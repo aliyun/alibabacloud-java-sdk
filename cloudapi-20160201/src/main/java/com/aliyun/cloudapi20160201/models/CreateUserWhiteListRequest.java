@@ -16,6 +16,9 @@ public class CreateUserWhiteListRequest extends TeaModel {
     @NameInMap("LimitCount")
     public Integer limitCount;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("Type")
     public String type;
 
@@ -60,6 +63,14 @@ public class CreateUserWhiteListRequest extends TeaModel {
     }
     public Integer getLimitCount() {
         return this.limitCount;
+    }
+
+    public CreateUserWhiteListRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public CreateUserWhiteListRequest setType(String type) {

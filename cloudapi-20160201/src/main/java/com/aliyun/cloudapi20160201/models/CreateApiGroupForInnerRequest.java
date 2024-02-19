@@ -13,6 +13,9 @@ public class CreateApiGroupForInnerRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("Source")
     public String source;
 
@@ -43,6 +46,14 @@ public class CreateApiGroupForInnerRequest extends TeaModel {
     }
     public String getGroupName() {
         return this.groupName;
+    }
+
+    public CreateApiGroupForInnerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public CreateApiGroupForInnerRequest setSource(String source) {

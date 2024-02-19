@@ -13,6 +13,9 @@ public class DescribeApiErrorRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("StartTime")
     public String startTime;
 
@@ -43,6 +46,14 @@ public class DescribeApiErrorRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DescribeApiErrorRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribeApiErrorRequest setStartTime(String startTime) {

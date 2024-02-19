@@ -7,6 +7,9 @@ public class RemoveAllBlackListRequest extends TeaModel {
     @NameInMap("BlackType")
     public String blackType;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static RemoveAllBlackListRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveAllBlackListRequest self = new RemoveAllBlackListRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class RemoveAllBlackListRequest extends TeaModel {
     }
     public String getBlackType() {
         return this.blackType;
+    }
+
+    public RemoveAllBlackListRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

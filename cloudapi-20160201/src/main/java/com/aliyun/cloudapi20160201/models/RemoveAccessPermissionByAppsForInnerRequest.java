@@ -16,6 +16,9 @@ public class RemoveAccessPermissionByAppsForInnerRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("Source")
     public String source;
 
@@ -57,6 +60,14 @@ public class RemoveAccessPermissionByAppsForInnerRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public RemoveAccessPermissionByAppsForInnerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public RemoveAccessPermissionByAppsForInnerRequest setSource(String source) {

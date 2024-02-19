@@ -16,6 +16,9 @@ public class ModifySecretKeyRequest extends TeaModel {
     @NameInMap("SecretValue")
     public String secretValue;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static ModifySecretKeyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySecretKeyRequest self = new ModifySecretKeyRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ModifySecretKeyRequest extends TeaModel {
     }
     public String getSecretValue() {
         return this.secretValue;
+    }
+
+    public ModifySecretKeyRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

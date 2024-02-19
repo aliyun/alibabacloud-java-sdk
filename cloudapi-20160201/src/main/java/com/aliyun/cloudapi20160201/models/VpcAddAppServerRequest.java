@@ -10,6 +10,9 @@ public class VpcAddAppServerRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("ServerIp")
     public String serverIp;
 
@@ -35,6 +38,14 @@ public class VpcAddAppServerRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public VpcAddAppServerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public VpcAddAppServerRequest setServerIp(String serverIp) {

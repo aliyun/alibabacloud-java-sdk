@@ -25,6 +25,9 @@ public class CreateAppForInnerRequest extends TeaModel {
     @NameInMap("Extend")
     public String extend;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("Source")
     public String source;
 
@@ -87,6 +90,14 @@ public class CreateAppForInnerRequest extends TeaModel {
     }
     public String getExtend() {
         return this.extend;
+    }
+
+    public CreateAppForInnerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public CreateAppForInnerRequest setSource(String source) {

@@ -10,6 +10,9 @@ public class DescribeApiMarketInstanceRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DescribeApiMarketInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApiMarketInstanceRequest self = new DescribeApiMarketInstanceRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DescribeApiMarketInstanceRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DescribeApiMarketInstanceRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

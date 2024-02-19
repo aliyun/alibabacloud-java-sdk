@@ -13,6 +13,9 @@ public class DescribeApiTrafficRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("StartTime")
     public String startTime;
 
@@ -43,6 +46,14 @@ public class DescribeApiTrafficRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DescribeApiTrafficRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribeApiTrafficRequest setStartTime(String startTime) {

@@ -13,6 +13,9 @@ public class DescribeApisByAppRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DescribeApisByAppRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApisByAppRequest self = new DescribeApisByAppRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class DescribeApisByAppRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeApisByAppRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

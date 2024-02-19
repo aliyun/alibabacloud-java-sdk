@@ -7,6 +7,9 @@ public class DeleteSecretKeyRequest extends TeaModel {
     @NameInMap("SecretKeyId")
     public String secretKeyId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DeleteSecretKeyRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSecretKeyRequest self = new DeleteSecretKeyRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DeleteSecretKeyRequest extends TeaModel {
     }
     public String getSecretKeyId() {
         return this.secretKeyId;
+    }
+
+    public DeleteSecretKeyRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

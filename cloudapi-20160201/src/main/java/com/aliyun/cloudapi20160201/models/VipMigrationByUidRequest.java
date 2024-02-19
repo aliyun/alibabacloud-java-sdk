@@ -10,6 +10,9 @@ public class VipMigrationByUidRequest extends TeaModel {
     @NameInMap("OriginalVip")
     public String originalVip;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static VipMigrationByUidRequest build(java.util.Map<String, ?> map) throws Exception {
         VipMigrationByUidRequest self = new VipMigrationByUidRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class VipMigrationByUidRequest extends TeaModel {
     }
     public String getOriginalVip() {
         return this.originalVip;
+    }
+
+    public VipMigrationByUidRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

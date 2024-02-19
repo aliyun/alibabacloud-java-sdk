@@ -7,6 +7,9 @@ public class VpcRemoveAppServerRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("ServerIp")
     public String serverIp;
 
@@ -24,6 +27,14 @@ public class VpcRemoveAppServerRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public VpcRemoveAppServerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public VpcRemoveAppServerRequest setServerIp(String serverIp) {

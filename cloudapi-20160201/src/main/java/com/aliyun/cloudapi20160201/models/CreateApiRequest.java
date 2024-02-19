@@ -55,6 +55,9 @@ public class CreateApiRequest extends TeaModel {
     @NameInMap("ResultType")
     public String resultType;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("ServiceAddress")
     public String serviceAddress;
 
@@ -209,6 +212,14 @@ public class CreateApiRequest extends TeaModel {
     }
     public String getResultType() {
         return this.resultType;
+    }
+
+    public CreateApiRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public CreateApiRequest setServiceAddress(String serviceAddress) {

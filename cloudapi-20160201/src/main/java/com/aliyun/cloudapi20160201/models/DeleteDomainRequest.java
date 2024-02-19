@@ -10,6 +10,9 @@ public class DeleteDomainRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DeleteDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDomainRequest self = new DeleteDomainRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DeleteDomainRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DeleteDomainRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

@@ -16,6 +16,9 @@ public class ResetSecretByAppKeyForInnerRequest extends TeaModel {
     @NameInMap("NewAppSecret")
     public String newAppSecret;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static ResetSecretByAppKeyForInnerRequest build(java.util.Map<String, ?> map) throws Exception {
         ResetSecretByAppKeyForInnerRequest self = new ResetSecretByAppKeyForInnerRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ResetSecretByAppKeyForInnerRequest extends TeaModel {
     }
     public String getNewAppSecret() {
         return this.newAppSecret;
+    }
+
+    public ResetSecretByAppKeyForInnerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

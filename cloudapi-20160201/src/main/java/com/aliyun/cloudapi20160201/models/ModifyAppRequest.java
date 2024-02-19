@@ -13,6 +13,9 @@ public class ModifyAppRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static ModifyAppRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAppRequest self = new ModifyAppRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ModifyAppRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyAppRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

@@ -10,6 +10,9 @@ public class DeleteAppForInnerRequest extends TeaModel {
     @NameInMap("AppId")
     public Long appId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DeleteAppForInnerRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAppForInnerRequest self = new DeleteAppForInnerRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DeleteAppForInnerRequest extends TeaModel {
     }
     public Long getAppId() {
         return this.appId;
+    }
+
+    public DeleteAppForInnerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

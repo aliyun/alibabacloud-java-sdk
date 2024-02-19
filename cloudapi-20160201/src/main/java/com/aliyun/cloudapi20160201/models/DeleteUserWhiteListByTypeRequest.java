@@ -7,6 +7,9 @@ public class DeleteUserWhiteListByTypeRequest extends TeaModel {
     @NameInMap("EntityId")
     public String entityId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("Type")
     public String type;
 
@@ -24,6 +27,14 @@ public class DeleteUserWhiteListByTypeRequest extends TeaModel {
     }
     public String getEntityId() {
         return this.entityId;
+    }
+
+    public DeleteUserWhiteListByTypeRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DeleteUserWhiteListByTypeRequest setType(String type) {

@@ -16,6 +16,9 @@ public class CreateRaceWorkForInnerRequest extends TeaModel {
     @NameInMap("LogoUrl")
     public String logoUrl;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("ShortDescription")
     public String shortDescription;
 
@@ -57,6 +60,14 @@ public class CreateRaceWorkForInnerRequest extends TeaModel {
     }
     public String getLogoUrl() {
         return this.logoUrl;
+    }
+
+    public CreateRaceWorkForInnerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public CreateRaceWorkForInnerRequest setShortDescription(String shortDescription) {

@@ -10,6 +10,9 @@ public class DescribeUserWhiteListsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("Type")
     public String type;
 
@@ -35,6 +38,14 @@ public class DescribeUserWhiteListsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeUserWhiteListsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribeUserWhiteListsRequest setType(String type) {
