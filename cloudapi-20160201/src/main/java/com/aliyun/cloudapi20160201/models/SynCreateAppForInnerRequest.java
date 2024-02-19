@@ -19,6 +19,9 @@ public class SynCreateAppForInnerRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("Source")
     public String source;
 
@@ -65,6 +68,14 @@ public class SynCreateAppForInnerRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public SynCreateAppForInnerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public SynCreateAppForInnerRequest setSource(String source) {

@@ -16,6 +16,9 @@ public class RemoveAccessPermissionByApisRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("StageName")
     public String stageName;
 
@@ -54,6 +57,14 @@ public class RemoveAccessPermissionByApisRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public RemoveAccessPermissionByApisRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public RemoveAccessPermissionByApisRequest setStageName(String stageName) {

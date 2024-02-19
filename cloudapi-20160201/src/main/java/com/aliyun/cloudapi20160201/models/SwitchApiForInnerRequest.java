@@ -16,6 +16,9 @@ public class SwitchApiForInnerRequest extends TeaModel {
     @NameInMap("HistoryVersion")
     public String historyVersion;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("StageName")
     public String stageName;
 
@@ -54,6 +57,14 @@ public class SwitchApiForInnerRequest extends TeaModel {
     }
     public String getHistoryVersion() {
         return this.historyVersion;
+    }
+
+    public SwitchApiForInnerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public SwitchApiForInnerRequest setStageName(String stageName) {

@@ -13,6 +13,9 @@ public class ModifyGroupAuthAppCodeForBackendRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static ModifyGroupAuthAppCodeForBackendRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyGroupAuthAppCodeForBackendRequest self = new ModifyGroupAuthAppCodeForBackendRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ModifyGroupAuthAppCodeForBackendRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public ModifyGroupAuthAppCodeForBackendRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

@@ -13,6 +13,9 @@ public class VpcCreateAddressPoolRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("Token")
     public String token;
 
@@ -43,6 +46,14 @@ public class VpcCreateAddressPoolRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public VpcCreateAddressPoolRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public VpcCreateAddressPoolRequest setToken(String token) {

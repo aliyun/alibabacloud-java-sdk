@@ -19,6 +19,9 @@ public class DescribeApisRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("Visibility")
     public String visibility;
 
@@ -65,6 +68,14 @@ public class DescribeApisRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeApisRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribeApisRequest setVisibility(String visibility) {

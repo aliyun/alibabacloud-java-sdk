@@ -58,6 +58,9 @@ public class ModifyApiRequest extends TeaModel {
     @NameInMap("ResultType")
     public String resultType;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("ServiceAddress")
     public String serviceAddress;
 
@@ -220,6 +223,14 @@ public class ModifyApiRequest extends TeaModel {
     }
     public String getResultType() {
         return this.resultType;
+    }
+
+    public ModifyApiRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public ModifyApiRequest setServiceAddress(String serviceAddress) {

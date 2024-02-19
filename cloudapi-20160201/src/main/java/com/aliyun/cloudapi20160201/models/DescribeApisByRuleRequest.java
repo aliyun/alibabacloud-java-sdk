@@ -16,6 +16,9 @@ public class DescribeApisByRuleRequest extends TeaModel {
     @NameInMap("RuleType")
     public String ruleType;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DescribeApisByRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApisByRuleRequest self = new DescribeApisByRuleRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class DescribeApisByRuleRequest extends TeaModel {
     }
     public String getRuleType() {
         return this.ruleType;
+    }
+
+    public DescribeApisByRuleRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

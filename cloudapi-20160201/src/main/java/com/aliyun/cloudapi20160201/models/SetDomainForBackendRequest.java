@@ -19,6 +19,9 @@ public class SetDomainForBackendRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static SetDomainForBackendRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDomainForBackendRequest self = new SetDomainForBackendRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class SetDomainForBackendRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public SetDomainForBackendRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

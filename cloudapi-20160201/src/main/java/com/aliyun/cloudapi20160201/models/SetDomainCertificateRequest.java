@@ -19,6 +19,9 @@ public class SetDomainCertificateRequest extends TeaModel {
     @NameInMap("PrivateKey")
     public String privateKey;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static SetDomainCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDomainCertificateRequest self = new SetDomainCertificateRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class SetDomainCertificateRequest extends TeaModel {
     }
     public String getPrivateKey() {
         return this.privateKey;
+    }
+
+    public SetDomainCertificateRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

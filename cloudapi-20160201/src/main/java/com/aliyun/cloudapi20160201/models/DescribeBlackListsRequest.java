@@ -13,6 +13,9 @@ public class DescribeBlackListsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DescribeBlackListsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBlackListsRequest self = new DescribeBlackListsRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class DescribeBlackListsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeBlackListsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

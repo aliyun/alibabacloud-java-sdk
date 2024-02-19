@@ -4,6 +4,9 @@ package com.aliyun.cloudapi20160201.models;
 import com.aliyun.tea.*;
 
 public class AddTrafficSpecialControlRequest extends TeaModel {
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("SpecialKey")
     public String specialKey;
 
@@ -19,6 +22,14 @@ public class AddTrafficSpecialControlRequest extends TeaModel {
     public static AddTrafficSpecialControlRequest build(java.util.Map<String, ?> map) throws Exception {
         AddTrafficSpecialControlRequest self = new AddTrafficSpecialControlRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddTrafficSpecialControlRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public AddTrafficSpecialControlRequest setSpecialKey(String specialKey) {

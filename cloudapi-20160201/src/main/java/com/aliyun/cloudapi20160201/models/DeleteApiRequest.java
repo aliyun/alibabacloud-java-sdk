@@ -10,6 +10,9 @@ public class DeleteApiRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DeleteApiRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteApiRequest self = new DeleteApiRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DeleteApiRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DeleteApiRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

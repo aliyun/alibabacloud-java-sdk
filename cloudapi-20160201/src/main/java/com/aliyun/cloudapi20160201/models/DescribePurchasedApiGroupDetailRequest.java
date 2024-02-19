@@ -7,6 +7,9 @@ public class DescribePurchasedApiGroupDetailRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DescribePurchasedApiGroupDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePurchasedApiGroupDetailRequest self = new DescribePurchasedApiGroupDetailRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DescribePurchasedApiGroupDetailRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DescribePurchasedApiGroupDetailRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

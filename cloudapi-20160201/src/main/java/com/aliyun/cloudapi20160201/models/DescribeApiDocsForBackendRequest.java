@@ -22,6 +22,9 @@ public class DescribeApiDocsForBackendRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("StageName")
     public String stageName;
 
@@ -76,6 +79,14 @@ public class DescribeApiDocsForBackendRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeApiDocsForBackendRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribeApiDocsForBackendRequest setStageName(String stageName) {

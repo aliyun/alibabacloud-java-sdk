@@ -22,6 +22,9 @@ public class DescribeModelsForInnerRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DescribeModelsForInnerRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeModelsForInnerRequest self = new DescribeModelsForInnerRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class DescribeModelsForInnerRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeModelsForInnerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

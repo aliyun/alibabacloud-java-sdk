@@ -19,6 +19,9 @@ public class ModifyAppForInnerRequest extends TeaModel {
     @NameInMap("Extend")
     public String extend;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static ModifyAppForInnerRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAppForInnerRequest self = new ModifyAppForInnerRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class ModifyAppForInnerRequest extends TeaModel {
     }
     public String getExtend() {
         return this.extend;
+    }
+
+    public ModifyAppForInnerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

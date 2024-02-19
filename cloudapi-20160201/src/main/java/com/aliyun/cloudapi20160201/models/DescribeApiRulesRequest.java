@@ -19,6 +19,9 @@ public class DescribeApiRulesRequest extends TeaModel {
     @NameInMap("RuleType")
     public String ruleType;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("StageName")
     public String stageName;
 
@@ -65,6 +68,14 @@ public class DescribeApiRulesRequest extends TeaModel {
     }
     public String getRuleType() {
         return this.ruleType;
+    }
+
+    public DescribeApiRulesRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribeApiRulesRequest setStageName(String stageName) {

@@ -7,6 +7,9 @@ public class ModifyUserWhiteListValueByTypeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("Type")
     public String type;
 
@@ -27,6 +30,14 @@ public class ModifyUserWhiteListValueByTypeRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyUserWhiteListValueByTypeRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public ModifyUserWhiteListValueByTypeRequest setType(String type) {

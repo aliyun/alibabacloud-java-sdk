@@ -13,6 +13,9 @@ public class ModifyApiGroupRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static ModifyApiGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyApiGroupRequest self = new ModifyApiGroupRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ModifyApiGroupRequest extends TeaModel {
     }
     public String getGroupName() {
         return this.groupName;
+    }
+
+    public ModifyApiGroupRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

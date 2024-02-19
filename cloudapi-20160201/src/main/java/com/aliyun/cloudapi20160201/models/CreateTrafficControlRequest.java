@@ -13,6 +13,9 @@ public class CreateTrafficControlRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("TrafficControlName")
     public String trafficControlName;
 
@@ -49,6 +52,14 @@ public class CreateTrafficControlRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateTrafficControlRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public CreateTrafficControlRequest setTrafficControlName(String trafficControlName) {

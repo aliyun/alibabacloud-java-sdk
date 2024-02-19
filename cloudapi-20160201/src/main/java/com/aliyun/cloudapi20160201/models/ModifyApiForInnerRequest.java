@@ -34,6 +34,9 @@ public class ModifyApiForInnerRequest extends TeaModel {
     @NameInMap("ResultType")
     public String resultType;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("ServiceConfig")
     public String serviceConfig;
 
@@ -129,6 +132,14 @@ public class ModifyApiForInnerRequest extends TeaModel {
     }
     public String getResultType() {
         return this.resultType;
+    }
+
+    public ModifyApiForInnerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public ModifyApiForInnerRequest setServiceConfig(String serviceConfig) {

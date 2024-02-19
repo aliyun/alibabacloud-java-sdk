@@ -19,6 +19,9 @@ public class SetAccessPermissionsForInnerRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("Source")
     public String source;
 
@@ -68,6 +71,14 @@ public class SetAccessPermissionsForInnerRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public SetAccessPermissionsForInnerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public SetAccessPermissionsForInnerRequest setSource(String source) {

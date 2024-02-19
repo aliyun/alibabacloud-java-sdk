@@ -10,6 +10,9 @@ public class DescribeDomainRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DescribeDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainRequest self = new DescribeDomainRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DescribeDomainRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DescribeDomainRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

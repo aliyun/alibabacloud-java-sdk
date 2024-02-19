@@ -16,6 +16,9 @@ public class SetMockIntegrationRequest extends TeaModel {
     @NameInMap("MockResult")
     public String mockResult;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static SetMockIntegrationRequest build(java.util.Map<String, ?> map) throws Exception {
         SetMockIntegrationRequest self = new SetMockIntegrationRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class SetMockIntegrationRequest extends TeaModel {
     }
     public String getMockResult() {
         return this.mockResult;
+    }
+
+    public SetMockIntegrationRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

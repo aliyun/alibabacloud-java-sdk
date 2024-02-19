@@ -13,6 +13,9 @@ public class ResetAppCodeForInnerRequest extends TeaModel {
     @NameInMap("NewAppCode")
     public String newAppCode;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static ResetAppCodeForInnerRequest build(java.util.Map<String, ?> map) throws Exception {
         ResetAppCodeForInnerRequest self = new ResetAppCodeForInnerRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ResetAppCodeForInnerRequest extends TeaModel {
     }
     public String getNewAppCode() {
         return this.newAppCode;
+    }
+
+    public ResetAppCodeForInnerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

@@ -13,6 +13,9 @@ public class RecoveryApiDefineFromHistoricalRequest extends TeaModel {
     @NameInMap("HistoryVersion")
     public String historyVersion;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("StageName")
     public String stageName;
 
@@ -43,6 +46,14 @@ public class RecoveryApiDefineFromHistoricalRequest extends TeaModel {
     }
     public String getHistoryVersion() {
         return this.historyVersion;
+    }
+
+    public RecoveryApiDefineFromHistoricalRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public RecoveryApiDefineFromHistoricalRequest setStageName(String stageName) {

@@ -10,6 +10,9 @@ public class CreateAppRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static CreateAppRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppRequest self = new CreateAppRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class CreateAppRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateAppRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

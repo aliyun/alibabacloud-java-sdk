@@ -16,6 +16,9 @@ public class RemoveApiRuleRequest extends TeaModel {
     @NameInMap("RuleType")
     public String ruleType;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("StageName")
     public String stageName;
 
@@ -54,6 +57,14 @@ public class RemoveApiRuleRequest extends TeaModel {
     }
     public String getRuleType() {
         return this.ruleType;
+    }
+
+    public RemoveApiRuleRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public RemoveApiRuleRequest setStageName(String stageName) {

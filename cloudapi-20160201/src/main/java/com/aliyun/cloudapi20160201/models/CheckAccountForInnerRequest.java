@@ -7,6 +7,9 @@ public class CheckAccountForInnerRequest extends TeaModel {
     @NameInMap("AliUid")
     public Long aliUid;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static CheckAccountForInnerRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckAccountForInnerRequest self = new CheckAccountForInnerRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class CheckAccountForInnerRequest extends TeaModel {
     }
     public Long getAliUid() {
         return this.aliUid;
+    }
+
+    public CheckAccountForInnerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

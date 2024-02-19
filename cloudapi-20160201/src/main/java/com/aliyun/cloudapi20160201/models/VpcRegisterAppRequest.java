@@ -13,6 +13,9 @@ public class VpcRegisterAppRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("Token")
     public String token;
 
@@ -43,6 +46,14 @@ public class VpcRegisterAppRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public VpcRegisterAppRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public VpcRegisterAppRequest setToken(String token) {
