@@ -22,6 +22,9 @@ public class QueryContentAdvanceRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("IncludeVector")
+    public Boolean includeVector;
+
     @NameInMap("Metrics")
     public String metrics;
 
@@ -34,8 +37,14 @@ public class QueryContentAdvanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RecallWindow")
+    public java.util.List<Integer> recallWindow;
+
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("RerankFactor")
+    public Double rerankFactor;
 
     @NameInMap("TopK")
     public Integer topK;
@@ -96,6 +105,14 @@ public class QueryContentAdvanceRequest extends TeaModel {
         return this.filter;
     }
 
+    public QueryContentAdvanceRequest setIncludeVector(Boolean includeVector) {
+        this.includeVector = includeVector;
+        return this;
+    }
+    public Boolean getIncludeVector() {
+        return this.includeVector;
+    }
+
     public QueryContentAdvanceRequest setMetrics(String metrics) {
         this.metrics = metrics;
         return this;
@@ -128,12 +145,28 @@ public class QueryContentAdvanceRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public QueryContentAdvanceRequest setRecallWindow(java.util.List<Integer> recallWindow) {
+        this.recallWindow = recallWindow;
+        return this;
+    }
+    public java.util.List<Integer> getRecallWindow() {
+        return this.recallWindow;
+    }
+
     public QueryContentAdvanceRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public QueryContentAdvanceRequest setRerankFactor(Double rerankFactor) {
+        this.rerankFactor = rerankFactor;
+        return this;
+    }
+    public Double getRerankFactor() {
+        return this.rerankFactor;
     }
 
     public QueryContentAdvanceRequest setTopK(Integer topK) {

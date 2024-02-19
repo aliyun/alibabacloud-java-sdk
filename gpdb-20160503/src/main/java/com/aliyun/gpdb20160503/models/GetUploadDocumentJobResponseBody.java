@@ -194,12 +194,23 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
     }
 
     public static class GetUploadDocumentJobResponseBodyUsage extends TeaModel {
+        @NameInMap("EmbeddingEntries")
+        public Integer embeddingEntries;
+
         @NameInMap("EmbeddingTokens")
         public Integer embeddingTokens;
 
         public static GetUploadDocumentJobResponseBodyUsage build(java.util.Map<String, ?> map) throws Exception {
             GetUploadDocumentJobResponseBodyUsage self = new GetUploadDocumentJobResponseBodyUsage();
             return TeaModel.build(map, self);
+        }
+
+        public GetUploadDocumentJobResponseBodyUsage setEmbeddingEntries(Integer embeddingEntries) {
+            this.embeddingEntries = embeddingEntries;
+            return this;
+        }
+        public Integer getEmbeddingEntries() {
+            return this.embeddingEntries;
         }
 
         public GetUploadDocumentJobResponseBodyUsage setEmbeddingTokens(Integer embeddingTokens) {

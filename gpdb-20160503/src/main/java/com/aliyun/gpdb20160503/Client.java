@@ -5660,8 +5660,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryCollectionDataWithOptions(request, runtime);
     }
 
-    public QueryContentResponse queryContentWithOptions(QueryContentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public QueryContentResponse queryContentWithOptions(QueryContentRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryContentShrinkRequest request = new QueryContentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.recallWindow)) {
+            request.recallWindowShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.recallWindow, "RecallWindow", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.collection)) {
             query.put("Collection", request.collection);
@@ -5687,6 +5693,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Filter", request.filter);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.includeVector)) {
+            query.put("IncludeVector", request.includeVector);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.metrics)) {
             query.put("Metrics", request.metrics);
         }
@@ -5703,8 +5713,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.recallWindowShrink)) {
+            query.put("RecallWindow", request.recallWindowShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rerankFactor)) {
+            query.put("RerankFactor", request.rerankFactor);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.topK)) {
