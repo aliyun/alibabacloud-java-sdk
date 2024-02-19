@@ -13,9 +13,6 @@ public class AddImageShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("VMImageSpec")
     public String VMImageSpecShrink;
 
@@ -49,14 +46,6 @@ public class AddImageShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public AddImageShrinkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public AddImageShrinkRequest setVMImageSpecShrink(String VMImageSpecShrink) {

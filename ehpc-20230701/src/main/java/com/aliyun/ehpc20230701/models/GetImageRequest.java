@@ -7,9 +7,6 @@ public class GetImageRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static GetImageRequest build(java.util.Map<String, ?> map) throws Exception {
         GetImageRequest self = new GetImageRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class GetImageRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
-    }
-
-    public GetImageRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

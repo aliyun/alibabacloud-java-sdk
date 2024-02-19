@@ -13,9 +13,6 @@ public class AddImageRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("VMImageSpec")
     public AddImageRequestVMImageSpec VMImageSpec;
 
@@ -49,14 +46,6 @@ public class AddImageRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public AddImageRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public AddImageRequest setVMImageSpec(AddImageRequestVMImageSpec VMImageSpec) {

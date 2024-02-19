@@ -16,9 +16,6 @@ public class ListImagesShrinkRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static ListImagesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListImagesShrinkRequest self = new ListImagesShrinkRequest();
         return TeaModel.build(map, self);
@@ -54,14 +51,6 @@ public class ListImagesShrinkRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
-    }
-
-    public ListImagesShrinkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }
