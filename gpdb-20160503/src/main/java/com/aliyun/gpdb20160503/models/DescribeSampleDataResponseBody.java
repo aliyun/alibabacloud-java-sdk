@@ -31,6 +31,9 @@ public class DescribeSampleDataResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SampleDataStatus")
+    public String sampleDataStatus;
+
     public static DescribeSampleDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSampleDataResponseBody self = new DescribeSampleDataResponseBody();
         return TeaModel.build(map, self);
@@ -66,6 +69,14 @@ public class DescribeSampleDataResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeSampleDataResponseBody setSampleDataStatus(String sampleDataStatus) {
+        this.sampleDataStatus = sampleDataStatus;
+        return this;
+    }
+    public String getSampleDataStatus() {
+        return this.sampleDataStatus;
     }
 
 }

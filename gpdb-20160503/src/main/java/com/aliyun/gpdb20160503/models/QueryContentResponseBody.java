@@ -22,6 +22,9 @@ public class QueryContentResponseBody extends TeaModel {
     @NameInMap("Usage")
     public QueryContentResponseBodyUsage usage;
 
+    @NameInMap("WindowMatches")
+    public QueryContentResponseBodyWindowMatches windowMatches;
+
     public static QueryContentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryContentResponseBody self = new QueryContentResponseBody();
         return TeaModel.build(map, self);
@@ -75,6 +78,14 @@ public class QueryContentResponseBody extends TeaModel {
         return this.usage;
     }
 
+    public QueryContentResponseBody setWindowMatches(QueryContentResponseBodyWindowMatches windowMatches) {
+        this.windowMatches = windowMatches;
+        return this;
+    }
+    public QueryContentResponseBodyWindowMatches getWindowMatches() {
+        return this.windowMatches;
+    }
+
     public static class QueryContentResponseBodyMatchesMatchListVector extends TeaModel {
         @NameInMap("VectorList")
         public java.util.List<Double> vectorList;
@@ -112,6 +123,9 @@ public class QueryContentResponseBody extends TeaModel {
 
         @NameInMap("Metadata")
         public java.util.Map<String, String> metadata;
+
+        @NameInMap("RerankScore")
+        public Double rerankScore;
 
         @NameInMap("RetrievalSource")
         public Integer retrievalSource;
@@ -173,6 +187,14 @@ public class QueryContentResponseBody extends TeaModel {
         }
         public java.util.Map<String, String> getMetadata() {
             return this.metadata;
+        }
+
+        public QueryContentResponseBodyMatchesMatchList setRerankScore(Double rerankScore) {
+            this.rerankScore = rerankScore;
+            return this;
+        }
+        public Double getRerankScore() {
+            return this.rerankScore;
         }
 
         public QueryContentResponseBodyMatchesMatchList setRetrievalSource(Integer retrievalSource) {
@@ -246,6 +268,126 @@ public class QueryContentResponseBody extends TeaModel {
         }
         public String getEmbeddingTokens() {
             return this.embeddingTokens;
+        }
+
+    }
+
+    public static class QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatchWindowMatch extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("FileName")
+        public String fileName;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("LoaderMetadata")
+        public String loaderMetadata;
+
+        @NameInMap("Metadata")
+        public java.util.Map<String, String> metadata;
+
+        public static QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatchWindowMatch build(java.util.Map<String, ?> map) throws Exception {
+            QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatchWindowMatch self = new QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatchWindowMatch();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatchWindowMatch setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatchWindowMatch setFileName(String fileName) {
+            this.fileName = fileName;
+            return this;
+        }
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        public QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatchWindowMatch setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatchWindowMatch setLoaderMetadata(String loaderMetadata) {
+            this.loaderMetadata = loaderMetadata;
+            return this;
+        }
+        public String getLoaderMetadata() {
+            return this.loaderMetadata;
+        }
+
+        public QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatchWindowMatch setMetadata(java.util.Map<String, String> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+        public java.util.Map<String, String> getMetadata() {
+            return this.metadata;
+        }
+
+    }
+
+    public static class QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatch extends TeaModel {
+        @NameInMap("windowMatch")
+        public java.util.List<QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatchWindowMatch> windowMatch;
+
+        public static QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatch build(java.util.Map<String, ?> map) throws Exception {
+            QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatch self = new QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatch();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatch setWindowMatch(java.util.List<QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatchWindowMatch> windowMatch) {
+            this.windowMatch = windowMatch;
+            return this;
+        }
+        public java.util.List<QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatchWindowMatch> getWindowMatch() {
+            return this.windowMatch;
+        }
+
+    }
+
+    public static class QueryContentResponseBodyWindowMatchesWindowMatches extends TeaModel {
+        @NameInMap("WindowMatch")
+        public QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatch windowMatch;
+
+        public static QueryContentResponseBodyWindowMatchesWindowMatches build(java.util.Map<String, ?> map) throws Exception {
+            QueryContentResponseBodyWindowMatchesWindowMatches self = new QueryContentResponseBodyWindowMatchesWindowMatches();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryContentResponseBodyWindowMatchesWindowMatches setWindowMatch(QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatch windowMatch) {
+            this.windowMatch = windowMatch;
+            return this;
+        }
+        public QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatch getWindowMatch() {
+            return this.windowMatch;
+        }
+
+    }
+
+    public static class QueryContentResponseBodyWindowMatches extends TeaModel {
+        @NameInMap("windowMatches")
+        public java.util.List<QueryContentResponseBodyWindowMatchesWindowMatches> windowMatches;
+
+        public static QueryContentResponseBodyWindowMatches build(java.util.Map<String, ?> map) throws Exception {
+            QueryContentResponseBodyWindowMatches self = new QueryContentResponseBodyWindowMatches();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryContentResponseBodyWindowMatches setWindowMatches(java.util.List<QueryContentResponseBodyWindowMatchesWindowMatches> windowMatches) {
+            this.windowMatches = windowMatches;
+            return this;
+        }
+        public java.util.List<QueryContentResponseBodyWindowMatchesWindowMatches> getWindowMatches() {
+            return this.windowMatches;
         }
 
     }

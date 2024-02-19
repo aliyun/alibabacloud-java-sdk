@@ -3,7 +3,7 @@ package com.aliyun.gpdb20160503.models;
 
 import com.aliyun.tea.*;
 
-public class QueryContentRequest extends TeaModel {
+public class QueryContentShrinkRequest extends TeaModel {
     @NameInMap("Collection")
     public String collection;
 
@@ -38,7 +38,7 @@ public class QueryContentRequest extends TeaModel {
     public Long ownerId;
 
     @NameInMap("RecallWindow")
-    public java.util.List<Integer> recallWindow;
+    public String recallWindowShrink;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -52,12 +52,12 @@ public class QueryContentRequest extends TeaModel {
     @NameInMap("UseFullTextRetrieval")
     public Boolean useFullTextRetrieval;
 
-    public static QueryContentRequest build(java.util.Map<String, ?> map) throws Exception {
-        QueryContentRequest self = new QueryContentRequest();
+    public static QueryContentShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        QueryContentShrinkRequest self = new QueryContentShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryContentRequest setCollection(String collection) {
+    public QueryContentShrinkRequest setCollection(String collection) {
         this.collection = collection;
         return this;
     }
@@ -65,7 +65,7 @@ public class QueryContentRequest extends TeaModel {
         return this.collection;
     }
 
-    public QueryContentRequest setContent(String content) {
+    public QueryContentShrinkRequest setContent(String content) {
         this.content = content;
         return this;
     }
@@ -73,7 +73,7 @@ public class QueryContentRequest extends TeaModel {
         return this.content;
     }
 
-    public QueryContentRequest setDBInstanceId(String DBInstanceId) {
+    public QueryContentShrinkRequest setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
@@ -81,7 +81,7 @@ public class QueryContentRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public QueryContentRequest setFileName(String fileName) {
+    public QueryContentShrinkRequest setFileName(String fileName) {
         this.fileName = fileName;
         return this;
     }
@@ -89,7 +89,7 @@ public class QueryContentRequest extends TeaModel {
         return this.fileName;
     }
 
-    public QueryContentRequest setFileUrl(String fileUrl) {
+    public QueryContentShrinkRequest setFileUrl(String fileUrl) {
         this.fileUrl = fileUrl;
         return this;
     }
@@ -97,7 +97,7 @@ public class QueryContentRequest extends TeaModel {
         return this.fileUrl;
     }
 
-    public QueryContentRequest setFilter(String filter) {
+    public QueryContentShrinkRequest setFilter(String filter) {
         this.filter = filter;
         return this;
     }
@@ -105,7 +105,7 @@ public class QueryContentRequest extends TeaModel {
         return this.filter;
     }
 
-    public QueryContentRequest setIncludeVector(Boolean includeVector) {
+    public QueryContentShrinkRequest setIncludeVector(Boolean includeVector) {
         this.includeVector = includeVector;
         return this;
     }
@@ -113,7 +113,7 @@ public class QueryContentRequest extends TeaModel {
         return this.includeVector;
     }
 
-    public QueryContentRequest setMetrics(String metrics) {
+    public QueryContentShrinkRequest setMetrics(String metrics) {
         this.metrics = metrics;
         return this;
     }
@@ -121,7 +121,7 @@ public class QueryContentRequest extends TeaModel {
         return this.metrics;
     }
 
-    public QueryContentRequest setNamespace(String namespace) {
+    public QueryContentShrinkRequest setNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
@@ -129,7 +129,7 @@ public class QueryContentRequest extends TeaModel {
         return this.namespace;
     }
 
-    public QueryContentRequest setNamespacePassword(String namespacePassword) {
+    public QueryContentShrinkRequest setNamespacePassword(String namespacePassword) {
         this.namespacePassword = namespacePassword;
         return this;
     }
@@ -137,7 +137,7 @@ public class QueryContentRequest extends TeaModel {
         return this.namespacePassword;
     }
 
-    public QueryContentRequest setOwnerId(Long ownerId) {
+    public QueryContentShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -145,15 +145,15 @@ public class QueryContentRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public QueryContentRequest setRecallWindow(java.util.List<Integer> recallWindow) {
-        this.recallWindow = recallWindow;
+    public QueryContentShrinkRequest setRecallWindowShrink(String recallWindowShrink) {
+        this.recallWindowShrink = recallWindowShrink;
         return this;
     }
-    public java.util.List<Integer> getRecallWindow() {
-        return this.recallWindow;
+    public String getRecallWindowShrink() {
+        return this.recallWindowShrink;
     }
 
-    public QueryContentRequest setRegionId(String regionId) {
+    public QueryContentShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -161,7 +161,7 @@ public class QueryContentRequest extends TeaModel {
         return this.regionId;
     }
 
-    public QueryContentRequest setRerankFactor(Double rerankFactor) {
+    public QueryContentShrinkRequest setRerankFactor(Double rerankFactor) {
         this.rerankFactor = rerankFactor;
         return this;
     }
@@ -169,7 +169,7 @@ public class QueryContentRequest extends TeaModel {
         return this.rerankFactor;
     }
 
-    public QueryContentRequest setTopK(Integer topK) {
+    public QueryContentShrinkRequest setTopK(Integer topK) {
         this.topK = topK;
         return this;
     }
@@ -177,7 +177,7 @@ public class QueryContentRequest extends TeaModel {
         return this.topK;
     }
 
-    public QueryContentRequest setUseFullTextRetrieval(Boolean useFullTextRetrieval) {
+    public QueryContentShrinkRequest setUseFullTextRetrieval(Boolean useFullTextRetrieval) {
         this.useFullTextRetrieval = useFullTextRetrieval;
         return this;
     }
