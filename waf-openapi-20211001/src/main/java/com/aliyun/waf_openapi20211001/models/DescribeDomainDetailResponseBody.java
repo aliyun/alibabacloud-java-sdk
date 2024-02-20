@@ -657,6 +657,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         @NameInMap("WriteTimeout")
         public Integer writeTimeout;
 
+        @NameInMap("XffProto")
+        public Boolean xffProto;
+
         public static DescribeDomainDetailResponseBodyRedirect build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainDetailResponseBodyRedirect self = new DescribeDomainDetailResponseBodyRedirect();
             return TeaModel.build(map, self);
@@ -764,6 +767,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
         public Integer getWriteTimeout() {
             return this.writeTimeout;
+        }
+
+        public DescribeDomainDetailResponseBodyRedirect setXffProto(Boolean xffProto) {
+            this.xffProto = xffProto;
+            return this;
+        }
+        public Boolean getXffProto() {
+            return this.xffProto;
         }
 
     }

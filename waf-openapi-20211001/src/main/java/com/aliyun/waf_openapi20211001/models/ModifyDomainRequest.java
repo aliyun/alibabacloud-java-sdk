@@ -558,6 +558,9 @@ public class ModifyDomainRequest extends TeaModel {
         @NameInMap("WriteTimeout")
         public Integer writeTimeout;
 
+        @NameInMap("XffProto")
+        public Boolean xffProto;
+
         public static ModifyDomainRequestRedirect build(java.util.Map<String, ?> map) throws Exception {
             ModifyDomainRequestRedirect self = new ModifyDomainRequestRedirect();
             return TeaModel.build(map, self);
@@ -681,6 +684,14 @@ public class ModifyDomainRequest extends TeaModel {
         }
         public Integer getWriteTimeout() {
             return this.writeTimeout;
+        }
+
+        public ModifyDomainRequestRedirect setXffProto(Boolean xffProto) {
+            this.xffProto = xffProto;
+            return this;
+        }
+        public Boolean getXffProto() {
+            return this.xffProto;
         }
 
     }

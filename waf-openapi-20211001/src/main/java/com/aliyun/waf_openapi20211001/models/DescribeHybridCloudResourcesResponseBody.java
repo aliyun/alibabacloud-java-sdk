@@ -124,6 +124,9 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         @NameInMap("HttpsPorts")
         public java.util.List<Long> httpsPorts;
 
+        @NameInMap("IPv6Enabled")
+        public Boolean IPv6Enabled;
+
         /**
          * <p>Indicates whether IPv6 is supported. Valid values:</p>
          * <br>
@@ -245,6 +248,14 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         }
         public java.util.List<Long> getHttpsPorts() {
             return this.httpsPorts;
+        }
+
+        public DescribeHybridCloudResourcesResponseBodyDomainsListen setIPv6Enabled(Boolean IPv6Enabled) {
+            this.IPv6Enabled = IPv6Enabled;
+            return this;
+        }
+        public Boolean getIPv6Enabled() {
+            return this.IPv6Enabled;
         }
 
         public DescribeHybridCloudResourcesResponseBodyDomainsListen setIpv6Enabled(Boolean ipv6Enabled) {
