@@ -49,6 +49,12 @@ public class SingleSendMailRequest extends TeaModel {
     @NameInMap("ToAddress")
     public String toAddress;
 
+    @NameInMap("UnSubscribeFilterLevel")
+    public String unSubscribeFilterLevel;
+
+    @NameInMap("UnSubscribeLinkType")
+    public String unSubscribeLinkType;
+
     public static SingleSendMailRequest build(java.util.Map<String, ?> map) throws Exception {
         SingleSendMailRequest self = new SingleSendMailRequest();
         return TeaModel.build(map, self);
@@ -172,6 +178,22 @@ public class SingleSendMailRequest extends TeaModel {
     }
     public String getToAddress() {
         return this.toAddress;
+    }
+
+    public SingleSendMailRequest setUnSubscribeFilterLevel(String unSubscribeFilterLevel) {
+        this.unSubscribeFilterLevel = unSubscribeFilterLevel;
+        return this;
+    }
+    public String getUnSubscribeFilterLevel() {
+        return this.unSubscribeFilterLevel;
+    }
+
+    public SingleSendMailRequest setUnSubscribeLinkType(String unSubscribeLinkType) {
+        this.unSubscribeLinkType = unSubscribeLinkType;
+        return this;
+    }
+    public String getUnSubscribeLinkType() {
+        return this.unSubscribeLinkType;
     }
 
 }

@@ -3,15 +3,12 @@ package com.aliyun.dm20170622.models;
 
 import com.aliyun.tea.*;
 
-public class DescDomainRequest extends TeaModel {
+public class CheckDomainDnsRequest extends TeaModel {
     @NameInMap("DomainId")
     public Integer domainId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("RequireRealTimeDnsRecords")
-    public Boolean requireRealTimeDnsRecords;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -19,12 +16,15 @@ public class DescDomainRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static DescDomainRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescDomainRequest self = new DescDomainRequest();
+    @NameInMap("Type")
+    public String type;
+
+    public static CheckDomainDnsRequest build(java.util.Map<String, ?> map) throws Exception {
+        CheckDomainDnsRequest self = new CheckDomainDnsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescDomainRequest setDomainId(Integer domainId) {
+    public CheckDomainDnsRequest setDomainId(Integer domainId) {
         this.domainId = domainId;
         return this;
     }
@@ -32,7 +32,7 @@ public class DescDomainRequest extends TeaModel {
         return this.domainId;
     }
 
-    public DescDomainRequest setOwnerId(Long ownerId) {
+    public CheckDomainDnsRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -40,15 +40,7 @@ public class DescDomainRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescDomainRequest setRequireRealTimeDnsRecords(Boolean requireRealTimeDnsRecords) {
-        this.requireRealTimeDnsRecords = requireRealTimeDnsRecords;
-        return this;
-    }
-    public Boolean getRequireRealTimeDnsRecords() {
-        return this.requireRealTimeDnsRecords;
-    }
-
-    public DescDomainRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public CheckDomainDnsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -56,12 +48,20 @@ public class DescDomainRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescDomainRequest setResourceOwnerId(Long resourceOwnerId) {
+    public CheckDomainDnsRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CheckDomainDnsRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

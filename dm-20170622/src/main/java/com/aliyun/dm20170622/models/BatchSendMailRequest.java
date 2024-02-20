@@ -37,6 +37,12 @@ public class BatchSendMailRequest extends TeaModel {
     @NameInMap("TemplateName")
     public String templateName;
 
+    @NameInMap("UnSubscribeFilterLevel")
+    public String unSubscribeFilterLevel;
+
+    @NameInMap("UnSubscribeLinkType")
+    public String unSubscribeLinkType;
+
     public static BatchSendMailRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchSendMailRequest self = new BatchSendMailRequest();
         return TeaModel.build(map, self);
@@ -128,6 +134,22 @@ public class BatchSendMailRequest extends TeaModel {
     }
     public String getTemplateName() {
         return this.templateName;
+    }
+
+    public BatchSendMailRequest setUnSubscribeFilterLevel(String unSubscribeFilterLevel) {
+        this.unSubscribeFilterLevel = unSubscribeFilterLevel;
+        return this;
+    }
+    public String getUnSubscribeFilterLevel() {
+        return this.unSubscribeFilterLevel;
+    }
+
+    public BatchSendMailRequest setUnSubscribeLinkType(String unSubscribeLinkType) {
+        this.unSubscribeLinkType = unSubscribeLinkType;
+        return this;
+    }
+    public String getUnSubscribeLinkType() {
+        return this.unSubscribeLinkType;
     }
 
 }
