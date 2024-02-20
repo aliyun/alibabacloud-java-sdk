@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>imageenhan20190930</artifactId>
-  <version>1.0.12</version>
+  <version>1.0.13</version>
   <packaging>jar</packaging>
   <name>imageenhan20190930</name>
   <description>Aliyun IMAGEENHAN SDK for Java
@@ -48,7 +48,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
-      <version>1.2.0</version>
+      <version>1.2.7</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -105,12 +105,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.8</version>
+      <version>0.3.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.2.0</version>
+      <version>0.2.1</version>
     </dependency>
   </dependencies>
   <build>
