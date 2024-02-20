@@ -155,6 +155,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TemplateName", request.templateName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.unSubscribeFilterLevel)) {
+            query.put("UnSubscribeFilterLevel", request.unSubscribeFilterLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.unSubscribeLinkType)) {
+            query.put("UnSubscribeLinkType", request.unSubscribeLinkType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1859,6 +1867,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.toAddress)) {
             query.put("ToAddress", request.toAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.unSubscribeFilterLevel)) {
+            query.put("UnSubscribeFilterLevel", request.unSubscribeFilterLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.unSubscribeLinkType)) {
+            query.put("UnSubscribeLinkType", request.unSubscribeLinkType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
