@@ -1,3 +1,8 @@
+2024-02-20 Version: 6.3.0
+- Support API AddGatewayAuth.
+- Support API GetGatewayAuthDetail.
+
+
 2024-01-31 Version: 6.2.7
 - Update API UpdateClusterSpecadd AutoPay param.
 add PubNetworkFlow param.
