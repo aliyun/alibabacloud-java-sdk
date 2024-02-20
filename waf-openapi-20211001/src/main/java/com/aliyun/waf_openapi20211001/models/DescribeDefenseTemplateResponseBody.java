@@ -44,6 +44,13 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         @NameInMap("DefenseScene")
         public String defenseScene;
 
+        /**
+         * <p>The sub-scenario in which the template is used. Valid values:</p>
+         * <br>
+         * <p>*   **web**: The template is a bot management template that is used for website protection.</p>
+         * <p>*   **app**: The template is a bot management template that is used for app protection.</p>
+         * <p>*   **basic**: The template is a bot management template that is used for basic protection.</p>
+         */
         @NameInMap("DefenseSubScene")
         public String defenseSubScene;
 
