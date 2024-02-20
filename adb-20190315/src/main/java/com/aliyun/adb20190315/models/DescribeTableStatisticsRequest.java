@@ -12,6 +12,9 @@ public class DescribeTableStatisticsRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("Keyword")
+    public String keyword;
+
     /**
      * <p>The order in which to sort the retrieved records by field. Specify this value in the JSON format. The value is an ordered array that uses the order of the input array and contains `Field` and `Type`. Example: `[{ "Field":"TableName", "Type":"Asc" }]`.</p>
      * <br>
@@ -68,6 +71,14 @@ public class DescribeTableStatisticsRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DescribeTableStatisticsRequest setKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    public String getKeyword() {
+        return this.keyword;
     }
 
     public DescribeTableStatisticsRequest setOrder(String order) {

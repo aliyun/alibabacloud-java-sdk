@@ -108,11 +108,17 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         @NameInMap("DataSize")
         public Long dataSize;
 
+        @NameInMap("HotDataSize")
+        public Long hotDataSize;
+
         /**
          * <p>The amount of data in indexes. Unit: byte.</p>
          */
         @NameInMap("IndexSize")
         public Long indexSize;
+
+        @NameInMap("OtherSize")
+        public Long otherSize;
 
         /**
          * <p>The number of partitions.</p>
@@ -138,11 +144,17 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         @NameInMap("SchemaName")
         public String schemaName;
 
+        @NameInMap("SpaceRatio")
+        public Double spaceRatio;
+
         /**
          * <p>The name of the table.</p>
          */
         @NameInMap("TableName")
         public String tableName;
+
+        @NameInMap("TotalSize")
+        public Long totalSize;
 
         public static DescribeTableStatisticsResponseBodyItemsTableStatisticRecords build(java.util.Map<String, ?> map) throws Exception {
             DescribeTableStatisticsResponseBodyItemsTableStatisticRecords self = new DescribeTableStatisticsResponseBodyItemsTableStatisticRecords();
@@ -165,12 +177,28 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             return this.dataSize;
         }
 
+        public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setHotDataSize(Long hotDataSize) {
+            this.hotDataSize = hotDataSize;
+            return this;
+        }
+        public Long getHotDataSize() {
+            return this.hotDataSize;
+        }
+
         public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setIndexSize(Long indexSize) {
             this.indexSize = indexSize;
             return this;
         }
         public Long getIndexSize() {
             return this.indexSize;
+        }
+
+        public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setOtherSize(Long otherSize) {
+            this.otherSize = otherSize;
+            return this;
+        }
+        public Long getOtherSize() {
+            return this.otherSize;
         }
 
         public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setPartitionCount(Long partitionCount) {
@@ -205,12 +233,28 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             return this.schemaName;
         }
 
+        public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setSpaceRatio(Double spaceRatio) {
+            this.spaceRatio = spaceRatio;
+            return this;
+        }
+        public Double getSpaceRatio() {
+            return this.spaceRatio;
+        }
+
         public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setTableName(String tableName) {
             this.tableName = tableName;
             return this;
         }
         public String getTableName() {
             return this.tableName;
+        }
+
+        public DescribeTableStatisticsResponseBodyItemsTableStatisticRecords setTotalSize(Long totalSize) {
+            this.totalSize = totalSize;
+            return this;
+        }
+        public Long getTotalSize() {
+            return this.totalSize;
         }
 
     }
