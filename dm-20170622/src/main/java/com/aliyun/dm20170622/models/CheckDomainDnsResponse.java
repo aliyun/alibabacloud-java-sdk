@@ -3,7 +3,7 @@ package com.aliyun.dm20170622.models;
 
 import com.aliyun.tea.*;
 
-public class GetTrackListResponse extends TeaModel {
+public class CheckDomainDnsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetTrackListResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetTrackListResponseBody body;
+    public CheckDomainDnsResponseBody body;
 
-    public static GetTrackListResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetTrackListResponse self = new GetTrackListResponse();
+    public static CheckDomainDnsResponse build(java.util.Map<String, ?> map) throws Exception {
+        CheckDomainDnsResponse self = new CheckDomainDnsResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetTrackListResponse setHeaders(java.util.Map<String, String> headers) {
+    public CheckDomainDnsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetTrackListResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetTrackListResponse setStatusCode(Integer statusCode) {
+    public CheckDomainDnsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetTrackListResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetTrackListResponse setBody(GetTrackListResponseBody body) {
+    public CheckDomainDnsResponse setBody(CheckDomainDnsResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetTrackListResponseBody getBody() {
+    public CheckDomainDnsResponseBody getBody() {
         return this.body;
     }
 
