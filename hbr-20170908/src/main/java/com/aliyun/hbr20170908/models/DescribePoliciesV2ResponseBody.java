@@ -181,6 +181,9 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
     }
 
     public static class DescribePoliciesV2ResponseBodyPoliciesRules extends TeaModel {
+        @NameInMap("ArchiveDays")
+        public Long archiveDays;
+
         /**
          * <p>This parameter is returned only if the value of the **RuleType** parameter is **BACKUP**. This parameter indicates the backup type. Only **COMPLETE** may be returned, which indicates full backup.</p>
          */
@@ -242,9 +245,20 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         @NameInMap("Schedule")
         public String schedule;
 
+        @NameInMap("VaultId")
+        public String vaultId;
+
         public static DescribePoliciesV2ResponseBodyPoliciesRules build(java.util.Map<String, ?> map) throws Exception {
             DescribePoliciesV2ResponseBodyPoliciesRules self = new DescribePoliciesV2ResponseBodyPoliciesRules();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePoliciesV2ResponseBodyPoliciesRules setArchiveDays(Long archiveDays) {
+            this.archiveDays = archiveDays;
+            return this;
+        }
+        public Long getArchiveDays() {
+            return this.archiveDays;
         }
 
         public DescribePoliciesV2ResponseBodyPoliciesRules setBackupType(String backupType) {
@@ -309,6 +323,14 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         }
         public String getSchedule() {
             return this.schedule;
+        }
+
+        public DescribePoliciesV2ResponseBodyPoliciesRules setVaultId(String vaultId) {
+            this.vaultId = vaultId;
+            return this;
+        }
+        public String getVaultId() {
+            return this.vaultId;
         }
 
     }

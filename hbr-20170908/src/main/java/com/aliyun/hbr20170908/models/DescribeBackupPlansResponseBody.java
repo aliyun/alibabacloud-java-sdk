@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPlansResponseBody extends TeaModel {
     /**
-     * <p>The returned backup plans that meet the specified conditions.</p>
+     * <p>The queried backup plans.</p>
      */
     @NameInMap("BackupPlans")
     public DescribeBackupPlansResponseBodyBackupPlans backupPlans;
@@ -198,7 +198,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the data source. Only **UDM_DISK** may be returned.</p>
+         * <p>The type of the data source. Valid value: **UDM_DISK**.</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
@@ -255,7 +255,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
 
     public static class DescribeBackupPlansResponseBodyBackupPlansBackupPlanRulesRule extends TeaModel {
         /**
-         * <p>The backup type. Only **COMPLETE** may be returned, which indicates full backup.</p>
+         * <p>The backup type. **COMPLETE** indicates full backup.</p>
          */
         @NameInMap("BackupType")
         public String backupType;
@@ -267,7 +267,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         public String destinationRegionId;
 
         /**
-         * <p>The retention period of the backup data in remote backup mode. Unit: day.</p>
+         * <p>The retention period of the backup data in remote backup mode. Unit: days.</p>
          */
         @NameInMap("DestinationRetention")
         public Long destinationRetention;
@@ -285,7 +285,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         public Boolean doCopy;
 
         /**
-         * <p>The retention period of the backup data. Unit: day.</p>
+         * <p>The retention period of the backup data. Unit: days.</p>
          */
         @NameInMap("Retention")
         public Long retention;
@@ -303,9 +303,9 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The backup policy. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified by `{startTime}` and the subsequent backup jobs at an interval that is specified by `{interval}`. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is complete. For example, `I|1631685600|P1D` indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
+         * <p>The backup policy. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified by `{startTime}` and the subsequent backup jobs at an interval that is specified by `{interval}`. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, `I|1631685600|P1D` indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
          * <br>
-         * <p>*   `startTime`: the time at which the system starts to run a backup job. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>*   `startTime`: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.</p>
          * <p>*   `interval`: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.</p>
          */
         @NameInMap("Schedule")
@@ -475,28 +475,31 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
 
     public static class DescribeBackupPlansResponseBodyBackupPlansBackupPlan extends TeaModel {
         /**
-         * <p>The ID of the data source group for backup.</p>
+         * <p>The ID of the data source group.</p>
          */
         @NameInMap("BackupSourceGroupId")
         public String backupSourceGroupId;
 
         /**
-         * <p>The backup type. Only **COMPLETE** may be returned, which indicates full backup.</p>
+         * <p>The backup type. **COMPLETE** indicates full backup.</p>
          */
         @NameInMap("BackupType")
         public String backupType;
 
         /**
-         * <p>This parameter is valid only if **SourceType** is set to **OSS**. This parameter indicates the name of the OSS bucket.</p>
+         * <p>This parameter is valid only when **SourceType** is set to **OSS**. This parameter indicates the name of the OSS bucket.</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>The configurations of the incremental file synchronization. This parameter is required only for data synchronization.</p>
+         */
         @NameInMap("ChangeListPath")
         public String changeListPath;
 
         /**
-         * <p>The ID of a backup client.</p>
+         * <p>The ID of the backup client.</p>
          */
         @NameInMap("ClientId")
         public String clientId;
@@ -508,13 +511,13 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>This parameter is valid only if **SourceType** is set to **NAS**. This parameter indicates the time when the file system was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>This parameter is valid only when **SourceType** is set to **NAS**. This parameter indicates the time when the file system was created. This value is a UNIX timestamp. Unit: seconds.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The time when the backup plan was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the backup plan was created. This value is a UNIX timestamp. Unit: seconds.</p>
          */
         @NameInMap("CreatedTime")
         public Long createdTime;
@@ -580,31 +583,31 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         public Boolean disabled;
 
         /**
-         * <p>This parameter is valid only if **SourceType** is set to **ECS_FILE**. This parameter indicates the paths to the files that are excluded from the backup job.</p>
+         * <p>This parameter is valid only when **SourceType** is set to **ECS_FILE**. This parameter indicates the paths to the files that are excluded from the backup job.</p>
          */
         @NameInMap("Exclude")
         public String exclude;
 
         /**
-         * <p>This parameter is valid only if **SourceType** is set to **NAS**. This parameter indicates the ID of the NAS file system.</p>
+         * <p>This parameter is valid only when **SourceType** is set to **NAS**. This parameter indicates the ID of the NAS file system.</p>
          */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
         /**
-         * <p>This parameter is valid only if **SourceType** is set to **ECS_FILE**. This parameter indicates the paths to the files that are backed up.</p>
+         * <p>This parameter is valid only when **SourceType** is set to **ECS_FILE**. This parameter indicates the paths to the files that are backed up.</p>
          */
         @NameInMap("Include")
         public String include;
 
         /**
-         * <p>The ID of the group to which the instance belongs.</p>
+         * <p>The ID of the instance group.</p>
          */
         @NameInMap("InstanceGroupId")
         public String instanceGroupId;
 
         /**
-         * <p>This parameter is valid only if **SourceType** is set to **ECS_FILE**. This parameter indicates the ID of the ECS instance.</p>
+         * <p>This parameter is valid only when **SourceType** is set to **ECS_FILE**. This parameter indicates the ID of the ECS instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -624,11 +627,14 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         @NameInMap("KeepLatestSnapshots")
         public Long keepLatestSnapshots;
 
+        /**
+         * <p>The latest execution job id of plan.</p>
+         */
         @NameInMap("LatestExecuteJobId")
         public String latestExecuteJobId;
 
         /**
-         * <p>This parameter is valid only if **SourceType** is set to **ECS_FILE**. This parameter indicates whether Windows Volume Shadow Copy Service (VSS) is used to define a source path.</p>
+         * <p>This parameter is valid only when **SourceType** is set to **ECS_FILE**. This parameter indicates whether VSS is used to define a source path.</p>
          */
         @NameInMap("Options")
         public String options;
@@ -640,7 +646,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         public DescribeBackupPlansResponseBodyBackupPlansBackupPlanOtsDetail otsDetail;
 
         /**
-         * <p>The source paths. This parameter is valid only if **SourceType** is set to **ECS_FILE**.</p>
+         * <p>The source paths. This parameter is valid only when **SourceType** is set to **ECS_FILE**.</p>
          */
         @NameInMap("Paths")
         public DescribeBackupPlansResponseBodyBackupPlansBackupPlanPaths paths;
@@ -658,7 +664,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         public String planName;
 
         /**
-         * <p>This parameter is valid only if **SourceType** is set to **OSS**. This parameter indicates the prefix of objects that are backed up.</p>
+         * <p>This parameter is valid only when **SourceType** is set to **OSS**. This parameter indicates the prefix of the objects that are backed up.</p>
          */
         @NameInMap("Prefix")
         public String prefix;
@@ -670,7 +676,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         public DescribeBackupPlansResponseBodyBackupPlansBackupPlanResources resources;
 
         /**
-         * <p>The retention period of the backup data. Unit: day.</p>
+         * <p>The retention period of the backup data. Unit: days.</p>
          */
         @NameInMap("Retention")
         public Long retention;
@@ -682,9 +688,9 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         public DescribeBackupPlansResponseBodyBackupPlansBackupPlanRules rules;
 
         /**
-         * <p>The backup policy. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified by `{startTime}` and the subsequent backup jobs at an interval that is specified by `{interval}`. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is complete. For example, `I|1631685600|P1D` indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
+         * <p>The backup policy. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified by `{startTime}` and the subsequent backup jobs at an interval that is specified by `{interval}`. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, `I|1631685600|P1D` indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
          * <br>
-         * <p>*   **startTime**: the time at which the system starts to run a backup job. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>*   **startTime**: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.</p>
          * <p>*   **interval**: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.</p>
          */
         @NameInMap("Schedule")
@@ -703,11 +709,11 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>This parameter is valid only if **SourceType** is set to **ECS_FILE**. This parameter indicates the throttling rules. Format: `{start}|{end}|{bandwidth}`. Multiple throttling rules are separated with vertical bars (`|`). A time range cannot overlap with another one.</p>
+         * <p>This parameter is valid only when **SourceType** is set to **ECS_FILE**. This parameter indicates the throttling rules. Format: `{start}|{end}|{bandwidth}`. Multiple throttling rules are separated with vertical bars (`|`). A time range cannot overlap with another one.</p>
          * <br>
          * <p>*   start: the start hour.</p>
          * <p>*   end: the end hour.</p>
-         * <p>*   bandwidth: the bandwidth. Unit: KB/s.</p>
+         * <p>*   bandwidth: the bandwidth. Unit: KB.</p>
          */
         @NameInMap("SpeedLimit")
         public String speedLimit;
@@ -719,7 +725,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         public DescribeBackupPlansResponseBodyBackupPlansBackupPlanTrialInfo trialInfo;
 
         /**
-         * <p>The time when the backup plan was updated. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the backup plan was updated. This value is a UNIX timestamp. Unit: seconds.</p>
          */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
