@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreateStorageAnalysisTaskResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request is successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +85,24 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
     }
 
     public static class CreateStorageAnalysisTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the task is created. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("CreateTaskSuccess")
         public Boolean createTaskSuccess;
 
+        /**
+         * <p>The error message returned.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The task ID.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

@@ -72,7 +72,7 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public Long maxLatancy;
 
     /**
-     * <p>The maximum number of entries per page.</p>
+     * <p>The maximum number of entries per page. Valid values: 5 to 100.</p>
      */
     @NameInMap("MaxRecordsPerPage")
     public Long maxRecordsPerPage;

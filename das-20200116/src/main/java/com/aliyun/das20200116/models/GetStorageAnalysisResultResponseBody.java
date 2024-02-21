@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetStorageAnalysisResultResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetStorageAnalysisResultResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request is successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +85,39 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
     }
 
     public static class GetStorageAnalysisResultResponseBodyDataStorageAnalysisResultNeedOptimizeItemList extends TeaModel {
+        /**
+         * <p>The data associated with items to be optimized.</p>
+         */
         @NameInMap("AssociatedData")
         public String associatedData;
 
+        /**
+         * <p>The database name.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>The optimization suggestion. Valid values:</p>
+         * <br>
+         * <p>*   **NEED_ANALYZE_TABLE**: You can execute the ANALYZE TABLE statement on the related table during off-peak hours.</p>
+         * <p>*   **NEED_OPTIMIZE_TABLE**: You can reclaim fragments during off-peak hours.</p>
+         */
         @NameInMap("OptimizeAdvice")
         public String optimizeAdvice;
 
+        /**
+         * <p>The item to be optimized. Valid values:</p>
+         * <br>
+         * <p>*   **NEED_ANALYZE_TABLE**: The statistical data in information_schema.tables differs greatly from the physical file size.</p>
+         * <p>*   **NEED_OPTIMIZE_TABLE**: The fragmentation degree of the table is high.</p>
+         */
         @NameInMap("OptimizeItemName")
         public String optimizeItemName;
 
+        /**
+         * <p>The table name.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
@@ -128,39 +169,89 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
     }
 
     public static class GetStorageAnalysisResultResponseBodyDataStorageAnalysisResultTableStats extends TeaModel {
+        /**
+         * <p>The average row length.</p>
+         * <br>
+         * <p>>  Unit: bytes.</p>
+         */
         @NameInMap("AvgRowLength")
         public Long avgRowLength;
 
+        /**
+         * <p>The size of storage occupied by fragments.</p>
+         * <br>
+         * <p>>  Unit: bytes.</p>
+         */
         @NameInMap("DataFree")
         public Long dataFree;
 
+        /**
+         * <p>The size of storage occupied by the table data.</p>
+         * <br>
+         * <p>>  Unit: bytes.</p>
+         */
         @NameInMap("DataSize")
         public Long dataSize;
 
+        /**
+         * <p>The database name.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>The type of the engine used by the table.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The size of storage occupied by indexes.</p>
+         * <br>
+         * <p>>  Unit: bytes.</p>
+         */
         @NameInMap("IndexSize")
         public Long indexSize;
 
+        /**
+         * <p>The size of the table storage.</p>
+         * <br>
+         * <p>>  Unit: byte. The value of the parameter is the sum of DataSize, IndexSize, and DataFree.</p>
+         */
         @NameInMap("PhyTotalSize")
         public Long phyTotalSize;
 
+        /**
+         * <p>The physical file size of the table.</p>
+         * <br>
+         * <p>>  Unit: byte. You may fail to obtain the physical file size because of the deployment mode of the database instance.</p>
+         */
         @NameInMap("PhysicalFileSize")
         public Long physicalFileSize;
 
+        /**
+         * <p>The table name.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <p>The number of rows in the table.</p>
+         */
         @NameInMap("TableRows")
         public Long tableRows;
 
+        /**
+         * <p>The table type.</p>
+         */
         @NameInMap("TableType")
         public String tableType;
 
+        /**
+         * <p>The size of storage occupied by table data and indexes.</p>
+         * <br>
+         * <p>>  Unit: byte. The value of the parameter is the sum of DataSize and IndexSize.</p>
+         */
         @NameInMap("TotalSize")
         public Long totalSize;
 
@@ -268,30 +359,68 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
     }
 
     public static class GetStorageAnalysisResultResponseBodyDataStorageAnalysisResult extends TeaModel {
+        /**
+         * <p>The reason why the analysis on the database and table fails.</p>
+         * <br>
+         * <p>*   **DB_OR_TABLE_NOT_EXIST**: The specified database or table does not exist.</p>
+         * <p>*   **DB_NOT_EXIST**: The specified database does not exist.</p>
+         */
         @NameInMap("AnalysisErrorType")
         public String analysisErrorType;
 
+        /**
+         * <p>Indicates whether the analysis on the database and table is successful.</p>
+         */
         @NameInMap("AnalysisSuccess")
         public Boolean analysisSuccess;
 
+        /**
+         * <p>The estimated daily storage usage increment in the last seven days.</p>
+         * <br>
+         * <p>>  Unit: bytes.</p>
+         */
         @NameInMap("DailyIncrement")
         public Long dailyIncrement;
 
+        /**
+         * <p>The estimated number of days before the remaining storage runs out.</p>
+         */
         @NameInMap("EstimateAvailableDays")
         public Long estimateAvailableDays;
 
+        /**
+         * <p>The list of items to be optimized.</p>
+         */
         @NameInMap("NeedOptimizeItemList")
         public java.util.List<GetStorageAnalysisResultResponseBodyDataStorageAnalysisResultNeedOptimizeItemList> needOptimizeItemList;
 
+        /**
+         * <p>The information about the table.</p>
+         */
         @NameInMap("TableStats")
         public java.util.List<GetStorageAnalysisResultResponseBodyDataStorageAnalysisResultTableStats> tableStats;
 
+        /**
+         * <p>The size of remaining storage.</p>
+         * <br>
+         * <p>>  Unit: bytes.</p>
+         */
         @NameInMap("TotalFreeStorageSize")
         public Long totalFreeStorageSize;
 
+        /**
+         * <p>The total size of instance storage.</p>
+         * <br>
+         * <p>>  Unit: bytes.</p>
+         */
         @NameInMap("TotalStorageSize")
         public Long totalStorageSize;
 
+        /**
+         * <p>The size of used storage.</p>
+         * <br>
+         * <p>>  Unit: bytes.</p>
+         */
         @NameInMap("TotalUsedStorageSize")
         public Long totalUsedStorageSize;
 
@@ -375,27 +504,61 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
     }
 
     public static class GetStorageAnalysisResultResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of databases that have been analyzed.</p>
+         */
         @NameInMap("AnalyzedDbCount")
         public Long analyzedDbCount;
 
+        /**
+         * <p>The details of storage analysis.</p>
+         */
         @NameInMap("StorageAnalysisResult")
         public GetStorageAnalysisResultResponseBodyDataStorageAnalysisResult storageAnalysisResult;
 
+        /**
+         * <p>Indicates whether the task is complete.</p>
+         */
         @NameInMap("TaskFinish")
         public Boolean taskFinish;
 
+        /**
+         * <p>The task ID.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The task progress.</p>
+         * <br>
+         * <p>>  Valid values are integers that range from 0 to 100.</p>
+         */
         @NameInMap("TaskProgress")
         public Long taskProgress;
 
+        /**
+         * <p>The status of the storage analysis task. Valid values:</p>
+         * <br>
+         * <p>*   **INIT**: The task is being initialized.</p>
+         * <p>*   **PENDING**: The task is being queued for execution.</p>
+         * <p>*   **RECEIVED**: The task is received for execution.</p>
+         * <p>*   **RUNNING**: The task is being executed.</p>
+         * <p>*   **RETRY**: The task is being retried.</p>
+         * <p>*   **SUCCESS**: The task succeeds.</p>
+         * <p>*   **FAILURE**: The task fails.</p>
+         */
         @NameInMap("TaskState")
         public String taskState;
 
+        /**
+         * <p>Indicates whether the task is successful.</p>
+         */
         @NameInMap("TaskSuccess")
         public Boolean taskSuccess;
 
+        /**
+         * <p>The number of databases that need to be analyzed in the storage analysis task.</p>
+         */
         @NameInMap("TotalDbCount")
         public Long totalDbCount;
 
