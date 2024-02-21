@@ -4,18 +4,33 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
+    /**
+     * <p>The list of historical event delivery tasks.</p>
+     */
     @NameInMap("DeliveryHistoryJobs")
     public java.util.List<ListDeliveryHistoryJobsResponseBodyDeliveryHistoryJobs> deliveryHistoryJobs;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of historical event delivery tasks returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,27 +80,56 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
     }
 
     public static class ListDeliveryHistoryJobsResponseBodyDeliveryHistoryJobs extends TeaModel {
+        /**
+         * <p>The time when the task was created.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The time when the task ended.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The home region of the trail.</p>
+         */
         @NameInMap("HomeRegion")
         public String homeRegion;
 
+        /**
+         * <p>The task ID.</p>
+         */
         @NameInMap("JobId")
         public Long jobId;
 
+        /**
+         * <p>The task status. Valid values:</p>
+         * <br>
+         * <p>*   0: The task is initializing.</p>
+         * <p>*   1: The task is delivering historical events.</p>
+         * <p>*   2: The task is complete.</p>
+         * <p>*   3: The task fails.</p>
+         */
         @NameInMap("JobStatus")
         public Integer jobStatus;
 
+        /**
+         * <p>The time when the task started.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The name of the trail.</p>
+         */
         @NameInMap("TrailName")
         public String trailName;
 
+        /**
+         * <p>The time when the task was updated.</p>
+         */
         @NameInMap("UpdatedTime")
         public String updatedTime;
 

@@ -4,9 +4,15 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class CreateDeliveryHistoryJobResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the historical event delivery task.</p>
+     */
     @NameInMap("JobId")
     public Integer jobId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

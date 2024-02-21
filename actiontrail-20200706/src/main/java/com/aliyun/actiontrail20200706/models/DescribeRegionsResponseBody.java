@@ -4,9 +4,15 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The regions returned.</p>
+     */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,23 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
-        // 地域名称
+        /**
+         * <p>The name of the region.</p>
+         * <br>
+         * <p>> If the AcceptLanguage parameter is set to zh-CN, the Chinese name of the region is returned. If the AcceptLanguage parameter is set to zh-US or left empty, the English name of the region is returned.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
-        // 地域链接地址
+        /**
+         * <p>The endpoint of ActionTrail in the region.</p>
+         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
-        // 地域ID
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

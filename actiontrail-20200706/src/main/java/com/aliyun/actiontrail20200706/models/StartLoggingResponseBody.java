@@ -4,6 +4,9 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class StartLoggingResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

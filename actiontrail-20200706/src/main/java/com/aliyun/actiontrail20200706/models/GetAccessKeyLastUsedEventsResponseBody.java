@@ -4,12 +4,21 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class GetAccessKeyLastUsedEventsResponseBody extends TeaModel {
+    /**
+     * <p>The list of returned events.</p>
+     */
     @NameInMap("Events")
     public java.util.List<GetAccessKeyLastUsedEventsResponseBodyEvents> events;
 
+    /**
+     * <p>The token that determines the start point of the query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +52,27 @@ public class GetAccessKeyLastUsedEventsResponseBody extends TeaModel {
     }
 
     public static class GetAccessKeyLastUsedEventsResponseBodyEvents extends TeaModel {
+        /**
+         * <p>An array that consists of the details about the event.</p>
+         */
         @NameInMap("Detail")
         public String detail;
 
+        /**
+         * <p>The name of the event.</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
+        /**
+         * <p>The event source.</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The timestamp when the event was generated.</p>
+         */
         @NameInMap("UsedTimestamp")
         public Long usedTimestamp;
 

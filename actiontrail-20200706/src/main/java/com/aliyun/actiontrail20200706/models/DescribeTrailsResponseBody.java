@@ -4,9 +4,15 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class DescribeTrailsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of returned trails.</p>
+     */
     @NameInMap("TrailList")
     public java.util.List<DescribeTrailsResponseBodyTrailList> trailList;
 
@@ -32,60 +38,136 @@ public class DescribeTrailsResponseBody extends TeaModel {
     }
 
     public static class DescribeTrailsResponseBodyTrailList extends TeaModel {
+        /**
+         * <p>The time when the trail was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The read/write type of the events that are delivered. Valid values:</p>
+         * <br>
+         * <p>*   Write: write events. This is the default value.</p>
+         * <p>*   Read: read events.</p>
+         * <p>*   All: read and write events.</p>
+         */
         @NameInMap("EventRW")
         public String eventRW;
 
+        /**
+         * <p>The home region of the trail.</p>
+         */
         @NameInMap("HomeRegion")
         public String homeRegion;
 
+        /**
+         * <p>Indicates whether the trail is a multi-account trail. Valid values:</p>
+         * <br>
+         * <p>*   false (default)</p>
+         * <p>*   true</p>
+         */
         @NameInMap("IsOrganizationTrail")
         public Boolean isOrganizationTrail;
 
+        @NameInMap("MaxComputeProjectArn")
+        public String maxComputeProjectArn;
+
+        @NameInMap("MaxComputeWriteRoleArn")
+        public String maxComputeWriteRoleArn;
+
+        /**
+         * <p>The name of the trail.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the resource directory.</p>
+         * <br>
+         * <p>>  This parameter is returned only when the trail is a multi-account trail.</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
+        /**
+         * <p>The region where the OSS bucket resides.</p>
+         */
         @NameInMap("OssBucketLocation")
         public String ossBucketLocation;
 
+        /**
+         * <p>The name of the OSS bucket to which events are delivered.</p>
+         */
         @NameInMap("OssBucketName")
         public String ossBucketName;
 
+        /**
+         * <p>The prefix of the files that are stored in the Object Storage Service (OSS) bucket.</p>
+         */
         @NameInMap("OssKeyPrefix")
         public String ossKeyPrefix;
 
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.</p>
+         */
         @NameInMap("OssWriteRoleArn")
         public String ossWriteRoleArn;
 
+        /**
+         * <p>The region where the trail resides.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The ARN of the Log Service project to which events are delivered.</p>
+         */
         @NameInMap("SlsProjectArn")
         public String slsProjectArn;
 
+        /**
+         * <p>The ARN of the RAM role that is assumed by ActionTrail to deliver events to the Log Service project.</p>
+         */
         @NameInMap("SlsWriteRoleArn")
         public String slsWriteRoleArn;
 
+        /**
+         * <p>The time when the trail was last enabled.</p>
+         */
         @NameInMap("StartLoggingTime")
         public String startLoggingTime;
 
+        /**
+         * <p>The status of the trail. Valid values:</p>
+         * <br>
+         * <p>*   Disable: disabled.</p>
+         * <p>*   Enable: enabled.</p>
+         * <p>*   Fresh: The trail is created but is not enabled.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The time when the trail was last disabled.</p>
+         */
         @NameInMap("StopLoggingTime")
         public String stopLoggingTime;
 
+        /**
+         * <p>The ARN of the trail.</p>
+         */
         @NameInMap("TrailArn")
         public String trailArn;
 
+        /**
+         * <p>The region of the trail.</p>
+         */
         @NameInMap("TrailRegion")
         public String trailRegion;
 
+        /**
+         * <p>The time when the configurations of the trail were last updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -124,6 +206,22 @@ public class DescribeTrailsResponseBody extends TeaModel {
         }
         public Boolean getIsOrganizationTrail() {
             return this.isOrganizationTrail;
+        }
+
+        public DescribeTrailsResponseBodyTrailList setMaxComputeProjectArn(String maxComputeProjectArn) {
+            this.maxComputeProjectArn = maxComputeProjectArn;
+            return this;
+        }
+        public String getMaxComputeProjectArn() {
+            return this.maxComputeProjectArn;
+        }
+
+        public DescribeTrailsResponseBodyTrailList setMaxComputeWriteRoleArn(String maxComputeWriteRoleArn) {
+            this.maxComputeWriteRoleArn = maxComputeWriteRoleArn;
+            return this;
+        }
+        public String getMaxComputeWriteRoleArn() {
+            return this.maxComputeWriteRoleArn;
         }
 
         public DescribeTrailsResponseBodyTrailList setName(String name) {

@@ -4,9 +4,21 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class ListDeliveryHistoryJobsRequest extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     * <br>
+     * <p>*   Pages start from page 1.</p>
+     * <p>*   Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * <br>
+     * <p>*   Valid values: 1 to 100.</p>
+     * <p>*   Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

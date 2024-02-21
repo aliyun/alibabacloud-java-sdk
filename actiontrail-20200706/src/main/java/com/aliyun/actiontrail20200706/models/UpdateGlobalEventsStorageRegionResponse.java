@@ -3,7 +3,7 @@ package com.aliyun.actiontrail20200706.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateTrailResponse extends TeaModel {
+public class UpdateGlobalEventsStorageRegionResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class UpdateTrailResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public UpdateTrailResponseBody body;
+    public UpdateGlobalEventsStorageRegionResponseBody body;
 
-    public static UpdateTrailResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateTrailResponse self = new UpdateTrailResponse();
+    public static UpdateGlobalEventsStorageRegionResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateGlobalEventsStorageRegionResponse self = new UpdateGlobalEventsStorageRegionResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateTrailResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateGlobalEventsStorageRegionResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class UpdateTrailResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateTrailResponse setStatusCode(Integer statusCode) {
+    public UpdateGlobalEventsStorageRegionResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class UpdateTrailResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateTrailResponse setBody(UpdateTrailResponseBody body) {
+    public UpdateGlobalEventsStorageRegionResponse setBody(UpdateGlobalEventsStorageRegionResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateTrailResponseBody getBody() {
+    public UpdateGlobalEventsStorageRegionResponseBody getBody() {
         return this.body;
     }
 

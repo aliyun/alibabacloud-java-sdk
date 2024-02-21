@@ -4,15 +4,32 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class GetAccessKeyLastUsedResourcesRequest extends TeaModel {
+    /**
+     * <p>The AccessKey ID.</p>
+     */
     @NameInMap("AccessKey")
     public String accessKey;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <br>
+     * <p>> The request parameters must be the same as those of the last request.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * <br>
+     * <p>*   Valid values: 0 to 100.</p>
+     * <p>*   Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The Alibaba Cloud service. For more information about the Alibaba Cloud services supported by ActionTrail, see [Supported Alibaba Cloud services](~~28829~~).</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 

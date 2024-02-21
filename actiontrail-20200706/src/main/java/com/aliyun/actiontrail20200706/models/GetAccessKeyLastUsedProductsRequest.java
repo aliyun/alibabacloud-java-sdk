@@ -4,6 +4,9 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class GetAccessKeyLastUsedProductsRequest extends TeaModel {
+    /**
+     * <p>The AccessKey ID.</p>
+     */
     @NameInMap("AccessKey")
     public String accessKey;
 
