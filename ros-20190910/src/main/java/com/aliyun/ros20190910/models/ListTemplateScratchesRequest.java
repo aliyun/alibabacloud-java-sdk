@@ -61,7 +61,7 @@ public class ListTemplateScratchesRequest extends TeaModel {
     public String templateScratchId;
 
     /**
-     * <p>The type of the scenario. Valid values:</p>
+     * <p>The type of the resource scenario. Valid values:</p>
      * <br>
      * <p>*   ArchitectureReplication: resource replication</p>
      * <p>*   ArchitectureDetection: resource detection</p>

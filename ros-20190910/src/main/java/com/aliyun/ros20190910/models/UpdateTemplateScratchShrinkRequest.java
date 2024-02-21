@@ -42,7 +42,7 @@ public class UpdateTemplateScratchShrinkRequest extends TeaModel {
     public String logicalIdStrategy;
 
     /**
-     * <p>The parameters that you want to configure for the scenario.</p>
+     * <p>The preference parameters of the resource scenario.</p>
      */
     @NameInMap("PreferenceParameters")
     public String preferenceParametersShrink;
@@ -70,7 +70,7 @@ public class UpdateTemplateScratchShrinkRequest extends TeaModel {
     /**
      * <p>The source resources.</p>
      * <br>
-     * <p>If you specify source resources as the value of SourceResources when TemplateScratchType is set to ArchitectureDetection, the system detects the schema data of all resources that are associated with the specified source resources. For example, if you specify the ID of a Classic Load Balancer (CLB) instance as the value of SourceResources, the system detects the schema data of resources, such as Elastic Compute Service (ECS) instances, vSwitches, and VPCs, that are associated with the CLB instance.</p>
+     * <p>If you specify SourceResources when TemplateScratchType is set to ArchitectureDetection, the system detects the architecture of all resources that are associated with the specified source resources. For example, if you set the value of SourceResources to an ID of a Classic Load Balancer (CLB) instance, the system detects the architecture of resources, such as Elastic Compute Service (ECS) instances, vSwitches, and virtual private clouds (VPCs), that are associated with the CLB instance.</p>
      * <br>
      * <p>If you set TemplateScratchType to ArchitectureDetection, you can specify up to 20 source resources for SourceResources. In other cases, you can specify up to 200 source resources.</p>
      */

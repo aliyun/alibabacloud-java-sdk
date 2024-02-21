@@ -192,6 +192,11 @@ public class DeleteStackInstancesRequest extends TeaModel {
     }
 
     public static class DeleteStackInstancesRequestDeploymentTargets extends TeaModel {
+        /**
+         * <p>The IDs of the execution accounts within which you want to deploy stacks in self-managed mode. You can specify up to 20 execution account IDs.</p>
+         * <br>
+         * <p>> To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information about a folder](~~111223~~).</p>
+         */
         @NameInMap("AccountIds")
         public java.util.List<String> accountIds;
 
