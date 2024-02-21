@@ -3,7 +3,7 @@ package com.aliyun.elasticsearch20170613.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteInstanceResponse extends TeaModel {
+public class GetRegionalInstanceConfigResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteInstanceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DeleteInstanceResponseBody body;
+    public GetRegionalInstanceConfigResponseBody body;
 
-    public static DeleteInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteInstanceResponse self = new DeleteInstanceResponse();
+    public static GetRegionalInstanceConfigResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetRegionalInstanceConfigResponse self = new GetRegionalInstanceConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetRegionalInstanceConfigResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteInstanceResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteInstanceResponse setStatusCode(Integer statusCode) {
+    public GetRegionalInstanceConfigResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteInstanceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteInstanceResponse setBody(DeleteInstanceResponseBody body) {
+    public GetRegionalInstanceConfigResponse setBody(GetRegionalInstanceConfigResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteInstanceResponseBody getBody() {
+    public GetRegionalInstanceConfigResponseBody getBody() {
         return this.body;
     }
 
