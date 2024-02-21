@@ -10,6 +10,12 @@ public class DescribeDtsJobsRequest extends TeaModel {
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
+    /**
+     * <p>The environment tag of the DTS instance. Valid values:</p>
+     * <br>
+     * <p>- **normal**</p>
+     * <p>- **online**</p>
+     */
     @NameInMap("DtsBisLabel")
     public String dtsBisLabel;
 

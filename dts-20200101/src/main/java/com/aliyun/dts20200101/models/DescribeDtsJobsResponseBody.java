@@ -839,7 +839,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether full data verification is performed. Valid values:</p>
          * <p>-  **true**: yes</p>
-         * <p>-   **false**: no</p>
+         * <p>-  **false**: no</p>
          */
         @NameInMap("FullDataCheck")
         public Boolean fullDataCheck;
@@ -847,7 +847,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether incremental data verification is performed. Valid values:</p>
          * <p>-  **true**: yes</p>
-         * <p>-   **false**: no</p>
+         * <p>-  **false**: no</p>
          */
         @NameInMap("IncDataCheck")
         public Boolean incDataCheck;
@@ -1654,15 +1654,32 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus extends TeaModel {
+        /**
+         * <p>The error message returned if the task failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The progress of the full data verification task. Unit: percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The progress of the full data verification task.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The state of the full data verification task. Valid values:</p>
+         * <br>
+         * <p>- **NotStarted**: The verification is not started. </p>
+         * <p>- **Checking**: The verification is in progress. </p>
+         * <p>- **Failed**: The verification failed. </p>
+         * <p>- **Finished**: The verification is complete.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -1706,15 +1723,32 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus extends TeaModel {
+        /**
+         * <p>The error message returned if the task failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The progress of the incremental data verification task. Unit: percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The progress of the incremental data verification task.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The state of the incremental data verification task. Valid values:</p>
+         * <br>
+         * <p>- **Catched**: The verification is delayed. </p>
+         * <p>- **NotStarted**: The verification is not started. </p>
+         * <p>- **Checking**: The verification is in progress. </p>
+         * <p>- **Failed**: The verification failed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -1775,9 +1809,19 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("DataSynchronization")
         public Boolean dataSynchronization;
 
+        /**
+         * <p>Indicates whether full data verification is performed. Valid values:</p>
+         * <p>-  **true**: yes</p>
+         * <p>-  **false**: no</p>
+         */
         @NameInMap("FullDataCheck")
         public Boolean fullDataCheck;
 
+        /**
+         * <p>Indicates whether incremental data verification is performed. Valid values:</p>
+         * <p>-  **true**: yes</p>
+         * <p>-  **false**: no</p>
+         */
         @NameInMap("IncDataCheck")
         public Boolean incDataCheck;
 
@@ -2366,9 +2410,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The state information about the full data verification task.</p>
+         */
         @NameInMap("FullDataCheckStatus")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus fullDataCheckStatus;
 
+        /**
+         * <p>The state information about the incremental data verification task.</p>
+         */
         @NameInMap("IncDataCheckStatus")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus incDataCheckStatus;
 
@@ -3053,6 +3103,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("DestinationEndpoint")
         public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint destinationEndpoint;
 
+        /**
+         * <p>The environment tag of the DTS instance. Valid values:</p>
+         * <br>
+         * <p>- **normal**</p>
+         * <p>- **online**</p>
+         */
         @NameInMap("DtsBisLabel")
         public String dtsBisLabel;
 

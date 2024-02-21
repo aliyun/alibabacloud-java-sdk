@@ -4669,6 +4669,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDedicatedClusterWithOptions(request, runtime);
     }
 
+    /**
+      * When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over **Next: Save Task Settings and Precheck** in the **Advanced Settings** step and click **Preview OpenAPI parameters** to view the parameters that are used to configure the task by calling an API operation.
+      *
+      * @param tmpReq ModifyDtsJobRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDtsJobResponse
+     */
     public ModifyDtsJobResponse modifyDtsJobWithOptions(ModifyDtsJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ModifyDtsJobShrinkRequest request = new ModifyDtsJobShrinkRequest();
@@ -4753,6 +4760,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDtsJobResponse());
     }
 
+    /**
+      * When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over **Next: Save Task Settings and Precheck** in the **Advanced Settings** step and click **Preview OpenAPI parameters** to view the parameters that are used to configure the task by calling an API operation.
+      *
+      * @param request ModifyDtsJobRequest
+      * @return ModifyDtsJobResponse
+     */
     public ModifyDtsJobResponse modifyDtsJob(ModifyDtsJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDtsJobWithOptions(request, runtime);
@@ -5788,6 +5801,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.startMigrationJobWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the [DescribeDtsJobDetail](~~208925~~) operation.
+      *
+      * @param request StartReverseWriterRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StartReverseWriterResponse
+     */
     public StartReverseWriterResponse startReverseWriterWithOptions(StartReverseWriterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5816,6 +5836,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartReverseWriterResponse());
     }
 
+    /**
+      * Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the [DescribeDtsJobDetail](~~208925~~) operation.
+      *
+      * @param request StartReverseWriterRequest
+      * @return StartReverseWriterResponse
+     */
     public StartReverseWriterResponse startReverseWriter(StartReverseWriterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startReverseWriterWithOptions(request, runtime);

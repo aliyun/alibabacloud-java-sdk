@@ -4,15 +4,30 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataCheckReportUrlRequest extends TeaModel {
+    /**
+     * <p>The data verification method. Valid values:</p>
+     * <br>
+     * <p>*   **1**: full data verification.</p>
+     * <p>*   **2**: incremental data verification.</p>
+     */
     @NameInMap("CheckType")
     public Integer checkType;
 
+    /**
+     * <p>The name of the verified source database.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The ID of the Data Transmission Service (DTS) task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.</p>
+     */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <p>The name of the table verified in the source database.</p>
+     */
     @NameInMap("TbName")
     public String tbName;
 
