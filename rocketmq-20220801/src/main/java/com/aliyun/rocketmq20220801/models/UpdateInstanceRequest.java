@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
     /**
-     * <p>The new name of the instance.</p>
+     * <p>The updated name of the instance.</p>
      */
     @NameInMap("instanceName")
     public String instanceName;
 
     /**
-     * <p>The new network information about the instance.</p>
+     * <p>The updated network information about the instance.</p>
      */
     @NameInMap("networkInfo")
     public UpdateInstanceRequestNetworkInfo networkInfo;
 
     /**
-     * <p>The extended configurations of the instance.</p>
+     * <p>Additional configurations of the instance.</p>
      */
     @NameInMap("productInfo")
     public UpdateInstanceRequestProductInfo productInfo;
 
     /**
-     * <p>The new remarks on the instance.</p>
+     * <p>The updated description of the instance.</p>
      */
     @NameInMap("remark")
     public String remark;
@@ -67,10 +67,10 @@ public class UpdateInstanceRequest extends TeaModel {
 
     public static class UpdateInstanceRequestNetworkInfoInternetInfo extends TeaModel {
         /**
-         * <p>The IP address whitelist that allows access to the instance over the Internet.</p>
+         * <p>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
          * <br>
-         * <p>*   If you do not configure an IP address whitelist, all IP addresses are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
-         * <p>*   If you configure an IP address whitelist, only IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
+         * <p>*   If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
+         * <p>*   If you configure an IP address whitelist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
          */
         @NameInMap("ipWhitelist")
         public java.util.List<String> ipWhitelist;
@@ -92,7 +92,7 @@ public class UpdateInstanceRequest extends TeaModel {
 
     public static class UpdateInstanceRequestNetworkInfo extends TeaModel {
         /**
-         * <p>The Internet information about the instance. This parameter takes effect only when the Internet access feature is enabled for the instance.</p>
+         * <p>The information about the Internet over which the instance is accessed. This parameter takes effect only if the Internet access feature is enabled for the instance.</p>
          */
         @NameInMap("internetInfo")
         public UpdateInstanceRequestNetworkInfoInternetInfo internetInfo;
@@ -114,16 +114,16 @@ public class UpdateInstanceRequest extends TeaModel {
 
     public static class UpdateInstanceRequestProductInfo extends TeaModel {
         /**
-         * <p>Specifies whether to enable burst scaling for the instance.</p>
+         * <p>Specifies whether to enable the elastic transactions per second (TPS) feature for the instance.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
          * <p>*   true</p>
          * <p>*   false</p>
          * <br>
-         * <p>After you enable burst scaling, the system allows the actual messaging transactions per second (TPS) of the ApsaraMQ for RocketMQ instance to exceed the upper limit of the basic computing specification. You are charged for the extra TPS. For more information, see [Computing fee](~~427237~~).</p>
+         * <p>After you enable the elastic TPS feature for an ApsaraMQ for RocketMQ instance, you can use a specific number of TPS that exceeds the specification limit. You are charged for using the elastic TPS feature. For more information, see [Computing fees](~~427237~~).</p>
          * <br>
-         * <p>> Only specific types of instances support burst scaling. For more information, see [Instance specifications](~~444715~~).</p>
+         * <p>>  The elastic TPS feature is supported only by specific instance editions. For more information, see [Instance editions](~~444715~~).</p>
          */
         @NameInMap("autoScaling")
         public Boolean autoScaling;
@@ -131,21 +131,29 @@ public class UpdateInstanceRequest extends TeaModel {
         /**
          * <p>The retention period of messages. Unit: hours.</p>
          * <br>
-         * <p>For more information about the valid values, see the "Limits on resource quotas" section of the [Usage limits](~~440347~~) topic.</p>
+         * <p>For information about the valid values of this parameter, see the "Limits on resource quotas" section of the [Limits](~~440347~~) topic.</p>
          * <br>
-         * <p>The storage of ApsaraMQ for RocketMQ messages is in serverless scaling mode. You are charged based on the actual used storage. You can adjust the storage retention period to reduce storage usage and costs. For more information, see [Storage fees](~~427238~~).</p>
+         * <p>ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see [Storage fees](~~427238~~).</p>
          */
         @NameInMap("messageRetentionTime")
         public Integer messageRetentionTime;
 
         /**
-         * <p>The ratio of the number of messages that you can send to the number of messages that you can receive in the instance.</p>
+         * <p>The ratio of the number of messages that you can send to the number of messages that you can receive on the instance.</p>
          * <br>
          * <p>Value values: 0.25 to 1.</p>
          */
         @NameInMap("sendReceiveRatio")
         public Float sendReceiveRatio;
 
+        /**
+         * <p>Specifies whether to enable the message trace feature.</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         * <br>
+         * <p>This parameter is not in use. By default, the message trace feature is enabled for ApsaraMQ for RocketMQ instances, regardless of whether this parameter is configured.</p>
+         */
         @NameInMap("traceOn")
         public Boolean traceOn;
 

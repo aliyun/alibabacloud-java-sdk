@@ -569,6 +569,9 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataNetworkInfoVpcInfo extends TeaModel {
+        /**
+         * <p>The ID of the security group with which the instance is associated.</p>
+         */
         @NameInMap("securityGroupIds")
         public String securityGroupIds;
 
@@ -716,6 +719,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("supportAutoScaling")
         public Boolean supportAutoScaling;
 
+        /**
+         * <p>Whether to enable tracking capability. Non-serverless instances are enabled by default, and serverless instances are optional for users.</p>
+         */
         @NameInMap("traceOn")
         public Boolean traceOn;
 
