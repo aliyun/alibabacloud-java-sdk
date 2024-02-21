@@ -22,7 +22,11 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The default bandwidth of the endpoint connection. Valid values: **100** to **10240**. Unit: Mbit/s.</p>
+     * <p>The default maximum bandwidth of the endpoint connection. Unit: Mbit/s. Default value: **3072**.</p>
+     * <br>
+     * <p>Valid values: **100** to **10240**.</p>
+     * <br>
+     * <p>>  You can specify this parameter only if you specify Classic Load Balancer (CLB) instances or Application Load Balancer (ALB) instances as service resources.</p>
      */
     @NameInMap("ConnectBandwidth")
     public Integer connectBandwidth;
@@ -66,10 +70,10 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
     public Boolean serviceSupportIPv6;
 
     /**
-     * <p>Specifies whether to enable zone affinity. Valid values:</p>
+     * <p>Specifies whether to first resolve the domain name of the nearest endpoint that is associated with the endpoint service. Valid values:</p>
      * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <p>*   **true** (default)</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("ZoneAffinityEnabled")
     public Boolean zoneAffinityEnabled;

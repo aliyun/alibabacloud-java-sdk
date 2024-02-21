@@ -33,7 +33,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
      * <p>The service state of the endpoint. Valid values:</p>
      * <br>
      * <p>*   **Normal**: The endpoint runs as expected.</p>
-     * <p>*   **FinacialLocked**: The endpoint is locked due to overdue payments.</p>
+     * <p>*   **FinancialLocked**: The endpoint is locked due to overdue payments.</p>
      */
     @NameInMap("EndpointBusinessStatus")
     public String endpointBusinessStatus;
@@ -136,10 +136,10 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>Indicates whether zone affinity is enabled. Valid values:</p>
+     * <p>Indicates whether the domain name of the nearest endpoint that is associated with the endpoint service is resolved first. Valid values:</p>
      * <br>
-     * <p>*   **true**: Zone affinity is enabled.</p>
-     * <p>*   **false**: Zone affinity is disabled.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("ZoneAffinityEnabled")
     public Boolean zoneAffinityEnabled;

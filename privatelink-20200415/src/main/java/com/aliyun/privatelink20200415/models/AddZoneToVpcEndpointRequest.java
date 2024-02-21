@@ -48,7 +48,7 @@ public class AddZoneToVpcEndpointRequest extends TeaModel {
     public String zoneId;
 
     /**
-     * <p>The IP address of the endpoint ENI in the zone that you want to add.</p>
+     * <p>The IP address of the endpoint elastic network interface (ENI) in the zone that you want to add.</p>
      */
     @NameInMap("ip")
     public String ip;

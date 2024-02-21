@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateVpcEndpointConnectionAttributeRequest extends TeaModel {
     /**
-     * <p>The bandwidth of the endpoint connection that you want to modify. Unit: Mbit/s.</p>
+     * <p>The bandwidth of the endpoint connection that you want to modify. Unit: Mbit/s. Valid values: **3072** to **10240**.</p>
+     * <br>
+     * <p>>  The bandwidth of an endpoint connection is in the range of **100** to **10,240** Mbit/s. The default bandwidth is **3,072** Mbit/s. When the endpoint is connected to the endpoint service, the default bandwidth is the minimum bandwidth. In this case, the connection bandwidth range is **3,072** to **10,240** Mbit/s. If Classic Load Balancer (CLB) instances or Application Load Balancer (ALB) instances are specified as service resources, you can modify the endpoint connection bandwidth based on your business requirements. This parameter is invalid if Network Load Balancer (NLB) instances are specified as service resources.</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;

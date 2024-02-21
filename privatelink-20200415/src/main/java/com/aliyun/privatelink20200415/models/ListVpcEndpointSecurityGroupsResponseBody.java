@@ -26,7 +26,7 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The security groups that are associated with the endpoint.</p>
+     * <p>The information about the security groups.</p>
      */
     @NameInMap("SecurityGroups")
     public java.util.List<ListVpcEndpointSecurityGroupsResponseBodySecurityGroups> securityGroups;

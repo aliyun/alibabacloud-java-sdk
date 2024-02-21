@@ -38,8 +38,8 @@ public class UpdateVpcEndpointZoneConnectionResourceAttributeRequest extends Tea
     /**
      * <p>The resource allocation mode. You can change the resource allocation mode only if the endpoint connection is in the **Disconnected** state. Valid values:</p>
      * <br>
-     * <p>*   **Auto**: automatically and randomly allocates the service resource. In this mode, the service resource is deleted.</p>
-     * <p>*   **Mannual**: manually allocates the service resource. If you set the value to Mannual, you must also specify the **ResourceId** and **ResourceType** parameters.</p>
+     * <p>*   **Auto**: automatically and randomly allocates service resources. In this mode, the specified service resource is deleted.</p>
+     * <p>*   **Manual**: manually allocates service resources. If you set the value to Manual, you must also specify the **ResourceId** and **ResourceType** parameters.</p>
      */
     @NameInMap("ResourceAllocateMode")
     public String resourceAllocateMode;
@@ -55,10 +55,10 @@ public class UpdateVpcEndpointZoneConnectionResourceAttributeRequest extends Tea
     /**
      * <p>The migration mode of the service resource. Valid values:</p>
      * <br>
-     * <p>*   **Graceful**: smoothly migrates the service resource in the zone.</p>
-     * <p>*   **Force**: forcefully migrates the service resource in the zone.</p>
+     * <p>*   **Graceful**: smooth migration. Service resources in the zone are smoothly migrated.</p>
+     * <p>*   **Force**: forced migration. Service resources in the zone are forcefully migrated.</p>
      * <br>
-     * <p>> If you want to migrate the service resource, you need to set this parameter. This parameter is available only if the endpoint connection is in the **Connected** state. If you set this parameter, you must also specify the **ResourceId** and **ResourceType** parameters.</p>
+     * <p>>  You need to specify this parameter only if you want to migrate service resources and the endpoint connection is in the **Connected** state. If you specify this parameter, you must also specify the **ResourceId** and **ResourceType** parameters.</p>
      */
     @NameInMap("ResourceReplaceMode")
     public String resourceReplaceMode;
