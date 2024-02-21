@@ -4,9 +4,17 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class ChangeCdnDomainToDcdnRequest extends TeaModel {
+    /**
+     * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The operation that you want to perform on the check items. Valid values:</p>
+     * <br>
+     * <p>**preCheck**: return the verification result.</p>
+     */
     @NameInMap("Operation")
     public String operation;
 
