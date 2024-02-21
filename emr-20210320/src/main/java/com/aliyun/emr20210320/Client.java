@@ -2999,7 +2999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * 设置弹性伸缩规则。
+      * You can call this operation to configure auto scaling policies.
       *
       * @param request PutAutoScalingPolicyRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3046,7 +3046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * 设置弹性伸缩规则。
+      * You can call this operation to configure auto scaling policies.
       *
       * @param request PutAutoScalingPolicyRequest
       * @return PutAutoScalingPolicyResponse

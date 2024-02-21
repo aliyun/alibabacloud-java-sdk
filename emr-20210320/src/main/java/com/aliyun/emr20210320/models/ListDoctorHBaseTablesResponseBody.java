@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("Data")
     public java.util.List<Data> data;
 
     /**
-     * <p>本次请求所返回的最大记录条数。</p>
+     * <p>The maximum number of entries returned.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * <p>The page number of the next page returned.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>本次请求条件下的数据总量。</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,7 +81,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     public static class Analysis extends TeaModel {
         /**
-         * <p>The partitions that have read hotspot issues.</p>
+         * <p>The regions that have read hotspot issues.</p>
          */
         @NameInMap("ReadRequestHotspotRegionList")
         public java.util.List<String> readRequestHotspotRegionList;
@@ -93,7 +93,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         public String readRequestUnbalanceSuggestion;
 
         /**
-         * <p>The partitions that have read/write hotspot issues.</p>
+         * <p>The regions that have read/write hotspot issues.</p>
          */
         @NameInMap("RequestHotspotRegionList")
         public java.util.List<String> requestHotspotRegionList;
@@ -111,7 +111,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         public Integer tableScore;
 
         /**
-         * <p>The partitions that have write hotspot issues.</p>
+         * <p>The regions that have write hotspot issues.</p>
          */
         @NameInMap("WriteRequestHotspotRegionList")
         public java.util.List<String> writeRequestHotspotRegionList;
@@ -1729,7 +1729,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         public ColdAccessDay coldAccessDay;
 
         /**
-         * <p>The number of consecutive days without access to data before the data is considered as cold data.</p>
+         * <p>The number of consecutive days without access to data before the data is considered as very cold data.</p>
          */
         @NameInMap("ColdConfigDay")
         public ColdConfigDay coldConfigDay;
@@ -1765,7 +1765,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         public DailyWriteRequestDayGrowthRatio dailyWriteRequestDayGrowthRatio;
 
         /**
-         * <p>The number of consecutive days without access to data before the data is considered as very cold data.</p>
+         * <p>The number of consecutive days without access to data before the data was considered as very cold data.</p>
          */
         @NameInMap("FreezeConfigDay")
         public FreezeConfigDay freezeConfigDay;
@@ -1801,13 +1801,13 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         public RegionBalance regionBalance;
 
         /**
-         * <p>The number of partitions that are composed of the table.</p>
+         * <p>The number of regions that host the table.</p>
          */
         @NameInMap("RegionCount")
         public RegionCount regionCount;
 
         /**
-         * <p>The daily increment ratio of the number of partitions.</p>
+         * <p>The daily increment ratio of the number of regions.</p>
          */
         @NameInMap("RegionCountDayGrowthRatio")
         public RegionCountDayGrowthRatio regionCountDayGrowthRatio;
@@ -1849,7 +1849,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         public TableSizeDayGrowthRatio tableSizeDayGrowthRatio;
 
         /**
-         * <p>The number of consecutive days without access to data before the data is considered as warm data.</p>
+         * <p>The number of consecutive days without access to data before the data is considered as cold data.</p>
          */
         @NameInMap("WarmConfigDay")
         public WarmConfigDay warmConfigDay;

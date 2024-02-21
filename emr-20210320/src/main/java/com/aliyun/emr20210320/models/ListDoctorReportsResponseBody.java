@@ -11,25 +11,25 @@ public class ListDoctorReportsResponseBody extends TeaModel {
     public java.util.List<Data> data;
 
     /**
-     * <p>本次请求所返回的最大记录条数。</p>
+     * <p>The maximum number of entries returned.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * <p>A pagination token.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>本次请求条件下的数据总量。</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -131,7 +131,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
 
     public static class Data extends TeaModel {
         /**
-         * <p>The service types.</p>
+         * <p>The component types.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>

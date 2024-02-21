@@ -10,6 +10,9 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the scaling activity.</p>
+     */
     @NameInMap("ScalingActivity")
     public ScalingActivity scalingActivity;
 
@@ -42,7 +45,7 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
         public String activityId;
 
         /**
-         * <p>The instances corresponding to this scaling activity.</p>
+         * <p>The instances that correspond to the scaling activity.</p>
          */
         @NameInMap("ActivityResults")
         public java.util.List<ScalingActivityResult> activityResults;

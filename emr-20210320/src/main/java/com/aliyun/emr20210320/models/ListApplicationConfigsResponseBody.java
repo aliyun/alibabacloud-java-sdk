@@ -29,7 +29,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of pages.</p>
+     * <p>The total number of pages returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -99,7 +99,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
         public String configFileName;
 
         /**
-         * <p>The name of the configuration item.</p>
+         * <p>The key of the configuration item.</p>
          */
         @NameInMap("ConfigItemKey")
         public String configItemKey;
@@ -111,7 +111,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
         public String configItemValue;
 
         /**
-         * <p>The time when the application was created.</p>
+         * <p>The creation time.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -141,7 +141,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
         public String modifier;
 
         /**
-         * <p>The ID of the node group.</p>
+         * <p>The node group ID.</p>
          */
         @NameInMap("NodeGroupId")
         public String nodeGroupId;
@@ -153,7 +153,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The time when the application was updated.</p>
+         * <p>The update time.</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

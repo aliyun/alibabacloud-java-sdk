@@ -4,11 +4,14 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class GetClusterResponseBody extends TeaModel {
+    /**
+     * <p>The details of the master instance.</p>
+     */
     @NameInMap("Cluster")
     public Cluster cluster;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

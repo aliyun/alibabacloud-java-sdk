@@ -5,116 +5,117 @@ import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
     /**
-     * <p>应用配置。数组元素个数N的取值范围：1~1000。</p>
+     * <p>The configurations of the applications. Valid values of N: 1 to 1000.</p>
      */
     @NameInMap("ApplicationConfigs")
     public java.util.List<ApplicationConfig> applicationConfigs;
 
     /**
-     * <p>应用列表。数组元素个数N的取值范围：1~100。</p>
+     * <p>The applications that you want to add to the cluster. Valid values of N: 1 to 100.</p>
      */
     @NameInMap("Applications")
     public java.util.List<Application> applications;
 
     /**
-     * <p>引导脚本。数组元素个数N的取值范围：1~10。</p>
+     * <p>The array of scripts for the bootstrap actions. Valid values of N: 1 to 10.</p>
      */
     @NameInMap("BootstrapScripts")
     public java.util.List<Script> bootstrapScripts;
 
     /**
-     * <p>幂等客户端TOKEN。同一个ClientToken多次调用的返回结果一致，同一个ClientToken最多只创建一个集群。</p>
+     * <p>The idempotent client token. If you call the same ClientToken multiple times, the returned results are the same. Only one cluster can be created with the same ClientToken.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>集群名称。长度为1~128个字符，必须以大小字母或中文开头，不能以http://和https://开头。可以包含中文、英文、数字、半角冒号（:）、下划线（_）、半角句号（.）或者短划线（-）</p>
+     * <p>The name of the cluster. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
-     * <p>创建的EMR集群类型。取值范围：</p>
-     * <p>- DATALAKE：新版数据湖。</p>
-     * <p>- OLAP：数据分析。</p>
-     * <p>- DATAFLOW：实时数据流。</p>
-     * <p>- DATASERVING：数据服务。</p>
-     * <p>- CUSTOM：自定义集群。</p>
-     * <p>- HADOOP：旧版数据湖（不推荐使用，建议使用新版数据湖）。</p>
+     * <p>The type of the cluster. Valid values:</p>
+     * <br>
+     * <p>*   DATALAKE: data lake</p>
+     * <p>*   OLAP: online analytical processing (OLAP)</p>
+     * <p>*   DATAFLOW: Dataflow</p>
+     * <p>*   DATASERVING: DataServing</p>
+     * <p>*   CUSTOM: a custom hybrid cluster.</p>
+     * <p>*   HADOOP: the old data lake. We recommend that you use the new data lake.</p>
+     * <br>
+     * <p>If you create an EMR cluster for the first time after 17:00 (UTC +8) on December 19, 2022, you cannot select the HADOOP, DATA_SCIENCE, PRESTO, or ZOOKEEPER cluster type.</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
-     * <p>集群中的应用部署模式。取值范围：</p>
-     * <p>- NORMAL：非高可用部署。集群1个MASTER节点。</p>
-     * <p>- HA：高可用部署。高可用部署要求至少3个MASTER节点。</p>
+     * <p>The deployment mode of applications in the cluster. Valid values:</p>
      * <br>
-     * <p>默认值：NORMAL。</p>
+     * <p>*   NORMAL: regular mode. A master node is deployed in the cluster.</p>
+     * <p>*   HA: high availability mode. At least three master nodes are deployed in the cluster.</p>
      */
     @NameInMap("DeployMode")
     public String deployMode;
 
     /**
-     * <p>节点属性。集群中的ECS节点基础属性。</p>
+     * <p>The attributes of all Elastic Compute Service (ECS) nodes in the cluster. The basic attributes of all ECS nodes in the cluster.</p>
      */
     @NameInMap("NodeAttributes")
     public NodeAttributes nodeAttributes;
 
     /**
-     * <p>节点组。数组元素个数N的取值范围：1~100。</p>
-     * <p><p></p>
+     * <p>The array of configurations of the node groups. Valid values of N: 1 to 100.</p>
      */
     @NameInMap("NodeGroups")
     public java.util.List<NodeGroupConfig> nodeGroups;
 
     /**
-     * <p>集群的付费类型。取值范围：</p>
-     * <p>- PayAsYouGo：后付费。</p>
-     * <p>- Subscription：预付费。</p>
+     * <p>The billing cycle of the instance. Valid values:</p>
      * <br>
-     * <p>默认值：PayAsYouGo。</p>
+     * <p>*   PayAsYouGo: pay-as-you-go</p>
+     * <p>*   Subscription: subscription</p>
+     * <br>
+     * <p>Default value: PayAsYouGo.</p>
      */
     @NameInMap("PaymentType")
     public String paymentType;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The ID of the region in which you want to create the instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>EMR发行版。</p>
+     * <p>The version of EMR. You can view the EMR release version on the EMR cluster purchase page.</p>
      */
     @NameInMap("ReleaseVersion")
     public String releaseVersion;
 
     /**
-     * <p>集群所在的企业资源组ID。</p>
+     * <p>The ID of the resource group to which to assign the ENI.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>Kerberos安全模式。取值范围：</p>
-     * <p>- NORMAL：普通模式，不开启Kerberos模式。</p>
-     * <p>- KERBEROS：开启Kerberos模式。</p>
+     * <p>The security mode of the cluster. Valid values:</p>
      * <br>
-     * <p>默认值：NORMAL</p>
+     * <p>*   NORMAL: regular mode. Kerberos is not enabled.</p>
+     * <p>*   KERBEROS: Kerberos mode. Kerberos is enabled.</p>
      */
     @NameInMap("SecurityMode")
     public String securityMode;
 
     /**
-     * <p>预付费配置。当PaymentType取值Subscription时该参数生效。</p>
+     * <p>The subscription configurations. This parameter is required when the PaymentType parameter is set to Subscription.</p>
      */
     @NameInMap("SubscriptionConfig")
     public SubscriptionConfig subscriptionConfig;
 
     /**
-     * <p>标签。数组元数个数N的取值范围：0~20。</p>
+     * <p>The tag that you want to add to the cloud desktop. Valid values of N: 0 to 20.</p>
      */
     @NameInMap("Tags")
     public java.util.List<Tag> tags;

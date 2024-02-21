@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunApplicationActionResponseBody extends TeaModel {
     /**
-     * <p>异常节点列表。</p>
+     * <p>The abnormal nodes.</p>
      */
     @NameInMap("AbnInstances")
     public java.util.List<AbnInstances> abnInstances;

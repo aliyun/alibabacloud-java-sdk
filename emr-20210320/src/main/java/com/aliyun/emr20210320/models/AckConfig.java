@@ -32,7 +32,7 @@ public class AckConfig extends TeaModel {
      * <p>Pod的内存限制值。</p>
      */
     @NameInMap("LimitMemory")
-    public String limitMemory;
+    public Float limitMemory;
 
     @NameInMap("MountHostCgroup")
     public Boolean mountHostCgroup;
@@ -59,7 +59,7 @@ public class AckConfig extends TeaModel {
      * <p>Pod的内存请求值。</p>
      */
     @NameInMap("RequestMemory")
-    public String requestMemory;
+    public Float requestMemory;
 
     /**
      * <p>ack的节点污点容忍</p>
@@ -120,11 +120,11 @@ public class AckConfig extends TeaModel {
         return this.limitCpu;
     }
 
-    public AckConfig setLimitMemory(String limitMemory) {
+    public AckConfig setLimitMemory(Float limitMemory) {
         this.limitMemory = limitMemory;
         return this;
     }
-    public String getLimitMemory() {
+    public Float getLimitMemory() {
         return this.limitMemory;
     }
 
@@ -160,11 +160,11 @@ public class AckConfig extends TeaModel {
         return this.requestCpu;
     }
 
-    public AckConfig setRequestMemory(String requestMemory) {
+    public AckConfig setRequestMemory(Float requestMemory) {
         this.requestMemory = requestMemory;
         return this;
     }
-    public String getRequestMemory() {
+    public Float getRequestMemory() {
         return this.requestMemory;
     }
 
