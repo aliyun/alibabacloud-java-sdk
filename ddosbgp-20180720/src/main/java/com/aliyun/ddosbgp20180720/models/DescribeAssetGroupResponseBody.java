@@ -4,12 +4,21 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeAssetGroupResponseBody extends TeaModel {
+    /**
+     * <p>The information about the asset.</p>
+     */
     @NameInMap("AssetGroupList")
     public java.util.List<DescribeAssetGroupResponseBodyAssetGroupList> assetGroupList;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -43,12 +52,21 @@ public class DescribeAssetGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeAssetGroupResponseBodyAssetGroupList extends TeaModel {
+        /**
+         * <p>The ID of the asset.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The region to which the asset belongs.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The type of the asset.</p>
+         */
         @NameInMap("Type")
         public String type;
 

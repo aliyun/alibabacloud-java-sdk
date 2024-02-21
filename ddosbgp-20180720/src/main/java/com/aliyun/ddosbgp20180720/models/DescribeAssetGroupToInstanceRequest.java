@@ -4,24 +4,52 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeAssetGroupToInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance to query.</p>
+     * <br>
+     * <p>>  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The UID of the member to which the asset belongs.</p>
+     */
     @NameInMap("MemberUid")
     public String memberUid;
 
+    /**
+     * <p>The ID of the asset. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The region ID of the asset.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The ID of the region in which the instance resides.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The source IP address of the request. The system specifies this parameter.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>The type of the asset. Valid values:</p>
+     * <br>
+     * <p>*   **waf**: WAF instance</p>
+     * <p>*   **ga**: Global Accelerator (GA) instance</p>
+     */
     @NameInMap("Type")
     public String type;
 
