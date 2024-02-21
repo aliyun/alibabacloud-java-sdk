@@ -29,7 +29,12 @@ public class DescribeProcessListRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The column by which the query results are sorted.</p>
+     * <p>Sorting by the specified column name. Valid values:</p>
+     * <br>
+     * <p>*   elapsed: the cumulative execution time</p>
+     * <p>*   written_rows: the number of written rows</p>
+     * <p>*   read_rows: the number of read rows</p>
+     * <p>*   memory_usage: the memory usage</p>
      */
     @NameInMap("Order")
     public String order;

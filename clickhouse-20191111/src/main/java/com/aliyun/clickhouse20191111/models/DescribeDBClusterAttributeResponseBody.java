@@ -454,10 +454,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public Integer supportBackup;
 
         /**
-         * <p>Indicates whether the cluster supports an HTTP port. Valid values:</p>
+         * <p>Indicates whether HTTPS ports are supported. Valid values:</p>
          * <br>
-         * <p>*   **true**: An HTTP port is supported.</p>
-         * <p>*   **false**: An HTTP port is not supported.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("SupportHttpsPort")
         public Boolean supportHttpsPort;
@@ -516,6 +516,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("ZoneId")
         public String zoneId;
 
+        /**
+         * <p>The list of vSwitch IDs in multi-zone clusters.</p>
+         */
         @NameInMap("ZoneIdVswitchMap")
         public java.util.Map<String, ?> zoneIdVswitchMap;
 

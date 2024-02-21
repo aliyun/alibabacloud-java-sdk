@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceRequest extends TeaModel {
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
     /**
      * <p>The ID of the backup set. You can call the [DescribeBackups](~~360339~~) operation to query the backup sets.</p>
      * <br>
@@ -210,6 +213,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     public static CreateDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBInstanceRequest self = new CreateDBInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDBInstanceRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     public CreateDBInstanceRequest setBackupSetID(String backupSetID) {
