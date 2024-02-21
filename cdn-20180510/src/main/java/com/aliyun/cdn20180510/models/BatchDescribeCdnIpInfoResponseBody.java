@@ -60,7 +60,7 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
         public String country;
 
         /**
-         * <p>The IP address of the client.</p>
+         * <p>The IP address.</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;

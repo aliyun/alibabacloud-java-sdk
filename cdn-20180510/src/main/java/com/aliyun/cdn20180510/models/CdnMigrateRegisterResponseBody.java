@@ -4,12 +4,25 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class CdnMigrateRegisterResponseBody extends TeaModel {
+    /**
+     * <p>The accelerated domain name. You can specify only one domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The registration status. Valid values:</p>
+     * <br>
+     * <p>*   **running**</p>
+     * <p>*   **succeed**</p>
+     * <p>*   **failed**</p>
+     */
     @NameInMap("Status")
     public String status;
 

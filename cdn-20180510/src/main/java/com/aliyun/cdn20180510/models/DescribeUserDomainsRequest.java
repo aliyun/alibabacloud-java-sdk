@@ -89,13 +89,13 @@ public class DescribeUserDomainsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: **1** to **100000**.</p>
+     * <p>The page number. Valid values: **1** to **100000**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1 to 50**. Default value: **20**. Maximum value: **50**.</p>
+     * <p>The number of entries to return on each page. Valid values: **1 to 500**. Default value: **20**. Maximum value: **500**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

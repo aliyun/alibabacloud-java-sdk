@@ -331,8 +331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **
-      * **The maximum number of times that each user can call this operation per second is 20.
+      * >The maximum number of times that each user can call this operation per second is 20.
       *
       * @param request BatchDescribeCdnIpInfoRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -363,8 +362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **
-      * **The maximum number of times that each user can call this operation per second is 20.
+      * >The maximum number of times that each user can call this operation per second is 20.
       *
       * @param request BatchDescribeCdnIpInfoRequest
       * @return BatchDescribeCdnIpInfoResponse
@@ -6027,6 +6025,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDomainUvDataResponse describeDomainUvData(DescribeDomainUvDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDomainUvDataWithOptions(request, runtime);
+    }
+
+    /**
+      * You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.
+      *
+      * @param request DescribeDomainVerifyDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDomainVerifyDataResponse
+     */
+    public DescribeDomainVerifyDataResponse describeDomainVerifyDataWithOptions(DescribeDomainVerifyDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.globalResourcePlan)) {
+            query.put("GlobalResourcePlan", request.globalResourcePlan);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDomainVerifyData"),
+            new TeaPair("version", "2018-05-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDomainVerifyDataResponse());
+    }
+
+    /**
+      * You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.
+      *
+      * @param request DescribeDomainVerifyDataRequest
+      * @return DescribeDomainVerifyDataResponse
+     */
+    public DescribeDomainVerifyDataResponse describeDomainVerifyData(DescribeDomainVerifyDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDomainVerifyDataWithOptions(request, runtime);
     }
 
     /**
