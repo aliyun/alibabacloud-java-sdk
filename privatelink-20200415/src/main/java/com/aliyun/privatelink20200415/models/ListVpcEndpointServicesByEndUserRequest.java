@@ -4,27 +4,58 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **50**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</p>
+     * <p>*   If a next request is to be performed, set the value to the value of **NextToken** that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The region ID of the endpoint.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the endpoint service that you want to query.</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>The name of the endpoint service that you want to query.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The type of the endpoint service.</p>
+     * <br>
+     * <p>Set the value to **Interface**. You can specify CLB and ALB instances as service resources for the endpoint service.</p>
+     */
     @NameInMap("ServiceType")
     public String serviceType;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListVpcEndpointServicesByEndUserRequestTag> tag;
 
@@ -98,9 +129,19 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     }
 
     public static class ListVpcEndpointServicesByEndUserRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

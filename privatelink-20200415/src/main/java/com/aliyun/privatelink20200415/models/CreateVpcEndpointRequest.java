@@ -69,9 +69,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the security group that is associated with the endpoint ENI. The security group can be used to control data transfer between the VPC and the endpoint ENI.</p>
-     * <br>
-     * <p>The endpoint can be associated with up to 10 security groups.</p>
+     * <p>The IDs of security groups that are associated with the endpoint elastic network interface (ENI).</p>
      */
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;
@@ -89,7 +87,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags to add to the resource.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateVpcEndpointRequestTag> tag;
@@ -239,13 +237,13 @@ public class CreateVpcEndpointRequest extends TeaModel {
 
     public static class CreateVpcEndpointRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The key of the tag to add to the resource.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The value of the tag to add to the resource.</p>
          */
         @NameInMap("Value")
         public String value;

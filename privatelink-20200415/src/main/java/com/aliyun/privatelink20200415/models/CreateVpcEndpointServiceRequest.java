@@ -87,7 +87,7 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     public Boolean serviceSupportIPv6;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags to add to the resource.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateVpcEndpointServiceRequestTag> tag;
@@ -212,11 +212,11 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
         /**
          * <p>The type of the service resource that is added to the endpoint service. You can add up to 20 service resources to the endpoint service. Valid values:</p>
          * <br>
-         * <p>*   **slb**: a CLB instance</p>
-         * <p>*   **alb**: an ALB instance</p>
-         * <p>*   **nlb**: a NLB instance</p>
+         * <p>*   **slb**: Classic Load Balancer (CLB) instance</p>
+         * <p>*   **alb**: Application Load Balancer (ALB) instance</p>
+         * <p>*   **nlb**: Network Load Balancer (NLB) instance</p>
          * <br>
-         * <p>>  In regions where PrivateLink is supported, CLB instances deployed in virtual private clouds (VPCs) can serve as service resources of the endpoint service.</p>
+         * <p>>  In regions where PrivateLink is supported, CLB instances deployed in virtual private clouds (VPCs) can serve as the service resources of the endpoint service.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -260,17 +260,17 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
 
     public static class CreateVpcEndpointServiceRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The value of the tag to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
          * <br>
-         * <p>The tag value must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -4,12 +4,21 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The region ID of the resource group.</p>
+     */
     @NameInMap("ResourceRegionId")
     public String resourceRegionId;
 

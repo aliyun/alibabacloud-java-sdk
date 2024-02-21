@@ -4,39 +4,95 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointsRequest extends TeaModel {
+    /**
+     * <p>The state of the endpoint connection. Valid values:</p>
+     * <br>
+     * <p>*   **Pending**: The endpoint connection is being modified.</p>
+     * <p>*   **Connecting**: The endpoint connection is being established.</p>
+     * <p>*   **Connected**: The endpoint connection is established.</p>
+     * <p>*   **Disconnecting**: The endpoint is being disconnected from the endpoint service.</p>
+     * <p>*   **Disconnected**: The endpoint is disconnected from the endpoint service.</p>
+     * <p>*   **Deleting**: The connection is being deleted.</p>
+     * <p>*   **ServiceDeleted**: The corresponding endpoint service has been deleted.</p>
+     */
     @NameInMap("ConnectionStatus")
     public String connectionStatus;
 
+    /**
+     * <p>The ID of the endpoint.</p>
+     */
     @NameInMap("EndpointId")
     public String endpointId;
 
+    /**
+     * <p>The name of the endpoint.</p>
+     */
     @NameInMap("EndpointName")
     public String endpointName;
 
+    /**
+     * <p>The state of the endpoint. Valid values:</p>
+     * <br>
+     * <p>*   **Creating**: The endpoint is being created.</p>
+     * <p>*   **Active**: The endpoint is available.</p>
+     * <p>*   **Pending**: The endpoint is being modified.</p>
+     * <p>*   **Deleting**: The endpoint is being deleted.</p>
+     */
     @NameInMap("EndpointStatus")
     public String endpointStatus;
 
+    /**
+     * <p>The type of the endpoint.</p>
+     * <br>
+     * <p>Set the value to **Interface**. Then, you can specify Application Load Balancer (ALB) and Classic Load Balancer (CLB) instances as service resources for the endpoint service.</p>
+     */
     @NameInMap("EndpointType")
     public String endpointType;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</p>
+     * <p>*   If a next request is to be performed, set the parameter to the value of **NextToken** that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The region ID of the endpoint.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The name of the endpoint service with which the endpoint is associated.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListVpcEndpointsRequestTag> tag;
 
+    /**
+     * <p>The ID of the VPC to which the endpoint belongs.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -142,9 +198,19 @@ public class ListVpcEndpointsRequest extends TeaModel {
     }
 
     public static class ListVpcEndpointsRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

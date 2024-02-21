@@ -35,7 +35,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
      * <p>The service state of the endpoint service. Valid values:</p>
      * <br>
      * <p>*   **Normal**: The endpoint service runs as expected.</p>
-     * <p>*   **FinacialLocked**: The endpoint service is locked due to overdue payments.</p>
+     * <p>*   **FinancialLocked**: The endpoint service is locked due to overdue payments.</p>
      */
     @NameInMap("ServiceBusinessStatus")
     public String serviceBusinessStatus;
@@ -71,7 +71,6 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
      * <p>*   **Pending**: The endpoint service is being modified.</p>
      * <p>*   **Active**: The endpoint service is available.</p>
      * <p>*   **Deleting**: The endpoint service is being deleted.</p>
-     * <p>*   **Inactive**: The endpoint service is unavailable.</p>
      */
     @NameInMap("ServiceStatus")
     public String serviceStatus;
