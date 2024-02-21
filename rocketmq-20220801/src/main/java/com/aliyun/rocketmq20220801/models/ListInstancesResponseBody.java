@@ -122,6 +122,9 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyDataListProductInfo extends TeaModel {
+        /**
+         * <p>Whether to enable tracking capability. Non-serverless instances are enabled by default, and serverless instances are optional for users.</p>
+         */
         @NameInMap("traceOn")
         public Boolean traceOn;
 
@@ -224,6 +227,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("paymentType")
         public String paymentType;
 
+        /**
+         * <p>The product information of instance.</p>
+         */
         @NameInMap("productInfo")
         public ListInstancesResponseBodyDataListProductInfo productInfo;
 

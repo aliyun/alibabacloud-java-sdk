@@ -23,7 +23,7 @@ public class ListInstancesRequest extends TeaModel {
     /**
      * <p>The number of entries returned on each page.</p>
      * <br>
-     * <p>Value values: 10 to 200.</p>
+     * <p>Valid values: 10 to 200.</p>
      * <br>
      * <p>If the value that you specify for this parameter is less than 10, the system uses 10 as the value. If the value that you specify for this parameter is greater than 200, the system uses 200 as the value.</p>
      */

@@ -3,7 +3,7 @@ package com.aliyun.rocketmq20220801.models;
 
 import com.aliyun.tea.*;
 
-public class CreateConsumerGroupResponse extends TeaModel {
+public class ListAvailableZonesResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class CreateConsumerGroupResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public CreateConsumerGroupResponseBody body;
+    public ListAvailableZonesResponseBody body;
 
-    public static CreateConsumerGroupResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateConsumerGroupResponse self = new CreateConsumerGroupResponse();
+    public static ListAvailableZonesResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListAvailableZonesResponse self = new ListAvailableZonesResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateConsumerGroupResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListAvailableZonesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class CreateConsumerGroupResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateConsumerGroupResponse setStatusCode(Integer statusCode) {
+    public ListAvailableZonesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class CreateConsumerGroupResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateConsumerGroupResponse setBody(CreateConsumerGroupResponseBody body) {
+    public ListAvailableZonesResponse setBody(ListAvailableZonesResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateConsumerGroupResponseBody getBody() {
+    public ListAvailableZonesResponseBody getBody() {
         return this.body;
     }
 
