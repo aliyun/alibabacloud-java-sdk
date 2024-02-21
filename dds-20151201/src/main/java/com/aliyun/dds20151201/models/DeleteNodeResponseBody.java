@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteNodeResponseBody extends TeaModel {
     /**
-     * <p>The order ID of the instance.</p>
+     * <p>The order ID.</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

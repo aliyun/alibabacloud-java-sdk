@@ -7,15 +7,14 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     /**
      * <p>The description of the account.</p>
      * <br>
-     * <p>*   It cannot start with http:// or https://.</p>
-     * <p>*   It must start with a letter.</p>
-     * <p>*   It must be 2 to 256 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-).</p>
+     * <p>*   The description must start with a letter and cannot start with http:// or https://.</p>
+     * <p>*   The description must be 2 to 256 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("AccountDescription")
     public String accountDescription;
 
     /**
-     * <p>The name of the account for which you want to modify the description.</p>
+     * <p>The name of the account whose description is to be modified.</p>
      */
     @NameInMap("AccountName")
     public String accountName;

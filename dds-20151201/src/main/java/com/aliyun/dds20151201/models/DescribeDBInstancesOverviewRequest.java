@@ -20,7 +20,7 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The instance type of the instance. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following topics:</p>
+     * <p>The instance type. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following references:</p>
      * <br>
      * <p>*   [Standalone instance types](~~311407~~)</p>
      * <p>*   [Replica set instance types](~~311410~~)</p>
@@ -32,8 +32,11 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     /**
      * <p>The ID of the instance for which you want to query the overview information.</p>
      * <br>
-     * <p>> * If you do not specify this parameter, the overview information of all instances under this account is queried.</p>
-     * <p>> * Separate the instance IDs with commas (,).</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   If you do not specify this parameter, the overview information of all instances within this account is queried.</p>
+     * <br>
+     * <p>*   Separate the instance IDs with commas (,).</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
@@ -45,13 +48,16 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     public String instanceStatus;
 
     /**
-     * <p>The category of the instance. Valid values:</p>
+     * <p>The architecture of the instance. Valid values:</p>
      * <br>
-     * <p>- **sharding**: sharded cluster instance</p>
-     * <p>- **replicate**: replica set or standalone instance</p>
+     * <p>*   **sharding**: sharded cluster instance</p>
+     * <p>*   **replicate**: replica set or standalone instance</p>
      * <br>
-     * <p>> * To query the overview information of a sharded cluster instance, you must set the parameter to **sharding**.</p>
-     * <p>> * If you do not specify this parameter, the overview information of all instances under this account is queried.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   To query the overview information of a sharded cluster instance, you must set the parameter to **sharding**.</p>
+     * <br>
+     * <p>*   If you do not specify this parameter, the overview information of all instances within this account is queried.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -59,8 +65,8 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <br>
-     * <p>*   **Classic**</p>
-     * <p>*   **VPC**</p>
+     * <p>*   **Classic**: classic network</p>
+     * <p>*   **VPC**: Virtual Private Cloud (VPC)</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -78,7 +84,7 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).</p>
+     * <p>The ID of the resource group to which the instance belongs. For more information, see [View the basic information of a resource group](~~151181~~).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -90,19 +96,19 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The ID of the vSwitch to which the instance is connected.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <p>The ID of the VPC in which the instance is deployed.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The ID of the zone.</p>
+     * <p>The zone ID of the instance.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

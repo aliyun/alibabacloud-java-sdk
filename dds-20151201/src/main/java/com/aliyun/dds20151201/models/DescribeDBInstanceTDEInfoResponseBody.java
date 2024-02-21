@@ -5,23 +5,24 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceTDEInfoResponseBody extends TeaModel {
     /**
-     * <p>The custom key of the instance.</p>
+     * <p>实例的自定义密钥。</p>
      * <br>
-     * <p>The Bring Your Own Key (BYOK) feature allows you to manage and obtain your own encryption key. This feature is supported only in the following regions:</p>
+     * <p>目前仅以下地域支持BYOK（Bring Your Own Key，用户可以自行管理和拥有加密密钥）：</p>
+     * <p>- 华东1（杭州）</p>
+     * <p>- 华东2（上海）</p>
+     * <p>- 华北2（北京）</p>
+     * <p>- 华南1（深圳）</p>
+     * <p>- 中国（香港）</p>
+     * <p>- 新加坡</p>
+     * <p>- 马来西亚（吉隆坡）</p>
      * <br>
-     * <p>*   cn-hangzhou</p>
-     * <p>*   cn-shanghai</p>
-     * <p>*   cn-beijing</p>
-     * <p>*   cn-shenzhen</p>
-     * <p>*   cn-hongkong</p>
-     * <p>*   ap-southeast-1</p>
-     * <p>*   ap-southeast-3</p>
+     * <p>> 支持BYOK，用户可以管理且拥有密钥，系统将返回用户的自定义密钥；不支持BYOK，用户不可管理密钥，系统将返回字符串`NoActiveBYOK`。</p>
      */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
     /**
-     * <p>The encryption algorithm.</p>
+     * <p>加密算法。</p>
      */
     @NameInMap("EncryptorName")
     public String encryptorName;
@@ -33,7 +34,7 @@ public class DescribeDBInstanceTDEInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role to which you want to grant permissions.</p>
+     * <p>指定待授权角色的全局资源描述符ARN（Alibaba Cloud Resource Name）信息。</p>
      */
     @NameInMap("RoleARN")
     public String roleARN;

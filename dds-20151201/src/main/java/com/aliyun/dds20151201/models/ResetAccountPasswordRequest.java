@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetAccountPasswordRequest extends TeaModel {
     /**
-     * <p>The account for which you want to reset the password. Set the value to **root**.</p>
+     * <p>The account whose password needs to be reset. Set the value to **root**.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
@@ -20,17 +20,17 @@ public class ResetAccountPasswordRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>The role of the instance. Valid values:</p>
+     * <p>实例的角色类型，取值说明</p>
      * <br>
-     * <p>*   db: a shard node.</p>
-     * <p>*   cs: a Configserver node.</p>
-     * <p>*   mongos: a mongos node.</p>
+     * <br>
+     * <p>- 当实例类型为分片集群时，charactertype为必选； 取值为db 和cs。</p>
+     * <p>- 当实例类型为副本集时，charactertype 可为空或传入normal。</p>
      */
     @NameInMap("CharacterType")
     public String characterType;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

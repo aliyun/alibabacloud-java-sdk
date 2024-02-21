@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
     /**
-     * <p>Details about the instances.</p>
+     * <p>The information of instances.</p>
      */
     @NameInMap("DBInstances")
     public java.util.List<DescribeDBInstancesOverviewResponseBodyDBInstances> DBInstances;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of instances in the query result.</p>
+     * <p>The number of instances in the query results.</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -53,7 +53,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesOverviewResponseBodyDBInstancesMongosList extends TeaModel {
         /**
-         * <p>The type of the mongos node.</p>
+         * <p>The instance type of the mongos node.</p>
          */
         @NameInMap("NodeClass")
         public String nodeClass;
@@ -121,7 +121,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The storage capacity of the shard node. Unit: GB.</p>
+         * <p>The storage space of the shard node. Unit: GB.</p>
          */
         @NameInMap("NodeStorage")
         public Integer nodeStorage;
@@ -181,17 +181,17 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesOverviewResponseBodyDBInstancesTags extends TeaModel {
         /**
-         * <p>The key of tag N of the instance. Valid values of N: **1** to **20**.</p>
+         * <p>The tag key. Valid values of N: **1** to **20**.</p>
          * <br>
          * <p>*   The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.</p>
-         * <p>*   The key can be up to 64 characters in length.</p>
-         * <p>*   The key cannot be an empty string.</p>
+         * <p>*   It can be up to 64 characters in length.</p>
+         * <p>*   It cannot be an empty string.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the instance. Valid values of N: **1** to **20**.</p>
+         * <p>The tag value. Valid values of N: **1** to **20**.</p>
          * <br>
          * <p>*   The value cannot start with `aliyun`, `acs:`, `http://`, or `https://`.</p>
          * <p>*   The value can be up to 128 characters in length.</p>
@@ -225,10 +225,13 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesOverviewResponseBodyDBInstances extends TeaModel {
         /**
-         * <p>The I/O throughput consumed by the instance.</p>
+         * <p>The read and write throughput consumed by the instance.</p>
          * <br>
-         * <p>> * This parameter is returned when the instance is a serverless instance.</p>
-         * <p>> * Serverless instances are available only in the China site (aliyun.com).</p>
+         * <p>> </p>
+         * <br>
+         * <p>*   This parameter is returned when the instance is a serverless instance.</p>
+         * <br>
+         * <p>*   Serverless instances are available only in the China site (aliyun.com).</p>
          */
         @NameInMap("CapacityUnit")
         public String capacityUnit;
@@ -243,13 +246,13 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The time when the instance was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The instance type of the instance. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following topics:</p>
+         * <p>The instance type. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following references:</p>
          * <br>
          * <p>*   [Standalone instance types](~~311407~~)</p>
          * <p>*   [Replica set instance types](~~311410~~)</p>
@@ -265,7 +268,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String DBInstanceDescription;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
@@ -277,13 +280,13 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String DBInstanceStatus;
 
         /**
-         * <p>The storage capacity of the instance.</p>
+         * <p>The storage space of the instance. Unit: GB.</p>
          */
         @NameInMap("DBInstanceStorage")
         public Integer DBInstanceStorage;
 
         /**
-         * <p>The category of the instance. Valid values:</p>
+         * <p>The architecture of the instance. Valid values:</p>
          * <br>
          * <p>*   **sharding**: sharded cluster instance</p>
          * <p>*   **replicate**: replica set or standalone instance</p>
@@ -292,7 +295,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String DBInstanceType;
 
         /**
-         * <p>The time when the instance data was destroyed. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the instance data was destroyed. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("DestroyTime")
         public String destroyTime;
@@ -310,7 +313,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The time when the instance expires. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
@@ -327,7 +330,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String kindCode;
 
         /**
-         * <p>The last time when the instance was downgraded.</p>
+         * <p>The date when the last downgrade operation was performed.</p>
          */
         @NameInMap("LastDowngradeTime")
         public String lastDowngradeTime;
@@ -336,19 +339,19 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
          * <p>Indicates whether the instance is locked. Valid values:</p>
          * <br>
          * <p>*   **Unlock**: The instance is not locked.</p>
-         * <p>*   **ManualLock**: The cluster is manually locked.</p>
-         * <p>*   **LockByExpiration**: The instance is automatically locked after it expires.</p>
+         * <p>*   **ManualLock**: The instance is manually locked.</p>
+         * <p>*   **LockByExpiration**: The instance is automatically locked due to instance expiration.</p>
          * <p>*   **LockByRestoration**: The instance is automatically locked before it is rolled back.</p>
-         * <p>*   **LockByDiskQuota**: The instance is automatically locked after the storage capacity is exhausted.</p>
-         * <p>*   **Released**: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires an extended period of time.</p>
+         * <p>*   **LockByDiskQuota**: The instance is automatically locked after the storage space is exhausted.</p>
+         * <p>*   **Released**: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires a long period of time.</p>
          */
         @NameInMap("LockMode")
         public String lockMode;
 
         /**
-         * <p>Details about the mongos node.</p>
+         * <p>The details of the mongos nodes.</p>
          * <br>
-         * <p>>  This parameter is returned if the instance is a sharded cluster instance.</p>
+         * <p>>  This parameter is returned when the instance is a sharded cluster instance.</p>
          */
         @NameInMap("MongosList")
         public java.util.List<DescribeDBInstancesOverviewResponseBodyDBInstancesMongosList> mongosList;
@@ -371,36 +374,36 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         /**
          * <p>The number of nodes in the instance.</p>
          * <br>
-         * <p>>  This parameter is returned if the instance is a replica set instance.</p>
+         * <p>>  This parameter is returned when the instance is a replica set instance.</p>
          */
         @NameInMap("ReplicationFactor")
         public String replicationFactor;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the resource group to which the instance belongs.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>Details about the shard node.</p>
+         * <p>The details of the shard nodes.</p>
          * <br>
-         * <p>>  This parameter is returned if the instance is a sharded cluster instance.</p>
+         * <p>>  This parameter is returned when the instance is a sharded cluster instance.</p>
          */
         @NameInMap("ShardList")
         public java.util.List<DescribeDBInstancesOverviewResponseBodyDBInstancesShardList> shardList;
 
         /**
-         * <p>The tags of the instance.</p>
+         * <p>The tags to add to the instance.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeDBInstancesOverviewResponseBodyDBInstancesTags> tags;
 
         /**
-         * <p>Indicates whether password-free access within a VPC is enabled. Valid values:</p>
+         * <p>Indicates whether password-free access over VPC is enabled. Valid values:</p>
          * <br>
-         * <p>*   **Open**: Password-free access is enabled.</p>
-         * <p>*   **Close**: Password-free access is disabled.</p>
+         * <p>*   **Open**: Password-free access over VPC is enabled.</p>
+         * <p>*   **Close**: Password-free access over VPC is disabled.</p>
          */
         @NameInMap("VpcAuthMode")
         public String vpcAuthMode;

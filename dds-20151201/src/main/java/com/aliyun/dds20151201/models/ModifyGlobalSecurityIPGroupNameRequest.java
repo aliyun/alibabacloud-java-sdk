@@ -4,9 +4,19 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyGlobalSecurityIPGroupNameRequest extends TeaModel {
+    /**
+     * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
+     * <br>
+     * <p>*   It can contain lowercase letters, digits, and underscores (\_).</p>
+     * <p>*   It must start with a letter and end with a letter or digit.</p>
+     * <p>*   It must be 2 to 120 characters in length.</p>
+     */
     @NameInMap("GlobalIgName")
     public String globalIgName;
 
+    /**
+     * <p>The ID of the IP whitelist template.</p>
+     */
     @NameInMap("GlobalSecurityGroupId")
     public String globalSecurityGroupId;
 
@@ -16,6 +26,9 @@ public class ModifyGlobalSecurityIPGroupNameRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

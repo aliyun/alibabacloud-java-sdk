@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupDBsResponseBody extends TeaModel {
     /**
-     * <p>Details about the databases.</p>
+     * <p>The details of the databases.</p>
      */
     @NameInMap("Databases")
     public DescribeBackupDBsResponseBodyDatabases databases;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the page returned.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -23,7 +23,7 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

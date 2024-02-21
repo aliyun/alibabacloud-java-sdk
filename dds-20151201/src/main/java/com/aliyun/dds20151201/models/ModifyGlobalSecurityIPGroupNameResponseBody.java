@@ -4,9 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
+    /**
+     * <p>The global IP whitelist templates.</p>
+     */
     @NameInMap("GlobalSecurityIPGroup")
     public java.util.List<ModifyGlobalSecurityIPGroupNameResponseBodyGlobalSecurityIPGroup> globalSecurityIPGroup;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,29 @@ public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
     }
 
     public static class ModifyGlobalSecurityIPGroupNameResponseBodyGlobalSecurityIPGroup extends TeaModel {
+        /**
+         * <p>The IP addresses in the whitelist template.</p>
+         * <br>
+         * <p>> Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.</p>
+         */
         @NameInMap("GIpList")
         public String GIpList;
 
+        /**
+         * <p>The name of the IP whitelist template.</p>
+         */
         @NameInMap("GlobalIgName")
         public String globalIgName;
 
+        /**
+         * <p>The ID of the IP whitelist template.</p>
+         */
         @NameInMap("GlobalSecurityGroupId")
         public String globalSecurityGroupId;
 
+        /**
+         * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

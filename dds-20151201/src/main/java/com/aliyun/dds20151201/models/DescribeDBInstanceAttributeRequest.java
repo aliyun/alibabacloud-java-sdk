@@ -16,12 +16,6 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
-    /**
-     * <p>Specifies whether to delete the instance. Valid values:</p>
-     * <br>
-     * <p>*   **false**: queries the details of running instances.</p>
-     * <p>*   **true**: queries the details of deleted instances.</p>
-     */
     @NameInMap("IsDelete")
     public Boolean isDelete;
 

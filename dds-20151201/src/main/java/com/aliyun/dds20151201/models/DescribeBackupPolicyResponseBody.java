@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
-     * <p>The frequency at which high-frequency backups are created. Valid values:</p>
+     * <p>The frequency at which high-frequency backup is created. Valid values:</p>
      * <br>
-     * <p>*   **-1**: disables high-frequency backup.</p>
+     * <p>*   **-1**: High-frequency backup is disabled.</p>
      * <p>*   **15**: every 15 minutes.</p>
      * <p>*   **30**: every 30 minutes.</p>
      * <p>*   **60**: every hour.</p>
@@ -22,22 +22,22 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public Integer backupInterval;
 
     /**
-     * <p>The retention period of backups. Unit: days.</p>
+     * <p>The retention period of the backup data. Unit: day.</p>
      */
     @NameInMap("BackupRetentionPeriod")
     public String backupRetentionPeriod;
 
     /**
-     * <p>Indicates whether log backup is enabled. Default value: 0. Valid values:</p>
+     * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
      * <br>
-     * <p>*   **0**: disables log backup.</p>
-     * <p>*   **1**: enables log backup.</p>
+     * <p>*   **0** (default): The log backup feature is disabled.</p>
+     * <p>*   **1**: The log backup feature is enabled.</p>
      */
     @NameInMap("EnableBackupLog")
     public Integer enableBackupLog;
 
     /**
-     * <p>The number of days for which to retain log backups. Valid values: 7 to 730.</p>
+     * <p>The number of days for which log backups are retained. Valid values: 7 to 730.</p>
      */
     @NameInMap("LogBackupRetentionPeriod")
     public Integer logBackupRetentionPeriod;
@@ -57,22 +57,22 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
-     * <p>The time range to back up data. The time is in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.</p>
+     * <p>The time range during which the backup was created. The time follows the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.</p>
      */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The snapshot backup type. Default value: Standard. Valid values:</p>
+     * <p>The snapshot backup type. Valid values:</p>
      * <br>
      * <p>*   **Flash**: single-digit second backup</p>
-     * <p>*   **Standard**: standard backup</p>
+     * <p>*   **Standard** (default): standard backup</p>
      */
     @NameInMap("SnapshotBackupType")
     public String snapshotBackupType;

@@ -42,7 +42,10 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.</p>
+     * <p>Specifies whether to use coupons. Default value: null. Valid values:</p>
+     * <br>
+     * <p>*   **default** or **null**: uses coupons.</p>
+     * <p>*   **youhuiquan_promotion_option_id_for_blank**: does not use coupons.</p>
      */
     @NameInMap("CouponNo")
     public String couponNo;

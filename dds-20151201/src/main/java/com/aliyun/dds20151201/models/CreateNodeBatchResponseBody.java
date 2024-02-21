@@ -4,12 +4,21 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class CreateNodeBatchResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the added mongos or shard node.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

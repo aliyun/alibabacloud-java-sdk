@@ -4,6 +4,9 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DeleteGlobalSecurityIPGroupResponseBody extends TeaModel {
+    /**
+     * <p>The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

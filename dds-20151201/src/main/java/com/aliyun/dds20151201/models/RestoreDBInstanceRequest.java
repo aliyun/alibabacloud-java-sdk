@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class RestoreDBInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the backup.</p>
+     * <p>The ID of the backup set.</p>
      * <br>
-     * <p>>  You can call the [DescribeBackups](~~62172~~) operation to query the backup ID.</p>
+     * <p>> You can call the [DescribeBackups](~~62172~~) operation to query the backup set ID.</p>
      */
     @NameInMap("BackupId")
     public Integer backupId;

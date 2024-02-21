@@ -5,23 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set. You can call the [CreateBackup](~~62171~~) operation to obtain the value of this parameter.</p>
+     * <p>The ID of the backup set. You can call the [CreateBackup](~~62171~~) operation to query the backup set ID.</p>
      * <br>
-     * <p>If you set the DBInstanceId parameter to the ID of a sharded cluster instance, the number of backup IDs is the same as the number of shards. Separate them with commas (,) in the middle.</p>
+     * <p>If you set the **DBInstanceId** parameter to the ID of a sharded cluster instance, the number of backup IDs is the same as the number of shard nodes. Multiple backup IDs are separated with commas (,).</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <br>
-     * <p>>  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.</p>
+     * <p>> If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -29,7 +29,7 @@ public class DescribeBackupsRequest extends TeaModel {
     /**
      * <p>The ID of the shard node in the sharded cluster instance.</p>
      * <br>
-     * <p>>  This parameter is valid only when **DBInstanceId** is set to the ID of a sharded cluster instance.</p>
+     * <p>> This parameter takes effect only when you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -41,13 +41,17 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.</p>
+     * <p>The page number of the page to return.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **30, 50, and 100**. Default value: **30**.</p>
+     * <p>The number of entries to return on each page. Valid values:</p>
+     * <br>
+     * <p>*   **30** (default)</p>
+     * <p>*   **50**</p>
+     * <p>*   **100**</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -59,7 +63,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
