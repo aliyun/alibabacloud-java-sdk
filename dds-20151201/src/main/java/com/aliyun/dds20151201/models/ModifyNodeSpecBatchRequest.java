@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyNodeSpecBatchRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment for the instance. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <br>
      * <p>*   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.</p>
-     * <p>*   **false**: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose **Expenses** > User Center to go to the **Billing Management** console. In the left-side navigation pane, click **Orders**. On the **Orders** page, find the order and complete the payment.</p>
+     * <p>*   **false**: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, click **Expenses** to go to the **Billing Management** console. In the left-side navigation pane, click **Orders**. On the **Orders** page, find the order and complete the payment.</p>
      * <br>
      * <p>Default value: **true**.</p>
      */
@@ -22,7 +22,7 @@ public class ModifyNodeSpecBatchRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -34,13 +34,13 @@ public class ModifyNodeSpecBatchRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>The ID of the instance whose configurations you want to modify.</p>
+     * <p>The ID of the instance whose configurations you want to change.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The time when the modified configurations take effect. Valid values:</p>
+     * <p>The time when the changed configurations take effect. Valid values:</p>
      * <br>
      * <p>*   **Immediately**: The configurations immediately take effect.</p>
      * <p>*   **MaintainTime**: The configurations take effect during the maintenance window of the instance.</p>
@@ -57,18 +57,18 @@ public class ModifyNodeSpecBatchRequest extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>The configuration information of the mongos nodes or shard nodes whose configurations you want to modify. For more information, see [Instance types](~~57141~~).</p>
+     * <p>The configuration information of the mongos nodes or shard nodes whose configurations you want to change. For more information, see [Instance types](~~57141~~).</p>
      */
     @NameInMap("NodesInfo")
     public String nodesInfo;
 
     /**
-     * <p>The type of configuration modifications. Valid values:</p>
+     * <p>The type of configuration changes. Valid values:</p>
      * <br>
      * <p>*   **UPGRADE**</p>
      * <p>*   **DOWNGRADE**</p>
      * <br>
-     * <p>> This parameter is available only if the billing method of the instance is subscription.</p>
+     * <p>> This parameter is only applicable to instances whose billing method is subscription.</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -80,7 +80,7 @@ public class ModifyNodeSpecBatchRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~61933~~) operation to query the latest available regions.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

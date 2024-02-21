@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceSpecRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <br>
-     * <p>*   **true**: enables automatic payment. Make sure that your Alibaba Cloud account has a sufficient balance.</p>
+     * <p>*   **true** (default): enables automatic payment. Make sure that your Alibaba Cloud account has a sufficient balance.</p>
      * <p>*   **false**: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose **Expenses** > **User Center**. In the left-side navigation pane, choose **Order Management** > **Order**. On the **Orders for Services** tab, find the order and pay for the order.</p>
      */
     @NameInMap("AutoPay")
@@ -52,27 +52,45 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     public String DBInstanceStorage;
 
     /**
-     * <p>The time when the changed configurations take effect. Default value: Immediately. Valid values:</p>
+     * <p>The time when the changed configurations take effect. Valid values:</p>
      * <br>
-     * <p>*   **Immediately**: The configurations immediately take effect.</p>
+     * <p>*   **Immediately** (default): The configurations immediately take effect.</p>
      * <p>*   **MaintainTime**: The configurations take effect during the maintenance window of the instance.</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
     /**
-     * <p>Additional parameter</p>
+     * <p>The additional parameter.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   async</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   sync</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("ExtraParam")
     public String extraParam;
 
     /**
-     * <p>The type of the configuration change. Default value: DOWNGRADE. Valid values:</p>
+     * <p>The type of the configuration change. Valid values:</p>
      * <br>
      * <p>*   **UPGRADE**</p>
-     * <p>*   **DOWNGRADE**</p>
+     * <p>*   **DOWNGRADE** (default)</p>
      * <br>
-     * <p>> This parameter can be configured only when the billing method of the instance is subscription.</p>
+     * <p>>  This parameter can be configured only when the billing method of the instance is subscription.</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -96,10 +114,10 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     /**
      * <p>The number of nodes in the instance.</p>
      * <br>
-     * <p>*   Valid values of replica set instances: **3**, **5**, and **7**</p>
-     * <p>*   Valid values of standalone instances: **1**</p>
+     * <p>*   Valid values for replica set instances: **3**, **5**, and **7**</p>
+     * <p>*   Valid values for standalone instances: **1**</p>
      * <br>
-     * <p>> This parameter is not required for a serverless instance which is only available on the China site (aliyun.com).</p>
+     * <p>>  This parameter is not required for a serverless instance which is only available on the China site (aliyun.com).</p>
      */
     @NameInMap("ReplicationFactor")
     public String replicationFactor;

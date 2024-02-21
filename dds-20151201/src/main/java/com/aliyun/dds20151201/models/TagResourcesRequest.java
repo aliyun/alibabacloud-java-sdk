@@ -23,7 +23,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The list of resource IDs.</p>
+     * <p>The details of the tags bound to the instance.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -138,7 +138,7 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>The value of tag.</p>
          * <br>
-         * <p>N specifies the serial number of the tag. The following example shows how to calculate consumption intervals: </p>
+         * <p>N specifies the serial number of the tag. The following example shows how to calculate consumption intervals:</p>
          * <br>
          * <p>- **Tag.1.Value** specifies the value of the first tag.</p>
          * <p>- **Tag.2.Value** specifies the value of the second tag.</p>

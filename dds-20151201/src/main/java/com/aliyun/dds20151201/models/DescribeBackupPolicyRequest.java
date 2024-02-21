@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

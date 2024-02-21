@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancePerformanceRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <br>
      * <p>>  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.</p>
      */
@@ -13,15 +13,15 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>A performance metric. For more information about the valid values, see [Performance metrics](~~64048~~).</p>
+     * <p>The performance metric. For more information about valid values, see [Performance metrics](~~64048~~).</p>
      * <br>
-     * <p>>  If you specify multiple metrics, separate them with commas (,).</p>
+     * <p>>  If you need to specify multiple metrics, separate the metrics with commas (,).</p>
      */
     @NameInMap("Key")
     public String key;
@@ -29,7 +29,7 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     /**
      * <p>The ID of the mongos or shard node in a sharded cluster instance. You can specify this parameter to view the performance data of a single node.</p>
      * <br>
-     * <p>>  This parameter is valid only when **DBInstanceId** is set to the ID of a sharded cluster instance.</p>
+     * <p>>  This parameter is valid when you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -41,13 +41,16 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The role of the node in a standalone or replica set instance.</p>
+     * <p>The role of the node in a standalone or replica set instance. Valid values:</p>
      * <br>
-     * <p>* **Primary**</p>
-     * <p>* **Secondary**</p>
+     * <p>*   **Primary**</p>
+     * <p>*   **Secondary**</p>
      * <br>
-     * <p>> * This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a standalone instance or a replica set instance.</p>
-     * <p>> * If you set the **DBInstanceId** parameter to the ID of a standalone instance, the value of this parameter can only be **Primary**.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter is valid only when you set the **DBInstanceId** parameter to the ID of a standalone instance or a replica set instance.</p>
+     * <br>
+     * <p>*   If you set the **DBInstanceId** parameter to the ID of a standalone instance, the value of this parameter can only be **Primary**.</p>
      */
     @NameInMap("ReplicaSetRole")
     public String replicaSetRole;
@@ -61,13 +64,13 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     /**
      * <p>The role ID of the node in a standalone or replica set instance. You can call the [DescribeReplicaSetRole](~~62134~~) operation to query the role ID of the node.</p>
      * <br>
-     * <p>>  This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a standalone instance or a replica set instance.</p>
+     * <p>>  This parameter is available when you set the **DBInstanceId** parameter to the ID of a standalone instance or a replica set instance.</p>
      */
     @NameInMap("RoleId")
     public String roleId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

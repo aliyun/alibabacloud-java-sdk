@@ -5,10 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeKernelReleaseNotesRequest extends TeaModel {
     /**
-     * <p>The number of the minor database version. For example: **mongodb\_20180522\_0.4.8**.</p>
+     * <p>The minor version number of the instance. Example: **mongodb\_20180522\_0.4.8**.</p>
      * <br>
-     * <p>*   If you specify this parameter, a list of version numbers later than the version specified is returned.</p>
-     * <p>*   If you do not specify this parameter, a list of all the version numbers is returned.</p>
+     * <p>*   This parameter is required. After you specify a version number for this parameter in a request, the release notes of the versions later than this version are returned.</p>
      */
     @NameInMap("KernelVersion")
     public String kernelVersion;

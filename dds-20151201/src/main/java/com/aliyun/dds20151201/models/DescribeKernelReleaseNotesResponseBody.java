@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
     /**
-     * <p>The list of version release notes.</p>
+     * <p>The list of the version release notes.</p>
      */
     @NameInMap("ReleaseNotes")
     public DescribeKernelReleaseNotesResponseBodyReleaseNotes releaseNotes;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,7 +45,7 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
         public String kernelVersion;
 
         /**
-         * <p>Publishes the log.</p>
+         * <p>The release notes.</p>
          */
         @NameInMap("ReleaseNote")
         public String releaseNote;

@@ -5,31 +5,35 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
     /**
-     * <p>Details about backup sets.</p>
+     * <p>The details of the backup sets.</p>
      */
     @NameInMap("Backups")
     public DescribeBackupsResponseBodyBackups backups;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries returned per page. Valid values:</p>
+     * <br>
+     * <p>*   **30** (default)</p>
+     * <p>*   **50**</p>
+     * <p>*   **100**</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of backup sets that were returned.</p>
+     * <p>The total number of backup sets.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -93,7 +97,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupDownloadURL;
 
         /**
-         * <p>The end of the backup time range. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format and displayed in UTC.</p>
+         * <p>The end of the backup time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
@@ -107,13 +111,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * <p>The internal download URL of the backup set.</p>
          * <br>
-         * <p>>  You can use this URL to download the backup set from on the ECS instance which is on the same network as the ApsaraDB for MongoDB instance.</p>
+         * <p>> You can use this URL to download the backup set from on the Elastic Compute Service (ECS) instance which is on the same network as the ApsaraDB for MongoDB instance.</p>
          */
         @NameInMap("BackupIntranetDownloadURL")
         public String backupIntranetDownloadURL;
 
         /**
-         * <p>The backup method. Valid values:</p>
+         * <p>The method that is used to generate the backup set. Valid values:</p>
          * <br>
          * <p>*   **Snapshot**</p>
          * <p>*   **Physical**</p>
@@ -123,10 +127,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupMethod;
 
         /**
-         * <p>The backup mode.</p>
+         * <p>The backup mode of the backup set. Valid values:</p>
          * <br>
-         * <p>*   **Automated**: automatic backup</p>
-         * <p>*   **Manual**: manual backup</p>
+         * <p>*   **Automated**:</p>
+         * <p>*   **Manual**</p>
          */
         @NameInMap("BackupMode")
         public String backupMode;
@@ -138,25 +142,25 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public Long backupSize;
 
         /**
-         * <p>The beginning of the backup time range. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format and displayed in UTC.</p>
+         * <p>The beginning of the backup time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
         /**
-         * <p>The status of the backup. Valid values:</p>
+         * <p>The status of the backup task. Valid values:</p>
          * <br>
-         * <p>*   **Success**: The backup task is successful.</p>
-         * <p>*   **Failed**: The backup task failed.</p>
+         * <p>*   **Success**</p>
+         * <p>*   **Failed**</p>
          */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
         /**
-         * <p>The backup method.</p>
+         * <p>The backup type. Valid values:</p>
          * <br>
-         * <p>*   **FullBackup**: a full backup</p>
-         * <p>*   **IncrementalBackup**: an incremental backup</p>
+         * <p>*   **FullBackup**</p>
+         * <p>*   **IncrementalBackup**</p>
          */
         @NameInMap("BackupType")
         public String backupType;

@@ -11,7 +11,7 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     public String auditLogSwitchSource;
 
     /**
-     * <p>Specifies whether the audit log feature is enabled. Valid values:</p>
+     * <p>Specifies whether to enable the audit log feature. Valid values:</p>
      * <br>
      * <p>*   **enable**</p>
      * <p>*   **disabled**</p>
@@ -20,7 +20,7 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     public String auditStatus;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -40,10 +40,10 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     /**
      * <p>The type of the audit log feature. Valid values:</p>
      * <br>
-     * <p>*   **Trial**: the free trial edition</p>
-     * <p>*   **Standard**: the official edition</p>
+     * <p>*   **Trail**: free trial edition.</p>
+     * <p>*   **Standard**: official edition.</p>
      * <br>
-     * <p>>  Default value: **Trial**. Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. We recommend that you set this parameter to **Standard**.</p>
+     * <p>> The default value is **Trail**. Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and the free trial edition of the feature can no longer be applied for. We recommend that you set this parameter to **Standard**.</p>
      */
     @NameInMap("ServiceType")
     public String serviceType;

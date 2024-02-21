@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
     /**
-     * <p>The username of the account.</p>
+     * <p>The details of the account.</p>
      */
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
@@ -40,8 +40,6 @@ public class DescribeAccountsResponseBody extends TeaModel {
     public static class DescribeAccountsResponseBodyAccountsAccount extends TeaModel {
         /**
          * <p>The description of the account.</p>
-         * <br>
-         * <p>> This parameter is returned only after you configure the description of the account by calling the [ModifyAccountDescription](~~468391~~) operation.</p>
          */
         @NameInMap("AccountDescription")
         public String accountDescription;
@@ -53,7 +51,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The status of the account.</p>
+         * <p>The status of the account. Valid values:</p>
          * <br>
          * <p>*   **Unavailable**</p>
          * <p>*   **Available**</p>
@@ -64,17 +62,17 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * <p>The role of the account. Valid values:</p>
          * <br>
-         * <p>*   **db**: shard</p>
-         * <p>*   **cs**: Configserver</p>
-         * <p>*   **mongos**: mongos</p>
-         * <p>*   **logic:** sharded cluster instance</p>
-         * <p>*   **normal:** replica set instance</p>
+         * <p>*   **db**: shard node</p>
+         * <p>*   **cs**: Configserver node</p>
+         * <p>*   **mongos**: mongos node</p>
+         * <p>*   **logic**: sharded cluster instance</p>
+         * <p>*   **normal**: replica set instance</p>
          */
         @NameInMap("CharacterType")
         public String characterType;
 
         /**
-         * <p>The name of the instance to which the account belongs.</p>
+         * <p>The ID of the instance to which the account belongs.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;

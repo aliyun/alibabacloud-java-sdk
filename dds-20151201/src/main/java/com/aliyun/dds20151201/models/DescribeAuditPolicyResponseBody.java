@@ -16,7 +16,7 @@ public class DescribeAuditPolicyResponseBody extends TeaModel {
     public String logAuditStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

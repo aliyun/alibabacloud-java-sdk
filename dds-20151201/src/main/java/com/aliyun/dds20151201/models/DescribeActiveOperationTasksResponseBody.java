@@ -174,7 +174,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String insName;
 
         /**
-         * <p>The time when the O\&M task was modified. The time follows the ISO 8601 standard in the *yyyy-mm-dd*t*hh:mm:ss*z format. The time is displayed in UTC.</p>
+         * <p>The time when the O\&M task was modified. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
@@ -198,7 +198,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String resultInfo;
 
         /**
-         * <p>The time when the O\&M task started to run. The time follows the ISO 8601 standard in the *yyyy-mm-dd*t*hh:mm:ss*z format. The time is displayed in UTC.</p>
+         * <p>The time when the O\&M task started to run. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -216,7 +216,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public java.util.List<String> subInsNames;
 
         /**
-         * <p>The point in time when the switchover is performed. The time follows the ISO 8601 standard in the *yyyy-mm-dd*t*hh:mm:ss*z format. The time is displayed in UTC. Service interruptions may occur during switchover.</p>
+         * <p>The point in time when the switchover is performed. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC. Service interruptions may occur during switchover.</p>
          */
         @NameInMap("SwitchTime")
         public String switchTime;

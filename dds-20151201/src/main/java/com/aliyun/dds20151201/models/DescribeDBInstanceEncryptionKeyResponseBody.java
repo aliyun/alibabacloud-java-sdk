@@ -11,7 +11,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String creator;
 
     /**
-     * <p>The scheduled time when the key for the instance will be deleted. If the value is empty, the key will not be deleted.</p>
+     * <p>The scheduled time when the key for the instance will be deleted. If the parameter is left empty, the key will not be deleted.</p>
      */
     @NameInMap("DeleteDate")
     public String deleteDate;
@@ -44,7 +44,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String keyUsage;
 
     /**
-     * <p>The expiration time of the key for the instance. The time is displayed in UTC. If the value is empty, the key for the instance will not expire.</p>
+     * <p>The expiration time of the key for the instance. The time is displayed in UTC. If the parameter is left empty, the key for the instance will not expire.</p>
      */
     @NameInMap("MaterialExpireTime")
     public String materialExpireTime;
@@ -56,7 +56,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String origin;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -11,7 +11,7 @@ public class CreateBackupResponseBody extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
