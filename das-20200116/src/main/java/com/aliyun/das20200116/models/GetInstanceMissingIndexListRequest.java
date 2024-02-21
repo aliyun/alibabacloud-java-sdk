@@ -4,48 +4,95 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceMissingIndexListRequest extends TeaModel {
+    /**
+     * <p>The query condition based on the average cost savings.</p>
+     */
     @NameInMap("AvgTotalUserCost")
     public String avgTotalUserCost;
 
+    /**
+     * <p>The query condition based on the performance improvement.</p>
+     */
     @NameInMap("AvgUserImpact")
     public String avgUserImpact;
 
+    /**
+     * <p>The end time of the last seek.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The query condition based on the number of indexes.</p>
+     */
     @NameInMap("IndexCount")
     public String indexCount;
 
+    /**
+     * <p>The database instance ID.</p>
+     * <br>
+     * <p>>  Only ApsaraDB RDS for SQL Server instances are supported.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The object name.</p>
+     */
     @NameInMap("ObjectName")
     public String objectName;
 
+    /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNo")
     public String pageNo;
 
+    /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The query condition based on the total number of pages.</p>
+     */
     @NameInMap("ReservedPages")
     public String reservedPages;
 
+    /**
+     * <p>The query condition based on the table size.</p>
+     */
     @NameInMap("ReservedSize")
     public String reservedSize;
 
+    /**
+     * <p>The query condition based on the number of table rows.</p>
+     */
     @NameInMap("RowCount")
     public String rowCount;
 
+    /**
+     * <p>The start time of the last seek.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The query condition based on the number of compilations.</p>
+     */
     @NameInMap("UniqueCompiles")
     public String uniqueCompiles;
 
+    /**
+     * <p>The query condition based on the number of scans.</p>
+     */
     @NameInMap("UserScans")
     public String userScans;
 
+    /**
+     * <p>The query condition based on the number of seeks.</p>
+     */
     @NameInMap("UserSeeks")
     public String userSeeks;
 

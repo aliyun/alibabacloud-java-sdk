@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetAutoIncrementUsageStatisticResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request is successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +85,39 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
     }
 
     public static class GetAutoIncrementUsageStatisticResponseBodyDataAutoIncrementUsageList extends TeaModel {
+        /**
+         * <p>The latest auto-increment ID.</p>
+         */
         @NameInMap("AutoIncrementCurrentValue")
         public Long autoIncrementCurrentValue;
 
+        /**
+         * <p>The usage ratio of auto-increment IDs.</p>
+         */
         @NameInMap("AutoIncrementRatio")
         public Double autoIncrementRatio;
 
+        /**
+         * <p>The column name.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <p>The database name.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>The maximum auto-increment ID that is supported by the current data type.</p>
+         */
         @NameInMap("MaximumValue")
         public Long maximumValue;
 
+        /**
+         * <p>The table name.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
@@ -139,18 +177,41 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
     }
 
     public static class GetAutoIncrementUsageStatisticResponseBodyData extends TeaModel {
+        /**
+         * <p>The usage details of auto-increment IDs.</p>
+         */
         @NameInMap("AutoIncrementUsageList")
         public java.util.List<GetAutoIncrementUsageStatisticResponseBodyDataAutoIncrementUsageList> autoIncrementUsageList;
 
+        /**
+         * <p>The error message returned if the task fails.</p>
+         */
         @NameInMap("ErrorInfo")
         public String errorInfo;
 
+        /**
+         * <p>Indicates whether the task is complete. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Finish")
         public Boolean finish;
 
+        /**
+         * <p>The task status. Valid values:</p>
+         * <br>
+         * <p>*   **INIT**: The task is being initialized.</p>
+         * <p>*   **RUNNING**: The task is being executed.</p>
+         * <p>*   **SUCCESS**: The task succeeds.</p>
+         * <p>*   **FAIL**: The task fails.</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <p>The time when the request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 

@@ -4,15 +4,32 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetAutoIncrementUsageStatisticRequest extends TeaModel {
+    /**
+     * <p>The database name. If you specify a database, the operation queries the usage of auto-increment table IDs in the specified database. Otherwise, the operation queries the usage of auto-increment table IDs in all databases on the instance.</p>
+     * <br>
+     * <p>>  Specify the parameter value as a JSON array, such as \[\"db1\",\"db2\"]. Separate multiple database names with commas (,).</p>
+     */
     @NameInMap("DbNames")
     public String dbNames;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The usage threshold of auto-increment IDs. Only usage that exceeds the threshold can be returned. Valid values are decimals that range from 0 to 1.</p>
+     */
     @NameInMap("RatioFilter")
     public Double ratioFilter;
 
+    /**
+     * <p>Specifies whether to query real-time data. Valid values:</p>
+     * <br>
+     * <p>*   **true**: queries data in real time except for data generated in the last 10 minutes.****</p>
+     * <p>*   **false**: queries data generated in the last 2 hours. If no such data exists, queries the latest data.</p>
+     */
     @NameInMap("RealTime")
     public Boolean realTime;
 

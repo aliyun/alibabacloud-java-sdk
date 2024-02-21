@@ -4,18 +4,36 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceMissingIndexListResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The detailed information.</p>
+     */
     @NameInMap("Data")
     public GetInstanceMissingIndexListResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,60 +83,117 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
     }
 
     public static class GetInstanceMissingIndexListResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The average cost savings.</p>
+         */
         @NameInMap("AvgTotalUserCost")
         public Double avgTotalUserCost;
 
+        /**
+         * <p>The performance improvement, in percentage.</p>
+         */
         @NameInMap("AvgUserImpact")
         public Double avgUserImpact;
 
+        /**
+         * <p>The statement used to create the missing indexes.</p>
+         */
         @NameInMap("CreateIndex")
         public String createIndex;
 
+        /**
+         * <p>The database name.</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The index columns included in the equal operation.</p>
+         */
         @NameInMap("EqualityColumns")
         public String equalityColumns;
 
+        /**
+         * <p>The columns on which indexes are missing.</p>
+         */
         @NameInMap("IncludedColumns")
         public String includedColumns;
 
+        /**
+         * <p>The number of indexes.</p>
+         */
         @NameInMap("IndexCount")
         public Long indexCount;
 
+        /**
+         * <p>The index columns included in the not equal operation.</p>
+         */
         @NameInMap("InequalityColumns")
         public String inequalityColumns;
 
+        /**
+         * <p>The last seek time of a user.</p>
+         */
         @NameInMap("LastUserSeek")
         public Long lastUserSeek;
 
+        /**
+         * <p>The object name.</p>
+         */
         @NameInMap("ObjectName")
         public String objectName;
 
+        /**
+         * <p>The total number of returned pages.</p>
+         */
         @NameInMap("ReservedPages")
         public Long reservedPages;
 
+        /**
+         * <p>The table size.</p>
+         */
         @NameInMap("ReservedSize")
         public Double reservedSize;
 
+        /**
+         * <p>The number of table rows.</p>
+         */
         @NameInMap("RowCount")
         public Long rowCount;
 
+        /**
+         * <p>The schema name.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The number of scans.</p>
+         */
         @NameInMap("SystemScans")
         public Long systemScans;
 
+        /**
+         * <p>The number of seeks.</p>
+         */
         @NameInMap("SystemSeeks")
         public Long systemSeeks;
 
+        /**
+         * <p>The number of compilations.</p>
+         */
         @NameInMap("UniqueCompiles")
         public Long uniqueCompiles;
 
+        /**
+         * <p>The number of scans performed by users.</p>
+         */
         @NameInMap("UserScans")
         public Long userScans;
 
+        /**
+         * <p>The number of seeks performed by users.</p>
+         */
         @NameInMap("UserSeeks")
         public Long userSeeks;
 
@@ -282,15 +357,27 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
     }
 
     public static class GetInstanceMissingIndexListResponseBodyData extends TeaModel {
+        /**
+         * <p>The returned data.</p>
+         */
         @NameInMap("List")
         public java.util.List<GetInstanceMissingIndexListResponseBodyDataList> list;
 
+        /**
+         * <p>The page number of the page returned.</p>
+         */
         @NameInMap("PageNo")
         public Long pageNo;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

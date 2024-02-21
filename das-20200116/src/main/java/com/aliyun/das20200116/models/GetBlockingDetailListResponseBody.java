@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetBlockingDetailListResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetBlockingDetailListResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request is successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,39 +85,75 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
     }
 
     public static class GetBlockingDetailListResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The batch ID.</p>
+         */
         @NameInMap("BatchId")
         public Long batchId;
 
+        /**
+         * <p>The client name.</p>
+         */
         @NameInMap("ClientAppName")
         public String clientAppName;
 
+        /**
+         * <p>The time when the blocking data was collected.</p>
+         */
         @NameInMap("CurrentCollectionTime")
         public Long currentCollectionTime;
 
+        /**
+         * <p>The database name.</p>
+         */
         @NameInMap("DataBase")
         public String dataBase;
 
+        /**
+         * <p>The client hostname.</p>
+         */
         @NameInMap("HostName")
         public String hostName;
 
+        /**
+         * <p>The username that is used for the logon.</p>
+         */
         @NameInMap("LoginId")
         public String loginId;
 
+        /**
+         * <p>The hash value of the SQL statement.</p>
+         */
         @NameInMap("QueryHash")
         public String queryHash;
 
+        /**
+         * <p>The session ID.</p>
+         */
         @NameInMap("Spid")
         public String spid;
 
+        /**
+         * <p>The SQL statement.</p>
+         */
         @NameInMap("SqlText")
         public String sqlText;
 
+        /**
+         * <p>The time when the execution started.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The blocking duration. Unit: milliseconds.</p>
+         */
         @NameInMap("WaitTimeMs")
         public Long waitTimeMs;
 
+        /**
+         * <p>The wait type.</p>
+         */
         @NameInMap("WaitType")
         public String waitType;
 
@@ -205,15 +261,27 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
     }
 
     public static class GetBlockingDetailListResponseBodyData extends TeaModel {
+        /**
+         * <p>The details of the data returned.</p>
+         */
         @NameInMap("List")
         public java.util.List<GetBlockingDetailListResponseBodyDataList> list;
 
+        /**
+         * <p>The page number of the page returned.</p>
+         */
         @NameInMap("PageNo")
         public Long pageNo;
 
+        /**
+         * <p>The number of entries returned on each page.</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 
