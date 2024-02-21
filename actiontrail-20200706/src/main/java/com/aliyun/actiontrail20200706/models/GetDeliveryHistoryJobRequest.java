@@ -4,6 +4,9 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class GetDeliveryHistoryJobRequest extends TeaModel {
+    /**
+     * <p>The ID of the historical event delivery task.</p>
+     */
     @NameInMap("JobId")
     public Long jobId;
 

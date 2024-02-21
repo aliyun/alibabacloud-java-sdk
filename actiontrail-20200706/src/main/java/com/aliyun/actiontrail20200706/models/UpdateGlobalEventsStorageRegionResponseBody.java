@@ -3,19 +3,19 @@ package com.aliyun.actiontrail20200706.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteDeliveryHistoryJobResponseBody extends TeaModel {
+public class UpdateGlobalEventsStorageRegionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteDeliveryHistoryJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteDeliveryHistoryJobResponseBody self = new DeleteDeliveryHistoryJobResponseBody();
+    public static UpdateGlobalEventsStorageRegionResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateGlobalEventsStorageRegionResponseBody self = new UpdateGlobalEventsStorageRegionResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDeliveryHistoryJobResponseBody setRequestId(String requestId) {
+    public UpdateGlobalEventsStorageRegionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

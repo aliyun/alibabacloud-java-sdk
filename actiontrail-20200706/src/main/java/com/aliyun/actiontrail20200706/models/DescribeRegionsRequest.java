@@ -4,6 +4,12 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
+    /**
+     * <p>The language in which the region names are returned. Valid values:</p>
+     * <br>
+     * <p>- zh-CN: Chinese.</p>
+     * <p>- en-US: English. It is the default value.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 

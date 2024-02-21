@@ -4,9 +4,22 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class GetTrailStatusRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to query the status of a multi-account trail. Valid values:</p>
+     * <br>
+     * <p>*   true: Query the status of a multi-account trail.</p>
+     * <p>*   false: Query the status of a single-account trail. It is the default value.</p>
+     */
     @NameInMap("IsOrganizationTrail")
     public Boolean isOrganizationTrail;
 
+    /**
+     * <p>The name of the trail.</p>
+     * <br>
+     * <p>The name must be 6 to 36 characters in length. The name must start with a lowercase letter and can contain lowercase letters, digits, hyphens (-), and underscores (\_).</p>
+     * <br>
+     * <p>> The name must be unique within your Alibaba Cloud account.</p>
+     */
     @NameInMap("Name")
     public String name;
 

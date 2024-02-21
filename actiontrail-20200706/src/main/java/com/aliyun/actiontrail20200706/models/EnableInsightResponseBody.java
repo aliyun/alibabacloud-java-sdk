@@ -3,19 +3,16 @@ package com.aliyun.actiontrail20200706.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteTrailResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
+public class EnableInsightResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteTrailResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteTrailResponseBody self = new DeleteTrailResponseBody();
+    public static EnableInsightResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        EnableInsightResponseBody self = new EnableInsightResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteTrailResponseBody setRequestId(String requestId) {
+    public EnableInsightResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

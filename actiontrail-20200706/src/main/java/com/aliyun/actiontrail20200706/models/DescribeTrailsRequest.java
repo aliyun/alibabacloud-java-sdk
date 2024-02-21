@@ -4,12 +4,27 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class DescribeTrailsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to query the information about multi-account trails. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false (default)</p>
+     */
     @NameInMap("IncludeOrganizationTrail")
     public Boolean includeOrganizationTrail;
 
+    /**
+     * <p>Specifies whether to return the information about shadow trails. Valid values:</p>
+     * <br>
+     * <p>*   false: Do not return the information about shadow trails. It is the default value.</p>
+     * <p>*   true: Return the information about shadow trails.</p>
+     */
     @NameInMap("IncludeShadowTrails")
     public Boolean includeShadowTrails;
 
+    /**
+     * <p>The names of the trails whose information you want to query. Separate multiple trail names with commas (,).</p>
+     */
     @NameInMap("NameList")
     public String nameList;
 

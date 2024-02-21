@@ -4,9 +4,15 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class GetAccessKeyLastUsedProductsResponseBody extends TeaModel {
+    /**
+     * <p>The list of returned Alibaba Cloud services.</p>
+     */
     @NameInMap("Products")
     public java.util.List<GetAccessKeyLastUsedProductsResponseBodyProducts> products;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,77 @@ public class GetAccessKeyLastUsedProductsResponseBody extends TeaModel {
     }
 
     public static class GetAccessKeyLastUsedProductsResponseBodyProducts extends TeaModel {
+        /**
+         * <p>The event details.</p>
+         */
         @NameInMap("Detail")
         public String detail;
 
+        /**
+         * <p>The Alibaba Cloud service.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The Chinese name of the Alibaba Cloud service.</p>
+         */
         @NameInMap("ServiceNameCn")
         public String serviceNameCn;
 
+        /**
+         * <p>The English name of the Alibaba Cloud service.</p>
+         */
         @NameInMap("ServiceNameEn")
         public String serviceNameEn;
 
+        /**
+         * <p>The event source.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Internal</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    other events</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   ManagementEvent</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    management events</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   DataEvent</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    data events</p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Unit: millisecond.</p>
+         */
         @NameInMap("UsedTimestamp")
         public Long usedTimestamp;
 

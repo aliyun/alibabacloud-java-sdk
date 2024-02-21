@@ -4,33 +4,72 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class GetTrailStatusResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether logging is enabled for the trail. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("IsLogging")
     public Boolean isLogging;
 
+    /**
+     * <p>The log of the last failed delivery.</p>
+     */
     @NameInMap("LatestDeliveryError")
     public String latestDeliveryError;
 
+    /**
+     * <p>The log of the last failed delivery to Log Service.</p>
+     */
     @NameInMap("LatestDeliveryLogServiceError")
     public String latestDeliveryLogServiceError;
 
+    /**
+     * <p>The most recent time when an event was delivered to Log Service.</p>
+     */
     @NameInMap("LatestDeliveryLogServiceTime")
     public String latestDeliveryLogServiceTime;
 
+    /**
+     * <p>The most recent time when an event was delivered by the trail.</p>
+     */
     @NameInMap("LatestDeliveryTime")
     public String latestDeliveryTime;
 
+    /**
+     * <p>Indicates whether the destination Object Storage Service (OSS) bucket is available. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("OssBucketStatus")
     public Boolean ossBucketStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the destination Log Service Logstore is available. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("SlsLogStoreStatus")
     public Boolean slsLogStoreStatus;
 
+    /**
+     * <p>The time when logging was last enabled for the trail.</p>
+     */
     @NameInMap("StartLoggingTime")
     public String startLoggingTime;
 
+    /**
+     * <p>The time when logging was last disabled for the trail.</p>
+     */
     @NameInMap("StopLoggingTime")
     public String stopLoggingTime;
 

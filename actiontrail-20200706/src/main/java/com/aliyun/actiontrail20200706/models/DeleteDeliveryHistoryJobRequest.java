@@ -4,6 +4,11 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class DeleteDeliveryHistoryJobRequest extends TeaModel {
+    /**
+     * <p>The ID of the historical event delivery task to be deleted.</p>
+     * <br>
+     * <p>You can call the [ListDeliveryHistoryJobs](~~188101~~) operation to query task IDs.</p>
+     */
     @NameInMap("JobId")
     public Integer jobId;
 

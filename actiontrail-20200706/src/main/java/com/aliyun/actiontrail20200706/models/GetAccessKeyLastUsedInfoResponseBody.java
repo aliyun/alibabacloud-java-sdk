@@ -4,39 +4,77 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
+    /**
+     * <p>The AccessKey ID.</p>
+     */
     @NameInMap("AccessKeyId")
     public String accessKeyId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <p>The type of the account to which the AccessKey pair belongs.</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <p>The details about the event.</p>
+     */
     @NameInMap("Detail")
     public String detail;
 
+    /**
+     * <p>The ID of the account to which the AccessKey pair belongs.</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The Alibaba Cloud service that was last accessed.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The Chinese name of the Alibaba Cloud service that was last accessed.</p>
+     */
     @NameInMap("ServiceNameCn")
     public String serviceNameCn;
 
+    /**
+     * <p>The English name of the Alibaba Cloud service that was last accessed.</p>
+     */
     @NameInMap("ServiceNameEn")
     public String serviceNameEn;
 
+    /**
+     * <p>The event source.</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>The timestamp when the AccessKey pair was last called.</p>
+     */
     @NameInMap("UsedTimestamp")
     public Long usedTimestamp;
 
+    /**
+     * <p>The name of the account to which the AccessKey pair belongs.</p>
+     * <br>
+     * <p>If the value of the AccountType parameter is root-account, the value of the UserName parameter is root. If the value of the AccountType parameter is ram-user, the value of the UserName parameter is the name of a RAM user.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

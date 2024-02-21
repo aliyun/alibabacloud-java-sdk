@@ -4,33 +4,69 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class UpdateTrailResponseBody extends TeaModel {
+    /**
+     * <p>The read/write type of the events to be delivered.</p>
+     */
     @NameInMap("EventRW")
     public String eventRW;
 
+    /**
+     * <p>The home region of the trail.</p>
+     */
     @NameInMap("HomeRegion")
     public String homeRegion;
 
+    @NameInMap("MaxComputeProjectArn")
+    public String maxComputeProjectArn;
+
+    @NameInMap("MaxComputeWriteRoleArn")
+    public String maxComputeWriteRoleArn;
+
+    /**
+     * <p>The name of the trail.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The name of the OSS bucket.</p>
+     */
     @NameInMap("OssBucketName")
     public String ossBucketName;
 
+    /**
+     * <p>The prefix of the log files to be stored in the destination OSS bucket.</p>
+     */
     @NameInMap("OssKeyPrefix")
     public String ossKeyPrefix;
 
+    /**
+     * <p>The ARN of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.</p>
+     */
     @NameInMap("OssWriteRoleArn")
     public String ossWriteRoleArn;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ARN of the Log Service project to which events are to be delivered.</p>
+     */
     @NameInMap("SlsProjectArn")
     public String slsProjectArn;
 
+    /**
+     * <p>The ARN of the RAM role that is assumed by ActionTrail is to deliver events to the Log Service project.</p>
+     */
     @NameInMap("SlsWriteRoleArn")
     public String slsWriteRoleArn;
 
+    /**
+     * <p>The one or more regions from which the trail delivers events.</p>
+     */
     @NameInMap("TrailRegion")
     public String trailRegion;
 
@@ -53,6 +89,22 @@ public class UpdateTrailResponseBody extends TeaModel {
     }
     public String getHomeRegion() {
         return this.homeRegion;
+    }
+
+    public UpdateTrailResponseBody setMaxComputeProjectArn(String maxComputeProjectArn) {
+        this.maxComputeProjectArn = maxComputeProjectArn;
+        return this;
+    }
+    public String getMaxComputeProjectArn() {
+        return this.maxComputeProjectArn;
+    }
+
+    public UpdateTrailResponseBody setMaxComputeWriteRoleArn(String maxComputeWriteRoleArn) {
+        this.maxComputeWriteRoleArn = maxComputeWriteRoleArn;
+        return this;
+    }
+    public String getMaxComputeWriteRoleArn() {
+        return this.maxComputeWriteRoleArn;
     }
 
     public UpdateTrailResponseBody setName(String name) {
