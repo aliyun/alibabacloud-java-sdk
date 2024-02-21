@@ -10,16 +10,32 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to perform full data migration or synchronization. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("DataInitialization")
     public Boolean dataInitialization;
 
+    /**
+     * <p>Specifies whether to perform incremental data migration or synchronization. Valid values:</p>
+     * <br>
+     * <p>*   **false**</p>
+     * <p>*   **true**</p>
+     */
     @NameInMap("DataSynchronization")
     public Boolean dataSynchronization;
 
     /**
-     * <p>The objects of the data synchronization task after modification. The value is a JSON string. For more information, see [Objects of DTS tasks](~~209545~~).</p>
+     * <p>The objects of the data synchronization task after modification. The value must be a JSON string. For more information, see [Objects of DTS tasks](~~209545~~).</p>
      * <br>
-     * <p>>  Before you call the ModifyDtsJob operation, we recommend that you call the [DescribeDtsJobDetail](~~208925~~) to query the current objects of the data synchronization task. Then, you can specify the new objects based on your business requirements. For example, if the current objects are Table A and Table B and you need to add Table C, you must specify Table A, Table B, and Table C for this parameter.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   The new value of DbList overwrites the original value. Make sure that all the objects that you want to synchronize are specified. Otherwise, some objects may be lost. Specify this parameter with caution.</p>
+     * <br>
+     * <p>*   Before you call the ModifyDtsJob operation, we recommend that you call the [DescribeDtsJobDetail](~~208925~~) operation to query the current objects of the data synchronization task. Then, you can specify the new objects based on your business requirements. For example, if the current objects are Table A and Table B and you need to add Table C, you must specify Table A, Table B, and Table C for this parameter.</p>
      */
     @NameInMap("DbList")
     public java.util.Map<String, ?> dbList;
@@ -30,6 +46,9 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
+    /**
+     * <p>The synchronization task ID. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.</p>
+     */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
@@ -69,6 +88,12 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("Reserved")
     public String reserved;
 
+    /**
+     * <p>Specifies whether to perform schema migration or synchronization. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("StructureInitialization")
     public Boolean structureInitialization;
 
