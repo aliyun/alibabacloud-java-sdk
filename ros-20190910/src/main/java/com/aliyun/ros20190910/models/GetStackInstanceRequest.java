@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetStackInstanceRequest extends TeaModel {
+    @NameInMap("OutputOption")
+    public String outputOption;
+
     /**
      * <p>The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
      */
@@ -37,6 +40,14 @@ public class GetStackInstanceRequest extends TeaModel {
     public static GetStackInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetStackInstanceRequest self = new GetStackInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetStackInstanceRequest setOutputOption(String outputOption) {
+        this.outputOption = outputOption;
+        return this;
+    }
+    public String getOutputOption() {
+        return this.outputOption;
     }
 
     public GetStackInstanceRequest setRegionId(String regionId) {

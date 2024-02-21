@@ -88,6 +88,9 @@ public class GetStackInstanceResponseBody extends TeaModel {
         @NameInMap("DriftDetectionTime")
         public String driftDetectionTime;
 
+        @NameInMap("Outputs")
+        public java.util.List<java.util.Map<String, ?>> outputs;
+
         /**
          * <p>The parameters that are used to override specific parameters.</p>
          */
@@ -185,6 +188,14 @@ public class GetStackInstanceResponseBody extends TeaModel {
         }
         public String getDriftDetectionTime() {
             return this.driftDetectionTime;
+        }
+
+        public GetStackInstanceResponseBodyStackInstance setOutputs(java.util.List<java.util.Map<String, ?>> outputs) {
+            this.outputs = outputs;
+            return this;
+        }
+        public java.util.List<java.util.Map<String, ?>> getOutputs() {
+            return this.outputs;
         }
 
         public GetStackInstanceResponseBodyStackInstance setParameterOverrides(java.util.List<GetStackInstanceResponseBodyStackInstanceParameterOverrides> parameterOverrides) {
