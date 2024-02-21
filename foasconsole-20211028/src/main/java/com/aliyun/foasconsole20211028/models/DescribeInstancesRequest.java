@@ -4,7 +4,6 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
-    // 付款类型
     @NameInMap("ChargeType")
     public String chargeType;
 

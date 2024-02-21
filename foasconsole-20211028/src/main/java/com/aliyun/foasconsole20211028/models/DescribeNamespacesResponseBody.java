@@ -13,11 +13,9 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -149,11 +147,9 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespacesResponseBodyNamespacesTags extends TeaModel {
-        // 标签键
         @NameInMap("Key")
         public String key;
 
-        // 标签值
         @NameInMap("Value")
         public String value;
 
@@ -199,7 +195,6 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        // 资源列表
         @NameInMap("Tags")
         public java.util.List<DescribeNamespacesResponseBodyNamespacesTags> tags;
 

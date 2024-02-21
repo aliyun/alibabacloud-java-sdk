@@ -4,15 +4,12 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class QueryCreateInstancePriceResponseBody extends TeaModel {
-    // 价格信息，包括价格和优惠规则。
     @NameInMap("PriceInfo")
     public QueryCreateInstancePriceResponseBodyPriceInfo priceInfo;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -46,15 +43,12 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
     }
 
     public static class QueryCreateInstancePriceResponseBodyPriceInfoOptionalPromotions extends TeaModel {
-        // 优惠券描述
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
-        // 优惠券名称
         @NameInMap("PromotionName")
         public String promotionName;
 
-        // 优惠券编号
         @NameInMap("PromotionOptionNo")
         public String promotionOptionNo;
 
@@ -101,11 +95,9 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
     }
 
     public static class QueryCreateInstancePriceResponseBodyPriceInfoRules extends TeaModel {
-        // 活动规则描述。
         @NameInMap("Description")
         public String description;
 
-        // 活动ID。
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -133,34 +125,27 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
     }
 
     public static class QueryCreateInstancePriceResponseBodyPriceInfo extends TeaModel {
-        // 错误码
         @NameInMap("Code")
         public String code;
 
-        // 货币单位。
         @NameInMap("Currency")
         public String currency;
 
-        // 折扣
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
-        // 错误信息
         @NameInMap("Message")
         public String message;
 
         @NameInMap("OptionalPromotions")
         public java.util.List<QueryCreateInstancePriceResponseBodyPriceInfoOptionalPromotions> optionalPromotions;
 
-        // 原价
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
-        // 活动规则。
         @NameInMap("Rules")
         public java.util.List<QueryCreateInstancePriceResponseBodyPriceInfoRules> rules;
 
-        // 最终价，为原价减去折扣。
         @NameInMap("TradeAmount")
         public Float tradeAmount;
 

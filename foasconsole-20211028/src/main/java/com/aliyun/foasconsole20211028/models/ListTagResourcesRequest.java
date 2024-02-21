@@ -4,23 +4,18 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
-    // 下一个查询开始Token
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 地域
     @NameInMap("RegionId")
     public String regionId;
 
-    // 资源ID,最多 50个子项
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
-    // 资源类型
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // 标签列表，最多包含20个子项
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -70,11 +65,9 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
-        // 标签键
         @NameInMap("Key")
         public String key;
 
-        // 标签值
         @NameInMap("Value")
         public String value;
 

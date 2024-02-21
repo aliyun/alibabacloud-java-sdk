@@ -4,22 +4,18 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class ConvertInstanceShrinkRequest extends TeaModel {
-    // 订购周期数量
     @NameInMap("Duration")
     public Integer duration;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 是否自动续费
     @NameInMap("IsAutoRenew")
     public Boolean isAutoRenew;
 
-    // 项目空间资源规格。
     @NameInMap("NamespaceResourceSpecs")
     public String namespaceResourceSpecsShrink;
 
-    // 订购周期
     @NameInMap("PricingCycle")
     public String pricingCycle;
 

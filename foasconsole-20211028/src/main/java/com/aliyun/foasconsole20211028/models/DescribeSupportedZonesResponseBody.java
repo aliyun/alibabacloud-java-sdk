@@ -10,11 +10,9 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 

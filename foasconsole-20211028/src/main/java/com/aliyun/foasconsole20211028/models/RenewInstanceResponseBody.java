@@ -4,15 +4,15 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class RenewInstanceResponseBody extends TeaModel {
-    // orderId
+    /**
+     * <p>orderId</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
