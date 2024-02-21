@@ -77,11 +77,14 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         public Long IOPSPercent;
 
         /**
-         * <p>The read bandwidth of the disk. Unit: Mbit/s.</p>
+         * <p>The read bandwidth of the disk. Unit: MByte/s.</p>
          */
         @NameInMap("ReadBPS")
         public Long readBPS;
 
+        /**
+         * <p>Read IO block size. Unit: Bytes</p>
+         */
         @NameInMap("ReadBlockSize")
         public Long readBlockSize;
 
@@ -91,6 +94,9 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         @NameInMap("ReadIOPS")
         public Long readIOPS;
 
+        /**
+         * <p>Read IO latency. Unit:  microsecond</p>
+         */
         @NameInMap("ReadLatency")
         public Long readLatency;
 
@@ -101,11 +107,14 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         public String timestamp;
 
         /**
-         * <p>The write bandwidth of the disk. Unit: Mbit/s.</p>
+         * <p>The write bandwidth of the disk. Unit: MByte/s.</p>
          */
         @NameInMap("WriteBPS")
         public Long writeBPS;
 
+        /**
+         * <p>Write IO block size. Unit: Bytes</p>
+         */
         @NameInMap("WriteBlockSize")
         public Long writeBlockSize;
 
@@ -115,6 +124,9 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         @NameInMap("WriteIOPS")
         public Long writeIOPS;
 
+        /**
+         * <p>Write IO latency. Unit: microsecond</p>
+         */
         @NameInMap("WriteLatency")
         public Long writeLatency;
 

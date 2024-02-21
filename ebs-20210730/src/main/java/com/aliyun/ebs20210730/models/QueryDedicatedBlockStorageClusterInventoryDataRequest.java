@@ -25,7 +25,7 @@ public class QueryDedicatedBlockStorageClusterInventoryDataRequest extends TeaMo
     public Long endTime;
 
     /**
-     * <p>The time interval （seconds） between data retrieval points.</p>
+     * <p>The time interval (seconds) between data retrieval points.</p>
      */
     @NameInMap("Period")
     public Integer period;
