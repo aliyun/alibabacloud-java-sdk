@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetClusterRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The ID of the cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>地域ID。</p>
+     * <p>The ID of the region in which you want to create the instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

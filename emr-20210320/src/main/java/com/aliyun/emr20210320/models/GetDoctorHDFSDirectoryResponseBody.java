@@ -2151,19 +2151,19 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
 
     public static class Metrics extends TeaModel {
         /**
-         * <p>The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
+         * <p>The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.</p>
          */
         @NameInMap("ColdDataDayGrowthSize")
         public ColdDataDayGrowthSize coldDataDayGrowthSize;
 
         /**
-         * <p>The amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
+         * <p>The amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.</p>
          */
         @NameInMap("ColdDataSize")
         public ColdDataSize coldDataSize;
 
         /**
-         * <p>The day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
+         * <p>The day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.</p>
          */
         @NameInMap("ColdDataSizeDayGrowthRatio")
         public ColdDataSizeDayGrowthRatio coldDataSizeDayGrowthRatio;
@@ -2205,19 +2205,19 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
         public FreezeDataSizeDayGrowthRatio freezeDataSizeDayGrowthRatio;
 
         /**
-         * <p>The daily increment of the amount of hot data. Hot data refers to data that is accessed in recent seven days.</p>
+         * <p>The daily increment of the amount of hot data. Hot data refers to data that is accessed in previous seven days.</p>
          */
         @NameInMap("HotDataDayGrowthSize")
         public HotDataDayGrowthSize hotDataDayGrowthSize;
 
         /**
-         * <p>The amount of hot data. Hot data refers to data that is accessed in recent seven days.</p>
+         * <p>The amount of hot data. Hot data refers to data that is accessed in previous seven days.</p>
          */
         @NameInMap("HotDataSize")
         public HotDataSize hotDataSize;
 
         /**
-         * <p>The day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in recent seven days.</p>
+         * <p>The day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in previous seven days.</p>
          */
         @NameInMap("HotDataSizeDayGrowthRatio")
         public HotDataSizeDayGrowthRatio hotDataSizeDayGrowthRatio;
@@ -2295,7 +2295,7 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
         public TinyFileDayGrowthCount tinyFileDayGrowthCount;
 
         /**
-         * <p>The daily incremental of the total data volume.</p>
+         * <p>The daily incremental of the total amount of data.</p>
          */
         @NameInMap("TotalDataDayGrowthSize")
         public TotalDataDayGrowthSize totalDataDayGrowthSize;
@@ -2331,19 +2331,19 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
         public TotalFileDayGrowthCount totalFileDayGrowthCount;
 
         /**
-         * <p>The daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
+         * <p>The daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.</p>
          */
         @NameInMap("WarmDataDayGrowthSize")
         public WarmDataDayGrowthSize warmDataDayGrowthSize;
 
         /**
-         * <p>The amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
+         * <p>The amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.</p>
          */
         @NameInMap("WarmDataSize")
         public WarmDataSize warmDataSize;
 
         /**
-         * <p>The day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
+         * <p>The day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.</p>
          */
         @NameInMap("WarmDataSizeDayGrowthRatio")
         public WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio;

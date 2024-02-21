@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateClusterResponseBody extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The ID of cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>操作ID。</p>
+     * <p>The ID of the operation.</p>
      */
     @NameInMap("OperationId")
     public String operationId;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

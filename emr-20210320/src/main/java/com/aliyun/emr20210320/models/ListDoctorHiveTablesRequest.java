@@ -29,7 +29,7 @@ public class ListDoctorHiveTablesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The basis on which you want to sort the query results. Valid value:</p>
+     * <p>The basis on which you want to sort the query results. Valid values:</p>
      * <br>
      * <p>*   partitionNum: the number of partitions.</p>
      * <p>*   totalFileCount: the total number of files.</p>
@@ -43,14 +43,14 @@ public class ListDoctorHiveTablesRequest extends TeaModel {
      * <p>*   smallFileRatio: the proportion of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.</p>
      * <p>*   tinyFileRatio: the proportion of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.</p>
      * <p>*   emptyFileRatio: the proportion of empty files. Empty files are those with a size of 0 MB.</p>
-     * <p>*   hotDataSize: the amount of hot data. Hot data refers to data that is accessed in recent seven days.</p>
-     * <p>*   warmDataSize: the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
-     * <p>*   coldDataSize: the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
+     * <p>*   hotDataSize: the amount of hot data. Hot data refers to data that is accessed in previous seven days.</p>
+     * <p>*   WarmDataSize: the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.</p>
+     * <p>*   coldDataSize: the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.</p>
      * <p>*   freezeDataSize: the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.</p>
      * <p>*   totalDataSize: the total amount of data.</p>
-     * <p>*   hotDataRatio: the proportion of hot data. Hot data refers to data that is accessed in recent seven days.</p>
-     * <p>*   awmDataRatio: the proportion of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
-     * <p>*   coldDataRatio: the proportion of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
+     * <p>*   hotDataRatio: the proportion of hot data. Hot data refers to data that is accessed in previous seven days.</p>
+     * <p>*   WarmDataRatio: the proportion of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.</p>
+     * <p>*   coldDataRatio: the proportion of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.</p>
      * <p>*   freezeDataRatio: the proportion of very cold data. Very cold data refers to data that is not accessed for more than 90 days.</p>
      * <p>*   totalFileDayGrowthCount: the daily increment of the total number of files.</p>
      * <p>*   largeFileDayGrowthCount: the daily increment of the number of large files. Large files are those with a size greater than 1 GB.</p>
@@ -58,22 +58,22 @@ public class ListDoctorHiveTablesRequest extends TeaModel {
      * <p>*   smallFileDayGrowthCount: the daily increment of the number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.</p>
      * <p>*   tinyFileDayGrowthCount: the daily increment of the number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.</p>
      * <p>*   emptyFileDayGrowthCount: the daily increment of the number of empty files. Empty files are those with a size of 0 MB.</p>
-     * <p>*   hotDataDayGrowthSize: The daily increment of the amount of hot data. Hot data refers to data that is accessed in recent seven days.</p>
-     * <p>*   warmDataDayGrowthSize: the daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
-     * <p>*   coldDataDayGrowthSize: The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
-     * <p>*   freezeDataDayGrowthSize: The daily increment of the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.</p>
-     * <p>*   totalDataDayGrowthSize: the daily incremental of the total data volume.</p>
+     * <p>*   hotDataDayGrowthSize: the daily increment of the amount of hot data. Hot data refers to data that is accessed in previous seven days.</p>
+     * <p>*   warmDataDayGrowthSize: the daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.</p>
+     * <p>*   coldDataDayGrowthSize: the daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.</p>
+     * <p>*   freezeDataDayGrowthSize: the daily increment of the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.</p>
+     * <p>*   totalDataDayGrowthSize: the daily increment of the amount of total data.</p>
      * <p>*   totalFileCountDayGrowthRatio: the day-to-day growth rate of the total number of files.</p>
      * <p>*   largeFileCountDayGrowthRatio: the day-to-day growth rate of the number of large files. Large files are those with a size greater than 1 GB.</p>
      * <p>*   mediumFileCountDayGrowthRatio: the day-to-day growth rate of the number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.</p>
      * <p>*   smallFileCountDayGrowthRatio: the day-to-day growth rate of the number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.</p>
      * <p>*   tinyFileCountDayGrowthRatio: the day-to-day growth rate of the number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.</p>
      * <p>*   emptyFileCountDayGrowthRatio: the day-to-day growth rate of the number of empty files. Empty files are those with a size of 0 MB.</p>
-     * <p>*   hotDataSizeDayGrowthRatio: the day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in recent seven days.</p>
-     * <p>*   warmDataSizeDayGrowthRatio: the day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
-     * <p>*   coldDataSizeDayGrowthRatio: the day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
+     * <p>*   hotDataSizeDayGrowthRatio: the day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in previous seven days.</p>
+     * <p>*   warmDataSizeDayGrowthRatio: the day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.</p>
+     * <p>*   coldDataSizeDayGrowthRatio: the day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.</p>
      * <p>*   freezeDataSizeDayGrowthRatio: the day-to-day growth rate of the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.</p>
-     * <p>*   totalDataSizeDayGrowthRatio: the day-to-day growth rate of the total data volume.</p>
+     * <p>*   totalDataSizeDayGrowthRatio: the day-to-day growth rate of the total amount of data.</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;

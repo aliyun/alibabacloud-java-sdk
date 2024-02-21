@@ -39,13 +39,13 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
 
     public static class Analysis extends TeaModel {
         /**
-         * <p>The score for the distribution of files of different sizes stored in the Hive database.</p>
+         * <p>The score for the file sizes of the Hive database.</p>
          */
         @NameInMap("HiveDistributionScore")
         public Integer hiveDistributionScore;
 
         /**
-         * <p>The score for the distribution of files stored in different formats in the Hive database.</p>
+         * <p>The score for the data formats of the Hive database.</p>
          */
         @NameInMap("HiveFormatScore")
         public Integer hiveFormatScore;
@@ -103,7 +103,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
 
     public static class Formats extends TeaModel {
         /**
-         * <p>The daily increment of storage format-specific data.</p>
+         * <p>The daily increment of data in the format.</p>
          */
         @NameInMap("FormatDayGrowthSize")
         public Long formatDayGrowthSize;
@@ -115,25 +115,25 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
         public String formatName;
 
         /**
-         * <p>The proportion of data in a specific storage format.</p>
+         * <p>The proportion of the data in the format.</p>
          */
         @NameInMap("FormatRatio")
         public Float formatRatio;
 
         /**
-         * <p>The amount of storage format-specific data.</p>
+         * <p>The amount of data in the format.</p>
          */
         @NameInMap("FormatSize")
         public Long formatSize;
 
         /**
-         * <p>The day-to-day growth rate of storage format-specific data.</p>
+         * <p>The day-to-day growth rate of data in the format.</p>
          */
         @NameInMap("FormatSizeDayGrowthRatio")
         public Float formatSizeDayGrowthRatio;
 
         /**
-         * <p>The unit of the amount of storage format-specific data.</p>
+         * <p>The unit of the amount of data in the format.</p>
          */
         @NameInMap("FormatSizeUnit")
         public String formatSizeUnit;
@@ -3011,25 +3011,25 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
 
     public static class Metrics extends TeaModel {
         /**
-         * <p>The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
+         * <p>The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.</p>
          */
         @NameInMap("ColdDataDayGrowthSize")
         public ColdDataDayGrowthSize coldDataDayGrowthSize;
 
         /**
-         * <p>The proportion of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
+         * <p>The proportion of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.</p>
          */
         @NameInMap("ColdDataRatio")
         public ColdDataRatio coldDataRatio;
 
         /**
-         * <p>The amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
+         * <p>The amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.</p>
          */
         @NameInMap("ColdDataSize")
         public ColdDataSize coldDataSize;
 
         /**
-         * <p>The day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.</p>
+         * <p>The day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.</p>
          */
         @NameInMap("ColdDataSizeDayGrowthRatio")
         public ColdDataSizeDayGrowthRatio coldDataSizeDayGrowthRatio;
@@ -3083,25 +3083,25 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
         public FreezeDataSizeDayGrowthRatio freezeDataSizeDayGrowthRatio;
 
         /**
-         * <p>The daily increment of the amount of hot data. Hot data refers to data that is accessed in recent seven days.</p>
+         * <p>The daily increment of the amount of hot data. Hot data refers to data that is accessed in previous seven days.</p>
          */
         @NameInMap("HotDataDayGrowthSize")
         public HotDataDayGrowthSize hotDataDayGrowthSize;
 
         /**
-         * <p>The proportion of hot data. Hot data refers to data that is accessed in recent seven days.</p>
+         * <p>The proportion of hot data. Hot data refers to data that is accessed in previous seven days.</p>
          */
         @NameInMap("HotDataRatio")
         public HotDataRatio hotDataRatio;
 
         /**
-         * <p>The amount of hot data. Hot data refers to data that is accessed in recent seven days.</p>
+         * <p>The amount of hot data. Hot data refers to data that is accessed in previous seven days.</p>
          */
         @NameInMap("HotDataSize")
         public HotDataSize hotDataSize;
 
         /**
-         * <p>The day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in recent seven days.</p>
+         * <p>The day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in previous seven days.</p>
          */
         @NameInMap("HotDataSizeDayGrowthRatio")
         public HotDataSizeDayGrowthRatio hotDataSizeDayGrowthRatio;
@@ -3215,7 +3215,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
         public TinyFileRatio tinyFileRatio;
 
         /**
-         * <p>The daily incremental of the total data volume.</p>
+         * <p>The daily incremental of the total amount of data.</p>
          */
         @NameInMap("TotalDataDayGrowthSize")
         public TotalDataDayGrowthSize totalDataDayGrowthSize;
@@ -3251,25 +3251,25 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
         public TotalFileDayGrowthCount totalFileDayGrowthCount;
 
         /**
-         * <p>The daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
+         * <p>The daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.</p>
          */
         @NameInMap("WarmDataDayGrowthSize")
         public WarmDataDayGrowthSize warmDataDayGrowthSize;
 
         /**
-         * <p>The proportion of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
+         * <p>The proportion of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.</p>
          */
         @NameInMap("WarmDataRatio")
         public WarmDataRatio warmDataRatio;
 
         /**
-         * <p>The amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
+         * <p>The amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.</p>
          */
         @NameInMap("WarmDataSize")
         public WarmDataSize warmDataSize;
 
         /**
-         * <p>The day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.</p>
+         * <p>The day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.</p>
          */
         @NameInMap("WarmDataSizeDayGrowthRatio")
         public WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio;
