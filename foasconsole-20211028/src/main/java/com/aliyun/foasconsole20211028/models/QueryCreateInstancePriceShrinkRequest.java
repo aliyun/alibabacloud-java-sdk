@@ -19,7 +19,6 @@ public class QueryCreateInstancePriceShrinkRequest extends TeaModel {
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
-    // 优惠券code
     @NameInMap("PromotionCode")
     public String promotionCode;
 

@@ -4,23 +4,18 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class DescribeNamespacesShrinkRequest extends TeaModel {
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 命名空间名称
     @NameInMap("Namespace")
     public String namespace;
 
-    // 当前页数
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
-    // 每页大小
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // regionId
     @NameInMap("Region")
     public String region;
 

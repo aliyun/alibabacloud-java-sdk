@@ -4,7 +4,6 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class DescribeSupportedZonesRequest extends TeaModel {
-    // regionId
     @NameInMap("Region")
     public String region;
 

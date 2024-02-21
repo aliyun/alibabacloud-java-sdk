@@ -16,7 +16,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
     @NameInMap("TagReponseId")
     public String tagReponseId;
 
-    // 资源列表
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
 
@@ -66,19 +65,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
-        // 资源ID
         @NameInMap("ResourceId")
         public String resourceId;
 
-        // 资源类型
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // 标签键
         @NameInMap("TagKey")
         public String tagKey;
 
-        // 标签值
         @NameInMap("TagValue")
         public String tagValue;
 

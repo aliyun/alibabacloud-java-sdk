@@ -155,11 +155,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesTags extends TeaModel {
-        // 标签键
         @NameInMap("Key")
         public String key;
 
-        // 标签值
         @NameInMap("Value")
         public String value;
 
@@ -208,7 +206,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ResourceCreateTime")
         public Long resourceCreateTime;
 
-        // 超期时间
         @NameInMap("ResourceExpiredTime")
         public Long resourceExpiredTime;
 
@@ -221,7 +218,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Storage")
         public DescribeInstancesResponseBodyInstancesStorage storage;
 
-        // 资源列表
         @NameInMap("Tags")
         public java.util.List<DescribeInstancesResponseBodyInstancesTags> tags;
 

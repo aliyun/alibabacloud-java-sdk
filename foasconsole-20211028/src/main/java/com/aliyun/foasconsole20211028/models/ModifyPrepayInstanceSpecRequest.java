@@ -7,7 +7,6 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 地域id
     @NameInMap("Region")
     public String region;
 
