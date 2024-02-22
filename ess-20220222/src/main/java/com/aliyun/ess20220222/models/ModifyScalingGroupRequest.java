@@ -207,6 +207,9 @@ public class ModifyScalingGroupRequest extends TeaModel {
     @NameInMap("ScalingGroupName")
     public String scalingGroupName;
 
+    @NameInMap("ScalingPolicy")
+    public String scalingPolicy;
+
     /**
      * <p>The allocation policy of preemptible instances. You can use this parameter to individually specify the allocation policy of preemptible instances. This parameter takes effect only when you set the `MultiAZPolicy` parameter to `COMPOSABLE`. Valid values:</p>
      * <br>
@@ -461,6 +464,14 @@ public class ModifyScalingGroupRequest extends TeaModel {
     }
     public String getScalingGroupName() {
         return this.scalingGroupName;
+    }
+
+    public ModifyScalingGroupRequest setScalingPolicy(String scalingPolicy) {
+        this.scalingPolicy = scalingPolicy;
+        return this;
+    }
+    public String getScalingPolicy() {
+        return this.scalingPolicy;
     }
 
     public ModifyScalingGroupRequest setSpotAllocationStrategy(String spotAllocationStrategy) {
