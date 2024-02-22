@@ -220,9 +220,6 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("is_share_str")
         public String isShareStr;
 
-        @NameInMap("main_apply_id")
-        public String mainApplyId;
-
         @NameInMap("nights")
         public Integer nights;
 
@@ -298,9 +295,6 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("settlement_type")
         public String settlementType;
 
-        @NameInMap("show_sub_order_id")
-        public String showSubOrderId;
-
         @NameInMap("star")
         public String star;
 
@@ -318,12 +312,6 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("third_itinerary_id")
         public String thirdItineraryId;
-
-        @NameInMap("third_part_business_id")
-        public String thirdPartBusinessId;
-
-        @NameInMap("thirdpart_apply_id")
-        public String thirdpartApplyId;
 
         @NameInMap("total_nights")
         public Integer totalNights;
@@ -719,14 +707,6 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
             return this.isShareStr;
         }
 
-        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setMainApplyId(String mainApplyId) {
-            this.mainApplyId = mainApplyId;
-            return this;
-        }
-        public String getMainApplyId() {
-            return this.mainApplyId;
-        }
-
         public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setNights(Integer nights) {
             this.nights = nights;
             return this;
@@ -927,14 +907,6 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
             return this.settlementType;
         }
 
-        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setShowSubOrderId(String showSubOrderId) {
-            this.showSubOrderId = showSubOrderId;
-            return this;
-        }
-        public String getShowSubOrderId() {
-            return this.showSubOrderId;
-        }
-
         public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setStar(String star) {
             this.star = star;
             return this;
@@ -981,22 +953,6 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getThirdItineraryId() {
             return this.thirdItineraryId;
-        }
-
-        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setThirdPartBusinessId(String thirdPartBusinessId) {
-            this.thirdPartBusinessId = thirdPartBusinessId;
-            return this;
-        }
-        public String getThirdPartBusinessId() {
-            return this.thirdPartBusinessId;
-        }
-
-        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setThirdpartApplyId(String thirdpartApplyId) {
-            this.thirdpartApplyId = thirdpartApplyId;
-            return this;
-        }
-        public String getThirdpartApplyId() {
-            return this.thirdpartApplyId;
         }
 
         public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setTotalNights(Integer totalNights) {
