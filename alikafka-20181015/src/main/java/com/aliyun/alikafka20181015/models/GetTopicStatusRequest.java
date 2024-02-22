@@ -7,6 +7,9 @@ public class GetTopicStatusRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Topic")
     public String topic;
 
@@ -21,6 +24,14 @@ public class GetTopicStatusRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetTopicStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetTopicStatusRequest setTopic(String topic) {

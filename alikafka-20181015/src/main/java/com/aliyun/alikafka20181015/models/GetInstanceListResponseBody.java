@@ -7,6 +7,9 @@ public class GetInstanceListResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("InstanceList")
+    public GetInstanceListResponseBodyInstanceList instanceList;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class GetInstanceListResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("InstanceList")
-    public GetInstanceListResponseBodyInstanceList instanceList;
 
     public static GetInstanceListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceListResponseBody self = new GetInstanceListResponseBody();
@@ -30,6 +30,14 @@ public class GetInstanceListResponseBody extends TeaModel {
     }
     public Integer getCode() {
         return this.code;
+    }
+
+    public GetInstanceListResponseBody setInstanceList(GetInstanceListResponseBodyInstanceList instanceList) {
+        this.instanceList = instanceList;
+        return this;
+    }
+    public GetInstanceListResponseBodyInstanceList getInstanceList() {
+        return this.instanceList;
     }
 
     public GetInstanceListResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class GetInstanceListResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public GetInstanceListResponseBody setInstanceList(GetInstanceListResponseBodyInstanceList instanceList) {
-        this.instanceList = instanceList;
-        return this;
-    }
-    public GetInstanceListResponseBodyInstanceList getInstanceList() {
-        return this.instanceList;
     }
 
     public static class GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfoUpgradeServiceDetailInfoVO extends TeaModel {
@@ -103,23 +103,17 @@ public class GetInstanceListResponseBody extends TeaModel {
     }
 
     public static class GetInstanceListResponseBodyInstanceListInstanceVO extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
-
-        @NameInMap("ExpiredTime")
-        public Long expiredTime;
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         @NameInMap("DeployType")
         public Integer deployType;
 
-        @NameInMap("CreateTime")
-        public Long createTime;
+        @NameInMap("EndPoint")
+        public String endPoint;
 
-        @NameInMap("SslEndPoint")
-        public String sslEndPoint;
+        @NameInMap("ExpiredTime")
+        public Long expiredTime;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -127,53 +121,33 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         @NameInMap("ServiceStatus")
         public Integer serviceStatus;
 
-        @NameInMap("EndPoint")
-        public String endPoint;
-
-        @NameInMap("RegionId")
-        public String regionId;
+        @NameInMap("SslEndPoint")
+        public String sslEndPoint;
 
         @NameInMap("UpgradeServiceDetailInfo")
         public GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo upgradeServiceDetailInfo;
 
+        /**
+         * <p>VSwitch ID。</p>
+         */
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        /**
+         * <p>VPC ID。</p>
+         */
+        @NameInMap("VpcId")
+        public String vpcId;
+
         public static GetInstanceListResponseBodyInstanceListInstanceVO build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceListResponseBodyInstanceListInstanceVO self = new GetInstanceListResponseBodyInstanceListInstanceVO();
             return TeaModel.build(map, self);
-        }
-
-        public GetInstanceListResponseBodyInstanceListInstanceVO setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public GetInstanceListResponseBodyInstanceListInstanceVO setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public GetInstanceListResponseBodyInstanceListInstanceVO setExpiredTime(Long expiredTime) {
-            this.expiredTime = expiredTime;
-            return this;
-        }
-        public Long getExpiredTime() {
-            return this.expiredTime;
-        }
-
-        public GetInstanceListResponseBodyInstanceListInstanceVO setDeployType(Integer deployType) {
-            this.deployType = deployType;
-            return this;
-        }
-        public Integer getDeployType() {
-            return this.deployType;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setCreateTime(Long createTime) {
@@ -184,12 +158,28 @@ public class GetInstanceListResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetInstanceListResponseBodyInstanceListInstanceVO setSslEndPoint(String sslEndPoint) {
-            this.sslEndPoint = sslEndPoint;
+        public GetInstanceListResponseBodyInstanceListInstanceVO setDeployType(Integer deployType) {
+            this.deployType = deployType;
             return this;
         }
-        public String getSslEndPoint() {
-            return this.sslEndPoint;
+        public Integer getDeployType() {
+            return this.deployType;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setEndPoint(String endPoint) {
+            this.endPoint = endPoint;
+            return this;
+        }
+        public String getEndPoint() {
+            return this.endPoint;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setExpiredTime(Long expiredTime) {
+            this.expiredTime = expiredTime;
+            return this;
+        }
+        public Long getExpiredTime() {
+            return this.expiredTime;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setInstanceId(String instanceId) {
@@ -208,22 +198,6 @@ public class GetInstanceListResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetInstanceListResponseBodyInstanceListInstanceVO setServiceStatus(Integer serviceStatus) {
-            this.serviceStatus = serviceStatus;
-            return this;
-        }
-        public Integer getServiceStatus() {
-            return this.serviceStatus;
-        }
-
-        public GetInstanceListResponseBodyInstanceListInstanceVO setEndPoint(String endPoint) {
-            this.endPoint = endPoint;
-            return this;
-        }
-        public String getEndPoint() {
-            return this.endPoint;
-        }
-
         public GetInstanceListResponseBodyInstanceListInstanceVO setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -232,12 +206,44 @@ public class GetInstanceListResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public GetInstanceListResponseBodyInstanceListInstanceVO setServiceStatus(Integer serviceStatus) {
+            this.serviceStatus = serviceStatus;
+            return this;
+        }
+        public Integer getServiceStatus() {
+            return this.serviceStatus;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setSslEndPoint(String sslEndPoint) {
+            this.sslEndPoint = sslEndPoint;
+            return this;
+        }
+        public String getSslEndPoint() {
+            return this.sslEndPoint;
+        }
+
         public GetInstanceListResponseBodyInstanceListInstanceVO setUpgradeServiceDetailInfo(GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo upgradeServiceDetailInfo) {
             this.upgradeServiceDetailInfo = upgradeServiceDetailInfo;
             return this;
         }
         public GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo getUpgradeServiceDetailInfo() {
             return this.upgradeServiceDetailInfo;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

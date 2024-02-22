@@ -7,6 +7,9 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("ConsumerProgress")
+    public GetConsumerProgressResponseBodyConsumerProgress consumerProgress;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("ConsumerProgress")
-    public GetConsumerProgressResponseBodyConsumerProgress consumerProgress;
 
     public static GetConsumerProgressResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetConsumerProgressResponseBody self = new GetConsumerProgressResponseBody();
@@ -30,6 +30,14 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     }
     public Integer getCode() {
         return this.code;
+    }
+
+    public GetConsumerProgressResponseBody setConsumerProgress(GetConsumerProgressResponseBodyConsumerProgress consumerProgress) {
+        this.consumerProgress = consumerProgress;
+        return this;
+    }
+    public GetConsumerProgressResponseBodyConsumerProgress getConsumerProgress() {
+        return this.consumerProgress;
     }
 
     public GetConsumerProgressResponseBody setMessage(String message) {
@@ -56,18 +64,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetConsumerProgressResponseBody setConsumerProgress(GetConsumerProgressResponseBodyConsumerProgress consumerProgress) {
-        this.consumerProgress = consumerProgress;
-        return this;
-    }
-    public GetConsumerProgressResponseBodyConsumerProgress getConsumerProgress() {
-        return this.consumerProgress;
-    }
-
     public static class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList extends TeaModel {
-        @NameInMap("Partition")
-        public Integer partition;
-
         @NameInMap("BrokerOffset")
         public Long brokerOffset;
 
@@ -77,17 +74,12 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
+        @NameInMap("Partition")
+        public Integer partition;
+
         public static GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList build(java.util.Map<String, ?> map) throws Exception {
             GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList self = new GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList();
             return TeaModel.build(map, self);
-        }
-
-        public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList setPartition(Integer partition) {
-            this.partition = partition;
-            return this;
-        }
-        public Integer getPartition() {
-            return this.partition;
         }
 
         public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList setBrokerOffset(Long brokerOffset) {
@@ -114,6 +106,14 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             return this.lastTimestamp;
         }
 
+        public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList setPartition(Integer partition) {
+            this.partition = partition;
+            return this;
+        }
+        public Integer getPartition() {
+            return this.partition;
+        }
+
     }
 
     public static class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetList extends TeaModel {
@@ -136,29 +136,21 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     }
 
     public static class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList extends TeaModel {
-        @NameInMap("TotalDiff")
-        public Long totalDiff;
-
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
-
-        @NameInMap("Topic")
-        public String topic;
 
         @NameInMap("OffsetList")
         public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetList offsetList;
 
+        @NameInMap("Topic")
+        public String topic;
+
+        @NameInMap("TotalDiff")
+        public Long totalDiff;
+
         public static GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList build(java.util.Map<String, ?> map) throws Exception {
             GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList self = new GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList();
             return TeaModel.build(map, self);
-        }
-
-        public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList setTotalDiff(Long totalDiff) {
-            this.totalDiff = totalDiff;
-            return this;
-        }
-        public Long getTotalDiff() {
-            return this.totalDiff;
         }
 
         public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList setLastTimestamp(Long lastTimestamp) {
@@ -169,6 +161,14 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             return this.lastTimestamp;
         }
 
+        public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList setOffsetList(GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetList offsetList) {
+            this.offsetList = offsetList;
+            return this;
+        }
+        public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetList getOffsetList() {
+            return this.offsetList;
+        }
+
         public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList setTopic(String topic) {
             this.topic = topic;
             return this;
@@ -177,12 +177,12 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             return this.topic;
         }
 
-        public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList setOffsetList(GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetList offsetList) {
-            this.offsetList = offsetList;
+        public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList setTotalDiff(Long totalDiff) {
+            this.totalDiff = totalDiff;
             return this;
         }
-        public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetList getOffsetList() {
-            return this.offsetList;
+        public Long getTotalDiff() {
+            return this.totalDiff;
         }
 
     }
@@ -210,11 +210,11 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
-        @NameInMap("TotalDiff")
-        public Long totalDiff;
-
         @NameInMap("TopicList")
         public GetConsumerProgressResponseBodyConsumerProgressTopicList topicList;
+
+        @NameInMap("TotalDiff")
+        public Long totalDiff;
 
         public static GetConsumerProgressResponseBodyConsumerProgress build(java.util.Map<String, ?> map) throws Exception {
             GetConsumerProgressResponseBodyConsumerProgress self = new GetConsumerProgressResponseBodyConsumerProgress();
@@ -229,20 +229,20 @@ public class GetConsumerProgressResponseBody extends TeaModel {
             return this.lastTimestamp;
         }
 
-        public GetConsumerProgressResponseBodyConsumerProgress setTotalDiff(Long totalDiff) {
-            this.totalDiff = totalDiff;
-            return this;
-        }
-        public Long getTotalDiff() {
-            return this.totalDiff;
-        }
-
         public GetConsumerProgressResponseBodyConsumerProgress setTopicList(GetConsumerProgressResponseBodyConsumerProgressTopicList topicList) {
             this.topicList = topicList;
             return this;
         }
         public GetConsumerProgressResponseBodyConsumerProgressTopicList getTopicList() {
             return this.topicList;
+        }
+
+        public GetConsumerProgressResponseBodyConsumerProgress setTotalDiff(Long totalDiff) {
+            this.totalDiff = totalDiff;
+            return this;
+        }
+        public Long getTotalDiff() {
+            return this.totalDiff;
         }
 
     }
