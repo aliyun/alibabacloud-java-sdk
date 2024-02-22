@@ -7,6 +7,9 @@ public class DeleteDocResponseBody extends TeaModel {
     @NameInMap("DocId")
     public String docId;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

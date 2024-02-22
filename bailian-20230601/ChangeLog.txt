@@ -1,3 +1,32 @@
+2024-02-22 Version: 1.8.0
+- Support API CreateDocumentTag.
+- Support API DeleteDoc.
+- Support API DeleteDocumentTag.
+- Support API DescribeDoc.
+- Support API DescribeDocumentImportJob.
+- Support API ListDocs.
+- Support API ListDocumentTags.
+- Support API SubmitDocumentImportJob.
+- Support API UpdateDocAttribute.
+- Support API UpdateDocumentTag.
+- Delete API AddEnterpriseTag.
+- Delete API DelEnterpriseTag.
+- Delete API DeleteEnterpriseData.
+- Delete API GetEnterpriseDataByDataId.
+- Delete API GetEnterpriseDataChunk.
+- Delete API GetEnterpriseDataPageImage.
+- Delete API GetEnterpriseDataParseResult.
+- Delete API GetImportTaskResult.
+- Delete API ImportEnterpriseDocument.
+- Delete API QueryEnterpriseDataList.
+- Delete API QueryEnterpriseDataTag.
+- Delete API QueryEnterpriseTagList.
+- Delete API SearchEnterpriseData.
+- Delete API UpdateEnterpriseDataInfo.
+- Delete API UpdateEnterpriseDataTag.
+- Delete API UpdateEnterpriseTag.
+
+
 2024-01-21 Version: 1.7.0
 - Generated java 2023-06-01 for bailian.
 
