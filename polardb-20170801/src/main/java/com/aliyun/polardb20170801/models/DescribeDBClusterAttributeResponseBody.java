@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterAttributeResponseBody extends TeaModel {
+    @NameInMap("AiCreatingTime")
+    public String aiCreatingTime;
+
     /**
      * <p>The information status of the AI node. Valid values:</p>
      * <br>
@@ -381,6 +384,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public static DescribeDBClusterAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterAttributeResponseBody self = new DescribeDBClusterAttributeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBClusterAttributeResponseBody setAiCreatingTime(String aiCreatingTime) {
+        this.aiCreatingTime = aiCreatingTime;
+        return this;
+    }
+    public String getAiCreatingTime() {
+        return this.aiCreatingTime;
     }
 
     public DescribeDBClusterAttributeResponseBody setAiType(String aiType) {
@@ -917,6 +928,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("MemorySize")
         public String memorySize;
 
+        @NameInMap("RemoteMemorySize")
+        public String remoteMemorySize;
+
         /**
          * <p>Indicates whether the global consistency (high-performance mode) feature is enabled for the node. Valid values:</p>
          * <br>
@@ -1064,6 +1078,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getMemorySize() {
             return this.memorySize;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBNodes setRemoteMemorySize(String remoteMemorySize) {
+            this.remoteMemorySize = remoteMemorySize;
+            return this;
+        }
+        public String getRemoteMemorySize() {
+            return this.remoteMemorySize;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBNodes setSccMode(String sccMode) {
