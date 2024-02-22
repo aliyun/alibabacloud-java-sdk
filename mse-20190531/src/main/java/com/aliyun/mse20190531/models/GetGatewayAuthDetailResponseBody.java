@@ -487,7 +487,7 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         public java.util.List<GetGatewayAuthDetailResponseBodyDataResourceList> resourceList;
 
         @NameInMap("ScopesList")
-        public java.util.List<String> scopesList;
+        public String scopesList;
 
         @NameInMap("Status")
         public Boolean status;
@@ -643,11 +643,11 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
             return this.resourceList;
         }
 
-        public GetGatewayAuthDetailResponseBodyData setScopesList(java.util.List<String> scopesList) {
+        public GetGatewayAuthDetailResponseBodyData setScopesList(String scopesList) {
             this.scopesList = scopesList;
             return this;
         }
-        public java.util.List<String> getScopesList() {
+        public String getScopesList() {
             return this.scopesList;
         }
 
