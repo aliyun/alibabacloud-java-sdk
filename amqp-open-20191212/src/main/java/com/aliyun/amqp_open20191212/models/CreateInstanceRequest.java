@@ -40,6 +40,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("QueueCapacity")
     public Integer queueCapacity;
 
+    /**
+     * <p>autoRenew和renewStatus都是续费方式，当两个同时填写时，以renewStatus为准</p>
+     */
     @NameInMap("RenewStatus")
     public String renewStatus;
 
