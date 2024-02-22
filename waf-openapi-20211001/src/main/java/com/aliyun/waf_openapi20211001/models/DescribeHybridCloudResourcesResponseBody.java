@@ -128,15 +128,6 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         public Boolean IPv6Enabled;
 
         /**
-         * <p>Indicates whether IPv6 is supported. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         */
-        @NameInMap("Ipv6Enabled")
-        public Boolean ipv6Enabled;
-
-        /**
          * <p>The type of the protection resource. Valid values:</p>
          * <br>
          * <p>*   **share:** shared cluster.</p>
@@ -256,14 +247,6 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         }
         public Boolean getIPv6Enabled() {
             return this.IPv6Enabled;
-        }
-
-        public DescribeHybridCloudResourcesResponseBodyDomainsListen setIpv6Enabled(Boolean ipv6Enabled) {
-            this.ipv6Enabled = ipv6Enabled;
-            return this;
-        }
-        public Boolean getIpv6Enabled() {
-            return this.ipv6Enabled;
         }
 
         public DescribeHybridCloudResourcesResponseBodyDomainsListen setProtectionResource(String protectionResource) {
