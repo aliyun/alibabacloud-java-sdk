@@ -46,6 +46,9 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
         @NameInMap("IsDimensionField")
         public Boolean isDimensionField;
 
+        @NameInMap("IsPartitionField")
+        public Boolean isPartitionField;
+
         @NameInMap("Meaning")
         public String meaning;
 
@@ -66,6 +69,14 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
         }
         public Boolean getIsDimensionField() {
             return this.isDimensionField;
+        }
+
+        public GetInstanceResourceTableResponseBodyFields setIsPartitionField(Boolean isPartitionField) {
+            this.isPartitionField = isPartitionField;
+            return this;
+        }
+        public Boolean getIsPartitionField() {
+            return this.isPartitionField;
         }
 
         public GetInstanceResourceTableResponseBodyFields setMeaning(String meaning) {

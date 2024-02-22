@@ -708,6 +708,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("FeaturePriority", request.featurePriority);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.featureStoreItemId)) {
+            body.put("FeatureStoreItemId", request.featureStoreItemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.featureStoreModelId)) {
+            body.put("FeatureStoreModelId", request.featureStoreModelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.featureStoreProjectId)) {
+            body.put("FeatureStoreProjectId", request.featureStoreProjectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.featureStoreProjectName)) {
+            body.put("FeatureStoreProjectName", request.featureStoreProjectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.featureStoreSeqFeatureView)) {
+            body.put("FeatureStoreSeqFeatureView", request.featureStoreSeqFeatureView);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.featureStoreUserId)) {
+            body.put("FeatureStoreUserId", request.featureStoreUserId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fgJarVersion)) {
             body.put("FgJarVersion", request.fgJarVersion);
         }
@@ -758,6 +782,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
             body.put("ServiceId", request.serviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useFeatureStore)) {
+            body.put("UseFeatureStore", request.useFeatureStore);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userIdField)) {
@@ -1965,6 +1993,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
@@ -1979,6 +2011,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
             query.put("SceneId", request.sceneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3493,6 +3529,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("FeaturePriority", request.featurePriority);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.featureStoreItemId)) {
+            body.put("FeatureStoreItemId", request.featureStoreItemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.featureStoreModelId)) {
+            body.put("FeatureStoreModelId", request.featureStoreModelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.featureStoreProjectId)) {
+            body.put("FeatureStoreProjectId", request.featureStoreProjectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.featureStoreProjectName)) {
+            body.put("FeatureStoreProjectName", request.featureStoreProjectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.featureStoreSeqFeatureView)) {
+            body.put("FeatureStoreSeqFeatureView", request.featureStoreSeqFeatureView);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.featureStoreUserId)) {
+            body.put("FeatureStoreUserId", request.featureStoreUserId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fgJarVersion)) {
             body.put("FgJarVersion", request.fgJarVersion);
         }
@@ -3507,6 +3567,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isUseFeatureStore)) {
+            body.put("IsUseFeatureStore", request.isUseFeatureStore);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.itemIdField)) {

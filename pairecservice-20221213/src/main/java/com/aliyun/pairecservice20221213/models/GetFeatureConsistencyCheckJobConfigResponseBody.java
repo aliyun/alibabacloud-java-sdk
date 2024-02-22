@@ -28,6 +28,24 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     @NameInMap("FeaturePriority")
     public String featurePriority;
 
+    @NameInMap("FeatureStoreItemId")
+    public String featureStoreItemId;
+
+    @NameInMap("FeatureStoreModelId")
+    public String featureStoreModelId;
+
+    @NameInMap("FeatureStoreProjectId")
+    public String featureStoreProjectId;
+
+    @NameInMap("FeatureStoreProjectName")
+    public String featureStoreProjectName;
+
+    @NameInMap("FeatureStoreSeqFeatureView")
+    public String featureStoreSeqFeatureView;
+
+    @NameInMap("FeatureStoreUserId")
+    public String featureStoreUserId;
+
     @NameInMap("FgJarVersion")
     public String fgJarVersion;
 
@@ -93,6 +111,9 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
 
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("UseFeatureStore")
+    public Boolean useFeatureStore;
 
     @NameInMap("UserIdField")
     public String userIdField;
@@ -176,6 +197,54 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     }
     public String getFeaturePriority() {
         return this.featurePriority;
+    }
+
+    public GetFeatureConsistencyCheckJobConfigResponseBody setFeatureStoreItemId(String featureStoreItemId) {
+        this.featureStoreItemId = featureStoreItemId;
+        return this;
+    }
+    public String getFeatureStoreItemId() {
+        return this.featureStoreItemId;
+    }
+
+    public GetFeatureConsistencyCheckJobConfigResponseBody setFeatureStoreModelId(String featureStoreModelId) {
+        this.featureStoreModelId = featureStoreModelId;
+        return this;
+    }
+    public String getFeatureStoreModelId() {
+        return this.featureStoreModelId;
+    }
+
+    public GetFeatureConsistencyCheckJobConfigResponseBody setFeatureStoreProjectId(String featureStoreProjectId) {
+        this.featureStoreProjectId = featureStoreProjectId;
+        return this;
+    }
+    public String getFeatureStoreProjectId() {
+        return this.featureStoreProjectId;
+    }
+
+    public GetFeatureConsistencyCheckJobConfigResponseBody setFeatureStoreProjectName(String featureStoreProjectName) {
+        this.featureStoreProjectName = featureStoreProjectName;
+        return this;
+    }
+    public String getFeatureStoreProjectName() {
+        return this.featureStoreProjectName;
+    }
+
+    public GetFeatureConsistencyCheckJobConfigResponseBody setFeatureStoreSeqFeatureView(String featureStoreSeqFeatureView) {
+        this.featureStoreSeqFeatureView = featureStoreSeqFeatureView;
+        return this;
+    }
+    public String getFeatureStoreSeqFeatureView() {
+        return this.featureStoreSeqFeatureView;
+    }
+
+    public GetFeatureConsistencyCheckJobConfigResponseBody setFeatureStoreUserId(String featureStoreUserId) {
+        this.featureStoreUserId = featureStoreUserId;
+        return this;
+    }
+    public String getFeatureStoreUserId() {
+        return this.featureStoreUserId;
     }
 
     public GetFeatureConsistencyCheckJobConfigResponseBody setFgJarVersion(String fgJarVersion) {
@@ -352,6 +421,14 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public GetFeatureConsistencyCheckJobConfigResponseBody setUseFeatureStore(Boolean useFeatureStore) {
+        this.useFeatureStore = useFeatureStore;
+        return this;
+    }
+    public Boolean getUseFeatureStore() {
+        return this.useFeatureStore;
     }
 
     public GetFeatureConsistencyCheckJobConfigResponseBody setUserIdField(String userIdField) {

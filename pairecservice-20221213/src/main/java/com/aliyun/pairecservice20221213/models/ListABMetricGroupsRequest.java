@@ -7,6 +7,9 @@ public class ListABMetricGroupsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Order")
+    public String order;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -19,6 +22,9 @@ public class ListABMetricGroupsRequest extends TeaModel {
     @NameInMap("SceneId")
     public String sceneId;
 
+    @NameInMap("SortBy")
+    public String sortBy;
+
     public static ListABMetricGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListABMetricGroupsRequest self = new ListABMetricGroupsRequest();
         return TeaModel.build(map, self);
@@ -30,6 +36,14 @@ public class ListABMetricGroupsRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListABMetricGroupsRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
     }
 
     public ListABMetricGroupsRequest setPageNumber(Integer pageNumber) {
@@ -62,6 +76,14 @@ public class ListABMetricGroupsRequest extends TeaModel {
     }
     public String getSceneId() {
         return this.sceneId;
+    }
+
+    public ListABMetricGroupsRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
     }
 
 }
