@@ -91,6 +91,9 @@ public class AnswerCallResponseBody extends TeaModel {
         @NameInMap("Destination")
         public String destination;
 
+        @NameInMap("Index")
+        public Long index;
+
         @NameInMap("JobId")
         public String jobId;
 
@@ -158,6 +161,14 @@ public class AnswerCallResponseBody extends TeaModel {
         }
         public String getDestination() {
             return this.destination;
+        }
+
+        public AnswerCallResponseBodyDataCallContextChannelContexts setIndex(Long index) {
+            this.index = index;
+            return this;
+        }
+        public Long getIndex() {
+            return this.index;
         }
 
         public AnswerCallResponseBodyDataCallContextChannelContexts setJobId(String jobId) {

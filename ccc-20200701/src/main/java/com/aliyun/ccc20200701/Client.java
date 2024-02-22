@@ -83,6 +83,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.abortCampaignWithOptions(request, runtime);
     }
 
+    public AddBlacklistCallTaggingResponse addBlacklistCallTaggingWithOptions(AddBlacklistCallTaggingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.number)) {
+            query.put("Number", request.number);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddBlacklistCallTagging"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddBlacklistCallTaggingResponse());
+    }
+
+    public AddBlacklistCallTaggingResponse addBlacklistCallTagging(AddBlacklistCallTaggingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addBlacklistCallTaggingWithOptions(request, runtime);
+    }
+
     public AddCasesResponse addCasesWithOptions(AddCasesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         AddCasesShrinkRequest request = new AddCasesShrinkRequest();
@@ -6258,6 +6295,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ReleaseCallResponse releaseCall(ReleaseCallRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.releaseCallWithOptions(request, runtime);
+    }
+
+    public RemoveBlacklistCallTaggingResponse removeBlacklistCallTaggingWithOptions(RemoveBlacklistCallTaggingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.number)) {
+            query.put("Number", request.number);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveBlacklistCallTagging"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveBlacklistCallTaggingResponse());
+    }
+
+    public RemoveBlacklistCallTaggingResponse removeBlacklistCallTagging(RemoveBlacklistCallTaggingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeBlacklistCallTaggingWithOptions(request, runtime);
     }
 
     public RemoveDoNotCallNumbersResponse removeDoNotCallNumbersWithOptions(RemoveDoNotCallNumbersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
