@@ -11,7 +11,7 @@ public class DescribeCustomizeRuleResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The return value for the request.</p>
      */
     @NameInMap("Data")
     public DescribeCustomizeRuleResponseBodyData data;
@@ -31,8 +31,8 @@ public class DescribeCustomizeRuleResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,13 +96,13 @@ public class DescribeCustomizeRuleResponseBody extends TeaModel {
         public String alertTypeMds;
 
         /**
-         * <p>The ID of the Alibaba Cloud account in SIEM.</p>
+         * <p>The ID of the Alibaba Cloud account for which the threat analysis feature is enabled.</p>
          */
         @NameInMap("Aliuid")
         public Long aliuid;
 
         /**
-         * <p>The extended information about event generation. If the value of eventTransferType is allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.</p>
+         * <p>The extended information about event generation. If **eventTransferType** is set to **allToSingle**, a value is returned for EventTransferExt. The return value indicates the length and time unit of the alert aggregation window. The HTML escape characters are reversed.</p>
          */
         @NameInMap("EventTransferExt")
         public String eventTransferExt;
@@ -119,9 +119,9 @@ public class DescribeCustomizeRuleResponseBody extends TeaModel {
         /**
          * <p>The event generation method. Valid values:</p>
          * <br>
-         * <p>*   default: The default method is used.</p>
-         * <p>*   singleToSingle: The system generates an event for each alert.</p>
-         * <p>*   allToSingle: The system generates an event for alerts within a period of time.</p>
+         * <p>*   **default**: The default method is used.</p>
+         * <p>*   **singleToSingle**: The system generates an event for each alert.</p>
+         * <p>*   **allToSingle**: The system generates an event for alerts within a period of time.</p>
          */
         @NameInMap("EventTransferType")
         public String eventTransferType;
@@ -205,7 +205,7 @@ public class DescribeCustomizeRuleResponseBody extends TeaModel {
         public String ruleThreshold;
 
         /**
-         * <p>The type of the rule. Valid values:</p>
+         * <p>The rule type. Valid values:</p>
          * <br>
          * <p>*   predefine</p>
          * <p>*   customize</p>
@@ -216,21 +216,21 @@ public class DescribeCustomizeRuleResponseBody extends TeaModel {
         /**
          * <p>The rule status. Valid values:</p>
          * <br>
-         * <p>*   0: The rule is in the initial state.</p>
-         * <p>*   10: The simulation data is tested.</p>
-         * <p>*   15: The business data is being tested.</p>
-         * <p>*   20: The business data test ends.</p>
-         * <p>*   100: The rule takes effect.</p>
+         * <p>*   **0**: the initial status.</p>
+         * <p>*   **10**: The simulation data is tested.</p>
+         * <p>*   **15**: The business data is being tested.</p>
+         * <p>*   **20**: The business data test ends.</p>
+         * <p>*   **100**: The rule takes effect.</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
-         * <p>The risk level. Valid values:</p>
+         * <p>The threat level. Valid values:</p>
          * <br>
-         * <p>*   serious: high</p>
-         * <p>*   suspicious: medium</p>
-         * <p>*   remind: low</p>
+         * <p>*   **serious**: high risk</p>
+         * <p>*   **suspicious**: medium risk</p>
+         * <p>*   **remind**: low risk</p>
          */
         @NameInMap("ThreatLevel")
         public String threatLevel;

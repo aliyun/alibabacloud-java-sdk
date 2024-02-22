@@ -11,7 +11,7 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The return value for the request.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeCustomizeRuleTestHistogramResponseBodyData> data;

@@ -166,6 +166,9 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         @NameInMap("OpLevel")
         public String opLevel;
 
+        @NameInMap("ParamConfig")
+        public java.util.List<?> paramConfig;
+
         /**
          * <p>The opcode configuration.</p>
          */
@@ -224,6 +227,14 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         }
         public String getOpLevel() {
             return this.opLevel;
+        }
+
+        public DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList setParamConfig(java.util.List<?> paramConfig) {
+            this.paramConfig = paramConfig;
+            return this;
+        }
+        public java.util.List<?> getParamConfig() {
+            return this.paramConfig;
         }
 
         public DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList setTaskConfig(String taskConfig) {

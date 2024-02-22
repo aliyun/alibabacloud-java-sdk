@@ -20,13 +20,13 @@ public class PostCustomizeRuleTestRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The simulation data for the testing. This parameter is available only when TestType is set to simulate.</p>
+     * <p>The simulation data for the test. This parameter is available only when TestType is set to simulate.</p>
      */
     @NameInMap("SimulatedData")
     public String simulatedData;
 
     /**
-     * <p>The testing type. Valid values:</p>
+     * <p>The test type. Valid values:</p>
      * <br>
      * <p>*   simulate: simulation data test</p>
      * <p>*   business: business data test</p>

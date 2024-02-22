@@ -23,16 +23,16 @@ public class GetLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The search statement or the analytic statement. For more information, see [Log search overview](https://help.aliyun.com/zh/sls/user-guide/log-analysis-overview?spm=a2c4g.11186623.0.i1#t13103.html) and [Log analysis overview](https://help.aliyun.com/zh/sls/user-guide/search-syntax?spm=a2c4g.11186623.0.i0#concept-tnd-1jq-zdb).</p>
+     * <p>The search statement or the analytic statement. For more information, see [Log search overview](~~43772~~) and [Log analysis overview](~~53608~~).</p>
      */
     @NameInMap("Query")
     public String query;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
+     * <p>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</p>
      * <br>
-     * <p>*   cn-hangzhou: Your assets reside in regions inside the Chinese mainland or in the China (Hong Kong) region.</p>
-     * <p>*   ap-southeast-1: Your assets reside in regions outside the Chinese mainland, excluding the China (Hong Kong) region.</p>
+     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
+     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -4,21 +4,42 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class BatchJobSubmitResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public BatchJobSubmitResponseBodyData data;
 
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,21 +97,39 @@ public class BatchJobSubmitResponseBody extends TeaModel {
     }
 
     public static class BatchJobSubmitResponseBodyDataConfigListProductListLogList extends TeaModel {
+        /**
+         * <p>The error code returned.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The log code.</p>
+         */
         @NameInMap("LogCode")
         public String logCode;
 
+        /**
+         * <p>The pattern of SLS log store name.</p>
+         */
         @NameInMap("LogStoreNamePattern")
         public String logStoreNamePattern;
 
+        /**
+         * <p>The code of product.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The pattern of SLS project name.</p>
+         */
         @NameInMap("ProjectNamePattern")
         public String projectNamePattern;
 
+        /**
+         * <p>The ID of the region in which the instance resides.</p>
+         */
         @NameInMap("RegionCode")
         public String regionCode;
 
@@ -150,9 +189,15 @@ public class BatchJobSubmitResponseBody extends TeaModel {
     }
 
     public static class BatchJobSubmitResponseBodyDataConfigListProductList extends TeaModel {
+        /**
+         * <p>The list of log.</p>
+         */
         @NameInMap("LogList")
         public java.util.List<BatchJobSubmitResponseBodyDataConfigListProductListLogList> logList;
 
+        /**
+         * <p>The code of the product.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
@@ -180,9 +225,15 @@ public class BatchJobSubmitResponseBody extends TeaModel {
     }
 
     public static class BatchJobSubmitResponseBodyDataConfigList extends TeaModel {
+        /**
+         * <p>The list of product.</p>
+         */
         @NameInMap("ProductList")
         public java.util.List<BatchJobSubmitResponseBodyDataConfigListProductList> productList;
 
+        /**
+         * <p>The account id of aliyun.</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 
@@ -210,15 +261,27 @@ public class BatchJobSubmitResponseBody extends TeaModel {
     }
 
     public static class BatchJobSubmitResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the task configuration.</p>
+         */
         @NameInMap("ConfigId")
         public String configId;
 
+        /**
+         * <p>The list of task configure.</p>
+         */
         @NameInMap("ConfigList")
         public java.util.List<BatchJobSubmitResponseBodyDataConfigList> configList;
 
+        /**
+         * <p>The id of task.</p>
+         */
         @NameInMap("SubmitId")
         public String submitId;
 
+        /**
+         * <p>The number of existing tasks that are created to add logs within the data source.</p>
+         */
         @NameInMap("TaskCount")
         public Integer taskCount;
 

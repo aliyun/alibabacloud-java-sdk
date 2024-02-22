@@ -4,21 +4,42 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeWhiteRuleListRequest extends TeaModel {
+    /**
+     * <p>The name of the alert.</p>
+     */
     @NameInMap("AlertName")
     public String alertName;
 
+    /**
+     * <p>The type of the alert.</p>
+     */
     @NameInMap("AlertType")
     public String alertType;
 
+    /**
+     * <p>The page number. Pages start from page 1.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The UUID of the event.</p>
+     */
     @NameInMap("IncidentUuid")
     public String incidentUuid;
 
+    /**
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <br>
+     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
+     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

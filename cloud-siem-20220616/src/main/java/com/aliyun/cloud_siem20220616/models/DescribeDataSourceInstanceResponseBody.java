@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataSourceInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeDataSourceInstanceResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDataSourceInstanceResponseBodyDataDataSourceInstanceParams extends TeaModel {
+        /**
+         * <p>The code of the parameter.</p>
+         */
         @NameInMap("ParaCode")
         public String paraCode;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("ParaValue")
         public String paraValue;
 
@@ -62,15 +74,31 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDataSourceInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the cloud account.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The code of the cloud service provider. Valid values:</p>
+         * <br>
+         * <p>*   qcloud: Tencent Cloud</p>
+         * <p>*   aliyun: Alibaba Cloud</p>
+         * <p>*   hcloud: Huawei Cloud</p>
+         */
         @NameInMap("CloudCode")
         public String cloudCode;
 
+        /**
+         * <p>The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.</p>
+         */
         @NameInMap("DataSourceInstanceId")
         public String dataSourceInstanceId;
 
+        /**
+         * <p>The parameters of the data source.</p>
+         */
         @NameInMap("DataSourceInstanceParams")
         public java.util.List<DescribeDataSourceInstanceResponseBodyDataDataSourceInstanceParams> dataSourceInstanceParams;
 

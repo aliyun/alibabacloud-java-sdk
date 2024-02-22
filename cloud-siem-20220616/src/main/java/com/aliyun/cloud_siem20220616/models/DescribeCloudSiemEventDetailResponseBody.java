@@ -161,6 +161,9 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         @NameInMap("IncidentUuid")
         public String incidentUuid;
 
+        @NameInMap("ReferAccount")
+        public String referAccount;
+
         /**
          * <p>The remarks of the event.</p>
          */
@@ -301,6 +304,14 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         }
         public String getIncidentUuid() {
             return this.incidentUuid;
+        }
+
+        public DescribeCloudSiemEventDetailResponseBodyData setReferAccount(String referAccount) {
+            this.referAccount = referAccount;
+            return this;
+        }
+        public String getReferAccount() {
+            return this.referAccount;
         }
 
         public DescribeCloudSiemEventDetailResponseBodyData setRemark(String remark) {

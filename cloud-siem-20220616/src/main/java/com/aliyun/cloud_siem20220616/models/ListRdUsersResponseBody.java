@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListRdUsersResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListRdUsersResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,42 @@ public class ListRdUsersResponseBody extends TeaModel {
     }
 
     public static class ListRdUsersResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the account can be used to view the logs and alerts within the account.</p>
+         */
         @NameInMap("DelegatedOrNot")
         public Boolean delegatedOrNot;
 
+        /**
+         * <p>Indicates whether the account is added to the threat analysis feature for centralized management. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("Joined")
         public Boolean joined;
 
+        /**
+         * <p>The time when the account was added to the threat analysis feature.</p>
+         */
         @NameInMap("JoinedTime")
         public String joinedTime;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         */
         @NameInMap("MainUserId")
         public Long mainUserId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to perform operations supported by the threat analysis feature.</p>
+         */
         @NameInMap("SubUserId")
         public Long subUserId;
 
+        /**
+         * <p>The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+         */
         @NameInMap("SubUserName")
         public String subUserName;
 

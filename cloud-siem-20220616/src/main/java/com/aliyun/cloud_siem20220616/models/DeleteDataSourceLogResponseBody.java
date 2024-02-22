@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DeleteDataSourceLogResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DeleteDataSourceLogResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DeleteDataSourceLogResponseBody extends TeaModel {
     }
 
     public static class DeleteDataSourceLogResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of logs that are removed. The value 1 indicates that the log is removed, and a value less than or equal to 0 indicates that the log failed to be removed.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The ID of the log. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.</p>
+         */
         @NameInMap("LogInstanceId")
         public String logInstanceId;
 

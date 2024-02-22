@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeImportedLogCountResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeImportedLogCountResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
     }
 
     public static class DescribeImportedLogCountResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of logs that are added.</p>
+         */
         @NameInMap("ImportedLogCount")
         public Integer importedLogCount;
 
+        /**
+         * <p>The total number of logs.</p>
+         */
         @NameInMap("TotalLogCount")
         public Integer totalLogCount;
 
+        /**
+         * <p>The number of logs that are not added.</p>
+         */
         @NameInMap("UnImportedLogCount")
         public Integer unImportedLogCount;
 

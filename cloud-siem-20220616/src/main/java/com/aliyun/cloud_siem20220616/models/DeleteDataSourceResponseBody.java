@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DeleteDataSourceResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DeleteDataSourceResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class DeleteDataSourceResponseBody extends TeaModel {
     }
 
     public static class DeleteDataSourceResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of data sources that are removed. The value 1 indicates that data source is removed, and a value less than or equal to 0 indicates that the data source failed to be removed.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 

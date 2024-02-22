@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ModifyBindAccountResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ModifyBindAccountResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class ModifyBindAccountResponseBody extends TeaModel {
     }
 
     public static class ModifyBindAccountResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of the accounts that are modified. The value 1 indicates that the modification is successful, and a value less than or equal to 0 indicates that the modification failed.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 

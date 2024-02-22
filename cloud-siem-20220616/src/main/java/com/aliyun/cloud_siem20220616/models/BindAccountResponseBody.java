@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class BindAccountResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public BindAccountResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class BindAccountResponseBody extends TeaModel {
     }
 
     public static class BindAccountResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of the cloud accounts that are added to the threat analysis feature. The value 1 indicates that the account is added, and a value less than or equal to 0 indicates that the account failed to be added.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 

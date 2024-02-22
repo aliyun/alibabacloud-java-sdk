@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListDataSourceTypesResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListDataSourceTypesResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,19 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
     }
 
     public static class ListDataSourceTypesResponseBodyData extends TeaModel {
+        /**
+         * <p>The code of the third-party cloud service.</p>
+         */
         @NameInMap("CloudCode")
         public String cloudCode;
 
+        /**
+         * <p>The type of the data source. Valid values:</p>
+         * <br>
+         * <p>*   obs: Huawei Cloud Object Storage Service (OBS)</p>
+         * <p>*   wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</p>
+         * <p>*   ckafka: Tencent Cloud Kafka (CKafka)</p>
+         */
         @NameInMap("DataSourceType")
         public String dataSourceType;
 

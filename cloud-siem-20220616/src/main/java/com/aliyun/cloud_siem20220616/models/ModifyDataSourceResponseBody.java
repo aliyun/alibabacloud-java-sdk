@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ModifyDataSourceResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ModifyDataSourceResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ModifyDataSourceResponseBody extends TeaModel {
     }
 
     public static class ModifyDataSourceResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of data sources that are modified. The value 1 indicates that the modification is successful, and a value less than or equal to 0 indicates that the modification failed.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.</p>
+         */
         @NameInMap("DataSourceInstanceId")
         public String dataSourceInstanceId;
 

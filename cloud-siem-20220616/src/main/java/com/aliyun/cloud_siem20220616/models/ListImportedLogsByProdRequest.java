@@ -4,12 +4,28 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListImportedLogsByProdRequest extends TeaModel {
+    /**
+     * <p>The code of the cloud service provider. Valid values:</p>
+     * <br>
+     * <p>*   qcloud: Tencent Cloud</p>
+     * <p>*   aliyun: Alibaba Cloud</p>
+     * <p>*   hcloud: Huawei Cloud</p>
+     */
     @NameInMap("CloudCode")
     public String cloudCode;
 
+    /**
+     * <p>The code of the cloud service.</p>
+     */
     @NameInMap("ProdCode")
     public String prodCode;
 
+    /**
+     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <br>
+     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
+     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

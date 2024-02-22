@@ -4,9 +4,18 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeCsImportedProdStatusByUserResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the cloud service is activated for the account. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
