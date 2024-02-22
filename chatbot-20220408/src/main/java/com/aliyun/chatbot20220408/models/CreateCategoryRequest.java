@@ -7,6 +7,12 @@ public class CreateCategoryRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    @NameInMap("BizCode")
+    public String bizCode;
+
+    @NameInMap("KnowledgeType")
+    public Integer knowledgeType;
+
     @NameInMap("Name")
     public String name;
 
@@ -24,6 +30,22 @@ public class CreateCategoryRequest extends TeaModel {
     }
     public String getAgentKey() {
         return this.agentKey;
+    }
+
+    public CreateCategoryRequest setBizCode(String bizCode) {
+        this.bizCode = bizCode;
+        return this;
+    }
+    public String getBizCode() {
+        return this.bizCode;
+    }
+
+    public CreateCategoryRequest setKnowledgeType(Integer knowledgeType) {
+        this.knowledgeType = knowledgeType;
+        return this;
+    }
+    public Integer getKnowledgeType() {
+        return this.knowledgeType;
     }
 
     public CreateCategoryRequest setName(String name) {

@@ -7,6 +7,9 @@ public class UpdateCategoryRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    @NameInMap("BizCode")
+    public String bizCode;
+
     @NameInMap("CategoryId")
     public Long categoryId;
 
@@ -24,6 +27,14 @@ public class UpdateCategoryRequest extends TeaModel {
     }
     public String getAgentKey() {
         return this.agentKey;
+    }
+
+    public UpdateCategoryRequest setBizCode(String bizCode) {
+        this.bizCode = bizCode;
+        return this;
+    }
+    public String getBizCode() {
+        return this.bizCode;
     }
 
     public UpdateCategoryRequest setCategoryId(Long categoryId) {
