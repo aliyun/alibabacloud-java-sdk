@@ -3,7 +3,7 @@ package com.aliyun.pai_dsw20220101.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteInstanceSnapshotResponse extends TeaModel {
+public class GetInstanceEventsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteInstanceSnapshotResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DeleteInstanceSnapshotResponseBody body;
+    public GetInstanceEventsResponseBody body;
 
-    public static DeleteInstanceSnapshotResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteInstanceSnapshotResponse self = new DeleteInstanceSnapshotResponse();
+    public static GetInstanceEventsResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetInstanceEventsResponse self = new GetInstanceEventsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteInstanceSnapshotResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetInstanceEventsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteInstanceSnapshotResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteInstanceSnapshotResponse setStatusCode(Integer statusCode) {
+    public GetInstanceEventsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteInstanceSnapshotResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteInstanceSnapshotResponse setBody(DeleteInstanceSnapshotResponseBody body) {
+    public GetInstanceEventsResponse setBody(GetInstanceEventsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteInstanceSnapshotResponseBody getBody() {
+    public GetInstanceEventsResponseBody getBody() {
         return this.body;
     }
 

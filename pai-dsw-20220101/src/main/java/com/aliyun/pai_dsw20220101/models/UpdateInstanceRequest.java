@@ -7,6 +7,9 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("CloudDisks")
+    public java.util.List<UpdateInstanceRequestCloudDisks> cloudDisks;
+
     @NameInMap("Datasets")
     public java.util.List<UpdateInstanceRequestDatasets> datasets;
 
@@ -15,6 +18,9 @@ public class UpdateInstanceRequest extends TeaModel {
 
     @NameInMap("DisassociateDriver")
     public Boolean disassociateDriver;
+
+    @NameInMap("DisassociateForwardInfos")
+    public Boolean disassociateForwardInfos;
 
     @NameInMap("DisassociateVpc")
     public Boolean disassociateVpc;
@@ -62,6 +68,14 @@ public class UpdateInstanceRequest extends TeaModel {
         return this.accessibility;
     }
 
+    public UpdateInstanceRequest setCloudDisks(java.util.List<UpdateInstanceRequestCloudDisks> cloudDisks) {
+        this.cloudDisks = cloudDisks;
+        return this;
+    }
+    public java.util.List<UpdateInstanceRequestCloudDisks> getCloudDisks() {
+        return this.cloudDisks;
+    }
+
     public UpdateInstanceRequest setDatasets(java.util.List<UpdateInstanceRequestDatasets> datasets) {
         this.datasets = datasets;
         return this;
@@ -84,6 +98,14 @@ public class UpdateInstanceRequest extends TeaModel {
     }
     public Boolean getDisassociateDriver() {
         return this.disassociateDriver;
+    }
+
+    public UpdateInstanceRequest setDisassociateForwardInfos(Boolean disassociateForwardInfos) {
+        this.disassociateForwardInfos = disassociateForwardInfos;
+        return this;
+    }
+    public Boolean getDisassociateForwardInfos() {
+        return this.disassociateForwardInfos;
     }
 
     public UpdateInstanceRequest setDisassociateVpc(Boolean disassociateVpc) {
@@ -172,6 +194,36 @@ public class UpdateInstanceRequest extends TeaModel {
     }
     public String getWorkspaceSource() {
         return this.workspaceSource;
+    }
+
+    public static class UpdateInstanceRequestCloudDisks extends TeaModel {
+        @NameInMap("Capacity")
+        public String capacity;
+
+        @NameInMap("SubType")
+        public String subType;
+
+        public static UpdateInstanceRequestCloudDisks build(java.util.Map<String, ?> map) throws Exception {
+            UpdateInstanceRequestCloudDisks self = new UpdateInstanceRequestCloudDisks();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateInstanceRequestCloudDisks setCapacity(String capacity) {
+            this.capacity = capacity;
+            return this;
+        }
+        public String getCapacity() {
+            return this.capacity;
+        }
+
+        public UpdateInstanceRequestCloudDisks setSubType(String subType) {
+            this.subType = subType;
+            return this;
+        }
+        public String getSubType() {
+            return this.subType;
+        }
+
     }
 
     public static class UpdateInstanceRequestDatasets extends TeaModel {
