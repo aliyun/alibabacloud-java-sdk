@@ -3,7 +3,7 @@ package com.aliyun.cloudauth20190307.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeSmartStatisticsPageListResponse extends TeaModel {
+public class AIGCFaceVerifyResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeSmartStatisticsPageListResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeSmartStatisticsPageListResponseBody body;
+    public AIGCFaceVerifyResponseBody body;
 
-    public static DescribeSmartStatisticsPageListResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeSmartStatisticsPageListResponse self = new DescribeSmartStatisticsPageListResponse();
+    public static AIGCFaceVerifyResponse build(java.util.Map<String, ?> map) throws Exception {
+        AIGCFaceVerifyResponse self = new AIGCFaceVerifyResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSmartStatisticsPageListResponse setHeaders(java.util.Map<String, String> headers) {
+    public AIGCFaceVerifyResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeSmartStatisticsPageListResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeSmartStatisticsPageListResponse setStatusCode(Integer statusCode) {
+    public AIGCFaceVerifyResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeSmartStatisticsPageListResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeSmartStatisticsPageListResponse setBody(DescribeSmartStatisticsPageListResponseBody body) {
+    public AIGCFaceVerifyResponse setBody(AIGCFaceVerifyResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeSmartStatisticsPageListResponseBody getBody() {
+    public AIGCFaceVerifyResponseBody getBody() {
         return this.body;
     }
 
