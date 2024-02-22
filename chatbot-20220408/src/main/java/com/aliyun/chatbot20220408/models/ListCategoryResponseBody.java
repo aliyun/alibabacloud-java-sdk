@@ -32,6 +32,9 @@ public class ListCategoryResponseBody extends TeaModel {
     }
 
     public static class ListCategoryResponseBodyCategories extends TeaModel {
+        @NameInMap("BizCode")
+        public String bizCode;
+
         @NameInMap("CategoryId")
         public Long categoryId;
 
@@ -47,6 +50,14 @@ public class ListCategoryResponseBody extends TeaModel {
         public static ListCategoryResponseBodyCategories build(java.util.Map<String, ?> map) throws Exception {
             ListCategoryResponseBodyCategories self = new ListCategoryResponseBodyCategories();
             return TeaModel.build(map, self);
+        }
+
+        public ListCategoryResponseBodyCategories setBizCode(String bizCode) {
+            this.bizCode = bizCode;
+            return this;
+        }
+        public String getBizCode() {
+            return this.bizCode;
         }
 
         public ListCategoryResponseBodyCategories setCategoryId(Long categoryId) {

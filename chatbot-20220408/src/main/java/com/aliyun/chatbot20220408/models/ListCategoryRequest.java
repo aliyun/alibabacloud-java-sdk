@@ -7,6 +7,9 @@ public class ListCategoryRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    @NameInMap("KnowledgeType")
+    public Integer knowledgeType;
+
     @NameInMap("ParentCategoryId")
     public Long parentCategoryId;
 
@@ -21,6 +24,14 @@ public class ListCategoryRequest extends TeaModel {
     }
     public String getAgentKey() {
         return this.agentKey;
+    }
+
+    public ListCategoryRequest setKnowledgeType(Integer knowledgeType) {
+        this.knowledgeType = knowledgeType;
+        return this;
+    }
+    public Integer getKnowledgeType() {
+        return this.knowledgeType;
     }
 
     public ListCategoryRequest setParentCategoryId(Long parentCategoryId) {
