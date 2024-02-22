@@ -7,6 +7,9 @@ public class GetConsumerListResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("ConsumerList")
+    public GetConsumerListResponseBodyConsumerList consumerList;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class GetConsumerListResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("ConsumerList")
-    public GetConsumerListResponseBodyConsumerList consumerList;
 
     public static GetConsumerListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetConsumerListResponseBody self = new GetConsumerListResponseBody();
@@ -30,6 +30,14 @@ public class GetConsumerListResponseBody extends TeaModel {
     }
     public Integer getCode() {
         return this.code;
+    }
+
+    public GetConsumerListResponseBody setConsumerList(GetConsumerListResponseBodyConsumerList consumerList) {
+        this.consumerList = consumerList;
+        return this;
+    }
+    public GetConsumerListResponseBodyConsumerList getConsumerList() {
+        return this.consumerList;
     }
 
     public GetConsumerListResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class GetConsumerListResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public GetConsumerListResponseBody setConsumerList(GetConsumerListResponseBodyConsumerList consumerList) {
-        this.consumerList = consumerList;
-        return this;
-    }
-    public GetConsumerListResponseBodyConsumerList getConsumerList() {
-        return this.consumerList;
     }
 
     public static class GetConsumerListResponseBodyConsumerListConsumerVO extends TeaModel {

@@ -4,11 +4,11 @@ package com.aliyun.alikafka20181015.models;
 import com.aliyun.tea.*;
 
 public class GetTopicListRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("CurrentPage")
     public String currentPage;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("PageSize")
     public String pageSize;
@@ -21,20 +21,20 @@ public class GetTopicListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetTopicListRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public GetTopicListRequest setCurrentPage(String currentPage) {
         this.currentPage = currentPage;
         return this;
     }
     public String getCurrentPage() {
         return this.currentPage;
+    }
+
+    public GetTopicListRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public GetTopicListRequest setPageSize(String pageSize) {
