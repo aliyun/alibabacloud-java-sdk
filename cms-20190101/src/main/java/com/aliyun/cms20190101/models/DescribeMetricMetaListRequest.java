@@ -45,9 +45,6 @@ public class DescribeMetricMetaListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static DescribeMetricMetaListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricMetaListRequest self = new DescribeMetricMetaListRequest();
         return TeaModel.build(map, self);
@@ -91,14 +88,6 @@ public class DescribeMetricMetaListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public DescribeMetricMetaListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

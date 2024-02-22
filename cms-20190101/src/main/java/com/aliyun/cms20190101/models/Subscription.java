@@ -13,8 +13,14 @@ public class Subscription extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Enabled")
+    public Boolean enabled;
+
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("Product")
+    public String product;
 
     @NameInMap("Relation")
     public String relation;
@@ -57,12 +63,28 @@ public class Subscription extends TeaModel {
         return this.description;
     }
 
+    public Subscription setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    public Boolean getEnabled() {
+        return this.enabled;
+    }
+
     public Subscription setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public Subscription setProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    public String getProduct() {
+        return this.product;
     }
 
     public Subscription setRelation(String relation) {

@@ -11,16 +11,28 @@ public class DescribeAlertLogListRequest extends TeaModel {
     public String contactGroup;
 
     /**
-     * <p>The end timestamp of the alert logs to be queried. Unit: milliseconds.</p>
+     * <p>The end timestamp of the alert logs to be queried.</p>
+     * <br>
+     * <p>Unit: milliseconds.</p>
+     * <br>
+     * <p>You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the `AlertLogList` parameter is empty.</p>
+     * <br>
+     * <p>>  The time period between the start time specified by `StartTime` and end time specified by `EndTime` must be less than or equal to 15 days. You must specify StartTime and EndTime at the same time, or leave StartTime and EndTime empty at the same time. If you do not specify this parameter, the alert logs within the last 15 minutes are queried by default.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The type of the alert event. Valid values:</p>
+     * <br>
+     * <p>*   TRIGGERED: The alert is triggered.</p>
+     * <p>*   RESOLVED: The alert is resolved.</p>
+     */
     @NameInMap("EventType")
     public String eventType;
 
     /**
-     * <p>The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:</p>
+     * <p>The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:</p>
      * <br>
      * <p>*   `product`: aggregates data by cloud service.</p>
      * <p>*   `level`: aggregates data by alert level.</p>
@@ -63,25 +75,31 @@ public class DescribeAlertLogListRequest extends TeaModel {
     /**
      * <p>The namespace of the cloud service.</p>
      * <br>
-     * <p>> For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>>  For information about how to query the namespace of a cloud service, see [Appendix 1: Metrics](~~163515~~).</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number.</p>
+     * <br>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of entries per page.</p>
+     * <br>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The abbreviation of the cloud service name.</p>
+     * <p>The abbreviation of the service name.</p>
+     * <br>
+     * <p>For information about how to obtain the abbreviation of a cloud service name, see [DescribeProductsOfActiveMetricRule](~~114930~~).</p>
      */
     @NameInMap("Product")
     public String product;
@@ -90,7 +108,9 @@ public class DescribeAlertLogListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the alert rule. For more information about how to query the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
+     * <p>The ID of the alert rule.</p>
+     * <br>
+     * <p>For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
      */
     @NameInMap("RuleId")
     public String ruleId;
@@ -121,11 +141,20 @@ public class DescribeAlertLogListRequest extends TeaModel {
     @NameInMap("SendStatus")
     public String sendStatus;
 
+    /**
+     * <p>The type of the alert rule. Valid value: METRIC. This value indicates an alert rule for time series metrics.</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
-     * <p>The start timestamp of the alert logs to be queried. Unit: milliseconds.</p>
+     * <p>The start timestamp of the alert logs to be queried.</p>
+     * <br>
+     * <p>Unit: milliseconds.</p>
+     * <br>
+     * <p>You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the `AlertLogList` parameter is empty.</p>
+     * <br>
+     * <p>>  The time period between the start time specified by `StartTime` and the end time specified by `EndTime` must be less than or equal to 15 days. You must specify StartTime and EndTime at the same time, or leave StartTime and EndTime empty at the same time. If you do not specify this parameter, the alert logs within the last 15 minutes are queried by default.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

@@ -10,6 +10,12 @@ public class AlertEvent extends TeaModel {
     @NameInMap("AlertStatus")
     public String alertStatus;
 
+    @NameInMap("Arn")
+    public String arn;
+
+    @NameInMap("Content")
+    public String content;
+
     @NameInMap("CustomLabels")
     public java.util.Map<String, ?> customLabels;
 
@@ -22,11 +28,17 @@ public class AlertEvent extends TeaModel {
     @NameInMap("EventName")
     public String eventName;
 
+    @NameInMap("EventType")
+    public String eventType;
+
     @NameInMap("Expression")
     public String expression;
 
     @NameInMap("Metrics")
     public java.util.List<AlertEventMetrics> metrics;
+
+    @NameInMap("Product")
+    public String product;
 
     @NameInMap("ResourceInfo")
     public java.util.Map<String, ?> resourceInfo;
@@ -73,6 +85,22 @@ public class AlertEvent extends TeaModel {
         return this.alertStatus;
     }
 
+    public AlertEvent setArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    public String getArn() {
+        return this.arn;
+    }
+
+    public AlertEvent setContent(String content) {
+        this.content = content;
+        return this;
+    }
+    public String getContent() {
+        return this.content;
+    }
+
     public AlertEvent setCustomLabels(java.util.Map<String, ?> customLabels) {
         this.customLabels = customLabels;
         return this;
@@ -105,6 +133,14 @@ public class AlertEvent extends TeaModel {
         return this.eventName;
     }
 
+    public AlertEvent setEventType(String eventType) {
+        this.eventType = eventType;
+        return this;
+    }
+    public String getEventType() {
+        return this.eventType;
+    }
+
     public AlertEvent setExpression(String expression) {
         this.expression = expression;
         return this;
@@ -119,6 +155,14 @@ public class AlertEvent extends TeaModel {
     }
     public java.util.List<AlertEventMetrics> getMetrics() {
         return this.metrics;
+    }
+
+    public AlertEvent setProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    public String getProduct() {
+        return this.product;
     }
 
     public AlertEvent setResourceInfo(java.util.Map<String, ?> resourceInfo) {

@@ -17,11 +17,17 @@ public class DescribeAlertLogCountRequest extends TeaModel {
      * <br>
      * <p>You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the `AlertLogCount` parameter is empty.</p>
      * <br>
-     * <p>>  The interval between the start time (`StartTime`) and end time (`EndTime`) must be less than or equal to 15 days.</p>
+     * <p>>  The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days. The start time and end time must be specified or left empty at the same time. If you do not specify the start time and end time, the alert logs within the last 15 minutes are queried by default.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The type of the alert event. Valid values:</p>
+     * <br>
+     * <p>*   TRIGGERED: The alert is triggered.</p>
+     * <p>*   RESOLVED: The alert is resolved.</p>
+     */
     @NameInMap("EventType")
     public String eventType;
 
@@ -101,6 +107,11 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the alert rule.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 
@@ -143,7 +154,7 @@ public class DescribeAlertLogCountRequest extends TeaModel {
      * <br>
      * <p>You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the `AlertLogCount` parameter is empty.</p>
      * <br>
-     * <p>>  The interval between the start time (`StartTime`) and end time (`EndTime`) must be less than or equal to 15 days.</p>
+     * <p>>  The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days. The start time and end time must be specified or left empty at the same time. If you do not specify the start time and end time, the alert logs within the last 15 minutes are queried by default.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

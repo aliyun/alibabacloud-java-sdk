@@ -152,13 +152,13 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         /**
          * <p>The description of the alert rule.</p>
          * <br>
-         * <p>> The content of the alert rule. If the metric value meets the alert condition, an alert is triggered.</p>
+         * <p>>  The content of the alert rule. This parameter indicates the conditions that trigger an alert.</p>
          */
         @NameInMap("Expression")
         public String expression;
 
         /**
-         * <p>The severity level and notification methods of the alert. Valid values:</p>
+         * <p>The alert level and the methods that are used to send alert notifications. Valid values:</p>
          * <br>
          * <p>*   P4: Alert notifications are sent by using emails and DingTalk chatbots.</p>
          * <p>*   OK: No alert is generated.</p>
@@ -270,9 +270,6 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         @NameInMap("Success")
         public Boolean success;
 
-        /**
-         * <p>The queried resources.</p>
-         */
         @NameInMap("notifyTargetList")
         public java.util.List<String> notifyTargetList;
 
@@ -410,7 +407,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         /**
          * <p>The category of the alert notification method. Valid values:</p>
          * <br>
-         * <p>*   Mail: email</p>
+         * <p>*   MAIL: email</p>
          * <p>*   ALIIM: TradeManager</p>
          * <p>*   SMS: text message</p>
          * <p>*   CALL: phone call</p>
@@ -421,7 +418,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The alert notification methods.</p>
+         * <p>The notification object corresponding to the alert notification method.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;
@@ -501,7 +498,9 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
     public static class DescribeAlertLogListResponseBodyAlertLogList extends TeaModel {
         /**
-         * <p>The timestamp that was generated when the alert was triggered. Unit: milliseconds.</p>
+         * <p>The timestamp that was generated when the alert was triggered.</p>
+         * <br>
+         * <p>Unit: milliseconds.</p>
          */
         @NameInMap("AlertTime")
         public String alertTime;
@@ -524,45 +523,21 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         @NameInMap("BlackListUUID")
         public String blackListUUID;
 
-        /**
-         * <p>The TradeManager IDs of the alert contacts.</p>
-         * <br>
-         * <p>> This parameter is valid only on the China site (aliyun.com).</p>
-         */
         @NameInMap("ContactALIIWWList")
         public java.util.List<String> contactALIIWWList;
 
-        /**
-         * <p>The DingTalk chatbots of the alert contacts.</p>
-         */
         @NameInMap("ContactDingList")
         public java.util.List<String> contactDingList;
 
-        /**
-         * <p>The alert contact groups.</p>
-         */
         @NameInMap("ContactGroups")
         public java.util.List<String> contactGroups;
 
-        /**
-         * <p>The email addresses of the alert contacts.</p>
-         */
         @NameInMap("ContactMailList")
         public java.util.List<String> contactMailList;
 
-        /**
-         * <p>The phone numbers of the alert contacts that receive alert phone calls.</p>
-         * <br>
-         * <p>> This parameter is valid only on the China site (aliyun.com).</p>
-         */
         @NameInMap("ContactOnCallList")
         public java.util.List<String> contactOnCallList;
 
-        /**
-         * <p>The phone numbers of the alert contacts that receive alert text messages.</p>
-         * <br>
-         * <p>> This parameter is valid only on the China site (aliyun.com).</p>
-         */
         @NameInMap("ContactSMSList")
         public java.util.List<String> contactSMSList;
 
@@ -572,9 +547,6 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         @NameInMap("Dimensions")
         public java.util.List<DescribeAlertLogListResponseBodyAlertLogListDimensions> dimensions;
 
-        /**
-         * <p>The webhook URLs of the alert contacts.</p>
-         */
         @NameInMap("DingdingWebhookList")
         public java.util.List<String> dingdingWebhookList;
 
@@ -621,7 +593,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The severity level and notification methods of the alert. Valid values:</p>
+         * <p>The alert level and the methods that are used to send alert notifications. Valid values:</p>
          * <br>
          * <p>*   P4: Alert notifications are sent by using emails and DingTalk chatbots.</p>
          * <p>*   OK: No alert is generated.</p>
@@ -684,7 +656,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The details of the alert notification method.</p>
+         * <p>The details about the sending results of alert notifications.</p>
          */
         @NameInMap("SendDetail")
         public DescribeAlertLogListResponseBodyAlertLogListSendDetail sendDetail;

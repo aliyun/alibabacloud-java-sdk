@@ -18,9 +18,20 @@ public class CreateHybridMonitorNamespaceRequest extends TeaModel {
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The region where the metric data is stored.</p>
+     */
     @NameInMap("NamespaceRegion")
     public String namespaceRegion;
 
+    /**
+     * <p>The storage scheme of metric data. Valid values:</p>
+     * <br>
+     * <p>*   m_prom_pool: The metric data is stored in Simple Log Service.</p>
+     * <p>*   m_prometheus: The metric data is stored in the storage space provided by CloudMonitor.</p>
+     * <br>
+     * <p>>  For more information about the storage schemes of metric data, see [Storage schemes of metric data in Hybrid Cloud Monitoring](~~2594921~~).</p>
+     */
     @NameInMap("NamespaceType")
     public String namespaceType;
 
@@ -28,14 +39,14 @@ public class CreateHybridMonitorNamespaceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The data retention period of the namespace. Valid values:</p>
+     * <p>The data retention period. Valid values:</p>
      * <br>
-     * <p>*   cms.s1.large: 15 days</p>
-     * <p>*   cms.s1.xlarge: 32 days</p>
-     * <p>*   cms.s1.2xlarge: 63 days</p>
-     * <p>*   cms.s1.3xlarge (default value): 93 days</p>
-     * <p>*   cms.s1.6xlarge: 185 days</p>
-     * <p>*   cms.s1.12xlarge: 376 days</p>
+     * <p>*   cms.s1.large (Retention Period 15 Days)</p>
+     * <p>*   cms.s1.xlarge (Retention Period 32 Days)</p>
+     * <p>*   cms.s1.2xlarge (Retention Period 63 Days)</p>
+     * <p>*   cms.s1.3xlarge (Retention Period 93 Days) (default)</p>
+     * <p>*   cms.s1.6xlarge (Retention Period 185 Days)</p>
+     * <p>*   cms.s1.12xlarge (Retention Period 367 Days)</p>
      * <br>
      * <p>For information about the pricing for different retention periods, see the **Pricing** section in [Billing of the dashboard feature](~~223532~~).</p>
      */

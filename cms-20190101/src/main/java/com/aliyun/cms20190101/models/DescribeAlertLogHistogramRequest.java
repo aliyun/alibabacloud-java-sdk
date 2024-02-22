@@ -24,6 +24,12 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The type of the alert event. Valid values:</p>
+     * <br>
+     * <p>*   TRIGGERED: The alert is triggered.</p>
+     * <p>*   RESOLVED: The alert is resolved.</p>
+     */
     @NameInMap("EventType")
     public String eventType;
 
@@ -101,6 +107,11 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the alert rule.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 
