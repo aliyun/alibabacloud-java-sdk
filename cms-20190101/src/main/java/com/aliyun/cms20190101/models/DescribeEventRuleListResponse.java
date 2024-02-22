@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeEventRuleListResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public DescribeEventRuleListResponseBody body;
 
     public static DescribeEventRuleListResponse build(java.util.Map<String, ?> map) throws Exception {

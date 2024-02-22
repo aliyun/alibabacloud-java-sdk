@@ -5,36 +5,36 @@ import com.aliyun.tea.*;
 
 public class CreateHybridMonitorTaskResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The response code.</p>
      * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>>  The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public String success;
 
     /**
-     * <p>The ID of the metric import task.</p>
+     * <p>The ID of the monitoring task.</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

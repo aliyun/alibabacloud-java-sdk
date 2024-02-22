@@ -31,7 +31,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The details of the system event.</p>
+     * <p>The details of the event.</p>
      */
     @NameInMap("SystemEvents")
     public DescribeSystemEventAttributeResponseBodySystemEvents systemEvents;
@@ -83,7 +83,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
 
     public static class DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent extends TeaModel {
         /**
-         * <p>The details of the system event.</p>
+         * <p>The details of the event.</p>
          */
         @NameInMap("Content")
         public String content;
@@ -98,23 +98,23 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The level of the system event. Valid values:</p>
+         * <p>The severity level of the alert. Valid values:</p>
          * <br>
-         * <p>*   CRITICAL: critical</p>
-         * <p>*   WARN: warning</p>
-         * <p>*   INFO: information</p>
+         * <p>*   CRITICAL</p>
+         * <p>*   WARN</p>
+         * <p>*   INFO</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
-         * <p>The name of the system event.</p>
+         * <p>The event name.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -126,25 +126,25 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         public String product;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The status of the system event.</p>
+         * <p>The status of the event.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The timestamp when the system event occurred.</p>
+         * <p>The time when the event occurred. The value is a timestamp.</p>
          * <br>
          * <p>Unit: milliseconds.</p>
          */

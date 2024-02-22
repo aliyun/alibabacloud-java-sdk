@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class PutResourceMetricRulesResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The response code.</p>
      * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>>  The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -19,22 +19,22 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
     public PutResourceMetricRulesResponseBodyFailedListResult failedListResult;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -86,22 +86,22 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
 
     public static class PutResourceMetricRulesResponseBodyFailedListResultTargetResult extends TeaModel {
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The response code.</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The error message.</p>
+         * <p>The error message returned.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <br>
-         * <p>*   true: The call was successful.</p>
-         * <p>*   false: The call failed.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("Success")
         public Boolean success;

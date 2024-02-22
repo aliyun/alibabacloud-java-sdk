@@ -4,14 +4,22 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateHybridMonitorTaskRequest extends TeaModel {
+    /**
+     * <p>The tags of the metric.</p>
+     * <br>
+     * <p>>  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.</p>
+     */
     @NameInMap("AttachLabels")
     public java.util.List<CreateHybridMonitorTaskRequestAttachLabels> attachLabels;
 
+    @NameInMap("CloudAccessId")
+    public java.util.List<String> cloudAccessId;
+
     /**
-     * <p>The interval at which metrics are collected. Valid values:</p>
+     * <p>The collection period of the metric. Valid values:</p>
      * <br>
      * <p>*   15</p>
-     * <p>*   60 (default value)</p>
+     * <p>*   60 (default)</p>
      * <br>
      * <p>Unit: seconds.</p>
      * <br>
@@ -57,7 +65,7 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The configurations of the logs that are imported from Log Service.</p>
+     * <p>The configurations of the logs that are imported from Simple Log Service.</p>
      * <br>
      * <p>>  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.</p>
      */
@@ -67,7 +75,7 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     /**
      * <p>The ID of the member account.</p>
      * <br>
-     * <p>If you call API operations by using a management account, you can connect the Alibaba Cloud services that are activated for a member account in a resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.</p>
+     * <p>If you call this operation by using the management account of a resource directory, you can connect the Alibaba Cloud services that are activated for all members in the resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.</p>
      * <br>
      * <p>>  This parameter is required only if the `TaskType` parameter is set to `aliyun_fc`.</p>
      */
@@ -86,16 +94,16 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
      * <p>The name of the metric import task.</p>
      * <br>
      * <p>*   If the `TaskType` parameter is set to `aliyun_fc`, enter the name of the metric import task.</p>
-     * <p>*   If the `TaskType` parameter is set to `aliyun_sls`, enter the name of the metric for logs imported from Log Service.</p>
+     * <p>*   If the `TaskType` parameter is set to `aliyun_sls`, enter the name of the metric for logs imported from Simple Log Service.</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
-     * <p>Specifies whether to create a metric import task for an Alibaba Cloud service or create a metric for logs imported from Log Service. Valid values:</p>
+     * <p>The type of the metric import task. Valid values:</p>
      * <br>
-     * <p>*   aliyun_fc: creates a metric import task for an Alibaba Cloud service</p>
-     * <p>*   aliyun_sls: creates a metric for logs imported from Log Service</p>
+     * <p>*   aliyun_fc: metric import tasks for Alibaba Cloud services.</p>
+     * <p>*   aliyun_sls: metrics for logs imported from Simple Log Service.</p>
      */
     @NameInMap("TaskType")
     public String taskType;
@@ -108,26 +116,23 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
      * <br>
      * <p>The following code shows a sample configuration file:</p>
      * <br>
-     * <p>```</p>
-     * <br>
-     * <p>products:</p>
-     * <p>- namespace: acs_ecs_dashboard</p>
-     * <p>  metric_info:</p>
-     * <p>  - metric_list:</p>
-     * <p>    - cpu_total</p>
-     * <p>    - cpu_idle</p>
-     * <p>    - diskusage_utilization</p>
-     * <p>    - CPUUtilization</p>
-     * <p>    - DiskReadBPS</p>
-     * <p>    - InternetOut</p>
-     * <p>    - IntranetOut</p>
-     * <p>    - cpu_system</p>
-     * <p>- namespace: acs_rds_dashboard</p>
-     * <p>  metric_info:</p>
-     * <p>  - metric_list:</p>
-     * <p>    - MySQL_QPS</p>
-     * <p>    - MySQL_TPS</p>
-     * <p>```</p>
+     * <p>    products:</p>
+     * <p>    - namespace: acs_ecs_dashboard</p>
+     * <p>      metric_info:</p>
+     * <p>      - metric_list:</p>
+     * <p>        - cpu_total</p>
+     * <p>        - cpu_idle</p>
+     * <p>        - diskusage_utilization</p>
+     * <p>        - CPUUtilization</p>
+     * <p>        - DiskReadBPS</p>
+     * <p>        - InternetOut</p>
+     * <p>        - IntranetOut</p>
+     * <p>        - cpu_system</p>
+     * <p>    - namespace: acs_rds_dashboard</p>
+     * <p>      metric_info:</p>
+     * <p>      - metric_list:</p>
+     * <p>        - MySQL_QPS</p>
+     * <p>        - MySQL_TPS</p>
      * <br>
      * <p>>  This parameter is required only if the `TaskType` parameter is set to `aliyun_fc`.</p>
      */
@@ -145,6 +150,14 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     }
     public java.util.List<CreateHybridMonitorTaskRequestAttachLabels> getAttachLabels() {
         return this.attachLabels;
+    }
+
+    public CreateHybridMonitorTaskRequest setCloudAccessId(java.util.List<String> cloudAccessId) {
+        this.cloudAccessId = cloudAccessId;
+        return this;
+    }
+    public java.util.List<String> getCloudAccessId() {
+        return this.cloudAccessId;
     }
 
     public CreateHybridMonitorTaskRequest setCollectInterval(String collectInterval) {
@@ -281,13 +294,13 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
 
     public static class CreateHybridMonitorTaskRequestSLSProcessConfigExpress extends TeaModel {
         /**
-         * <p>The alias of the extended field that specifies the result of basic operations that are performed on aggregation results.</p>
+         * <p>The alias of the extended field that specifies the result of basic operations performed on aggregation results.</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
-         * <p>The extended field that specifies the result of basic operations that are performed on aggregation results.</p>
+         * <p>The extended field that specifies the result of basic operations performed on aggregation results.</p>
          */
         @NameInMap("Express")
         public String express;
@@ -317,7 +330,7 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
 
     public static class CreateHybridMonitorTaskRequestSLSProcessConfigFilterFilters extends TeaModel {
         /**
-         * <p>The method that is used to filter logs imported from Log Service. Valid values:</p>
+         * <p>The method that is used to filter logs imported from Simple Log Service. Valid values:</p>
          * <br>
          * <p>*   `contain`: contains</p>
          * <p>*   `notContain`: does not contain</p>
@@ -332,13 +345,13 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
         public String operator;
 
         /**
-         * <p>The name of the key that is used to filter logs imported from Log Service.</p>
+         * <p>The name of the key that is used to filter logs imported from Simple Log Service.</p>
          */
         @NameInMap("SLSKeyName")
         public String SLSKeyName;
 
         /**
-         * <p>The value of the key that is used to filter logs imported from Log Service.</p>
+         * <p>The value of the key that is used to filter logs imported from Simple Log Service.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -376,7 +389,7 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
 
     public static class CreateHybridMonitorTaskRequestSLSProcessConfigFilter extends TeaModel {
         /**
-         * <p>The conditions that are used to filter logs imported from Log Service.</p>
+         * <p>The conditions that are used to filter logs imported from Simple Log Service.</p>
          */
         @NameInMap("Filters")
         public java.util.List<CreateHybridMonitorTaskRequestSLSProcessConfigFilterFilters> filters;
@@ -384,7 +397,7 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
         /**
          * <p>The relationship between multiple filter conditions. Valid values:</p>
          * <br>
-         * <p>*   and (default value): Logs are processed only if all filter conditions are met.</p>
+         * <p>*   and (default): Logs are processed only if all filter conditions are met.</p>
          * <p>*   or: Logs are processed if one of the filter conditions is met.</p>
          */
         @NameInMap("Relation")
@@ -421,7 +434,7 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
         public String alias;
 
         /**
-         * <p>The name of the key that is used to aggregate logs imported from Log Service.</p>
+         * <p>The name of the key that is used to aggregate logs imported from Simple Log Service.</p>
          */
         @NameInMap("SLSKeyName")
         public String SLSKeyName;
@@ -450,18 +463,50 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     }
 
     public static class CreateHybridMonitorTaskRequestSLSProcessConfigStatistics extends TeaModel {
+        /**
+         * <p>The alias of the aggregation result.</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <p>The function that is used to aggregate the log data of a statistical period. Valid values:</p>
+         * <br>
+         * <p>*   count: counts the number.</p>
+         * <p>*   sum: calculates the total value.</p>
+         * <p>*   avg: calculates the average value.</p>
+         * <p>*   max: calculates the maximum value.</p>
+         * <p>*   min: calculates the minimum value.</p>
+         * <p>*   value: collects samples within the statistical period.</p>
+         * <p>*   countps: calculates the number of values of the specified field divided by the total number of seconds within a statistical period.</p>
+         * <p>*   sumps: calculates the sum of the values of the specified field divided by the total number of seconds within a statistical period.</p>
+         * <p>*   distinct: calculates the number of unique values of the specified field within a statistical period.</p>
+         * <p>*   distribution: calculates the number of logs that meet a specified condition within the statistical period.</p>
+         * <p>*   percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.</p>
+         */
         @NameInMap("Function")
         public String function;
 
+        /**
+         * <p>The value of the function that is used to aggregate logs imported from Simple Log Service.</p>
+         * <br>
+         * <p>*   If the `Function` parameter is set to `distribution`, this parameter specifies the lower limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 200.</p>
+         * <p>*   If the `Function` parameter is set to `percentile`, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</p>
+         */
         @NameInMap("Parameter1")
         public String parameter1;
 
+        /**
+         * <p>The value of the function that is used to aggregate logs imported from Simple Log Service.</p>
+         * <br>
+         * <p>>  This parameter is required only if the `Function` parameter is set to `distribution`. This parameter specifies the upper limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 299.</p>
+         */
         @NameInMap("Parameter2")
         public String parameter2;
 
+        /**
+         * <p>The name of the key that is used to aggregate logs imported from Simple Log Service.</p>
+         */
         @NameInMap("SLSKeyName")
         public String SLSKeyName;
 
@@ -514,13 +559,13 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
 
     public static class CreateHybridMonitorTaskRequestSLSProcessConfig extends TeaModel {
         /**
-         * <p>The extended fields that specify the results of basic operations that are performed on aggregation results.</p>
+         * <p>The extended fields that specify the results of basic operations performed on aggregation results.</p>
          */
         @NameInMap("Express")
         public java.util.List<CreateHybridMonitorTaskRequestSLSProcessConfigExpress> express;
 
         /**
-         * <p>The conditions that are used to filter logs imported from Log Service.</p>
+         * <p>The conditions that are used to filter logs imported from Simple Log Service.</p>
          */
         @NameInMap("Filter")
         public CreateHybridMonitorTaskRequestSLSProcessConfigFilter filter;
@@ -531,6 +576,9 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
         @NameInMap("GroupBy")
         public java.util.List<CreateHybridMonitorTaskRequestSLSProcessConfigGroupBy> groupBy;
 
+        /**
+         * <p>The method that is used to aggregate logs imported from Simple Log Service.</p>
+         */
         @NameInMap("Statistics")
         public java.util.List<CreateHybridMonitorTaskRequestSLSProcessConfigStatistics> statistics;
 

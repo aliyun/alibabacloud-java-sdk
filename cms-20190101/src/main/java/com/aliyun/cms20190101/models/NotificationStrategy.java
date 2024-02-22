@@ -22,6 +22,9 @@ public class NotificationStrategy extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("Product")
+    public String product;
+
     @NameInMap("PushingSetting")
     public NotificationStrategyPushingSetting pushingSetting;
 
@@ -85,6 +88,14 @@ public class NotificationStrategy extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public NotificationStrategy setProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    public String getProduct() {
+        return this.product;
     }
 
     public NotificationStrategy setPushingSetting(NotificationStrategyPushingSetting pushingSetting) {

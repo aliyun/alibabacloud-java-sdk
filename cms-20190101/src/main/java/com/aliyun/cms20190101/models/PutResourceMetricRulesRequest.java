@@ -4,6 +4,11 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutResourceMetricRulesRequest extends TeaModel {
+    /**
+     * <p>The threshold-triggered alert rules.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 500.</p>
+     */
     @NameInMap("Rules")
     public java.util.List<PutResourceMetricRulesRequestRules> rules;
 
@@ -285,13 +290,13 @@ public class PutResourceMetricRulesRequest extends TeaModel {
 
     public static class PutResourceMetricRulesRequestRulesLabels extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * <br>
          * <p>>  You can use a template parameter to specify a tag value. CloudMonitor replaces the value of the template parameter with an actual tag value.</p>
          */
@@ -326,7 +331,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         public PutResourceMetricRulesRequestRulesEscalations escalations;
 
         /**
-         * <p>The alert contact group. The alert notifications are sent to the alert contacts in the alert contact group.</p>
+         * <p>The alert contact groups. The alert notifications are sent to the alert contacts in the alert contact group.</p>
          * <br>
          * <p>Valid values of N: 1 to 500.</p>
          * <br>
@@ -352,7 +357,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         public String emailSubject;
 
         /**
-         * <p>The interval at which the alert rule is executed.</p>
+         * <p>The interval at which alerts are triggered based on the alert rule.</p>
          * <br>
          * <p>Unit: seconds.</p>
          * <br>
@@ -363,11 +368,14 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         @NameInMap("Interval")
         public String interval;
 
+        /**
+         * <p>If the metric meets the specified condition in the alert rule and CloudMonitor sends an alert notification, the tag is also written to the metric and displayed in the alert notification.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<PutResourceMetricRulesRequestRulesLabels> labels;
 
         /**
-         * <p>The name of the metric.</p>
+         * <p>The metric name.</p>
          * <br>
          * <p>Valid values of N: 1 to 500.</p>
          * <br>
@@ -389,7 +397,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         /**
          * <p>The method that is used to handle alerts when no monitoring data is found. Valid values:</p>
          * <br>
-         * <p>*   KEEP_LAST_STATE (default value): No operation is performed.</p>
+         * <p>*   KEEP_LAST_STATE (default): No operation is performed.</p>
          * <p>*   INSUFFICIENT_DATA: An alert whose content is "Insufficient data" is triggered.</p>
          * <p>*   OK: The status is considered normal.</p>
          * <br>
@@ -419,7 +427,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         public String period;
 
         /**
-         * <p>The information about the resource. Examples: `[{"instanceId":"i-uf6j91r34rnwawoo****"}]` and `[{"userId":"100931896542****"}]`.</p>
+         * <p>The information about the resource. Example: `[{"instanceId":"i-uf6j91r34rnwawoo****"}]` or `[{"userId":"100931896542****"}]`.</p>
          * <br>
          * <p>Valid values of N: 1 to 500.</p>
          * <br>
@@ -435,7 +443,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
          * <br>
          * <p>You can specify a new ID or the ID of an existing alert rule. For information about how to query the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
          * <br>
-         * <p>>  If you specify a new ID, you create a threshold-triggered alert rule.</p>
+         * <p>>  If you specify a new ID, a threshold-triggered alert rule is created.</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
@@ -447,13 +455,13 @@ public class PutResourceMetricRulesRequest extends TeaModel {
          * <br>
          * <p>You can specify a new name or the name of an existing alert rule. For information about how to query the name of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
          * <br>
-         * <p>>  If you specify a new name, you create a threshold-triggered alert rule.</p>
+         * <p>>  If you specify a new name, a threshold-triggered alert rule is created.</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
-         * <p>The mute period during which new alerts are not sent even if the trigger conditions are met.</p>
+         * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met.</p>
          * <br>
          * <p>Unit: seconds. Default value: 86400.</p>
          * <br>
