@@ -1,3 +1,9 @@
+2024-02-22 Version: 1.2.0
+- Support API GetInstanceEvents.
+- Update API CreateInstance: update param body.
+- Update API UpdateInstance: update param body.
+
+
 2023-12-27 Version: 1.1.44
 - Generated java 2022-01-01 for pai-dsw.
 

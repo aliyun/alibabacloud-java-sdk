@@ -196,6 +196,47 @@ public class CreateInstanceRequest extends TeaModel {
         return this.workspaceSource;
     }
 
+    public static class CreateInstanceRequestCloudDisksStatus extends TeaModel {
+        @NameInMap("Available")
+        public Long available;
+
+        @NameInMap("Capacity")
+        public Long capacity;
+
+        @NameInMap("Usage")
+        public Long usage;
+
+        public static CreateInstanceRequestCloudDisksStatus build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestCloudDisksStatus self = new CreateInstanceRequestCloudDisksStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestCloudDisksStatus setAvailable(Long available) {
+            this.available = available;
+            return this;
+        }
+        public Long getAvailable() {
+            return this.available;
+        }
+
+        public CreateInstanceRequestCloudDisksStatus setCapacity(Long capacity) {
+            this.capacity = capacity;
+            return this;
+        }
+        public Long getCapacity() {
+            return this.capacity;
+        }
+
+        public CreateInstanceRequestCloudDisksStatus setUsage(Long usage) {
+            this.usage = usage;
+            return this;
+        }
+        public Long getUsage() {
+            return this.usage;
+        }
+
+    }
+
     public static class CreateInstanceRequestCloudDisks extends TeaModel {
         @NameInMap("Capacity")
         public String capacity;
@@ -205,6 +246,9 @@ public class CreateInstanceRequest extends TeaModel {
 
         @NameInMap("Path")
         public String path;
+
+        @NameInMap("Status")
+        public CreateInstanceRequestCloudDisksStatus status;
 
         @NameInMap("SubType")
         public String subType;
@@ -236,6 +280,14 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public String getPath() {
             return this.path;
+        }
+
+        public CreateInstanceRequestCloudDisks setStatus(CreateInstanceRequestCloudDisksStatus status) {
+            this.status = status;
+            return this;
+        }
+        public CreateInstanceRequestCloudDisksStatus getStatus() {
+            return this.status;
         }
 
         public CreateInstanceRequestCloudDisks setSubType(String subType) {
