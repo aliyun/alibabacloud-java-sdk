@@ -16,6 +16,9 @@ public class DescribeDocResponseBody extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

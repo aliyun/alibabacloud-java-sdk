@@ -7,6 +7,9 @@ public class SubmitDocumentImportJobResponseBody extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

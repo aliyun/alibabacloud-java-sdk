@@ -4,6 +4,9 @@ package com.aliyun.bailian20230601.models;
 import com.aliyun.tea.*;
 
 public class DeleteDocumentTagResponseBody extends TeaModel {
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

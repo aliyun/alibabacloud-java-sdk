@@ -7,9 +7,15 @@ public class DescribeDocumentImportJobResponseBody extends TeaModel {
     @NameInMap("Docs")
     public java.util.List<DescribeDocumentImportJobResponseBodyDocs> docs;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
