@@ -62,7 +62,7 @@ public class AddGatewayAuthShrinkRequest extends TeaModel {
     public String jwks;
 
     /**
-     * <p>The URL that is used to log on to the IDaaS instance. For more information, see [OAuth2.0 Application User Manual](https://help.aliyun.com/document_detail/193871.html).</p>
+     * <p>The URL that is used to log on to the IDaaS instance.</p>
      */
     @NameInMap("LoginUrl")
     public String loginUrl;
