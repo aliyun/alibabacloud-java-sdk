@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListBindAccountResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListBindAccountResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,55 @@ public class ListBindAccountResponseBody extends TeaModel {
     }
 
     public static class ListBindAccountResponseBodyData extends TeaModel {
+        /**
+         * <p>The AccessKey ID of the cloud account.</p>
+         */
         @NameInMap("AccessId")
         public String accessId;
 
+        /**
+         * <p>The ID of the cloud account.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The username of the cloud account.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The ID that is generated when the cloud account is added.</p>
+         */
         @NameInMap("BindId")
         public Long bindId;
 
+        /**
+         * <p>The code of the cloud service provider. Valid values:</p>
+         * <br>
+         * <p>*   qcloud: Tencent Cloud</p>
+         * <p>*   aliyun: Alibaba Cloud</p>
+         * <p>*   hcloud: Huawei Cloud</p>
+         */
         @NameInMap("CloudCode")
         public String cloudCode;
 
+        /**
+         * <p>The ID of the account that is used to add the cloud account.</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>The number of data sources that are added to the threat analysis feature within the cloud account.</p>
+         */
         @NameInMap("DataSourceCount")
         public Long dataSourceCount;
 
+        /**
+         * <p>The modification time.</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 

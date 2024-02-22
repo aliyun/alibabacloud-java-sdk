@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class SubmitJobsResponseBody extends TeaModel {
+    /**
+     * <p>The total number of tasks.</p>
+     */
     @NameInMap("Data")
     public Integer data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

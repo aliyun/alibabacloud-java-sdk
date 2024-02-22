@@ -5,32 +5,32 @@ import com.aliyun.tea.*;
 
 public class PostAutomateResponseConfigRequest extends TeaModel {
     /**
-     * <p>The configuration of the action that is performed after the rule is hit. The value is in JSON format.</p>
+     * <p>The action configuration of the automated response rule. The value is in the JSON format.</p>
      */
     @NameInMap("ActionConfig")
     public String actionConfig;
 
     /**
-     * <p>The action that is performed after the rule is hit. Separate multiple values with commas (,). Valid values:</p>
+     * <p>The type of the handling action. Multiple types are separated by commas (,). Valid values:</p>
      * <br>
-     * <p>*   doPlaybook: Execute a playbook.</p>
-     * <p>*   changeEventStatus: Change the event status.</p>
-     * <p>*   changeThreatLevel: Change the threat level of the event.</p>
+     * <p>*   **doPlaybook**: runs the playbook.</p>
+     * <p>*   **changeEventStatus**: changes the event status.</p>
+     * <p>*   **changeThreatLevel**: changes the threat level of the event.</p>
      */
     @NameInMap("ActionType")
     public String actionType;
 
     /**
-     * <p>The rule type. Valid values:</p>
+     * <p>The type of the automated response rule. Valid values:</p>
      * <br>
-     * <p>*   event</p>
-     * <p>*   alert</p>
+     * <p>*   **event**</p>
+     * <p>*   **alert**</p>
      */
     @NameInMap("AutoResponseType")
     public String autoResponseType;
 
     /**
-     * <p>The trigger condition of the rule. The value is in JSON format.</p>
+     * <p>The trigger condition of the automated response rule. The value is in the JSON format.</p>
      */
     @NameInMap("ExecutionCondition")
     public String executionCondition;
@@ -42,10 +42,10 @@ public class PostAutomateResponseConfigRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The data management center of the threat analysis feature. Specify this parameter based on the region in which your assets reside. Valid values:</p>
+     * <p>The data management center of the threat analysis feature. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
      * <br>
-     * <p>*   cn-hangzhou: Your assets reside in regions inside China.</p>
-     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     * <p>*   **cn-hangzhou**: Your assets reside in regions in China.</p>
+     * <p>*   **ap-southeast-1**: Your assets reside in regions outside China.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

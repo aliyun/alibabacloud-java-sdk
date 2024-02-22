@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListAccountsByLogResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListAccountsByLogResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,45 @@ public class ListAccountsByLogResponseBody extends TeaModel {
     }
 
     public static class ListAccountsByLogResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the cloud account.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The name of the cloud account.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>Indicates whether the account is added. Valid values: -1: yes -0: no</p>
+         */
         @NameInMap("Imported")
         public Integer imported;
 
+        /**
+         * <p>The code of the log.</p>
+         */
         @NameInMap("LogCode")
         public String logCode;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         */
         @NameInMap("MainUserId")
         public Long mainUserId;
 
+        /**
+         * <p>The code of the service.</p>
+         */
         @NameInMap("ProdCode")
         public String prodCode;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account for which the threat analysis feature is enabled.</p>
+         */
         @NameInMap("SubUserId")
         public Long subUserId;
 

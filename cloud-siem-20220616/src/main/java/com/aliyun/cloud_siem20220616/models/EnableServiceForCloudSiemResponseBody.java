@@ -4,9 +4,18 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class EnableServiceForCloudSiemResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the threat analysis feature is authorized to access the resource directory. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

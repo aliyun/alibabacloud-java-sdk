@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListAllProdsResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ListAllProdsResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,37 @@ public class ListAllProdsResponseBody extends TeaModel {
     }
 
     public static class ListAllProdsResponseBodyDataProdList extends TeaModel {
+        /**
+         * <p>The code of the cloud service provider. Valid values:</p>
+         * <br>
+         * <p>*   qcloud: Tencent Cloud</p>
+         * <p>*   aliyun: Alibaba Cloud</p>
+         * <p>*   hcloud: Huawei Cloud</p>
+         */
         @NameInMap("CloudCode")
         public String cloudCode;
 
+        /**
+         * <p>The number of logs within the cloud service that are added to the threat analysis feature.</p>
+         */
         @NameInMap("ImportedLogCount")
         public Integer importedLogCount;
 
+        /**
+         * <p>The time when the logs within the cloud service were last added to the threat analysis feature.</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>The code of the cloud service.</p>
+         */
         @NameInMap("ProdCode")
         public String prodCode;
 
+        /**
+         * <p>The total number of logs within the cloud service.</p>
+         */
         @NameInMap("TotalLogCount")
         public Integer totalLogCount;
 
@@ -95,15 +120,27 @@ public class ListAllProdsResponseBody extends TeaModel {
     }
 
     public static class ListAllProdsResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The cloud services.</p>
+         */
         @NameInMap("ProdList")
         public java.util.List<ListAllProdsResponseBodyDataProdList> prodList;
 
+        /**
+         * <p>The total number of logs.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -96,7 +96,7 @@ public class GetLogsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of logs.</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -238,7 +238,7 @@ public class GetLogsResponseBody extends TeaModel {
         public GetLogsResponseBodyDataPageInfo pageInfo;
 
         /**
-         * <p>The log.</p>
+         * <p>The content of the log.</p>
          */
         @NameInMap("ResponseData")
         public GetLogsResponseBodyDataResponseData responseData;

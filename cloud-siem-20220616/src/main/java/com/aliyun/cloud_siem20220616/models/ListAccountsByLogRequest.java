@@ -4,15 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListAccountsByLogRequest extends TeaModel {
+    /**
+     * <p>The code that is used for multi-cloud environments.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   qcloud</p>
+     * <p>*   hcloud</p>
+     * <p>*   aliyun</p>
+     */
     @NameInMap("CloudCode")
     public String cloudCode;
 
+    /**
+     * <p>The codes of logs. The value is a JSON array.</p>
+     */
     @NameInMap("LogCodes")
     public java.util.List<String> logCodes;
 
+    /**
+     * <p>The code of the service.</p>
+     */
     @NameInMap("ProdCode")
     public String prodCode;
 
+    /**
+     * <p>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</p>
+     * <br>
+     * <p>*   cn-hangzhou: Your assets reside in regions inside China.</p>
+     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class BatchJobCheckRequest extends TeaModel {
+    /**
+     * <p>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The id of task.</p>
+     */
     @NameInMap("SubmitId")
     public String submitId;
 

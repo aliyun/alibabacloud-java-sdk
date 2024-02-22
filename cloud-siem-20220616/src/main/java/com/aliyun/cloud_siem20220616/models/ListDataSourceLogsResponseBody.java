@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListDataSourceLogsResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ListDataSourceLogsResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
     }
 
     public static class ListDataSourceLogsResponseBodyDataDataSourceInstanceLogsLogParams extends TeaModel {
+        /**
+         * <p>The parameter code of the log.</p>
+         */
         @NameInMap("ParaCode")
         public String paraCode;
 
+        /**
+         * <p>The parameter value of the log.</p>
+         */
         @NameInMap("ParaValue")
         public String paraValue;
 
@@ -62,18 +74,36 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
     }
 
     public static class ListDataSourceLogsResponseBodyDataDataSourceInstanceLogs extends TeaModel {
+        /**
+         * <p>The code of the log.</p>
+         */
         @NameInMap("LogCode")
         public String logCode;
 
+        /**
+         * <p>The ID of the log. The value is obtained after the threat analysis feature calculates the MD5 hash value of a parameter.</p>
+         */
         @NameInMap("LogInstanceId")
         public String logInstanceId;
 
+        /**
+         * <p>The display code of the log.</p>
+         */
         @NameInMap("LogMdsCode")
         public String logMdsCode;
 
+        /**
+         * <p>The parameters of the log.</p>
+         */
         @NameInMap("LogParams")
         public java.util.List<ListDataSourceLogsResponseBodyDataDataSourceInstanceLogsLogParams> logParams;
 
+        /**
+         * <p>Indicates whether the task for which logs are collected is enabled. Valid values:</p>
+         * <br>
+         * <p>*   1: yes</p>
+         * <p>*   0: no</p>
+         */
         @NameInMap("TaskStatus")
         public Integer taskStatus;
 
@@ -125,24 +155,49 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
     }
 
     public static class ListDataSourceLogsResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the cloud account.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The code that is used for multi-cloud environments. Valid values:</p>
+         * <br>
+         * <p>*   qcloud: Tencent Cloud</p>
+         * <p>*   aliyun: Alibaba Cloud</p>
+         * <p>*   hcloud: Huawei Cloud</p>
+         */
         @NameInMap("CloudCode")
         public String cloudCode;
 
+        /**
+         * <p>The ID of the data source. The value is obtained after the threat analysis feature calculates the MD5 hash value of a parameter.</p>
+         */
         @NameInMap("DataSourceInstanceId")
         public String dataSourceInstanceId;
 
+        /**
+         * <p>The logs of the data source.</p>
+         */
         @NameInMap("DataSourceInstanceLogs")
         public java.util.List<ListDataSourceLogsResponseBodyDataDataSourceInstanceLogs> dataSourceInstanceLogs;
 
+        /**
+         * <p>The name of the data source.</p>
+         */
         @NameInMap("DataSourceInstanceName")
         public String dataSourceInstanceName;
 
+        /**
+         * <p>The remarks of the data source.</p>
+         */
         @NameInMap("DataSourceInstanceRemark")
         public String dataSourceInstanceRemark;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("SubUserId")
         public Long subUserId;
 

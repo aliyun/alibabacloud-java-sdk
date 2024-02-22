@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataSourceParametersResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeDataSourceParametersResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeDataSourceParametersResponseBodyDataParamValue extends TeaModel {
+        /**
+         * <p>The display value.</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The actual value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -62,45 +74,107 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeDataSourceParametersResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the edit operation is supported. Valid values:</p>
+         * <br>
+         * <p>*   0: no</p>
+         * <p>*   1: yes</p>
+         */
         @NameInMap("CanEditted")
         public Integer canEditted;
 
+        /**
+         * <p>The code of the cloud service provider. Valid values:</p>
+         * <br>
+         * <p>*   qcloud: Tencent Cloud</p>
+         * <p>*   aliyun: Alibaba Cloud</p>
+         * <p>*   hcloud: Huawei Cloud</p>
+         */
         @NameInMap("CloudCode")
         public String cloudCode;
 
+        /**
+         * <p>The type of the data source. Valid values:</p>
+         * <br>
+         * <p>*   obs: Huawei Cloud OBS</p>
+         * <p>*   wafApi: download API of Tencent Cloud WAF</p>
+         * <p>*   ckafka: Tencent Cloud CKafka</p>
+         */
         @NameInMap("DataSourceType")
         public String dataSourceType;
 
+        /**
+         * <p>The default value of the parameter.</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <p>Indicates whether the modification operation is forbidden. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("Disabled")
         public Boolean disabled;
 
+        /**
+         * <p>The method that is used to check the parameter format.</p>
+         */
         @NameInMap("FormatCheck")
         public String formatCheck;
 
+        /**
+         * <p>The additional information.</p>
+         */
         @NameInMap("Hit")
         public String hit;
 
+        /**
+         * <p>The code of the parameter.</p>
+         */
         @NameInMap("ParaCode")
         public String paraCode;
 
+        /**
+         * <p>The parameter level. Valid values:</p>
+         * <br>
+         * <p>*   1: data source</p>
+         * <p>*   2: log</p>
+         */
         @NameInMap("ParaLevel")
         public Integer paraLevel;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParaName")
         public String paraName;
 
+        /**
+         * <p>The data type of the parameter.</p>
+         */
         @NameInMap("ParaType")
         public String paraType;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("ParamValue")
         public java.util.List<DescribeDataSourceParametersResponseBodyDataParamValue> paramValue;
 
+        /**
+         * <p>Indicates whether the parameter is required. Valid values:</p>
+         * <br>
+         * <p>*   1: yes</p>
+         * <p>*   0: no</p>
+         */
         @NameInMap("Required")
         public Integer required;
 
+        /**
+         * <p>The note on the parameter value.</p>
+         */
         @NameInMap("Title")
         public String title;
 

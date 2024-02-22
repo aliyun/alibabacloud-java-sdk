@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeProdCountResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeProdCountResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeProdCountResponseBody extends TeaModel {
     }
 
     public static class DescribeProdCountResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of Alibaba Cloud services.</p>
+         */
         @NameInMap("AliyunProdCount")
         public Integer aliyunProdCount;
 
+        /**
+         * <p>The number of Huawei Cloud services.</p>
+         */
         @NameInMap("HcloudProdCount")
         public Integer hcloudProdCount;
 
+        /**
+         * <p>The number of Tencent Cloud services.</p>
+         */
         @NameInMap("QcloudProdCount")
         public Integer qcloudProdCount;
 

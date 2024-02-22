@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListImportedLogsByProdResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListImportedLogsByProdResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +38,73 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
     }
 
     public static class ListImportedLogsByProdResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the log is automatically added to the threat analysis feature within newly added accounts. Valid values:</p>
+         * <br>
+         * <p>*   1: yes</p>
+         * <p>*   0: no</p>
+         */
         @NameInMap("AutoImported")
         public Integer autoImported;
 
+        /**
+         * <p>The code of the cloud service provider. Valid values:</p>
+         * <br>
+         * <p>*   qcloud: Tencent Cloud</p>
+         * <p>*   aliyun: Alibaba Cloud</p>
+         * <p>*   hcloud: Huawei Cloud</p>
+         */
         @NameInMap("CloudCode")
         public String cloudCode;
 
+        /**
+         * <p>Indicates whether the log is added to the threat analysis feature. Valid values:</p>
+         * <br>
+         * <p>*   1: yes</p>
+         * <p>*   0: no</p>
+         */
         @NameInMap("Imported")
         public Integer imported;
 
+        /**
+         * <p>The number of users who have added the log.</p>
+         */
         @NameInMap("ImportedUserCount")
         public Integer importedUserCount;
 
+        /**
+         * <p>The log code.</p>
+         */
         @NameInMap("LogCode")
         public String logCode;
 
+        /**
+         * <p>The display log code.</p>
+         */
         @NameInMap("LogMdsCode")
         public String logMdsCode;
 
+        /**
+         * <p>The time when the log was last added.</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>The code of the cloud service to which the log belongs.</p>
+         */
         @NameInMap("ProdCode")
         public String prodCode;
 
+        /**
+         * <p>The total number of users who have the log.</p>
+         */
         @NameInMap("TotalUserCount")
         public Integer totalUserCount;
 
+        /**
+         * <p>The number of users who have not added the log.</p>
+         */
         @NameInMap("UnImportedUserCount")
         public Integer unImportedUserCount;
 

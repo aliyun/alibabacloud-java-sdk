@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListProjectLogStoresResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListProjectLogStoresResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,51 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
     }
 
     public static class ListProjectLogStoresResponseBodyData extends TeaModel {
+        /**
+         * <p>The endpoint of the Simple Log Service project.</p>
+         */
         @NameInMap("EndPoint")
         public String endPoint;
 
+        /**
+         * <p>The name of the region in which the Simple Log Service project resides.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>The name of the Simple Log Service Logstore.</p>
+         */
         @NameInMap("LogStore")
         public String logStore;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         */
         @NameInMap("MainUserId")
         public Long mainUserId;
 
+        /**
+         * <p>The name of the Simple Log Service project.</p>
+         */
         @NameInMap("Project")
         public String project;
 
+        /**
+         * <p>The ID of the region in which the Simple Log Service project resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+         */
         @NameInMap("SubUserId")
         public Long subUserId;
 
+        /**
+         * <p>The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+         */
         @NameInMap("SubUserName")
         public String subUserName;
 

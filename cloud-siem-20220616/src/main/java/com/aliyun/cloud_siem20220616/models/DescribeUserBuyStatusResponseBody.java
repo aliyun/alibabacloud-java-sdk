@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserBuyStatusResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeUserBuyStatusResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,36 +38,72 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeUserBuyStatusResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the logon Alibaba Cloud account can be used to place orders for the threat analysis feature, such as purchase, upgrade, and specifications change orders. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("CanBuy")
         public Boolean canBuy;
 
+        /**
+         * <p>The log storage capacity that is purchased for the threat analysis feature. Unit: GB.</p>
+         */
         @NameInMap("Capacity")
         public Integer capacity;
 
+        /**
+         * <p>The number of days before the expiration time of the threat analysis feature.</p>
+         */
         @NameInMap("DurationDays")
         public Long durationDays;
 
+        /**
+         * <p>The timestamp when the threat analysis feature expires. Unit: milliseconds.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         */
         @NameInMap("MainUserId")
         public Long mainUserId;
 
+        /**
+         * <p>The username of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         */
         @NameInMap("MainUserName")
         public String mainUserName;
 
+        /**
+         * <p>The ID of the management account of the resource directory.</p>
+         */
         @NameInMap("MasterUserId")
         public Long masterUserId;
 
+        /**
+         * <p>The display name of the management account of the resource directory.</p>
+         */
         @NameInMap("MasterUserName")
         public String masterUserName;
 
+        /**
+         * <p>The instance ID of Security Center.</p>
+         */
         @NameInMap("SasInstanceId")
         public String sasInstanceId;
 
+        /**
+         * <p>The ID of the logon Alibaba Cloud account.</p>
+         */
         @NameInMap("SubUserId")
         public Long subUserId;
 
+        /**
+         * <p>The username of the logon Alibaba Cloud account.</p>
+         */
         @NameInMap("SubUserName")
         public String subUserName;
 

@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertSceneResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeAlertSceneResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +83,27 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertSceneResponseBodyDataTargets extends TeaModel {
+        /**
+         * <p>The display name of the attribute for the entity.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The attribute of the entity.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The right operand that is displayed by default in the whitelist rule.</p>
+         */
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <p>The right operands supported by the whitelist rule.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -117,24 +147,45 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertSceneResponseBodyData extends TeaModel {
+        /**
+         * <p>The name of the alert. The value varies based on the display language (Chinese or English) of the Security Center console.</p>
+         */
         @NameInMap("AlertName")
         public String alertName;
 
+        /**
+         * <p>The ID of the alert name.</p>
+         */
         @NameInMap("AlertNameId")
         public String alertNameId;
 
+        /**
+         * <p>The title of the alert notification. The value varies based on the display language (Chinese or English) of the Security Center console.</p>
+         */
         @NameInMap("AlertTile")
         public String alertTile;
 
+        /**
+         * <p>The ID of the alert title.</p>
+         */
         @NameInMap("AlertTileId")
         public String alertTileId;
 
+        /**
+         * <p>The type of the alert. The value varies based on the display language (Chinese or English) of the Security Center console.</p>
+         */
         @NameInMap("AlertType")
         public String alertType;
 
+        /**
+         * <p>The ID of the alert type.</p>
+         */
         @NameInMap("AlertTypeId")
         public String alertTypeId;
 
+        /**
+         * <p>The information about the entities for which you need to add the alert to the whitelist.</p>
+         */
         @NameInMap("Targets")
         public java.util.List<DescribeAlertSceneResponseBodyDataTargets> targets;
 

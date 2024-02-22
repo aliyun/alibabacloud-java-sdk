@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListUsersByProdResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListUsersByProdResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +38,61 @@ public class ListUsersByProdResponseBody extends TeaModel {
     }
 
     public static class ListUsersByProdResponseBodyData extends TeaModel {
+        /**
+         * <p>The code of the cloud service provider. Valid values:</p>
+         * <br>
+         * <p>*   qcloud: Tencent Cloud</p>
+         * <p>*   aliyun: Alibaba Cloud</p>
+         * <p>*   hcloud: Huawei Cloud</p>
+         */
         @NameInMap("CloudCode")
         public String cloudCode;
 
+        /**
+         * <p>Indicates whether the log is added to the threat analysis feature.</p>
+         */
         @NameInMap("Imported")
         public Boolean imported;
 
+        /**
+         * <p>The display log code. The value is based on your console settings.</p>
+         */
         @NameInMap("LogMdsCode")
         public String logMdsCode;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         */
         @NameInMap("MainUserId")
         public Long mainUserId;
 
+        /**
+         * <p>The log code.</p>
+         */
         @NameInMap("SourceLogCode")
         public String sourceLogCode;
 
+        /**
+         * <p>The log name.</p>
+         */
         @NameInMap("SourceLogName")
         public String sourceLogName;
 
+        /**
+         * <p>The code of the cloud service.</p>
+         */
         @NameInMap("SourceProdCode")
         public String sourceProdCode;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+         */
         @NameInMap("SubUserId")
         public Long subUserId;
 
+        /**
+         * <p>The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+         */
         @NameInMap("SubUserName")
         public String subUserName;
 

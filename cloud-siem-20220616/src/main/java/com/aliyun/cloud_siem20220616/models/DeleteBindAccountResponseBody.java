@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DeleteBindAccountResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DeleteBindAccountResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class DeleteBindAccountResponseBody extends TeaModel {
     }
 
     public static class DeleteBindAccountResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of cloud accounts that are removed. The value 1 indicates that cloud account is removed, and a value less than or equal to 0 indicates that the cloud account failed to be removed.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 

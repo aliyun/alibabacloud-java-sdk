@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListBindDataSourcesResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListBindDataSourcesResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +38,65 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
     }
 
     public static class ListBindDataSourcesResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the cloud account.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The username of the cloud account.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The code of the cloud service provider. Valid values:</p>
+         * <br>
+         * <p>*   qcloud: Tencent Cloud</p>
+         * <p>*   aliyun: Alibaba Cloud</p>
+         * <p>*   hcloud: Huawei Cloud</p>
+         */
         @NameInMap("CloudCode")
         public String cloudCode;
 
+        /**
+         * <p>The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.</p>
+         */
         @NameInMap("DataSourceInstanceId")
         public String dataSourceInstanceId;
 
+        /**
+         * <p>The name of the data source.</p>
+         */
         @NameInMap("DataSourceName")
         public String dataSourceName;
 
+        /**
+         * <p>The remarks on the data source.</p>
+         */
         @NameInMap("DataSourceRemark")
         public String dataSourceRemark;
 
+        /**
+         * <p>The type of the data source. Valid values:</p>
+         * <br>
+         * <p>*   obs: Huawei Cloud Object Storage Service (OBS)</p>
+         * <p>*   wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</p>
+         * <p>*   ckafka: Tencent Cloud Kafka (CKafka)</p>
+         */
         @NameInMap("DataSourceType")
         public String dataSourceType;
 
+        /**
+         * <p>The number of logs that are added within the data source.</p>
+         */
         @NameInMap("LogCount")
         public Integer logCount;
 
+        /**
+         * <p>The number of existing tasks that are created to add logs within the data source.</p>
+         */
         @NameInMap("TaskCount")
         public Integer taskCount;
 
