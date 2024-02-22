@@ -98,6 +98,9 @@ public class ListTableMetasResponseBody extends TeaModel {
         @NameInMap("CanDelete")
         public Boolean canDelete;
 
+        @NameInMap("Config")
+        public String config;
+
         @NameInMap("Description")
         public String description;
 
@@ -145,6 +148,14 @@ public class ListTableMetasResponseBody extends TeaModel {
         }
         public Boolean getCanDelete() {
             return this.canDelete;
+        }
+
+        public ListTableMetasResponseBodyTableMetas setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
         }
 
         public ListTableMetasResponseBodyTableMetas setDescription(String description) {

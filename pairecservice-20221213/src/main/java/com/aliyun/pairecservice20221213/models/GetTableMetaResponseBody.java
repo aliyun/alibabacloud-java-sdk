@@ -7,6 +7,9 @@ public class GetTableMetaResponseBody extends TeaModel {
     @NameInMap("CanDelete")
     public Boolean canDelete;
 
+    @NameInMap("Config")
+    public String config;
+
     @NameInMap("Description")
     public String description;
 
@@ -15,6 +18,9 @@ public class GetTableMetaResponseBody extends TeaModel {
 
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
+
+    @NameInMap("GmtImportedTime")
+    public String gmtImportedTime;
 
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
@@ -30,6 +36,9 @@ public class GetTableMetaResponseBody extends TeaModel {
 
     @NameInMap("ResourceId")
     public String resourceId;
+
+    @NameInMap("TableMetaId")
+    public String tableMetaId;
 
     @NameInMap("TableName")
     public String tableName;
@@ -51,6 +60,14 @@ public class GetTableMetaResponseBody extends TeaModel {
     }
     public Boolean getCanDelete() {
         return this.canDelete;
+    }
+
+    public GetTableMetaResponseBody setConfig(String config) {
+        this.config = config;
+        return this;
+    }
+    public String getConfig() {
+        return this.config;
     }
 
     public GetTableMetaResponseBody setDescription(String description) {
@@ -75,6 +92,14 @@ public class GetTableMetaResponseBody extends TeaModel {
     }
     public String getGmtCreateTime() {
         return this.gmtCreateTime;
+    }
+
+    public GetTableMetaResponseBody setGmtImportedTime(String gmtImportedTime) {
+        this.gmtImportedTime = gmtImportedTime;
+        return this;
+    }
+    public String getGmtImportedTime() {
+        return this.gmtImportedTime;
     }
 
     public GetTableMetaResponseBody setGmtModifiedTime(String gmtModifiedTime) {
@@ -115,6 +140,14 @@ public class GetTableMetaResponseBody extends TeaModel {
     }
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    public GetTableMetaResponseBody setTableMetaId(String tableMetaId) {
+        this.tableMetaId = tableMetaId;
+        return this;
+    }
+    public String getTableMetaId() {
+        return this.tableMetaId;
     }
 
     public GetTableMetaResponseBody setTableName(String tableName) {

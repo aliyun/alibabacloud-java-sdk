@@ -87,8 +87,14 @@ public class CreateTableMetaRequest extends TeaModel {
     }
 
     public static class CreateTableMetaRequestFields extends TeaModel {
+        @NameInMap("DataType")
+        public String dataType;
+
         @NameInMap("IsDimensionField")
         public Boolean isDimensionField;
+
+        @NameInMap("IsPartitionField")
+        public String isPartitionField;
 
         @NameInMap("Meaning")
         public String meaning;
@@ -104,12 +110,28 @@ public class CreateTableMetaRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateTableMetaRequestFields setDataType(String dataType) {
+            this.dataType = dataType;
+            return this;
+        }
+        public String getDataType() {
+            return this.dataType;
+        }
+
         public CreateTableMetaRequestFields setIsDimensionField(Boolean isDimensionField) {
             this.isDimensionField = isDimensionField;
             return this;
         }
         public Boolean getIsDimensionField() {
             return this.isDimensionField;
+        }
+
+        public CreateTableMetaRequestFields setIsPartitionField(String isPartitionField) {
+            this.isPartitionField = isPartitionField;
+            return this;
+        }
+        public String getIsPartitionField() {
+            return this.isPartitionField;
         }
 
         public CreateTableMetaRequestFields setMeaning(String meaning) {
