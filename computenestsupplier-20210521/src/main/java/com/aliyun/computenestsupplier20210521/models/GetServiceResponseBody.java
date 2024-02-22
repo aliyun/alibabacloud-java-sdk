@@ -16,6 +16,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("Categories")
     public String categories;
 
+    @NameInMap("Commodity")
+    public GetServiceResponseBodyCommodity commodity;
+
     @NameInMap("CommodityCode")
     public String commodityCode;
 
@@ -210,6 +213,14 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public String getCategories() {
         return this.categories;
+    }
+
+    public GetServiceResponseBody setCommodity(GetServiceResponseBodyCommodity commodity) {
+        this.commodity = commodity;
+        return this;
+    }
+    public GetServiceResponseBodyCommodity getCommodity() {
+        return this.commodity;
     }
 
     public GetServiceResponseBody setCommodityCode(String commodityCode) {
@@ -739,6 +750,58 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         public GetServiceResponseBodyBillEntityMappings setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetServiceResponseBodyCommodity extends TeaModel {
+        @NameInMap("ChargeType")
+        public String chargeType;
+
+        @NameInMap("Components")
+        public java.util.List<String> components;
+
+        @NameInMap("OrderTime")
+        public java.util.Map<String, java.util.List<String>> orderTime;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static GetServiceResponseBodyCommodity build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyCommodity self = new GetServiceResponseBodyCommodity();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyCommodity setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        public GetServiceResponseBodyCommodity setComponents(java.util.List<String> components) {
+            this.components = components;
+            return this;
+        }
+        public java.util.List<String> getComponents() {
+            return this.components;
+        }
+
+        public GetServiceResponseBodyCommodity setOrderTime(java.util.Map<String, java.util.List<String>> orderTime) {
+            this.orderTime = orderTime;
+            return this;
+        }
+        public java.util.Map<String, java.util.List<String>> getOrderTime() {
+            return this.orderTime;
+        }
+
+        public GetServiceResponseBodyCommodity setType(String type) {
             this.type = type;
             return this;
         }
