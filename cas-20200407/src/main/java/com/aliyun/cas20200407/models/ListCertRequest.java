@@ -20,7 +20,7 @@ public class ListCertRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The keyword for the query. You can enter a name, domain name, or Subject Alternative Name (SAN) extension. Fuzzy match is supported.</p>
+     * <p>The keyword that is used for queries. The value can be a name, domain name, or subject alternative name (SAN) attribute. Fuzzy match is supported.</p>
      */
     @NameInMap("KeyWord")
     public String keyWord;
@@ -50,7 +50,7 @@ public class ListCertRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the certificate repository. You can call the [ListCertWarehouse](~~453246~~) operation to query the IDs of certificate repositories.</p>
+     * <p>The ID of the certificate repository. You can call the ListCertWarehouse API operation to query the IDs of certificate repositories.</p>
      */
     @NameInMap("WarehouseId")
     public Long warehouseId;

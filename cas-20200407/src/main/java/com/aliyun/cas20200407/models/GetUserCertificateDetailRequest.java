@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserCertificateDetailRequest extends TeaModel {
     /**
-     * <p>值为true时Cert、Key、EncryptCert、EncryptPrivateKey、SignCert、SignPrivateKey信息不返回，false时则返回，默认是false。</p>
+     * <p>If true, the Cert, Key, EncryptCert, EncryptPrivateKey, SignCert, SignPrivateKey will return null, default is false.</p>
      */
     @NameInMap("CertFilter")
     public Boolean certFilter;
