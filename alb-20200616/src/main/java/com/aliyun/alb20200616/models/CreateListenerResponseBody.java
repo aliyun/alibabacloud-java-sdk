@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateListenerResponseBody extends TeaModel {
     /**
-     * <p>The asynchronous task ID.</p>
+     * <p>The ID of the asynchronous task.</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
-     * <p>The listener ID.</p>
+     * <p>The ID of the listener.</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAclsRequest extends TeaModel {
     /**
-     * <p>The ACL IDs.</p>
+     * <p>The ID of the network ACL. You can specify at most 20 network ACL IDs in each request.</p>
      */
     @NameInMap("AclIds")
     public java.util.List<String> aclIds;
 
     /**
-     * <p>The ACL names. You can specify up to 10 ACL names in each request.</p>
+     * <p>The names of the network ACLs. You can specify at most 10 network ACL names in each request.</p>
      */
     @NameInMap("AclNames")
     public java.util.List<String> aclNames;
@@ -23,20 +23,23 @@ public class ListAclsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token that is used for the next query. Valid values:</p>
      * <br>
-     * <p>*   You do not need to specify this parameter for the first request.</p>
-     * <p>*   You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The resource group ID. You can filter the results based on the specified ID.</p>
+     * <p>The ID of the resource group. You can filter the query results based on the specified ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListAclsRequestTag> tag;
 
@@ -94,9 +97,15 @@ public class ListAclsRequest extends TeaModel {
     }
 
     public static class ListAclsRequestTag extends TeaModel {
+        /**
+         * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

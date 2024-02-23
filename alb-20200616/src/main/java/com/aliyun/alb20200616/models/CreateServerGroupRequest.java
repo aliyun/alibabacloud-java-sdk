@@ -14,6 +14,9 @@ public class CreateServerGroupRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("ConnectionDrainConfig")
+    public CreateServerGroupRequestConnectionDrainConfig connectionDrainConfig;
+
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <br>
@@ -68,7 +71,7 @@ public class CreateServerGroupRequest extends TeaModel {
     /**
      * <p>The type of server group. Valid values:</p>
      * <br>
-     * <p>*   **Instance** (default): allows you to add servers by specifying **Ecs**, **Ens**, or **Eci**.</p>
+     * <p>*   **Instance** (default): allows you to add servers by specifying **Ecs**, **Eni**, or **Eci**.</p>
      * <p>*   **Ip**: allows you to add servers by specifying IP addresses.</p>
      * <p>*   **Fc**: allows you to add servers by specifying functions of Function Compute.</p>
      */
@@ -81,6 +84,9 @@ public class CreateServerGroupRequest extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
+    @NameInMap("SlowStartConfig")
+    public CreateServerGroupRequestSlowStartConfig slowStartConfig;
+
     /**
      * <p>The configuration of session persistence.</p>
      * <br>
@@ -89,15 +95,21 @@ public class CreateServerGroupRequest extends TeaModel {
     @NameInMap("StickySessionConfig")
     public CreateServerGroupRequestStickySessionConfig stickySessionConfig;
 
+    /**
+     * <p>The tag.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateServerGroupRequestTag> tag;
 
     /**
-     * <p>The setting of consistent hashing based on URLs.</p>
+     * <p>The configuration of consistent hashing based on URLs.</p>
      */
     @NameInMap("UchConfig")
     public CreateServerGroupRequestUchConfig uchConfig;
 
+    /**
+     * <p>Specifies whether to enable persistent TCP connections.</p>
+     */
     @NameInMap("UpstreamKeepaliveEnabled")
     public Boolean upstreamKeepaliveEnabled;
 
@@ -120,6 +132,14 @@ public class CreateServerGroupRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateServerGroupRequest setConnectionDrainConfig(CreateServerGroupRequestConnectionDrainConfig connectionDrainConfig) {
+        this.connectionDrainConfig = connectionDrainConfig;
+        return this;
+    }
+    public CreateServerGroupRequestConnectionDrainConfig getConnectionDrainConfig() {
+        return this.connectionDrainConfig;
     }
 
     public CreateServerGroupRequest setDryRun(Boolean dryRun) {
@@ -186,6 +206,14 @@ public class CreateServerGroupRequest extends TeaModel {
         return this.serviceName;
     }
 
+    public CreateServerGroupRequest setSlowStartConfig(CreateServerGroupRequestSlowStartConfig slowStartConfig) {
+        this.slowStartConfig = slowStartConfig;
+        return this;
+    }
+    public CreateServerGroupRequestSlowStartConfig getSlowStartConfig() {
+        return this.slowStartConfig;
+    }
+
     public CreateServerGroupRequest setStickySessionConfig(CreateServerGroupRequestStickySessionConfig stickySessionConfig) {
         this.stickySessionConfig = stickySessionConfig;
         return this;
@@ -226,15 +254,45 @@ public class CreateServerGroupRequest extends TeaModel {
         return this.vpcId;
     }
 
+    public static class CreateServerGroupRequestConnectionDrainConfig extends TeaModel {
+        @NameInMap("ConnectionDrainEnabled")
+        public Boolean connectionDrainEnabled;
+
+        @NameInMap("ConnectionDrainTimeout")
+        public Integer connectionDrainTimeout;
+
+        public static CreateServerGroupRequestConnectionDrainConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateServerGroupRequestConnectionDrainConfig self = new CreateServerGroupRequestConnectionDrainConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServerGroupRequestConnectionDrainConfig setConnectionDrainEnabled(Boolean connectionDrainEnabled) {
+            this.connectionDrainEnabled = connectionDrainEnabled;
+            return this;
+        }
+        public Boolean getConnectionDrainEnabled() {
+            return this.connectionDrainEnabled;
+        }
+
+        public CreateServerGroupRequestConnectionDrainConfig setConnectionDrainTimeout(Integer connectionDrainTimeout) {
+            this.connectionDrainTimeout = connectionDrainTimeout;
+            return this;
+        }
+        public Integer getConnectionDrainTimeout() {
+            return this.connectionDrainTimeout;
+        }
+
+    }
+
     public static class CreateServerGroupRequestHealthCheckConfig extends TeaModel {
         /**
-         * <p>The HTTP status codes that are used to determine whether the backend server passes the health check.</p>
+         * <p>The HTTP status codes that are used to indicate whether the backend server passes the health check.</p>
          */
         @NameInMap("HealthCheckCodes")
         public java.util.List<String> healthCheckCodes;
 
         /**
-         * <p>The port that you want to use for health checks on backend servers.</p>
+         * <p>The backend port that is used for health checks.</p>
          * <br>
          * <p>Valid values: **0** to **65535**.</p>
          * <br>
@@ -244,34 +302,34 @@ public class CreateServerGroupRequest extends TeaModel {
         public Integer healthCheckConnectPort;
 
         /**
-         * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+         * <p>Specifies whether to enable the health check feature. Valid values:</p>
          * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <p>*   **true**: enables the health check feature.</p>
+         * <p>*   **false**: disables the health check feature.</p>
          * <br>
-         * <p>> If the **ServerGroupType** parameter is set to **Instance** or **Ip**, the health check feature is enabled by default. If the **ServerGroupType** parameter is set to **Fc**, the health check feature is disabled by default.</p>
+         * <p>>  If the **ServerGroupType** parameter is set to **Instance** or **Ip**, the health check feature is enabled by default. If the **ServerGroupType** parameter is set to **Fc**, the health check feature is disabled by default.</p>
          */
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
 
         /**
-         * <p>The domain name that is used for health checks. The domain name must meet the following requirements:</p>
+         * <p>The domain name that is used for health checks. The domain name meets the following requirements:</p>
          * <br>
-         * <p>*   The domain name must be 1 to 80 characters in length.</p>
-         * <p>*   The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).</p>
-         * <p>*   It must contain at least one period (.) but cannot start or end with a period (.).</p>
-         * <p>*   The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).</p>
-         * <p>*   The domain name cannot start or end with a hyphen (-).</p>
+         * <p>*   The domain name is 1 to 80 characters in length.</p>
+         * <p>*   The domain name contains lowercase letters, digits, hyphens (-), and periods (.).</p>
+         * <p>*   The domain name contains at least one period (.) but does not start or end with a period (.).</p>
+         * <p>*   The rightmost domain label of the domain name contains only letters, and does not contain digits or hyphens (-).</p>
+         * <p>*   The domain name does not start or end with a hyphen (-).</p>
          * <br>
-         * <p>> This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP**.</p>
+         * <p>>  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the **ALB** tab.</p>
          */
         @NameInMap("HealthCheckHost")
         public String healthCheckHost;
 
         /**
-         * <p>The HTTP version. Valid values: **HTTP1.0** and **HTTP1.1**. Default value: HTTP1.1.</p>
+         * <p>The version of the HTTP protocol. Valid values: **HTTP1.0** and **HTTP1.1**. Default value: HTTP1.1.</p>
          * <br>
-         * <p>> This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP**.</p>
+         * <p>>  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the **ALB** tab.</p>
          */
         @NameInMap("HealthCheckHttpVersion")
         public String healthCheckHttpVersion;
@@ -290,10 +348,10 @@ public class CreateServerGroupRequest extends TeaModel {
          * <p>The HTTP method that is used for health checks. Valid values:</p>
          * <br>
          * <p>*   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</p>
-         * <p>*   **POST**: gRPC health checks automatically use the POST method.</p>
-         * <p>*   **HEAD**: By default, HTTP health checks use the HEAD method.</p>
+         * <p>*   **POST**: By default, gRPC health checks use the POST method.</p>
+         * <p>*   **HEAD**: HTTP and HTTPS health checks in listeners use the HEAD method by default.</p>
          * <br>
-         * <p>> This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.</p>
+         * <p>>  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP**, **HTTPS**, or **gRPC**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the **ALB** tab.</p>
          */
         @NameInMap("HealthCheckMethod")
         public String healthCheckMethod;
@@ -303,7 +361,7 @@ public class CreateServerGroupRequest extends TeaModel {
          * <br>
          * <p>The path must be 1 to 80 characters in length and can contain only letters, digits, and the following special characters: `- / . % ? # & =`. It can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \" , +`. The URL must start with a forward slash (/).</p>
          * <br>
-         * <p>> This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP**.</p>
+         * <p>>  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTPS on the **ALB** tab.</p>
          */
         @NameInMap("HealthCheckPath")
         public String healthCheckPath;
@@ -311,27 +369,30 @@ public class CreateServerGroupRequest extends TeaModel {
         /**
          * <p>The protocol that is used for health checks. Valid values:</p>
          * <br>
-         * <p>*   **HTTP**: To perform HTTP health checks, Application Load Balancer (ALB) sends HEAD or GET requests to a backend server to check whether the backend server is healthy.</p>
-         * <p>*   **HTTPS**: To perform HTTPS health checks, ALB sends SYN packets to a backend server to check whether the port of the backend server is available to receive requests.</p>
-         * <p>*   **gRPC**: To perform gRPC health checks, ALB sends POST or GET requests to a backend server to check whether the backend server is healthy.</p>
+         * <p>*   **HTTP**: ALB performs HTTP health checks by sending HEAD or GET requests to a backend server to check whether the backend server is healthy.</p>
+         * <p>*   **HTTPS**: ALB performs HTTPS health checks by sending HEAD or GET requests to a backend server to check whether the backend server is healthy. HTTPS supports data encryption and provides higher data security than HTTP.</p>
+         * <p>*   **TCP**: To perform TCP health checks, SLB sends SYN packets to the backend server to check whether the port of the backend server is available to receive requests.</p>
+         * <p>*   **gRPC**: To perform gRPC health checks, SLB sends POST or GET requests to a backend server to check whether the backend server is healthy.</p>
+         * <br>
+         * <p>>  HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the **ALB** tab.</p>
          */
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;
 
         /**
-         * <p>Specify the timeout period of a health check response. If a backend server, such as an Elastic Compute Service (ECS) instance, does not return a health check response within the specified timeout period, the server fails the health check. Unit: seconds.</p>
+         * <p>The timeout period for a health check response. If a backend server, such as an Elastic Compute Service (ECS) instance, does not return a health check response within the specified timeout period, the server fails the health check. Unit: seconds.</p>
          * <br>
          * <p>Valid values: **1** to **300**.</p>
          * <br>
          * <p>Default value: **5**.</p>
          * <br>
-         * <p>> If the value of the **HealthCheckTimeout** parameter is smaller than that of the **HealthCheckInterval** parameter, the timeout period specified by the **HealthCheckTimeout** parameter is ignored and the value of the **HealthCheckInterval** parameter is used as the timeout period.</p>
+         * <p>>  If the value of **HealthCHeckTimeout** is smaller than the value of **HealthCheckInterval**, the value of **HealthCHeckTimeout** is ignored and the value of **HealthCheckInterval** is used.</p>
          */
         @NameInMap("HealthCheckTimeout")
         public Integer healthCheckTimeout;
 
         /**
-         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.</p>
+         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from **fail** to **success**.</p>
          * <br>
          * <p>Valid values: **2** to **10**.</p>
          * <br>
@@ -341,7 +402,7 @@ public class CreateServerGroupRequest extends TeaModel {
         public Integer healthyThreshold;
 
         /**
-         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.</p>
+         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from **success** to **fail**.</p>
          * <br>
          * <p>Valid values: **2** to **10**.</p>
          * <br>
@@ -453,6 +514,36 @@ public class CreateServerGroupRequest extends TeaModel {
 
     }
 
+    public static class CreateServerGroupRequestSlowStartConfig extends TeaModel {
+        @NameInMap("SlowStartDuration")
+        public Integer slowStartDuration;
+
+        @NameInMap("SlowStartEnabled")
+        public Boolean slowStartEnabled;
+
+        public static CreateServerGroupRequestSlowStartConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateServerGroupRequestSlowStartConfig self = new CreateServerGroupRequestSlowStartConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServerGroupRequestSlowStartConfig setSlowStartDuration(Integer slowStartDuration) {
+            this.slowStartDuration = slowStartDuration;
+            return this;
+        }
+        public Integer getSlowStartDuration() {
+            return this.slowStartDuration;
+        }
+
+        public CreateServerGroupRequestSlowStartConfig setSlowStartEnabled(Boolean slowStartEnabled) {
+            this.slowStartEnabled = slowStartEnabled;
+            return this;
+        }
+        public Boolean getSlowStartEnabled() {
+            return this.slowStartEnabled;
+        }
+
+    }
+
     public static class CreateServerGroupRequestStickySessionConfig extends TeaModel {
         /**
          * <p>The cookie to be configured on the server.</p>
@@ -543,9 +634,15 @@ public class CreateServerGroupRequest extends TeaModel {
     }
 
     public static class CreateServerGroupRequestTag extends TeaModel {
+        /**
+         * <p>The tag key. The tag key can be up to 128 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. The tag value can be up to 128 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -574,13 +671,13 @@ public class CreateServerGroupRequest extends TeaModel {
 
     public static class CreateServerGroupRequestUchConfig extends TeaModel {
         /**
-         * <p>Type</p>
+         * <p>The type of the parameter.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The setting of consistent hashing.</p>
+         * <p>The parameter value for consistent hashing.</p>
          */
         @NameInMap("Value")
         public String value;

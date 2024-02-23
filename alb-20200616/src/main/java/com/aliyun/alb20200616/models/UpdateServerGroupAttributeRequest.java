@@ -14,6 +14,9 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("ConnectionDrainConfig")
+    public UpdateServerGroupAttributeRequestConnectionDrainConfig connectionDrainConfig;
+
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <br>
@@ -59,15 +62,24 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
+    @NameInMap("SlowStartConfig")
+    public UpdateServerGroupAttributeRequestSlowStartConfig slowStartConfig;
+
     /**
      * <p>The configuration of session persistence.</p>
      */
     @NameInMap("StickySessionConfig")
     public UpdateServerGroupAttributeRequestStickySessionConfig stickySessionConfig;
 
+    /**
+     * <p>The setting of consistent hashing based on URLs.</p>
+     */
     @NameInMap("UchConfig")
     public UpdateServerGroupAttributeRequestUchConfig uchConfig;
 
+    /**
+     * <p>Specifies whether to enable persistent TCP connections.</p>
+     */
     @NameInMap("UpstreamKeepaliveEnabled")
     public Boolean upstreamKeepaliveEnabled;
 
@@ -82,6 +94,14 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateServerGroupAttributeRequest setConnectionDrainConfig(UpdateServerGroupAttributeRequestConnectionDrainConfig connectionDrainConfig) {
+        this.connectionDrainConfig = connectionDrainConfig;
+        return this;
+    }
+    public UpdateServerGroupAttributeRequestConnectionDrainConfig getConnectionDrainConfig() {
+        return this.connectionDrainConfig;
     }
 
     public UpdateServerGroupAttributeRequest setDryRun(Boolean dryRun) {
@@ -132,6 +152,14 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         return this.serviceName;
     }
 
+    public UpdateServerGroupAttributeRequest setSlowStartConfig(UpdateServerGroupAttributeRequestSlowStartConfig slowStartConfig) {
+        this.slowStartConfig = slowStartConfig;
+        return this;
+    }
+    public UpdateServerGroupAttributeRequestSlowStartConfig getSlowStartConfig() {
+        return this.slowStartConfig;
+    }
+
     public UpdateServerGroupAttributeRequest setStickySessionConfig(UpdateServerGroupAttributeRequestStickySessionConfig stickySessionConfig) {
         this.stickySessionConfig = stickySessionConfig;
         return this;
@@ -154,6 +182,36 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     }
     public Boolean getUpstreamKeepaliveEnabled() {
         return this.upstreamKeepaliveEnabled;
+    }
+
+    public static class UpdateServerGroupAttributeRequestConnectionDrainConfig extends TeaModel {
+        @NameInMap("ConnectionDrainEnabled")
+        public Boolean connectionDrainEnabled;
+
+        @NameInMap("ConnectionDrainTimeout")
+        public Integer connectionDrainTimeout;
+
+        public static UpdateServerGroupAttributeRequestConnectionDrainConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateServerGroupAttributeRequestConnectionDrainConfig self = new UpdateServerGroupAttributeRequestConnectionDrainConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateServerGroupAttributeRequestConnectionDrainConfig setConnectionDrainEnabled(Boolean connectionDrainEnabled) {
+            this.connectionDrainEnabled = connectionDrainEnabled;
+            return this;
+        }
+        public Boolean getConnectionDrainEnabled() {
+            return this.connectionDrainEnabled;
+        }
+
+        public UpdateServerGroupAttributeRequestConnectionDrainConfig setConnectionDrainTimeout(Integer connectionDrainTimeout) {
+            this.connectionDrainTimeout = connectionDrainTimeout;
+            return this;
+        }
+        public Integer getConnectionDrainTimeout() {
+            return this.connectionDrainTimeout;
+        }
+
     }
 
     public static class UpdateServerGroupAttributeRequestHealthCheckConfig extends TeaModel {
@@ -384,6 +442,36 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
 
     }
 
+    public static class UpdateServerGroupAttributeRequestSlowStartConfig extends TeaModel {
+        @NameInMap("SlowStartDuration")
+        public Integer slowStartDuration;
+
+        @NameInMap("SlowStartEnabled")
+        public Boolean slowStartEnabled;
+
+        public static UpdateServerGroupAttributeRequestSlowStartConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateServerGroupAttributeRequestSlowStartConfig self = new UpdateServerGroupAttributeRequestSlowStartConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateServerGroupAttributeRequestSlowStartConfig setSlowStartDuration(Integer slowStartDuration) {
+            this.slowStartDuration = slowStartDuration;
+            return this;
+        }
+        public Integer getSlowStartDuration() {
+            return this.slowStartDuration;
+        }
+
+        public UpdateServerGroupAttributeRequestSlowStartConfig setSlowStartEnabled(Boolean slowStartEnabled) {
+            this.slowStartEnabled = slowStartEnabled;
+            return this;
+        }
+        public Boolean getSlowStartEnabled() {
+            return this.slowStartEnabled;
+        }
+
+    }
+
     public static class UpdateServerGroupAttributeRequestStickySessionConfig extends TeaModel {
         /**
          * <p>The cookie to be configured on the server.</p>
@@ -470,9 +558,15 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     }
 
     public static class UpdateServerGroupAttributeRequestUchConfig extends TeaModel {
+        /**
+         * <p>The type of the parameter.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The setting of consistent hashing.</p>
+         */
         @NameInMap("Value")
         public String value;
 

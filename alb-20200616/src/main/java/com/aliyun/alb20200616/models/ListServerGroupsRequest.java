@@ -37,6 +37,9 @@ public class ListServerGroupsRequest extends TeaModel {
     @NameInMap("ServerGroupNames")
     public java.util.List<String> serverGroupNames;
 
+    @NameInMap("ServerGroupType")
+    public String serverGroupType;
+
     /**
      * <p>The tags that are added to the server group. You can specify up to 10 tags in each call.</p>
      */
@@ -92,6 +95,14 @@ public class ListServerGroupsRequest extends TeaModel {
     }
     public java.util.List<String> getServerGroupNames() {
         return this.serverGroupNames;
+    }
+
+    public ListServerGroupsRequest setServerGroupType(String serverGroupType) {
+        this.serverGroupType = serverGroupType;
+        return this;
+    }
+    public String getServerGroupType() {
+        return this.serverGroupType;
     }
 
     public ListServerGroupsRequest setTag(java.util.List<ListServerGroupsRequestTag> tag) {

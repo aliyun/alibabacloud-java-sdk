@@ -38,7 +38,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
     public java.util.List<UpdateRuleAttributeRequestRuleActions> ruleActions;
 
     /**
-     * <p>The match conditions of the forwarding rule.</p>
+     * <p>The match condition of the forwarding rule.</p>
      */
     @NameInMap("RuleConditions")
     public java.util.List<UpdateRuleAttributeRequestRuleConditions> ruleConditions;
@@ -971,7 +971,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     public static class UpdateRuleAttributeRequestRuleConditionsCookieConfigValues extends TeaModel {
         /**
-         * <p>The key of the cookie. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, the key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.</p>
+         * <p>The key of the cookie. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \ | < > &`.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -1007,7 +1007,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     public static class UpdateRuleAttributeRequestRuleConditionsCookieConfig extends TeaModel {
         /**
-         * <p>The configurations of the cookies.</p>
+         * <p>The configuration of the cookie.</p>
          */
         @NameInMap("Values")
         public java.util.List<UpdateRuleAttributeRequestRuleConditionsCookieConfigValues> values;
@@ -1065,7 +1065,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     public static class UpdateRuleAttributeRequestRuleConditionsHostConfig extends TeaModel {
         /**
-         * <p>The hostname.</p>
+         * <p>The hostnames.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -1109,7 +1109,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     public static class UpdateRuleAttributeRequestRuleConditionsPathConfig extends TeaModel {
         /**
-         * <p>The path.</p>
+         * <p>The paths.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -1131,7 +1131,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     public static class UpdateRuleAttributeRequestRuleConditionsQueryStringConfigValues extends TeaModel {
         /**
-         * <p>They key of the query string. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). The key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.</p>
+         * <p>They key of the query string. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, the key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -1167,7 +1167,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     public static class UpdateRuleAttributeRequestRuleConditionsQueryStringConfig extends TeaModel {
         /**
-         * <p>The query strings.</p>
+         * <p>The query string.</p>
          */
         @NameInMap("Values")
         public java.util.List<UpdateRuleAttributeRequestRuleConditionsQueryStringConfigValues> values;
@@ -1188,9 +1188,19 @@ public class UpdateRuleAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRuleAttributeRequestRuleConditionsResponseHeaderConfig extends TeaModel {
+        /**
+         * <p>The key of the header.</p>
+         * <br>
+         * <p>*   The key must be 1 to 40 characters in length.</p>
+         * <p>*   It can contain lowercase letters, digits, hyphens (-), and underscores (\_).</p>
+         * <p>*   Cookie and Host are not supported.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The values of the header.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -1218,6 +1228,9 @@ public class UpdateRuleAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRuleAttributeRequestRuleConditionsResponseStatusCodeConfig extends TeaModel {
+        /**
+         * <p>The response status codes.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -1238,7 +1251,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     public static class UpdateRuleAttributeRequestRuleConditionsSourceIpConfig extends TeaModel {
         /**
-         * <p>The IP addresses or CIDR blocks.</p>
+         * <p>The IP address or CIDR block based on which user traffic is matched. You can specify multiple IP addresses or CIDR blocks.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -1260,7 +1273,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     public static class UpdateRuleAttributeRequestRuleConditions extends TeaModel {
         /**
-         * <p>The configurations of the cookies.</p>
+         * <p>The configuration of the cookie.</p>
          */
         @NameInMap("CookieConfig")
         public UpdateRuleAttributeRequestRuleConditionsCookieConfig cookieConfig;
@@ -1272,7 +1285,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         public UpdateRuleAttributeRequestRuleConditionsHeaderConfig headerConfig;
 
         /**
-         * <p>The configurations of the host.</p>
+         * <p>The configurations of the hosts.</p>
          */
         @NameInMap("HostConfig")
         public UpdateRuleAttributeRequestRuleConditionsHostConfig hostConfig;
@@ -1284,7 +1297,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         public UpdateRuleAttributeRequestRuleConditionsMethodConfig methodConfig;
 
         /**
-         * <p>The configurations of the URLs.</p>
+         * <p>The configurations of the paths.</p>
          */
         @NameInMap("PathConfig")
         public UpdateRuleAttributeRequestRuleConditionsPathConfig pathConfig;
@@ -1295,28 +1308,36 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         @NameInMap("QueryStringConfig")
         public UpdateRuleAttributeRequestRuleConditionsQueryStringConfig queryStringConfig;
 
+        /**
+         * <p>The configuration of the header.</p>
+         */
         @NameInMap("ResponseHeaderConfig")
         public UpdateRuleAttributeRequestRuleConditionsResponseHeaderConfig responseHeaderConfig;
 
+        /**
+         * <p>The configurations of the response status codes.</p>
+         */
         @NameInMap("ResponseStatusCodeConfig")
         public UpdateRuleAttributeRequestRuleConditionsResponseStatusCodeConfig responseStatusCodeConfig;
 
         /**
-         * <p>The configuration of the source IP-based forwarding rule. You can add at most five source IP-based forwarding rules.</p>
+         * <p>The configuration of the source IP addresses based on which user traffic is matched. You can add at most five source IP-based forwarding rules.</p>
          */
         @NameInMap("SourceIpConfig")
         public UpdateRuleAttributeRequestRuleConditionsSourceIpConfig sourceIpConfig;
 
         /**
-         * <p>The type of the forwarding rule. You can specify at most seven types. Valid values:</p>
+         * <p>The type of the forwarding rule. You can specify up to seven types. Valid values:</p>
          * <br>
-         * <p>*   **Host**: Requests are distributed based on hosts.</p>
-         * <p>*   **Path**: Requests are distributed based on paths.</p>
-         * <p>*   **Header**: Requests are distributed based on HTTP headers.</p>
-         * <p>*   **QueryString**: Requests are distributed based on query strings.</p>
-         * <p>*   **Method**: Requests are distributed based on request methods.</p>
-         * <p>*   **Cookie**: Requests are distributed based on cookies.</p>
+         * <p>*   **Host**: Requests are forwarded based on hosts.</p>
+         * <p>*   **Path**: Requests are forwarded based on paths.</p>
+         * <p>*   **Header**: Requests are forwarded based on HTTP headers.</p>
+         * <p>*   **QueryString**: Requests are forwarded based on query strings.</p>
+         * <p>*   **Method**: Requests are forwarded based on request methods.</p>
+         * <p>*   **Cookie**: Requests are forwarded based on cookies.</p>
          * <p>*   **SourceIp**: Requests are distributed based on source IP addresses.</p>
+         * <p>*   **ResponseHeader**: Requests are forwarded based on HTTP response headers.</p>
+         * <p>*   **ResponseStatusCode**: Requests are forwarded based on response status codes.</p>
          */
         @NameInMap("Type")
         public String type;
