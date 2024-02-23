@@ -710,6 +710,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * Currently, this API is only available for use with ACS resource hosting and is not yet open for direct invocation.
+      *
+      * @param request DeleteDiskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDiskResponse
+     */
+    public DeleteDiskResponse deleteDiskWithOptions(DeleteDiskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.diskId)) {
+            query.put("DiskId", request.diskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDisk"),
+            new TeaPair("version", "2021-07-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDiskResponse());
+    }
+
+    /**
+      * Currently, this API is only available for use with ACS resource hosting and is not yet open for direct invocation.
+      *
+      * @param request DeleteDiskRequest
+      * @return DeleteDiskResponse
+     */
+    public DeleteDiskResponse deleteDisk(DeleteDiskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDiskWithOptions(request, runtime);
+    }
+
+    /**
       * ## [](#)Usage notes
       * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
       * *   Before you can delete a replication pair-consistent group, make sure that no replication pairs exist in the group.
