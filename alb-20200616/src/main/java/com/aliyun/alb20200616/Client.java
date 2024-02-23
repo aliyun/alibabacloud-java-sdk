@@ -502,7 +502,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **CreateAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAcls](~~213617~~) operation to query the status of the task.
+      * ## Usage notes
+      * The **CreateAcl** operation is asynchronous. After you send a request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListAcls](~~213617~~) operation to query the status of an ACL:
       * *   If an ACL is in the **Creating** state, the ACL is being created.
       * *   If an ACL is in the **Available** state, the ACL is created.
       *
@@ -551,7 +552,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **CreateAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAcls](~~213617~~) operation to query the status of the task.
+      * ## Usage notes
+      * The **CreateAcl** operation is asynchronous. After you send a request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListAcls](~~213617~~) operation to query the status of an ACL:
       * *   If an ACL is in the **Creating** state, the ACL is being created.
       * *   If an ACL is in the **Available** state, the ACL is created.
       *
@@ -649,9 +651,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **CreateListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetListenerAttribute](~~2254865~~) operation to query the status of the task.
-      * *   If the HTTP, HTTPS, or QUIC listener is in the **Provisioning** state, the listener is being created.
-      * *   If the HTTP, HTTPS, or QUIC listener is in the **Running** state, the listener is created.
+      * ## Usage notes
+      * **CreateListener** is an asynchronous operation. After you call this operation, the system returns a request ID. However, the operation is still being performed in the background. You can call the [GetListenerAttribute](~~214353~~) operation to query the status of the HTTP, HTTPS, or QUIC listener.
+      * *   If the HTTP, HTTPS, or QUIC listener is in the **Provisioning** state, it indicates that the listener is being created.
+      * *   If the HTTP, HTTPS, or QUIC listener is in the **Running** state, it indicates that the listener has been created successfully.
       *
       * @param request CreateListenerRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -750,9 +753,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **CreateListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetListenerAttribute](~~2254865~~) operation to query the status of the task.
-      * *   If the HTTP, HTTPS, or QUIC listener is in the **Provisioning** state, the listener is being created.
-      * *   If the HTTP, HTTPS, or QUIC listener is in the **Running** state, the listener is created.
+      * ## Usage notes
+      * **CreateListener** is an asynchronous operation. After you call this operation, the system returns a request ID. However, the operation is still being performed in the background. You can call the [GetListenerAttribute](~~214353~~) operation to query the status of the HTTP, HTTPS, or QUIC listener.
+      * *   If the HTTP, HTTPS, or QUIC listener is in the **Provisioning** state, it indicates that the listener is being created.
+      * *   If the HTTP, HTTPS, or QUIC listener is in the **Running** state, it indicates that the listener has been created successfully.
       *
       * @param request CreateListenerRequest
       * @return CreateListenerResponse
@@ -1074,7 +1078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **CreateServerGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListServerGroups](~~213627~~) operation to query the status of the task.
+      * **CreateServerGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [ListServerGroups](~~213627~~) to query the status of a server group.
       * *   If a server group is in the **Creating** state, it indicates that the server group is being created.
       * *   If a server group is in the **Available** state, it indicates that the server group is created.
       *
@@ -1087,6 +1091,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionDrainConfig)) {
+            query.put("ConnectionDrainConfig", request.connectionDrainConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
@@ -1119,6 +1127,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
             query.put("ServiceName", request.serviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slowStartConfig)) {
+            query.put("SlowStartConfig", request.slowStartConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.stickySessionConfig)) {
@@ -1159,7 +1171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **CreateServerGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListServerGroups](~~213627~~) operation to query the status of the task.
+      * **CreateServerGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [ListServerGroups](~~213627~~) to query the status of a server group.
       * *   If a server group is in the **Creating** state, it indicates that the server group is being created.
       * *   If a server group is in the **Available** state, it indicates that the server group is created.
       *
@@ -2911,6 +2923,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ServerGroupNames", request.serverGroupNames);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.serverGroupType)) {
+            query.put("ServerGroupType", request.serverGroupType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
         }
@@ -4175,7 +4191,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
       * *   **UpdateRuleAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListRules](~~214379~~) operation to query the status of a forwarding rule:
       *     *   If a forwarding rule is in the **Configuring** state, the forwarding rule is being updated.
       *     *   If a forwarding rule is in the **Available** state, the forwarding rule is updated.
@@ -4236,7 +4251,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
       * *   **UpdateRuleAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListRules](~~214379~~) operation to query the status of a forwarding rule:
       *     *   If a forwarding rule is in the **Configuring** state, the forwarding rule is being updated.
       *     *   If a forwarding rule is in the **Available** state, the forwarding rule is updated.
@@ -4397,6 +4411,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionDrainConfig)) {
+            query.put("ConnectionDrainConfig", request.connectionDrainConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
         }
@@ -4419,6 +4437,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
             query.put("ServiceName", request.serviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slowStartConfig)) {
+            query.put("SlowStartConfig", request.slowStartConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.stickySessionConfig)) {

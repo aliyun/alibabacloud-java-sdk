@@ -9,7 +9,7 @@ public class CreateHealthCheckTemplateRequest extends TeaModel {
      * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the value of RequestId as the value of ClientToken. The request ID may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -24,11 +24,7 @@ public class CreateHealthCheckTemplateRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The interval at which health checks are performed.</p>
-     * <br>
-     * <p>Valid values: **1 to 50**.</p>
-     * <br>
-     * <p>Default value: **2**.</p>
+     * <p>The HTTP status codes that are used to indicate whether the backend server passes the health check.</p>
      */
     @NameInMap("HealthCheckCodes")
     public java.util.List<String> healthCheckCodes;
@@ -142,6 +138,9 @@ public class CreateHealthCheckTemplateRequest extends TeaModel {
     @NameInMap("HealthyThreshold")
     public Integer healthyThreshold;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateHealthCheckTemplateRequestTag> tag;
 
@@ -281,9 +280,15 @@ public class CreateHealthCheckTemplateRequest extends TeaModel {
     }
 
     public static class CreateHealthCheckTemplateRequestTag extends TeaModel {
+        /**
+         * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

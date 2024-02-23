@@ -54,9 +54,17 @@ public class CreateRulesResponseBody extends TeaModel {
     }
 
     public static class CreateRulesResponseBodyRuleIds extends TeaModel {
+        /**
+         * <p>The priority of the forwarding rule. Valid values: **1 to 10000**. A smaller value indicates a higher priority.</p>
+         * <br>
+         * <p>> The priorities of the forwarding rules created for the same listener must be unique.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The forwarding rule ID.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 

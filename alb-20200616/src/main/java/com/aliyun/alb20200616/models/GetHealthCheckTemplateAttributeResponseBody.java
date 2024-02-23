@@ -120,6 +120,9 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<GetHealthCheckTemplateAttributeResponseBodyTags> tags;
 
@@ -257,9 +260,15 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
     }
 
     public static class GetHealthCheckTemplateAttributeResponseBodyTags extends TeaModel {
+        /**
+         * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

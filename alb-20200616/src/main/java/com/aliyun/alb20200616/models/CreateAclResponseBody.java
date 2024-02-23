@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateAclResponseBody extends TeaModel {
     /**
-     * <p>The ACL ID.</p>
+     * <p>The ID of the ACL.</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
-     * <p>The asynchronous task ID.</p>
+     * <p>The ID of the asynchronous task.</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

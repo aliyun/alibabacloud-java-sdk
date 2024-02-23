@@ -83,9 +83,15 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListHealthCheckTemplatesResponseBodyHealthCheckTemplatesTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -114,7 +120,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
 
     public static class ListHealthCheckTemplatesResponseBodyHealthCheckTemplates extends TeaModel {
         /**
-         * <p>The status code.</p>
+         * <p>The HTTP status codes.</p>
          */
         @NameInMap("HealthCheckCodes")
         public java.util.List<String> healthCheckCodes;
@@ -124,7 +130,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
          * <br>
          * <p>Valid values: \*\* 0 to 65535\*\*.</p>
          * <br>
-         * <p>Default value: **0**. If you set the value to 0, the port of a backend server is used for health checks.</p>
+         * <p>Default value: **0**. This value indicates that the port on a backend server is used for health checks.</p>
          */
         @NameInMap("HealthCheckConnectPort")
         public Integer healthCheckConnectPort;
@@ -132,11 +138,11 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         /**
          * <p>The domain name that is used for health checks. Valid values:</p>
          * <br>
-         * <p>**$SERVER_IP** (default): the private IP addresses of backend servers. If you do not set the HealthCheckHost parameter or set the parameter to $SERVER_IP, the Application Load Balancer (ALB) uses the private IP addresses of backend servers for health checks.</p>
+         * <p>**$SERVER_IP** (default): the private IP addresses of backend servers. If HealthCheckHost is not specified or set to $SERVER_IP, SLB uses the private IP addresses of backend servers for health checks.</p>
          * <br>
          * <p>**domain**: The domain name must be 1 to 80 characters in length and can contain letters, digits, periods (.), and hyphens (-).</p>
          * <br>
-         * <p>> This parameter is valid only if the `HealthCheckProtocol` parameter is set to **HTTP**.</p>
+         * <p>>  This parameter takes effect only if `HealthCheckProtocol` is set to **HTTP**.</p>
          */
         @NameInMap("HealthCheckHost")
         public String healthCheckHost;
@@ -148,7 +154,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
          * <br>
          * <p>Default value: **HTTP 1.1**.</p>
          * <br>
-         * <p>> This parameter is valid only if the `HealthCheckProtocol` parameter is set to **HTTP**.</p>
+         * <p>>  This parameter takes effect only if `HealthCheckProtocol` is set to **HTTP**.</p>
          */
         @NameInMap("HealthCheckHttpVersion")
         public String healthCheckHttpVersion;
@@ -160,13 +166,13 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         public Integer healthCheckInterval;
 
         /**
-         * <p>The method that you want to use for the health check. Valid values:</p>
+         * <p>The HTTP method that is used for health checks. Valid values:</p>
          * <br>
-         * <p>*   **HEAD**: By default, the ALB instance sends HEAD requests to a backend server to perform HTTP health checks.</p>
+         * <p>*   **HEAD** (default): By default, HTTP health checks use the HEAD method.</p>
          * <p>*   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</p>
-         * <p>*   **POST**: gRPC health checks automatically use the POST method.</p>
+         * <p>*   **POST**: By default, gRPC health checks use the POST method.</p>
          * <br>
-         * <p>> This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.</p>
+         * <p>>  This parameter takes effect only if **HealthCheckProtocol** is set to **HTTP** or **gRPC**.</p>
          */
         @NameInMap("HealthCheckMethod")
         public String healthCheckMethod;
@@ -180,11 +186,11 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         public String healthCheckPath;
 
         /**
-         * <p>The protocol that you want to use for health checks. Valid values:</p>
+         * <p>The protocol that is used for health checks. Valid values:</p>
          * <br>
-         * <p>*   **HTTP** (default): To perform HTTP health checks, ALB sends HEAD or GET requests to a backend server to check whether the backend server is healthy.</p>
-         * <p>*   **TCP**: To perform TCP health checks, ALB sends SYN packets to a backend server to check whether the port of the backend server is available to receive requests.</p>
-         * <p>*   **gRPC**: To perform gRPC health checks, ALB sends POST or GET requests to a backend server to check whether the backend server is healthy.</p>
+         * <p>*   **HTTP** (default): The SLB instance sends HEAD or GET requests to a backend server to simulate access from a browser and check whether the backend server is healthy.</p>
+         * <p>*   **TCP**: To perform TCP health checks, SLB sends SYN packets to the backend server to check whether the port of the backend server is available to receive requests.</p>
+         * <p>*   **gRPC**: To perform gRPC health checks, SLB sends POST or GET requests to a backend server to check whether the backend server is healthy.</p>
          */
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;
@@ -204,19 +210,19 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         public String healthCheckTemplateName;
 
         /**
-         * <p>The timeout period of a health check response. If a backend Elastic Compute Service (ECS) instance does not return a health check response within the specified timeout period, the server fails the health check.</p>
+         * <p>The timeout period for a health check response. If a backend Elastic Compute Service (ECS) instance does not return a health check response within the specified timeout period, the backend server fails the health check.</p>
          * <br>
          * <p>Valid values: **1 to 300**. Unit: seconds.</p>
          * <br>
          * <p>Default value: **5**.</p>
          * <br>
-         * <p>> If the value of the **HealthCheckTimeout** parameter is smaller than that of the **HealthCheckInterval** parameter, the timeout period specified by the **HealthCheckTimeout** parameter is ignored and the value of the **HealthCheckInterval** parameter is used as the timeout period.</p>
+         * <p>>  If the value of **HealthCHeckTimeout** is smaller than the value of **HealthCheckInterval**, the value of **HealthCHeckTimeout** is ignored and the value of **HealthCheckInterval** is used.</p>
          */
         @NameInMap("HealthCheckTimeout")
         public Integer healthCheckTimeout;
 
         /**
-         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.</p>
+         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from **fail** to **success**.</p>
          * <br>
          * <p>Valid values: **2 to 10**.</p>
          * <br>
@@ -225,11 +231,14 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         @NameInMap("HealthyThreshold")
         public Integer healthyThreshold;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListHealthCheckTemplatesResponseBodyHealthCheckTemplatesTags> tags;
 
         /**
-         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.</p>
+         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from **success** to **fail**.</p>
          * <br>
          * <p>Valid values: **2 to 10**.</p>
          * <br>

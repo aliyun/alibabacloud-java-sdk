@@ -5,28 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListAclsResponseBody extends TeaModel {
     /**
-     * <p>The ACLs.</p>
+     * <p>The network ACLs.</p>
      */
     @NameInMap("Acls")
     public java.util.List<ListAclsResponseBodyAcls> acls;
 
     /**
-     * <p>The maximum number of ACLs returned. This parameter is optional. Valid values: **1** to **100**. If this parameter is not specified, the default value **20** is returned.</p>
+     * <p>The maximum number of network ACLs returned. This parameter is optional. Valid values: **1** to **100**. If this parameter is not set, the default value **20** is returned.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token that is used for the next query. Valid values:</p>
      * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If **NextToken** is empty, it indicates that no next query is to be sent.</p>
      * <p>*   If **NextToken** is returned, the value indicates the token that is used for the next query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -83,9 +83,15 @@ public class ListAclsResponseBody extends TeaModel {
     }
 
     public static class ListAclsResponseBodyAclsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -114,51 +120,57 @@ public class ListAclsResponseBody extends TeaModel {
 
     public static class ListAclsResponseBodyAcls extends TeaModel {
         /**
-         * <p>The ACL ID.</p>
+         * <p>The ID of the network ACL.</p>
          */
         @NameInMap("AclId")
         public String aclId;
 
         /**
-         * <p>The ACL name.</p>
+         * <p>The name of the network ACL.</p>
          */
         @NameInMap("AclName")
         public String aclName;
 
         /**
-         * <p>The status of the ACL. Valid values:</p>
+         * <p>The status of the network ACL. Valid values:</p>
          * <br>
-         * <p>*   **Creating**</p>
-         * <p>*   **Available**</p>
-         * <p>*   **Configuring**</p>
+         * <p>*   **Creating**: The network ACL is being created.</p>
+         * <p>*   **Available**: The network ACL is available.</p>
+         * <p>*   **Configuring**: The network ACL is being configured.</p>
          */
         @NameInMap("AclStatus")
         public String aclStatus;
 
         /**
-         * <p>The IP version. Only **IPv4** may be returned.</p>
+         * <p>The IP version. **IPv4** is returned.</p>
          */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
         /**
-         * <p>Indicates whether configuration management is enabled. Valid values:</p>
+         * <p>The status of configuration management. Valid values:</p>
          * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <p>*   **true**: configuration management is enabled.</p>
+         * <p>*   **false**: configuration management is disabled.</p>
          */
         @NameInMap("ConfigManagedEnabled")
         public Boolean configManagedEnabled;
 
+        /**
+         * <p>The time when the resource was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListAclsResponseBodyAclsTags> tags;
 

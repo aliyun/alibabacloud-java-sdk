@@ -95,6 +95,9 @@ public class CreateLoadBalancerRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateLoadBalancerRequestTag> tag;
 
@@ -105,7 +108,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zones and the vSwitches. You must specify at least two zones.</p>
+     * <p>The zones and the vSwitches in the zones. You must specify at least two zones.</p>
      */
     @NameInMap("ZoneMappings")
     public java.util.List<CreateLoadBalancerRequestZoneMappings> zoneMappings;
@@ -309,9 +312,15 @@ public class CreateLoadBalancerRequest extends TeaModel {
     }
 
     public static class CreateLoadBalancerRequestTag extends TeaModel {
+        /**
+         * <p>The tag key can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -339,22 +348,28 @@ public class CreateLoadBalancerRequest extends TeaModel {
     }
 
     public static class CreateLoadBalancerRequestZoneMappings extends TeaModel {
+        /**
+         * <p>公网实例绑定的EIP实例ID。至少需要添加2个可用区，最多支持添加10个可用区。</p>
+         */
         @NameInMap("AllocationId")
         public String allocationId;
 
+        /**
+         * <p>The private IPv4 address. You must add at least two zones. You can add a maximum of 10 zones.</p>
+         */
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
         /**
-         * <p>The ID of the vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance. You can specify up to 10 vSwitch IDs.</p>
+         * <p>The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance. You can specify up to 10 zones.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The ID of the zone where the ALB instance is deployed. You can specify up to 10 zone IDs.</p>
+         * <p>The zone ID of the ALB instance. You can specify up to 10 zones for an ALB instance.</p>
          * <br>
-         * <p>You can call the [DescribeZones](~~36064~~) operation to query the zones of the ALB instance.</p>
+         * <p>You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

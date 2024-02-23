@@ -41,6 +41,9 @@ public class ListListenersRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListListenersRequestTag> tag;
 
@@ -98,9 +101,15 @@ public class ListListenersRequest extends TeaModel {
     }
 
     public static class ListListenersRequestTag extends TeaModel {
+        /**
+         * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

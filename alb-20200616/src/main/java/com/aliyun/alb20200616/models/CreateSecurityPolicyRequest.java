@@ -47,6 +47,9 @@ public class CreateSecurityPolicyRequest extends TeaModel {
     @NameInMap("TLSVersions")
     public java.util.List<String> TLSVersions;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateSecurityPolicyRequestTag> tag;
 
@@ -112,9 +115,15 @@ public class CreateSecurityPolicyRequest extends TeaModel {
     }
 
     public static class CreateSecurityPolicyRequestTag extends TeaModel {
+        /**
+         * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

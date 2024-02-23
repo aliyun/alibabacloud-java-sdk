@@ -83,9 +83,15 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListSecurityPoliciesResponseBodySecurityPoliciesTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -119,17 +125,20 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         @NameInMap("Ciphers")
         public java.util.List<String> ciphers;
 
+        /**
+         * <p>The time when the resource was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The security policy ID.</p>
+         * <p>The ID of the security policy.</p>
          */
         @NameInMap("SecurityPolicyId")
         public String securityPolicyId;
@@ -155,6 +164,9 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         @NameInMap("TLSVersions")
         public java.util.List<String> TLSVersions;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListSecurityPoliciesResponseBodySecurityPoliciesTags> tags;
 
