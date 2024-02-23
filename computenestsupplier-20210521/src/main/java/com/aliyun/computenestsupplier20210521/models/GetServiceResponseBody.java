@@ -28,6 +28,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("CommoditySpecifications")
     public java.util.List<GetServiceResponseBodyCommoditySpecifications> commoditySpecifications;
 
+    @NameInMap("ComponentsConfigs")
+    public java.util.List<GetServiceResponseBodyComponentsConfigs> componentsConfigs;
+
     @NameInMap("CreateTime")
     public String createTime;
 
@@ -245,6 +248,14 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public java.util.List<GetServiceResponseBodyCommoditySpecifications> getCommoditySpecifications() {
         return this.commoditySpecifications;
+    }
+
+    public GetServiceResponseBody setComponentsConfigs(java.util.List<GetServiceResponseBodyComponentsConfigs> componentsConfigs) {
+        this.componentsConfigs = componentsConfigs;
+        return this;
+    }
+    public java.util.List<GetServiceResponseBodyComponentsConfigs> getComponentsConfigs() {
+        return this.componentsConfigs;
     }
 
     public GetServiceResponseBody setCreateTime(String createTime) {
@@ -884,6 +895,36 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         public GetServiceResponseBodyCommoditySpecifications setTemplateName(String templateName) {
+            this.templateName = templateName;
+            return this;
+        }
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+    }
+
+    public static class GetServiceResponseBodyComponentsConfigs extends TeaModel {
+        @NameInMap("ComponentsMappings")
+        public java.util.Map<String, String> componentsMappings;
+
+        @NameInMap("TemplateName")
+        public String templateName;
+
+        public static GetServiceResponseBodyComponentsConfigs build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyComponentsConfigs self = new GetServiceResponseBodyComponentsConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyComponentsConfigs setComponentsMappings(java.util.Map<String, String> componentsMappings) {
+            this.componentsMappings = componentsMappings;
+            return this;
+        }
+        public java.util.Map<String, String> getComponentsMappings() {
+            return this.componentsMappings;
+        }
+
+        public GetServiceResponseBodyComponentsConfigs setTemplateName(String templateName) {
             this.templateName = templateName;
             return this;
         }
