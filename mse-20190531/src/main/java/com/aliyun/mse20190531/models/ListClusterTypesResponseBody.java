@@ -127,6 +127,9 @@ public class ListClusterTypesResponseBody extends TeaModel {
     }
 
     public static class ListClusterTypesResponseBodyData extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
         /**
          * <p>The type of the MSE engine that can be activated.</p>
          */
@@ -136,6 +139,14 @@ public class ListClusterTypesResponseBody extends TeaModel {
         public static ListClusterTypesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListClusterTypesResponseBodyData self = new ListClusterTypesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListClusterTypesResponseBodyData setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
         public ListClusterTypesResponseBodyData setShowName(String showName) {
