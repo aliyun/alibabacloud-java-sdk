@@ -1,3 +1,8 @@
+2024-02-23 Version: 2.0.2
+- Update API CreateTask: update param body.
+- Update API GetTaskInfo: update response param.
+
+
 2023-12-25 Version: 2.0.1
 - Generated java 2023-09-30 for tingwu.
 
