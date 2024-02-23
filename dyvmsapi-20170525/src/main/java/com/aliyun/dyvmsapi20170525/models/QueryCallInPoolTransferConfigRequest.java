@@ -7,6 +7,9 @@ public class QueryCallInPoolTransferConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The China 400 number used to transfer the call.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 

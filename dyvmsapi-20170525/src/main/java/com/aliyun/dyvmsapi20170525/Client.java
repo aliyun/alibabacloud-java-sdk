@@ -3,16 +3,10 @@ package com.aliyun.dyvmsapi20170525;
 
 import com.aliyun.tea.*;
 import com.aliyun.dyvmsapi20170525.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "central";
         this.checkConfig(config);
@@ -32,48 +26,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public AddRtcAccountResponse addRtcAccountWithOptions(AddRtcAccountRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
-            query.put("DeviceId", request.deviceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "AddRtcAccount"),
-            new TeaPair("version", "2017-05-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AddRtcAccountResponse());
-    }
-
-    public AddRtcAccountResponse addRtcAccount(AddRtcAccountRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.addRtcAccountWithOptions(request, runtime);
-    }
-
-    public AddVirtualNumberRelationResponse addVirtualNumberRelationWithOptions(AddVirtualNumberRelationRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 200 times per second per account.
+      *
+      * @param request AddVirtualNumberRelationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddVirtualNumberRelationResponse
+     */
+    public AddVirtualNumberRelationResponse addVirtualNumberRelationWithOptions(AddVirtualNumberRelationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.corpNameList)) {
@@ -108,10 +69,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RouteType", request.routeType);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "AddVirtualNumberRelation"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -125,12 +86,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddVirtualNumberRelationResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 200 times per second per account.
+      *
+      * @param request AddVirtualNumberRelationRequest
+      * @return AddVirtualNumberRelationResponse
+     */
     public AddVirtualNumberRelationResponse addVirtualNumberRelation(AddVirtualNumberRelationRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addVirtualNumberRelationWithOptions(request, runtime);
     }
 
-    public BatchRobotSmartCallResponse batchRobotSmartCallWithOptions(BatchRobotSmartCallRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * *   In an intelligent speech interaction task, you can use the robot communication scripts preset in the Voice Messaging Service console, or invoke the callback function to return the response mode configured by the business party in each call.
+      * *   The BatchRobotSmartCall operation is used to initiate an outbound robocall task by using the robot communication scripts preset in the Voice Messaging Service console.
+      * ## Prerequisites
+      * *   You have passed the real-name verification for an enterprise user and passed the enterprise qualification review.
+      * *   You have purchased numbers in the [Voice Messaging Service console](https://dyvms.console.aliyun.com/dyvms.htm#/number/normal).
+      * *   You have added communication scripts on the [Communication script management](https://dyvms.console.aliyun.com/dyvms.htm#/smart-call/saas/robot/list) page, and the communication scripts have been approved.
+      * > Before you call this operation, make sure that you are familiar with the [billing](https://www.aliyun.com/price/product#/vms/detail) of Voice Messaging Service (VMS).
+      *
+      * @param request BatchRobotSmartCallRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchRobotSmartCallResponse
+     */
+    public BatchRobotSmartCallResponse batchRobotSmartCallWithOptions(BatchRobotSmartCallRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
@@ -189,10 +170,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TtsParamHead", request.ttsParamHead);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "BatchRobotSmartCall"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -206,12 +187,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchRobotSmartCallResponse());
     }
 
+    /**
+      * *   In an intelligent speech interaction task, you can use the robot communication scripts preset in the Voice Messaging Service console, or invoke the callback function to return the response mode configured by the business party in each call.
+      * *   The BatchRobotSmartCall operation is used to initiate an outbound robocall task by using the robot communication scripts preset in the Voice Messaging Service console.
+      * ## Prerequisites
+      * *   You have passed the real-name verification for an enterprise user and passed the enterprise qualification review.
+      * *   You have purchased numbers in the [Voice Messaging Service console](https://dyvms.console.aliyun.com/dyvms.htm#/number/normal).
+      * *   You have added communication scripts on the [Communication script management](https://dyvms.console.aliyun.com/dyvms.htm#/smart-call/saas/robot/list) page, and the communication scripts have been approved.
+      * > Before you call this operation, make sure that you are familiar with the [billing](https://www.aliyun.com/price/product#/vms/detail) of Voice Messaging Service (VMS).
+      *
+      * @param request BatchRobotSmartCallRequest
+      * @return BatchRobotSmartCallResponse
+     */
     public BatchRobotSmartCallResponse batchRobotSmartCall(BatchRobotSmartCallRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchRobotSmartCallWithOptions(request, runtime);
     }
 
-    public CancelOrderRobotTaskResponse cancelOrderRobotTaskWithOptions(CancelOrderRobotTaskRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request CancelOrderRobotTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CancelOrderRobotTaskResponse
+     */
+    public CancelOrderRobotTaskResponse cancelOrderRobotTaskWithOptions(CancelOrderRobotTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
@@ -230,10 +231,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskId", request.taskId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CancelOrderRobotTask"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -247,12 +248,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelOrderRobotTaskResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request CancelOrderRobotTaskRequest
+      * @return CancelOrderRobotTaskResponse
+     */
     public CancelOrderRobotTaskResponse cancelOrderRobotTask(CancelOrderRobotTaskRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelOrderRobotTaskWithOptions(request, runtime);
     }
 
-    public CancelRobotTaskResponse cancelRobotTaskWithOptions(CancelRobotTaskRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * Only a task in progress can be terminated by calling the CancelRobotTask operation, and the task cannot be resumed after it is terminated.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request CancelRobotTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CancelRobotTaskResponse
+     */
+    public CancelRobotTaskResponse cancelRobotTaskWithOptions(CancelRobotTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
@@ -271,10 +288,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskId", request.taskId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CancelRobotTask"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -288,12 +305,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelRobotTaskResponse());
     }
 
+    /**
+      * Only a task in progress can be terminated by calling the CancelRobotTask operation, and the task cannot be resumed after it is terminated.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request CancelRobotTaskRequest
+      * @return CancelRobotTaskResponse
+     */
     public CancelRobotTaskResponse cancelRobotTask(CancelRobotTaskRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelRobotTaskWithOptions(request, runtime);
     }
 
-    public CreateCallTaskResponse createCallTaskWithOptions(CreateCallTaskRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * You can create up to 1,000 voice notifications for each task.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request CreateCallTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateCallTaskResponse
+     */
+    public CreateCallTaskResponse createCallTaskWithOptions(CreateCallTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
@@ -352,10 +386,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TemplateName", request.templateName);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateCallTask"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -369,12 +403,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCallTaskResponse());
     }
 
+    /**
+      * You can create up to 1,000 voice notifications for each task.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request CreateCallTaskRequest
+      * @return CreateCallTaskResponse
+     */
     public CreateCallTaskResponse createCallTask(CreateCallTaskRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createCallTaskWithOptions(request, runtime);
     }
 
-    public CreateRobotTaskResponse createRobotTaskWithOptions(CreateRobotTaskRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * You can call this operation to initiate an outbound robocall task by using the robot communication scripts preset in the Voice Messaging Service console. In an intelligent speech interaction task, you can use the robot communication scripts preset in the Voice Messaging Service console, or invoke the callback function to return the response mode configured by the business party in each call.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request CreateRobotTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateRobotTaskResponse
+     */
+    public CreateRobotTaskResponse createRobotTaskWithOptions(CreateRobotTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.caller)) {
@@ -429,10 +480,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskName", request.taskName);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateRobotTask"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -446,12 +497,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRobotTaskResponse());
     }
 
+    /**
+      * You can call this operation to initiate an outbound robocall task by using the robot communication scripts preset in the Voice Messaging Service console. In an intelligent speech interaction task, you can use the robot communication scripts preset in the Voice Messaging Service console, or invoke the callback function to return the response mode configured by the business party in each call.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request CreateRobotTaskRequest
+      * @return CreateRobotTaskResponse
+     */
     public CreateRobotTaskResponse createRobotTask(CreateRobotTaskRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRobotTaskWithOptions(request, runtime);
     }
 
-    public DeleteRobotTaskResponse deleteRobotTaskWithOptions(DeleteRobotTaskRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * You can call this operation to delete only tasks that are not started, that are completed, and that are terminated.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request DeleteRobotTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteRobotTaskResponse
+     */
+    public DeleteRobotTaskResponse deleteRobotTaskWithOptions(DeleteRobotTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
@@ -470,10 +538,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskId", request.taskId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteRobotTask"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -487,12 +555,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRobotTaskResponse());
     }
 
+    /**
+      * You can call this operation to delete only tasks that are not started, that are completed, and that are terminated.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request DeleteRobotTaskRequest
+      * @return DeleteRobotTaskResponse
+     */
     public DeleteRobotTaskResponse deleteRobotTask(DeleteRobotTaskRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRobotTaskWithOptions(request, runtime);
     }
 
-    public ExecuteCallTaskResponse executeCallTaskWithOptions(ExecuteCallTaskRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request ExecuteCallTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ExecuteCallTaskResponse
+     */
+    public ExecuteCallTaskResponse executeCallTaskWithOptions(ExecuteCallTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.fireTime)) {
@@ -519,10 +603,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskId", request.taskId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ExecuteCallTask"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -536,53 +620,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteCallTaskResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request ExecuteCallTaskRequest
+      * @return ExecuteCallTaskResponse
+     */
     public ExecuteCallTaskResponse executeCallTask(ExecuteCallTaskRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeCallTaskWithOptions(request, runtime);
     }
 
-    public GetCallInfoResponse getCallInfoWithOptions(GetCallInfoRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.rtcId)) {
-            query.put("RtcId", request.rtcId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetCallInfo"),
-            new TeaPair("version", "2017-05-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCallInfoResponse());
-    }
-
-    public GetCallInfoResponse getCallInfo(GetCallInfoRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getCallInfoWithOptions(request, runtime);
-    }
-
-    public GetHotlineQualificationByOrderResponse getHotlineQualificationByOrderWithOptions(GetHotlineQualificationByOrderRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request GetHotlineQualificationByOrderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetHotlineQualificationByOrderResponse
+     */
+    public GetHotlineQualificationByOrderResponse getHotlineQualificationByOrderWithOptions(GetHotlineQualificationByOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
@@ -601,10 +659,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetHotlineQualificationByOrder"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -618,98 +676,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineQualificationByOrderResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request GetHotlineQualificationByOrderRequest
+      * @return GetHotlineQualificationByOrderResponse
+     */
     public GetHotlineQualificationByOrderResponse getHotlineQualificationByOrder(GetHotlineQualificationByOrderRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getHotlineQualificationByOrderWithOptions(request, runtime);
     }
 
-    public GetMqttTokenResponse getMqttTokenWithOptions(GetMqttTokenRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetMqttToken"),
-            new TeaPair("version", "2017-05-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMqttTokenResponse());
-    }
-
-    public GetMqttTokenResponse getMqttToken(GetMqttTokenRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getMqttTokenWithOptions(request, runtime);
-    }
-
-    public GetRtcTokenResponse getRtcTokenWithOptions(GetRtcTokenRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
-            query.put("DeviceId", request.deviceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.isCustomAccount)) {
-            query.put("IsCustomAccount", request.isCustomAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
-            query.put("UserId", request.userId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetRtcToken"),
-            new TeaPair("version", "2017-05-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRtcTokenResponse());
-    }
-
-    public GetRtcTokenResponse getRtcToken(GetRtcTokenRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getRtcTokenWithOptions(request, runtime);
-    }
-
-    public GetTokenResponse getTokenWithOptions(GetTokenRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to five times per second per account.
+      *
+      * @param request GetTokenRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetTokenResponse
+     */
+    public GetTokenResponse getTokenWithOptions(GetTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
@@ -728,10 +715,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TokenType", request.tokenType);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetToken"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -745,12 +732,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTokenResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to five times per second per account.
+      *
+      * @param request GetTokenRequest
+      * @return GetTokenResponse
+     */
     public GetTokenResponse getToken(GetTokenRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTokenWithOptions(request, runtime);
     }
 
-    public IvrCallResponse ivrCallWithOptions(IvrCallRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * *   Your enterprise qualification is approved. For more information, see [Submit enterprise qualifications](~~149795~~).
+      * *   Voice numbers are purchased. For more information, see [Purchase numbers](~~149794~~).
+      * *   When the subscriber answers the call, the subscriber hears a voice that instructs the subscriber to press a key as needed. If the [message receipt](~~112503~~) feature is enabled, the Voice Messaging Service (VMS) platform returns the information about the key pressed by the subscriber to the business system. The key information includes the order confirmation, questionnaire survey, and satisfaction survey completed by the subscriber.
+      * ## QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request IvrCallRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return IvrCallResponse
+     */
+    public IvrCallResponse ivrCallWithOptions(IvrCallRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.byeCode)) {
@@ -805,10 +810,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Timeout", request.timeout);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "IvrCall"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -822,12 +827,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new IvrCallResponse());
     }
 
+    /**
+      * *   Your enterprise qualification is approved. For more information, see [Submit enterprise qualifications](~~149795~~).
+      * *   Voice numbers are purchased. For more information, see [Purchase numbers](~~149794~~).
+      * *   When the subscriber answers the call, the subscriber hears a voice that instructs the subscriber to press a key as needed. If the [message receipt](~~112503~~) feature is enabled, the Voice Messaging Service (VMS) platform returns the information about the key pressed by the subscriber to the business system. The key information includes the order confirmation, questionnaire survey, and satisfaction survey completed by the subscriber.
+      * ## QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request IvrCallRequest
+      * @return IvrCallResponse
+     */
     public IvrCallResponse ivrCall(IvrCallRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.ivrCallWithOptions(request, runtime);
     }
 
-    public ListCallTaskResponse listCallTaskWithOptions(ListCallTaskRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request ListCallTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListCallTaskResponse
+     */
+    public ListCallTaskResponse listCallTaskWithOptions(ListCallTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
@@ -870,10 +893,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TemplateName", request.templateName);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListCallTask"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -887,12 +910,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListCallTaskResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request ListCallTaskRequest
+      * @return ListCallTaskResponse
+     */
     public ListCallTaskResponse listCallTask(ListCallTaskRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCallTaskWithOptions(request, runtime);
     }
 
-    public ListCallTaskDetailResponse listCallTaskDetailWithOptions(ListCallTaskDetailRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request ListCallTaskDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListCallTaskDetailResponse
+     */
+    public ListCallTaskDetailResponse listCallTaskDetailWithOptions(ListCallTaskDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.calledNum)) {
@@ -927,10 +965,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskId", request.taskId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListCallTaskDetail"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -944,12 +982,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListCallTaskDetailResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request ListCallTaskDetailRequest
+      * @return ListCallTaskDetailResponse
+     */
     public ListCallTaskDetailResponse listCallTaskDetail(ListCallTaskDetailRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCallTaskDetailWithOptions(request, runtime);
     }
 
-    public ListHotlineTransferNumberResponse listHotlineTransferNumberWithOptions(ListHotlineTransferNumberRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request ListHotlineTransferNumberRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListHotlineTransferNumberResponse
+     */
+    public ListHotlineTransferNumberResponse listHotlineTransferNumberWithOptions(ListHotlineTransferNumberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.hotlineNumber)) {
@@ -980,10 +1033,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListHotlineTransferNumber"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -997,12 +1050,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListHotlineTransferNumberResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request ListHotlineTransferNumberRequest
+      * @return ListHotlineTransferNumberResponse
+     */
     public ListHotlineTransferNumberResponse listHotlineTransferNumber(ListHotlineTransferNumberRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listHotlineTransferNumberWithOptions(request, runtime);
     }
 
-    public ListHotlineTransferRegisterFileResponse listHotlineTransferRegisterFileWithOptions(ListHotlineTransferRegisterFileRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request ListHotlineTransferRegisterFileRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListHotlineTransferRegisterFileResponse
+     */
+    public ListHotlineTransferRegisterFileResponse listHotlineTransferRegisterFileWithOptions(ListHotlineTransferRegisterFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.hotlineNumber)) {
@@ -1033,10 +1101,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListHotlineTransferRegisterFile"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -1050,12 +1118,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListHotlineTransferRegisterFileResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request ListHotlineTransferRegisterFileRequest
+      * @return ListHotlineTransferRegisterFileResponse
+     */
     public ListHotlineTransferRegisterFileResponse listHotlineTransferRegisterFile(ListHotlineTransferRegisterFileRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listHotlineTransferRegisterFileWithOptions(request, runtime);
     }
 
-    public QueryCallDetailByCallIdResponse queryCallDetailByCallIdWithOptions(QueryCallDetailByCallIdRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * QueryCallDetailByCallId is a common query operation. You can call this operation to query the details of a voice notification, voice verification code, interactive voice response (IVR), intelligent inbound voice call, intelligent outbound voice call, or intelligent robocall.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request QueryCallDetailByCallIdRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryCallDetailByCallIdResponse
+     */
+    public QueryCallDetailByCallIdResponse queryCallDetailByCallIdWithOptions(QueryCallDetailByCallIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callId)) {
@@ -1082,10 +1166,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryCallDetailByCallId"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -1099,12 +1183,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCallDetailByCallIdResponse());
     }
 
+    /**
+      * QueryCallDetailByCallId is a common query operation. You can call this operation to query the details of a voice notification, voice verification code, interactive voice response (IVR), intelligent inbound voice call, intelligent outbound voice call, or intelligent robocall.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request QueryCallDetailByCallIdRequest
+      * @return QueryCallDetailByCallIdResponse
+     */
     public QueryCallDetailByCallIdResponse queryCallDetailByCallId(QueryCallDetailByCallIdRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryCallDetailByCallIdWithOptions(request, runtime);
     }
 
-    public QueryCallDetailByTaskIdResponse queryCallDetailByTaskIdWithOptions(QueryCallDetailByTaskIdRequest request, RuntimeOptions runtime) throws Exception {
+    public QueryCallDetailByTaskIdResponse queryCallDetailByTaskIdWithOptions(QueryCallDetailByTaskIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callee)) {
@@ -1131,10 +1223,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskId", request.taskId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryCallDetailByTaskId"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -1149,11 +1241,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public QueryCallDetailByTaskIdResponse queryCallDetailByTaskId(QueryCallDetailByTaskIdRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryCallDetailByTaskIdWithOptions(request, runtime);
     }
 
-    public QueryCallInPoolTransferConfigResponse queryCallInPoolTransferConfigWithOptions(QueryCallInPoolTransferConfigRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request QueryCallInPoolTransferConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryCallInPoolTransferConfigResponse
+     */
+    public QueryCallInPoolTransferConfigResponse queryCallInPoolTransferConfigWithOptions(QueryCallInPoolTransferConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
@@ -1172,10 +1272,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryCallInPoolTransferConfig"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -1189,12 +1289,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCallInPoolTransferConfigResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request QueryCallInPoolTransferConfigRequest
+      * @return QueryCallInPoolTransferConfigResponse
+     */
     public QueryCallInPoolTransferConfigResponse queryCallInPoolTransferConfig(QueryCallInPoolTransferConfigRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryCallInPoolTransferConfigWithOptions(request, runtime);
     }
 
-    public QueryCallInTransferRecordResponse queryCallInTransferRecordWithOptions(QueryCallInTransferRecordRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request QueryCallInTransferRecordRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryCallInTransferRecordResponse
+     */
+    public QueryCallInTransferRecordResponse queryCallInTransferRecordWithOptions(QueryCallInTransferRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callInCaller)) {
@@ -1229,10 +1344,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryCallInTransferRecord"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -1246,12 +1361,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCallInTransferRecordResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request QueryCallInTransferRecordRequest
+      * @return QueryCallInTransferRecordResponse
+     */
     public QueryCallInTransferRecordResponse queryCallInTransferRecord(QueryCallInTransferRecordRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryCallInTransferRecordWithOptions(request, runtime);
     }
 
-    public QueryRobotInfoListResponse queryRobotInfoListWithOptions(QueryRobotInfoListRequest request, RuntimeOptions runtime) throws Exception {
+    public QueryRobotInfoListResponse queryRobotInfoListWithOptions(QueryRobotInfoListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.auditStatus)) {
@@ -1270,10 +1392,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryRobotInfoList"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -1288,11 +1410,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public QueryRobotInfoListResponse queryRobotInfoList(QueryRobotInfoListRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryRobotInfoListWithOptions(request, runtime);
     }
 
-    public QueryRobotTaskCallDetailResponse queryRobotTaskCallDetailWithOptions(QueryRobotTaskCallDetailRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request QueryRobotTaskCallDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryRobotTaskCallDetailResponse
+     */
+    public QueryRobotTaskCallDetailResponse queryRobotTaskCallDetailWithOptions(QueryRobotTaskCallDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callee)) {
@@ -1319,10 +1449,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskId", request.taskId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryRobotTaskCallDetail"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -1336,12 +1466,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryRobotTaskCallDetailResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request QueryRobotTaskCallDetailRequest
+      * @return QueryRobotTaskCallDetailResponse
+     */
     public QueryRobotTaskCallDetailResponse queryRobotTaskCallDetail(QueryRobotTaskCallDetailRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryRobotTaskCallDetailWithOptions(request, runtime);
     }
 
-    public QueryRobotTaskCallListResponse queryRobotTaskCallListWithOptions(QueryRobotTaskCallListRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request QueryRobotTaskCallListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryRobotTaskCallListResponse
+     */
+    public QueryRobotTaskCallListResponse queryRobotTaskCallListWithOptions(QueryRobotTaskCallListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callResult)) {
@@ -1396,10 +1541,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskId", request.taskId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryRobotTaskCallList"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -1413,12 +1558,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryRobotTaskCallListResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request QueryRobotTaskCallListRequest
+      * @return QueryRobotTaskCallListResponse
+     */
     public QueryRobotTaskCallListResponse queryRobotTaskCallList(QueryRobotTaskCallListRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryRobotTaskCallListWithOptions(request, runtime);
     }
 
-    public QueryRobotTaskDetailResponse queryRobotTaskDetailWithOptions(QueryRobotTaskDetailRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request QueryRobotTaskDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryRobotTaskDetailResponse
+     */
+    public QueryRobotTaskDetailResponse queryRobotTaskDetailWithOptions(QueryRobotTaskDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
@@ -1437,10 +1597,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryRobotTaskDetail"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -1454,12 +1614,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryRobotTaskDetailResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request QueryRobotTaskDetailRequest
+      * @return QueryRobotTaskDetailResponse
+     */
     public QueryRobotTaskDetailResponse queryRobotTaskDetail(QueryRobotTaskDetailRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryRobotTaskDetailWithOptions(request, runtime);
     }
 
-    public QueryRobotTaskListResponse queryRobotTaskListWithOptions(QueryRobotTaskListRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request QueryRobotTaskListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryRobotTaskListResponse
+     */
+    public QueryRobotTaskListResponse queryRobotTaskListWithOptions(QueryRobotTaskListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
@@ -1494,10 +1669,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Time", request.time);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryRobotTaskList"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -1511,12 +1686,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryRobotTaskListResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request QueryRobotTaskListRequest
+      * @return QueryRobotTaskListResponse
+     */
     public QueryRobotTaskListResponse queryRobotTaskList(QueryRobotTaskListRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryRobotTaskListWithOptions(request, runtime);
     }
 
-    public QueryRobotv2AllListResponse queryRobotv2AllListWithOptions(QueryRobotv2AllListRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request QueryRobotv2AllListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryRobotv2AllListResponse
+     */
+    public QueryRobotv2AllListResponse queryRobotv2AllListWithOptions(QueryRobotv2AllListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
@@ -1531,10 +1721,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryRobotv2AllList"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -1548,12 +1738,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryRobotv2AllListResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request QueryRobotv2AllListRequest
+      * @return QueryRobotv2AllListResponse
+     */
     public QueryRobotv2AllListResponse queryRobotv2AllList(QueryRobotv2AllListRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryRobotv2AllListWithOptions(request, runtime);
     }
 
-    public QueryVirtualNumberResponse queryVirtualNumberWithOptions(QueryVirtualNumberRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request QueryVirtualNumberRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryVirtualNumberResponse
+     */
+    public QueryVirtualNumberResponse queryVirtualNumberWithOptions(QueryVirtualNumberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
@@ -1584,10 +1789,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RouteType", request.routeType);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryVirtualNumber"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -1601,12 +1806,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryVirtualNumberResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request QueryVirtualNumberRequest
+      * @return QueryVirtualNumberResponse
+     */
     public QueryVirtualNumberResponse queryVirtualNumber(QueryVirtualNumberRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryVirtualNumberWithOptions(request, runtime);
     }
 
-    public QueryVirtualNumberRelationResponse queryVirtualNumberRelationWithOptions(QueryVirtualNumberRelationRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 200 times per second per account.
+      *
+      * @param request QueryVirtualNumberRelationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryVirtualNumberRelationResponse
+     */
+    public QueryVirtualNumberRelationResponse queryVirtualNumberRelationWithOptions(QueryVirtualNumberRelationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
@@ -1657,10 +1877,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SpecId", request.specId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryVirtualNumberRelation"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -1674,12 +1894,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryVirtualNumberRelationResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 200 times per second per account.
+      *
+      * @param request QueryVirtualNumberRelationRequest
+      * @return QueryVirtualNumberRelationResponse
+     */
     public QueryVirtualNumberRelationResponse queryVirtualNumberRelation(QueryVirtualNumberRelationRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryVirtualNumberRelationWithOptions(request, runtime);
     }
 
-    public QueryVoiceFileAuditInfoResponse queryVoiceFileAuditInfoWithOptions(QueryVoiceFileAuditInfoRequest request, RuntimeOptions runtime) throws Exception {
+    public QueryVoiceFileAuditInfoResponse queryVoiceFileAuditInfoWithOptions(QueryVoiceFileAuditInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
@@ -1702,10 +1929,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("VoiceCodes", request.voiceCodes);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryVoiceFileAuditInfo"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -1720,11 +1947,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public QueryVoiceFileAuditInfoResponse queryVoiceFileAuditInfo(QueryVoiceFileAuditInfoRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryVoiceFileAuditInfoWithOptions(request, runtime);
     }
 
-    public RecoverCallInConfigResponse recoverCallInConfigWithOptions(RecoverCallInConfigRequest request, RuntimeOptions runtime) throws Exception {
+    public RecoverCallInConfigResponse recoverCallInConfigWithOptions(RecoverCallInConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.number)) {
@@ -1743,10 +1970,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RecoverCallInConfig"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -1761,52 +1988,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public RecoverCallInConfigResponse recoverCallInConfig(RecoverCallInConfigRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.recoverCallInConfigWithOptions(request, runtime);
     }
 
-    public RefreshMqttTokenResponse refreshMqttTokenWithOptions(RefreshMqttTokenRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
-            query.put("ClientId", request.clientId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "RefreshMqttToken"),
-            new TeaPair("version", "2017-05-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RefreshMqttTokenResponse());
-    }
-
-    public RefreshMqttTokenResponse refreshMqttToken(RefreshMqttTokenRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.refreshMqttTokenWithOptions(request, runtime);
-    }
-
-    public SendVerificationResponse sendVerificationWithOptions(SendVerificationRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request SendVerificationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SendVerificationResponse
+     */
+    public SendVerificationResponse sendVerificationWithOptions(SendVerificationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
@@ -1833,10 +2027,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("VerifyType", request.verifyType);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SendVerification"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -1850,12 +2044,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SendVerificationResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request SendVerificationRequest
+      * @return SendVerificationResponse
+     */
     public SendVerificationResponse sendVerification(SendVerificationRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.sendVerificationWithOptions(request, runtime);
     }
 
-    public SetTransferCalleePoolConfigResponse setTransferCalleePoolConfigWithOptions(SetTransferCalleePoolConfigRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request SetTransferCalleePoolConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetTransferCalleePoolConfigResponse
+     */
+    public SetTransferCalleePoolConfigResponse setTransferCalleePoolConfigWithOptions(SetTransferCalleePoolConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.calledRouteMode)) {
@@ -1886,10 +2095,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SetTransferCalleePoolConfig"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -1903,12 +2112,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetTransferCalleePoolConfigResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request SetTransferCalleePoolConfigRequest
+      * @return SetTransferCalleePoolConfigResponse
+     */
     public SetTransferCalleePoolConfigResponse setTransferCalleePoolConfig(SetTransferCalleePoolConfigRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setTransferCalleePoolConfigWithOptions(request, runtime);
     }
 
-    public SingleCallByTtsResponse singleCallByTtsWithOptions(SingleCallByTtsRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * *   Due to business adjustments, the updates of the voice notification and voice verification code services have been stopped in regions outside the Chinese mainland and the services have been discontinued since March 2022. Only qualified customers can continue using the voice notification and voice verification code services.
+      * *   For more information about voice plans or voice service billing, see [Pricing of VMS on China site (aliyun.com)](~~150083~~).
+      * ### QPS limits
+      * You can call this operation up to 1,000 times per second per account.
+      *
+      * @param request SingleCallByTtsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SingleCallByTtsResponse
+     */
+    public SingleCallByTtsResponse singleCallByTtsWithOptions(SingleCallByTtsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
@@ -1955,10 +2181,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Volume", request.volume);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SingleCallByTts"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -1972,12 +2198,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SingleCallByTtsResponse());
     }
 
+    /**
+      * *   Due to business adjustments, the updates of the voice notification and voice verification code services have been stopped in regions outside the Chinese mainland and the services have been discontinued since March 2022. Only qualified customers can continue using the voice notification and voice verification code services.
+      * *   For more information about voice plans or voice service billing, see [Pricing of VMS on China site (aliyun.com)](~~150083~~).
+      * ### QPS limits
+      * You can call this operation up to 1,000 times per second per account.
+      *
+      * @param request SingleCallByTtsRequest
+      * @return SingleCallByTtsResponse
+     */
     public SingleCallByTtsResponse singleCallByTts(SingleCallByTtsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.singleCallByTtsWithOptions(request, runtime);
     }
 
-    public SingleCallByVoiceResponse singleCallByVoiceWithOptions(SingleCallByVoiceRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * > Due to business adjustments, the updates of the voice notification and voice verification code services have been stopped in regions outside the Chinese mainland and the services have been discontinued since March 2022. Only qualified customers can continue using the voice notification and voice verification code services.
+      * You can call the [SingleCallByTts](~~393519~~) operation to send voice notifications with variables.
+      * ### QPS limits
+      * You can call this operation up to 1,200 times per second per account.
+      *
+      * @param request SingleCallByVoiceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SingleCallByVoiceResponse
+     */
+    public SingleCallByVoiceResponse singleCallByVoiceWithOptions(SingleCallByVoiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
@@ -2020,10 +2265,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Volume", request.volume);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SingleCallByVoice"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -2037,12 +2282,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SingleCallByVoiceResponse());
     }
 
+    /**
+      * > Due to business adjustments, the updates of the voice notification and voice verification code services have been stopped in regions outside the Chinese mainland and the services have been discontinued since March 2022. Only qualified customers can continue using the voice notification and voice verification code services.
+      * You can call the [SingleCallByTts](~~393519~~) operation to send voice notifications with variables.
+      * ### QPS limits
+      * You can call this operation up to 1,200 times per second per account.
+      *
+      * @param request SingleCallByVoiceRequest
+      * @return SingleCallByVoiceResponse
+     */
     public SingleCallByVoiceResponse singleCallByVoice(SingleCallByVoiceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.singleCallByVoiceWithOptions(request, runtime);
     }
 
-    public SmartCallResponse smartCallWithOptions(SmartCallRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * *   The SmartCall operation must be used together with the [intelligent outbound HTTP operation](~~112703~~). After the call initiated by the Voice Messaging Service (VMS) platform is connected, the VMS platform sends the text converted from speech back to the business side, and the business side then returns the follow-up action to the VMS platform.
+      * *   The SmartCall operation does not support the following characters: `@ = : "" $ { } ^ * ￥`.
+      * ### QPS limits
+      * You can call this operation up to 1,000 times per second per account.
+      *
+      * @param request SmartCallRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SmartCallResponse
+     */
+    public SmartCallResponse smartCallWithOptions(SmartCallRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.actionCodeBreak)) {
@@ -2161,10 +2425,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Volume", request.volume);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SmartCall"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -2178,12 +2442,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SmartCallResponse());
     }
 
+    /**
+      * *   The SmartCall operation must be used together with the [intelligent outbound HTTP operation](~~112703~~). After the call initiated by the Voice Messaging Service (VMS) platform is connected, the VMS platform sends the text converted from speech back to the business side, and the business side then returns the follow-up action to the VMS platform.
+      * *   The SmartCall operation does not support the following characters: `@ = : "" $ { } ^ * ￥`.
+      * ### QPS limits
+      * You can call this operation up to 1,000 times per second per account.
+      *
+      * @param request SmartCallRequest
+      * @return SmartCallResponse
+     */
     public SmartCallResponse smartCall(SmartCallRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.smartCallWithOptions(request, runtime);
     }
 
-    public SmartCallOperateResponse smartCallOperateWithOptions(SmartCallOperateRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * You can call this operation to initiate a specified action on the called number of an outbound robocall when the call is transferred to an agent of the call center.
+      * > You can only initiate the action of bridging a called number and an agent of the call center.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request SmartCallOperateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SmartCallOperateResponse
+     */
+    public SmartCallOperateResponse smartCallOperateWithOptions(SmartCallOperateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callId)) {
@@ -2210,10 +2493,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SmartCallOperate"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -2227,12 +2510,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SmartCallOperateResponse());
     }
 
+    /**
+      * You can call this operation to initiate a specified action on the called number of an outbound robocall when the call is transferred to an agent of the call center.
+      * > You can only initiate the action of bridging a called number and an agent of the call center.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request SmartCallOperateRequest
+      * @return SmartCallOperateResponse
+     */
     public SmartCallOperateResponse smartCallOperate(SmartCallOperateRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.smartCallOperateWithOptions(request, runtime);
     }
 
-    public StartRobotTaskResponse startRobotTaskWithOptions(StartRobotTaskRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request StartRobotTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StartRobotTaskResponse
+     */
+    public StartRobotTaskResponse startRobotTaskWithOptions(StartRobotTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
@@ -2255,10 +2555,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskId", request.taskId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StartRobotTask"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -2272,12 +2572,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartRobotTaskResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request StartRobotTaskRequest
+      * @return StartRobotTaskResponse
+     */
     public StartRobotTaskResponse startRobotTask(StartRobotTaskRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startRobotTaskWithOptions(request, runtime);
     }
 
-    public StopCallInConfigResponse stopCallInConfigWithOptions(StopCallInConfigRequest request, RuntimeOptions runtime) throws Exception {
+    public StopCallInConfigResponse stopCallInConfigWithOptions(StopCallInConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.number)) {
@@ -2296,10 +2603,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StopCallInConfig"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -2314,11 +2621,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public StopCallInConfigResponse stopCallInConfig(StopCallInConfigRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopCallInConfigWithOptions(request, runtime);
     }
 
-    public StopRobotTaskResponse stopRobotTaskWithOptions(StopRobotTaskRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * After you stop a robocall task, you can call the [StartRobotTask](~~StartRobotTask~~) operation to start it again.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request StopRobotTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StopRobotTaskResponse
+     */
+    public StopRobotTaskResponse stopRobotTaskWithOptions(StopRobotTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
@@ -2337,10 +2653,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskId", request.taskId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StopRobotTask"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -2354,12 +2670,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopRobotTaskResponse());
     }
 
+    /**
+      * After you stop a robocall task, you can call the [StartRobotTask](~~StartRobotTask~~) operation to start it again.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request StopRobotTaskRequest
+      * @return StopRobotTaskResponse
+     */
     public StopRobotTaskResponse stopRobotTask(StopRobotTaskRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopRobotTaskWithOptions(request, runtime);
     }
 
-    public SubmitHotlineTransferRegisterResponse submitHotlineTransferRegisterWithOptions(SubmitHotlineTransferRegisterRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request SubmitHotlineTransferRegisterRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SubmitHotlineTransferRegisterResponse
+     */
+    public SubmitHotlineTransferRegisterResponse submitHotlineTransferRegisterWithOptions(SubmitHotlineTransferRegisterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agreement)) {
@@ -2414,10 +2746,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TransferPhoneNumberInfos", request.transferPhoneNumberInfos);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SubmitHotlineTransferRegister"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -2431,12 +2763,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitHotlineTransferRegisterResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request SubmitHotlineTransferRegisterRequest
+      * @return SubmitHotlineTransferRegisterResponse
+     */
     public SubmitHotlineTransferRegisterResponse submitHotlineTransferRegister(SubmitHotlineTransferRegisterRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitHotlineTransferRegisterWithOptions(request, runtime);
     }
 
-    public UploadRobotTaskCalledFileResponse uploadRobotTaskCalledFileWithOptions(UploadRobotTaskCalledFileRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request UploadRobotTaskCalledFileRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UploadRobotTaskCalledFileResponse
+     */
+    public UploadRobotTaskCalledFileResponse uploadRobotTaskCalledFileWithOptions(UploadRobotTaskCalledFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
@@ -2467,10 +2814,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TtsParamHead", request.ttsParamHead);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UploadRobotTaskCalledFile"),
             new TeaPair("version", "2017-05-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -2484,8 +2831,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UploadRobotTaskCalledFileResponse());
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+      * @param request UploadRobotTaskCalledFileRequest
+      * @return UploadRobotTaskCalledFileResponse
+     */
     public UploadRobotTaskCalledFileResponse uploadRobotTaskCalledFile(UploadRobotTaskCalledFileRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uploadRobotTaskCalledFileWithOptions(request, runtime);
     }
 }

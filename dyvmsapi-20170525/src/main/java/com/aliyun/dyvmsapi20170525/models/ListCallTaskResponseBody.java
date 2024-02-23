@@ -4,21 +4,39 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ListCallTaskResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The task information.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListCallTaskResponseBodyData> data;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of tasks.</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -76,48 +94,106 @@ public class ListCallTaskResponseBody extends TeaModel {
     }
 
     public static class ListCallTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>The type of the task template. Valid values:</p>
+         * <br>
+         * <p>*   **VMS_VOICE_TTS**: the TTS notification template.</p>
+         * <p>*   **VMS_VOICE_CODE**: the voice notification template.</p>
+         * <p>*   **VMS_TTS**: the voice verification code template.</p>
+         */
         @NameInMap("BizType")
         public String bizType;
 
+        /**
+         * <p>The time when the task was completed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CompleteTime")
         public String completeTime;
 
+        /**
+         * <p>The number of tasks that were complete.</p>
+         */
         @NameInMap("CompletedCount")
         public Long completedCount;
 
+        /**
+         * <p>The task progress.</p>
+         */
         @NameInMap("CompletedRate")
         public Integer completedRate;
 
+        /**
+         * <p>This parameter is unavailable.</p>
+         */
         @NameInMap("Data")
         public String data;
 
+        /**
+         * <p>The type of the called number.</p>
+         */
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <p>The time when the scheduled task was started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("FireTime")
         public String fireTime;
 
+        /**
+         * <p>The task ID.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The calling number.</p>
+         */
         @NameInMap("Resource")
         public String resource;
 
+        /**
+         * <p>The task state. Valid values:</p>
+         * <br>
+         * <p>*   **INIT**: The task was in the initial state.</p>
+         * <p>*   **RELEASE**: The task was being parsed.</p>
+         * <p>*   **RUNNING**: The task was running.</p>
+         * <p>*   **STOP**: The task was manually suspended.</p>
+         * <p>*   **SYSTEM_STOP**: The task was suspended by the system.</p>
+         * <p>*   **CANCEL**: The task was manually canceled.</p>
+         * <p>*   **SYSTEM_CANCEL**: The task was canceled by the system.</p>
+         * <p>*   **DONE**: The task was complete.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>This parameter is unavailable.</p>
+         */
         @NameInMap("StopTime")
         public String stopTime;
 
+        /**
+         * <p>The task name.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The ID of the voice template.</p>
+         */
         @NameInMap("TemplateCode")
         public String templateCode;
 
+        /**
+         * <p>The template name.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <p>The total number of called numbers.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

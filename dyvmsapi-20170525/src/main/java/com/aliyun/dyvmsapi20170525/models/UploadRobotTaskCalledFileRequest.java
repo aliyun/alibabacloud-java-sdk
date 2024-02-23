@@ -4,9 +4,17 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class UploadRobotTaskCalledFileRequest extends TeaModel {
+    /**
+     * <p>The called numbers. Separate multiple called numbers with commas (,).</p>
+     * <br>
+     * <p>> After you create a robocall task, you must upload called numbers in batches. You can upload up to 300,000 called numbers for each task.</p>
+     */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    /**
+     * <p>The unique ID of the robocall task. You can call the [CreateRobotTask](~~CreateRobotTask~~) operation to obtain the ID of the robocall task.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
@@ -19,9 +27,18 @@ public class UploadRobotTaskCalledFileRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The values of the variable in the text-to-speech (TTS) template, in the JSON format. The variable values specified by the TtsParam parameter must match the variable names specified by the TtsParamHead parameter.</p>
+     * <br>
+     * <p>*   If all the called numbers carry the same variable values, you can set the value of the number field to **all** and upload only one copy of the variable values.</p>
+     * <p>*   If only some of the called numbers carry the same variable values, you can set the value of the number field to **all** for these called numbers and set the value of the number field and variable values for other called numbers based on your business requirements. The system preferentially selects the values that you set for the called numbers.</p>
+     */
     @NameInMap("TtsParam")
     public String ttsParam;
 
+    /**
+     * <p>The list of variable names carried in the robocall task, in the JSON format. The TtsParamHead parameter must be used together with the TtsParam parameter.</p>
+     */
     @NameInMap("TtsParamHead")
     public String ttsParamHead;
 

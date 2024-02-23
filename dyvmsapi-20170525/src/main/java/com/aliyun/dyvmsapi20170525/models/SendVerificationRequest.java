@@ -4,6 +4,9 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class SendVerificationRequest extends TeaModel {
+    /**
+     * <p>The business type. Set the value to **CONTACT**.</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
@@ -16,9 +19,15 @@ public class SendVerificationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The mobile phone number that receives the SMS verification code.</p>
+     */
     @NameInMap("Target")
     public String target;
 
+    /**
+     * <p>The mode of sending the SMS verification code. Set the value to **SMS**.</p>
+     */
     @NameInMap("VerifyType")
     public String verifyType;
 

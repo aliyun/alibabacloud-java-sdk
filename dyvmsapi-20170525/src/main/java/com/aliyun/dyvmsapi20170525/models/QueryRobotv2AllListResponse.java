@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class QueryRobotv2AllListResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     public QueryRobotv2AllListResponseBody body;
 
     public static QueryRobotv2AllListResponse build(java.util.Map<String, ?> map) throws Exception {
@@ -23,6 +24,14 @@ public class QueryRobotv2AllListResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public QueryRobotv2AllListResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public QueryRobotv2AllListResponse setBody(QueryRobotv2AllListResponseBody body) {

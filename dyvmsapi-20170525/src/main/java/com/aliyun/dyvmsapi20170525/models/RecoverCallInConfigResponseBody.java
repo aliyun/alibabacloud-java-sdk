@@ -4,15 +4,30 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class RecoverCallInConfigResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the inbound call was resumed. Valid values:</p>
+     * <br>
+     * <p>*   true: The inbound call was resumed.</p>
+     * <p>*   false: The inbound call failed to be resumed.</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

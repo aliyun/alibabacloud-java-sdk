@@ -4,18 +4,30 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class AddVirtualNumberRelationRequest extends TeaModel {
+    /**
+     * <p>The company names. Separate multiple company names with commas (,).</p>
+     */
     @NameInMap("CorpNameList")
     public String corpNameList;
 
+    /**
+     * <p>The real numbers. Separate multiple real numbers with commas (,).</p>
+     */
     @NameInMap("NumberList")
     public String numberList;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The virtual number.</p>
+     */
     @NameInMap("PhoneNum")
     public String phoneNum;
 
+    /**
+     * <p>The service name. Default value: **dyvms**.</p>
+     */
     @NameInMap("ProdCode")
     public String prodCode;
 
@@ -25,6 +37,12 @@ public class AddVirtualNumberRelationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The route type. Valid values:</p>
+     * <br>
+     * <p>*   **0**: number location first.</p>
+     * <p>*   **1**: random.</p>
+     */
     @NameInMap("RouteType")
     public Integer routeType;
 

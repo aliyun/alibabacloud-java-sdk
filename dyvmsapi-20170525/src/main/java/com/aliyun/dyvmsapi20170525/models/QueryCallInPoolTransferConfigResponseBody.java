@@ -4,15 +4,30 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>*   The value OK indicates that the request was successful.</p>
+     * <p>*   For more information about other response codes, see [API error codes](~~112502~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public QueryCallInPoolTransferConfigResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +69,9 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
     }
 
     public static class QueryCallInPoolTransferConfigResponseBodyDataDetails extends TeaModel {
+        /**
+         * <p>The number used to transfer the call.</p>
+         */
         @NameInMap("Called")
         public String called;
 
@@ -73,15 +91,30 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
     }
 
     public static class QueryCallInPoolTransferConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>The call mode. Valid values:</p>
+         * <br>
+         * <p>*   **roundRobin**</p>
+         * <p>*   **random**</p>
+         */
         @NameInMap("CalledRouteMode")
         public String calledRouteMode;
 
+        /**
+         * <p>The details of the response parameters.</p>
+         */
         @NameInMap("Details")
         public java.util.List<QueryCallInPoolTransferConfigResponseBodyDataDetails> details;
 
+        /**
+         * <p>The time when the call transfer task was created.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The timeout period for transferring the call.</p>
+         */
         @NameInMap("TransferTimeout")
         public String transferTimeout;
 

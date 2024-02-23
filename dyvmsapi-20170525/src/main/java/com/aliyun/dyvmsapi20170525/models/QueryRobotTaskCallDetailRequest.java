@@ -4,12 +4,18 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryRobotTaskCallDetailRequest extends TeaModel {
+    /**
+     * <p>The called number.</p>
+     */
     @NameInMap("Callee")
     public String callee;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The timestamp of the time at which the call details you want to query.</p>
+     */
     @NameInMap("QueryDate")
     public Long queryDate;
 
@@ -19,6 +25,9 @@ public class QueryRobotTaskCallDetailRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The unique ID of the robocall task. You can call the [CreateRobotTask](~~393531~~) operation to obtain the task ID.</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 

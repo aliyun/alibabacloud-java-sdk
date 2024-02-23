@@ -4,15 +4,26 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class SmartCallOperateRequest extends TeaModel {
+    /**
+     * <p>The unique receipt ID of the call. You can call the [SmartCall](~~393526~~) operation to obtain the receipt ID.</p>
+     */
     @NameInMap("CallId")
     public String callId;
 
+    /**
+     * <p>The action that is initiated to the called number of an outbound robocall.</p>
+     * <br>
+     * <p>> Only the value **parallelBridge** is supported. This value indicates that a bridge action is initiated between a called number and an agent of the call center.</p>
+     */
     @NameInMap("Command")
     public String command;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The extended field.</p>
+     */
     @NameInMap("Param")
     public String param;
 

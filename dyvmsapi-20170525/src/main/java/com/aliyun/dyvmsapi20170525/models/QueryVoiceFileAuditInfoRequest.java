@@ -4,6 +4,12 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryVoiceFileAuditInfoRequest extends TeaModel {
+    /**
+     * <p>The type of the voice file. Valid values:</p>
+     * <br>
+     * <p>*   **0** (default): the voice notification file.</p>
+     * <p>*   **2**: the recording file.</p>
+     */
     @NameInMap("BusinessType")
     public Integer businessType;
 
@@ -16,6 +22,11 @@ public class QueryVoiceFileAuditInfoRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the voice file. You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), choose **Voice Messages** > **Voice Notifications** or **Voice File Management**, and then click the **Voice Notification Files** tab to view the **voice ID**.</p>
+     * <br>
+     * <p>> You can query up to 10 voice files each time. Separate the voice file names with commas (,).</p>
+     */
     @NameInMap("VoiceCodes")
     public String voiceCodes;
 

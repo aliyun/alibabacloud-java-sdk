@@ -4,24 +4,48 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ListCallTaskDetailResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>*   The value OK indicates that the request was successful.</p>
+     * <p>*   For more information about other response codes, see [API error codes](~~112502~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about the task.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListCallTaskDetailResponseBodyData> data;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of called numbers.</p>
+     */
     @NameInMap("Total")
     public Long total;
 
+    /**
+     * <p>The total number of pages.</p>
+     */
     @NameInMap("TotalPage")
     public Long totalPage;
 
@@ -87,18 +111,37 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
     }
 
     public static class ListCallTaskDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The called number.</p>
+         */
         @NameInMap("CalledNum")
         public String calledNum;
 
+        /**
+         * <p>The calling number.</p>
+         */
         @NameInMap("Caller")
         public String caller;
 
+        /**
+         * <p>The call duration. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <p>This parameter is unavailable.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The task state. Valid values:</p>
+         * <br>
+         * <p>*   **SUCCESS**: The task was successful.</p>
+         * <p>*   **FAIL**: The task failed.</p>
+         * <p>*   **INIT**: The task was not started.</p>
+         */
         @NameInMap("Status")
         public String status;
 

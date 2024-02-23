@@ -7,12 +7,21 @@ public class QueryVirtualNumberRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The service name. Default value: **dyvms**.</p>
+     */
     @NameInMap("ProdCode")
     public String prodCode;
 
@@ -22,6 +31,12 @@ public class QueryVirtualNumberRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The route type. Valid values:</p>
+     * <br>
+     * <p>*   **0**: number location first.</p>
+     * <p>*   **1**: random.</p>
+     */
     @NameInMap("RouteType")
     public Integer routeType;
 

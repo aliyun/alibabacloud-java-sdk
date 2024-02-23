@@ -4,33 +4,69 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryRobotTaskCallListRequest extends TeaModel {
+    /**
+     * <p>The call result. Valid values:</p>
+     * <br>
+     * <p>*   **200002**: The line is busy.</p>
+     * <p>*   **200005**: The called party cannot be connected.</p>
+     * <p>*   **200010**: The phone of the called party is powered off.</p>
+     * <p>*   **200011**: The called party is out of service.</p>
+     * <p>*   **200012**: The call is lost.</p>
+     */
     @NameInMap("CallResult")
     public String callResult;
 
+    /**
+     * <p>The called number.</p>
+     */
     @NameInMap("Called")
     public String called;
 
+    /**
+     * <p>The minimum number of conversation rounds in the call.</p>
+     */
     @NameInMap("DialogCountFrom")
     public String dialogCountFrom;
 
+    /**
+     * <p>The maximum number of conversation rounds in the call.</p>
+     */
     @NameInMap("DialogCountTo")
     public String dialogCountTo;
 
+    /**
+     * <p>The minimum call duration.</p>
+     */
     @NameInMap("DurationFrom")
     public String durationFrom;
 
+    /**
+     * <p>The maximum call duration.</p>
+     */
     @NameInMap("DurationTo")
     public String durationTo;
 
+    /**
+     * <p>The party who hangs up. Valid values:</p>
+     * <br>
+     * <p>*   **0**: the called party.</p>
+     * <p>*   **1**: the robot.</p>
+     */
     @NameInMap("HangupDirection")
     public String hangupDirection;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -40,6 +76,9 @@ public class QueryRobotTaskCallListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The unique ID of the robocall task. You can call the [CreateRobotTask](~~393531~~) operation to obtain the task ID.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
