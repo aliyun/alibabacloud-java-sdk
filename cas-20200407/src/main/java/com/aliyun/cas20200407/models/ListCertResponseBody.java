@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCertResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the certificates.</p>
+     * <p>The certificates.</p>
      */
     @NameInMap("CertList")
     public java.util.List<ListCertResponseBodyCertList> certList;
@@ -129,7 +129,7 @@ public class ListCertResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>The domain names that are bound to the certificate. Multiple domain names are separated by commas.</p>
+         * <p>All domain names that are bound to the certificate. Multiple domain names are separated by commas (,).</p>
          */
         @NameInMap("Sans")
         public String sans;
@@ -153,13 +153,13 @@ public class ListCertResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the certificate repository.</p>
+         * <p>The ID of the certificate application repository.</p>
          */
         @NameInMap("WhId")
         public Long whId;
 
         /**
-         * <p>The instance ID of the certificate repository.</p>
+         * <p>The instance ID of the certificate application repository.</p>
          */
         @NameInMap("WhInstanceId")
         public String whInstanceId;
