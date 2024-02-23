@@ -25,6 +25,9 @@ public class ScalingRule extends TeaModel {
     @NameInMap("MetricsTrigger")
     public MetricsTrigger metricsTrigger;
 
+    @NameInMap("MinAdjustmentValue")
+    public Integer minAdjustmentValue;
+
     /**
      * <p>规则名称。</p>
      */
@@ -73,6 +76,14 @@ public class ScalingRule extends TeaModel {
     }
     public MetricsTrigger getMetricsTrigger() {
         return this.metricsTrigger;
+    }
+
+    public ScalingRule setMinAdjustmentValue(Integer minAdjustmentValue) {
+        this.minAdjustmentValue = minAdjustmentValue;
+        return this;
+    }
+    public Integer getMinAdjustmentValue() {
+        return this.minAdjustmentValue;
     }
 
     public ScalingRule setRuleName(String ruleName) {

@@ -177,6 +177,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * Currently we only support taihao platform
+      *
+      * @param request CreateReportRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateReportResponse
+     */
+    public CreateReportResponse createReportWithOptions(CreateReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selectTimestamp)) {
+            query.put("SelectTimestamp", request.selectTimestamp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateReport"),
+            new TeaPair("version", "2021-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateReportResponse());
+    }
+
+    /**
+      * Currently we only support taihao platform
+      *
+      * @param request CreateReportRequest
+      * @return CreateReportResponse
+     */
+    public CreateReportResponse createReport(CreateReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createReportWithOptions(request, runtime);
+    }
+
+    /**
       * 缩容节点。
       *
       * @param request DecreaseNodesRequest
@@ -497,6 +547,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetClusterResponse getCluster(GetClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getClusterWithOptions(request, runtime);
+    }
+
+    /**
+      * 获取集群克隆详情。
+      *
+      * @param request GetClusterCloneMetaRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetClusterCloneMetaResponse
+     */
+    public GetClusterCloneMetaResponse getClusterCloneMetaWithOptions(GetClusterCloneMetaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetClusterCloneMeta"),
+            new TeaPair("version", "2021-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetClusterCloneMetaResponse());
+    }
+
+    /**
+      * 获取集群克隆详情。
+      *
+      * @param request GetClusterCloneMetaRequest
+      * @return GetClusterCloneMetaResponse
+     */
+    public GetClusterCloneMetaResponse getClusterCloneMeta(GetClusterCloneMetaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getClusterCloneMetaWithOptions(request, runtime);
     }
 
     /**
@@ -1343,13 +1439,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getOperationWithOptions(request, runtime);
     }
 
-    /**
-      * 扩容节点。
-      *
-      * @param request IncreaseNodesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return IncreaseNodesResponse
-     */
     public IncreaseNodesResponse increaseNodesWithOptions(IncreaseNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1367,6 +1456,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.increaseNodeCount)) {
             query.put("IncreaseNodeCount", request.increaseNodeCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minIncreaseNodeCount)) {
+            query.put("MinIncreaseNodeCount", request.minIncreaseNodeCount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupId)) {
@@ -1402,12 +1495,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new IncreaseNodesResponse());
     }
 
-    /**
-      * 扩容节点。
-      *
-      * @param request IncreaseNodesRequest
-      * @return IncreaseNodesResponse
-     */
     public IncreaseNodesResponse increaseNodes(IncreaseNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.increaseNodesWithOptions(request, runtime);

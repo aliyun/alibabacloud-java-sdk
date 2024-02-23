@@ -33,6 +33,9 @@ public class IncreaseNodesRequest extends TeaModel {
     @NameInMap("IncreaseNodeCount")
     public Integer increaseNodeCount;
 
+    @NameInMap("MinIncreaseNodeCount")
+    public Integer minIncreaseNodeCount;
+
     /**
      * <p>The ID of the node group. The target node group to which you want to scale out the cluster.</p>
      */
@@ -94,6 +97,14 @@ public class IncreaseNodesRequest extends TeaModel {
     }
     public Integer getIncreaseNodeCount() {
         return this.increaseNodeCount;
+    }
+
+    public IncreaseNodesRequest setMinIncreaseNodeCount(Integer minIncreaseNodeCount) {
+        this.minIncreaseNodeCount = minIncreaseNodeCount;
+        return this;
+    }
+    public Integer getMinIncreaseNodeCount() {
+        return this.minIncreaseNodeCount;
     }
 
     public IncreaseNodesRequest setNodeGroupId(String nodeGroupId) {
