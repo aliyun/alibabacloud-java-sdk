@@ -370,6 +370,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("SummarizationEnabled")
         public Boolean summarizationEnabled;
 
+        @NameInMap("TextPolishEnabled")
+        public Boolean textPolishEnabled;
+
         @NameInMap("Transcoding")
         public CreateTaskRequestParametersTranscoding transcoding;
 
@@ -433,6 +436,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public Boolean getSummarizationEnabled() {
             return this.summarizationEnabled;
+        }
+
+        public CreateTaskRequestParameters setTextPolishEnabled(Boolean textPolishEnabled) {
+            this.textPolishEnabled = textPolishEnabled;
+            return this;
+        }
+        public Boolean getTextPolishEnabled() {
+            return this.textPolishEnabled;
         }
 
         public CreateTaskRequestParameters setTranscoding(CreateTaskRequestParametersTranscoding transcoding) {

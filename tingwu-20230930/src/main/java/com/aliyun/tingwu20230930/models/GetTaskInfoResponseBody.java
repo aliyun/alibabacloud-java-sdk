@@ -128,6 +128,12 @@ public class GetTaskInfoResponseBody extends TeaModel {
     }
 
     public static class GetTaskInfoResponseBodyData extends TeaModel {
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
         @NameInMap("Result")
         public GetTaskInfoResponseBodyDataResult result;
 
@@ -143,6 +149,22 @@ public class GetTaskInfoResponseBody extends TeaModel {
         public static GetTaskInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetTaskInfoResponseBodyData self = new GetTaskInfoResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetTaskInfoResponseBodyData setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public GetTaskInfoResponseBodyData setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public GetTaskInfoResponseBodyData setResult(GetTaskInfoResponseBodyDataResult result) {
