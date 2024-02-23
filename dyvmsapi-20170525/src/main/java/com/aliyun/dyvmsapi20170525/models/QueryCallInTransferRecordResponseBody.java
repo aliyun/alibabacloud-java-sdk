@@ -4,15 +4,30 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryCallInTransferRecordResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>*   The value OK indicates that the request was successful.</p>
+     * <p>*   For more information about other response codes, see [API error codes](~~112502~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public QueryCallInTransferRecordResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +69,39 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
     }
 
     public static class QueryCallInTransferRecordResponseBodyDataValues extends TeaModel {
+        /**
+         * <p>The called number of the inbound call.</p>
+         */
         @NameInMap("CallInCalled")
         public String callInCalled;
 
+        /**
+         * <p>The calling number of the inbound call.</p>
+         */
         @NameInMap("CallInCaller")
         public String callInCaller;
 
+        /**
+         * <p>The time when the call was initiated.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The recording URL.</p>
+         */
         @NameInMap("RecordUrl")
         public String recordUrl;
 
+        /**
+         * <p>The phone number to which the call was transferred.</p>
+         */
         @NameInMap("TransferCalled")
         public String transferCalled;
 
+        /**
+         * <p>The calling number that transferred the call.</p>
+         */
         @NameInMap("TransferCaller")
         public String transferCaller;
 
@@ -128,15 +161,27 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
     }
 
     public static class QueryCallInTransferRecordResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("PageNo")
         public Long pageNo;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 
+        /**
+         * <p>The call transfer records.</p>
+         */
         @NameInMap("Values")
         public java.util.List<QueryCallInTransferRecordResponseBodyDataValues> values;
 

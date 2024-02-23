@@ -13,6 +13,9 @@ public class CancelOrderRobotTaskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The unique ID of the robocall task. You can call the [CreateRobotTask](~~393531~~) operation to obtain the ID of the robocall task.</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 

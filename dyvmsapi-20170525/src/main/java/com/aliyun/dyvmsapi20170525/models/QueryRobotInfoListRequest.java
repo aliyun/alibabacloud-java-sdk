@@ -4,6 +4,14 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryRobotInfoListRequest extends TeaModel {
+    /**
+     * <p>The review state. Valid values:</p>
+     * <br>
+     * <p>*   **CONFIGURABLE**</p>
+     * <p>*   **AUDITING**</p>
+     * <p>*   **AUDITPASS**</p>
+     * <p>*   **AUDITFAIL**</p>
+     */
     @NameInMap("AuditStatus")
     public String auditStatus;
 

@@ -4,18 +4,33 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class SetTransferCalleePoolConfigRequest extends TeaModel {
+    /**
+     * <p>The call mode. Valid values:</p>
+     * <br>
+     * <p>*   **roundRobin**</p>
+     * <p>*   **random**</p>
+     */
     @NameInMap("CalledRouteMode")
     public String calledRouteMode;
 
+    /**
+     * <p>The information about the phone numbers for transferring the call.</p>
+     */
     @NameInMap("Details")
     public java.util.List<SetTransferCalleePoolConfigRequestDetails> details;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The phone number used for transferring the call.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    /**
+     * <p>The qualification ID. You can call the [GetHotlineQualificationByOrder](~~393548~~) operation to obtain the qualification ID.</p>
+     */
     @NameInMap("QualificationId")
     public String qualificationId;
 
@@ -87,9 +102,15 @@ public class SetTransferCalleePoolConfigRequest extends TeaModel {
     }
 
     public static class SetTransferCalleePoolConfigRequestDetails extends TeaModel {
+        /**
+         * <p>The called number.</p>
+         */
         @NameInMap("Called")
         public String called;
 
+        /**
+         * <p>The calling number.</p>
+         */
         @NameInMap("Caller")
         public String caller;
 

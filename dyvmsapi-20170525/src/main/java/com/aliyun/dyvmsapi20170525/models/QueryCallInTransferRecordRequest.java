@@ -4,21 +4,38 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryCallInTransferRecordRequest extends TeaModel {
+    /**
+     * <p>The calling number of the inbound call.</p>
+     */
     @NameInMap("CallInCaller")
     public String callInCaller;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number. Default value: **1**.</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <p>The number of entries per page. Valid values: 1 to 10.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The phone number to which a call is transferred.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    /**
+     * <p>The time at which call transfer records are queried, in the YYYY-MM-DD hh:mm:ss format.</p>
+     * <br>
+     * <p>> The query result is all the call transfer records of the specified day.</p>
+     */
     @NameInMap("QueryDate")
     public String queryDate;
 

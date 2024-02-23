@@ -4,18 +4,30 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ListHotlineTransferNumberRequest extends TeaModel {
+    /**
+     * <p>The China 400 number.</p>
+     */
     @NameInMap("HotlineNumber")
     public String hotlineNumber;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number. Default value: **1**.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries per page. Valid values: 1 to 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The qualification ID. You can call the [GetHotlineQualificationByOrder](~~393548~~) operation to obtain the qualification ID.</p>
+     */
     @NameInMap("QualificationId")
     public String qualificationId;
 

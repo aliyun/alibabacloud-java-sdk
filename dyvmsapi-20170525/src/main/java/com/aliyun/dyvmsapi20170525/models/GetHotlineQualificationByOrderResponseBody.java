@@ -4,15 +4,30 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>*   The value OK indicates that the request was successful.</p>
+     * <p>*   For more information about other response codes, see [API error codes](~~112502~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public GetHotlineQualificationByOrderResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +69,24 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
     }
 
     public static class GetHotlineQualificationByOrderResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the qualification application ticket.</p>
+         */
         @NameInMap("OrderId")
         public String orderId;
 
+        /**
+         * <p>The qualification ID.</p>
+         */
         @NameInMap("QualificationId")
         public String qualificationId;
 
+        /**
+         * <p>The qualification state. Valid values:</p>
+         * <br>
+         * <p>*   **NORMAL**</p>
+         * <p>*   **OTHER**</p>
+         */
         @NameInMap("Status")
         public String status;
 

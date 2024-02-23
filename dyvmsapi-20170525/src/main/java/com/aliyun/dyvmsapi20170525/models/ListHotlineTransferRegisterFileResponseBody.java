@@ -4,15 +4,30 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>*   The value OK indicates that the request was successful.</p>
+     * <p>*   For more information about other response codes, see [API error codes](~~112502~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public ListHotlineTransferRegisterFileResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,30 +69,57 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
     }
 
     public static class ListHotlineTransferRegisterFileResponseBodyDataValues extends TeaModel {
+        /**
+         * <p>The authenticity of the commitment.</p>
+         */
         @NameInMap("Agree")
         public String agree;
 
+        /**
+         * <p>The enterprise name.</p>
+         */
         @NameInMap("CorpName")
         public String corpName;
 
+        /**
+         * <p>The China 400 number.</p>
+         */
         @NameInMap("HotlineNumber")
         public String hotlineNumber;
 
+        /**
+         * <p>The ID card number of the handler.</p>
+         */
         @NameInMap("MngOpIdentityCard")
         public String mngOpIdentityCard;
 
+        /**
+         * <p>The email address of the handler.</p>
+         */
         @NameInMap("MngOpMail")
         public String mngOpMail;
 
+        /**
+         * <p>The mobile phone number of the handler.</p>
+         */
         @NameInMap("MngOpMobile")
         public String mngOpMobile;
 
+        /**
+         * <p>The name of the handler.</p>
+         */
         @NameInMap("MngOpName")
         public String mngOpName;
 
+        /**
+         * <p>The qualification ID.</p>
+         */
         @NameInMap("QualificationId")
         public String qualificationId;
 
+        /**
+         * <p>The unique code of the query operation.</p>
+         */
         @NameInMap("ResUniqueCode")
         public Long resUniqueCode;
 
@@ -161,15 +203,27 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
     }
 
     public static class ListHotlineTransferRegisterFileResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 
+        /**
+         * <p>The registration file.</p>
+         */
         @NameInMap("Values")
         public java.util.List<ListHotlineTransferRegisterFileResponseBodyDataValues> values;
 

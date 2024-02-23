@@ -4,15 +4,30 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class StopCallInConfigResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the inbound call was stopped. Valid values:</p>
+     * <br>
+     * <p>*   true: The inbound call was stopped.</p>
+     * <p>*   false: The inbound call failed to be stopped.</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

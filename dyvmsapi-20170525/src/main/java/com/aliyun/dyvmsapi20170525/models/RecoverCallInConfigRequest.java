@@ -4,6 +4,9 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class RecoverCallInConfigRequest extends TeaModel {
+    /**
+     * <p>The China 400 number that is used to transfer the inbound call.</p>
+     */
     @NameInMap("Number")
     public String number;
 

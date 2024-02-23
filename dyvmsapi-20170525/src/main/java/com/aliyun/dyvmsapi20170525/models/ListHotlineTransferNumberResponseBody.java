@@ -4,15 +4,30 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ListHotlineTransferNumberResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>*   The value OK indicates that the request was successful.</p>
+     * <p>*   For more information about other response codes, see [API error codes](~~112502~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about the registered phone number.</p>
+     */
     @NameInMap("Data")
     public ListHotlineTransferNumberResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +69,39 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
     }
 
     public static class ListHotlineTransferNumberResponseBodyDataValues extends TeaModel {
+        /**
+         * <p>The China 400 number.</p>
+         */
         @NameInMap("HotlineNumber")
         public String hotlineNumber;
 
+        /**
+         * <p>The ID card number of the number owner.</p>
+         */
         @NameInMap("IdentityCard")
         public String identityCard;
 
+        /**
+         * <p>The real name of the number owner or the company name.</p>
+         */
         @NameInMap("NumberOwnerName")
         public String numberOwnerName;
 
+        /**
+         * <p>The registered phone number.</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <p>The qualification ID.</p>
+         */
         @NameInMap("QualificationId")
         public String qualificationId;
 
+        /**
+         * <p>The resource code.</p>
+         */
         @NameInMap("ResUniqueCode")
         public String resUniqueCode;
 
@@ -128,15 +161,27 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
     }
 
     public static class ListHotlineTransferNumberResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 
+        /**
+         * <p>The phone numbers.</p>
+         */
         @NameInMap("Values")
         public java.util.List<ListHotlineTransferNumberResponseBodyDataValues> values;
 

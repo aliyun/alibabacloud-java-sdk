@@ -7,9 +7,15 @@ public class QueryRobotTaskListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -19,12 +25,32 @@ public class QueryRobotTaskListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The task state. Valid values:</p>
+     * <br>
+     * <p>*   **INIT**: The task is not started.</p>
+     * <p>*   **READY**: The task is ready to start.</p>
+     * <p>*   **DISPATCH**: The task is being parsed.</p>
+     * <p>*   **EXCUTING**: The task is being executed.</p>
+     * <p>*   **MANUAL_STOP**: The task is manually suspended.</p>
+     * <p>*   **SYSTEM_STOP**: The task is suspended by the system.</p>
+     * <p>*   **ARREARS_STOP**: The task is suspended due to overdue payments.</p>
+     * <p>*   **CANCEL**: The task is manually canceled.</p>
+     * <p>*   **SYSTEM_CANCEL**: The task is canceled by the system.</p>
+     * <p>*   **FINISH**: The task is complete.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The task name.</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <p>The date when the task is created, in the yyyy-MM-dd format.</p>
+     */
     @NameInMap("Time")
     public String time;
 

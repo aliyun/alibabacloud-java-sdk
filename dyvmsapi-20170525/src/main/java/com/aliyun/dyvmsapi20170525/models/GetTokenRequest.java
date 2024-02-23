@@ -13,6 +13,9 @@ public class GetTokenRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The token type.</p>
+     */
     @NameInMap("TokenType")
     public String tokenType;
 

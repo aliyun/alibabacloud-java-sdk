@@ -13,9 +13,15 @@ public class StartRobotTaskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The time scheduled for starting the robocall task, in the yyyy-MM-dd HH:mm:ss format.</p>
+     */
     @NameInMap("ScheduleTime")
     public String scheduleTime;
 
+    /**
+     * <p>The unique ID of the robocall task. You can call the [CreateRobotTask](~~CreateRobotTask~~) operation to obtain the task ID.</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 

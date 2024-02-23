@@ -4,15 +4,32 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class SingleCallByTtsResponseBody extends TeaModel {
+    /**
+     * <p>The unique receipt ID of the call.</p>
+     * <br>
+     * <p>You can call the [QueryCallDetailByCallId](~~393529~~) operation to query the details of the call based on the receipt ID.</p>
+     */
     @NameInMap("CallId")
     public String callId;
 
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>*   The value OK indicates that the request was successful.</p>
+     * <p>*   For more information about other response codes, see [API error codes](~~112502~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

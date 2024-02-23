@@ -4,21 +4,46 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreateCallTaskRequest extends TeaModel {
+    /**
+     * <p>The type of the task template. Valid values:</p>
+     * <br>
+     * <p>*   **VMS_VOICE_TTS**: the text-to-speech (TTS) notification template.</p>
+     * <p>*   **VMS_VOICE_CODE**: the voice notification template.</p>
+     * <p>*   **VMS_TTS**: the voice verification code template.</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>The called numbers.</p>
+     * <br>
+     * <p>*   If you set DataType to LIST, the value of Data is in the LIST format.</p>
+     * <p>*   If you set DataType to JSON, the value of Data is in the JSON format.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The type of called numbers. Valid values:</p>
+     * <br>
+     * <p>*   **LIST**: the called numbers that are separated by commas (,).</p>
+     * <p>*   **JSON**: a JSON-formatted list of called numbers with template parameters.</p>
+     */
     @NameInMap("DataType")
     public String dataType;
 
+    /**
+     * <p>This parameter is unavailable.</p>
+     */
     @NameInMap("FireTime")
     public String fireTime;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The calling number. Only virtual numbers are supported.</p>
+     */
     @NameInMap("Resource")
     public String resource;
 
@@ -28,21 +53,39 @@ public class CreateCallTaskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the calling number. Set the value to **LIST**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>This parameter is unavailable.</p>
+     */
     @NameInMap("ScheduleType")
     public String scheduleType;
 
+    /**
+     * <p>This parameter is unavailable.</p>
+     */
     @NameInMap("StopTime")
     public String stopTime;
 
+    /**
+     * <p>The task name.</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <p>The template ID.</p>
+     */
     @NameInMap("TemplateCode")
     public String templateCode;
 
+    /**
+     * <p>The template name.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 

@@ -4,6 +4,11 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetHotlineQualificationByOrderRequest extends TeaModel {
+    /**
+     * <p>The ticket ID.</p>
+     * <br>
+     * <p>You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), choose **Qualification\&Communication Script Management** > **Qualification Management**, and then click the **400 Qualifications** tab to view the ticket ID.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 

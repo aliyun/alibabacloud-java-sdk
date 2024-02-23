@@ -4,15 +4,24 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ListCallTaskDetailRequest extends TeaModel {
+    /**
+     * <p>The called number.</p>
+     */
     @NameInMap("CalledNum")
     public String calledNum;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -22,9 +31,19 @@ public class ListCallTaskDetailRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The task state. Valid values:</p>
+     * <br>
+     * <p>*   **SUCCESS**: The task is successful.</p>
+     * <p>*   **FAIL**: The task fails.</p>
+     * <p>*   **INIT**: The task is not started.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The task ID.</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 

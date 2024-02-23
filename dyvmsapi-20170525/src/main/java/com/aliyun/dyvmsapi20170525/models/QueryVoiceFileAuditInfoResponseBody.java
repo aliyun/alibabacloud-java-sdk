@@ -4,15 +4,29 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>The value OK indicates that the request was successful. For more information about other response codes, see [API error codes](~~112502~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryVoiceFileAuditInfoResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +68,30 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
     }
 
     public static class QueryVoiceFileAuditInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The review state of the voice file. Valid values:</p>
+         * <br>
+         * <p>*   **AUDIT_STATE_INIT**: The voice file was under review.</p>
+         * <p>*   **AUDIT_STATE_PASS**: The voice file was approved.</p>
+         * <p>*   **AUDIT_STATE_NOT_PASS**: The voice file was rejected.</p>
+         * <p>*   **AUDIT_STATE_UPLOADING**: The voice file was approved and is being uploaded.</p>
+         * <p>*   **AUDIT_STATE_REDOING**: The voice file was being reprocessed.</p>
+         * <p>*   **AUDIT_SATE_CANCEL**: The review of the voice file was canceled.</p>
+         * <p>*   **AUDIT_PAUSE**: The review of the voice file was suspended.</p>
+         * <p>*   **AUDIT_ORDER_FINISHED**: The voice file was approved by the ticket system and was waiting for the review of the Internet service provider (ISP).</p>
+         */
         @NameInMap("AuditState")
         public String auditState;
 
+        /**
+         * <p>The reason why the voice file was rejected.</p>
+         */
         @NameInMap("RejectInfo")
         public String rejectInfo;
 
+        /**
+         * <p>The code of the voice file.</p>
+         */
         @NameInMap("VoiceCode")
         public String voiceCode;
 

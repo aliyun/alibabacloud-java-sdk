@@ -4,33 +4,63 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class SubmitHotlineTransferRegisterRequest extends TeaModel {
+    /**
+     * <p>The authenticity of the commitment. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The commitment is authentic.</p>
+     * <p>*   **false**: The commitment is not authentic.</p>
+     */
     @NameInMap("Agreement")
     public String agreement;
 
+    /**
+     * <p>The China 400 number.</p>
+     */
     @NameInMap("HotlineNumber")
     public String hotlineNumber;
 
+    /**
+     * <p>The ID card number of the handler.</p>
+     */
     @NameInMap("OperatorIdentityCard")
     public String operatorIdentityCard;
 
+    /**
+     * <p>The email address of the handler.</p>
+     */
     @NameInMap("OperatorMail")
     public String operatorMail;
 
+    /**
+     * <p>The verification code that is received by the mailbox of the handler.</p>
+     */
     @NameInMap("OperatorMailVerifyCode")
     public String operatorMailVerifyCode;
 
+    /**
+     * <p>The mobile phone number of the handler.</p>
+     */
     @NameInMap("OperatorMobile")
     public String operatorMobile;
 
+    /**
+     * <p>The verification code that is received by the mobile phone of the handler.</p>
+     */
     @NameInMap("OperatorMobileVerifyCode")
     public String operatorMobileVerifyCode;
 
+    /**
+     * <p>The name of the handler.</p>
+     */
     @NameInMap("OperatorName")
     public String operatorName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The qualification ID. You can call the [GetHotlineQualificationByOrder](~~393548~~) operation to obtain the qualification ID.</p>
+     */
     @NameInMap("QualificationId")
     public String qualificationId;
 
@@ -40,6 +70,9 @@ public class SubmitHotlineTransferRegisterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The registration information about the China 400 number.</p>
+     */
     @NameInMap("TransferPhoneNumberInfos")
     public java.util.List<SubmitHotlineTransferRegisterRequestTransferPhoneNumberInfos> transferPhoneNumberInfos;
 
@@ -153,12 +186,21 @@ public class SubmitHotlineTransferRegisterRequest extends TeaModel {
     }
 
     public static class SubmitHotlineTransferRegisterRequestTransferPhoneNumberInfos extends TeaModel {
+        /**
+         * <p>The ID card number of the number owner.</p>
+         */
         @NameInMap("IdentityCard")
         public String identityCard;
 
+        /**
+         * <p>The China 400 number that you want to submit for registration.</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <p>The real name or company name of the number owner.</p>
+         */
         @NameInMap("PhoneNumberOwnerName")
         public String phoneNumberOwnerName;
 

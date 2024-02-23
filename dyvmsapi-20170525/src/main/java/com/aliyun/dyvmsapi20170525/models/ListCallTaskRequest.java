@@ -4,15 +4,28 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ListCallTaskRequest extends TeaModel {
+    /**
+     * <p>The type of the task template. Valid values:</p>
+     * <br>
+     * <p>*   **VMS_VOICE_TTS**: the text-to-speech (TTS) notification template.</p>
+     * <p>*   **VMS_VOICE_CODE**: the voice notification template.</p>
+     * <p>*   **VMS_TTS**: the voice verification code template.</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -22,15 +35,36 @@ public class ListCallTaskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The task state. Valid values:</p>
+     * <br>
+     * <p>*   **INIT**: The task is in the initial state.</p>
+     * <p>*   **RELEASE**: The task is being parsed.</p>
+     * <p>*   **RUNNING**: The task is running.</p>
+     * <p>*   **STOP**: The task is suspended.</p>
+     * <p>*   **SYSTEM_STOP**: The task is suspended by the system.</p>
+     * <p>*   **CANCEL**: The task is canceled.</p>
+     * <p>*   **SYSTEM_CANCEL**: The task is canceled by the system.</p>
+     * <p>*   **DONE**: The task is complete.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The task ID.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The task name.</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <p>The template name.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 

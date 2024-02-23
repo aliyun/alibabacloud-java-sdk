@@ -4,6 +4,9 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class StopCallInConfigRequest extends TeaModel {
+    /**
+     * <p>The China 400 number from which the inbound call to be stopped is transferred.</p>
+     */
     @NameInMap("Number")
     public String number;
 
