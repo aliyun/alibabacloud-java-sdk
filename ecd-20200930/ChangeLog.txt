@@ -1,3 +1,22 @@
+2024-02-26 Version: 3.3.0
+- Support API DisconnectDesktopSessions.
+- Support API UnbindUserDesktop.
+- Update API CreateAutoSnapshotPolicy: update response param.
+- Update API CreatePolicyGroup: add param RecordingUserNotify.
+- Update API CreatePolicyGroup: add param RecordingUserNotifyMessage.
+- Update API CreatePolicyGroup: add param WatermarkAntiCam.
+- Update API CreatePolicyGroup: add param WatermarkPower.
+- Update API CreateSnapshot: update response param.
+- Update API DescribePolicyGroups: update response param.
+- Update API ModifyPolicyGroup: add param RecordingUserNotify.
+- Update API ModifyPolicyGroup: add param RecordingUserNotifyMessage.
+- Update API ModifyPolicyGroup: add param WatermarkAntiCam.
+- Update API ModifyPolicyGroup: add param WatermarkPower.
+- Update API RebuildDesktops: update response param.
+- Update API SetDesktopGroupTimer: update response param.
+- Update API SetDesktopGroupTimerStatus: update response param.
+
+
 2024-02-22 Version: 3.2.0
 - Support API DisconnectDesktopSessions.
 - Update API CreateAutoSnapshotPolicy: update response param.
