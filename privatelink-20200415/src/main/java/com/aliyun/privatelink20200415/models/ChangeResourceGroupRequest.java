@@ -17,10 +17,13 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The region ID of the resource group.</p>
+     * <p>The type of resource. Valid values:</p>
+     * <br>
+     * <p>*   **vpcendpoint**: endpoint</p>
+     * <p>*   **vpcendpointservice**: endpoint service</p>
      */
-    @NameInMap("ResourceRegionId")
-    public String resourceRegionId;
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     public static ChangeResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeResourceGroupRequest self = new ChangeResourceGroupRequest();
@@ -43,12 +46,12 @@ public class ChangeResourceGroupRequest extends TeaModel {
         return this.resourceId;
     }
 
-    public ChangeResourceGroupRequest setResourceRegionId(String resourceRegionId) {
-        this.resourceRegionId = resourceRegionId;
+    public ChangeResourceGroupRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
         return this;
     }
-    public String getResourceRegionId() {
-        return this.resourceRegionId;
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }

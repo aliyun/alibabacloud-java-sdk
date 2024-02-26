@@ -152,6 +152,13 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The type of the service resource. Valid values:</p>
+         * <br>
+         * <p>*   **slb**: Classic Load Balancer (CLB) instance</p>
+         * <p>*   **alb**: Application Load Balancer (ALB) instance</p>
+         * <p>*   **nlb**: Network Load Balancer (NLB) instance</p>
+         */
         @NameInMap("ServiceResourceType")
         public String serviceResourceType;
 
