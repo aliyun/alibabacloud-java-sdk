@@ -19,6 +19,9 @@ public class CreateSlotRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("IoType")
+    public String ioType;
+
     @NameInMap("LifeCycle")
     public SlotLifeCycle lifeCycle;
 
@@ -77,6 +80,14 @@ public class CreateSlotRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateSlotRequest setIoType(String ioType) {
+        this.ioType = ioType;
+        return this;
+    }
+    public String getIoType() {
+        return this.ioType;
     }
 
     public CreateSlotRequest setLifeCycle(SlotLifeCycle lifeCycle) {

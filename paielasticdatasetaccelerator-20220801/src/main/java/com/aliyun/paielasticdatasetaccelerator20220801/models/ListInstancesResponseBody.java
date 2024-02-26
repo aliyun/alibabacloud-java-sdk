@@ -85,6 +85,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        @NameInMap("IoType")
+        public String ioType;
+
         /**
          * <p>数据集加速实例的最大挂载点个数。</p>
          */
@@ -165,6 +168,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getGmtModifiedTime() {
             return this.gmtModifiedTime;
+        }
+
+        public ListInstancesResponseBodyInstances setIoType(String ioType) {
+            this.ioType = ioType;
+            return this;
+        }
+        public String getIoType() {
+            return this.ioType;
         }
 
         public ListInstancesResponseBodyInstances setMaxEndpoint(Integer maxEndpoint) {

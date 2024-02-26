@@ -3,7 +3,7 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 
 import com.aliyun.tea.*;
 
-public class QuerySlotMetricsResponse extends TeaModel {
+public class ReloadSlotResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class QuerySlotMetricsResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public QuerySlotMetricsResponseBody body;
+    public ReloadSlotResponseBody body;
 
-    public static QuerySlotMetricsResponse build(java.util.Map<String, ?> map) throws Exception {
-        QuerySlotMetricsResponse self = new QuerySlotMetricsResponse();
+    public static ReloadSlotResponse build(java.util.Map<String, ?> map) throws Exception {
+        ReloadSlotResponse self = new ReloadSlotResponse();
         return TeaModel.build(map, self);
     }
 
-    public QuerySlotMetricsResponse setHeaders(java.util.Map<String, String> headers) {
+    public ReloadSlotResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class QuerySlotMetricsResponse extends TeaModel {
         return this.headers;
     }
 
-    public QuerySlotMetricsResponse setStatusCode(Integer statusCode) {
+    public ReloadSlotResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class QuerySlotMetricsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public QuerySlotMetricsResponse setBody(QuerySlotMetricsResponseBody body) {
+    public ReloadSlotResponse setBody(ReloadSlotResponseBody body) {
         this.body = body;
         return this;
     }
-    public QuerySlotMetricsResponseBody getBody() {
+    public ReloadSlotResponseBody getBody() {
         return this.body;
     }
 
