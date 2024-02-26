@@ -16,6 +16,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    @NameInMap("IoType")
+    public String ioType;
+
+    /**
+     * <p>数据集加速实例的最大挂载点个数。</p>
+     */
     @NameInMap("MaxEndpoint")
     public Integer maxEndpoint;
 
@@ -31,6 +37,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @NameInMap("PaymentType")
     public String paymentType;
 
+    /**
+     * <p>数据集加速实例的资源提供者类型。</p>
+     */
     @NameInMap("ProviderType")
     public String providerType;
 
@@ -40,6 +49,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @NameInMap("Status")
     public InstanceStatus status;
 
+    /**
+     * <p>数据集加速实例的存储类型。</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 
@@ -90,6 +102,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
     public String getGmtModifiedTime() {
         return this.gmtModifiedTime;
+    }
+
+    public DescribeInstanceResponseBody setIoType(String ioType) {
+        this.ioType = ioType;
+        return this;
+    }
+    public String getIoType() {
+        return this.ioType;
     }
 
     public DescribeInstanceResponseBody setMaxEndpoint(Integer maxEndpoint) {
