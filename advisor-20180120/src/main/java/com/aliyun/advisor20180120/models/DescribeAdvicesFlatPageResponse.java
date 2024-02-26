@@ -3,7 +3,7 @@ package com.aliyun.advisor20180120.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeAdvisorResourcesResponse extends TeaModel {
+public class DescribeAdvicesFlatPageResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeAdvisorResourcesResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeAdvisorResourcesResponseBody body;
+    public DescribeAdvicesFlatPageResponseBody body;
 
-    public static DescribeAdvisorResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeAdvisorResourcesResponse self = new DescribeAdvisorResourcesResponse();
+    public static DescribeAdvicesFlatPageResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeAdvicesFlatPageResponse self = new DescribeAdvicesFlatPageResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAdvisorResourcesResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeAdvicesFlatPageResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeAdvisorResourcesResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeAdvisorResourcesResponse setStatusCode(Integer statusCode) {
+    public DescribeAdvicesFlatPageResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeAdvisorResourcesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeAdvisorResourcesResponse setBody(DescribeAdvisorResourcesResponseBody body) {
+    public DescribeAdvicesFlatPageResponse setBody(DescribeAdvicesFlatPageResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeAdvisorResourcesResponseBody getBody() {
+    public DescribeAdvicesFlatPageResponseBody getBody() {
         return this.body;
     }
 
