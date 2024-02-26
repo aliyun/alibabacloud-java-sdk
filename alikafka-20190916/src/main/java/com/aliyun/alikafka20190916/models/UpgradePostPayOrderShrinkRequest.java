@@ -3,7 +3,7 @@ package com.aliyun.alikafka20190916.models;
 
 import com.aliyun.tea.*;
 
-public class UpgradePostPayOrderRequest extends TeaModel {
+public class UpgradePostPayOrderShrinkRequest extends TeaModel {
     /**
      * <p>The disk size. Unit: GB.</p>
      * <br>
@@ -76,7 +76,7 @@ public class UpgradePostPayOrderRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("ServerlessConfig")
-    public UpgradePostPayOrderRequestServerlessConfig serverlessConfig;
+    public String serverlessConfigShrink;
 
     /**
      * <p>The edition of the instance. Valid values:</p>
@@ -101,12 +101,12 @@ public class UpgradePostPayOrderRequest extends TeaModel {
     @NameInMap("TopicQuota")
     public Integer topicQuota;
 
-    public static UpgradePostPayOrderRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpgradePostPayOrderRequest self = new UpgradePostPayOrderRequest();
+    public static UpgradePostPayOrderShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpgradePostPayOrderShrinkRequest self = new UpgradePostPayOrderShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpgradePostPayOrderRequest setDiskSize(Integer diskSize) {
+    public UpgradePostPayOrderShrinkRequest setDiskSize(Integer diskSize) {
         this.diskSize = diskSize;
         return this;
     }
@@ -114,7 +114,7 @@ public class UpgradePostPayOrderRequest extends TeaModel {
         return this.diskSize;
     }
 
-    public UpgradePostPayOrderRequest setEipMax(Integer eipMax) {
+    public UpgradePostPayOrderShrinkRequest setEipMax(Integer eipMax) {
         this.eipMax = eipMax;
         return this;
     }
@@ -122,7 +122,7 @@ public class UpgradePostPayOrderRequest extends TeaModel {
         return this.eipMax;
     }
 
-    public UpgradePostPayOrderRequest setEipModel(Boolean eipModel) {
+    public UpgradePostPayOrderShrinkRequest setEipModel(Boolean eipModel) {
         this.eipModel = eipModel;
         return this;
     }
@@ -130,7 +130,7 @@ public class UpgradePostPayOrderRequest extends TeaModel {
         return this.eipModel;
     }
 
-    public UpgradePostPayOrderRequest setInstanceId(String instanceId) {
+    public UpgradePostPayOrderShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -138,7 +138,7 @@ public class UpgradePostPayOrderRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public UpgradePostPayOrderRequest setIoMax(Integer ioMax) {
+    public UpgradePostPayOrderShrinkRequest setIoMax(Integer ioMax) {
         this.ioMax = ioMax;
         return this;
     }
@@ -146,7 +146,7 @@ public class UpgradePostPayOrderRequest extends TeaModel {
         return this.ioMax;
     }
 
-    public UpgradePostPayOrderRequest setIoMaxSpec(String ioMaxSpec) {
+    public UpgradePostPayOrderShrinkRequest setIoMaxSpec(String ioMaxSpec) {
         this.ioMaxSpec = ioMaxSpec;
         return this;
     }
@@ -154,7 +154,7 @@ public class UpgradePostPayOrderRequest extends TeaModel {
         return this.ioMaxSpec;
     }
 
-    public UpgradePostPayOrderRequest setPartitionNum(Integer partitionNum) {
+    public UpgradePostPayOrderShrinkRequest setPartitionNum(Integer partitionNum) {
         this.partitionNum = partitionNum;
         return this;
     }
@@ -162,7 +162,7 @@ public class UpgradePostPayOrderRequest extends TeaModel {
         return this.partitionNum;
     }
 
-    public UpgradePostPayOrderRequest setRegionId(String regionId) {
+    public UpgradePostPayOrderShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -170,15 +170,15 @@ public class UpgradePostPayOrderRequest extends TeaModel {
         return this.regionId;
     }
 
-    public UpgradePostPayOrderRequest setServerlessConfig(UpgradePostPayOrderRequestServerlessConfig serverlessConfig) {
-        this.serverlessConfig = serverlessConfig;
+    public UpgradePostPayOrderShrinkRequest setServerlessConfigShrink(String serverlessConfigShrink) {
+        this.serverlessConfigShrink = serverlessConfigShrink;
         return this;
     }
-    public UpgradePostPayOrderRequestServerlessConfig getServerlessConfig() {
-        return this.serverlessConfig;
+    public String getServerlessConfigShrink() {
+        return this.serverlessConfigShrink;
     }
 
-    public UpgradePostPayOrderRequest setSpecType(String specType) {
+    public UpgradePostPayOrderShrinkRequest setSpecType(String specType) {
         this.specType = specType;
         return this;
     }
@@ -186,42 +186,12 @@ public class UpgradePostPayOrderRequest extends TeaModel {
         return this.specType;
     }
 
-    public UpgradePostPayOrderRequest setTopicQuota(Integer topicQuota) {
+    public UpgradePostPayOrderShrinkRequest setTopicQuota(Integer topicQuota) {
         this.topicQuota = topicQuota;
         return this;
     }
     public Integer getTopicQuota() {
         return this.topicQuota;
-    }
-
-    public static class UpgradePostPayOrderRequestServerlessConfig extends TeaModel {
-        @NameInMap("ReservedPublishCapacity")
-        public Long reservedPublishCapacity;
-
-        @NameInMap("ReservedSubscribeCapacity")
-        public Long reservedSubscribeCapacity;
-
-        public static UpgradePostPayOrderRequestServerlessConfig build(java.util.Map<String, ?> map) throws Exception {
-            UpgradePostPayOrderRequestServerlessConfig self = new UpgradePostPayOrderRequestServerlessConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public UpgradePostPayOrderRequestServerlessConfig setReservedPublishCapacity(Long reservedPublishCapacity) {
-            this.reservedPublishCapacity = reservedPublishCapacity;
-            return this;
-        }
-        public Long getReservedPublishCapacity() {
-            return this.reservedPublishCapacity;
-        }
-
-        public UpgradePostPayOrderRequestServerlessConfig setReservedSubscribeCapacity(Long reservedSubscribeCapacity) {
-            this.reservedSubscribeCapacity = reservedSubscribeCapacity;
-            return this;
-        }
-        public Long getReservedSubscribeCapacity() {
-            return this.reservedSubscribeCapacity;
-        }
-
     }
 
 }
