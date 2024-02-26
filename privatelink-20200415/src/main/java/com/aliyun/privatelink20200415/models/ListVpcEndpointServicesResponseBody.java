@@ -31,6 +31,9 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
     @NameInMap("Services")
     public java.util.List<ListVpcEndpointServicesResponseBodyServices> services;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

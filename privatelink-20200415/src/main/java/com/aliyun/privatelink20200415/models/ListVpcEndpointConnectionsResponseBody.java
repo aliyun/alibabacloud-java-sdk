@@ -31,6 +31,9 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 

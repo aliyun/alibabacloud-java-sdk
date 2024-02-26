@@ -321,8 +321,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceId", request.resourceId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceRegionId)) {
-            query.put("ResourceRegionId", request.resourceRegionId);
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
