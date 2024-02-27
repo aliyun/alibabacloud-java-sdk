@@ -19,6 +19,9 @@ public class AddUserRequest extends TeaModel {
     @NameInMap("NickName")
     public String nickName;
 
+    @NameInMap("RoleIds")
+    public String roleIds;
+
     @NameInMap("UserType")
     public Integer userType;
 
@@ -57,6 +60,14 @@ public class AddUserRequest extends TeaModel {
     }
     public String getNickName() {
         return this.nickName;
+    }
+
+    public AddUserRequest setRoleIds(String roleIds) {
+        this.roleIds = roleIds;
+        return this;
+    }
+    public String getRoleIds() {
+        return this.roleIds;
     }
 
     public AddUserRequest setUserType(Integer userType) {

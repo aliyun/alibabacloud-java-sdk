@@ -55,6 +55,9 @@ public class AddUserResponseBody extends TeaModel {
         @NameInMap("NickName")
         public String nickName;
 
+        @NameInMap("RoleIdList")
+        public java.util.List<Long> roleIdList;
+
         @NameInMap("UserId")
         public String userId;
 
@@ -96,6 +99,14 @@ public class AddUserResponseBody extends TeaModel {
         }
         public String getNickName() {
             return this.nickName;
+        }
+
+        public AddUserResponseBodyResult setRoleIdList(java.util.List<Long> roleIdList) {
+            this.roleIdList = roleIdList;
+            return this;
+        }
+        public java.util.List<Long> getRoleIdList() {
+            return this.roleIdList;
         }
 
         public AddUserResponseBodyResult setUserId(String userId) {
