@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The zones that are returned.</p>
+     * <p>The zone list.</p>
      */
     @NameInMap("Zones")
     public DescribeZonesResponseBodyZones zones;
@@ -39,19 +39,19 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     public static class DescribeZonesResponseBodyZonesZone extends TeaModel {
         /**
-         * <p>The name of the zone.</p>
+         * <p>The zone name.</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
 
         /**
-         * <p>The type of the zones to be queried. Default value: **AvailabilityZone**. This value indicates Alibaba Cloud zones.</p>
+         * <p>The zone type. Default value: **AvailabilityZone**.</p>
          */
         @NameInMap("ZoneType")
         public String zoneType;

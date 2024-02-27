@@ -56,7 +56,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
 
     public static class DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHopsNextHopNextHopRelatedInfo extends TeaModel {
         /**
-         * <p>The ID of the instance associated with the next hop.</p>
+         * <p>The ID of the instance that is associated with the next hop.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -72,7 +72,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The region ID of the instance associated with the next hop.</p>
+         * <p>The region ID of the instance associated with the next hop. Valid values:</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -115,7 +115,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
          * <p>*   **0**: unavailable</p>
          * <p>*   **1**: available</p>
          * <br>
-         * <p>>  This parameter is returned if the next hop type is set to **RouterInterface**.</p>
+         * <p>>  This parameter is returned when the next hop type is set to **RouterInterface**.</p>
          */
         @NameInMap("Enabled")
         public Integer enabled;
@@ -127,9 +127,9 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         public String nextHopId;
 
         /**
-         * <p>The region ID of the next hop.</p>
+         * <p>The ID of the region where the next hop is deployed.</p>
          * <br>
-         * <p>>  This parameter is returned if the next hop type is set to **RouterInterface**.</p>
+         * <p>>  This parameter is returned when the next hop type is set to **RouterInterface**.</p>
          */
         @NameInMap("NextHopRegionId")
         public String nextHopRegionId;
@@ -143,11 +143,11 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         /**
          * <p>The type of the next hop. Valid values:</p>
          * <br>
-         * <p>*   **Instance**: an ECS instance</p>
-         * <p>*   **HaVip**: an HAVIP</p>
+         * <p>*   **Instance**: an Elastic Compute Service (ECS) instance</p>
+         * <p>*   **HaVip**: a high-availability virtual IP address (HAVIP)</p>
          * <p>*   **VpnGateway**: a VPN gateway</p>
          * <p>*   **NatGateway**: a NAT gateway</p>
-         * <p>*   **NetworkInterface**: a secondary ENI</p>
+         * <p>*   **NetworkInterface**: a secondary elastic network interface (ENI)</p>
          * <p>*   **RouterInterface**: a router interface</p>
          * <p>*   **IPv6Gateway**: an IPv6 gateway</p>
          * <p>*   **Attachment**: a transit router</p>
@@ -158,7 +158,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         /**
          * <p>The weight of the route.</p>
          * <br>
-         * <p>>  This parameter is returned if the next hop type is set to **RouterInterface**.</p>
+         * <p>>  This parameter is returned when the next hop type is set to **RouterInterface**.</p>
          */
         @NameInMap("Weight")
         public Integer weight;
@@ -251,7 +251,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         public String destinationCidrBlock;
 
         /**
-         * <p>The time when the route was modified. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format in UTC.</p>
+         * <p>The time when the route was modified. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -259,18 +259,24 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         /**
          * <p>The IP version. Valid values:</p>
          * <br>
-         * <p>*   **IPv4**</p>
-         * <p>*   **IPv6**</p>
+         * <p>*   **ipv4**</p>
+         * <p>*   **ipv6**</p>
          */
         @NameInMap("IpVersion")
         public String ipVersion;
 
         /**
-         * <p>The information about the next hop.</p>
+         * <p>The information about the next hops.</p>
          */
         @NameInMap("NextHops")
         public DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHops nextHops;
 
+        /**
+         * <p>The route origin. Valid values：</p>
+         * <p>* **RoutePropagation**: The route is created by a dynamic propagation source.</p>
+         * <p>* **SystemCreate**: The route is created by the system.</p>
+         * <p>* **CustomCreate**: The route is created by a user.</p>
+         */
         @NameInMap("Origin")
         public String origin;
 
@@ -301,11 +307,11 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         public String serviceType;
 
         /**
-         * <p>The status of the route. Valid values:</p>
+         * <p>The route status. Valid values:</p>
          * <br>
          * <p>*   **Pending**</p>
          * <p>*   **Available**</p>
-         * <p>*   **Modifying**</p>
+         * <p>*   **Modifying**: The Internet Shared Bandwidth instance is being modified.</p>
          */
         @NameInMap("Status")
         public String status;

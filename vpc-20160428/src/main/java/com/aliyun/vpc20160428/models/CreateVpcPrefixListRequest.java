@@ -52,6 +52,9 @@ public class CreateVpcPrefixListRequest extends TeaModel {
     @NameInMap("PrefixListDescription")
     public String prefixListDescription;
 
+    /**
+     * <p>The CIDR block information specified in the prefix list.</p>
+     */
     @NameInMap("PrefixListEntries")
     public java.util.List<CreateVpcPrefixListRequestPrefixListEntries> prefixListEntries;
 
@@ -83,6 +86,9 @@ public class CreateVpcPrefixListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateVpcPrefixListRequestTag> tag;
 
@@ -242,9 +248,19 @@ public class CreateVpcPrefixListRequest extends TeaModel {
     }
 
     public static class CreateVpcPrefixListRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

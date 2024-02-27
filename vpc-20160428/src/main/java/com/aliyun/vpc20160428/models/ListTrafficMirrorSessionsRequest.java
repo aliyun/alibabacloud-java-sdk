@@ -7,7 +7,7 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the traffic mirror session. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): does not enable the traffic mirror session.</p>
+     * <p>*   **false**: does not enable the traffic mirror session.</p>
      * <p>*   **true**: enables the traffic mirror session.</p>
      */
     @NameInMap("Enabled")
@@ -60,6 +60,9 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags of the resource.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListTrafficMirrorSessionsRequestTags> tags;
 
@@ -69,6 +72,9 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
     @NameInMap("TrafficMirrorFilterId")
     public String trafficMirrorFilterId;
 
+    /**
+     * <p>The IDs of the traffic mirror session. The maximum value of N is 100, which indicates that you can query up to 100 traffic mirror sessions at a time.</p>
+     */
     @NameInMap("TrafficMirrorSessionIds")
     public java.util.List<String> trafficMirrorSessionIds;
 

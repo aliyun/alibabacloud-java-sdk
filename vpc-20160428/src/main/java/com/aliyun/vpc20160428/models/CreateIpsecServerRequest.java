@@ -56,9 +56,9 @@ public class CreateIpsecServerRequest extends TeaModel {
     public String ikeConfig;
 
     /**
-     * <p>The IPsec server name.</p>
+     * <p>The name of the IPsec server.</p>
      * <br>
-     * <p>The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 100 characters in length.</p>
      */
     @NameInMap("IpSecServerName")
     public String ipSecServerName;
@@ -95,7 +95,9 @@ public class CreateIpsecServerRequest extends TeaModel {
     public String psk;
 
     /**
-     * <p>Specifies whether to enable pre-shared key authentication. If you set the value to **true**, pre-shared key authentication is enabled.</p>
+     * <p>Indicates whether pre-shared key authentication is enabled. If you set the value to **true**, pre-shared key authentication is enabled.</p>
+     * <br>
+     * <p>>  This parameter is required.</p>
      */
     @NameInMap("PskEnabled")
     public Boolean pskEnabled;

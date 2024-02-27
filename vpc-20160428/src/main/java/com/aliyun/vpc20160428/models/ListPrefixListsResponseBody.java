@@ -182,6 +182,9 @@ public class ListPrefixListsResponseBody extends TeaModel {
         @NameInMap("PrefixListStatus")
         public String prefixListStatus;
 
+        /**
+         * <p>The type of the prefix list.</p>
+         */
         @NameInMap("PrefixListType")
         public String prefixListType;
 

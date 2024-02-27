@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpcPrefixListRequest extends TeaModel {
+    /**
+     * <p>The information about CIDR blocks to be added to the prefix list.</p>
+     */
     @NameInMap("AddPrefixListEntry")
     public java.util.List<ModifyVpcPrefixListRequestAddPrefixListEntry> addPrefixListEntry;
 
@@ -66,6 +69,9 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The information about CIDR blocks to be deleted to the prefix list.</p>
+     */
     @NameInMap("RemovePrefixListEntry")
     public java.util.List<ModifyVpcPrefixListRequestRemovePrefixListEntry> removePrefixListEntry;
 

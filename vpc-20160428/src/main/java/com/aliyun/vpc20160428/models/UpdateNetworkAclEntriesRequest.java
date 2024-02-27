@@ -14,6 +14,12 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <br>
+     * <p>*   **true**: performs a dry run. The system checks the request for potential issues, including the AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -199,6 +205,12 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
         @NameInMap("EntryType")
         public String entryType;
 
+        /**
+         * <p>The IP version. Valid values:</p>
+         * <br>
+         * <p>*   **IPv4** (default)</p>
+         * <p>*   **IPv6**</p>
+         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
@@ -219,7 +231,7 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
         public String networkAclEntryName;
 
         /**
-         * <p>The rule action that determines whether to allow outbound traffic. Valid values:</p>
+         * <p>The action to be performed on network traffic that matches the rule. Valid values:</p>
          * <br>
          * <p>*   **accept**</p>
          * <p>*   **drop**</p>
@@ -237,7 +249,7 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
         public String port;
 
         /**
-         * <p>The protocol type. Valid values:</p>
+         * <p>The protocol. Valid values:</p>
          * <br>
          * <p>*   **icmp**</p>
          * <p>*   **gre**</p>
@@ -342,6 +354,12 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
         @NameInMap("EntryType")
         public String entryType;
 
+        /**
+         * <p>The IP version. Valid values:</p>
+         * <br>
+         * <p>*   **IPv4** (default)</p>
+         * <p>*   **IPv6**</p>
+         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
@@ -362,7 +380,7 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
         public String networkAclEntryName;
 
         /**
-         * <p>The rule action that determines whether to allow inbound requests. Valid values:</p>
+         * <p>The action to be performed on network traffic that matches the rule. Valid values:</p>
          * <br>
          * <p>*   **accept**</p>
          * <p>*   **drop**</p>
@@ -380,7 +398,7 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
         public String port;
 
         /**
-         * <p>The protocol type. Valid values:</p>
+         * <p>The protocol. Valid values:</p>
          * <br>
          * <p>*   **icmp**</p>
          * <p>*   **gre**</p>

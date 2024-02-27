@@ -11,27 +11,30 @@ public class DescribeRouteTableListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+     * <br>
+     * <p>The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The type of the route table.</p>
+     * <br>
+     * <p>*   **System**</p>
+     * <p>*   **Custom**</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the VPC to which the route table belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the route table to be queried belongs.</p>
+     * <p>The details of the route table.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -43,50 +46,47 @@ public class DescribeRouteTableListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the route table that you want to query.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;
 
     /**
-     * <p>The name of the route table that you want to query.</p>
+     * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+     * <br>
+     * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
      */
     @NameInMap("RouteTableName")
     public String routeTableName;
 
     /**
-     * <p>The type of the route table. Valid values:</p>
-     * <p>- **System**</p>
-     * <p>- **Custom**</p>
+     * <p>The time when the route table was created.</p>
      */
     @NameInMap("RouteTableType")
     public String routeTableType;
 
     /**
-     * <p>The ID of the router to which the route table belongs.</p>
+     * <p>The region ID of the VPC to which the route table belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RouterId")
     public String routerId;
 
     /**
-     * <p>The type of the router to which the route table belongs. Valid values:</p>
-     * <br>
-     * <p>*   **VRouter** (default)</p>
-     * <p>*   **VBR**</p>
+     * <p>The ID of the resource group to which the route table to be queried belongs.</p>
      */
     @NameInMap("RouterType")
     public String routerType;
 
     /**
-     * <p>The tags of the resource.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeRouteTableListRequestTag> tag;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the route table belongs.</p>
-     * <br>
-     * <p>After this parameter is specified, the value of the **RouterType** parameter is automatically set to **VRouter**.</p>
+     * <p>The tags of the resource.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -218,17 +218,13 @@ public class DescribeRouteTableListRequest extends TeaModel {
 
     public static class DescribeRouteTableListRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>The detailed information about the route tables.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.</p>
+         * <p>The ID of the VPC to which the route table belongs.</p>
          */
         @NameInMap("Value")
         public String value;

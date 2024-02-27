@@ -11,25 +11,25 @@ public class DescribeHaVipsResponseBody extends TeaModel {
     public DescribeHaVipsResponseBodyHaVips haVips;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -119,13 +119,13 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
     public static class DescribeHaVipsResponseBodyHaVipsHaVipTagsTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N added to the resource.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N added to the resource.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -174,7 +174,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
     public static class DescribeHaVipsResponseBodyHaVipsHaVip extends TeaModel {
         /**
-         * <p>The elastic IP address (EIP) associated with the HAVIP.</p>
+         * <p>The list of EIPs associated with the HAVIP.</p>
          */
         @NameInMap("AssociatedEipAddresses")
         public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses associatedEipAddresses;
@@ -182,14 +182,14 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         /**
          * <p>The type of the instance with which the HAVIP is associated. Valid values:</p>
          * <br>
-         * <p>*   **EcsInstance**: an ECS instance</p>
-         * <p>*   **NetworkInterface**: an ENI</p>
+         * <p>*   **EcsInstance**: Elastic Compute Service (ECS) instance</p>
+         * <p>*   **NetworkInterface**: elastic network interface (ENI)</p>
          */
         @NameInMap("AssociatedInstanceType")
         public String associatedInstanceType;
 
         /**
-         * <p>The ID of the instance with which the HAVIP is associated.</p>
+         * <p>The information about the instance associated with the HAVIP.</p>
          */
         @NameInMap("AssociatedInstances")
         public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances associatedInstances;
@@ -251,15 +251,15 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         /**
          * <p>The status of the HAVIP. Valid values:</p>
          * <br>
-         * <p>*   **Creating**</p>
-         * <p>*   **Available**</p>
+         * <p>*   **Creating**: The server group is being created.</p>
+         * <p>*   **Available**: The FULLNAT entry is available.</p>
          * <p>*   **Deleting**</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The tag list.</p>
          */
         @NameInMap("Tags")
         public DescribeHaVipsResponseBodyHaVipsHaVipTags tags;

@@ -86,9 +86,18 @@ public class CreateFlowLogRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tag of the resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateFlowLogRequestTag> tag;
 
+    /**
+     * <p>The scope of the traffic that you want to capture. Valid values:</p>
+     * <br>
+     * <p>*   **all**: all traffic.</p>
+     * <p>*   **internetGateway**: Internet traffic.</p>
+     */
     @NameInMap("TrafficPath")
     public java.util.List<String> trafficPath;
 
@@ -236,9 +245,19 @@ public class CreateFlowLogRequest extends TeaModel {
     }
 
     public static class CreateFlowLogRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

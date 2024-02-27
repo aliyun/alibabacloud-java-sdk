@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeHaVipsRequest extends TeaModel {
+    /**
+     * <p>The details of the filter condition.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<DescribeHaVipsRequestFilter> filter;
 
@@ -14,19 +17,19 @@ public class DescribeHaVipsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region to which the HAVIP belongs.</p>
+     * <p>The region ID of the HAVIP.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
@@ -45,6 +48,9 @@ public class DescribeHaVipsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribeHaVipsRequestTags> tags;
 
@@ -135,9 +141,7 @@ public class DescribeHaVipsRequest extends TeaModel {
 
     public static class DescribeHaVipsRequestFilter extends TeaModel {
         /**
-         * <p>The filter keys. You can specify at most five filter keys. Valid values of **N**: **1 to 5**.</p>
-         * <br>
-         * <p>The following filter keys are supported:</p>
+         * <p>The filter keys. You can specify at most five filter keys. Valid values of **N**: **1 to 5**. The following filter keys are supported:</p>
          * <br>
          * <p>*   **VpcId**: virtual private cloud (VPC) ID</p>
          * <p>*   **VSwitchId**: vSwitch ID</p>
@@ -152,6 +156,9 @@ public class DescribeHaVipsRequest extends TeaModel {
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the filter key. Valid values of **N**: **1 to 5**.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 
@@ -180,17 +187,17 @@ public class DescribeHaVipsRequest extends TeaModel {
 
     public static class DescribeHaVipsRequestTags extends TeaModel {
         /**
-         * <p>The tag key. You can specify at most 20 tag keys. It cannot be an empty string.</p>
+         * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value. You can specify at most 20 tag values. It can be an empty string.</p>
+         * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
          * <br>
-         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
          */
         @NameInMap("Value")
         public String value;

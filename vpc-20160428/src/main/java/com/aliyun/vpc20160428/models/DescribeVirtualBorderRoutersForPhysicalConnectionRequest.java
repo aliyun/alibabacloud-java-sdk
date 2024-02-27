@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends TeaModel {
     /**
-     * <p>25425</p>
+     * <p>The filter keys.</p>
      */
     @NameInMap("Filter")
     public java.util.List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> filter;
@@ -114,7 +114,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
 
     public static class DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter extends TeaModel {
         /**
-         * <p>The filter conditions. You can specify up to five filter conditions. The following filter conditions are supported:</p>
+         * <p>The filter conditions. You can specify at most five filter conditions. The following filter conditions are supported:</p>
          * <br>
          * <p>*   **PhysicalConnectionId**: filter VBRs by the Express Connect circuit ID.</p>
          * <p>*   **VbrId**: filter VBRs by ID.</p>
@@ -128,7 +128,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
         public String key;
 
         /**
-         * <p>The filter values for keys. You can specify multiple filter values for a key. The logical operator between filter values is OR. If one filter value is matched, the filter condition is matched.</p>
+         * <p>The filter value for the key. You can specify multiple filter values for one key. The logical operator among filter values is OR. If one filter value is matched, the filter condition is matched.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

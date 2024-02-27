@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The HTTP status code</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -29,7 +29,7 @@ public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the maximum bandwidth value is updated.</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <br>
      * <p>*   **true**</p>
      * <p>*   **false**</p>

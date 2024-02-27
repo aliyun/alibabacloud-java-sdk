@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The number of entries.</p>
      */
     @NameInMap("Count")
     public Long count;
 
     /**
-     * <p>The token that determines the start point of the next query. Valid values:</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
-     * <p>*   If **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -26,13 +26,13 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
     public java.util.List<GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation> prefixListAssociation;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -90,7 +90,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         public String ownerId;
 
         /**
-         * <p>The ID of the prefix list.</p>
+         * <p>The prefix list ID.</p>
          */
         @NameInMap("PrefixListId")
         public String prefixListId;
@@ -116,7 +116,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         /**
          * <p>The type of the associated resource. Valid values:</p>
          * <br>
-         * <p>*   **vpcRouteTable** :VPC route table.</p>
+         * <p>*   **vpcRouteTable**: virtual private cloud (VPC) route table.</p>
          * <p>*   **trRouteTable**: route table of a transit router.</p>
          */
         @NameInMap("ResourceType")
