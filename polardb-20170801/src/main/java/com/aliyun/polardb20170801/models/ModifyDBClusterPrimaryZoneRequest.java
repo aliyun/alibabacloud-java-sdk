@@ -89,6 +89,9 @@ public class ModifyDBClusterPrimaryZoneRequest extends TeaModel {
     @NameInMap("ZoneId")
     public String zoneId;
 
+    @NameInMap("ZoneType")
+    public String zoneType;
+
     public static ModifyDBClusterPrimaryZoneRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterPrimaryZoneRequest self = new ModifyDBClusterPrimaryZoneRequest();
         return TeaModel.build(map, self);
@@ -188,6 +191,14 @@ public class ModifyDBClusterPrimaryZoneRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public ModifyDBClusterPrimaryZoneRequest setZoneType(String zoneType) {
+        this.zoneType = zoneType;
+        return this;
+    }
+    public String getZoneType() {
+        return this.zoneType;
     }
 
 }
