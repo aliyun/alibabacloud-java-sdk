@@ -17,7 +17,10 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     public String DBProxyEngineType;
 
     /**
-     * <p>The type of proxy that is enabled on the instance. Set the value to **DedicatedProxy**.</p>
+     * <p>The type of the database proxy instance. Valid values:</p>
+     * <br>
+     * <p>*   common: the general-purpose database proxy</p>
+     * <p>*   exclusive: the dedicated database proxy</p>
      */
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;

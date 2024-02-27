@@ -461,7 +461,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The method that is used to update the minor engine version of the instance. Valid values:</p>
          * <br>
-         * <p>*   **Auto:** automatic update.</p>
+         * <p>*   **Auto**: automatic update.</p>
          * <p>*   **Manual**: manual update. The minor engine version of the instance is forcefully updated only when the in-use minor engine version is phased out.</p>
          */
         @NameInMap("AutoUpgradeMinorVersion")
@@ -476,7 +476,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The configuration of the Babelfish feature for the ApsaraDB RDS for PostgreSQL instance.</p>
          * <br>
-         * <p>>  This parameter is suitable only for ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see [Introduction to Babelfish](~~428613~~).</p>
+         * <p>>  This parameter applies only to ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see [Introduction to Babelfish](~~428613~~).</p>
          */
         @NameInMap("BabelfishConfig")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig babelfishConfig;
@@ -506,6 +506,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("ColdDataEnabled")
         public Boolean coldDataEnabled;
 
@@ -533,8 +536,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The type of the proxy that is used by the instance. Valid values:</p>
          * <br>
-         * <p>*   **1**: shared proxy</p>
-         * <p>*   **2**: dedicated proxy</p>
+         * <p>*   **1**: shared database proxy</p>
+         * <p>*   **2**: dedicated database proxy</p>
          * <br>
          * <p>>  We recommend that you use the **ProxyType** parameter instead of this parameter.</p>
          */
@@ -542,7 +545,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String consoleVersion;
 
         /**
-         * <p>The creation time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The creation time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -589,7 +592,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String DBInstanceDescription;
 
         /**
-         * <p>The disk usage of the instance.</p>
+         * <p>The disk usage of the instance. Unit: MB.</p>
          */
         @NameInMap("DBInstanceDiskUsed")
         public String DBInstanceDiskUsed;
@@ -630,9 +633,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The storage type of the instance. Valid values:</p>
          * <br>
-         * <p>*   **local_ssd** and **ephemeral_ssd**: local SSD</p>
+         * <p>*   **local_ssd** or **ephemeral_ssd**: local SSD</p>
          * <p>*   **cloud_ssd**: standard SSD</p>
-         * <p>*   **cloud_essd**: enhanced SSD (ESSD)</p>
+         * <p>*   **cloud_essd**: enhanced SSD (ESSD).</p>
          * <p>*   **general_essd**: general ESSD</p>
          */
         @NameInMap("DBInstanceStorageType")
@@ -656,7 +659,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Integer DBMaxQuantity;
 
         /**
-         * <p>The dedicated cluster ID.</p>
+         * <p>The ID of the dedicated cluster to which the instances belong.</p>
          */
         @NameInMap("DedicatedHostGroupId")
         public String dedicatedHostGroupId;
@@ -688,7 +691,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The expiration time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The expiration time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          * <br>
          * <p>>  Pay-as-you-go instances never expire.</p>
          */
@@ -708,19 +711,19 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String generalGroupName;
 
         /**
-         * <p>The ID of the disaster recovery instance that is attached to the instance.</p>
+         * <p>The ID of the disaster recovery instance that is attached to the primary instance.</p>
          */
         @NameInMap("GuardDBInstanceId")
         public String guardDBInstanceId;
 
         /**
-         * <p>The IP address type. Only **IPv4** addresses are supported.</p>
+         * <p>The IP address type. Only **IPv4 addresses** are supported.</p>
          */
         @NameInMap("IPType")
         public String IPType;
 
         /**
-         * <p>The ID of the instance from which incremental data comes. The incremental data of a read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.</p>
+         * <p>The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance comes from its primary instance. The incremental data of a read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.</p>
          */
         @NameInMap("IncrementSourceDBInstanceId")
         public String incrementSourceDBInstanceId;
@@ -743,6 +746,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("InstructionSetArch")
         public String instructionSetArch;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("IoAccelerationEnabled")
         public String ioAccelerationEnabled;
 
@@ -772,7 +778,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String lockReason;
 
         /**
-         * <p>The maintenance window of the instance. The time is displayed in UTC. Take note that the maintenance window displayed in the ApsaraDB RDS console is equal to the value of this parameter plus 8 hours.</p>
+         * <p>The maintenance window of the instance. The time is displayed in UTC. The maintenance window displayed in the ApsaraDB RDS console is equal to the value of this parameter plus 8 hours.</p>
          */
         @NameInMap("MaintainTime")
         public String maintainTime;
@@ -822,7 +828,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <br>
          * <p>*   **Postpaid**: pay-as-you-go</p>
          * <p>*   **Prepaid**: subscription</p>
-         * <p>*   **SERVERLESS**: Serverless</p>
          */
         @NameInMap("PayType")
         public String payType;
@@ -889,13 +894,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeServerlessConfig serverlessConfig;
 
         /**
-         * <p>The information about the zone of the secondary instance.</p>
+         * <p>The zone IDs of the secondary instances.</p>
          */
         @NameInMap("SlaveZones")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeSlaveZones slaveZones;
 
         /**
-         * <p>Indicates whether the instance supports superuser accounts, such as the system administrator (SA) account, the Active Directory (AD) account, and the host account. Valid values:</p>
+         * <p>Indicates whether the instance supports superuser accounts, such as the system administrator (SA) account, Active Directory (AD) account, and host account. Valid values:</p>
          * <br>
          * <p>*   **Enable**</p>
          * <p>*   **Disabled**</p>
@@ -904,7 +909,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String superPermissionMode;
 
         /**
-         * <p>The ID of the temporary instance that is attached to the instance.</p>
+         * <p>The ID of the temporary instance that is attached to the primary instance.</p>
          */
         @NameInMap("TempDBInstanceId")
         public String tempDBInstanceId;
@@ -922,7 +927,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String tips;
 
         /**
-         * <p>The severity level of the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:</p>
+         * <p>The severity of the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:</p>
          * <br>
          * <p>*   **1**: The instance is normal.</p>
          * <p>*   **2**: The specifications of the read-only instances do not match the specifications of the primary instance, and instance performance may be affected. You must adjust the specifications of these instances based on your business requirements.</p>
@@ -937,13 +942,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the instance. This parameter is returned only when the instance resides in a VPC.</p>
          */
         @NameInMap("VpcCloudInstanceId")
         public String vpcCloudInstanceId;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The virtual private cloud (VPC) ID.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

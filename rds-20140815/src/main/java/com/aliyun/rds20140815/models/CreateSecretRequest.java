@@ -11,7 +11,7 @@ public class CreateSecretRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.</p>
+     * <p>The ID of the instance. You can call the DescribeDBInstances operation to query the ID of the instance.</p>
      */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
@@ -46,13 +46,13 @@ public class CreateSecretRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query region ID of the instance.</p>
+     * <p>The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID of the instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the resource group ID.</p>
+     * <p>The ID of the resource group to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

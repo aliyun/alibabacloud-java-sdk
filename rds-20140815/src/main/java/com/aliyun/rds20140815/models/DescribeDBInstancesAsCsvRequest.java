@@ -11,7 +11,7 @@ public class DescribeDBInstancesAsCsvRequest extends TeaModel {
     public Boolean cachedAsync;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the IDs of instances.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

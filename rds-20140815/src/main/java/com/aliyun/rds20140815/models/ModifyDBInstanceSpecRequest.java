@@ -14,7 +14,7 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>An invalid parameter. You do not need to specify this parameter.</p>
+     * <p>An invalid parameter. You can ignore this parameter.</p>
      */
     @NameInMap("BurstingEnabled")
     public Boolean burstingEnabled;
@@ -22,24 +22,29 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     /**
      * <p>The RDS edition of the instance. Valid values:</p>
      * <br>
-     * <p>*   Regular RDS instance</p>
+     * <p>*   Regular instance</p>
      * <br>
-     * <p>    *   **Basic**: RDS Basic Edition</p>
-     * <p>    *   **HighAvailability**: RDS High-availability Edition</p>
-     * <p>    *   **AlwaysOn**: RDS Cluster Edition for ApsaraDB RDS for SQL Server</p>
+     * <p>    *   **Basic**: RDS Basic Edition.</p>
+     * <p>    *   **HighAvailability**: RDS High-availability Edition.</p>
+     * <p>    *   **AlwaysOn**: RDS Cluster Edition for ApsaraDB RDS for SQL Server.</p>
      * <p>    *   **Cluster**: RDS Cluster Edition for ApsaraDB RDS for MySQL.</p>
      * <br>
      * <p>*   Serverless instance</p>
      * <br>
      * <p>    *   **serverless_basic**: RDS Basic Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.</p>
-     * <p>    *   **serverless_standard**: RDS High-availability Edition for ApsaraDB RDS for MySQL.</p>
+     * <p>    *   **serverless_standard**: RDS High-availability Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.</p>
      * <p>    *   **serverless_ha**: RDS High-availability Edition for ApsaraDB RDS for SQL Server.</p>
      * <br>
-     * <p>> If you set the **EngineVersion** parameter to an SQL Server version number, you must also specify this parameter.</p>
+     * <p>    **</p>
+     * <br>
+     * <p>    **Note** If you set the **EngineVersion** parameter to an SQL Server version number, you must also specify this parameter.</p>
      */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("ColdDataEnabled")
     public Boolean coldDataEnabled;
 
@@ -116,22 +121,25 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
      * <br>
      * <p>*   Regular instance</p>
      * <br>
-     * <p>    *   Valid values if you set Engine to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**</p>
-     * <p>    *   Valid values if you set Engine to SQLServer: **2008r2**, **08r2\_ent_ha**, **2012**, **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_std_ha**, **2017\_ent**, **2019\_std_ha**, and **2019\_ent**</p>
-     * <p>    *   Valid values if you set Engine to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, and **15.0**</p>
-     * <p>    *   Valid value if you set Engine to MariaDB: **10.3**</p>
+     * <p>    *   Valid values if you set the Engine parameter to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**</p>
+     * <p>    *   Valid values if you set the Engine parameter to SQLServer: **2008r2**, **08r2\_ent_ha**, **2012**, **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_std_ha**, **2017\_ent**, **2019\_std_ha**, and **2019\_ent**</p>
+     * <p>    *   Valid values if you set the Engine parameter to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, and **15.0**</p>
+     * <p>    *   Valid value if you set the Engine parameter to MariaDB: **10.3**</p>
      * <br>
      * <p>*   Serverless instance</p>
      * <br>
-     * <p>    *   Valid values if you set Engine to MySQL: **5.7** and **8.0**</p>
-     * <p>    *   Valid values if you set Engine to SQLServer: **2016\_std_sl**, **2017\_std_sl**, and **2019\_std_sl**</p>
-     * <p>    *   Valid value if you set Engine to PostgreSQL: **14.0**</p>
+     * <p>    *   Valid values if you set the Engine parameter to MySQL: **5.7** and **8.0**</p>
+     * <p>    *   Valid values if you set the Engine parameter to SQLServer: **2016\_std_sl**, **2017\_std_sl**, and **2019\_std_sl**</p>
+     * <p>    *   Valid values if you set the Engine parameter to PostgreSQL: **14.0**, **15.0**, **16.0**</p>
      * <br>
      * <p>> ApsaraDB RDS for MariaDB does not support serverless instances.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("IoAccelerationEnabled")
     public String ioAccelerationEnabled;
 
@@ -164,7 +172,7 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The serverless instance on which you want to perform the specification change.</p>
+     * <p>The serverless instance specifications that you want to change.</p>
      */
     @NameInMap("ServerlessConfiguration")
     public ModifyDBInstanceSpecRequestServerlessConfiguration serverlessConfiguration;
@@ -419,7 +427,7 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
 
     public static class ModifyDBInstanceSpecRequestServerlessConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether to enable the automatic start and stop feature for the serverless instance. Valid values:</p>
+         * <p>Specifies whether to enable the automatic start and stop feature for the serverless instance. Valid values: Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false** (default)</p>
@@ -432,9 +440,9 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
         /**
          * <p>The maximum number of RDS Capacity Units (RCUs). Valid values:</p>
          * <br>
-         * <p>*   Serverless ApsaraDB RDS for MySQL instances: **1 to 8**</p>
+         * <p>*   Serverless ApsaraDB RDS for MySQL instances: **1 to 32**</p>
          * <p>*   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**</p>
-         * <p>*   Serverless ApsaraDB RDS for PostgreSQL instances: **1 to 12**</p>
+         * <p>*   Serverless ApsaraDB RDS for PostgreSQL instances: **1 to 14**</p>
          * <br>
          * <p>>  The value of this parameter must be greater than or equal to the value of **MinCapacity** and can be specified only to an **integer**.</p>
          */
@@ -444,9 +452,9 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
         /**
          * <p>The minimum number of RCUs. Valid values:</p>
          * <br>
-         * <p>*   Serverless ApsaraDB RDS for MySQL instances: **0.5 to 8**.</p>
+         * <p>*   Serverless ApsaraDB RDS for MySQL instances: **0.5 to 32**.</p>
          * <p>*   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**. Only integers are supported.</p>
-         * <p>*   Serverless ApsaraDB RDS for PostgreSQL instances: **0.5 to 12**.</p>
+         * <p>*   Serverless ApsaraDB RDS for PostgreSQL instances: **0.5 to 14**.</p>
          * <br>
          * <p>>  The value of this parameter must be less than or equal to the value of **MaxCapacity**.</p>
          */
@@ -459,7 +467,7 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
          * <p>*   **true**</p>
          * <p>*   **false** (default)</p>
          * <br>
-         * <p>> *   This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a transient connection that lasts approximately 1 minute occurs during forced scaling. Process with caution.</p>
+         * <p>> *   This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a service interruption that lasts 30 to 120 seconds occurs during forced scaling. Process with caution.</p>
          * <p>> *   The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.</p>
          */
         @NameInMap("SwitchForce")
