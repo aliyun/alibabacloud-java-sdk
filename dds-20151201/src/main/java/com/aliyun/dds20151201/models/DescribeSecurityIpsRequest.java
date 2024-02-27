@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityIpsRequest extends TeaModel {
     /**
-     * <p>com.aliyun.abs.dds.service.v20151201.domain.GetDdsSecurityIpsRequest</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -23,7 +23,7 @@ public class DescribeSecurityIpsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeSecurityIps**.</p>
+     * <p>Whether to display DAS whitelist information.</p>
      */
     @NameInMap("ShowHDMIps")
     public Boolean showHDMIps;

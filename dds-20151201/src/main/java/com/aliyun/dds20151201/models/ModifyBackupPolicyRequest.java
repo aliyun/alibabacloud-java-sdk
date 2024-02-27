@@ -48,6 +48,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("EnableBackupLog")
     public Long enableBackupLog;
 
+    @NameInMap("HighFrequencyBackupRetention")
+    public Long highFrequencyBackupRetention;
+
     /**
      * <p>The number of days for which log backups are retained. Default value: 7.</p>
      * <br>
@@ -91,9 +94,6 @@ public class ModifyBackupPolicyRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
 
     /**
      * <p>The snapshot backup type. Default value: Standard. Valid values:</p>
@@ -139,6 +139,14 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     }
     public Long getEnableBackupLog() {
         return this.enableBackupLog;
+    }
+
+    public ModifyBackupPolicyRequest setHighFrequencyBackupRetention(Long highFrequencyBackupRetention) {
+        this.highFrequencyBackupRetention = highFrequencyBackupRetention;
+        return this;
+    }
+    public Long getHighFrequencyBackupRetention() {
+        return this.highFrequencyBackupRetention;
     }
 
     public ModifyBackupPolicyRequest setLogBackupRetentionPeriod(Long logBackupRetentionPeriod) {
@@ -195,14 +203,6 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyBackupPolicyRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public ModifyBackupPolicyRequest setSnapshotBackupType(String snapshotBackupType) {
