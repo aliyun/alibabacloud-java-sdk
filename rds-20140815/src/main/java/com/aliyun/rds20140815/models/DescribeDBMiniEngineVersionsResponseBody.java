@@ -146,9 +146,9 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         /**
          * <p>The RDS edition of the instance that runs the minor engine version. Valid values:</p>
          * <br>
-         * <p>*   **Basic**: RDS Basic Edition.</p>
-         * <p>*   **HighAvailability**: RDS High-availability Edition.</p>
-         * <p>*   **Finance**: RDS Enterprise Edition.</p>
+         * <p>*   **Basic**: RDS Basic Edition</p>
+         * <p>*   **HighAvailability**: RDS High-availability Edition</p>
+         * <p>*   **Finance**: RDS Enterprise Edition</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
@@ -171,8 +171,8 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         /**
          * <p>The status of the minor engine version. Valid values:</p>
          * <br>
-         * <p>*   **Offline**</p>
-         * <p>*   **online**</p>
+         * <p>*   **Offline**: discontinued</p>
+         * <p>*   **Online**: available</p>
          * <br>
          * <p>>  If the minor engine version is in the Offline state, the minor engine version is discontinued. In this case, ignore the expiration status. If the minor engine version is in the Online state and the expiration state is expired, the minor engine version expires. If the expiration state is vaild, the minor engine version is still in its lifecycle.</p>
          */
@@ -182,8 +182,8 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         /**
          * <p>The tag that corresponds to the minor engine version. Valid values:</p>
          * <br>
-         * <p>*   **pgsql_docker_image**: tag of the common instance</p>
-         * <p>*   **pgsql_babelfish_image**: tag of the instance for which Babelfish is enabled</p>
+         * <p>*   **pgsql_docker_image**: tag of common instances</p>
+         * <p>*   **pgsql_babelfish_image**: tag of instances for which Babelfish is enabled</p>
          * <br>
          * <p>>  This parameter is available only for instances that run **PostgreSQL**.</p>
          */

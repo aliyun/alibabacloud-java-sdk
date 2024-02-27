@@ -53,13 +53,12 @@ public class CreatePostgresExtensionsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>There are security risks associated with installing certain plug-ins on an instance of a minor version that is too low, and you can install it after confirming the risk. </p>
+     * <p>The risk description that you need to confirm. If your instance runs an outdated minor engine version, installing specific extensions on the instance poses security risks. Proceed with the installation only after you acknowledge these risks. Valid values:</p>
      * <br>
-     * <p>Valid values:</p>
-     * <p>- true</p>
-     * <p>- false</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      * <br>
-     * <p>> For more information about the risks, see [Limits on extension creation for ApsaraDB RDS for PostgreSQL instances](~~2587815~~).</p>
+     * <p>>  For more information about the risks, see [Limits on extension creation for ApsaraDB RDS for PostgreSQL instances](~~2587815~~).</p>
      */
     @NameInMap("RiskConfirmed")
     public Boolean riskConfirmed;

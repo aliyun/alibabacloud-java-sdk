@@ -14,7 +14,7 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>An invalid parameter. You do not need to specify this parameter.</p>
+     * <p>An invalid parameter. You can ignore this parameter.</p>
      */
     @NameInMap("BurstingEnabled")
     public Boolean burstingEnabled;
@@ -22,24 +22,29 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     /**
      * <p>The RDS edition of the instance. Valid values:</p>
      * <br>
-     * <p>*   Regular RDS instance</p>
+     * <p>*   Regular instance</p>
      * <br>
-     * <p>    *   **Basic**: RDS Basic Edition</p>
-     * <p>    *   **HighAvailability**: RDS High-availability Edition</p>
-     * <p>    *   **AlwaysOn**: RDS Cluster Edition for ApsaraDB RDS for SQL Server</p>
+     * <p>    *   **Basic**: RDS Basic Edition.</p>
+     * <p>    *   **HighAvailability**: RDS High-availability Edition.</p>
+     * <p>    *   **AlwaysOn**: RDS Cluster Edition for ApsaraDB RDS for SQL Server.</p>
      * <p>    *   **Cluster**: RDS Cluster Edition for ApsaraDB RDS for MySQL.</p>
      * <br>
      * <p>*   Serverless instance</p>
      * <br>
      * <p>    *   **serverless_basic**: RDS Basic Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.</p>
-     * <p>    *   **serverless_standard**: RDS High-availability Edition for ApsaraDB RDS for MySQL.</p>
+     * <p>    *   **serverless_standard**: RDS High-availability Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.</p>
      * <p>    *   **serverless_ha**: RDS High-availability Edition for ApsaraDB RDS for SQL Server.</p>
      * <br>
-     * <p>> If you set the **EngineVersion** parameter to an SQL Server version number, you must also specify this parameter.</p>
+     * <p>    **</p>
+     * <br>
+     * <p>    **Note** If you set the **EngineVersion** parameter to an SQL Server version number, you must also specify this parameter.</p>
      */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("ColdDataEnabled")
     public Boolean coldDataEnabled;
 
@@ -116,22 +121,25 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
      * <br>
      * <p>*   Regular instance</p>
      * <br>
-     * <p>    *   Valid values if you set Engine to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**</p>
-     * <p>    *   Valid values if you set Engine to SQLServer: **2008r2**, **08r2\_ent_ha**, **2012**, **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_std_ha**, **2017\_ent**, **2019\_std_ha**, and **2019\_ent**</p>
-     * <p>    *   Valid values if you set Engine to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, and **15.0**</p>
-     * <p>    *   Valid value if you set Engine to MariaDB: **10.3**</p>
+     * <p>    *   Valid values if you set the Engine parameter to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**</p>
+     * <p>    *   Valid values if you set the Engine parameter to SQLServer: **2008r2**, **08r2\_ent_ha**, **2012**, **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_std_ha**, **2017\_ent**, **2019\_std_ha**, and **2019\_ent**</p>
+     * <p>    *   Valid values if you set the Engine parameter to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, and **15.0**</p>
+     * <p>    *   Valid value if you set the Engine parameter to MariaDB: **10.3**</p>
      * <br>
      * <p>*   Serverless instance</p>
      * <br>
-     * <p>    *   Valid values if you set Engine to MySQL: **5.7** and **8.0**</p>
-     * <p>    *   Valid values if you set Engine to SQLServer: **2016\_std_sl**, **2017\_std_sl**, and **2019\_std_sl**</p>
-     * <p>    *   Valid value if you set Engine to PostgreSQL: **14.0**</p>
+     * <p>    *   Valid values if you set the Engine parameter to MySQL: **5.7** and **8.0**</p>
+     * <p>    *   Valid values if you set the Engine parameter to SQLServer: **2016\_std_sl**, **2017\_std_sl**, and **2019\_std_sl**</p>
+     * <p>    *   Valid values if you set the Engine parameter to PostgreSQL: **14.0**, **15.0**, **16.0**</p>
      * <br>
      * <p>> ApsaraDB RDS for MariaDB does not support serverless instances.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("IoAccelerationEnabled")
     public String ioAccelerationEnabled;
 
@@ -164,7 +172,7 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The serverless instance on which you want to perform the specification change.</p>
+     * <p>The serverless instance specifications that you want to change.</p>
      */
     @NameInMap("ServerlessConfiguration")
     public String serverlessConfigurationShrink;

@@ -24,6 +24,9 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     @NameInMap("CAType")
     public String CAType;
 
+    @NameInMap("Certificate")
+    public String certificate;
+
     /**
      * <p>The public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with cloud disks. This parameter must be specified when ClientCAEbabled is set to **1**.</p>
      */
@@ -66,6 +69,12 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>Specifies whether to enable the forceful SSL encryption feature. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see [Configure the SSL encryption feature](~~95715~~). Valid values:</p>
+     * <br>
+     * <p>*   **1**: enables the feature.</p>
+     * <p>*   **0**: disables the feature.</p>
+     */
     @NameInMap("ForceEncryption")
     public String forceEncryption;
 
@@ -74,6 +83,9 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PassWord")
+    public String passWord;
 
     /**
      * <p>The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:</p>
@@ -113,6 +125,9 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     @NameInMap("ServerKey")
     public String serverKey;
 
+    /**
+     * <p>The minimum Transport Layer Security (TLS) version. Valid values: 1.0, 1.1, and 1.2. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see [Configure the SSL encryption feature](~~95715~~).</p>
+     */
     @NameInMap("TlsVersion")
     public String tlsVersion;
 
@@ -135,6 +150,14 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     }
     public String getCAType() {
         return this.CAType;
+    }
+
+    public ModifyDBInstanceSSLRequest setCertificate(String certificate) {
+        this.certificate = certificate;
+        return this;
+    }
+    public String getCertificate() {
+        return this.certificate;
     }
 
     public ModifyDBInstanceSSLRequest setClientCACert(String clientCACert) {
@@ -207,6 +230,14 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyDBInstanceSSLRequest setPassWord(String passWord) {
+        this.passWord = passWord;
+        return this;
+    }
+    public String getPassWord() {
+        return this.passWord;
     }
 
     public ModifyDBInstanceSSLRequest setReplicationACL(String replicationACL) {

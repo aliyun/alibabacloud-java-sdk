@@ -99,7 +99,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesResponseBodyItemsDBInstanceReadOnlyDBInstanceIdsReadOnlyDBInstanceId extends TeaModel {
         /**
-         * <p>The ID of the read-only instance.</p>
+         * <p>The read-only instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
@@ -221,7 +221,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBInstanceNetType;
 
         /**
-         * <p>The status of the instance. For more information, see [Instance states](~~26315~~).</p>
+         * <p>The instance status. For more information, see [Instance statuses](~~26315~~).</p>
          */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
@@ -244,7 +244,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBInstanceType;
 
         /**
-         * <p>The ID of the dedicated cluster.</p>
+         * <p>The ID of the dedicated cluster to which the instances belong.</p>
          */
         @NameInMap("DedicatedHostGroupId")
         public String dedicatedHostGroupId;
@@ -351,7 +351,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String generalGroupName;
 
         /**
-         * <p>The ID of the disaster recovery instance. This parameter is returned only when the instance is a primary instance and has a disaster recovery instance.</p>
+         * <p>The ID of the disaster recovery instance. This parameter is returned only when the instance is a primary instance and has a disaster recovery instance attached.</p>
          */
         @NameInMap("GuardDBInstanceId")
         public String guardDBInstanceId;
@@ -388,7 +388,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String lockReason;
 
         /**
-         * <p>The ID of the primary instance. If the value of this parameter is null, the instance is a primary instance.</p>
+         * <p>The ID of the primary instance. If this parameter is null, the instance is a primary instance.</p>
          */
         @NameInMap("MasterInstanceId")
         public String masterInstanceId;
@@ -414,13 +414,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String payType;
 
         /**
-         * <p>An array that consists of the IDs of the read-only instances that are attached to the instance. This parameter is returned only when the instance is a primary instance and has read-only instances.</p>
+         * <p>The IDs of the read-only instances that are attached to the primary instance. This parameter is returned only when the instance is a primary instance.</p>
          */
         @NameInMap("ReadOnlyDBInstanceIds")
         public DescribeDBInstancesResponseBodyItemsDBInstanceReadOnlyDBInstanceIds readOnlyDBInstanceIds;
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -441,7 +441,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public Integer switchWeight;
 
         /**
-         * <p>The ID of the temporary instance. This parameter is returned only when the instance is a primary instance and has a temporary instance.</p>
+         * <p>The ID of the temporary instance. This parameter is returned only when the instance is a primary instance and has a temporary instance attached.</p>
          */
         @NameInMap("TempDBInstanceId")
         public String tempDBInstanceId;
@@ -453,7 +453,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String tips;
 
         /**
-         * <p>The severity level of the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:</p>
+         * <p>The severity of the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:</p>
          * <br>
          * <p>*   **1**: The instance is normal.</p>
          * <p>*   **2**: The specifications of the read-only instances do not match the specifications of the primary instance, and instance performance may be affected. You must adjust the specifications of these instances based on your business requirements.</p>
@@ -468,13 +468,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the instance. This parameter is returned only when the instance resides in a VPC.</p>
          */
         @NameInMap("VpcCloudInstanceId")
         public String vpcCloudInstanceId;
 
         /**
-         * <p>The virtual private cloud (VPC) ID of the instance.</p>
+         * <p>The virtual private cloud (VPC) ID.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

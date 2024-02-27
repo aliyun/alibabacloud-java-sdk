@@ -34,7 +34,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String bpeEnabled;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>This parameter is reserved. You do not need to specify this parameter.</p>
      */
     @NameInMap("BurstingEnabled")
     public Boolean burstingEnabled;
@@ -150,6 +150,9 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     @NameInMap("InstructionSetArch")
     public String instructionSetArch;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("IoAccelerationEnabled")
     public String ioAccelerationEnabled;
 

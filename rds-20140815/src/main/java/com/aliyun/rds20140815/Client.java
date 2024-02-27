@@ -8944,7 +8944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated : DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
-      * This operation is phased out. Use the DescribeDBInstances operation instead.
+      * >  The DescribeDBInstancesAsCsv operation is phased out. You can call the DescribeDBInstances operation.
       *
       * @param request DescribeDBInstancesAsCsvRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9005,7 +9005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated : DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
-      * This operation is phased out. Use the DescribeDBInstances operation instead.
+      * >  The DescribeDBInstancesAsCsv operation is phased out. You can call the DescribeDBInstances operation.
       *
       * @param request DescribeDBInstancesAsCsvRequest
       * @return DescribeDBInstancesAsCsvResponse
@@ -17786,6 +17786,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CAType", request.CAType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.certificate)) {
+            query.put("Certificate", request.certificate);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientCACert)) {
             query.put("ClientCACert", request.clientCACert);
         }
@@ -17820,6 +17824,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.passWord)) {
+            query.put("PassWord", request.passWord);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.replicationACL)) {
