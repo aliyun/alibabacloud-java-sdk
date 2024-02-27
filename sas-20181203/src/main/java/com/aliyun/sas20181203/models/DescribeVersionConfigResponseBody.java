@@ -21,6 +21,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("AllowPartialBuy")
     public Integer allowPartialBuy;
 
+    @NameInMap("AntiRansomwareService")
+    public Integer antiRansomwareService;
+
     /**
      * <p>Indicates whether the application whitelist feature is enabled. Valid values:</p>
      * <br>
@@ -308,6 +311,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
     public Integer getAllowPartialBuy() {
         return this.allowPartialBuy;
+    }
+
+    public DescribeVersionConfigResponseBody setAntiRansomwareService(Integer antiRansomwareService) {
+        this.antiRansomwareService = antiRansomwareService;
+        return this;
+    }
+    public Integer getAntiRansomwareService() {
+        return this.antiRansomwareService;
     }
 
     public DescribeVersionConfigResponseBody setAppWhiteList(Integer appWhiteList) {
