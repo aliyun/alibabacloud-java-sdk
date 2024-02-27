@@ -99,6 +99,9 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         @NameInMap("MediaId")
         public String mediaId;
 
+        @NameInMap("Usage")
+        public String usage;
+
         public static GetSmartHandleJobResponseBodyJobResult build(java.util.Map<String, ?> map) throws Exception {
             GetSmartHandleJobResponseBodyJobResult self = new GetSmartHandleJobResponseBodyJobResult();
             return TeaModel.build(map, self);
@@ -118,6 +121,14 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         }
         public String getMediaId() {
             return this.mediaId;
+        }
+
+        public GetSmartHandleJobResponseBodyJobResult setUsage(String usage) {
+            this.usage = usage;
+            return this;
+        }
+        public String getUsage() {
+            return this.usage;
         }
 
     }
