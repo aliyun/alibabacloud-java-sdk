@@ -31,6 +31,9 @@ public class UpdateUserRequest extends TeaModel {
     @NameInMap("NickName")
     public String nickName;
 
+    @NameInMap("RoleIds")
+    public String roleIds;
+
     /**
      * <p>The ID of the user to be updated. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</p>
      */
@@ -74,6 +77,14 @@ public class UpdateUserRequest extends TeaModel {
     }
     public String getNickName() {
         return this.nickName;
+    }
+
+    public UpdateUserRequest setRoleIds(String roleIds) {
+        this.roleIds = roleIds;
+        return this;
+    }
+    public String getRoleIds() {
+        return this.roleIds;
     }
 
     public UpdateUserRequest setUserId(String userId) {

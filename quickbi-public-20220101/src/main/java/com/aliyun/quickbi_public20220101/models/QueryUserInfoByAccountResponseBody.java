@@ -103,6 +103,9 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         @NameInMap("Phone")
         public String phone;
 
+        @NameInMap("RoleIdList")
+        public java.util.List<Long> roleIdList;
+
         /**
          * <p>The UserID in the Quick BI.</p>
          */
@@ -178,6 +181,14 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         }
         public String getPhone() {
             return this.phone;
+        }
+
+        public QueryUserInfoByAccountResponseBodyResult setRoleIdList(java.util.List<Long> roleIdList) {
+            this.roleIdList = roleIdList;
+            return this;
+        }
+        public java.util.List<Long> getRoleIdList() {
+            return this.roleIdList;
         }
 
         public QueryUserInfoByAccountResponseBodyResult setUserId(String userId) {

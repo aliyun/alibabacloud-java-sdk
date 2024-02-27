@@ -19,6 +19,9 @@ public class QueryUserInfoByAccountRequest extends TeaModel {
     @NameInMap("Account")
     public String account;
 
+    @NameInMap("ParentAccountName")
+    public String parentAccountName;
+
     public static QueryUserInfoByAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryUserInfoByAccountRequest self = new QueryUserInfoByAccountRequest();
         return TeaModel.build(map, self);
@@ -30,6 +33,14 @@ public class QueryUserInfoByAccountRequest extends TeaModel {
     }
     public String getAccount() {
         return this.account;
+    }
+
+    public QueryUserInfoByAccountRequest setParentAccountName(String parentAccountName) {
+        this.parentAccountName = parentAccountName;
+        return this;
+    }
+    public String getParentAccountName() {
+        return this.parentAccountName;
     }
 
 }

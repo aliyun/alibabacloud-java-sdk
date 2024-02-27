@@ -194,8 +194,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("UserType", request.userType);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.roleIds)) {
+            body.put("RoleIds", request.roleIds);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "AddUser"),
@@ -2256,6 +2262,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Account", request.account);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.parentAccountName)) {
+            query.put("ParentAccountName", request.parentAccountName);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2915,6 +2925,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nickName)) {
             query.put("NickName", request.nickName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleIds)) {
+            query.put("RoleIds", request.roleIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
