@@ -19,7 +19,9 @@ public class ModifyVpnPbrRouteEntryAttributeRequest extends TeaModel {
      * <br>
      * <p>A smaller value indicates a higher priority.</p>
      * <br>
-     * <p>If you do not set this parameter, the priority of the policy-based route is not modified.</p>
+     * <p>If you do not specify this parameter, the priority of the policy-based route is not modified.</p>
+     * <br>
+     * <p>>  You must specify at least one of **NewPriority** and **NewWeight**.</p>
      */
     @NameInMap("NewPriority")
     public Integer newPriority;
@@ -27,10 +29,12 @@ public class ModifyVpnPbrRouteEntryAttributeRequest extends TeaModel {
     /**
      * <p>The new weight of the policy-based route. Valid values:</p>
      * <br>
-     * <p>*   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</p>
-     * <p>*   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</p>
+     * <p>*   **100**: The IPsec-VPN connection associated with the policy-based route serves as the active connection.</p>
+     * <p>*   **0**: The IPsec-VPN connection associated with the policy-based route serves as the standby connection.</p>
      * <br>
-     * <p>If you do not set this parameter, the weight of the policy-based route is not modified.</p>
+     * <p>If you do not specify this parameter, the weight of the policy-based route is not modified.</p>
+     * <br>
+     * <p>>  You must specify at least one of **NewPriority** and **NewWeight**.</p>
      */
     @NameInMap("NewWeight")
     public Integer newWeight;

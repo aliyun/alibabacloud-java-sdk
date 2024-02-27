@@ -11,7 +11,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public DescribeRegionsResponseBodyRegions regions;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,13 +45,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String localName;
 
         /**
-         * <p>The endpoint of the region.</p>
+         * <p>The endpoint of the region service.</p>
          */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

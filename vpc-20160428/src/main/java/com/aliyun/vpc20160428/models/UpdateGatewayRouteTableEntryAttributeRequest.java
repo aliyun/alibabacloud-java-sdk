@@ -37,6 +37,9 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>The ID of the gateway route table that you want to modify.</p>
+     */
     @NameInMap("GatewayRouteTableId")
     public String gatewayRouteTableId;
 

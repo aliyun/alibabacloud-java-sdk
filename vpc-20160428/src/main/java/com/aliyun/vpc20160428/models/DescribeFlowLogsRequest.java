@@ -102,6 +102,9 @@ public class DescribeFlowLogsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribeFlowLogsRequestTags> tags;
 

@@ -3748,6 +3748,237 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createExpressCloudConnectionWithOptions(request, runtime);
     }
 
+    public CreateExpressConnectTrafficQosResponse createExpressConnectTrafficQosWithOptions(CreateExpressConnectTrafficQosRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosDescription)) {
+            query.put("QosDescription", request.qosDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosName)) {
+            query.put("QosName", request.qosName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateExpressConnectTrafficQos"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateExpressConnectTrafficQosResponse());
+    }
+
+    public CreateExpressConnectTrafficQosResponse createExpressConnectTrafficQos(CreateExpressConnectTrafficQosRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createExpressConnectTrafficQosWithOptions(request, runtime);
+    }
+
+    public CreateExpressConnectTrafficQosQueueResponse createExpressConnectTrafficQosQueueWithOptions(CreateExpressConnectTrafficQosQueueRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidthPercent)) {
+            query.put("BandwidthPercent", request.bandwidthPercent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosId)) {
+            query.put("QosId", request.qosId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueDescription)) {
+            query.put("QueueDescription", request.queueDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueName)) {
+            query.put("QueueName", request.queueName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueType)) {
+            query.put("QueueType", request.queueType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateExpressConnectTrafficQosQueue"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateExpressConnectTrafficQosQueueResponse());
+    }
+
+    public CreateExpressConnectTrafficQosQueueResponse createExpressConnectTrafficQosQueue(CreateExpressConnectTrafficQosQueueRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createExpressConnectTrafficQosQueueWithOptions(request, runtime);
+    }
+
+    public CreateExpressConnectTrafficQosRuleResponse createExpressConnectTrafficQosRuleWithOptions(CreateExpressConnectTrafficQosRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstCidr)) {
+            query.put("DstCidr", request.dstCidr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstIPv6Cidr)) {
+            query.put("DstIPv6Cidr", request.dstIPv6Cidr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstPortRange)) {
+            query.put("DstPortRange", request.dstPortRange);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.matchDscp)) {
+            query.put("MatchDscp", request.matchDscp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            query.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            query.put("Protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosId)) {
+            query.put("QosId", request.qosId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueId)) {
+            query.put("QueueId", request.queueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remarkingDscp)) {
+            query.put("RemarkingDscp", request.remarkingDscp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleDescription)) {
+            query.put("RuleDescription", request.ruleDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcCidr)) {
+            query.put("SrcCidr", request.srcCidr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcIPv6Cidr)) {
+            query.put("SrcIPv6Cidr", request.srcIPv6Cidr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcPortRange)) {
+            query.put("SrcPortRange", request.srcPortRange);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateExpressConnectTrafficQosRule"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateExpressConnectTrafficQosRuleResponse());
+    }
+
+    public CreateExpressConnectTrafficQosRuleResponse createExpressConnectTrafficQosRule(CreateExpressConnectTrafficQosRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createExpressConnectTrafficQosRuleWithOptions(request, runtime);
+    }
+
     public CreateFailoverTestJobResponse createFailoverTestJobWithOptions(CreateFailoverTestJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3822,7 +4053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **CreateFlowLog** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
+      * **CreateFlowLog** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of the flow log.
       * *   If the flow log is in the **Activating** state, the flow log is being created.
       * *   If the flow log is in the **Active** state, the flow log is created and started.
       *
@@ -3915,7 +4146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **CreateFlowLog** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
+      * **CreateFlowLog** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of the flow log.
       * *   If the flow log is in the **Activating** state, the flow log is being created.
       * *   If the flow log is in the **Active** state, the flow log is created and started.
       *
@@ -4680,10 +4911,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   Before you create an IPsec server, you must create a VPN gateway and enable the SSL-VPN feature for the VPN gateway. For more information, see [CreateVpnGateway](~~120363~~).
-      * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task:
+      * *   Before you create an IPsec server, make sure that no IPsec-VPN connection exists on the VPN gateway. For more information, see [DeleteVpnConnection](~~2526948~~).
+      * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
       *     *   If the VPN gateway is in the **updating** state, the IPsec server is being created.
       *     *   If the VPN gateway is in the **active** state, the IPsec server is created.
-      * *   You cannot repeatedly call the **CreateIpsecServer** operation for the same VPN gateway within the specified period of time.
+      * *   You cannot repeatedly call **CreateIpsecServer** within the specified period of time.
       *
       * @param request CreateIpsecServerRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4759,10 +4991,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   Before you create an IPsec server, you must create a VPN gateway and enable the SSL-VPN feature for the VPN gateway. For more information, see [CreateVpnGateway](~~120363~~).
-      * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task:
+      * *   Before you create an IPsec server, make sure that no IPsec-VPN connection exists on the VPN gateway. For more information, see [DeleteVpnConnection](~~2526948~~).
+      * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
       *     *   If the VPN gateway is in the **updating** state, the IPsec server is being created.
       *     *   If the VPN gateway is in the **active** state, the IPsec server is created.
-      * *   You cannot repeatedly call the **CreateIpsecServer** operation for the same VPN gateway within the specified period of time.
+      * *   You cannot repeatedly call **CreateIpsecServer** within the specified period of time.
       *
       * @param request CreateIpsecServerRequest
       * @return CreateIpsecServerResponse
@@ -6149,7 +6382,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)
       * When you call this operation, take note of the following limits:
       * *   You can create only one pair of interfaces to be connected between two routers.
       * *   You can create a maximum of five router interfaces for a router.
@@ -6303,7 +6535,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)
       * When you call this operation, take note of the following limits:
       * *   You can create only one pair of interfaces to be connected between two routers.
       * *   You can create a maximum of five router interfaces for a router.
@@ -7277,7 +7508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you create a VBR, the VBR is in the **active** state by default.
+      * After you create a VBR, the VBR is in the **active** state.
       *
       * @param request CreateVirtualBorderRouterRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7392,7 +7623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you create a VBR, the VBR is in the **active** state by default.
+      * After you create a VBR, the VBR is in the **active** state.
       *
       * @param request CreateVirtualBorderRouterRequest
       * @return CreateVirtualBorderRouterResponse
@@ -7614,6 +7845,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createVpcWithOptions(request, runtime);
     }
 
+    /**
+      * *   **CreateVpcGatewayEndpoint** is an asynchronous operation. After a request is sent, the system returns an **EndpointId** and runs the task in the background. You can call the [ListVpcGatewayEndpoints](~~448682~~) operation to query the status of the task.
+      *     *   If the gateway endpoint is in the **Creating** state, the gateway endpoint is being created.
+      *     *   If the gateway endpoint is in the **Created** state, the gateway endpoint is created.
+      * *   You cannot repeatedly call the **CreateVpcGatewayEndpoint** operation for the same endpoint service within the specified period of time.
+      *
+      * @param request CreateVpcGatewayEndpointRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateVpcGatewayEndpointResponse
+     */
     public CreateVpcGatewayEndpointResponse createVpcGatewayEndpointWithOptions(CreateVpcGatewayEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7690,13 +7931,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVpcGatewayEndpointResponse());
     }
 
+    /**
+      * *   **CreateVpcGatewayEndpoint** is an asynchronous operation. After a request is sent, the system returns an **EndpointId** and runs the task in the background. You can call the [ListVpcGatewayEndpoints](~~448682~~) operation to query the status of the task.
+      *     *   If the gateway endpoint is in the **Creating** state, the gateway endpoint is being created.
+      *     *   If the gateway endpoint is in the **Created** state, the gateway endpoint is created.
+      * *   You cannot repeatedly call the **CreateVpcGatewayEndpoint** operation for the same endpoint service within the specified period of time.
+      *
+      * @param request CreateVpcGatewayEndpointRequest
+      * @return CreateVpcGatewayEndpointResponse
+     */
     public CreateVpcGatewayEndpointResponse createVpcGatewayEndpoint(CreateVpcGatewayEndpointRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVpcGatewayEndpointWithOptions(request, runtime);
     }
 
     /**
-      * You cannot repeatedly call the **CreateVpcPrefixList** operation to create a prefix list in a region within the specified period of time.
+      * You cannot repeatedly call the **CreateVpcPrefixList** operation within the specified period of time.
       *
       * @param request CreateVpcPrefixListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7779,7 +8029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You cannot repeatedly call the **CreateVpcPrefixList** operation to create a prefix list in a region within the specified period of time.
+      * You cannot repeatedly call the **CreateVpcPrefixList** operation within the specified period of time.
       *
       * @param request CreateVpcPrefixListRequest
       * @return CreateVpcPrefixListResponse
@@ -8939,6 +9189,177 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDhcpOptionsSetResponse deleteDhcpOptionsSet(DeleteDhcpOptionsSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDhcpOptionsSetWithOptions(request, runtime);
+    }
+
+    public DeleteExpressConnectTrafficQosResponse deleteExpressConnectTrafficQosWithOptions(DeleteExpressConnectTrafficQosRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosId)) {
+            query.put("QosId", request.qosId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteExpressConnectTrafficQos"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteExpressConnectTrafficQosResponse());
+    }
+
+    public DeleteExpressConnectTrafficQosResponse deleteExpressConnectTrafficQos(DeleteExpressConnectTrafficQosRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteExpressConnectTrafficQosWithOptions(request, runtime);
+    }
+
+    public DeleteExpressConnectTrafficQosQueueResponse deleteExpressConnectTrafficQosQueueWithOptions(DeleteExpressConnectTrafficQosQueueRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosId)) {
+            query.put("QosId", request.qosId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueId)) {
+            query.put("QueueId", request.queueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteExpressConnectTrafficQosQueue"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteExpressConnectTrafficQosQueueResponse());
+    }
+
+    public DeleteExpressConnectTrafficQosQueueResponse deleteExpressConnectTrafficQosQueue(DeleteExpressConnectTrafficQosQueueRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteExpressConnectTrafficQosQueueWithOptions(request, runtime);
+    }
+
+    public DeleteExpressConnectTrafficQosRuleResponse deleteExpressConnectTrafficQosRuleWithOptions(DeleteExpressConnectTrafficQosRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosId)) {
+            query.put("QosId", request.qosId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueId)) {
+            query.put("QueueId", request.queueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteExpressConnectTrafficQosRule"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteExpressConnectTrafficQosRuleResponse());
+    }
+
+    public DeleteExpressConnectTrafficQosRuleResponse deleteExpressConnectTrafficQosRule(DeleteExpressConnectTrafficQosRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteExpressConnectTrafficQosRuleWithOptions(request, runtime);
     }
 
     public DeleteFailoverTestJobResponse deleteFailoverTestJobWithOptions(DeleteFailoverTestJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -11526,7 +11947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * Before you call this operation, take note of the following limits:
       * *   Before you delete a VBR, you must delete all router interfaces of the VBR.
       * *   You can delete only a VBR in the **unconfirmed**, **active**, or **terminated** state.
-      * *   If the VBR belongs to another Alibaba Cloud account, you can delete the VBR only if it is in the **unconfirmed** state.
+      * *   The owner of an Express Connect circuit can delete a VBR that belongs to another account only if the VBR is in the **unconfirmed** state.
       *
       * @param request DeleteVirtualBorderRouterRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -11584,7 +12005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * Before you call this operation, take note of the following limits:
       * *   Before you delete a VBR, you must delete all router interfaces of the VBR.
       * *   You can delete only a VBR in the **unconfirmed**, **active**, or **terminated** state.
-      * *   If the VBR belongs to another Alibaba Cloud account, you can delete the VBR only if it is in the **unconfirmed** state.
+      * *   The owner of an Express Connect circuit can delete a VBR that belongs to another account only if the VBR is in the **unconfirmed** state.
       *
       * @param request DeleteVirtualBorderRouterRequest
       * @return DeleteVirtualBorderRouterResponse
@@ -13082,6 +13503,197 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeEipSegmentResponse describeEipSegment(DescribeEipSegmentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeEipSegmentWithOptions(request, runtime);
+    }
+
+    public DescribeExpressConnectTrafficQosResponse describeExpressConnectTrafficQosWithOptions(DescribeExpressConnectTrafficQosRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosIdList)) {
+            query.put("QosIdList", request.qosIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosNameList)) {
+            query.put("QosNameList", request.qosNameList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeExpressConnectTrafficQos"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeExpressConnectTrafficQosResponse());
+    }
+
+    public DescribeExpressConnectTrafficQosResponse describeExpressConnectTrafficQos(DescribeExpressConnectTrafficQosRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeExpressConnectTrafficQosWithOptions(request, runtime);
+    }
+
+    public DescribeExpressConnectTrafficQosQueueResponse describeExpressConnectTrafficQosQueueWithOptions(DescribeExpressConnectTrafficQosQueueRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosId)) {
+            query.put("QosId", request.qosId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueIdList)) {
+            query.put("QueueIdList", request.queueIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueNameList)) {
+            query.put("QueueNameList", request.queueNameList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeExpressConnectTrafficQosQueue"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeExpressConnectTrafficQosQueueResponse());
+    }
+
+    public DescribeExpressConnectTrafficQosQueueResponse describeExpressConnectTrafficQosQueue(DescribeExpressConnectTrafficQosQueueRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeExpressConnectTrafficQosQueueWithOptions(request, runtime);
+    }
+
+    public DescribeExpressConnectTrafficQosRuleResponse describeExpressConnectTrafficQosRuleWithOptions(DescribeExpressConnectTrafficQosRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosId)) {
+            query.put("QosId", request.qosId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueId)) {
+            query.put("QueueId", request.queueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleIdList)) {
+            query.put("RuleIdList", request.ruleIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleNameList)) {
+            query.put("RuleNameList", request.ruleNameList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeExpressConnectTrafficQosRule"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeExpressConnectTrafficQosRuleResponse());
+    }
+
+    public DescribeExpressConnectTrafficQosRuleResponse describeExpressConnectTrafficQosRule(DescribeExpressConnectTrafficQosRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeExpressConnectTrafficQosRuleWithOptions(request, runtime);
     }
 
     public DescribeFailoverTestJobResponse describeFailoverTestJobWithOptions(DescribeFailoverTestJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -14836,7 +15448,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)References
       * Before you call the [DeleteRouteEntry](~~36013~~) operation to delete a route, you can call this operation to query the next hop of the route that you want to delete.
       *
       * @param request DescribeRouteEntryListRequest
@@ -14936,7 +15547,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)References
       * Before you call the [DeleteRouteEntry](~~36013~~) operation to delete a route, you can call this operation to query the next hop of the route that you want to delete.
       *
       * @param request DescribeRouteEntryListRequest
@@ -20996,6 +21606,249 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyExpressCloudConnectionBandwidthWithOptions(request, runtime);
     }
 
+    public ModifyExpressConnectTrafficQosResponse modifyExpressConnectTrafficQosWithOptions(ModifyExpressConnectTrafficQosRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pconnIdList)) {
+            query.put("PconnIdList", request.pconnIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosDescription)) {
+            query.put("QosDescription", request.qosDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosId)) {
+            query.put("QosId", request.qosId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosName)) {
+            query.put("QosName", request.qosName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyExpressConnectTrafficQos"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyExpressConnectTrafficQosResponse());
+    }
+
+    public ModifyExpressConnectTrafficQosResponse modifyExpressConnectTrafficQos(ModifyExpressConnectTrafficQosRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyExpressConnectTrafficQosWithOptions(request, runtime);
+    }
+
+    public ModifyExpressConnectTrafficQosQueueResponse modifyExpressConnectTrafficQosQueueWithOptions(ModifyExpressConnectTrafficQosQueueRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidthPercent)) {
+            query.put("BandwidthPercent", request.bandwidthPercent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosId)) {
+            query.put("QosId", request.qosId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueDescription)) {
+            query.put("QueueDescription", request.queueDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueId)) {
+            query.put("QueueId", request.queueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueName)) {
+            query.put("QueueName", request.queueName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyExpressConnectTrafficQosQueue"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyExpressConnectTrafficQosQueueResponse());
+    }
+
+    public ModifyExpressConnectTrafficQosQueueResponse modifyExpressConnectTrafficQosQueue(ModifyExpressConnectTrafficQosQueueRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyExpressConnectTrafficQosQueueWithOptions(request, runtime);
+    }
+
+    public ModifyExpressConnectTrafficQosRuleResponse modifyExpressConnectTrafficQosRuleWithOptions(ModifyExpressConnectTrafficQosRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstCidr)) {
+            query.put("DstCidr", request.dstCidr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstIPv6Cidr)) {
+            query.put("DstIPv6Cidr", request.dstIPv6Cidr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstPortRange)) {
+            query.put("DstPortRange", request.dstPortRange);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.matchDscp)) {
+            query.put("MatchDscp", request.matchDscp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            query.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            query.put("Protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qosId)) {
+            query.put("QosId", request.qosId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueId)) {
+            query.put("QueueId", request.queueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remarkingDscp)) {
+            query.put("RemarkingDscp", request.remarkingDscp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleDescription)) {
+            query.put("RuleDescription", request.ruleDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcCidr)) {
+            query.put("SrcCidr", request.srcCidr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcIPv6Cidr)) {
+            query.put("SrcIPv6Cidr", request.srcIPv6Cidr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcPortRange)) {
+            query.put("SrcPortRange", request.srcPortRange);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyExpressConnectTrafficQosRule"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyExpressConnectTrafficQosRuleResponse());
+    }
+
+    public ModifyExpressConnectTrafficQosRuleResponse modifyExpressConnectTrafficQosRule(ModifyExpressConnectTrafficQosRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyExpressConnectTrafficQosRuleWithOptions(request, runtime);
+    }
+
     /**
       * *   **ModifyFlowLogAttribute** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
       *     *   If the flow log is in the **Modifying** state, the flow log is being modified.
@@ -22794,7 +23647,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Description
       * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, the router interface enters the **Active** state.
       * >  You cannot modify the specification of a router interface that has overdue payments.
       *
@@ -22855,7 +23707,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)Description
       * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, the router interface enters the **Active** state.
       * >  You cannot modify the specification of a router interface that has overdue payments.
       *
@@ -23740,10 +24591,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The **ModifyVpcPrefixList** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPrefixLists](~~311535~~) to query the status of a prefix list.
+      * *   **ModifyVpcPrefixList** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPrefixLists](~~311535~~) to query the status of the task.
       *     *   If the prefix list is in the **Modifying** state, the configuration of the prefix list is being modified.
       *     *   If the prefix list is in the **Created** state, the configuration of the prefix list is modified.
-      *     *   After the configuration of the prefix list is modified, you can call the [GetVpcPrefixListAssociations](~~445478~~) operation to query information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association **status** of the prefix list is **Created**, the new CIDR blocks are used by the network instances that are associated with the prefix list.
+      *     *   After the configuration of the prefix list is modified, you can call the [GetVpcPrefixListAssociations](~~445478~~) operation to query the information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association **status** of the prefix list is **Created**, the new CIDR blocks are used by the network instances that are associated with the prefix list.
       * *   You cannot repeatedly call **ModifyVpcPrefixList** to modify the configuration of a prefix list within the specified period of time.
       *
       * @param request ModifyVpcPrefixListRequest
@@ -23823,10 +24674,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The **ModifyVpcPrefixList** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPrefixLists](~~311535~~) to query the status of a prefix list.
+      * *   **ModifyVpcPrefixList** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPrefixLists](~~311535~~) to query the status of the task.
       *     *   If the prefix list is in the **Modifying** state, the configuration of the prefix list is being modified.
       *     *   If the prefix list is in the **Created** state, the configuration of the prefix list is modified.
-      *     *   After the configuration of the prefix list is modified, you can call the [GetVpcPrefixListAssociations](~~445478~~) operation to query information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association **status** of the prefix list is **Created**, the new CIDR blocks are used by the network instances that are associated with the prefix list.
+      *     *   After the configuration of the prefix list is modified, you can call the [GetVpcPrefixListAssociations](~~445478~~) operation to query the information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association **status** of the prefix list is **Created**, the new CIDR blocks are used by the network instances that are associated with the prefix list.
       * *   You cannot repeatedly call **ModifyVpcPrefixList** to modify the configuration of a prefix list within the specified period of time.
       *
       * @param request ModifyVpcPrefixListRequest
@@ -25011,7 +25862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After the operation is called, the VBR changes from the **terminated** state to the **recovering** state. When the VBR recovers, it enters the **active** state.
+      * After you call this operation, the VBR changes from the **terminated** state to the **recovering** state. After the operation is performed, the VBR enters the **active** state.
       * When you call this operation, take note of the following items:
       * *   Only the owner of the Express Connect circuit can call this operation.
       * *   The Express Connect circuit to which the VBR connects must be in the **Enabled** state.
@@ -25069,7 +25920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After the operation is called, the VBR changes from the **terminated** state to the **recovering** state. When the VBR recovers, it enters the **active** state.
+      * After you call this operation, the VBR changes from the **terminated** state to the **recovering** state. After the operation is performed, the VBR enters the **active** state.
       * When you call this operation, take note of the following items:
       * *   Only the owner of the Express Connect circuit can call this operation.
       * *   The Express Connect circuit to which the VBR connects must be in the **Enabled** state.
@@ -26347,7 +27198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After the operation is performed, the VBR changes from the **active** state to the **terminating** state. After the VBR is terminated, it enters the **terminated** state.
+      * After you call this operation, the VBR enters the **terminating** state from the **active** state. After the VBR is terminated, the VBR enters the **terminated** state.
       * >  Only the owner of an Express Connect circuit can call this operation.
       *
       * @param request TerminateVirtualBorderRouterRequest
@@ -26403,7 +27254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After the operation is performed, the VBR changes from the **active** state to the **terminating** state. After the VBR is terminated, it enters the **terminated** state.
+      * After you call this operation, the VBR enters the **terminating** state from the **active** state. After the VBR is terminated, the VBR enters the **terminated** state.
       * >  Only the owner of an Express Connect circuit can call this operation.
       *
       * @param request TerminateVirtualBorderRouterRequest

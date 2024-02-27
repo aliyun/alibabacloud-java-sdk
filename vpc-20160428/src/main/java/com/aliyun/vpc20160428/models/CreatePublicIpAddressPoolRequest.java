@@ -94,6 +94,11 @@ public class CreatePublicIpAddressPoolRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The editions of Anti-DDoS.</p>
+     * <p>- If you do not specify this parameter, Anti-DDoS Origin Basic is used.</p>
+     * <p>- If you set the parameter to AntiDDoS_Enhanced, Anti-DDoS Pro/Premium is used.</p>
+     */
     @NameInMap("SecurityProtectionTypes")
     public java.util.List<String> securityProtectionTypes;
 

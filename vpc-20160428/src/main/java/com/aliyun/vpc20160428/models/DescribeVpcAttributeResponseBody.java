@@ -12,6 +12,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     @NameInMap("AssociatedCens")
     public DescribeVpcAttributeResponseBodyAssociatedCens associatedCens;
 
+    /**
+     * <p>The propagation source associated with the VPC.</p>
+     */
     @NameInMap("AssociatedPropagationSources")
     public DescribeVpcAttributeResponseBodyAssociatedPropagationSources associatedPropagationSources;
 
@@ -397,15 +400,15 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         public String cenId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
+         * <p>The ID of the account to which the CEN instance belongs.</p>
          */
         @NameInMap("CenOwnerId")
         public Long cenOwnerId;
 
         /**
-         * <p>The status of the CEN instance to which the VPC is attached.</p>
+         * <p>The status of the CEN instance.</p>
          * <br>
-         * <p>**Attached** is returned only if the VPC is attached to a CEN instance.</p>
+         * <p>**Attached** is returned only when the VPC is attached to a CEN instance.</p>
          */
         @NameInMap("CenStatus")
         public String cenStatus;
@@ -461,18 +464,42 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources extends TeaModel {
+        /**
+         * <p>Indicates whether to propagate the routes of the VPC.</p>
+         */
         @NameInMap("RoutePropagated")
         public Boolean routePropagated;
 
+        /**
+         * <p>The instance ID of the propagation source.</p>
+         */
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
 
+        /**
+         * <p>The ID of the account to which the propagation source belongs.</p>
+         */
         @NameInMap("SourceOwnerId")
         public Long sourceOwnerId;
 
+        /**
+         * <p>The type of the propagation source. Valid values:</p>
+         * <br>
+         * <p>- **CEN**</p>
+         * <p>- **VPN**</p>
+         * <p>- **TR**</p>
+         * <p>- **ECR**</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
+        /**
+         * <p>The status indicating whether the propagation source is attached to the VPC. Valid values:</p>
+         * <br>
+         * <p>- **Attaching**</p>
+         * <p>- **Attached**</p>
+         * <p>- **Detaching**</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -544,13 +571,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     public static class DescribeVpcAttributeResponseBodyCloudResourcesCloudResourceSetType extends TeaModel {
         /**
-         * <p>The number of resources deployed in the VPC.</p>
+         * <p>The number of resources in the VPC.</p>
          */
         @NameInMap("ResourceCount")
         public Integer resourceCount;
 
         /**
-         * <p>The type of resources deployed in the VPC. Valid values:</p>
+         * <p>The type of resource deployed in the VPC. Valid values: Valid values:</p>
          * <br>
          * <p>*   **VSwitch**</p>
          * <p>*   **VRouter**</p>
@@ -609,14 +636,14 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         public String ipv6CidrBlock;
 
         /**
-         * <p>The type of the IPv6 CIDR block. Valid values:</p>
+         * <p>The IPv6 CIDR block type of the VPC. Valid values:</p>
          * <br>
          * <p>*   **BGP** (default)</p>
          * <p>*   **ChinaMobile**</p>
          * <p>*   **ChinaUnicom**</p>
          * <p>*   **ChinaTelecom**</p>
          * <br>
-         * <p>>  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.</p>
+         * <p>>  If you are allowed to use single-ISP bandwidth, valid values are **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**</p>
          */
         @NameInMap("Ipv6Isp")
         public String ipv6Isp;
@@ -684,13 +711,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     public static class DescribeVpcAttributeResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The key of tag N added to the resource.</p>
+         * <p>The key of tag N.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N added to the resource.</p>
+         * <p>The value of tag N.</p>
          */
         @NameInMap("Value")
         public String value;

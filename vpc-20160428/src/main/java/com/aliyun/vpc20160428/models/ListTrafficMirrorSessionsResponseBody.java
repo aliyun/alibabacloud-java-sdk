@@ -114,14 +114,14 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the traffic mirror session was enabled.</p>
          * <br>
-         * <p>*   **false**: the traffic mirror session was disabled. This is the default value.</p>
-         * <p>*   **true**: the traffic mirror session was enabled.</p>
+         * <p>*   **false** </p>
+         * <p>*   **true**</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
-         * <p>The maximum transmission unit (MTU).</p>
+         * <p>The maximum transmission unit.</p>
          */
         @NameInMap("PacketLength")
         public Integer packetLength;
@@ -135,19 +135,19 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The ID of the resource group to which the mirrored traffic belongs.</p>
+         * <p>The ID of the resource group to which the traffic mirror session belongs.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The tag list.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessionsTags> tags;
 
         /**
-         * <p>The ID of the traffic mirror filter.</p>
+         * <p>The ID of the filter.</p>
          */
         @NameInMap("TrafficMirrorFilterId")
         public String trafficMirrorFilterId;
@@ -155,8 +155,8 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         /**
          * <p>The status of the traffic mirror session.</p>
          * <br>
-         * <p>*   **Normal**: active</p>
-         * <p>*   **FinancialLocked**: locked due to overdue payments</p>
+         * <p>*   **Normal**</p>
+         * <p>*   **FinancialLocked**</p>
          */
         @NameInMap("TrafficMirrorSessionBusinessStatus")
         public String trafficMirrorSessionBusinessStatus;
@@ -191,13 +191,13 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         public String trafficMirrorSessionStatus;
 
         /**
-         * <p>The ID of the mirror source.</p>
+         * <p>The ID of the traffic mirror source.</p>
          */
         @NameInMap("TrafficMirrorSourceIds")
         public java.util.List<String> trafficMirrorSourceIds;
 
         /**
-         * <p>The ID of the mirror destination.</p>
+         * <p>The ID of the traffic mirror destination.</p>
          */
         @NameInMap("TrafficMirrorTargetId")
         public String trafficMirrorTargetId;
@@ -205,8 +205,8 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         /**
          * <p>The type of the traffic mirror destination. Valid values:</p>
          * <br>
-         * <p>*   **NetworkInterface**: an ENI</p>
-         * <p>*   **SLB**: an internal-facing SLB instance</p>
+         * <p>*   **NetworkInterface**: an elastic network interface (ENI)</p>
+         * <p>*   **SLB**: an internal-facing Server Load Balancer (SLB) instance</p>
          */
         @NameInMap("TrafficMirrorTargetType")
         public String trafficMirrorTargetType;

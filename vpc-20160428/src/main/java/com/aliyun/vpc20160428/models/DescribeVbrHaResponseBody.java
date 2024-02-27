@@ -13,7 +13,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
     /**
      * <p>The description of the VBR failover group.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://`or `https://`.</p>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -31,22 +31,22 @@ public class DescribeVbrHaResponseBody extends TeaModel {
     public String peerVbrId;
 
     /**
-     * <p>The ID of the region where the VBR is deployed.</p>
+     * <p>The ID of the region in which the VBR is deployed.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The state of the VBR failover group.</p>
+     * <p>The status of the VBR failover group.</p>
      * <br>
-     * <p>*   **Creating**: The VBR failover group is being created.</p>
-     * <p>*   **Active**: The VBR failover group is running as expected.</p>
+     * <p>*   **Creating**</p>
+     * <p>*   **Active**</p>
      */
     @NameInMap("Status")
     public String status;
@@ -58,7 +58,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
     public String vbrHaId;
 
     /**
-     * <p>The ID of the VBR.</p>
+     * <p>The VBR ID.</p>
      */
     @NameInMap("VbrId")
     public String vbrId;

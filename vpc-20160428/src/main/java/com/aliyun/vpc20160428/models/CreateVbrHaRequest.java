@@ -7,7 +7,9 @@ public class CreateVbrHaRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>The client token must be unique among different requests. It can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -15,16 +17,16 @@ public class CreateVbrHaRequest extends TeaModel {
     /**
      * <p>The description of the VBR failover group.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://`or `https://`.</p>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Specifies whether to precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values: Valid Values:</p>
      * <br>
-     * <p>*   **true**: prechecks the request without performing the operation. The system checks the request format, instance status, and whether the required parameters are specified. An error message is returned if the request fails the precheck. If the request passes the precheck, `DRYRUN.SUCCESS` is returned.</p>
-     * <p>*   **false**: prechecks the request. After the request passes the precheck, the operation is performed.</p>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, `DRYRUN.SUCCESS` is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -48,7 +50,7 @@ public class CreateVbrHaRequest extends TeaModel {
     public String peerVbrId;
 
     /**
-     * <p>The ID of the region where the VBR is deployed.</p>
+     * <p>The ID of the region in which the VBR is deployed.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

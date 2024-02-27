@@ -13,6 +13,9 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The filter information. You can specify a filter key and a filter value.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<ListEnhanhcedNatGatewayAvailableZonesRequestFilter> filter;
 
@@ -100,9 +103,17 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends TeaModel {
     }
 
     public static class ListEnhanhcedNatGatewayAvailableZonesRequestFilter extends TeaModel {
+        /**
+         * <p>The filter key. Only **PrivateLinkEnabled** is supported.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the filter key.</p>
+         * <br>
+         * <p>>  If the filter key is set to **PrivateLinkEnabled**, you must specify a filter value. Valid values: **true** and **false**.</p>
+         */
         @NameInMap("Value")
         public String value;
 

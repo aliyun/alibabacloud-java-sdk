@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetVpcPrefixListAssociationsRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **20**.</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
-     * <p>The token that determines the start point of the next query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.</p>
+     * <p>*   You do not need to specify this parameter for the first request.</p>
+     * <p>*   If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

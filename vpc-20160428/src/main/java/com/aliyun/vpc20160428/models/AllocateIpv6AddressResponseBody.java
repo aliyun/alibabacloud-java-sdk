@@ -4,15 +4,27 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AllocateIpv6AddressResponseBody extends TeaModel {
+    /**
+     * <p>The IPv6 address.</p>
+     */
     @NameInMap("Ipv6Address")
     public String ipv6Address;
 
+    /**
+     * <p>The ID of the IPv6 address.</p>
+     */
     @NameInMap("Ipv6AddressId")
     public String ipv6AddressId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
