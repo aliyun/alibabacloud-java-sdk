@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterVersionRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The revision version of the database engine.</p>
      * <br>
-     * <p>> You can call the [DescribeDBClusters](~~98094~~) operation to query the details of all the clusters for your account, such as the cluster ID.</p>
+     * <p>>  For a cluster of the PolarDB for MySQL 5.6, the DBRevisionVersion parameter returns the revision version information only if the `Revision Version` is released later than August 31, 2020. Otherwise, this parameter returns an empty value. For more information about the kernel version of a cluster that runs the PolarDB for MySQL, see [PolarDB for MySQL](~~423884~~).</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("DescribeType")
     public String describeType;
 

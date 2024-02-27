@@ -3497,7 +3497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > For more information, see [Engine versions](~~471239~~) and [PolarDB for MySQL](~~172561~~).
+      * The release note of the kernel version.
       *
       * @param request DescribeDBClusterVersionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3548,7 +3548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > For more information, see [Engine versions](~~471239~~) and [PolarDB for MySQL](~~172561~~).
+      * The release note of the kernel version.
       *
       * @param request DescribeDBClusterVersionRequest
       * @return DescribeDBClusterVersionResponse
@@ -7025,6 +7025,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
             query.put("ZoneId", request.zoneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneType)) {
+            query.put("ZoneType", request.zoneType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
