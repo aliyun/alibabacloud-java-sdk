@@ -4,6 +4,9 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class GetCreditInfoRequest extends TeaModel {
+    /**
+     * <p>Sub Account UID</p>
+     */
     @NameInMap("Uid")
     public Long uid;
 

@@ -4,9 +4,15 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class SetCreditLineRequest extends TeaModel {
+    /**
+     * <p>New Credit Line</p>
+     */
     @NameInMap("CreditLine")
     public String creditLine;
 
+    /**
+     * <p>The UID of Sub Account.</p>
+     */
     @NameInMap("Uid")
     public Long uid;
 

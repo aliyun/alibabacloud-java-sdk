@@ -4,18 +4,35 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class InviteSubAccountResponseBody extends TeaModel {
+    /**
+     * <p>Error Code: </br></p>
+     * <p>• 200 OK</br></p>
+     * <p>• 1109 System Error</br></p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Message</br></p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID, Alibaba Cloud will track errors with this ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of invitation sending results</p>
+     */
     @NameInMap("Results")
     public InviteSubAccountResponseBodyResults results;
 
+    /**
+     * <p>Candidate Values: True/False, this value states if the current API calling action is successful. It does not guarantee the success of subsequent business operations.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +82,21 @@ public class InviteSubAccountResponseBody extends TeaModel {
     }
 
     public static class InviteSubAccountResponseBodyResultsResultResult extends TeaModel {
+        /**
+         * <p>Valid days of registration URL, count on daily basis.</p>
+         */
         @NameInMap("Days")
         public Integer days;
 
+        /**
+         * <p>Invitation ID, The invitation status tracking code.</p>
+         */
         @NameInMap("InviteId")
         public Long inviteId;
 
+        /**
+         * <p>URL for Partner Customer Registration.</p>
+         */
         @NameInMap("RegUrl")
         public String regUrl;
 
@@ -106,15 +132,27 @@ public class InviteSubAccountResponseBody extends TeaModel {
     }
 
     public static class InviteSubAccountResponseBodyResultsResult extends TeaModel {
+        /**
+         * <p>Error Code, 200 OK</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>Message, Notes of Code</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Returning Message of Invitation Results</p>
+         */
         @NameInMap("Result")
         public InviteSubAccountResponseBodyResultsResultResult result;
 
+        /**
+         * <p>Always true.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

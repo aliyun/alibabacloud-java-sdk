@@ -4,18 +4,35 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class GetCreditInfoResponseBody extends TeaModel {
+    /**
+     * <p>Result Code:</p>
+     * <p>- 200 OK</p>
+     * <p>- 1109 System Error</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetCreditInfoResponseBodyData data;
 
+    /**
+     * <p>Message Information</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,27 +82,60 @@ public class GetCreditInfoResponseBody extends TeaModel {
     }
 
     public static class GetCreditInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The Credit Control status, Value Range:</br></p>
+         * <p>1. normal - Sub Account status is running as usual.</p>
+         * <p>2. arrearsNotShutdown - Sub Account status is running as usual, but have outstanding bill(s).</p>
+         * <p>3. shutdown -  Sub Account status is down.</p>
+         */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
+        /**
+         * <p>Percentage value, when the available credit limit is lower than this credit limit percentage, a notification E-mail will be sent to the main account.</p>
+         */
         @NameInMap("AlarmThreshold")
         public String alarmThreshold;
 
+        /**
+         * <p>The Credit available to consume.</p>
+         */
         @NameInMap("AvailableCredit")
         public String availableCredit;
 
+        /**
+         * <p>Obtain total unpaid amount on demo bill before simulated deduction.</p>
+         */
         @NameInMap("ConsumedUndeductedValue")
         public String consumedUndeductedValue;
 
+        /**
+         * <p>The Credit Line of Sub Account</p>
+         */
         @NameInMap("CreditLine")
         public String creditLine;
 
+        /**
+         * <p>The Credit have been consumed by Sub Account, and haven\"t be paid.</p>
+         */
         @NameInMap("OutstandingBalance")
         public String outstandingBalance;
 
+        /**
+         * <p>The systematic controlling policy for resource management, specifically when the available Credit of Sub Account falls to 0 or less.</br></p>
+         * <br>
+         * <p>- 1: delayStop. The account have Shutdown-delay Privilege,  After Shutdown-delay Credit is ran out, Alibaba Cloud will take over resources and keep the instance for 15 days. In addition, the instance will be released if Sub Account failed to pay the bill within these 15 days.</br></p>
+         * <p>- 2: noStop. Partner will manually manage Shutdown Status for Sub Account. Meanwhile, System would not manage the resource\"s life-circle of Sub Account.</br></p>
+         * <p>- 3: immediatelyStop. Once valid quota of Sub Account falls below 0 and be identified as defaulting account, it will trigger the instance shutdown immediately.</br></p>
+         */
         @NameInMap("ZeroCreditShutdownPolicy")
         public String zeroCreditShutdownPolicy;
 
+        /**
+         * <p>Manage order operation.</p>
+         * <p>- ban：Ban the new purchase action.</p>
+         * <p>- normal：The account could raise new purchase order as usual.</p>
+         */
         @NameInMap("newBuyStatus")
         public String newBuyStatus;
 

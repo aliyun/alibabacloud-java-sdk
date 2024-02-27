@@ -3,7 +3,7 @@ package com.aliyun.agency20221216.models;
 
 import com.aliyun.tea.*;
 
-public class EditZeroCreditShutdownResponse extends TeaModel {
+public class QuotaListExportPagedResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class EditZeroCreditShutdownResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public EditZeroCreditShutdownResponseBody body;
+    public QuotaListExportPagedResponseBody body;
 
-    public static EditZeroCreditShutdownResponse build(java.util.Map<String, ?> map) throws Exception {
-        EditZeroCreditShutdownResponse self = new EditZeroCreditShutdownResponse();
+    public static QuotaListExportPagedResponse build(java.util.Map<String, ?> map) throws Exception {
+        QuotaListExportPagedResponse self = new QuotaListExportPagedResponse();
         return TeaModel.build(map, self);
     }
 
-    public EditZeroCreditShutdownResponse setHeaders(java.util.Map<String, String> headers) {
+    public QuotaListExportPagedResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class EditZeroCreditShutdownResponse extends TeaModel {
         return this.headers;
     }
 
-    public EditZeroCreditShutdownResponse setStatusCode(Integer statusCode) {
+    public QuotaListExportPagedResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class EditZeroCreditShutdownResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public EditZeroCreditShutdownResponse setBody(EditZeroCreditShutdownResponseBody body) {
+    public QuotaListExportPagedResponse setBody(QuotaListExportPagedResponseBody body) {
         this.body = body;
         return this;
     }
-    public EditZeroCreditShutdownResponseBody getBody() {
+    public QuotaListExportPagedResponseBody getBody() {
         return this.body;
     }
 

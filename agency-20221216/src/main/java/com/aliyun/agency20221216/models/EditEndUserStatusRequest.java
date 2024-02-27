@@ -4,11 +4,18 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class EditEndUserStatusRequest extends TeaModel {
+    /**
+     * <p>Shutdown Status</br></p>
+     * <br>
+     * <p>- postPayFreeze, the account have been blocked</br></p>
+     * <br>
+     * <p>- postPayThaw, the account have been unlocked</br></p>
+     */
     @NameInMap("CreditStatus")
     public String creditStatus;
 
     /**
-     * <p>uid</p>
+     * <p>UID</p>
      */
     @NameInMap("Uid")
     public Long uid;

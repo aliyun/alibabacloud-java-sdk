@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInviteStatusRequest extends TeaModel {
     /**
-     * <p>inviteId list</p>
+     * <p>inviteId list</br></p>
+     * <p>`Sub-levels <= 5`</p>
      */
     @NameInMap("InviteStatusList")
     public java.util.List<GetInviteStatusRequestInviteStatusList> inviteStatusList;
@@ -24,6 +25,9 @@ public class GetInviteStatusRequest extends TeaModel {
     }
 
     public static class GetInviteStatusRequestInviteStatusList extends TeaModel {
+        /**
+         * <p>Invitation ID, From interface InviteSubAccount</p>
+         */
         @NameInMap("InviteId")
         public Long inviteId;
 

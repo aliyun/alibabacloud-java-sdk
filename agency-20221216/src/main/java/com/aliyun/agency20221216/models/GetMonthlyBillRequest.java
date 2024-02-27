@@ -5,13 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetMonthlyBillRequest extends TeaModel {
     /**
-     * <p>Bill Owner type.</p>
-     * <br>
-     * <p> Value range:</p>
-     * <br>
-     * <p>1: Master account </p>
-     * <br>
-     * <p>2: Sub account</p>
+     * <p>Bill Owner type. Value Range:</br></p>
+     * <p>1: Master account</br></p>
+     * <p>2: Sub account</br></p>
      */
     @NameInMap("BillOwner")
     public String billOwner;
@@ -19,23 +15,15 @@ public class GetMonthlyBillRequest extends TeaModel {
     /**
      * <p>Value Range:</p>
      * <br>
-     * <p>MonthlyInvoice</p>
-     * <br>
-     * <p>MonthRefundInvoice</p>
-     * <br>
-     * <p>MonthlySummary</p>
-     * <br>
-     * <p>MonthlyInstanceAddAdjustBill </p>
-     * <br>
-     * <p>MonthlyInstanceRefundBill</p>
-     * <br>
-     * <p>MonthlyAddAdjustInvoce</p>
-     * <br>
-     * <p>MonthlyRefundAdjustInvoce </p>
-     * <br>
-     * <p>MonthlyInstanceConsumeV2 </p>
-     * <br>
-     * <p>MarginReportV2</p>
+     * <p>- MonthlyInvoice</p>
+     * <p>- MonthRefundInvoice</p>
+     * <p>- MonthlySummary</p>
+     * <p>- MonthlyInstanceAddAdjustBill </p>
+     * <p>- MonthlyInstanceRefundBill</p>
+     * <p>- MonthlyAddAdjustInvoce</p>
+     * <p>- MonthlyRefundAdjustInvoce </p>
+     * <p>- MonthlyInstanceConsumeV2 </p>
+     * <p>- MarginReportV2</p>
      */
     @NameInMap("BillType")
     public String billType;

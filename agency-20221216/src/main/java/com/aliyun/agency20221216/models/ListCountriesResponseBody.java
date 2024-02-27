@@ -4,18 +4,35 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class ListCountriesResponseBody extends TeaModel {
+    /**
+     * <p>Error Code</p>
+     * <p>* 200: OK</p>
+     * <p>* 1109: System error</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>List of Region Code</p>
+     */
     @NameInMap("Data")
     public java.util.List<String> data;
 
+    /**
+     * <p>Message information</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

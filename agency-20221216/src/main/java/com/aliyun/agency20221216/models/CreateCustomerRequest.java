@@ -4,18 +4,33 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomerRequest extends TeaModel {
+    /**
+     * <p>Customer\"s name.</p>
+     */
     @NameInMap("CustomerName")
     public String customerName;
 
+    /**
+     * <p>The source/channel that allow client to connected with us. Please enumerate with Customer Source.</p>
+     */
     @NameInMap("CustomerSource")
     public String customerSource;
 
+    /**
+     * <p>The sub-industry that Customer\"s business belongs to. Please enumerate with Customer Trade.</p>
+     */
     @NameInMap("CustomerSubTrade")
     public String customerSubTrade;
 
+    /**
+     * <p>The industry that Customer\"s business belongs to. Please enumerate with Customer Trade.</p>
+     */
     @NameInMap("CustomerTrade")
     public String customerTrade;
 
+    /**
+     * <p>The region that Customer choose to launch the Cloud Service. Please use ListCountries to confirm the valid region list for current UID.</p>
+     */
     @NameInMap("Nation")
     public String nation;
 

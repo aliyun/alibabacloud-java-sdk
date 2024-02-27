@@ -4,9 +4,19 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class EditNewBuyStatusRequest extends TeaModel {
+    /**
+     * <p>New Purchase Status</br></p>
+     * <br>
+     * <p>- cancelBan: Cancel the restriction for New Purchase request</br></p>
+     * <br>
+     * <p>- ban: ban the New Purchase request</br></p>
+     */
     @NameInMap("NewBuyStatus")
     public String newBuyStatus;
 
+    /**
+     * <p>Customer UID</p>
+     */
     @NameInMap("Uid")
     public Long uid;
 

@@ -4,11 +4,14 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class EditZeroCreditShutdownRequest extends TeaModel {
+    /**
+     * <p>UID</p>
+     */
     @NameInMap("ShutdownPolicy")
     public String shutdownPolicy;
 
     /**
-     * <p>uid</p>
+     * <p>No Change History</p>
      */
     @NameInMap("Uid")
     public Long uid;
