@@ -4,12 +4,23 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class SetAccountInfoRequest extends TeaModel {
+    /**
+     * <p>Sub Account Nickname. </p>
+     * <p>* Use the official name of Company, if Sub Account is an enterprise.</p>
+     * <p>* Use the official name of Partner, if Sub Account is a T2 reseller.</p>
+     */
     @NameInMap("AccountNickname")
     public String accountNickname;
 
+    /**
+     * <p>Description of Sub Account.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>The UID of Sub Account.</p>
+     */
     @NameInMap("Uid")
     public Long uid;
 

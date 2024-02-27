@@ -4,9 +4,15 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class DeductOutstandingBalanceRequest extends TeaModel {
+    /**
+     * <p>The Deducted Credit to be offset.</p>
+     */
     @NameInMap("DeductAmount")
     public String deductAmount;
 
+    /**
+     * <p>Account UID of Distribution Customer.</p>
+     */
     @NameInMap("Uid")
     public Long uid;
 

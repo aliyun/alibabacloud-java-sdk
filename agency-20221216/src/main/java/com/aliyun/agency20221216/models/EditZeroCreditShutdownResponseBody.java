@@ -4,18 +4,33 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class EditZeroCreditShutdownResponseBody extends TeaModel {
+    /**
+     * <p>Success or not</br></p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Request ID</br></p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>Message</br></p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>NO_STOP</p>
+     */
     @NameInMap("Msg")
     public String msg;
 
+    /**
+     * <p>success</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

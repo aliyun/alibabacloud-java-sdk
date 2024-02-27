@@ -177,6 +177,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createCustomerWithOptions(request, runtime);
     }
 
+    public CustomerQuotaRecordListResponse customerQuotaRecordListWithOptions(CustomerQuotaRecordListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CustomerQuotaRecordList"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CustomerQuotaRecordListResponse());
+    }
+
+    public CustomerQuotaRecordListResponse customerQuotaRecordList(CustomerQuotaRecordListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.customerQuotaRecordListWithOptions(request, runtime);
+    }
+
+    /**
+      * Note that sometimes you may find that the customer\\"s Used Credit is negative. This indicates that there is no need to restore the Used Credit, and its ready for customer\\"s usage. This phenomenon occurs because a refund is generated while the customer\\"s credit is full, thereby triggered additional increasing on the customer\\"s credit.
+      * For example, if the customer\\"s maximum Available Credit is 1000 with no usage, and a refund of 300 occurs, the Used Credit will become -300.
+      *
+      * @param request DeductOutstandingBalanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeductOutstandingBalanceResponse
+     */
     public DeductOutstandingBalanceResponse deductOutstandingBalanceWithOptions(DeductOutstandingBalanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -205,11 +238,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeductOutstandingBalanceResponse());
     }
 
+    /**
+      * Note that sometimes you may find that the customer\\"s Used Credit is negative. This indicates that there is no need to restore the Used Credit, and its ready for customer\\"s usage. This phenomenon occurs because a refund is generated while the customer\\"s credit is full, thereby triggered additional increasing on the customer\\"s credit.
+      * For example, if the customer\\"s maximum Available Credit is 1000 with no usage, and a refund of 300 occurs, the Used Credit will become -300.
+      *
+      * @param request DeductOutstandingBalanceRequest
+      * @return DeductOutstandingBalanceResponse
+     */
     public DeductOutstandingBalanceResponse deductOutstandingBalance(DeductOutstandingBalanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deductOutstandingBalanceWithOptions(request, runtime);
     }
 
+    /**
+      * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+      * **This content is only published on the international site. **
+      *
+      * @param request EditEndUserStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return EditEndUserStatusResponse
+     */
     public EditEndUserStatusResponse editEndUserStatusWithOptions(EditEndUserStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -230,11 +278,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EditEndUserStatusResponse());
     }
 
+    /**
+      * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+      * **This content is only published on the international site. **
+      *
+      * @param request EditEndUserStatusRequest
+      * @return EditEndUserStatusResponse
+     */
     public EditEndUserStatusResponse editEndUserStatus(EditEndUserStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.editEndUserStatusWithOptions(request, runtime);
     }
 
+    /**
+      * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+      * **This content is only published on the international site. **
+      *
+      * @param request EditNewBuyStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return EditNewBuyStatusResponse
+     */
     public EditNewBuyStatusResponse editNewBuyStatusWithOptions(EditNewBuyStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -263,11 +326,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EditNewBuyStatusResponse());
     }
 
+    /**
+      * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+      * **This content is only published on the international site. **
+      *
+      * @param request EditNewBuyStatusRequest
+      * @return EditNewBuyStatusResponse
+     */
     public EditNewBuyStatusResponse editNewBuyStatus(EditNewBuyStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.editNewBuyStatusWithOptions(request, runtime);
     }
 
+    /**
+      * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+      * **This content is only published on the international site. **
+      *
+      * @param request EditZeroCreditShutdownRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return EditZeroCreditShutdownResponse
+     */
     public EditZeroCreditShutdownResponse editZeroCreditShutdownWithOptions(EditZeroCreditShutdownRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -296,9 +374,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EditZeroCreditShutdownResponse());
     }
 
+    /**
+      * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+      * **This content is only published on the international site. **
+      *
+      * @param request EditZeroCreditShutdownRequest
+      * @return EditZeroCreditShutdownResponse
+     */
     public EditZeroCreditShutdownResponse editZeroCreditShutdown(EditZeroCreditShutdownRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.editZeroCreditShutdownWithOptions(request, runtime);
+    }
+
+    /**
+      * Caller must be a Partner from International Site, either Distribution or Reseller will do.
+      *
+      * @param request ExportCustomerQuotaRecordRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ExportCustomerQuotaRecordResponse
+     */
+    public ExportCustomerQuotaRecordResponse exportCustomerQuotaRecordWithOptions(ExportCustomerQuotaRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserPk)) {
+            query.put("EndUserPk", request.endUserPk);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationType)) {
+            query.put("OperationType", request.operationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExportCustomerQuotaRecord"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExportCustomerQuotaRecordResponse());
+    }
+
+    /**
+      * Caller must be a Partner from International Site, either Distribution or Reseller will do.
+      *
+      * @param request ExportCustomerQuotaRecordRequest
+      * @return ExportCustomerQuotaRecordResponse
+     */
+    public ExportCustomerQuotaRecordResponse exportCustomerQuotaRecord(ExportCustomerQuotaRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.exportCustomerQuotaRecordWithOptions(request, runtime);
     }
 
     public GetAccountInfoResponse getAccountInfoWithOptions(GetAccountInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -479,6 +622,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getUnassociatedCustomerWithOptions(request, runtime);
     }
 
+    /**
+      * The current API request rate for the Cloud Product has not been disclosed.
+      *
+      * @param request InviteSubAccountRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return InviteSubAccountResponse
+     */
     public InviteSubAccountResponse inviteSubAccountWithOptions(InviteSubAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -503,11 +653,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new InviteSubAccountResponse());
     }
 
+    /**
+      * The current API request rate for the Cloud Product has not been disclosed.
+      *
+      * @param request InviteSubAccountRequest
+      * @return InviteSubAccountResponse
+     */
     public InviteSubAccountResponse inviteSubAccount(InviteSubAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.inviteSubAccountWithOptions(request, runtime);
     }
 
+    /**
+      * The current API request rate for cloud products has not been disclosed.
+      *
+      * @param request ListCountriesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListCountriesResponse
+     */
     public ListCountriesResponse listCountriesWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -524,9 +687,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListCountriesResponse());
     }
 
+    /**
+      * The current API request rate for cloud products has not been disclosed.
+      *
+      * @return ListCountriesResponse
+     */
     public ListCountriesResponse listCountries() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCountriesWithOptions(runtime);
+    }
+
+    /**
+      * Caller must be a Partner from International Site, either Distribution or Reseller will do.
+      *
+      * @param request QuotaListExportPagedRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QuotaListExportPagedResponse
+     */
+    public QuotaListExportPagedResponse quotaListExportPagedWithOptions(QuotaListExportPagedRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QuotaListExportPaged"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QuotaListExportPagedResponse());
+    }
+
+    /**
+      * Caller must be a Partner from International Site, either Distribution or Reseller will do.
+      *
+      * @param request QuotaListExportPagedRequest
+      * @return QuotaListExportPagedResponse
+     */
+    public QuotaListExportPagedResponse quotaListExportPaged(QuotaListExportPagedRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.quotaListExportPagedWithOptions(request, runtime);
     }
 
     public ResendEmailResponse resendEmailWithOptions(ResendEmailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

@@ -4,9 +4,15 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class GetUnassociatedCustomerRequest extends TeaModel {
+    /**
+     * <p>Pagination, current page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Pagination, record number on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

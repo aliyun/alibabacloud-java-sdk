@@ -4,18 +4,35 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class GetInviteStatusResponseBody extends TeaModel {
+    /**
+     * <p>Status Code. Error Code:</p>
+     * <br>
+     * <p>- 3057 InviteId is empty</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetInviteStatusResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +82,53 @@ public class GetInviteStatusResponseBody extends TeaModel {
     }
 
     public static class GetInviteStatusResponseBodyDataInviteStatusInviteStatusList extends TeaModel {
+        /**
+         * <p>The time that Distribution Customer successfully associated with Distributor.</br></p>
+         * <p>This value will be empty if there is no existing association.</p>
+         */
         @NameInMap("AssociationSuccessTime")
         public String associationSuccessTime;
 
+        /**
+         * <p>Distribution Customer\"s CID</p>
+         */
         @NameInMap("Cid")
         public Long cid;
 
+        /**
+         * <p>The time of email been sent out.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The parent organization ID.</p>
+         */
         @NameInMap("ParentId")
         public String parentId;
 
+        /**
+         * <p>Invitation Status:</p>
+         * <p>* 0 No visit on registration URL</p>
+         * <p>* 1 Successful Registration</p>
+         * <p>* 2 Unsuccessful Registration</p>
+         * <p>* 3 Registration URL have been visited, but no submitted sheet/ticket.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>Account Type:</p>
+         * <p>- 1 Agency\"s End User</p>
+         * <p>- 2 Reseller\"s End User</p>
+         * <p>- 5 T2 Reseller Partner</p>
+         */
         @NameInMap("SubAccountType")
         public String subAccountType;
 
+        /**
+         * <p>Distribution Customer\"s UID</p>
+         */
         @NameInMap("Uid")
         public Long uid;
 
@@ -150,15 +196,29 @@ public class GetInviteStatusResponseBody extends TeaModel {
     }
 
     public static class GetInviteStatusResponseBodyDataInviteStatus extends TeaModel {
+        /**
+         * <p>Result Code. Value Range:</p>
+         * <p>*   200 OK</p>
+         * <p>*   1109 system error</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>List of Invitation Status result</p>
+         */
         @NameInMap("InviteStatusList")
         public GetInviteStatusResponseBodyDataInviteStatusInviteStatusList inviteStatusList;
 
+        /**
+         * <p>The message returned.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

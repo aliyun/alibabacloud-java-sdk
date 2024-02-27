@@ -4,9 +4,22 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class GetDailyBillRequest extends TeaModel {
+    /**
+     * <p>Bill Owner type. Value Range:</br></p>
+     * <p>1: Master account</br></p>
+     * <p>2: Sub account</br></p>
+     */
     @NameInMap("BillOwner")
     public String billOwner;
 
+    /**
+     * <p>BillType. Value Range:</br></p>
+     * <br>
+     * <p>- DailyOrder(Deprecated)</p>
+     * <p>- DailyBill (Deprecated)</p>
+     * <p>- DailyInstanceBill (Deprecated)</p>
+     * <p>- DailyInstanceBillV2</p>
+     */
     @NameInMap("BillType")
     public String billType;
 

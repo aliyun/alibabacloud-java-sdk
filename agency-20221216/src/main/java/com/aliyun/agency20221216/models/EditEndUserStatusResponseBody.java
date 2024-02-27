@@ -4,18 +4,33 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class EditEndUserStatusResponseBody extends TeaModel {
+    /**
+     * <p>Status Code</br></p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Success or not</br></p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>Message</br></p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Message</br></p>
+     */
     @NameInMap("Msg")
     public String msg;
 
+    /**
+     * <p>Request ID</br></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

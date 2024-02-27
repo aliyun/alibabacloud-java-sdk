@@ -4,15 +4,30 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class GetAccountInfoRequest extends TeaModel {
+    /**
+     * <p>Pagination, current page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Pagination, record number on each page, maximum 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Account UID of Distribution Customer. This parameter and the UserType parameter must have one filled. If this parameter is empty, then check all Distribution Customer accounts of the selected UserType.</p>
+     */
     @NameInMap("Uid")
     public Long uid;
 
+    /**
+     * <p>Distribution Customer\"s Account Type:</p>
+     * <p>- 1 End User</p>
+     * <p>- 2 Enterprise</p>
+     * <p>- 3 T2 Partner</p>
+     */
     @NameInMap("UserType")
     public String userType;
 
