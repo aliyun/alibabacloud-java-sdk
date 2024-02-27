@@ -207,6 +207,9 @@ public class QueryAvatarListResponseBody extends TeaModel {
         @NameInMap("Portrait")
         public String portrait;
 
+        @NameInMap("Preview")
+        public String preview;
+
         @NameInMap("SupportedResolutions")
         public QueryAvatarListResponseBodyDataListSupportedResolutions supportedResolutions;
 
@@ -293,6 +296,14 @@ public class QueryAvatarListResponseBody extends TeaModel {
         }
         public String getPortrait() {
             return this.portrait;
+        }
+
+        public QueryAvatarListResponseBodyDataList setPreview(String preview) {
+            this.preview = preview;
+            return this;
+        }
+        public String getPreview() {
+            return this.preview;
         }
 
         public QueryAvatarListResponseBodyDataList setSupportedResolutions(QueryAvatarListResponseBodyDataListSupportedResolutions supportedResolutions) {
