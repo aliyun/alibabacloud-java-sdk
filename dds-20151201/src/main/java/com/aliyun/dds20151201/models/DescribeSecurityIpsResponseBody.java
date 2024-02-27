@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityIpsResponseBody extends TeaModel {
     /**
-     * <p>Whether to display DAS whitelist information.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The IP addresses in the default whitelist.</p>
+     * <p>An array that consists of the information of IP whitelists.</p>
      */
     @NameInMap("SecurityIpGroups")
     public DescribeSecurityIpsResponseBodySecurityIpGroups securityIpGroups;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The IP addresses in the default whitelist.</p>
      */
     @NameInMap("SecurityIps")
     public String securityIps;
@@ -53,13 +53,13 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
 
     public static class DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup extends TeaModel {
         /**
-         * <p>An array that consists of the information of IP whitelists.</p>
+         * <p>The attribute of the IP address whitelist.</p>
          */
         @NameInMap("SecurityIpGroupAttribute")
         public String securityIpGroupAttribute;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The name of the IP whitelist.</p>
          */
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;

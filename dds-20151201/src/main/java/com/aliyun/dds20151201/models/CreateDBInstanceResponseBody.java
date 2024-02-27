@@ -17,7 +17,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

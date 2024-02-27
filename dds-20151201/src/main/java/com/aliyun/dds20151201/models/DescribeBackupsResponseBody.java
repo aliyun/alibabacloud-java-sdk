@@ -116,6 +116,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("BackupIntranetDownloadURL")
         public String backupIntranetDownloadURL;
 
+        @NameInMap("BackupJobId")
+        public Long backupJobId;
+
         /**
          * <p>The method that is used to generate the backup set. Valid values:</p>
          * <br>
@@ -208,6 +211,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getBackupIntranetDownloadURL() {
             return this.backupIntranetDownloadURL;
+        }
+
+        public DescribeBackupsResponseBodyBackupsBackup setBackupJobId(Long backupJobId) {
+            this.backupJobId = backupJobId;
+            return this;
+        }
+        public Long getBackupJobId() {
+            return this.backupJobId;
         }
 
         public DescribeBackupsResponseBodyBackupsBackup setBackupMethod(String backupMethod) {

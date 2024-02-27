@@ -36,6 +36,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("EnableBackupLog")
     public Integer enableBackupLog;
 
+    @NameInMap("HighFrequencyBackupRetention")
+    public String highFrequencyBackupRetention;
+
     /**
      * <p>The number of days for which log backups are retained. Valid values: 7 to 730.</p>
      */
@@ -104,6 +107,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
     public Integer getEnableBackupLog() {
         return this.enableBackupLog;
+    }
+
+    public DescribeBackupPolicyResponseBody setHighFrequencyBackupRetention(String highFrequencyBackupRetention) {
+        this.highFrequencyBackupRetention = highFrequencyBackupRetention;
+        return this;
+    }
+    public String getHighFrequencyBackupRetention() {
+        return this.highFrequencyBackupRetention;
     }
 
     public DescribeBackupPolicyResponseBody setLogBackupRetentionPeriod(Integer logBackupRetentionPeriod) {
