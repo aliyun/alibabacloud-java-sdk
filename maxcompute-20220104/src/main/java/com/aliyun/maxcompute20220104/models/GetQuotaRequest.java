@@ -4,15 +4,27 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetQuotaRequest extends TeaModel {
+    /**
+     * <p>The trusted AccessKey pairs.</p>
+     */
     @NameInMap("AkProven")
     public String akProven;
 
+    /**
+     * <p>Specifies whether to include submodules. Valid values: -true: The request includes submodules. -false: The request does not include submodules. This is the default value.</p>
+     */
     @NameInMap("mock")
     public Boolean mock;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("region")
     public String region;
 
+    /**
+     * <p>The tenant ID.</p>
+     */
     @NameInMap("tenantId")
     public String tenantId;
 

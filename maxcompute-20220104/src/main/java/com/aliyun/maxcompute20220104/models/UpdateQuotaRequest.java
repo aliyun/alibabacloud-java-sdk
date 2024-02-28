@@ -4,12 +4,21 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class UpdateQuotaRequest extends TeaModel {
+    /**
+     * <p>The request body parameter.</p>
+     */
     @NameInMap("body")
     public String body;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("region")
     public String region;
 
+    /**
+     * <p>The tenant ID.</p>
+     */
     @NameInMap("tenantId")
     public String tenantId;
 

@@ -3,7 +3,7 @@ package com.aliyun.maxcompute20220104.models;
 
 import com.aliyun.tea.*;
 
-public class KillJobsResponse extends TeaModel {
+public class GetTableInfoResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class KillJobsResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public KillJobsResponseBody body;
+    public GetTableInfoResponseBody body;
 
-    public static KillJobsResponse build(java.util.Map<String, ?> map) throws Exception {
-        KillJobsResponse self = new KillJobsResponse();
+    public static GetTableInfoResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetTableInfoResponse self = new GetTableInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public KillJobsResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetTableInfoResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class KillJobsResponse extends TeaModel {
         return this.headers;
     }
 
-    public KillJobsResponse setStatusCode(Integer statusCode) {
+    public GetTableInfoResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class KillJobsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public KillJobsResponse setBody(KillJobsResponseBody body) {
+    public GetTableInfoResponse setBody(GetTableInfoResponseBody body) {
         this.body = body;
         return this;
     }
-    public KillJobsResponseBody getBody() {
+    public GetTableInfoResponseBody getBody() {
         return this.body;
     }
 

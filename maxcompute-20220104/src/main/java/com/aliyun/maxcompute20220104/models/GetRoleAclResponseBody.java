@@ -10,12 +10,21 @@ public class GetRoleAclResponseBody extends TeaModel {
     @NameInMap("data")
     public GetRoleAclResponseBodyData data;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("httpCode")
     public Integer httpCode;
 
@@ -83,6 +92,9 @@ public class GetRoleAclResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The Schema name.</p>
+         */
         @NameInMap("schemaName")
         public String schemaName;
 
@@ -130,6 +142,9 @@ public class GetRoleAclResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The Schema name.</p>
+         */
         @NameInMap("schemaName")
         public String schemaName;
 
@@ -177,6 +192,9 @@ public class GetRoleAclResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The Schema name.</p>
+         */
         @NameInMap("schemaName")
         public String schemaName;
 
@@ -224,6 +242,9 @@ public class GetRoleAclResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The Schema name.</p>
+         */
         @NameInMap("schemaName")
         public String schemaName;
 
@@ -271,6 +292,9 @@ public class GetRoleAclResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The Schema name.</p>
+         */
         @NameInMap("schemaName")
         public String schemaName;
 
@@ -318,6 +342,9 @@ public class GetRoleAclResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The Schema name.</p>
+         */
         @NameInMap("schemaName")
         public String schemaName;
 

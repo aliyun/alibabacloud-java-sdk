@@ -7,6 +7,9 @@ public class UpdateQuotaHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <p>The trusted AccessKey pairs.</p>
+     */
     @NameInMap("AkProven")
     public String akProven;
 

@@ -11,6 +11,18 @@ public class GetProjectResponseBody extends TeaModel {
     public GetProjectResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     */
+    @NameInMap("errorCode")
+    public String errorCode;
+
+    /**
+     * <p>The error message.</p>
+     */
+    @NameInMap("errorMsg")
+    public String errorMsg;
+
+    /**
      * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
      */
     @NameInMap("httpCode")
@@ -33,6 +45,22 @@ public class GetProjectResponseBody extends TeaModel {
     }
     public GetProjectResponseBodyData getData() {
         return this.data;
+    }
+
+    public GetProjectResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetProjectResponseBody setErrorMsg(String errorMsg) {
+        this.errorMsg = errorMsg;
+        return this;
+    }
+    public String getErrorMsg() {
+        return this.errorMsg;
     }
 
     public GetProjectResponseBody setHttpCode(Integer httpCode) {
@@ -195,6 +223,12 @@ public class GetProjectResponseBody extends TeaModel {
         public Long projectBackupSize;
 
         /**
+         * <p>The total storage.</p>
+         */
+        @NameInMap("projectTotalSize")
+        public Long projectTotalSize;
+
+        /**
          * <p>The tiered storage.</p>
          */
         @NameInMap("storageTierSize")
@@ -211,6 +245,14 @@ public class GetProjectResponseBody extends TeaModel {
         }
         public Long getProjectBackupSize() {
             return this.projectBackupSize;
+        }
+
+        public GetProjectResponseBodyDataPropertiesStorageTierInfo setProjectTotalSize(Long projectTotalSize) {
+            this.projectTotalSize = projectTotalSize;
+            return this;
+        }
+        public Long getProjectTotalSize() {
+            return this.projectTotalSize;
         }
 
         public GetProjectResponseBodyDataPropertiesStorageTierInfo setStorageTierSize(GetProjectResponseBodyDataPropertiesStorageTierInfoStorageTierSize storageTierSize) {
@@ -265,6 +307,12 @@ public class GetProjectResponseBody extends TeaModel {
          */
         @NameInMap("allowFullScan")
         public Boolean allowFullScan;
+
+        /**
+         * <p>This operation does not return a value for this parameter.</p>
+         */
+        @NameInMap("elderTunnelQuota")
+        public String elderTunnelQuota;
 
         /**
          * <p>Indicates whether the DECIMAL data type in MaxCompute V2.0 is enabled.</p>
@@ -337,6 +385,14 @@ public class GetProjectResponseBody extends TeaModel {
         }
         public Boolean getAllowFullScan() {
             return this.allowFullScan;
+        }
+
+        public GetProjectResponseBodyDataProperties setElderTunnelQuota(String elderTunnelQuota) {
+            this.elderTunnelQuota = elderTunnelQuota;
+            return this;
+        }
+        public String getElderTunnelQuota() {
+            return this.elderTunnelQuota;
         }
 
         public GetProjectResponseBodyDataProperties setEnableDecimal2(Boolean enableDecimal2) {
@@ -613,6 +669,12 @@ public class GetProjectResponseBody extends TeaModel {
         public String costStorage;
 
         /**
+         * <p>Create time</p>
+         */
+        @NameInMap("createdTime")
+        public Long createdTime;
+
+        /**
          * <p>The default computing quota.</p>
          */
         @NameInMap("defaultQuota")
@@ -649,6 +711,12 @@ public class GetProjectResponseBody extends TeaModel {
         public GetProjectResponseBodyDataProperties properties;
 
         /**
+         * <p>RegionID</p>
+         */
+        @NameInMap("regionId")
+        public String regionId;
+
+        /**
          * <p>The tag.</p>
          */
         @NameInMap("saleTag")
@@ -666,8 +734,17 @@ public class GetProjectResponseBody extends TeaModel {
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The Super_Administrator role.</p>
+         */
         @NameInMap("superAdmins")
         public java.util.List<String> superAdmins;
+
+        /**
+         * <p>Indicates whether the current project supports the three-layer model of MaxCompute.</p>
+         */
+        @NameInMap("threeTierModel")
+        public Boolean threeTierModel;
 
         /**
          * <p>The type of the project. Valid values: -**managed**: The project is an internal project. -**external**: The project is an external project.</p>
@@ -694,6 +771,14 @@ public class GetProjectResponseBody extends TeaModel {
         }
         public String getCostStorage() {
             return this.costStorage;
+        }
+
+        public GetProjectResponseBodyData setCreatedTime(Long createdTime) {
+            this.createdTime = createdTime;
+            return this;
+        }
+        public Long getCreatedTime() {
+            return this.createdTime;
         }
 
         public GetProjectResponseBodyData setDefaultQuota(String defaultQuota) {
@@ -744,6 +829,14 @@ public class GetProjectResponseBody extends TeaModel {
             return this.properties;
         }
 
+        public GetProjectResponseBodyData setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
         public GetProjectResponseBodyData setSaleTag(GetProjectResponseBodyDataSaleTag saleTag) {
             this.saleTag = saleTag;
             return this;
@@ -774,6 +867,14 @@ public class GetProjectResponseBody extends TeaModel {
         }
         public java.util.List<String> getSuperAdmins() {
             return this.superAdmins;
+        }
+
+        public GetProjectResponseBodyData setThreeTierModel(Boolean threeTierModel) {
+            this.threeTierModel = threeTierModel;
+            return this;
+        }
+        public Boolean getThreeTierModel() {
+            return this.threeTierModel;
         }
 
         public GetProjectResponseBodyData setType(String type) {

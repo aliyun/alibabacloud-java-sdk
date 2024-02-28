@@ -11,7 +11,7 @@ public class ListProjectsResponseBody extends TeaModel {
     public ListProjectsResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -39,13 +39,13 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyDataProjectsTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -203,7 +203,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public Boolean allowFullScan;
 
         /**
-         * <p>Indicates whether the DECIMAL data type in MaxCompute V2.0 is enabled.</p>
+         * <p>Indicates whether the DECIMAL data type in the MaxCompute V2.0 data type edition is enabled.</p>
          */
         @NameInMap("enableDecimal2")
         public Boolean enableDecimal2;
@@ -221,7 +221,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public ListProjectsResponseBodyDataProjectsPropertiesEncryption encryption;
 
         /**
-         * <p>The number of days for which backup data can be retained.</p>
+         * <p>The maximum number of days for which backup data can be retained.</p>
          */
         @NameInMap("retentionDays")
         public Long retentionDays;
@@ -233,13 +233,13 @@ public class ListProjectsResponseBody extends TeaModel {
         public String sqlMeteringMax;
 
         /**
-         * <p>The lifecycle of tables in the project.</p>
+         * <p>The lifecycle of a table in the project.</p>
          */
         @NameInMap("tableLifecycle")
         public ListProjectsResponseBodyDataProjectsPropertiesTableLifecycle tableLifecycle;
 
         /**
-         * <p>The time zone of the project.</p>
+         * <p>The time zone of the instance.</p>
          */
         @NameInMap("timezone")
         public String timezone;
@@ -523,7 +523,7 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyDataProjects extends TeaModel {
         /**
-         * <p>The tag.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListProjectsResponseBodyDataProjectsTags> tags;
@@ -541,6 +541,12 @@ public class ListProjectsResponseBody extends TeaModel {
         public String costStorage;
 
         /**
+         * <p>Create time</p>
+         */
+        @NameInMap("createdTime")
+        public Long createdTime;
+
+        /**
          * <p>The default computing quota.</p>
          */
         @NameInMap("defaultQuota")
@@ -553,7 +559,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public ListProjectsResponseBodyDataProjectsIpWhiteList ipWhiteList;
 
         /**
-         * <p>The name of the MaxCompute project.</p>
+         * <p>The name of the project.</p>
          */
         @NameInMap("name")
         public String name;
@@ -571,6 +577,12 @@ public class ListProjectsResponseBody extends TeaModel {
         public ListProjectsResponseBodyDataProjectsProperties properties;
 
         /**
+         * <p>Region Id</p>
+         */
+        @NameInMap("regionId")
+        public String regionId;
+
+        /**
          * <p>The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.</p>
          */
         @NameInMap("saleTag")
@@ -583,13 +595,31 @@ public class ListProjectsResponseBody extends TeaModel {
         public ListProjectsResponseBodyDataProjectsSecurityProperties securityProperties;
 
         /**
-         * <p>The status of the project. Valid values: -AVAILABLE: The project is available. -READONLY: The project is read only. -FROZEN: The project is frozen. -DELETING: The project is being deleted.</p>
+         * <p>The status of the project. Valid values: -AVAILABLE: The project is available. -READONLY: The project is read-only. -FROZEN: The project is frozen. -DELETING: The project is being deleted.</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
-         * <p>Indicates whether the current project support the three-tier model</p>
+         * <p>Indicates whether the current project supports the MaxCompute three-layer model.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   false</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("threeTierModel")
         public Boolean threeTierModel;
@@ -627,6 +657,14 @@ public class ListProjectsResponseBody extends TeaModel {
         }
         public String getCostStorage() {
             return this.costStorage;
+        }
+
+        public ListProjectsResponseBodyDataProjects setCreatedTime(Long createdTime) {
+            this.createdTime = createdTime;
+            return this;
+        }
+        public Long getCreatedTime() {
+            return this.createdTime;
         }
 
         public ListProjectsResponseBodyDataProjects setDefaultQuota(String defaultQuota) {
@@ -667,6 +705,14 @@ public class ListProjectsResponseBody extends TeaModel {
         }
         public ListProjectsResponseBodyDataProjectsProperties getProperties() {
             return this.properties;
+        }
+
+        public ListProjectsResponseBodyDataProjects setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public ListProjectsResponseBodyDataProjects setSaleTag(ListProjectsResponseBodyDataProjectsSaleTag saleTag) {
