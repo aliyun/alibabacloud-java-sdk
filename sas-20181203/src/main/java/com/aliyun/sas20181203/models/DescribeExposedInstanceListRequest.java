@@ -71,6 +71,9 @@ public class DescribeExposedInstanceListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>Specifies whether the server has vulnerabilities. Valid values:</p>
      * <br>
@@ -155,6 +158,14 @@ public class DescribeExposedInstanceListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeExposedInstanceListRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeExposedInstanceListRequest setVulStatus(Boolean vulStatus) {
