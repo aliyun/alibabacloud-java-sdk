@@ -97,6 +97,9 @@ public class DescribePackIpListResponseBody extends TeaModel {
         @NameInMap("MemberUid")
         public String memberUid;
 
+        @NameInMap("NsmStatus")
+        public Integer nsmStatus;
+
         /**
          * <p>The type of the cloud asset to which the IP address belongs. Valid values:</p>
          * <br>
@@ -152,6 +155,14 @@ public class DescribePackIpListResponseBody extends TeaModel {
         }
         public String getMemberUid() {
             return this.memberUid;
+        }
+
+        public DescribePackIpListResponseBodyIpList setNsmStatus(Integer nsmStatus) {
+            this.nsmStatus = nsmStatus;
+            return this;
+        }
+        public Integer getNsmStatus() {
+            return this.nsmStatus;
         }
 
         public DescribePackIpListResponseBodyIpList setProduct(String product) {
