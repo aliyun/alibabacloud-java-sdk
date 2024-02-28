@@ -51,7 +51,29 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         return this.total;
     }
 
+    public static class DescribeInstanceListResponseBodyInstanceListAutoProtectCondition extends TeaModel {
+        @NameInMap("Events")
+        public java.util.List<String> events;
+
+        public static DescribeInstanceListResponseBodyInstanceListAutoProtectCondition build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceListResponseBodyInstanceListAutoProtectCondition self = new DescribeInstanceListResponseBodyInstanceListAutoProtectCondition();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceListResponseBodyInstanceListAutoProtectCondition setEvents(java.util.List<String> events) {
+            this.events = events;
+            return this;
+        }
+        public java.util.List<String> getEvents() {
+            return this.events;
+        }
+
+    }
+
     public static class DescribeInstanceListResponseBodyInstanceList extends TeaModel {
+        @NameInMap("AutoProtectCondition")
+        public DescribeInstanceListResponseBodyInstanceListAutoProtectCondition autoProtectCondition;
+
         /**
          * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
          * <br>
@@ -141,6 +163,14 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         public static DescribeInstanceListResponseBodyInstanceList build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceListResponseBodyInstanceList self = new DescribeInstanceListResponseBodyInstanceList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceListResponseBodyInstanceList setAutoProtectCondition(DescribeInstanceListResponseBodyInstanceListAutoProtectCondition autoProtectCondition) {
+            this.autoProtectCondition = autoProtectCondition;
+            return this;
+        }
+        public DescribeInstanceListResponseBodyInstanceListAutoProtectCondition getAutoProtectCondition() {
+            return this.autoProtectCondition;
         }
 
         public DescribeInstanceListResponseBodyInstanceList setAutoRenewal(Boolean autoRenewal) {
