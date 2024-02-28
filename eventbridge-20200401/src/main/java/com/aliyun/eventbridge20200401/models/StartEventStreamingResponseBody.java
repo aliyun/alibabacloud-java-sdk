@@ -8,7 +8,7 @@ public class StartEventStreamingResponseBody extends TeaModel {
      * <p>The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
      */
     @NameInMap("Code")
-    public Boolean code;
+    public String code;
 
     /**
      * <p>The error message that is returned if the request failed.</p>
@@ -23,7 +23,7 @@ public class StartEventStreamingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation is successful. The value true indicates that the operation is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -33,11 +33,11 @@ public class StartEventStreamingResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public StartEventStreamingResponseBody setCode(Boolean code) {
+    public StartEventStreamingResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Boolean getCode() {
+    public String getCode() {
         return this.code;
     }
 

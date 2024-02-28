@@ -11,7 +11,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetEventStreamingResponseBodyData data;
@@ -3014,6 +3014,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("VSwitchIds")
         public String vSwitchIds;
 
+        @NameInMap("ValueDataType")
+        public String valueDataType;
+
         /**
          * <p>The ID of the virtual private cloud (VPC).</p>
          */
@@ -3087,6 +3090,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public String getVSwitchIds() {
             return this.vSwitchIds;
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourceKafkaParameters setValueDataType(String valueDataType) {
+            this.valueDataType = valueDataType;
+            return this;
+        }
+        public String getValueDataType() {
+            return this.valueDataType;
         }
 
         public GetEventStreamingResponseBodyDataSourceSourceKafkaParameters setVpcId(String vpcId) {
@@ -3195,6 +3206,47 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public String getTopic() {
             return this.topic;
+        }
+
+    }
+
+    public static class GetEventStreamingResponseBodyDataSourceSourcePrometheusParameters extends TeaModel {
+        @NameInMap("ClusterId")
+        public String clusterId;
+
+        @NameInMap("DataType")
+        public String dataType;
+
+        @NameInMap("Labels")
+        public String labels;
+
+        public static GetEventStreamingResponseBodyDataSourceSourcePrometheusParameters build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSourceSourcePrometheusParameters self = new GetEventStreamingResponseBodyDataSourceSourcePrometheusParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourcePrometheusParameters setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourcePrometheusParameters setDataType(String dataType) {
+            this.dataType = dataType;
+            return this;
+        }
+        public String getDataType() {
+            return this.dataType;
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourcePrometheusParameters setLabels(String labels) {
+            this.labels = labels;
+            return this;
+        }
+        public String getLabels() {
+            return this.labels;
         }
 
     }
@@ -3571,6 +3623,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("SourceMQTTParameters")
         public GetEventStreamingResponseBodyDataSourceSourceMQTTParameters sourceMQTTParameters;
 
+        @NameInMap("SourcePrometheusParameters")
+        public GetEventStreamingResponseBodyDataSourceSourcePrometheusParameters sourcePrometheusParameters;
+
         /**
          * <p>Source RabbitMQ Parameters</p>
          */
@@ -3624,6 +3679,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public GetEventStreamingResponseBodyDataSourceSourceMQTTParameters getSourceMQTTParameters() {
             return this.sourceMQTTParameters;
+        }
+
+        public GetEventStreamingResponseBodyDataSource setSourcePrometheusParameters(GetEventStreamingResponseBodyDataSourceSourcePrometheusParameters sourcePrometheusParameters) {
+            this.sourcePrometheusParameters = sourcePrometheusParameters;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSourceSourcePrometheusParameters getSourcePrometheusParameters() {
+            return this.sourcePrometheusParameters;
         }
 
         public GetEventStreamingResponseBodyDataSource setSourceRabbitMQParameters(GetEventStreamingResponseBodyDataSourceSourceRabbitMQParameters sourceRabbitMQParameters) {
@@ -3703,7 +3766,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSink sink;
 
         /**
-         * <p>The event provider.</p>
+         * <p>The event provider, which is also known as the event source.</p>
          */
         @NameInMap("Source")
         public GetEventStreamingResponseBodyDataSource source;

@@ -16,6 +16,9 @@ public class QueryEventRequest extends TeaModel {
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <p>EventSource is required for querying default bus events.</p>
+     */
     @NameInMap("EventSource")
     public String eventSource;
 

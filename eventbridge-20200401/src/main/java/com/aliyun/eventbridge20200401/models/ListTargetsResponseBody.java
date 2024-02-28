@@ -7,9 +7,8 @@ public class ListTargetsResponseBody extends TeaModel {
     /**
      * <p>The returned response code. Valid values:</p>
      * <br>
-     * <p>    Success: The request is successful. </p>
-     * <br>
-     * <p>    Other codes: The request failed. For more information about error codes, see Error codes.</p>
+     * <p>*   Success: The request is successful.</p>
+     * <p>*   Other codes: The request failed. For a list of error codes, see Error codes.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -35,9 +34,8 @@ public class ListTargetsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <br>
-     * <p>    true: The request is successful. </p>
-     * <br>
-     * <p>    false: The request failed.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -88,15 +86,27 @@ public class ListTargetsResponseBody extends TeaModel {
     }
 
     public static class ListTargetsResponseBodyDataTargetsParamList extends TeaModel {
+        /**
+         * <p>The format that is used by the event target parameter.</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The resource parameter of the event target.</p>
+         */
         @NameInMap("ResourceKey")
         public String resourceKey;
 
+        /**
+         * <p>The template that is used by the event target parameter.</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The value of the event target parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -140,24 +150,42 @@ public class ListTargetsResponseBody extends TeaModel {
     }
 
     public static class ListTargetsResponseBodyDataTargets extends TeaModel {
+        /**
+         * <p>The endpoint of the event target.</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
         @NameInMap("ErrorsTolerance")
         public String errorsTolerance;
 
+        /**
+         * <p>The name of the event bus.</p>
+         */
         @NameInMap("EventBusName")
         public String eventBusName;
 
+        /**
+         * <p>The ID of the event target.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The parameters that are configured for the event target.</p>
+         */
         @NameInMap("ParamList")
         public java.util.List<ListTargetsResponseBodyDataTargetsParamList> paramList;
 
+        /**
+         * <p>The name of the event rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The type of the event target. For more information, see [Event target parameters](~~183698~~).</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -232,7 +260,7 @@ public class ListTargetsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The name of the event rule.</p>
+         * <p>The event targets.</p>
          */
         @NameInMap("Targets")
         public java.util.List<ListTargetsResponseBodyDataTargets> targets;
