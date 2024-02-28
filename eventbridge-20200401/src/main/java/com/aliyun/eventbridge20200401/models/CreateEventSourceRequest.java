@@ -59,7 +59,7 @@ public class CreateEventSourceRequest extends TeaModel {
     public CreateEventSourceRequestSourceSLSParameters sourceSLSParameters;
 
     /**
-     * <p>The parameters that are configured if the event source is scheduled events.</p>
+     * <p>The parameters that are configured if you specify scheduled events as the event source.</p>
      */
     @NameInMap("SourceScheduledEventParameters")
     public CreateEventSourceRequestSourceScheduledEventParameters sourceScheduledEventParameters;

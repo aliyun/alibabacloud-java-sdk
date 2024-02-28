@@ -208,7 +208,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
 
     public static class ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceKafkaParameters extends TeaModel {
         /**
-         * <p>The ID of the consumer group that subscribes to the topic.</p>
+         * <p>The ID of the consumer group that subscribes to the topic on the Message Queue for Apache Kafka instance.</p>
          */
         @NameInMap("ConsumerGroup")
         public String consumerGroup;
@@ -226,7 +226,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public Integer maximumTasks;
 
         /**
-         * <p>The network. Valid values: Default and PublicNetwork. Default value: Default. The value PublicNetwork indicates a self-managed network.</p>
+         * <p>The network type. Valid values: Default and PublicNetwork. Default value: Default. The value PublicNetwork indicates a self-managed network.</p>
          */
         @NameInMap("Network")
         public String network;
@@ -238,13 +238,13 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public String offsetReset;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The ID of the region where the Message Queue for Apache Kafka instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The security group ID.</p>
+         * <p>The ID of the security group to which the Message Queue for Apache Kafka instance belongs.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
@@ -256,13 +256,13 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public String topic;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated.</p>
          */
         @NameInMap("VSwitchIds")
         public String vSwitchIds;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC in which the Message Queue for Apache Kafka instance is deployed.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -368,7 +368,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public String queueName;
 
         /**
-         * <p>The region where the MNS queue resides.</p>
+         * <p>The ID of the region where the MNS queue resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -482,7 +482,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The instance endpoint.</p>
+         * <p>The endpoint that is used to access the Message Queue for Apache RocketMQ instance.</p>
          */
         @NameInMap("InstanceEndpoint")
         public String instanceEndpoint;
@@ -494,19 +494,19 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The network that is used by the Message Queue for Apache RocketMQ instance.</p>
+         * <p>The type of network over which the Message Queue for Apache RocketMQ instance is accessed.</p>
          */
         @NameInMap("InstanceNetwork")
         public String instanceNetwork;
 
         /**
-         * <p>The instance password.</p>
+         * <p>The password that is used to access the Message Queue for Apache RocketMQ instance.</p>
          */
         @NameInMap("InstancePassword")
         public String instancePassword;
 
         /**
-         * <p>The security group ID.</p>
+         * <p>The ID of the security group to which the Message Queue for Apache RocketMQ instance belongs.</p>
          */
         @NameInMap("InstanceSecurityGroupId")
         public String instanceSecurityGroupId;
@@ -518,19 +518,19 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The instance username.</p>
+         * <p>The username that is used to access the Message Queue for Apache RocketMQ instance.</p>
          */
         @NameInMap("InstanceUsername")
         public String instanceUsername;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch with which the Message Queue for Apache RocketMQ instance is associated.</p>
          */
         @NameInMap("InstanceVSwitchIds")
         public String instanceVSwitchIds;
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The ID of the virtual private cloud (VPC) in which the Message Queue for Apache RocketMQ instance is deployed.</p>
          */
         @NameInMap("InstanceVpcId")
         public String instanceVpcId;
@@ -548,7 +548,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public String offset;
 
         /**
-         * <p>The region where the Message Queue for Apache RocketMQ instance resides.</p>
+         * <p>The ID of the region where the Message Queue for Apache RocketMQ instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -708,7 +708,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
 
     public static class ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceSLSParameters extends TeaModel {
         /**
-         * <p>The consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start message consumption.</p>
+         * <p>The consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start consumption.</p>
          */
         @NameInMap("ConsumePosition")
         public String consumePosition;
@@ -783,6 +783,9 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         @NameInMap("TimeZone")
         public String timeZone;
 
+        /**
+         * <p>The JSON string.</p>
+         */
         @NameInMap("UserData")
         public String userData;
 
@@ -1028,6 +1031,12 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         @NameInMap("EventSourceList")
         public java.util.List<ListUserDefinedEventSourcesResponseBodyDataEventSourceList> eventSourceList;
 
+        @NameInMap("NextToken")
+        public String nextToken;
+
+        @NameInMap("Total")
+        public Integer total;
+
         public static ListUserDefinedEventSourcesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListUserDefinedEventSourcesResponseBodyData self = new ListUserDefinedEventSourcesResponseBodyData();
             return TeaModel.build(map, self);
@@ -1039,6 +1048,22 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         }
         public java.util.List<ListUserDefinedEventSourcesResponseBodyDataEventSourceList> getEventSourceList() {
             return this.eventSourceList;
+        }
+
+        public ListUserDefinedEventSourcesResponseBodyData setNextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+        public String getNextToken() {
+            return this.nextToken;
+        }
+
+        public ListUserDefinedEventSourcesResponseBodyData setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
         }
 
     }

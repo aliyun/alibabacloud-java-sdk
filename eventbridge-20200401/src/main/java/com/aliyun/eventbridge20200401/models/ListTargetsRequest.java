@@ -17,7 +17,7 @@ public class ListTargetsRequest extends TeaModel {
     public String eventBusName;
 
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The maximum number of returned entries in a call.</p>
      */
     @NameInMap("Limit")
     public Integer limit;

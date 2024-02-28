@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
     /**
-     * <p>The returned response code. The value Success indicates that the request is successful.</p>
+     * <p>The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For a list of error codes, see Error codes.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -29,7 +29,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation is successful. If the operation is successful, the value true is returned.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,19 +87,19 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
         public String eventSourceName;
 
         /**
-         * <p>The name of the group to which the queried event type belongs.</p>
+         * <p>The name of the group to which the event type belongs.</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
-         * <p>The full name of the queried event type.</p>
+         * <p>The full name of the event type.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The short name of the queried event type.</p>
+         * <p>The short name of the event type.</p>
          */
         @NameInMap("ShortName")
         public String shortName;
@@ -157,40 +157,43 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
         public Float ctime;
 
         /**
-         * <p>The description of the queried event source.</p>
+         * <p>The description of the event source.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The name of the event source to which the queried event type belongs.</p>
+         * <p>The name of the event source to which the event type belongs.</p>
          */
         @NameInMap("EventBusName")
         public String eventBusName;
 
         /**
-         * <p>The queried event types.</p>
+         * <p>The event types.</p>
          */
         @NameInMap("EventTypes")
         public java.util.List<ListAliyunOfficialEventSourcesResponseBodyDataEventSourceListEventTypes> eventTypes;
 
+        /**
+         * <p>The full name of the event source.</p>
+         */
         @NameInMap("FullName")
         public String fullName;
 
         /**
-         * <p>The name of the queried event source.</p>
+         * <p>The name of the event source.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The status of the queried event source. Valid value: Activated.</p>
+         * <p>The status of the event source. Valid value: Activated.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The type of the queried event source.</p>
+         * <p>The type of the event source.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -276,7 +279,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
 
     public static class ListAliyunOfficialEventSourcesResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the event source to which the queried event type belongs.</p>
+         * <p>The event sources.</p>
          */
         @NameInMap("EventSourceList")
         public java.util.List<ListAliyunOfficialEventSourcesResponseBodyDataEventSourceList> eventSourceList;

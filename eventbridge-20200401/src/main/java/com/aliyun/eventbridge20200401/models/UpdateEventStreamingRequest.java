@@ -1426,6 +1426,482 @@ public class UpdateEventStreamingRequest extends TeaModel {
 
     }
 
+    public static class UpdateEventStreamingRequestSinkSinkPrometheusParametersAuthorizationType extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdateEventStreamingRequestSinkSinkPrometheusParametersAuthorizationType build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventStreamingRequestSinkSinkPrometheusParametersAuthorizationType self = new UpdateEventStreamingRequestSinkSinkPrometheusParametersAuthorizationType();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersAuthorizationType setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersAuthorizationType setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersAuthorizationType setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class UpdateEventStreamingRequestSinkSinkPrometheusParametersData extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdateEventStreamingRequestSinkSinkPrometheusParametersData build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventStreamingRequestSinkSinkPrometheusParametersData self = new UpdateEventStreamingRequestSinkSinkPrometheusParametersData();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersData setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersData setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersData setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class UpdateEventStreamingRequestSinkSinkPrometheusParametersNetworkType extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdateEventStreamingRequestSinkSinkPrometheusParametersNetworkType build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventStreamingRequestSinkSinkPrometheusParametersNetworkType self = new UpdateEventStreamingRequestSinkSinkPrometheusParametersNetworkType();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersNetworkType setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersNetworkType setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersNetworkType setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class UpdateEventStreamingRequestSinkSinkPrometheusParametersPassword extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdateEventStreamingRequestSinkSinkPrometheusParametersPassword build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventStreamingRequestSinkSinkPrometheusParametersPassword self = new UpdateEventStreamingRequestSinkSinkPrometheusParametersPassword();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersPassword setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersPassword setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersPassword setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class UpdateEventStreamingRequestSinkSinkPrometheusParametersSecurityGroupId extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdateEventStreamingRequestSinkSinkPrometheusParametersSecurityGroupId build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventStreamingRequestSinkSinkPrometheusParametersSecurityGroupId self = new UpdateEventStreamingRequestSinkSinkPrometheusParametersSecurityGroupId();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersSecurityGroupId setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersSecurityGroupId setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersSecurityGroupId setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class UpdateEventStreamingRequestSinkSinkPrometheusParametersURL extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdateEventStreamingRequestSinkSinkPrometheusParametersURL build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventStreamingRequestSinkSinkPrometheusParametersURL self = new UpdateEventStreamingRequestSinkSinkPrometheusParametersURL();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersURL setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersURL setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersURL setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class UpdateEventStreamingRequestSinkSinkPrometheusParametersUsername extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdateEventStreamingRequestSinkSinkPrometheusParametersUsername build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventStreamingRequestSinkSinkPrometheusParametersUsername self = new UpdateEventStreamingRequestSinkSinkPrometheusParametersUsername();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersUsername setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersUsername setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersUsername setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class UpdateEventStreamingRequestSinkSinkPrometheusParametersVSwitchId extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdateEventStreamingRequestSinkSinkPrometheusParametersVSwitchId build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventStreamingRequestSinkSinkPrometheusParametersVSwitchId self = new UpdateEventStreamingRequestSinkSinkPrometheusParametersVSwitchId();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersVSwitchId setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersVSwitchId setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersVSwitchId setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class UpdateEventStreamingRequestSinkSinkPrometheusParametersVpcId extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdateEventStreamingRequestSinkSinkPrometheusParametersVpcId build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventStreamingRequestSinkSinkPrometheusParametersVpcId self = new UpdateEventStreamingRequestSinkSinkPrometheusParametersVpcId();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersVpcId setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersVpcId setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersVpcId setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class UpdateEventStreamingRequestSinkSinkPrometheusParameters extends TeaModel {
+        @NameInMap("AuthorizationType")
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersAuthorizationType authorizationType;
+
+        @NameInMap("Data")
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersData data;
+
+        @NameInMap("NetworkType")
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersNetworkType networkType;
+
+        @NameInMap("Password")
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersPassword password;
+
+        @NameInMap("SecurityGroupId")
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersSecurityGroupId securityGroupId;
+
+        @NameInMap("URL")
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersURL URL;
+
+        @NameInMap("Username")
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersUsername username;
+
+        @NameInMap("VSwitchId")
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersVSwitchId vSwitchId;
+
+        @NameInMap("VpcId")
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersVpcId vpcId;
+
+        public static UpdateEventStreamingRequestSinkSinkPrometheusParameters build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventStreamingRequestSinkSinkPrometheusParameters self = new UpdateEventStreamingRequestSinkSinkPrometheusParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParameters setAuthorizationType(UpdateEventStreamingRequestSinkSinkPrometheusParametersAuthorizationType authorizationType) {
+            this.authorizationType = authorizationType;
+            return this;
+        }
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersAuthorizationType getAuthorizationType() {
+            return this.authorizationType;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParameters setData(UpdateEventStreamingRequestSinkSinkPrometheusParametersData data) {
+            this.data = data;
+            return this;
+        }
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersData getData() {
+            return this.data;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParameters setNetworkType(UpdateEventStreamingRequestSinkSinkPrometheusParametersNetworkType networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersNetworkType getNetworkType() {
+            return this.networkType;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParameters setPassword(UpdateEventStreamingRequestSinkSinkPrometheusParametersPassword password) {
+            this.password = password;
+            return this;
+        }
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersPassword getPassword() {
+            return this.password;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParameters setSecurityGroupId(UpdateEventStreamingRequestSinkSinkPrometheusParametersSecurityGroupId securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersSecurityGroupId getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParameters setURL(UpdateEventStreamingRequestSinkSinkPrometheusParametersURL URL) {
+            this.URL = URL;
+            return this;
+        }
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersURL getURL() {
+            return this.URL;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParameters setUsername(UpdateEventStreamingRequestSinkSinkPrometheusParametersUsername username) {
+            this.username = username;
+            return this;
+        }
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersUsername getUsername() {
+            return this.username;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParameters setVSwitchId(UpdateEventStreamingRequestSinkSinkPrometheusParametersVSwitchId vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersVSwitchId getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkPrometheusParameters setVpcId(UpdateEventStreamingRequestSinkSinkPrometheusParametersVpcId vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public UpdateEventStreamingRequestSinkSinkPrometheusParametersVpcId getVpcId() {
+            return this.vpcId;
+        }
+
+    }
+
     public static class UpdateEventStreamingRequestSinkSinkRabbitMQParametersBody extends TeaModel {
         /**
          * <p>The method that is used to transform events.</p>
@@ -2752,6 +3228,9 @@ public class UpdateEventStreamingRequest extends TeaModel {
         @NameInMap("SinkMNSParameters")
         public UpdateEventStreamingRequestSinkSinkMNSParameters sinkMNSParameters;
 
+        @NameInMap("SinkPrometheusParameters")
+        public UpdateEventStreamingRequestSinkSinkPrometheusParameters sinkPrometheusParameters;
+
         /**
          * <p>The parameters that are configured if the event target is Message Queue for RabbitMQ.</p>
          */
@@ -2807,6 +3286,14 @@ public class UpdateEventStreamingRequest extends TeaModel {
             return this.sinkMNSParameters;
         }
 
+        public UpdateEventStreamingRequestSink setSinkPrometheusParameters(UpdateEventStreamingRequestSinkSinkPrometheusParameters sinkPrometheusParameters) {
+            this.sinkPrometheusParameters = sinkPrometheusParameters;
+            return this;
+        }
+        public UpdateEventStreamingRequestSinkSinkPrometheusParameters getSinkPrometheusParameters() {
+            return this.sinkPrometheusParameters;
+        }
+
         public UpdateEventStreamingRequestSink setSinkRabbitMQParameters(UpdateEventStreamingRequestSinkSinkRabbitMQParameters sinkRabbitMQParameters) {
             this.sinkRabbitMQParameters = sinkRabbitMQParameters;
             return this;
@@ -2835,25 +3322,25 @@ public class UpdateEventStreamingRequest extends TeaModel {
 
     public static class UpdateEventStreamingRequestSourceSourceDTSParameters extends TeaModel {
         /**
-         * <p>The URL and port number of the data subscription channel.</p>
+         * <p>The URL and port number of the change tracking instance.</p>
          */
         @NameInMap("BrokerUrl")
         public String brokerUrl;
 
         /**
-         * <p>The consumer offset. A consumer offset is a timestamp that indicates when the SDK client consumes the first data record. The value is a UNIX timestamp.</p>
+         * <p>The UNIX timestamp that is generated when the SDK client consumes the first data record.</p>
          */
         @NameInMap("InitCheckPoint")
         public Long initCheckPoint;
 
         /**
-         * <p>The password of the consumer group.</p>
+         * <p>The consumer group password.</p>
          */
         @NameInMap("Password")
         public String password;
 
         /**
-         * <p>The ID of the consumer group.</p>
+         * <p>The consumer group ID.</p>
          */
         @NameInMap("Sid")
         public String sid;
@@ -2865,13 +3352,13 @@ public class UpdateEventStreamingRequest extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The topic to which you want to subscribe by using the data subscription channel.</p>
+         * <p>The name of the tracked topic of the change tracking instance.</p>
          */
         @NameInMap("Topic")
         public String topic;
 
         /**
-         * <p>The username of the consumer group.</p>
+         * <p>The consumer group username.</p>
          */
         @NameInMap("Username")
         public String username;
@@ -2941,7 +3428,7 @@ public class UpdateEventStreamingRequest extends TeaModel {
 
     public static class UpdateEventStreamingRequestSourceSourceKafkaParameters extends TeaModel {
         /**
-         * <p>The ID of the consumer group that subscribes to the topic.</p>
+         * <p>The group ID of the consumer that subscribes to the topic.</p>
          */
         @NameInMap("ConsumerGroup")
         public String consumerGroup;
@@ -2953,7 +3440,7 @@ public class UpdateEventStreamingRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The network. Default value: Default. The value PublicNetwork specifies a virtual private cloud (VPC).</p>
+         * <p>The network setting. Default value: Default. The value PublicNetwork specifies a virtual private cloud (VPC).</p>
          */
         @NameInMap("Network")
         public String network;
@@ -2971,25 +3458,28 @@ public class UpdateEventStreamingRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the security group to which the Message Queue for Apache Kafka instance belongs.</p>
+         * <p>The security group ID.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
-         * <p>The name of the topic in the Message Queue for Apache Kafka instance.</p>
+         * <p>The topic name.</p>
          */
         @NameInMap("Topic")
         public String topic;
 
         /**
-         * <p>The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated.</p>
+         * <p>The vSwitch ID.</p>
          */
         @NameInMap("VSwitchIds")
         public String vSwitchIds;
 
+        @NameInMap("ValueDataType")
+        public String valueDataType;
+
         /**
-         * <p>The ID of the VPC to which the Message Queue for Apache Kafka instance belongs.</p>
+         * <p>The VPC ID.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -3063,6 +3553,14 @@ public class UpdateEventStreamingRequest extends TeaModel {
             return this.vSwitchIds;
         }
 
+        public UpdateEventStreamingRequestSourceSourceKafkaParameters setValueDataType(String valueDataType) {
+            this.valueDataType = valueDataType;
+            return this;
+        }
+        public String getValueDataType() {
+            return this.valueDataType;
+        }
+
         public UpdateEventStreamingRequestSourceSourceKafkaParameters setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
@@ -3081,7 +3579,7 @@ public class UpdateEventStreamingRequest extends TeaModel {
         public Boolean isBase64Decode;
 
         /**
-         * <p>The queue name.</p>
+         * <p>The name of the MNS queue.</p>
          */
         @NameInMap("QueueName")
         public String queueName;
@@ -3131,13 +3629,13 @@ public class UpdateEventStreamingRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the region where the Message Queue for MQTT resides.</p>
+         * <p>The ID of the region where the Message Queue for MQTT instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The name of the topic in the Message Queue for MQTT instance.</p>
+         * <p>The topic name.</p>
          */
         @NameInMap("Topic")
         public String topic;
@@ -3173,6 +3671,47 @@ public class UpdateEventStreamingRequest extends TeaModel {
 
     }
 
+    public static class UpdateEventStreamingRequestSourceSourcePrometheusParameters extends TeaModel {
+        @NameInMap("ClusterId")
+        public String clusterId;
+
+        @NameInMap("DataType")
+        public String dataType;
+
+        @NameInMap("Labels")
+        public String labels;
+
+        public static UpdateEventStreamingRequestSourceSourcePrometheusParameters build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventStreamingRequestSourceSourcePrometheusParameters self = new UpdateEventStreamingRequestSourceSourcePrometheusParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventStreamingRequestSourceSourcePrometheusParameters setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public UpdateEventStreamingRequestSourceSourcePrometheusParameters setDataType(String dataType) {
+            this.dataType = dataType;
+            return this;
+        }
+        public String getDataType() {
+            return this.dataType;
+        }
+
+        public UpdateEventStreamingRequestSourceSourcePrometheusParameters setLabels(String labels) {
+            this.labels = labels;
+            return this;
+        }
+        public String getLabels() {
+            return this.labels;
+        }
+
+    }
+
     public static class UpdateEventStreamingRequestSourceSourceRabbitMQParameters extends TeaModel {
         /**
          * <p>The ID of the Message Queue for RabbitMQ instance.</p>
@@ -3181,7 +3720,7 @@ public class UpdateEventStreamingRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the queue in the Message Queue for RabbitMQ instance.</p>
+         * <p>The name of the queue on the Message Queue for RabbitMQ instance.</p>
          */
         @NameInMap("QueueName")
         public String queueName;
@@ -3193,7 +3732,7 @@ public class UpdateEventStreamingRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The vhost name of the Message Queue for RabbitMQ instance.</p>
+         * <p>The name of the vhost of the Message Queue for RabbitMQ instance.</p>
          */
         @NameInMap("VirtualHostName")
         public String virtualHostName;
@@ -3238,15 +3777,21 @@ public class UpdateEventStreamingRequest extends TeaModel {
     }
 
     public static class UpdateEventStreamingRequestSourceSourceRocketMQParameters extends TeaModel {
+        /**
+         * <p>The authentication method.</p>
+         */
         @NameInMap("AuthType")
         public String authType;
 
         /**
-         * <p>The ID of the consumer group in the Message Queue for Apache RocketMQ instance.</p>
+         * <p>The ID of the consumer group on the Message Queue for Apache RocketMQ instance.</p>
          */
         @NameInMap("GroupID")
         public String groupID;
 
+        /**
+         * <p>The instance endpoint.</p>
+         */
         @NameInMap("InstanceEndpoint")
         public String instanceEndpoint;
 
@@ -3256,29 +3801,58 @@ public class UpdateEventStreamingRequest extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The network type of the instance. Valid values:</p>
+         * <br>
+         * <p>PublicNetwork and PrivateNetwork.</p>
+         */
         @NameInMap("InstanceNetwork")
         public String instanceNetwork;
 
+        /**
+         * <p>The instance password.</p>
+         */
         @NameInMap("InstancePassword")
         public String instancePassword;
 
+        /**
+         * <p>The security group ID of the instance.</p>
+         */
         @NameInMap("InstanceSecurityGroupId")
         public String instanceSecurityGroupId;
 
+        /**
+         * <p>The instance type.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The instance username.</p>
+         */
         @NameInMap("InstanceUsername")
         public String instanceUsername;
 
+        /**
+         * <p>The vSwitch ID of the instance.</p>
+         */
         @NameInMap("InstanceVSwitchIds")
         public String instanceVSwitchIds;
 
+        /**
+         * <p>The VPC ID of the instance.</p>
+         */
         @NameInMap("InstanceVpcId")
         public String instanceVpcId;
 
         /**
-         * <p>The consumer offset of the message. Valid values: CONSUME_FROM_LAST_OFFSET: consumes messages from the latest offset. CONSUME_FROM_FIRST_OFFSET: consumes messages from the earliest offset. CONSUME_FROM_TIMESTAMP: consumes messages from the offset at the specified point in time. Default value: CONSUME_FROM_LAST_OFFSET.</p>
+         * <p>The offset from which messages are consumed. Valid values:</p>
+         * <br>
+         * <p>*   CONSUMEFROMLASTOFFSET: Messages are consumed from the latest offset.</p>
+         * <p>*   CONSUMEFROMFIRSTOFFSET: Messages are consumed from the earliest offset.</p>
+         * <p>*   CONSUMEFROMTIMESTAMP: Messages are consumed from the offset at the specified point in time.</p>
+         * <br>
+         * <p>Default value: CONSUMEFROMLASTOFFSET.</p>
          */
         @NameInMap("Offset")
         public String offset;
@@ -3290,19 +3864,19 @@ public class UpdateEventStreamingRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The tags that are used to filter messages.</p>
+         * <p>The tag that you want to use to filter messages.</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
-         * <p>The timestamp that indicates the time from which messages are consumed. This parameter is valid only if you set Offset to CONSUME_FROM_TIMESTAMP.</p>
+         * <p>The timestamp that specifies the time from which messages are consumed. This parameter is valid only if you set Offset to CONSUMEFROMTIMESTAMP.</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;
 
         /**
-         * <p>The name of the topic in the Message Queue for Apache RocketMQ instance.</p>
+         * <p>The topic name.</p>
          */
         @NameInMap("Topic")
         public String topic;
@@ -3466,43 +4040,46 @@ public class UpdateEventStreamingRequest extends TeaModel {
 
     public static class UpdateEventStreamingRequestSource extends TeaModel {
         /**
-         * <p>The parameters that are configured if the event source is Data Transmission Service (DTS).</p>
+         * <p>The parameters that are configured if you specify Data Transmission Service (DTS) as the event source.</p>
          */
         @NameInMap("SourceDTSParameters")
         public UpdateEventStreamingRequestSourceSourceDTSParameters sourceDTSParameters;
 
         /**
-         * <p>The parameters that are configured if the event source is Message Queue for Apache Kafka.</p>
+         * <p>The parameters that are configured if you specify Message Queue for Apache Kafka as the event source.</p>
          */
         @NameInMap("SourceKafkaParameters")
         public UpdateEventStreamingRequestSourceSourceKafkaParameters sourceKafkaParameters;
 
         /**
-         * <p>The parameters that are configured if the event source is Message Service (MNS).</p>
+         * <p>The parameters that are configured if you specify Message Service (MNS) as the event source.</p>
          */
         @NameInMap("SourceMNSParameters")
         public UpdateEventStreamingRequestSourceSourceMNSParameters sourceMNSParameters;
 
         /**
-         * <p>The parameters that are configured if the event source is Message Queue for MQTT.</p>
+         * <p>The parameters that are configured if you specify Message Queue for MQTT as the event source.</p>
          */
         @NameInMap("SourceMQTTParameters")
         public UpdateEventStreamingRequestSourceSourceMQTTParameters sourceMQTTParameters;
 
+        @NameInMap("SourcePrometheusParameters")
+        public UpdateEventStreamingRequestSourceSourcePrometheusParameters sourcePrometheusParameters;
+
         /**
-         * <p>The parameters that are configured if the event source is Message Queue for RabbitMQ.</p>
+         * <p>The parameters that are configured if you specify Message Queue for RabbitMQ as the event source.</p>
          */
         @NameInMap("SourceRabbitMQParameters")
         public UpdateEventStreamingRequestSourceSourceRabbitMQParameters sourceRabbitMQParameters;
 
         /**
-         * <p>The parameters that are configured if the event source is Message Queue for Apache RocketMQ.</p>
+         * <p>The parameters that are configured if you specify Message Queue for Apache RocketMQ as the event source.</p>
          */
         @NameInMap("SourceRocketMQParameters")
         public UpdateEventStreamingRequestSourceSourceRocketMQParameters sourceRocketMQParameters;
 
         /**
-         * <p>The parameters that are configured if the event source is Log Service.</p>
+         * <p>The parameters that are configured if you specify Log Service as the event source.</p>
          */
         @NameInMap("SourceSLSParameters")
         public UpdateEventStreamingRequestSourceSourceSLSParameters sourceSLSParameters;
@@ -3542,6 +4119,14 @@ public class UpdateEventStreamingRequest extends TeaModel {
         }
         public UpdateEventStreamingRequestSourceSourceMQTTParameters getSourceMQTTParameters() {
             return this.sourceMQTTParameters;
+        }
+
+        public UpdateEventStreamingRequestSource setSourcePrometheusParameters(UpdateEventStreamingRequestSourceSourcePrometheusParameters sourcePrometheusParameters) {
+            this.sourcePrometheusParameters = sourcePrometheusParameters;
+            return this;
+        }
+        public UpdateEventStreamingRequestSourceSourcePrometheusParameters getSourcePrometheusParameters() {
+            return this.sourcePrometheusParameters;
         }
 
         public UpdateEventStreamingRequestSource setSourceRabbitMQParameters(UpdateEventStreamingRequestSourceSourceRabbitMQParameters sourceRabbitMQParameters) {

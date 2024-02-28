@@ -59,7 +59,7 @@ public class CreateEventSourceShrinkRequest extends TeaModel {
     public String sourceSLSParametersShrink;
 
     /**
-     * <p>The parameters that are configured if the event source is scheduled events.</p>
+     * <p>The parameters that are configured if you specify scheduled events as the event source.</p>
      */
     @NameInMap("SourceScheduledEventParameters")
     public String sourceScheduledEventParametersShrink;
