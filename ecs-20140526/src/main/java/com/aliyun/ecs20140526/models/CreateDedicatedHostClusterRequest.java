@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDedicatedHostClusterRequest extends TeaModel {
     /**
-     * <p>The description of the dedicated host cluster. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.</p>
+     * <p>The name of the dedicated host cluster. The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot contain `http://` or `https://`.</p>
      * <br>
      * <p>This parameter is empty by default.</p>
      */
@@ -13,13 +13,20 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
     public String dedicatedHostClusterName;
 
     /**
-     * <p>The ID of the dedicated host cluster.</p>
+     * <p>The description of the dedicated host cluster. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.</p>
+     * <br>
+     * <p>This parameter is empty by default.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The tags of the resource. You can enter most at 20 tags for the resource.</p>
+     * <p>Specifies whether to check the validity of the request without actually making the request. Valid values:</p>
+     * <br>
+     * <p>*   true: The validity of the request is checked but the request is not made. Check items include whether your AccessKey pair is valid, whether RAM users are authorized, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the `DryRunOperation` error code is returned.</p>
+     * <p>*   false: The validity of the request is checked. If the check succeeds, a 2XX HTTP status code is returned and the request is made.</p>
+     * <br>
+     * <p>Default value: false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -31,18 +38,13 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to check the validity of the request without actually making the request. Valid values:</p>
-     * <br>
-     * <p>*   true: The validity of the request is checked but the request is not made. Check items include whether your AccessKey pair is valid, whether RAM users are authorized, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the `DryRunOperation` error code is returned.</p>
-     * <p>*   false: The validity of the request is checked. If the check succeeds, a 2XX HTTP status code is returned and the request is made.</p>
-     * <br>
-     * <p>Default value: false</p>
+     * <p>The ID of the region in which to create the dedicated host cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the zone in which to create the dedicated host cluster. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
+     * <p>The ID of the resource group to which to assign the dedicated host cluster.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -54,15 +56,13 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The key of tag N of the dedicated host cluster. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+     * <p>The tags of the resource. You can enter most at 20 tags for the resource.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateDedicatedHostClusterRequestTag> tag;
 
     /**
-     * <p>The name of the dedicated host cluster. The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot contain `http://` or `https://`.</p>
-     * <br>
-     * <p>This parameter is empty by default.</p>
+     * <p>The ID of the zone in which to create the dedicated host cluster. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -162,13 +162,13 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
 
     public static class CreateDedicatedHostClusterRequestTag extends TeaModel {
         /**
-         * <p>The value of tag N of the dedicated host cluster. Valid values of N: 1 to 20. The tag value cannot be an empty string. It can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The key of tag N of the dedicated host cluster. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The ID of the resource group to which to assign the dedicated host cluster.</p>
+         * <p>The value of tag N of the dedicated host cluster. Valid values of N: 1 to 20. The tag value cannot be an empty string. It can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -20,15 +20,17 @@ public class DescribeDisksRequest extends TeaModel {
     public String autoSnapshotPolicyId;
 
     /**
-     * <p>The category of the cloud disk or local disk. Valid values:</p>
+     * <p>The category of the disk. Valid values:</p>
      * <br>
      * <p>*   all: all disk categories</p>
      * <p>*   cloud: basic disk</p>
      * <p>*   cloud_efficiency: ultra disk</p>
      * <p>*   cloud_ssd: standard SSD</p>
-     * <p>*   cloud_essd: ESSD</p>
+     * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
+     * <p>*   cloud_auto: ESSD AutoPL disk</p>
      * <p>*   local_ssd_pro: I/O-intensive local disk</p>
      * <p>*   local_hdd_pro: throughput-intensive local disk</p>
+     * <p>*   cloud_essd_entry: ESSD Entry disk</p>
      * <p>*   ephemeral: retired local disk</p>
      * <p>*   ephemeral_ssd: retired local SSD</p>
      * <br>
@@ -166,12 +168,12 @@ public class DescribeDisksRequest extends TeaModel {
     public String lockReason;
 
     /**
-     * <p>The maximum number of entries to return on each page. Valid values: 1 to 500.</p>
+     * <p>The maximum number of entries per page. Valid values: 10 to 500.</p>
      * <br>
-     * <p>Default values:</p>
+     * <p>Default value:</p>
      * <br>
-     * <p>*   If this parameter is not specified or is set to a value smaller than 10, the default value is 10.</p>
-     * <p>*   If this parameter is set to a value greater than 500, the default value is 500.</p>
+     * <p>*   If you do not specify this parameter or you set this parameter to a value less than 10, the default value is 10.</p>
+     * <p>*   If you set this parameter to a value greater than 500, the default value is 500.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;

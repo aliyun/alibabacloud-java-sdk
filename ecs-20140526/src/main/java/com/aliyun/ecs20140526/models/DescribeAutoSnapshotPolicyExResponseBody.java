@@ -83,6 +83,36 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyCopyEncryptionConfiguration extends TeaModel {
+        @NameInMap("Encrypted")
+        public Boolean encrypted;
+
+        @NameInMap("KMSKeyId")
+        public String KMSKeyId;
+
+        public static DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyCopyEncryptionConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyCopyEncryptionConfiguration self = new DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyCopyEncryptionConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyCopyEncryptionConfiguration setEncrypted(Boolean encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyCopyEncryptionConfiguration setKMSKeyId(String KMSKeyId) {
+            this.KMSKeyId = KMSKeyId;
+            return this;
+        }
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+    }
+
     public static class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTagsTag extends TeaModel {
         @NameInMap("TagKey")
         public String tagKey;
@@ -156,6 +186,9 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
          */
         @NameInMap("CopiedSnapshotsRetentionDays")
         public Integer copiedSnapshotsRetentionDays;
+
+        @NameInMap("CopyEncryptionConfiguration")
+        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyCopyEncryptionConfiguration copyEncryptionConfiguration;
 
         /**
          * <p>The state of the automatic snapshot policy. Valid values:</p>
@@ -262,6 +295,14 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
         public Integer getCopiedSnapshotsRetentionDays() {
             return this.copiedSnapshotsRetentionDays;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setCopyEncryptionConfiguration(DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyCopyEncryptionConfiguration copyEncryptionConfiguration) {
+            this.copyEncryptionConfiguration = copyEncryptionConfiguration;
+            return this;
+        }
+        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyCopyEncryptionConfiguration getCopyEncryptionConfiguration() {
+            return this.copyEncryptionConfiguration;
         }
 
         public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setCreationTime(String creationTime) {
