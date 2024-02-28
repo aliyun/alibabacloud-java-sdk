@@ -22,6 +22,9 @@ public class ListFunctionsRequest extends TeaModel {
     @NameInMap("prefix")
     public String prefix;
 
+    /**
+     * <p>the name of schema.</p>
+     */
     @NameInMap("schemaName")
     public String schemaName;
 

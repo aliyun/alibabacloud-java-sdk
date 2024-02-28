@@ -38,9 +38,15 @@ public class ListResourcesResponseBody extends TeaModel {
     }
 
     public static class ListResourcesResponseBodyDataResources extends TeaModel {
+        /**
+         * <p>The remarks.</p>
+         */
         @NameInMap("comment")
         public String comment;
 
+        /**
+         * <p>The Base64-encoded 128-bit MD5 hash value of the HTTP request body.</p>
+         */
         @NameInMap("contentMD5")
         public String contentMD5;
 
@@ -50,12 +56,21 @@ public class ListResourcesResponseBody extends TeaModel {
         @NameInMap("creationTime")
         public Long creationTime;
 
+        /**
+         * <p>The display name.</p>
+         */
         @NameInMap("displayName")
         public String displayName;
 
+        /**
+         * <p>The time when the resource was modified.</p>
+         */
         @NameInMap("lastModifiedTime")
         public Long lastModifiedTime;
 
+        /**
+         * <p>The user who updated the resource.</p>
+         */
         @NameInMap("lastUpdator")
         public String lastUpdator;
 
@@ -72,16 +87,61 @@ public class ListResourcesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The schema of the resource.</p>
+         * <p>The schema to which the resource belongs.</p>
          */
         @NameInMap("schema")
         public String schema;
 
+        /**
+         * <p>The size of the resource.</p>
+         */
         @NameInMap("size")
         public Long size;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   file</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   py</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   jar</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   volumefile</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   table</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("type")
         public String type;

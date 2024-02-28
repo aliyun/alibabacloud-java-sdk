@@ -11,7 +11,7 @@ public class ListTablesResponseBody extends TeaModel {
     public ListTablesResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,15 +38,27 @@ public class ListTablesResponseBody extends TeaModel {
     }
 
     public static class ListTablesResponseBodyDataTablesNativeColumns extends TeaModel {
+        /**
+         * <p>The remarks.</p>
+         */
         @NameInMap("comment")
         public String comment;
 
+        /**
+         * <p>The security level of the column.</p>
+         */
         @NameInMap("label")
         public String label;
 
+        /**
+         * <p>The name of the column.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The type of the column.</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -90,15 +102,27 @@ public class ListTablesResponseBody extends TeaModel {
     }
 
     public static class ListTablesResponseBodyDataTablesPartitionColumns extends TeaModel {
+        /**
+         * <p>The remarks.</p>
+         */
         @NameInMap("comment")
         public String comment;
 
+        /**
+         * <p>The security level of the partition column.</p>
+         */
         @NameInMap("label")
         public String label;
 
+        /**
+         * <p>The name of the partition column.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The type of the partition column.</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -142,9 +166,15 @@ public class ListTablesResponseBody extends TeaModel {
     }
 
     public static class ListTablesResponseBodyDataTables extends TeaModel {
+        /**
+         * <p>Indicates whether to enable the scheduled update feature for the materialized view.</p>
+         */
         @NameInMap("autoRefreshEnabled")
         public Boolean autoRefreshEnabled;
 
+        /**
+         * <p>The DDL statement that is used to create the table.</p>
+         */
         @NameInMap("createTableDDL")
         public String createTableDDL;
 
@@ -154,33 +184,63 @@ public class ListTablesResponseBody extends TeaModel {
         @NameInMap("creationTime")
         public Long creationTime;
 
+        /**
+         * <p>The display name of the table.</p>
+         */
         @NameInMap("displayName")
         public String displayName;
 
+        /**
+         * <p>The number of files.</p>
+         */
         @NameInMap("fileNum")
         public Long fileNum;
 
+        /**
+         * <p>Indicates whether the table is an external table.</p>
+         */
         @NameInMap("isExternalTable")
         public Boolean isExternalTable;
 
+        /**
+         * <p>Indicates whether the data in the materialized view is invalid due to data changes in the source table.</p>
+         */
         @NameInMap("isOutdated")
         public Boolean isOutdated;
 
+        /**
+         * <p>The time when the data was last accessed.</p>
+         */
         @NameInMap("lastAccessTime")
         public Long lastAccessTime;
 
+        /**
+         * <p>The last time when the DDL statement of the table was updated.</p>
+         */
         @NameInMap("lastDDLTime")
         public Long lastDDLTime;
 
+        /**
+         * <p>The time when the data was last updated.</p>
+         */
         @NameInMap("lastModifiedTime")
         public Long lastModifiedTime;
 
+        /**
+         * <p>The lifecycle of the table.</p>
+         */
         @NameInMap("lifecycle")
         public String lifecycle;
 
+        /**
+         * <p>The storage location of the external table.</p>
+         */
         @NameInMap("location")
         public String location;
 
+        /**
+         * <p>Indicates whether a materialized view is created.</p>
+         */
         @NameInMap("materializedView")
         public Boolean materializedView;
 
@@ -190,15 +250,27 @@ public class ListTablesResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The information about columns.</p>
+         */
         @NameInMap("nativeColumns")
         public java.util.List<ListTablesResponseBodyDataTablesNativeColumns> nativeColumns;
 
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of AliyunODPSDefaultRole in Resource Access Management (RAM).</p>
+         */
         @NameInMap("odpsPropertiesRolearn")
         public String odpsPropertiesRolearn;
 
+        /**
+         * <p>Indicates whether to ignore the table header.</p>
+         */
         @NameInMap("odpsSqlTextOptionFlushHeader")
         public Boolean odpsSqlTextOptionFlushHeader;
 
+        /**
+         * <p>Indicates whether to ignore the first N rows of the table header.</p>
+         */
         @NameInMap("odpsTextOptionHeaderLinesCount")
         public Long odpsTextOptionHeaderLinesCount;
 
@@ -208,39 +280,69 @@ public class ListTablesResponseBody extends TeaModel {
         @NameInMap("owner")
         public String owner;
 
+        /**
+         * <p>The information about the partition column.</p>
+         */
         @NameInMap("partitionColumns")
         public java.util.List<ListTablesResponseBodyDataTablesPartitionColumns> partitionColumns;
 
+        /**
+         * <p>The physical size of the table.</p>
+         */
         @NameInMap("physicalSize")
         public Long physicalSize;
 
+        /**
+         * <p>The name of the project.</p>
+         */
         @NameInMap("projectName")
         public String projectName;
 
+        /**
+         * <p>Indicates whether to enable the query rewrite operation that is performed based on the materialized view.</p>
+         */
         @NameInMap("rewriteEnabled")
         public Boolean rewriteEnabled;
 
         /**
-         * <p>The schema of the table.</p>
+         * <p>The schema to which the table belongs.</p>
          */
         @NameInMap("schema")
         public String schema;
 
+        /**
+         * <p>The size of the table.</p>
+         */
         @NameInMap("size")
         public Long size;
 
+        /**
+         * <p>The extractor of the external table.</p>
+         */
         @NameInMap("storageHandler")
         public String storageHandler;
 
+        /**
+         * <p>The description of the table.</p>
+         */
         @NameInMap("tableComment")
         public String tableComment;
 
+        /**
+         * <p>The security level of the table.</p>
+         */
         @NameInMap("tableLabel")
         public String tableLabel;
 
+        /**
+         * <p>The name of the Tablestore table that you want MaxCompute to access.</p>
+         */
         @NameInMap("tablesotreTableName")
         public String tablesotreTableName;
 
+        /**
+         * <p>The columns of the Tablestore table that you want MaxCompute to access. The columns include primary key columns and attribute columns.</p>
+         */
         @NameInMap("tablestoreColumnsMapping")
         public String tablestoreColumnsMapping;
 
@@ -250,6 +352,9 @@ public class ListTablesResponseBody extends TeaModel {
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The statement that is used to generate the view.</p>
+         */
         @NameInMap("viewText")
         public String viewText;
 

@@ -10,12 +10,21 @@ public class GetPackageResponseBody extends TeaModel {
     @NameInMap("data")
     public GetPackageResponseBodyData data;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    /**
+     * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+     */
     @NameInMap("httpCode")
     public Integer httpCode;
 
@@ -119,6 +128,9 @@ public class GetPackageResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The name of schema.</p>
+         */
         @NameInMap("schemaName")
         public String schemaName;
 
@@ -166,6 +178,9 @@ public class GetPackageResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The name of schema.</p>
+         */
         @NameInMap("schemaName")
         public String schemaName;
 
@@ -213,6 +228,9 @@ public class GetPackageResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The name of schema.</p>
+         */
         @NameInMap("schemaName")
         public String schemaName;
 

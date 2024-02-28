@@ -22,6 +22,9 @@ public class ListResourcesRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The name of the schema.</p>
+     */
     @NameInMap("schemaName")
     public String schemaName;
 

@@ -5,7 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListProjectsRequest extends TeaModel {
     /**
-     * <p>The flag to choose whether list the specific catalog - system_catalog.</p>
+     * <p>Specifies whether to list a project named SystemCatalog.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("listSystemCatalog")
     public Boolean listSystemCatalog;
@@ -53,7 +71,7 @@ public class ListProjectsRequest extends TeaModel {
     public String saleTags;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The tenant ID.</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

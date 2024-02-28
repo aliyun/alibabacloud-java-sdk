@@ -50,6 +50,9 @@ public class ListFunctionsResponseBody extends TeaModel {
         @NameInMap("creationTime")
         public Long creationTime;
 
+        /**
+         * <p>The display name of the function.</p>
+         */
         @NameInMap("displayName")
         public String displayName;
 
