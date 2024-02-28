@@ -7,6 +7,9 @@ public class SetRetcodeShareStatusRequest extends TeaModel {
     @NameInMap("Pid")
     public String pid;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Status")
     public Boolean status;
 
@@ -21,6 +24,14 @@ public class SetRetcodeShareStatusRequest extends TeaModel {
     }
     public String getPid() {
         return this.pid;
+    }
+
+    public SetRetcodeShareStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SetRetcodeShareStatusRequest setStatus(Boolean status) {

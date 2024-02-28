@@ -3254,6 +3254,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Pid", request.pid);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("Status", request.status);
         }
