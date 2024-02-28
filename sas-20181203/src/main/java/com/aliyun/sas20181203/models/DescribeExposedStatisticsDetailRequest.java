@@ -18,6 +18,9 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The type of the exposed asset. Valid values:</p>
      * <br>
@@ -63,6 +66,14 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeExposedStatisticsDetailRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeExposedStatisticsDetailRequest setStatisticsType(String statisticsType) {
