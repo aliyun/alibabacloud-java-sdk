@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
     /**
-     * <p>The category of the local disks.</p>
+     * <p>The information about the dedicated host type.</p>
      */
     @NameInMap("DedicatedHostTypes")
     public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes dedicatedHostTypes;
 
     /**
-     * <p>The number of cores in a single physical CPU.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -77,88 +77,91 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType extends TeaModel {
         /**
-         * <p>The GPU model.</p>
+         * <p>The number of cores in a single physical CPU.</p>
          */
         @NameInMap("Cores")
         public Integer cores;
 
         /**
-         * <p>The size of the memory. Unit: GiB.</p>
+         * <p>The supported CPU overcommit ratio range.</p>
          */
         @NameInMap("CpuOverCommitRatioRange")
         public String cpuOverCommitRatioRange;
 
         /**
-         * <p>The total number of vGPUs.</p>
+         * <p>The type of the dedicated host. You can submit a ticket to request more dedicated host types.</p>
          */
         @NameInMap("DedicatedHostType")
         public String dedicatedHostType;
 
         /**
-         * <p>The supported CPU overcommit ratio range.</p>
+         * <p>The GPU model.</p>
          */
         @NameInMap("GPUSpec")
         public String GPUSpec;
 
         /**
-         * <p>The number of physical CPUs.</p>
+         * <p>The number of local disks on a dedicated host.</p>
          */
         @NameInMap("LocalStorageAmount")
         public Integer localStorageAmount;
 
         /**
-         * <p>The number of local disks on a dedicated host.</p>
+         * <p>The capacity of a local disk. Unit: GiB.</p>
          */
         @NameInMap("LocalStorageCapacity")
         public Long localStorageCapacity;
 
         /**
-         * <p>The total number of vCPUs.</p>
+         * <p>The category of the local disks.</p>
          */
         @NameInMap("LocalStorageCategory")
         public String localStorageCategory;
 
         /**
-         * <p>The capacity of a local disk. Unit: GiB.</p>
+         * <p>The size of the memory. Unit: GiB.</p>
          */
         @NameInMap("MemorySize")
         public Float memorySize;
 
         /**
-         * <p>Indicates whether the CPU overcommit ratio setting is supported.</p>
+         * <p>The number of physical GPUs.</p>
          */
         @NameInMap("PhysicalGpus")
         public Integer physicalGpus;
 
         /**
-         * <p>The ECS instance family.</p>
+         * <p>The number of physical CPUs.</p>
          */
         @NameInMap("Sockets")
         public Integer sockets;
 
         /**
-         * <p>The type of the dedicated host. You can submit a ticket to request more dedicated host types.</p>
+         * <p>Indicates whether the CPU overcommit ratio setting is supported.</p>
          */
         @NameInMap("SupportCpuOverCommitRatio")
         public Boolean supportCpuOverCommitRatio;
 
         /**
-         * <p>The ECS instance types supported by the dedicated host.</p>
+         * <p>The ECS instance families supported by the dedicated host.</p>
          */
         @NameInMap("SupportedInstanceTypeFamilies")
         public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypeFamilies supportedInstanceTypeFamilies;
 
+        /**
+         * <p>The ECS instance types supported by the dedicated host.</p>
+         */
         @NameInMap("SupportedInstanceTypesList")
         public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypesList supportedInstanceTypesList;
 
         /**
-         * <p>The number of physical GPUs.</p>
+         * <p>The total number of vCPUs.</p>
          */
         @NameInMap("TotalVcpus")
         public Integer totalVcpus;
 
         /**
-         * <p>The ECS instance families supported by the dedicated host.</p>
+         * <p>The total number of vGPUs.</p>
          */
         @NameInMap("TotalVgpus")
         public Integer totalVgpus;

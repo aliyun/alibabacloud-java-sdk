@@ -34,7 +34,7 @@ public class RunInstancesRequest extends TeaModel {
     public String affinity;
 
     /**
-     * <p>The number of instances that you want to create. Valid values: 1 to 100.</p>
+     * <p>The number of ECS instances that you want to create. Valid values: 1 to 100.</p>
      * <br>
      * <p>Default value: 1.</p>
      */
@@ -42,7 +42,7 @@ public class RunInstancesRequest extends TeaModel {
     public Integer amount;
 
     /**
-     * <p>> This parameter is in invitational preview and is unavailable.</p>
+     * <p>This parameter is not publicly available.</p>
      */
     @NameInMap("Arn")
     public java.util.List<RunInstancesRequestArn> arn;
@@ -50,11 +50,17 @@ public class RunInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically complete the payment for instance creation. Valid values:</p>
      * <br>
-     * <p>- true: The payment is automatically completed.true: The payment is automatically completed.</p>
-     * <p>  >Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set `AutoPay` to `false` to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
+     * <p>*   true: The payment is automatically completed.</p>
      * <br>
-     * <p>- false: An order is generated but no payment is made.</p>
-     * <p>  >When `InstanceChargeType` is set to `PostPaid`, `AutoPay` cannot be set to `false`.</p>
+     * <p>    **</p>
+     * <br>
+     * <p>    **Note** Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set `AutoPay` to `false` to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
+     * <br>
+     * <p>*   false: An order is generated but no payment is made.</p>
+     * <br>
+     * <p>    **</p>
+     * <br>
+     * <p>    **Note** When `InstanceChargeType` is set to `PostPaid`, `AutoPay` cannot be set to `false`.</p>
      * <br>
      * <p>Default value: true.</p>
      */
@@ -62,11 +68,11 @@ public class RunInstancesRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The time when to automatically release the pay-as-you-go instance. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.</p>
+     * <p>The time when to automatically release the pay-as-you-go instance. Specify the time in the [ISO 8601 standard](~~25696~~) in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.</p>
      * <br>
-     * <p>*   If the value of seconds (`ss`) is not `00`, the time is automatically rounded to the nearest minute based on the value of minutes (`mm`).</p>
+     * <p>*   If the value of seconds (`ss`) is not `00`, the start time is automatically rounded to the nearest minute based on the value of minutes (`mm`).</p>
      * <p>*   The specified time must be at least 30 minutes later than the current time.</p>
-     * <p>*   The specified time can be at most three years from the current time.</p>
+     * <p>*   The specified time can be at most three years later than the current time.</p>
      */
     @NameInMap("AutoReleaseTime")
     public String autoReleaseTime;
@@ -94,7 +100,7 @@ public class RunInstancesRequest extends TeaModel {
     public Integer autoRenewPeriod;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -102,14 +108,14 @@ public class RunInstancesRequest extends TeaModel {
     /**
      * <p>The performance mode of the burstable instance. Valid values:</p>
      * <br>
-     * <p>*   Standard: the standard mode. For more information, see the "Standard mode" section in [Burstable instances](~~59977~~).</p>
+     * <p>*   Standard: the standard mode. For more information, see the "Standard mode" section in [Overview of burstable instances](~~59977~~).</p>
      * <p>*   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Burstable instances](~~59977~~).</p>
      */
     @NameInMap("CreditSpecification")
     public String creditSpecification;
 
     /**
-     * <p>Details about the data disks.</p>
+     * <p>Details of the data disks.</p>
      */
     @NameInMap("DataDisk")
     public java.util.List<RunInstancesRequestDataDisk> dataDisk;
@@ -189,7 +195,9 @@ public class RunInstancesRequest extends TeaModel {
     public java.util.List<String> hostNames;
 
     /**
-     * <p>The ID of the Elastic High Performance Computing (E-HPC) cluster to which to assign the instance.</p>
+     * <p>The ID of the high performance computing (HPC) cluster to which the instance belongs.</p>
+     * <br>
+     * <p>This parameter is required when you create instances of a Supper Computing Cluster (SCC) instance type. For information about how to create an HPC cluster, see [CreateHpcCluster](~~109138~~).</p>
      */
     @NameInMap("HpcClusterId")
     public String hpcClusterId;
@@ -231,22 +239,24 @@ public class RunInstancesRequest extends TeaModel {
     /**
      * <p>The name of the image family. You can set this parameter to obtain the latest available custom image from the specified image family to create instances.</p>
      * <br>
-     * <p>*   If you set the `ImageId` parameter, you cannot set the ImageFamily parameter.</p>
-     * <p>*   If you do not set the `ImageId` parameter but use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify a launch template that has the `ImageId` parameter set, you cannot set the ImageFamily parameter.</p>
-     * <p>*   If you do not set the `ImageId` parameter but use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify a launch template that does not have the `ImageId` parameter set, you can set the ImageFamily parameter.</p>
-     * <p>*   If you do not set the `ImageId`, `LaunchTemplateId`, or `LaunchTemplateName` parameter, you can set the ImageFamily parameter.</p>
+     * <p>*   If you specify `ImageId`, you cannot specify ImageFamily.</p>
+     * <p>*   If you do not specify `ImageId` but use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify a launch template that has the `ImageId` parameter specified, you cannot specify ImageFamily.</p>
+     * <p>*   If you do not specify `ImageId` but use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify a launch template that does not have the `ImageId` parameter specified, you can specify ImageFamily.</p>
+     * <p>*   If you do not specify `ImageId`, `LaunchTemplateId`, or `LaunchTemplateName`, you can specify ImageFamily.</p>
+     * <br>
+     * <p>>  For information about image families that are associated with Alibaba Cloud official images, see [Overview of public images](~~108393~~).</p>
      */
     @NameInMap("ImageFamily")
     public String imageFamily;
 
     /**
-     * <p>The ID of the image to use to create the instance. You can call the [DescribeImages](~~25534~~) operation to query available images. If you do not use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify a launch template and do not set the `ImageFamily` parameter to obtain the latest available custom image from the specified image family, you must specify the `ImageId` parameter.</p>
+     * <p>The ID of the image. You can call the [DescribeImages](~~25534~~) operation to query available images. If you do not use `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template and do not set `ImageFamily` to obtain the latest available custom image from a specified image family, you must specify `ImageId`.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
-     * <p>The image-related attribute parameters.</p>
+     * <p>Details about the image options.</p>
      */
     @NameInMap("ImageOptions")
     public RunInstancesRequestImageOptions imageOptions;
@@ -265,7 +275,7 @@ public class RunInstancesRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). The default value of this parameter is the `InstanceId` value.</p>
+     * <p>The name of the instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). The default value of this parameter is the `InstanceId` value.</p>
      * <br>
      * <p>When you batch create instances, you can batch configure sequential names for the instances. For more information, see [Batch configure sequential names or hostnames for multiple instances](~~196048~~).</p>
      */
@@ -359,7 +369,7 @@ public class RunInstancesRequest extends TeaModel {
     public String keyPairName;
 
     /**
-     * <p>The ID of the launch template. For more information, see [DescribeLaunchTemplates](~~73759~~).</p>
+     * <p>The ID of the launch template. For more information, call the [DescribeLaunchTemplates](~~73759~~) operation.</p>
      * <br>
      * <p>To use a launch template to create an instance, you must use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify the launch template.</p>
      */
@@ -406,7 +416,7 @@ public class RunInstancesRequest extends TeaModel {
     public Integer networkInterfaceQueueNumber;
 
     /**
-     * <p>The network-related attribute parameters.</p>
+     * <p>Details about network options.</p>
      */
     @NameInMap("NetworkOptions")
     public RunInstancesRequestNetworkOptions networkOptions;
@@ -509,36 +519,36 @@ public class RunInstancesRequest extends TeaModel {
     public String securityEnhancementStrategy;
 
     /**
-     * <p>The ID of the security group to which to assign the instance. Instances in the same security group can communicate with each other. The maximum number of instances that a security group can contain depends on the type of the security group. For more information, see the "Security group limits" section in [Limits](~~25412~~).</p>
+     * <p>The ID of the security group to which you want to assign the instance. Instances in the same security group can communicate with each other. The maximum number of instances that a security group can contain depends on the type of the security group. For more information, see the "Security group limits" section in [Limits](~~25412~~#SecurityGroupQuota).</p>
      * <br>
-     * <p>> The network type of the new instance must be the same as that of the security group specified by the `SecurityGroupId` parameter. For example, if the specified security group is of the VPC type, the new instance is also of the VPC type and you must specify the `VSwitchId` parameter.</p>
+     * <p>>  The network type of the new instance must be the same as that of the security group specified by the `SecurityGroupId` parameter. For example, if the specified security group is of the VPC type, the new instance is also of the VPC type and you must specify `VSwitchId`.</p>
      * <br>
-     * <p>If you do not use `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template, you must set the SecurityGroupId parameter. Take note of the following items:</p>
+     * <p>If you do not use `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template, you must specify SecurityGroupId. Take note of the following items:</p>
      * <br>
      * <p>*   You can set `SecurityGroupId` to specify a single security group or set `SecurityGroupIds.N` to specify one or more security groups. However, you cannot specify both `SecurityGroupId` and `SecurityGroupIds.N`.</p>
-     * <p>*   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `SecurityGroupId` or `SecurityGroupIds.N` but can specify only `NetworkInterface.N.SecurityGroupId` or `NetworkInterface.N.SecurityGroupIds.N`.</p>
+     * <p>*   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `SecurityGroupId` or `SecurityGroupIds.N` but can specify `NetworkInterface.N.SecurityGroupId` or `NetworkInterface.N.SecurityGroupIds.N`.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
-     * <p>The ID of security group N to which to assign the instance. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the "Security group limits" section in [Limits](~~101348~~).</p>
+     * <p>The ID of security group N to which to assign the instance. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see [Security group limits](~~101348~~).</p>
      * <br>
      * <p>Take note of the following items:</p>
      * <br>
-     * <p>*   You cannot specify both the `SecurityGroupId` and `SecurityGroupIds.N` parameters.</p>
+     * <p>*   You cannot specify both `SecurityGroupId` and `SecurityGroupIds.N`.</p>
      * <p>*   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `SecurityGroupId` or `SecurityGroupIds.N` but can specify `NetworkInterface.N.SecurityGroupId` or `NetworkInterface.N.SecurityGroupIds.N`.</p>
      */
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 
     /**
-     * <p>The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.</p>
+     * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
      * <br>
-     * <p>*   Protection periods of 2, 3, 4, 5, and 6 hours are in invitational preview. If you want to set this parameter to one of these values, submit a ticket.</p>
-     * <p>*   If this parameter is set to 0, no protection period is configured for the preemptible instance.</p>
+     * <p>*   1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</p>
+     * <p>*   0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</p>
      * <br>
-     * <p>Default value: 1.</p>
+     * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</p>
      */
     @NameInMap("SpotDuration")
     public Integer spotDuration;
@@ -614,7 +624,7 @@ public class RunInstancesRequest extends TeaModel {
     /**
      * <p>The user data of the instance. The user data must be encoded in Base64. The raw data can be up to 16 KB in size.</p>
      * <br>
-     * <p>> If the instance type supports [user data](~~~49121~), you can use the UserData parameter to pass in user data. We recommend that you do not pass in confidential information (such as passwords or private keys) in plaintext as user data. This is because the system does not encrypt UserData values when API requests are transmitted. If you must pass in confidential information, we recommend that you encrypt and encode the information in Base64, and then decode and decrypt the information in the same way within the instance.</p>
+     * <p>>  If the instance type supports [user data](~~49121~~), you can use the UserData parameter to pass in user data. We recommend that you do not pass in confidential information (such as passwords or private keys) in plaintext as user data. This is because the system does not encrypt UserData values when API requests are transmitted. If you must pass in confidential information, we recommend that you encrypt and encode the information in Base64, and then decode and decrypt the information in the same way inside the instance.</p>
      */
     @NameInMap("UserData")
     public String userData;
@@ -1269,12 +1279,10 @@ public class RunInstancesRequest extends TeaModel {
         public String numa;
 
         /**
-         * <p>The number of threads per CPU core. The following formula is used to calculate the number of vCPUs of the instance: `CpuOptions.Core` value × `CpuOptions.ThreadPerCore` value.</p>
+         * <p>The number of threads per CPU core. The following formula is used to calculate the number of vCPUs of the instance: `CpuOptions.Core` value × `CpuOptions.ThreadsPerCore` value.</p>
          * <br>
-         * <p>*   The following formula is used to calculate the number of vCPUs of the instance: `CpuOptions.Core` value × CpuOptions.ThreadPerCore value.</p>
+         * <p>*   If `CpuOptionsThreadPerCore` is set to 1, Hyper-Threading (HT) is disabled.</p>
          * <p>*   This parameter is applicable only to specific instance types.</p>
-         * <br>
-         * <p>For information about valid values and the default value, see [Customize CPU options](~~145895~~).</p>
          */
         @NameInMap("ThreadsPerCore")
         public Integer threadsPerCore;
@@ -1282,13 +1290,12 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>The CPU topology type of the instance. Valid values:</p>
          * <br>
-         * <p>- ContinuousCoreToHTMapping: The Hyper-Threading (HT) technology allows continuous threads to run on the same core in the CPU topology of the instance.</p>
-         * <br>
-         * <p>- DiscreteCoreToHTMapping: The HT technology allows discrete threads to run on the same core in the CPU topology of the instance.</p>
+         * <p>*   ContinuousCoreToHTMapping: The HT technology allows continuous threads to run on the same core in the CPU topology of the instance.``</p>
+         * <p>*   DiscreteCoreToHTMapping: The HT technology allows discrete threads to run on the same core in the CPU topology of the instance.``</p>
          * <br>
          * <p>This parameter is empty by default.</p>
          * <br>
-         * <p>>This parameter is supported only for specific instance families. For more information about the supported instance families, see [View and modify the CPU topology](~~2636059~~).</p>
+         * <p>>  This parameter is supported only for specific instance families. For more information about the supported instance families, see [View and modify the CPU topology](~~2636059~~).</p>
          */
         @NameInMap("TopologyType")
         public String topologyType;
@@ -1439,9 +1446,9 @@ public class RunInstancesRequest extends TeaModel {
          * <br>
          * <p>A value of Enclave indicates that an enclave-based confidential computing environment is built on the instance. When you call the `RunInstances` operation, you can set this parameter only for c7, g7, or r7 instances to use enclave-based confidential computing. Take note of the following items:</p>
          * <br>
-         * <p>*   The confidential computing feature is in invitational preview. To use this feature, submit a ticket.</p>
+         * <p>*   The confidential computing feature is in invitational preview.</p>
          * <p>*   When you use the ECS API to create instances that support enclave-based confidential computing, you can call only the `RunInstances` operation. The `CreateInstance` operation does not support the `SecurityOptions.ConfidentialComputingMode` parameter.</p>
-         * <p>*   Enclave-based confidential computing is implemented based on the Alibaba Cloud trusted system (vTPM). When you build a confidential computing environment on an instance by using Enclave, the Alibaba Cloud trusted system is enabled for the instance. Therefore, if you set `SecurityOptions.ConfidentialComputingMode` to Enclave when you call this operation, the created instances use enclave-based confidential computing and the Alibaba Cloud trusted system regardless of whether `SecurityOptions.TrustedSystemMode` is set to vTPM.</p>
+         * <p>*   Enclave-based confidential computing is implemented based on Alibaba Cloud Trusted System (vTPM). When you build a confidential computing environment on an instance by using Enclave, Alibaba Cloud Trusted System is enabled for the instance. If you set `SecurityOptions.ConfidentialComputingMode` to Enclave when you call this operation, the created instances use enclave-based confidential computing and Alibaba Cloud Trusted System regardless of whether `SecurityOptions.TrustedSystemMode` is set to vTPM.</p>
          * <br>
          * <p>For more information about confidential computing, see [Build a confidential computing environment by using Enclave](~~203433~~).</p>
          */
@@ -1504,11 +1511,14 @@ public class RunInstancesRequest extends TeaModel {
          * <br>
          * <p>*   cloud_efficiency: ultra disk</p>
          * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
+         * <p>*   cloud_essd: ESSD</p>
          * <p>*   cloud: basic disk</p>
          * <p>*   cloud_auto: ESSD AutoPL disk</p>
+         * <p>*   cloud_essd_entry: ESSD Entry disk</p>
          * <br>
-         * <p>For non-I/O optimized instances of retired instance types, the default value is cloud. For other instances, the default value is cloud_efficiency.</p>
+         * <p>>  Only when `InstanceType` is set to `ecs.u1` or `ecs.e`, this parameter supports `cloud_essd_entry`.</p>
+         * <br>
+         * <p>For non-I/O optimized instances of retired instance types, the default value is cloud. For instances of other instance types, the default value is cloud_efficiency.</p>
          */
         @NameInMap("Category")
         public String category;
@@ -1520,7 +1530,7 @@ public class RunInstancesRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the system disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
          */
         @NameInMap("DiskName")
         public String diskName;
@@ -1539,7 +1549,10 @@ public class RunInstancesRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The size of the system disk. Unit: GiB. Valid values: 20 to 500.</p>
+         * <p>The size of the system disk. Unit: GiB. Valid values:</p>
+         * <br>
+         * <p>*   Basic disks: 20 to 500.</p>
+         * <p>*   Other disks: 20 to 2048.</p>
          * <br>
          * <p>The value of this parameter must be at least 20 and greater than or equal to the image size.</p>
          * <br>
@@ -1549,23 +1562,18 @@ public class RunInstancesRequest extends TeaModel {
         public String size;
 
         /**
-         * <p>Specifies whether to enable the burst feature for the system disk. Valid values:</p>
+         * <p>Specifies whether to enable the performance burst feature for the system disk. Valid values:</p>
          * <br>
          * <p>*   true</p>
          * <p>*   false</p>
          * <br>
-         * <p>> This parameter is available only if you set `SystemDisk.Category` to `cloud_auto`.</p>
+         * <p>>  This parameter is available only if you set the `SystemDisk.Category` parameter to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).</p>
          */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
 
         /**
-         * <p>The algorithm to use to encrypt the system disk. Valid values:</p>
-         * <br>
-         * <p>*   ase-256</p>
-         * <p>*   sm4-128</p>
-         * <br>
-         * <p>Default value: ase-256.</p>
+         * <p>>  This parameter is not publicly available.</p>
          */
         @NameInMap("EncryptAlgorithm")
         public String encryptAlgorithm;
@@ -1573,12 +1581,12 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>Specifies whether to encrypt the system disk. Valid values:</p>
          * <br>
-         * <p>*   true: encrypts the data disk.</p>
-         * <p>*   false: does not encrypt the data disk.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          * <br>
          * <p>Default value: false.</p>
          * <br>
-         * <p>> The system disks of instances cannot be encrypted during instance creation in Hong Kong Zone D or Singapore Zone A.</p>
+         * <p>>  The system disks of instances cannot be encrypted during instance creation in Hong Kong Zone D or Singapore Zone A.</p>
          */
         @NameInMap("Encrypted")
         public String encrypted;
@@ -1590,17 +1598,17 @@ public class RunInstancesRequest extends TeaModel {
         public String KMSKeyId;
 
         /**
-         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}</p>
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
          * <br>
-         * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
+         * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
          * <br>
-         * <p>> This parameter is available only if you set the SystemDisk.Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).</p>
+         * <p>>  This parameter is available only if you set the `SystemDisk.Category` parameter to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).</p>
          */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
 
         /**
-         * <p>The ID of the dedicated block storage cluster. If you want to use disks in a dedicated block storage cluster as system disks when you create instances, you must specify this parameter.</p>
+         * <p>The ID of the dedicated block storage cluster. If you want to use disks in a dedicated block storage cluster as system disks when you create instances, you need to specify this parameter.</p>
          */
         @NameInMap("StorageClusterId")
         public String storageClusterId;
@@ -1710,19 +1718,19 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestArn extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>This parameter is not publicly available.</p>
          */
         @NameInMap("AssumeRoleFor")
         public Long assumeRoleFor;
 
         /**
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>This parameter is not publicly available.</p>
          */
         @NameInMap("RoleType")
         public String roleType;
 
         /**
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>This parameter is not publicly available.</p>
          */
         @NameInMap("Rolearn")
         public String rolearn;
@@ -1766,7 +1774,12 @@ public class RunInstancesRequest extends TeaModel {
         public String autoSnapshotPolicyId;
 
         /**
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>Specifies whether to enable the performance burst feature for data disk N. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         * <br>
+         * <p>>  This parameter is available only if you set the DataDisk.N.Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).</p>
          */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
@@ -1779,6 +1792,9 @@ public class RunInstancesRequest extends TeaModel {
          * <p>*   cloud_essd: ESSD</p>
          * <p>*   cloud: basic disk</p>
          * <p>*   cloud_auto: ESSD AutoPL disk</p>
+         * <p>*   cloud_essd_entry: ESSD Entry disk</p>
+         * <br>
+         * <p>>  This parameter can be set to `cloud_essd_entry` only when `InstanceType` is set to `ecs.u1` or `ecs.e`.</p>
          * <br>
          * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>
          */
@@ -1788,8 +1804,8 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>Specifies whether to release data disk N when the instance is released. Valid values:</p>
          * <br>
-         * <p>*   true: releases data disk N when the instance is released.</p>
-         * <p>*   false: does not release data disk N when the instance is released.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          * <br>
          * <p>Default value: true.</p>
          */
@@ -1803,26 +1819,24 @@ public class RunInstancesRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The mount point of data disk N.</p>
+         * <p>The mount point of data disk N. The mount points are named based on the number of data disks:</p>
          * <br>
-         * <p>> This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set this parameter to the mount point of data disk N contained in the full image and modify the `DataDisk.N.Size` and `DataDisk.N.Category` parameters to change the category and size of data disk N created based on the image.</p>
+         * <p>*   1st to 25th data disks: /dev/xvd`[b-z]`.</p>
+         * <p>*   From the 26th data disk on: /dev/xvd`[aa-zz]`. For example, the 26th data disk is named /dev/xvdaa, the 27th data disk is named /dev/xvdab, and so on.</p>
+         * <br>
+         * <p>>  This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify the `DataDisk.N.Size` and `DataDisk.N.Category` parameters to change the category and size of data disk N created based on the image.</p>
          */
         @NameInMap("Device")
         public String device;
 
         /**
-         * <p>The name of data disk N. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
+         * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
          */
         @NameInMap("DiskName")
         public String diskName;
 
         /**
-         * <p>The algorithm to use to encrypt data disk N. Valid values:</p>
-         * <br>
-         * <p>*   aes-256</p>
-         * <p>*   sm4-128</p>
-         * <br>
-         * <p>Default value: aes-256.</p>
+         * <p>>  This parameter is not publicly available.</p>
          */
         @NameInMap("EncryptAlgorithm")
         public String encryptAlgorithm;
@@ -1830,8 +1844,8 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>Specifies whether to encrypt data disk N. Valid values:</p>
          * <br>
-         * <p>*   true: encrypts the data disk.</p>
-         * <p>*   false: does not encrypt the data disk.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          * <br>
          * <p>Default value: false.</p>
          */
@@ -1839,38 +1853,42 @@ public class RunInstancesRequest extends TeaModel {
         public String encrypted;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key that is used for the data disk.</p>
+         * <p>The ID of the Key Management Service (KMS) key to use for data disk N.</p>
          */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
 
         /**
-         * <p>The performance level of the ESSD to use as data disk N. The value of N must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Default value: PL1. Valid values:</p>
+         * <p>The performance level of the ESSD to use as data disk N. The value of N must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Valid values:</p>
          * <br>
-         * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
-         * <p>*   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
-         * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
-         * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
+         * <p>*   PL0: A single ESSD can deliver up to 10000 random read/write IOPS.</p>
+         * <p>*   PL1 (default): A single ESSD can deliver up to 50000 random read/write IOPS.</p>
+         * <p>*   PL2: A single ESSD can deliver up to 100000 random read/write IOPS.</p>
+         * <p>*   PL3: A single ESSD can deliver up to 1000000 random read/write IOPS.</p>
          * <br>
-         * <p>For more information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
+         * <p>For information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
         /**
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
+         * <br>
+         * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+         * <br>
+         * <p>>  This parameter is available only if you set the DataDisk.N.Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).</p>
          */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
 
         /**
-         * <p>The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values of this parameter:</p>
+         * <p>The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
          * <br>
          * <p>*   Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</p>
          * <br>
          * <p>*   Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</p>
          * <br>
-         * <p>*   Valid values when DataDisk.N.Category is set to cloud_essd: depend on the `DataDisk.N.PerformanceLevel` value.</p>
+         * <p>*   Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the `DataDisk.N.PerformanceLevel` value.</p>
          * <br>
          * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.</p>
          * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</p>
@@ -1881,7 +1899,9 @@ public class RunInstancesRequest extends TeaModel {
          * <br>
          * <p>*   Valid values when DataDisk.N.Category is set to cloud_auto: 40 to 32768.</p>
          * <br>
-         * <p>The value of this parameter must be greater than or equal to the size of the snapshot specified by the `SnapshotId` parameter.</p>
+         * <p>*   Valid values when DataDisk.N.Category is set to cloud_essd_entry: 10 to 32768.</p>
+         * <br>
+         * <p>The value of this parameter must be greater than or equal to the size of the snapshot specified by the `DataDisk.N.SnapshotId` parameter.</p>
          */
         @NameInMap("Size")
         public Integer size;
@@ -1889,13 +1909,13 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.</p>
          * <br>
-         * <p>If the `DataDisk.N.SnapshotId` parameter is specified, the `DataDisk.N.Size` parameter is ignored. The data disk is created with the size of the specified snapshot. Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
+         * <p>When the `DataDisk.N.SnapshotId` parameter is specified, the `DataDisk.N.Size` parameter is ignored. The data disk is created with the size of the specified snapshot. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
         /**
-         * <p>The ID of the dedicated block storage cluster. If you want to use a disk in a dedicated block storage cluster as data disk N when you create instances, you must specify this parameter.</p>
+         * <p>The ID of the dedicated block storage cluster to which data disk N belongs. If you want to use a disk in a dedicated block storage cluster as data disk N when you create the instance, you must specify this parameter.</p>
          */
         @NameInMap("StorageClusterId")
         public String storageClusterId;
@@ -2029,11 +2049,10 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestImageOptions extends TeaModel {
         /**
-         * <p>Specifies whether the instance that uses the image support logons from the ecs-user user. Valid values:</p>
+         * <p>Specifies whether the instance that uses the image supports logons of the ecs-user user. Valid values:</p>
          * <br>
-         * <p>- true</p>
-         * <br>
-         * <p>- false</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("LoginAsNonRoot")
         public Boolean loginAsNonRoot;
@@ -2055,16 +2074,14 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestNetworkInterface extends TeaModel {
         /**
-         * <p>Specifies whether to release ENI N when the instance is released. Valid values:</p>
+         * <p>Specifies whether to retain the ENI when the associated instance is released. Valid values:</p>
          * <br>
-         * <p>- true</p>
-         * <br>
-         * <p>- false</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          * <br>
          * <p>Default value: true.</p>
          * <br>
-         * <p>> Note This parameter takes effect only for secondary ENIs.</p>
-         * <p>Example: true.</p>
+         * <p>>  This parameter takes effect only for secondary ENIs.</p>
          */
         @NameInMap("DeleteOnRelease")
         public Boolean deleteOnRelease;
@@ -2102,38 +2119,38 @@ public class RunInstancesRequest extends TeaModel {
          * <p>Take note of the following items:</p>
          * <br>
          * <p>*   This parameter is valid only when `NetworkInterface.N.InstanceType` is set to `Primary`. If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, you cannot set this parameter.</p>
-         * <p>*   If you specify this parameter, you must set `Amount` to 1. You cannot specify `Ipv6AddressCount`, `Ipv6Address.N`, or `NetworkInterface.N.Ipv6AddressCount`.</p>
+         * <p>*   If you specify this parameter, you must set `Amount` to 1 and cannot specify `Ipv6AddressCount`, `Ipv6Address.N`, or `NetworkInterface.N.Ipv6AddressCount`.</p>
          */
         @NameInMap("Ipv6Address")
         public java.util.List<String> ipv6Address;
 
         /**
-         * <p>The number of IPv6 addresses that the system randomly generates for the primary ENI. Valid values: 1 to 10.</p>
+         * <p>The number of IPv6 addresses to randomly generate for the primary ENI. Valid values: 1 to 10.</p>
          * <br>
          * <p>Take note of the following items:</p>
          * <br>
          * <p>*   This parameter is valid only when `NetworkInterface.N.InstanceType` is set to `Primary`. If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, you cannot set this parameter.</p>
-         * <p>*   If you specify this parameter, you cannot specify `Ipv6AddressCount`, `Ipv6Address.N`, or `NetworkInterface.N.Ipv6Address.N`.</p>
+         * <p>*   If this parameter is specified, you cannot specify `Ipv6AddressCount`, `Ipv6Address.N`, or `NetworkInterface.N.Ipv6Address.N`.</p>
          */
         @NameInMap("Ipv6AddressCount")
         public Long ipv6AddressCount;
 
         /**
-         * <p>The network interface controller (NIC) index specified for an ENI. </p>
+         * <p>The index of the network card for ENI N.</p>
          * <br>
          * <p>Take note of the following items:</p>
-         * <p>- You can specify NIC indexes only for instances of specific instance types. </p>
-         * <p>- If NetworkInterface.N.InstanceType is set to Primary, set this parameter to 0 for the instance that supports NICs. </p>
-         * <p>- If NetworkInterface.N.InstanceType is set to Secondary or left empty, specify this parameter based on the instance type of the instance that supports NICs. For more information, see [Overview of instance families](~~25378~~).</p>
+         * <br>
+         * <p>*   You can specify network card indexes only for instances of specific instance types.</p>
+         * <p>*   When NetworkInterface.N.InstanceType is set to Primary, you can set NetworkInterface.N.NetworkCardIndex only to 0 for instance types that support network cards.</p>
+         * <p>*   When NetworkInterface.N.InstanceType is set to Secondary or left empty, you can set NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see [Overview of instance families](~~25378~~).</p>
          */
         @NameInMap("NetworkCardIndex")
         public Integer networkCardIndex;
 
         /**
-         * <p>The ID of ENI N.</p>
+         * <p>The ID of the ENI to attach to the instance.</p>
          * <br>
-         * <p>> Note This parameter takes effect only for secondary ENIs.</p>
-         * <p>Example: eni-bp1gn106np8jhxhj****.</p>
+         * <p>>  This parameter takes effect only for secondary ENIs.</p>
          */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
@@ -2150,15 +2167,14 @@ public class RunInstancesRequest extends TeaModel {
         public String networkInterfaceName;
 
         /**
-         * <p>The communication mode of primary ENI N. Valid values:</p>
+         * <p>The communication mode of ENI N. Valid values:</p>
          * <br>
          * <p>*   Standard: uses the TCP communication mode.</p>
-         * <p>*   HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the remote direct memory access (RDMA) communication mode.</p>
+         * <p>*   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</p>
          * <br>
-         * <p>Take note of the following items:</p>
+         * <p>Default value: Standard.</p>
          * <br>
-         * <p>*   This parameter is valid only when `NetworkInterface.N.InstanceType` is set to `Primary`. If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, you cannot set this parameter.</p>
-         * <p>*   If you set this parameter to HighPerformance, you can create instances only of the c7re RDMA-enhanced instance family. The maximum number of ENIs in RDMA mode that can be bound to a c7re instance is determined based on the instance type. The c7re instance family is in invitational preview in Beijing Zone K. For more information, see [Instance family](~~25378~~).</p>
+         * <p>>  The number of ERIs on an instance cannot exceed the maximum number of ERIs that the instance type supports. For more information, see [Overview of instance families](~~25378~~).</p>
          */
         @NameInMap("NetworkInterfaceTrafficMode")
         public String networkInterfaceTrafficMode;
@@ -2170,14 +2186,14 @@ public class RunInstancesRequest extends TeaModel {
          * <br>
          * <p>*   Valid values of N: 1 and 2.</p>
          * <br>
-         * <p>    *   If the value of N is 1, you can configure a primary or secondary ENI. If this parameter is specified, `Amount` is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, the specified number of instances are created and consecutive primary IP addresses starting from the specified one are assigned to the instances. In this case, you cannot bind secondary ENIs to the instances.</p>
-         * <p>    *   If the value of N is 2, you can configure a primary ENI and a secondary ENI. If this parameter is specified, `Amount` is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, you cannot specify `NetworkInterface.2.InstanceType` to Secondary to bind a secondary ENI.</p>
+         * <p>    *   If the value of N is 1, you can configure a primary or secondary ENI. If this parameter is specified, `Amount` is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, the specified number of instances are created and consecutive primary IP addresses starting from the specified one are assigned to the instances. In this case, you cannot attach secondary ENIs to the instances.</p>
+         * <p>    *   If the value of N is 2, you can configure a primary ENI and a secondary ENI. If this parameter is specified, `Amount` is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, you cannot set `NetworkInterface.2.InstanceType` to Secondary to attach a secondary ENI.</p>
          * <br>
-         * <p>*   If `NetworkInterface.N.InstanceType` is set to `Primary`, this parameter is equivalent to `PrivateIpAddress` and you cannot specify both NetworkInterface.N.PrimaryIpAddress and `PrivateIpAddress`.</p>
+         * <p>*   If `NetworkInterface.N.InstanceType` is set to `Primary`, this parameter is equivalent to `PrivateIpAddress`. You cannot specify both NetworkInterface.N.PrimaryIpAddress and `PrivateIpAddress`.</p>
          * <br>
          * <p>*   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, the specified primary IP address is assigned to the secondary ENI. The default value is an IP address that is randomly selected from within the CIDR block of the vSwitch to which to connect the secondary ENI.</p>
          * <br>
-         * <p>> You can bind only a single secondary ENI when you create an instance. After the instance is created, you can call the [CreateNetworkInterface](~~58504~~) and [AttachNetworkInterface](~~58515~~) operations to bind more secondary ENIs.</p>
+         * <p>>  You can attach only a single secondary ENI when you create an instance. After the instance is created, you can call the [CreateNetworkInterface](~~58504~~) and [AttachNetworkInterface](~~58515~~) operations to attach more secondary ENIs.</p>
          */
         @NameInMap("PrimaryIpAddress")
         public String primaryIpAddress;
@@ -2187,31 +2203,39 @@ public class RunInstancesRequest extends TeaModel {
          * <br>
          * <p>Take note of the following items:</p>
          * <br>
-         * <p>*   Valid values of N: 1 and 2. If the value of N is 1, you can set a primary or secondary ENI. If the value of N is 2, you can set a primary ENI and a secondary ENI.</p>
-         * <p>*   The value of this parameter cannot exceed the maximum number of queues per ENI allowed for the specified instance type.</p>
-         * <p>*   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` values.</p>
-         * <p>*   If this parameter is set and `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot set the `NetworkInterfaceQueueNumber` parameter.</p>
+         * <p>*   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</p>
+         * <p>*   The value of this parameter cannot exceed the maximum number of queues per ENI allowed for the instance type.</p>
+         * <p>*   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To learn the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` values.</p>
+         * <p>*   If this parameter is set and `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `NetworkInterfaceQueueNumber`.</p>
          */
         @NameInMap("QueueNumber")
         public Integer queueNumber;
 
         /**
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>The number of queues supported by the ERI.</p>
          */
         @NameInMap("QueuePairNumber")
         public Long queuePairNumber;
 
+        /**
+         * <p>Elastic Network Interface RxQueueSize.</p>
+         * <br>
+         * <p>Please note:</p>
+         * <br>
+         * <p>- RxQueueSize of the ENI must be equal to the TxQueueSize, with a value range from 8192 to 16384, and it must be a power of 2.</p>
+         * <p>- A larger RxQueueSize can improve the throughput of inbound traffic but will consume more memory.</p>
+         */
         @NameInMap("RxQueueSize")
         public Integer rxQueueSize;
 
         /**
-         * <p>The ID of the security group to which to assign secondary ENI N.</p>
+         * <p>The ID of the security group to which to assign ENI N.</p>
          * <br>
          * <p>Take note of the following items:</p>
          * <br>
          * <p>*   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</p>
-         * <p>*   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter. In this case, this parameter is equivalent to `SecurityGroupId` and you cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupIds.N`.</p>
-         * <p>*   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which to assign the ECS instance.</p>
+         * <p>*   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter. In this case, this parameter is equivalent to `SecurityGroupId`. You cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupIds.N`.</p>
+         * <p>*   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which the instance belongs.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
@@ -2220,27 +2244,35 @@ public class RunInstancesRequest extends TeaModel {
          * <p>The ID of security group N to which to assign ENI N.</p>
          * <br>
          * <p>*   Valid values of the first N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</p>
-         * <p>*   The second N indicates that one or more security group IDs can be specified. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).</p>
+         * <p>*   The second N indicates that one or more security group IDs can be specified. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see [Security group limits](~~25412#SecurityGroupQuota1~~).</p>
          * <br>
          * <p>Take note of the following items:</p>
          * <br>
-         * <p>*   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter or `NetworkInterface.N.SecurityGroupId`. In this case, this parameter is equivalent to `SecurityGroupIds.N` and you cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupId`.</p>
-         * <p>*   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which to assign the ECS instance.</p>
+         * <p>*   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must specify this parameter or `NetworkInterface.N.SecurityGroupId`. In this case, this parameter is equivalent to `SecurityGroupIds.N`. You cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupId`.</p>
+         * <p>*   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which the instance belongs.</p>
          */
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
 
+        /**
+         * <p>Elastic Network Interface TxQueueSize.</p>
+         * <br>
+         * <p>Please note:</p>
+         * <br>
+         * <p>- TxQueueSize of the ENI must be equal to the RxQueueSize, with a value range from 8192 to 16384, and it must be a power of 2.</p>
+         * <p>- A larger TxQueueSize can improve the throughput of outbound traffic but will consume more memory.</p>
+         */
         @NameInMap("TxQueueSize")
         public Integer txQueueSize;
 
         /**
-         * <p>The ID of the vSwitch to which to connect to ENI N.</p>
+         * <p>The ID of the vSwitch to which to connect ENI N.</p>
          * <br>
          * <p>Take note of the following items:</p>
          * <br>
          * <p>*   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</p>
-         * <p>*   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter. In this case, this parameter is equivalent to `VSwitchId` and you cannot specify `VSwitchId`.</p>
-         * <p>*   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the vSwitch to which to connect to the instance.</p>
+         * <p>*   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter. In this case, this parameter is equivalent to `VSwitchId`. You cannot specify both NetworkInterface.N.VSwitchId and `VSwitchId`.</p>
+         * <p>*   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the VSwitchId value.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -2390,15 +2422,14 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestNetworkOptions extends TeaModel {
         /**
-         * <p>Specifies whether to enable the Jumbo Frame feature for the instance. Valid values:</p>
+         * <p>Specifies whether to enable the Jumbo Frames feature for the instance. Valid values:</p>
          * <br>
-         * <p>- false: does not enable the Jumbo Frame feature for the instance. The maximum transmission unit (MTU) values of all primary and secondary elastic network interfaces (ENIs) on the instance are set to 1500. </p>
+         * <p>*   false: does not enable the Jumbo Frames feature for the instance. The maximum transmission unit (MTU) value of all ENIs on the instance is set to 1500.</p>
+         * <p>*   true: enables the Jumbo Frames feature for the instance. The MTU value of all ENIs on the instance is set to 8500.</p>
          * <br>
-         * <p>- true: enables the Jumbo Frame feature for the instance. The MTU values of all primary and secondary ENIs on the instance are set to 8500. </p>
+         * <p>Default value: true.</p>
          * <br>
-         * <p>Default value: true. </p>
-         * <br>
-         * <p>> Only instances of some 8th-generation or later instance types support the Jumbo Frame feature. For more information, see [MTUs](~~200512~~).</p>
+         * <p>>  The Jumbo Frames feature is supported by only 8th-generation or later instance types. For more information, see [MTUs](~~200512~~).</p>
          */
         @NameInMap("EnableJumboFrame")
         public Boolean enableJumboFrame;

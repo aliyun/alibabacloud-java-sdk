@@ -3,7 +3,7 @@ package com.aliyun.ecs20140526.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
+public class ModifyAutoSnapshotPolicyExShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the request.</p>
      */
@@ -11,7 +11,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public Integer copiedSnapshotsRetentionDays;
 
     @NameInMap("CopyEncryptionConfiguration")
-    public ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration copyEncryptionConfiguration;
+    public String copyEncryptionConfigurationShrink;
 
     /**
      * <p>The destination region to which to copy the snapshot. You can specify only a single destination region.</p>
@@ -93,12 +93,12 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     @NameInMap("timePoints")
     public String timePoints;
 
-    public static ModifyAutoSnapshotPolicyExRequest build(java.util.Map<String, ?> map) throws Exception {
-        ModifyAutoSnapshotPolicyExRequest self = new ModifyAutoSnapshotPolicyExRequest();
+    public static ModifyAutoSnapshotPolicyExShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyAutoSnapshotPolicyExShrinkRequest self = new ModifyAutoSnapshotPolicyExShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyAutoSnapshotPolicyExRequest setCopiedSnapshotsRetentionDays(Integer copiedSnapshotsRetentionDays) {
+    public ModifyAutoSnapshotPolicyExShrinkRequest setCopiedSnapshotsRetentionDays(Integer copiedSnapshotsRetentionDays) {
         this.copiedSnapshotsRetentionDays = copiedSnapshotsRetentionDays;
         return this;
     }
@@ -106,15 +106,15 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         return this.copiedSnapshotsRetentionDays;
     }
 
-    public ModifyAutoSnapshotPolicyExRequest setCopyEncryptionConfiguration(ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration copyEncryptionConfiguration) {
-        this.copyEncryptionConfiguration = copyEncryptionConfiguration;
+    public ModifyAutoSnapshotPolicyExShrinkRequest setCopyEncryptionConfigurationShrink(String copyEncryptionConfigurationShrink) {
+        this.copyEncryptionConfigurationShrink = copyEncryptionConfigurationShrink;
         return this;
     }
-    public ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration getCopyEncryptionConfiguration() {
-        return this.copyEncryptionConfiguration;
+    public String getCopyEncryptionConfigurationShrink() {
+        return this.copyEncryptionConfigurationShrink;
     }
 
-    public ModifyAutoSnapshotPolicyExRequest setEnableCrossRegionCopy(Boolean enableCrossRegionCopy) {
+    public ModifyAutoSnapshotPolicyExShrinkRequest setEnableCrossRegionCopy(Boolean enableCrossRegionCopy) {
         this.enableCrossRegionCopy = enableCrossRegionCopy;
         return this;
     }
@@ -122,7 +122,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         return this.enableCrossRegionCopy;
     }
 
-    public ModifyAutoSnapshotPolicyExRequest setOwnerId(Long ownerId) {
+    public ModifyAutoSnapshotPolicyExShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -130,7 +130,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public ModifyAutoSnapshotPolicyExRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public ModifyAutoSnapshotPolicyExShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -138,7 +138,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public ModifyAutoSnapshotPolicyExRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ModifyAutoSnapshotPolicyExShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -146,7 +146,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyAutoSnapshotPolicyExRequest setTargetCopyRegions(String targetCopyRegions) {
+    public ModifyAutoSnapshotPolicyExShrinkRequest setTargetCopyRegions(String targetCopyRegions) {
         this.targetCopyRegions = targetCopyRegions;
         return this;
     }
@@ -154,7 +154,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         return this.targetCopyRegions;
     }
 
-    public ModifyAutoSnapshotPolicyExRequest setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+    public ModifyAutoSnapshotPolicyExShrinkRequest setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
         this.autoSnapshotPolicyId = autoSnapshotPolicyId;
         return this;
     }
@@ -162,7 +162,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         return this.autoSnapshotPolicyId;
     }
 
-    public ModifyAutoSnapshotPolicyExRequest setAutoSnapshotPolicyName(String autoSnapshotPolicyName) {
+    public ModifyAutoSnapshotPolicyExShrinkRequest setAutoSnapshotPolicyName(String autoSnapshotPolicyName) {
         this.autoSnapshotPolicyName = autoSnapshotPolicyName;
         return this;
     }
@@ -170,7 +170,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         return this.autoSnapshotPolicyName;
     }
 
-    public ModifyAutoSnapshotPolicyExRequest setRegionId(String regionId) {
+    public ModifyAutoSnapshotPolicyExShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -178,7 +178,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ModifyAutoSnapshotPolicyExRequest setRepeatWeekdays(String repeatWeekdays) {
+    public ModifyAutoSnapshotPolicyExShrinkRequest setRepeatWeekdays(String repeatWeekdays) {
         this.repeatWeekdays = repeatWeekdays;
         return this;
     }
@@ -186,7 +186,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         return this.repeatWeekdays;
     }
 
-    public ModifyAutoSnapshotPolicyExRequest setRetentionDays(Integer retentionDays) {
+    public ModifyAutoSnapshotPolicyExShrinkRequest setRetentionDays(Integer retentionDays) {
         this.retentionDays = retentionDays;
         return this;
     }
@@ -194,94 +194,12 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         return this.retentionDays;
     }
 
-    public ModifyAutoSnapshotPolicyExRequest setTimePoints(String timePoints) {
+    public ModifyAutoSnapshotPolicyExShrinkRequest setTimePoints(String timePoints) {
         this.timePoints = timePoints;
         return this;
     }
     public String getTimePoints() {
         return this.timePoints;
-    }
-
-    public static class ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn extends TeaModel {
-        @NameInMap("AssumeRoleFor")
-        public Long assumeRoleFor;
-
-        @NameInMap("RoleType")
-        public String roleType;
-
-        @NameInMap("Rolearn")
-        public String rolearn;
-
-        public static ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn build(java.util.Map<String, ?> map) throws Exception {
-            ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn self = new ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn();
-            return TeaModel.build(map, self);
-        }
-
-        public ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn setAssumeRoleFor(Long assumeRoleFor) {
-            this.assumeRoleFor = assumeRoleFor;
-            return this;
-        }
-        public Long getAssumeRoleFor() {
-            return this.assumeRoleFor;
-        }
-
-        public ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn setRoleType(String roleType) {
-            this.roleType = roleType;
-            return this;
-        }
-        public String getRoleType() {
-            return this.roleType;
-        }
-
-        public ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn setRolearn(String rolearn) {
-            this.rolearn = rolearn;
-            return this;
-        }
-        public String getRolearn() {
-            return this.rolearn;
-        }
-
-    }
-
-    public static class ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration extends TeaModel {
-        @NameInMap("Arn")
-        public java.util.List<ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn> arn;
-
-        @NameInMap("Encrypted")
-        public Boolean encrypted;
-
-        @NameInMap("KMSKeyId")
-        public String KMSKeyId;
-
-        public static ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration build(java.util.Map<String, ?> map) throws Exception {
-            ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration self = new ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration();
-            return TeaModel.build(map, self);
-        }
-
-        public ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration setArn(java.util.List<ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn> arn) {
-            this.arn = arn;
-            return this;
-        }
-        public java.util.List<ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn> getArn() {
-            return this.arn;
-        }
-
-        public ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration setEncrypted(Boolean encrypted) {
-            this.encrypted = encrypted;
-            return this;
-        }
-        public Boolean getEncrypted() {
-            return this.encrypted;
-        }
-
-        public ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration setKMSKeyId(String KMSKeyId) {
-            this.KMSKeyId = KMSKeyId;
-            return this;
-        }
-        public String getKMSKeyId() {
-            return this.KMSKeyId;
-        }
-
     }
 
 }

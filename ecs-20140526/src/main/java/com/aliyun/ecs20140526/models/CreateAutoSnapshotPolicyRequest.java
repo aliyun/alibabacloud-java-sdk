@@ -15,6 +15,9 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     @NameInMap("CopiedSnapshotsRetentionDays")
     public Integer copiedSnapshotsRetentionDays;
 
+    @NameInMap("CopyEncryptionConfiguration")
+    public CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration copyEncryptionConfiguration;
+
     /**
      * <p>Specifies whether to enable cross-region replication for snapshots.</p>
      * <br>
@@ -111,6 +114,14 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     }
     public Integer getCopiedSnapshotsRetentionDays() {
         return this.copiedSnapshotsRetentionDays;
+    }
+
+    public CreateAutoSnapshotPolicyRequest setCopyEncryptionConfiguration(CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration copyEncryptionConfiguration) {
+        this.copyEncryptionConfiguration = copyEncryptionConfiguration;
+        return this;
+    }
+    public CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration getCopyEncryptionConfiguration() {
+        return this.copyEncryptionConfiguration;
     }
 
     public CreateAutoSnapshotPolicyRequest setEnableCrossRegionCopy(Boolean enableCrossRegionCopy) {
@@ -215,6 +226,88 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     }
     public String getTimePoints() {
         return this.timePoints;
+    }
+
+    public static class CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn extends TeaModel {
+        @NameInMap("AssumeRoleFor")
+        public Long assumeRoleFor;
+
+        @NameInMap("RoleType")
+        public String roleType;
+
+        @NameInMap("Rolearn")
+        public String rolearn;
+
+        public static CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn self = new CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn setAssumeRoleFor(Long assumeRoleFor) {
+            this.assumeRoleFor = assumeRoleFor;
+            return this;
+        }
+        public Long getAssumeRoleFor() {
+            return this.assumeRoleFor;
+        }
+
+        public CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn setRoleType(String roleType) {
+            this.roleType = roleType;
+            return this;
+        }
+        public String getRoleType() {
+            return this.roleType;
+        }
+
+        public CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn setRolearn(String rolearn) {
+            this.rolearn = rolearn;
+            return this;
+        }
+        public String getRolearn() {
+            return this.rolearn;
+        }
+
+    }
+
+    public static class CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration extends TeaModel {
+        @NameInMap("Arn")
+        public java.util.List<CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn> arn;
+
+        @NameInMap("Encrypted")
+        public Boolean encrypted;
+
+        @NameInMap("KMSKeyId")
+        public String KMSKeyId;
+
+        public static CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration self = new CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration setArn(java.util.List<CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn> arn) {
+            this.arn = arn;
+            return this;
+        }
+        public java.util.List<CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn> getArn() {
+            return this.arn;
+        }
+
+        public CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration setEncrypted(Boolean encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        public CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration setKMSKeyId(String KMSKeyId) {
+            this.KMSKeyId = KMSKeyId;
+            return this;
+        }
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
     }
 
     public static class CreateAutoSnapshotPolicyRequestTag extends TeaModel {
