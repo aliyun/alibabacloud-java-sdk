@@ -4,12 +4,21 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The information about the associated global IP whitelist template.</p>
+     */
     @NameInMap("GlobalSecurityIPGroupRel")
     public java.util.List<DescribeGlobalSecurityIPGroupRelationResponseBodyGlobalSecurityIPGroupRel> globalSecurityIPGroupRel;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +52,29 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
     }
 
     public static class DescribeGlobalSecurityIPGroupRelationResponseBodyGlobalSecurityIPGroupRel extends TeaModel {
+        /**
+         * <p>The IP address in the IP whitelist template.</p>
+         * <br>
+         * <p>>  Multiple IP addresses are separated by commas (,).</p>
+         */
         @NameInMap("GIpList")
         public String GIpList;
 
+        /**
+         * <p>The name of the IP whitelist template.</p>
+         */
         @NameInMap("GlobalIgName")
         public String globalIgName;
 
+        /**
+         * <p>The ID of the IP whitelist template.</p>
+         */
         @NameInMap("GlobalSecurityGroupId")
         public String globalSecurityGroupId;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

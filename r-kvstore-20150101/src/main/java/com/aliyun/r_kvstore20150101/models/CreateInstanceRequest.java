@@ -75,7 +75,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>Backup files ID of cluster instance.</p>
+     * <p>The backup set ID.</p>
      */
     @NameInMap("ClusterBackupId")
     public String clusterBackupId;
@@ -87,7 +87,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String connectionStringPrefix;
 
     /**
-     * <p>The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.</p>
+     * <p>The coupon code. Default value: `default`.</p>
      */
     @NameInMap("CouponNo")
     public String couponNo;
@@ -175,8 +175,12 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The node type. Valid values:</p>
      * <br>
+     * <p>*   **MASTER_SLAVE**: high availability (master-replica)</p>
      * <p>*   **STAND_ALONE**: standalone</p>
-     * <p>*   **MASTER_SLAVE** (default): high availability (master-replica)</p>
+     * <p>*   **double**: master-replica</p>
+     * <p>*   **single**: standalone</p>
+     * <br>
+     * <p>>  To create a cloud-native instance, set this parameter to **MASTER_SLAVE** or **STAND_ALONE**. To create a classic instance, set this parameter to **double** or **single**.</p>
      */
     @NameInMap("NodeType")
     public String nodeType;
@@ -188,7 +192,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Parameter template ID.</p>
+     * <p>The parameter template ID, which must be globally unique.</p>
      */
     @NameInMap("ParamGroupId")
     public String paramGroupId;

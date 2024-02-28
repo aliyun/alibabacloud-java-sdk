@@ -15,7 +15,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String architectureType;
 
     /**
-     * <p>The billing method of the instance. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <br>
      * <p>*   **PrePaid**: subscription</p>
      * <p>*   **PostPaid**: pay-as-you-go</p>
@@ -26,14 +26,23 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The edition of the instance. Valid values:</p>
      * <br>
-     * <p>*   **Community**: Community Edition</p>
-     * <p>*   **Enterprise**: Enhance Edition (Tair)</p>
+     * <p>*   **Community**: ApsaraDB for Redis Community Edition</p>
+     * <p>*   **Enterprise**: ApsaraDB for Redis Enhanced Edition (Tair)</p>
      */
     @NameInMap("EditionType")
     public String editionType;
 
     /**
-     * <p>The database engine version of the instance. Valid values: **2.8**, **4.0**, **5.0**, and **6.0**.</p>
+     * <p>The engine version of the instance. Valid values: **2.8**, **4.0**, and **5.0**.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   1.0</p>
+     * <p>*   2.8</p>
+     * <p>*   4.0</p>
+     * <p>*   5.0</p>
+     * <p>*   6.0</p>
+     * <p>*   7.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -63,9 +72,9 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceClass;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The IDs of the instances that you want to query.</p>
      * <br>
-     * <p>> If you specify multiple instance IDs, separate these IDs with commas (,).</p>
+     * <p>>  If you want to specify multiple instance IDs, separate the instance IDs with commas (,). You can specify a maximum of 30 instance IDs in a single request.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
@@ -105,10 +114,10 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The network type of the instance. Valid values:</p>
+     * <p>The network type. Valid values:</p>
      * <br>
-     * <p>*   **CLASSIC**: classic network</p>
-     * <p>*   **VPC**: Virtual Private Cloud (VPC)</p>
+     * <p>*   **CLASSIC**</p>
+     * <p>*   **VPC**</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -120,13 +129,13 @@ public class DescribeInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -407,15 +416,15 @@ public class DescribeInstancesRequest extends TeaModel {
 
     public static class DescribeInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. A tag is a key-value pair.</p>
+         * <p>The tag key. A tag is a key-value pair.</p>
          * <br>
-         * <p>> A maximum of five key-value pairs can be specified at a time.</p>
+         * <p>>  A maximum of five key-value pairs can be specified at a time.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag. A tag is a key-value pair.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;

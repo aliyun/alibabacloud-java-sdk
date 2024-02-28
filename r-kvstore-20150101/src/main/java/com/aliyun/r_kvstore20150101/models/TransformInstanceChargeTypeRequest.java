@@ -14,18 +14,18 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
      * <br>
      * <p>*   **true**: enables auto-renewal.</p>
-     * <p>*   **false**: disables auto-renewal.</p>
+     * <p>*   **false** (default): disables auto-renewal.</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
     /**
-     * <p>The subscription duration that is supported by auto-renewal. Unit: months. Valid values: **1**, **2**, **3**, **6**, and **12**.</p>
+     * <p>The subscription duration that is supported by auto-renewal. Unit: month. Valid values: **1**, **2**, **3**, **6**, and **12**.</p>
      * <br>
-     * <p>> This parameter is required only if the **AutoRenew** parameter is set to **true**.</p>
+     * <p>>  This parameter is required if the **AutoRenew** parameter is set to **true**.</p>
      */
     @NameInMap("AutoRenewPeriod")
     public Long autoRenewPeriod;
@@ -33,8 +33,8 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     /**
      * <p>The new billing method. Valid values:</p>
      * <br>
-     * <p>*   **PrePaid**: subscription. If you set this parameter to PrePaid, you must also set the **Period** parameter.</p>
-     * <p>*   **PostPaid**: pay-as-you-go.</p>
+     * <p>*   **PrePaid**: subscription. If you set this parameter to PrePaid, you must also specify the **Period** parameter.</p>
+     * <p>*   **PostPaid**: pay-as-you-go</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;

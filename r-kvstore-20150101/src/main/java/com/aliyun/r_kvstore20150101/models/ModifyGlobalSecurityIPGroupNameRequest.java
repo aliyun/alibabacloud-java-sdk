@@ -4,9 +4,19 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyGlobalSecurityIPGroupNameRequest extends TeaModel {
+    /**
+     * <p>The name of the global IP whitelist template. The name must meet the following requirements:</p>
+     * <br>
+     * <p>*   The name can contain lowercase letters, digits, and underscores (\_).</p>
+     * <p>*   The name must start with a letter and end with a letter or a digit.</p>
+     * <p>*   The name must be 2 to 120 characters in length.</p>
+     */
     @NameInMap("GlobalIgName")
     public String globalIgName;
 
+    /**
+     * <p>The ID of the IP whitelist template.</p>
+     */
     @NameInMap("GlobalSecurityGroupId")
     public String globalSecurityGroupId;
 
@@ -16,9 +26,15 @@ public class ModifyGlobalSecurityIPGroupNameRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

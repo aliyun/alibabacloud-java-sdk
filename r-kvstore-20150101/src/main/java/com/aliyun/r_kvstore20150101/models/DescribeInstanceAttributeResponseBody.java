@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
-     * <p>Details of the instance.</p>
+     * <p>Details about the instances.</p>
      */
     @NameInMap("Instances")
     public DescribeInstanceAttributeResponseBodyInstances instances;
@@ -104,7 +104,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String architectureType;
 
         /**
-         * <p>The retention period of audit logs. Unit: day. A value of 0 indicates that the audit log feature is disabled. For more information, see [Enable the audit log feature](~~102015~~).</p>
+         * <p>The retention period of audit logs. Unit: day. A value of 0 indicates that the audit log feature is disabled. For information about how to enable the feature, see [Enable the audit log feature](~~102015~~).</p>
          */
         @NameInMap("AuditLogRetention")
         public String auditLogRetention;
@@ -116,11 +116,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String availabilityValue;
 
         /**
-         * <p>The earliest point in time to which you can restore data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The earliest point in time to which data can be restored. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          * <br>
          * <p>> </p>
          * <br>
-         * <p>*   This parameter is returned only if the [data flashback](~~148479~~) feature is enabled for the instance.</p>
+         * <p>*   This parameter is returned only when the data flashback feature is enabled for the instance. For more information, see [Restore data to a point in time by using the data flashback feature](~~148479~~).</p>
          * <br>
          * <p>*   When you call the [RestoreInstance](~~61083~~) operation to implement data flashback, you can obtain the earliest point in time for data flashback from the return value of this parameter and set the **RestoreTime** parameter to this point in time.</p>
          */
@@ -179,7 +179,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the subscription instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the subscription expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
@@ -199,7 +199,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The ID of the distributed instance to which the instance belongs.</p>
          * <br>
-         * <p>>  This parameter is returned only if the ApsaraDB for Redis instance is a child instance of a distributed instance.</p>
+         * <p>>  This parameter is returned only when the ApsaraDB for Redis instance is a child instance of a distributed instance.</p>
          */
         @NameInMap("GlobalInstanceId")
         public String globalInstanceId;
@@ -214,7 +214,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String hasRenewChangeOrder;
 
         /**
-         * <p>The instance type of the instance. For more information, see [Instance types](~~107984~~).</p>
+         * <p>The instance type. For more information, see [Instance types](~~107984~~).</p>
          */
         @NameInMap("InstanceClass")
         public String instanceClass;
@@ -226,7 +226,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
@@ -256,7 +256,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          * <p>*   **BackupRecovering**: The instance is being restored from a backup.</p>
          * <p>*   **MinorVersionUpgrading**: The minor version of the instance is being updated.</p>
          * <p>*   **NetworkModifying**: The network type of the instance is being changed.</p>
-         * <p>*   **SSLModifying**: The SSL certificate of the instance is being changed.</p>
+         * <p>*   **SSLModifying**: The SSL configurations of the instance are being changed.</p>
          * <p>*   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</p>
          * <br>
          * <p>>  For more information about instance states, see [Instance states and impacts](~~200740~~).</p>
@@ -326,7 +326,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          * <p>The node type. Valid values:</p>
          * <br>
          * <p>*   **double**: The instance contains a master node and a replica node.</p>
-         * <p>*   **single**: The instance contains only a master node. This node type is phrased out.</p>
+         * <p>*   **single**: The instance is a standalone instance.</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
@@ -341,7 +341,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String packageType;
 
         /**
-         * <p>The port number that is used to connect to the instance.</p>
+         * <p>The service port of the ApsaraDB for Redis instance.</p>
          */
         @NameInMap("Port")
         public Long port;
@@ -361,15 +361,15 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public Long QPS;
 
         /**
-         * <p>The number of read-only nodes. This parameter is available only for read/write splitting instances that use cloud disks.</p>
+         * <p>The number of read replicas. This parameter is available only for read/write splitting instances that use cloud disks.</p>
          */
         @NameInMap("ReadOnlyCount")
         public Integer readOnlyCount;
 
         /**
-         * <p>If the instance is a cluster instance that uses cloud disks, this parameter indicates the instance type of each shard. In this case, the InstanceClass parameter indicates a virtual instance type.</p>
+         * <p>If the instance is a cluster instance that uses cloud disks, this parameter indicates the actual instance type of individual shards in the instance. The InstanceClass parameter indicates the virtual instance type.</p>
          * <br>
-         * <p>>  You can call the [DescribePrice](~~95612~~) operation to query the price of the instance type that is returned by this parameter.</p>
+         * <p>>  To query fees for instances of the instance type, you can specify the instance type that is returned by this parameter in the [DescribePrice](~~95612~~) operation.</p>
          */
         @NameInMap("RealInstanceClass")
         public String realInstanceClass;
@@ -381,15 +381,15 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The ID of the replica node.</p>
          */
         @NameInMap("ReplicaId")
         public String replicaId;
 
         /**
-         * <p>The architecture of the instance. Valid values:</p>
+         * <p>The architecture of the replica node. Valid values:</p>
          * <br>
-         * <p>*   **master-slave**: the standard mater-replica architecture.</p>
+         * <p>*   **master-slave**: the standard master-replica architecture.</p>
          * <p>*   **cluster**: the cluster architecture, which includes the read/write splitting instances and cluster instances.</p>
          */
         @NameInMap("ReplicationMode")
@@ -402,7 +402,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The secondary zone ID of the instance.</p>
+         * <p>The ID of the secondary zone.</p>
          * <br>
          * <p>>  This parameter is returned only if the instance has a secondary zone ID.</p>
          */
@@ -410,7 +410,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String secondaryZoneId;
 
         /**
-         * <p>The IP address whitelist.</p>
+         * <p>The IP addresses in the whitelist.</p>
          */
         @NameInMap("SecurityIPList")
         public String securityIPList;
@@ -425,21 +425,19 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public Long slaveReadOnlyCount;
 
         /**
-         * <p>The storage space of cloud disks. Valid values vary based on the instance specifications. For more information, see [ESSD-based instances](~~443846~~).</p>
-         * <br>
-         * <p>> This parameter is available and required only if the **InstanceType** parameter is set to **tair_essd**.</p>
+         * <p>The storage capacity of the cloud disk.</p>
          */
         @NameInMap("Storage")
         public String storage;
 
         /**
-         * <p>The type of the storage.</p>
+         * <p>The storage type.</p>
          */
         @NameInMap("StorageType")
         public String storageType;
 
         /**
-         * <p>The details of the tags.</p>
+         * <p>Details about the tags.</p>
          */
         @NameInMap("Tags")
         public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttributeTags tags;
@@ -451,16 +449,16 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The VPC authentication mode. Valid values:</p>
+         * <p>Indicates whether password authentication is enabled. Valid values:</p>
          * <br>
-         * <p>*   **Open**: enables password authentication.</p>
-         * <p>*   **Close**: disables password authentication and enables password-free access. For more information, see [Enable password-free access](~~85168~~).</p>
+         * <p>*   **Open**: Password authentication is enabled.</p>
+         * <p>*   **Close**: Password authentication is disabled and [password-free access](~~85168~~) is enabled.</p>
          */
         @NameInMap("VpcAuthMode")
         public String vpcAuthMode;
 
         /**
-         * <p>The ID of the instance that is deployed in the VPC.</p>
+         * <p>The ID of the instance in the VPC.</p>
          */
         @NameInMap("VpcCloudInstanceId")
         public String vpcCloudInstanceId;

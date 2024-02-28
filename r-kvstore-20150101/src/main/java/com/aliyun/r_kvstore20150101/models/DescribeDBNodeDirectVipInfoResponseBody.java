@@ -4,12 +4,21 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
+    /**
+     * <p>The VIPs of shards in the cluster instance.</p>
+     */
     @NameInMap("DirectVipInfo")
     public DescribeDBNodeDirectVipInfoResponseBodyDirectVipInfo directVipInfo;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +52,29 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDBNodeDirectVipInfoResponseBodyDirectVipInfoVipInfo extends TeaModel {
+        /**
+         * <p>The network type of the security group. Valid values:</p>
+         * <br>
+         * <p>*   **vpc**: Virtual Private Cloud (VPC)</p>
+         */
         @NameInMap("NetType")
         public String netType;
 
+        /**
+         * <p>The shard ID.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The port number. Valid values: **1024** to **65535**. Default value: **6379**.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The VIP of the shard.</p>
+         */
         @NameInMap("Vip")
         public String vip;
 
