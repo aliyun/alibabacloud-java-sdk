@@ -468,6 +468,47 @@ public class ApplyModifyRequest extends TeaModel {
 
     }
 
+    public static class ApplyModifyRequestExternalTravelerStandardHotelIntlCitys extends TeaModel {
+        @NameInMap("city_code")
+        public String cityCode;
+
+        @NameInMap("city_name")
+        public String cityName;
+
+        @NameInMap("fee")
+        public Long fee;
+
+        public static ApplyModifyRequestExternalTravelerStandardHotelIntlCitys build(java.util.Map<String, ?> map) throws Exception {
+            ApplyModifyRequestExternalTravelerStandardHotelIntlCitys self = new ApplyModifyRequestExternalTravelerStandardHotelIntlCitys();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyModifyRequestExternalTravelerStandardHotelIntlCitys setCityCode(String cityCode) {
+            this.cityCode = cityCode;
+            return this;
+        }
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        public ApplyModifyRequestExternalTravelerStandardHotelIntlCitys setCityName(String cityName) {
+            this.cityName = cityName;
+            return this;
+        }
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        public ApplyModifyRequestExternalTravelerStandardHotelIntlCitys setFee(Long fee) {
+            this.fee = fee;
+            return this;
+        }
+        public Long getFee() {
+            return this.fee;
+        }
+
+    }
+
     public static class ApplyModifyRequestExternalTravelerStandard extends TeaModel {
         @NameInMap("business_discount")
         public Integer businessDiscount;
@@ -483,6 +524,9 @@ public class ApplyModifyRequest extends TeaModel {
 
         @NameInMap("hotel_citys")
         public java.util.List<ApplyModifyRequestExternalTravelerStandardHotelCitys> hotelCitys;
+
+        @NameInMap("hotel_intl_citys")
+        public java.util.List<ApplyModifyRequestExternalTravelerStandardHotelIntlCitys> hotelIntlCitys;
 
         /**
          * <p>超级经济舱折扣。1到10的整数</p>
@@ -539,6 +583,14 @@ public class ApplyModifyRequest extends TeaModel {
         }
         public java.util.List<ApplyModifyRequestExternalTravelerStandardHotelCitys> getHotelCitys() {
             return this.hotelCitys;
+        }
+
+        public ApplyModifyRequestExternalTravelerStandard setHotelIntlCitys(java.util.List<ApplyModifyRequestExternalTravelerStandardHotelIntlCitys> hotelIntlCitys) {
+            this.hotelIntlCitys = hotelIntlCitys;
+            return this;
+        }
+        public java.util.List<ApplyModifyRequestExternalTravelerStandardHotelIntlCitys> getHotelIntlCitys() {
+            return this.hotelIntlCitys;
         }
 
         public ApplyModifyRequestExternalTravelerStandard setPremiumEconomyDiscount(Integer premiumEconomyDiscount) {
@@ -1093,6 +1145,47 @@ public class ApplyModifyRequest extends TeaModel {
 
     }
 
+    public static class ApplyModifyRequestTravelerStandardHotelIntlCitys extends TeaModel {
+        @NameInMap("city_code")
+        public String cityCode;
+
+        @NameInMap("city_name")
+        public String cityName;
+
+        @NameInMap("fee")
+        public Long fee;
+
+        public static ApplyModifyRequestTravelerStandardHotelIntlCitys build(java.util.Map<String, ?> map) throws Exception {
+            ApplyModifyRequestTravelerStandardHotelIntlCitys self = new ApplyModifyRequestTravelerStandardHotelIntlCitys();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyModifyRequestTravelerStandardHotelIntlCitys setCityCode(String cityCode) {
+            this.cityCode = cityCode;
+            return this;
+        }
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        public ApplyModifyRequestTravelerStandardHotelIntlCitys setCityName(String cityName) {
+            this.cityName = cityName;
+            return this;
+        }
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        public ApplyModifyRequestTravelerStandardHotelIntlCitys setFee(Long fee) {
+            this.fee = fee;
+            return this;
+        }
+        public Long getFee() {
+            return this.fee;
+        }
+
+    }
+
     public static class ApplyModifyRequestTravelerStandard extends TeaModel {
         @NameInMap("business_discount")
         public Integer businessDiscount;
@@ -1111,6 +1204,9 @@ public class ApplyModifyRequest extends TeaModel {
 
         @NameInMap("hotel_citys")
         public java.util.List<ApplyModifyRequestTravelerStandardHotelCitys> hotelCitys;
+
+        @NameInMap("hotel_intl_citys")
+        public java.util.List<ApplyModifyRequestTravelerStandardHotelIntlCitys> hotelIntlCitys;
 
         /**
          * <p>超级经济舱折扣。1到10的整数</p>
@@ -1178,6 +1274,14 @@ public class ApplyModifyRequest extends TeaModel {
         }
         public java.util.List<ApplyModifyRequestTravelerStandardHotelCitys> getHotelCitys() {
             return this.hotelCitys;
+        }
+
+        public ApplyModifyRequestTravelerStandard setHotelIntlCitys(java.util.List<ApplyModifyRequestTravelerStandardHotelIntlCitys> hotelIntlCitys) {
+            this.hotelIntlCitys = hotelIntlCitys;
+            return this;
+        }
+        public java.util.List<ApplyModifyRequestTravelerStandardHotelIntlCitys> getHotelIntlCitys() {
+            return this.hotelIntlCitys;
         }
 
         public ApplyModifyRequestTravelerStandard setPremiumEconomyDiscount(Integer premiumEconomyDiscount) {
