@@ -87,7 +87,11 @@ public class CreateTairInstanceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The database engine version of the instance. Default value: **1.0**, which is developed by Alibaba Cloud and compatible with Redis 5.0.</p>
+     * <p>The engine version. Default value: **1.0**. The parameter value varies with the Tair instance type.</p>
+     * <br>
+     * <p>*   For Tair DRAM-based instances (tair_rdb) that are compatible with Redis 5.0 or 6.0, set this parameter to 5.0 or 6.0.</p>
+     * <p>*   For Tair persistent memory-optimized instances (tair_scm) that are compatible with Redis 6.0, set this parameter to 1.0.</p>
+     * <p>*   For Tair ESSD-based instances (tair_essd) that are compatible with Redis 4.0 or 6.0, set this parameter to 1.0 or 2.0.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;

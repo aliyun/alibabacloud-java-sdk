@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskRequest extends TeaModel {
     /**
-     * <p>The time when the O\&M task was created. The time in UTC is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format.</p>
+     * <p>Specifies whether to return the historical tasks. Default value: 0. Valid values:</p>
+     * <br>
+     * <p>*   **0**: returns the current task.</p>
+     * <p>*   **1**: returns the historical tasks.</p>
      */
     @NameInMap("IsHistory")
     public Integer isHistory;
@@ -29,7 +32,9 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the O\&M task.</p>
+     * <p>The region ID of the O&M task. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.</p>
+     * <br>
+     * <p>> A value of **all** indicates all region IDs.</p>
      */
     @NameInMap("Region")
     public String region;
@@ -44,7 +49,12 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The type of the O&M task. Valid values:</p>
+     * <br>
+     * <p>*   **rds_apsaradb_ha**: master-replica switchover</p>
+     * <p>*   **rds_apsaradb_transfer**: instance migration</p>
+     * <p>*   **rds_apsaradb_upgrade**: minor version update</p>
+     * <p>*   **all**: all types</p>
      */
     @NameInMap("TaskType")
     public String taskType;

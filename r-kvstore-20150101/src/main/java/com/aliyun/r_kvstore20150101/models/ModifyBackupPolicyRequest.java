@@ -8,14 +8,11 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Integer backupRetentionPeriod;
 
     /**
-     * <p>Enables or disables the data flashback feature for the instance. Valid values:</p>
+     * <p>Specifies whether to enable incremental data backup. Default value: 0. Valid values:</p>
      * <br>
-     * <p>*   **1**: enables the data flashback feature. You must also enable AOF persistence by setting `appendonly` to `yes` in the parameter settings of the instance. Then, you can use the data flashback feature.</p>
-     * <p>*   **0** (default): disables the data flashback feature.</p>
-     * <br>
-     * <p>**</p>
-     * <br>
-     * <p>**Description** This parameter is available only for ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based and persistent memory-optimized instances. For more information, see [Data flashback](~~443784~~).</p>
+     * <p>*   **1**: enables incremental data backup.</p>
+     * <p>*   **0**: disables incremental data backup.</p>
+     * <p>>This parameter is available only for ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based and persistent memory-optimized instances. For more information, see [Data flashback](~~443784~~).</p>
      */
     @NameInMap("EnableBackupLog")
     public Integer enableBackupLog;
@@ -35,23 +32,23 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     /**
      * <p>The days of the week to back up data. Valid values:</p>
      * <br>
-     * <p>*   **Monday**: every Monday</p>
-     * <p>*   **Tuesday**: every Tuesday</p>
-     * <p>*   **Wednesday**: every Wednesday</p>
-     * <p>*   **Thursday**: every Thursday</p>
-     * <p>*   **Friday**: every Friday</p>
-     * <p>*   **Saturday**: every Saturday</p>
-     * <p>*   **Sunday**: every Sunday</p>
+     * <p>*   **Monday**</p>
+     * <p>*   **Tuesday**</p>
+     * <p>*   **Wednesday**</p>
+     * <p>*   **Thursday**</p>
+     * <p>*   **Friday**</p>
+     * <p>*   **Saturday**</p>
+     * <p>*   **Sunday**</p>
      * <br>
-     * <p>>  Separate multiple options with commas (,).</p>
+     * <p>> Separate multiple options with commas (,).</p>
      */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
     /**
-     * <p>The time range to back up data. Specify the time in the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The time range to back up data. Specify the time in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.</p>
      * <br>
-     * <p>>  The beginning and end of the time range must be on the hour. The duration must be an hour.</p>
+     * <p>> The beginning and end of the time range must be on the hour. The duration must be an hour.</p>
      */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;

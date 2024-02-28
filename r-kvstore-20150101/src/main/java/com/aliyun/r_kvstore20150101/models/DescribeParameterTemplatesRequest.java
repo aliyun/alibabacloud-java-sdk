@@ -7,26 +7,26 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     /**
      * <p>The architecture of the instance. For more information, see [Overview](~~86132~~). Valid values:</p>
      * <br>
-     * <p>*   **logic**: The instance is a cluster or read/write splitting instance.</p>
+     * <p>*   **logic**: The instance is a cluster master-replica instance or a read/write splitting instance.</p>
      * <p>*   **normal**: The instance is a standard master-replica instance.</p>
      */
     @NameInMap("CharacterType")
     public String characterType;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeParameterTemplates**.</p>
+     * <p>The database engine that is run on the instance. Set the value to **Redis**.</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
-     * <p>The database engine that is run on the instance. The value **Redis** is returned for this parameter.</p>
+     * <p>The major version that is run on the instance. Valid values: **2.8**, **4.0**, and **5.0**.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
-     * <p>r-bp1zxszhcgatnx****</p>
+     * <p>The ID of the instance. You can call the [DescribeInstances](~~DescribeInstances~~) operation to query the IDs of instances.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -38,7 +38,9 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the IDs of instances.</p>
+     * <p>The ID of the resource group to which the instance belongs. You can call the [ListResourceGroups](~~ListResourceGroups~~) operation to query the IDs of resource groups.</p>
+     * <br>
+     * <p>>  You can also query the ID of a resource group in the Resource Management console. For more information, see [View the basic information of a resource group](~~151181~~).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

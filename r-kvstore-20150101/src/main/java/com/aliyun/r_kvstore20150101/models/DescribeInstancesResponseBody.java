@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesResponseBody extends TeaModel {
     /**
-     * <p>Details of the instances.</p>
+     * <p>Details about the instances.</p>
      */
     @NameInMap("Instances")
     public DescribeInstancesResponseBodyInstances instances;
@@ -138,10 +138,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The architecture of the instance. Default value: NULL. Valid values:</p>
          * <br>
-         * <p>*   **cluster**: The instance is a cluster instance.</p>
-         * <p>*   **standard**: The instance is a standard instance.</p>
-         * <p>*   **rwsplit**: The instance is a read/write splitting instance.</p>
-         * <p>*   **NULL**: The instance can be a cluster, standard, or read/write splitting instance.</p>
+         * <p>*   **cluster**: cluster architecture</p>
+         * <p>*   **standard**: standard architecture</p>
+         * <p>*   **rwsplit**: read/write splitting architecture</p>
+         * <p>*   **NULL**: all of the preceding architectures</p>
          */
         @NameInMap("ArchitectureType")
         public String architectureType;
@@ -189,7 +189,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>The connection mode of the instance. Valid values:</p>
          * <br>
          * <p>*   **Standard**: standard mode</p>
-         * <p>*   **Safe**: proxy mode</p>
+         * <p>*   **Safe**: database proxy mode</p>
          */
         @NameInMap("ConnectionMode")
         public String connectionMode;
@@ -215,8 +215,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The edition of the instance. Valid values:</p>
          * <br>
-         * <p>*   **Community**: Community Edition</p>
-         * <p>*   **Enterprise**: Enhance Edition (Tair)</p>
+         * <p>*   **Community**: ApsaraDB for Redis Community Edition</p>
+         * <p>*   **Enterprise**: ApsaraDB for Redis Enhanced Edition (Tair)</p>
          */
         @NameInMap("EditionType")
         public String editionType;
@@ -228,7 +228,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The database engine version of the instance. Valid values: **2.8**, **4.0**, **5.0**, and **6.0**.</p>
+         * <p>The engine version of the instance. Valid values: **2.8**, **4.0**, and **5.0**.</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
@@ -236,7 +236,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The ID of the distributed instance.</p>
          * <br>
-         * <p>> This parameter is returned only when the instance is a child instance of a distributed instance.</p>
+         * <p>>  This parameter is returned only if the instance is a child instance of a distributed instance.</p>
          */
         @NameInMap("GlobalInstanceId")
         public String globalInstanceId;
@@ -244,14 +244,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether your Alibaba Cloud account has pending orders for renewal and configuration change. Valid values:</p>
          * <br>
-         * <p>*   **true**: Your Alibaba Cloud account has pending orders for renewal and configuration change.</p>
-         * <p>*   **false**: Your Alibaba Cloud account does not have pending orders for renewal and configuration change.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("HasRenewChangeOrder")
         public Boolean hasRenewChangeOrder;
 
         /**
-         * <p>The instance class of the instance.</p>
+         * <p>The instance class.</p>
          */
         @NameInMap("InstanceClass")
         public String instanceClass;
@@ -278,13 +278,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>*   **Flushing**: The instance is being released.</p>
          * <p>*   **Released**: The instance is released.</p>
          * <p>*   **Transforming**: The billing method of the instance is being changed.</p>
-         * <p>*   **Unavailable**: The instance is suspended.</p>
+         * <p>*   **Unavailable**: The instance is unavailable.</p>
          * <p>*   **Error**: The instance failed to be created.</p>
          * <p>*   **Migrating**: The instance is being migrated.</p>
          * <p>*   **BackupRecovering**: The instance is being restored from a backup.</p>
          * <p>*   **MinorVersionUpgrading**: The minor version of the instance is being updated.</p>
          * <p>*   **NetworkModifying**: The network type of the instance is being changed.</p>
-         * <p>*   **SSLModifying**: The SSL certificate of the instance is being changed.</p>
+         * <p>*   **SSLModifying**: The SSL configurations of the instance are being changed.</p>
          * <p>*   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</p>
          */
         @NameInMap("InstanceStatus")
@@ -303,8 +303,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instance is managed by ApsaraDB RDS. Valid values:</p>
          * <br>
-         * <p>*   **true**: The instance is managed by ApsaraDB RDS.</p>
-         * <p>*   **false**: The instance is not managed by ApsaraDB RDS.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("IsRds")
         public Boolean isRds;
@@ -312,8 +312,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <br>
-         * <p>*   **CLASSIC**: classic network</p>
-         * <p>*   **VPC**: VPC</p>
+         * <p>*   **CLASSIC**</p>
+         * <p>*   **VPC**</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
@@ -322,13 +322,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>The node type. Valid values:</p>
          * <br>
          * <p>*   **double**: The instance contains a master node and a replica node.</p>
-         * <p>*   **single**: The instance contains only a master node. This node type is phrased out.</p>
+         * <p>*   **single**: The instance contains only a master node. This node type is phased out.</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
-         * <p>The plan type of the instance. Valid values:</p>
+         * <p>The plan type. Valid values:</p>
          * <br>
          * <p>*   **standard**: standard plan</p>
          * <p>*   **customized**: custom plan</p>
@@ -337,33 +337,33 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String packageType;
 
         /**
-         * <p>The port number of the instance.</p>
+         * <p>The service port of the instance.</p>
          */
         @NameInMap("Port")
         public Long port;
 
         /**
-         * <p>The private IP address of the instance.</p>
+         * <p>The private IP address.</p>
          * <br>
-         * <p>> This parameter is not returned when the instance is deployed in the classic network.</p>
+         * <p>>  This parameter is not returned when the instance is deployed in the classic network.</p>
          */
         @NameInMap("PrivateIp")
         public String privateIp;
 
         /**
-         * <p>The expected maximum queries per second (QPS).</p>
+         * <p>The number of queries per second (QPS).</p>
          */
         @NameInMap("QPS")
         public Long QPS;
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The logical ID of the replica instance.</p>
+         * <p>The logical ID of the distributed instance.</p>
          */
         @NameInMap("ReplacateId")
         public String replacateId;
@@ -377,33 +377,35 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The ID of the secondary zone.</p>
          * <br>
-         * <p>> If multiple zones are returned for **ZoneId** such as cn-hangzhou-MAZ10(h,i), this parameter is ignored.</p>
+         * <p>>  If multiple zones are returned for **ZoneId**, such as cn-hangzhou-MAZ10(h,i), this parameter is ignored.</p>
          */
         @NameInMap("SecondaryZoneId")
         public String secondaryZoneId;
 
         /**
-         * <p>The shard class for the instance.</p>
+         * <p>The shard class. For more information about shard classes, see [Overview](~~26350~~).</p>
+         * <br>
+         * <p>>  The overall performance of a cluster instance is calculated by multiplying the class of a single shard (ShardClass) by the number of shards (ShardCount).</p>
          */
         @NameInMap("ShardClass")
         public String shardClass;
 
         /**
-         * <p>The number of data shards in the instance.</p>
+         * <p>The number of data shards in the cluster instance.</p>
          * <br>
-         * <p>> This parameter is returned only when the instance is a cluster instance that uses cloud disks.</p>
+         * <p>>  This parameter is returned only for cloud-native cluster instances or read/write splitting instances.</p>
          */
         @NameInMap("ShardCount")
         public Integer shardCount;
 
         /**
-         * <p>Details of the tags.</p>
+         * <p>Details about the tags.</p>
          */
         @NameInMap("Tags")
         public DescribeInstancesResponseBodyInstancesKVStoreInstanceTags tags;
 
         /**
-         * <p>The username that is used to connect to the instance. By default, the username that is named after the instance ID is returned.</p>
+         * <p>The username used to connect to the instance. By default, a username named after the instance ID is included.</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -415,13 +417,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
