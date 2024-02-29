@@ -4,13 +4,32 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListDhcpOptionsSetsRequest extends TeaModel {
+    /**
+     * <p>The ID of the DHCP options set. You can specify at most 20 IDs.</p>
+     */
     @NameInMap("DhcpOptionsSetId")
     public java.util.List<String> dhcpOptionsSetId;
 
     /**
      * <p>The name of the DHCP options set.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 1 to 128 characters in length and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   tf-testAccVpcDhcpOptionsSets-1585169790614573448</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    tf-testAccVpcDhcpOptionsSets-1585169790614573448</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    .</p>
      */
     @NameInMap("DhcpOptionsSetName")
     public String dhcpOptionsSetName;
@@ -18,22 +37,22 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
     /**
      * <p>The root domain. For example, you can set the value to example.com.</p>
      * <br>
-     * <p>After a DHCP options set is associated with a virtual private cloud (VPC), the root domain in the DHCP options set is automatically synchronized with the Elastic Compute Service (ECS) instances in the VPC.</p>
+     * <p>After a DHCP options set is associated with a virtual private cloud (VPC), the root domain in the DHCP options set is automatically synchronized with the ECS instances in the VPC.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **10**.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If this is your first query or no next queries are to be sent, ignore this parameter.</p>
-     * <p>*   If a subsequent query is to be sent, set the value to the value of **NextToken** that is returned from the last call.</p>
+     * <p>*   You do not need to specify this parameter for the first request.</p>
+     * <p>*   You must specify the token that is obtained from the previous query as the value of the **NextToken** parameter.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -52,6 +71,9 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the DHCP options set belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -61,6 +83,9 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListDhcpOptionsSetsRequestTags> tags;
 
@@ -166,9 +191,19 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
     }
 
     public static class ListDhcpOptionsSetsRequestTags extends TeaModel {
+        /**
+         * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The tag key must start with a letter but cannot start with `aliyun` or `acs:`. The tag key cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The tag value must start with a letter but cannot start with `aliyun` or `acs:`. The tag value cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

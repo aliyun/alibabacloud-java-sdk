@@ -11,20 +11,23 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
     public java.util.List<ListDhcpOptionsSetsResponseBodyDhcpOptionsSets> dhcpOptionsSets;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If **NextToken** is empty, it indicates that no next query is to be sent.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is the token that is used for the next query.</p>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -73,7 +76,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The DNS server IP address.</p>
+         * <p>The IP address of the DNS server.</p>
          */
         @NameInMap("DomainNameServers")
         public String domainNameServers;
@@ -136,9 +139,15 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
     }
 
     public static class ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsTags extends TeaModel {
+        /**
+         * <p>The key of tag N added to the resource.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N added to the resource.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -202,20 +211,26 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         @NameInMap("OwnerId")
         public Long ownerId;
 
+        /**
+         * <p>The ID of the resource group to which the DHCP options set belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The status of the DHCP options set. Valid values:</p>
          * <br>
-         * <p>*   **Available**: available</p>
-         * <p>*   **InUse**: in use</p>
-         * <p>*   **Pending**: being configured</p>
-         * <p>*   **Deleted**: deleted</p>
+         * <p>*   **Available**</p>
+         * <p>*   **InUse**</p>
+         * <p>*   **Pending**</p>
+         * <p>*   **Deleted**</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tag list.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsTags> tags;
 
