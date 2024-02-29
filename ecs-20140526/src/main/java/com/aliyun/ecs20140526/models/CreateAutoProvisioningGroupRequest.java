@@ -193,6 +193,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     @NameInMap("SystemDiskConfig")
     public java.util.List<CreateAutoProvisioningGroupRequestSystemDiskConfig> systemDiskConfig;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateAutoProvisioningGroupRequestTag> tag;
+
     /**
      * <p>Specifies whether to release instances in the auto provisioning group when the auto provisioning group is deleted. Valid values:</p>
      * <br>
@@ -462,6 +465,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     }
     public java.util.List<CreateAutoProvisioningGroupRequestSystemDiskConfig> getSystemDiskConfig() {
         return this.systemDiskConfig;
+    }
+
+    public CreateAutoProvisioningGroupRequest setTag(java.util.List<CreateAutoProvisioningGroupRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateAutoProvisioningGroupRequestTag> getTag() {
+        return this.tag;
     }
 
     public CreateAutoProvisioningGroupRequest setTerminateInstances(Boolean terminateInstances) {
@@ -1642,6 +1653,36 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         }
         public String getDiskCategory() {
             return this.diskCategory;
+        }
+
+    }
+
+    public static class CreateAutoProvisioningGroupRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateAutoProvisioningGroupRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupRequestTag self = new CreateAutoProvisioningGroupRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateAutoProvisioningGroupRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

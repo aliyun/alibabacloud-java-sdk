@@ -63,6 +63,9 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeAutoProvisioningGroupsRequestTag> tag;
+
     public static DescribeAutoProvisioningGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAutoProvisioningGroupsRequest self = new DescribeAutoProvisioningGroupsRequest();
         return TeaModel.build(map, self);
@@ -154,6 +157,44 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeAutoProvisioningGroupsRequest setTag(java.util.List<DescribeAutoProvisioningGroupsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeAutoProvisioningGroupsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeAutoProvisioningGroupsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeAutoProvisioningGroupsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAutoProvisioningGroupsRequestTag self = new DescribeAutoProvisioningGroupsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAutoProvisioningGroupsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeAutoProvisioningGroupsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -2804,6 +2804,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SystemDiskConfig", request.systemDiskConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.terminateInstances)) {
             query.put("TerminateInstances", request.terminateInstances);
         }
@@ -9680,6 +9684,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -20935,21 +20943,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyAutoSnapshotPolicyWithOptions(request, runtime);
     }
 
-    public ModifyAutoSnapshotPolicyExResponse modifyAutoSnapshotPolicyExWithOptions(ModifyAutoSnapshotPolicyExRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        ModifyAutoSnapshotPolicyExShrinkRequest request = new ModifyAutoSnapshotPolicyExShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.copyEncryptionConfiguration)) {
-            request.copyEncryptionConfigurationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.copyEncryptionConfiguration, "CopyEncryptionConfiguration", "json");
-        }
-
+    public ModifyAutoSnapshotPolicyExResponse modifyAutoSnapshotPolicyExWithOptions(ModifyAutoSnapshotPolicyExRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.copiedSnapshotsRetentionDays)) {
             query.put("CopiedSnapshotsRetentionDays", request.copiedSnapshotsRetentionDays);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.copyEncryptionConfigurationShrink)) {
-            query.put("CopyEncryptionConfiguration", request.copyEncryptionConfigurationShrink);
+        if (!com.aliyun.teautil.Common.isUnset(request.copyEncryptionConfiguration)) {
+            query.put("CopyEncryptionConfiguration", request.copyEncryptionConfiguration);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableCrossRegionCopy)) {
