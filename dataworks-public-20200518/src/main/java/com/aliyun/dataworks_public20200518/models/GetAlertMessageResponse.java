@@ -3,7 +3,7 @@ package com.aliyun.dataworks_public20200518.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteDataServiceApiAuthorityResponse extends TeaModel {
+public class GetAlertMessageResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteDataServiceApiAuthorityResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DeleteDataServiceApiAuthorityResponseBody body;
+    public GetAlertMessageResponseBody body;
 
-    public static DeleteDataServiceApiAuthorityResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteDataServiceApiAuthorityResponse self = new DeleteDataServiceApiAuthorityResponse();
+    public static GetAlertMessageResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetAlertMessageResponse self = new GetAlertMessageResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDataServiceApiAuthorityResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetAlertMessageResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteDataServiceApiAuthorityResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteDataServiceApiAuthorityResponse setStatusCode(Integer statusCode) {
+    public GetAlertMessageResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteDataServiceApiAuthorityResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteDataServiceApiAuthorityResponse setBody(DeleteDataServiceApiAuthorityResponseBody body) {
+    public GetAlertMessageResponse setBody(GetAlertMessageResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteDataServiceApiAuthorityResponseBody getBody() {
+    public GetAlertMessageResponseBody getBody() {
         return this.body;
     }
 

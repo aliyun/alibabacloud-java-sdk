@@ -131,7 +131,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
          * <p>The ID of the partition filter expression.</p>
          */
         @NameInMap("EntityId")
-        public Integer entityId;
+        public Long entityId;
 
         /**
          * <p>The expected value.</p>
@@ -161,7 +161,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
          * <p>The ID of the monitoring rule.</p>
          */
         @NameInMap("Id")
-        public Integer id;
+        public Long id;
 
         /**
          * <p>The partition filter expression.</p>
@@ -215,7 +215,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
          * <p>The ID of the node that is associated with the partition filter expression.</p>
          */
         @NameInMap("RuleCheckerRelationId")
-        public Integer ruleCheckerRelationId;
+        public Long ruleCheckerRelationId;
 
         /**
          * <p>The name of the monitoring rule.</p>
@@ -300,11 +300,11 @@ public class ListQualityRulesResponseBody extends TeaModel {
             return this.criticalThreshold;
         }
 
-        public ListQualityRulesResponseBodyDataRules setEntityId(Integer entityId) {
+        public ListQualityRulesResponseBodyDataRules setEntityId(Long entityId) {
             this.entityId = entityId;
             return this;
         }
-        public Integer getEntityId() {
+        public Long getEntityId() {
             return this.entityId;
         }
 
@@ -340,11 +340,11 @@ public class ListQualityRulesResponseBody extends TeaModel {
             return this.historyWarningThreshold;
         }
 
-        public ListQualityRulesResponseBodyDataRules setId(Integer id) {
+        public ListQualityRulesResponseBodyDataRules setId(Long id) {
             this.id = id;
             return this;
         }
-        public Integer getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -412,11 +412,11 @@ public class ListQualityRulesResponseBody extends TeaModel {
             return this.propertyKey;
         }
 
-        public ListQualityRulesResponseBodyDataRules setRuleCheckerRelationId(Integer ruleCheckerRelationId) {
+        public ListQualityRulesResponseBodyDataRules setRuleCheckerRelationId(Long ruleCheckerRelationId) {
             this.ruleCheckerRelationId = ruleCheckerRelationId;
             return this;
         }
-        public Integer getRuleCheckerRelationId() {
+        public Long getRuleCheckerRelationId() {
             return this.ruleCheckerRelationId;
         }
 

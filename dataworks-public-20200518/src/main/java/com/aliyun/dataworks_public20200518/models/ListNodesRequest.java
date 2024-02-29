@@ -52,6 +52,9 @@ public class ListNodesRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
+    @NameInMap("SchedulerType")
+    public String schedulerType;
+
     public static ListNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNodesRequest self = new ListNodesRequest();
         return TeaModel.build(map, self);
@@ -119,6 +122,14 @@ public class ListNodesRequest extends TeaModel {
     }
     public Long getProjectId() {
         return this.projectId;
+    }
+
+    public ListNodesRequest setSchedulerType(String schedulerType) {
+        this.schedulerType = schedulerType;
+        return this;
+    }
+    public String getSchedulerType() {
+        return this.schedulerType;
     }
 
 }

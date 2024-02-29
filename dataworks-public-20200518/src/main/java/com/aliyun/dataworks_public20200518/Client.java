@@ -3918,6 +3918,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.generateDISyncTaskConfigForUpdatingWithOptions(request, runtime);
     }
 
+    public GetAlertMessageResponse getAlertMessageWithOptions(GetAlertMessageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alertId)) {
+            body.put("AlertId", request.alertId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAlertMessage"),
+            new TeaPair("version", "2020-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAlertMessageResponse());
+    }
+
+    public GetAlertMessageResponse getAlertMessage(GetAlertMessageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAlertMessageWithOptions(request, runtime);
+    }
+
     public GetBaselineResponse getBaselineWithOptions(GetBaselineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -8665,6 +8694,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ProjectId", request.projectId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.schedulerType)) {
+            body.put("SchedulerType", request.schedulerType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -10041,12 +10074,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RunCycleDagNodesResponse runCycleDagNodesWithOptions(RunCycleDagNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alertNoticeType)) {
+            body.put("AlertNoticeType", request.alertNoticeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alertType)) {
+            body.put("AlertType", request.alertType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.bizBeginTime)) {
             body.put("BizBeginTime", request.bizBeginTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.bizEndTime)) {
             body.put("BizEndTime", request.bizEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.concurrentRuns)) {
+            body.put("ConcurrentRuns", request.concurrentRuns);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endBizDate)) {

@@ -14,7 +14,7 @@ public class ListQualityResultsByEntityRequest extends TeaModel {
      * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
      */
     @NameInMap("EntityId")
-    public Integer entityId;
+    public Long entityId;
 
     /**
      * <p>The error message returned.</p>
@@ -56,11 +56,11 @@ public class ListQualityResultsByEntityRequest extends TeaModel {
         return this.endDate;
     }
 
-    public ListQualityResultsByEntityRequest setEntityId(Integer entityId) {
+    public ListQualityResultsByEntityRequest setEntityId(Long entityId) {
         this.entityId = entityId;
         return this;
     }
-    public Integer getEntityId() {
+    public Long getEntityId() {
         return this.entityId;
     }
 

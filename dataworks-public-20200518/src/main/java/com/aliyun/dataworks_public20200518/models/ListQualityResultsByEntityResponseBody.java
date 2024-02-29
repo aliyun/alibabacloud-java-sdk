@@ -307,7 +307,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
          * <p>The ID of the monitoring template.</p>
          */
         @NameInMap("EntityId")
-        public Integer entityId;
+        public Long entityId;
 
         /**
          * <p>The ID of the primary key.</p>
@@ -337,7 +337,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
          * <p>The check value.</p>
          */
         @NameInMap("Id")
-        public Integer id;
+        public Long id;
 
         /**
          * <p>Indicates whether the monitoring is discrete monitoring. Valid values:</p>
@@ -404,7 +404,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
          * <p>The upper limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specified.</p>
          */
         @NameInMap("RuleId")
-        public Integer ruleId;
+        public Long ruleId;
 
         /**
          * <p>The time when the monitoring ended.</p>
@@ -596,11 +596,11 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public ListQualityResultsByEntityResponseBodyDataRuleChecks setEntityId(Integer entityId) {
+        public ListQualityResultsByEntityResponseBodyDataRuleChecks setEntityId(Long entityId) {
             this.entityId = entityId;
             return this;
         }
-        public Integer getEntityId() {
+        public Long getEntityId() {
             return this.entityId;
         }
 
@@ -636,11 +636,11 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             return this.fixedCheck;
         }
 
-        public ListQualityResultsByEntityResponseBodyDataRuleChecks setId(Integer id) {
+        public ListQualityResultsByEntityResponseBodyDataRuleChecks setId(Long id) {
             this.id = id;
             return this;
         }
-        public Integer getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -716,11 +716,11 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             return this.resultString;
         }
 
-        public ListQualityResultsByEntityResponseBodyDataRuleChecks setRuleId(Integer ruleId) {
+        public ListQualityResultsByEntityResponseBodyDataRuleChecks setRuleId(Long ruleId) {
             this.ruleId = ruleId;
             return this;
         }
-        public Integer getRuleId() {
+        public Long getRuleId() {
             return this.ruleId;
         }
 
