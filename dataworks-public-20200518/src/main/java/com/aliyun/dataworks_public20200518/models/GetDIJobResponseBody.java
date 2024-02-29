@@ -91,6 +91,36 @@ public class GetDIJobResponseBody extends TeaModel {
 
     }
 
+    public static class GetDIJobResponseBodyDataJobSettingsCycleScheduleSettings extends TeaModel {
+        @NameInMap("CycleMigrationType")
+        public String cycleMigrationType;
+
+        @NameInMap("ScheduleParameters")
+        public String scheduleParameters;
+
+        public static GetDIJobResponseBodyDataJobSettingsCycleScheduleSettings build(java.util.Map<String, ?> map) throws Exception {
+            GetDIJobResponseBodyDataJobSettingsCycleScheduleSettings self = new GetDIJobResponseBodyDataJobSettingsCycleScheduleSettings();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDIJobResponseBodyDataJobSettingsCycleScheduleSettings setCycleMigrationType(String cycleMigrationType) {
+            this.cycleMigrationType = cycleMigrationType;
+            return this;
+        }
+        public String getCycleMigrationType() {
+            return this.cycleMigrationType;
+        }
+
+        public GetDIJobResponseBodyDataJobSettingsCycleScheduleSettings setScheduleParameters(String scheduleParameters) {
+            this.scheduleParameters = scheduleParameters;
+            return this;
+        }
+        public String getScheduleParameters() {
+            return this.scheduleParameters;
+        }
+
+    }
+
     public static class GetDIJobResponseBodyDataJobSettingsDdlHandlingSettings extends TeaModel {
         @NameInMap("Action")
         public String action;
@@ -152,8 +182,14 @@ public class GetDIJobResponseBody extends TeaModel {
     }
 
     public static class GetDIJobResponseBodyDataJobSettings extends TeaModel {
+        @NameInMap("ChannelSettings")
+        public String channelSettings;
+
         @NameInMap("ColumnDataTypeSettings")
         public java.util.List<GetDIJobResponseBodyDataJobSettingsColumnDataTypeSettings> columnDataTypeSettings;
+
+        @NameInMap("CycleScheduleSettings")
+        public GetDIJobResponseBodyDataJobSettingsCycleScheduleSettings cycleScheduleSettings;
 
         @NameInMap("DdlHandlingSettings")
         public java.util.List<GetDIJobResponseBodyDataJobSettingsDdlHandlingSettings> ddlHandlingSettings;
@@ -166,12 +202,28 @@ public class GetDIJobResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetDIJobResponseBodyDataJobSettings setChannelSettings(String channelSettings) {
+            this.channelSettings = channelSettings;
+            return this;
+        }
+        public String getChannelSettings() {
+            return this.channelSettings;
+        }
+
         public GetDIJobResponseBodyDataJobSettings setColumnDataTypeSettings(java.util.List<GetDIJobResponseBodyDataJobSettingsColumnDataTypeSettings> columnDataTypeSettings) {
             this.columnDataTypeSettings = columnDataTypeSettings;
             return this;
         }
         public java.util.List<GetDIJobResponseBodyDataJobSettingsColumnDataTypeSettings> getColumnDataTypeSettings() {
             return this.columnDataTypeSettings;
+        }
+
+        public GetDIJobResponseBodyDataJobSettings setCycleScheduleSettings(GetDIJobResponseBodyDataJobSettingsCycleScheduleSettings cycleScheduleSettings) {
+            this.cycleScheduleSettings = cycleScheduleSettings;
+            return this;
+        }
+        public GetDIJobResponseBodyDataJobSettingsCycleScheduleSettings getCycleScheduleSettings() {
+            return this.cycleScheduleSettings;
         }
 
         public GetDIJobResponseBodyDataJobSettings setDdlHandlingSettings(java.util.List<GetDIJobResponseBodyDataJobSettingsDdlHandlingSettings> ddlHandlingSettings) {

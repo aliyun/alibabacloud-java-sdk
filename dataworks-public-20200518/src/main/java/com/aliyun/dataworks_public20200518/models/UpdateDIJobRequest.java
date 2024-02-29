@@ -105,6 +105,25 @@ public class UpdateDIJobRequest extends TeaModel {
 
     }
 
+    public static class UpdateDIJobRequestJobSettingsCycleScheduleSettings extends TeaModel {
+        @NameInMap("ScheduleParameters")
+        public String scheduleParameters;
+
+        public static UpdateDIJobRequestJobSettingsCycleScheduleSettings build(java.util.Map<String, ?> map) throws Exception {
+            UpdateDIJobRequestJobSettingsCycleScheduleSettings self = new UpdateDIJobRequestJobSettingsCycleScheduleSettings();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateDIJobRequestJobSettingsCycleScheduleSettings setScheduleParameters(String scheduleParameters) {
+            this.scheduleParameters = scheduleParameters;
+            return this;
+        }
+        public String getScheduleParameters() {
+            return this.scheduleParameters;
+        }
+
+    }
+
     public static class UpdateDIJobRequestJobSettingsDdlHandlingSettings extends TeaModel {
         @NameInMap("Action")
         public String action;
@@ -166,8 +185,14 @@ public class UpdateDIJobRequest extends TeaModel {
     }
 
     public static class UpdateDIJobRequestJobSettings extends TeaModel {
+        @NameInMap("ChannelSettings")
+        public String channelSettings;
+
         @NameInMap("ColumnDataTypeSettings")
         public java.util.List<UpdateDIJobRequestJobSettingsColumnDataTypeSettings> columnDataTypeSettings;
+
+        @NameInMap("CycleScheduleSettings")
+        public UpdateDIJobRequestJobSettingsCycleScheduleSettings cycleScheduleSettings;
 
         @NameInMap("DdlHandlingSettings")
         public java.util.List<UpdateDIJobRequestJobSettingsDdlHandlingSettings> ddlHandlingSettings;
@@ -180,12 +205,28 @@ public class UpdateDIJobRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public UpdateDIJobRequestJobSettings setChannelSettings(String channelSettings) {
+            this.channelSettings = channelSettings;
+            return this;
+        }
+        public String getChannelSettings() {
+            return this.channelSettings;
+        }
+
         public UpdateDIJobRequestJobSettings setColumnDataTypeSettings(java.util.List<UpdateDIJobRequestJobSettingsColumnDataTypeSettings> columnDataTypeSettings) {
             this.columnDataTypeSettings = columnDataTypeSettings;
             return this;
         }
         public java.util.List<UpdateDIJobRequestJobSettingsColumnDataTypeSettings> getColumnDataTypeSettings() {
             return this.columnDataTypeSettings;
+        }
+
+        public UpdateDIJobRequestJobSettings setCycleScheduleSettings(UpdateDIJobRequestJobSettingsCycleScheduleSettings cycleScheduleSettings) {
+            this.cycleScheduleSettings = cycleScheduleSettings;
+            return this;
+        }
+        public UpdateDIJobRequestJobSettingsCycleScheduleSettings getCycleScheduleSettings() {
+            return this.cycleScheduleSettings;
         }
 
         public UpdateDIJobRequestJobSettings setDdlHandlingSettings(java.util.List<UpdateDIJobRequestJobSettingsDdlHandlingSettings> ddlHandlingSettings) {

@@ -4,6 +4,12 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class RunCycleDagNodesRequest extends TeaModel {
+    @NameInMap("AlertNoticeType")
+    public String alertNoticeType;
+
+    @NameInMap("AlertType")
+    public String alertType;
+
     /**
      * <p>The time when the node started to run. This parameter is required only for auto triggered nodes that are scheduled by hour. Specify the value in the HH:mm:ss format. Valid values: 00:00:00 to 23:59:59.</p>
      */
@@ -15,6 +21,9 @@ public class RunCycleDagNodesRequest extends TeaModel {
      */
     @NameInMap("BizEndTime")
     public String bizEndTime;
+
+    @NameInMap("ConcurrentRuns")
+    public Integer concurrentRuns;
 
     /**
      * <p>The data timestamp at which data is no longer backfilled. Specify the value in the yyyy-MM-dd 00:00:00 format.</p>
@@ -81,6 +90,22 @@ public class RunCycleDagNodesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RunCycleDagNodesRequest setAlertNoticeType(String alertNoticeType) {
+        this.alertNoticeType = alertNoticeType;
+        return this;
+    }
+    public String getAlertNoticeType() {
+        return this.alertNoticeType;
+    }
+
+    public RunCycleDagNodesRequest setAlertType(String alertType) {
+        this.alertType = alertType;
+        return this;
+    }
+    public String getAlertType() {
+        return this.alertType;
+    }
+
     public RunCycleDagNodesRequest setBizBeginTime(String bizBeginTime) {
         this.bizBeginTime = bizBeginTime;
         return this;
@@ -95,6 +120,14 @@ public class RunCycleDagNodesRequest extends TeaModel {
     }
     public String getBizEndTime() {
         return this.bizEndTime;
+    }
+
+    public RunCycleDagNodesRequest setConcurrentRuns(Integer concurrentRuns) {
+        this.concurrentRuns = concurrentRuns;
+        return this;
+    }
+    public Integer getConcurrentRuns() {
+        return this.concurrentRuns;
     }
 
     public RunCycleDagNodesRequest setEndBizDate(String endBizDate) {

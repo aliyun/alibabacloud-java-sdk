@@ -212,6 +212,36 @@ public class CreateDIJobRequest extends TeaModel {
 
     }
 
+    public static class CreateDIJobRequestJobSettingsCycleScheduleSettings extends TeaModel {
+        @NameInMap("CycleMigrationType")
+        public String cycleMigrationType;
+
+        @NameInMap("ScheduleParameters")
+        public String scheduleParameters;
+
+        public static CreateDIJobRequestJobSettingsCycleScheduleSettings build(java.util.Map<String, ?> map) throws Exception {
+            CreateDIJobRequestJobSettingsCycleScheduleSettings self = new CreateDIJobRequestJobSettingsCycleScheduleSettings();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDIJobRequestJobSettingsCycleScheduleSettings setCycleMigrationType(String cycleMigrationType) {
+            this.cycleMigrationType = cycleMigrationType;
+            return this;
+        }
+        public String getCycleMigrationType() {
+            return this.cycleMigrationType;
+        }
+
+        public CreateDIJobRequestJobSettingsCycleScheduleSettings setScheduleParameters(String scheduleParameters) {
+            this.scheduleParameters = scheduleParameters;
+            return this;
+        }
+        public String getScheduleParameters() {
+            return this.scheduleParameters;
+        }
+
+    }
+
     public static class CreateDIJobRequestJobSettingsDdlHandlingSettings extends TeaModel {
         @NameInMap("Action")
         public String action;
@@ -238,6 +268,36 @@ public class CreateDIJobRequest extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class CreateDIJobRequestJobSettingsImportRuleSettings extends TeaModel {
+        @NameInMap("FileId")
+        public String fileId;
+
+        @NameInMap("Source")
+        public String source;
+
+        public static CreateDIJobRequestJobSettingsImportRuleSettings build(java.util.Map<String, ?> map) throws Exception {
+            CreateDIJobRequestJobSettingsImportRuleSettings self = new CreateDIJobRequestJobSettingsImportRuleSettings();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDIJobRequestJobSettingsImportRuleSettings setFileId(String fileId) {
+            this.fileId = fileId;
+            return this;
+        }
+        public String getFileId() {
+            return this.fileId;
+        }
+
+        public CreateDIJobRequestJobSettingsImportRuleSettings setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
         }
 
     }
@@ -273,11 +333,20 @@ public class CreateDIJobRequest extends TeaModel {
     }
 
     public static class CreateDIJobRequestJobSettings extends TeaModel {
+        @NameInMap("ChannelSettings")
+        public String channelSettings;
+
         @NameInMap("ColumnDataTypeSettings")
         public java.util.List<CreateDIJobRequestJobSettingsColumnDataTypeSettings> columnDataTypeSettings;
 
+        @NameInMap("CycleScheduleSettings")
+        public CreateDIJobRequestJobSettingsCycleScheduleSettings cycleScheduleSettings;
+
         @NameInMap("DdlHandlingSettings")
         public java.util.List<CreateDIJobRequestJobSettingsDdlHandlingSettings> ddlHandlingSettings;
+
+        @NameInMap("ImportRuleSettings")
+        public CreateDIJobRequestJobSettingsImportRuleSettings importRuleSettings;
 
         @NameInMap("RuntimeSettings")
         public java.util.List<CreateDIJobRequestJobSettingsRuntimeSettings> runtimeSettings;
@@ -285,6 +354,14 @@ public class CreateDIJobRequest extends TeaModel {
         public static CreateDIJobRequestJobSettings build(java.util.Map<String, ?> map) throws Exception {
             CreateDIJobRequestJobSettings self = new CreateDIJobRequestJobSettings();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDIJobRequestJobSettings setChannelSettings(String channelSettings) {
+            this.channelSettings = channelSettings;
+            return this;
+        }
+        public String getChannelSettings() {
+            return this.channelSettings;
         }
 
         public CreateDIJobRequestJobSettings setColumnDataTypeSettings(java.util.List<CreateDIJobRequestJobSettingsColumnDataTypeSettings> columnDataTypeSettings) {
@@ -295,12 +372,28 @@ public class CreateDIJobRequest extends TeaModel {
             return this.columnDataTypeSettings;
         }
 
+        public CreateDIJobRequestJobSettings setCycleScheduleSettings(CreateDIJobRequestJobSettingsCycleScheduleSettings cycleScheduleSettings) {
+            this.cycleScheduleSettings = cycleScheduleSettings;
+            return this;
+        }
+        public CreateDIJobRequestJobSettingsCycleScheduleSettings getCycleScheduleSettings() {
+            return this.cycleScheduleSettings;
+        }
+
         public CreateDIJobRequestJobSettings setDdlHandlingSettings(java.util.List<CreateDIJobRequestJobSettingsDdlHandlingSettings> ddlHandlingSettings) {
             this.ddlHandlingSettings = ddlHandlingSettings;
             return this;
         }
         public java.util.List<CreateDIJobRequestJobSettingsDdlHandlingSettings> getDdlHandlingSettings() {
             return this.ddlHandlingSettings;
+        }
+
+        public CreateDIJobRequestJobSettings setImportRuleSettings(CreateDIJobRequestJobSettingsImportRuleSettings importRuleSettings) {
+            this.importRuleSettings = importRuleSettings;
+            return this;
+        }
+        public CreateDIJobRequestJobSettingsImportRuleSettings getImportRuleSettings() {
+            return this.importRuleSettings;
         }
 
         public CreateDIJobRequestJobSettings setRuntimeSettings(java.util.List<CreateDIJobRequestJobSettingsRuntimeSettings> runtimeSettings) {
