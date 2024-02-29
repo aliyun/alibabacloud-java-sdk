@@ -14,7 +14,7 @@ public class ExportZookeeperDataRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The type of the object that you want to export. Valid values:</p>
+     * <p>The type of the object that is exported. Valid values:</p>
      * <br>
      * <p>*   transactionLog: transaction logs</p>
      * <p>*   snapshot: snapshots</p>
@@ -23,7 +23,7 @@ public class ExportZookeeperDataRequest extends TeaModel {
     public String exportType;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
