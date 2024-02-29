@@ -146,6 +146,9 @@ public class GetStackResponseBody extends TeaModel {
     @NameInMap("ResourceProgress")
     public GetStackResponseBodyResourceProgress resourceProgress;
 
+    @NameInMap("RollbackFailedRootReason")
+    public String rollbackFailedRootReason;
+
     /**
      * <p>The ID of the root stack. This parameter is returned if the specified stack is a nested stack.</p>
      */
@@ -460,6 +463,14 @@ public class GetStackResponseBody extends TeaModel {
     }
     public GetStackResponseBodyResourceProgress getResourceProgress() {
         return this.resourceProgress;
+    }
+
+    public GetStackResponseBody setRollbackFailedRootReason(String rollbackFailedRootReason) {
+        this.rollbackFailedRootReason = rollbackFailedRootReason;
+        return this;
+    }
+    public String getRollbackFailedRootReason() {
+        return this.rollbackFailedRootReason;
     }
 
     public GetStackResponseBody setRootStackId(String rootStackId) {
