@@ -3,7 +3,7 @@ package com.aliyun.aligenieip_1_0.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateRcuSceneResponse extends TeaModel {
+public class PmsEventReportResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class UpdateRcuSceneResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public UpdateRcuSceneResponseBody body;
+    public PmsEventReportResponseBody body;
 
-    public static UpdateRcuSceneResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateRcuSceneResponse self = new UpdateRcuSceneResponse();
+    public static PmsEventReportResponse build(java.util.Map<String, ?> map) throws Exception {
+        PmsEventReportResponse self = new PmsEventReportResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateRcuSceneResponse setHeaders(java.util.Map<String, String> headers) {
+    public PmsEventReportResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class UpdateRcuSceneResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateRcuSceneResponse setStatusCode(Integer statusCode) {
+    public PmsEventReportResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class UpdateRcuSceneResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateRcuSceneResponse setBody(UpdateRcuSceneResponseBody body) {
+    public PmsEventReportResponse setBody(PmsEventReportResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateRcuSceneResponseBody getBody() {
+    public PmsEventReportResponseBody getBody() {
         return this.body;
     }
 
