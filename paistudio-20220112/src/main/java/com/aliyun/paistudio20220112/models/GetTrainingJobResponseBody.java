@@ -22,6 +22,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("ComputeResource")
     public GetTrainingJobResponseBodyComputeResource computeResource;
 
+    @NameInMap("ExperimentConfig")
+    public GetTrainingJobResponseBodyExperimentConfig experimentConfig;
+
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
@@ -151,6 +154,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
     public GetTrainingJobResponseBodyComputeResource getComputeResource() {
         return this.computeResource;
+    }
+
+    public GetTrainingJobResponseBody setExperimentConfig(GetTrainingJobResponseBodyExperimentConfig experimentConfig) {
+        this.experimentConfig = experimentConfig;
+        return this;
+    }
+    public GetTrainingJobResponseBodyExperimentConfig getExperimentConfig() {
+        return this.experimentConfig;
     }
 
     public GetTrainingJobResponseBody setGmtCreateTime(String gmtCreateTime) {
@@ -483,6 +494,36 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
         public String getResourceId() {
             return this.resourceId;
+        }
+
+    }
+
+    public static class GetTrainingJobResponseBodyExperimentConfig extends TeaModel {
+        @NameInMap("ExperimentId")
+        public String experimentId;
+
+        @NameInMap("ExperimentName")
+        public String experimentName;
+
+        public static GetTrainingJobResponseBodyExperimentConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetTrainingJobResponseBodyExperimentConfig self = new GetTrainingJobResponseBodyExperimentConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTrainingJobResponseBodyExperimentConfig setExperimentId(String experimentId) {
+            this.experimentId = experimentId;
+            return this;
+        }
+        public String getExperimentId() {
+            return this.experimentId;
+        }
+
+        public GetTrainingJobResponseBodyExperimentConfig setExperimentName(String experimentName) {
+            this.experimentName = experimentName;
+            return this;
+        }
+        public String getExperimentName() {
+            return this.experimentName;
         }
 
     }

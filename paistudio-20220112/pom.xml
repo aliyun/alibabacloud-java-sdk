@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>paistudio20220112</artifactId>
-  <version>1.1.3</version>
+  <version>1.1.4</version>
   <packaging>jar</packaging>
   <name>paistudio20220112</name>
   <description>Alibaba Cloud PaiStudio (20220112) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.1</version>
+      <version>0.3.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
