@@ -22,6 +22,9 @@ public class CreateTrainingJobRequest extends TeaModel {
     @NameInMap("ComputeResource")
     public CreateTrainingJobRequestComputeResource computeResource;
 
+    @NameInMap("ExperimentConfig")
+    public CreateTrainingJobRequestExperimentConfig experimentConfig;
+
     @NameInMap("HyperParameters")
     public java.util.List<CreateTrainingJobRequestHyperParameters> hyperParameters;
 
@@ -106,6 +109,14 @@ public class CreateTrainingJobRequest extends TeaModel {
     }
     public CreateTrainingJobRequestComputeResource getComputeResource() {
         return this.computeResource;
+    }
+
+    public CreateTrainingJobRequest setExperimentConfig(CreateTrainingJobRequestExperimentConfig experimentConfig) {
+        this.experimentConfig = experimentConfig;
+        return this;
+    }
+    public CreateTrainingJobRequestExperimentConfig getExperimentConfig() {
+        return this.experimentConfig;
     }
 
     public CreateTrainingJobRequest setHyperParameters(java.util.List<CreateTrainingJobRequestHyperParameters> hyperParameters) {
@@ -318,6 +329,25 @@ public class CreateTrainingJobRequest extends TeaModel {
         }
         public String getResourceId() {
             return this.resourceId;
+        }
+
+    }
+
+    public static class CreateTrainingJobRequestExperimentConfig extends TeaModel {
+        @NameInMap("ExperimentId")
+        public String experimentId;
+
+        public static CreateTrainingJobRequestExperimentConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateTrainingJobRequestExperimentConfig self = new CreateTrainingJobRequestExperimentConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTrainingJobRequestExperimentConfig setExperimentId(String experimentId) {
+            this.experimentId = experimentId;
+            return this;
+        }
+        public String getExperimentId() {
+            return this.experimentId;
         }
 
     }

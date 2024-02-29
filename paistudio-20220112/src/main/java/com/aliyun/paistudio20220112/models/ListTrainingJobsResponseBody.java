@@ -168,6 +168,36 @@ public class ListTrainingJobsResponseBody extends TeaModel {
 
     }
 
+    public static class ListTrainingJobsResponseBodyTrainingJobsExperimentConfig extends TeaModel {
+        @NameInMap("ExperimentId")
+        public String experimentId;
+
+        @NameInMap("ExperimentName")
+        public String experimentName;
+
+        public static ListTrainingJobsResponseBodyTrainingJobsExperimentConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListTrainingJobsResponseBodyTrainingJobsExperimentConfig self = new ListTrainingJobsResponseBodyTrainingJobsExperimentConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobsExperimentConfig setExperimentId(String experimentId) {
+            this.experimentId = experimentId;
+            return this;
+        }
+        public String getExperimentId() {
+            return this.experimentId;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobsExperimentConfig setExperimentName(String experimentName) {
+            this.experimentName = experimentName;
+            return this;
+        }
+        public String getExperimentName() {
+            return this.experimentName;
+        }
+
+    }
+
     public static class ListTrainingJobsResponseBodyTrainingJobsHyperParameters extends TeaModel {
         @NameInMap("Name")
         public String name;
@@ -468,6 +498,9 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @NameInMap("ComputeResource")
         public ListTrainingJobsResponseBodyTrainingJobsComputeResource computeResource;
 
+        @NameInMap("ExperimentConfig")
+        public ListTrainingJobsResponseBodyTrainingJobsExperimentConfig experimentConfig;
+
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
@@ -560,6 +593,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         }
         public ListTrainingJobsResponseBodyTrainingJobsComputeResource getComputeResource() {
             return this.computeResource;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobs setExperimentConfig(ListTrainingJobsResponseBodyTrainingJobsExperimentConfig experimentConfig) {
+            this.experimentConfig = experimentConfig;
+            return this;
+        }
+        public ListTrainingJobsResponseBodyTrainingJobsExperimentConfig getExperimentConfig() {
+            return this.experimentConfig;
         }
 
         public ListTrainingJobsResponseBodyTrainingJobs setGmtCreateTime(String gmtCreateTime) {

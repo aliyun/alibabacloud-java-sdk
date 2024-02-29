@@ -269,6 +269,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ComputeResource", request.computeResource);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.experimentConfig)) {
+            body.put("ExperimentConfig", request.experimentConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.hyperParameters)) {
             body.put("HyperParameters", request.hyperParameters);
         }
