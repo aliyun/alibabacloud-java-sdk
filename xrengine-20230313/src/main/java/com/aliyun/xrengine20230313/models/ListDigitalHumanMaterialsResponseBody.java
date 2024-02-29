@@ -201,6 +201,9 @@ public class ListDigitalHumanMaterialsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("SortOrder")
+        public Integer sortOrder;
+
         @NameInMap("Type")
         public String type;
 
@@ -255,6 +258,14 @@ public class ListDigitalHumanMaterialsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListDigitalHumanMaterialsResponseBodyData setSortOrder(Integer sortOrder) {
+            this.sortOrder = sortOrder;
+            return this;
+        }
+        public Integer getSortOrder() {
+            return this.sortOrder;
         }
 
         public ListDigitalHumanMaterialsResponseBodyData setType(String type) {
