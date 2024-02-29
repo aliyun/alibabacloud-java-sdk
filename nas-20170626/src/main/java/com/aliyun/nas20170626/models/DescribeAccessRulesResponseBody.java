@@ -80,11 +80,17 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessRulesResponseBodyAccessRulesAccessRule extends TeaModel {
+        @NameInMap("AccessGroupName")
+        public String accessGroupName;
+
         /**
          * <p>The ID of the rule.</p>
          */
         @NameInMap("AccessRuleId")
         public String accessRuleId;
+
+        @NameInMap("FileSystemType")
+        public String fileSystemType;
 
         /**
          * <p>The IPv6 address or CIDR block of the authorized object.</p>
@@ -113,6 +119,9 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         @NameInMap("RWAccess")
         public String RWAccess;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         /**
          * <p>The IP address or CIDR block of the authorized object.</p>
          */
@@ -138,12 +147,28 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeAccessRulesResponseBodyAccessRulesAccessRule setAccessGroupName(String accessGroupName) {
+            this.accessGroupName = accessGroupName;
+            return this;
+        }
+        public String getAccessGroupName() {
+            return this.accessGroupName;
+        }
+
         public DescribeAccessRulesResponseBodyAccessRulesAccessRule setAccessRuleId(String accessRuleId) {
             this.accessRuleId = accessRuleId;
             return this;
         }
         public String getAccessRuleId() {
             return this.accessRuleId;
+        }
+
+        public DescribeAccessRulesResponseBodyAccessRulesAccessRule setFileSystemType(String fileSystemType) {
+            this.fileSystemType = fileSystemType;
+            return this;
+        }
+        public String getFileSystemType() {
+            return this.fileSystemType;
         }
 
         public DescribeAccessRulesResponseBodyAccessRulesAccessRule setIpv6SourceCidrIp(String ipv6SourceCidrIp) {
@@ -168,6 +193,14 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         }
         public String getRWAccess() {
             return this.RWAccess;
+        }
+
+        public DescribeAccessRulesResponseBodyAccessRulesAccessRule setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeAccessRulesResponseBodyAccessRulesAccessRule setSourceCidrIp(String sourceCidrIp) {

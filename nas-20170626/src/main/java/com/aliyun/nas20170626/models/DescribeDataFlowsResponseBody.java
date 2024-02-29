@@ -220,6 +220,12 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         public String sourceStorage;
 
         /**
+         * <p>源端存储内的访问路径。</p>
+         */
+        @NameInMap("SourceStoragePath")
+        public String sourceStoragePath;
+
+        /**
          * <p>The dataflow status. Valid values:</p>
          * <br>
          * <p>*   Starting: The dataflow is being created or enabled.</p>
@@ -360,6 +366,14 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         }
         public String getSourceStorage() {
             return this.sourceStorage;
+        }
+
+        public DescribeDataFlowsResponseBodyDataFlowInfoDataFlow setSourceStoragePath(String sourceStoragePath) {
+            this.sourceStoragePath = sourceStoragePath;
+            return this;
+        }
+        public String getSourceStoragePath() {
+            return this.sourceStoragePath;
         }
 
         public DescribeDataFlowsResponseBodyDataFlowInfoDataFlow setStatus(String status) {

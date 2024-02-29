@@ -104,11 +104,17 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("FileSystemType")
+        public String fileSystemType;
+
         /**
          * <p>The number of mount targets to which the permission group is attached.</p>
          */
         @NameInMap("MountTargetCount")
         public Integer mountTargetCount;
+
+        @NameInMap("RegionId")
+        public String regionId;
 
         /**
          * <p>The total number of rules in the permission group.</p>
@@ -153,12 +159,28 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeAccessGroupsResponseBodyAccessGroupsAccessGroup setFileSystemType(String fileSystemType) {
+            this.fileSystemType = fileSystemType;
+            return this;
+        }
+        public String getFileSystemType() {
+            return this.fileSystemType;
+        }
+
         public DescribeAccessGroupsResponseBodyAccessGroupsAccessGroup setMountTargetCount(Integer mountTargetCount) {
             this.mountTargetCount = mountTargetCount;
             return this;
         }
         public Integer getMountTargetCount() {
             return this.mountTargetCount;
+        }
+
+        public DescribeAccessGroupsResponseBodyAccessGroupsAccessGroup setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeAccessGroupsResponseBodyAccessGroupsAccessGroup setRuleCount(Integer ruleCount) {
