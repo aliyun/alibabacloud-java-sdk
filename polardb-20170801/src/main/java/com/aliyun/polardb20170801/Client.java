@@ -3314,6 +3314,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndTime", request.endTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.key)) {
             query.put("Key", request.key);
         }
