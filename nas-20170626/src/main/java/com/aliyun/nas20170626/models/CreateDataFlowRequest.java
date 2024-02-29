@@ -68,6 +68,9 @@ public class CreateDataFlowRequest extends TeaModel {
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    @NameInMap("FileSystemPath")
+    public String fileSystemPath;
+
     /**
      * <p>The fileset ID.</p>
      */
@@ -101,6 +104,9 @@ public class CreateDataFlowRequest extends TeaModel {
      */
     @NameInMap("SourceStorage")
     public String sourceStorage;
+
+    @NameInMap("SourceStoragePath")
+    public String sourceStoragePath;
 
     /**
      * <p>The maximum dataflow throughput. Unit: MB/s. Valid values:</p>
@@ -175,6 +181,14 @@ public class CreateDataFlowRequest extends TeaModel {
         return this.fileSystemId;
     }
 
+    public CreateDataFlowRequest setFileSystemPath(String fileSystemPath) {
+        this.fileSystemPath = fileSystemPath;
+        return this;
+    }
+    public String getFileSystemPath() {
+        return this.fileSystemPath;
+    }
+
     public CreateDataFlowRequest setFsetId(String fsetId) {
         this.fsetId = fsetId;
         return this;
@@ -197,6 +211,14 @@ public class CreateDataFlowRequest extends TeaModel {
     }
     public String getSourceStorage() {
         return this.sourceStorage;
+    }
+
+    public CreateDataFlowRequest setSourceStoragePath(String sourceStoragePath) {
+        this.sourceStoragePath = sourceStoragePath;
+        return this;
+    }
+    public String getSourceStoragePath() {
+        return this.sourceStoragePath;
     }
 
     public CreateDataFlowRequest setThroughput(Long throughput) {

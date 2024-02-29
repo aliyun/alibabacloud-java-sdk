@@ -880,6 +880,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FileSystemId", request.fileSystemId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemPath)) {
+            query.put("FileSystemPath", request.fileSystemPath);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fsetId)) {
             query.put("FsetId", request.fsetId);
         }
@@ -890,6 +894,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceStorage)) {
             query.put("SourceStorage", request.sourceStorage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceStoragePath)) {
+            query.put("SourceStoragePath", request.sourceStoragePath);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.throughput)) {
@@ -974,6 +982,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conflictPolicy)) {
+            query.put("ConflictPolicy", request.conflictPolicy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dataFlowId)) {

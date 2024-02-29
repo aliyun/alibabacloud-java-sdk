@@ -14,6 +14,9 @@ public class CreateDataFlowTaskRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("ConflictPolicy")
+    public String conflictPolicy;
+
     /**
      * <p>The dataflow ID.</p>
      */
@@ -107,6 +110,14 @@ public class CreateDataFlowTaskRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateDataFlowTaskRequest setConflictPolicy(String conflictPolicy) {
+        this.conflictPolicy = conflictPolicy;
+        return this;
+    }
+    public String getConflictPolicy() {
+        return this.conflictPolicy;
     }
 
     public CreateDataFlowTaskRequest setDataFlowId(String dataFlowId) {

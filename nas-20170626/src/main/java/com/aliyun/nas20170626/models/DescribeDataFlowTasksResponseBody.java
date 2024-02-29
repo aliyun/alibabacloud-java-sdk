@@ -43,6 +43,9 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeDataFlowTasksResponseBodyTaskInfoTask extends TeaModel {
+        @NameInMap("ConflictPolicy")
+        public String conflictPolicy;
+
         /**
          * <p>The time when the task was created.</p>
          */
@@ -61,6 +64,9 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
          */
         @NameInMap("DataType")
         public String dataType;
+
+        @NameInMap("Directory")
+        public String directory;
 
         /**
          * <p>The time when the task ended.</p>
@@ -168,6 +174,14 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDataFlowTasksResponseBodyTaskInfoTask setConflictPolicy(String conflictPolicy) {
+            this.conflictPolicy = conflictPolicy;
+            return this;
+        }
+        public String getConflictPolicy() {
+            return this.conflictPolicy;
+        }
+
         public DescribeDataFlowTasksResponseBodyTaskInfoTask setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
@@ -190,6 +204,14 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         }
         public String getDataType() {
             return this.dataType;
+        }
+
+        public DescribeDataFlowTasksResponseBodyTaskInfoTask setDirectory(String directory) {
+            this.directory = directory;
+            return this;
+        }
+        public String getDirectory() {
+            return this.directory;
         }
 
         public DescribeDataFlowTasksResponseBodyTaskInfoTask setEndTime(String endTime) {
