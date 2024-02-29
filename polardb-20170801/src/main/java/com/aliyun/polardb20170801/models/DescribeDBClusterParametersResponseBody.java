@@ -139,6 +139,18 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         @NameInMap("IsEqual")
         public String isEqual;
 
+        @NameInMap("IsInstancePolarDBKey")
+        public String isInstancePolarDBKey;
+
+        @NameInMap("IsInstanceRdsKey")
+        public String isInstanceRdsKey;
+
+        @NameInMap("IsPolarDBKey")
+        public String isPolarDBKey;
+
+        @NameInMap("IsRdsKey")
+        public String isRdsKey;
+
         /**
          * <p>The description of the parameter of the current cluster.</p>
          */
@@ -198,6 +210,38 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
         public String getIsEqual() {
             return this.isEqual;
+        }
+
+        public DescribeDBClusterParametersResponseBodyParametersParameters setIsInstancePolarDBKey(String isInstancePolarDBKey) {
+            this.isInstancePolarDBKey = isInstancePolarDBKey;
+            return this;
+        }
+        public String getIsInstancePolarDBKey() {
+            return this.isInstancePolarDBKey;
+        }
+
+        public DescribeDBClusterParametersResponseBodyParametersParameters setIsInstanceRdsKey(String isInstanceRdsKey) {
+            this.isInstanceRdsKey = isInstanceRdsKey;
+            return this;
+        }
+        public String getIsInstanceRdsKey() {
+            return this.isInstanceRdsKey;
+        }
+
+        public DescribeDBClusterParametersResponseBodyParametersParameters setIsPolarDBKey(String isPolarDBKey) {
+            this.isPolarDBKey = isPolarDBKey;
+            return this;
+        }
+        public String getIsPolarDBKey() {
+            return this.isPolarDBKey;
+        }
+
+        public DescribeDBClusterParametersResponseBodyParametersParameters setIsRdsKey(String isRdsKey) {
+            this.isRdsKey = isRdsKey;
+            return this;
+        }
+        public String getIsRdsKey() {
+            return this.isRdsKey;
         }
 
         public DescribeDBClusterParametersResponseBodyParametersParameters setDistParameterDescription(String distParameterDescription) {

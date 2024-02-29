@@ -16,6 +16,9 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("Interval")
+    public String interval;
+
     /**
      * <p>The performance metrics that you want to query. Separate multiple metrics with commas (,). For more information, see [Performance parameters](~~141787~~).</p>
      * <br>
@@ -49,6 +52,14 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDBClusterPerformanceRequest setInterval(String interval) {
+        this.interval = interval;
+        return this;
+    }
+    public String getInterval() {
+        return this.interval;
     }
 
     public DescribeDBClusterPerformanceRequest setKey(String key) {
