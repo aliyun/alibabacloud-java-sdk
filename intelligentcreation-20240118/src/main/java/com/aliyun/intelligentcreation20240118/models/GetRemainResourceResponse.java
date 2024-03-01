@@ -3,7 +3,7 @@ package com.aliyun.intelligentcreation20240118.models;
 
 import com.aliyun.tea.*;
 
-public class ExpectDeductResourceResponse extends TeaModel {
+public class GetRemainResourceResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ExpectDeductResourceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ExpectDeductResourceResult body;
+    public GetRemainResourceResponseBody body;
 
-    public static ExpectDeductResourceResponse build(java.util.Map<String, ?> map) throws Exception {
-        ExpectDeductResourceResponse self = new ExpectDeductResourceResponse();
+    public static GetRemainResourceResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetRemainResourceResponse self = new GetRemainResourceResponse();
         return TeaModel.build(map, self);
     }
 
-    public ExpectDeductResourceResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetRemainResourceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ExpectDeductResourceResponse extends TeaModel {
         return this.headers;
     }
 
-    public ExpectDeductResourceResponse setStatusCode(Integer statusCode) {
+    public GetRemainResourceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ExpectDeductResourceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ExpectDeductResourceResponse setBody(ExpectDeductResourceResult body) {
+    public GetRemainResourceResponse setBody(GetRemainResourceResponseBody body) {
         this.body = body;
         return this;
     }
-    public ExpectDeductResourceResult getBody() {
+    public GetRemainResourceResponseBody getBody() {
         return this.body;
     }
 
