@@ -17,7 +17,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The details about the access control policy.</p>
+     * <p>The information about the access control policies.</p>
      */
     @NameInMap("Policys")
     public java.util.List<DescribeControlPolicyResponseBodyPolicys> policys;
@@ -91,7 +91,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String aclAction;
 
         /**
-         * <p>The unique ID of the access control policy.</p>
+         * <p>The UUID of the access control policy.</p>
          */
         @NameInMap("AclUuid")
         public String aclUuid;
@@ -103,7 +103,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The type of the application that the access control policy supports. Valid values:</p>
+         * <p>The application type supported by the access control policy. We recommend that you specify ApplicationNameList. Valid values:</p>
          * <br>
          * <p>*   **FTP**</p>
          * <p>*   **HTTP**</p>
@@ -125,13 +125,13 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String applicationName;
 
         /**
-         * <p>The names of applications.</p>
+         * <p>The application names.</p>
          */
         @NameInMap("ApplicationNameList")
         public java.util.List<String> applicationNameList;
 
         /**
-         * <p>The time at which the access control policy was created.</p>
+         * <p>The time when the access control policy was created.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -170,7 +170,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String destPortType;
 
         /**
-         * <p>The destination address in the access control policy. The value of this parameter depends on the value of the DestinationType parameter. Valid values:</p>
+         * <p>The destination address in the access control policy. The value of this parameter varies based on the value of DestinationType. Valid values:</p>
          * <br>
          * <p>*   If **DestinationType** is set to **net**, the value of Destination is a CIDR block. Example: 192.0.XX.XX/24.</p>
          * <p>*   If **DestinationType** is set to **domain**, the value of Destination is a domain name. Example: aliyuncs.com.</p>
@@ -201,10 +201,10 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         /**
          * <p>The type of the destination address in the access control policy. Valid values:</p>
          * <br>
-         * <p>*   **net**: destination CIDR block</p>
-         * <p>*   **group**: destination address book</p>
-         * <p>*   **domain**: destination domain name</p>
-         * <p>*   **location**: destination location</p>
+         * <p>*   **net**: CIDR block</p>
+         * <p>*   **group**: address book</p>
+         * <p>*   **domain**: domain name</p>
+         * <p>*   **location**: location</p>
          */
         @NameInMap("DestinationType")
         public String destinationType;
@@ -225,16 +225,21 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String dnsResult;
 
         /**
-         * <p>The timestamp of the DNS resolution result. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the Domain Name System (DNS) resolution was performed. The value is a timestamp. Unit: seconds.</p>
          */
         @NameInMap("DnsResultTime")
         public Long dnsResultTime;
 
+        /**
+         * <p>The time when the access control policy stops taking effect. The value is a timestamp. Unit: seconds. The end time must be on the hour or on the half hour, and at least 30 minutes later than the start time.</p>
+         * <br>
+         * <p>>  If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
-         * <p>The timestamp when the access control policy was last hit. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the access control policy was last hit. The value is a timestamp. Unit: seconds.</p>
          */
         @NameInMap("HitLastTime")
         public Long hitLastTime;
@@ -246,7 +251,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public Long hitTimes;
 
         /**
-         * <p>The IP version of the address in the access control policy. Valid values:</p>
+         * <p>The IP version used in the access control policy. Valid values:</p>
          * <br>
          * <p>*   **4**: IPv4</p>
          * <p>*   **6**: IPv6</p>
@@ -255,7 +260,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public Integer ipVersion;
 
         /**
-         * <p>The time at which the access control policy was modified.</p>
+         * <p>The time when the access control policy was modified.</p>
          */
         @NameInMap("ModifyTime")
         public Long modifyTime;
@@ -263,13 +268,13 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         /**
          * <p>The priority of the access control policy.</p>
          * <br>
-         * <p>The priority value starts from 1. A small priority value indicates a high priority.</p>
+         * <p>The priority value starts from 1. A smaller priority value indicates a higher priority.</p>
          */
         @NameInMap("Order")
         public Integer order;
 
         /**
-         * <p>The type of the protocol in the access control policy. Valid values:</p>
+         * <p>The protocol type in the access control policy. Valid values:</p>
          * <br>
          * <p>*   **ANY**</p>
          * <p>*   **TCP**</p>
@@ -280,23 +285,54 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         public String proto;
 
         /**
-         * <p>Indicates whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values:</p>
+         * <p>The status of the access control policy. By default, an access control policy is enabled after it is created. Valid values:</p>
          * <br>
-         * <p>*   **true**: The access control policy is enabled.</p>
-         * <p>*   **false**: The access control policy is disabled.</p>
+         * <p>*   **true**: enabled</p>
+         * <p>*   **false**: disabled</p>
          */
         @NameInMap("Release")
         public String release;
 
+        /**
+         * <p>The days of a week or of a month on which the access control policy takes effect.</p>
+         * <br>
+         * <p>*   If RepeatType is set to `Permanent`, `None`, or `Daily`, this parameter is left empty. Example: \[].</p>
+         * <p>*   If RepeatType is set to Weekly, this parameter must be specified. Example: \[0, 6].</p>
+         * <br>
+         * <p>>  If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.</p>
+         * <br>
+         * <p>*   If RepeatType is set to `Monthly`, this parameter must be specified. Example: \[1, 31].</p>
+         * <br>
+         * <p>>  If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.</p>
+         */
         @NameInMap("RepeatDays")
         public java.util.List<Long> repeatDays;
 
+        /**
+         * <p>The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the start time.</p>
+         * <br>
+         * <p>>  If RepeatType is set to Permanent or None, this parameter is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.</p>
+         */
         @NameInMap("RepeatEndTime")
         public String repeatEndTime;
 
+        /**
+         * <p>The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.</p>
+         * <br>
+         * <p>>  If RepeatType is set to Permanent or None, this parameter is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.</p>
+         */
         @NameInMap("RepeatStartTime")
         public String repeatStartTime;
 
+        /**
+         * <p>The recurrence type based on which the access control policy takes effect. Valid values:</p>
+         * <br>
+         * <p>*   **Permanent** (default): The policy always takes effect.</p>
+         * <p>*   **None**: The policy takes effect for only once.</p>
+         * <p>*   **Daily**: The policy takes effect on a daily basis.</p>
+         * <p>*   **Weekly**: The policy takes effect on a weekly basis.</p>
+         * <p>*   **Monthly**: The policy takes effect on a monthly basis.</p>
+         */
         @NameInMap("RepeatType")
         public String repeatType;
 
@@ -331,21 +367,24 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         /**
          * <p>The type of the source address in the access control policy. Valid values:</p>
          * <br>
-         * <p>*   **net**: source CIDR block</p>
-         * <p>*   **group**: source address book</p>
-         * <p>*   **location**: source location</p>
+         * <p>*   **net**: CIDR block</p>
+         * <p>*   **group**: address book</p>
+         * <p>*   **location**: location</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
-         * <p>The total quota consumed by the returned access control policies, which is the sum of the quota consumed by each policy.</p>
-         * <br>
-         * <p>Quota that is consumed by an access control policy = Number of source CIDR blocks × Number of destination CIDR blocks, destination locations, or IP addresses that are resolved from destination domain names × Number of applications × Number of ports.</p>
+         * <p>The total quota consumed by the returned access control policies, which is the sum of the quota consumed by each policy. The quota that is consumed by an access control policy is calculated by using the following formula: Quota that is consumed by an access control policy = Number of source addresses (number of CIDR blocks or regions) × Number of destination addresses (number of CIDR blocks, regions, or domain names) × Number of port ranges × Number of applications.</p>
          */
         @NameInMap("SpreadCnt")
         public Integer spreadCnt;
 
+        /**
+         * <p>The time when the access control policy starts to take effect. The value is a timestamp. Unit: seconds. The start time must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.</p>
+         * <br>
+         * <p>>  If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

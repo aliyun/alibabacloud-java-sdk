@@ -46,10 +46,10 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The order in which you want to sort the query results. Valid values:</p>
+     * <p>The method that is used to sort the results. Valid values:</p>
      * <br>
      * <p>*   **asc**: the ascending order.</p>
-     * <p>*   **desc**: the descending order. This is the default value.</p>
+     * <p>*   **desc** (default): the descending order.</p>
      */
     @NameInMap("Order")
     public String order;
@@ -71,7 +71,7 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     /**
      * <p>The field based on which you want to sort the query results. Valid values:</p>
      * <br>
-     * <p>*   **SessionCount**: the number of requests. This is the default value.</p>
+     * <p>*   **SessionCount** (default): the number of requests.</p>
      * <p>*   **TotalBytes**: the total volume of traffic.</p>
      */
     @NameInMap("Sort")

@@ -13,6 +13,9 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("ShouldRecover")
+    public String shouldRecover;
+
     @NameInMap("SrcCandidateList")
     public java.util.List<ModifyTrFirewallV2RoutePolicyScopeRequestSrcCandidateList> srcCandidateList;
 
@@ -46,6 +49,14 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public ModifyTrFirewallV2RoutePolicyScopeRequest setShouldRecover(String shouldRecover) {
+        this.shouldRecover = shouldRecover;
+        return this;
+    }
+    public String getShouldRecover() {
+        return this.shouldRecover;
     }
 
     public ModifyTrFirewallV2RoutePolicyScopeRequest setSrcCandidateList(java.util.List<ModifyTrFirewallV2RoutePolicyScopeRequestSrcCandidateList> srcCandidateList) {

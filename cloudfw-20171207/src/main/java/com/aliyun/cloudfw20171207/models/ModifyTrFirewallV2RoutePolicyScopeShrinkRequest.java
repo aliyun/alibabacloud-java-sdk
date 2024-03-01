@@ -13,6 +13,9 @@ public class ModifyTrFirewallV2RoutePolicyScopeShrinkRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("ShouldRecover")
+    public String shouldRecover;
+
     @NameInMap("SrcCandidateList")
     public String srcCandidateListShrink;
 
@@ -46,6 +49,14 @@ public class ModifyTrFirewallV2RoutePolicyScopeShrinkRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public ModifyTrFirewallV2RoutePolicyScopeShrinkRequest setShouldRecover(String shouldRecover) {
+        this.shouldRecover = shouldRecover;
+        return this;
+    }
+    public String getShouldRecover() {
+        return this.shouldRecover;
     }
 
     public ModifyTrFirewallV2RoutePolicyScopeShrinkRequest setSrcCandidateListShrink(String srcCandidateListShrink) {

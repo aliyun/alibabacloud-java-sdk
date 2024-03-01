@@ -36,6 +36,9 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    /**
+     * <p>The application types supported by the access control policy.</p>
+     */
     @NameInMap("ApplicationNameList")
     public java.util.List<String> applicationNameList;
 
@@ -90,6 +93,11 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("DestinationType")
     public String destinationType;
 
+    /**
+     * <p>The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the start time.</p>
+     * <br>
+     * <p>>  If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -136,15 +144,46 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("Release")
     public String release;
 
+    /**
+     * <p>The days of a week or of a month on which the access control policy takes effect.</p>
+     * <br>
+     * <p>*   If you set RepeatType to `Permanent`, `None`, or `Daily`, leave this parameter empty. Example: \[].</p>
+     * <p>*   If you set RepeatType to Weekly, you must specify this parameter. Example: \[0, 6].</p>
+     * <br>
+     * <p>>  If you set RepeatType to Weekly, the fields in the value of this parameter cannot be repeated.</p>
+     * <br>
+     * <p>*   If you set RepeatType to `Monthly`, you must specify this parameter. Example: \[1, 31].</p>
+     * <br>
+     * <p>>  If you set RepeatType to Monthly, the fields in the value of this parameter cannot be repeated.</p>
+     */
     @NameInMap("RepeatDays")
     public java.util.List<Long> repeatDays;
 
+    /**
+     * <p>The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the start time.</p>
+     * <br>
+     * <p>>  If you set RepeatType to Permanent or None, leave this parameter empty. If you set RepeatType to Daily, Weekly, or Monthly, you must specify this parameter.</p>
+     */
     @NameInMap("RepeatEndTime")
     public String repeatEndTime;
 
+    /**
+     * <p>The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.</p>
+     * <br>
+     * <p>>  If you set RepeatType to Permanent or None, leave this parameter empty. If you set RepeatType to Daily, Weekly, or Monthly, you must specify this parameter.</p>
+     */
     @NameInMap("RepeatStartTime")
     public String repeatStartTime;
 
+    /**
+     * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
+     * <br>
+     * <p>*   **Permanent** (default): The policy always takes effect.</p>
+     * <p>*   **None**: The policy takes effect for only once.</p>
+     * <p>*   **Daily**: The policy takes effect on a daily basis.</p>
+     * <p>*   **Weekly**: The policy takes effect on a weekly basis.</p>
+     * <p>*   **Monthly**: The policy takes effect on a monthly basis.</p>
+     */
     @NameInMap("RepeatType")
     public String repeatType;
 
@@ -166,6 +205,11 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <p>The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.</p>
+     * <br>
+     * <p>>  If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

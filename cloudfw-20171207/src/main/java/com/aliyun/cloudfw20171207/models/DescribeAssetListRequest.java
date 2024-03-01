@@ -68,8 +68,8 @@ public class DescribeAssetListRequest extends TeaModel {
      * <p>*   **EIP**: the EIP</p>
      * <p>*   **EniEIP**: the EIP of an elastic network interface (ENI)</p>
      * <p>*   **NatEIP**: the EIP of a NAT gateway</p>
-     * <p>*   **SlbEIP**: the EIP of a Server Load Balancer (SLB) instance</p>
-     * <p>*   **SlbPublicIP**: the public IP address of an SLB instance</p>
+     * <p>*   **SlbEIP**: the EIP of a Server Load Balancer (SLB) instance or a Classic Load Balancer (CLB) instance</p>
+     * <p>*   **SlbPublicIP**: the public IP address of an SLB instance or a CLB instance</p>
      * <p>*   **NatPublicIP**: the public IP address of a NAT gateway</p>
      * <p>*   **HAVIP**: the high-availability virtual IP address (HAVIP)</p>
      */

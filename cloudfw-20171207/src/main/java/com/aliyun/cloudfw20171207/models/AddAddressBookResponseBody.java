@@ -11,7 +11,7 @@ public class AddAddressBookResponseBody extends TeaModel {
     public String groupUuid;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
