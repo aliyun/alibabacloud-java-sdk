@@ -168,6 +168,9 @@ public class StartInstanceRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    @NameInMap("VSwitchIds")
+    public java.util.List<String> vSwitchIds;
+
     /**
      * <p>The ID of the virtual private cloud (VPC) in which you want to deploy the instance.</p>
      */
@@ -330,6 +333,14 @@ public class StartInstanceRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public StartInstanceRequest setVSwitchIds(java.util.List<String> vSwitchIds) {
+        this.vSwitchIds = vSwitchIds;
+        return this;
+    }
+    public java.util.List<String> getVSwitchIds() {
+        return this.vSwitchIds;
     }
 
     public StartInstanceRequest setVpcId(String vpcId) {
