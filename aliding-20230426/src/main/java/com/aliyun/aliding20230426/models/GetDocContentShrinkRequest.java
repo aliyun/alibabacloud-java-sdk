@@ -13,6 +13,9 @@ public class GetDocContentShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
+    @NameInMap("userToken")
+    public String userToken;
+
     public static GetDocContentShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDocContentShrinkRequest self = new GetDocContentShrinkRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class GetDocContentShrinkRequest extends TeaModel {
     }
     public String getTenantContextShrink() {
         return this.tenantContextShrink;
+    }
+
+    public GetDocContentShrinkRequest setUserToken(String userToken) {
+        this.userToken = userToken;
+        return this;
+    }
+    public String getUserToken() {
+        return this.userToken;
     }
 
 }

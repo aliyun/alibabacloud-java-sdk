@@ -31,6 +31,9 @@ public class CreateEventRequest extends TeaModel {
     @NameInMap("Reminders")
     public java.util.List<CreateEventRequestReminders> reminders;
 
+    @NameInMap("RichTextDescription")
+    public CreateEventRequestRichTextDescription richTextDescription;
+
     @NameInMap("Summary")
     public String summary;
 
@@ -118,6 +121,14 @@ public class CreateEventRequest extends TeaModel {
     }
     public java.util.List<CreateEventRequestReminders> getReminders() {
         return this.reminders;
+    }
+
+    public CreateEventRequest setRichTextDescription(CreateEventRequestRichTextDescription richTextDescription) {
+        this.richTextDescription = richTextDescription;
+        return this;
+    }
+    public CreateEventRequestRichTextDescription getRichTextDescription() {
+        return this.richTextDescription;
     }
 
     public CreateEventRequest setSummary(String summary) {
@@ -421,6 +432,25 @@ public class CreateEventRequest extends TeaModel {
         }
         public Integer getMinutes() {
             return this.minutes;
+        }
+
+    }
+
+    public static class CreateEventRequestRichTextDescription extends TeaModel {
+        @NameInMap("text")
+        public String text;
+
+        public static CreateEventRequestRichTextDescription build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventRequestRichTextDescription self = new CreateEventRequestRichTextDescription();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventRequestRichTextDescription setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
         }
 
     }

@@ -13,6 +13,9 @@ public class GetDocContentRequest extends TeaModel {
     @NameInMap("TenantContext")
     public GetDocContentRequestTenantContext tenantContext;
 
+    @NameInMap("userToken")
+    public String userToken;
+
     public static GetDocContentRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDocContentRequest self = new GetDocContentRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class GetDocContentRequest extends TeaModel {
     }
     public GetDocContentRequestTenantContext getTenantContext() {
         return this.tenantContext;
+    }
+
+    public GetDocContentRequest setUserToken(String userToken) {
+        this.userToken = userToken;
+        return this;
+    }
+    public String getUserToken() {
+        return this.userToken;
     }
 
     public static class GetDocContentRequestTenantContext extends TeaModel {

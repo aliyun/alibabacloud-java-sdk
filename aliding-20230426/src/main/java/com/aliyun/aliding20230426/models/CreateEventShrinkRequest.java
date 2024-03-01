@@ -31,6 +31,9 @@ public class CreateEventShrinkRequest extends TeaModel {
     @NameInMap("Reminders")
     public String remindersShrink;
 
+    @NameInMap("RichTextDescription")
+    public String richTextDescriptionShrink;
+
     @NameInMap("Summary")
     public String summary;
 
@@ -118,6 +121,14 @@ public class CreateEventShrinkRequest extends TeaModel {
     }
     public String getRemindersShrink() {
         return this.remindersShrink;
+    }
+
+    public CreateEventShrinkRequest setRichTextDescriptionShrink(String richTextDescriptionShrink) {
+        this.richTextDescriptionShrink = richTextDescriptionShrink;
+        return this;
+    }
+    public String getRichTextDescriptionShrink() {
+        return this.richTextDescriptionShrink;
     }
 
     public CreateEventShrinkRequest setSummary(String summary) {
