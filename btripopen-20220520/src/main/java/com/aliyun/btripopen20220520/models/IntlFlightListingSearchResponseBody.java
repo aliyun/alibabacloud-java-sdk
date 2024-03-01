@@ -79,6 +79,9 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         @NameInMap("agreement_price_codes")
         public java.util.List<String> agreementPriceCodes;
 
+        @NameInMap("item_type")
+        public String itemType;
+
         @NameInMap("shopping_item_map")
         public java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValue> shoppingItemMap;
 
@@ -93,6 +96,14 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         }
         public java.util.List<String> getAgreementPriceCodes() {
             return this.agreementPriceCodes;
+        }
+
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItem setItemType(String itemType) {
+            this.itemType = itemType;
+            return this;
+        }
+        public String getItemType() {
+            return this.itemType;
         }
 
         public IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItem setShoppingItemMap(java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValue> shoppingItemMap) {
