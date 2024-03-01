@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetTaskWorkforceStatisticResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public GetTaskWorkforceStatisticResponseBody body;
 
     public static GetTaskWorkforceStatisticResponse build(java.util.Map<String, ?> map) throws Exception {
