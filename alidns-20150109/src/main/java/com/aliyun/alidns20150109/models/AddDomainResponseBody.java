@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddDomainResponseBody extends TeaModel {
     /**
-     * <p>The Domain Name System (DNS) servers that resolve the domain name.</p>
+     * <p>The Domain Name System (DNS) servers configured for the domain name.</p>
      */
     @NameInMap("DnsServers")
     public AddDomainResponseBodyDnsServers dnsServers;
@@ -41,7 +41,7 @@ public class AddDomainResponseBody extends TeaModel {
     public String punyCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

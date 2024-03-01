@@ -29,31 +29,31 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The resolution line.</p>
+     * <p>The DNS resolution line.</p>
      */
     @NameInMap("Line")
     public String line;
 
     /**
-     * <p>The lock status of the DNS record. Valid values: true and false.</p>
+     * <p>The lock state of the DNS record. Valid values: **true and false**.</p>
      */
     @NameInMap("Locked")
     public Boolean locked;
 
     /**
-     * <p>The priority of the MX-type DNS record.</p>
+     * <p>The priority of the mail exchanger (MX) record.</p>
      */
     @NameInMap("Priority")
     public Long priority;
 
     /**
-     * <p>The punycode is only returned for Chinese domain names.</p>
+     * <p>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</p>
      */
     @NameInMap("PunyCode")
     public String punyCode;
 
     /**
-     * <p>The host record.</p>
+     * <p>The hostname.</p>
      */
     @NameInMap("RR")
     public String RR;
@@ -65,25 +65,25 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     public String recordId;
 
     /**
-     * <p>The remark of the DNS record.</p>
+     * <p>The description of your DNS record.</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The status of the DNS record. Valid values: Enable and Disable.</p>
+     * <p>The state of the DNS records. Valid values: **Enable and Disable**.</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The TTL of the resolution.</p>
+     * <p>The time-to-live (TTL) of the DNS record.</p>
      */
     @NameInMap("TTL")
     public Long TTL;
@@ -95,7 +95,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     public String type;
 
     /**
-     * <p>The value of the DNS record.</p>
+     * <p>The record value.</p>
      */
     @NameInMap("Value")
     public String value;

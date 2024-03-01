@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeGtmAccessStrategyAvailableConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the GTM instance for which you want to query the available configurations of the current access policy.</p>
+     * <p>The ID of the Global Traffic Manager (GTM) instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The language used by the user.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;

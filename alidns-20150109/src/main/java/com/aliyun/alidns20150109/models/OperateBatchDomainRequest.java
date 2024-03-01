@@ -4,8 +4,17 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class OperateBatchDomainRequest extends TeaModel {
+    /**
+     * <p>The DNS records. You can submit up to 1000 DNS records.</p>
+     */
     @NameInMap("DomainRecordInfo")
     public java.util.List<OperateBatchDomainRequestDomainRecordInfo> domainRecordInfo;
+
+    /**
+     * <p>The language.</p>
+     */
+    @NameInMap("Lang")
+    public String lang;
 
     /**
      * <p>The type of the batch operation. Valid values:</p>
@@ -13,15 +22,7 @@ public class OperateBatchDomainRequest extends TeaModel {
      * <p>*   **DOMAIN_ADD**: adds domain names in batches.</p>
      * <p>*   **DOMAIN_DEL**: deletes domain names in batches.</p>
      * <p>*   **RR_ADD**: adds DNS records in batches.</p>
-     * <p>*   **RR_DEL**: deletes DNS records in batches. (If RR or VALUE exists, DNS records corresponding to the specified RR or VALUE are deleted. If both of them exist, DNS records corresponding to the specified RR and VALUE are deleted. If no RR or VALUE is specified, the DNS records corresponding to the DomainName parameter are deleted.)</p>
-     */
-    @NameInMap("Lang")
-    public String lang;
-
-    /**
-     * <p>The type of DNS record N. For the DNS record types supported by Alibaba Cloud DNS, see [Resolution record type formats](https://www.alibabacloud.com/help/zh/doc-detail/29805.htm).</p>
-     * <br>
-     * <p>>  If you set the Type parameter to **RR_ADD**, you must also specify this parameter.</p>
+     * <p>*   **RR_DEL**: deletes DNS records in batches. This operation deletes the DNS records with the specified hostname or record value. If you do not specify the Rr and Value parameters, this operation deletes the DNS records that are added for the specified domain names.</p>
      */
     @NameInMap("Type")
     public String type;
@@ -57,17 +58,15 @@ public class OperateBatchDomainRequest extends TeaModel {
 
     public static class OperateBatchDomainRequestDomainRecordInfo extends TeaModel {
         /**
-         * <p>The resolution line of DNS record N. Default value: default.</p>
+         * <p>The domain name.</p>
          * <br>
-         * <p>For more information, see [Resolution line enumeration](https://www.alibabacloud.com/help/zh/doc-detail/29807.htm).</p>
+         * <p>>  You can submit 1 to 1,000 domain names. Due to the limit on the length of HTTP request headers, excessive domain names are ignored. Do not enter more than 1,000 domain names.</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
-         * <p>The host record corresponding to DNS record N.</p>
-         * <br>
-         * <p>>  If you set the Type parameter to **RR_ADD**, you must also specify this parameter.</p>
+         * <p>The resolution line. Default value: default.</p>
          */
         @NameInMap("Line")
         public String line;
@@ -82,37 +81,39 @@ public class OperateBatchDomainRequest extends TeaModel {
         public String newValue;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The priority of the mail exchanger (MX) record.</p>
+         * <br>
+         * <p>This parameter is required if the type of the DNS record is MX. Default value: 10.</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
-         * <p>The priority of MX-type DNS record N.</p>
+         * <p>The hostname.</p>
          * <br>
-         * <p>This parameter must be specified if the type of the DNS record is MX. Default value: 10.</p>
+         * <p>>  This parameter is required if you set Type to **RR_ADD** or **RR_DEL**.</p>
          */
         @NameInMap("Rr")
         public String rr;
 
         /**
-         * <p>The domain name corresponding to DNS record N.</p>
-         * <br>
-         * <p>>  N is specified by users. **N** starts from **1**. The maximum value of N is **1000**. Extra data entries are ignored.</p>
+         * <p>The time-to-live (TTL) value of the cached DNS record. Unit: seconds. Default value: ***600***.</p>
          */
         @NameInMap("Ttl")
         public Integer ttl;
 
         /**
-         * <p>The value of DNS record N.</p>
+         * <p>The type of the DNS record. Valid values: A, AAAA, TXT, MX, and CNAME.</p>
          * <br>
-         * <p>>  If you set the Type parameter to **RR_ADD**, you must also specify this parameter.</p>
+         * <p>>  This parameter is required if you set Type to **RR_ADD** or **RR_DEL**.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The TTL of DNS record N. Unit: seconds. Default value: **600**.</p>
+         * <p>The record value.</p>
+         * <br>
+         * <p>>  This parameter is required if you set Type to **RR_ADD** or **RR_DEL**.</p>
          */
         @NameInMap("Value")
         public String value;

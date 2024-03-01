@@ -4,12 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateDnsCacheDomainRemarkRequest extends TeaModel {
+    /**
+     * <p>The domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The language.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The remarks. The remarks can be up to 50 characters in length and can contain only letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
+     */
     @NameInMap("Remark")
     public String remark;
 

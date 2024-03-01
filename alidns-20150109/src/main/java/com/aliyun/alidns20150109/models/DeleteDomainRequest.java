@@ -11,7 +11,7 @@ public class DeleteDomainRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;

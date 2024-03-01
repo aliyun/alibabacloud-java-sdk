@@ -11,7 +11,7 @@ public class DescribeTagsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number to return. Default value: 1.</p>
+     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeRecordResolveStatisticsSummaryRequest extends TeaModel {
     /**
-     * <p>The order in which you want to sort the query results. Valid values: DESC and ASC. DESC is the default value and indicates that the query results are sorted in descending order. ASC indicates that the query results are sorted in ascending order.</p>
+     * <p>The order in which the returned entries are sorted. Valid values:</p>
+     * <br>
+     * <p>*   DESC (default): descending order</p>
+     * <p>*   ASC: ascending order</p>
      */
     @NameInMap("Direction")
     public String direction;
@@ -19,25 +22,26 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends TeaModel {
     /**
      * <p>The type of the domain name. The parameter value is not case-sensitive. Valid values:</p>
      * <br>
-     * <p>PUBLIC and CACHE. PUBLIC is the default value and indicates an authoritative domain name. CACHE indicates a cache-accelerated domain name.</p>
+     * <p>*   PUBLIC (default): hosted public domain name</p>
+     * <p>*   CACHE: cache-accelerated domain name</p>
      */
     @NameInMap("DomainType")
     public String domainType;
 
     /**
-     * <p>The end time in the yyyy-MM-dd format, for example, 2023-03-13.</p>
+     * <p>The end date of the time range to be queried. Specify the time in the yyyy-MM-dd format, such as 2023-03-13.</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
-     * <p>The keyword. The Keyword parameter is used together with the SearchMode parameter.</p>
+     * <p>The keyword. Keyword is used together with SearchMode.</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The language used. Valid values: zh, en, and ja.</p>
+     * <p>The language. Valid values: zh, en, and ja.</p>
      */
     @NameInMap("Lang")
     public String lang;
@@ -57,27 +61,28 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends TeaModel {
     /**
      * <p>The search mode of the keyword. Valid values:</p>
      * <br>
-     * <p>LIKE (default): fuzzy search. EXACT: exact match.</p>
+     * <p>*   LIKE (default): fuzzy search</p>
+     * <p>*   EXACT: exact search</p>
      */
     @NameInMap("SearchMode")
     public String searchMode;
 
     /**
-     * <p>The start time in the yyyy-MM-dd format, for example, 2023-03-01.</p>
+     * <p>The start date of the time range to be queried. Specify the time in the yyyy-MM-dd format, such as 2023-03-01.</p>
      */
     @NameInMap("StartDate")
     public String startDate;
 
     /**
-     * <p>The threshold for the number of resolution requests. You can query the subdomain names at the specified quantity level of resolution requests and query the number of resolution requests for each subdomain name. For example, if you set this parameter to 100, you can obtain data about the subdomain names with less than 100 resolution requests.</p>
+     * <p>The threshold for the number of Domain Name System (DNS) requests. You can query the subdomain names at the specified quantity level of DNS requests and query the number of DNS requests for each subdomain name.</p>
      * <br>
-     * <p>If you do not specify this parameter, the data about the subdomain names that have resolution requests is obtained.</p>
+     * <p>If you do not specify this parameter, the data about the subdomain names that have DNS requests is obtained.</p>
      * <br>
      * <p>If you set this parameter to a value less than 0, the data about all subdomain names is obtained.</p>
      * <br>
-     * <p>If you set this parameter to 0, the data about the subdomain names that do not have resolution requests is obtained.</p>
+     * <p>If you set this parameter to 0, the data about the subdomain names that do not have DNS requests is obtained.</p>
      * <br>
-     * <p>If you set this parameter to a value greater than 0, the data about the subdomain names whose number of resolution requests is less than or equal to the value of this parameter is obtained.</p>
+     * <p>If you set this parameter to a value greater than 0, the data about the subdomain names whose number of DNS requests is less than or equal to the value of this parameter is obtained.</p>
      */
     @NameInMap("Threshold")
     public Long threshold;

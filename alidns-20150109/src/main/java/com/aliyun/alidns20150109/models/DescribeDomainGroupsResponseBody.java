@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainGroupsResponseBody extends TeaModel {
     /**
-     * <p>The list of domain name groups.</p>
+     * <p>The domain name groups.</p>
      */
     @NameInMap("DomainGroups")
     public DescribeDomainGroupsResponseBodyDomainGroups domainGroups;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page. Valid values: **1 to 100**. Default value: **20**.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of domain name groups.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -87,7 +87,10 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         public Long domainCount;
 
         /**
-         * <p>The ID of the domain name group.</p>
+         * <p>The ID of the domain name group. Valid values:</p>
+         * <br>
+         * <p>*   defaultGroup: the default group</p>
+         * <p>*   If an empty string is returned, it indicates the group that contains all domain names.</p>
          */
         @NameInMap("GroupId")
         public String groupId;

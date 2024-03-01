@@ -5,64 +5,64 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
     /**
-     * <p>The algorithm configured in a DNSSEC record. This parameter is returned if DNSSEC is enabled.</p>
+     * <p>The algorithm type. This parameter is returned if DNSSEC is enabled.</p>
      */
     @NameInMap("Algorithm")
     public String algorithm;
 
     /**
-     * <p>The digest configured in a DNSSEC record. This parameter is returned if DNSSEC is enabled.</p>
+     * <p>The digest. This parameter is returned if DNSSEC is enabled.</p>
      */
     @NameInMap("Digest")
     public String digest;
 
     /**
-     * <p>The digest type configured in a DNSSEC record. This parameter is returned if DNSSEC is enabled.</p>
+     * <p>The digest type. This parameter is returned if DNSSEC is enabled.</p>
      */
     @NameInMap("DigestType")
     public String digestType;
 
     /**
-     * <p>The domain name that is queried.</p>
+     * <p>The domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The DS record. This parameter is returned if DNSSEC is enabled.</p>
+     * <p>The delegation signer (DS) record. This parameter is returned if DNSSEC is enabled.</p>
      */
     @NameInMap("DsRecord")
     public String dsRecord;
 
     /**
-     * <p>The flag of a DNSSEC record. This parameter is returned if DNSSEC is enabled.</p>
+     * <p>The flag. This parameter is returned if DNSSEC is enabled.</p>
      */
     @NameInMap("Flags")
     public String flags;
 
     /**
-     * <p>The key tag of a DNSSEC record. This parameter is returned if DNSSEC is enabled.</p>
+     * <p>The key tag. This parameter is returned if DNSSEC is enabled.</p>
      */
     @NameInMap("KeyTag")
     public String keyTag;
 
     /**
-     * <p>The public key for a DNSSEC record. This parameter is returned if DNSSEC is enabled.</p>
+     * <p>The public key. This parameter is returned if DNSSEC is enabled.</p>
      */
     @NameInMap("PublicKey")
     public String publicKey;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether DNSSEC is enabled for the specified domain name.</p>
+     * <p>The state of the DNSSEC. Valid values:</p>
      * <br>
-     * <p>*   ON: DNSSEC is enabled.</p>
-     * <p>*   OFF: DNSSEC is disabled.</p>
+     * <p>*   ON</p>
+     * <p>*   OFF</p>
      */
     @NameInMap("Status")
     public String status;

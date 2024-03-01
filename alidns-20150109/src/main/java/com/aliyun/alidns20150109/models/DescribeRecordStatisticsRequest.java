@@ -10,35 +10,43 @@ public class DescribeRecordStatisticsRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The type of the domain name. The parameter value is not case-sensitive. Valid values:</p>
+     * <br>
+     * <p>*   PUBLIC (default): hosted public domain name</p>
+     * <p>*   CACHE: cache-accelerated domain name</p>
+     */
     @NameInMap("DomainType")
     public String domainType;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the **YYYY-MM-DD** format.</p>
+     * <p>The end date of the query. Specify the end date in the **YYYY-MM-DD** format.</p>
      * <br>
-     * <p>The default value is the day when you perform the operation.</p>
+     * <p>The default value is the day when you query the data.</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The DNS record.</p>
-     * <br>
-     * <p>The host record. For example, to resolve `www.dns-exmaple.com`, you must set Rr to www.</p>
+     * <p>The hostname. If you want to resolve the subdomain name www.dns-exmaple.top, set this parameter to www.</p>
      */
     @NameInMap("Rr")
     public String rr;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the **YYYY-MM-DD** format.</p>
+     * <p>The start date of the query. Specify the start date in the **YYYY-MM-DD** format.</p>
      * <br>
-     * <p>You can only query DNS records of the last 90 days.</p>
+     * <p>You can only query the DNS records within the last 90 days.``</p>
+     * <br>
+     * <p>If the time range is less than or equal to seven days, data is returned on an hourly basis.````</p>
+     * <br>
+     * <p>If the time range is greater than seven days, data is returned on a daily basis.````</p>
      */
     @NameInMap("StartDate")
     public String startDate;

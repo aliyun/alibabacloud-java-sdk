@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class UnbindInstanceDomainsRequest extends TeaModel {
     /**
-     * <p>The list of domain names.</p>
+     * <p>The domain names.</p>
      * <br>
-     * <p>Separate multiple domain names with commas (,). A maximum of 100 domain names can be entered.</p>
+     * <p>Separate multiple domain names with commas (,). Up to 100 domain names can be entered.</p>
      */
     @NameInMap("DomainNames")
     public String domainNames;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;

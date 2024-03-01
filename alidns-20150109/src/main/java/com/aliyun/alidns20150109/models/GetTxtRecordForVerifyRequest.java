@@ -11,15 +11,15 @@ public class GetTxtRecordForVerifyRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The function verified by using the TXT record. Valid values:</p>
+     * <p>The feature verified by using the TXT record. Valid values:</p>
      * <br>
-     * <p>*   ADD_SUBDOMAIN</p>
+     * <p>*   ADD_SUB_DOMAIN</p>
      * <p>*   RETRIEVAL</p>
      */
     @NameInMap("Type")

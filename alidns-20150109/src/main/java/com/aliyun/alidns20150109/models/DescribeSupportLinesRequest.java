@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeSupportLinesRequest extends TeaModel {
     /**
-     * <p>The domain name.</p>
+     * <p>域名名称。</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The language type.</p>
+     * <p>语言。</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>用户端IP。</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;

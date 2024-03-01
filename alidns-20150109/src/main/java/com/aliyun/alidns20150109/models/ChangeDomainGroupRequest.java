@@ -11,13 +11,18 @@ public class ChangeDomainGroupRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The ID of the target domain name group.</p>
+     * <p>The ID of the destination domain name group.</p>
+     * <br>
+     * <p>*   If you do not specify GroupId, the domain name is moved to the default group.</p>
+     * <p>*   If you set GroupId to an empty string, the domain name is moved to the default group.</p>
+     * <p>*   If you set GroupId to defaultGroup, the domain name is moved to the default group.</p>
+     * <p>*   If you do not set GroupId to one of the preceding values and set GroupId to an existing group ID, the domain name is moved to the existing group. If you set GroupId to a group ID that does not exist, the domain name remains in the original group.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;

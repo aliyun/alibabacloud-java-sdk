@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The total number of subdomains returned.</p>
+     * <p>The number of entries per page. Valid values: **1 to 100**. Default value: **20**.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The details of the subdomains.</p>
+     * <p>The subdomains for which weighted round-robin is enabled.</p>
      */
     @NameInMap("SlbSubDomains")
     public DescribeDNSSLBSubDomainsResponseBodySlbSubDomains slbSubDomains;
 
     /**
-     * <p>The number of domain name groups.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -80,9 +80,18 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithmsLineAlgorithm extends TeaModel {
+        /**
+         * <p>The DNS resolution line. The line can be China Telecom, China Mobile, and China Unicom.</p>
+         */
         @NameInMap("Line")
         public String line;
 
+        /**
+         * <p>Indicates whether weighted round-robin is enabled for the line. Valid values:</p>
+         * <br>
+         * <p>*   **true** (default): Weighted round-robin is enabled.</p>
+         * <p>*   **false**: Weighted round-robin is disabled.</p>
+         */
         @NameInMap("Open")
         public Boolean open;
 
@@ -129,6 +138,9 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain extends TeaModel {
+        /**
+         * <p>The lines for which weighted round-robin is enabled.</p>
+         */
         @NameInMap("LineAlgorithms")
         public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms lineAlgorithms;
 
@@ -145,13 +157,13 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         public Long recordCount;
 
         /**
-         * <p>The subdomain.</p>
+         * <p>The subdomain name.</p>
          */
         @NameInMap("SubDomain")
         public String subDomain;
 
         /**
-         * <p>The type of the DNS record that supports weighted round-robin. Valid values: A, AAAA, and CNAME.</p>
+         * <p>The type of the Domain Name System (DNS) record that supports weighted round-robin. Valid values: A, AAAA, and CNAME.</p>
          */
         @NameInMap("Type")
         public String type;

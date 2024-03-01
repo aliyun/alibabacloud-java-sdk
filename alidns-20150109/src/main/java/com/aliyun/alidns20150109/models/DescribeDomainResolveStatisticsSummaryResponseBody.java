@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page. Maximum value: **100**. Default value: **20**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -95,7 +95,7 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
 
     public static class DescribeDomainResolveStatisticsSummaryResponseBodyStatistics extends TeaModel {
         /**
-         * <p>The number of resolution requests.</p>
+         * <p>The number of DNS requests.</p>
          */
         @NameInMap("Count")
         public String count;
@@ -107,7 +107,10 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
         public String domainName;
 
         /**
-         * <p>The instance type. Valid values: PUBLIC and CACHE. PUBLIC indicates an authoritative domain name. CACHE indicates a cache-accelerated domain name.</p>
+         * <p>The type of the domain name. Valid values:</p>
+         * <br>
+         * <p>*   PUBLIC: hosted public domain name</p>
+         * <p>*   CACHE: cache-accelerated domain name</p>
          */
         @NameInMap("DomainType")
         public String domainType;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddDomainBackupRequest extends TeaModel {
     /**
-     * <p>The domain name for which you want to create a backup task.</p>
+     * <p>The domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

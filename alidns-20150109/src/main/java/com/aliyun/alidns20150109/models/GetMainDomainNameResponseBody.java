@@ -17,13 +17,13 @@ public class GetMainDomainNameResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The host record.</p>
+     * <p>The hostname.</p>
      */
     @NameInMap("RR")
     public String RR;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

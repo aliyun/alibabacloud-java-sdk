@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainsResponseBody extends TeaModel {
     /**
-     * <p>The list of domain names queried by this operation.</p>
+     * <p>The domain names.</p>
      */
     @NameInMap("Domains")
     public DescribeDomainsResponseBodyDomains domains;
@@ -99,9 +99,15 @@ public class DescribeDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsResponseBodyDomainsDomainTagsTag extends TeaModel {
+        /**
+         * <p>The key of the tag added to the resource.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag added to the resource.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -149,19 +155,25 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     public static class DescribeDomainsResponseBodyDomainsDomain extends TeaModel {
         /**
-         * <p>Indicates whether the domain name is an Alibaba Cloud HiChina domain name.</p>
+         * <p>Indicates whether the domain name was registered in Alibaba Cloud.</p>
          */
         @NameInMap("AliDomain")
         public Boolean aliDomain;
 
+        /**
+         * <p>The time when the domain name was added.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The time when the domain name was added. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
-         * <p>The list of DNS servers of the domain name in the DNS system.</p>
+         * <p>The names of the DNS servers configured for the domain name.</p>
          */
         @NameInMap("DnsServers")
         public DescribeDomainsResponseBodyDomainsDomainDnsServers dnsServers;
@@ -194,13 +206,13 @@ public class DescribeDomainsResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The expiration time of the instance.</p>
+         * <p>The time when the Alibaba Cloud DNS instance expires.</p>
          */
         @NameInMap("InstanceEndTime")
         public String instanceEndTime;
 
         /**
-         * <p>Indicates whether the instance expired.</p>
+         * <p>Indicates whether the Alibaba Cloud DNS instance expires.</p>
          */
         @NameInMap("InstanceExpired")
         public Boolean instanceExpired;
@@ -212,13 +224,13 @@ public class DescribeDomainsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The punycode is returned for Chinese domain names and is left blank for English domain names.</p>
+         * <p>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</p>
          */
         @NameInMap("PunyCode")
         public String punyCode;
 
         /**
-         * <p>The number of DNS records of the domain name.</p>
+         * <p>The number of Domain Name System (DNS) records added for the domain name.</p>
          */
         @NameInMap("RecordCount")
         public Long recordCount;
@@ -230,31 +242,37 @@ public class DescribeDomainsResponseBody extends TeaModel {
         public String registrantEmail;
 
         /**
-         * <p>The description.</p>
+         * <p>The description of the domain name.</p>
          */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The ID of the resource group to which the domain name belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>Indicates whether to query the starmark of the domain name.</p>
+         * <p>Indicates whether the domain name was added to favorites.</p>
          */
         @NameInMap("Starmark")
         public Boolean starmark;
 
+        /**
+         * <p>The tags added to the resource.</p>
+         */
         @NameInMap("Tags")
         public DescribeDomainsResponseBodyDomainsDomainTags tags;
 
         /**
-         * <p>The version code of the Alibaba Cloud DNS instance.</p>
+         * <p>The edition code of Alibaba Cloud DNS.</p>
          */
         @NameInMap("VersionCode")
         public String versionCode;
 
         /**
-         * <p>The version name of the Alibaba Cloud DNS instance.</p>
+         * <p>The edition of Alibaba Cloud DNS.</p>
          */
         @NameInMap("VersionName")
         public String versionName;

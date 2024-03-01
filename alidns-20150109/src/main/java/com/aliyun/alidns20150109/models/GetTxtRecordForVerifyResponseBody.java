@@ -13,19 +13,19 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The host record.</p>
+     * <p>The hostname.</p>
      */
     @NameInMap("RR")
     public String RR;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The value of the DNS record.</p>
+     * <p>The record value.</p>
      * <br>
      * <p>>  The validity period is three days.</p>
      */
