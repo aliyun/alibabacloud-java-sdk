@@ -19,6 +19,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("GrafanaDashBoardUrl")
+    public String grafanaDashBoardUrl;
+
     @NameInMap("IsOperated")
     public Boolean isOperated;
 
@@ -143,6 +146,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public GetServiceInstanceResponseBody setGrafanaDashBoardUrl(String grafanaDashBoardUrl) {
+        this.grafanaDashBoardUrl = grafanaDashBoardUrl;
+        return this;
+    }
+    public String getGrafanaDashBoardUrl() {
+        return this.grafanaDashBoardUrl;
     }
 
     public GetServiceInstanceResponseBody setIsOperated(Boolean isOperated) {
