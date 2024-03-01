@@ -10,6 +10,11 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends TeaModel {
     @NameInMap("AclUuid")
     public String aclUuid;
 
+    /**
+     * <p>The direction of the traffic to which the access control policy applies.</p>
+     * <br>
+     * <p>*   Set the value to **out**.</p>
+     */
     @NameInMap("Direction")
     public String direction;
 

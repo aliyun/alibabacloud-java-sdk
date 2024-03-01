@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
     /**
-     * <p>The destination IP addresses in outbound connections.</p>
+     * <p>The IP addresses in outbound connections.</p>
      */
     @NameInMap("DstIPList")
     public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPList> dstIPList;
@@ -89,7 +89,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
 
     public static class DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList extends TeaModel {
         /**
-         * <p>The application type in the access control policy. Valid values:</p>
+         * <p>The application type used in the access control policy. Valid values:</p>
          * <br>
          * <p>*   **FTP**</p>
          * <p>*   **HTTP**</p>
@@ -107,13 +107,13 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
          * <p>*   **SSL**</p>
          * <p>*   **VNC**</p>
          * <br>
-         * <p>>  The value of this parameter depends on the value of Proto. If you set Proto to TCP, you can set ApplicationNameList to any valid value. If you specify both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.</p>
+         * <p>>  The value of this parameter depends on the value of the Proto parameter. If you set Proto to TCP, you can set ApplicationNameList to any valid value. If you configure both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
-         * <p>The port of the application.</p>
+         * <p>The application port.</p>
          */
         @NameInMap("Port")
         public Integer port;
@@ -231,22 +231,22 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         /**
          * <p>Indicates whether an access control policy is configured. Valid values:</p>
          * <br>
-         * <p>*   **Uncovered**: No access control policies are configured.</p>
-         * <p>*   **FullCoverage**: An access control policy is configured.</p>
+         * <p>*   **Uncovered**: no</p>
+         * <p>*   **FullCoverage**: yes</p>
          */
         @NameInMap("AclCoverage")
         public String aclCoverage;
 
         /**
-         * <p>The suggestion in an access control policy.</p>
+         * <p>The suggestion to configure an access control policy.</p>
          */
         @NameInMap("AclRecommendDetail")
         public String aclRecommendDetail;
 
         /**
-         * <p>The state of the access control policy. Valid values:</p>
+         * <p>The status of the access control policy. Valid values:</p>
          * <br>
-         * <p>*   **Normal**: healthy</p>
+         * <p>*   **normal**: healthy</p>
          * <p>*   **Abnormal**: unhealthy</p>
          */
         @NameInMap("AclStatus")
@@ -259,7 +259,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListAddressGroupList> addressGroupList;
 
         /**
-         * <p>An array that consists of application ports.</p>
+         * <p>The application ports.</p>
          */
         @NameInMap("ApplicationPortList")
         public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList> applicationPortList;
@@ -275,7 +275,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         public String categoryClassId;
 
         /**
-         * <p>The ID of the service to which the destination IP address belongs. Valid values:</p>
+         * <p>The ID of the service type. Valid values:</p>
          * <br>
          * <p>*   **Aliyun**: Alibaba Cloud services</p>
          * <p>*   **NotAliyun**: third-party services</p>
@@ -287,13 +287,13 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
          * <p>The type of the service to which the destination IP address belongs. Valid values:</p>
          * <br>
          * <p>*   **Alibaba Cloud services**</p>
-         * <p>*   **third-party services**</p>
+         * <p>*   **Third-party services**</p>
          */
         @NameInMap("CategoryName")
         public String categoryName;
 
         /**
-         * <p>The destination IP address in the outbound connection that is initiated to access a domain name.</p>
+         * <p>The destination IP addresses in outbound connections.</p>
          */
         @NameInMap("DstIP")
         public String dstIP;
@@ -307,8 +307,8 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         /**
          * <p>Indicates whether an access control policy is configured. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("HasAcl")
         public String hasAcl;
@@ -316,8 +316,8 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         /**
          * <p>Indicates whether an access control policy is recommended. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("HasAclRecommend")
         public Boolean hasAclRecommend;
@@ -331,8 +331,8 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the destination IP address is added to a whitelist. Valid values:</p>
          * <br>
-         * <p>*   **true**: added</p>
-         * <p>*   **false**: not added</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("IsMarkNormal")
         public Boolean isMarkNormal;
@@ -384,7 +384,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListTagList> tagList;
 
         /**
-         * <p>The total volume of traffic. Unit: bytes.</p>
+         * <p>The total traffic. Unit: bytes</p>
          */
         @NameInMap("TotalBytes")
         public String totalBytes;

@@ -15,7 +15,7 @@ public class DescribeVpcFirewallAclGroupListRequest extends TeaModel {
      * <br>
      * <p>*   **notconfigured**: VPC firewalls are not configured.</p>
      * <p>*   **configured**: VPC firewalls are configured.</p>
-     * <p>*   If this parameter is left empty, all policy groups of access control policies are queried.</p>
+     * <p>*   If you do not specify this parameter, the access control policies of all VPC firewalls are queried.</p>
      */
     @NameInMap("FirewallConfigureStatus")
     public String firewallConfigureStatus;

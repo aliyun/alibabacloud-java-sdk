@@ -116,10 +116,10 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         /**
          * <p>The destination address in the access control policy. The value of this parameter varies based on the value of DestinationType. Valid values:</p>
          * <br>
-         * <p>*   If **DestinationType** is set to **net**, the value of Destination is a CIDR block. Example: 192.0.XX.XX/24.</p>
-         * <p>*   If **DestinationType** is set to **domain**, the value of Destination is a domain name. Example: aliyuncs.com.</p>
-         * <p>*   If **DestinationType** is set to **group**, the value of Destination is the name of an address book. Example: db_group.</p>
-         * <p>*   If **DestinationType** is set to **location**, the value of Destination is a location. For more information about location codes, see [AddControlPolicy](~~138867~~). Example: \["BJ11", "ZB"].</p>
+         * <p>*   If the value of **DestinationType** is **net**, the value of this parameter is a CIDR block. Example: 192.0.XX.XX/24.</p>
+         * <p>*   If the value of **DestinationType** is **domain**, the value of this parameter is a domain name. Example: aliyuncs.com.</p>
+         * <p>*   If the value of **DestinationType** is **group**, the value of this parameter is the name of an address book. Example: db_group.</p>
+         * <p>*   If the value of **DestinationType** is **location**, the value of this parameter is a location. For more information about location codes, see [AddControlPolicy](~~138867~~). Example: \["BJ11", "ZB"].</p>
          */
         @NameInMap("Destination")
         public String destination;
@@ -163,15 +163,20 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         public Long dnsResultTime;
 
         /**
-         * <p>The domain name resolution method of the access control policy. By default, an access control policy is enabled after it is created. Valid values:</p>
+         * <p>The domain name resolution method of the access control policy. By default, an access control policy is enabled after the policy is created. Valid values:</p>
          * <br>
-         * <p>*   **0**: fully qualified domain name (FQDN) resolution</p>
-         * <p>*   **1**: dynamic DNS resolution</p>
-         * <p>*   **2**: FQDN resolution and dynamic DNS resolution</p>
+         * <p>*   **0**: fully qualified domain name (FQDN)-based resolution</p>
+         * <p>*   **1**: DNS-based dynamic resolution</p>
+         * <p>*   **2**: FQDN and DNS-based dynamic resolution</p>
          */
         @NameInMap("DomainResolveType")
         public Integer domainResolveType;
 
+        /**
+         * <p>The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The end time must be on the hour or on the half hour, and at least 30 minutes later than the start time.</p>
+         * <br>
+         * <p>>  If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
@@ -219,32 +224,63 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         public String proto;
 
         /**
-         * <p>Indicates whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values:</p>
+         * <p>The status of the access control policy. By default, an access control policy is enabled after it is created. Valid values:</p>
          * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <p>*   **true**: enabled</p>
+         * <p>*   **false**: disabled</p>
          */
         @NameInMap("Release")
         public String release;
 
+        /**
+         * <p>The days of a week or of a month on which the access control policy takes effect.</p>
+         * <br>
+         * <p>*   If RepeatType is set to `Permanent`, `None`, or `Daily`, the value of this parameter is an empty array. Example: \[].</p>
+         * <p>*   If RepeatType is set to Weekly, this parameter must be specified. Example: \[0, 6].</p>
+         * <br>
+         * <p>>  If RepeatType is set to Weekly, the fields in the value of this parameter cannot be repeated.</p>
+         * <br>
+         * <p>*   If RepeatType is set to `Monthly`, this parameter must be specified. Example: \[1, 31].</p>
+         * <br>
+         * <p>>  If RepeatType is set to Monthly, the fields in the value of this parameter cannot be repeated.</p>
+         */
         @NameInMap("RepeatDays")
         public java.util.List<Long> repeatDays;
 
+        /**
+         * <p>The point in time when the recurrence ends. Example: 23:30. The end time must be on the hour or on the half hour, and at least 30 minutes later than the start time.</p>
+         * <br>
+         * <p>>  If RepeatType is set to Permanent or None, this parameter is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.</p>
+         */
         @NameInMap("RepeatEndTime")
         public String repeatEndTime;
 
+        /**
+         * <p>The point in time when the recurrence starts. Example: 08:00. The start time must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.</p>
+         * <br>
+         * <p>>  If RepeatType is set to Permanent or None, this parameter is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.</p>
+         */
         @NameInMap("RepeatStartTime")
         public String repeatStartTime;
 
+        /**
+         * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
+         * <br>
+         * <p>*   **Permanent** (default): The policy always takes effect.</p>
+         * <p>*   **None**: The policy takes effect for only once.</p>
+         * <p>*   **Daily**: The policy takes effect on a daily basis.</p>
+         * <p>*   **Weekly**: The policy takes effect on a weekly basis.</p>
+         * <p>*   **Monthly**: The policy takes effect on a monthly basis.</p>
+         */
         @NameInMap("RepeatType")
         public String repeatType;
 
         /**
          * <p>The source address in the access control policy. Valid values:</p>
          * <br>
-         * <p>*   If **SourceType** is set to `net`, the value of Source is a CIDR block. Example: 192.0.XX.XX/24.</p>
-         * <p>*   If **SourceType** is set to `group`, the value of Source is the name of an address book. Example: db_group.</p>
-         * <p>*   If **SourceType** is set to `location`, the value of Source is a location. For more information about location codes, see [AddControlPolicy](~~138867~~). Example: \["BJ11", "ZB"].</p>
+         * <p>*   If the value of **SourceType** is `net`, the value of this parameter is a CIDR block. Example: 192.0.XX.XX/24.</p>
+         * <p>*   If the value of **SourceType** is `group`, the value of this parameter is the name of an address book. Example: db_group.</p>
+         * <p>*   If the value of **SourceType** is `location`, the value of this parameter is a location. For more information about location codes, see [AddControlPolicy](~~138867~~). Example: \["BJ11", "ZB"].</p>
          */
         @NameInMap("Source")
         public String source;
@@ -277,6 +313,11 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("SpreadCnt")
         public String spreadCnt;
 
+        /**
+         * <p>The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The start time must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.</p>
+         * <br>
+         * <p>>  If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

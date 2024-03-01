@@ -11,19 +11,19 @@ public class DescribeAddressBookResponseBody extends TeaModel {
     public java.util.List<DescribeAddressBookResponseBodyAcls> acls;
 
     /**
-     * <p>The page number of the current page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNo")
     public String pageNo;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -131,8 +131,8 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the public IP addresses of ECS instances are automatically added to the address book if the instances match the specified tags. The setting takes effect on both newly purchased ECS instances whose tag settings are complete and ECS instances whose tag settings are modified. Valid values:</p>
          * <br>
-         * <p>* **1**: yes</p>
-         * <p>* **0**: no</p>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
          */
         @NameInMap("AutoAddTagEcs")
         public Integer autoAddTagEcs;
@@ -152,18 +152,18 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         /**
          * <p>The type of the address book. Valid values:</p>
          * <br>
-         * <p>* **ip**: IP address book</p>
-         * <p>* **domain**: domain address book</p>
-         * <p>* **port**: port address book</p>
-         * <p>* **tag**: ECS tag-based address book</p>
-         * <p>* **allCloud**: cloud service address book</p>
-         * <p>* **threat**: threat intelligence address book</p>
+         * <p>*   **ip**: IP address book</p>
+         * <p>*   **domain**: domain address book</p>
+         * <p>*   **port**: port address book</p>
+         * <p>*   **tag**: ECS tag-based address book</p>
+         * <p>*   **allCloud**: cloud service address book</p>
+         * <p>*   **threat**: threat intelligence address book</p>
          */
         @NameInMap("GroupType")
         public String groupType;
 
         /**
-         * <p>The unique ID of the address book.</p>
+         * <p>The UUID of the address book.</p>
          */
         @NameInMap("GroupUuid")
         public String groupUuid;
@@ -183,8 +183,8 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         /**
          * <p>The logical relationship among ECS tags. Valid values:</p>
          * <br>
-         * <p>* **and**: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.</p>
-         * <p>* **or**: The public IP addresses of ECS instances that match any of the specified tags can be added to the address book.</p>
+         * <p>*   **and**: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.</p>
+         * <p>*   **or**: The public IP addresses of ECS instances that match any of the specified tags can be added to the address book.</p>
          */
         @NameInMap("TagRelation")
         public String tagRelation;

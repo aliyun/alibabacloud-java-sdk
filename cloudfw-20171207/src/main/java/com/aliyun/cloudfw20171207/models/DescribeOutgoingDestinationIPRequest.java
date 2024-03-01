@@ -63,17 +63,17 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     /**
      * <p>The language of the content within the response. Valid values:</p>
      * <br>
-     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **zh** (default): Chinese</p>
      * <p>*   **en**: English</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The order in which you want to sort the queried information. Valid values:</p>
+     * <p>The method that is used to sort the results. Valid values:</p>
      * <br>
      * <p>*   **asc**: the ascending order.</p>
-     * <p>*   **desc**: the descending order. This is the default value.</p>
+     * <p>*   **desc** (default): the descending order.</p>
      */
     @NameInMap("Order")
     public String order;
@@ -105,9 +105,9 @@ public class DescribeOutgoingDestinationIPRequest extends TeaModel {
     public String publicIP;
 
     /**
-     * <p>The field based on which you want to sort the queried information. Valid values:</p>
+     * <p>The field based on which you want to sort the query results. Valid values:</p>
      * <br>
-     * <p>*   **SessionCount**: the number of requests. This is the default value.</p>
+     * <p>*   **SessionCount** (default): the number of requests.</p>
      * <p>*   **TotalBytes**: the total volume of traffic.</p>
      */
     @NameInMap("Sort")

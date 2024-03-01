@@ -13,14 +13,14 @@ public class DescribeUserAssetIPTrafficInfoRequest extends TeaModel {
     /**
      * <p>The language of the content within the response. Valid values:</p>
      * <br>
-     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **zh** (default): Chinese</p>
      * <p>*   **en**: English</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The point in time to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      */
     @NameInMap("TrafficTime")
     public String trafficTime;

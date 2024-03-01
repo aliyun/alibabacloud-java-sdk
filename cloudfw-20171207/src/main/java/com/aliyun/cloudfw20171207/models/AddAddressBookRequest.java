@@ -7,11 +7,11 @@ public class AddAddressBookRequest extends TeaModel {
     /**
      * <p>The addresses that you want to add to the address book. Separate multiple addresses with commas (,).</p>
      * <br>
-     * <p>> If you set GroupType to `ip`, `port` or `domain`, you must specify the AddressList parameter.</p>
-     * <p>></p>
-     * <p>> * If you set GroupType to `ip`, you must add IP addresses to the address book. Example: 192.0.XX.XX/32, 192.0.XX.XX/24.</p>
-     * <p>> * If you set GroupType to `port`, you must add port numbers or port ranges to the address book. Example: 80, 100/200.</p>
-     * <p>> * If you set GroupType to `domain`, you must add domain names to the address book. Example: example.com, aliyundoc.com.</p>
+     * <p>>  If you set GroupType to `ip`, `port`, or `domain`, you must specify the AddressList parameter.</p>
+     * <br>
+     * <p>*   If you set GroupType to `ip`, you must add IP addresses to the address book. Example: 192.0.XX.XX/32, 192.0.XX.XX/24.</p>
+     * <p>*   If you set GroupType to `port`, you must add port numbers or port ranges to the address book. Example: 80, 100/200.</p>
+     * <p>*   If you set GroupType to `domain`, you must add domain names to the address book. Example: example.com, aliyundoc.com.</p>
      */
     @NameInMap("AddressList")
     public String addressList;
@@ -20,7 +20,7 @@ public class AddAddressBookRequest extends TeaModel {
      * <p>Specifies whether to automatically add public IP addresses of ECS instances to the address book if the instances match the specified tags. Valid values:</p>
      * <br>
      * <p>*   **1**: yes</p>
-     * <p>*   **0**: no (default)</p>
+     * <p>*   **0** (default): no</p>
      */
     @NameInMap("AutoAddTagEcs")
     public String autoAddTagEcs;
@@ -40,10 +40,10 @@ public class AddAddressBookRequest extends TeaModel {
     /**
      * <p>The type of the address book. Valid values:</p>
      * <br>
-     * <p>* **ip**: IP address book</p>
-     * <p>* **domain**: domain address book</p>
-     * <p>* **port**: port address book</p>
-     * <p>* **tag**: ECS tag-based address book</p>
+     * <p>*   **ip**: IP address book</p>
+     * <p>*   **domain**: domain address book</p>
+     * <p>*   **port**: port address book</p>
+     * <p>*   **tag**: ECS tag-based address book</p>
      */
     @NameInMap("GroupType")
     public String groupType;
@@ -51,7 +51,7 @@ public class AddAddressBookRequest extends TeaModel {
     /**
      * <p>The language of the content within the response. Valid values:</p>
      * <br>
-     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **zh** (default): Chinese</p>
      * <p>*   **en**: English</p>
      */
     @NameInMap("Lang")
@@ -73,7 +73,7 @@ public class AddAddressBookRequest extends TeaModel {
     /**
      * <p>The logical relation among the ECS tags that you want to match. Valid values:</p>
      * <br>
-     * <p>*   **and**: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book. This is the default value.</p>
+     * <p>*   **and** (default): Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.</p>
      * <p>*   **or**: The public IP addresses of ECS instances that match one of the specified tags can be added to the address book.</p>
      */
     @NameInMap("TagRelation")
@@ -158,13 +158,13 @@ public class AddAddressBookRequest extends TeaModel {
 
     public static class AddAddressBookRequestTagList extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The key of the ECS tag.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The value of the ECS tag.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

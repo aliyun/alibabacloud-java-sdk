@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
     /**
-     * <p>The end of the time range that is queried. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -17,13 +17,13 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
     public Long inBps;
 
     /**
-     * <p>The network throughput, which indicates the inbound packet rate. Unit: packets per second (pps).</p>
+     * <p>The inbound network throughput, which indicates the number of packets that are sent inbound per second. Unit: packets per second (pps).</p>
      */
     @NameInMap("InPps")
     public Long inPps;
 
     /**
-     * <p>The number of new connections.</p>
+     * <p>The new connection creation rate.</p>
      */
     @NameInMap("NewConn")
     public Long newConn;
@@ -35,13 +35,13 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
     public Long outBps;
 
     /**
-     * <p>The network throughput, which indicates the outbound packet rate. Unit: pps.</p>
+     * <p>The outbound network throughput, which indicates the number of packets that are sent outbound per second. Unit: pps.</p>
      */
     @NameInMap("OutPps")
     public Long outPps;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,7 +53,7 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
     public Long sessionCount;
 
     /**
-     * <p>The beginning of the time range that is queried. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

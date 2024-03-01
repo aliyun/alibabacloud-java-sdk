@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteTrFirewallV2Response extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public DeleteTrFirewallV2ResponseBody body;
 
     public static DeleteTrFirewallV2Response build(java.util.Map<String, ?> map) throws Exception {

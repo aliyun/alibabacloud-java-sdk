@@ -11,7 +11,7 @@ public class DescribeAddressBookRequest extends TeaModel {
     public String containPort;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
      */
@@ -21,14 +21,14 @@ public class DescribeAddressBookRequest extends TeaModel {
     /**
      * <p>The type of the address book. Valid values:</p>
      * <br>
-     * <p>* **ip**: IP address book</p>
-     * <p>* **domain**: domain address book</p>
-     * <p>* **port**: port address book</p>
-     * <p>* **tag**: Elastic Compute Service (ECS) tag-based address book</p>
-     * <p>* **allCloud**: cloud service address book</p>
-     * <p>* **threat**: threat intelligence address book</p>
+     * <p>*   **ip**: IP address book</p>
+     * <p>*   **domain**: domain address book</p>
+     * <p>*   **port**: port address book</p>
+     * <p>*   **tag**: Elastic Compute Service (ECS) tag-based address book</p>
+     * <p>*   **allCloud**: cloud service address book</p>
+     * <p>*   **threat**: threat intelligence address book</p>
      * <br>
-     * <p>> If you do not specify a type, the domain address books and ECS tag-based address books are queried.</p>
+     * <p>>  If you do not specify a type, the domain address books and ECS tag-based address books are queried.</p>
      */
     @NameInMap("GroupType")
     public String groupType;
@@ -36,14 +36,14 @@ public class DescribeAddressBookRequest extends TeaModel {
     /**
      * <p>The language of the content within the request. Valid values:</p>
      * <br>
-     * <p>* **zh**: Chinese (default)</p>
-     * <p>* **en**: English</p>
+     * <p>*   **zh** (default): Chinese</p>
+     * <p>*   **en**: English</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
      * <p>Default value: 10. Maximum value: 50.</p>
      */

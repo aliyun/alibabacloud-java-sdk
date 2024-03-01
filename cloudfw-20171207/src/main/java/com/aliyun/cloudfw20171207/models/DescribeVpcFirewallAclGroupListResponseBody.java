@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the information about the policy group.</p>
+     * <p>The information about the policy groups.</p>
      */
     @NameInMap("AclGroupList")
     public java.util.List<DescribeVpcFirewallAclGroupListResponseBodyAclGroupList> aclGroupList;
@@ -61,7 +61,7 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
          * <br>
          * <p>    Example: cen-ervw0g12b5jbw\*\*\*\*</p>
          * <br>
-         * <p>*   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the ID of the VPC firewall instance.</p>
+         * <p>*   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall.</p>
          * <br>
          * <p>    Example: vfw-a42bbb7b887148c9\*\*\*\*</p>
          */
@@ -72,14 +72,22 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
          * <p>The name of the policy group. Valid values:</p>
          * <br>
          * <p>*   If the VPC firewall is used to protect a CEN instance, the value of this parameter is the name of the CEN instance.</p>
-         * <p>*   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the name of the VPC firewall instance.</p>
+         * <p>*   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance name of the VPC firewall.</p>
          */
         @NameInMap("AclGroupName")
         public String aclGroupName;
 
+        /**
+         * <p>The number of access control policies in the policy group.</p>
+         */
         @NameInMap("AclRuleCount")
         public Integer aclRuleCount;
 
+        /**
+         * <p>是否是默认防火墙。取值：</p>
+         * <p>- **true**：是默认防火墙。</p>
+         * <p>- **false**：不是默认防火墙。</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 

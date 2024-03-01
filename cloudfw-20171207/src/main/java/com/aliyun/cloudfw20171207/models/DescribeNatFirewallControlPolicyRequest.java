@@ -100,6 +100,15 @@ public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("Release")
     public String release;
 
+    /**
+     * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
+     * <br>
+     * <p>*   **Permanent** (default): The policy always takes effect.</p>
+     * <p>*   **None**: The policy takes effect for only once.</p>
+     * <p>*   **Daily**: The policy takes effect on a daily basis.</p>
+     * <p>*   **Weekly**: The policy takes effect on a weekly basis.</p>
+     * <p>*   **Monthly**: The policy takes effect on a monthly basis.</p>
+     */
     @NameInMap("RepeatType")
     public String repeatType;
 
