@@ -1280,6 +1280,9 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         @NameInMap("item_id")
         public String itemId;
 
+        @NameInMap("item_type")
+        public String itemType;
+
         @NameInMap("shopping_item_map")
         public java.util.Map<String, ModuleGroupItemShoppingItemMapValue> shoppingItemMap;
 
@@ -1316,6 +1319,14 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         }
         public String getItemId() {
             return this.itemId;
+        }
+
+        public IntlFlightOtaItemDetailResponseBodyModuleGroupItem setItemType(String itemType) {
+            this.itemType = itemType;
+            return this;
+        }
+        public String getItemType() {
+            return this.itemType;
         }
 
         public IntlFlightOtaItemDetailResponseBodyModuleGroupItem setShoppingItemMap(java.util.Map<String, ModuleGroupItemShoppingItemMapValue> shoppingItemMap) {
