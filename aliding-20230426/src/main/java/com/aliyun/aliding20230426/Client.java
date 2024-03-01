@@ -1192,6 +1192,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.remindersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.reminders, "Reminders", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.richTextDescription)) {
+            request.richTextDescriptionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.richTextDescription, "RichTextDescription", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.uiConfigs)) {
             request.uiConfigsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.uiConfigs, "UiConfigs", "json");
         }
@@ -1235,6 +1239,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.remindersShrink)) {
             body.put("Reminders", request.remindersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.richTextDescriptionShrink)) {
+            body.put("RichTextDescription", request.richTextDescriptionShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.summary)) {
@@ -4095,6 +4103,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
             body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userToken)) {
+            body.put("userToken", request.userToken);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();

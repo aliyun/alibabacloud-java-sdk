@@ -32,20 +32,20 @@ public class GetDocContentHeaders extends TeaModel {
     }
 
     public static class GetDocContentHeadersAccountContext extends TeaModel {
-        @NameInMap("userToken")
-        public String userToken;
+        @NameInMap("accountId")
+        public String accountId;
 
         public static GetDocContentHeadersAccountContext build(java.util.Map<String, ?> map) throws Exception {
             GetDocContentHeadersAccountContext self = new GetDocContentHeadersAccountContext();
             return TeaModel.build(map, self);
         }
 
-        public GetDocContentHeadersAccountContext setUserToken(String userToken) {
-            this.userToken = userToken;
+        public GetDocContentHeadersAccountContext setAccountId(String accountId) {
+            this.accountId = accountId;
             return this;
         }
-        public String getUserToken() {
-            return this.userToken;
+        public String getAccountId() {
+            return this.accountId;
         }
 
     }
