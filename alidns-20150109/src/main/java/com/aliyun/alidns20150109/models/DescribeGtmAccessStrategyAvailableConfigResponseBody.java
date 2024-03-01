@@ -5,23 +5,26 @@ import com.aliyun.tea.*;
 
 public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaModel {
     /**
-     * <p>The returned list of address pools.</p>
+     * <p>The address pools.</p>
      */
     @NameInMap("AddrPools")
     public DescribeGtmAccessStrategyAvailableConfigResponseBodyAddrPools addrPools;
 
     /**
-     * <p>The returned lines of access regions.</p>
+     * <p>The Domain Name System (DNS) request sources.</p>
      */
     @NameInMap("Lines")
     public DescribeGtmAccessStrategyAvailableConfigResponseBodyLines lines;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the global line is recommended.</p>
+     */
     @NameInMap("SuggestSetDefaultLine")
     public Boolean suggestSetDefaultLine;
 
@@ -119,40 +122,40 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
 
     public static class DescribeGtmAccessStrategyAvailableConfigResponseBodyLinesLine extends TeaModel {
         /**
-         * <p>The code of the parent line for the access region. If no parent line exists, leave this parameter blank.</p>
+         * <p>The code of the parent line. No value is returned if no parent line exists.</p>
          */
         @NameInMap("FatherCode")
         public String fatherCode;
 
         /**
-         * <p>The code of the access region group.</p>
+         * <p>The group number of the DNS request source.</p>
          */
         @NameInMap("GroupCode")
         public String groupCode;
 
         /**
-         * <p>The name of the access region group.</p>
+         * <p>The group name of the DNS request source.</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
-         * <p>The code for the line of the access region.</p>
+         * <p>The code of the DNS request source.</p>
          */
         @NameInMap("LineCode")
         public String lineCode;
 
         /**
-         * <p>The name for the line of the access region.</p>
+         * <p>The name of the DNS request source.</p>
          */
         @NameInMap("LineName")
         public String lineName;
 
         /**
-         * <p>The current status of the line. Valid values:</p>
+         * <p>The state of the line. Valid values:</p>
          * <br>
-         * <p>- **FORBIDDEN**: Unavailable</p>
-         * <p>- **OPTIONAL**: Availabe</p>
+         * <p>*   **FORBIDDEN**: The line is unavailable.</p>
+         * <p>*   **OPTIONAL**: The line is available.</p>
          */
         @NameInMap("Status")
         public String status;

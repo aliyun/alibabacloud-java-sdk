@@ -11,19 +11,21 @@ public class AddDomainRecordRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The resolution line. Default value: **default**.</p>
+     * <p>The DNS resolution line. Default value: **default**. For more information, see</p>
+     * <br>
+     * <p>[DNS lines](https://www.alibabacloud.com/help/zh/doc-detail/29807.htm).</p>
      */
     @NameInMap("Line")
     public String line;
 
     /**
-     * <p>The priority of an MX-type DNS record. Valid values: `[1,50]`.</p>
+     * <p>The priority of the mail exchanger (MX) record. Valid values: `1 to 50`.</p>
      * <br>
      * <p>This parameter must be specified if the type of the DNS record is MX. A smaller value indicates a higher priority.</p>
      */
@@ -31,23 +33,25 @@ public class AddDomainRecordRequest extends TeaModel {
     public Long priority;
 
     /**
-     * <p>The host record.</p>
+     * <p>The hostname.</p>
      * <br>
-     * <p>For example, to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it blank.</p>
+     * <p>For example, if you want to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it empty.</p>
      */
     @NameInMap("RR")
     public String RR;
 
     /**
-     * <p>The TTL of the resolution. Default value: 600. Unit: seconds.</p>
+     * <p>The time-to-live (TTL) of the DNS record. Default value: 600. Unit: seconds. For more information, see</p>
+     * <br>
+     * <p>[TTL definition](https://www.alibabacloud.com/help/zh/doc-detail/29806.htm).</p>
      */
     @NameInMap("TTL")
     public Long TTL;
 
     /**
-     * <p>The type of the DNS record. DNS record types</p>
+     * <p>The type of the DNS record. For more information, see</p>
      * <br>
-     * <p>[dns records types](https://www.alibabacloud.com/help/en/alibaba-cloud-dns/latest/dns-record-types)</p>
+     * <p>[DNS record types](https://www.alibabacloud.com/help/zh/doc-detail/29805.htm).</p>
      */
     @NameInMap("Type")
     public String type;
@@ -59,7 +63,7 @@ public class AddDomainRecordRequest extends TeaModel {
     public String userClientIp;
 
     /**
-     * <p>The value of the DNS record.</p>
+     * <p>The record value.</p>
      */
     @NameInMap("Value")
     public String value;

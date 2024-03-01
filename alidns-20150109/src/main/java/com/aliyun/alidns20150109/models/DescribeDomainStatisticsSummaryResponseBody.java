@@ -23,7 +23,7 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of query volume records.</p>
+     * <p>The statistics on the Domain Name System (DNS) requests.</p>
      */
     @NameInMap("Statistics")
     public DescribeDomainStatisticsSummaryResponseBodyStatistics statistics;
@@ -95,7 +95,7 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
 
     public static class DescribeDomainStatisticsSummaryResponseBodyStatisticsStatistic extends TeaModel {
         /**
-         * <p>The number of queries.</p>
+         * <p>The number of DNS requests.</p>
          */
         @NameInMap("Count")
         public Long count;
@@ -106,6 +106,13 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The type of the domain name. The parameter value is not case-sensitive. Valid values:</p>
+         * <br>
+         * <p>PUBLIC (default): hosted public domain name</p>
+         * <br>
+         * <p>CACHE: cache-accelerated domain name</p>
+         */
         @NameInMap("DomainType")
         public String domainType;
 

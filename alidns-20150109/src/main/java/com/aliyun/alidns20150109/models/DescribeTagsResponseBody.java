@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
     /**
-     * <p>The returned page number. Default value: 1.</p>
+     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Default value: 200.</p>
+     * <p>The number of entries per page. Default value: 200.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags added to the resource.</p>
      */
     @NameInMap("Tags")
     public java.util.List<DescribeTagsResponseBodyTags> tags;
 
     /**
-     * <p>The total number of tags returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -81,11 +81,14 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     public static class DescribeTagsResponseBodyTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The key of tag N added to the resource.</p>
          */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The values of tags added to the resource.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainResolveStatisticsSummaryRequest extends TeaModel {
     /**
-     * <p>The order in which you want to sort the query results. Valid values: DESC and ASC. DESC indicates that the query results are sorted in descending order. ASC indicates that the query results are sorted in ascending order.</p>
+     * <p>The order in which you want to sort the returned entries. Valid values:</p>
+     * <br>
+     * <p>*   DESC: the descending order</p>
+     * <p>*   ASC: the ascending order</p>
      */
     @NameInMap("Direction")
     public String direction;
@@ -17,13 +20,13 @@ public class DescribeDomainResolveStatisticsSummaryRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The keyword. The Keyword parameter must be used together with the SearchMode parameter.</p>
+     * <p>The keyword. The Keyword parameter is used together with the SearchMode parameter.</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The language used. Valid values: zh, en, and ja.</p>
+     * <p>The language. Valid values: zh, en, and ja.</p>
      */
     @NameInMap("Lang")
     public String lang;
@@ -43,7 +46,8 @@ public class DescribeDomainResolveStatisticsSummaryRequest extends TeaModel {
     /**
      * <p>The search mode of the keyword. Valid values:</p>
      * <br>
-     * <p>LIKE and EXACT. LIKE is the default value and indicates the fuzzy search mode. EXACT indicates the exact match mode.</p>
+     * <p>*   LIKE (default): fuzzy search</p>
+     * <p>*   EXACT: exact search</p>
      */
     @NameInMap("SearchMode")
     public String searchMode;
@@ -55,7 +59,15 @@ public class DescribeDomainResolveStatisticsSummaryRequest extends TeaModel {
     public String startDate;
 
     /**
-     * <p>The threshold for the number of resolution requests. You can query the paid domain names at the specified quantity level of resolution requests and query the number of resolution requests. For example, if you set this parameter to 100, you can obtain data about the paid domain names with less than 100 resolution requests. If you do not specify this parameter, the data about the paid domain names that have resolution requests is obtained. If you set this parameter to a value less than 0, the data about all paid domain names is obtained. If you set this parameter to 0, the data about the paid domain names that do not have resolution requests is obtained. If you set this parameter to a value greater than 0, the data about the paid domain names whose number of resolution requests is less than or equal to the value of this parameter is obtained.</p>
+     * <p>The threshold for the number of Domain Name System (DNS) requests. You can query the domain names at the specified quantity level of DNS requests and query the number of DNS requests for each domain name.</p>
+     * <br>
+     * <p>If you do not specify this parameter, the data about the domain names that have DNS requests is obtained.</p>
+     * <br>
+     * <p>If you set this parameter to a value less than 0, the data about all domain names is obtained.</p>
+     * <br>
+     * <p>If you set this parameter to 0, the data about the domain names that do not have DNS requests is obtained.</p>
+     * <br>
+     * <p>If you set this parameter to a value greater than 0, the data about the domain names whose number of DNS requests is less than or equal to the value of this parameter is obtained.</p>
      */
     @NameInMap("Threshold")
     public Long threshold;

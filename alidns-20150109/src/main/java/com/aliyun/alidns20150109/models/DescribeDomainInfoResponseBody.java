@@ -133,6 +133,12 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     @NameInMap("SlaveDns")
     public Boolean slaveDns;
 
+    /**
+     * <p>Indicates whether the queried domain name is a hosted subdomain name. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("SubDomain")
     public Boolean subDomain;
 
@@ -393,7 +399,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
 
     public static class DescribeDomainInfoResponseBodyRecordLinesRecordLine extends TeaModel {
         /**
-         * <p>The code of the parent line. This parameter is left empty if the line has no parent line.</p>
+         * <p>The code of the parent line. This parameter is not returned if the line has no parent line.</p>
          */
         @NameInMap("FatherCode")
         public String fatherCode;

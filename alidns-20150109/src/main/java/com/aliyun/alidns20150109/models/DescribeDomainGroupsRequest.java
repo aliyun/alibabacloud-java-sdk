@@ -11,19 +11,19 @@ public class DescribeDomainGroupsRequest extends TeaModel {
     public String keyWord;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: **1 to 100**. Default value: **20**.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

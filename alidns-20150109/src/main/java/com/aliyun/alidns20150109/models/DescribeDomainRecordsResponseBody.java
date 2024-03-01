@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainRecordsResponseBody extends TeaModel {
     /**
-     * <p>The returned DNS records.</p>
+     * <p>The returned Domain Name System (DNS) records.</p>
      */
     @NameInMap("DomainRecords")
     public DescribeDomainRecordsResponseBodyDomainRecords domainRecords;
@@ -80,6 +80,9 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainRecordsResponseBodyDomainRecordsRecord extends TeaModel {
+        /**
+         * <p>The time when the DNS record was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
@@ -120,7 +123,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         public String recordId;
 
         /**
-         * <p>The description.</p>
+         * <p>The description of the DNS record.</p>
          */
         @NameInMap("Remark")
         public String remark;
@@ -132,7 +135,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time-to-live (TTL) of the cached data. Unit: seconds.</p>
+         * <p>The time-to-live (TTL) of the cached DNS record. Unit: seconds.</p>
          */
         @NameInMap("TTL")
         public Long TTL;
@@ -143,6 +146,9 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The time when the DNS record was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
+         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 

@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainLogsResponseBody extends TeaModel {
     /**
-     * <p>The details about the operation logs that are queried.</p>
+     * <p>The operation logs.</p>
      */
     @NameInMap("DomainLogs")
     public DescribeDomainLogsResponseBodyDomainLogs domainLogs;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of operation logs returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of operation logs returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -81,25 +81,25 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
 
     public static class DescribeDomainLogsResponseBodyDomainLogsDomainLog extends TeaModel {
         /**
-         * <p>The operation performed.</p>
+         * <p>The operation.</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
-         * <p>The time when the operation was performed.</p>
+         * <p>The time when the operation is performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
          */
         @NameInMap("ActionTime")
         public String actionTime;
 
         /**
-         * <p>The UNIX timestamp that indicates when the operation was performed.</p>
+         * <p>The time when the operation was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("ActionTimestamp")
         public Long actionTimestamp;
 
         /**
-         * <p>The IP address from which the operation was performed.</p>
+         * <p>The IP address of the operator.</p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
@@ -117,7 +117,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The ID of the private zone.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

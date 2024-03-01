@@ -17,39 +17,35 @@ public class DescribeSubDomainRecordsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The resolution line.</p>
+     * <p>The DNS resolution line.</p>
      */
     @NameInMap("Line")
     public String line;
 
     /**
-     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **500**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: **1 to 100**. Default value: **20**.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The subdomain. For example, assume that the SubDomain parameter is set to a.www.example.com.</p>
+     * <p>If you set SubDomain to `a.www.example.com` and leave</p>
      * <br>
-     * <p>If the DomainName parameter is empty, the DNS records of the subdomain whose domain name is example.com and hostname is "a.www" are queried.</p>
-     * <br>
-     * <p>If the DomainName parameter is set to www.example.com, the DNS records of the subdomain whose domain name is www.example.com and hostname is "a" are queried.</p>
-     * <br>
-     * <p>If the DomainName parameter is set to a.www.example.com, the DNS records of the subdomain whose domain name is a.www.example.com and hostname is "@" are queried.</p>
+     * <p>DomainName empty, the system returns the DNS records that contain the hostname `a.www` for the domain name example.com. If you set SubDomain to a.www.example.com and set DomainName to www.example.com, the system returns the DNS records that contain the hostname `a` for the domain name www.example.com. If you set SubDomain to a.www.example.com and set DomainName to a.www.example.com, the system returns the DNS records that contain the hostname `@` for the domain name a.www.example.com.</p>
      */
     @NameInMap("SubDomain")
     public String subDomain;
 
     /**
-     * <p>The type of DNS records to query. If you do not specify this parameter, all types of DNS records corresponding to the subdomain are returned.</p>
+     * <p>The type of DNS records. If you do not specify this parameter, all types of DNS records for the subdomain name are returned.</p>
      * <br>
-     * <p>DNS record types include **A, MX, CNAME, TXT, REDIRECT_URL, FORWORD_URL, NS, AAAA, and SRV**. The value is not case-sensitive.</p>
+     * <p>Valid values: **A, MX, CNAME, TXT, REDIRECT_URL, FORWORD_URL, NS, AAAA, and SRV**.</p>
      */
     @NameInMap("Type")
     public String type;

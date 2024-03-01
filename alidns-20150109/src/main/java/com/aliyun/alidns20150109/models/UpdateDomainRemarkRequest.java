@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateDomainRemarkRequest extends TeaModel {
     /**
-     * <p>The domain name in Alibaba Cloud DNS.</p>
+     * <p>The domain name that already exists in Alibaba Cloud DNS.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;

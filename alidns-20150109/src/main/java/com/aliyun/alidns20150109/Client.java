@@ -384,8 +384,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can check whether a domain name is valid based on the following topic:
-      * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm)
+      * For more information about how to check whether a domain name is valid, see
+      * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm).
       *
       * @param request AddDomainRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -428,8 +428,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can check whether a domain name is valid based on the following topic:
-      * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm)
+      * For more information about how to check whether a domain name is valid, see
+      * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm).
       *
       * @param request AddDomainRequest
       * @return AddDomainResponse
@@ -794,6 +794,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addGtmRecoveryPlanWithOptions(request, runtime);
     }
 
+    /**
+      * A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call this API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\\
+      * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call this API operation to bind only one domain name to the instance. However, if the instance is already bound to a domain name, you must unbind the original domain name from the instance and bind the desired domain name to the instance.
+      *
+      * @param request BindInstanceDomainsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BindInstanceDomainsResponse
+     */
     public BindInstanceDomainsResponse bindInstanceDomainsWithOptions(BindInstanceDomainsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -826,11 +834,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BindInstanceDomainsResponse());
     }
 
+    /**
+      * A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call this API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\\
+      * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call this API operation to bind only one domain name to the instance. However, if the instance is already bound to a domain name, you must unbind the original domain name from the instance and bind the desired domain name to the instance.
+      *
+      * @param request BindInstanceDomainsRequest
+      * @return BindInstanceDomainsResponse
+     */
     public BindInstanceDomainsResponse bindInstanceDomains(BindInstanceDomainsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.bindInstanceDomainsWithOptions(request, runtime);
     }
 
+    /**
+      * You can specify GroupId to move a domain name to a specific domain name group. You can move the domain name to the group that contains all domain names or the default group.
+      *
+      * @param request ChangeDomainGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ChangeDomainGroupResponse
+     */
     public ChangeDomainGroupResponse changeDomainGroupWithOptions(ChangeDomainGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -863,6 +885,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeDomainGroupResponse());
     }
 
+    /**
+      * You can specify GroupId to move a domain name to a specific domain name group. You can move the domain name to the group that contains all domain names or the default group.
+      *
+      * @param request ChangeDomainGroupRequest
+      * @return ChangeDomainGroupResponse
+     */
     public ChangeDomainGroupResponse changeDomainGroup(ChangeDomainGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.changeDomainGroupWithOptions(request, runtime);
@@ -1165,14 +1193,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteDnsGtmAddressPoolWithOptions(request, runtime);
     }
 
-    /**
-      * *   Given the unique nature of a HiChina domain name, you are not allowed to delete the HiChina domain name by calling the Alibaba Cloud DNS API.
-      * *   If the system prompts that a domain name does not exist, it is an unregistered domain name, it does not exist under the account, or its format in the request parameters is incorrect.
-      *
-      * @param request DeleteDomainRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteDomainResponse
-     */
     public DeleteDomainResponse deleteDomainWithOptions(DeleteDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1201,20 +1221,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDomainResponse());
     }
 
-    /**
-      * *   Given the unique nature of a HiChina domain name, you are not allowed to delete the HiChina domain name by calling the Alibaba Cloud DNS API.
-      * *   If the system prompts that a domain name does not exist, it is an unregistered domain name, it does not exist under the account, or its format in the request parameters is incorrect.
-      *
-      * @param request DeleteDomainRequest
-      * @return DeleteDomainResponse
-     */
     public DeleteDomainResponse deleteDomain(DeleteDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDomainWithOptions(request, runtime);
     }
 
     /**
-      * >  A domain name group can be deleted only when it contains no domain names. The default group cannot be deleted.
+      * >  The default group cannot be deleted.
       *
       * @param request DeleteDomainGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1249,7 +1262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  A domain name group can be deleted only when it contains no domain names. The default group cannot be deleted.
+      * >  The default group cannot be deleted.
       *
       * @param request DeleteDomainGroupRequest
       * @return DeleteDomainGroupResponse
@@ -1491,7 +1504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **Before you call this operation, make sure that the batch operation task is complete.
+      * Before you call this operation, make sure that the batch operation task is complete.
       *
       * @param request DescribeBatchResultDetailRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1542,7 +1555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **Before you call this operation, make sure that the batch operation task is complete.
+      * Before you call this operation, make sure that the batch operation task is complete.
       *
       * @param request DescribeBatchResultDetailRequest
       * @return DescribeBatchResultDetailResponse
@@ -3884,6 +3897,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeInstanceDomainsWithOptions(request, runtime);
     }
 
+    public DescribeInternetDnsLogsResponse describeInternetDnsLogsWithOptions(DescribeInternetDnsLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTimestamp)) {
+            query.put("EndTimestamp", request.endTimestamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.module)) {
+            query.put("Module", request.module);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryCondition)) {
+            query.put("QueryCondition", request.queryCondition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimestamp)) {
+            query.put("StartTimestamp", request.startTimestamp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInternetDnsLogs"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInternetDnsLogsResponse());
+    }
+
+    public DescribeInternetDnsLogsResponse describeInternetDnsLogs(DescribeInternetDnsLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInternetDnsLogsWithOptions(request, runtime);
+    }
+
     public DescribeIspFlushCacheInstancesResponse describeIspFlushCacheInstancesWithOptions(DescribeIspFlushCacheInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5033,6 +5103,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.executeGtmRecoveryPlanWithOptions(request, runtime);
     }
 
+    /**
+      * For more information about the difference between primary domain names and subdomain names, see
+      * [Subdomain levels](https://www.alibabacloud.com/help/zh/faq-detail/39803.htm). For example, if you enter `www.abc.com`, abc.com is obtained.
+      *
+      * @param request GetMainDomainNameRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetMainDomainNameResponse
+     */
     public GetMainDomainNameResponse getMainDomainNameWithOptions(GetMainDomainNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5061,6 +5139,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetMainDomainNameResponse());
     }
 
+    /**
+      * For more information about the difference between primary domain names and subdomain names, see
+      * [Subdomain levels](https://www.alibabacloud.com/help/zh/faq-detail/39803.htm). For example, if you enter `www.abc.com`, abc.com is obtained.
+      *
+      * @param request GetMainDomainNameRequest
+      * @return GetMainDomainNameResponse
+     */
     public GetMainDomainNameResponse getMainDomainName(GetMainDomainNameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getMainDomainNameWithOptions(request, runtime);
@@ -5293,6 +5378,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.moveGtmResourceGroupWithOptions(request, runtime);
     }
 
+    /**
+      * Scenario: You need to execute a large number of tasks related to DNS resolution and you do not have high requirements for efficiency.
+      *
+      * @param request OperateBatchDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return OperateBatchDomainResponse
+     */
     public OperateBatchDomainResponse operateBatchDomainWithOptions(OperateBatchDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5325,6 +5417,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new OperateBatchDomainResponse());
     }
 
+    /**
+      * Scenario: You need to execute a large number of tasks related to DNS resolution and you do not have high requirements for efficiency.
+      *
+      * @param request OperateBatchDomainRequest
+      * @return OperateBatchDomainResponse
+     */
     public OperateBatchDomainResponse operateBatchDomain(OperateBatchDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.operateBatchDomainWithOptions(request, runtime);
@@ -5503,6 +5601,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.resumePdnsServiceWithOptions(request, runtime);
     }
 
+    /**
+      * To retrieve a domain name, you must verify a text (TXT) record. Therefore, before you call this API operation to retrieve a domain name, call the [GetTxtRecordForVerify](https://www.alibabacloud.com/help/zh/alibaba-cloud-dns/latest/generating-a-txt-record) operation to generate a TXT record.
+      *
+      * @param request RetrieveDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RetrieveDomainResponse
+     */
     public RetrieveDomainResponse retrieveDomainWithOptions(RetrieveDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5531,6 +5636,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RetrieveDomainResponse());
     }
 
+    /**
+      * To retrieve a domain name, you must verify a text (TXT) record. Therefore, before you call this API operation to retrieve a domain name, call the [GetTxtRecordForVerify](https://www.alibabacloud.com/help/zh/alibaba-cloud-dns/latest/generating-a-txt-record) operation to generate a TXT record.
+      *
+      * @param request RetrieveDomainRequest
+      * @return RetrieveDomainResponse
+     */
     public RetrieveDomainResponse retrieveDomain(RetrieveDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.retrieveDomainWithOptions(request, runtime);
@@ -6021,6 +6132,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.transferDomainWithOptions(request, runtime);
     }
 
+    /**
+      * A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call an API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\\
+      * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call an API operation to bind only one domain name to the instance. However, if the instance that you want to bind to the desired domain name is already bound to a domain name, you can call this operation to unbind the original domain name from the instance and then bind the desired domain name to the instance.
+      *
+      * @param request UnbindInstanceDomainsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UnbindInstanceDomainsResponse
+     */
     public UnbindInstanceDomainsResponse unbindInstanceDomainsWithOptions(UnbindInstanceDomainsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6053,6 +6172,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UnbindInstanceDomainsResponse());
     }
 
+    /**
+      * A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call an API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\\
+      * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call an API operation to bind only one domain name to the instance. However, if the instance that you want to bind to the desired domain name is already bound to a domain name, you can call this operation to unbind the original domain name from the instance and then bind the desired domain name to the instance.
+      *
+      * @param request UnbindInstanceDomainsRequest
+      * @return UnbindInstanceDomainsResponse
+     */
     public UnbindInstanceDomainsResponse unbindInstanceDomains(UnbindInstanceDomainsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unbindInstanceDomainsWithOptions(request, runtime);
@@ -6141,8 +6267,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
-      * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+      * In each CIDR block, the end IP address must be greater than or equal to the start IP address.\\
+      * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.
       *
       * @param request UpdateCustomLineRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6185,8 +6311,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
-      * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+      * In each CIDR block, the end IP address must be greater than or equal to the start IP address.\\
+      * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.
       *
       * @param request UpdateCustomLineRequest
       * @return UpdateCustomLineResponse

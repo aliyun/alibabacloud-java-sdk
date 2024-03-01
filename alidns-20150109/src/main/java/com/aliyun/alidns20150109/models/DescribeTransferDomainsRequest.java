@@ -4,38 +4,47 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeTransferDomainsRequest extends TeaModel {
+    /**
+     * <p>Specifies the domain name for which you want to view the transfer record.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The user ID from which the domain name was transferred to the current account.</p>
+     */
     @NameInMap("FromUserId")
     public Long fromUserId;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The user ID to which the domain name was transferred from the current account.</p>
+     */
     @NameInMap("TargetUserId")
     public Long targetUserId;
 
     /**
      * <p>The transfer type. Valid values:</p>
      * <br>
-     * <p>*   IN: transferred to this account.</p>
-     * <p>*   OUT: transferred from this account.</p>
+     * <p>*   IN: The domain name was transferred to the current account.</p>
+     * <p>*   OUT: The domain name was transferred from the current account.</p>
      */
     @NameInMap("TransferType")
     public String transferType;

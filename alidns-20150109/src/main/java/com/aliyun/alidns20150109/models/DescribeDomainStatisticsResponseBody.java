@@ -11,7 +11,7 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The DNS requests.</p>
+     * <p>The statistics on the Domain Name System (DNS) requests.</p>
      */
     @NameInMap("Statistics")
     public DescribeDomainStatisticsResponseBodyStatistics statistics;
@@ -44,11 +44,14 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
-         * <p>The statistical timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The statistical timestamp. Unit: milliseconds. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;

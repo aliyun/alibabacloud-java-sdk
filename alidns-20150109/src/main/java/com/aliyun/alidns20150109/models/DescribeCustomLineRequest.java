@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomLineRequest extends TeaModel {
     /**
-     * <p>The language type.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;

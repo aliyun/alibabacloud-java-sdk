@@ -4,6 +4,12 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsProductInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The auto-renewal status of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **true**: Auto-renewal is enabled.</p>
+     * <p>*   **false**: Auto-renewal is disabled.</p>
+     */
     @NameInMap("AutoRenewal")
     public Boolean autoRenewal;
 

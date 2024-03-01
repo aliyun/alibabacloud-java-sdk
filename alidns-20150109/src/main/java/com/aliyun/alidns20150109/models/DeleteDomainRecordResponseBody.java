@@ -11,7 +11,7 @@ public class DeleteDomainRecordResponseBody extends TeaModel {
     public String recordId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

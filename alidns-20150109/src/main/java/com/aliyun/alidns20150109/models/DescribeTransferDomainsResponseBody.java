@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeTransferDomainsResponseBody extends TeaModel {
     /**
-     * <p>The list of domain names that were transferred between accounts.</p>
+     * <p>The domain names that were transferred between accounts.</p>
      */
     @NameInMap("DomainTransfers")
     public DescribeTransferDomainsResponseBodyDomainTransfers domainTransfers;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of domain names.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -81,13 +81,13 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
 
     public static class DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer extends TeaModel {
         /**
-         * <p>The time when the task for transferring domain names was created.</p>
+         * <p>The time when the domain name was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The UNIX timestamp representing when the task for transferring domain names was created.</p>
+         * <p>The time when the domain name was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
@@ -99,7 +99,7 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The ID of the user from which the domain name was transferred.</p>
+         * <p>The user ID from which the domain name was transferred.</p>
          */
         @NameInMap("FromUserId")
         public Long fromUserId;
@@ -111,7 +111,7 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The ID of the user to which the domain name was transferred.</p>
+         * <p>The user ID to which the domain name was transferred.</p>
          */
         @NameInMap("TargetUserId")
         public Long targetUserId;

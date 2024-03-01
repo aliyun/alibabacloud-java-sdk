@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDomainRecordRemarkRequest extends TeaModel {
     /**
-     * <p>The language type.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;
@@ -17,7 +17,7 @@ public class UpdateDomainRecordRemarkRequest extends TeaModel {
     public String recordId;
 
     /**
-     * <p>The description of your DNS record.</p>
+     * <p>The description of the DNS record.</p>
      */
     @NameInMap("Remark")
     public String remark;

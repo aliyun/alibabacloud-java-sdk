@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddDomainGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the domain name group.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>The name of the domain name group.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;

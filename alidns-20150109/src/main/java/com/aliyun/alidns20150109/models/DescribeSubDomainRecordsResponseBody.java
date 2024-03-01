@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeSubDomainRecordsResponseBody extends TeaModel {
     /**
-     * <p>The list of DNS records returned.</p>
+     * <p>The returned DNS records.</p>
      */
     @NameInMap("DomainRecords")
     public DescribeSubDomainRecordsResponseBodyDomainRecords domainRecords;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of DNS records returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -87,19 +87,19 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The resolution line.</p>
+         * <p>The DNS resolution line.</p>
          */
         @NameInMap("Line")
         public String line;
 
         /**
-         * <p>Indicates whether the DNS record is locked.</p>
+         * <p>The lock status of the DNS record.</p>
          */
         @NameInMap("Locked")
         public Boolean locked;
 
         /**
-         * <p>The priority of the MX record.</p>
+         * <p>The priority of the mail exchanger (MX) record.</p>
          */
         @NameInMap("Priority")
         public Long priority;
@@ -129,7 +129,7 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The Time-to-Live (TTL) of the DNS record.</p>
+         * <p>The time-to-live (TTL) of the DNS record.</p>
          */
         @NameInMap("TTL")
         public Long TTL;

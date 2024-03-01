@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetDnsGtmMonitorStatusRequest extends TeaModel {
     /**
-     * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
      */
     @NameInMap("Lang")
     public String lang;
@@ -19,8 +19,8 @@ public class SetDnsGtmMonitorStatusRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the health check feature. Valid values:</p>
      * <br>
-     * <p>*   OPEN: enable</p>
-     * <p>*   CLOSE: disable</p>
+     * <p>*   OPEN: enables the health check feature.</p>
+     * <p>*   CLOSE: disables the health check feature.</p>
      */
     @NameInMap("Status")
     public String status;

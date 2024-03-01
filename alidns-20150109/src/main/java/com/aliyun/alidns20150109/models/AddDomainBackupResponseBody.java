@@ -17,7 +17,7 @@ public class AddDomainBackupResponseBody extends TeaModel {
     public String periodType;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -17,7 +17,7 @@ public class UpdateDomainGroupRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;

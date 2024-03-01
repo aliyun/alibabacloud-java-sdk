@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomLineResponseBody extends TeaModel {
     /**
-     * <p>The code of the custom line. The code is used when you configure a resolution record.</p>
+     * <p>The code of the custom line.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The domain name for which the custom line is configured.</p>
+     * <p>The domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The unique ID of the custom line.</p>
+     * <p>The ID of the custom line.</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
-     * <p>The list of CIDR blocks.</p>
+     * <p>The CIDR blocks. Separate IP addresses with a hyphen (-). Enter a CIDR block in each row. You can enter 1 to 50 CIDR blocks at a time. If a CIDR block contains only one IP address, enter the IP address in the format of IP1-IP1. Different CIDR blocks cannot be overlapped.</p>
      */
     @NameInMap("IpSegmentList")
     public java.util.List<DescribeCustomLineResponseBodyIpSegmentList> ipSegmentList;
@@ -35,7 +35,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -95,13 +95,13 @@ public class DescribeCustomLineResponseBody extends TeaModel {
 
     public static class DescribeCustomLineResponseBodyIpSegmentList extends TeaModel {
         /**
-         * <p>The end IP address.</p>
+         * <p>The end IP address of the CIDR block.</p>
          */
         @NameInMap("EndIp")
         public String endIp;
 
         /**
-         * <p>The start IP address.</p>
+         * <p>The start IP address of the CIDR block.</p>
          */
         @NameInMap("StartIp")
         public String startIp;

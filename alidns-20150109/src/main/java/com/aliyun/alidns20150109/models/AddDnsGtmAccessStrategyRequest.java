@@ -4,6 +4,9 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddDnsGtmAccessStrategyRequest extends TeaModel {
+    /**
+     * <p>The address pools in the primary address pool set.</p>
+     */
     @NameInMap("DefaultAddrPool")
     public java.util.List<AddDnsGtmAccessStrategyRequestDefaultAddrPool> defaultAddrPool;
 
@@ -18,16 +21,16 @@ public class AddDnsGtmAccessStrategyRequest extends TeaModel {
     public String defaultAddrPoolType;
 
     /**
-     * <p>Specifies whether to enable scheduling optimization for latency resolution for the primary address pool group. Valid values:</p>
+     * <p>Specifies whether to enable DNS resolution with optimal latency for the primary address pool set. Valid values:</p>
      * <br>
-     * <p>*   OPEN: enable</p>
-     * <p>*   CLOSE: disable</p>
+     * <p>*   OPEN</p>
+     * <p>*   CLOSE</p>
      */
     @NameInMap("DefaultLatencyOptimization")
     public String defaultLatencyOptimization;
 
     /**
-     * <p>The load balancing policy of the primary address pool group. Valid values:</p>
+     * <p>The load balancing policy of the primary address pool set. Valid values:</p>
      * <br>
      * <p>*   ALL_RR: returns all addresses.</p>
      * <p>*   RATIO: returns addresses by weight.</p>
@@ -36,17 +39,20 @@ public class AddDnsGtmAccessStrategyRequest extends TeaModel {
     public String defaultLbaStrategy;
 
     /**
-     * <p>The maximum number of addresses returned from the primary address pool group.</p>
+     * <p>The maximum number of addresses returned from the primary address pool set.</p>
      */
     @NameInMap("DefaultMaxReturnAddrNum")
     public Integer defaultMaxReturnAddrNum;
 
     /**
-     * <p>The minimum number of available addresses in the primary address pool group.</p>
+     * <p>The minimum number of available addresses in the primary address pool set.</p>
      */
     @NameInMap("DefaultMinAvailableAddrNum")
     public Integer defaultMinAvailableAddrNum;
 
+    /**
+     * <p>The address pools in the secondary address pool set. If no address pool exists in the secondary address pool set, set this parameter to EMPTY.</p>
+     */
     @NameInMap("FailoverAddrPool")
     public java.util.List<AddDnsGtmAccessStrategyRequestFailoverAddrPool> failoverAddrPool;
 
@@ -61,16 +67,16 @@ public class AddDnsGtmAccessStrategyRequest extends TeaModel {
     public String failoverAddrPoolType;
 
     /**
-     * <p>Specifies whether to enable scheduling optimization for latency resolution for the secondary address pool group. Valid values:</p>
+     * <p>Specifies whether to enable DNS resolution with optimal latency for the secondary address pool set. Valid values:</p>
      * <br>
-     * <p>*   OPEN: enable</p>
-     * <p>*   CLOSE: disable</p>
+     * <p>*   OPEN</p>
+     * <p>*   CLOSE</p>
      */
     @NameInMap("FailoverLatencyOptimization")
     public String failoverLatencyOptimization;
 
     /**
-     * <p>The load balancing policy of the secondary address pool group. Valid values:</p>
+     * <p>The load balancing policy of the secondary address pool set. Valid values:</p>
      * <br>
      * <p>*   ALL_RR: returns all addresses.</p>
      * <p>*   RATIO: returns addresses by weight.</p>
@@ -79,31 +85,31 @@ public class AddDnsGtmAccessStrategyRequest extends TeaModel {
     public String failoverLbaStrategy;
 
     /**
-     * <p>The maximum number of addresses returned from the secondary address pool group.</p>
+     * <p>The maximum number of addresses returned from the secondary address pool set.</p>
      */
     @NameInMap("FailoverMaxReturnAddrNum")
     public Integer failoverMaxReturnAddrNum;
 
     /**
-     * <p>The minimum number of available addresses in the secondary address pool group.</p>
+     * <p>The minimum number of available addresses in the secondary address pool set.</p>
      */
     @NameInMap("FailoverMinAvailableAddrNum")
     public Integer failoverMinAvailableAddrNum;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The line codes of source regions. For example: `["default", "drpeng"]` indicates Global and Dr. Peng Telecom & Media Group.</p>
+     * <p>The Domain Name System (DNS) request source. For example: `["default", "drpeng"]` indicates Global and Dr. Peng Group.</p>
      */
     @NameInMap("Lines")
     public String lines;
@@ -111,8 +117,8 @@ public class AddDnsGtmAccessStrategyRequest extends TeaModel {
     /**
      * <p>The type of the access policy. Valid values:</p>
      * <br>
-     * <p>*   GEO: geographical location-based</p>
-     * <p>*   LATENCY: latency-based</p>
+     * <p>*   GEO: geographical location-based access policy</p>
+     * <p>*   LATENCY: latency-based access policy</p>
      */
     @NameInMap("StrategyMode")
     public String strategyMode;
@@ -266,13 +272,13 @@ public class AddDnsGtmAccessStrategyRequest extends TeaModel {
 
     public static class AddDnsGtmAccessStrategyRequestDefaultAddrPool extends TeaModel {
         /**
-         * <p>The ID of the address pool in the primary address pool group.</p>
+         * <p>The ID of the address pool in the primary address pool set.</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The weight of the address pool in the primary address pool group.</p>
+         * <p>The weight of the address pool in the primary address pool set.</p>
          */
         @NameInMap("LbaWeight")
         public Integer lbaWeight;
@@ -302,13 +308,13 @@ public class AddDnsGtmAccessStrategyRequest extends TeaModel {
 
     public static class AddDnsGtmAccessStrategyRequestFailoverAddrPool extends TeaModel {
         /**
-         * <p>The ID of the address pool in the secondary address pool group.</p>
+         * <p>The ID of the address pool in the secondary address pool set.</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The weight of the address pool in the secondary address pool group.</p>
+         * <p>The weight of the address pool in the secondary address pool set.</p>
          */
         @NameInMap("LbaWeight")
         public Integer lbaWeight;

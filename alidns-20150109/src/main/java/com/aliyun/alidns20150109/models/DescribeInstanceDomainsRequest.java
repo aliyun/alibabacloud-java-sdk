@@ -4,6 +4,9 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceDomainsRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,6 +16,9 @@ public class DescribeInstanceDomainsRequest extends TeaModel {
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
