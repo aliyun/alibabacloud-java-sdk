@@ -79,6 +79,212 @@ public class GetInstanceListResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig extends TeaModel {
+        @NameInMap("ConnectCU")
+        public Integer connectCU;
+
+        @NameInMap("ConnectReplica")
+        public Integer connectReplica;
+
+        @NameInMap("ControlCenterCU")
+        public Integer controlCenterCU;
+
+        @NameInMap("ControlCenterReplica")
+        public Integer controlCenterReplica;
+
+        @NameInMap("ControlCenterStorage")
+        public Integer controlCenterStorage;
+
+        @NameInMap("KafkaCU")
+        public Integer kafkaCU;
+
+        @NameInMap("KafkaReplica")
+        public Integer kafkaReplica;
+
+        @NameInMap("KafkaRestProxyCU")
+        public Integer kafkaRestProxyCU;
+
+        @NameInMap("KafkaRestProxyReplica")
+        public Integer kafkaRestProxyReplica;
+
+        @NameInMap("KafkaStorage")
+        public Integer kafkaStorage;
+
+        @NameInMap("KsqlCU")
+        public Integer ksqlCU;
+
+        @NameInMap("KsqlReplica")
+        public Integer ksqlReplica;
+
+        @NameInMap("KsqlStorage")
+        public Integer ksqlStorage;
+
+        @NameInMap("SchemaRegistryCU")
+        public Integer schemaRegistryCU;
+
+        @NameInMap("SchemaRegistryReplica")
+        public Integer schemaRegistryReplica;
+
+        @NameInMap("ZooKeeperCU")
+        public Integer zooKeeperCU;
+
+        @NameInMap("ZooKeeperReplica")
+        public Integer zooKeeperReplica;
+
+        @NameInMap("ZooKeeperStorage")
+        public Integer zooKeeperStorage;
+
+        public static GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig self = new GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig setConnectCU(Integer connectCU) {
+            this.connectCU = connectCU;
+            return this;
+        }
+        public Integer getConnectCU() {
+            return this.connectCU;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig setConnectReplica(Integer connectReplica) {
+            this.connectReplica = connectReplica;
+            return this;
+        }
+        public Integer getConnectReplica() {
+            return this.connectReplica;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig setControlCenterCU(Integer controlCenterCU) {
+            this.controlCenterCU = controlCenterCU;
+            return this;
+        }
+        public Integer getControlCenterCU() {
+            return this.controlCenterCU;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig setControlCenterReplica(Integer controlCenterReplica) {
+            this.controlCenterReplica = controlCenterReplica;
+            return this;
+        }
+        public Integer getControlCenterReplica() {
+            return this.controlCenterReplica;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig setControlCenterStorage(Integer controlCenterStorage) {
+            this.controlCenterStorage = controlCenterStorage;
+            return this;
+        }
+        public Integer getControlCenterStorage() {
+            return this.controlCenterStorage;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig setKafkaCU(Integer kafkaCU) {
+            this.kafkaCU = kafkaCU;
+            return this;
+        }
+        public Integer getKafkaCU() {
+            return this.kafkaCU;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig setKafkaReplica(Integer kafkaReplica) {
+            this.kafkaReplica = kafkaReplica;
+            return this;
+        }
+        public Integer getKafkaReplica() {
+            return this.kafkaReplica;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig setKafkaRestProxyCU(Integer kafkaRestProxyCU) {
+            this.kafkaRestProxyCU = kafkaRestProxyCU;
+            return this;
+        }
+        public Integer getKafkaRestProxyCU() {
+            return this.kafkaRestProxyCU;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig setKafkaRestProxyReplica(Integer kafkaRestProxyReplica) {
+            this.kafkaRestProxyReplica = kafkaRestProxyReplica;
+            return this;
+        }
+        public Integer getKafkaRestProxyReplica() {
+            return this.kafkaRestProxyReplica;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig setKafkaStorage(Integer kafkaStorage) {
+            this.kafkaStorage = kafkaStorage;
+            return this;
+        }
+        public Integer getKafkaStorage() {
+            return this.kafkaStorage;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig setKsqlCU(Integer ksqlCU) {
+            this.ksqlCU = ksqlCU;
+            return this;
+        }
+        public Integer getKsqlCU() {
+            return this.ksqlCU;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig setKsqlReplica(Integer ksqlReplica) {
+            this.ksqlReplica = ksqlReplica;
+            return this;
+        }
+        public Integer getKsqlReplica() {
+            return this.ksqlReplica;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig setKsqlStorage(Integer ksqlStorage) {
+            this.ksqlStorage = ksqlStorage;
+            return this;
+        }
+        public Integer getKsqlStorage() {
+            return this.ksqlStorage;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig setSchemaRegistryCU(Integer schemaRegistryCU) {
+            this.schemaRegistryCU = schemaRegistryCU;
+            return this;
+        }
+        public Integer getSchemaRegistryCU() {
+            return this.schemaRegistryCU;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig setSchemaRegistryReplica(Integer schemaRegistryReplica) {
+            this.schemaRegistryReplica = schemaRegistryReplica;
+            return this;
+        }
+        public Integer getSchemaRegistryReplica() {
+            return this.schemaRegistryReplica;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig setZooKeeperCU(Integer zooKeeperCU) {
+            this.zooKeeperCU = zooKeeperCU;
+            return this;
+        }
+        public Integer getZooKeeperCU() {
+            return this.zooKeeperCU;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig setZooKeeperReplica(Integer zooKeeperReplica) {
+            this.zooKeeperReplica = zooKeeperReplica;
+            return this;
+        }
+        public Integer getZooKeeperReplica() {
+            return this.zooKeeperReplica;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig setZooKeeperStorage(Integer zooKeeperStorage) {
+            this.zooKeeperStorage = zooKeeperStorage;
+            return this;
+        }
+        public Integer getZooKeeperStorage() {
+            return this.zooKeeperStorage;
+        }
+
+    }
+
     public static class GetInstanceListResponseBodyInstanceListInstanceVOTagsTagVO extends TeaModel {
         /**
          * <p>The tag key.</p>
@@ -162,6 +368,9 @@ public class GetInstanceListResponseBody extends TeaModel {
          */
         @NameInMap("AllConfig")
         public String allConfig;
+
+        @NameInMap("ConfluentConfig")
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig confluentConfig;
 
         /**
          * <p>The time when the instance was created. Unit: milliseconds.</p>
@@ -416,6 +625,14 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
         public String getAllConfig() {
             return this.allConfig;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setConfluentConfig(GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig confluentConfig) {
+            this.confluentConfig = confluentConfig;
+            return this;
+        }
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig getConfluentConfig() {
+            return this.confluentConfig;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setCreateTime(Long createTime) {

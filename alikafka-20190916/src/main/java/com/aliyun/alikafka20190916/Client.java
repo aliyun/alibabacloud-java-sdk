@@ -288,13 +288,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see [Billing](~~84737~~).
       * *   If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the [Renewal](https://renew.console.aliyun.com/#/ecs) page in the Alibaba Cloud Management Console.
       *
-      * @param request CreatePrePayOrderRequest
+      * @param tmpReq CreatePrePayOrderRequest
       * @param runtime runtime options for this request RuntimeOptions
       * @return CreatePrePayOrderResponse
      */
-    public CreatePrePayOrderResponse createPrePayOrderWithOptions(CreatePrePayOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreatePrePayOrderResponse createPrePayOrderWithOptions(CreatePrePayOrderRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreatePrePayOrderShrinkRequest request = new CreatePrePayOrderShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.confluentConfig)) {
+            request.confluentConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.confluentConfig, "ConfluentConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.confluentConfigShrink)) {
+            query.put("ConfluentConfig", request.confluentConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deployType)) {
             query.put("DeployType", request.deployType);
         }
@@ -782,6 +792,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSaslUsersResponse describeSaslUsers(DescribeSaslUsersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSaslUsersWithOptions(request, runtime);
+    }
+
+    public EnableAutoGroupCreationResponse enableAutoGroupCreationWithOptions(EnableAutoGroupCreationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            query.put("Enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableAutoGroupCreation"),
+            new TeaPair("version", "2019-09-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableAutoGroupCreationResponse());
+    }
+
+    public EnableAutoGroupCreationResponse enableAutoGroupCreation(EnableAutoGroupCreationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableAutoGroupCreationWithOptions(request, runtime);
+    }
+
+    public EnableAutoTopicCreationResponse enableAutoTopicCreationWithOptions(EnableAutoTopicCreationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operate)) {
+            query.put("Operate", request.operate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partitionNum)) {
+            query.put("PartitionNum", request.partitionNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableAutoTopicCreation"),
+            new TeaPair("version", "2019-09-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableAutoTopicCreationResponse());
+    }
+
+    public EnableAutoTopicCreationResponse enableAutoTopicCreation(EnableAutoTopicCreationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableAutoTopicCreationWithOptions(request, runtime);
     }
 
     public GetAllInstanceIdListResponse getAllInstanceIdListWithOptions(GetAllInstanceIdListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1438,6 +1526,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("VSwitchId", request.vSwitchId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchIds)) {
+            query.put("VSwitchIds", request.vSwitchIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
             query.put("VpcId", request.vpcId);
         }
@@ -1951,13 +2043,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see [Billing overview](~~84737~~).
       *
-      * @param request UpgradePrePayOrderRequest
+      * @param tmpReq UpgradePrePayOrderRequest
       * @param runtime runtime options for this request RuntimeOptions
       * @return UpgradePrePayOrderResponse
      */
-    public UpgradePrePayOrderResponse upgradePrePayOrderWithOptions(UpgradePrePayOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpgradePrePayOrderResponse upgradePrePayOrderWithOptions(UpgradePrePayOrderRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpgradePrePayOrderShrinkRequest request = new UpgradePrePayOrderShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.confluentConfig)) {
+            request.confluentConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.confluentConfig, "ConfluentConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.confluentConfigShrink)) {
+            query.put("ConfluentConfig", request.confluentConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.diskSize)) {
             query.put("DiskSize", request.diskSize);
         }
@@ -1980,6 +2082,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ioMaxSpec)) {
             query.put("IoMaxSpec", request.ioMaxSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paidType)) {
+            query.put("PaidType", request.paidType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.partitionNum)) {

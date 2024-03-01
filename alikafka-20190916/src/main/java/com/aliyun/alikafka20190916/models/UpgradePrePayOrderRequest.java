@@ -4,6 +4,9 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class UpgradePrePayOrderRequest extends TeaModel {
+    @NameInMap("ConfluentConfig")
+    public UpgradePrePayOrderRequestConfluentConfig confluentConfig;
+
     /**
      * <p>The size of the disk.</p>
      * <br>
@@ -59,6 +62,9 @@ public class UpgradePrePayOrderRequest extends TeaModel {
     @NameInMap("IoMaxSpec")
     public String ioMaxSpec;
 
+    @NameInMap("PaidType")
+    public Integer paidType;
+
     /**
      * <p>The number of partitions. We recommend that you configure this parameter.</p>
      * <br>
@@ -101,6 +107,14 @@ public class UpgradePrePayOrderRequest extends TeaModel {
     public static UpgradePrePayOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradePrePayOrderRequest self = new UpgradePrePayOrderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpgradePrePayOrderRequest setConfluentConfig(UpgradePrePayOrderRequestConfluentConfig confluentConfig) {
+        this.confluentConfig = confluentConfig;
+        return this;
+    }
+    public UpgradePrePayOrderRequestConfluentConfig getConfluentConfig() {
+        return this.confluentConfig;
     }
 
     public UpgradePrePayOrderRequest setDiskSize(Integer diskSize) {
@@ -151,6 +165,14 @@ public class UpgradePrePayOrderRequest extends TeaModel {
         return this.ioMaxSpec;
     }
 
+    public UpgradePrePayOrderRequest setPaidType(Integer paidType) {
+        this.paidType = paidType;
+        return this;
+    }
+    public Integer getPaidType() {
+        return this.paidType;
+    }
+
     public UpgradePrePayOrderRequest setPartitionNum(Integer partitionNum) {
         this.partitionNum = partitionNum;
         return this;
@@ -181,6 +203,212 @@ public class UpgradePrePayOrderRequest extends TeaModel {
     }
     public Integer getTopicQuota() {
         return this.topicQuota;
+    }
+
+    public static class UpgradePrePayOrderRequestConfluentConfig extends TeaModel {
+        @NameInMap("ConnectCU")
+        public Integer connectCU;
+
+        @NameInMap("ConnectReplica")
+        public Integer connectReplica;
+
+        @NameInMap("ControlCenterCU")
+        public Integer controlCenterCU;
+
+        @NameInMap("ControlCenterReplica")
+        public Integer controlCenterReplica;
+
+        @NameInMap("ControlCenterStorage")
+        public Integer controlCenterStorage;
+
+        @NameInMap("KafkaCU")
+        public Integer kafkaCU;
+
+        @NameInMap("KafkaReplica")
+        public Integer kafkaReplica;
+
+        @NameInMap("KafkaRestProxyCU")
+        public Integer kafkaRestProxyCU;
+
+        @NameInMap("KafkaRestProxyReplica")
+        public Integer kafkaRestProxyReplica;
+
+        @NameInMap("KafkaStorage")
+        public Integer kafkaStorage;
+
+        @NameInMap("KsqlCU")
+        public Integer ksqlCU;
+
+        @NameInMap("KsqlReplica")
+        public Integer ksqlReplica;
+
+        @NameInMap("KsqlStorage")
+        public Integer ksqlStorage;
+
+        @NameInMap("SchemaRegistryCU")
+        public Integer schemaRegistryCU;
+
+        @NameInMap("SchemaRegistryReplica")
+        public Integer schemaRegistryReplica;
+
+        @NameInMap("ZooKeeperCU")
+        public Integer zooKeeperCU;
+
+        @NameInMap("ZooKeeperReplica")
+        public Integer zooKeeperReplica;
+
+        @NameInMap("ZooKeeperStorage")
+        public Integer zooKeeperStorage;
+
+        public static UpgradePrePayOrderRequestConfluentConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpgradePrePayOrderRequestConfluentConfig self = new UpgradePrePayOrderRequestConfluentConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setConnectCU(Integer connectCU) {
+            this.connectCU = connectCU;
+            return this;
+        }
+        public Integer getConnectCU() {
+            return this.connectCU;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setConnectReplica(Integer connectReplica) {
+            this.connectReplica = connectReplica;
+            return this;
+        }
+        public Integer getConnectReplica() {
+            return this.connectReplica;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setControlCenterCU(Integer controlCenterCU) {
+            this.controlCenterCU = controlCenterCU;
+            return this;
+        }
+        public Integer getControlCenterCU() {
+            return this.controlCenterCU;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setControlCenterReplica(Integer controlCenterReplica) {
+            this.controlCenterReplica = controlCenterReplica;
+            return this;
+        }
+        public Integer getControlCenterReplica() {
+            return this.controlCenterReplica;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setControlCenterStorage(Integer controlCenterStorage) {
+            this.controlCenterStorage = controlCenterStorage;
+            return this;
+        }
+        public Integer getControlCenterStorage() {
+            return this.controlCenterStorage;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setKafkaCU(Integer kafkaCU) {
+            this.kafkaCU = kafkaCU;
+            return this;
+        }
+        public Integer getKafkaCU() {
+            return this.kafkaCU;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setKafkaReplica(Integer kafkaReplica) {
+            this.kafkaReplica = kafkaReplica;
+            return this;
+        }
+        public Integer getKafkaReplica() {
+            return this.kafkaReplica;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setKafkaRestProxyCU(Integer kafkaRestProxyCU) {
+            this.kafkaRestProxyCU = kafkaRestProxyCU;
+            return this;
+        }
+        public Integer getKafkaRestProxyCU() {
+            return this.kafkaRestProxyCU;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setKafkaRestProxyReplica(Integer kafkaRestProxyReplica) {
+            this.kafkaRestProxyReplica = kafkaRestProxyReplica;
+            return this;
+        }
+        public Integer getKafkaRestProxyReplica() {
+            return this.kafkaRestProxyReplica;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setKafkaStorage(Integer kafkaStorage) {
+            this.kafkaStorage = kafkaStorage;
+            return this;
+        }
+        public Integer getKafkaStorage() {
+            return this.kafkaStorage;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setKsqlCU(Integer ksqlCU) {
+            this.ksqlCU = ksqlCU;
+            return this;
+        }
+        public Integer getKsqlCU() {
+            return this.ksqlCU;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setKsqlReplica(Integer ksqlReplica) {
+            this.ksqlReplica = ksqlReplica;
+            return this;
+        }
+        public Integer getKsqlReplica() {
+            return this.ksqlReplica;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setKsqlStorage(Integer ksqlStorage) {
+            this.ksqlStorage = ksqlStorage;
+            return this;
+        }
+        public Integer getKsqlStorage() {
+            return this.ksqlStorage;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setSchemaRegistryCU(Integer schemaRegistryCU) {
+            this.schemaRegistryCU = schemaRegistryCU;
+            return this;
+        }
+        public Integer getSchemaRegistryCU() {
+            return this.schemaRegistryCU;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setSchemaRegistryReplica(Integer schemaRegistryReplica) {
+            this.schemaRegistryReplica = schemaRegistryReplica;
+            return this;
+        }
+        public Integer getSchemaRegistryReplica() {
+            return this.schemaRegistryReplica;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setZooKeeperCU(Integer zooKeeperCU) {
+            this.zooKeeperCU = zooKeeperCU;
+            return this;
+        }
+        public Integer getZooKeeperCU() {
+            return this.zooKeeperCU;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setZooKeeperReplica(Integer zooKeeperReplica) {
+            this.zooKeeperReplica = zooKeeperReplica;
+            return this;
+        }
+        public Integer getZooKeeperReplica() {
+            return this.zooKeeperReplica;
+        }
+
+        public UpgradePrePayOrderRequestConfluentConfig setZooKeeperStorage(Integer zooKeeperStorage) {
+            this.zooKeeperStorage = zooKeeperStorage;
+            return this;
+        }
+        public Integer getZooKeeperStorage() {
+            return this.zooKeeperStorage;
+        }
+
     }
 
 }
