@@ -186,6 +186,12 @@ public class DataIngestion extends TeaModel {
         @NameInMap("Endpoint")
         public String endpoint;
 
+        @NameInMap("MNS")
+        public MNS MNS;
+
+        @NameInMap("RocketMQ")
+        public RocketMQ rocketMQ;
+
         @NameInMap("Topic")
         public String topic;
 
@@ -200,6 +206,22 @@ public class DataIngestion extends TeaModel {
         }
         public String getEndpoint() {
             return this.endpoint;
+        }
+
+        public DataIngestionNotification setMNS(MNS MNS) {
+            this.MNS = MNS;
+            return this;
+        }
+        public MNS getMNS() {
+            return this.MNS;
+        }
+
+        public DataIngestionNotification setRocketMQ(RocketMQ rocketMQ) {
+            this.rocketMQ = rocketMQ;
+            return this;
+        }
+        public RocketMQ getRocketMQ() {
+            return this.rocketMQ;
         }
 
         public DataIngestionNotification setTopic(String topic) {
