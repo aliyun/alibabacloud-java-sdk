@@ -4,10 +4,14 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
+    @NameInMap("PublicIpAddressPoolId")
+    public String publicIpAddressPoolId;
+
     /**
      * <p>The ID of the IP address pool.</p>
      */
     @NameInMap("PulbicIpAddressPoolId")
+    @Deprecated
     public String pulbicIpAddressPoolId;
 
     /**
@@ -25,6 +29,14 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
     public static CreatePublicIpAddressPoolResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreatePublicIpAddressPoolResponseBody self = new CreatePublicIpAddressPoolResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreatePublicIpAddressPoolResponseBody setPublicIpAddressPoolId(String publicIpAddressPoolId) {
+        this.publicIpAddressPoolId = publicIpAddressPoolId;
+        return this;
+    }
+    public String getPublicIpAddressPoolId() {
+        return this.publicIpAddressPoolId;
     }
 
     public CreatePublicIpAddressPoolResponseBody setPulbicIpAddressPoolId(String pulbicIpAddressPoolId) {
