@@ -3,7 +3,7 @@ package com.aliyun.aimiaobi20230801.models;
 
 import com.aliyun.tea.*;
 
-public class SaveMaterialDocumentResponse extends TeaModel {
+public class GenerateFileUrlByKeyResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class SaveMaterialDocumentResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public SaveMaterialDocumentResponseBody body;
+    public GenerateFileUrlByKeyResponseBody body;
 
-    public static SaveMaterialDocumentResponse build(java.util.Map<String, ?> map) throws Exception {
-        SaveMaterialDocumentResponse self = new SaveMaterialDocumentResponse();
+    public static GenerateFileUrlByKeyResponse build(java.util.Map<String, ?> map) throws Exception {
+        GenerateFileUrlByKeyResponse self = new GenerateFileUrlByKeyResponse();
         return TeaModel.build(map, self);
     }
 
-    public SaveMaterialDocumentResponse setHeaders(java.util.Map<String, String> headers) {
+    public GenerateFileUrlByKeyResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class SaveMaterialDocumentResponse extends TeaModel {
         return this.headers;
     }
 
-    public SaveMaterialDocumentResponse setStatusCode(Integer statusCode) {
+    public GenerateFileUrlByKeyResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class SaveMaterialDocumentResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public SaveMaterialDocumentResponse setBody(SaveMaterialDocumentResponseBody body) {
+    public GenerateFileUrlByKeyResponse setBody(GenerateFileUrlByKeyResponseBody body) {
         this.body = body;
         return this;
     }
-    public SaveMaterialDocumentResponseBody getBody() {
+    public GenerateFileUrlByKeyResponseBody getBody() {
         return this.body;
     }
 
