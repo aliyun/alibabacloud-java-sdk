@@ -49,6 +49,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("RenewalDurationUnit")
     public String renewalDurationUnit;
 
+    @NameInMap("ServerlessChargeType")
+    public String serverlessChargeType;
+
     @NameInMap("StorageSize")
     public Integer storageSize;
 
@@ -176,6 +179,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getRenewalDurationUnit() {
         return this.renewalDurationUnit;
+    }
+
+    public CreateInstanceRequest setServerlessChargeType(String serverlessChargeType) {
+        this.serverlessChargeType = serverlessChargeType;
+        return this;
+    }
+    public String getServerlessChargeType() {
+        return this.serverlessChargeType;
     }
 
     public CreateInstanceRequest setStorageSize(Integer storageSize) {

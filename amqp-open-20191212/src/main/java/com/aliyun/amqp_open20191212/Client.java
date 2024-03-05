@@ -251,6 +251,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RenewalDurationUnit", request.renewalDurationUnit);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.serverlessChargeType)) {
+            query.put("ServerlessChargeType", request.serverlessChargeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.storageSize)) {
             query.put("StorageSize", request.storageSize);
         }
