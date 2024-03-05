@@ -3,7 +3,7 @@ package com.aliyun.domain20180208.models;
 
 import com.aliyun.tea.*;
 
-public class PurchaseIntlDomainResponse extends TeaModel {
+public class SubmitPurchaseInfoResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class PurchaseIntlDomainResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public PurchaseIntlDomainResponseBody body;
+    public SubmitPurchaseInfoResponseBody body;
 
-    public static PurchaseIntlDomainResponse build(java.util.Map<String, ?> map) throws Exception {
-        PurchaseIntlDomainResponse self = new PurchaseIntlDomainResponse();
+    public static SubmitPurchaseInfoResponse build(java.util.Map<String, ?> map) throws Exception {
+        SubmitPurchaseInfoResponse self = new SubmitPurchaseInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public PurchaseIntlDomainResponse setHeaders(java.util.Map<String, String> headers) {
+    public SubmitPurchaseInfoResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class PurchaseIntlDomainResponse extends TeaModel {
         return this.headers;
     }
 
-    public PurchaseIntlDomainResponse setStatusCode(Integer statusCode) {
+    public SubmitPurchaseInfoResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class PurchaseIntlDomainResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public PurchaseIntlDomainResponse setBody(PurchaseIntlDomainResponseBody body) {
+    public SubmitPurchaseInfoResponse setBody(SubmitPurchaseInfoResponseBody body) {
         this.body = body;
         return this;
     }
-    public PurchaseIntlDomainResponseBody getBody() {
+    public SubmitPurchaseInfoResponseBody getBody() {
         return this.body;
     }
 

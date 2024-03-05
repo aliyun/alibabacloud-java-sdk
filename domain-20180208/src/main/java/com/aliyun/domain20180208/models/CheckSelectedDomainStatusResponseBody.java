@@ -74,6 +74,9 @@ public class CheckSelectedDomainStatusResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public Long endTime;
 
+        @NameInMap("Premium")
+        public Boolean premium;
+
         @NameInMap("Price")
         public Double price;
 
@@ -107,6 +110,14 @@ public class CheckSelectedDomainStatusResponseBody extends TeaModel {
         }
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        public CheckSelectedDomainStatusResponseBodyModule setPremium(Boolean premium) {
+            this.premium = premium;
+            return this;
+        }
+        public Boolean getPremium() {
+            return this.premium;
         }
 
         public CheckSelectedDomainStatusResponseBodyModule setPrice(Double price) {
