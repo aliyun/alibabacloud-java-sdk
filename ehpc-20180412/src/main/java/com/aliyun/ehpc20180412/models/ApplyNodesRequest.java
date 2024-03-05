@@ -10,13 +10,13 @@ public class ApplyNodesRequest extends TeaModel {
      * <p>*   true: A public IP address is allocated to the compute nodes.</p>
      * <p>*   false: A public IP address is not allocated to the compute nodes.</p>
      * <br>
-     * <p>Default value: false</p>
+     * <p>Default value: false.</p>
      */
     @NameInMap("AllocatePublicAddress")
     public Boolean allocatePublicAddress;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the E-HPC cluster.</p>
      * <br>
      * <p>You can call the [ListClusters](~~87126~~) operation to query the cluster ID.</p>
      */
@@ -26,7 +26,7 @@ public class ApplyNodesRequest extends TeaModel {
     /**
      * <p>The maximum hourly price of the compute nodes. The value is a floating-point number that supports up to three decimal places. The parameter takes effect only when ComputeSpotStrategy is set to SpotWithPriceLimit.</p>
      * <br>
-     * <p>If ComputeSpotPriceLimit and InstanceTypeModel.N.MaxPrice are specified at the same time, compute nodes are created based on the smaller value of these parameters.</p>
+     * <p>If ComputeSpotPriceLimit and InstanceTypeModel.N.MaxPrice are specified at the same time, compute nodes are created based on the smaller value of the two parameters.</p>
      */
     @NameInMap("ComputeSpotPriceLimit")
     public Float computeSpotPriceLimit;
@@ -34,11 +34,11 @@ public class ApplyNodesRequest extends TeaModel {
     /**
      * <p>The preemption policy of the compute nodes. Valid values:</p>
      * <br>
-     * <p>*   NoSpot: The compute nodes use the pay-as-you-go billing method.</p>
+     * <p>*   NoSpot: The compute nodes are pay-as-you-go instances.</p>
      * <p>*   SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.</p>
      * <p>*   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.</p>
      * <br>
-     * <p>Default value: NoSpot</p>
+     * <p>Default value: NoSpot.</p>
      */
     @NameInMap("ComputeSpotStrategy")
     public String computeSpotStrategy;
@@ -46,7 +46,7 @@ public class ApplyNodesRequest extends TeaModel {
     /**
      * <p>The number of vCPUs. The parameter is required when the ResourceAmountType parameter is set to Cores.</p>
      * <br>
-     * <p>You can set Cores, vCPU, and Memory to query node specifications. For example, you can query the available compute nodes that have 2 vCPUs and 16 GB of memory by setting vCPU to 2 and Memory to 16. You can also query compute nodes by zone. Query results are sorted by price.</p>
+     * <p>You can set vCPU and Memory to query node specifications. For example, you can query the available compute nodes that have 2 vCPUs and 16 GB of memory by setting vCPU to 2 and Memory to 16. You can also query compute nodes by node specification and zone. Query results are sorted by price. The nodes that have the lowest price are created.</p>
      */
     @NameInMap("Cores")
     public Integer cores;
@@ -76,15 +76,18 @@ public class ApplyNodesRequest extends TeaModel {
     /**
      * <p>The level of the instance family. The parameter takes effect only when Cores and Memory are specified. Valid values:</p>
      * <br>
-     * <p>*   EntryLevel.</p>
-     * <p>*   EnterpriseLevel.</p>
-     * <p>*   CreditEntryLevel. For more information, see [What are burstable instances?](~~59977~~)</p>
+     * <p>*   EntryLevel</p>
+     * <p>*   EnterpriseLevel</p>
+     * <p>*   CreditEntryLevel For more information, see [Overview of burstable instances](~~59977~~).</p>
      * <br>
-     * <p>Default value: EnterpriseLevel</p>
+     * <p>Default value: EnterpriseLevel.</p>
      */
     @NameInMap("InstanceFamilyLevel")
     public String instanceFamilyLevel;
 
+    /**
+     * <p>The information about the preemptible instance.</p>
+     */
     @NameInMap("InstanceTypeModel")
     public java.util.List<ApplyNodesRequestInstanceTypeModel> instanceTypeModel;
 
@@ -101,7 +104,7 @@ public class ApplyNodesRequest extends TeaModel {
      * <p>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</p>
      * <br>
      * <p>*   If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of the parameter are 1 to 10 and the default value is 10.</p>
-     * <p>*   If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the amount of the outbound bandwidth that is purchased.</p>
+     * <p>*   If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the amount of the outbound bandwidth that is purchased. The default value is the value of the InternetMaxBandWidthOut parameter.</p>
      */
     @NameInMap("InternetMaxBandWidthIn")
     public Integer internetMaxBandWidthIn;
@@ -109,7 +112,7 @@ public class ApplyNodesRequest extends TeaModel {
     /**
      * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
      * <br>
-     * <p>Default value: 0</p>
+     * <p>Default value: 0.</p>
      */
     @NameInMap("InternetMaxBandWidthOut")
     public Integer internetMaxBandWidthOut;
@@ -117,7 +120,7 @@ public class ApplyNodesRequest extends TeaModel {
     /**
      * <p>The interval between two consecutive batches. Valid values: 60 to 600. Unit: seconds.</p>
      * <br>
-     * <p>Default value: 60</p>
+     * <p>Default value: 60.</p>
      */
     @NameInMap("Interval")
     public Integer interval;
@@ -133,7 +136,7 @@ public class ApplyNodesRequest extends TeaModel {
     /**
      * <p>The memory capacity. The parameter is required when the ResourceAmountType parameter is set to Cores. Unit: GB.</p>
      * <br>
-     * <p>You can set Cores, vCPU, and Memory to query node specifications. For example, you can query the available compute nodes that have 2 vCPUs and 16 GB of memory by setting vCPU to 2 and Memory to 16. You can also query compute nodes by zone. Query results are sorted by price.</p>
+     * <p>You can set vCPU and Memory to query node specifications. For example, you can query the available compute nodes that have 2 vCPUs and 16 GB of memory by setting vCPU to 2 and Memory to 16. You can also query compute nodes by node specification and zone. Query results are sorted by price. The nodes that have the lowest price are created.</p>
      */
     @NameInMap("Memory")
     public Integer memory;
@@ -141,7 +144,7 @@ public class ApplyNodesRequest extends TeaModel {
     /**
      * <p>The application policy of the preemptible nodes. Valid values:</p>
      * <br>
-     * <p>*   LowPriceResourcePlanning: Preemptible nodes are created based on the unit prices of vCPUs in ascending order. Preemptible nodes are created first when preemptible instance types are specified.</p>
+     * <p>*   LowPriceResourcePlanning: Preemptible nodes are created based on the unit prices of vCPUs in ascending order. Preemptible nodes are created first when multiple preemptible instance types are specified.</p>
      * <p>*   CapacityOptResourcePlanning: Preemptible nodes are created based on the prices and release rates in ascending order.</p>
      * <p>*   CustomizedResourcePlanning: Nodes are added based on the predefined value of the ZoneIds.N parameter. Instances of a zone that has a higher priority are used first.</p>
      */
@@ -149,12 +152,12 @@ public class ApplyNodesRequest extends TeaModel {
     public String priorityStrategy;
 
     /**
-     * <p>The type of the resource to be added. Valid values:</p>
+     * <p>The type of the resource that you want to add. Valid values:</p>
      * <br>
-     * <p>*   Instances: compute node</p>
+     * <p>*   Instances: the ECS instances that are used as compute nodes</p>
      * <p>*   Cores: vCPU and memory</p>
      * <br>
-     * <p>Default value: Instances</p>
+     * <p>Default value: Instances.</p>
      */
     @NameInMap("ResourceAmountType")
     public String resourceAmountType;
@@ -162,7 +165,7 @@ public class ApplyNodesRequest extends TeaModel {
     /**
      * <p>The total number of batches to create nodes. Valid values: 1 to 10.</p>
      * <br>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("Round")
     public Integer round;
@@ -171,9 +174,9 @@ public class ApplyNodesRequest extends TeaModel {
      * <p>Specifies whether to strictly meet the requirements of the TargetCapacity parameter. The parameter takes effect only when StrictSatisfiedTargetCapacity is set to true. Valid values:</p>
      * <br>
      * <p>*   true: Check the inventory of the resources. Compute nodes are created based on the value of the TargetCapacity parameter only when the available resources are sufficient. Otherwise, no compute nodes are created.</p>
-     * <p>*   false: Check the inventory of the resources. Compute nodes are created only when the available resources are sufficient. However, some compute nodes may fail to be created because resources become insufficient after the inventory is checked.</p>
+     * <p>*   false: Check the inventory of the resources. Compute nodes are created only when the available resources are sufficient. However, some compute nodes may fail to be created because resources become insufficient after the inventory query.</p>
      * <br>
-     * <p>Default value: false</p>
+     * <p>Default value: false.</p>
      */
     @NameInMap("StrictResourceProvision")
     public Boolean strictResourceProvision;
@@ -184,26 +187,24 @@ public class ApplyNodesRequest extends TeaModel {
      * <p>*   true: If the available resources are fewer than the resources that you want to add, no compute nodes are created and an error is returned. If the available resources are more than the resources that you want to add, the following cases may occur:</p>
      * <br>
      * <p>    *   If StrictResourceProvision is set to true, check the inventory of the resources. Compute nodes are created based on the value of the TargetCapacity parameter only when the available resources are sufficient. Otherwise, no compute nodes are created.</p>
-     * <p>    *   If StrictResourceProvision is set to false, check the inventory of the resources. Compute nodes are created only when the available resources are sufficient. However, some compute nodes may fail to be created because resources become insufficient after the inventory is checked.</p>
+     * <p>    *   If StrictResourceProvision is set to false, check the inventory of the resources. Compute nodes are created only when the available resources are sufficient. However, some compute nodes may fail to be created because resources become insufficient after the inventory query.</p>
      * <br>
      * <p>*   false: If the available resources are insufficient, compute nodes are created based on the inventory of the resources.</p>
      * <br>
-     * <p>Default value: true</p>
+     * <p>Default value: true.</p>
      */
     @NameInMap("StrictSatisfiedTargetCapacity")
     public Boolean strictSatisfiedTargetCapacity;
 
     /**
-     * <p>The performance level of the ESSD used as the system disk. Valid values:</p>
+     * <p>The performance level of the ESSD that you want to use as the system disk. Valid values:</p>
      * <br>
      * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
-     * <p>*   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
+     * <p>*   PL1: A single ESSD can deliver up to 50,000 IOPS of random read/write.</p>
      * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
      * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
      * <br>
-     * <p>Default value: PL0</p>
-     * <br>
-     * <p>For more information, see [ESSDs](~~122389~~).</p>
+     * <p>Default value: PL0. For more information, see [ESSDs](~~122389~~).</p>
      */
     @NameInMap("SystemDiskLevel")
     public String systemDiskLevel;
@@ -211,9 +212,9 @@ public class ApplyNodesRequest extends TeaModel {
     /**
      * <p>The size of the system disk. Unit: GB.</p>
      * <br>
-     * <p>Valid values: 40 to 500</p>
+     * <p>Valid values: 40 to 500.</p>
      * <br>
-     * <p>Default value: 40</p>
+     * <p>Default value: 40.</p>
      */
     @NameInMap("SystemDiskSize")
     public Integer systemDiskSize;
@@ -221,19 +222,22 @@ public class ApplyNodesRequest extends TeaModel {
     /**
      * <p>The type of the system disk. Valid values:</p>
      * <br>
-     * <p>*   cloud_efficiency: ultra disk.</p>
-     * <p>*   cloud_ssd: SSD.</p>
-     * <p>*   cloud_essd: ESSD.</p>
+     * <p>*   cloud_efficiency: ultra disk</p>
+     * <p>*   cloud_ssd: SSD</p>
+     * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
      * <p>*   cloud: basic disk. Disks of this type are retired.</p>
      */
     @NameInMap("SystemDiskType")
     public String systemDiskType;
 
+    /**
+     * <p>The tag to add to the instance.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ApplyNodesRequestTag> tag;
 
     /**
-     * <p>The number of the resource that you want to add. The specific number depends on the value of the ResourceAmountType parameter:</p>
+     * <p>The amount of the resource that you want to add. The specific number depends on the value of the ResourceAmountType parameter:</p>
      * <br>
      * <p>*   If ResourceAmountType is set to Instance, the value range of TargetCapacity is 1 to 200.</p>
      * <p>*   If ResourceAmountType is set to Cores, the value range of TargetCapacity is 1 to 1,000.</p>
@@ -241,6 +245,12 @@ public class ApplyNodesRequest extends TeaModel {
     @NameInMap("TargetCapacity")
     public Integer targetCapacity;
 
+    @NameInMap("UserData")
+    public String userData;
+
+    /**
+     * <p>The details of the zones. You can specify up to 10 zones.</p>
+     */
     @NameInMap("ZoneInfos")
     public java.util.List<ApplyNodesRequestZoneInfos> zoneInfos;
 
@@ -457,6 +467,14 @@ public class ApplyNodesRequest extends TeaModel {
         return this.targetCapacity;
     }
 
+    public ApplyNodesRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
+    }
+
     public ApplyNodesRequest setZoneInfos(java.util.List<ApplyNodesRequestZoneInfos> zoneInfos) {
         this.zoneInfos = zoneInfos;
         return this;
@@ -467,9 +485,9 @@ public class ApplyNodesRequest extends TeaModel {
 
     public static class ApplyNodesRequestInstanceTypeModel extends TeaModel {
         /**
-         * <p>The instance type of the compute node. The default value is the instance type that was specified when you created the cluster or the last time when you added compute nodes.</p>
+         * <p>The instance type of the compute node. The default value is the instance type that was specified when you created the cluster or the last time you added compute nodes.</p>
          * <br>
-         * <p>Valid values of N: 1 to 10</p>
+         * <p>Valid values of N: 1 to 10.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -479,7 +497,7 @@ public class ApplyNodesRequest extends TeaModel {
          * <br>
          * <p>The parameter takes effect only when ComputeSpotStrategy is set to SpotWithPriceLimit.</p>
          * <br>
-         * <p>Valid values of N: 1 to 10</p>
+         * <p>Valid values of N: 1 to 10.</p>
          */
         @NameInMap("MaxPrice")
         public Float maxPrice;
@@ -487,7 +505,7 @@ public class ApplyNodesRequest extends TeaModel {
         /**
          * <p>The image ID of the compute node. You must select a Windows image.</p>
          * <br>
-         * <p>Valid values of N: 1 to 10</p>
+         * <p>Valid values of N: 1 to 10.</p>
          */
         @NameInMap("TargetImageId")
         public String targetImageId;
@@ -525,17 +543,17 @@ public class ApplyNodesRequest extends TeaModel {
 
     public static class ApplyNodesRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the compute node that you want to attach. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         * <p>The tag key of the compute node that you want to add. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
          * <br>
-         * <p>Valid values of N: 1 to 10</p>
+         * <p>Valid values of N: 1 to 10.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value of the compute node that you want to add. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain http:// or https://.</p>
+         * <p>The tag value of the compute node that you want to add. You can specify 1 to 20 tag values. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain http:// or https://.</p>
          * <br>
-         * <p>Valid values of N: 1 to 10</p>
+         * <p>Valid values of N: 1 to 10.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -571,7 +589,7 @@ public class ApplyNodesRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the zone to which the cluster belongs. Valid values of N: 1 to 10.</p>
+         * <p>The ID of the zone to which the node belongs. Valid values of N: 1 to 10.</p>
          * <br>
          * <p>>  Each zone ID must be unique.</p>
          */

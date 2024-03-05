@@ -4,24 +4,45 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListUsersAsyncResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the asynchronous task.</p>
+     */
     @NameInMap("AsyncId")
     public String asyncId;
 
+    /**
+     * <p>The status of the asynchronous task.</p>
+     */
     @NameInMap("AsyncStatus")
     public String asyncStatus;
 
+    /**
+     * <p>The number of the page returned. Pages start from page 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of users.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of users.</p>
+     */
     @NameInMap("Users")
     public ListUsersAsyncResponseBodyUsers users;
 
@@ -87,18 +108,33 @@ public class ListUsersAsyncResponseBody extends TeaModel {
     }
 
     public static class ListUsersAsyncResponseBodyUsersUserInfo extends TeaModel {
+        /**
+         * <p>The time when the user was created.</p>
+         */
         @NameInMap("AddTime")
         public String addTime;
 
+        /**
+         * <p>The user groups.</p>
+         */
         @NameInMap("Group")
         public String group;
 
+        /**
+         * <p>The user group ID.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The username of the account.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The user ID.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

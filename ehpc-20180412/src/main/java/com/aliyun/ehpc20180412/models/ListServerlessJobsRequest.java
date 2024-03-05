@@ -25,7 +25,7 @@ public class ListServerlessJobsRequest extends TeaModel {
     public java.util.List<String> jobNames;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -43,16 +43,16 @@ public class ListServerlessJobsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to sort the serverless jobs by the job start time. Valid value:</p>
+     * <p>Specifies whether to sort the serverless jobs by the job start time. Valid values:</p>
      * <br>
-     * <p>*   Asc: ascending order</p>
-     * <p>*   Desc: descending order</p>
+     * <p>*   Asc: ascending order.</p>
+     * <p>*   Desc: descending order.</p>
      */
     @NameInMap("StartOrder")
     public String startOrder;
 
     /**
-     * <p>The status of the serverless job. Valid value:</p>
+     * <p>The status of the serverless job. Valid values:</p>
      * <br>
      * <p>*   All</p>
      * <p>*   Pending</p>
@@ -67,10 +67,10 @@ public class ListServerlessJobsRequest extends TeaModel {
     public String state;
 
     /**
-     * <p>Specifies whether to sort the serverless jobs by the job submission time. Valid value:</p>
+     * <p>Specifies whether to sort the serverless jobs by the job submission time. Valid values:</p>
      * <br>
-     * <p>*   Asc: ascending order</p>
-     * <p>*   Desc: descending order</p>
+     * <p>*   Asc: ascending order.</p>
+     * <p>*   Desc: descending order.</p>
      */
     @NameInMap("SubmitOrder")
     public String submitOrder;

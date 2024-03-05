@@ -15,10 +15,7 @@ public class StopServerlessJobsRequest extends TeaModel {
     /**
      * <p>The serverless job IDs or subtask IDs (array jobs).</p>
      * <br>
-     * <p>> </p>
-     * <br>
      * <p>*   If you specify the job ID of an array job, all subtasks under the array job are stopped.</p>
-     * <br>
      * <p>*   If you specify the ID of a subtask of an array job, only the subtask is stopped.</p>
      */
     @NameInMap("JobIds")

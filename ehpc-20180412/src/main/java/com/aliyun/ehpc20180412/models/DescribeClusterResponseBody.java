@@ -677,7 +677,7 @@ public class DescribeClusterResponseBody extends TeaModel {
 
     public static class DescribeClusterResponseBodyClusterInfoPostInstallScriptsPostInstallScriptInfo extends TeaModel {
         /**
-         * <p>The runtime parameters of the script.</p>
+         * <p>The runtime parameter of the script.</p>
          */
         @NameInMap("Args")
         public String args;
@@ -1046,6 +1046,12 @@ public class DescribeClusterResponseBody extends TeaModel {
          */
         @NameInMap("SchedulerType")
         public String schedulerType;
+
+        /**
+         * <p>The version of the scheduler.</p>
+         */
+        @NameInMap("SchedulerVersion")
+        public String schedulerVersion;
 
         /**
          * <p>The ID of the security group.</p>
@@ -1454,6 +1460,14 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
         public String getSchedulerType() {
             return this.schedulerType;
+        }
+
+        public DescribeClusterResponseBodyClusterInfo setSchedulerVersion(String schedulerVersion) {
+            this.schedulerVersion = schedulerVersion;
+            return this;
+        }
+        public String getSchedulerVersion() {
+            return this.schedulerVersion;
         }
 
         public DescribeClusterResponseBodyClusterInfo setSecurityGroupId(String securityGroupId) {

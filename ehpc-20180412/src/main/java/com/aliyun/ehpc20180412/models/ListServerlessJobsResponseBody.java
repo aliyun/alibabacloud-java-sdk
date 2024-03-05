@@ -96,7 +96,7 @@ public class ListServerlessJobsResponseBody extends TeaModel {
         public Boolean isArrayJob;
 
         /**
-         * <p>The ID of the serverless job or subtask (array job).</p>
+         * <p>The ID of the serverless job or the subtask (array job).</p>
          */
         @NameInMap("JobId")
         public String jobId;

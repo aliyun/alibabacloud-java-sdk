@@ -113,6 +113,12 @@ public class ListClustersMetaResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The version of E-HPC.</p>
+         */
+        @NameInMap("EhpcVersion")
+        public String ehpcVersion;
+
+        /**
          * <p>Indicates whether the cluster uses a plug-in. Valid values:</p>
          * <br>
          * <p>*   true</p>
@@ -224,6 +230,14 @@ public class ListClustersMetaResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setEhpcVersion(String ehpcVersion) {
+            this.ehpcVersion = ehpcVersion;
+            return this;
+        }
+        public String getEhpcVersion() {
+            return this.ehpcVersion;
         }
 
         public ListClustersMetaResponseBodyClustersClusterInfoSimple setHasPlugin(Boolean hasPlugin) {

@@ -271,7 +271,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersEnvironmentVars extends TeaModel {
         /**
-         * <p>The key of the environment variable.</p>
+         * <p>The name of the environment variable.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -413,7 +413,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public java.util.List<String> execs;
 
         /**
-         * <p>The minimum number of consecutive failures that must occur for the probe to be considered failed. Default value: 3.</p>
+         * <p>The minimum number of consecutive failures that must occur for the probe to be considered as failed. Default value: 3.</p>
          */
         @NameInMap("FailureThreshold")
         public Long failureThreshold;
@@ -425,7 +425,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersLivenessProbeHttpGet httpGet;
 
         /**
-         * <p>The number of seconds between the time when the startup of the container ends and the time when the check starts.</p>
+         * <p>The number of seconds after the container is started and before a liveness probe is initiated.</p>
          */
         @NameInMap("InitialDelaySeconds")
         public Long initialDelaySeconds;
@@ -437,7 +437,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public Long periodSeconds;
 
         /**
-         * <p>The minimum number of consecutive successes for the probe to be considered successful after having failed. Default value: 1. Set the value to 1.</p>
+         * <p>The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. Set the value to 1.</p>
          */
         @NameInMap("SuccessThreshold")
         public Long successThreshold;
@@ -449,7 +449,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersLivenessProbeTcpSocket tcpSocket;
 
         /**
-         * <p>The timeout period of a readiness probe. Default value: 1. Minimum value: 1. Unit: seconds.</p>
+         * <p>The timeout period of the check. Default value: 1. Minimum value: 1.</p>
          */
         @NameInMap("TimeoutSeconds")
         public Long timeoutSeconds;
@@ -779,7 +779,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public java.util.List<String> execs;
 
         /**
-         * <p>The minimum number of consecutive failures that must occur for the check to be considered failure. Default value: 3.</p>
+         * <p>The minimum number of consecutive failures that must occur for the check to be considered as failed. Default value: 3.</p>
          */
         @NameInMap("FailureThreshold")
         public Long failureThreshold;
@@ -791,19 +791,19 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersReadinessProbeHttpGet httpGet;
 
         /**
-         * <p>The number of seconds between the time when the startup of the container ends and the time when the check starts.</p>
+         * <p>The number of seconds after the container is started and before a liveness probe is initiated.</p>
          */
         @NameInMap("InitialDelaySeconds")
         public Long initialDelaySeconds;
 
         /**
-         * <p>The interval at which the check is performed. Unit: seconds. Default value: 10. Minimum value: 1.</p>
+         * <p>The interval at which the container is checked. Unit: seconds. Default value: 10. Minimum value: 1.</p>
          */
         @NameInMap("PeriodSeconds")
         public Long periodSeconds;
 
         /**
-         * <p>The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. Set the value to 1.</p>
+         * <p>The minimum number of consecutive successes for a failed liveness probe to be considered successful. Default value: 1. Set the value to 1.</p>
          */
         @NameInMap("SuccessThreshold")
         public Long successThreshold;
@@ -927,7 +927,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public Boolean readOnlyRootFilesystem;
 
         /**
-         * <p>The UID that is used to run the entry point of the container process.</p>
+         * <p>The user ID (UID) that is used to run the entry point of the container process.</p>
          */
         @NameInMap("RunAsUser")
         public Long runAsUser;
@@ -1059,7 +1059,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public java.util.List<String> commands;
 
         /**
-         * <p>The number of vCPUs of the container.</p>
+         * <p>The number of vCPUs.</p>
          */
         @NameInMap("Cpu")
         public Float cpu;
@@ -1089,7 +1089,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The policy for image pulling. Valid values:</p>
+         * <p>The policy to pull images. Valid values:</p>
          * <br>
          * <p>*   Always: Each time instances are created, image pulling is performed.</p>
          * <p>*   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</p>
@@ -1153,13 +1153,13 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersSecurityContext securityContext;
 
         /**
-         * <p>Indicates whether the container allocates buffer resources to standard input streams when the container runs. If you do not specify this parameter, an EOF error may occur when standard input streams in the init container are read. Default value: false.</p>
+         * <p>Indicates whether the container allocates buffer resources to standard input streams when the container runs. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.</p>
          */
         @NameInMap("Stdin")
         public Boolean stdin;
 
         /**
-         * <p>Indicates whether the container runtime closes the stdin channel after the stdin channel has been opened by a single attach session. If stdin is true, the stdin stream remains open across multiple attach sessions. If StdinOnce is set to true, stdin is opened on container start, remains empty until the first client attaches to stdin, and then is open and receives data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.</p>
+         * <p>Indicates whether the container runtime closes the stdin channel after the stdin channel has been opened by a single attach session. If stdin is true, the stdin stream remains open across multiple attach sessions. If StdinOnce is set to true, stdin is opened on container start, but remains empty until the first client attaches to stdin, and then remains open and receives data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.</p>
          */
         @NameInMap("StdinOnce")
         public Boolean stdinOnce;
@@ -1535,7 +1535,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The name of the object to which the event belongs.</p>
+         * <p>The name of the category to which the event belongs.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -1626,7 +1626,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public java.util.List<String> hostnames;
 
         /**
-         * <p>The IP address of the host.</p>
+         * <p>The IP address.</p>
          */
         @NameInMap("Ip")
         public String ip;
@@ -1674,7 +1674,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The message of the event.</p>
+         * <p>The message about the event.</p>
          */
         @NameInMap("Message")
         public String message;
@@ -1824,7 +1824,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersEnvironmentVars extends TeaModel {
         /**
-         * <p>The key of the environment variable.</p>
+         * <p>The name of the environment variable.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -2208,13 +2208,13 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public Long gpu;
 
         /**
-         * <p>The image of the container.</p>
+         * <p>The image.</p>
          */
         @NameInMap("Image")
         public String image;
 
         /**
-         * <p>The policy for image pulling.</p>
+         * <p>The policy to pull images.</p>
          */
         @NameInMap("ImagePullPolicy")
         public String imagePullPolicy;
@@ -2502,16 +2502,16 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public String diskVolumeDiskId;
 
         /**
-         * <p>The file system type of the disk volume.</p>
+         * <p>The type of the volume.</p>
          */
         @NameInMap("DiskVolumeFsType")
         public String diskVolumeFsType;
 
         /**
-         * <p>The storage media of emptyDir volume N. This parameter is empty by default, which indicates that the node file system is used as the storage media. Valid values:</p>
+         * <p>The storage media for the emptyDir volume. This parameter is empty by default, which indicates that the node file system is used as the storage media. Valid values:</p>
          * <br>
          * <p>*   Memory: uses memory as the storage media.</p>
-         * <p>*   LocalRaid0: forms local disks into RAID 0. This value is applicable only to scenarios in which an elastic container instance that has local disks mounted is created. For more information, see [Create an elastic container instance that has local disks mounted](~~114664~~).</p>
+         * <p>*   LocalRaid0: forms local disks into RAID 0. This value is valid only if an elastic container instance that has local disks mounted is created. For more information, see [Create an elastic container instance that has local disks mounted](~~114664~~).</p>
          */
         @NameInMap("EmptyDirVolumeMedium")
         public String emptyDirVolumeMedium;
@@ -2541,7 +2541,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public String flexVolumeOptions;
 
         /**
-         * <p>The path to the NFS volume.</p>
+         * <p>The path of the Network File System (NFS) volume.</p>
          */
         @NameInMap("NFSVolumePath")
         public String NFSVolumePath;
@@ -2553,7 +2553,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public Boolean NFSVolumeReadOnly;
 
         /**
-         * <p>The endpoint of the server when you set the Type parameter to NFSVolume.</p>
+         * <p>The endpoint of the server if you set Type to NFSVolume.</p>
          */
         @NameInMap("NFSVolumeServer")
         public String NFSVolumeServer;
@@ -2754,7 +2754,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public java.util.List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsEvents> events;
 
         /**
-         * <p>The time when the instance failed to run due to overdue payments. The beginning of the time range to query. Specify the time in the RFC 3339 standard. The time must be in UTC.</p>
+         * <p>The time when the instance failed to run due to overdue payments. The time follows the RFC 3339 standard and must be in UTC.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -2802,7 +2802,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public String ipv6Address;
 
         /**
-         * <p>The memory size of the instance. Unit: GiB.</p>
+         * <p>The memory size of the elastic container instance. Unit: GiB.</p>
          */
         @NameInMap("Memory")
         public Float memory;
@@ -2820,7 +2820,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. If you do not specify a resource group when you create an elastic container instance, the system automatically adds the instance to the default resource group in your account.</p>
+         * <p>The ID of the resource group to which the cluster belongs. If you do not specify a resource group when you create an elastic container instance, the system automatically adds the instance to the default resource group in your account.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -2830,13 +2830,13 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
          * <br>
          * <p>*   Always: Always restarts the instance if a container in the instance exits upon termination.</p>
          * <p>*   Never: Never restarts the instance if a container in the instance exits upon termination.</p>
-         * <p>*   OnFailure: Restarts the instance only if a container in the instance exists upon failure with a status code of non-zero.</p>
+         * <p>*   OnFailure: Restarts the instance when the last start failed.</p>
          */
         @NameInMap("RestartPolicy")
         public String restartPolicy;
 
         /**
-         * <p>The ID of the security group to which the instances belong.</p>
+         * <p>The ID of the security group.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
@@ -2844,23 +2844,23 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         /**
          * <p>The maximum hourly price for the preemptible instance.</p>
          * <br>
-         * <p>This parameter is returned only if you set SpotStrategy to SpotWithPriceLimit.</p>
+         * <p>This parameter is returned only if you set the SpotStrategy parameter to SpotWithPriceLimit.</p>
          */
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
 
         /**
-         * <p>The bidding policy for the instance. Valid values:</p>
+         * <p>The bidding policy of the instance. Valid values:</p>
          * <br>
-         * <p>*   NoSpot: The node is a regular pay-as-you-go instance.</p>
-         * <p>*   SpotWithPriceLimit: The node is a preemptible instance that has a user-defined maximum hourly price.</p>
-         * <p>*   SpotAsPriceGo: The node is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</p>
+         * <p>*   NoSpot: The instance is a regular pay-as-you-go instance.</p>
+         * <p>*   SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.</p>
+         * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</p>
          */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
         /**
-         * <p>The status of the instance. Valid value:</p>
+         * <p>The status of the instance. Valid values:</p>
          * <br>
          * <p>*   Pending: The instance is being started.</p>
          * <p>*   Running: The instance is running.</p>
@@ -2877,7 +2877,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when all containers exited on success. The beginning of the time range to query. Specify the time in the RFC 3339 standard. The time must be in UTC.</p>
+         * <p>The time when all containers exited on success. The time follows the RFC 3339 standard and must be in UTC.</p>
          */
         @NameInMap("SucceededTime")
         public String succeededTime;
@@ -2925,7 +2925,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         public java.util.List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsVolumes> volumes;
 
         /**
-         * <p>The ID of the VPC to which the elastic container instances belong.</p>
+         * <p>The ID of the virtual private cloud (VPC) to which the elastic container instance belongs.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

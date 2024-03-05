@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAutoScaleConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The interval between two consecutive rounds of scale-out. Unit: minutes. Valid values: 2 to 10.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

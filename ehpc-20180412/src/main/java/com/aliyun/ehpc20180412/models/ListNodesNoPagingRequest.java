@@ -25,7 +25,7 @@ public class ListNodesNoPagingRequest extends TeaModel {
      * <p>*   Login: logon node</p>
      * <p>*   Compute: compute node</p>
      * <br>
-     * <p>Default value: Compute</p>
+     * <p>Default value: Compute.</p>
      */
     @NameInMap("Role")
     public String role;
@@ -36,7 +36,7 @@ public class ListNodesNoPagingRequest extends TeaModel {
      * <p>*   Forward: sorts the nodes in chronological order.</p>
      * <p>*   Backward: sorts the nodes in reverse chronological order.</p>
      * <br>
-     * <p>Default value: Forward</p>
+     * <p>Default value: Forward.</p>
      */
     @NameInMap("Sequence")
     public String sequence;

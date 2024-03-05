@@ -10,28 +10,23 @@ public class ApplyNodesResponseBody extends TeaModel {
     @NameInMap("Detail")
     public String detail;
 
-    /**
-     * <p>The ID of the Elastic Compute Service (ECS) instance.</p>
-     * <br>
-     * <p>>  AddNodes is an asynchronous API operation. If a request succeeds, a response is immediately generated before ECS instances are created. Therefore, the value of the parameter is null. You can call the [ListNodes](~~87161~~) operation to query the ID of the ECS instance.</p>
-     */
     @NameInMap("InstanceIds")
     public ApplyNodesResponseBodyInstanceIds instanceIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The task ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of the compute nodes that were created.</p>
+     * <p>The number of the compute nodes that are created.</p>
      */
     @NameInMap("SatisfiedAmount")
     public Integer satisfiedAmount;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

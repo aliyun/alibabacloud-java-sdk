@@ -232,6 +232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## [](#)Description
       * You can call the ApplyNodes operation to specify the number of compute nodes, the number of vCPUs, and the memory size when you add nodes to a cluster.
       *
       * @param request ApplyNodesRequest
@@ -259,6 +260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## [](#)Description
       * You can call the ApplyNodes operation to specify the number of compute nodes, the number of vCPUs, and the memory size when you add nodes to a cluster.
       *
       * @param request ApplyNodesRequest
@@ -458,7 +460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After a cluster is released, the pay-as-you-go nodes and the subscription nodes that have expired are automatically released. The subscription nodes that have not expired are retained. If you need to release the subscription nodes that have not expired, change their billing method to pay-as-you-go. Before you release a cluster, make sure that you will no longer use the cluster.
+      * After a cluster is released, the pay-as-you-go nodes and the subscription nodes that are expired are automatically released. The subscription nodes that are expired are retained. If you need to release subscription nodes that are not expired, change the billing method to pay-as-you-go. Before you release a cluster, make sure that you no longer use the cluster.
       *
       * @param request DeleteClusterRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -485,7 +487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After a cluster is released, the pay-as-you-go nodes and the subscription nodes that have expired are automatically released. The subscription nodes that have not expired are retained. If you need to release the subscription nodes that have not expired, change their billing method to pay-as-you-go. Before you release a cluster, make sure that you will no longer use the cluster.
+      * After a cluster is released, the pay-as-you-go nodes and the subscription nodes that are expired are automatically released. The subscription nodes that are expired are retained. If you need to release subscription nodes that are not expired, change the billing method to pay-as-you-go. Before you release a cluster, make sure that you no longer use the cluster.
       *
       * @param request DeleteClusterRequest
       * @return DeleteClusterResponse
@@ -1254,14 +1256,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getAccountingReportWithOptions(request, runtime);
     }
 
-    /**
-      * ## Debugging
-      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=EHPC\\&api=GetAutoScaleConfig\\&type=RPC\\&version=2018-04-12)
-      *
-      * @param request GetAutoScaleConfigRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetAutoScaleConfigResponse
-     */
     public GetAutoScaleConfigResponse getAutoScaleConfigWithOptions(GetAutoScaleConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1282,13 +1276,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAutoScaleConfigResponse());
     }
 
-    /**
-      * ## Debugging
-      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=EHPC\\&api=GetAutoScaleConfig\\&type=RPC\\&version=2018-04-12)
-      *
-      * @param request GetAutoScaleConfigRequest
-      * @return GetAutoScaleConfigResponse
-     */
     public GetAutoScaleConfigResponse getAutoScaleConfig(GetAutoScaleConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAutoScaleConfigWithOptions(request, runtime);

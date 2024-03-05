@@ -85,33 +85,33 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   true: ueses the default permission group. If you use the default permission group, access from all IP addresses are allowed. The default permission group and the permission rules in the default permission group cannot be deleted.</p>
+         * <p>*   true: uses the default permission group. If the permission group is the default one, all IP addresses are allowed to access the permission group, and users cannot delete the group and its rules.</p>
          * <p>*   false: does not use the default permission group.</p>
          */
         @NameInMap("AccessGroup")
         public String accessGroup;
 
         /**
-         * <p>The domain where the mount target resides.</p>
+         * <p>The domain in which the mount target resides.</p>
          */
         @NameInMap("MountTargetDomain")
         public String mountTargetDomain;
 
         /**
-         * <p>The network type of the cluster. Valid values:</p>
+         * <p>The network type. Valid values:</p>
          * <br>
-         * <p>*   vpc: Virtual Private Cloud (VPC)</p>
-         * <p>*   classic: the classic network</p>
+         * <p>*   vpc</p>
+         * <p>*   classic</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
-         * <p>The status of the mount target. Valid values:</p>
+         * <p>The state of the mount target. Valid values:</p>
          * <br>
          * <p>*   Active: The mount target is available.</p>
          * <p>*   Inactive: The mount target is unavailable.</p>
-         * <p>*   Pending: The mount target is being created or modified.</p>
+         * <p>*   Pending: The mount target is pending to be used.</p>
          * <p>*   Deleting: The mount target is being deleted.</p>
          */
         @NameInMap("Status")
@@ -252,13 +252,13 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         public Integer bandWidth;
 
         /**
-         * <p>The capacity of the file system. Unit: GiB.</p>
+         * <p>The capacity of the file system. Unit: GiB</p>
          */
         @NameInMap("Capacity")
         public Integer capacity;
 
         /**
-         * <p>The time at which the file system is created.</p>
+         * <p>The time when the file system was created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -270,15 +270,15 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         public String destription;
 
         /**
-         * <p>Specifies whether to encrypt the data in the file system.</p>
+         * <p>Indicates whether data in the file system is encrypted.</p>
          * <br>
-         * <p>You can use keys that are managed by Key Management Service (KMS) to encrypt the data that is stored in a file system. When you read and write the encrypted data, the data is automatically decrypted.</p>
+         * <p>You can use keys that are hosted by Key Management Service (KMS) to encrypt the data in a file system. When you read and write the encrypted data, the data is automatically decrypted.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   0 (default): The data in the file system is not encrypted.</p>
-         * <p>*   1: NAS-managed keys are used to encrypt the data in the file system. This value is valid only if the FileSystemType parameter is set to standard or extreme.</p>
-         * <p>*   2: KMS-managed keys are used to encrypt the data in the file system. This value is valid only if the FileSystemType parameter is set to extreme.</p>
+         * <p>*   0 (default): does not encrypt the data in the file system.</p>
+         * <p>*   1: encrypts data in the file system by using a NAS-managed key. This parameter is valid only if the FileSystemType parameter is set to standard or extreme.</p>
+         * <p>*   2: A KMS-managed key is used to encrypt the data in the file system. This parameter is valid only if the FileSystemType parameter is set to extreme.</p>
          */
         @NameInMap("EncryptType")
         public Integer encryptType;
@@ -290,21 +290,21 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         public String fileSystemId;
 
         /**
-         * <p>The type of the file system. Valid values:</p>
+         * <p>The type of the file system.</p>
          * <br>
-         * <p>*   standard: general-purpose NAS. extreme: Extreme NAS.</p>
+         * <p>*   Valid values: standard (General-purpose NAS file systems) and extreme (Extreme NAS file systems).</p>
          */
         @NameInMap("FileSystemType")
         public String fileSystemType;
 
         /**
-         * <p>The used storage of the NAS file system. Unit: byte.</p>
+         * <p>The used capacity of the NAS file system. Unit: bytes.</p>
          */
         @NameInMap("MeteredSize")
         public Integer meteredSize;
 
         /**
-         * <p>The mount targets.</p>
+         * <p>The list of mount targets.</p>
          */
         @NameInMap("MountTargetList")
         public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList mountTargetList;
@@ -318,7 +318,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         /**
          * <p>The protocol type of the file system. Valid values:</p>
          * <br>
-         * <p>*   NFS- SMB</p>
+         * <p>*   NFS-SMB</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
@@ -336,7 +336,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
          * <p>*   Running: The file system is available.</p>
          * <p>*   Stopped: The file system is unavailable.</p>
          * <p>*   Extending: The file system is being scaled out.</p>
-         * <p>*   Stopping: The file system is being disabled.</p>
+         * <p>*   Stopping: The file system is being stopped.</p>
          * <p>*   Deleting: The file system is being deleted.</p>
          */
         @NameInMap("Status")
@@ -345,13 +345,14 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         /**
          * <p>The storage type of the file system.</p>
          * <br>
-         * <p>*   Valid values when FileSystemType is set to standard: Capacity and Performance. Valid values when FileSystemType is set to extreme: standard and advance.</p>
+         * <p>*   Valid values if FileSystemType is set to standard: Capacity and Performance.</p>
+         * <p>*   Valid values if FileSystemType is set to extreme: standard and advance.</p>
          */
         @NameInMap("StorageType")
         public String storageType;
 
         /**
-         * <p>The VPC ID of the node.</p>
+         * <p>The ID of the VPC.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

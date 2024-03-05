@@ -15,11 +15,11 @@ public class AddExistedNodesRequest extends TeaModel {
     /**
      * <p>The ID of the image that is specified for the compute nodes. The image must meet the following requirements:</p>
      * <br>
-     * <p>*   The operating system that is specified by the image must be the same as that of the existing cluster nodes. For example, if the operating system of the cluster nodes is CentOS, you can select only a CentOS image.</p>
+     * <p>*   The operating system that is specified for the image must be the same as that of the existing cluster nodes. For example, if the operating system of the cluster nodes is CentOS, you can select only a CentOS image.</p>
      * <br>
-     * <p>> If you add nodes to a hybrid cloud cluster that supports multiple operating systems, you can select a Windows Server image or a CentOS image when the operating system of the cluster nodes is Windows.</p>
+     * <p>>  If you add nodes to a hybrid cloud cluster that supports multiple operating systems, you can select a Windows Server image or a CentOS image when the operating system of the cluster nodes is Windows.</p>
      * <br>
-     * <p>*   The major version of the image specified for the compute nodes that you want to add is the same as that of the image of the cluster. For example, if the version of the cluster image is CentOS 7.x, the version of the image specified for the compute nodes must be CentOS 7.x.</p>
+     * <p>*   The major version of the image specified for the compute nodes that you want to add must be the same as that of the image of the cluster. For example, if the version of the cluster image is CentOS 7.x, the version of the image specified for the compute nodes must be CentOS 7.x.</p>
      * <br>
      * <p>You can call the [ListImages](~~87213~~) and [ListCustomImages](~~87215~~) operations to query the image ID.</p>
      */
@@ -27,18 +27,21 @@ public class AddExistedNodesRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The type of the image. Valid values:</p>
+     * <p>The type of the images. Valid values:</p>
      * <br>
-     * <p>*   system: public image</p>
+     * <p>*   system: public image.</p>
      * <p>*   self: custom image</p>
      * <p>*   others: shared image</p>
      * <p>*   marketplace: Alibaba Cloud Marketplace image</p>
      * <br>
-     * <p>Default value: system</p>
+     * <p>Default value: system.</p>
      */
     @NameInMap("ImageOwnerAlias")
     public String imageOwnerAlias;
 
+    /**
+     * <p>The information about the node that you want to add.</p>
+     */
     @NameInMap("Instance")
     public java.util.List<AddExistedNodesRequestInstance> instance;
 

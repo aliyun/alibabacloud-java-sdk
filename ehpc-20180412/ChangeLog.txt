@@ -1,3 +1,10 @@
+2024-03-05 Version: 3.0.1
+- Update API ApplyNodes: add param UserData.
+- Update API DescribeCluster: update response param.
+- Update API InitializeEHPC: add param ServiceName.
+- Update API ListClustersMeta: update response param.
+
+
 2023-09-06 Version: 3.0.0
 - Generated java 2018-04-12 for EHPC.
 

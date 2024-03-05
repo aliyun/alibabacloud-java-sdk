@@ -5,17 +5,20 @@ import com.aliyun.tea.*;
 
 public class GetSchedulerInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID of the cluster.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The detailed settings of the scheduler.</p>
+     */
     @NameInMap("Scheduler")
     public java.util.List<GetSchedulerInfoRequestScheduler> scheduler;
 
@@ -50,7 +53,7 @@ public class GetSchedulerInfoRequest extends TeaModel {
 
     public static class GetSchedulerInfoRequestScheduler extends TeaModel {
         /**
-         * <p>The name of the scheduler. Valid values:</p>
+         * <p>The scheduler name. Valid values:</p>
          * <br>
          * <p>*   pbs</p>
          * <p>*   pbs19</p>
@@ -58,7 +61,7 @@ public class GetSchedulerInfoRequest extends TeaModel {
          * <p>*   slurm19</p>
          * <p>*   slurm20</p>
          * <br>
-         * <p>Valid values of N: 0 to 100</p>
+         * <p>Valid values of N: 0 to 100.</p>
          */
         @NameInMap("SchedName")
         public String schedName;

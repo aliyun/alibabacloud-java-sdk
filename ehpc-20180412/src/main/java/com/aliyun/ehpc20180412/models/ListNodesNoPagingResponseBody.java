@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListNodesNoPagingResponseBody extends TeaModel {
     /**
-     * <p>The information about nodes.</p>
+     * <p>The list of nodes.</p>
      */
     @NameInMap("Nodes")
     public ListNodesNoPagingResponseBodyNodes nodes;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,25 +39,25 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
 
     public static class ListNodesNoPagingResponseBodyNodesNodeInfo extends TeaModel {
         /**
-         * <p>The name of the node.</p>
+         * <p>The node name.</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
-         * <p>The instance type of the node.</p>
+         * <p>The node type.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -66,7 +66,7 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
          * <p>The status of the node. Valid values:</p>
          * <br>
          * <p>*   uninit: The node is being installed.</p>
-         * <p>*   exception: An exception has occurred on the node.</p>
+         * <p>*   exception: An exception occurred on the node.</p>
          * <p>*   running: The node is running.</p>
          * <p>*   initing: The node is being initialized.</p>
          * <p>*   releasing: The node is being released.</p>

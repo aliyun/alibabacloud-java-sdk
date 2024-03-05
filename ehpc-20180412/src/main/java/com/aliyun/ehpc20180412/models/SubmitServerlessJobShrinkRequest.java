@@ -7,9 +7,7 @@ public class SubmitServerlessJobShrinkRequest extends TeaModel {
     /**
      * <p>The configuration of the array job.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The index value of an array job is passed to the serverless job container by using the environment variable **EHPC_JOB_ARRAY_INDEX** to allow access to the array job from business programs.</p>
+     * <p>>  The value of an array job index is passed to a serverless job container through the environment variable `EHPC_ARRAY_TASK_ID`. Users can access the container from business programs.</p>
      */
     @NameInMap("ArrayProperties")
     public String arrayPropertiesShrink;
