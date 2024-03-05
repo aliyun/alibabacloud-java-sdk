@@ -4,15 +4,31 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListUsersAsyncRequest extends TeaModel {
+    /**
+     * <p>The ID of the asynchronous task.</p>
+     */
     @NameInMap("AsyncId")
     public String asyncId;
 
+    /**
+     * <p>The ID of the E-HPC cluster. You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The page number.\</p>
+     * <p>Pages start from page 1.\</p>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.\</p>
+     * <p>Valid values: 1 to 50.\</p>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

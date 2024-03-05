@@ -23,7 +23,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -187,9 +187,9 @@ public class ListNodesByQueueResponseBody extends TeaModel {
         public String addTime;
 
         /**
-         * <p>The mode in which the node was added. Valid values:</p>
+         * <p>The mode in which the node is created. Valid values:</p>
          * <br>
-         * <p>*   manual: The node was manually added.</p>
+         * <p>*   manual: The node is manually added.</p>
          * <p>*   autoscale: The node is automatically added.</p>
          */
         @NameInMap("CreateMode")
@@ -214,7 +214,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The name of the node.</p>
+         * <p>The node name.</p>
          */
         @NameInMap("HostName")
         public String hostName;
@@ -226,13 +226,13 @@ public class ListNodesByQueueResponseBody extends TeaModel {
         public Boolean htEnabled;
 
         /**
-         * <p>The ID of the ECS instance.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
@@ -257,8 +257,8 @@ public class ListNodesByQueueResponseBody extends TeaModel {
         /**
          * <p>The location where the node is deployed. Valid values:</p>
          * <br>
-         * <p>*   OnPremise: The node is deployed on a hybrid cloud.</p>
-         * <p>*   PublicCloud: The node is deployed on a public cloud.</p>
+         * <p>*   OnPremise: The cluster is deployed on a hybrid cloud.</p>
+         * <p>*   PublicCloud: The cluster is deployed on a public cloud.</p>
          */
         @NameInMap("Location")
         public String location;
@@ -266,10 +266,10 @@ public class ListNodesByQueueResponseBody extends TeaModel {
         /**
          * <p>The reason why the node is locked. Valid values:</p>
          * <br>
-         * <p>*   financial: The node is locked due to overdue payments.</p>
-         * <p>*   security: The node is locked due to security reasons.</p>
-         * <p>*   recycling: The preemptible node is locked and pending release.</p>
-         * <p>*   dedicatedhostfinancial: The node is locked due to the overdue payments of the dedicated host.</p>
+         * <p>*   financial: The instance is locked due to overdue payments.</p>
+         * <p>*   security: The node is locked for security reasons.</p>
+         * <p>*   recycling: The preemptible instance is locked and pending release.</p>
+         * <p>*   dedicatedhostfinancial: The ECS instance is locked due to overdue payments of the dedicated host.</p>
          * <br>
          * <p>By default, an empty string is returned.</p>
          */
@@ -283,17 +283,17 @@ public class ListNodesByQueueResponseBody extends TeaModel {
         public String publicIpAddress;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The preemption policy for the Elastic Compute Service (ECS) instance. Valid values:</p>
+         * <p>The preemption policy of the instance. Valid values:</p>
          * <br>
-         * <p>*   NoSpot: applies to regular pay-as-you-go instances.</p>
-         * <p>*   SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.</p>
-         * <p>*   SpotAsPriceGo: The instances of the compute node are preemptible instances. The price of these instances is based on the current market price.</p>
+         * <p>*   NoSpot: The instance is created as a pay-as-you-go instance.</p>
+         * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
+         * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</p>
          */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
@@ -310,8 +310,8 @@ public class ListNodesByQueueResponseBody extends TeaModel {
          * <p>*   uninit: The node is not initialized.</p>
          * <p>*   init: The node is being initialized.</p>
          * <p>*   ready: The node is ready.</p>
-         * <p>*   running: The node is running.</p>
-         * <p>*   exception: An exception has occurred on the node.</p>
+         * <p>*   running: The cluster is running.</p>
+         * <p>*   exception: An exception occurred on the node.</p>
          * <p>*   untracking: The node is not added to the cluster.</p>
          */
         @NameInMap("Status")
@@ -330,7 +330,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
         public ListNodesByQueueResponseBodyNodesNodeInfoUsedResources usedResources;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -342,13 +342,13 @@ public class ListNodesByQueueResponseBody extends TeaModel {
         public String version;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The VPC ID of the node.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID of the node.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

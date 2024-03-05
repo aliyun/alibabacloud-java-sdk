@@ -47,7 +47,7 @@ public class ModifyImageGatewayConfigRequest extends TeaModel {
     public String imageExpirationTimeout;
 
     /**
-     * <p>The timeout period for pulling images.</p>
+     * <p>The timeout period for pulling images. Unit: seconds.</p>
      */
     @NameInMap("PullUpdateTimeout")
     public Integer pullUpdateTimeout;

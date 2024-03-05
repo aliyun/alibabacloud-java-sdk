@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SetSchedulerInfoResponseBody extends TeaModel {
     /**
-     * <p>The response message.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

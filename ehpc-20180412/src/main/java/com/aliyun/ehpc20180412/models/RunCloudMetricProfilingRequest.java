@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunCloudMetricProfilingRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the E-HPC cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -13,25 +13,23 @@ public class RunCloudMetricProfilingRequest extends TeaModel {
     /**
      * <p>The duration of the profiling process. Unit: seconds.</p>
      * <br>
-     * <p>Value values: 10 to 300</p>
+     * <p>Value values: 10 to 300.</p>
      * <br>
-     * <p>Default value: 30</p>
+     * <p>Default value: 30.</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
     /**
-     * <p>The sampling frequency. Unit: Hz</p>
+     * <p>The sampling frequency. Unit: Hz. Valid values: 1 to 2000.</p>
      * <br>
-     * <p>Valid values: 1 to 2000</p>
-     * <br>
-     * <p>Default value: 2000</p>
+     * <p>Default value: 2000.</p>
      */
     @NameInMap("Freq")
     public Integer freq;
 
     /**
-     * <p>The name of the host.</p>
+     * <p>The hostname.</p>
      */
     @NameInMap("HostName")
     public String hostName;
@@ -43,7 +41,7 @@ public class RunCloudMetricProfilingRequest extends TeaModel {
     public Integer processId;
 
     /**
-     * <p>The ID of the region where the cluster resides.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

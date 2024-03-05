@@ -39,7 +39,7 @@ public class UpdateClusterVolumesRequest extends TeaModel {
 
     public static class UpdateClusterVolumesRequestAdditionalVolumesRoles extends TeaModel {
         /**
-         * <p>The node type on which the additional mounted file system N is mounted. Valid values:</p>
+         * <p>The node type on which the additional mounted file system is mounted. Valid values:</p>
          * <br>
          * <p>*   Manager: management node</p>
          * <p>*   Login: logon node</p>
@@ -65,19 +65,19 @@ public class UpdateClusterVolumesRequest extends TeaModel {
 
     public static class UpdateClusterVolumesRequestAdditionalVolumes extends TeaModel {
         /**
-         * <p>The queue name of the additional mounted file system N.</p>
+         * <p>The queue name of the attached mounted file system.</p>
          */
         @NameInMap("JobQueue")
         public String jobQueue;
 
         /**
-         * <p>The on-premises mount directory for the additional mounted file system N.</p>
+         * <p>The on-premises mount directory for the additional mounted file system.</p>
          */
         @NameInMap("LocalDirectory")
         public String localDirectory;
 
         /**
-         * <p>The storage location of the additional mounted file system N. Valid values:</p>
+         * <p>The storage location of the attached mounted file system. Valid values:</p>
          * <br>
          * <p>*   OnPremise: The cluster is deployed on a hybrid cloud.</p>
          * <p>*   PublicCloud: The cluster is deployed on a public cloud.</p>
@@ -86,7 +86,7 @@ public class UpdateClusterVolumesRequest extends TeaModel {
         public String location;
 
         /**
-         * <p>The remote directory to be mounted by the additional mounted file system N.</p>
+         * <p>The remote directory to be mounted by the additional mounted file system.</p>
          */
         @NameInMap("RemoteDirectory")
         public String remoteDirectory;
@@ -98,22 +98,25 @@ public class UpdateClusterVolumesRequest extends TeaModel {
         public java.util.List<UpdateClusterVolumesRequestAdditionalVolumesRoles> roles;
 
         /**
-         * <p>The ID of the additional mounted file system N.</p>
+         * <p>The ID of the additional mounted file system.</p>
          */
         @NameInMap("VolumeId")
         public String volumeId;
 
+        /**
+         * <p>The mount option of the attached mounted file system.</p>
+         */
         @NameInMap("VolumeMountOption")
         public String volumeMountOption;
 
         /**
-         * <p>The domain name of the mount target for the additional mounted file system N.</p>
+         * <p>The domain name of the mount target for the additional mounted file system.</p>
          */
         @NameInMap("VolumeMountpoint")
         public String volumeMountpoint;
 
         /**
-         * <p>The protocol type of the additional mounted file system N. Valid values:</p>
+         * <p>The protocol type of the additional mounted file system. Valid values:</p>
          * <br>
          * <p>*   NFS</p>
          * <p>*   SMB</p>
@@ -122,9 +125,7 @@ public class UpdateClusterVolumesRequest extends TeaModel {
         public String volumeProtocol;
 
         /**
-         * <p>The type of the additional mounted file system N. Currently, only NAS is supported.</p>
-         * <br>
-         * <p>Valid values of N: 1 to 10.</p>
+         * <p>The type of the additional mounted file system. Only NAS is supported.</p>
          */
         @NameInMap("VolumeType")
         public String volumeType;

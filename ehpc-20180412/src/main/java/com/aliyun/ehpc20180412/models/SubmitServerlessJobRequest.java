@@ -7,9 +7,7 @@ public class SubmitServerlessJobRequest extends TeaModel {
     /**
      * <p>The configuration of the array job.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The index value of an array job is passed to the serverless job container by using the environment variable **EHPC_JOB_ARRAY_INDEX** to allow access to the array job from business programs.</p>
+     * <p>>  The value of an array job index is passed to a serverless job container through the environment variable `EHPC_ARRAY_TASK_ID`. Users can access the container from business programs.</p>
      */
     @NameInMap("ArrayProperties")
     public SubmitServerlessJobRequestArrayProperties arrayProperties;
@@ -254,7 +252,7 @@ public class SubmitServerlessJobRequest extends TeaModel {
         public Long indexEnd;
 
         /**
-         * <p>The starting value of the array job index. Valid values: 0 to 4999.</p>
+         * <p>The start value of the array job index. Valid values: 0 to 4999.</p>
          */
         @NameInMap("IndexStart")
         public Long indexStart;
@@ -262,7 +260,7 @@ public class SubmitServerlessJobRequest extends TeaModel {
         /**
          * <p>The interval of the array job index.</p>
          * <br>
-         * <p>>  If the IndexStart of the array job is set to 1, IndexEnd is set to 5, and IndexStep is set to 2, the array job contains three subtasks. The subtask indexes are 1, 3, and 5.</p>
+         * <p>>  If the array job property is IndexStart=1,IndexEnd=5, and IndexStep=2, the array job contains three subtasks. The values of the subtask indexes are 1,3, and 5.</p>
          */
         @NameInMap("IndexStep")
         public Long indexStep;
@@ -299,9 +297,6 @@ public class SubmitServerlessJobRequest extends TeaModel {
     }
 
     public static class SubmitServerlessJobRequestContainerEnvironmentVar extends TeaModel {
-        /**
-         * <p>环境变量名。长度为1~128位。格式要求：[0-9a-zA-Z]，以及下划线，不能以数字开头。</p>
-         */
         @NameInMap("Key")
         public String key;
 
@@ -335,19 +330,9 @@ public class SubmitServerlessJobRequest extends TeaModel {
     }
 
     public static class SubmitServerlessJobRequestContainerVolumeMount extends TeaModel {
-        /**
-         * <p>使用FlexVolume插件挂载数据卷时的驱动类型。取值范围如下：</p>
-         * <br>
-         * <p>alicloud/nas：挂载NAS。</p>
-         * <br>
-         * <p>alicloud/oss：挂载OSS。</p>
-         */
         @NameInMap("FlexVolumeDriver")
         public String flexVolumeDriver;
 
-        /**
-         * <p>FlexVolume对象选项列表。为KV形式，采用JSON传递。</p>
-         */
         @NameInMap("FlexVolumeOptions")
         public String flexVolumeOptions;
 

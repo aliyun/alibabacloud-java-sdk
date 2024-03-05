@@ -523,6 +523,9 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The resource group ID.You can call the ListResourceGroups operation to query the IDs of resource groups.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

@@ -11,7 +11,7 @@ public class DescribeJobResponseBody extends TeaModel {
     public DescribeJobResponseBodyMessage message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

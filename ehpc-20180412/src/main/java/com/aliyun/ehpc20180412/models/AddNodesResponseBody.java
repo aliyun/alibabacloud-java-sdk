@@ -4,6 +4,9 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class AddNodesResponseBody extends TeaModel {
+    /**
+     * <p>The instance IDs.</p>
+     */
     @NameInMap("InstanceIds")
     public AddNodesResponseBodyInstanceIds instanceIds;
 

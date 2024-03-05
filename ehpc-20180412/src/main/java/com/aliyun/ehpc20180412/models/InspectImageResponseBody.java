@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class InspectImageResponseBody extends TeaModel {
     /**
-     * <p>The status of the image.</p>
+     * <p>The state of the container image.</p>
      */
     @NameInMap("ImageStatus")
     public InspectImageResponseBodyImageStatus imageStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

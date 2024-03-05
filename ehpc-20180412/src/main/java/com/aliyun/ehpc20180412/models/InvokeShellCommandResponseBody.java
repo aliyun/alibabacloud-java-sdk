@@ -10,6 +10,9 @@ public class InvokeShellCommandResponseBody extends TeaModel {
     @NameInMap("CommandId")
     public String commandId;
 
+    /**
+     * <p>The list of IDs of the instances on which you want to run the command.</p>
+     */
     @NameInMap("InstanceIds")
     public InvokeShellCommandResponseBodyInstanceIds instanceIds;
 

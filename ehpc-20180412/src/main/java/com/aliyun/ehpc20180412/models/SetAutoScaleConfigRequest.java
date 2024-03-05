@@ -18,6 +18,9 @@ public class SetAutoScaleConfigRequest extends TeaModel {
     @NameInMap("ComputeEnableHt")
     public Boolean computeEnableHt;
 
+    /**
+     * <p>The Domain Name System (DNS) settings.</p>
+     */
     @NameInMap("DnsConfig")
     public String dnsConfig;
 
@@ -568,6 +571,10 @@ public class SetAutoScaleConfigRequest extends TeaModel {
     }
 
     public static class SetAutoScaleConfigRequestQueues extends TeaModel {
+        /**
+         * <p>Automatic Configuration of the Minimum Node Number for Each Scale-out.</p>
+         * <p>If you set this parameter to true, the minimum number of nodes for each scale-out is equal to the number of nodes required by the job. The maximum number is 99.</p>
+         */
         @NameInMap("AutoMinNodesPerCycle")
         public Boolean autoMinNodesPerCycle;
 

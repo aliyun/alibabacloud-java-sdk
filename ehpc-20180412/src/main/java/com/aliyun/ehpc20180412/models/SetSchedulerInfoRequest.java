@@ -5,27 +5,36 @@ import com.aliyun.tea.*;
 
 public class SetSchedulerInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the E-HPC cluster.</p>
      * <br>
      * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The information about PBS schedulers.</p>
+     */
     @NameInMap("PbsInfo")
     public java.util.List<SetSchedulerInfoRequestPbsInfo> pbsInfo;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <br>
      * <p>You can call the [ListRegions](~~188593~~) operation to obtain the IDs of regions supported by Elastic High Performance Computing (E-HPC).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The scheduler information.</p>
+     */
     @NameInMap("Scheduler")
     public java.util.List<SetSchedulerInfoRequestScheduler> scheduler;
 
+    /**
+     * <p>The information about Slurm schedulers.</p>
+     */
     @NameInMap("SlurmInfo")
     public java.util.List<SetSchedulerInfoRequestSlurmInfo> slurmInfo;
 
@@ -217,19 +226,23 @@ public class SetSchedulerInfoRequest extends TeaModel {
     }
 
     public static class SetSchedulerInfoRequestPbsInfo extends TeaModel {
+        /**
+         * <p>The information about limits on the queue.</p>
+         */
         @NameInMap("AclLimit")
         public java.util.List<SetSchedulerInfoRequestPbsInfoAclLimit> aclLimit;
 
         /**
-         * <p>The retention period of jobs. After the retention period is exceeded, job data is deleted. Unit: days.</p>
-         * <br>
-         * <p>Valid values: 1 to 30</p>
-         * <br>
-         * <p>Default value: 14</p>
+         * <p>The retention period of jobs. After the retention period is exceeded, job data is deleted. Unit: days.\</p>
+         * <p>Valid values: 1 to 30.\</p>
+         * <p>Default value: 14.</p>
          */
         @NameInMap("JobHistoryDuration")
         public Integer jobHistoryDuration;
 
+        /**
+         * <p>The information about the nodes that are used by cluster users.</p>
+         */
         @NameInMap("ResourceLimit")
         public java.util.List<SetSchedulerInfoRequestPbsInfoResourceLimit> resourceLimit;
 
@@ -240,7 +253,7 @@ public class SetSchedulerInfoRequest extends TeaModel {
          * <br>
          * <p>A scheduling period is the interval between two consecutive running jobs. If you set SchedInterval to 60, another job can be run 60 seconds after a job starts running.</p>
          * <br>
-         * <p>Default value: 60</p>
+         * <p>Default value: 60.</p>
          */
         @NameInMap("SchedInterval")
         public Integer schedInterval;
@@ -322,7 +335,7 @@ public class SetSchedulerInfoRequest extends TeaModel {
          * <p>*   slurm19</p>
          * <p>*   slurm20</p>
          * <br>
-         * <p>>  If you set Scheduler.N.SchedName to pbs or pbs19, you must specify at least one of the PbsInfo.N.SchedInterval, PbsInfo.N.JobHistoryDuration, and PbsInfo.N.AclLimit parameters. If you set Scheduler.N.SchedName to slurm, slurm19, or slurm20, you must specify at least one of the SlurmInfo.N.SchedInterval and SlurmInfo.N.BackfillInterval parameters.</p>
+         * <p>>  If you set Scheduler.N.SchedName to pbs or pbs19, you must specify at least one of the PbsInfo.N.SchedInterval, PbsInfo.N.JobHistoryDuration, PbsInfo.N.ResourceLimit, and PbsInfo.N.AclLimit parameters. If you set Scheduler.N.SchedName to slurm, slurm19, or slurm20, you must specify at least one of the SlurmInfo.N.SchedInterval and SlurmInfo.N.BackfillInterval parameters.</p>
          */
         @NameInMap("SchedName")
         public String schedName;
@@ -346,7 +359,7 @@ public class SetSchedulerInfoRequest extends TeaModel {
         /**
          * <p>The backfill scheduling period. Unit: seconds.</p>
          * <br>
-         * <p>Default value: 60</p>
+         * <p>Default value: 60.</p>
          */
         @NameInMap("BackfillInterval")
         public Integer backfillInterval;
@@ -356,7 +369,7 @@ public class SetSchedulerInfoRequest extends TeaModel {
          * <br>
          * <p>SchedInterval specifies the scheduling period. Unit: seconds.</p>
          * <br>
-         * <p>Default value: 60</p>
+         * <p>Default value: 60.</p>
          */
         @NameInMap("SchedInterval")
         public Integer schedInterval;

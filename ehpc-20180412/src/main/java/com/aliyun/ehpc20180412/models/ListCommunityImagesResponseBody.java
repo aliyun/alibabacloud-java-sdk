@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCommunityImagesResponseBody extends TeaModel {
     /**
-     * <p>The list of community images, including custom images and shared images.</p>
+     * <p>The list of custom images and shared images that are supported by the E-HPC.</p>
      */
     @NameInMap("Images")
     public ListCommunityImagesResponseBodyImages images;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -48,7 +48,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
         public String architecture;
 
         /**
-         * <p>The tag of the OS image.</p>
+         * <p>The operating system tag of the image.</p>
          */
         @NameInMap("OsTag")
         public String osTag;
@@ -134,13 +134,13 @@ public class ListCommunityImagesResponseBody extends TeaModel {
         public String baseOsTag;
 
         /**
-         * <p>The tag of the OS image.</p>
+         * <p>The operating system tag of the image.</p>
          */
         @NameInMap("OsTag")
         public String osTag;
 
         /**
-         * <p>The operating system.</p>
+         * <p>The OS.</p>
          */
         @NameInMap("Platform")
         public String platform;
@@ -212,19 +212,19 @@ public class ListCommunityImagesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
-         * <p>The name of the image.</p>
+         * <p>The image name.</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
-         * <p>The type of the image. Valid values:</p>
+         * <p>The image type. Valid values:</p>
          * <br>
          * <p>*   self: custom image</p>
          * <p>*   others: shared image</p>
@@ -255,7 +255,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
         public String pricingCycle;
 
         /**
-         * <p>The Alibaba Cloud Marketplace product code of the image.</p>
+         * <p>The product code in Alibaba Cloud Marketplace.</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
@@ -276,12 +276,12 @@ public class ListCommunityImagesResponseBody extends TeaModel {
         public String skuCode;
 
         /**
-         * <p>The status of the image. Valid values:</p>
+         * <p>The state of the image. Valid values:</p>
          * <br>
-         * <p>*   UnAvailable: The image is unavailable.</p>
-         * <p>*   Available: The image is available.</p>
-         * <p>*   Creating: The image is being created.</p>
-         * <p>*   CreateFailed: The image failed to be created.</p>
+         * <p>*   UnAvailable</p>
+         * <p>*   Available</p>
+         * <p>*   Creating</p>
+         * <p>*   CreateFailed</p>
          */
         @NameInMap("Status")
         public String status;

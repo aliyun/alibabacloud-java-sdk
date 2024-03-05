@@ -4,11 +4,14 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListNodesByQueueRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable asynchronous query.</p>
+     */
     @NameInMap("Async")
     public Boolean async;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the E-HPC cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -22,7 +25,7 @@ public class ListNodesByQueueRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
      * <br>
-     * <p>Default value: 10</p>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

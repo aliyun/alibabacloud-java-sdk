@@ -119,6 +119,9 @@ public class AddNodesRequest extends TeaModel {
     @NameInMap("DataDisks")
     public java.util.List<AddNodesRequestDataDisks> dataDisks;
 
+    /**
+     * <p>The information about Domain Name System (DNS) settings.</p>
+     */
     @NameInMap("DnsConfig")
     public String dnsConfig;
 

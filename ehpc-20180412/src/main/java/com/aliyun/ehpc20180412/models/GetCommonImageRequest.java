@@ -4,15 +4,27 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetCommonImageRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster to which you want to store the image.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The image type.</p>
+     */
     @NameInMap("ContainType")
     public String containType;
 
+    /**
+     * <p>The name of the image that you want to obtain.</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
+    /**
+     * <p>The region ID of the cluster. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
