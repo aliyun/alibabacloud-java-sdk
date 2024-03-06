@@ -82,6 +82,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CopywritingQAShrinkRequest request = new CopywritingQAShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.histories)) {
+            request.historiesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.histories, "histories", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.history)) {
             request.historyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.history, "history", "json");
         }
@@ -89,6 +93,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
             query.put("accountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.historiesShrink)) {
+            query.put("histories", request.historiesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.historyShrink)) {

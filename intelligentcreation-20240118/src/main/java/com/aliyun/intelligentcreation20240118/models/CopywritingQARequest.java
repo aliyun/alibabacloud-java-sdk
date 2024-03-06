@@ -7,7 +7,11 @@ public class CopywritingQARequest extends TeaModel {
     @NameInMap("accountId")
     public String accountId;
 
+    @NameInMap("histories")
+    public java.util.List<CopywritingQARequestHistories> histories;
+
     @NameInMap("history")
+    @Deprecated
     public CopywritingQARequestHistory history;
 
     @NameInMap("question")
@@ -33,6 +37,14 @@ public class CopywritingQARequest extends TeaModel {
     }
     public String getAccountId() {
         return this.accountId;
+    }
+
+    public CopywritingQARequest setHistories(java.util.List<CopywritingQARequestHistories> histories) {
+        this.histories = histories;
+        return this;
+    }
+    public java.util.List<CopywritingQARequestHistories> getHistories() {
+        return this.histories;
     }
 
     public CopywritingQARequest setHistory(CopywritingQARequestHistory history) {
@@ -73,6 +85,36 @@ public class CopywritingQARequest extends TeaModel {
     }
     public String getSubAccountId() {
         return this.subAccountId;
+    }
+
+    public static class CopywritingQARequestHistories extends TeaModel {
+        @NameInMap("bot")
+        public String bot;
+
+        @NameInMap("user")
+        public String user;
+
+        public static CopywritingQARequestHistories build(java.util.Map<String, ?> map) throws Exception {
+            CopywritingQARequestHistories self = new CopywritingQARequestHistories();
+            return TeaModel.build(map, self);
+        }
+
+        public CopywritingQARequestHistories setBot(String bot) {
+            this.bot = bot;
+            return this;
+        }
+        public String getBot() {
+            return this.bot;
+        }
+
+        public CopywritingQARequestHistories setUser(String user) {
+            this.user = user;
+            return this;
+        }
+        public String getUser() {
+            return this.user;
+        }
+
     }
 
     public static class CopywritingQARequestHistory extends TeaModel {

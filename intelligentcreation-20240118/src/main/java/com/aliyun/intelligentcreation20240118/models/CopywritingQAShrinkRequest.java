@@ -7,7 +7,11 @@ public class CopywritingQAShrinkRequest extends TeaModel {
     @NameInMap("accountId")
     public String accountId;
 
+    @NameInMap("histories")
+    public String historiesShrink;
+
     @NameInMap("history")
+    @Deprecated
     public String historyShrink;
 
     @NameInMap("question")
@@ -33,6 +37,14 @@ public class CopywritingQAShrinkRequest extends TeaModel {
     }
     public String getAccountId() {
         return this.accountId;
+    }
+
+    public CopywritingQAShrinkRequest setHistoriesShrink(String historiesShrink) {
+        this.historiesShrink = historiesShrink;
+        return this;
+    }
+    public String getHistoriesShrink() {
+        return this.historiesShrink;
     }
 
     public CopywritingQAShrinkRequest setHistoryShrink(String historyShrink) {
