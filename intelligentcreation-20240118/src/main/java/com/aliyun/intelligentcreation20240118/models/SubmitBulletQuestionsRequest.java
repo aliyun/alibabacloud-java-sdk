@@ -63,6 +63,9 @@ public class SubmitBulletQuestionsRequest extends TeaModel {
         @NameInMap("id")
         public String id;
 
+        @NameInMap("time")
+        public Long time;
+
         @NameInMap("username")
         public String username;
 
@@ -85,6 +88,14 @@ public class SubmitBulletQuestionsRequest extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public SubmitBulletQuestionsRequestQuestions setTime(Long time) {
+            this.time = time;
+            return this;
+        }
+        public Long getTime() {
+            return this.time;
         }
 
         public SubmitBulletQuestionsRequestQuestions setUsername(String username) {
