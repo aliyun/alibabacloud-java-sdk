@@ -3,7 +3,7 @@ package com.aliyun.carbonfootprint20230711.models;
 
 import com.aliyun.tea.*;
 
-public class GetSummaryDataRequest extends TeaModel {
+public class GetSummaryDataShrinkRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
@@ -14,14 +14,14 @@ public class GetSummaryDataRequest extends TeaModel {
     public String startTime;
 
     @NameInMap("Uids")
-    public java.util.List<String> uids;
+    public String uidsShrink;
 
-    public static GetSummaryDataRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetSummaryDataRequest self = new GetSummaryDataRequest();
+    public static GetSummaryDataShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetSummaryDataShrinkRequest self = new GetSummaryDataShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetSummaryDataRequest setEndTime(String endTime) {
+    public GetSummaryDataShrinkRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetSummaryDataRequest extends TeaModel {
         return this.endTime;
     }
 
-    public GetSummaryDataRequest setGroup(String group) {
+    public GetSummaryDataShrinkRequest setGroup(String group) {
         this.group = group;
         return this;
     }
@@ -37,7 +37,7 @@ public class GetSummaryDataRequest extends TeaModel {
         return this.group;
     }
 
-    public GetSummaryDataRequest setStartTime(String startTime) {
+    public GetSummaryDataShrinkRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -45,12 +45,12 @@ public class GetSummaryDataRequest extends TeaModel {
         return this.startTime;
     }
 
-    public GetSummaryDataRequest setUids(java.util.List<String> uids) {
-        this.uids = uids;
+    public GetSummaryDataShrinkRequest setUidsShrink(String uidsShrink) {
+        this.uidsShrink = uidsShrink;
         return this;
     }
-    public java.util.List<String> getUids() {
-        return this.uids;
+    public String getUidsShrink() {
+        return this.uidsShrink;
     }
 
 }

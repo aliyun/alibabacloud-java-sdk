@@ -35,6 +35,12 @@ public class GetSummaryDataResponseBody extends TeaModel {
     }
 
     public static class GetSummaryDataResponseBodyData extends TeaModel {
+        @NameInMap("AircraftConsumptionConversion")
+        public String aircraftConsumptionConversion;
+
+        @NameInMap("CarConsumptionConversion")
+        public String carConsumptionConversion;
+
         @NameInMap("LastMonthConsumptionConversion")
         public String lastMonthConsumptionConversion;
 
@@ -56,9 +62,28 @@ public class GetSummaryDataResponseBody extends TeaModel {
         @NameInMap("TotalCarbonConsumptionConversion")
         public String totalCarbonConsumptionConversion;
 
+        @NameInMap("TreeConsumptionConversion")
+        public String treeConsumptionConversion;
+
         public static GetSummaryDataResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetSummaryDataResponseBodyData self = new GetSummaryDataResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetSummaryDataResponseBodyData setAircraftConsumptionConversion(String aircraftConsumptionConversion) {
+            this.aircraftConsumptionConversion = aircraftConsumptionConversion;
+            return this;
+        }
+        public String getAircraftConsumptionConversion() {
+            return this.aircraftConsumptionConversion;
+        }
+
+        public GetSummaryDataResponseBodyData setCarConsumptionConversion(String carConsumptionConversion) {
+            this.carConsumptionConversion = carConsumptionConversion;
+            return this;
+        }
+        public String getCarConsumptionConversion() {
+            return this.carConsumptionConversion;
         }
 
         public GetSummaryDataResponseBodyData setLastMonthConsumptionConversion(String lastMonthConsumptionConversion) {
@@ -115,6 +140,14 @@ public class GetSummaryDataResponseBody extends TeaModel {
         }
         public String getTotalCarbonConsumptionConversion() {
             return this.totalCarbonConsumptionConversion;
+        }
+
+        public GetSummaryDataResponseBodyData setTreeConsumptionConversion(String treeConsumptionConversion) {
+            this.treeConsumptionConversion = treeConsumptionConversion;
+            return this;
+        }
+        public String getTreeConsumptionConversion() {
+            return this.treeConsumptionConversion;
         }
 
     }
