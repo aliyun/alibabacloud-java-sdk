@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>kms20160120</artifactId>
-  <version>1.1.1</version>
+  <version>1.1.2</version>
   <packaging>jar</packaging>
   <name>kms20160120</name>
   <description>Aliyun KMS for Java
@@ -69,6 +69,16 @@
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
       <version>0.2.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>alibabacloud-gateway-spi</artifactId>
+      <version>0.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>alibabacloud-gateway-pop</artifactId>
+      <version>0.0.4</version>
     </dependency>
   </dependencies>
   <build>
