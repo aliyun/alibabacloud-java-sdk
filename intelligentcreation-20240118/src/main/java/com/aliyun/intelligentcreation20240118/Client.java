@@ -78,6 +78,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.actualDeductResourcesWithOptions(request, headers, runtime);
     }
 
+    public CopywritingQAResponse copywritingQAWithOptions(CopywritingQARequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CopywritingQAShrinkRequest request = new CopywritingQAShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.history)) {
+            request.historyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.history, "history", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            query.put("accountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.historyShrink)) {
+            query.put("history", request.historyShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.question)) {
+            query.put("question", request.question);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("sessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stream)) {
+            query.put("stream", request.stream);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subAccountId)) {
+            query.put("subAccountId", request.subAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CopywritingQA"),
+            new TeaPair("version", "2024-01-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/yic/yic-console/openService/v1/digitalHuman/commands/copywritingQA"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CopywritingQAResponse());
+    }
+
+    public CopywritingQAResponse copywritingQA(CopywritingQARequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.copywritingQAWithOptions(request, headers, runtime);
+    }
+
     public DirectDeductResourceResponse directDeductResourceWithOptions(DirectDeductResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -219,5 +276,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getRemainResourceWithOptions(request, headers, runtime);
+    }
+
+    public SubmitBulletQuestionsResponse submitBulletQuestionsWithOptions(SubmitBulletQuestionsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitBulletQuestionsShrinkRequest request = new SubmitBulletQuestionsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.questions)) {
+            request.questionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.questions, "questions", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            query.put("accountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.questionsShrink)) {
+            query.put("questions", request.questionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roomId)) {
+            query.put("roomId", request.roomId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subAccountId)) {
+            query.put("subAccountId", request.subAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitBulletQuestions"),
+            new TeaPair("version", "2024-01-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/yic/yic-console/openService/v1/digitalHuman/commands/submitBulletQuestions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitBulletQuestionsResponse());
+    }
+
+    public SubmitBulletQuestionsResponse submitBulletQuestions(SubmitBulletQuestionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.submitBulletQuestionsWithOptions(request, headers, runtime);
     }
 }
