@@ -4,18 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListKmsInstancesResponseBody extends TeaModel {
+    /**
+     * <p>A list of KMS instances.</p>
+     */
     @NameInMap("KmsInstances")
     public ListKmsInstancesResponseBodyKmsInstances kmsInstances;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of KMS instances.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,9 +80,15 @@ public class ListKmsInstancesResponseBody extends TeaModel {
     }
 
     public static class ListKmsInstancesResponseBodyKmsInstancesKmsInstance extends TeaModel {
+        /**
+         * <p>The ARN of the KMS instance.</p>
+         */
         @NameInMap("KmsInstanceArn")
         public String kmsInstanceArn;
 
+        /**
+         * <p>The ID of the KMS instance.</p>
+         */
         @NameInMap("KmsInstanceId")
         public String kmsInstanceId;
 

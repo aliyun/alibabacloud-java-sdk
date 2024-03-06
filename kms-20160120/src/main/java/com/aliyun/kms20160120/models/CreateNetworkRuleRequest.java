@@ -4,15 +4,29 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CreateNetworkRuleRequest extends TeaModel {
+    /**
+     * <p>The description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the access control rule.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The private IP address or private CIDR block. Separate multiple items with commas (,).</p>
+     */
     @NameInMap("SourcePrivateIp")
     public String sourcePrivateIp;
 
+    /**
+     * <p>The network type.</p>
+     * <br>
+     * <p>Only private IP addresses are supported. Set the value to Private.</p>
+     */
     @NameInMap("Type")
     public String type;
 

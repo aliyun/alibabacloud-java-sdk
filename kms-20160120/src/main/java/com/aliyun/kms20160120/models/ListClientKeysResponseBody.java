@@ -4,9 +4,15 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListClientKeysResponseBody extends TeaModel {
+    /**
+     * <p>A list of client keys.</p>
+     */
     @NameInMap("ClientKeys")
     public java.util.List<ListClientKeysResponseBodyClientKeys> clientKeys;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,53 @@ public class ListClientKeysResponseBody extends TeaModel {
     }
 
     public static class ListClientKeysResponseBodyClientKeys extends TeaModel {
+        /**
+         * <p>The name of the AAP.</p>
+         */
         @NameInMap("AapName")
         public String aapName;
 
+        /**
+         * <p>The ID of the client key.</p>
+         */
         @NameInMap("ClientKeyId")
         public String clientKeyId;
 
+        /**
+         * <p>The time when the client key was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The private key algorithm of the client key.</p>
+         */
         @NameInMap("KeyAlgorithm")
         public String keyAlgorithm;
 
+        /**
+         * <p>The provider of the client key.</p>
+         * <br>
+         * <p>Currently, only KMS is supported. The value is fixed as KMS_PROVIDED.</p>
+         */
         @NameInMap("KeyOrigin")
         public String keyOrigin;
 
+        /**
+         * <p>The end of the validity period of the client key.</p>
+         */
         @NameInMap("NotAfter")
         public String notAfter;
 
+        /**
+         * <p>The beginning of the validity period of the client key.</p>
+         */
         @NameInMap("NotBefore")
         public String notBefore;
 
+        /**
+         * <p>The public key of the client key.</p>
+         */
         @NameInMap("PublicKeyData")
         public String publicKeyData;
 

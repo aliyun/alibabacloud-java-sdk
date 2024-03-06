@@ -608,6 +608,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.certificatePublicKeyVerifyWithOptions(request, runtime);
     }
 
+    /**
+      * ### [](#)Limits
+      * You can enable only instances of the software key management type. You cannot enable instances of the hardware key management type.
+      *
+      * @param request ConnectKmsInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ConnectKmsInstanceResponse
+     */
     public ConnectKmsInstanceResponse connectKmsInstanceWithOptions(ConnectKmsInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -648,6 +656,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ConnectKmsInstanceResponse());
     }
 
+    /**
+      * ### [](#)Limits
+      * You can enable only instances of the software key management type. You cannot enable instances of the hardware key management type.
+      *
+      * @param request ConnectKmsInstanceRequest
+      * @return ConnectKmsInstanceResponse
+     */
     public ConnectKmsInstanceResponse connectKmsInstance(ConnectKmsInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.connectKmsInstanceWithOptions(request, runtime);
@@ -703,6 +718,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createAliasWithOptions(request, runtime);
     }
 
+    /**
+      * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based AAP:
+      * 1.Create a network access rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access KMS. For more information, see [CreateNetworkRule](~~2539407~~).
+      * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind network access rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+      * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. This topic describes how to create an AAP.
+      * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+      *
+      * @param request CreateApplicationAccessPointRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateApplicationAccessPointResponse
+     */
     public CreateApplicationAccessPointResponse createApplicationAccessPointWithOptions(CreateApplicationAccessPointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -739,6 +765,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateApplicationAccessPointResponse());
     }
 
+    /**
+      * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based AAP:
+      * 1.Create a network access rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access KMS. For more information, see [CreateNetworkRule](~~2539407~~).
+      * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind network access rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+      * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. This topic describes how to create an AAP.
+      * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+      *
+      * @param request CreateApplicationAccessPointRequest
+      * @return CreateApplicationAccessPointResponse
+     */
     public CreateApplicationAccessPointResponse createApplicationAccessPoint(CreateApplicationAccessPointRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createApplicationAccessPointWithOptions(request, runtime);
@@ -806,6 +842,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createCertificateWithOptions(request, runtime);
     }
 
+    /**
+      * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based application access point (AAP):
+      * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance. For more information, see [CreateNetworkRule](~~2539407~~).
+      * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+      * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+      * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP.
+      * ### Precautions
+      * A client key has a validity period. After a client key expires, applications into which the client key is integrated cannot access the required KMS instance. You must replace the client key before the client key expires. We recommend that you delete the expired client key in KMS after the new client key is used.
+      *
+      * @param request CreateClientKeyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateClientKeyResponse
+     */
     public CreateClientKeyResponse createClientKeyWithOptions(CreateClientKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -842,13 +891,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateClientKeyResponse());
     }
 
+    /**
+      * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based application access point (AAP):
+      * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance. For more information, see [CreateNetworkRule](~~2539407~~).
+      * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+      * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+      * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP.
+      * ### Precautions
+      * A client key has a validity period. After a client key expires, applications into which the client key is integrated cannot access the required KMS instance. You must replace the client key before the client key expires. We recommend that you delete the expired client key in KMS after the new client key is used.
+      *
+      * @param request CreateClientKeyRequest
+      * @return CreateClientKeyResponse
+     */
     public CreateClientKeyResponse createClientKey(CreateClientKeyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createClientKeyWithOptions(request, runtime);
     }
 
     /**
-      * Creates a customer master key (CMK).
+      * KMS supports common symmetric keys and asymmetric keys. For more information, see [Key types and specifications](~~480161~~).
       *
       * @param request CreateKeyRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -911,7 +972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Creates a customer master key (CMK).
+      * KMS supports common symmetric keys and asymmetric keys. For more information, see [Key types and specifications](~~480161~~).
       *
       * @param request CreateKeyRequest
       * @return CreateKeyResponse
@@ -971,6 +1032,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createKeyVersionWithOptions(request, runtime);
     }
 
+    /**
+      * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a KMS instance. The following process shows how to create a client key-based application access point (AAP):
+      * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance.
+      * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+      * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+      * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+      *
+      * @param request CreateNetworkRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateNetworkRuleResponse
+     */
     public CreateNetworkRuleResponse createNetworkRuleWithOptions(CreateNetworkRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1007,11 +1079,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNetworkRuleResponse());
     }
 
+    /**
+      * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a KMS instance. The following process shows how to create a client key-based application access point (AAP):
+      * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance.
+      * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+      * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+      * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+      *
+      * @param request CreateNetworkRuleRequest
+      * @return CreateNetworkRuleResponse
+     */
     public CreateNetworkRuleResponse createNetworkRule(CreateNetworkRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createNetworkRuleWithOptions(request, runtime);
     }
 
+    /**
+      * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based application access point (AAP):
+      * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance. For more information, see [CreateNetworkRule](~~2539407~~).
+      * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets.
+      * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+      * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+      *
+      * @param request CreatePolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreatePolicyResponse
+     */
     public CreatePolicyResponse createPolicyWithOptions(CreatePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1056,6 +1149,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePolicyResponse());
     }
 
+    /**
+      * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based application access point (AAP):
+      * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance. For more information, see [CreateNetworkRule](~~2539407~~).
+      * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets.
+      * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+      * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+      *
+      * @param request CreatePolicyRequest
+      * @return CreatePolicyResponse
+     */
     public CreatePolicyResponse createPolicy(CreatePolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPolicyWithOptions(request, runtime);
@@ -1229,6 +1332,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteAliasWithOptions(request, runtime);
     }
 
+    /**
+      * Before you delete an AAP, make sure that the AAP is no longer in use. If you delete an AAP that is in use, applications that use the AAP cannot access Key Management Service (KMS). Exercise caution when you delete an AAP.
+      *
+      * @param request DeleteApplicationAccessPointRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteApplicationAccessPointResponse
+     */
     public DeleteApplicationAccessPointResponse deleteApplicationAccessPointWithOptions(DeleteApplicationAccessPointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1253,6 +1363,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteApplicationAccessPointResponse());
     }
 
+    /**
+      * Before you delete an AAP, make sure that the AAP is no longer in use. If you delete an AAP that is in use, applications that use the AAP cannot access Key Management Service (KMS). Exercise caution when you delete an AAP.
+      *
+      * @param request DeleteApplicationAccessPointRequest
+      * @return DeleteApplicationAccessPointResponse
+     */
     public DeleteApplicationAccessPointResponse deleteApplicationAccessPoint(DeleteApplicationAccessPointRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteApplicationAccessPointWithOptions(request, runtime);
@@ -1302,6 +1418,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteCertificateWithOptions(request, runtime);
     }
 
+    /**
+      * Before you delete a client key, make sure that the client key is no longer in use. If you delete a client key that is in use, applications that use the client key cannot access Key Management Service (KMS). Exercise caution when you delete a client key.
+      *
+      * @param request DeleteClientKeyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteClientKeyResponse
+     */
     public DeleteClientKeyResponse deleteClientKeyWithOptions(DeleteClientKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1326,6 +1449,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteClientKeyResponse());
     }
 
+    /**
+      * Before you delete a client key, make sure that the client key is no longer in use. If you delete a client key that is in use, applications that use the client key cannot access Key Management Service (KMS). Exercise caution when you delete a client key.
+      *
+      * @param request DeleteClientKeyRequest
+      * @return DeleteClientKeyResponse
+     */
     public DeleteClientKeyResponse deleteClientKey(DeleteClientKeyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteClientKeyWithOptions(request, runtime);
@@ -1377,6 +1506,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteKeyMaterialWithOptions(request, runtime);
     }
 
+    /**
+      * Before you delete a network access rule, make sure that the network access rule is not bound to permission policies. Otherwise, related applications cannot access Key Management Service (KMS).
+      *
+      * @param request DeleteNetworkRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteNetworkRuleResponse
+     */
     public DeleteNetworkRuleResponse deleteNetworkRuleWithOptions(DeleteNetworkRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1401,11 +1537,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNetworkRuleResponse());
     }
 
+    /**
+      * Before you delete a network access rule, make sure that the network access rule is not bound to permission policies. Otherwise, related applications cannot access Key Management Service (KMS).
+      *
+      * @param request DeleteNetworkRuleRequest
+      * @return DeleteNetworkRuleResponse
+     */
     public DeleteNetworkRuleResponse deleteNetworkRule(DeleteNetworkRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteNetworkRuleWithOptions(request, runtime);
     }
 
+    /**
+      * Before you delete a permission policy, make sure that the permission policy is not associated with application access points (AAPs). Otherwise, related applications cannot access Key Management Service (KMS).
+      *
+      * @param request DeletePolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeletePolicyResponse
+     */
     public DeletePolicyResponse deletePolicyWithOptions(DeletePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1430,6 +1579,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePolicyResponse());
     }
 
+    /**
+      * Before you delete a permission policy, make sure that the permission policy is not associated with application access points (AAPs). Otherwise, related applications cannot access Key Management Service (KMS).
+      *
+      * @param request DeletePolicyRequest
+      * @return DeletePolicyResponse
+     */
     public DeletePolicyResponse deletePolicy(DeletePolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletePolicyWithOptions(request, runtime);
@@ -1725,6 +1880,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describePolicyWithOptions(request, runtime);
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Kms\\&api=DescribeRegions\\&type=RPC\\&version=2016-01-20)
+      *
+      * @param request DescribeRegionsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeRegionsResponse
+     */
     public DescribeRegionsResponse describeRegionsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1741,6 +1904,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Kms\\&api=DescribeRegions\\&type=RPC\\&version=2016-01-20)
+      *
+      * @return DescribeRegionsResponse
+     */
     public DescribeRegionsResponse describeRegions() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRegionsWithOptions(runtime);
@@ -3554,6 +3723,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.tagResourceWithOptions(request, runtime);
     }
 
+    /**
+      * You can add multiple tags to multiple keys or multiple secrets at a time.
+      *
+      * @param request TagResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3590,6 +3766,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
     }
 
+    /**
+      * You can add multiple tags to multiple keys or multiple secrets at a time.
+      *
+      * @param request TagResourcesRequest
+      * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.tagResourcesWithOptions(request, runtime);
@@ -3653,6 +3835,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.untagResourceWithOptions(request, runtime);
     }
 
+    /**
+      * You can remove multiple tags from multiple keys or multiple secrets at a time. You cannot remove tags that start with aliyun or acs:.
+      * If you enter multiple tag keys in the request parameters and only some of the tag keys are associated with resources, the operation can be called and the tags whose keys are associated with resources are removed from the resources.
+      *
+      * @param request UntagResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UntagResourcesResponse
+     */
     public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3693,6 +3883,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
     }
 
+    /**
+      * You can remove multiple tags from multiple keys or multiple secrets at a time. You cannot remove tags that start with aliyun or acs:.
+      * If you enter multiple tag keys in the request parameters and only some of the tag keys are associated with resources, the operation can be called and the tags whose keys are associated with resources are removed from the resources.
+      *
+      * @param request UntagResourcesRequest
+      * @return UntagResourcesResponse
+     */
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagResourcesWithOptions(request, runtime);
@@ -3731,6 +3928,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateAliasWithOptions(request, runtime);
     }
 
+    /**
+      * The update takes effect immediately after an AAP information is updated. Exercise caution when you perform this operation. You can update the description of an AAP and the permission policies that are associated with the AAP. You cannot update the name of the AAP.
+      *
+      * @param request UpdateApplicationAccessPointRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateApplicationAccessPointResponse
+     */
     public UpdateApplicationAccessPointResponse updateApplicationAccessPointWithOptions(UpdateApplicationAccessPointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3763,6 +3967,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateApplicationAccessPointResponse());
     }
 
+    /**
+      * The update takes effect immediately after an AAP information is updated. Exercise caution when you perform this operation. You can update the description of an AAP and the permission policies that are associated with the AAP. You cannot update the name of the AAP.
+      *
+      * @param request UpdateApplicationAccessPointRequest
+      * @return UpdateApplicationAccessPointResponse
+     */
     public UpdateApplicationAccessPointResponse updateApplicationAccessPoint(UpdateApplicationAccessPointRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateApplicationAccessPointWithOptions(request, runtime);
@@ -3860,6 +4070,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateKeyDescriptionWithOptions(request, runtime);
     }
 
+    /**
+      * If your own applications are deployed in multiple VPCs in the same region, you can associate the VPCs except the VPC in which the KMS instance resides with the KMS instance. This topic describes how to configure the VPCs.
+      * The VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, the applications in these VPCs can access the KMS instance.
+      * > If the VPCs belong to different Alibaba Cloud accounts, you must first configure resource sharing to share the vSwitches of other Alibaba Cloud accounts with the Alibaba Cloud account to which the KMS instance belongs. For more information, see [Access a KMS instance from multiple VPCs in the same region](~~2393236~~).
+      *
+      * @param request UpdateKmsInstanceBindVpcRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateKmsInstanceBindVpcResponse
+     */
     public UpdateKmsInstanceBindVpcResponse updateKmsInstanceBindVpcWithOptions(UpdateKmsInstanceBindVpcRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -3880,11 +4099,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateKmsInstanceBindVpcResponse());
     }
 
+    /**
+      * If your own applications are deployed in multiple VPCs in the same region, you can associate the VPCs except the VPC in which the KMS instance resides with the KMS instance. This topic describes how to configure the VPCs.
+      * The VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, the applications in these VPCs can access the KMS instance.
+      * > If the VPCs belong to different Alibaba Cloud accounts, you must first configure resource sharing to share the vSwitches of other Alibaba Cloud accounts with the Alibaba Cloud account to which the KMS instance belongs. For more information, see [Access a KMS instance from multiple VPCs in the same region](~~2393236~~).
+      *
+      * @param request UpdateKmsInstanceBindVpcRequest
+      * @return UpdateKmsInstanceBindVpcResponse
+     */
     public UpdateKmsInstanceBindVpcResponse updateKmsInstanceBindVpc(UpdateKmsInstanceBindVpcRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateKmsInstanceBindVpcWithOptions(request, runtime);
     }
 
+    /**
+      * - You can update only private IP addresses and description of an access control rule. You cannot update the name and network type of an access control rule.
+      * - Updating an access control rule affects all permission policies that are bound to the access control rule. Exercise caution when you perform this operation.
+      *
+      * @param request UpdateNetworkRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateNetworkRuleResponse
+     */
     public UpdateNetworkRuleResponse updateNetworkRuleWithOptions(UpdateNetworkRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3917,11 +4152,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateNetworkRuleResponse());
     }
 
+    /**
+      * - You can update only private IP addresses and description of an access control rule. You cannot update the name and network type of an access control rule.
+      * - Updating an access control rule affects all permission policies that are bound to the access control rule. Exercise caution when you perform this operation.
+      *
+      * @param request UpdateNetworkRuleRequest
+      * @return UpdateNetworkRuleResponse
+     */
     public UpdateNetworkRuleResponse updateNetworkRule(UpdateNetworkRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateNetworkRuleWithOptions(request, runtime);
     }
 
+    /**
+      * - You can update the role-based access control (RBAC) permissions, accessible resources, access control rules, and description of a permission policy. You cannot update the name or scope of a permission policy.
+      * - Updating a permission policy affects all application access points (AAPs) that are bound to the permission policy. Exercise caution when you perform this operation.
+      *
+      * @param request UpdatePolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdatePolicyResponse
+     */
     public UpdatePolicyResponse updatePolicyWithOptions(UpdatePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3962,6 +4212,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePolicyResponse());
     }
 
+    /**
+      * - You can update the role-based access control (RBAC) permissions, accessible resources, access control rules, and description of a permission policy. You cannot update the name or scope of a permission policy.
+      * - Updating a permission policy affects all application access points (AAPs) that are bound to the permission policy. Exercise caution when you perform this operation.
+      *
+      * @param request UpdatePolicyRequest
+      * @return UpdatePolicyResponse
+     */
     public UpdatePolicyResponse updatePolicy(UpdatePolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updatePolicyWithOptions(request, runtime);

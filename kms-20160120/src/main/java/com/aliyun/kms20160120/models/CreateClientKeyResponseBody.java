@@ -4,21 +4,46 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CreateClientKeyResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("ClientKeyId")
     public String clientKeyId;
 
+    /**
+     * <p>The ID of the client key.</p>
+     */
     @NameInMap("KeyAlgorithm")
     public String keyAlgorithm;
 
+    /**
+     * <p>The beginning of the validity period of the client key.</p>
+     */
     @NameInMap("NotAfter")
     public String notAfter;
 
+    /**
+     * <p>The private key of the client key.</p>
+     */
     @NameInMap("NotBefore")
     public String notBefore;
 
+    /**
+     * <p>The algorithm that is used to encrypt the private key of the client key. Currently, only RSA\_2048 is supported.</p>
+     */
     @NameInMap("PrivateKeyData")
     public String privateKeyData;
 
+    /**
+     * <p>The beginning of the validity period of the client key.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard. The time must be in UTC. The time must be in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   If you do not configure NotBefore, the default value is the time when the client key was created.</p>
+     * <p>*   If you configure NotBefore, you must configure NotAfter.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

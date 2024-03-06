@@ -4,27 +4,54 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CreatePolicyResponseBody extends TeaModel {
+    /**
+     * <p>The name of the access control rule.</p>
+     */
     @NameInMap("AccessControlRules")
     public String accessControlRules;
 
+    /**
+     * <p>The ARN of the permission policy.</p>
+     */
     @NameInMap("Arn")
     public String arn;
 
+    /**
+     * <p>The description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The scope of the permission policy.</p>
+     */
     @NameInMap("KmsInstance")
     public String kmsInstance;
 
+    /**
+     * <p>The name of the permission policy.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The operations that can be performed.</p>
+     */
     @NameInMap("Permissions")
     public String permissions;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The key and secret that are allowed to access.</p>
+     * <br>
+     * <p>*   `key/*` indicates that all keys of the KMS instance can be accessed.</p>
+     * <p>*   `secret/*` indicates all secrets of the KMS instance can be accessed.</p>
+     */
     @NameInMap("Resources")
     public String resources;
 

@@ -4,6 +4,9 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationAccessPointRequest extends TeaModel {
+    /**
+     * <p>The name of the AAP that you want to query.</p>
+     */
     @NameInMap("Name")
     public String name;
 

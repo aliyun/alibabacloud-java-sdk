@@ -4,18 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListNetworkRulesResponseBody extends TeaModel {
+    /**
+     * <p>A list of access control rules.</p>
+     */
     @NameInMap("NetworkRules")
     public ListNetworkRulesResponseBodyNetworkRules networkRules;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class ListNetworkRulesResponseBody extends TeaModel {
     }
 
     public static class ListNetworkRulesResponseBodyNetworkRulesNetworkRule extends TeaModel {
+        /**
+         * <p>The name of the access control rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The network type. The value is fixed as Private. Self-managed applications can access KMS instances only over a private virtual private cloud (VPC).</p>
+         */
         @NameInMap("Type")
         public String type;
 

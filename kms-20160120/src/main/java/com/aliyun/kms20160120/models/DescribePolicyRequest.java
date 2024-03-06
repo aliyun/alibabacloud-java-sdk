@@ -4,6 +4,9 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyRequest extends TeaModel {
+    /**
+     * <p>The name of the permission policy that you want to query.</p>
+     */
     @NameInMap("Name")
     public String name;
 

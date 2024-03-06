@@ -4,9 +4,15 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GetKmsInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The details of the KMS instance.</p>
+     */
     @NameInMap("KmsInstance")
     public GetKmsInstanceResponseBodyKmsInstance kmsInstance;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,27 @@ public class GetKmsInstanceResponseBody extends TeaModel {
     }
 
     public static class GetKmsInstanceResponseBodyKmsInstanceBindVpcsBindVpc extends TeaModel {
+        /**
+         * <p>The region to which the VPC belongs.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The vSwitch in the VPC.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The Alibaba Cloud account to which the VPC belongs.</p>
+         */
         @NameInMap("VpcOwnerId")
         public String vpcOwnerId;
 
@@ -103,48 +121,101 @@ public class GetKmsInstanceResponseBody extends TeaModel {
     }
 
     public static class GetKmsInstanceResponseBodyKmsInstance extends TeaModel {
+        /**
+         * <p>A list of associated VPCs.</p>
+         * <br>
+         * <p>>  If your self-managed applications are deployed in multiple VPCs in the same region, you can associate VPCs with the KMS instance beyond the VPC that you specify when you enable the KMS instance. The VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, self-managed applications in the VPCs can access the specified KMS instance.</p>
+         */
         @NameInMap("BindVpcs")
         public GetKmsInstanceResponseBodyKmsInstanceBindVpcs bindVpcs;
 
+        /**
+         * <p>The content of the certificate authority (CA) certificate of the KMS instance.</p>
+         */
         @NameInMap("CaCertificateChainPem")
         public String caCertificateChainPem;
 
+        /**
+         * <p>The time when the KMS instance is created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The expiration time of the KMS instance.</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <p>The ID of the KMS instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the KMS instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The number of keys that can be created for the KMS instance.</p>
+         */
         @NameInMap("KeyNum")
         public Long keyNum;
 
+        /**
+         * <p>The number of secrets that can be created for the KMS instance.</p>
+         */
         @NameInMap("SecretNum")
         public String secretNum;
 
+        /**
+         * <p>The computing performance of the KMS instance.</p>
+         */
         @NameInMap("Spec")
         public Long spec;
 
+        /**
+         * <p>The time when the KMS instance is enabled.</p>
+         */
         @NameInMap("StartDate")
         public String startDate;
 
+        /**
+         * <p>The status of the KMS instance. Valid values:</p>
+         * <br>
+         * <p>*   Uninitialized: The KMS instance is not enabled.</p>
+         * <p>*   Connecting: The KMS instance is being connected.</p>
+         * <p>*   Connected: The KMS instance is enabled.</p>
+         * <p>*   Disconnected: The KMS instance is disconnected.</p>
+         * <p>*   Error: The KMS instance is abnormal.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The virtual private cloud (VPC) with which the KMS instance is associated.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The access management quota for the KMS instance.</p>
+         */
         @NameInMap("VpcNum")
         public Long vpcNum;
 
+        /**
+         * <p>The vSwitch in the VPC.</p>
+         */
         @NameInMap("VswitchIds")
         public String vswitchIds;
 
+        /**
+         * <p>The zone with which the KMS instance is associated.</p>
+         */
         @NameInMap("ZoneIds")
         public String zoneIds;
 

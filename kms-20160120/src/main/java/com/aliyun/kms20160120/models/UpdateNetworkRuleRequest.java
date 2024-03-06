@@ -4,12 +4,21 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class UpdateNetworkRuleRequest extends TeaModel {
+    /**
+     * <p>The description after the update.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the access control rule that you want to update.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The private IP address or CIDR block after the update. Separate multiple items with commas (,).</p>
+     */
     @NameInMap("SourcePrivateIp")
     public String sourcePrivateIp;
 

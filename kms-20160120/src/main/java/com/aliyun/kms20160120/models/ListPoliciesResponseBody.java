@@ -4,18 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListPoliciesResponseBody extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>A list of permission policies.</p>
+     */
     @NameInMap("Policies")
     public ListPoliciesResponseBodyPolicies policies;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,6 +80,9 @@ public class ListPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListPoliciesResponseBodyPoliciesPolicy extends TeaModel {
+        /**
+         * <p>The name of the permission policy.</p>
+         */
         @NameInMap("Name")
         public String name;
 

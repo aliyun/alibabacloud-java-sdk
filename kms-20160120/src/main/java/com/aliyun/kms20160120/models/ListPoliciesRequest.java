@@ -4,9 +4,15 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListPoliciesRequest extends TeaModel {
+    /**
+     * <p>The page number. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
