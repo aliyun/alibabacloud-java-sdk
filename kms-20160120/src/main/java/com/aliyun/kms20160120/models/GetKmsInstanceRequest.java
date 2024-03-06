@@ -4,6 +4,9 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GetKmsInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the KMS instance that you want to query.</p>
+     */
     @NameInMap("KmsInstanceId")
     public String kmsInstanceId;
 

@@ -4,6 +4,9 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GetClientKeyRequest extends TeaModel {
+    /**
+     * <p>The ID of the client key.</p>
+     */
     @NameInMap("ClientKeyId")
     public String clientKeyId;
 

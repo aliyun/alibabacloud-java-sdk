@@ -4,21 +4,39 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationAccessPointResponseBody extends TeaModel {
+    /**
+     * <p>The ARN of the AAP.</p>
+     */
     @NameInMap("Arn")
     public String arn;
 
+    /**
+     * <p>The authentication method.</p>
+     */
     @NameInMap("AuthenticationMethod")
     public String authenticationMethod;
 
+    /**
+     * <p>The description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the AAP.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The permission policy that is bound to the AAP.</p>
+     */
     @NameInMap("Policies")
     public String policies;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

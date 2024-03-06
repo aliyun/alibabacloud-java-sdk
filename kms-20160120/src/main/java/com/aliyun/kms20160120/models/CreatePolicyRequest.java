@@ -4,21 +4,49 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CreatePolicyRequest extends TeaModel {
+    /**
+     * <p>The name of the access control rule.</p>
+     * <br>
+     * <p>> For more information about how to query created access control rules, see [ListNetworkRules](~~2539433~~).</p>
+     */
     @NameInMap("AccessControlRules")
     public String accessControlRules;
 
+    /**
+     * <p>The description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The scope of the permission policy. You need to specify the KMS instance that you want to access.</p>
+     */
     @NameInMap("KmsInstance")
     public String kmsInstance;
 
+    /**
+     * <p>The name of the permission policy.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The operations that can be performed. Valid values:</p>
+     * <br>
+     * <p>*   RbacPermission/Template/CryptoServiceKeyUser: allows you to perform cryptographic operations.</p>
+     * <p>*   RbacPermission/Template/CryptoServiceSecretUser: allows you to perform secret-related operations.</p>
+     * <br>
+     * <p>You can select both.</p>
+     */
     @NameInMap("Permissions")
     public String permissions;
 
+    /**
+     * <p>The key and secret that are allowed to access.</p>
+     * <br>
+     * <p>*   Key: Enter a key in the `key/${KeyId}` format. To allow access to all keys of a KMS instance, enter key/\*.</p>
+     * <p>*   Secret: Enter a secret in the `secret/${SecretName}` format. To allow access to all secrets of a KMS instance, enter secret/\*.</p>
+     */
     @NameInMap("Resources")
     public String resources;
 

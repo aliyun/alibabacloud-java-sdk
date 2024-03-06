@@ -4,6 +4,9 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class DeleteNetworkRuleRequest extends TeaModel {
+    /**
+     * <p>The name of the network access rule that you want to delete.</p>
+     */
     @NameInMap("Name")
     public String name;
 

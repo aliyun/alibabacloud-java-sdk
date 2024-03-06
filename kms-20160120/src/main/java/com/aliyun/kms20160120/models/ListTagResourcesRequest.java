@@ -4,18 +4,42 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <br>
+     * <p>>  If the call does not return all result entries, the value of the NextToken parameter is returned. By default, 200 rows are returned. You can call this operation again and set the value of the parameter to the value of the parameter that is returned in the last call to implement paged query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The region ID of the resource.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~601478~~) to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>A list of resource IDs for which you want to query tags. You can enter a maximum of 50 resource IDs.</p>
+     * <br>
+     * <p>Enter multiple resource IDs in the `["ResourceId. 1","ResourceId. 2",...]` format.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The type of resource whose tags you want to query. Valid value:</p>
+     * <br>
+     * <p>*   key</p>
+     * <p>*   secret</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>A list of tags that you want to query. Valid values of N: 1 to 20.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -65,9 +89,21 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag. A tag consists of a key-value pair.</p>
+         * <br>
+         * <p>You can enter up to 20 tags. Enter multiple tags in the `[{"Key":"key1","Value":"value1"},{"Key":"key2","Value":"value2"},..]` format.</p>
+         * <br>
+         * <p>>  The key cannot start with aliyun or acs:.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag. A tag consists of a key-value pair.</p>
+         * <br>
+         * <p>You can enter up to 20 tags. Enter multiple tags in the `[{"Key":"key1","Value":"value1"},{"Key":"key2","Value":"value2"},..]` format.</p>
+         */
         @NameInMap("Value")
         public String value;
 

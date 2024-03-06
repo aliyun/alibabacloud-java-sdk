@@ -4,18 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkRuleResponseBody extends TeaModel {
+    /**
+     * <p>The ARN of the access control rule.</p>
+     */
     @NameInMap("Arn")
     public String arn;
 
+    /**
+     * <p>The description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The private IP address or private CIDR block.</p>
+     */
     @NameInMap("SourcePrivateIp")
     public String sourcePrivateIp;
 
+    /**
+     * <p>The network type. Only private IP addresses are supported. The value is fixed as Private.</p>
+     */
     @NameInMap("Type")
     public String type;
 

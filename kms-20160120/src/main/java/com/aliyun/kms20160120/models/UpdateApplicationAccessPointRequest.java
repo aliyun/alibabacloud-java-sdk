@@ -4,12 +4,22 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class UpdateApplicationAccessPointRequest extends TeaModel {
+    /**
+     * <p>The description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the AAP that you want to update.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The permission policy that you want to update.</p>
+     * <p>> You can associate up to three permission policies with each AAP.</p>
+     */
     @NameInMap("Policies")
     public String policies;
 
