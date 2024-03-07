@@ -94,11 +94,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getSummaryDataWithOptions(request, runtime);
     }
 
-    public QueryCarbonTrackResponse queryCarbonTrackWithOptions(QueryCarbonTrackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public QueryCarbonTrackResponse queryCarbonTrackWithOptions(QueryCarbonTrackRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryCarbonTrackShrinkRequest request = new QueryCarbonTrackShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.uids)) {
+            request.uidsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.uids, "Uids", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterRDAccount)) {
+            query.put("FilterRDAccount", request.filterRDAccount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.group)) {
@@ -107,6 +117,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uidsShrink)) {
+            query.put("Uids", request.uidsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
