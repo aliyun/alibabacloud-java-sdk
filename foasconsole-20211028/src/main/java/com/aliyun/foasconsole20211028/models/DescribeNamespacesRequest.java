@@ -4,6 +4,9 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class DescribeNamespacesRequest extends TeaModel {
+    @NameInMap("Ha")
+    public Boolean ha;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -25,6 +28,14 @@ public class DescribeNamespacesRequest extends TeaModel {
     public static DescribeNamespacesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNamespacesRequest self = new DescribeNamespacesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeNamespacesRequest setHa(Boolean ha) {
+        this.ha = ha;
+        return this;
+    }
+    public Boolean getHa() {
+        return this.ha;
     }
 
     public DescribeNamespacesRequest setInstanceId(String instanceId) {

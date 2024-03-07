@@ -4,6 +4,9 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class QueryCreateInstancePriceRequest extends TeaModel {
+    @NameInMap("ArchitectureType")
+    public String architectureType;
+
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
@@ -12,6 +15,15 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
 
     @NameInMap("Duration")
     public Integer duration;
+
+    @NameInMap("Extra")
+    public String extra;
+
+    @NameInMap("Ha")
+    public Boolean ha;
+
+    @NameInMap("HaResourceSpec")
+    public QueryCreateInstancePriceRequestHaResourceSpec haResourceSpec;
 
     @NameInMap("InstanceName")
     public String instanceName;
@@ -31,6 +43,9 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
     @NameInMap("Storage")
     public QueryCreateInstancePriceRequestStorage storage;
 
+    @NameInMap("UsePromotionCode")
+    public Boolean usePromotionCode;
+
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
@@ -43,6 +58,14 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
     public static QueryCreateInstancePriceRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryCreateInstancePriceRequest self = new QueryCreateInstancePriceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryCreateInstancePriceRequest setArchitectureType(String architectureType) {
+        this.architectureType = architectureType;
+        return this;
+    }
+    public String getArchitectureType() {
+        return this.architectureType;
     }
 
     public QueryCreateInstancePriceRequest setAutoRenew(Boolean autoRenew) {
@@ -67,6 +90,30 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
     }
     public Integer getDuration() {
         return this.duration;
+    }
+
+    public QueryCreateInstancePriceRequest setExtra(String extra) {
+        this.extra = extra;
+        return this;
+    }
+    public String getExtra() {
+        return this.extra;
+    }
+
+    public QueryCreateInstancePriceRequest setHa(Boolean ha) {
+        this.ha = ha;
+        return this;
+    }
+    public Boolean getHa() {
+        return this.ha;
+    }
+
+    public QueryCreateInstancePriceRequest setHaResourceSpec(QueryCreateInstancePriceRequestHaResourceSpec haResourceSpec) {
+        this.haResourceSpec = haResourceSpec;
+        return this;
+    }
+    public QueryCreateInstancePriceRequestHaResourceSpec getHaResourceSpec() {
+        return this.haResourceSpec;
     }
 
     public QueryCreateInstancePriceRequest setInstanceName(String instanceName) {
@@ -117,6 +164,14 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
         return this.storage;
     }
 
+    public QueryCreateInstancePriceRequest setUsePromotionCode(Boolean usePromotionCode) {
+        this.usePromotionCode = usePromotionCode;
+        return this;
+    }
+    public Boolean getUsePromotionCode() {
+        return this.usePromotionCode;
+    }
+
     public QueryCreateInstancePriceRequest setVSwitchIds(java.util.List<String> vSwitchIds) {
         this.vSwitchIds = vSwitchIds;
         return this;
@@ -139,6 +194,36 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class QueryCreateInstancePriceRequestHaResourceSpec extends TeaModel {
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        @NameInMap("MemoryGB")
+        public Integer memoryGB;
+
+        public static QueryCreateInstancePriceRequestHaResourceSpec build(java.util.Map<String, ?> map) throws Exception {
+            QueryCreateInstancePriceRequestHaResourceSpec self = new QueryCreateInstancePriceRequestHaResourceSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryCreateInstancePriceRequestHaResourceSpec setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public QueryCreateInstancePriceRequestHaResourceSpec setMemoryGB(Integer memoryGB) {
+            this.memoryGB = memoryGB;
+            return this;
+        }
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
     }
 
     public static class QueryCreateInstancePriceRequestResourceSpec extends TeaModel {

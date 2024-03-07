@@ -4,6 +4,18 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class ModifyPrepayInstanceSpecShrinkRequest extends TeaModel {
+    @NameInMap("Ha")
+    public Boolean ha;
+
+    @NameInMap("HaResourceSpec")
+    public String haResourceSpecShrink;
+
+    @NameInMap("HaVSwitchIds")
+    public String haVSwitchIdsShrink;
+
+    @NameInMap("HaZoneId")
+    public String haZoneId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,6 +28,38 @@ public class ModifyPrepayInstanceSpecShrinkRequest extends TeaModel {
     public static ModifyPrepayInstanceSpecShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyPrepayInstanceSpecShrinkRequest self = new ModifyPrepayInstanceSpecShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyPrepayInstanceSpecShrinkRequest setHa(Boolean ha) {
+        this.ha = ha;
+        return this;
+    }
+    public Boolean getHa() {
+        return this.ha;
+    }
+
+    public ModifyPrepayInstanceSpecShrinkRequest setHaResourceSpecShrink(String haResourceSpecShrink) {
+        this.haResourceSpecShrink = haResourceSpecShrink;
+        return this;
+    }
+    public String getHaResourceSpecShrink() {
+        return this.haResourceSpecShrink;
+    }
+
+    public ModifyPrepayInstanceSpecShrinkRequest setHaVSwitchIdsShrink(String haVSwitchIdsShrink) {
+        this.haVSwitchIdsShrink = haVSwitchIdsShrink;
+        return this;
+    }
+    public String getHaVSwitchIdsShrink() {
+        return this.haVSwitchIdsShrink;
+    }
+
+    public ModifyPrepayInstanceSpecShrinkRequest setHaZoneId(String haZoneId) {
+        this.haZoneId = haZoneId;
+        return this;
+    }
+    public String getHaZoneId() {
+        return this.haZoneId;
     }
 
     public ModifyPrepayInstanceSpecShrinkRequest setInstanceId(String instanceId) {

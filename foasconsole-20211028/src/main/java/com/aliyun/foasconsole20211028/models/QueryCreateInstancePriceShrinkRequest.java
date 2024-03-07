@@ -4,6 +4,9 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class QueryCreateInstancePriceShrinkRequest extends TeaModel {
+    @NameInMap("ArchitectureType")
+    public String architectureType;
+
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
@@ -12,6 +15,15 @@ public class QueryCreateInstancePriceShrinkRequest extends TeaModel {
 
     @NameInMap("Duration")
     public Integer duration;
+
+    @NameInMap("Extra")
+    public String extra;
+
+    @NameInMap("Ha")
+    public Boolean ha;
+
+    @NameInMap("HaResourceSpec")
+    public String haResourceSpecShrink;
 
     @NameInMap("InstanceName")
     public String instanceName;
@@ -31,6 +43,9 @@ public class QueryCreateInstancePriceShrinkRequest extends TeaModel {
     @NameInMap("Storage")
     public String storageShrink;
 
+    @NameInMap("UsePromotionCode")
+    public Boolean usePromotionCode;
+
     @NameInMap("VSwitchIds")
     public String vSwitchIdsShrink;
 
@@ -43,6 +58,14 @@ public class QueryCreateInstancePriceShrinkRequest extends TeaModel {
     public static QueryCreateInstancePriceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryCreateInstancePriceShrinkRequest self = new QueryCreateInstancePriceShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryCreateInstancePriceShrinkRequest setArchitectureType(String architectureType) {
+        this.architectureType = architectureType;
+        return this;
+    }
+    public String getArchitectureType() {
+        return this.architectureType;
     }
 
     public QueryCreateInstancePriceShrinkRequest setAutoRenew(Boolean autoRenew) {
@@ -67,6 +90,30 @@ public class QueryCreateInstancePriceShrinkRequest extends TeaModel {
     }
     public Integer getDuration() {
         return this.duration;
+    }
+
+    public QueryCreateInstancePriceShrinkRequest setExtra(String extra) {
+        this.extra = extra;
+        return this;
+    }
+    public String getExtra() {
+        return this.extra;
+    }
+
+    public QueryCreateInstancePriceShrinkRequest setHa(Boolean ha) {
+        this.ha = ha;
+        return this;
+    }
+    public Boolean getHa() {
+        return this.ha;
+    }
+
+    public QueryCreateInstancePriceShrinkRequest setHaResourceSpecShrink(String haResourceSpecShrink) {
+        this.haResourceSpecShrink = haResourceSpecShrink;
+        return this;
+    }
+    public String getHaResourceSpecShrink() {
+        return this.haResourceSpecShrink;
     }
 
     public QueryCreateInstancePriceShrinkRequest setInstanceName(String instanceName) {
@@ -115,6 +162,14 @@ public class QueryCreateInstancePriceShrinkRequest extends TeaModel {
     }
     public String getStorageShrink() {
         return this.storageShrink;
+    }
+
+    public QueryCreateInstancePriceShrinkRequest setUsePromotionCode(Boolean usePromotionCode) {
+        this.usePromotionCode = usePromotionCode;
+        return this;
+    }
+    public Boolean getUsePromotionCode() {
+        return this.usePromotionCode;
     }
 
     public QueryCreateInstancePriceShrinkRequest setVSwitchIdsShrink(String vSwitchIdsShrink) {
