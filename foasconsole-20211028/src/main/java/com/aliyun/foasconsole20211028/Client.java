@@ -85,6 +85,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateInstanceShrinkRequest request = new CreateInstanceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.haResourceSpec)) {
+            request.haResourceSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.haResourceSpec, "HaResourceSpec", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.haVSwitchIds)) {
+            request.haVSwitchIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.haVSwitchIds, "HaVSwitchIds", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceSpec)) {
             request.resourceSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceSpec, "ResourceSpec", "json");
         }
@@ -98,6 +106,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.architectureType)) {
+            body.put("ArchitectureType", request.architectureType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             body.put("AutoRenew", request.autoRenew);
         }
@@ -110,8 +122,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Duration", request.duration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extra)) {
+            body.put("Extra", request.extra);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ha)) {
+            body.put("Ha", request.ha);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.haResourceSpecShrink)) {
+            body.put("HaResourceSpec", request.haResourceSpecShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.haVSwitchIdsShrink)) {
+            body.put("HaVSwitchIds", request.haVSwitchIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.haZoneId)) {
+            body.put("HaZoneId", request.haZoneId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
             body.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.monitorType)) {
+            body.put("MonitorType", request.monitorType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pricingCycle)) {
@@ -126,12 +162,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Region", request.region);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceSpecShrink)) {
             body.put("ResourceSpec", request.resourceSpecShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageShrink)) {
             body.put("Storage", request.storageShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usePromotionCode)) {
+            body.put("UsePromotionCode", request.usePromotionCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchIdsShrink)) {
@@ -177,6 +221,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ha)) {
+            body.put("Ha", request.ha);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             body.put("InstanceId", request.instanceId);
         }
@@ -438,15 +486,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listTagResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : ModifyPrepayInstanceSpec is deprecated, please use foasconsole::2021-10-28::ModifyInstanceSpec instead.
+      *
+      * @param tmpReq ModifyPrepayInstanceSpecRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyPrepayInstanceSpecResponse
+     */
+    // Deprecated
     public ModifyPrepayInstanceSpecResponse modifyPrepayInstanceSpecWithOptions(ModifyPrepayInstanceSpecRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ModifyPrepayInstanceSpecShrinkRequest request = new ModifyPrepayInstanceSpecShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.haResourceSpec)) {
+            request.haResourceSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.haResourceSpec, "HaResourceSpec", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.haVSwitchIds)) {
+            request.haVSwitchIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.haVSwitchIds, "HaVSwitchIds", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceSpec)) {
             request.resourceSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceSpec, "ResourceSpec", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ha)) {
+            body.put("Ha", request.ha);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.haResourceSpecShrink)) {
+            body.put("HaResourceSpec", request.haResourceSpecShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.haVSwitchIdsShrink)) {
+            body.put("HaVSwitchIds", request.haVSwitchIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.haZoneId)) {
+            body.put("HaZoneId", request.haZoneId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             body.put("InstanceId", request.instanceId);
         }
@@ -476,11 +556,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyPrepayInstanceSpecResponse());
     }
 
+    /**
+      * @deprecated : ModifyPrepayInstanceSpec is deprecated, please use foasconsole::2021-10-28::ModifyInstanceSpec instead.
+      *
+      * @param request ModifyPrepayInstanceSpecRequest
+      * @return ModifyPrepayInstanceSpecResponse
+     */
+    // Deprecated
     public ModifyPrepayInstanceSpecResponse modifyPrepayInstanceSpec(ModifyPrepayInstanceSpecRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyPrepayInstanceSpecWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : ModifyPrepayNamespaceSpec is deprecated, please use foasconsole::2021-10-28::ModifyNamespaceSpec instead.
+      *
+      * @param tmpReq ModifyPrepayNamespaceSpecRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyPrepayNamespaceSpecResponse
+     */
+    // Deprecated
     public ModifyPrepayNamespaceSpecResponse modifyPrepayNamespaceSpecWithOptions(ModifyPrepayNamespaceSpecRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ModifyPrepayNamespaceSpecShrinkRequest request = new ModifyPrepayNamespaceSpecShrinkRequest();
@@ -523,6 +618,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyPrepayNamespaceSpecResponse());
     }
 
+    /**
+      * @deprecated : ModifyPrepayNamespaceSpec is deprecated, please use foasconsole::2021-10-28::ModifyNamespaceSpec instead.
+      *
+      * @param request ModifyPrepayNamespaceSpecRequest
+      * @return ModifyPrepayNamespaceSpecResponse
+     */
+    // Deprecated
     public ModifyPrepayNamespaceSpecResponse modifyPrepayNamespaceSpec(ModifyPrepayNamespaceSpecRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyPrepayNamespaceSpecWithOptions(request, runtime);
@@ -587,6 +689,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         QueryCreateInstancePriceShrinkRequest request = new QueryCreateInstancePriceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.haResourceSpec)) {
+            request.haResourceSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.haResourceSpec, "HaResourceSpec", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceSpec)) {
             request.resourceSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceSpec, "ResourceSpec", "json");
         }
@@ -600,6 +706,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.architectureType)) {
+            body.put("ArchitectureType", request.architectureType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             body.put("AutoRenew", request.autoRenew);
         }
@@ -610,6 +720,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
             body.put("Duration", request.duration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extra)) {
+            body.put("Extra", request.extra);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ha)) {
+            body.put("Ha", request.ha);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.haResourceSpecShrink)) {
+            body.put("HaResourceSpec", request.haResourceSpecShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
@@ -634,6 +756,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageShrink)) {
             body.put("Storage", request.storageShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usePromotionCode)) {
+            body.put("UsePromotionCode", request.usePromotionCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchIdsShrink)) {
@@ -674,11 +800,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         QueryModifyInstancePriceShrinkRequest request = new QueryModifyInstancePriceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.haResourceSpec)) {
+            request.haResourceSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.haResourceSpec, "HaResourceSpec", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.haVSwitchIds)) {
+            request.haVSwitchIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.haVSwitchIds, "HaVSwitchIds", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceSpec)) {
             request.resourceSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceSpec, "ResourceSpec", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ha)) {
+            body.put("Ha", request.ha);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.haResourceSpecShrink)) {
+            body.put("HaResourceSpec", request.haResourceSpecShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.haVSwitchIdsShrink)) {
+            body.put("HaVSwitchIds", request.haVSwitchIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.haZoneId)) {
+            body.put("HaZoneId", request.haZoneId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             body.put("InstanceId", request.instanceId);
         }

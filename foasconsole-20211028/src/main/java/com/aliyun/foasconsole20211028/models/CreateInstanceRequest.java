@@ -4,6 +4,9 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
+    @NameInMap("ArchitectureType")
+    public String architectureType;
+
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
@@ -13,8 +16,26 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("Duration")
     public Integer duration;
 
+    @NameInMap("Extra")
+    public String extra;
+
+    @NameInMap("Ha")
+    public Boolean ha;
+
+    @NameInMap("HaResourceSpec")
+    public CreateInstanceRequestHaResourceSpec haResourceSpec;
+
+    @NameInMap("HaVSwitchIds")
+    public java.util.List<String> haVSwitchIds;
+
+    @NameInMap("HaZoneId")
+    public String haZoneId;
+
     @NameInMap("InstanceName")
     public String instanceName;
+
+    @NameInMap("MonitorType")
+    public String monitorType;
 
     @NameInMap("PricingCycle")
     public String pricingCycle;
@@ -25,11 +46,17 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceSpec")
     public CreateInstanceRequestResourceSpec resourceSpec;
 
     @NameInMap("Storage")
     public CreateInstanceRequestStorage storage;
+
+    @NameInMap("UsePromotionCode")
+    public Boolean usePromotionCode;
 
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
@@ -43,6 +70,14 @@ public class CreateInstanceRequest extends TeaModel {
     public static CreateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceRequest self = new CreateInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateInstanceRequest setArchitectureType(String architectureType) {
+        this.architectureType = architectureType;
+        return this;
+    }
+    public String getArchitectureType() {
+        return this.architectureType;
     }
 
     public CreateInstanceRequest setAutoRenew(Boolean autoRenew) {
@@ -69,12 +104,60 @@ public class CreateInstanceRequest extends TeaModel {
         return this.duration;
     }
 
+    public CreateInstanceRequest setExtra(String extra) {
+        this.extra = extra;
+        return this;
+    }
+    public String getExtra() {
+        return this.extra;
+    }
+
+    public CreateInstanceRequest setHa(Boolean ha) {
+        this.ha = ha;
+        return this;
+    }
+    public Boolean getHa() {
+        return this.ha;
+    }
+
+    public CreateInstanceRequest setHaResourceSpec(CreateInstanceRequestHaResourceSpec haResourceSpec) {
+        this.haResourceSpec = haResourceSpec;
+        return this;
+    }
+    public CreateInstanceRequestHaResourceSpec getHaResourceSpec() {
+        return this.haResourceSpec;
+    }
+
+    public CreateInstanceRequest setHaVSwitchIds(java.util.List<String> haVSwitchIds) {
+        this.haVSwitchIds = haVSwitchIds;
+        return this;
+    }
+    public java.util.List<String> getHaVSwitchIds() {
+        return this.haVSwitchIds;
+    }
+
+    public CreateInstanceRequest setHaZoneId(String haZoneId) {
+        this.haZoneId = haZoneId;
+        return this;
+    }
+    public String getHaZoneId() {
+        return this.haZoneId;
+    }
+
     public CreateInstanceRequest setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public CreateInstanceRequest setMonitorType(String monitorType) {
+        this.monitorType = monitorType;
+        return this;
+    }
+    public String getMonitorType() {
+        return this.monitorType;
     }
 
     public CreateInstanceRequest setPricingCycle(String pricingCycle) {
@@ -101,6 +184,14 @@ public class CreateInstanceRequest extends TeaModel {
         return this.region;
     }
 
+    public CreateInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public CreateInstanceRequest setResourceSpec(CreateInstanceRequestResourceSpec resourceSpec) {
         this.resourceSpec = resourceSpec;
         return this;
@@ -115,6 +206,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public CreateInstanceRequestStorage getStorage() {
         return this.storage;
+    }
+
+    public CreateInstanceRequest setUsePromotionCode(Boolean usePromotionCode) {
+        this.usePromotionCode = usePromotionCode;
+        return this;
+    }
+    public Boolean getUsePromotionCode() {
+        return this.usePromotionCode;
     }
 
     public CreateInstanceRequest setVSwitchIds(java.util.List<String> vSwitchIds) {
@@ -139,6 +238,36 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class CreateInstanceRequestHaResourceSpec extends TeaModel {
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        @NameInMap("MemoryGB")
+        public Integer memoryGB;
+
+        public static CreateInstanceRequestHaResourceSpec build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestHaResourceSpec self = new CreateInstanceRequestHaResourceSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestHaResourceSpec setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public CreateInstanceRequestHaResourceSpec setMemoryGB(Integer memoryGB) {
+            this.memoryGB = memoryGB;
+            return this;
+        }
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
     }
 
     public static class CreateInstanceRequestResourceSpec extends TeaModel {

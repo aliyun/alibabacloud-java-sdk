@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>foasconsole20211028</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
   <packaging>jar</packaging>
   <name>foasconsole20211028</name>
   <description>Alibaba Cloud foasconsole (20211028) SDK for Java

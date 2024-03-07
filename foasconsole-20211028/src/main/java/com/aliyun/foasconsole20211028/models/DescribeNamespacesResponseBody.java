@@ -120,6 +120,9 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public Float cpu;
 
+        @NameInMap("Cu")
+        public Float cu;
+
         @NameInMap("MemoryGB")
         public Float memoryGB;
 
@@ -134,6 +137,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
         public Float getCpu() {
             return this.cpu;
+        }
+
+        public DescribeNamespacesResponseBodyNamespacesResourceUsed setCu(Float cu) {
+            this.cu = cu;
+            return this;
+        }
+        public Float getCu() {
+            return this.cu;
         }
 
         public DescribeNamespacesResponseBodyNamespacesResourceUsed setMemoryGB(Float memoryGB) {
@@ -183,6 +194,9 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        @NameInMap("Ha")
+        public Boolean ha;
+
         @NameInMap("Namespace")
         public String namespace;
 
@@ -217,6 +231,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
         public Long getGmtModified() {
             return this.gmtModified;
+        }
+
+        public DescribeNamespacesResponseBodyNamespaces setHa(Boolean ha) {
+            this.ha = ha;
+            return this;
+        }
+        public Boolean getHa() {
+            return this.ha;
         }
 
         public DescribeNamespacesResponseBodyNamespaces setNamespace(String namespace) {

@@ -4,6 +4,9 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesShrinkRequest extends TeaModel {
+    @NameInMap("ArchitectureType")
+    public String architectureType;
+
     @NameInMap("ChargeType")
     public String chargeType;
 
@@ -19,12 +22,23 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Tags")
     public String tagsShrink;
 
     public static DescribeInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesShrinkRequest self = new DescribeInstancesShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstancesShrinkRequest setArchitectureType(String architectureType) {
+        this.architectureType = architectureType;
+        return this;
+    }
+    public String getArchitectureType() {
+        return this.architectureType;
     }
 
     public DescribeInstancesShrinkRequest setChargeType(String chargeType) {
@@ -65,6 +79,14 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public DescribeInstancesShrinkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeInstancesShrinkRequest setTagsShrink(String tagsShrink) {
