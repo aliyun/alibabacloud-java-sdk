@@ -3,7 +3,7 @@ package com.aliyun.carbonfootprint20230711.models;
 
 import com.aliyun.tea.*;
 
-public class QueryCarbonTrackRequest extends TeaModel {
+public class QueryCarbonTrackShrinkRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
@@ -17,14 +17,14 @@ public class QueryCarbonTrackRequest extends TeaModel {
     public String startTime;
 
     @NameInMap("Uids")
-    public java.util.List<String> uids;
+    public String uidsShrink;
 
-    public static QueryCarbonTrackRequest build(java.util.Map<String, ?> map) throws Exception {
-        QueryCarbonTrackRequest self = new QueryCarbonTrackRequest();
+    public static QueryCarbonTrackShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        QueryCarbonTrackShrinkRequest self = new QueryCarbonTrackShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryCarbonTrackRequest setEndTime(String endTime) {
+    public QueryCarbonTrackShrinkRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -32,7 +32,7 @@ public class QueryCarbonTrackRequest extends TeaModel {
         return this.endTime;
     }
 
-    public QueryCarbonTrackRequest setFilterRDAccount(Integer filterRDAccount) {
+    public QueryCarbonTrackShrinkRequest setFilterRDAccount(Integer filterRDAccount) {
         this.filterRDAccount = filterRDAccount;
         return this;
     }
@@ -40,7 +40,7 @@ public class QueryCarbonTrackRequest extends TeaModel {
         return this.filterRDAccount;
     }
 
-    public QueryCarbonTrackRequest setGroup(String group) {
+    public QueryCarbonTrackShrinkRequest setGroup(String group) {
         this.group = group;
         return this;
     }
@@ -48,7 +48,7 @@ public class QueryCarbonTrackRequest extends TeaModel {
         return this.group;
     }
 
-    public QueryCarbonTrackRequest setStartTime(String startTime) {
+    public QueryCarbonTrackShrinkRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -56,12 +56,12 @@ public class QueryCarbonTrackRequest extends TeaModel {
         return this.startTime;
     }
 
-    public QueryCarbonTrackRequest setUids(java.util.List<String> uids) {
-        this.uids = uids;
+    public QueryCarbonTrackShrinkRequest setUidsShrink(String uidsShrink) {
+        this.uidsShrink = uidsShrink;
         return this;
     }
-    public java.util.List<String> getUids() {
-        return this.uids;
+    public String getUidsShrink() {
+        return this.uidsShrink;
     }
 
 }
