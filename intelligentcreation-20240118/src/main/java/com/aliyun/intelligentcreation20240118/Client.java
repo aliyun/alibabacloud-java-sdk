@@ -143,6 +143,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.copywritingQAWithOptions(request, headers, runtime);
     }
 
+    public CopywritingQAV1Response copywritingQAV1WithOptions(CopywritingQAV1Request request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CopywritingQAV1"),
+            new TeaPair("version", "2024-01-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/yic/yic-console/openService/v1/digitalHuman/commands/copywritingQAV1"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CopywritingQAV1Response());
+    }
+
+    public CopywritingQAV1Response copywritingQAV1(CopywritingQAV1Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.copywritingQAV1WithOptions(request, headers, runtime);
+    }
+
     public DirectDeductResourceResponse directDeductResourceWithOptions(DirectDeductResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -333,5 +359,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.submitBulletQuestionsWithOptions(request, headers, runtime);
+    }
+
+    public SubmitBulletQuestionsV1Response submitBulletQuestionsV1WithOptions(SubmitBulletQuestionsV1Request request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitBulletQuestionsV1"),
+            new TeaPair("version", "2024-01-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/yic/yic-console/openService/v1/digitalHuman/commands/submitBulletQuestionsV1"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitBulletQuestionsV1Response());
+    }
+
+    public SubmitBulletQuestionsV1Response submitBulletQuestionsV1(SubmitBulletQuestionsV1Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.submitBulletQuestionsV1WithOptions(request, headers, runtime);
     }
 }
