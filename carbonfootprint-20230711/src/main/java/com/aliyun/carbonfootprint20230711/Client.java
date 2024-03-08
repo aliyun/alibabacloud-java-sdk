@@ -119,6 +119,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartTime", request.startTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.topNum)) {
+            query.put("TopNum", request.topNum);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.uidsShrink)) {
             query.put("Uids", request.uidsShrink);
         }

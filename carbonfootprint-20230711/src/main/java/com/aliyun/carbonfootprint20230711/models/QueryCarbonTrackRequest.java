@@ -16,6 +16,9 @@ public class QueryCarbonTrackRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    @NameInMap("TopNum")
+    public Integer topNum;
+
     @NameInMap("Uids")
     public java.util.List<String> uids;
 
@@ -54,6 +57,14 @@ public class QueryCarbonTrackRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public QueryCarbonTrackRequest setTopNum(Integer topNum) {
+        this.topNum = topNum;
+        return this;
+    }
+    public Integer getTopNum() {
+        return this.topNum;
     }
 
     public QueryCarbonTrackRequest setUids(java.util.List<String> uids) {

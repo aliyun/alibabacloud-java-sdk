@@ -16,6 +16,9 @@ public class QueryCarbonTrackShrinkRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    @NameInMap("TopNum")
+    public Integer topNum;
+
     @NameInMap("Uids")
     public String uidsShrink;
 
@@ -54,6 +57,14 @@ public class QueryCarbonTrackShrinkRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public QueryCarbonTrackShrinkRequest setTopNum(Integer topNum) {
+        this.topNum = topNum;
+        return this;
+    }
+    public Integer getTopNum() {
+        return this.topNum;
     }
 
     public QueryCarbonTrackShrinkRequest setUidsShrink(String uidsShrink) {
