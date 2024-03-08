@@ -32,9 +32,6 @@ public class CreateAppStreamingOutTemplateRequest extends TeaModel {
     }
 
     public static class CreateAppStreamingOutTemplateRequestStreamingOutTemplate extends TeaModel {
-        @NameInMap("EnableVad")
-        public Boolean enableVad;
-
         @NameInMap("LayoutIds")
         public java.util.List<String> layoutIds;
 
@@ -47,14 +44,6 @@ public class CreateAppStreamingOutTemplateRequest extends TeaModel {
         public static CreateAppStreamingOutTemplateRequestStreamingOutTemplate build(java.util.Map<String, ?> map) throws Exception {
             CreateAppStreamingOutTemplateRequestStreamingOutTemplate self = new CreateAppStreamingOutTemplateRequestStreamingOutTemplate();
             return TeaModel.build(map, self);
-        }
-
-        public CreateAppStreamingOutTemplateRequestStreamingOutTemplate setEnableVad(Boolean enableVad) {
-            this.enableVad = enableVad;
-            return this;
-        }
-        public Boolean getEnableVad() {
-            return this.enableVad;
         }
 
         public CreateAppStreamingOutTemplateRequestStreamingOutTemplate setLayoutIds(java.util.List<String> layoutIds) {

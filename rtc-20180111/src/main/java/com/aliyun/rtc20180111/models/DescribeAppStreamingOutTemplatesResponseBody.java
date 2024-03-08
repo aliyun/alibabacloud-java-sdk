@@ -60,9 +60,6 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("EnableVad")
-        public Boolean enableVad;
-
         @NameInMap("LayoutIds")
         public java.util.List<String> layoutIds;
 
@@ -86,14 +83,6 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
-        }
-
-        public DescribeAppStreamingOutTemplatesResponseBodyTemplates setEnableVad(Boolean enableVad) {
-            this.enableVad = enableVad;
-            return this;
-        }
-        public Boolean getEnableVad() {
-            return this.enableVad;
         }
 
         public DescribeAppStreamingOutTemplatesResponseBodyTemplates setLayoutIds(java.util.List<String> layoutIds) {
