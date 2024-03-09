@@ -145,6 +145,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getHpoTrialWithOptions(ExperimentId, TrialId, headers, runtime);
     }
 
+    public ListHpoExperimentLogsResponse listHpoExperimentLogsWithOptions(String ExperimentId, ListHpoExperimentLogsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.logName)) {
+            query.put("LogName", request.logName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListHpoExperimentLogs"),
+            new TeaPair("version", "2022-08-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/automl/v1/hpo/experiment/" + com.aliyun.openapiutil.Client.getEncodeParam(ExperimentId) + "/logs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHpoExperimentLogsResponse());
+    }
+
+    public ListHpoExperimentLogsResponse listHpoExperimentLogs(String ExperimentId, ListHpoExperimentLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listHpoExperimentLogsWithOptions(ExperimentId, request, headers, runtime);
+    }
+
     public ListHpoExperimentsResponse listHpoExperimentsWithOptions(ListHpoExperimentsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -218,6 +257,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listHpoExperimentsWithOptions(request, headers, runtime);
+    }
+
+    public ListHpoTrialCommandsResponse listHpoTrialCommandsWithOptions(String ExperimentId, String TrialId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListHpoTrialCommands"),
+            new TeaPair("version", "2022-08-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/automl/v1/hpo/experiment/" + com.aliyun.openapiutil.Client.getEncodeParam(ExperimentId) + "/trial/" + com.aliyun.openapiutil.Client.getEncodeParam(TrialId) + "/commands"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHpoTrialCommandsResponse());
+    }
+
+    public ListHpoTrialCommandsResponse listHpoTrialCommands(String ExperimentId, String TrialId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listHpoTrialCommandsWithOptions(ExperimentId, TrialId, headers, runtime);
+    }
+
+    public ListHpoTrialLogNamesResponse listHpoTrialLogNamesWithOptions(String ExperimentId, String TrialId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListHpoTrialLogNames"),
+            new TeaPair("version", "2022-08-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/automl/v1/hpo/experiment/" + com.aliyun.openapiutil.Client.getEncodeParam(ExperimentId) + "/trial/" + com.aliyun.openapiutil.Client.getEncodeParam(TrialId) + "/lognames"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHpoTrialLogNamesResponse());
+    }
+
+    public ListHpoTrialLogNamesResponse listHpoTrialLogNames(String ExperimentId, String TrialId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listHpoTrialLogNamesWithOptions(ExperimentId, TrialId, headers, runtime);
     }
 
     public ListHpoTrialLogsResponse listHpoTrialLogsWithOptions(String ExperimentId, String TrialId, ListHpoTrialLogsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -390,5 +477,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.stopHpoTrialsWithOptions(ExperimentId, request, headers, runtime);
+    }
+
+    public UpdateHpoExperimentResponse updateHpoExperimentWithOptions(String ExperimentId, UpdateHpoExperimentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
+            body.put("Accessibility", request.accessibility);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hpoExperimentConfiguration)) {
+            body.put("HpoExperimentConfiguration", request.hpoExperimentConfiguration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateHpoExperiment"),
+            new TeaPair("version", "2022-08-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/automl/v1/hpo/experiment/" + com.aliyun.openapiutil.Client.getEncodeParam(ExperimentId) + "/update"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateHpoExperimentResponse());
+    }
+
+    public UpdateHpoExperimentResponse updateHpoExperiment(String ExperimentId, UpdateHpoExperimentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateHpoExperimentWithOptions(ExperimentId, request, headers, runtime);
     }
 }
