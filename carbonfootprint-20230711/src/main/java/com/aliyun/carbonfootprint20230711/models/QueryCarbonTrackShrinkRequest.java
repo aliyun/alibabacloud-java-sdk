@@ -22,6 +22,9 @@ public class QueryCarbonTrackShrinkRequest extends TeaModel {
     @NameInMap("Uids")
     public String uidsShrink;
 
+    @NameInMap("UseCode")
+    public Integer useCode;
+
     public static QueryCarbonTrackShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryCarbonTrackShrinkRequest self = new QueryCarbonTrackShrinkRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class QueryCarbonTrackShrinkRequest extends TeaModel {
     }
     public String getUidsShrink() {
         return this.uidsShrink;
+    }
+
+    public QueryCarbonTrackShrinkRequest setUseCode(Integer useCode) {
+        this.useCode = useCode;
+        return this;
+    }
+    public Integer getUseCode() {
+        return this.useCode;
     }
 
 }
