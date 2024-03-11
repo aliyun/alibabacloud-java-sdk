@@ -1,3 +1,9 @@
+2024-03-11 Version: 2.4.1
+- Update API ADMiniCog: update response param.
+- Update API ADMiniCogResult: update response param.
+- Update API GetItemPubChEcom: update response param.
+
+
 2024-01-23 Version: 2.4.0
 - Generated java 2020-06-29 for alinlp.
 
