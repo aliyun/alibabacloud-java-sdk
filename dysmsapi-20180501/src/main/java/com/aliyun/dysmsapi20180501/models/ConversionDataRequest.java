@@ -13,7 +13,7 @@ public class ConversionDataRequest extends TeaModel {
     public String conversionRate;
 
     /**
-     * <p>Timestamp of the conversion rate observation should be a Unix timestamp, millisecond-level long integer.</p>
+     * <p>Timestamp of the conversion rate observation should be a Unix timestamp, a millisecond-level long integer.</p>
      * <br>
      * <p>>  If this field is not specified: the current timestamp is the default.</p>
      */

@@ -36,6 +36,9 @@ public class SendMessageWithTemplateRequest extends TeaModel {
     @NameInMap("To")
     public String to;
 
+    /**
+     * <p>The validity period of the message.</p>
+     */
     @NameInMap("ValidityPeriod")
     public Long validityPeriod;
 

@@ -39,6 +39,9 @@ public class BatchSendMessageToGlobeRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The validity period of the message. Unit: seconds.</p>
+     */
     @NameInMap("ValidityPeriod")
     public Long validityPeriod;
 
