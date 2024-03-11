@@ -32,20 +32,20 @@ public class CreatePersonalTodoTaskHeaders extends TeaModel {
     }
 
     public static class CreatePersonalTodoTaskHeadersAccountContext extends TeaModel {
-        @NameInMap("userToken")
-        public String userToken;
+        @NameInMap("accountId")
+        public String accountId;
 
         public static CreatePersonalTodoTaskHeadersAccountContext build(java.util.Map<String, ?> map) throws Exception {
             CreatePersonalTodoTaskHeadersAccountContext self = new CreatePersonalTodoTaskHeadersAccountContext();
             return TeaModel.build(map, self);
         }
 
-        public CreatePersonalTodoTaskHeadersAccountContext setUserToken(String userToken) {
-            this.userToken = userToken;
+        public CreatePersonalTodoTaskHeadersAccountContext setAccountId(String accountId) {
+            this.accountId = accountId;
             return this;
         }
-        public String getUserToken() {
-            return this.userToken;
+        public String getAccountId() {
+            return this.accountId;
         }
 
     }
