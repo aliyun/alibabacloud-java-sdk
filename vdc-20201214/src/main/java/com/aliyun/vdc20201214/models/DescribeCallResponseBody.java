@@ -4,15 +4,12 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeCallResponseBody extends TeaModel {
-    // 通信基本信息。
     @NameInMap("CallInfo")
     public DescribeCallResponseBodyCallInfo callInfo;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 用户详情列表。
     @NameInMap("UserDetailList")
     public java.util.List<DescribeCallResponseBodyUserDetailList> userDetailList;
 
@@ -46,27 +43,24 @@ public class DescribeCallResponseBody extends TeaModel {
     }
 
     public static class DescribeCallResponseBodyCallInfo extends TeaModel {
-        // App ID。
+        /**
+         * <p>App ID。</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // 通信状态。取值：IN：进行中。OUT：已结束。
         @NameInMap("CallStatus")
         public String callStatus;
 
-        // 频道ID。
         @NameInMap("ChannelId")
         public String channelId;
 
-        // 创建通信时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("CreatedTs")
         public Long createdTs;
 
-        // 释放通信时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
-        // 通信持续时长，单位：秒。
         @NameInMap("Duration")
         public Long duration;
 
@@ -126,43 +120,33 @@ public class DescribeCallResponseBody extends TeaModel {
     }
 
     public static class DescribeCallResponseBodyUserDetailListDurMetricStatData extends TeaModel {
-        // 发布音频时长，单位秒
         @NameInMap("PubAudio")
         public Long pubAudio;
 
-        // 发布1080P视频时长，单位：秒
         @NameInMap("PubVideo1080")
         public Long pubVideo1080;
 
-        // 发布360P视频时长，单位秒
         @NameInMap("PubVideo360")
         public Long pubVideo360;
 
-        // 发布720P视频时长，单位：秒
         @NameInMap("PubVideo720")
         public Long pubVideo720;
 
-        // 发布屏幕共享时长，单位：秒
         @NameInMap("PubVideoScreenShare")
         public Long pubVideoScreenShare;
 
-        // 订阅音频时长，单位秒
         @NameInMap("SubAudio")
         public Long subAudio;
 
-        // 订阅1080P视频时长，单位：秒
         @NameInMap("SubVideo1080")
         public Long subVideo1080;
 
-        // 订阅360P视频时长，单位：秒
         @NameInMap("SubVideo360")
         public Long subVideo360;
 
-        // 订阅720P视频时长，单位：秒
         @NameInMap("SubVideo720")
         public Long subVideo720;
 
-        // 订阅屏幕共享时长，单位：秒
         @NameInMap("SubVideoScreenShare")
         public Long subVideoScreenShare;
 
@@ -254,11 +238,9 @@ public class DescribeCallResponseBody extends TeaModel {
     }
 
     public static class DescribeCallResponseBodyUserDetailListOnlinePeriods extends TeaModel {
-        // 加入通话时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("JoinTs")
         public Long joinTs;
 
-        // 离开通话时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("LeaveTs")
         public Long leaveTs;
 
@@ -286,77 +268,54 @@ public class DescribeCallResponseBody extends TeaModel {
     }
 
     public static class DescribeCallResponseBodyUserDetailList extends TeaModel {
-        // 通话体验，取值：GOOD:优良，BAD:欠佳。
         @NameInMap("CallExp")
         public String callExp;
 
-        // 创建通话时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("CreatedTs")
         public Long createdTs;
 
-        // 释放通话时间，使用UNIX时间戳表示，单位：秒。通话未结束时值为0。
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
-        // 时长统计数据
         @NameInMap("DurMetricStatData")
         public DescribeCallResponseBodyUserDetailListDurMetricStatData durMetricStatData;
 
-        // 通话时长，首次进入到最后离开，单位：秒。
         @NameInMap("Duration")
         public Long duration;
 
-        // 地理位置信息，例如：北京市-北京市
         @NameInMap("Location")
         public String location;
 
-        @NameInMap("LocationCn")
-        public String locationCn;
-
-        @NameInMap("LocationEn")
-        public String locationEn;
-
-        // 网络类型，如WiFi，4G等
         @NameInMap("Network")
         public String network;
 
-        // 网络类型，如WiFi，4G等
         @NameInMap("NetworkList")
         public java.util.List<String> networkList;
 
-        // 在线时长，单位：秒。
         @NameInMap("OnlineDuration")
         public Long onlineDuration;
 
-        // 在线时段信息。
         @NameInMap("OnlinePeriods")
         public java.util.List<DescribeCallResponseBodyUserDetailListOnlinePeriods> onlinePeriods;
 
-        // 平台类型：若用户客户端为WEB则是浏览器类型，若客户端为NATIVE则是操作系统类型
         @NameInMap("Os")
         public String os;
 
-        // 平台类型：若用户客户端为WEB则是浏览器类型，若客户端为NATIVE则是操作系统类型
         @NameInMap("OsList")
         public java.util.List<String> osList;
 
-        // 用户角色，取值：SENDER：发布端。RECEIVER：订阅端。
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
-        // SDK版本，如1.0.0、1.1.1等
         @NameInMap("SdkVersion")
         public String sdkVersion;
 
-        // SDK版本列表，如1.0.0、1.1.1等
         @NameInMap("SdkVersionList")
         public java.util.List<String> sdkVersionList;
 
-        // 用户ID。
         @NameInMap("UserId")
         public String userId;
 
-        // 用户ID 别称
         @NameInMap("UserIdAlias")
         public String userIdAlias;
 
@@ -411,22 +370,6 @@ public class DescribeCallResponseBody extends TeaModel {
         }
         public String getLocation() {
             return this.location;
-        }
-
-        public DescribeCallResponseBodyUserDetailList setLocationCn(String locationCn) {
-            this.locationCn = locationCn;
-            return this;
-        }
-        public String getLocationCn() {
-            return this.locationCn;
-        }
-
-        public DescribeCallResponseBodyUserDetailList setLocationEn(String locationEn) {
-            this.locationEn = locationEn;
-            return this;
-        }
-        public String getLocationEn() {
-            return this.locationEn;
         }
 
         public DescribeCallResponseBodyUserDetailList setNetwork(String network) {

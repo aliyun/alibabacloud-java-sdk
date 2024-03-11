@@ -4,11 +4,9 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeIceDurPeriodByDaySubTypeResponseBody extends TeaModel {
-    // 任务信息列表
     @NameInMap("JobInfoList")
     public java.util.List<DescribeIceDurPeriodByDaySubTypeResponseBodyJobInfoList> jobInfoList;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +32,9 @@ public class DescribeIceDurPeriodByDaySubTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeIceDurPeriodByDaySubTypeResponseBodyJobInfoListSubJobInfoList extends TeaModel {
-        // 子任务时长
         @NameInMap("SubJobDuration")
         public Long subJobDuration;
 
-        // 子任务类型
         @NameInMap("SubJobType")
         public String subJobType;
 
@@ -66,15 +62,12 @@ public class DescribeIceDurPeriodByDaySubTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeIceDurPeriodByDaySubTypeResponseBodyJobInfoList extends TeaModel {
-        // 日期时间戳
         @NameInMap("DateTs")
         public Long dateTs;
 
-        // 任务总时长,单位分钟
         @NameInMap("Duration")
         public Long duration;
 
-        // 子任务信息列表
         @NameInMap("SubJobInfoList")
         public java.util.List<DescribeIceDurPeriodByDaySubTypeResponseBodyJobInfoListSubJobInfoList> subJobInfoList;
 

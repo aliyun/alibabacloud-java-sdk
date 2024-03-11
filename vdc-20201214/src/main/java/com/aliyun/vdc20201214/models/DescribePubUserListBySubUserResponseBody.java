@@ -4,19 +4,15 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribePubUserListBySubUserResponseBody extends TeaModel {
-    // 通信状态。取值：IN：进行中。OUT：已结束。
     @NameInMap("CallStatus")
     public String callStatus;
 
-    // 发布端用户详情信息。
     @NameInMap("PubUserDetailList")
     public java.util.List<DescribePubUserListBySubUserResponseBodyPubUserDetailList> pubUserDetailList;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 订阅端用户详细信息。
     @NameInMap("SubUserDetail")
     public DescribePubUserListBySubUserResponseBodySubUserDetail subUserDetail;
 
@@ -58,11 +54,9 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
     }
 
     public static class DescribePubUserListBySubUserResponseBodyPubUserDetailListOnlinePeriods extends TeaModel {
-        // 加入通话时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("JoinTs")
         public Long joinTs;
 
-        // 离开通话时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("LeaveTs")
         public Long leaveTs;
 
@@ -90,71 +84,54 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
     }
 
     public static class DescribePubUserListBySubUserResponseBodyPubUserDetailList extends TeaModel {
-        // 用户通信流的Call ID。
         @NameInMap("CallIdList")
         public java.util.List<String> callIdList;
 
-        // 端类型，取值：WEB：Web端。NATIVE：本地端。
         @NameInMap("ClientType")
         public String clientType;
 
-        // 第一次加入通话的时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("CreatedTs")
         public Long createdTs;
 
-        // 最后一次离开通话的时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
-        // 通话时长，首次进入到最后离开，单位：秒。
         @NameInMap("Duration")
         public Long duration;
 
-        // 地理位置信息，例如：浙江省-杭州市。
         @NameInMap("Location")
         public String location;
 
-        // 网络类型，如WiFi，4G等
         @NameInMap("Network")
         public String network;
 
-        // 网络类型，如WiFi，4G等
         @NameInMap("NetworkList")
         public java.util.List<String> networkList;
 
-        // 在线时长，单位：秒。
         @NameInMap("OnlineDuration")
         public Long onlineDuration;
 
-        // 在线时段信息。
         @NameInMap("OnlinePeriods")
         public java.util.List<DescribePubUserListBySubUserResponseBodyPubUserDetailListOnlinePeriods> onlinePeriods;
 
-        // 平台类型：若用户客户端为WEB则是浏览器类型，若客户端为NATIVE则是操作系统类型
         @NameInMap("Os")
         public String os;
 
-        // 平台类型：若用户客户端为WEB则是浏览器类型，若客户端为NATIVE则是操作系统类型
         @NameInMap("OsList")
         public java.util.List<String> osList;
 
-        // 用户角色，取值：SENDER：发起者。RECEIVER：接收者。
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
-        // SDK版本。
         @NameInMap("SdkVersion")
         public String sdkVersion;
 
-        // SDK版本列表，如1.0.0、1.1.1等
         @NameInMap("SdkVersionList")
         public java.util.List<String> sdkVersionList;
 
-        // 用户ID。
         @NameInMap("UserId")
         public String userId;
 
-        // 用户ID别称
         @NameInMap("UserIdAlias")
         public String userIdAlias;
 
@@ -302,11 +279,9 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
     }
 
     public static class DescribePubUserListBySubUserResponseBodySubUserDetailOnlinePeriods extends TeaModel {
-        // 加入通话时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("JoinTs")
         public Long joinTs;
 
-        // 离开通话时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("LeaveTs")
         public Long leaveTs;
 
@@ -334,67 +309,51 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
     }
 
     public static class DescribePubUserListBySubUserResponseBodySubUserDetail extends TeaModel {
-        // 端类型，取值：WEB：Web端。NATIVE：本地端。
         @NameInMap("ClientType")
         public String clientType;
 
-        // 第一次加入通话的时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("CreatedTs")
         public Long createdTs;
 
-        // 最后一次离开通话的时间，使用UNIX时间戳表示，单位：秒。通话未结束时值为0。
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
-        // 通话时长，首次进入到最后离开，单位：秒。
         @NameInMap("Duration")
         public Long duration;
 
-        // 地理位置信息，例如：浙江省-杭州市。
         @NameInMap("Location")
         public String location;
 
-        // 网络类型，如WiFi，4G等
         @NameInMap("Network")
         public String network;
 
-        // 网络类型，如WiFi，4G等
         @NameInMap("NetworkList")
         public java.util.List<String> networkList;
 
-        // 在线时长，单位：秒。
         @NameInMap("OnlineDuration")
         public Long onlineDuration;
 
-        // 在线时段信息。
         @NameInMap("OnlinePeriods")
         public java.util.List<DescribePubUserListBySubUserResponseBodySubUserDetailOnlinePeriods> onlinePeriods;
 
-        // 平台类型：若用户客户端为WEB则是浏览器类型，若客户端为NATIVE则是操作系统类型
         @NameInMap("Os")
         public String os;
 
-        // 平台类型：若用户客户端为WEB则是浏览器类型，若客户端为NATIVE则是操作系统类型
         @NameInMap("OsList")
         public java.util.List<String> osList;
 
-        // 用户角色，取值：SENDER：发布端。RECEIVER：订阅端。
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
-        // SDK版本。
         @NameInMap("SdkVersion")
         public String sdkVersion;
 
-        // SDK版本列表，如1.0.0、1.1.1等
         @NameInMap("SdkVersionList")
         public java.util.List<String> sdkVersionList;
 
-        // 用户ID。
         @NameInMap("UserId")
         public String userId;
 
-        // 用户ID别称
         @NameInMap("UserIdAlias")
         public String userIdAlias;
 

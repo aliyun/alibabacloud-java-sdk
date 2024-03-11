@@ -4,11 +4,9 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeEndPointEventListResponseBody extends TeaModel {
-    // 用户基本信息列表。
     @NameInMap("Nodes")
     public java.util.List<DescribeEndPointEventListResponseBodyNodes> nodes;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -40,11 +38,9 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
         @NameInMap("EventCode")
         public String eventCode;
 
-        // 事件名称。
         @NameInMap("EventName")
         public String eventName;
 
-        // 事件类型，取值：USER：用户事件。SYSTEM：系统事件。
         @NameInMap("EventType")
         public String eventType;
 
@@ -66,9 +62,11 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
         @NameInMap("TrackName")
         public String trackName;
 
-        // 事件发生的时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("Ts")
         public Long ts;
+
+        @NameInMap("TsInMs")
+        public String tsInMs;
 
         @NameInMap("UserId")
         public String userId;
@@ -166,6 +164,14 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
             return this.ts;
         }
 
+        public DescribeEndPointEventListResponseBodyNodesEventDataItemsEventList setTsInMs(String tsInMs) {
+            this.tsInMs = tsInMs;
+            return this;
+        }
+        public String getTsInMs() {
+            return this.tsInMs;
+        }
+
         public DescribeEndPointEventListResponseBodyNodesEventDataItemsEventList setUserId(String userId) {
             this.userId = userId;
             return this;
@@ -177,11 +183,9 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
     }
 
     public static class DescribeEndPointEventListResponseBodyNodesEventDataItems extends TeaModel {
-        // 事件列表。
         @NameInMap("EventList")
         public java.util.List<DescribeEndPointEventListResponseBodyNodesEventDataItemsEventList> eventList;
 
-        // 第一个事件发生的时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("Ts")
         public Long ts;
 
@@ -209,11 +213,9 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
     }
 
     public static class DescribeEndPointEventListResponseBodyNodes extends TeaModel {
-        // 事件数据列表
         @NameInMap("EventDataItems")
         public java.util.List<DescribeEndPointEventListResponseBodyNodesEventDataItems> eventDataItems;
 
-        // 用户ID
         @NameInMap("UserId")
         public String userId;
 

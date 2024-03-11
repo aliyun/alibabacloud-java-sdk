@@ -4,11 +4,9 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaModel {
-    // 质量分布数据列表
     @NameInMap("QualityStatDataList")
     public java.util.List<DescribeQualityAreaDistributionStatDataResponseBodyQualityStatDataList> qualityStatDataList;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,51 +32,39 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
     }
 
     public static class DescribeQualityAreaDistributionStatDataResponseBodyQualityStatDataList extends TeaModel {
-        // 音频延时，单位毫秒
         @NameInMap("AudioDelay")
         public Long audioDelay;
 
-        // 音频优质传输率， 四位小数表示，如0.9927
         @NameInMap("AudioHighQualityTransmissionRate")
         public String audioHighQualityTransmissionRate;
 
-        // 音频首次出声时间，单位毫秒
         @NameInMap("AudioSpeakOutDuration")
         public Long audioSpeakOutDuration;
 
-        // 音频卡顿率， 四位小数表示，如0.0034
         @NameInMap("AudioStuckRate")
         public String audioStuckRate;
 
-        // 通话时长用量占比，四位小数表示，如1.0000
         @NameInMap("CallDurationRatio")
         public String callDurationRatio;
 
-        // 5秒加入频道成功率， 四位小数表示，如1.0000
         @NameInMap("JoinChannelSucFiveSecRate")
         public String joinChannelSucFiveSecRate;
 
-        // 加入频道成功率， 四位小数表示，如1.0000
         @NameInMap("JoinChannelSucRate")
         public String joinChannelSucRate;
 
-        // 区域名称，如广东省
         @NameInMap("Name")
         public String name;
 
-        // 视频延时，单位毫秒
         @NameInMap("VideoDelay")
         public Long videoDelay;
 
-        // 视频首次出图时间，单位毫秒
         @NameInMap("VideoFirstPicDuration")
         public Long videoFirstPicDuration;
 
-        // 视频优质传输率，四位小数表示，如0.9965
         @NameInMap("VideoHighQualityTransmissionRate")
         public String videoHighQualityTransmissionRate;
 
-        // 视频卡顿率， 四位小数表示，如0.0038
         @NameInMap("VideoStuckRate")
         public String videoStuckRate;
 

@@ -4,15 +4,12 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsageOsSdkVersionDistributionStatDataRequest extends TeaModel {
-    // APP ID
     @NameInMap("AppId")
     public String appId;
 
-    // 结束时间，秒级时间戳：1609344000
     @NameInMap("EndDate")
     public Long endDate;
 
-    // 开始时间，秒级时间戳：1609344000
     @NameInMap("StartDate")
     public Long startDate;
 

@@ -4,11 +4,9 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppConfigResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 阈值配置对象
     @NameInMap("ThresholdConfig")
     public DescribeAppConfigResponseBodyThresholdConfig thresholdConfig;
 
@@ -34,7 +32,6 @@ public class DescribeAppConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeAppConfigResponseBodyThresholdConfig extends TeaModel {
-        // 入会慢时间阈值，单位毫秒
         @NameInMap("JoinSlowTime")
         public Long joinSlowTime;
 

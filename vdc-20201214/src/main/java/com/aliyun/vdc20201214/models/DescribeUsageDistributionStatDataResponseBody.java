@@ -4,11 +4,9 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 用量统计数据列表
     @NameInMap("UsageStatList")
     public java.util.List<DescribeUsageDistributionStatDataResponseBodyUsageStatList> usageStatList;
 
@@ -34,23 +32,18 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
     }
 
     public static class DescribeUsageDistributionStatDataResponseBodyUsageStatList extends TeaModel {
-        // 音频通话时长，单位分钟
         @NameInMap("AudioCallDuration")
         public Long audioCallDuration;
 
-        // 通话时长占比，四位小数表示，如1.0000
         @NameInMap("CallDurationRatio")
         public String callDurationRatio;
 
-        // 统计名称， 当StatDim=CHANNEL_ONLINE： ONE_TO_FIVE：1-5人 SIX_TO_TEN：6-10人 ELEVEN_TO_TWENTY：11-20人 TWENTY_ONE_TO_FIFTY: 21-50人 ABOVE_FIFTY：50人以上  当StatDim=NETWORK： WiFi，4G等  当StatDim=OS： iOS、android等
         @NameInMap("Name")
         public String name;
 
-        // 总通话时长，单位分钟
         @NameInMap("TotalCallDuration")
         public Long totalCallDuration;
 
-        // 视频通话时长，单位分钟
         @NameInMap("VideoCallDuration")
         public Long videoCallDuration;
 

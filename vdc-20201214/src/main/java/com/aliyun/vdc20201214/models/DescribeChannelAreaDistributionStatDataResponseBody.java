@@ -4,11 +4,9 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaModel {
-    // 地域统计列表。
     @NameInMap("AreaStatList")
     public java.util.List<DescribeChannelAreaDistributionStatDataResponseBodyAreaStatList> areaStatList;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,23 +32,18 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
     }
 
     public static class DescribeChannelAreaDistributionStatDataResponseBodyAreaStatList extends TeaModel {
-        // 地域名称，例如：中国_浙江省_杭州市。
         @NameInMap("AreaName")
         public String areaName;
 
-        // 通信人数。
         @NameInMap("CallUserCount")
         public Integer callUserCount;
 
-        // 优质传输率，用小数表示，例如0.9999表示优质传输率为99.99%。
         @NameInMap("HighQualityTransmissionRate")
         public String highQualityTransmissionRate;
 
-        // 发布端人数。
         @NameInMap("PubUserCount")
         public Integer pubUserCount;
 
-        // 订阅端人数。
         @NameInMap("SubUserCount")
         public Integer subUserCount;
 

@@ -4,35 +4,27 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeFaultDiagnosisUserListRequest extends TeaModel {
-    // APP ID。
     @NameInMap("AppId")
     public String appId;
 
-    // 搜索的频道ID
     @NameInMap("ChannelId")
     public String channelId;
 
-    // 查询的结束时间，使用UNIX时间戳表示，单位：秒。
     @NameInMap("EndTs")
     public Long endTs;
 
-    // 过滤的异常类型，多个使用半角逗号分隔 JOIN_SLOW：进频道慢 AUDIO_STUCK：音频卡顿 VIDEO_STUCK：视频卡顿 VIDEO_VAGUE：视频模糊 HIGH_DELAY：通话延迟高 FIRST_FRAME_SLOW：接收首屏慢
     @NameInMap("FaultTypes")
     public String faultTypes;
 
-    // 页码
     @NameInMap("PageNo")
     public Integer pageNo;
 
-    // 每页数量
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 查询的开始时间，使用UNIX时间戳表示，单位：秒。
     @NameInMap("StartTs")
     public Long startTs;
 
-    // 搜索的用户ID
     @NameInMap("UserId")
     public String userId;
 

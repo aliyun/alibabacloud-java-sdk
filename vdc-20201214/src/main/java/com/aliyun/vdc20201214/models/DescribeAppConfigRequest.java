@@ -4,7 +4,6 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppConfigRequest extends TeaModel {
-    // APP ID
     @NameInMap("AppId")
     public String appId;
 

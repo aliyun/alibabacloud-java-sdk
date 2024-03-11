@@ -4,15 +4,12 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeEndPointMetricDataResponseBody extends TeaModel {
-    // 发布端用户指标数据。
     @NameInMap("PubMetrics")
     public java.util.List<DescribeEndPointMetricDataResponseBodyPubMetrics> pubMetrics;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 订阅端用户指标数据。
     @NameInMap("SubMetrics")
     public java.util.List<DescribeEndPointMetricDataResponseBodySubMetrics> subMetrics;
 
@@ -46,15 +43,12 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEndPointMetricDataResponseBodyPubMetricsNodes extends TeaModel {
-        // 拓展属性
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
-        // 发布端指标趋势图中x轴横坐标。
         @NameInMap("X")
         public String x;
 
-        // 发布端指标趋势图中y轴纵坐标。
         @NameInMap("Y")
         public String y;
 
@@ -90,15 +84,12 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEndPointMetricDataResponseBodyPubMetrics extends TeaModel {
-        // 坐标点列表
         @NameInMap("Nodes")
         public java.util.List<DescribeEndPointMetricDataResponseBodyPubMetricsNodes> nodes;
 
-        // 对应入参Metrics中的类型
         @NameInMap("Type")
         public String type;
 
-        // 用户ID。
         @NameInMap("UserId")
         public String userId;
 
@@ -134,15 +125,12 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEndPointMetricDataResponseBodySubMetricsNodes extends TeaModel {
-        // 拓展属性
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
-        // 订阅端指标趋势图中x轴横坐标。
         @NameInMap("X")
         public String x;
 
-        // 订阅端指标趋势图y轴纵坐标。
         @NameInMap("Y")
         public String y;
 
@@ -178,15 +166,12 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEndPointMetricDataResponseBodySubMetrics extends TeaModel {
-        // 订阅端指标趋势图坐标点列表。
         @NameInMap("Nodes")
         public java.util.List<DescribeEndPointMetricDataResponseBodySubMetricsNodes> nodes;
 
-        // 对应入参Metrics中的类型
         @NameInMap("Type")
         public String type;
 
-        // 用户ID。
         @NameInMap("UserId")
         public String userId;
 

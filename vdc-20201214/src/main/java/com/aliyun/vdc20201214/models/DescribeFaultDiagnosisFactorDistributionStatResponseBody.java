@@ -4,11 +4,9 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 影响因素分布统计数据
     @NameInMap("StatList")
     public java.util.List<DescribeFaultDiagnosisFactorDistributionStatResponseBodyStatList> statList;
 
@@ -34,15 +32,12 @@ public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends Te
     }
 
     public static class DescribeFaultDiagnosisFactorDistributionStatResponseBodyStatList extends TeaModel {
-        // 影响因素ID： 1：发布端网络差 2：订阅端网络差 3：发布端设备性能差 4：发布端关闭摄像头 5：发布端切到后台运行，UNKNOWN：未知
         @NameInMap("FactorId")
         public String factorId;
 
-        // 影响用户数
         @NameInMap("UserCount")
         public Integer userCount;
 
-        // 影响用户占比
         @NameInMap("UserRatio")
         public Float userRatio;
 

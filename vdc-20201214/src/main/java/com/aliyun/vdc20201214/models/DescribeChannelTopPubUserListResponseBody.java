@@ -4,11 +4,9 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // Top发布用户详情列表
     @NameInMap("TopPubUserDetailList")
     public java.util.List<DescribeChannelTopPubUserListResponseBodyTopPubUserDetailList> topPubUserDetailList;
 
@@ -34,11 +32,9 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelTopPubUserListResponseBodyTopPubUserDetailListOnlinePeriods extends TeaModel {
-        // 加入通话时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("JoinTs")
         public Long joinTs;
 
-        // 离开通话时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("LeaveTs")
         public Long leaveTs;
 
@@ -66,31 +62,24 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelTopPubUserListResponseBodyTopPubUserDetailList extends TeaModel {
-        // 第一次加入通话的时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("CreatedTs")
         public Long createdTs;
 
-        // 最后一次离开通话的时间，使用UNIX时间戳表示，单位：秒。通话未结束时值为0。
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
-        // 总时长，单位：秒。
         @NameInMap("Duration")
         public Long duration;
 
-        // 地域位置，例如：北京市-北京市
         @NameInMap("Location")
         public String location;
 
-        // 通信时长，单位：秒。
         @NameInMap("OnlineDuration")
         public Long onlineDuration;
 
-        // 在线期间用户列表。
         @NameInMap("OnlinePeriods")
         public java.util.List<DescribeChannelTopPubUserListResponseBodyTopPubUserDetailListOnlinePeriods> onlinePeriods;
 
-        // 用户ID。
         @NameInMap("UserId")
         public String userId;
 

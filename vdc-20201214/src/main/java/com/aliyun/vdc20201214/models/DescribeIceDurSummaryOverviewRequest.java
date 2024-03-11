@@ -4,11 +4,9 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeIceDurSummaryOverviewRequest extends TeaModel {
-    // 当前时间戳
     @NameInMap("CurTs")
     public Long curTs;
 
-    // 时区
     @NameInMap("TimeZone")
     public String timeZone;
 

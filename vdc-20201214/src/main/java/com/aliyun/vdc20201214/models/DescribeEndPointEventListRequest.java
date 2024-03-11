@@ -4,23 +4,18 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeEndPointEventListRequest extends TeaModel {
-    // APP ID。
     @NameInMap("AppId")
     public String appId;
 
-    // 频道ID
     @NameInMap("ChannelId")
     public String channelId;
 
-    // 创建频道时间，使用UNIX时间戳表示，单位：秒。
     @NameInMap("CreatedTs")
     public Long createdTs;
 
-    // 释放频道时间，使用UNIX时间戳表示，单位：秒。参数为空表示获取当前时间。
     @NameInMap("DestroyedTs")
     public Long destroyedTs;
 
-    // 用户ID列表，多个用英文逗号（,）分隔。
     @NameInMap("UserIdList")
     public String userIdList;
 

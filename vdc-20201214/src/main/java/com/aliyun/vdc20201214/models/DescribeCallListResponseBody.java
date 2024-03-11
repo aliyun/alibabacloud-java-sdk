@@ -4,23 +4,18 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeCallListResponseBody extends TeaModel {
-    // 通信列表。
     @NameInMap("CallList")
     public java.util.List<DescribeCallListResponseBodyCallList> callList;
 
-    // 页码。
     @NameInMap("PageNo")
     public Integer pageNo;
 
-    // 每页数量。
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总数量。
     @NameInMap("TotalCnt")
     public Integer totalCnt;
 
@@ -70,35 +65,30 @@ public class DescribeCallListResponseBody extends TeaModel {
     }
 
     public static class DescribeCallListResponseBodyCallList extends TeaModel {
-        // App ID。
+        /**
+         * <p>App ID。</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // 通信体验差的用户数。
         @NameInMap("BadExpUserCnt")
         public Integer badExpUserCnt;
 
-        // 通信状态，IN：进行中，OUT：已结束
         @NameInMap("CallStatus")
         public String callStatus;
 
-        // 频道ID。
         @NameInMap("ChannelId")
         public String channelId;
 
-        // 通信的创建时间戳，使用UNIX时间戳表示，单位：秒。
         @NameInMap("CreatedTs")
         public Long createdTs;
 
-        // 通信的释放时间戳，使用UNIX时间戳表示，单位：秒。
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
-        // 通信持续时长，单位：秒。
         @NameInMap("Duration")
         public Long duration;
 
-        // 通信用户数。
         @NameInMap("UserCnt")
         public Integer userCnt;
 

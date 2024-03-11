@@ -4,11 +4,9 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeQualityOverallDataResponseBody extends TeaModel {
-    // 概览数据列表
     @NameInMap("QualityOverallData")
     public java.util.List<DescribeQualityOverallDataResponseBodyQualityOverallData> qualityOverallData;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +32,9 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeQualityOverallDataResponseBodyQualityOverallDataNodes extends TeaModel {
-        // x轴横坐标
         @NameInMap("X")
         public String x;
 
-        // y轴纵坐标
         @NameInMap("Y")
         public String y;
 
@@ -66,15 +62,12 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeQualityOverallDataResponseBodyQualityOverallData extends TeaModel {
-        // 平均值
         @NameInMap("Average")
         public String average;
 
-        // 坐标点列表
         @NameInMap("Nodes")
         public java.util.List<DescribeQualityOverallDataResponseBodyQualityOverallDataNodes> nodes;
 
-        // 概览数据类型，加入频道成功率： JOIN_CHANNEL_SUC_RATE 五秒加入频道成功率： JOIN_CHANNEL_SUC_FIVE_SEC_RATE  首次出声时间： AUDIO_SPEAK_OUT_DUR 首次出图时间： VIDEO_FIRST_PIC_DUR 音频卡顿率： AUDIO_STUCK_RATE 视频卡顿率： VIDEO_STUCK_RATE 音频延时： AUDIO_DELAY 视频延时： AUDIO_DELAY 音频优质传输率： AUDIO_HIGH_QUALITY_TRANSMISSION_RATE 视频优质传输率： VIDEO_HIGH_QUALITY_TRANSMISSION_RATE
         @NameInMap("Type")
         public String type;
 
