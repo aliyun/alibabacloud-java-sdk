@@ -22,6 +22,9 @@ public class QueryCarbonTrackRequest extends TeaModel {
     @NameInMap("Uids")
     public java.util.List<String> uids;
 
+    @NameInMap("UseCode")
+    public Integer useCode;
+
     public static QueryCarbonTrackRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryCarbonTrackRequest self = new QueryCarbonTrackRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class QueryCarbonTrackRequest extends TeaModel {
     }
     public java.util.List<String> getUids() {
         return this.uids;
+    }
+
+    public QueryCarbonTrackRequest setUseCode(Integer useCode) {
+        this.useCode = useCode;
+        return this;
+    }
+    public Integer getUseCode() {
+        return this.useCode;
     }
 
 }

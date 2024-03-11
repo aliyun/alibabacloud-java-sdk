@@ -127,6 +127,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Uids", request.uidsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.useCode)) {
+            query.put("UseCode", request.useCode);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
