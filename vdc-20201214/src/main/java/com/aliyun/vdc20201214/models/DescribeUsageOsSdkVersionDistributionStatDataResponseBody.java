@@ -4,11 +4,9 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 用量统计SDK版本数据列表
     @NameInMap("UsageOsSdkVersionStatList")
     public java.util.List<DescribeUsageOsSdkVersionDistributionStatDataResponseBodyUsageOsSdkVersionStatList> usageOsSdkVersionStatList;
 
@@ -34,27 +32,21 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
     }
 
     public static class DescribeUsageOsSdkVersionDistributionStatDataResponseBodyUsageOsSdkVersionStatList extends TeaModel {
-        // 音频通话时长，单位分钟
         @NameInMap("AudioCallDuration")
         public Long audioCallDuration;
 
-        // 通话时长占比，四位小数表示，如1.0000
         @NameInMap("CallDurationRatio")
         public String callDurationRatio;
 
-        // SDK版本名称，1.0.0、1.1.1等
         @NameInMap("Name")
         public String name;
 
-        // 操作系统，如iOS、android等
         @NameInMap("Os")
         public String os;
 
-        // 总通话时长，单位分钟
         @NameInMap("TotalCallDuration")
         public Long totalCallDuration;
 
-        // 视频通话时长，单位分钟
         @NameInMap("VideoCallDuration")
         public Long videoCallDuration;
 

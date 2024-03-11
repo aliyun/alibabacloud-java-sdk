@@ -4,27 +4,21 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
-    // 通信基本信息，QueryCallUserInfo=false是返回。
     @NameInMap("CallInfo")
     public DescribeFaultDiagnosisUserDetailResponseBodyCallInfo callInfo;
 
-    // 影响因素列表，空表示影响因素未知
     @NameInMap("FactorList")
     public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyFactorList> factorList;
 
-    // 异常指标
     @NameInMap("FaultMetricData")
     public DescribeFaultDiagnosisUserDetailResponseBodyFaultMetricData faultMetricData;
 
-    // 网络运营商列表
     @NameInMap("NetworkOperators")
     public java.util.List<String> networkOperators;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 诊断用户详细信，QueryCallUserInfo=false是返回息
     @NameInMap("UserDetail")
     public DescribeFaultDiagnosisUserDetailResponseBodyUserDetail userDetail;
 
@@ -82,27 +76,24 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyCallInfo extends TeaModel {
-        // App ID。
+        /**
+         * <p>App ID。</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // 通信状态。取值：IN：进行中。OUT：已结束。
         @NameInMap("CallStatus")
         public String callStatus;
 
-        // 频道ID。
         @NameInMap("ChannelId")
         public String channelId;
 
-        // 创建通信时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("CreatedTs")
         public Long createdTs;
 
-        // 释放通信时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
-        // 通信持续时长，单位：秒。
         @NameInMap("Duration")
         public Long duration;
 
@@ -168,11 +159,9 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         @NameInMap("EventCode")
         public String eventCode;
 
-        // 事件名称。
         @NameInMap("EventName")
         public String eventName;
 
-        // 事件类型，取值：USER：用户事件。SYSTEM：系统事件。
         @NameInMap("EventType")
         public String eventType;
 
@@ -194,7 +183,6 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         @NameInMap("TrackName")
         public String trackName;
 
-        // 事件发生的时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("Ts")
         public Long ts;
 
@@ -305,11 +293,9 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItems extends TeaModel {
-        // 事件列表。
         @NameInMap("EventList")
         public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList> eventList;
 
-        // 第一个事件发生的时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("Ts")
         public Long ts;
 
@@ -337,15 +323,12 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatas extends TeaModel {
-        // 事件数据列表
         @NameInMap("EventDataItems")
         public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItems> eventDataItems;
 
-        // 来源角色： SENDER：发布端，即上行 RECEIVER：订阅端，即下行
         @NameInMap("Role")
         public String role;
 
-        // 用户ID
         @NameInMap("UserId")
         public String userId;
 
@@ -381,15 +364,12 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedMetricDatasNodes extends TeaModel {
-        // 扩展数据
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
-        // X坐标值，秒级时间戳
         @NameInMap("X")
         public String x;
 
-        // Y坐标值，指标值
         @NameInMap("Y")
         public String y;
 
@@ -425,19 +405,15 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedMetricDatas extends TeaModel {
-        // 坐标数据列表
         @NameInMap("Nodes")
         public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedMetricDatasNodes> nodes;
 
-        // 来源角色： SENDER：发布端，即上行 RECEIVER：订阅端，即下行
         @NameInMap("Role")
         public String role;
 
-        // 指标类型，参照端到端指标接口的指标类型
         @NameInMap("Type")
         public String type;
 
-        // 数据来自对应发布端的用户ID
         @NameInMap("UserId")
         public String userId;
 
@@ -481,19 +457,15 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFactorList extends TeaModel {
-        // 影响因素ID： 1：发布端网络差 2：订阅端网络差 3：发布端设备性能差 4：发布端关闭摄像头 5：发布端切到后台运行
         @NameInMap("FactorId")
         public String factorId;
 
-        // 异常来源 LOCAL：本端 REMOTE：远端
         @NameInMap("FaultSource")
         public String faultSource;
 
-        // 关联的事件，按时间分组，当FaultType为AUDIO_STUCK、VIDEO_STUCK、VIDEO_VAGUE、HIGH_DELAY时返回
         @NameInMap("RelatedEventDatas")
         public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatas> relatedEventDatas;
 
-        // 关联的指标，坐标数据，当FaultType为AUDIO_STUCK、VIDEO_STUCK、VIDEO_VAGUE、HIGH_DELAY时返回
         @NameInMap("RelatedMetricDatas")
         public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedMetricDatas> relatedMetricDatas;
 
@@ -537,11 +509,9 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFaultMetricDataNodes extends TeaModel {
-        // x轴坐标值，秒级时间戳，单位时间为分钟
         @NameInMap("X")
         public String x;
 
-        // y轴坐标值，异常指标的值
         @NameInMap("Y")
         public String y;
 
@@ -569,7 +539,6 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFaultMetricData extends TeaModel {
-        // 指标坐标点列表
         @NameInMap("Nodes")
         public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyFaultMetricDataNodes> nodes;
 
@@ -589,11 +558,9 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyUserDetailOnlinePeriods extends TeaModel {
-        // 加入通话时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("JoinTs")
         public Long joinTs;
 
-        // 离开通话时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("LeaveTs")
         public Long leaveTs;
 
@@ -621,43 +588,33 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyUserDetail extends TeaModel {
-        // 创建通话时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("CreatedTs")
         public Long createdTs;
 
-        // 释放通话时间，使用UNIX时间戳表示，单位：秒。通话未结束时值为0。
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
-        // 通话时长，首次进入到最后离开，单位：秒。
         @NameInMap("Duration")
         public Long duration;
 
-        // 地理位置信息，例如：北京市-北京市
         @NameInMap("Location")
         public String location;
 
-        // 网络类型，如WiFi，4G等
         @NameInMap("Network")
         public String network;
 
-        // 在线时长，单位：秒。
         @NameInMap("OnlineDuration")
         public Long onlineDuration;
 
-        // 在线时段信息。
         @NameInMap("OnlinePeriods")
         public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyUserDetailOnlinePeriods> onlinePeriods;
 
-        // 平台类型：若用户客户端为WEB则是浏览器类型，若客户端为NATIVE则是操作系统类型
         @NameInMap("Os")
         public String os;
 
-        // SDK版本，如1.0.0、1.1.1等
         @NameInMap("SdkVersion")
         public String sdkVersion;
 
-        // 用户ID。
         @NameInMap("UserId")
         public String userId;
 

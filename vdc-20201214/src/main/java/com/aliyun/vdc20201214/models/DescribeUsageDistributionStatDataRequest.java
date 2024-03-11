@@ -4,19 +4,15 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsageDistributionStatDataRequest extends TeaModel {
-    // APP ID
     @NameInMap("AppId")
     public String appId;
 
-    // 结束时间，秒级时间戳：如1609344000
     @NameInMap("EndDate")
     public Long endDate;
 
-    // 开始时间，秒级时间戳：如1609344000
     @NameInMap("StartDate")
     public Long startDate;
 
-    // 统计维度，支持最多填入一个 CHANNEL_ONLINE, NETWORK, OS
     @NameInMap("StatDim")
     public String statDim;
 

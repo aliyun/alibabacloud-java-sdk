@@ -4,19 +4,15 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeFaultDiagnosisOverallDataRequest extends TeaModel {
-    // APP ID
     @NameInMap("AppId")
     public String appId;
 
-    // 结束时间，秒级时间戳：1609344000
     @NameInMap("EndTs")
     public Long endTs;
 
-    // 开始时间，秒级时间戳：1609344000
     @NameInMap("StartTs")
     public Long startTs;
 
-    // 获取数据统计维度： JOIN_SLOW_USER：进频道慢用户数 AUDIO_STUCK_USER：音频卡顿用户数 VIDEO_STUCK_USER：视频卡顿用户数 VIDEO_VAGUE_USER：视频模糊用户数 HIGH_DELAY_USER：通话延迟高用户数 FIRST_SCREEN_SLOW_USER：接收首屏慢用户数
     @NameInMap("StatDim")
     public String statDim;
 

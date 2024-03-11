@@ -4,19 +4,15 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeIceDurPeriodByDaySubTypeRequest extends TeaModel {
-    // 结束是时间戳
     @NameInMap("EndTs")
     public Long endTs;
 
-    // 任务类型
     @NameInMap("JobType")
     public String jobType;
 
-    // 起始时间戳
     @NameInMap("StartTs")
     public Long startTs;
 
-    // 时区
     @NameInMap("TimeZone")
     public String timeZone;
 

@@ -4,43 +4,33 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeCallListRequest extends TeaModel {
-    // APP ID。
     @NameInMap("AppId")
     public String appId;
 
-    // 通信状态。取值：IN：进行中。OUT：已结束。
     @NameInMap("CallStatus")
     public String callStatus;
 
-    // 频道ID
     @NameInMap("ChannelId")
     public String channelId;
 
-    // 查询的结束时间，使用UNIX时间戳表示，单位：秒。
     @NameInMap("EndTs")
     public Long endTs;
 
-    // 排序字段。取值：BAD_EXP_USER_COUNT_DESC：按体验欠佳人数降序。BAD_EXP_USER_COUNT_ASC：按体验欠佳人数升序
     @NameInMap("OrderBy")
     public String orderBy;
 
-    // 页码
     @NameInMap("PageNo")
     public Integer pageNo;
 
-    // 每页数量
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 查询模式。取值：ALL：全部通话。FOLLOW：关注通话。
     @NameInMap("QueryMode")
     public String queryMode;
 
-    // 查询的开始时间，使用UNIX时间戳表示，单位：秒。
     @NameInMap("StartTs")
     public Long startTs;
 
-    // 用户ID
     @NameInMap("UserId")
     public String userId;
 

@@ -4,19 +4,15 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelOverallDataResponseBody extends TeaModel {
-    // 通信基本信息。
     @NameInMap("CallInfo")
     public DescribeChannelOverallDataResponseBodyCallInfo callInfo;
 
-    // 指标数据列表。
     @NameInMap("MetricDatas")
     public java.util.List<DescribeChannelOverallDataResponseBodyMetricDatas> metricDatas;
 
-    // 概览数据。
     @NameInMap("OverallData")
     public DescribeChannelOverallDataResponseBodyOverallData overallData;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,27 +54,21 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelOverallDataResponseBodyCallInfo extends TeaModel {
-        // 应用ID。
         @NameInMap("AppId")
         public String appId;
 
-        // 通信状态，取值：IN：进行中。OUT：已结束
         @NameInMap("CallStatus")
         public String callStatus;
 
-        // 频道ID。
         @NameInMap("ChannelId")
         public String channelId;
 
-        // 创建通信的时间戳，使用UNIX时间戳表示，单位：秒。
         @NameInMap("CreatedTs")
         public Long createdTs;
 
-        // 释放通信的时间戳，使用UNIX时间戳表示，单位：秒。
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
-        // 通信时长，单位：秒。
         @NameInMap("Duration")
         public Long duration;
 
@@ -138,15 +128,12 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelOverallDataResponseBodyMetricDatasNodes extends TeaModel {
-        // 扩展数据
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
-        // 指标趋势图中x轴横坐标。
         @NameInMap("X")
         public String x;
 
-        // 指标趋势图中y轴纵坐标。
         @NameInMap("Y")
         public String y;
 
@@ -182,11 +169,9 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelOverallDataResponseBodyMetricDatas extends TeaModel {
-        // 指标趋势图坐标点列表。
         @NameInMap("Nodes")
         public java.util.List<DescribeChannelOverallDataResponseBodyMetricDatasNodes> nodes;
 
-        // 指标类型，取值：CALL_QUALITY：通信质量。CONN_NUM：通信次数。
         @NameInMap("Type")
         public String type;
 
@@ -214,23 +199,18 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelOverallDataResponseBodyOverallData extends TeaModel {
-        // 平均通信连接的用时，单位：秒。
         @NameInMap("ConnAvgTime")
         public Float connAvgTime;
 
-        // 5秒内连通成功率，用小数表示，例如1.0表示连通成功率为100%。
         @NameInMap("FiveSecJoinRate")
         public Float fiveSecJoinRate;
 
-        // 整体音频卡顿率，用小数表示，例如0.02表示音频卡顿率为2%。
         @NameInMap("TotalAudioStuckRate")
         public Float totalAudioStuckRate;
 
-        // 整体视频卡顿率，用小数表示，例如0.02表示视频卡顿率为2%。
         @NameInMap("TotalVideoStuckRate")
         public Float totalVideoStuckRate;
 
-        // 整体视频模糊率，用小数表示，例如0.02表示视频模糊率为2%。
         @NameInMap("TotalVideoVagueRate")
         public Float totalVideoVagueRate;
 

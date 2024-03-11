@@ -4,11 +4,9 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsageOverallDataResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 用量概览数据列表
     @NameInMap("UsageOverallData")
     public java.util.List<DescribeUsageOverallDataResponseBodyUsageOverallData> usageOverallData;
 
@@ -34,11 +32,9 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeUsageOverallDataResponseBodyUsageOverallDataNodes extends TeaModel {
-        // x轴横坐标
         @NameInMap("X")
         public String x;
 
-        // y轴横坐标
         @NameInMap("Y")
         public String y;
 
@@ -66,11 +62,9 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeUsageOverallDataResponseBodyUsageOverallData extends TeaModel {
-        // 坐标点列表
         @NameInMap("Nodes")
         public java.util.List<DescribeUsageOverallDataResponseBodyUsageOverallDataNodes> nodes;
 
-        // 类型，半角逗号分隔    总时长：TOTAL_CALL_DURATION  视频通信时长：VIDEO_CALL_DURATION  音频通信时长：AUDIO_CALL_DURATION    通信频道数：CALL_CHANNEL_COUNT  高并发通信频道数：  HIGHLY_CONCURRENT_CHANNEL_COUNT  并发频道数峰值：  CHANNEL_CONCURRENT_PEAK    在线人数峰值：ONLINE_USER_PEAK  累计通话人数：  TOTAL_CALL_USER  累计进出人次：  TOTAL_INOUT_NUM
         @NameInMap("Type")
         public String type;
 

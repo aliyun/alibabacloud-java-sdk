@@ -4,11 +4,9 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
-    // 分布数据列表
     @NameInMap("QualityStatDataList")
     public java.util.List<DescribeQualityDistributionStatDataResponseBodyQualityStatDataList> qualityStatDataList;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,51 +32,39 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
     }
 
     public static class DescribeQualityDistributionStatDataResponseBodyQualityStatDataList extends TeaModel {
-        // 音频延时，单位毫秒
         @NameInMap("AudioDelay")
         public Long audioDelay;
 
-        // 音频优质传输率， 四位小数表示，如0.9927
         @NameInMap("AudioHighQualityTransmissionRate")
         public String audioHighQualityTransmissionRate;
 
-        // 音频首次出声时间，单位毫秒
         @NameInMap("AudioSpeakOutDuration")
         public Long audioSpeakOutDuration;
 
-        // 音频卡顿率， 四位小数表示，如0.0034
         @NameInMap("AudioStuckRate")
         public String audioStuckRate;
 
-        // 通话时长用量占比，四位小数表示，如1.0000
         @NameInMap("CallDurationRatio")
         public String callDurationRatio;
 
-        // 5秒加入频道成功率， 四位小数表示，如1.0000
         @NameInMap("JoinChannelSucFiveSecRate")
         public String joinChannelSucFiveSecRate;
 
-        // 加入频道成功率， 四位小数表示，如1.0000
         @NameInMap("JoinChannelSucRate")
         public String joinChannelSucRate;
 
-        // 统计名称， 当StatDim=CHANNEL_ONLINE： ONE_TO_FIVE：1-5人 SIX_TO_TEN：6-10人 ELEVEN_TO_TWENTY：11-20人 TWENTY_ONE_TO_FIFTY: 21-50人 ABOVE_FIFTY：50人以上  当StatDim=NETWORK： WiFi，4G等  当StatDim=OS： iOS、android等
         @NameInMap("Name")
         public String name;
 
-        // 视频延时，单位毫秒
         @NameInMap("VideoDelay")
         public Long videoDelay;
 
-        // 视频首次出图时间，单位毫秒
         @NameInMap("VideoFirstPicDuration")
         public Long videoFirstPicDuration;
 
-        // 视频优质传输率，四位小数表示，如0.9965
         @NameInMap("VideoHighQualityTransmissionRate")
         public String videoHighQualityTransmissionRate;
 
-        // 视频卡顿率， 四位小数表示，如0.0038
         @NameInMap("VideoStuckRate")
         public String videoStuckRate;
 

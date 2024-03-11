@@ -4,7 +4,6 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeCallUserListRequest extends TeaModel {
-    // A short description of struct
     @NameInMap("AppId")
     public String appId;
 

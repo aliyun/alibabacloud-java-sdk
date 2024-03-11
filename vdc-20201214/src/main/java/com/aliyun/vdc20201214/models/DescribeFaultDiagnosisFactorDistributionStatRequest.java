@@ -4,15 +4,12 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeFaultDiagnosisFactorDistributionStatRequest extends TeaModel {
-    // APP ID。
     @NameInMap("AppId")
     public String appId;
 
-    // 查询的结束时间，使用UNIX时间戳表示，单位：秒。
     @NameInMap("EndTs")
     public Long endTs;
 
-    // 查询的开始时间，使用UNIX时间戳表示，单位：秒。
     @NameInMap("StartTs")
     public Long startTs;
 

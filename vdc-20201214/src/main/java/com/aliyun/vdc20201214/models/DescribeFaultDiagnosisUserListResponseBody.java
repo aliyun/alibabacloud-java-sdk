@@ -4,23 +4,18 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
-    // 页码。
     @NameInMap("PageNo")
     public Integer pageNo;
 
-    // 每页数量。
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总数量。
     @NameInMap("TotalCnt")
     public Integer totalCnt;
 
-    // 异常用户明细列表。
     @NameInMap("UserList")
     public java.util.List<DescribeFaultDiagnosisUserListResponseBodyUserList> userList;
 
@@ -70,7 +65,6 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserListResponseBodyUserListFaultList extends TeaModel {
-        // 异常类型 JOIN_SLOW：进频道慢 AUDIO_STUCK：音频卡顿 VIDEO_STUCK：视频卡顿 VIDEO_VAGUE：视频模糊 HIGH_DELAY：通话延迟高 FIRST_FRAME_SLOW：接收首屏慢
         @NameInMap("FaultType")
         public String faultType;
 
@@ -90,27 +84,21 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserListResponseBodyUserList extends TeaModel {
-        // 通信的创建时间戳，使用UNIX时间戳表示，单位：秒。
         @NameInMap("ChannelCreatedTs")
         public Long channelCreatedTs;
 
-        // 频道ID。
         @NameInMap("ChannelId")
         public String channelId;
 
-        // 用户首次进入通话时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("CreatedTs")
         public Long createdTs;
 
-        // 用户最后一次离开通话时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
-        // 异常列表。
         @NameInMap("FaultList")
         public java.util.List<DescribeFaultDiagnosisUserListResponseBodyUserListFaultList> faultList;
 
-        // 用户ID。
         @NameInMap("UserId")
         public String userId;
 

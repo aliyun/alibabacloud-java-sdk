@@ -4,19 +4,15 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeQualityAreaDistributionStatDataRequest extends TeaModel {
-    // APP ID
     @NameInMap("AppId")
     public String appId;
 
-    // 结束时间，秒级时间戳，如1609344000
     @NameInMap("EndDate")
     public Long endDate;
 
-    // 父级地区名称，为空取世界范围（国家维度）的统计，如： ""->中国、英国 "中国"->北京市、广东省 "广东省"->广州市、深圳市、佛山市 "北京市"->北京市
     @NameInMap("ParentArea")
     public String parentArea;
 
-    // 开始时间，秒级时间戳，如1609344000
     @NameInMap("StartDate")
     public Long startDate;
 

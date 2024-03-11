@@ -4,11 +4,9 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeCallUserExpResponseBody extends TeaModel {
-    // 通信体验信息。
     @NameInMap("ExpInfoList")
     public java.util.List<DescribeCallUserExpResponseBodyExpInfoList> expInfoList;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +32,9 @@ public class DescribeCallUserExpResponseBody extends TeaModel {
     }
 
     public static class DescribeCallUserExpResponseBodyExpInfoList extends TeaModel {
-        // 用户体验：GOOD:优良, BAD:欠佳
         @NameInMap("CallExp")
         public String callExp;
 
-        // 用户ID
         @NameInMap("UserId")
         public String userId;
 

@@ -4,15 +4,12 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelUserMetricsResponseBody extends TeaModel {
-    // 指标数据列表。
     @NameInMap("MetricDatas")
     public java.util.List<DescribeChannelUserMetricsResponseBodyMetricDatas> metricDatas;
 
-    // 总览数据
     @NameInMap("OverallData")
     public DescribeChannelUserMetricsResponseBodyOverallData overallData;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,15 +43,12 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelUserMetricsResponseBodyMetricDatasNodes extends TeaModel {
-        // 拓展属性
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
-        // 指标趋势图中x轴横坐标。
         @NameInMap("X")
         public String x;
 
-        // 指标趋势图中y轴纵坐标。
         @NameInMap("Y")
         public String y;
 
@@ -90,11 +84,9 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelUserMetricsResponseBodyMetricDatas extends TeaModel {
-        // 指标趋势图坐标点列表。
         @NameInMap("Nodes")
         public java.util.List<DescribeChannelUserMetricsResponseBodyMetricDatasNodes> nodes;
 
-        // 指标类型，取值：ALL_NUM：累计用户数量。PUB_NUM：累计发布用户数量。SUB_NUM：累计订阅用户数量。JOIN_FAIL_NUM：累计加入频道异常用户数量。BAD_EXP_NUM：累计通信体验异常用户。
         @NameInMap("Type")
         public String type;
 
@@ -122,23 +114,18 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelUserMetricsResponseBodyOverallData extends TeaModel {
-        // 累计通信体验异常用户数量。
         @NameInMap("TotalBadExpNum")
         public Long totalBadExpNum;
 
-        // 累计加入频道异常用户数量。
         @NameInMap("TotalJoinFailNum")
         public Long totalJoinFailNum;
 
-        // 累计发布端用户数量。
         @NameInMap("TotalPubUserNum")
         public Long totalPubUserNum;
 
-        // 累计订阅端用户数量。
         @NameInMap("TotalSubUserNum")
         public Long totalSubUserNum;
 
-        // 累计用户数量。
         @NameInMap("TotalUserNum")
         public Long totalUserNum;
 

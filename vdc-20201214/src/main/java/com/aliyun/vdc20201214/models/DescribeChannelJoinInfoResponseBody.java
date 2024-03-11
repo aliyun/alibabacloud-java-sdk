@@ -4,15 +4,12 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelJoinInfoResponseBody extends TeaModel {
-    // 在入会慢时间阈值内的入会成功率
     @NameInMap("JoinFastSuccessRate")
     public String joinFastSuccessRate;
 
-    // 入会慢时间阈值
     @NameInMap("JoinSlowThreshold")
     public Long joinSlowThreshold;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

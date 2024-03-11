@@ -4,15 +4,12 @@ package com.aliyun.vdc20201214.models;
 import com.aliyun.tea.*;
 
 public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
-    // 异常指标数据
     @NameInMap("MetricData")
     public DescribeFaultDiagnosisOverallDataResponseBodyMetricData metricData;
 
-    // 总览数据
     @NameInMap("OverallData")
     public DescribeFaultDiagnosisOverallDataResponseBodyOverallData overallData;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,15 +43,12 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisOverallDataResponseBodyMetricDataNodes extends TeaModel {
-        // 拓展属性，ratio：单位时间内异常用户占比，totalCount：单位时间内用户总数
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
-        // x轴横坐标，秒级时间戳
         @NameInMap("X")
         public String x;
 
-        // y轴横坐标，单位数据异常用户数
         @NameInMap("Y")
         public String y;
 
@@ -90,7 +84,6 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisOverallDataResponseBodyMetricData extends TeaModel {
-        // 指标坐标点列表，单位时间为1分钟的异常用户数据
         @NameInMap("Nodes")
         public java.util.List<DescribeFaultDiagnosisOverallDataResponseBodyMetricDataNodes> nodes;
 
@@ -110,15 +103,12 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisOverallDataResponseBodyOverallData extends TeaModel {
-        // 异常用户数/人次
         @NameInMap("FaultUserCount")
         public Integer faultUserCount;
 
-        // 异常用户总占比
         @NameInMap("FaultUserRatio")
         public Float faultUserRatio;
 
-        // 用户总数/人次
         @NameInMap("TotalUserCount")
         public Integer totalUserCount;
 
