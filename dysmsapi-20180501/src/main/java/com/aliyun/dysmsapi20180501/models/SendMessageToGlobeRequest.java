@@ -26,10 +26,15 @@ public class SendMessageToGlobeRequest extends TeaModel {
      * <p>The mobile phone number to which the message is sent. You must add the dialing code to the beginning of the mobile phone number. Example: 8521245567\*\*\*\*.</p>
      * <br>
      * <p>For more information, see [Dialing codes](https://www.alibabacloud.com/help/zh/short-message-service/latest/dialing-codes).</p>
+     * <br>
+     * <p>>  You cannot call the SendMessageToGlobe operation to send messages to the Chinese mainland.</p>
      */
     @NameInMap("To")
     public String to;
 
+    /**
+     * <p>The validity period of the message. Unit: seconds.</p>
+     */
     @NameInMap("ValidityPeriod")
     public Long validityPeriod;
 
