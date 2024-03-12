@@ -583,8 +583,14 @@ public class CreateClusterRequest extends TeaModel {
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
         @NameInMap("VSwitchZoneId")
         public String vSwitchZoneId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
 
         /**
          * <p>复用VPD信息</p>
@@ -621,12 +627,28 @@ public class CreateClusterRequest extends TeaModel {
             return this.securityGroupId;
         }
 
+        public CreateClusterRequestNetworks setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
         public CreateClusterRequestNetworks setVSwitchZoneId(String vSwitchZoneId) {
             this.vSwitchZoneId = vSwitchZoneId;
             return this;
         }
         public String getVSwitchZoneId() {
             return this.vSwitchZoneId;
+        }
+
+        public CreateClusterRequestNetworks setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
         public CreateClusterRequestNetworks setVpdInfo(CreateClusterRequestNetworksVpdInfo vpdInfo) {
