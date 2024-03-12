@@ -4,11 +4,14 @@ package com.aliyun.governance20210120.models;
 import com.aliyun.tea.*;
 
 public class GetEnrolledAccountRequest extends TeaModel {
+    /**
+     * <p>The account ID.</p>
+     */
     @NameInMap("AccountUid")
     public Long accountUid;
 
     /**
-     * <p>RegionId</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

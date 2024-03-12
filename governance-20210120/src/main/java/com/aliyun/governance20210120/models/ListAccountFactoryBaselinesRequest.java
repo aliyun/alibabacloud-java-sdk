@@ -4,9 +4,17 @@ package com.aliyun.governance20210120.models;
 import com.aliyun.tea.*;
 
 public class ListAccountFactoryBaselinesRequest extends TeaModel {
+    /**
+     * <p>The maximum number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

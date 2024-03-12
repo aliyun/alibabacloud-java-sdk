@@ -26,6 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+      * You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
+      * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the [GetEnrolledAccount API](~~GetEnrolledAccount~~) operation to view the details about the account to obtain the result of applying the account baseline to the account.
+      *
+      * @param request EnrollAccountRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return EnrollAccountResponse
+     */
     public EnrollAccountResponse enrollAccountWithOptions(EnrollAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -82,6 +90,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EnrollAccountResponse());
     }
 
+    /**
+      * You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
+      * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the [GetEnrolledAccount API](~~GetEnrolledAccount~~) operation to view the details about the account to obtain the result of applying the account baseline to the account.
+      *
+      * @param request EnrollAccountRequest
+      * @return EnrollAccountResponse
+     */
     public EnrollAccountResponse enrollAccount(EnrollAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enrollAccountWithOptions(request, runtime);
