@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to retain the ENI when the associated instance is released. Valid values:</p>
+     * <p>Specifies whether to release the ENI when the associated instance is released. Valid values:</p>
      * <br>
-     * <p>- true</p>
-     * <p>- false</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("DeleteOnRelease")
     public Boolean deleteOnRelease;
@@ -28,9 +28,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public String networkInterfaceId;
 
     /**
-     * <p>The name of the ENI. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with [http:// or https:// ](http://https://。、（:）、（\_）（-）。).</p>
+     * <p>The name of the ENI. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      * <br>
-     * <p>This parameter is left empty by default.</p>
+     * <p>This parameter is empty by default.</p>
      */
     @NameInMap("NetworkInterfaceName")
     public String networkInterfaceName;
@@ -67,9 +67,10 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public Integer rxQueueSize;
 
     /**
-     * <p>The ID of security group N to which the secondary ENI finally belongs. If a security group to which the ENI has belonged is in the ID list, that security group is removed from the list. Valid values of N: 1, 2, 3, 4, and 5.</p>
+     * <p>The IDs of the security groups to which to add the secondary ENI. The secondary ENI is added to the specified security groups and are removed from its original security groups.</p>
      * <br>
-     * <p>> After you change the security group, the change takes effect after a short delay.</p>
+     * <p>*   The valid value range of N varies based on the number of security groups to which an ENI can be added. For more information, see [Limits](~~25412#SecurityGroupQuota~~).</p>
+     * <p>*   The new security groups take effect after a short delay.</p>
      */
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;
