@@ -274,6 +274,9 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("PhoneRegion")
         public String phoneRegion;
 
+        @NameInMap("PreferredLanguage")
+        public String preferredLanguage;
+
         /**
          * <p>The ID of the primary organizational unit to which the account belongs.</p>
          */
@@ -471,6 +474,14 @@ public class GetUserResponseBody extends TeaModel {
         }
         public String getPhoneRegion() {
             return this.phoneRegion;
+        }
+
+        public GetUserResponseBodyUser setPreferredLanguage(String preferredLanguage) {
+            this.preferredLanguage = preferredLanguage;
+            return this;
+        }
+        public String getPreferredLanguage() {
+            return this.preferredLanguage;
         }
 
         public GetUserResponseBodyUser setPrimaryOrganizationalUnitId(String primaryOrganizationalUnitId) {

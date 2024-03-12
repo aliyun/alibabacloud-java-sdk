@@ -74,6 +74,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String applicationSourceType;
 
         /**
+         * <p>应用模板ID</p>
+         */
+        @NameInMap("ApplicationTemplateId")
+        public String applicationTemplateId;
+
+        /**
          * <p>The client ID of the application.</p>
          */
         @NameInMap("ClientId")
@@ -176,6 +182,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public String getApplicationSourceType() {
             return this.applicationSourceType;
+        }
+
+        public ListApplicationsResponseBodyApplications setApplicationTemplateId(String applicationTemplateId) {
+            this.applicationTemplateId = applicationTemplateId;
+            return this;
+        }
+        public String getApplicationTemplateId() {
+            return this.applicationTemplateId;
         }
 
         public ListApplicationsResponseBodyApplications setClientId(String clientId) {
