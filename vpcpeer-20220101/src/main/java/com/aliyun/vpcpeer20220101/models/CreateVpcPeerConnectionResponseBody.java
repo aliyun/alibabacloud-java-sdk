@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVpcPeerConnectionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the VPC peering connection.</p>
+     * <p>The ID of the instance on which the VPC peering connection is created.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
