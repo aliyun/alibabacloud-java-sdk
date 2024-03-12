@@ -4,15 +4,31 @@ package com.aliyun.dytnsapi20230101.models;
 import com.aliyun.tea.*;
 
 public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
+    /**
+     * <p>The return code. Valid values:</p>
+     * <br>
+     * <p>*   **OK**: The request is successful.</p>
+     * <p>*   **IdentificationNotAvailable**: The verification system does not support the phone number that corresponds to the IP address.</p>
+     * <p>*   **MobileNumberIllegal**: The format of the phone number is invalid.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetPhoneNumberIdentificationUrlResponseBodyData data;
 
+    /**
+     * <p>The description of the return code.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +70,15 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
     }
 
     public static class GetPhoneNumberIdentificationUrlResponseBodyData extends TeaModel {
+        /**
+         * <p>The verification URL.</p>
+         */
         @NameInMap("IdentificationUrl")
         public String identificationUrl;
 
+        /**
+         * <p>The session ID.</p>
+         */
         @NameInMap("SessionId")
         public String sessionId;
 

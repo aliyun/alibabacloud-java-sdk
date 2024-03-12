@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dytnsapi20230101</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
   <name>dytnsapi20230101</name>
   <description>Alibaba Cloud Dytnsapi (20230101) SDK for Java
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.16</version>
+      <version>0.2.21</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.8</version>
+      <version>0.3.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

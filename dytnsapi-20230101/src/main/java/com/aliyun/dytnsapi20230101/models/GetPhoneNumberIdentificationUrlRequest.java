@@ -4,21 +4,36 @@ package com.aliyun.dytnsapi20230101.models;
 import com.aliyun.tea.*;
 
 public class GetPhoneNumberIdentificationUrlRequest extends TeaModel {
+    /**
+     * <p>The authorization code.</p>
+     */
     @NameInMap("AuthCode")
     public String authCode;
 
+    /**
+     * <p>The IP address of the subscriber\"s phone.</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <p>The external ID.</p>
+     */
     @NameInMap("OutId")
     public String outId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The phone number of the subscriber. The phone number is in the Mobile Station International Subscriber Directory Number (MSISDN) format.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    /**
+     * <p>Specifies whether to remember the phone number.</p>
+     */
     @NameInMap("RememberPhoneNumber")
     public Boolean rememberPhoneNumber;
 
