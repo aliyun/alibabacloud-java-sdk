@@ -4,12 +4,21 @@ package com.aliyun.governance20210120.models;
 import com.aliyun.tea.*;
 
 public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of baselines.</p>
+     */
     @NameInMap("Baselines")
     public java.util.List<ListAccountFactoryBaselinesResponseBodyBaselines> baselines;
 
+    /**
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,21 +52,42 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
     }
 
     public static class ListAccountFactoryBaselinesResponseBodyBaselines extends TeaModel {
+        /**
+         * <p>The baseline ID.</p>
+         */
         @NameInMap("BaselineId")
         public String baselineId;
 
+        /**
+         * <p>The name of the baseline.</p>
+         */
         @NameInMap("BaselineName")
         public String baselineName;
 
+        /**
+         * <p>The time at which the baseline was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the baseline.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The type of the baseline. Valid values:</p>
+         * <br>
+         * <p>*   System: default baseline</p>
+         * <p>*   Custom: custom baseline</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The time when the baseline was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

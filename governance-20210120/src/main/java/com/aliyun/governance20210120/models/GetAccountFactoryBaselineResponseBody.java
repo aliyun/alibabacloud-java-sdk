@@ -4,27 +4,54 @@ package com.aliyun.governance20210120.models;
 import com.aliyun.tea.*;
 
 public class GetAccountFactoryBaselineResponseBody extends TeaModel {
+    /**
+     * <p>The baseline ID.</p>
+     */
     @NameInMap("BaselineId")
     public String baselineId;
 
+    /**
+     * <p>The baseline items.</p>
+     */
     @NameInMap("BaselineItems")
     public java.util.List<GetAccountFactoryBaselineResponseBodyBaselineItems> baselineItems;
 
+    /**
+     * <p>The name of the baseline.</p>
+     */
     @NameInMap("BaselineName")
     public String baselineName;
 
+    /**
+     * <p>The time when the baseline was created.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The description of the baseline.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The type of the baseline. Valid values:</p>
+     * <br>
+     * <p>*   System: default baseline.</p>
+     * <p>*   Custom: custom baseline.</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The time when the baseline was updated.</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
@@ -98,12 +125,23 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
     }
 
     public static class GetAccountFactoryBaselineResponseBodyBaselineItems extends TeaModel {
+        /**
+         * <p>The configuration of the baseline item.</p>
+         * <br>
+         * <p>The value is a JSON string.</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <p>The name of the baseline item.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The version of the baseline item.</p>
+         */
         @NameInMap("Version")
         public String version;
 

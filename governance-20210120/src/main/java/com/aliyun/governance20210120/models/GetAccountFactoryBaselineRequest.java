@@ -4,11 +4,14 @@ package com.aliyun.governance20210120.models;
 import com.aliyun.tea.*;
 
 public class GetAccountFactoryBaselineRequest extends TeaModel {
+    /**
+     * <p>The baseline ID.</p>
+     */
     @NameInMap("BaselineId")
     public String baselineId;
 
     /**
-     * <p>RegionId</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

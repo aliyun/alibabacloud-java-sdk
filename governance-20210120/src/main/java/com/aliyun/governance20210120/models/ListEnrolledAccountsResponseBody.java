@@ -4,12 +4,21 @@ package com.aliyun.governance20210120.models;
 import com.aliyun.tea.*;
 
 public class ListEnrolledAccountsResponseBody extends TeaModel {
+    /**
+     * <p>The accounts.</p>
+     */
     @NameInMap("EnrolledAccounts")
     public java.util.List<ListEnrolledAccountsResponseBodyEnrolledAccounts> enrolledAccounts;
 
+    /**
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,27 +52,58 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
     }
 
     public static class ListEnrolledAccountsResponseBodyEnrolledAccounts extends TeaModel {
+        /**
+         * <p>The account ID.</p>
+         */
         @NameInMap("AccountUid")
         public Long accountUid;
 
+        /**
+         * <p>The baseline ID.</p>
+         */
         @NameInMap("BaselineId")
         public String baselineId;
 
+        /**
+         * <p>The time at which the account was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The display name of the account.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The ID of the parent folder.</p>
+         */
         @NameInMap("FolderId")
         public String folderId;
 
+        /**
+         * <p>The ID of the billing account.</p>
+         */
         @NameInMap("PayerAccountUid")
         public Long payerAccountUid;
 
+        /**
+         * <p>The creation status of the account. Valid values:</p>
+         * <br>
+         * <p>*   Pending: The account is waiting to be created.</p>
+         * <p>*   Running: The account is being created.</p>
+         * <p>*   Finished: The account is created.</p>
+         * <p>*   Failed: The account failed to be created.</p>
+         * <p>*   Scheduling: The account is being scheduled.</p>
+         * <p>*   ScheduleFailed: The account failed to be scheduled.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The time when the information about the account was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
