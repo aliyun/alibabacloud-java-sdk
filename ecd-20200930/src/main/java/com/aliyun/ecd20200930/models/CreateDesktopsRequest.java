@@ -17,7 +17,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when the ChargeType parameter is set to PrePaid.````</p>
+     * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when the ChargeType parameter is set to PrePaid.</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;

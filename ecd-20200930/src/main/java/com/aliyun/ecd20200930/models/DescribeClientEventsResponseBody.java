@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeClientEventsResponseBody extends TeaModel {
     /**
-     * <p>The information about the regular user that connects to the cloud desktop from the EDS client. The information can be the RAM user ID or AD username.</p>
+     * <p>Details about the events.</p>
      */
     @NameInMap("Events")
     public java.util.List<DescribeClientEventsResponseBodyEvents> events;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The query token that is returned in this call.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The type of the directory.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,135 +53,139 @@ public class DescribeClientEventsResponseBody extends TeaModel {
 
     public static class DescribeClientEventsResponseBodyEvents extends TeaModel {
         /**
-         * <p>The name of the cloud desktop.</p>
+         * <p>The ID of the Alibaba Cloud account with which the event is associated.</p>
          */
         @NameInMap("AliUid")
         public String aliUid;
 
         /**
-         * <p>The name of the cloud desktop.</p>
+         * <p>The number of bytes that are received.</p>
          */
         @NameInMap("BytesReceived")
         public String bytesReceived;
 
         /**
-         * <p>The information about the regular user that connects to the cloud desktop from the EDS client. The information can be the RAM user ID or Active Directory (AD) username. If you do not specify a value for this parameter, events of all regular users in the specified region are queried.</p>
+         * <p>The number of bytes that are sent.</p>
          */
         @NameInMap("BytesSend")
         public String bytesSend;
 
         /**
-         * <p>The IP address of the cloud desktop. If you do not specify a value for this parameter, events of all cloud desktops in the specified region are queried.</p>
+         * <p>The IP address of the client.</p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
-         * <p>The ID of the cloud desktop.</p>
+         * <p>The OS that the client runs.</p>
          */
         @NameInMap("ClientOS")
         public String clientOS;
 
         /**
-         * <p>DescribeClientEvents</p>
+         * <p>The version of the client.</p>
          */
         @NameInMap("ClientVersion")
         public String clientVersion;
 
+        /**
+         * <p>The ID of the desktop group.</p>
+         */
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
+        /**
+         * <p>The name of the desktop group.</p>
+         */
         @NameInMap("DesktopGroupName")
         public String desktopGroupName;
 
         /**
-         * <p>The name of the desktop group.</p>
+         * <p>The ID of the cloud desktop.</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The IP address of the cloud desktop.</p>
          */
         @NameInMap("DesktopIp")
         public String desktopIp;
 
+        /**
+         * <p>The name of the cloud desktop.</p>
+         */
         @NameInMap("DesktopName")
         public String desktopName;
 
         /**
-         * <p>The type of the event.</p>
+         * <p>The ID of the directory to which the cloud desktop belongs.</p>
          */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         /**
-         * <p>The type of event.</p>
+         * <p>The type of the directory.</p>
          */
         @NameInMap("DirectoryType")
         public String directoryType;
 
         /**
-         * <p>The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
-         * <br>
-         * <p>If you do not specify a value for this parameter, the current time is used.</p>
+         * <p>The information about the regular user that connects to the cloud desktop from the EDS client. The information can be the RAM user ID or AD username.</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
-         * <p>The type of event that you want to query. Valid values:</p>
-         * <br>
-         * <p>*   DESKTOP_CONNECT: The desktop session is established.</p>
-         * <p>*   DESKTOP_DISCONNECT: The desktop session is disconnected.</p>
-         * <p>*   DESKTOP_REBOOT: The cloud desktop is restarted.</p>
-         * <p>*   CLIENT_AD_LOGIN: The AD user logs on to the client.</p>
-         * <p>*   GET_CONNECTION_TICKET: The request to connect to the cloud desktop is sent.</p>
-         * <p>*   DESKTOP_START: The cloud desktop is started.</p>
-         * <p>*   DESKTOP_STOP: The cloud desktop is stopped.</p>
-         * <br>
-         * <p>If you do not specify a value for this parameter, events of all types are queried.</p>
+         * <p>The ID of the event.</p>
          */
         @NameInMap("EventId")
         public String eventId;
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
-         * <br>
-         * <p>If you do not specify a value for this parameter, all events that occurred before the point in time that you specify for `EndTime` are queried.</p>
+         * <p>The time when the event occurred.</p>
          */
         @NameInMap("EventTime")
         public String eventTime;
 
         /**
-         * <p>The query token. Set the value to the NextToken value that is returned from the last call to the DescribeClientEvents operation.</p>
+         * <p>The type of the event.</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
-         * <p>The ID of the event.</p>
+         * <p>The ID of the workspace to which the cloud desktop belongs.</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
+        /**
+         * <p>The name of the workspace.</p>
+         */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The account type of the workspace. Valid values:</p>
+         * <br>
+         * <p>*   SIMPLE: convenience account</p>
+         * <p>*   AD_CONNECTOR: enterprise AD account</p>
          */
         @NameInMap("OfficeSiteType")
         public String officeSiteType;
 
         /**
-         * <p>The ID of the cloud desktop. If you do not specify a value for this parameter, events of all cloud desktops in the specified region are queried.</p>
+         * <p>The ID of the region.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The number of bytes that are sent.</p>
+         * <p>The status of the event. This parameter is returned if you set the EventType parameter to DESKTOP_DISCONNECT or GET_CONNECTION_TICKET. Valid values:</p>
+         * <br>
+         * <p>*   200\. The value indicates that the request is successful.</p>
+         * <p>*   An error message. The value indicates that the request failed. Example: FailedToGetConnectionTicket.</p>
          */
         @NameInMap("Status")
         public String status;

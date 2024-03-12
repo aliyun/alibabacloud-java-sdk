@@ -4,18 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CopyImageRequest extends TeaModel {
+    /**
+     * <p>The description of the image copy. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("DestinationDescription")
     public String destinationDescription;
 
+    /**
+     * <p>The name of the image copy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
+     */
     @NameInMap("DestinationImageName")
     public String destinationImageName;
 
+    /**
+     * <p>The destination region to which you want to copy the image.</p>
+     */
     @NameInMap("DestinationRegionId")
     public String destinationRegionId;
 
+    /**
+     * <p>The ID of the image that is copied to the destination region.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

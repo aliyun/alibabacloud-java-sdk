@@ -5,35 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeCensResponseBody extends TeaModel {
     /**
-     * <p>The level of CIDR block overlapping. Valid value: REDUCED. This value indicates that the CIDR blocks can overlap with each other but must not be the same.</p>
+     * <p>Details of the CEN instances.</p>
      */
     @NameInMap("Cens")
     public java.util.List<DescribeCensResponseBodyCens> cens;
 
     /**
-     * <p>The status of the CEN instance. Valid values:</p>
-     * <br>
-     * <p>*   Creating: The CEN instance is being created.</p>
-     * <p>*   Active: The CEN instance is running.</p>
-     * <p>*   Deleting: The CEN instance is being deleted.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The description of the CEN instance.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The operation that you want to perform. Set the value to DescribeCens.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The IDs of the bandwidth plans that are associated with the CEN instance.</p>
+     * <p>The total number of CEN instances returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -84,6 +80,9 @@ public class DescribeCensResponseBody extends TeaModel {
     }
 
     public static class DescribeCensResponseBodyCensPackageIds extends TeaModel {
+        /**
+         * <p>The ID of the bandwidth plan that is associated with the CEN instance.</p>
+         */
         @NameInMap("PackageId")
         public String packageId;
 
@@ -104,11 +103,14 @@ public class DescribeCensResponseBody extends TeaModel {
 
     public static class DescribeCensResponseBodyCensTags extends TeaModel {
         /**
-         * <p>DescribeCens</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -137,54 +139,63 @@ public class DescribeCensResponseBody extends TeaModel {
 
     public static class DescribeCensResponseBodyCens extends TeaModel {
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The ID of the CEN instance.</p>
          */
         @NameInMap("CenId")
         public String cenId;
 
         /**
-         * <p>The tag value of the CEN instance.</p>
+         * <p>The time when the CEN instance was created.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The tag key of the CEN instance.</p>
+         * <p>The description of the CEN instance.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Indicates whether IPv6 is supported. Valid value: DISABLED. This value indicates that IPv6 is not supported.</p>
+         * <p>Indicates whether IPv6 is supported. A value of DISABLED indicates that IPv6 is not supported.</p>
          * <br>
-         * <p>>  IPv6 is not supported.</p>
+         * <p>**</p>
+         * <br>
+         * <p>**Description** IPv6 is not supported.</p>
          */
         @NameInMap("Ipv6Level")
         public String ipv6Level;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The name of the CEN instance.</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The IDs of the bandwidth plans that are associated with the CEN instance.</p>
+         */
         @NameInMap("PackageIds")
         public java.util.List<DescribeCensResponseBodyCensPackageIds> packageIds;
 
         /**
-         * <p>The name of the CEN instance.</p>
+         * <p>The level of CIDR block overlapping. If REDUCED returns, the CIDR blocks can overlap with each other but must not be the same.</p>
          */
         @NameInMap("ProtectionLevel")
         public String protectionLevel;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The status of the CEN instance. Valid values:</p>
+         * <br>
+         * <p>*   Creating</p>
+         * <p>*   Active</p>
+         * <p>*   Deleting</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The tags of the CEN instance.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeCensResponseBodyCensTags> tags;

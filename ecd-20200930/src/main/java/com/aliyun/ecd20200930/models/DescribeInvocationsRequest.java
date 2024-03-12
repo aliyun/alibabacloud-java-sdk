@@ -74,9 +74,10 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String invokeStatus;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
-     * <p>Default value: 100.</p>
+     * <p>*   Valid values: 1 to 50.</p>
+     * <p>*   Default value: 10.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
