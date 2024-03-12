@@ -5,40 +5,22 @@ import com.aliyun.tea.*;
 
 public class ModifyDesktopChargeTypeRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud desktops. You can specify 1 to 20 IDs.</p>
+     * <p>Specifies whether to enable automatic payment if you specify subscription as the new billing method for the cloud desktop.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>The ID of the sales promotion.</p>
+     * <p>The new billing method that you want to use for the desktop group.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The IDs of the cloud desktops. You can specify 1 to 20 IDs.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
-
-    /**
-     * <p>Specifies whether to enable automatic payment if you specify subscription as the new billing method for the cloud desktop.</p>
-     */
-    @NameInMap("Period")
-    public Integer period;
-
-    /**
-     * <p>The IDs of the desktop groups. If multiple cloud desktops are created at a time, multiple cloud desktop IDs are returned.</p>
-     */
-    @NameInMap("PeriodUnit")
-    public String periodUnit;
-
-    /**
-     * <p>The unit of the subscription duration if you specify subscription as the new billing method for the cloud desktop.</p>
-     */
-    @NameInMap("PromotionId")
-    public String promotionId;
 
     /**
      * <p>The subscription duration if you specify subscription as the new billing method for the cloud desktop. The unit of the value is specified by the `PeriodUnit` parameter. This parameter takes effect only when the `ChargeType` parameter is set to `PrePaid`.</p>
@@ -47,11 +29,29 @@ public class ModifyDesktopChargeTypeRequest extends TeaModel {
      * <p>*   If the `PeriodUnit` parameter is set to `Month`, the valid values of the Period parameter are 1, 2, 3, and 6.</p>
      * <p>*   If the `PeriodUnit` parameter is set to `Year`, the valid values of the Period parameter are 1, 2, 3, 4, and 5.</p>
      */
+    @NameInMap("Period")
+    public Integer period;
+
+    /**
+     * <p>The unit of the subscription duration if you specify subscription as the new billing method for the cloud desktop.</p>
+     */
+    @NameInMap("PeriodUnit")
+    public String periodUnit;
+
+    /**
+     * <p>The ID of the sales promotion.</p>
+     */
+    @NameInMap("PromotionId")
+    public String promotionId;
+
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>>  This parameter is in invitational preview and not available to the public.</p>
+     * <p>> 处于定向邀测中，暂不对外开放。</p>
      */
     @NameInMap("UseDuration")
     public Integer useDuration;

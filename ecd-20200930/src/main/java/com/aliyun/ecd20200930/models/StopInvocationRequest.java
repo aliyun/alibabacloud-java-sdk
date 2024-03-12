@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class StopInvocationRequest extends TeaModel {
     /**
-     * <p>StopInvocation</p>
+     * <p>The ID of cloud desktop N. Valid values of N: 1 to 50.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to StopInvocation.</p>
+     * <p>The ID of the execution.</p>
      */
     @NameInMap("InvokeId")
     public String invokeId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

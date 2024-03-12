@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeCensRequest extends TeaModel {
     /**
-     * <p>Details about CEN instances.</p>
+     * <p>The page number.\</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>Default value: 1.</p>
+     * <p>The number of entries per page.\</p>
+     * <p>Default value: 50.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the bandwidth plan that is associated with the CEN instance.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

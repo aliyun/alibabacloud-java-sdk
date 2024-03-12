@@ -22,6 +22,9 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     /**
      * <p>The maximum capacity of each instance in Cloud Drive Service. Unit: GiB</p>
      */
@@ -30,6 +33,9 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
 
     @NameInMap("OfficeSiteType")
     public String officeSiteType;
+
+    @NameInMap("OrderId")
+    public String orderId;
 
     /**
      * <p>The ID of the request.</p>
@@ -74,6 +80,14 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         return this.domainName;
     }
 
+    public CreateCloudDriveServiceResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
     public CreateCloudDriveServiceResponseBody setMaxSize(String maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -88,6 +102,14 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     }
     public String getOfficeSiteType() {
         return this.officeSiteType;
+    }
+
+    public CreateCloudDriveServiceResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
     }
 
     public CreateCloudDriveServiceResponseBody setRequestId(String requestId) {

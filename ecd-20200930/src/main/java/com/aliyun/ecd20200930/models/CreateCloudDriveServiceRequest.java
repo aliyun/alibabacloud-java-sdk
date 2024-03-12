@@ -4,8 +4,20 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateCloudDriveServiceRequest extends TeaModel {
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
+    /**
+     * <p>The business type.</p>
+     */
     @NameInMap("BizType")
     public Integer bizType;
+
+    @NameInMap("CdsChargeType")
+    public String cdsChargeType;
 
     @NameInMap("CenId")
     public String cenId;
@@ -31,14 +43,26 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     @NameInMap("OfficeSiteType")
     public String officeSiteType;
 
+    @NameInMap("Period")
+    public Long period;
+
+    @NameInMap("PeriodUnit")
+    public String periodUnit;
+
     /**
      * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The solution ID.</p>
+     */
     @NameInMap("SolutionId")
     public String solutionId;
+
+    @NameInMap("UserCount")
+    public Long userCount;
 
     @NameInMap("UserMaxSize")
     public Long userMaxSize;
@@ -48,12 +72,36 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateCloudDriveServiceRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public CreateCloudDriveServiceRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
     public CreateCloudDriveServiceRequest setBizType(Integer bizType) {
         this.bizType = bizType;
         return this;
     }
     public Integer getBizType() {
         return this.bizType;
+    }
+
+    public CreateCloudDriveServiceRequest setCdsChargeType(String cdsChargeType) {
+        this.cdsChargeType = cdsChargeType;
+        return this;
+    }
+    public String getCdsChargeType() {
+        return this.cdsChargeType;
     }
 
     public CreateCloudDriveServiceRequest setCenId(String cenId) {
@@ -112,6 +160,22 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
         return this.officeSiteType;
     }
 
+    public CreateCloudDriveServiceRequest setPeriod(Long period) {
+        this.period = period;
+        return this;
+    }
+    public Long getPeriod() {
+        return this.period;
+    }
+
+    public CreateCloudDriveServiceRequest setPeriodUnit(String periodUnit) {
+        this.periodUnit = periodUnit;
+        return this;
+    }
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
     public CreateCloudDriveServiceRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -126,6 +190,14 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     }
     public String getSolutionId() {
         return this.solutionId;
+    }
+
+    public CreateCloudDriveServiceRequest setUserCount(Long userCount) {
+        this.userCount = userCount;
+        return this;
+    }
+    public Long getUserCount() {
+        return this.userCount;
     }
 
     public CreateCloudDriveServiceRequest setUserMaxSize(Long userMaxSize) {
