@@ -4,15 +4,24 @@ package com.aliyun.dytnsapi20230101.models;
 import com.aliyun.tea.*;
 
 public class GetPhoneNumberIdentificationResultRequest extends TeaModel {
+    /**
+     * <p>The authorization code.</p>
+     */
     @NameInMap("AuthCode")
     public String authCode;
 
+    /**
+     * <p>The external ID.</p>
+     */
     @NameInMap("OutId")
     public String outId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The phone number of the subscriber. The phone number to be verified must be in the Mobile Station International Subscriber Directory Number (MSISDN) format.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
@@ -22,9 +31,15 @@ public class GetPhoneNumberIdentificationResultRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The session ID.</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <p>The session payload.</p>
+     */
     @NameInMap("SessionPayload")
     public String sessionPayload;
 
