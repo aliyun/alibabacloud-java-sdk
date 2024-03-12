@@ -3,7 +3,7 @@ package com.aliyun.eflo_controller20221215.models;
 
 import com.aliyun.tea.*;
 
-public class ShrinkClusterResponse extends TeaModel {
+public class SendFileResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ShrinkClusterResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ShrinkClusterResponseBody body;
+    public SendFileResponseBody body;
 
-    public static ShrinkClusterResponse build(java.util.Map<String, ?> map) throws Exception {
-        ShrinkClusterResponse self = new ShrinkClusterResponse();
+    public static SendFileResponse build(java.util.Map<String, ?> map) throws Exception {
+        SendFileResponse self = new SendFileResponse();
         return TeaModel.build(map, self);
     }
 
-    public ShrinkClusterResponse setHeaders(java.util.Map<String, String> headers) {
+    public SendFileResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ShrinkClusterResponse extends TeaModel {
         return this.headers;
     }
 
-    public ShrinkClusterResponse setStatusCode(Integer statusCode) {
+    public SendFileResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ShrinkClusterResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ShrinkClusterResponse setBody(ShrinkClusterResponseBody body) {
+    public SendFileResponse setBody(SendFileResponseBody body) {
         this.body = body;
         return this;
     }
-    public ShrinkClusterResponseBody getBody() {
+    public SendFileResponseBody getBody() {
         return this.body;
     }
 
