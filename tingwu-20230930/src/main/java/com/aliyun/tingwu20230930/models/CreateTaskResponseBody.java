@@ -54,6 +54,9 @@ public class CreateTaskResponseBody extends TeaModel {
     }
 
     public static class CreateTaskResponseBodyData extends TeaModel {
+        @NameInMap("MeetingJoinUrl")
+        public String meetingJoinUrl;
+
         @NameInMap("TaskId")
         public String taskId;
 
@@ -63,6 +66,14 @@ public class CreateTaskResponseBody extends TeaModel {
         public static CreateTaskResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateTaskResponseBodyData self = new CreateTaskResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CreateTaskResponseBodyData setMeetingJoinUrl(String meetingJoinUrl) {
+            this.meetingJoinUrl = meetingJoinUrl;
+            return this;
+        }
+        public String getMeetingJoinUrl() {
+            return this.meetingJoinUrl;
         }
 
         public CreateTaskResponseBodyData setTaskId(String taskId) {
