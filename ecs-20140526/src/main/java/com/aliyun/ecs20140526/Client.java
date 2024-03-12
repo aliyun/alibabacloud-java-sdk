@@ -5412,16 +5412,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
+      * ## [](#)Usage notes
       * Take note of the following items:
-      * *   CreateNetworkInterface is a synchronous operation. After an ENI is created, the ENI immediately enters the Available state and can be attached to an Elastic Compute Service (ECS) instance.
+      * *   This operation is a synchronous operation. After an ENI is created, it immediately enters the Available (`Available`) state and can be attached to an Elastic Compute Service (ECS) instance.
       * *   If NetworkInterfaceId is empty in the response, no ENI is created. Call the operation again to create an ENI.
       * *   An ENI can be attached only to a single instance that resides in a virtual private cloud (VPC).
       * *   When an ENI is detached from an instance and attached to another instance, the attributes of the ENI remain unchanged and network traffic is redirected to the new instance.
-      * *   When you call this operation to create an ENI, you can assign up to 49 secondary private IP addresses to the ENI.
-      * *   If you want to assign IPv6 addresses when you create an ENI, make sure that IPv6 has been enabled for the vSwitch with which to associate the ENI. For more information, see [What is an IPv6 gateway?](~~98896~~)
-      * *   A quota is imposed on the number of ENIs that can be created per Alibaba Cloud region per account. You can view the quota in the ECS console. For more information, see [View and increase resource quotas](~~184115~~).
-      * **For information about examples on how to call this operation, see **[Create an ENI](~~471552~~).
+      * *   If you want to assign IPv6 addresses when you create an ENI, make sure that IPv6 is enabled for the vSwitch with which you want to associate the ENI. For more information, see [What is an IPv6 gateway?](~~98896~~)
+      * *   A quota is imposed on the number of ENIs that can be created per Alibaba Cloud region per account. You can view the quota on the ECS console. For more information, see [View and increase resource quotas](~~184115~~).
+      * **For information about examples on how to call the CreateNetworkInterface operation, see **[Create an ENI](~~471552~~).
       *
       * @param request CreateNetworkInterfaceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5576,16 +5575,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
+      * ## [](#)Usage notes
       * Take note of the following items:
-      * *   CreateNetworkInterface is a synchronous operation. After an ENI is created, the ENI immediately enters the Available state and can be attached to an Elastic Compute Service (ECS) instance.
+      * *   This operation is a synchronous operation. After an ENI is created, it immediately enters the Available (`Available`) state and can be attached to an Elastic Compute Service (ECS) instance.
       * *   If NetworkInterfaceId is empty in the response, no ENI is created. Call the operation again to create an ENI.
       * *   An ENI can be attached only to a single instance that resides in a virtual private cloud (VPC).
       * *   When an ENI is detached from an instance and attached to another instance, the attributes of the ENI remain unchanged and network traffic is redirected to the new instance.
-      * *   When you call this operation to create an ENI, you can assign up to 49 secondary private IP addresses to the ENI.
-      * *   If you want to assign IPv6 addresses when you create an ENI, make sure that IPv6 has been enabled for the vSwitch with which to associate the ENI. For more information, see [What is an IPv6 gateway?](~~98896~~)
-      * *   A quota is imposed on the number of ENIs that can be created per Alibaba Cloud region per account. You can view the quota in the ECS console. For more information, see [View and increase resource quotas](~~184115~~).
-      * **For information about examples on how to call this operation, see **[Create an ENI](~~471552~~).
+      * *   If you want to assign IPv6 addresses when you create an ENI, make sure that IPv6 is enabled for the vSwitch with which you want to associate the ENI. For more information, see [What is an IPv6 gateway?](~~98896~~)
+      * *   A quota is imposed on the number of ENIs that can be created per Alibaba Cloud region per account. You can view the quota on the ECS console. For more information, see [View and increase resource quotas](~~184115~~).
+      * **For information about examples on how to call the CreateNetworkInterface operation, see **[Create an ENI](~~471552~~).
       *
       * @param request CreateNetworkInterfaceRequest
       * @return CreateNetworkInterfaceResponse
@@ -22031,6 +22029,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDiskChargeTypeWithOptions(request, runtime);
     }
 
+    /**
+      * ### [](#)Usage notes
+      * >  The Dedicated Block Storage Cluster feature is available in the following regions: China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shenzhen), China (Heyuan), Indonesia (Jakarta), Germany (Frankfurt), and China South 1 Finance.
+      * Before you call the ModifyDiskDeployment operation, make sure that you fully understand the billing methods and prices of disks and dedicated block storage clusters. In addition, make sure that the dedicated block storage clusters are unexpired and your account has no overdue payments. For more information, see [Dedicated block storage cluster](~~208883~~) and [Block storage devices](~~179022~~).
+      * Take note of the following items:
+      * *   The disks and a dedicated block storage cluster to which you want to migrate the disk must be in the same zone.
+      * *   You can migrate only pay-as-you-go disks. If you want to migrate subscription disks, change the disks to pay-as-you-go disks first. For more information, see [Change the billing method of a disk](~~145018~~).
+      * *   The specifications of disks that you want to migrate to a destination block storage cluster must the same as the disk specifications that the destination dedicated block storage cluster supports. During migration, you can change the specifications of the disks to ensure specification consistency.
+      * *   The disk must be in the **In Use** (In_Use) or **Available** (Available) state.
+      * *   If the disk is attached to an Elastic Compute Service (ECS) instance, the instance must be in the **Running** (Running) or **Stopped** (Stopped) state. The ECS instance cannot be in the Expired state.
+      * *   The performance level of an enhanced SSD (ESSD) is limited by the ESSD disk size. If you cannot upgrade the performance level of an ESSD, you can resize the ESSD. For more information, see [ResizeDisk](~~25522~~) and [ESSDs](~~122389~~).
+      * *   An account can perform up to five disk migration tasks in the same region at the same time.
+      * *   When a disk is being migrated, you cannot cancel the migration task, create snapshots for the disk, change the disk configurations, resize the disk, mount the disk, unmount the disk, or re-initialize the disk.
+      * >  After you migrate a disk to a destination cluster by calling the ModifyDiskDeployment operation, the billing method, disk specifications, and capabilities of the destination cluster take effect immediately on the disk. Alibaba Cloud charges the disk based on the disk category and performance level. For more information, see [Dedicated block storage cluster](~~208883~~) and [Block storage devices](~~179022~~).
+      *
+      * @param request ModifyDiskDeploymentRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDiskDeploymentResponse
+     */
     public ModifyDiskDeploymentResponse modifyDiskDeploymentWithOptions(ModifyDiskDeploymentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -22087,6 +22104,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDiskDeploymentResponse());
     }
 
+    /**
+      * ### [](#)Usage notes
+      * >  The Dedicated Block Storage Cluster feature is available in the following regions: China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shenzhen), China (Heyuan), Indonesia (Jakarta), Germany (Frankfurt), and China South 1 Finance.
+      * Before you call the ModifyDiskDeployment operation, make sure that you fully understand the billing methods and prices of disks and dedicated block storage clusters. In addition, make sure that the dedicated block storage clusters are unexpired and your account has no overdue payments. For more information, see [Dedicated block storage cluster](~~208883~~) and [Block storage devices](~~179022~~).
+      * Take note of the following items:
+      * *   The disks and a dedicated block storage cluster to which you want to migrate the disk must be in the same zone.
+      * *   You can migrate only pay-as-you-go disks. If you want to migrate subscription disks, change the disks to pay-as-you-go disks first. For more information, see [Change the billing method of a disk](~~145018~~).
+      * *   The specifications of disks that you want to migrate to a destination block storage cluster must the same as the disk specifications that the destination dedicated block storage cluster supports. During migration, you can change the specifications of the disks to ensure specification consistency.
+      * *   The disk must be in the **In Use** (In_Use) or **Available** (Available) state.
+      * *   If the disk is attached to an Elastic Compute Service (ECS) instance, the instance must be in the **Running** (Running) or **Stopped** (Stopped) state. The ECS instance cannot be in the Expired state.
+      * *   The performance level of an enhanced SSD (ESSD) is limited by the ESSD disk size. If you cannot upgrade the performance level of an ESSD, you can resize the ESSD. For more information, see [ResizeDisk](~~25522~~) and [ESSDs](~~122389~~).
+      * *   An account can perform up to five disk migration tasks in the same region at the same time.
+      * *   When a disk is being migrated, you cannot cancel the migration task, create snapshots for the disk, change the disk configurations, resize the disk, mount the disk, unmount the disk, or re-initialize the disk.
+      * >  After you migrate a disk to a destination cluster by calling the ModifyDiskDeployment operation, the billing method, disk specifications, and capabilities of the destination cluster take effect immediately on the disk. Alibaba Cloud charges the disk based on the disk category and performance level. For more information, see [Dedicated block storage cluster](~~208883~~) and [Block storage devices](~~179022~~).
+      *
+      * @param request ModifyDiskDeploymentRequest
+      * @return ModifyDiskDeploymentResponse
+     */
     public ModifyDiskDeploymentResponse modifyDiskDeployment(ModifyDiskDeploymentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDiskDeploymentWithOptions(request, runtime);
@@ -29392,6 +29427,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.targetServer)) {
             query.put("TargetServer", request.targetServer);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            query.put("Username", request.username);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

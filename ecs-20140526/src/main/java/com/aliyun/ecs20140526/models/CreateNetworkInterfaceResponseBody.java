@@ -11,13 +11,13 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>> 该参数正在邀测中，暂未开放使用。</p>
+     * <p>The IPv4 prefixes assigned to the ENI.</p>
      */
     @NameInMap("Ipv4PrefixSets")
     public CreateNetworkInterfaceResponseBodyIpv4PrefixSets ipv4PrefixSets;
 
     /**
-     * <p>> 该参数正在邀测中，暂未开放使用。</p>
+     * <p>The IPv6 prefixes assigned to the ENI.</p>
      */
     @NameInMap("Ipv6PrefixSets")
     public CreateNetworkInterfaceResponseBodyIpv6PrefixSets ipv6PrefixSets;
@@ -305,7 +305,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     public static class CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet extends TeaModel {
         /**
-         * <p>> 该参数正在邀测中，暂未开放使用。</p>
+         * <p>The IPv4 prefix assigned to the ENI.</p>
          */
         @NameInMap("Ipv4Prefix")
         public String ipv4Prefix;
@@ -346,7 +346,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     public static class CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet extends TeaModel {
         /**
-         * <p>> 该参数正在邀测中，暂未开放使用。</p>
+         * <p>The IPv6 prefix assigned to the ENI.</p>
          */
         @NameInMap("Ipv6Prefix")
         public String ipv6Prefix;
@@ -434,7 +434,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         public Boolean primary;
 
         /**
-         * <p>The private IP address of the instance to which the ENI is attached.</p>
+         * <p>The private IP address of the instance.</p>
          */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
@@ -502,13 +502,13 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     public static class CreateNetworkInterfaceResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the ENI.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value of the ENI.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

@@ -52,6 +52,9 @@ public class StartTerminalSessionRequest extends TeaModel {
     @NameInMap("TargetServer")
     public String targetServer;
 
+    @NameInMap("Username")
+    public String username;
+
     public static StartTerminalSessionRequest build(java.util.Map<String, ?> map) throws Exception {
         StartTerminalSessionRequest self = new StartTerminalSessionRequest();
         return TeaModel.build(map, self);
@@ -127,6 +130,14 @@ public class StartTerminalSessionRequest extends TeaModel {
     }
     public String getTargetServer() {
         return this.targetServer;
+    }
+
+    public StartTerminalSessionRequest setUsername(String username) {
+        this.username = username;
+        return this;
+    }
+    public String getUsername() {
+        return this.username;
     }
 
 }
