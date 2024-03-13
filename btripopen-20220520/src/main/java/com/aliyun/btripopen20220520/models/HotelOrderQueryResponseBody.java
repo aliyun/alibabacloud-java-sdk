@@ -476,6 +476,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("itinerary_id")
         public String itineraryId;
 
+        @NameInMap("occupant_type")
+        public Integer occupantType;
+
         @NameInMap("project_code")
         public String projectCode;
 
@@ -546,6 +549,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
         public String getItineraryId() {
             return this.itineraryId;
+        }
+
+        public HotelOrderQueryResponseBodyModulePassengerList setOccupantType(Integer occupantType) {
+            this.occupantType = occupantType;
+            return this;
+        }
+        public Integer getOccupantType() {
+            return this.occupantType;
         }
 
         public HotelOrderQueryResponseBodyModulePassengerList setProjectCode(String projectCode) {
