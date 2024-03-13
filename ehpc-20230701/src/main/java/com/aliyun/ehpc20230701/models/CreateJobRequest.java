@@ -251,6 +251,9 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("PrologScript")
         public String prologScript;
 
+        @NameInMap("Script")
+        public String script;
+
         public static CreateJobRequestTasksTaskSpecTaskExecutorVM build(java.util.Map<String, ?> map) throws Exception {
             CreateJobRequestTasksTaskSpecTaskExecutorVM self = new CreateJobRequestTasksTaskSpecTaskExecutorVM();
             return TeaModel.build(map, self);
@@ -270,6 +273,14 @@ public class CreateJobRequest extends TeaModel {
         }
         public String getPrologScript() {
             return this.prologScript;
+        }
+
+        public CreateJobRequestTasksTaskSpecTaskExecutorVM setScript(String script) {
+            this.script = script;
+            return this;
+        }
+        public String getScript() {
+            return this.script;
         }
 
     }

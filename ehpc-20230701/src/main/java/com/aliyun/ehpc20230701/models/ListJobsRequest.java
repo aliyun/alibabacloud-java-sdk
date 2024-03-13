@@ -54,6 +54,9 @@ public class ListJobsRequest extends TeaModel {
     }
 
     public static class ListJobsRequestFilter extends TeaModel {
+        @NameInMap("JobId")
+        public String jobId;
+
         @NameInMap("JobName")
         public String jobName;
 
@@ -69,6 +72,14 @@ public class ListJobsRequest extends TeaModel {
         public static ListJobsRequestFilter build(java.util.Map<String, ?> map) throws Exception {
             ListJobsRequestFilter self = new ListJobsRequestFilter();
             return TeaModel.build(map, self);
+        }
+
+        public ListJobsRequestFilter setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
         }
 
         public ListJobsRequestFilter setJobName(String jobName) {
