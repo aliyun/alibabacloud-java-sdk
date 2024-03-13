@@ -139,6 +139,9 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
         @NameInMap("Elements")
         public java.util.List<QueryFaceVideoTemplateResponseBodyDataElements> elements;
 
+        @NameInMap("Total")
+        public Long total;
+
         public static QueryFaceVideoTemplateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryFaceVideoTemplateResponseBodyData self = new QueryFaceVideoTemplateResponseBodyData();
             return TeaModel.build(map, self);
@@ -150,6 +153,14 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
         }
         public java.util.List<QueryFaceVideoTemplateResponseBodyDataElements> getElements() {
             return this.elements;
+        }
+
+        public QueryFaceVideoTemplateResponseBodyData setTotal(Long total) {
+            this.total = total;
+            return this;
+        }
+        public Long getTotal() {
+            return this.total;
         }
 
     }

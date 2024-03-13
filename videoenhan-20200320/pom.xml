@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>videoenhan20200320</artifactId>
-  <version>2.0.19</version>
+  <version>2.0.20</version>
   <packaging>jar</packaging>
   <name>videoenhan20200320</name>
   <description>Aliyun VIDEOENHAN for Java
@@ -48,7 +48,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
-      <version>1.2.0</version>
+      <version>1.2.7</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -117,7 +117,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.8</version>
+      <version>0.3.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
