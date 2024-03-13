@@ -10,6 +10,9 @@ public class ExpectDeductResourceCmd extends TeaModel {
     @NameInMap("cost")
     public Long cost;
 
+    @NameInMap("deductScene")
+    public String deductScene;
+
     @NameInMap("extraInfo")
     public String extraInfo;
 
@@ -44,6 +47,14 @@ public class ExpectDeductResourceCmd extends TeaModel {
     }
     public Long getCost() {
         return this.cost;
+    }
+
+    public ExpectDeductResourceCmd setDeductScene(String deductScene) {
+        this.deductScene = deductScene;
+        return this;
+    }
+    public String getDeductScene() {
+        return this.deductScene;
     }
 
     public ExpectDeductResourceCmd setExtraInfo(String extraInfo) {
