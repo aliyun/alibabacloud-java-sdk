@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class RecognizePublicFaceResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public RecognizePublicFaceResponseBody body;
 
     public static RecognizePublicFaceResponse build(java.util.Map<String, ?> map) throws Exception {
