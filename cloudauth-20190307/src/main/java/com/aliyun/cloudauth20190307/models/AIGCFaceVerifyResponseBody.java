@@ -54,6 +54,9 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
     }
 
     public static class AIGCFaceVerifyResponseBodyResultObject extends TeaModel {
+        @NameInMap("CertifyId")
+        public String certifyId;
+
         @NameInMap("Result")
         public String result;
 
@@ -63,6 +66,14 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
         public static AIGCFaceVerifyResponseBodyResultObject build(java.util.Map<String, ?> map) throws Exception {
             AIGCFaceVerifyResponseBodyResultObject self = new AIGCFaceVerifyResponseBodyResultObject();
             return TeaModel.build(map, self);
+        }
+
+        public AIGCFaceVerifyResponseBodyResultObject setCertifyId(String certifyId) {
+            this.certifyId = certifyId;
+            return this;
+        }
+        public String getCertifyId() {
+            return this.certifyId;
         }
 
         public AIGCFaceVerifyResponseBodyResultObject setResult(String result) {
