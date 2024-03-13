@@ -7,7 +7,7 @@ public class CancelOrderRequestRequest extends TeaModel {
     /**
      * <p>The ID of the certificate application order that you want to cancel.</p>
      * <br>
-     * <p>>  After you call the [CreateCertificateForPackageRequest](~~204087~~), [CreateCertificateRequest](~~164105~~), or [CreateCertificateWithCsrRequest](~~178732~~) operation to submit a certificate application, you can obtain the ID of the certificate application order from the **OrderId** response parameter.</p>
+     * <p>>  After you call the [CreateCertificateForPackageRequest](~~CreateCertificateForPackageRequest~~), [CreateCertificateRequest](~~CreateCertificateRequest~~), or [CreateCertificateWithCsrRequest](~~CreateCertificateWithCsrRequest~~) operation to submit a certificate application, you can obtain the ID of the certificate application order from the **OrderId** response parameter.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
