@@ -19,6 +19,9 @@ public class IntlFlightListingSearchRequest extends TeaModel {
     @NameInMap("isv_name")
     public String isvName;
 
+    @NameInMap("language")
+    public String language;
+
     @NameInMap("need_share_flight")
     public Boolean needShareFlight;
 
@@ -89,6 +92,14 @@ public class IntlFlightListingSearchRequest extends TeaModel {
     }
     public String getIsvName() {
         return this.isvName;
+    }
+
+    public IntlFlightListingSearchRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public IntlFlightListingSearchRequest setNeedShareFlight(Boolean needShareFlight) {

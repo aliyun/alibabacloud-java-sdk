@@ -19,6 +19,9 @@ public class IntlFlightOtaSearchShrinkRequest extends TeaModel {
     @NameInMap("isv_name")
     public String isvName;
 
+    @NameInMap("language")
+    public String language;
+
     @NameInMap("need_share_flight")
     public Boolean needShareFlight;
 
@@ -77,6 +80,14 @@ public class IntlFlightOtaSearchShrinkRequest extends TeaModel {
     }
     public String getIsvName() {
         return this.isvName;
+    }
+
+    public IntlFlightOtaSearchShrinkRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public IntlFlightOtaSearchShrinkRequest setNeedShareFlight(Boolean needShareFlight) {

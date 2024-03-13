@@ -6629,6 +6629,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("isv_name", request.isvName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("language", request.language);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.needShareFlight)) {
             query.put("need_share_flight", request.needShareFlight);
         }
@@ -6713,6 +6717,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("isv_name", request.isvName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("language", request.language);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.supplierCode)) {
             query.put("supplier_code", request.supplierCode);
         }
@@ -6781,6 +6789,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.isvName)) {
             query.put("isv_name", request.isvName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("language", request.language);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.needShareFlight)) {
