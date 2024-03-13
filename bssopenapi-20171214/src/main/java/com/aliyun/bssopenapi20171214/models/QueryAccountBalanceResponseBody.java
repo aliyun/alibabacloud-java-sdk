@@ -114,6 +114,9 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         @NameInMap("MybankCreditAmount")
         public String mybankCreditAmount;
 
+        @NameInMap("QuotaLimit")
+        public String quotaLimit;
+
         public static QueryAccountBalanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryAccountBalanceResponseBodyData self = new QueryAccountBalanceResponseBodyData();
             return TeaModel.build(map, self);
@@ -157,6 +160,14 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         }
         public String getMybankCreditAmount() {
             return this.mybankCreditAmount;
+        }
+
+        public QueryAccountBalanceResponseBodyData setQuotaLimit(String quotaLimit) {
+            this.quotaLimit = quotaLimit;
+            return this;
+        }
+        public String getQuotaLimit() {
+            return this.quotaLimit;
         }
 
     }

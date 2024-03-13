@@ -4,24 +4,52 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class ReleaseInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance. Separate multiple IDs with commas (,). A maximum of 100 IDs can be specified.</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The code of the service.</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>The type of the service.</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The region in which the instance resides.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The method that is used to renew the instance. Valid values:</p>
+     * <br>
+     * <p>AutoRenewal: automatically renews the instance.</p>
+     * <br>
+     * <p>ManualRenewal: manually renews the instance.</p>
+     * <br>
+     * <p>NotRenewal: does not renew the instance.</p>
+     */
     @NameInMap("RenewStatus")
     public String renewStatus;
 
+    /**
+     * <p>The billing method. Valid values:</p>
+     * <br>
+     * <p>Subscription: the subscription billing method.</p>
+     * <br>
+     * <p>PayAsYouGo: the pay-as-you-go billing method.</p>
+     */
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 

@@ -201,7 +201,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
         /**
          * <p>The code of the service.</p>
          * <br>
-         * <p>>A value is returned only if the **IsGroupByProduct** parameter is set to true.</p>
+         * <p>> A value is returned only if the **IsGroupByProduct** parameter is set to true.</p>
          */
         @NameInMap("ProductCode")
         public String productCode;

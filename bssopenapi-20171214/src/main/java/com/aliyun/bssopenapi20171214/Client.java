@@ -1171,6 +1171,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.pipCode)) {
+            query.put("PipCode", request.pipCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
             query.put("ProductCode", request.productCode);
         }
@@ -2368,7 +2372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * 1.  **Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.**
       * 2.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
-      * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+      * 3.  For more information, see [Rules for unsubscribing from resources](https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules).
       *
       * @param request InquiryPriceRefundInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2413,7 +2417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * 1.  **Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.**
       * 2.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
-      * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+      * 3.  For more information, see [Rules for unsubscribing from resources](https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules).
       *
       * @param request InquiryPriceRefundInstanceRequest
       * @return InquiryPriceRefundInstanceResponse
@@ -2592,7 +2596,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ##
       * Before you call this operation, take note of the following items:
       * *   Account bills are summarized based on instance bills. In most cases, the account bills do not include the data generated on the last day of the specified period.
       * *   You can query the data generated in June 2020 or later for Cloud Communications services. However, the query results do not include the data of Alibaba Cloud Domains.
@@ -2658,7 +2661,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ##
       * Before you call this operation, take note of the following items:
       * *   Account bills are summarized based on instance bills. In most cases, the account bills do not include the data generated on the last day of the specified period.
       * *   You can query the data generated in June 2020 or later for Cloud Communications services. However, the query results do not include the data of Alibaba Cloud Domains.
@@ -4434,7 +4436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * 1.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
       * 2.  Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.
-      * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+      * 3.  For more information, see [Rules for unsubscribing from resources](https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules).
       *
       * @param request RefundInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4483,7 +4485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * 1.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
       * 2.  Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.
-      * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+      * 3.  For more information, see [Rules for unsubscribing from resources](https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules).
       *
       * @param request RefundInstanceRequest
       * @return RefundInstanceResponse
@@ -4494,8 +4496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * A value of true indicates that the execution is complete.
-      * A value of false indicates that an error occurs during the execution.
+      * This operation is provided for only VNOs to release instances. If a non-specific VNO calls this operation, the request is blocked.
       *
       * @param request ReleaseInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4550,8 +4551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * A value of true indicates that the execution is complete.
-      * A value of false indicates that an error occurs during the execution.
+      * This operation is provided for only VNOs to release instances. If a non-specific VNO calls this operation, the request is blocked.
       *
       * @param request ReleaseInstanceRequest
       * @return ReleaseInstanceResponse
@@ -4753,63 +4753,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.renewResourcePackageWithOptions(request, runtime);
     }
 
-    public SaveUserCreditResponse saveUserCreditWithOptions(SaveUserCreditRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.avoidExpiration)) {
-            query.put("AvoidExpiration", request.avoidExpiration);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.avoidNotification)) {
-            query.put("AvoidNotification", request.avoidNotification);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.avoidPrepaidExpiration)) {
-            query.put("AvoidPrepaidExpiration", request.avoidPrepaidExpiration);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.avoidPrepaidNotification)) {
-            query.put("AvoidPrepaidNotification", request.avoidPrepaidNotification);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.creditType)) {
-            query.put("CreditType", request.creditType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.creditValue)) {
-            query.put("CreditValue", request.creditValue);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
-            query.put("Description", request.description);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.operator)) {
-            query.put("Operator", request.operator);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "SaveUserCredit"),
-            new TeaPair("version", "2017-12-14"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SaveUserCreditResponse());
-    }
-
-    public SaveUserCreditResponse saveUserCredit(SaveUserCreditRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.saveUserCreditWithOptions(request, runtime);
-    }
-
     public SetAllExpirationDayResponse setAllExpirationDayWithOptions(SetAllExpirationDayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4841,99 +4784,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetAllExpirationDayResponse setAllExpirationDay(SetAllExpirationDayRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setAllExpirationDayWithOptions(request, runtime);
-    }
-
-    public SetCreditLabelActionResponse setCreditLabelActionWithOptions(SetCreditLabelActionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.actionType)) {
-            query.put("ActionType", request.actionType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.clearCycle)) {
-            query.put("ClearCycle", request.clearCycle);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.creditAmount)) {
-            query.put("CreditAmount", request.creditAmount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.currencyCode)) {
-            query.put("CurrencyCode", request.currencyCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.dailyCycle)) {
-            query.put("DailyCycle", request.dailyCycle);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
-            query.put("Description", request.description);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.isNeedAddSettleLabel)) {
-            query.put("IsNeedAddSettleLabel", request.isNeedAddSettleLabel);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.isNeedAdjustCreditAccount)) {
-            query.put("IsNeedAdjustCreditAccount", request.isNeedAdjustCreditAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.isNeedSaveNotifyRule)) {
-            query.put("IsNeedSaveNotifyRule", request.isNeedSaveNotifyRule);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.isNeedSetCreditAmount)) {
-            query.put("IsNeedSetCreditAmount", request.isNeedSetCreditAmount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.needNotice)) {
-            query.put("NeedNotice", request.needNotice);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.newCreateMode)) {
-            query.put("NewCreateMode", request.newCreateMode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.operator)) {
-            query.put("Operator", request.operator);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            query.put("RequestId", request.requestId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.siteCode)) {
-            query.put("SiteCode", request.siteCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
-            query.put("Source", request.source);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
-            query.put("Uid", request.uid);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "SetCreditLabelAction"),
-            new TeaPair("version", "2017-12-14"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SetCreditLabelActionResponse());
-    }
-
-    public SetCreditLabelActionResponse setCreditLabelAction(SetCreditLabelActionRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.setCreditLabelActionWithOptions(request, runtime);
     }
 
     public SetRenewalResponse setRenewalWithOptions(SetRenewalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
