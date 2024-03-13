@@ -71,6 +71,9 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("EndTime")
+        public String endTime;
+
         @NameInMap("ExecutorCount")
         public Integer executorCount;
 
@@ -86,11 +89,17 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("OwnerUid")
         public String ownerUid;
 
+        @NameInMap("StartTime")
+        public String startTime;
+
         @NameInMap("Status")
         public String status;
 
         @NameInMap("TaskCount")
         public Integer taskCount;
+
+        @NameInMap("TaskSustainable")
+        public Boolean taskSustainable;
 
         public static ListJobsResponseBodyJobList build(java.util.Map<String, ?> map) throws Exception {
             ListJobsResponseBodyJobList self = new ListJobsResponseBodyJobList();
@@ -103,6 +112,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListJobsResponseBodyJobList setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public ListJobsResponseBodyJobList setExecutorCount(Integer executorCount) {
@@ -145,6 +162,14 @@ public class ListJobsResponseBody extends TeaModel {
             return this.ownerUid;
         }
 
+        public ListJobsResponseBodyJobList setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
         public ListJobsResponseBodyJobList setStatus(String status) {
             this.status = status;
             return this;
@@ -159,6 +184,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public Integer getTaskCount() {
             return this.taskCount;
+        }
+
+        public ListJobsResponseBodyJobList setTaskSustainable(Boolean taskSustainable) {
+            this.taskSustainable = taskSustainable;
+            return this;
+        }
+        public Boolean getTaskSustainable() {
+            return this.taskSustainable;
         }
 
     }

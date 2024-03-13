@@ -306,6 +306,9 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("PrologScript")
         public String prologScript;
 
+        @NameInMap("Script")
+        public String script;
+
         public static GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutorVM build(java.util.Map<String, ?> map) throws Exception {
             GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutorVM self = new GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutorVM();
             return TeaModel.build(map, self);
@@ -325,6 +328,14 @@ public class GetJobResponseBody extends TeaModel {
         }
         public String getPrologScript() {
             return this.prologScript;
+        }
+
+        public GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutorVM setScript(String script) {
+            this.script = script;
+            return this;
+        }
+        public String getScript() {
+            return this.script;
         }
 
     }
@@ -442,8 +453,14 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJobInfo extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
         @NameInMap("DeploymentPolicy")
         public GetJobResponseBodyJobInfoDeploymentPolicy deploymentPolicy;
+
+        @NameInMap("EndTime")
+        public String endTime;
 
         @NameInMap("JobDescription")
         public String jobDescription;
@@ -454,6 +471,12 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("JobName")
         public String jobName;
 
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("Tasks")
         public java.util.List<GetJobResponseBodyJobInfoTasks> tasks;
 
@@ -462,12 +485,28 @@ public class GetJobResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetJobResponseBodyJobInfo setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
         public GetJobResponseBodyJobInfo setDeploymentPolicy(GetJobResponseBodyJobInfoDeploymentPolicy deploymentPolicy) {
             this.deploymentPolicy = deploymentPolicy;
             return this;
         }
         public GetJobResponseBodyJobInfoDeploymentPolicy getDeploymentPolicy() {
             return this.deploymentPolicy;
+        }
+
+        public GetJobResponseBodyJobInfo setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public GetJobResponseBodyJobInfo setJobDescription(String jobDescription) {
@@ -492,6 +531,22 @@ public class GetJobResponseBody extends TeaModel {
         }
         public String getJobName() {
             return this.jobName;
+        }
+
+        public GetJobResponseBodyJobInfo setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public GetJobResponseBodyJobInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public GetJobResponseBodyJobInfo setTasks(java.util.List<GetJobResponseBodyJobInfoTasks> tasks) {
