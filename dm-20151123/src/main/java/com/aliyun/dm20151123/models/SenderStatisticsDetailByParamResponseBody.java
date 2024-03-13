@@ -55,6 +55,9 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        @NameInMap("Subject")
+        public String subject;
+
         @NameInMap("ToAddress")
         public String toAddress;
 
@@ -96,6 +99,14 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public SenderStatisticsDetailByParamResponseBodyDataMailDetail setSubject(String subject) {
+            this.subject = subject;
+            return this;
+        }
+        public String getSubject() {
+            return this.subject;
         }
 
         public SenderStatisticsDetailByParamResponseBodyDataMailDetail setToAddress(String toAddress) {
