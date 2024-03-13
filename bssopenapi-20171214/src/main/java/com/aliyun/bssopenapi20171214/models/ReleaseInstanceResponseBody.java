@@ -4,18 +4,35 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class ReleaseInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>data</p>
+     */
     @NameInMap("Data")
     public ReleaseInstanceResponseBodyData data;
 
+    /**
+     * <p>The description of the execution result.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request, which can be used for troubleshooting.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A value of true indicates that the execution is complete.</p>
+     * <br>
+     * <p>A value of false indicates that an error occurs during the execution.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +82,15 @@ public class ReleaseInstanceResponseBody extends TeaModel {
     }
 
     public static class ReleaseInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The site of the execution host.</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <p>Indicates whether the instance is released.</p>
+         */
         @NameInMap("ReleaseResult")
         public Boolean releaseResult;
 

@@ -86,6 +86,12 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         @NameInMap("BillModule")
         public String billModule;
 
+        @NameInMap("BillingCycle")
+        public String billingCycle;
+
+        @NameInMap("BillingOfficialPrice")
+        public String billingOfficialPrice;
+
         /**
          * <p>The service for which the fee is deducted.</p>
          */
@@ -110,6 +116,9 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         @NameInMap("DeductRate")
         public String deductRate;
 
+        @NameInMap("DeductedOfficialPrice")
+        public String deductedOfficialPrice;
+
         /**
          * <p>The discount used for the current deduction.</p>
          */
@@ -128,8 +137,17 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("InstanceSpec")
+        public String instanceSpec;
+
+        @NameInMap("InstanceTypeFamily")
+        public String instanceTypeFamily;
+
         @NameInMap("OwnerId")
         public Long ownerId;
+
+        @NameInMap("Region")
+        public String region;
 
         /**
          * <p>The type of the savings plan. Valid values:</p>
@@ -165,6 +183,22 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             return this.billModule;
         }
 
+        public QuerySavingsPlansDeductLogResponseBodyDataItems setBillingCycle(String billingCycle) {
+            this.billingCycle = billingCycle;
+            return this;
+        }
+        public String getBillingCycle() {
+            return this.billingCycle;
+        }
+
+        public QuerySavingsPlansDeductLogResponseBodyDataItems setBillingOfficialPrice(String billingOfficialPrice) {
+            this.billingOfficialPrice = billingOfficialPrice;
+            return this;
+        }
+        public String getBillingOfficialPrice() {
+            return this.billingOfficialPrice;
+        }
+
         public QuerySavingsPlansDeductLogResponseBodyDataItems setDeductCommodity(String deductCommodity) {
             this.deductCommodity = deductCommodity;
             return this;
@@ -197,6 +231,14 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             return this.deductRate;
         }
 
+        public QuerySavingsPlansDeductLogResponseBodyDataItems setDeductedOfficialPrice(String deductedOfficialPrice) {
+            this.deductedOfficialPrice = deductedOfficialPrice;
+            return this;
+        }
+        public String getDeductedOfficialPrice() {
+            return this.deductedOfficialPrice;
+        }
+
         public QuerySavingsPlansDeductLogResponseBodyDataItems setDiscountRate(String discountRate) {
             this.discountRate = discountRate;
             return this;
@@ -221,12 +263,36 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public QuerySavingsPlansDeductLogResponseBodyDataItems setInstanceSpec(String instanceSpec) {
+            this.instanceSpec = instanceSpec;
+            return this;
+        }
+        public String getInstanceSpec() {
+            return this.instanceSpec;
+        }
+
+        public QuerySavingsPlansDeductLogResponseBodyDataItems setInstanceTypeFamily(String instanceTypeFamily) {
+            this.instanceTypeFamily = instanceTypeFamily;
+            return this;
+        }
+        public String getInstanceTypeFamily() {
+            return this.instanceTypeFamily;
+        }
+
         public QuerySavingsPlansDeductLogResponseBodyDataItems setOwnerId(Long ownerId) {
             this.ownerId = ownerId;
             return this;
         }
         public Long getOwnerId() {
             return this.ownerId;
+        }
+
+        public QuerySavingsPlansDeductLogResponseBodyDataItems setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
         public QuerySavingsPlansDeductLogResponseBodyDataItems setSavingsType(String savingsType) {

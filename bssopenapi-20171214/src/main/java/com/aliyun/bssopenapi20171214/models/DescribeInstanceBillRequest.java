@@ -75,6 +75,9 @@ public class DescribeInstanceBillRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PipCode")
+    public String pipCode;
+
     /**
      * <p>The code of the service.</p>
      */
@@ -179,6 +182,14 @@ public class DescribeInstanceBillRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeInstanceBillRequest setPipCode(String pipCode) {
+        this.pipCode = pipCode;
+        return this;
+    }
+    public String getPipCode() {
+        return this.pipCode;
     }
 
     public DescribeInstanceBillRequest setProductCode(String productCode) {
