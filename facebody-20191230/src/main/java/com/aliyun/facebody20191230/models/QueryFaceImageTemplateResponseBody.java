@@ -191,6 +191,9 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
         @NameInMap("Elements")
         public java.util.List<QueryFaceImageTemplateResponseBodyDataElements> elements;
 
+        @NameInMap("Total")
+        public Long total;
+
         public static QueryFaceImageTemplateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryFaceImageTemplateResponseBodyData self = new QueryFaceImageTemplateResponseBodyData();
             return TeaModel.build(map, self);
@@ -202,6 +205,14 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
         }
         public java.util.List<QueryFaceImageTemplateResponseBodyDataElements> getElements() {
             return this.elements;
+        }
+
+        public QueryFaceImageTemplateResponseBodyData setTotal(Long total) {
+            this.total = total;
+            return this;
+        }
+        public Long getTotal() {
+            return this.total;
         }
 
     }
