@@ -3,7 +3,7 @@ package com.aliyun.emr20210320.models;
 
 import com.aliyun.tea.*;
 
-public class GetApmDataResponse extends TeaModel {
+public class ListScriptsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetApmDataResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetApmDataResponseBody body;
+    public ListScriptsResponseBody body;
 
-    public static GetApmDataResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetApmDataResponse self = new GetApmDataResponse();
+    public static ListScriptsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListScriptsResponse self = new ListScriptsResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetApmDataResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListScriptsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetApmDataResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetApmDataResponse setStatusCode(Integer statusCode) {
+    public ListScriptsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetApmDataResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetApmDataResponse setBody(GetApmDataResponseBody body) {
+    public ListScriptsResponse setBody(ListScriptsResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetApmDataResponseBody getBody() {
+    public ListScriptsResponseBody getBody() {
         return this.body;
     }
 
