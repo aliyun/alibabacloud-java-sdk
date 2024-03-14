@@ -48,6 +48,34 @@ public class ListClustersRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   cn-qingdao</p>
+     * <p>*   cn-beijing</p>
+     * <p>*   cn-zhangjiakou</p>
+     * <p>*   cn-huhehaote</p>
+     * <p>*   cn-hangzhou</p>
+     * <p>*   cn-shanghai</p>
+     * <p>*   cn-shenzhen</p>
+     * <p>*   cn-chengdu</p>
+     * <p>*   cn-hongkong</p>
+     * <p>*   cn-wulanchabu</p>
+     * <p>*   cn-heyuan-acdr-1</p>
+     * <p>*   cn-qingdao-acdr-ut-1</p>
+     * <p>*   ap-northeast-1</p>
+     * <p>*   ap-southeast-1</p>
+     * <p>*   ap-southeast-2</p>
+     * <p>*   ap-southeast-3</p>
+     * <p>*   ap-southeast-5</p>
+     * <p>*   ap-south-1</p>
+     * <p>*   us-east-1</p>
+     * <p>*   us-west-1</p>
+     * <p>*   me-east-1</p>
+     * <p>*   me-central-1</p>
+     * <p>*   eu-central-1</p>
+     * <p>*   eu-west-1</p>
+     * <p>*   cn-north-2-gov-1</p>
      */
     @NameInMap("RegionId")
     public String regionId;
