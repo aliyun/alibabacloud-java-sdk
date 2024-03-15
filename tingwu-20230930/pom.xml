@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>tingwu20230930</artifactId>
-  <version>2.0.3</version>
+  <version>2.0.4</version>
   <packaging>jar</packaging>
   <name>tingwu20230930</name>
   <description>Alibaba Cloud tingwu (20230930) SDK for Java
