@@ -4,9 +4,6 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class ModifySecurityIPListResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
@@ -15,9 +12,6 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
 
     @NameInMap("GroupTag")
     public String groupTag;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -28,9 +22,6 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
     @NameInMap("SecurityIPType")
     public String securityIPType;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("TaskId")
     public Long taskId;
 
@@ -40,14 +31,6 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
     public static ModifySecurityIPListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifySecurityIPListResponseBody self = new ModifySecurityIPListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ModifySecurityIPListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public ModifySecurityIPListResponseBody setDBInstanceName(String DBInstanceName) {
@@ -74,14 +57,6 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         return this.groupTag;
     }
 
-    public ModifySecurityIPListResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public ModifySecurityIPListResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -104,14 +79,6 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
     }
     public String getSecurityIPType() {
         return this.securityIPType;
-    }
-
-    public ModifySecurityIPListResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public ModifySecurityIPListResponseBody setTaskId(Long taskId) {

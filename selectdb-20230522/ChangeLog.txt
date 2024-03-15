@@ -1,3 +1,16 @@
+2024-03-15 Version: 2.0.1
+- Update API AllocateInstancePublicConnection: update response param.
+- Update API CheckCreateDBInstance: update response param.
+- Update API DescribeDBInstanceAttribute: update response param.
+- Update API DescribeSecurityIPList: update response param.
+- Update API ModifyBEClusterAttribute: update response param.
+- Update API ModifyDBInstanceAttribute: update response param.
+- Update API ModifySecurityIPList: update response param.
+- Update API ReleaseInstancePublicConnection: update response param.
+- Update API StopBECluster: update response param.
+- Update API UpgradeDBInstanceEngineVersion: update response param.
+
+
 2024-01-05 Version: 2.0.0
 - Generated java 2023-05-22 for selectdb.
 

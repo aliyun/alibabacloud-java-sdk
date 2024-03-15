@@ -4,35 +4,18 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityIPListResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     @NameInMap("GroupItems")
     public java.util.List<DescribeSecurityIPListResponseBodyGroupItems> groupItems;
 
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     public static DescribeSecurityIPListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityIPListResponseBody self = new DescribeSecurityIPListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSecurityIPListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public DescribeSecurityIPListResponseBody setDBInstanceName(String DBInstanceName) {
@@ -51,28 +34,12 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         return this.groupItems;
     }
 
-    public DescribeSecurityIPListResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public DescribeSecurityIPListResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeSecurityIPListResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public static class DescribeSecurityIPListResponseBodyGroupItems extends TeaModel {

@@ -58,6 +58,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("ResourceCpu")
     public Long resourceCpu;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Status")
     public String status;
 
@@ -214,6 +217,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
     public Long getResourceCpu() {
         return this.resourceCpu;
+    }
+
+    public DescribeDBInstanceAttributeResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeDBInstanceAttributeResponseBody setStatus(String status) {
