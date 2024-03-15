@@ -38,10 +38,12 @@ public class UpdateAllowedIpRequest extends TeaModel {
     /**
      * <p>The port range. Valid values:</p>
      * <br>
-     * <p>*   **9092/9092**: the port range for access from a virtual private cloud (VPC).</p>
+     * <p>*   **9092/9092**: the port range for access from virtual private clouds (VPCs) by using the default endpoint.</p>
      * <p>*   **9093/9093**: the port range for access from the Internet.</p>
+     * <p>*   **9094/9094**: the port range for access from VPCs by using the Simple Authentication and Security Layer (SASL) endpoint.</p>
+     * <p>*   **9095/9095**: the port range for access from VPCs by using the Secure Sockets Layer (SSL) endpoint.</p>
      * <br>
-     * <p>The value of this parameter must match the value of the **AllowdedListType** parameter.</p>
+     * <p>This parameter must correspond to **AllowdedListType**.</p>
      */
     @NameInMap("PortRange")
     public String portRange;

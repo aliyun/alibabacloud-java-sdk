@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateAclRequest extends TeaModel {
     /**
-     * <p>The type of operation allowed by the ACL. Valid values:</p>
+     * <p>The operation type. Valid values:</p>
      * <br>
-     * <p>*   **Write**: data writes.</p>
-     * <p>*   **Read**: data reads.</p>
-     * <p>*   **Describe**: reads of **transaction IDs**.</p>
-     * <p>*   **IdempotentWrite**: idempotent data writes to **clusters**.</p>
+     * <p>*   **Write**: data writes</p>
+     * <p>*   **Read**: data reads</p>
+     * <p>*   **Describe**: reads of transaction IDs****</p>
+     * <p>*   **IdempotentWrite**: idempotent data writes to clusters****</p>
      */
     @NameInMap("AclOperationType")
     public String aclOperationType;
@@ -36,9 +36,9 @@ public class CreateAclRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <br>
-     * <p>*   **Topic**: topic</p>
-     * <p>*   **Group**: consumer group</p>
-     * <p>*   **Cluster**: cluster</p>
+     * <p>*   **Topic**</p>
+     * <p>*   **Group**</p>
+     * <p>*   **Cluster**</p>
      * <p>*   **TransactionalId**: transaction</p>
      */
     @NameInMap("AclResourceType")

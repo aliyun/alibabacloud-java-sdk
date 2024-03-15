@@ -4,24 +4,48 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class QueryMessageRequest extends TeaModel {
+    /**
+     * <p>The beginning of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+     */
     @NameInMap("BeginTime")
     public Long beginTime;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The consumer offset of the partition.</p>
+     */
     @NameInMap("Offset")
     public String offset;
 
+    /**
+     * <p>The partition ID.</p>
+     */
     @NameInMap("Partition")
     public String partition;
 
+    /**
+     * <p>The query type. Valid values:</p>
+     * <br>
+     * <p>*   byOffset: queries messages by offset. If you select this value, you must configure Partition and Offset.</p>
+     * <p>*   byTimestamp: queries messages by time. If you select this value, you must configure BeginTime.</p>
+     */
     @NameInMap("QueryType")
     public String queryType;
 
+    /**
+     * <p>The ID of the region where the resource resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The topic name.</p>
+     */
     @NameInMap("Topic")
     public String topic;
 
