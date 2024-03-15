@@ -367,13 +367,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getAutoScalingActivityWithOptions(request, runtime);
     }
 
-    /**
-      * 获取弹性伸缩策略信息。
-      *
-      * @param request GetAutoScalingPolicyRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetAutoScalingPolicyResponse
-     */
     public GetAutoScalingPolicyResponse getAutoScalingPolicyWithOptions(GetAutoScalingPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -406,12 +399,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAutoScalingPolicyResponse());
     }
 
-    /**
-      * 获取弹性伸缩策略信息。
-      *
-      * @param request GetAutoScalingPolicyRequest
-      * @return GetAutoScalingPolicyResponse
-     */
     public GetAutoScalingPolicyResponse getAutoScalingPolicy(GetAutoScalingPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAutoScalingPolicyWithOptions(request, runtime);
