@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAclRequest extends TeaModel {
     /**
-     * <p>The type of operation allowed by the ACL. Valid values:</p>
+     * <p>The operation type. Valid values:</p>
      * <br>
      * <p>*   **Write**</p>
      * <p>*   **Read**</p>

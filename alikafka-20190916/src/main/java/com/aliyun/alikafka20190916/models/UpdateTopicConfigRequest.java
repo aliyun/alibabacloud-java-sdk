@@ -4,18 +4,42 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class UpdateTopicConfigRequest extends TeaModel {
+    /**
+     * <p>The key of the topic configuration.</p>
+     * <br>
+     * <p>*   Valid values: retention.hours, max.message.bytes, and replications.</p>
+     * <p>*   retention.hours specifies the message retention period.</p>
+     * <p>*   max.message.bytes specifies the maximum size of a sent message.</p>
+     * <p>*   replications specifies the number of topic replicas.</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the region where the instance resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The topic name.</p>
+     */
     @NameInMap("Topic")
     public String topic;
 
+    /**
+     * <p>The value of the topic configuration.</p>
+     * <br>
+     * <p>*   retention.hours specifies the message retention period. The value is a string. Valid values: 24 to 8760.</p>
+     * <p>*   max.message.bytes specifies the maximum size of a sent message. The value is a string. Valid values: 1048576 to 10485760.</p>
+     * <p>*   replications specifies the number of topic replicas. The value is a string. Valid values: 1 to 3.</p>
+     */
     @NameInMap("Value")
     public String value;
 

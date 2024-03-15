@@ -483,6 +483,12 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ReservedPublishCapacity")
+        public Integer reservedPublishCapacity;
+
+        @NameInMap("ReservedSubscribeCapacity")
+        public Integer reservedSubscribeCapacity;
+
         /**
          * <p>The resource group ID.</p>
          */
@@ -761,6 +767,22 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setReservedPublishCapacity(Integer reservedPublishCapacity) {
+            this.reservedPublishCapacity = reservedPublishCapacity;
+            return this;
+        }
+        public Integer getReservedPublishCapacity() {
+            return this.reservedPublishCapacity;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setReservedSubscribeCapacity(Integer reservedSubscribeCapacity) {
+            this.reservedSubscribeCapacity = reservedSubscribeCapacity;
+            return this;
+        }
+        public Integer getReservedSubscribeCapacity() {
+            return this.reservedSubscribeCapacity;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setResourceGroupId(String resourceGroupId) {

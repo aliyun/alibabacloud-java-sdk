@@ -3,37 +3,25 @@ package com.aliyun.alikafka20190916.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteTopicResponseBody extends TeaModel {
-    /**
-     * <p>The HTTP status code. The status code 200 indicates that the request is successful.</p>
-     */
+public class StopInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <p>The returned message.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The request ID.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    public static DeleteTopicResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteTopicResponseBody self = new DeleteTopicResponseBody();
+    public static StopInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        StopInstanceResponseBody self = new StopInstanceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteTopicResponseBody setCode(Integer code) {
+    public StopInstanceResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -41,7 +29,7 @@ public class DeleteTopicResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DeleteTopicResponseBody setMessage(String message) {
+    public StopInstanceResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -49,7 +37,7 @@ public class DeleteTopicResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DeleteTopicResponseBody setRequestId(String requestId) {
+    public StopInstanceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -57,7 +45,7 @@ public class DeleteTopicResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteTopicResponseBody setSuccess(Boolean success) {
+    public StopInstanceResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

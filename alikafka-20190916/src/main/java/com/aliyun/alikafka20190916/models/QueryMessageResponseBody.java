@@ -4,18 +4,36 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class QueryMessageResponseBody extends TeaModel {
+    /**
+     * <p>The returned HTTP status code. If the request is successful, 200 is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The messages.</p>
+     */
     @NameInMap("MessageList")
     public java.util.List<QueryMessageResponseBodyMessageList> messageList;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,45 +83,91 @@ public class QueryMessageResponseBody extends TeaModel {
     }
 
     public static class QueryMessageResponseBodyMessageList extends TeaModel {
+        /**
+         * <p>The check value of the chaincode.</p>
+         */
         @NameInMap("Checksum")
         public Long checksum;
 
+        /**
+         * <p>The message key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>Indicates whether the key is truncated.</p>
+         */
         @NameInMap("KeyTruncated")
         public Boolean keyTruncated;
 
+        /**
+         * <p>The consumer offset of the partition.</p>
+         */
         @NameInMap("Offset")
         public Long offset;
 
+        /**
+         * <p>The partition ID.</p>
+         */
         @NameInMap("Partition")
         public Long partition;
 
+        /**
+         * <p>The size of the key after serialization. Unit: bytes.</p>
+         */
         @NameInMap("SerializedKeySize")
         public Integer serializedKeySize;
 
+        /**
+         * <p>The size of the value after serialization. Unit: bytes.</p>
+         */
         @NameInMap("SerializedValueSize")
         public Integer serializedValueSize;
 
+        /**
+         * <p>The time when the message was created. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <p>The time type.</p>
+         */
         @NameInMap("TimestampType")
         public String timestampType;
 
+        /**
+         * <p>The topic name.</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
+        /**
+         * <p>The truncated size of the message key. Unit: bytes.</p>
+         * <br>
+         * <p>*   A message is truncated only if the message exceeds 10 MB in size.</p>
+         */
         @NameInMap("TruncatedKeySize")
         public Integer truncatedKeySize;
 
+        /**
+         * <p>The truncated size of the message value. Unit: bytes.</p>
+         * <br>
+         * <p>*   A message is truncated only if the message exceeds 10 MB in size.</p>
+         */
         @NameInMap("TruncatedValueSize")
         public Integer truncatedValueSize;
 
+        /**
+         * <p>The message value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <p>Indicates whether the value is truncated.</p>
+         */
         @NameInMap("ValueTruncated")
         public Boolean valueTruncated;
 
