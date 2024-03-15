@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityIPListResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public ModifySecurityIPListResponseBody body;
 
     public static ModifySecurityIPListResponse build(java.util.Map<String, ?> map) throws Exception {
