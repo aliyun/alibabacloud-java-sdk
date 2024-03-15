@@ -4,12 +4,23 @@ package com.aliyun.ehpc20230701.models;
 import com.aliyun.tea.*;
 
 public class DeleteJobsRequest extends TeaModel {
+    @NameInMap("ExecutorIds")
+    public java.util.List<String> executorIds;
+
     @NameInMap("JobSpec")
     public java.util.List<DeleteJobsRequestJobSpec> jobSpec;
 
     public static DeleteJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteJobsRequest self = new DeleteJobsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteJobsRequest setExecutorIds(java.util.List<String> executorIds) {
+        this.executorIds = executorIds;
+        return this;
+    }
+    public java.util.List<String> getExecutorIds() {
+        return this.executorIds;
     }
 
     public DeleteJobsRequest setJobSpec(java.util.List<DeleteJobsRequestJobSpec> jobSpec) {
