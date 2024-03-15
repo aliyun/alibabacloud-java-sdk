@@ -101,6 +101,9 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         @NameInMap("MetricsTrigger")
         public MetricsTrigger metricsTrigger;
 
+        @NameInMap("MinAdjustmentValue")
+        public Integer minAdjustmentValue;
+
         /**
          * <p>The name of the auto scaling rule.</p>
          */
@@ -157,6 +160,14 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         }
         public MetricsTrigger getMetricsTrigger() {
             return this.metricsTrigger;
+        }
+
+        public ScalingRules setMinAdjustmentValue(Integer minAdjustmentValue) {
+            this.minAdjustmentValue = minAdjustmentValue;
+            return this;
+        }
+        public Integer getMinAdjustmentValue() {
+            return this.minAdjustmentValue;
         }
 
         public ScalingRules setRuleName(String ruleName) {
