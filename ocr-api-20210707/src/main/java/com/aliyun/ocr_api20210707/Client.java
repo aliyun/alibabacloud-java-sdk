@@ -2674,6 +2674,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InvoiceDate", request.invoiceDate);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.invoiceKind)) {
+            query.put("InvoiceKind", request.invoiceKind);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.invoiceNo)) {
             query.put("InvoiceNo", request.invoiceNo);
         }

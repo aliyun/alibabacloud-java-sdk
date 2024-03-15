@@ -10,6 +10,9 @@ public class VerifyVATInvoiceRequest extends TeaModel {
     @NameInMap("InvoiceDate")
     public String invoiceDate;
 
+    @NameInMap("InvoiceKind")
+    public Integer invoiceKind;
+
     @NameInMap("InvoiceNo")
     public String invoiceNo;
 
@@ -38,6 +41,14 @@ public class VerifyVATInvoiceRequest extends TeaModel {
     }
     public String getInvoiceDate() {
         return this.invoiceDate;
+    }
+
+    public VerifyVATInvoiceRequest setInvoiceKind(Integer invoiceKind) {
+        this.invoiceKind = invoiceKind;
+        return this;
+    }
+    public Integer getInvoiceKind() {
+        return this.invoiceKind;
     }
 
     public VerifyVATInvoiceRequest setInvoiceNo(String invoiceNo) {
