@@ -71,6 +71,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("Format")
         public String format;
 
+        @NameInMap("MultipleStreamsEnabled")
+        public Boolean multipleStreamsEnabled;
+
         @NameInMap("ProgressiveCallbacksEnabled")
         public Boolean progressiveCallbacksEnabled;
 
@@ -105,6 +108,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public String getFormat() {
             return this.format;
+        }
+
+        public CreateTaskRequestInput setMultipleStreamsEnabled(Boolean multipleStreamsEnabled) {
+            this.multipleStreamsEnabled = multipleStreamsEnabled;
+            return this;
+        }
+        public Boolean getMultipleStreamsEnabled() {
+            return this.multipleStreamsEnabled;
         }
 
         public CreateTaskRequestInput setProgressiveCallbacksEnabled(Boolean progressiveCallbacksEnabled) {
@@ -259,6 +270,9 @@ public class CreateTaskRequest extends TeaModel {
     }
 
     public static class CreateTaskRequestParametersTranscription extends TeaModel {
+        @NameInMap("AdditionalStreamOutputLevel")
+        public Integer additionalStreamOutputLevel;
+
         @NameInMap("AudioEventDetectionEnabled")
         public Boolean audioEventDetectionEnabled;
 
@@ -277,6 +291,14 @@ public class CreateTaskRequest extends TeaModel {
         public static CreateTaskRequestParametersTranscription build(java.util.Map<String, ?> map) throws Exception {
             CreateTaskRequestParametersTranscription self = new CreateTaskRequestParametersTranscription();
             return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestParametersTranscription setAdditionalStreamOutputLevel(Integer additionalStreamOutputLevel) {
+            this.additionalStreamOutputLevel = additionalStreamOutputLevel;
+            return this;
+        }
+        public Integer getAdditionalStreamOutputLevel() {
+            return this.additionalStreamOutputLevel;
         }
 
         public CreateTaskRequestParametersTranscription setAudioEventDetectionEnabled(Boolean audioEventDetectionEnabled) {
@@ -322,6 +344,9 @@ public class CreateTaskRequest extends TeaModel {
     }
 
     public static class CreateTaskRequestParametersTranslation extends TeaModel {
+        @NameInMap("AdditionalStreamOutputLevel")
+        public Integer additionalStreamOutputLevel;
+
         @NameInMap("OutputLevel")
         public Integer outputLevel;
 
@@ -331,6 +356,14 @@ public class CreateTaskRequest extends TeaModel {
         public static CreateTaskRequestParametersTranslation build(java.util.Map<String, ?> map) throws Exception {
             CreateTaskRequestParametersTranslation self = new CreateTaskRequestParametersTranslation();
             return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestParametersTranslation setAdditionalStreamOutputLevel(Integer additionalStreamOutputLevel) {
+            this.additionalStreamOutputLevel = additionalStreamOutputLevel;
+            return this;
+        }
+        public Integer getAdditionalStreamOutputLevel() {
+            return this.additionalStreamOutputLevel;
         }
 
         public CreateTaskRequestParametersTranslation setOutputLevel(Integer outputLevel) {
