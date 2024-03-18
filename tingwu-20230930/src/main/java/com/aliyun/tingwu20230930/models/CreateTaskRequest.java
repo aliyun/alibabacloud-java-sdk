@@ -160,6 +160,25 @@ public class CreateTaskRequest extends TeaModel {
 
     }
 
+    public static class CreateTaskRequestParametersExtraParams extends TeaModel {
+        @NameInMap("NfixEnabled")
+        public Boolean nfixEnabled;
+
+        public static CreateTaskRequestParametersExtraParams build(java.util.Map<String, ?> map) throws Exception {
+            CreateTaskRequestParametersExtraParams self = new CreateTaskRequestParametersExtraParams();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestParametersExtraParams setNfixEnabled(Boolean nfixEnabled) {
+            this.nfixEnabled = nfixEnabled;
+            return this;
+        }
+        public Boolean getNfixEnabled() {
+            return this.nfixEnabled;
+        }
+
+    }
+
     public static class CreateTaskRequestParametersMeetingAssistance extends TeaModel {
         @NameInMap("Types")
         public java.util.List<String> types;
@@ -388,6 +407,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("AutoChaptersEnabled")
         public Boolean autoChaptersEnabled;
 
+        @NameInMap("ExtraParams")
+        public CreateTaskRequestParametersExtraParams extraParams;
+
         @NameInMap("MeetingAssistance")
         public CreateTaskRequestParametersMeetingAssistance meetingAssistance;
 
@@ -429,6 +451,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public Boolean getAutoChaptersEnabled() {
             return this.autoChaptersEnabled;
+        }
+
+        public CreateTaskRequestParameters setExtraParams(CreateTaskRequestParametersExtraParams extraParams) {
+            this.extraParams = extraParams;
+            return this;
+        }
+        public CreateTaskRequestParametersExtraParams getExtraParams() {
+            return this.extraParams;
         }
 
         public CreateTaskRequestParameters setMeetingAssistance(CreateTaskRequestParametersMeetingAssistance meetingAssistance) {

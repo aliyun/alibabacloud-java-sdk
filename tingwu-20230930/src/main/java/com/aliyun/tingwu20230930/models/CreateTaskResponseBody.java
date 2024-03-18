@@ -63,6 +63,9 @@ public class CreateTaskResponseBody extends TeaModel {
         @NameInMap("TaskKey")
         public String taskKey;
 
+        @NameInMap("TaskStatus")
+        public String taskStatus;
+
         public static CreateTaskResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateTaskResponseBodyData self = new CreateTaskResponseBodyData();
             return TeaModel.build(map, self);
@@ -90,6 +93,14 @@ public class CreateTaskResponseBody extends TeaModel {
         }
         public String getTaskKey() {
             return this.taskKey;
+        }
+
+        public CreateTaskResponseBodyData setTaskStatus(String taskStatus) {
+            this.taskStatus = taskStatus;
+            return this;
+        }
+        public String getTaskStatus() {
+            return this.taskStatus;
         }
 
     }
