@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ecd20200930</artifactId>
-  <version>3.4.0</version>
+  <version>3.5.0</version>
   <packaging>jar</packaging>
   <name>ecd20200930</name>
   <description>Alibaba Cloud ecd (20200930) SDK for Java

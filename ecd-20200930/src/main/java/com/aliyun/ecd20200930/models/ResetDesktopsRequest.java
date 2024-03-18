@@ -10,6 +10,9 @@ public class ResetDesktopsRequest extends TeaModel {
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
+    @NameInMap("DesktopGroupIds")
+    public java.util.List<String> desktopGroupIds;
+
     /**
      * <p>The IDs of the cloud desktops. You can specify 1 to 100 cloud desktop IDs.</p>
      */
@@ -36,6 +39,9 @@ public class ResetDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResetScope")
+    public String resetScope;
+
     /**
      * <p>The type of the disk that you want to reset.</p>
      */
@@ -53,6 +59,14 @@ public class ResetDesktopsRequest extends TeaModel {
     }
     public String getDesktopGroupId() {
         return this.desktopGroupId;
+    }
+
+    public ResetDesktopsRequest setDesktopGroupIds(java.util.List<String> desktopGroupIds) {
+        this.desktopGroupIds = desktopGroupIds;
+        return this;
+    }
+    public java.util.List<String> getDesktopGroupIds() {
+        return this.desktopGroupIds;
     }
 
     public ResetDesktopsRequest setDesktopId(java.util.List<String> desktopId) {
@@ -85,6 +99,14 @@ public class ResetDesktopsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ResetDesktopsRequest setResetScope(String resetScope) {
+        this.resetScope = resetScope;
+        return this;
+    }
+    public String getResetScope() {
+        return this.resetScope;
     }
 
     public ResetDesktopsRequest setResetType(String resetType) {
