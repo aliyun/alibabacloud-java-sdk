@@ -10,6 +10,9 @@ public class ListQuotasResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListQuotasResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListQuotasResponseBody self = new ListQuotasResponseBody();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ListQuotasResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListQuotasResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
 }
