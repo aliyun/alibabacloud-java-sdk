@@ -22,6 +22,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("ComputeResource")
     public GetTrainingJobResponseBodyComputeResource computeResource;
 
+    @NameInMap("Duration")
+    public Long duration;
+
     @NameInMap("ExperimentConfig")
     public GetTrainingJobResponseBodyExperimentConfig experimentConfig;
 
@@ -154,6 +157,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
     public GetTrainingJobResponseBodyComputeResource getComputeResource() {
         return this.computeResource;
+    }
+
+    public GetTrainingJobResponseBody setDuration(Long duration) {
+        this.duration = duration;
+        return this;
+    }
+    public Long getDuration() {
+        return this.duration;
     }
 
     public GetTrainingJobResponseBody setExperimentConfig(GetTrainingJobResponseBodyExperimentConfig experimentConfig) {

@@ -13,6 +13,9 @@ public class QuotaConfig extends TeaModel {
     @NameInMap("DefaultGPUDriver")
     public String defaultGPUDriver;
 
+    @NameInMap("ResourceSpecs")
+    public java.util.List<WorkspaceSpecs> resourceSpecs;
+
     @NameInMap("SupportGPUDrivers")
     public java.util.List<String> supportGPUDrivers;
 
@@ -49,6 +52,14 @@ public class QuotaConfig extends TeaModel {
     }
     public String getDefaultGPUDriver() {
         return this.defaultGPUDriver;
+    }
+
+    public QuotaConfig setResourceSpecs(java.util.List<WorkspaceSpecs> resourceSpecs) {
+        this.resourceSpecs = resourceSpecs;
+        return this;
+    }
+    public java.util.List<WorkspaceSpecs> getResourceSpecs() {
+        return this.resourceSpecs;
     }
 
     public QuotaConfig setSupportGPUDrivers(java.util.List<String> supportGPUDrivers) {
