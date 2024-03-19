@@ -4,6 +4,9 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeBasicRequest extends TeaModel {
+    @NameInMap("NeedRotate")
+    public Boolean needRotate;
+
     @NameInMap("Url")
     public String url;
 
@@ -13,6 +16,14 @@ public class RecognizeBasicRequest extends TeaModel {
     public static RecognizeBasicRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeBasicRequest self = new RecognizeBasicRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RecognizeBasicRequest setNeedRotate(Boolean needRotate) {
+        this.needRotate = needRotate;
+        return this;
+    }
+    public Boolean getNeedRotate() {
+        return this.needRotate;
     }
 
     public RecognizeBasicRequest setUrl(String url) {

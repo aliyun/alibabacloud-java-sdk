@@ -333,6 +333,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RecognizeBasicResponse recognizeBasicWithOptions(RecognizeBasicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.needRotate)) {
+            query.put("NeedRotate", request.needRotate);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.url)) {
             query.put("Url", request.url);
         }
