@@ -83,6 +83,77 @@ public class DescribeClusterResourcesResponse extends TeaModel {
 
     }
 
+    public static class DescribeClusterResourcesResponseBodyAssociatedObject extends TeaModel {
+        @NameInMap("kind")
+        public String kind;
+
+        @NameInMap("namespace")
+        public String namespace;
+
+        @NameInMap("name")
+        public String name;
+
+        public static DescribeClusterResourcesResponseBodyAssociatedObject build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterResourcesResponseBodyAssociatedObject self = new DescribeClusterResourcesResponseBodyAssociatedObject();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterResourcesResponseBodyAssociatedObject setKind(String kind) {
+            this.kind = kind;
+            return this;
+        }
+        public String getKind() {
+            return this.kind;
+        }
+
+        public DescribeClusterResourcesResponseBodyAssociatedObject setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public DescribeClusterResourcesResponseBodyAssociatedObject setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class DescribeClusterResourcesResponseBodyDeleteBehavior extends TeaModel {
+        @NameInMap("delete_by_default")
+        public Boolean deleteByDefault;
+
+        @NameInMap("changeable")
+        public Boolean changeable;
+
+        public static DescribeClusterResourcesResponseBodyDeleteBehavior build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterResourcesResponseBodyDeleteBehavior self = new DescribeClusterResourcesResponseBodyDeleteBehavior();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterResourcesResponseBodyDeleteBehavior setDeleteByDefault(Boolean deleteByDefault) {
+            this.deleteByDefault = deleteByDefault;
+            return this;
+        }
+        public Boolean getDeleteByDefault() {
+            return this.deleteByDefault;
+        }
+
+        public DescribeClusterResourcesResponseBodyDeleteBehavior setChangeable(Boolean changeable) {
+            this.changeable = changeable;
+            return this;
+        }
+        public Boolean getChangeable() {
+            return this.changeable;
+        }
+
+    }
+
     public static class DescribeClusterResourcesResponseBody extends TeaModel {
         /**
          * <p>The cluster ID.</p>
@@ -140,6 +211,18 @@ public class DescribeClusterResourcesResponse extends TeaModel {
 
         @NameInMap("dependencies")
         public java.util.List<DescribeClusterResourcesResponseBodyDependencies> dependencies;
+
+        @NameInMap("associated_object")
+        public DescribeClusterResourcesResponseBodyAssociatedObject associatedObject;
+
+        @NameInMap("delete_behavior")
+        public DescribeClusterResourcesResponseBodyDeleteBehavior deleteBehavior;
+
+        @NameInMap("creator_type")
+        public String creatorType;
+
+        @NameInMap("extra_info")
+        public java.util.Map<String, ?> extraInfo;
 
         public static DescribeClusterResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterResourcesResponseBody self = new DescribeClusterResourcesResponseBody();
@@ -208,6 +291,38 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         }
         public java.util.List<DescribeClusterResourcesResponseBodyDependencies> getDependencies() {
             return this.dependencies;
+        }
+
+        public DescribeClusterResourcesResponseBody setAssociatedObject(DescribeClusterResourcesResponseBodyAssociatedObject associatedObject) {
+            this.associatedObject = associatedObject;
+            return this;
+        }
+        public DescribeClusterResourcesResponseBodyAssociatedObject getAssociatedObject() {
+            return this.associatedObject;
+        }
+
+        public DescribeClusterResourcesResponseBody setDeleteBehavior(DescribeClusterResourcesResponseBodyDeleteBehavior deleteBehavior) {
+            this.deleteBehavior = deleteBehavior;
+            return this;
+        }
+        public DescribeClusterResourcesResponseBodyDeleteBehavior getDeleteBehavior() {
+            return this.deleteBehavior;
+        }
+
+        public DescribeClusterResourcesResponseBody setCreatorType(String creatorType) {
+            this.creatorType = creatorType;
+            return this;
+        }
+        public String getCreatorType() {
+            return this.creatorType;
+        }
+
+        public DescribeClusterResourcesResponseBody setExtraInfo(java.util.Map<String, ?> extraInfo) {
+            this.extraInfo = extraInfo;
+            return this;
+        }
+        public java.util.Map<String, ?> getExtraInfo() {
+            return this.extraInfo;
         }
 
     }
