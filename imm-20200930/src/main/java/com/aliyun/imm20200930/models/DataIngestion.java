@@ -28,6 +28,9 @@ public class DataIngestion extends TeaModel {
     @NameInMap("Phase")
     public String phase;
 
+    @NameInMap("ServiceRole")
+    public String serviceRole;
+
     @NameInMap("State")
     public String state;
 
@@ -107,6 +110,14 @@ public class DataIngestion extends TeaModel {
     }
     public String getPhase() {
         return this.phase;
+    }
+
+    public DataIngestion setServiceRole(String serviceRole) {
+        this.serviceRole = serviceRole;
+        return this;
+    }
+    public String getServiceRole() {
+        return this.serviceRole;
     }
 
     public DataIngestion setState(String state) {
@@ -235,6 +246,9 @@ public class DataIngestion extends TeaModel {
     }
 
     public static class DataIngestionStatistic extends TeaModel {
+        @NameInMap("SkipFiles")
+        public Long skipFiles;
+
         @NameInMap("SubmitFailure")
         public Long submitFailure;
 
@@ -244,6 +258,14 @@ public class DataIngestion extends TeaModel {
         public static DataIngestionStatistic build(java.util.Map<String, ?> map) throws Exception {
             DataIngestionStatistic self = new DataIngestionStatistic();
             return TeaModel.build(map, self);
+        }
+
+        public DataIngestionStatistic setSkipFiles(Long skipFiles) {
+            this.skipFiles = skipFiles;
+            return this;
+        }
+        public Long getSkipFiles() {
+            return this.skipFiles;
         }
 
         public DataIngestionStatistic setSubmitFailure(Long submitFailure) {
