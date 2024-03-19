@@ -10,6 +10,9 @@ public class RunClusterCheckRequest extends TeaModel {
     @NameInMap("options")
     public java.util.Map<String, String> options;
 
+    @NameInMap("target")
+    public String target;
+
     /**
      * <p>The check method.</p>
      */
@@ -27,6 +30,14 @@ public class RunClusterCheckRequest extends TeaModel {
     }
     public java.util.Map<String, String> getOptions() {
         return this.options;
+    }
+
+    public RunClusterCheckRequest setTarget(String target) {
+        this.target = target;
+        return this;
+    }
+    public String getTarget() {
+        return this.target;
     }
 
     public RunClusterCheckRequest setType(String type) {

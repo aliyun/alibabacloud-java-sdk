@@ -10,6 +10,9 @@ public class DeleteAlertContactGroupResponse extends TeaModel {
     @NameInMap("statusCode")
     public Integer statusCode;
 
+    @NameInMap("body")
+    public java.util.List<DeleteAlertContactGroupResponseBody> body;
+
     public static DeleteAlertContactGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteAlertContactGroupResponse self = new DeleteAlertContactGroupResponse();
         return TeaModel.build(map, self);
@@ -29,6 +32,55 @@ public class DeleteAlertContactGroupResponse extends TeaModel {
     }
     public Integer getStatusCode() {
         return this.statusCode;
+    }
+
+    public DeleteAlertContactGroupResponse setBody(java.util.List<DeleteAlertContactGroupResponseBody> body) {
+        this.body = body;
+        return this;
+    }
+    public java.util.List<DeleteAlertContactGroupResponseBody> getBody() {
+        return this.body;
+    }
+
+    public static class DeleteAlertContactGroupResponseBody extends TeaModel {
+        @NameInMap("status")
+        public Boolean status;
+
+        @NameInMap("msg")
+        public String msg;
+
+        @NameInMap("contact_group_id")
+        public String contactGroupId;
+
+        public static DeleteAlertContactGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
+            DeleteAlertContactGroupResponseBody self = new DeleteAlertContactGroupResponseBody();
+            return TeaModel.build(map, self);
+        }
+
+        public DeleteAlertContactGroupResponseBody setStatus(Boolean status) {
+            this.status = status;
+            return this;
+        }
+        public Boolean getStatus() {
+            return this.status;
+        }
+
+        public DeleteAlertContactGroupResponseBody setMsg(String msg) {
+            this.msg = msg;
+            return this;
+        }
+        public String getMsg() {
+            return this.msg;
+        }
+
+        public DeleteAlertContactGroupResponseBody setContactGroupId(String contactGroupId) {
+            this.contactGroupId = contactGroupId;
+            return this;
+        }
+        public String getContactGroupId() {
+            return this.contactGroupId;
+        }
+
     }
 
 }

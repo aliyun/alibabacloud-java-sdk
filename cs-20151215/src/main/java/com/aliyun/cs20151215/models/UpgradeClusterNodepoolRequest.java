@@ -16,6 +16,12 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
     @NameInMap("kubernetes_version")
     public String kubernetesVersion;
 
+    @NameInMap("node_names")
+    public java.util.List<String> nodeNames;
+
+    @NameInMap("rolling_policy")
+    public UpgradeClusterNodepoolRequestRollingPolicy rollingPolicy;
+
     /**
      * <p>The runtime type. Valid values: containerd and docker.</p>
      */
@@ -52,6 +58,22 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
         return this.kubernetesVersion;
     }
 
+    public UpgradeClusterNodepoolRequest setNodeNames(java.util.List<String> nodeNames) {
+        this.nodeNames = nodeNames;
+        return this;
+    }
+    public java.util.List<String> getNodeNames() {
+        return this.nodeNames;
+    }
+
+    public UpgradeClusterNodepoolRequest setRollingPolicy(UpgradeClusterNodepoolRequestRollingPolicy rollingPolicy) {
+        this.rollingPolicy = rollingPolicy;
+        return this;
+    }
+    public UpgradeClusterNodepoolRequestRollingPolicy getRollingPolicy() {
+        return this.rollingPolicy;
+    }
+
     public UpgradeClusterNodepoolRequest setRuntimeType(String runtimeType) {
         this.runtimeType = runtimeType;
         return this;
@@ -74,6 +96,47 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
     }
     public Boolean getUseReplace() {
         return this.useReplace;
+    }
+
+    public static class UpgradeClusterNodepoolRequestRollingPolicy extends TeaModel {
+        @NameInMap("batch_interval")
+        public Integer batchInterval;
+
+        @NameInMap("max_parallelism")
+        public Integer maxParallelism;
+
+        @NameInMap("pause_policy")
+        public String pausePolicy;
+
+        public static UpgradeClusterNodepoolRequestRollingPolicy build(java.util.Map<String, ?> map) throws Exception {
+            UpgradeClusterNodepoolRequestRollingPolicy self = new UpgradeClusterNodepoolRequestRollingPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public UpgradeClusterNodepoolRequestRollingPolicy setBatchInterval(Integer batchInterval) {
+            this.batchInterval = batchInterval;
+            return this;
+        }
+        public Integer getBatchInterval() {
+            return this.batchInterval;
+        }
+
+        public UpgradeClusterNodepoolRequestRollingPolicy setMaxParallelism(Integer maxParallelism) {
+            this.maxParallelism = maxParallelism;
+            return this;
+        }
+        public Integer getMaxParallelism() {
+            return this.maxParallelism;
+        }
+
+        public UpgradeClusterNodepoolRequestRollingPolicy setPausePolicy(String pausePolicy) {
+            this.pausePolicy = pausePolicy;
+            return this;
+        }
+        public String getPausePolicy() {
+            return this.pausePolicy;
+        }
+
     }
 
 }

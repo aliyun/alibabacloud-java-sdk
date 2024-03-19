@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ListClusterChecksRequest extends TeaModel {
+    @NameInMap("target")
+    public String target;
+
     /**
      * <p>The check method.</p>
      */
@@ -13,6 +16,14 @@ public class ListClusterChecksRequest extends TeaModel {
     public static ListClusterChecksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListClusterChecksRequest self = new ListClusterChecksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListClusterChecksRequest setTarget(String target) {
+        this.target = target;
+        return this;
+    }
+    public String getTarget() {
+        return this.target;
     }
 
     public ListClusterChecksRequest setType(String type) {
