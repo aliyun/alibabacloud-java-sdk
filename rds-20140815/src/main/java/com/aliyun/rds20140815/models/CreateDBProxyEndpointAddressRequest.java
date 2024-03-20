@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBProxyEndpointAddressRequest extends TeaModel {
     /**
-     * <p>The prefix of the proxy endpoint. Enter a custom prefix.</p>
+     * <p>The prefix of the proxy endpoint Enter a custom prefix.</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
@@ -62,7 +62,7 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the VPC to which the proxy endpoint belongs. You can call the DescribeDBInstanceAttribute operation to query the VPC ID.</p>
+     * <p>The ID of the VPC to which the proxy endpoint belongs. You can call the DescribeDBInstanceAttribute operation to query the information.</p>
      * <br>
      * <p>>  This parameter must be specified when **DBProxyConnectStringNetType** is set to **VPC**.</p>
      */

@@ -41,7 +41,7 @@ public class CloneDBInstanceShrinkRequest extends TeaModel {
     public String bpeEnabled;
 
     /**
-     * <p>This parameter is reserved. You do not need to specify this parameter.</p>
+     * <p>An invalid parameter. You do not need to specify this parameter.</p>
      */
     @NameInMap("BurstingEnabled")
     public Boolean burstingEnabled;

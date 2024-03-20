@@ -23,7 +23,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>An array that consists of performance metrics.</p>
+     * <p>Details of the performance metrics.</p>
      */
     @NameInMap("PerformanceKeys")
     public DescribeDBInstancePerformanceResponseBodyPerformanceKeys performanceKeys;

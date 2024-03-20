@@ -21,7 +21,7 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     /**
      * <p>The performance metrics that you want to query. Separate multiple values with commas (,). You can specify up to 30 values. For more information, see [Performance parameters](~~26316~~).</p>
      * <br>
-     * <p>>  If you set **Key** to **MySQL_SpaceUsage** or **SQLServer_SpaceUsage**, you can only query the monitoring data within one day.</p>
+     * <p>>  If you set **Key** to **MySQL_SpaceUsage** or **SQLServer_SpaceUsage**, you can query the monitoring data within only one day.</p>
      */
     @NameInMap("Key")
     public String key;
