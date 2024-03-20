@@ -4,6 +4,9 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ReleasePublicNetworkAddressRequest extends TeaModel {
+    @NameInMap("ConnectionType")
+    public String connectionType;
+
     /**
      * <p>The instance ID.</p>
      * <br>
@@ -36,6 +39,14 @@ public class ReleasePublicNetworkAddressRequest extends TeaModel {
     public static ReleasePublicNetworkAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleasePublicNetworkAddressRequest self = new ReleasePublicNetworkAddressRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ReleasePublicNetworkAddressRequest setConnectionType(String connectionType) {
+        this.connectionType = connectionType;
+        return this;
+    }
+    public String getConnectionType() {
+        return this.connectionType;
     }
 
     public ReleasePublicNetworkAddressRequest setDBInstanceId(String DBInstanceId) {
