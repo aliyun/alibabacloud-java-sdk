@@ -25,6 +25,9 @@ public class CreateProjectRequest extends TeaModel {
     @NameInMap("FullTransferConfig")
     public CreateProjectRequestFullTransferConfig fullTransferConfig;
 
+    @NameInMap("Id")
+    public String id;
+
     @NameInMap("IncrTransferConfig")
     public CreateProjectRequestIncrTransferConfig incrTransferConfig;
 
@@ -117,6 +120,14 @@ public class CreateProjectRequest extends TeaModel {
     }
     public CreateProjectRequestFullTransferConfig getFullTransferConfig() {
         return this.fullTransferConfig;
+    }
+
+    public CreateProjectRequest setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
     public CreateProjectRequest setIncrTransferConfig(CreateProjectRequestIncrTransferConfig incrTransferConfig) {

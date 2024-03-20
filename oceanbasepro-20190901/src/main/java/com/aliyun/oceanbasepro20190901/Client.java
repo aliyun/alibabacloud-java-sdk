@@ -507,93 +507,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createOmsMysqlDataSourceWithOptions(request, runtime);
     }
 
-    public CreateOmsOpenAPIProjectResponse createOmsOpenAPIProjectWithOptions(CreateOmsOpenAPIProjectRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        CreateOmsOpenAPIProjectShrinkRequest request = new CreateOmsOpenAPIProjectShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.destConfig)) {
-            request.destConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.destConfig, "DestConfig", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.labelIds)) {
-            request.labelIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labelIds, "LabelIds", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceConfig)) {
-            request.sourceConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceConfig, "SourceConfig", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.transferMapping)) {
-            request.transferMappingShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.transferMapping, "TransferMapping", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.transferStepConfig)) {
-            request.transferStepConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.transferStepConfig, "TransferStepConfig", "json");
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.businessName)) {
-            body.put("BusinessName", request.businessName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.destConfigShrink)) {
-            body.put("DestConfig", request.destConfigShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.labelIdsShrink)) {
-            body.put("LabelIds", request.labelIdsShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            body.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
-            body.put("ProjectName", request.projectName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceConfigShrink)) {
-            body.put("SourceConfig", request.sourceConfigShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.transferMappingShrink)) {
-            body.put("TransferMapping", request.transferMappingShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.transferStepConfigShrink)) {
-            body.put("TransferStepConfig", request.transferStepConfigShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workerGradeId)) {
-            body.put("WorkerGradeId", request.workerGradeId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateOmsOpenAPIProject"),
-            new TeaPair("version", "2019-09-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOmsOpenAPIProjectResponse());
-    }
-
-    public CreateOmsOpenAPIProjectResponse createOmsOpenAPIProject(CreateOmsOpenAPIProjectRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createOmsOpenAPIProjectWithOptions(request, runtime);
-    }
-
     public CreateProjectResponse createProjectWithOptions(CreateProjectRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateProjectShrinkRequest request = new CreateProjectShrinkRequest();
@@ -649,6 +562,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fullTransferConfigShrink)) {
             body.put("FullTransferConfig", request.fullTransferConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.incrTransferConfigShrink)) {
@@ -1184,47 +1101,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteInstancesResponse deleteInstances(DeleteInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteInstancesWithOptions(request, runtime);
-    }
-
-    public DeleteOmsOpenAPIProjectResponse deleteOmsOpenAPIProjectWithOptions(DeleteOmsOpenAPIProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            body.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
-            body.put("ProjectId", request.projectId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workerGradeId)) {
-            body.put("WorkerGradeId", request.workerGradeId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteOmsOpenAPIProject"),
-            new TeaPair("version", "2019-09-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOmsOpenAPIProjectResponse());
-    }
-
-    public DeleteOmsOpenAPIProjectResponse deleteOmsOpenAPIProject(DeleteOmsOpenAPIProjectRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteOmsOpenAPIProjectWithOptions(request, runtime);
     }
 
     public DeleteProjectResponse deleteProjectWithOptions(DeleteProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2667,88 +2543,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeOasTopSQLListResponse describeOasTopSQLList(DescribeOasTopSQLListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeOasTopSQLListWithOptions(request, runtime);
-    }
-
-    public DescribeOmsOpenAPIProjectResponse describeOmsOpenAPIProjectWithOptions(DescribeOmsOpenAPIProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            body.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
-            body.put("ProjectId", request.projectId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workerGradeId)) {
-            body.put("WorkerGradeId", request.workerGradeId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeOmsOpenAPIProject"),
-            new TeaPair("version", "2019-09-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOmsOpenAPIProjectResponse());
-    }
-
-    public DescribeOmsOpenAPIProjectResponse describeOmsOpenAPIProject(DescribeOmsOpenAPIProjectRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeOmsOpenAPIProjectWithOptions(request, runtime);
-    }
-
-    public DescribeOmsOpenAPIProjectStepsResponse describeOmsOpenAPIProjectStepsWithOptions(DescribeOmsOpenAPIProjectStepsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            body.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
-            body.put("ProjectId", request.projectId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workerGradeId)) {
-            body.put("WorkerGradeId", request.workerGradeId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeOmsOpenAPIProjectSteps"),
-            new TeaPair("version", "2019-09-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOmsOpenAPIProjectStepsResponse());
-    }
-
-    public DescribeOmsOpenAPIProjectStepsResponse describeOmsOpenAPIProjectSteps(DescribeOmsOpenAPIProjectStepsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeOmsOpenAPIProjectStepsWithOptions(request, runtime);
     }
 
     public DescribeOutlineBindingResponse describeOutlineBindingWithOptions(DescribeOutlineBindingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -4292,6 +4086,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("LabelIds", request.labelIdsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.needRelatedInfo)) {
+            body.put("NeedRelatedInfo", request.needRelatedInfo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.order)) {
             body.put("Order", request.order);
         }
@@ -5163,47 +4961,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyTenantUserStatusWithOptions(request, runtime);
     }
 
-    public ReleaseOmsOpenAPIProjectResponse releaseOmsOpenAPIProjectWithOptions(ReleaseOmsOpenAPIProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            body.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
-            body.put("ProjectId", request.projectId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workerGradeId)) {
-            body.put("WorkerGradeId", request.workerGradeId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ReleaseOmsOpenAPIProject"),
-            new TeaPair("version", "2019-09-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ReleaseOmsOpenAPIProjectResponse());
-    }
-
-    public ReleaseOmsOpenAPIProjectResponse releaseOmsOpenAPIProject(ReleaseOmsOpenAPIProjectRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.releaseOmsOpenAPIProjectWithOptions(request, runtime);
-    }
-
     public ReleaseProjectResponse releaseProjectWithOptions(ReleaseProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -5260,88 +5017,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ReleaseWorkerInstanceResponse releaseWorkerInstance(ReleaseWorkerInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.releaseWorkerInstanceWithOptions(request, runtime);
-    }
-
-    public ResetOmsOpenAPIProjectResponse resetOmsOpenAPIProjectWithOptions(ResetOmsOpenAPIProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            body.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
-            body.put("ProjectId", request.projectId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workerGradeId)) {
-            body.put("WorkerGradeId", request.workerGradeId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ResetOmsOpenAPIProject"),
-            new TeaPair("version", "2019-09-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetOmsOpenAPIProjectResponse());
-    }
-
-    public ResetOmsOpenAPIProjectResponse resetOmsOpenAPIProject(ResetOmsOpenAPIProjectRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.resetOmsOpenAPIProjectWithOptions(request, runtime);
-    }
-
-    public ResumeOmsOpenAPIProjectResponse resumeOmsOpenAPIProjectWithOptions(ResumeOmsOpenAPIProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            body.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
-            body.put("ProjectId", request.projectId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workerGradeId)) {
-            body.put("WorkerGradeId", request.workerGradeId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ResumeOmsOpenAPIProject"),
-            new TeaPair("version", "2019-09-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ResumeOmsOpenAPIProjectResponse());
-    }
-
-    public ResumeOmsOpenAPIProjectResponse resumeOmsOpenAPIProject(ResumeOmsOpenAPIProjectRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.resumeOmsOpenAPIProjectWithOptions(request, runtime);
     }
 
     public ResumeProjectResponse resumeProjectWithOptions(ResumeProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -5402,179 +5077,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.retryProjectModifyRecordsWithOptions(request, runtime);
     }
 
-    public SearchOmsOpenAPIMonitorMetricResponse searchOmsOpenAPIMonitorMetricWithOptions(SearchOmsOpenAPIMonitorMetricRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
-            body.put("BeginTime", request.beginTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
-            body.put("EndTime", request.endTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.maxPointNum)) {
-            body.put("MaxPointNum", request.maxPointNum);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.metric)) {
-            body.put("Metric", request.metric);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            body.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
-            body.put("ProjectId", request.projectId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workerGradeId)) {
-            body.put("WorkerGradeId", request.workerGradeId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "SearchOmsOpenAPIMonitorMetric"),
-            new TeaPair("version", "2019-09-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchOmsOpenAPIMonitorMetricResponse());
-    }
-
-    public SearchOmsOpenAPIMonitorMetricResponse searchOmsOpenAPIMonitorMetric(SearchOmsOpenAPIMonitorMetricRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.searchOmsOpenAPIMonitorMetricWithOptions(request, runtime);
-    }
-
-    public SearchOmsOpenAPIProjectsResponse searchOmsOpenAPIProjectsWithOptions(SearchOmsOpenAPIProjectsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        SearchOmsOpenAPIProjectsShrinkRequest request = new SearchOmsOpenAPIProjectsShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.destDbTypes)) {
-            request.destDbTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.destDbTypes, "DestDbTypes", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.labelIds)) {
-            request.labelIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labelIds, "LabelIds", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceDbTypes)) {
-            request.sourceDbTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceDbTypes, "SourceDbTypes", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.statusList)) {
-            request.statusListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.statusList, "StatusList", "json");
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.destDbTypesShrink)) {
-            body.put("DestDbTypes", request.destDbTypesShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.labelIdsShrink)) {
-            body.put("LabelIds", request.labelIdsShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            body.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.searchKey)) {
-            body.put("SearchKey", request.searchKey);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceDbTypesShrink)) {
-            body.put("SourceDbTypes", request.sourceDbTypesShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.statusListShrink)) {
-            body.put("StatusList", request.statusListShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workerGradeId)) {
-            body.put("WorkerGradeId", request.workerGradeId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "SearchOmsOpenAPIProjects"),
-            new TeaPair("version", "2019-09-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchOmsOpenAPIProjectsResponse());
-    }
-
-    public SearchOmsOpenAPIProjectsResponse searchOmsOpenAPIProjects(SearchOmsOpenAPIProjectsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.searchOmsOpenAPIProjectsWithOptions(request, runtime);
-    }
-
-    public StartOmsOpenAPIProjectResponse startOmsOpenAPIProjectWithOptions(StartOmsOpenAPIProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            body.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
-            body.put("ProjectId", request.projectId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workerGradeId)) {
-            body.put("WorkerGradeId", request.workerGradeId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "StartOmsOpenAPIProject"),
-            new TeaPair("version", "2019-09-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StartOmsOpenAPIProjectResponse());
-    }
-
-    public StartOmsOpenAPIProjectResponse startOmsOpenAPIProject(StartOmsOpenAPIProjectRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.startOmsOpenAPIProjectWithOptions(request, runtime);
-    }
-
     public StartProjectResponse startProjectWithOptions(StartProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -5631,47 +5133,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartProjectsByLabelResponse startProjectsByLabel(StartProjectsByLabelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startProjectsByLabelWithOptions(request, runtime);
-    }
-
-    public StopOmsOpenAPIProjectResponse stopOmsOpenAPIProjectWithOptions(StopOmsOpenAPIProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            body.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
-            body.put("ProjectId", request.projectId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workerGradeId)) {
-            body.put("WorkerGradeId", request.workerGradeId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "StopOmsOpenAPIProject"),
-            new TeaPair("version", "2019-09-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StopOmsOpenAPIProjectResponse());
-    }
-
-    public StopOmsOpenAPIProjectResponse stopOmsOpenAPIProject(StopOmsOpenAPIProjectRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.stopOmsOpenAPIProjectWithOptions(request, runtime);
     }
 
     public StopProjectResponse stopProjectWithOptions(StopProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

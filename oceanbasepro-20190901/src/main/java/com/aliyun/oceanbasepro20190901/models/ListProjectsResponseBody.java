@@ -1538,6 +1538,168 @@ public class ListProjectsResponseBody extends TeaModel {
 
     }
 
+    public static class ListProjectsResponseBodyDataWorkerGradeInfo extends TeaModel {
+        @NameInMap("AutoRenewal")
+        public Boolean autoRenewal;
+
+        @NameInMap("ChargeType")
+        public String chargeType;
+
+        @NameInMap("DestRegion")
+        public String destRegion;
+
+        @NameInMap("DestType")
+        public String destType;
+
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("Expired")
+        public Boolean expired;
+
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
+
+        @NameInMap("Grade")
+        public String grade;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("SourceRegion")
+        public String sourceRegion;
+
+        @NameInMap("SourceType")
+        public String sourceType;
+
+        @NameInMap("Spec")
+        public String spec;
+
+        @NameInMap("SpecName")
+        public String specName;
+
+        public static ListProjectsResponseBodyDataWorkerGradeInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListProjectsResponseBodyDataWorkerGradeInfo self = new ListProjectsResponseBodyDataWorkerGradeInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListProjectsResponseBodyDataWorkerGradeInfo setAutoRenewal(Boolean autoRenewal) {
+            this.autoRenewal = autoRenewal;
+            return this;
+        }
+        public Boolean getAutoRenewal() {
+            return this.autoRenewal;
+        }
+
+        public ListProjectsResponseBodyDataWorkerGradeInfo setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        public ListProjectsResponseBodyDataWorkerGradeInfo setDestRegion(String destRegion) {
+            this.destRegion = destRegion;
+            return this;
+        }
+        public String getDestRegion() {
+            return this.destRegion;
+        }
+
+        public ListProjectsResponseBodyDataWorkerGradeInfo setDestType(String destType) {
+            this.destType = destType;
+            return this;
+        }
+        public String getDestType() {
+            return this.destType;
+        }
+
+        public ListProjectsResponseBodyDataWorkerGradeInfo setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public ListProjectsResponseBodyDataWorkerGradeInfo setExpired(Boolean expired) {
+            this.expired = expired;
+            return this;
+        }
+        public Boolean getExpired() {
+            return this.expired;
+        }
+
+        public ListProjectsResponseBodyDataWorkerGradeInfo setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public ListProjectsResponseBodyDataWorkerGradeInfo setGrade(String grade) {
+            this.grade = grade;
+            return this;
+        }
+        public String getGrade() {
+            return this.grade;
+        }
+
+        public ListProjectsResponseBodyDataWorkerGradeInfo setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public ListProjectsResponseBodyDataWorkerGradeInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListProjectsResponseBodyDataWorkerGradeInfo setSourceRegion(String sourceRegion) {
+            this.sourceRegion = sourceRegion;
+            return this;
+        }
+        public String getSourceRegion() {
+            return this.sourceRegion;
+        }
+
+        public ListProjectsResponseBodyDataWorkerGradeInfo setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        public ListProjectsResponseBodyDataWorkerGradeInfo setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
+        }
+
+        public ListProjectsResponseBodyDataWorkerGradeInfo setSpecName(String specName) {
+            this.specName = specName;
+            return this;
+        }
+        public String getSpecName() {
+            return this.specName;
+        }
+
+    }
+
     public static class ListProjectsResponseBodyData extends TeaModel {
         @NameInMap("AlarmStats")
         public ListProjectsResponseBodyDataAlarmStats alarmStats;
@@ -1640,6 +1802,9 @@ public class ListProjectsResponseBody extends TeaModel {
 
         @NameInMap("WorkerGradeId")
         public String workerGradeId;
+
+        @NameInMap("WorkerGradeInfo")
+        public ListProjectsResponseBodyDataWorkerGradeInfo workerGradeInfo;
 
         public static ListProjectsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListProjectsResponseBodyData self = new ListProjectsResponseBodyData();
@@ -1916,6 +2081,14 @@ public class ListProjectsResponseBody extends TeaModel {
         }
         public String getWorkerGradeId() {
             return this.workerGradeId;
+        }
+
+        public ListProjectsResponseBodyData setWorkerGradeInfo(ListProjectsResponseBodyDataWorkerGradeInfo workerGradeInfo) {
+            this.workerGradeInfo = workerGradeInfo;
+            return this;
+        }
+        public ListProjectsResponseBodyDataWorkerGradeInfo getWorkerGradeInfo() {
+            return this.workerGradeInfo;
         }
 
     }
