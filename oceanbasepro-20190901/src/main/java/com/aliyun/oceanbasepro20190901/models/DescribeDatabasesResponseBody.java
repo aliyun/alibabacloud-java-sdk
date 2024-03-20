@@ -11,7 +11,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     public java.util.List<DescribeDatabasesResponseBodyDatabases> databases;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -98,7 +98,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         public String userName;
 
         /**
-         * <p>The type of the account. Valid values:  - Admin: the super administrator account. - Normal: a general account.</p>
+         * <p>The type of the account. Valid values:  </p>
+         * <p>- Admin: the super administrator account. </p>
+         * <p>- Normal: a general account.</p>
          */
         @NameInMap("UserType")
         public String userType;
@@ -156,7 +158,8 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The actual data size, in GB.</p>
+         * <p>The actual data size, in GB. </p>
+         * <p>><notice>This parameter is no longer used in later versions. RequiredSize is used instead.></notice></p>
          */
         @NameInMap("DataSize")
         public Double dataSize;
@@ -186,7 +189,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         public String encoding;
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The ID of the cluster to which the tenant belongs.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -206,7 +209,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The information about the database tables.</p>
+         * <p>The list of database tables.</p>
          */
         @NameInMap("Tables")
         public java.util.List<DescribeDatabasesResponseBodyDatabasesTables> tables;
@@ -218,13 +221,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>Tenant name.</p>
+         * <p>The name of the tenant.</p>
          */
         @NameInMap("TenantName")
         public String tenantName;
 
         /**
-         * <p>The accounts that have privileges on the database.</p>
+         * <p>The list of accounts that are granted privileges on this database.</p>
          */
         @NameInMap("Users")
         public java.util.List<DescribeDatabasesResponseBodyDatabasesUsers> users;

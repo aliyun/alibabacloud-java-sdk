@@ -7,6 +7,9 @@ public class ListProjectsShrinkRequest extends TeaModel {
     @NameInMap("LabelIds")
     public String labelIdsShrink;
 
+    @NameInMap("NeedRelatedInfo")
+    public Boolean needRelatedInfo;
+
     @NameInMap("Order")
     public String order;
 
@@ -48,6 +51,14 @@ public class ListProjectsShrinkRequest extends TeaModel {
     }
     public String getLabelIdsShrink() {
         return this.labelIdsShrink;
+    }
+
+    public ListProjectsShrinkRequest setNeedRelatedInfo(Boolean needRelatedInfo) {
+        this.needRelatedInfo = needRelatedInfo;
+        return this;
+    }
+    public Boolean getNeedRelatedInfo() {
+        return this.needRelatedInfo;
     }
 
     public ListProjectsShrinkRequest setOrder(String order) {

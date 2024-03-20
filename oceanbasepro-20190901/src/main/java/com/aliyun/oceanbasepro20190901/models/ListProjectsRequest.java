@@ -7,6 +7,9 @@ public class ListProjectsRequest extends TeaModel {
     @NameInMap("LabelIds")
     public java.util.List<String> labelIds;
 
+    @NameInMap("NeedRelatedInfo")
+    public Boolean needRelatedInfo;
+
     @NameInMap("Order")
     public String order;
 
@@ -48,6 +51,14 @@ public class ListProjectsRequest extends TeaModel {
     }
     public java.util.List<String> getLabelIds() {
         return this.labelIds;
+    }
+
+    public ListProjectsRequest setNeedRelatedInfo(Boolean needRelatedInfo) {
+        this.needRelatedInfo = needRelatedInfo;
+        return this;
+    }
+    public Boolean getNeedRelatedInfo() {
+        return this.needRelatedInfo;
     }
 
     public ListProjectsRequest setOrder(String order) {

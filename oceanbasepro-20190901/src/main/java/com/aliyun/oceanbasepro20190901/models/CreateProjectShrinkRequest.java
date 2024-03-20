@@ -25,6 +25,9 @@ public class CreateProjectShrinkRequest extends TeaModel {
     @NameInMap("FullTransferConfig")
     public String fullTransferConfigShrink;
 
+    @NameInMap("Id")
+    public String id;
+
     @NameInMap("IncrTransferConfig")
     public String incrTransferConfigShrink;
 
@@ -117,6 +120,14 @@ public class CreateProjectShrinkRequest extends TeaModel {
     }
     public String getFullTransferConfigShrink() {
         return this.fullTransferConfigShrink;
+    }
+
+    public CreateProjectShrinkRequest setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
     public CreateProjectShrinkRequest setIncrTransferConfigShrink(String incrTransferConfigShrink) {

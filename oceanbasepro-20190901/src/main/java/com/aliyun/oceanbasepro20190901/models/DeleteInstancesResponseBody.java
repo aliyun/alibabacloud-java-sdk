@@ -11,7 +11,7 @@ public class DeleteInstancesResponseBody extends TeaModel {
     public DeleteInstancesResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

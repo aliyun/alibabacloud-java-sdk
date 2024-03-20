@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateTenantRequest extends TeaModel {
     /**
      * <p>The character set.    </p>
-     * <p>For more information, see DescribeCharset.</p>
+     * <p>For more information, see [DescribeCharset](https://www.alibabacloud.com/help/en/apsaradb-for-oceanbase/latest/api-oceanbasepro-2019-09-01-describecharset).</p>
      */
     @NameInMap("Charset")
     public String charset;
@@ -62,7 +62,7 @@ public class CreateTenantRequest extends TeaModel {
     /**
      * <p>The tenant mode.    </p>
      * <p>Valid values: Oracle and MySQL.   </p>
-     * <p>For more information, see [DescribeInstanceTenantModes](~~410354~~).</p>
+     * <p>For more information, see [DescribeInstanceTenantModes](https://www.alibabacloud.com/help/en/apsaradb-for-oceanbase/latest/api-oceanbasepro-2019-09-01-describeinstancetenantmodes).</p>
      */
     @NameInMap("TenantMode")
     public String tenantMode;

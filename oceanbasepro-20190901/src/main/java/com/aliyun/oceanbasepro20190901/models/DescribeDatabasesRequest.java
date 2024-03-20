@@ -12,7 +12,7 @@ public class DescribeDatabasesRequest extends TeaModel {
     public String databaseName;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The ID of the cluster.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -46,8 +46,9 @@ public class DescribeDatabasesRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>Specifies whether to return the information of tables in the database.   </p>
-     * <p>Default value: false.</p>
+     * <p>Specifies whether to return the information about tables in the database.</p>
+     * <p>Default value: false. </p>
+     * <p>> The operation may time out if the database contains a large number of tables.</p>
      */
     @NameInMap("WithTables")
     public Boolean withTables;
