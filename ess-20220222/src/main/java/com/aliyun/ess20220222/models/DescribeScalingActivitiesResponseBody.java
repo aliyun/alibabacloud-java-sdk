@@ -79,7 +79,40 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext extends TeaModel {
+        @NameInMap("DisableLifecycleHook")
+        public Boolean disableLifecycleHook;
+
+        @NameInMap("IgnoredLifecycleHookIds")
+        public java.util.List<String> ignoredLifecycleHookIds;
+
+        public static DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext self = new DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext setDisableLifecycleHook(Boolean disableLifecycleHook) {
+            this.disableLifecycleHook = disableLifecycleHook;
+            return this;
+        }
+        public Boolean getDisableLifecycleHook() {
+            return this.disableLifecycleHook;
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext setIgnoredLifecycleHookIds(java.util.List<String> ignoredLifecycleHookIds) {
+            this.ignoredLifecycleHookIds = ignoredLifecycleHookIds;
+            return this;
+        }
+        public java.util.List<String> getIgnoredLifecycleHookIds() {
+            return this.ignoredLifecycleHookIds;
+        }
+
+    }
+
     public static class DescribeScalingActivitiesResponseBodyScalingActivities extends TeaModel {
+        @NameInMap("ActivityMetadata")
+        public String activityMetadata;
+
         /**
          * <p>The total number of instances that were manually added to the scaling group after the scaling activity was complete.</p>
          */
@@ -151,6 +184,9 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
+
+        @NameInMap("LifecycleHookContext")
+        public DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext lifecycleHookContext;
 
         /**
          * <p>The execution progress of the scaling activity.</p>
@@ -232,9 +268,23 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         @NameInMap("TotalCapacity")
         public String totalCapacity;
 
+        @NameInMap("TriggerSourceId")
+        public String triggerSourceId;
+
+        @NameInMap("TriggerSourceType")
+        public String triggerSourceType;
+
         public static DescribeScalingActivitiesResponseBodyScalingActivities build(java.util.Map<String, ?> map) throws Exception {
             DescribeScalingActivitiesResponseBodyScalingActivities self = new DescribeScalingActivitiesResponseBodyScalingActivities();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivities setActivityMetadata(String activityMetadata) {
+            this.activityMetadata = activityMetadata;
+            return this;
+        }
+        public String getActivityMetadata() {
+            return this.activityMetadata;
         }
 
         public DescribeScalingActivitiesResponseBodyScalingActivities setAttachedCapacity(String attachedCapacity) {
@@ -333,6 +383,14 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             return this.errorMessage;
         }
 
+        public DescribeScalingActivitiesResponseBodyScalingActivities setLifecycleHookContext(DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext lifecycleHookContext) {
+            this.lifecycleHookContext = lifecycleHookContext;
+            return this;
+        }
+        public DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext getLifecycleHookContext() {
+            return this.lifecycleHookContext;
+        }
+
         public DescribeScalingActivitiesResponseBodyScalingActivities setProgress(Integer progress) {
             this.progress = progress;
             return this;
@@ -427,6 +485,22 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         }
         public String getTotalCapacity() {
             return this.totalCapacity;
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivities setTriggerSourceId(String triggerSourceId) {
+            this.triggerSourceId = triggerSourceId;
+            return this;
+        }
+        public String getTriggerSourceId() {
+            return this.triggerSourceId;
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivities setTriggerSourceType(String triggerSourceType) {
+            this.triggerSourceType = triggerSourceType;
+            return this;
+        }
+        public String getTriggerSourceType() {
+            return this.triggerSourceType;
         }
 
     }

@@ -4,6 +4,9 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class ScaleWithAdjustmentRequest extends TeaModel {
+    @NameInMap("ActivityMetadata")
+    public String activityMetadata;
+
     /**
      * <p>The type of the scaling policy. Valid values:</p>
      * <br>
@@ -29,6 +32,9 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
      */
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("LifecycleHookContext")
+    public ScaleWithAdjustmentRequestLifecycleHookContext lifecycleHookContext;
 
     /**
      * <p>The minimum number of instances allowed in each adjustment. This parameter takes effect only if you set the `AdjustmentType` parameter to `PercentChangeInCapacity`.</p>
@@ -69,6 +75,14 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ScaleWithAdjustmentRequest setActivityMetadata(String activityMetadata) {
+        this.activityMetadata = activityMetadata;
+        return this;
+    }
+    public String getActivityMetadata() {
+        return this.activityMetadata;
+    }
+
     public ScaleWithAdjustmentRequest setAdjustmentType(String adjustmentType) {
         this.adjustmentType = adjustmentType;
         return this;
@@ -91,6 +105,14 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ScaleWithAdjustmentRequest setLifecycleHookContext(ScaleWithAdjustmentRequestLifecycleHookContext lifecycleHookContext) {
+        this.lifecycleHookContext = lifecycleHookContext;
+        return this;
+    }
+    public ScaleWithAdjustmentRequestLifecycleHookContext getLifecycleHookContext() {
+        return this.lifecycleHookContext;
     }
 
     public ScaleWithAdjustmentRequest setMinAdjustmentMagnitude(Integer minAdjustmentMagnitude) {
@@ -139,6 +161,36 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
     }
     public Boolean getSyncActivity() {
         return this.syncActivity;
+    }
+
+    public static class ScaleWithAdjustmentRequestLifecycleHookContext extends TeaModel {
+        @NameInMap("DisableLifecycleHook")
+        public Boolean disableLifecycleHook;
+
+        @NameInMap("IgnoredLifecycleHookIds")
+        public java.util.List<String> ignoredLifecycleHookIds;
+
+        public static ScaleWithAdjustmentRequestLifecycleHookContext build(java.util.Map<String, ?> map) throws Exception {
+            ScaleWithAdjustmentRequestLifecycleHookContext self = new ScaleWithAdjustmentRequestLifecycleHookContext();
+            return TeaModel.build(map, self);
+        }
+
+        public ScaleWithAdjustmentRequestLifecycleHookContext setDisableLifecycleHook(Boolean disableLifecycleHook) {
+            this.disableLifecycleHook = disableLifecycleHook;
+            return this;
+        }
+        public Boolean getDisableLifecycleHook() {
+            return this.disableLifecycleHook;
+        }
+
+        public ScaleWithAdjustmentRequestLifecycleHookContext setIgnoredLifecycleHookIds(java.util.List<String> ignoredLifecycleHookIds) {
+            this.ignoredLifecycleHookIds = ignoredLifecycleHookIds;
+            return this;
+        }
+        public java.util.List<String> getIgnoredLifecycleHookIds() {
+            return this.ignoredLifecycleHookIds;
+        }
+
     }
 
     public static class ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars extends TeaModel {

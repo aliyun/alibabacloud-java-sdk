@@ -194,6 +194,9 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     @NameInMap("Memory")
     public Integer memory;
 
+    @NameInMap("NetworkInterfaces")
+    public java.util.List<ModifyScalingConfigurationShrinkRequestNetworkInterfaces> networkInterfaces;
+
     /**
      * <p>Specifies whether to overwrite existing data. Valid values:</p>
      * <br>
@@ -569,6 +572,14 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     }
     public Integer getMemory() {
         return this.memory;
+    }
+
+    public ModifyScalingConfigurationShrinkRequest setNetworkInterfaces(java.util.List<ModifyScalingConfigurationShrinkRequestNetworkInterfaces> networkInterfaces) {
+        this.networkInterfaces = networkInterfaces;
+        return this;
+    }
+    public java.util.List<ModifyScalingConfigurationShrinkRequestNetworkInterfaces> getNetworkInterfaces() {
+        return this.networkInterfaces;
     }
 
     public ModifyScalingConfigurationShrinkRequest setOverride(Boolean override) {
@@ -1489,6 +1500,58 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
         }
         public Integer getWeightedCapacity() {
             return this.weightedCapacity;
+        }
+
+    }
+
+    public static class ModifyScalingConfigurationShrinkRequestNetworkInterfaces extends TeaModel {
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("Ipv6AddressCount")
+        public Integer ipv6AddressCount;
+
+        @NameInMap("NetworkInterfaceTrafficMode")
+        public String networkInterfaceTrafficMode;
+
+        @NameInMap("SecurityGroupIds")
+        public java.util.List<String> securityGroupIds;
+
+        public static ModifyScalingConfigurationShrinkRequestNetworkInterfaces build(java.util.Map<String, ?> map) throws Exception {
+            ModifyScalingConfigurationShrinkRequestNetworkInterfaces self = new ModifyScalingConfigurationShrinkRequestNetworkInterfaces();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyScalingConfigurationShrinkRequestNetworkInterfaces setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public ModifyScalingConfigurationShrinkRequestNetworkInterfaces setIpv6AddressCount(Integer ipv6AddressCount) {
+            this.ipv6AddressCount = ipv6AddressCount;
+            return this;
+        }
+        public Integer getIpv6AddressCount() {
+            return this.ipv6AddressCount;
+        }
+
+        public ModifyScalingConfigurationShrinkRequestNetworkInterfaces setNetworkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+            this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+            return this;
+        }
+        public String getNetworkInterfaceTrafficMode() {
+            return this.networkInterfaceTrafficMode;
+        }
+
+        public ModifyScalingConfigurationShrinkRequestNetworkInterfaces setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupIds() {
+            return this.securityGroupIds;
         }
 
     }

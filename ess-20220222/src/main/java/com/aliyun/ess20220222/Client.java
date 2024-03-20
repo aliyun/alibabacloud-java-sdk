@@ -1375,6 +1375,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Memory", request.memory);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaces)) {
+            query.put("NetworkInterfaces", request.networkInterfaces);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -5114,6 +5118,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Memory", request.memory);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaces)) {
+            query.put("NetworkInterfaces", request.networkInterfaces);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.override)) {
             query.put("Override", request.override);
         }
@@ -5914,11 +5922,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ScaleWithAdjustmentShrinkRequest request = new ScaleWithAdjustmentShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.lifecycleHookContext)) {
+            request.lifecycleHookContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.lifecycleHookContext, "LifecycleHookContext", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.overrides)) {
             request.overridesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.overrides, "Overrides", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.activityMetadata)) {
+            query.put("ActivityMetadata", request.activityMetadata);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.adjustmentType)) {
             query.put("AdjustmentType", request.adjustmentType);
         }
@@ -5929,6 +5945,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lifecycleHookContextShrink)) {
+            query.put("LifecycleHookContext", request.lifecycleHookContextShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.minAdjustmentMagnitude)) {

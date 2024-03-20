@@ -194,6 +194,9 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
     @NameInMap("Memory")
     public Integer memory;
 
+    @NameInMap("NetworkInterfaces")
+    public java.util.List<ModifyScalingConfigurationRequestNetworkInterfaces> networkInterfaces;
+
     /**
      * <p>Specifies whether to overwrite existing data. Valid values:</p>
      * <br>
@@ -569,6 +572,14 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
     }
     public Integer getMemory() {
         return this.memory;
+    }
+
+    public ModifyScalingConfigurationRequest setNetworkInterfaces(java.util.List<ModifyScalingConfigurationRequestNetworkInterfaces> networkInterfaces) {
+        this.networkInterfaces = networkInterfaces;
+        return this;
+    }
+    public java.util.List<ModifyScalingConfigurationRequestNetworkInterfaces> getNetworkInterfaces() {
+        return this.networkInterfaces;
     }
 
     public ModifyScalingConfigurationRequest setOverride(Boolean override) {
@@ -1489,6 +1500,58 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
         }
         public Integer getWeightedCapacity() {
             return this.weightedCapacity;
+        }
+
+    }
+
+    public static class ModifyScalingConfigurationRequestNetworkInterfaces extends TeaModel {
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("Ipv6AddressCount")
+        public Integer ipv6AddressCount;
+
+        @NameInMap("NetworkInterfaceTrafficMode")
+        public String networkInterfaceTrafficMode;
+
+        @NameInMap("SecurityGroupIds")
+        public java.util.List<String> securityGroupIds;
+
+        public static ModifyScalingConfigurationRequestNetworkInterfaces build(java.util.Map<String, ?> map) throws Exception {
+            ModifyScalingConfigurationRequestNetworkInterfaces self = new ModifyScalingConfigurationRequestNetworkInterfaces();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyScalingConfigurationRequestNetworkInterfaces setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public ModifyScalingConfigurationRequestNetworkInterfaces setIpv6AddressCount(Integer ipv6AddressCount) {
+            this.ipv6AddressCount = ipv6AddressCount;
+            return this;
+        }
+        public Integer getIpv6AddressCount() {
+            return this.ipv6AddressCount;
+        }
+
+        public ModifyScalingConfigurationRequestNetworkInterfaces setNetworkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+            this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+            return this;
+        }
+        public String getNetworkInterfaceTrafficMode() {
+            return this.networkInterfaceTrafficMode;
+        }
+
+        public ModifyScalingConfigurationRequestNetworkInterfaces setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupIds() {
+            return this.securityGroupIds;
         }
 
     }

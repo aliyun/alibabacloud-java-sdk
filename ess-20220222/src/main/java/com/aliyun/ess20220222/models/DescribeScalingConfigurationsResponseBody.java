@@ -471,6 +471,58 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsNetworkInterfaces extends TeaModel {
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("Ipv6AddressCount")
+        public Integer ipv6AddressCount;
+
+        @NameInMap("NetworkInterfaceTrafficMode")
+        public String networkInterfaceTrafficMode;
+
+        @NameInMap("SecurityGroupIds")
+        public java.util.List<String> securityGroupIds;
+
+        public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsNetworkInterfaces build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingConfigurationsResponseBodyScalingConfigurationsNetworkInterfaces self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsNetworkInterfaces();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsNetworkInterfaces setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsNetworkInterfaces setIpv6AddressCount(Integer ipv6AddressCount) {
+            this.ipv6AddressCount = ipv6AddressCount;
+            return this;
+        }
+        public Integer getIpv6AddressCount() {
+            return this.ipv6AddressCount;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsNetworkInterfaces setNetworkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+            this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+            return this;
+        }
+        public String getNetworkInterfaceTrafficMode() {
+            return this.networkInterfaceTrafficMode;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsNetworkInterfaces setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+    }
+
     public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsSchedulerOptions extends TeaModel {
         /**
          * <p>> This parameter is in invitational preview and is unavailable.</p>
@@ -785,6 +837,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
          */
         @NameInMap("Memory")
         public Integer memory;
+
+        @NameInMap("NetworkInterfaces")
+        public java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsNetworkInterfaces> networkInterfaces;
 
         /**
          * <p>Indicates whether the password preconfigured in the image is used.</p>
@@ -1272,6 +1327,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public Integer getMemory() {
             return this.memory;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurations setNetworkInterfaces(java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsNetworkInterfaces> networkInterfaces) {
+            this.networkInterfaces = networkInterfaces;
+            return this;
+        }
+        public java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsNetworkInterfaces> getNetworkInterfaces() {
+            return this.networkInterfaces;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurations setPasswordInherit(Boolean passwordInherit) {
