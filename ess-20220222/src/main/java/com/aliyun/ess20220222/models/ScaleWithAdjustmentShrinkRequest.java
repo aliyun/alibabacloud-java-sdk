@@ -4,6 +4,9 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class ScaleWithAdjustmentShrinkRequest extends TeaModel {
+    @NameInMap("ActivityMetadata")
+    public String activityMetadata;
+
     /**
      * <p>The type of the scaling policy. Valid values:</p>
      * <br>
@@ -29,6 +32,9 @@ public class ScaleWithAdjustmentShrinkRequest extends TeaModel {
      */
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("LifecycleHookContext")
+    public String lifecycleHookContextShrink;
 
     /**
      * <p>The minimum number of instances allowed in each adjustment. This parameter takes effect only if you set the `AdjustmentType` parameter to `PercentChangeInCapacity`.</p>
@@ -69,6 +75,14 @@ public class ScaleWithAdjustmentShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ScaleWithAdjustmentShrinkRequest setActivityMetadata(String activityMetadata) {
+        this.activityMetadata = activityMetadata;
+        return this;
+    }
+    public String getActivityMetadata() {
+        return this.activityMetadata;
+    }
+
     public ScaleWithAdjustmentShrinkRequest setAdjustmentType(String adjustmentType) {
         this.adjustmentType = adjustmentType;
         return this;
@@ -91,6 +105,14 @@ public class ScaleWithAdjustmentShrinkRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ScaleWithAdjustmentShrinkRequest setLifecycleHookContextShrink(String lifecycleHookContextShrink) {
+        this.lifecycleHookContextShrink = lifecycleHookContextShrink;
+        return this;
+    }
+    public String getLifecycleHookContextShrink() {
+        return this.lifecycleHookContextShrink;
     }
 
     public ScaleWithAdjustmentShrinkRequest setMinAdjustmentMagnitude(Integer minAdjustmentMagnitude) {

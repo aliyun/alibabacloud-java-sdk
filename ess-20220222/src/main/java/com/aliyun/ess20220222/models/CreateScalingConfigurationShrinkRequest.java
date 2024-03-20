@@ -221,6 +221,9 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
     @NameInMap("Memory")
     public Integer memory;
 
+    @NameInMap("NetworkInterfaces")
+    public java.util.List<CreateScalingConfigurationShrinkRequestNetworkInterfaces> networkInterfaces;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -643,6 +646,14 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
     }
     public Integer getMemory() {
         return this.memory;
+    }
+
+    public CreateScalingConfigurationShrinkRequest setNetworkInterfaces(java.util.List<CreateScalingConfigurationShrinkRequestNetworkInterfaces> networkInterfaces) {
+        this.networkInterfaces = networkInterfaces;
+        return this;
+    }
+    public java.util.List<CreateScalingConfigurationShrinkRequestNetworkInterfaces> getNetworkInterfaces() {
+        return this.networkInterfaces;
     }
 
     public CreateScalingConfigurationShrinkRequest setOwnerAccount(String ownerAccount) {
@@ -1581,6 +1592,58 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
         }
         public Integer getWeightedCapacity() {
             return this.weightedCapacity;
+        }
+
+    }
+
+    public static class CreateScalingConfigurationShrinkRequestNetworkInterfaces extends TeaModel {
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("Ipv6AddressCount")
+        public Integer ipv6AddressCount;
+
+        @NameInMap("NetworkInterfaceTrafficMode")
+        public String networkInterfaceTrafficMode;
+
+        @NameInMap("SecurityGroupIds")
+        public java.util.List<String> securityGroupIds;
+
+        public static CreateScalingConfigurationShrinkRequestNetworkInterfaces build(java.util.Map<String, ?> map) throws Exception {
+            CreateScalingConfigurationShrinkRequestNetworkInterfaces self = new CreateScalingConfigurationShrinkRequestNetworkInterfaces();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateScalingConfigurationShrinkRequestNetworkInterfaces setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public CreateScalingConfigurationShrinkRequestNetworkInterfaces setIpv6AddressCount(Integer ipv6AddressCount) {
+            this.ipv6AddressCount = ipv6AddressCount;
+            return this;
+        }
+        public Integer getIpv6AddressCount() {
+            return this.ipv6AddressCount;
+        }
+
+        public CreateScalingConfigurationShrinkRequestNetworkInterfaces setNetworkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+            this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+            return this;
+        }
+        public String getNetworkInterfaceTrafficMode() {
+            return this.networkInterfaceTrafficMode;
+        }
+
+        public CreateScalingConfigurationShrinkRequestNetworkInterfaces setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupIds() {
+            return this.securityGroupIds;
         }
 
     }
