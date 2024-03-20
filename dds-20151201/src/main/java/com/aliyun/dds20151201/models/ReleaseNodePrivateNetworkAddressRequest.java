@@ -4,6 +4,9 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ReleaseNodePrivateNetworkAddressRequest extends TeaModel {
+    @NameInMap("ConnectionType")
+    public String connectionType;
+
     /**
      * <p>The ID of the sharded cluster instance.</p>
      */
@@ -44,6 +47,14 @@ public class ReleaseNodePrivateNetworkAddressRequest extends TeaModel {
     public static ReleaseNodePrivateNetworkAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleaseNodePrivateNetworkAddressRequest self = new ReleaseNodePrivateNetworkAddressRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ReleaseNodePrivateNetworkAddressRequest setConnectionType(String connectionType) {
+        this.connectionType = connectionType;
+        return this;
+    }
+    public String getConnectionType() {
+        return this.connectionType;
     }
 
     public ReleaseNodePrivateNetworkAddressRequest setDBInstanceId(String DBInstanceId) {

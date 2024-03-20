@@ -4644,8 +4644,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * Before you call this operation, make sure that the instance meets the following requirements:
+      * *   The instance is a replica set instance or a sharded cluster instance that uses local disks.
       * *   The billing method of the instance is subscription.
       * *   The instance has expired and is in the **Locking** state.
+      * **
+      * **Warning** Data cannot be restored after the instance is destroyed. Proceed with caution.
       *
       * @param request DestroyInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4705,8 +4708,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * Before you call this operation, make sure that the instance meets the following requirements:
+      * *   The instance is a replica set instance or a sharded cluster instance that uses local disks.
       * *   The billing method of the instance is subscription.
       * *   The instance has expired and is in the **Locking** state.
+      * **
+      * **Warning** Data cannot be restored after the instance is destroyed. Proceed with caution.
       *
       * @param request DestroyInstanceRequest
       * @return DestroyInstanceResponse
@@ -4887,6 +4893,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public MigrateAvailableZoneResponse migrateAvailableZoneWithOptions(MigrateAvailableZoneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            query.put("Category", request.category);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
             query.put("DBInstanceId", request.DBInstanceId);
         }
@@ -5074,6 +5084,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyAccountDescriptionResponse modifyAccountDescription(ModifyAccountDescriptionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyAccountDescriptionWithOptions(request, runtime);
+    }
+
+    public ModifyActiveOperationTasksResponse modifyActiveOperationTasksWithOptions(ModifyActiveOperationTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ids)) {
+            query.put("Ids", request.ids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.immediateStart)) {
+            query.put("ImmediateStart", request.immediateStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.switchTime)) {
+            query.put("SwitchTime", request.switchTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyActiveOperationTasks"),
+            new TeaPair("version", "2015-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyActiveOperationTasksResponse());
+    }
+
+    public ModifyActiveOperationTasksResponse modifyActiveOperationTasks(ModifyActiveOperationTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyActiveOperationTasksWithOptions(request, runtime);
     }
 
     /**
@@ -6801,6 +6864,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ReleaseNodePrivateNetworkAddressResponse releaseNodePrivateNetworkAddressWithOptions(ReleaseNodePrivateNetworkAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionType)) {
+            query.put("ConnectionType", request.connectionType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
             query.put("DBInstanceId", request.DBInstanceId);
         }
@@ -6861,6 +6928,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ReleasePublicNetworkAddressResponse releasePublicNetworkAddressWithOptions(ReleasePublicNetworkAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionType)) {
+            query.put("ConnectionType", request.connectionType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
             query.put("DBInstanceId", request.DBInstanceId);
         }
@@ -6908,8 +6979,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB before you call this operation.
-      * This parameter is only applicable to Subscription instances.
+      * Make sure that you fully understand the billing methods and pricing of ApsaraDB for MongoDB before you call this operation. For more information about the pricing of ApsaraDB for MongoDB, visit the [pricing tab of the product buy page](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
+      * This operation is only applicable to instances that use the subscription billing method.
       *
       * @param request RenewDBInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6980,8 +7051,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB before you call this operation.
-      * This parameter is only applicable to Subscription instances.
+      * Make sure that you fully understand the billing methods and pricing of ApsaraDB for MongoDB before you call this operation. For more information about the pricing of ApsaraDB for MongoDB, visit the [pricing tab of the product buy page](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
+      * This operation is only applicable to instances that use the subscription billing method.
       *
       * @param request RenewDBInstanceRequest
       * @return RenewDBInstanceResponse
