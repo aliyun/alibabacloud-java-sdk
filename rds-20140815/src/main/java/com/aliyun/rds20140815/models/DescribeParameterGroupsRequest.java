@@ -4,6 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterGroupsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to return the parameter overview.</p>
+     * <br>
+     * <p>*   **false** (default): The parameter overview is returned.</p>
+     * <p>*   **true**: The parameter overview is not returned.</p>
+     */
     @NameInMap("EnableDetail")
     public Boolean enableDetail;
 

@@ -51,7 +51,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>*   **masterUsername**: The username of the administrator account. The username can contain lowercase letters, digits, and underscores (\_). It must start with a letter and end with a letter or digit. It can be up to 63 characters in length and cannot start with pg.</p>
      * <p>*   **masterUserPassword**: The password of the administrator account. The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. It must be 8 to 32 characters in length. The password can contain any of the following characters: `! @ # $ % ^ & * ( ) _ + - =`.</p>
      * <br>
-     * <p>> : This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).</p>
+     * <p>> This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).</p>
      */
     @NameInMap("BabelfishConfig")
     public String babelfishConfig;
@@ -63,7 +63,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String bpeEnabled;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>An invalid parameter. You do not need to specify this parameter.</p>
      */
     @NameInMap("BurstingEnabled")
     public Boolean burstingEnabled;
@@ -137,7 +137,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String createStrategy;
 
     /**
-     * <p>The instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).</p>
+     * <p>The instance type of the instance. You can specify a standard instance type or an economy instance type. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).</p>
      * <br>
      * <p>To create a serverless instance, set this parameter to one of the following values:</p>
      * <br>
@@ -276,14 +276,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the instance.</p>
+     * <p>The database engine version of the instance. Valid values:</p>
      * <br>
      * <p>*   Regular instance</p>
      * <br>
      * <p>    *   Valid values when you set Engine to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**</p>
-     * <p>    *   Valid values if you set Engine to SQLServer: **08r2\_ent_ha** (cloud disks, discontinued), **2008r2** (local disks, discontinued), **2012** (SQL Server EE Basic), **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_ent_ha**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_ent**, **2017\_std_ha**, **2017\_web**, **2019\_ent**, **2019\_std_ha**, **2019\_web**, **2022\_ent**, **2022\_std_ha**, and **2022\_web**</p>
+     * <p>    *   Valid values when you set Engine to SQLServer: **08r2\_ent_ha** (cloud disks, discontinued), **2008r2** (local disks, discontinued), **2012** (SQL Server EE Basic), **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_ent_ha**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_ent**, **2017\_std_ha**, **2017\_web**, **2019\_ent**, **2019\_std_ha**, **2019\_web**, **2022\_ent**, **2022\_std_ha**, and **2022\_web**</p>
      * <p>    *   Valid values when you set Engine to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, **15.0**, and **16.0**</p>
-     * <p>    *   Valid values when you set the Engine parameter to MariaDB: **10.3**</p>
+     * <p>    *   Valid value if you set the Engine parameter to MariaDB: **10.3**</p>
      * <br>
      * <p>*   Serverless instance</p>
      * <br>
@@ -295,7 +295,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <br>
      * <p>*   ApsaraDB RDS for MariaDB does not support serverless instances.</p>
      * <br>
-     * <p>*   RDS instances that run SQL Server, `_ent` specifies SQL Server EE (Always On), `_ent_ha` specifies SQL Server EE, `_std_ha` specifies SQL Server SE, and `_web` specifies SQL Server Web.</p>
+     * <p>*   RDS instances that run SQL Server: `_ent` specifies SQL Server EE (Always On), `_ent_ha` specifies SQL Server EE, `_std_ha` specifies SQL Server SE, and `_web` specifies SQL Server Web.</p>
      * <br>
      * <p>*   RDS instances that run SQL Server 2014 are not available for purchase on the international site (alibabacloud.com).</p>
      * <br>
@@ -318,7 +318,12 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String instanceNetworkType;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>Specifies whether to enable the I/O acceleration feature. Valid values:</p>
+     * <br>
+     * <p>*   1: The feature is enabled.</p>
+     * <p>*   0: The feature is disabled.</p>
+     * <br>
+     * <p>>  For more information about the I/O acceleration feature of general enhanced SSDs (ESSDs), see [Introduction](~~2527067~~).</p>
      */
     @NameInMap("IoAccelerationEnabled")
     public String ioAccelerationEnabled;
@@ -1039,7 +1044,7 @@ public class CreateDBInstanceRequest extends TeaModel {
         /**
          * <p>The minimum value of RCUs. Valid values:</p>
          * <br>
-         * <p>*   Serverless ApsaraDB RDS for MySQL instances: **0.5 to 32**. Only integers are supported.</p>
+         * <p>*   Serverless ApsaraDB RDS for MySQL instances: **0.5 to 32**.</p>
          * <p>*   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**. Only integers are supported.</p>
          * <p>*   Serverless ApsaraDB RDS for PostgreSQL instances: **0.5 to 14**</p>
          * <br>
@@ -1054,11 +1059,8 @@ public class CreateDBInstanceRequest extends TeaModel {
          * <p>*   **true**</p>
          * <p>*   **false** (default)</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a service interruption that lasts approximately 30 to 120 seconds occurs during forced scaling. Process with caution.</p>
-         * <br>
-         * <p>*   The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.</p>
+         * <p>> *   This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a service interruption that lasts approximately 30 to 120 seconds occurs during forced scaling. Process with caution.</p>
+         * <p>> *   The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.</p>
          */
         @NameInMap("SwitchForce")
         public Boolean switchForce;
