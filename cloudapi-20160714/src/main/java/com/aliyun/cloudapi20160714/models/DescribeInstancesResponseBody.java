@@ -196,6 +196,25 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstancesResponseBodyInstancesInstanceAttributePrivateDnsList extends TeaModel {
+        @NameInMap("PrivateDns")
+        public java.util.List<String> privateDns;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceAttributePrivateDnsList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceAttributePrivateDnsList self = new DescribeInstancesResponseBodyInstancesInstanceAttributePrivateDnsList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttributePrivateDnsList setPrivateDns(java.util.List<String> privateDns) {
+            this.privateDns = privateDns;
+            return this;
+        }
+        public java.util.List<String> getPrivateDns() {
+            return this.privateDns;
+        }
+
+    }
+
     public static class DescribeInstancesResponseBodyInstancesInstanceAttribute extends TeaModel {
         @NameInMap("AclId")
         public String aclId;
@@ -302,6 +321,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         @NameInMap("NetworkInterfaceAttributes")
         public DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributes networkInterfaceAttributes;
+
+        @NameInMap("PrivateDnsList")
+        public DescribeInstancesResponseBodyInstancesInstanceAttributePrivateDnsList privateDnsList;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -579,6 +601,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributes getNetworkInterfaceAttributes() {
             return this.networkInterfaceAttributes;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setPrivateDnsList(DescribeInstancesResponseBodyInstancesInstanceAttributePrivateDnsList privateDnsList) {
+            this.privateDnsList = privateDnsList;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesInstanceAttributePrivateDnsList getPrivateDnsList() {
+            return this.privateDnsList;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceAttribute setRegionId(String regionId) {

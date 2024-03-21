@@ -128,6 +128,9 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         @NameInMap("Operator")
         public String operator;
 
+        @NameInMap("StageAlias")
+        public String stageAlias;
+
         /**
          * <p>The name of the runtime environment. Valid values:</p>
          * <br>
@@ -196,6 +199,14 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         }
         public String getOperator() {
             return this.operator;
+        }
+
+        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp setStageAlias(String stageAlias) {
+            this.stageAlias = stageAlias;
+            return this;
+        }
+        public String getStageAlias() {
+            return this.stageAlias;
         }
 
         public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp setStageName(String stageName) {

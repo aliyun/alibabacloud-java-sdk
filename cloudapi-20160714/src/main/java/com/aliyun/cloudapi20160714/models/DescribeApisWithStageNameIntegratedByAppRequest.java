@@ -4,27 +4,51 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisWithStageNameIntegratedByAppRequest extends TeaModel {
+    /**
+     * <p>The API name.</p>
+     */
     @NameInMap("ApiName")
     public String apiName;
 
+    /**
+     * <p>The API ID.</p>
+     */
     @NameInMap("ApiUid")
     public String apiUid;
 
+    /**
+     * <p>The application ID.</p>
+     */
     @NameInMap("AppId")
     public Long appId;
 
+    /**
+     * <p>The API description. The description can be up to 200 characters in length.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The request HTTP method of the API.</p>
+     */
     @NameInMap("Method")
     public String method;
 
+    /**
+     * <p>The page number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request path of the API.</p>
+     */
     @NameInMap("Path")
     public String path;
 

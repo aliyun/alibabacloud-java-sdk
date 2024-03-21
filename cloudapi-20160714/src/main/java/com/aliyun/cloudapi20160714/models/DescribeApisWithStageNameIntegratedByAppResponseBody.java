@@ -10,15 +10,27 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
     @NameInMap("AppApiRelationInfos")
     public DescribeApisWithStageNameIntegratedByAppResponseBodyAppApiRelationInfos appApiRelationInfos;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -111,7 +123,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
         public String groupName;
 
         /**
-         * <p>The request HTTP method for the API.</p>
+         * <p>The request HTTP method of the API.</p>
          */
         @NameInMap("Method")
         public String method;
@@ -119,14 +131,14 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
         /**
          * <p>The authorizer. Valid values:</p>
          * <br>
-         * <p>*   **PROVIDER:**: the API owner</p>
-         * <p>*   **CONSUMER:**: the API caller</p>
+         * <p>*   **PROVIDER:** the API owner</p>
+         * <p>*   **CONSUMER:** the API caller</p>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
-         * <p>The API request path.</p>
+         * <p>The request path of the API.</p>
          */
         @NameInMap("Path")
         public String path;

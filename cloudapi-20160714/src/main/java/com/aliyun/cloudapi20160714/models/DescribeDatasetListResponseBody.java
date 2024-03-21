@@ -4,18 +4,33 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeDatasetListResponseBody extends TeaModel {
+    /**
+     * <p>The returned dataset information. It is an array consisting of datasetinfo.</p>
+     */
     @NameInMap("DatasetInfoList")
     public java.util.List<DescribeDatasetListResponseBodyDatasetInfoList> datasetInfoList;
 
+    /**
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class DescribeDatasetListResponseBody extends TeaModel {
     }
 
     public static class DescribeDatasetListResponseBodyDatasetInfoListTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -102,22 +123,22 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The ID of the dataset.</p>
+         * <p>The dataset ID.</p>
          */
         @NameInMap("DatasetId")
         public String datasetId;
 
         /**
-         * <p>The name of the dataset.</p>
+         * <p>The dataset name.</p>
          */
         @NameInMap("DatasetName")
         public String datasetName;
 
         /**
-         * <p>The type of the dataset. Valid values:</p>
+         * <p>The dataset type. Valid values:</p>
          * <br>
-         * <p>*   JWT_BLOCKING: a JSON Web Token (JWT) blacklist</p>
-         * <p>*   IP_WHITELIST_CIDR: an IP address whitelist</p>
+         * <p>*   JWT_BLOCKING : a JSON Web Token (JWT) blacklist</p>
+         * <p>*   IP_WHITELIST_CIDR : an IP address whitelist</p>
          * <p>*   PARAMETER_ACCESS: a list of parameters for parameter-based access control</p>
          */
         @NameInMap("DatasetType")
@@ -129,6 +150,9 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The tags of the dataset.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeDatasetListResponseBodyDatasetInfoListTags> tags;
 

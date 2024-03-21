@@ -204,8 +204,8 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
     /**
      * <p>Specifies whether to make the API public. Valid values:</p>
      * <br>
-     * <p>*   **PUBLIC: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.**</p>
-     * <p>*   **PRIVATE: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.</p>
+     * <p>*   **PUBLIC**: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.**</p>
+     * <p>*   **PRIVATE**: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.</p>
      */
     @NameInMap("Visibility")
     public String visibility;
@@ -1147,12 +1147,21 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Specifies whether a subnode exists.</p>
+         */
         @NameInMap("HasChild")
         public Boolean hasChild;
 
+        /**
+         * <p>The ID of the result.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The primary key of the result.</p>
+         */
         @NameInMap("Key")
         public String key;
 
@@ -1162,12 +1171,21 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
         @NameInMap("Mandatory")
         public Boolean mandatory;
 
+        /**
+         * <p>The name of the result.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the parent node.</p>
+         */
         @NameInMap("Pid")
         public String pid;
 
+        /**
+         * <p>The type of the result.</p>
+         */
         @NameInMap("Type")
         public String type;
 

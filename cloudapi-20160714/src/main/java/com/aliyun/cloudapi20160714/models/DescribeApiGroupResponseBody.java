@@ -479,6 +479,9 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeApiGroupResponseBodyCustomDomainsDomainItem extends TeaModel {
+        @NameInMap("BindStageAlias")
+        public String bindStageAlias;
+
         /**
          * <p>The environment in which the associated API group runs.</p>
          */
@@ -575,6 +578,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         public static DescribeApiGroupResponseBodyCustomDomainsDomainItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeApiGroupResponseBodyCustomDomainsDomainItem self = new DescribeApiGroupResponseBodyCustomDomainsDomainItem();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeApiGroupResponseBodyCustomDomainsDomainItem setBindStageAlias(String bindStageAlias) {
+            this.bindStageAlias = bindStageAlias;
+            return this;
+        }
+        public String getBindStageAlias() {
+            return this.bindStageAlias;
         }
 
         public DescribeApiGroupResponseBodyCustomDomainsDomainItem setBindStageName(String bindStageName) {

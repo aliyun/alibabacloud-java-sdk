@@ -89,6 +89,9 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("StageAlias")
+        public String stageAlias;
+
         @NameInMap("StageName")
         public String stageName;
 
@@ -162,6 +165,14 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeHistoryApisResponseBodyApiHisItemsApiHisItem setStageAlias(String stageAlias) {
+            this.stageAlias = stageAlias;
+            return this;
+        }
+        public String getStageAlias() {
+            return this.stageAlias;
         }
 
         public DescribeHistoryApisResponseBodyApiHisItemsApiHisItem setStageName(String stageName) {

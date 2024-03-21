@@ -101,6 +101,9 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("StageAlias")
+        public String stageAlias;
+
         @NameInMap("StageName")
         public String stageName;
 
@@ -203,6 +206,14 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setStageAlias(String stageAlias) {
+            this.stageAlias = stageAlias;
+            return this;
+        }
+        public String getStageAlias() {
+            return this.stageAlias;
         }
 
         public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setStageName(String stageName) {
