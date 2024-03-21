@@ -39,7 +39,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
 
     public static class DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbolRegexp extends TeaModel {
         /**
-         * <p>The error message returned because no items match the regular expression.</p>
+         * <p>The error message returned when no items match the regular expression.</p>
          */
         @NameInMap("ErrMsg")
         public String errMsg;
@@ -74,6 +74,14 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbol extends TeaModel {
+        /**
+         * <p>The configurable attributes, which are bit-field variables that are shown in the following list.\</p>
+         * <p>For example, 1(00000001) indicates that case sensitivity can be enabled and stream match cannot be enabled, and 3(00000011) indicates that case sensitivity and stream match can be enabled.</p>
+         * <br>
+         * <p>*   Bit (low to high) - Description</p>
+         * <p>*   1 - Case sensitivity</p>
+         * <p>*   2 - Stream match</p>
+         */
         @NameInMap("Attributes")
         public Integer attributes;
 
@@ -84,9 +92,9 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The maximum number of match contents that can be returned. The value of this parameter varies based on the value of the Type parameter. Valid values:</p>
+         * <p>The maximum number of match items that can be returned. The value of this parameter varies based on the value of the Type parameter. Valid values:</p>
          * <br>
-         * <p>*   If **multi** is returned for the Type parameter, the value of this parameter indicates the maximum number of match contents.</p>
+         * <p>*   If **multi** is returned for the Type parameter, the value of this parameter indicates the maximum number of match items.</p>
          * <p>*   If **single** is returned for the Type parameter, the value of this parameter is 1.</p>
          * <p>*   If **none** is returned for the Type parameter, the value of this parameter is 0.</p>
          */
@@ -94,7 +102,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         public Integer maxLength;
 
         /**
-         * <p>The regular expression.</p>
+         * <p>The information about the regular expression.</p>
          */
         @NameInMap("Regexp")
         public DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbolRegexp regexp;
@@ -106,17 +114,17 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         public String symbol;
 
         /**
-         * <p>The tips that are displayed in the match content.</p>
+         * <p>The tips that are displayed in the match item.</p>
          */
         @NameInMap("Tip")
         public String tip;
 
         /**
-         * <p>The number of match contents. Valid values:</p>
+         * <p>The number of match items. Valid values:</p>
          * <br>
-         * <p>*   multi: multiple match contents</p>
-         * <p>*   single: one match content</p>
-         * <p>*   none: no match contents</p>
+         * <p>*   multi: You can specify multiple match items.</p>
+         * <p>*   single: You can specify only a match item.</p>
+         * <p>*   none: no match items.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -192,7 +200,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         public String extendField;
 
         /**
-         * <p>The logical operator.</p>
+         * <p>The information about the logical symbol.</p>
          */
         @NameInMap("LogicalSymbol")
         public java.util.List<DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbol> logicalSymbol;

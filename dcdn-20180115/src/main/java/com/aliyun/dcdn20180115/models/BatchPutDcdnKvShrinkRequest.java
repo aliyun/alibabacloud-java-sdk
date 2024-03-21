@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class BatchPutDcdnKvShrinkRequest extends TeaModel {
+    /**
+     * <p>The key-value pairs. The key-value pairs can be up to 2 MB in size.</p>
+     */
     @NameInMap("KvList")
     public String kvListShrink;
 
+    /**
+     * <p>The name of the namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 

@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafBotAppKeyResponseBody extends TeaModel {
+    /**
+     * <p>The SDK authentication key for the Alibaba Cloud account.</p>
+     */
     @NameInMap("AppKey")
     public String appKey;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

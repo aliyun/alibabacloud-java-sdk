@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnIpaDomainCidrResponseBody extends TeaModel {
+    /**
+     * <p>The back-to-origin IPv4 and IPv6 CIDR blocks.</p>
+     */
     @NameInMap("Cidr")
     public java.util.List<String> cidr;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

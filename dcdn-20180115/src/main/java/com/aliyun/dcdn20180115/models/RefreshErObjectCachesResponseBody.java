@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class RefreshErObjectCachesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the refresh task. Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("RefreshTaskId")
     public String refreshTaskId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

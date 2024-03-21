@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
+    /**
+     * <p>The list of certificates.</p>
+     */
     @NameInMap("CertificateListModel")
     public DescribeDcdnSSLCertificateListResponseBodyCertificateListModel certificateListModel;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,45 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnSSLCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
+        /**
+         * <p>The ID of the certificate.</p>
+         */
         @NameInMap("CertId")
         public Long certId;
 
+        /**
+         * <p>The name of the certificate.</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
+        /**
+         * <p>The region ID of the certificate. Valid values: **cn-hangzhou** and **ap-southeast-1**. Default value: **cn-hangzhou**.</p>
+         */
         @NameInMap("CertRegion")
         public String certRegion;
 
+        /**
+         * <p>The Common Name (CN) attribute of the certificate. In most cases, the CN is a domain name.</p>
+         */
         @NameInMap("Common")
         public String common;
 
+        /**
+         * <p>The fingerprint of the certificate.</p>
+         */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
+        /**
+         * <p>The certificate authority (CA) that issued the certificate.</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
+        /**
+         * <p>The time when the certificate was last modified. Unit: milliseconds.</p>
+         */
         @NameInMap("LastTime")
         public Long lastTime;
 
@@ -136,15 +163,27 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnSSLCertificateListResponseBodyCertificateListModel extends TeaModel {
+        /**
+         * <p>Details about each certificate.</p>
+         */
         @NameInMap("CertList")
         public DescribeDcdnSSLCertificateListResponseBodyCertificateListModelCertList certList;
 
+        /**
+         * <p>The number of certificates.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         */
         @NameInMap("PageNumber")
         public Long pageNumber;
 
+        /**
+         * <p>The number of entries per page. Valid values: an integer from 1 to 1000.</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 

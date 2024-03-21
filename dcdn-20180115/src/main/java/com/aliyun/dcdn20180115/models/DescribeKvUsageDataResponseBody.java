@@ -4,15 +4,27 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeKvUsageDataResponseBody extends TeaModel {
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The detailed usage data.</p>
+     */
     @NameInMap("KvUsageData")
     public java.util.List<DescribeKvUsageDataResponseBodyKvUsageData> kvUsageData;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -54,15 +66,27 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeKvUsageDataResponseBodyKvUsageData extends TeaModel {
+        /**
+         * <p>The number of visits.</p>
+         */
         @NameInMap("Acc")
         public Long acc;
 
+        /**
+         * <p>The request method. This parameter is returned only if **SplitBy** is set to **type**.</p>
+         */
         @NameInMap("AccessType")
         public String accessType;
 
+        /**
+         * <p>The ID of the namespace. This parameter is returned only if **SplitBy** is set to **namespace**.</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

@@ -4,27 +4,67 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
+    /**
+     * <p>The bandwidth limit of a single instance.</p>
+     */
     @NameInMap("BandwidthLimit")
     public String bandwidthLimit;
 
+    /**
+     * <p>The version. Valid values:</p>
+     * <br>
+     * <p>* **poc**: POC Edition</p>
+     * <p>* **basic**: Basic Edition</p>
+     * <p>* **insurance**: Insurance Edition</p>
+     * <p>* **unlimited**: Unlimited Edition</p>
+     * <p>* **port_enhancement**: Special Port Enhanced Edition</p>
+     */
     @NameInMap("Edition")
     public String edition;
 
+    /**
+     * <p>Specifies whether to enable DDoS mitigation. Valid values:</p>
+     * <br>
+     * <p>*   **on:**</p>
+     * <p>*   **off**.</p>
+     */
     @NameInMap("Enable")
     public String enable;
 
+    /**
+     * <p>Specifies whether custom ports are supported. Valid values:</p>
+     * <br>
+     * <p>*   **yes**</p>
+     * <p>*   **no**</p>
+     */
     @NameInMap("IsSpecialPort")
     public String isSpecialPort;
 
+    /**
+     * <p>Protected region. Valid values:</p>
+     * <br>
+     * <p>* **global**: global</p>
+     * <p>* **chinese_mainland**: Chinese mainland</p>
+     * <p>* **global_excluding_the_chinese_mainland**: outside the Chinese mainland</p>
+     */
     @NameInMap("ProtectedArea")
     public String protectedArea;
 
+    /**
+     * <p>The QPS limit.</p>
+     */
     @NameInMap("QpsLimit")
     public String qpsLimit;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The code and configurations of the security rules.</p>
+     */
     @NameInMap("SpecInfos")
     public java.util.List<DescribeDcdnDdosSpecInfoResponseBodySpecInfos> specInfos;
 
@@ -98,12 +138,28 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDdosSpecInfoResponseBodySpecInfosConfigs extends TeaModel {
+        /**
+         * <p>The configuration code of the version rule. Valid values:</p>
+         * <br>
+         * <p>*   **total_defense_num**: the total number of mitigation sessions of the version.</p>
+         * <p>*   **consume_defense_num**: the number of used mitigation sessions of the version.</p>
+         * <p>*   **max_domain_num**: the limit on the number of added domain names.</p>
+         * <p>*   **emain_domain_num**: the number of added domain names.</p>
+         * <p>*   **defence_package_num**: the total number of purchased additional mitigation sessions.</p>
+         * <p>*   **consume_defence_package_num**: the number of used additional mitigation sessions.</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <p>The configuration expression of the version rule.</p>
+         */
         @NameInMap("Expr")
         public String expr;
 
+        /**
+         * <p>The value of the configuration expression of the version rule.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -139,9 +195,19 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDdosSpecInfoResponseBodySpecInfos extends TeaModel {
+        /**
+         * <p>The configurations of the version rule.</p>
+         */
         @NameInMap("Configs")
         public java.util.List<DescribeDcdnDdosSpecInfoResponseBodySpecInfosConfigs> configs;
 
+        /**
+         * <p>The version rule. Valid values:</p>
+         * <br>
+         * <p>*   **version_defense_num**: the rule for the number of version mitigation sessions</p>
+         * <p>*   **domain_num**: the rule for the limit on the number of domain names</p>
+         * <p>*   **defence_package_num**: the rule for extra mitigation session plans</p>
+         */
         @NameInMap("Rule")
         public String rule;
 

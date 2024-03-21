@@ -4,21 +4,27 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDdosAllEventListRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The end time must be later than the start time. The maximum time range is 31 days.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The type of the DDoS attack event that was queried. Valid values:</p>
+     * <p>The type of the DDoS attack event to be queried. Valid values:</p>
      * <br>
-     * <p>*   *   **web-cc**: web resource exhaustion attacks</p>
-     * <p>*   *   **cc**: connection flood attacks</p>
-     * <p>*   *   **traffic**: volumetric attacks</p>
+     * <p> *   **web-cc**: resource exhaustion attacks</p>
+     * <p> *   **cc**: connection flood attacks</p>
+     * <p> *   **traffic**: volumetric attacks</p>
      * <br>
      * <p>If you do not configure this parameter, DDoS attack events of all types are queried.</p>
      */
     @NameInMap("EventType")
     public String eventType;
 
+    /**
+     * <p>The page number. Default value: 1. Value range: 1 to 10,000.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -28,6 +34,9 @@ public class DescribeDdosAllEventListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

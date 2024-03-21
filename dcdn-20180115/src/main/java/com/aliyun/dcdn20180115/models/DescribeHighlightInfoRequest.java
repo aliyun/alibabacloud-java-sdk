@@ -4,15 +4,30 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeHighlightInfoRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The access language. Valid values:</p>
+     * <br>
+     * <p>*   **en-US** (default): English</p>
+     * <p>*   **zh-CN**: Chinese</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The ID of the trace.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 

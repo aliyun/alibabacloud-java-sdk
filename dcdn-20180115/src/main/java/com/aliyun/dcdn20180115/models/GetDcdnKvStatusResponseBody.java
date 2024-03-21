@@ -4,12 +4,24 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class GetDcdnKvStatusResponseBody extends TeaModel {
+    /**
+     * <p>Specifies whether the configured key has taken effect on all points of presence (POPs).</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Complete")
     public Boolean complete;
 
+    /**
+     * <p>The timeout period of the configured key. The value is an absolute timestamp, such as 2023-09-11T15:39:44+08:00. This parameter is not returned if the key is permanently stored.</p>
+     */
     @NameInMap("Expire")
     public String expire;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

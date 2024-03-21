@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeEncryptRoutineUidResponseBody extends TeaModel {
+    /**
+     * <p>The returned ciphertext, which contains the Alibaba Cloud account ID, timestamp, and time to live (TTL).</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

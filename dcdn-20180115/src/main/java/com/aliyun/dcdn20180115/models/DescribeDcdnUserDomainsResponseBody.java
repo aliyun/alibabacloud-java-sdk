@@ -250,13 +250,6 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         @NameInMap("Sandbox")
         public String sandbox;
 
-        /**
-         * <p>场景。支持：</p>
-         * <p>- **apiscene**：API加速。</p>
-         * <p>- **webservicescene**：网站业务加速。</p>
-         * <p>- **staticscene**：视频、图文类加速。</p>
-         * <p>- **（空）**：没有场景。</p>
-         */
         @NameInMap("Scene")
         public String scene;
 

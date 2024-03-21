@@ -4,6 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeRoutineRelatedDomainsRequest extends TeaModel {
+    /**
+     * <p>The name of the routine. The name is unique in the same account.</p>
+     */
     @NameInMap("Name")
     public String name;
 
