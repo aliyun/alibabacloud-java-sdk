@@ -83,11 +83,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   Dynamic Content Delivery Network (DCDN) is activated.
-      * *   Internet content provider (ICP) filing is complete for the accelerated domain name.
-      * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
-      * *   You can call this operation up to 30 times per second per account.
+      * > *   Dynamic Content Delivery Network (DCDN) is activated.
+      * > *   Internet content provider (ICP) filing is complete for the accelerated domain name.
+      * > *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
+      * > *   You can call this operation up to 30 times per second per account.
       *
       * @param request AddDcdnDomainRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -162,11 +161,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   Dynamic Content Delivery Network (DCDN) is activated.
-      * *   Internet content provider (ICP) filing is complete for the accelerated domain name.
-      * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
-      * *   You can call this operation up to 30 times per second per account.
+      * > *   Dynamic Content Delivery Network (DCDN) is activated.
+      * > *   Internet content provider (ICP) filing is complete for the accelerated domain name.
+      * > *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
+      * > *   You can call this operation up to 30 times per second per account.
       *
       * @param request AddDcdnDomainRequest
       * @return AddDcdnDomainResponse
@@ -5638,6 +5636,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDcdnIpInfoWithOptions(request, runtime);
     }
 
+    /**
+      * >  This operation can be called globally up to 50 times per second. This operation can be called up to 10 times per second per account.
+      *
+      * @param request DescribeDcdnIpaDomainCidrRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnIpaDomainCidrResponse
+     */
     public DescribeDcdnIpaDomainCidrResponse describeDcdnIpaDomainCidrWithOptions(DescribeDcdnIpaDomainCidrRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5662,6 +5667,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnIpaDomainCidrResponse());
     }
 
+    /**
+      * >  This operation can be called globally up to 50 times per second. This operation can be called up to 10 times per second per account.
+      *
+      * @param request DescribeDcdnIpaDomainCidrRequest
+      * @return DescribeDcdnIpaDomainCidrResponse
+     */
     public DescribeDcdnIpaDomainCidrResponse describeDcdnIpaDomainCidr(DescribeDcdnIpaDomainCidrRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnIpaDomainCidrWithOptions(request, runtime);
@@ -8691,6 +8702,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeHighlightInfoWithOptions(request, runtime);
     }
 
+    /**
+      * * You can call this operation up to 5 times per second per account.
+      * * The usage data indicates the number of requests.
+      * **Time granularity:** This operation supports only the time granularity of 1 hour.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 hour|31 days|90 days|3 to 4 hours|
+      *
+      * @param request DescribeKvUsageDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeKvUsageDataResponse
+     */
     public DescribeKvUsageDataResponse describeKvUsageDataWithOptions(DescribeKvUsageDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8739,6 +8762,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeKvUsageDataResponse());
     }
 
+    /**
+      * * You can call this operation up to 5 times per second per account.
+      * * The usage data indicates the number of requests.
+      * **Time granularity:** This operation supports only the time granularity of 1 hour.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 hour|31 days|90 days|3 to 4 hours|
+      *
+      * @param request DescribeKvUsageDataRequest
+      * @return DescribeKvUsageDataResponse
+     */
     public DescribeKvUsageDataResponse describeKvUsageData(DescribeKvUsageDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeKvUsageDataWithOptions(request, runtime);
@@ -10083,6 +10117,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.refreshDcdnObjectCachesWithOptions(request, runtime);
     }
 
+    /**
+      * *   DCDN supports POST requests in which parameters are sent as a form.
+      * *   Related operation: such as [RefreshDcdnObjectCaches](~~130620~~).
+      * *   By default, each Alibaba Cloud account can refresh content from a maximum of 10,000 URLs and 100 directories including subdirectories per day.
+      * *   You can specify up to 1,000 URLs or 100 directories that you want to refresh in each request.
+      * *   You can refresh a maximum of 1,000 URLs per minute for each domain name.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+      * @param request RefreshErObjectCachesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RefreshErObjectCachesResponse
+     */
     public RefreshErObjectCachesResponse refreshErObjectCachesWithOptions(RefreshErObjectCachesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10123,6 +10169,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RefreshErObjectCachesResponse());
     }
 
+    /**
+      * *   DCDN supports POST requests in which parameters are sent as a form.
+      * *   Related operation: such as [RefreshDcdnObjectCaches](~~130620~~).
+      * *   By default, each Alibaba Cloud account can refresh content from a maximum of 10,000 URLs and 100 directories including subdirectories per day.
+      * *   You can specify up to 1,000 URLs or 100 directories that you want to refresh in each request.
+      * *   You can refresh a maximum of 1,000 URLs per minute for each domain name.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+      * @param request RefreshErObjectCachesRequest
+      * @return RefreshErObjectCachesResponse
+     */
     public RefreshErObjectCachesResponse refreshErObjectCaches(RefreshErObjectCachesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.refreshErObjectCachesWithOptions(request, runtime);
@@ -10459,7 +10516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > You can call this operation up to 10 times per second per account.
+      * >  You can call this operation to block or unblock a large number of IP addresses or CIDR blocks. You can block or unblock up to 1,000 IP addresses or CIDR blocks in a request.
       *
       * @param request SetDcdnFullDomainsBlockIPRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -10502,7 +10559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > You can call this operation up to 10 times per second per account.
+      * >  You can call this operation to block or unblock a large number of IP addresses or CIDR blocks. You can block or unblock up to 1,000 IP addresses or CIDR blocks in a request.
       *
       * @param request SetDcdnFullDomainsBlockIPRequest
       * @return SetDcdnFullDomainsBlockIPResponse

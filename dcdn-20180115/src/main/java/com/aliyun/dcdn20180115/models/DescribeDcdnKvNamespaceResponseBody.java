@@ -22,6 +22,9 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Mode")
+    public String mode;
+
     /**
      * <p>The name of the namespace.</p>
      */
@@ -78,6 +81,14 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public DescribeDcdnKvNamespaceResponseBody setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
     }
 
     public DescribeDcdnKvNamespaceResponseBody setNamespace(String namespace) {

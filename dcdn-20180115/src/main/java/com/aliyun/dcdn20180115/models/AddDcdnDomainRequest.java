@@ -18,6 +18,13 @@ public class AddDcdnDomainRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>Computing service type. Valid values:</p>
+     * <br>
+     * <p>*   **routine**</p>
+     * <p>*   **image**</p>
+     * <p>*   **cloudFunction**</p>
+     */
     @NameInMap("FunctionType")
     public String functionType;
 
@@ -33,6 +40,14 @@ public class AddDcdnDomainRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The Acceleration scen. Supported:</p>
+     * <br>
+     * <p>* apiscene:API acceleration.</p>
+     * <p>* webservicescene: accelerate website business.</p>
+     * <p>* staticscene: video and graphic acceleration.</p>
+     * <p>* (Empty): no scene.</p>
+     */
     @NameInMap("Scene")
     public String scene;
 

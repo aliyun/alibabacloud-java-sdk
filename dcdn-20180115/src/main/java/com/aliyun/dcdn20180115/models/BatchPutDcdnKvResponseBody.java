@@ -4,12 +4,21 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class BatchPutDcdnKvResponseBody extends TeaModel {
+    /**
+     * <p>The keys that failed to be written.</p>
+     */
     @NameInMap("FailKeys")
     public java.util.List<String> failKeys;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The keys that were written.</p>
+     */
     @NameInMap("SuccessKeys")
     public java.util.List<String> successKeys;
 

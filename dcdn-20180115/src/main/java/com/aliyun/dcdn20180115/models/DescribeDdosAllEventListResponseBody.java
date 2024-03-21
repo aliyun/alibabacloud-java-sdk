@@ -4,18 +4,33 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDdosAllEventListResponseBody extends TeaModel {
+    /**
+     * <p>The list of events.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeDdosAllEventListResponseBodyDataList> dataList;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on each page. Default value: **10**. Valid values: 5, 10, and 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -65,30 +80,62 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
     }
 
     public static class DescribeDdosAllEventListResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The peak attack traffic of volumetric attacks. Unit: bit/s.</p>
+         */
         @NameInMap("Bps")
         public Long bps;
 
+        /**
+         * <p>The peak of connection flood attacks. Unit: connections per seconds (CPS).</p>
+         */
         @NameInMap("Cps")
         public Long cps;
 
+        /**
+         * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The event ID.</p>
+         */
         @NameInMap("EventId")
         public String eventId;
 
+        /**
+         * <p>The type of the DDoS attack event that was queried. Valid values:</p>
+         * <br>
+         * <p>*   **web-cc**: web resource exhaustion attacks</p>
+         * <p>*   **cc**: connection flood attacks</p>
+         * <p>*   **traffic**: volumetric attacks</p>
+         * <p>*   If you do not configure this parameter, DDoS attack events of all types are queried.</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
+        /**
+         * <p>The peak attack traffic of volumetric attacks. Unit: packets per second (PPS).</p>
+         */
         @NameInMap("Pps")
         public Long pps;
 
+        /**
+         * <p>The peak of web resource exhaustion attacks. Unit: queries per second (QPS).</p>
+         */
         @NameInMap("Qps")
         public Long qps;
 
+        /**
+         * <p>The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The attack target.</p>
+         */
         @NameInMap("Target")
         public String target;
 

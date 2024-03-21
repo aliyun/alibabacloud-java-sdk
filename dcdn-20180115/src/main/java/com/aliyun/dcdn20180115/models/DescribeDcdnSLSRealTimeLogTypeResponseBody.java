@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("Content")
     public DescribeDcdnSLSRealTimeLogTypeResponseBodyContent content;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,19 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnSLSRealTimeLogTypeResponseBodyContentBusiness extends TeaModel {
+        /**
+         * <p>The type of real-time logs. Valid values:</p>
+         * <br>
+         * <p>*   **dcdn_log_access_l1**: access logs.</p>
+         * <p>*   **dcdn_log_er**: EdgeRoutine logs</p>
+         * <p>*   **dcdn_log_waf**: WAF interception logs</p>
+         */
         @NameInMap("BusinessType")
         public String businessType;
 
+        /**
+         * <p>The description of the real-time log type.</p>
+         */
         @NameInMap("Desc")
         public String desc;
 

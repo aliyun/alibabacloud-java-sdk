@@ -4,27 +4,51 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class CreateDcdnCertificateSigningRequestRequest extends TeaModel {
+    /**
+     * <p>The city. Default value: Hangzhou.</p>
+     */
     @NameInMap("City")
     public String city;
 
+    /**
+     * <p>The Common Name of the certificate.</p>
+     */
     @NameInMap("CommonName")
     public String commonName;
 
+    /**
+     * <p>The country or region in which the organization is located. Default value: CN.</p>
+     */
     @NameInMap("Country")
     public String country;
 
+    /**
+     * <p>The email address.</p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>The name of the organization. Default value: Alibaba Inc.</p>
+     */
     @NameInMap("Organization")
     public String organization;
 
+    /**
+     * <p>The name of the department. Default value: Aliyun CDN.</p>
+     */
     @NameInMap("OrganizationUnit")
     public String organizationUnit;
 
+    /**
+     * <p>The Subject Alternative Name (SAN) extension that allows multiple domain names to be associated with the certificate. Separate multiple domain names with commas (,).</p>
+     */
     @NameInMap("SANs")
     public String SANs;
 
+    /**
+     * <p>The provincial district. Default value: Zhejiang.</p>
+     */
     @NameInMap("State")
     public String state;
 

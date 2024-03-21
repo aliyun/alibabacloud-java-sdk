@@ -65,7 +65,7 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
         /**
          * <p>The type of the origin server. Valid values:</p>
          * <br>
-         * <p>*   **ipaddr**: an origin IP address</p>
+         * <p>*   **ipaddr**: an IP address</p>
          * <p>*   **domain**: an origin domain name</p>
          * <p>*   **oss**: the domain name of an Object Storage Service (OSS) bucket</p>
          */
@@ -73,7 +73,7 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The weight of the origin server if multiple origin servers have been specified.</p>
+         * <p>The weight of the origin server if multiple origin servers are specified.</p>
          */
         @NameInMap("Weight")
         public String weight;
@@ -184,6 +184,13 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
         @NameInMap("DomainStatus")
         public String domainStatus;
 
+        /**
+         * <p>Computing service type. Valid values:</p>
+         * <br>
+         * <p>*   **routine**</p>
+         * <p>*   **image**</p>
+         * <p>*   **cloudFunction**</p>
+         */
         @NameInMap("FunctionType")
         public String functionType;
 
@@ -220,6 +227,14 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
         @NameInMap("SSLPub")
         public String SSLPub;
 
+        /**
+         * <p>Acceleration scenario. Valid values:</p>
+         * <br>
+         * <p>*   **apiscene**: API acceleration.</p>
+         * <p>*   **webservicescene**: website acceleration.</p>
+         * <p>*   **staticscene**: video, image, and text acceleration.</p>
+         * <p>*   **an empty string**: no acceleration scenario is used.</p>
+         */
         @NameInMap("Scene")
         public String scene;
 

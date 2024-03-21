@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeHighlightInfoResponseBody extends TeaModel {
+    /**
+     * <p>The model of the highlighted data.</p>
+     */
     @NameInMap("DataModule")
     public java.util.List<DescribeHighlightInfoResponseBodyDataModule> dataModule;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeHighlightInfoResponseBodyDataModule extends TeaModel {
+        /**
+         * <p>The highlighted data.</p>
+         */
         @NameInMap("Hit")
         public String hit;
 
+        /**
+         * <p>The type of the highlight data.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>Complete data.</p>
+         */
         @NameInMap("Raw")
         public String raw;
 
