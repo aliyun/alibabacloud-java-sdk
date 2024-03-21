@@ -37,7 +37,7 @@ public class GetVbrFlowTopNShrinkRequest extends TeaModel {
     /**
      * <p>The local port.</p>
      * <br>
-     * <p>>  This parameter is required only if you set GroupBy to CloudPort.</p>
+     * <p>>  This parameter is required only if you set **GroupBy** to **CloudPort**.</p>
      */
     @NameInMap("CloudPort")
     public String cloudPort;
@@ -45,8 +45,8 @@ public class GetVbrFlowTopNShrinkRequest extends TeaModel {
     /**
      * <p>The direction of the hybrid cloud traffic in the local regions or for the local IP addresses. Valid values:</p>
      * <br>
-     * <p>*   in: traffic from a data center to Alibaba Cloud</p>
-     * <p>*   out: traffic from Alibaba Cloud to a data center</p>
+     * <p>*   **in**: traffic from a data center to Alibaba Cloud</p>
+     * <p>*   **out**: traffic from Alibaba Cloud to a data center</p>
      */
     @NameInMap("Direction")
     public String direction;
@@ -60,12 +60,12 @@ public class GetVbrFlowTopNShrinkRequest extends TeaModel {
     /**
      * <p>The dimension for ranking hybrid cloud traffic data. The value of this parameter is case-sensitive. Valid values:</p>
      * <br>
-     * <p>*   1Tuple: queries the rankings of hybrid cloud traffic data for the Cloud Enterprise Network (CEN) instances, CEN connections, virtual border routers (VBRs), and IP addresses.</p>
-     * <p>*   2Tuple: queries the rankings of hybrid cloud traffic data for the local and remote IP addresses.</p>
-     * <p>*   5Tuple: queries the rankings of hybrid cloud traffic data for the local and remote IP addresses, local and remote ports, and protocols.</p>
-     * <p>*   CloudPort: queries the rankings of hybrid cloud traffic data for the local ports.</p>
-     * <p>*   OtherPort: queries the rankings of hybrid cloud traffic data for the remote ports.</p>
-     * <p>*   Protocol: queries the rankings of hybrid cloud traffic data for the protocols.</p>
+     * <p>*   **1Tuple**: queries the rankings of hybrid cloud traffic data for the Cloud Enterprise Network (CEN) instances, CEN connections, virtual border routers (VBRs), and IP addresses.</p>
+     * <p>*   **2Tuple**: queries the rankings of hybrid cloud traffic data for the local and remote IP addresses.</p>
+     * <p>*   **5Tuple**: queries the rankings of hybrid cloud traffic data for the local and remote IP addresses, local and remote ports, and protocols.</p>
+     * <p>*   **CloudPort**: queries the rankings of hybrid cloud traffic data for the local ports.</p>
+     * <p>*   **OtherPort**: queries the rankings of hybrid cloud traffic data for the remote ports.</p>
+     * <p>*   **Protocol**: queries the rankings of hybrid cloud traffic data for the protocols.</p>
      */
     @NameInMap("GroupBy")
     public String groupBy;
@@ -85,7 +85,7 @@ public class GetVbrFlowTopNShrinkRequest extends TeaModel {
     /**
      * <p>The remote port.</p>
      * <br>
-     * <p>>  This parameter is required only if you set GroupBy to OtherPort.</p>
+     * <p>>  This parameter is required only if you set **GroupBy** to **OtherPort**.</p>
      */
     @NameInMap("OtherPort")
     public String otherPort;
@@ -93,7 +93,7 @@ public class GetVbrFlowTopNShrinkRequest extends TeaModel {
     /**
      * <p>The protocol number.</p>
      * <br>
-     * <p>>  All protocols are supported. This parameter is required only if you set GroupBy to 5Tuple or Protocol.</p>
+     * <p>>  All protocols are supported. This parameter is required only if you set **GroupBy** to **5Tuple** or **Protocol**.</p>
      */
     @NameInMap("Protocol")
     public String protocol;
@@ -107,8 +107,8 @@ public class GetVbrFlowTopNShrinkRequest extends TeaModel {
     /**
      * <p>The order for ranking hybrid cloud traffic data. Valid values:</p>
      * <br>
-     * <p>*   desc: descending order</p>
-     * <p>*   asc: ascending order</p>
+     * <p>*   **desc**: descending order</p>
+     * <p>*   **asc**: ascending order</p>
      */
     @NameInMap("Sort")
     public String sort;

@@ -25,7 +25,7 @@ public class GetInternetTupleShrinkRequest extends TeaModel {
     /**
      * <p>The local Internet service provider (ISP).</p>
      * <br>
-     * <p>> In most cases, the value is Alibaba or Alibaba Cloud.</p>
+     * <p>>  In most cases, the value is Alibaba or Alibaba Cloud.</p>
      */
     @NameInMap("CloudIsp")
     public String cloudIsp;
@@ -33,7 +33,7 @@ public class GetInternetTupleShrinkRequest extends TeaModel {
     /**
      * <p>The local port.</p>
      * <br>
-     * <p>>  This parameter is required only if you set the **TupleType** parameter to **5**.</p>
+     * <p>>  This parameter is required only if you set GroupBy to CloudPort.</p>
      */
     @NameInMap("CloudPort")
     public String cloudPort;
@@ -66,7 +66,27 @@ public class GetInternetTupleShrinkRequest extends TeaModel {
     public String instanceListShrink;
 
     /**
-     * <p>The metric for data ranking. Default value: **ByteCount**. This value specifies that data is ranked by traffic volume.</p>
+     * <p>The metric for data ranking. Default value: **ByteCount**. This value indicates that Internet traffic data is ranked by traffic volume.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   Rtt</p>
+     * <p>*   ByteCount</p>
+     * <p>*   PacketCount</p>
+     * <p>*   InByteCount</p>
+     * <p>*   OutByteCount</p>
+     * <p>*   InPacketCount</p>
+     * <p>*   OutPacketCount</p>
+     * <p>*   InRetranCount</p>
+     * <p>*   OutRetranCount</p>
+     * <p>*   InDupAckCount</p>
+     * <p>*   OutDupAckCount</p>
+     * <p>*   InOutOrderCount</p>
+     * <p>*   OutOutOrderCount</p>
+     * <p>*   RetranCount</p>
+     * <p>*   OutOrderCount</p>
+     * <p>*   DupAckCount</p>
+     * <p>*   RetransmitRate</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
@@ -74,7 +94,7 @@ public class GetInternetTupleShrinkRequest extends TeaModel {
     /**
      * <p>The remote city.</p>
      * <br>
-     * <p>> This parameter is required only if you set **TupleType** to **5**.</p>
+     * <p>>  This parameter is required only if you set **TupleType** to **2** or **5**.</p>
      */
     @NameInMap("OtherCity")
     public String otherCity;
@@ -82,7 +102,7 @@ public class GetInternetTupleShrinkRequest extends TeaModel {
     /**
      * <p>The remote country.</p>
      * <br>
-     * <p>> This parameter is required only if you set **TupleType** to **5**.</p>
+     * <p>>  This parameter is required only if you set **TupleType** to **2** or **5**.</p>
      */
     @NameInMap("OtherCountry")
     public String otherCountry;
@@ -135,7 +155,7 @@ public class GetInternetTupleShrinkRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>Specifies top-N traffic data to display. Default value: **10**. This value specifies to display top-10 traffic data by default.</p>
+     * <p>Specifies top-N traffic data to display. Default value: **10**. This value specifies to display top-10 traffic data by default. Max value: **100**.</p>
      */
     @NameInMap("TopN")
     public Integer topN;
@@ -153,7 +173,7 @@ public class GetInternetTupleShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the multi-account management feature. Default value: **false**. This value specifies that the multi-account management feature is disabled.</p>
      * <br>
-     * <p>>  By default, the multi-account management feature is not available. If you want to use this feature, contact your customer business manager to apply for permissions.</p>
+     * <p>>  By default, the multi-account management feature is not available. If you want to use this feature, contact your account manager to apply for permissions.</p>
      */
     @NameInMap("UseMultiAccount")
     public Boolean useMultiAccount;
