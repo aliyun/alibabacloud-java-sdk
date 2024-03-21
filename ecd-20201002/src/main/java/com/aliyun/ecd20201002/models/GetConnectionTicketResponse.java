@@ -3,7 +3,7 @@ package com.aliyun.ecd20201002.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeOfficeSitesResponse extends TeaModel {
+public class GetConnectionTicketResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeOfficeSitesResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeOfficeSitesResponseBody body;
+    public GetConnectionTicketResponseBody body;
 
-    public static DescribeOfficeSitesResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeOfficeSitesResponse self = new DescribeOfficeSitesResponse();
+    public static GetConnectionTicketResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetConnectionTicketResponse self = new GetConnectionTicketResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeOfficeSitesResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetConnectionTicketResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeOfficeSitesResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeOfficeSitesResponse setStatusCode(Integer statusCode) {
+    public GetConnectionTicketResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeOfficeSitesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeOfficeSitesResponse setBody(DescribeOfficeSitesResponseBody body) {
+    public GetConnectionTicketResponse setBody(GetConnectionTicketResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeOfficeSitesResponseBody getBody() {
+    public GetConnectionTicketResponseBody getBody() {
         return this.body;
     }
 

@@ -244,6 +244,12 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
+        @NameInMap("ReleaseNoteEn")
+        public String releaseNoteEn;
+
+        @NameInMap("ReleaseNoteJp")
+        public String releaseNoteJp;
+
         @NameInMap("Size")
         public String size;
 
@@ -298,6 +304,22 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         }
         public String getReleaseNote() {
             return this.releaseNote;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate setReleaseNoteEn(String releaseNoteEn) {
+            this.releaseNoteEn = releaseNoteEn;
+            return this;
+        }
+        public String getReleaseNoteEn() {
+            return this.releaseNoteEn;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate setReleaseNoteJp(String releaseNoteJp) {
+            this.releaseNoteJp = releaseNoteJp;
+            return this;
+        }
+        public String getReleaseNoteJp() {
+            return this.releaseNoteJp;
         }
 
         public DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate setSize(String size) {
@@ -425,8 +447,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
+        @NameInMap("Os")
+        public String os;
+
         @NameInMap("OsType")
         public String osType;
+
+        @NameInMap("Platform")
+        public String platform;
 
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
@@ -673,12 +701,28 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             return this.officeSiteId;
         }
 
+        public DescribeGlobalDesktopsResponseBodyDesktops setOs(String os) {
+            this.os = os;
+            return this;
+        }
+        public String getOs() {
+            return this.os;
+        }
+
         public DescribeGlobalDesktopsResponseBodyDesktops setOsType(String osType) {
             this.osType = osType;
             return this;
         }
         public String getOsType() {
             return this.osType;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktops setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
         }
 
         public DescribeGlobalDesktopsResponseBodyDesktops setPolicyGroupId(String policyGroupId) {
