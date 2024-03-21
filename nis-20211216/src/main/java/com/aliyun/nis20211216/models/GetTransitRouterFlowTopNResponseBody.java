@@ -81,7 +81,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
         public String otherPort;
 
         /**
-         * <p>The remote region where the remote IP address resides.</p>
+         * <p>The remote region where the **remote IP address** resides.</p>
          */
         @NameInMap("OtherRegion")
         public String otherRegion;
@@ -117,7 +117,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
         public String thisPort;
 
         /**
-         * <p>The local region where the local IP address resides.</p>
+         * <p>The local region where the **local IP address** resides.</p>
          */
         @NameInMap("ThisRegion")
         public String thisRegion;

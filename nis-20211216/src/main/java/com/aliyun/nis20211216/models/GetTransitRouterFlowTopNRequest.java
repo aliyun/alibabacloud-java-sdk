@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTransitRouterFlowTopNRequest extends TeaModel {
     /**
-     * <p>The IDs of member accounts.</p>
+     * <p>The IDs of the member accounts.</p>
      */
     @NameInMap("AccountIds")
     public java.util.List<Long> accountIds;
@@ -31,8 +31,8 @@ public class GetTransitRouterFlowTopNRequest extends TeaModel {
     /**
      * <p>The direction of the inter-region traffic in the local regions or for the local IP addresses. Valid values:</p>
      * <br>
-     * <p>*   in: inbound traffic</p>
-     * <p>*   out: outbound traffic</p>
+     * <p>*   **in**: inbound traffic</p>
+     * <p>*   **out**: outbound traffic</p>
      */
     @NameInMap("Direction")
     public String direction;
@@ -46,13 +46,13 @@ public class GetTransitRouterFlowTopNRequest extends TeaModel {
     /**
      * <p>The dimension for ranking inter-region traffic data. The value of this parameter is case-sensitive. Valid values:</p>
      * <br>
-     * <p>*   1Tuple: queries the rankings of inter-region traffic data for the local regions, Cloud Enterprise Network (CEN) instances, and IP addresses.</p>
-     * <p>*   2Tuple: queries the rankings of inter-region traffic data for the local and remote regions, and the local and remote IP addresses.</p>
-     * <p>*   5Tuple: queries the rankings of inter-region traffic data for the local and remote IP addresses, local and remote ports, and protocols in use.</p>
-     * <p>*   Cen: queries the rankings of inter-region traffic data for CEN instances.</p>
-     * <p>*   RegionPair: queries the rankings of inter-region traffic data for the local and remote regions.</p>
-     * <p>*   Port: queries the rankings of inter-region traffic data for the local and remote ports.</p>
-     * <p>*   Protocol: queries the rankings of inter-region traffic data for the protocols in use.</p>
+     * <p>*   **1Tuple**: queries the rankings of inter-region traffic data for the local regions, Cloud Enterprise Network (CEN) instances, and IP addresses.</p>
+     * <p>*   **2Tuple**: queries the rankings of inter-region traffic data for the local and remote regions, and the local and remote IP addresses.</p>
+     * <p>*   **5Tuple**: queries the rankings of inter-region traffic data for the local and remote IP addresses, local and remote ports, and protocols.</p>
+     * <p>*   **Cen**: queries the rankings of inter-region traffic data for CEN instances.</p>
+     * <p>*   **RegionPair**: queries the rankings of inter-region traffic data for the local and remote regions.</p>
+     * <p>*   **Port**: queries the rankings of inter-region traffic data for the local and remote ports.</p>
+     * <p>*   **Protocol**: queries the rankings of inter-region traffic data for the protocols.</p>
      */
     @NameInMap("GroupBy")
     public String groupBy;
@@ -84,7 +84,7 @@ public class GetTransitRouterFlowTopNRequest extends TeaModel {
     /**
      * <p>The protocol number.</p>
      * <br>
-     * <p>>  All protocols are supported. This parameter is required only if you set GroupBy to 5Tuple or Protocol.</p>
+     * <p>>  All protocols are supported. This parameter is required only if you set **GroupBy** to **5Tuple** or **Protocol**.</p>
      */
     @NameInMap("Protocol")
     public String protocol;
@@ -92,8 +92,8 @@ public class GetTransitRouterFlowTopNRequest extends TeaModel {
     /**
      * <p>The order for ranking inter-region traffic data. Valid values:</p>
      * <br>
-     * <p>*   desc: descending order</p>
-     * <p>*   asc: ascending order</p>
+     * <p>*   **desc**: descending order</p>
+     * <p>*   **asc**: ascending order</p>
      */
     @NameInMap("Sort")
     public String sort;

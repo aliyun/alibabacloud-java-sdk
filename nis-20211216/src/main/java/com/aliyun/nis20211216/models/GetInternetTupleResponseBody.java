@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInternetTupleResponseBody extends TeaModel {
     /**
-     * <p>The ranking result of instances by Internet traffic.</p>
+     * <p>The ranking result of Internet traffic data.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetInternetTupleResponseBodyData> data;
@@ -41,7 +41,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
         /**
          * <p>The access point of Alibaba Cloud.</p>
          * <br>
-         * <p>> This parameter is valid only when the value of **InstanceId** is the instance ID of an Anycast elastic IP address (EIP).</p>
+         * <p>>  This parameter is valid only if you set **InstanceId** to the instance ID of an Anycast elastic IP address (EIP).</p>
          */
         @NameInMap("AccessRegion")
         public String accessRegion;
@@ -89,7 +89,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
         public String cloudPort;
 
         /**
-         * <p>The product code of the instance to which the local IP address belongs.</p>
+         * <p>The service code of the instance to which the local IP address belongs.</p>
          */
         @NameInMap("CloudProduct")
         public String cloudProduct;
@@ -101,16 +101,16 @@ public class GetInternetTupleResponseBody extends TeaModel {
         public String cloudProvince;
 
         /**
-         * <p>The direction of the Internet traffic. Valid values:</p>
+         * <p>The direction of Internet traffic. Valid values:</p>
          * <br>
-         * <p>- **in**: inbound</p>
-         * <p>- **out**: outbound</p>
+         * <p>*   **in**: inbound</p>
+         * <p>*   **out**: outbound</p>
          */
         @NameInMap("Direction")
         public String direction;
 
         /**
-         * <p>The inbound traffic volume. Unit: bytes.</p>
+         * <p>The inbound traffic volume. Unit: bytes.</p>
          */
         @NameInMap("InByteCount")
         public Double inByteCount;
@@ -134,13 +134,13 @@ public class GetInternetTupleResponseBody extends TeaModel {
         public Double inRetranCount;
 
         /**
-         * <p>The instance ID to which the local IP address belongs.</p>
+         * <p>The ID of the instance to which the local IP address belongs.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The remote city. In most cases, this parameter is empty if the value of **OtherCountry** is not China.</p>
+         * <p>The remote city. In most cases, this parameter is empty if you set **OtherCountry** to a country except China.</p>
          */
         @NameInMap("OtherCity")
         public String otherCity;
@@ -170,19 +170,19 @@ public class GetInternetTupleResponseBody extends TeaModel {
         public String otherPort;
 
         /**
-         * <p>The product code of the instance to which the remote IP address belongs. If the IP address is not in the cloud, this parameter is empty.</p>
+         * <p>The service code of the instance to which the remote IP address belongs. If the IP address is not on the cloud, this parameter is empty.</p>
          */
         @NameInMap("OtherProduct")
         public String otherProduct;
 
         /**
-         * <p>The remote province. In most cases, this parameter is empty if the value of **OtherCountry** is not China.</p>
+         * <p>The remote province. In most cases, this parameter is empty if you set **OtherCountry** to a country except China.</p>
          */
         @NameInMap("OtherProvince")
         public String otherProvince;
 
         /**
-         * <p>The outbound traffic volume. Unit: bytes.</p>
+         * <p>The outbound traffic volume. Unit: bytes.</p>
          */
         @NameInMap("OutByteCount")
         public Double outByteCount;
@@ -223,11 +223,14 @@ public class GetInternetTupleResponseBody extends TeaModel {
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The retransmission rate of TCP packets.</p>
+         */
         @NameInMap("RetransmitRate")
         public Double retransmitRate;
 
         /**
-         * <p>The round-trip time (RTT). Unit: milliseconds.</p>
+         * <p>The round-trip time (RTT). Unit: milliseconds.</p>
          */
         @NameInMap("Rtt")
         public Double rtt;
