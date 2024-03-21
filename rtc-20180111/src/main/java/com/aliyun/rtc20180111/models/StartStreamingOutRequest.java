@@ -79,9 +79,6 @@ public class StartStreamingOutRequest extends TeaModel {
         @NameInMap("PaneId")
         public String paneId;
 
-        @NameInMap("Source")
-        public String source;
-
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -96,14 +93,6 @@ public class StartStreamingOutRequest extends TeaModel {
         }
         public String getPaneId() {
             return this.paneId;
-        }
-
-        public StartStreamingOutRequestPanes setSource(String source) {
-            this.source = source;
-            return this;
-        }
-        public String getSource() {
-            return this.source;
         }
 
         public StartStreamingOutRequestPanes setSourceType(String sourceType) {
