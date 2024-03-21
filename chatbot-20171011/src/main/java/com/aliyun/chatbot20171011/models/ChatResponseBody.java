@@ -500,6 +500,91 @@ public class ChatResponseBody extends TeaModel {
 
     }
 
+    public static class ChatResponseBodyMessagesVoiceStrategy extends TeaModel {
+        @NameInMap("AsrMaxEndSilence")
+        public String asrMaxEndSilence;
+
+        @NameInMap("CollectNumber")
+        public Boolean collectNumber;
+
+        @NameInMap("HangUp")
+        public Boolean hangUp;
+
+        @NameInMap("Interruptible")
+        public Boolean interruptible;
+
+        @NameInMap("MaxDigits")
+        public Long maxDigits;
+
+        @NameInMap("ReplyTimeout")
+        public Long replyTimeout;
+
+        @NameInMap("Terminator")
+        public String terminator;
+
+        public static ChatResponseBodyMessagesVoiceStrategy build(java.util.Map<String, ?> map) throws Exception {
+            ChatResponseBodyMessagesVoiceStrategy self = new ChatResponseBodyMessagesVoiceStrategy();
+            return TeaModel.build(map, self);
+        }
+
+        public ChatResponseBodyMessagesVoiceStrategy setAsrMaxEndSilence(String asrMaxEndSilence) {
+            this.asrMaxEndSilence = asrMaxEndSilence;
+            return this;
+        }
+        public String getAsrMaxEndSilence() {
+            return this.asrMaxEndSilence;
+        }
+
+        public ChatResponseBodyMessagesVoiceStrategy setCollectNumber(Boolean collectNumber) {
+            this.collectNumber = collectNumber;
+            return this;
+        }
+        public Boolean getCollectNumber() {
+            return this.collectNumber;
+        }
+
+        public ChatResponseBodyMessagesVoiceStrategy setHangUp(Boolean hangUp) {
+            this.hangUp = hangUp;
+            return this;
+        }
+        public Boolean getHangUp() {
+            return this.hangUp;
+        }
+
+        public ChatResponseBodyMessagesVoiceStrategy setInterruptible(Boolean interruptible) {
+            this.interruptible = interruptible;
+            return this;
+        }
+        public Boolean getInterruptible() {
+            return this.interruptible;
+        }
+
+        public ChatResponseBodyMessagesVoiceStrategy setMaxDigits(Long maxDigits) {
+            this.maxDigits = maxDigits;
+            return this;
+        }
+        public Long getMaxDigits() {
+            return this.maxDigits;
+        }
+
+        public ChatResponseBodyMessagesVoiceStrategy setReplyTimeout(Long replyTimeout) {
+            this.replyTimeout = replyTimeout;
+            return this;
+        }
+        public Long getReplyTimeout() {
+            return this.replyTimeout;
+        }
+
+        public ChatResponseBodyMessagesVoiceStrategy setTerminator(String terminator) {
+            this.terminator = terminator;
+            return this;
+        }
+        public String getTerminator() {
+            return this.terminator;
+        }
+
+    }
+
     public static class ChatResponseBodyMessages extends TeaModel {
         @NameInMap("AnswerSource")
         public String answerSource;
@@ -521,6 +606,9 @@ public class ChatResponseBody extends TeaModel {
 
         @NameInMap("Type")
         public String type;
+
+        @NameInMap("VoiceStrategy")
+        public ChatResponseBodyMessagesVoiceStrategy voiceStrategy;
 
         @NameInMap("VoiceTitle")
         public String voiceTitle;
@@ -584,6 +672,14 @@ public class ChatResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public ChatResponseBodyMessages setVoiceStrategy(ChatResponseBodyMessagesVoiceStrategy voiceStrategy) {
+            this.voiceStrategy = voiceStrategy;
+            return this;
+        }
+        public ChatResponseBodyMessagesVoiceStrategy getVoiceStrategy() {
+            return this.voiceStrategy;
         }
 
         public ChatResponseBodyMessages setVoiceTitle(String voiceTitle) {
