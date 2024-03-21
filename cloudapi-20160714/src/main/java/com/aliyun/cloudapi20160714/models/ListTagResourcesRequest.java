@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The token that determines the start point of the query.</p>
+     * <p>The token used to start the next query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -13,7 +13,7 @@ public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The ID of the resource.</p>
      * <br>
-     * <p>Valid values of N: `[1, 50]`.</p>
+     * <p>Valid values of N: `[1,50]`.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -21,7 +21,7 @@ public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the resource.</p>
      * <br>
-     * <p>Tags are supported for API groups, plug-ins, and apps. Operations performed on APIs are based on the tags of API groups.</p>
+     * <p>Currently, tags are supported for API groups, plug-ins, and apps. Operations performed on APIs are based on the tags of API groups.</p>
      * <br>
      * <p>*   **apiGroup**</p>
      * <p>*   **plugin**</p>
@@ -32,7 +32,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+     * <p>The tag of objects that match the lifecycle rule. You can specify multiple tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -78,15 +78,15 @@ public class ListTagResourcesRequest extends TeaModel {
         /**
          * <p>The key of the tag.</p>
          * <br>
-         * <p>Valid values of N: `[1, 20]`.</p>
+         * <p>Valid values of N: `[1,20]`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag. If the parameter has a value, you must specify a value for the tag key with the same N as **tag.N.Key**. Otherwise, an error is reported.</p>
+         * <p>The value of the tag. If the parameter has a value, a value is also required for the tag key of the same N in the corresponding **tag.N.Key**. Otherwise, an error is reported.</p>
          * <br>
-         * <p>Valid values of N: `[1, 20]`.</p>
+         * <p>Valid values of N: `[1,20]`.</p>
          */
         @NameInMap("Value")
         public String value;

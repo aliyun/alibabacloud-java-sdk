@@ -51,9 +51,6 @@ public class ModifyApiRequest extends TeaModel {
     @NameInMap("BackendId")
     public String backendId;
 
-    /**
-     * <p>The parameters of API requests sent by API Gateway to the backend service.</p>
-     */
     @NameInMap("ConstantParameters")
     public String constantParameters;
 
@@ -74,15 +71,9 @@ public class ModifyApiRequest extends TeaModel {
     @NameInMap("DisableInternet")
     public Boolean disableInternet;
 
-    /**
-     * <p>The returned description of the API.</p>
-     */
     @NameInMap("ErrorCodeSamples")
     public String errorCodeSamples;
 
-    /**
-     * <p>The sample error codes returned by the backend service.</p>
-     */
     @NameInMap("FailResultSample")
     public String failResultSample;
 
@@ -116,9 +107,6 @@ public class ModifyApiRequest extends TeaModel {
     @NameInMap("RequestConfig")
     public String requestConfig;
 
-    /**
-     * <p>System parameter</p>
-     */
     @NameInMap("RequestParameters")
     public String requestParameters;
 
@@ -129,15 +117,9 @@ public class ModifyApiRequest extends TeaModel {
     @NameInMap("ResultBodyModel")
     public String resultBodyModel;
 
-    /**
-     * <p>The configuration items of the third-party OpenID Connect authentication method.</p>
-     */
     @NameInMap("ResultDescriptions")
     public String resultDescriptions;
 
-    /**
-     * <p>The sample error response from the backend service.</p>
-     */
     @NameInMap("ResultSample")
     public String resultSample;
 
@@ -156,21 +138,12 @@ public class ModifyApiRequest extends TeaModel {
     @NameInMap("ServiceConfig")
     public String serviceConfig;
 
-    /**
-     * <p>The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.</p>
-     */
     @NameInMap("ServiceParameters")
     public String serviceParameters;
 
-    /**
-     * <p>The format of the response from the backend service. Valid values: JSON, TEXT, BINARY, XML, and HTML. This value is used only to generate documents. It does not affect the returned results.</p>
-     */
     @NameInMap("ServiceParametersMap")
     public String serviceParametersMap;
 
-    /**
-     * <p>Constant parameter</p>
-     */
     @NameInMap("SystemParameters")
     public String systemParameters;
 

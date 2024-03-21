@@ -4,21 +4,39 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DryRunSwaggerResponseBody extends TeaModel {
+    /**
+     * <p>The APIs that failed to be created based on the Swagger-compliant data imported this time.</p>
+     */
     @NameInMap("Failed")
     public DryRunSwaggerResponseBodyFailed failed;
 
+    /**
+     * <p>The global condition.</p>
+     */
     @NameInMap("GlobalCondition")
     public String globalCondition;
 
+    /**
+     * <p>The models that failed to be imported through the Swagger-compliant data this time.</p>
+     */
     @NameInMap("ModelFailed")
     public DryRunSwaggerResponseBodyModelFailed modelFailed;
 
+    /**
+     * <p>The models that failed to be imported through the Swagger-compliant data this time.</p>
+     */
     @NameInMap("ModelSuccess")
     public DryRunSwaggerResponseBodyModelSuccess modelSuccess;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The APIs that are created based on the Swagger-compliant data imported this time.</p>
+     */
     @NameInMap("Success")
     public DryRunSwaggerResponseBodySuccess success;
 
@@ -76,12 +94,21 @@ public class DryRunSwaggerResponseBody extends TeaModel {
     }
 
     public static class DryRunSwaggerResponseBodyFailedApiImportSwaggerFailed extends TeaModel {
+        /**
+         * <p>The error message returned when the API is created.</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <p>The HTTP method configured when the API is created.</p>
+         */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
+        /**
+         * <p>The request path configured when the API is created.</p>
+         */
         @NameInMap("Path")
         public String path;
 
@@ -136,12 +163,21 @@ public class DryRunSwaggerResponseBody extends TeaModel {
     }
 
     public static class DryRunSwaggerResponseBodyModelFailedApiImportModelFailed extends TeaModel {
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <p>The ID of the API group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the model.</p>
+         */
         @NameInMap("ModelName")
         public String modelName;
 
@@ -196,15 +232,27 @@ public class DryRunSwaggerResponseBody extends TeaModel {
     }
 
     public static class DryRunSwaggerResponseBodyModelSuccessApiImportModelSuccess extends TeaModel {
+        /**
+         * <p>The ID of the API group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the model.</p>
+         */
         @NameInMap("ModelName")
         public String modelName;
 
+        /**
+         * <p>The model operation.</p>
+         */
         @NameInMap("ModelOperation")
         public String modelOperation;
 
+        /**
+         * <p>The UID of the model.</p>
+         */
         @NameInMap("ModelUid")
         public String modelUid;
 
@@ -267,18 +315,33 @@ public class DryRunSwaggerResponseBody extends TeaModel {
     }
 
     public static class DryRunSwaggerResponseBodySuccessApiDryRunSwaggerSuccess extends TeaModel {
+        /**
+         * <p>Specifies whether the operation is CREATE or MODIFY.</p>
+         */
         @NameInMap("ApiOperation")
         public String apiOperation;
 
+        /**
+         * <p>The API definition that complies with the Swagger specification.</p>
+         */
         @NameInMap("ApiSwagger")
         public String apiSwagger;
 
+        /**
+         * <p>The UID of the successfully imported API.</p>
+         */
         @NameInMap("ApiUid")
         public String apiUid;
 
+        /**
+         * <p>The HTTP method configured when the API is created.</p>
+         */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
+        /**
+         * <p>The request path configured when the API is created.</p>
+         */
         @NameInMap("Path")
         public String path;
 

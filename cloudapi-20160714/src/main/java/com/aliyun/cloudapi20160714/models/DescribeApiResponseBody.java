@@ -228,6 +228,9 @@ public class DescribeApiResponseBody extends TeaModel {
     @NameInMap("SystemParameters")
     public DescribeApiResponseBodySystemParameters systemParameters;
 
+    @NameInMap("TagList")
+    public DescribeApiResponseBodyTagList tagList;
+
     /**
      * <p>Specifies whether to make the API public. Valid values:</p>
      * <br>
@@ -515,6 +518,14 @@ public class DescribeApiResponseBody extends TeaModel {
     }
     public DescribeApiResponseBodySystemParameters getSystemParameters() {
         return this.systemParameters;
+    }
+
+    public DescribeApiResponseBody setTagList(DescribeApiResponseBodyTagList tagList) {
+        this.tagList = tagList;
+        return this;
+    }
+    public DescribeApiResponseBodyTagList getTagList() {
+        return this.tagList;
     }
 
     public DescribeApiResponseBody setVisibility(String visibility) {
@@ -2274,6 +2285,55 @@ public class DescribeApiResponseBody extends TeaModel {
         }
         public java.util.List<DescribeApiResponseBodySystemParametersSystemParameter> getSystemParameter() {
             return this.systemParameter;
+        }
+
+    }
+
+    public static class DescribeApiResponseBodyTagListTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeApiResponseBodyTagListTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApiResponseBodyTagListTag self = new DescribeApiResponseBodyTagListTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApiResponseBodyTagListTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeApiResponseBodyTagListTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeApiResponseBodyTagList extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeApiResponseBodyTagListTag> tag;
+
+        public static DescribeApiResponseBodyTagList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApiResponseBodyTagList self = new DescribeApiResponseBodyTagList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApiResponseBodyTagList setTag(java.util.List<DescribeApiResponseBodyTagListTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeApiResponseBodyTagListTag> getTag() {
+            return this.tag;
         }
 
     }

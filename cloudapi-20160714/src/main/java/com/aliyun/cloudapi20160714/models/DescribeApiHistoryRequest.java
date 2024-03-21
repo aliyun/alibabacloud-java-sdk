@@ -30,7 +30,7 @@ public class DescribeApiHistoryRequest extends TeaModel {
      * <br>
      * <p>*   **RELEASE**</p>
      * <p>*   **TEST**: the test environment</p>
-     * <p>*   PRE: the pre-release environment</p>
+     * <p>*   **PRE**: the pre-release environment</p>
      */
     @NameInMap("StageName")
     public String stageName;

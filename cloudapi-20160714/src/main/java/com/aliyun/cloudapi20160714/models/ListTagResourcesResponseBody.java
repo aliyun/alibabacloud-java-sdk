@@ -7,7 +7,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The token that determines the start point of the next query.</p>
      * <br>
-     * <p>A NextToken value of \*\*-1\*\* indicates that a next query does not exist.</p>
+     * <p>A NextToken value of -1 indicates that a next query does not exist.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

@@ -4,12 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifyApiGroupVpcWhitelistRequest extends TeaModel {
+    /**
+     * <p>The ID of the API group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The ID of the VPC instance.</p>
+     */
     @NameInMap("VpcIds")
     public String vpcIds;
 

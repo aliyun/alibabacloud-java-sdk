@@ -211,11 +211,11 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
     public DescribeApiHistoryResponseBodyServiceParametersMap serviceParametersMap;
 
     /**
-     * <p>The environment to which the API is published.</p>
+     * <p>The environment in which the API is requested. Valid values:</p>
      * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **PRE: the pre-release environment**</p>
-     * <p>*   **TEST.</p>
+     * <p>*   **RELEASE**: the production environment</p>
+     * <p>*   **PRE**: the pre-release environment</p>
+     * <p>*   **TEST**: the test environment</p>
      */
     @NameInMap("StageName")
     public String stageName;
@@ -235,8 +235,8 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
     /**
      * <p>Specifies whether to make the API public. Valid values:</p>
      * <br>
-     * <p>*   **PUBLIC: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.**</p>
-     * <p>*   **PRIVATE: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.</p>
+     * <p>*   **PUBLIC**: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.</p>
+     * <p>*   **PRIVATE**: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.</p>
      */
     @NameInMap("Visibility")
     public String visibility;
@@ -1717,6 +1717,17 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeApiHistoryResponseBodyServiceConfigOssConfig extends TeaModel {
+        /**
+         * <p>The operation options on OSS. Valid values:</p>
+         * <br>
+         * <p>*   GetObject</p>
+         * <p>*   PostObject</p>
+         * <p>*   DeleteObject</p>
+         * <p>*   PutObject</p>
+         * <p>*   HeadObject</p>
+         * <p>*   GetObjectMeta</p>
+         * <p>*   AppendObject</p>
+         */
         @NameInMap("Action")
         public String action;
 
@@ -1726,6 +1737,9 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         @NameInMap("BucketName")
         public String bucketName;
 
+        /**
+         * <p>The stored object or folder path.</p>
+         */
         @NameInMap("Key")
         public String key;
 
