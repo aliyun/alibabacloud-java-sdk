@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class MoveKnowledgeCategoryResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public MoveKnowledgeCategoryResponseBody body;
 
     public static MoveKnowledgeCategoryResponse build(java.util.Map<String, ?> map) throws Exception {
