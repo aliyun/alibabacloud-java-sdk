@@ -4,48 +4,104 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class GetLoginTokenResponseBody extends TeaModel {
+    /**
+     * <p>The email address of the user. The system returns the email address in the return value of the LoginToken parameter after the user logs on to the client.</p>
+     * <br>
+     * <p>*   For a convenience user, the return value is the email address specified when the administrator creates the convenience user.</p>
+     * <p>*   For an AD user, the return value is in the following format: `Username@Name of the AD domain`.</p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>The account of the convenience user or the AD user.</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>> This is a parameter only for internal use.</p>
+     */
     @NameInMap("Industry")
     public String industry;
 
+    /**
+     * <p>The token used to keep the user logged on. After the user logs on to the client and select the Keep Logon option, `KeepAliveToken` is returned when you call the operation. If the user does not select the Keep Logon option, null is returned.</p>
+     */
     @NameInMap("KeepAliveToken")
     public String keepAliveToken;
 
+    /**
+     * <p>The attribute of the convenience user. For an AD user, null is returned.</p>
+     */
     @NameInMap("Label")
     public String label;
 
+    /**
+     * <p>The logon token.</p>
+     */
     @NameInMap("LoginToken")
     public String loginToken;
 
+    /**
+     * <p>The next stage that is expected to enter. For example, if the administrator enables MFA authentication in the EDS console, `MFAVerify` is returned after the username and password pass the authentication (after you set CurrentStage to `ADPassword` stage). This indicates that the MFA authentication is required.</p>
+     * <br>
+     * <p>> For more information about each authentication stage, see the parameter description of the request parameter `CurrentStage`.</p>
+     */
     @NameInMap("NextStage")
     public String nextStage;
 
+    /**
+     * <p>Enter the mobile number of the convenience user. For an AD user, null is returned.</p>
+     */
     @NameInMap("Phone")
     public String phone;
 
+    /**
+     * <p>> This is a parameter only for internal use.</p>
+     */
     @NameInMap("Props")
     public java.util.Map<String, String> props;
 
+    /**
+     * <p>The QR code that is generated when the virtual MFA device is bound. The value is encoded in Base64. This parameter can be empty. This parameter is required only when the CurrentStage parameter is set to `MFABind`.</p>
+     * <br>
+     * <p>> For more information about each authentication stage, see the parameter description of the request parameter `CurrentStage`.</p>
+     */
     @NameInMap("QrCodePng")
     public String qrCodePng;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The key that is generated when you bind the virtual MFA device. This parameter is required when the CurrentStage parameter is set to `MFABind`.</p>
+     * <br>
+     * <p>> For more information about each authentication stage, see the parameter description of the request parameter `CurrentStage`.</p>
+     */
     @NameInMap("Secret")
     public String secret;
 
+    /**
+     * <p>The ID of the session. The ID is returned the first time you call the `GetLoginToken` operation in the session. If MFA is required, you must specify this parameter in subsequent stages.</p>
+     * <br>
+     * <p>> For more information about each authentication stage, see the parameter description of the request parameter `CurrentStage`.</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account. The ID is used for hardware client authentication.</p>
+     */
     @NameInMap("TenantId")
     public Long tenantId;
 
+    /**
+     * <p>> This is a parameter only for internal use.</p>
+     */
     @NameInMap("WindowDisplayMode")
     public String windowDisplayMode;
 

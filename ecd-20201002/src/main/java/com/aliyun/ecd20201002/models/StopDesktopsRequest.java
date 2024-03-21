@@ -5,47 +5,56 @@ import com.aliyun.tea.*;
 
 public class StopDesktopsRequest extends TeaModel {
     /**
-     * <p>The logon credential.</p>
+     * <p>The client ID. The system generates a unique ID for each client.</p>
      */
     @NameInMap("ClientId")
     public String clientId;
 
     /**
-     * <p>The ID of cloud desktop N. You can specify one or more IDs of cloud desktops. Valid values of N: 1 to 20.</p>
+     * <p>The client OS.</p>
      */
     @NameInMap("ClientOS")
     public String clientOS;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The OS used by the client.</p>
+     * <p>The client version.</p>
      */
     @NameInMap("ClientVersion")
     public String clientVersion;
 
+    /**
+     * <p>The cloud desktop IDs. You can specify 1 to 20 IDs.</p>
+     */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to StopDesktops.</p>
+     * <p>The logon token.</p>
      */
     @NameInMap("LoginToken")
     public String loginToken;
 
     /**
-     * <p>The ID of the session.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The session ID.</p>
      */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <p>The logon token.</p>
+     */
     @NameInMap("SessionToken")
     public String sessionToken;
 

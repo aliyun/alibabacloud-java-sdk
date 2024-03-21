@@ -4,6 +4,9 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class StopDesktopsResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
