@@ -566,6 +566,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CrowdId", request.crowdId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.crowdTargetType)) {
+            body.put("CrowdTargetType", request.crowdTargetType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.debugCrowdId)) {
             body.put("DebugCrowdId", request.debugCrowdId);
         }
@@ -604,6 +608,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.needAA)) {
             body.put("NeedAA", request.needAA);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.randomFlow)) {
+            body.put("RandomFlow", request.randomFlow);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.reservedBuckets)) {
@@ -2220,6 +2228,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("LayerId", request.layerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("Status", request.status);
         }
@@ -3430,6 +3442,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CrowdId", request.crowdId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.crowdTargetType)) {
+            body.put("CrowdTargetType", request.crowdTargetType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.debugCrowdId)) {
             body.put("DebugCrowdId", request.debugCrowdId);
         }
@@ -3468,6 +3484,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.needAA)) {
             body.put("NeedAA", request.needAA);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.randomFlow)) {
+            body.put("RandomFlow", request.randomFlow);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.reservcedBuckets)) {

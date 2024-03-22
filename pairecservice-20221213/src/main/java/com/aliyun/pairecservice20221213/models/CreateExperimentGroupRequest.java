@@ -10,6 +10,9 @@ public class CreateExperimentGroupRequest extends TeaModel {
     @NameInMap("CrowdId")
     public String crowdId;
 
+    @NameInMap("CrowdTargetType")
+    public String crowdTargetType;
+
     @NameInMap("DebugCrowdId")
     public String debugCrowdId;
 
@@ -40,6 +43,9 @@ public class CreateExperimentGroupRequest extends TeaModel {
     @NameInMap("NeedAA")
     public Boolean needAA;
 
+    @NameInMap("RandomFlow")
+    public Long randomFlow;
+
     @NameInMap("ReservedBuckets")
     public String reservedBuckets;
 
@@ -62,6 +68,14 @@ public class CreateExperimentGroupRequest extends TeaModel {
     }
     public String getCrowdId() {
         return this.crowdId;
+    }
+
+    public CreateExperimentGroupRequest setCrowdTargetType(String crowdTargetType) {
+        this.crowdTargetType = crowdTargetType;
+        return this;
+    }
+    public String getCrowdTargetType() {
+        return this.crowdTargetType;
     }
 
     public CreateExperimentGroupRequest setDebugCrowdId(String debugCrowdId) {
@@ -142,6 +156,14 @@ public class CreateExperimentGroupRequest extends TeaModel {
     }
     public Boolean getNeedAA() {
         return this.needAA;
+    }
+
+    public CreateExperimentGroupRequest setRandomFlow(Long randomFlow) {
+        this.randomFlow = randomFlow;
+        return this;
+    }
+    public Long getRandomFlow() {
+        return this.randomFlow;
     }
 
     public CreateExperimentGroupRequest setReservedBuckets(String reservedBuckets) {

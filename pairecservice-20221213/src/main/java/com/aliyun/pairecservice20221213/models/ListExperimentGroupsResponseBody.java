@@ -52,6 +52,9 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         @NameInMap("CrowdId")
         public String crowdId;
 
+        @NameInMap("CrowdTargetType")
+        public String crowdTargetType;
+
         @NameInMap("DebugCrowdId")
         public String debugCrowdId;
 
@@ -73,6 +76,9 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         @NameInMap("Filter")
         public String filter;
 
+        @NameInMap("HoldingBuckets")
+        public String holdingBuckets;
+
         @NameInMap("LaboratoryId")
         public String laboratoryId;
 
@@ -87,6 +93,9 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
 
         @NameInMap("Owner")
         public String owner;
+
+        @NameInMap("RandomFlow")
+        public Long randomFlow;
 
         @NameInMap("ReservedBuckets")
         public String reservedBuckets;
@@ -116,6 +125,14 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         }
         public String getCrowdId() {
             return this.crowdId;
+        }
+
+        public ListExperimentGroupsResponseBodyExperimentGroups setCrowdTargetType(String crowdTargetType) {
+            this.crowdTargetType = crowdTargetType;
+            return this;
+        }
+        public String getCrowdTargetType() {
+            return this.crowdTargetType;
         }
 
         public ListExperimentGroupsResponseBodyExperimentGroups setDebugCrowdId(String debugCrowdId) {
@@ -174,6 +191,14 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
             return this.filter;
         }
 
+        public ListExperimentGroupsResponseBodyExperimentGroups setHoldingBuckets(String holdingBuckets) {
+            this.holdingBuckets = holdingBuckets;
+            return this;
+        }
+        public String getHoldingBuckets() {
+            return this.holdingBuckets;
+        }
+
         public ListExperimentGroupsResponseBodyExperimentGroups setLaboratoryId(String laboratoryId) {
             this.laboratoryId = laboratoryId;
             return this;
@@ -212,6 +237,14 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         }
         public String getOwner() {
             return this.owner;
+        }
+
+        public ListExperimentGroupsResponseBodyExperimentGroups setRandomFlow(Long randomFlow) {
+            this.randomFlow = randomFlow;
+            return this;
+        }
+        public Long getRandomFlow() {
+            return this.randomFlow;
         }
 
         public ListExperimentGroupsResponseBodyExperimentGroups setReservedBuckets(String reservedBuckets) {

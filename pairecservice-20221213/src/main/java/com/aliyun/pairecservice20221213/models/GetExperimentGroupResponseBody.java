@@ -10,6 +10,9 @@ public class GetExperimentGroupResponseBody extends TeaModel {
     @NameInMap("CrowdId")
     public String crowdId;
 
+    @NameInMap("CrowdTargetType")
+    public String crowdTargetType;
+
     @NameInMap("DebugCrowdId")
     public String debugCrowdId;
 
@@ -28,6 +31,9 @@ public class GetExperimentGroupResponseBody extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("HoldingBuckets")
+    public String holdingBuckets;
+
     @NameInMap("LaboratoryId")
     public String laboratoryId;
 
@@ -42,6 +48,9 @@ public class GetExperimentGroupResponseBody extends TeaModel {
 
     @NameInMap("Owner")
     public String owner;
+
+    @NameInMap("RandomFlow")
+    public Long randomFlow;
 
     /**
      * <p>Id of the request</p>
@@ -77,6 +86,14 @@ public class GetExperimentGroupResponseBody extends TeaModel {
     }
     public String getCrowdId() {
         return this.crowdId;
+    }
+
+    public GetExperimentGroupResponseBody setCrowdTargetType(String crowdTargetType) {
+        this.crowdTargetType = crowdTargetType;
+        return this;
+    }
+    public String getCrowdTargetType() {
+        return this.crowdTargetType;
     }
 
     public GetExperimentGroupResponseBody setDebugCrowdId(String debugCrowdId) {
@@ -127,6 +144,14 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         return this.filter;
     }
 
+    public GetExperimentGroupResponseBody setHoldingBuckets(String holdingBuckets) {
+        this.holdingBuckets = holdingBuckets;
+        return this;
+    }
+    public String getHoldingBuckets() {
+        return this.holdingBuckets;
+    }
+
     public GetExperimentGroupResponseBody setLaboratoryId(String laboratoryId) {
         this.laboratoryId = laboratoryId;
         return this;
@@ -165,6 +190,14 @@ public class GetExperimentGroupResponseBody extends TeaModel {
     }
     public String getOwner() {
         return this.owner;
+    }
+
+    public GetExperimentGroupResponseBody setRandomFlow(Long randomFlow) {
+        this.randomFlow = randomFlow;
+        return this;
+    }
+    public Long getRandomFlow() {
+        return this.randomFlow;
     }
 
     public GetExperimentGroupResponseBody setRequestId(String requestId) {
