@@ -7,6 +7,9 @@ public class GetLayerResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("GmtCreateTime")
+    public String gmtCreateTime;
+
     @NameInMap("LaboratoryId")
     public String laboratoryId;
 
@@ -18,6 +21,9 @@ public class GetLayerResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("ResidualFlow")
+    public Long residualFlow;
 
     @NameInMap("SceneId")
     public String sceneId;
@@ -33,6 +39,14 @@ public class GetLayerResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public GetLayerResponseBody setGmtCreateTime(String gmtCreateTime) {
+        this.gmtCreateTime = gmtCreateTime;
+        return this;
+    }
+    public String getGmtCreateTime() {
+        return this.gmtCreateTime;
     }
 
     public GetLayerResponseBody setLaboratoryId(String laboratoryId) {
@@ -57,6 +71,14 @@ public class GetLayerResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetLayerResponseBody setResidualFlow(Long residualFlow) {
+        this.residualFlow = residualFlow;
+        return this;
+    }
+    public Long getResidualFlow() {
+        return this.residualFlow;
     }
 
     public GetLayerResponseBody setSceneId(String sceneId) {

@@ -10,6 +10,9 @@ public class ListExperimentGroupsRequest extends TeaModel {
     @NameInMap("LayerId")
     public String layerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Status")
     public String status;
 
@@ -32,6 +35,14 @@ public class ListExperimentGroupsRequest extends TeaModel {
     }
     public String getLayerId() {
         return this.layerId;
+    }
+
+    public ListExperimentGroupsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListExperimentGroupsRequest setStatus(String status) {
