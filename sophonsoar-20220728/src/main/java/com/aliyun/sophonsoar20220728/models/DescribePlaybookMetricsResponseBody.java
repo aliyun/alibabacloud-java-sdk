@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribePlaybookMetricsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the playbook.</p>
+     */
     @NameInMap("Metrics")
     public DescribePlaybookMetricsResponseBodyMetrics metrics;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +38,69 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
     }
 
     public static class DescribePlaybookMetricsResponseBodyMetrics extends TeaModel {
+        /**
+         * <p>The status of the playbook. Valid values:</p>
+         * <br>
+         * <p>*   **1**: enabled</p>
+         * <p>*   **0**: disabled</p>
+         */
         @NameInMap("Active")
         public Integer active;
 
+        /**
+         * <p>The description of the playbook.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the playbook.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The number of the tasks that are created for the playbook and failed to run.</p>
+         */
         @NameInMap("FailNum")
         public Integer failNum;
 
+        /**
+         * <p>The time when the playbook was created. The value is a 13-digit timestamp.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The number of historical versions of the playbook.</p>
+         */
         @NameInMap("HistoryMd5")
         public Integer historyMd5;
 
+        /**
+         * <p>The time when the playbook was last run. The value is a 13-digit timestamp.</p>
+         */
         @NameInMap("LastRuntime")
         public Long lastRuntime;
 
+        /**
+         * <p>The type of the playbook. Valid values:</p>
+         * <br>
+         * <p>*   **preset**: predefined playbook</p>
+         * <p>*   **user**: custom playbook</p>
+         */
         @NameInMap("OwnType")
         public String ownType;
 
+        /**
+         * <p>The UUID of the playbook.</p>
+         */
         @NameInMap("PlaybookUuid")
         public String playbookUuid;
 
+        /**
+         * <p>The number of the tasks that are created for the playbook and were successfully run.</p>
+         */
         @NameInMap("SuccNum")
         public Integer succNum;
 

@@ -4,15 +4,36 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class ComparePlaybooksRequest extends TeaModel {
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh** (default): Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The UUID of the second version.</p>
+     * <br>
+     * <p>>  You can call the [DescribePopApiVersionList](~~DescribePopApiVersionList~~) operation to query the UUIDs of versions.</p>
+     */
     @NameInMap("NewPlaybookReleaseId")
     public Integer newPlaybookReleaseId;
 
+    /**
+     * <p>The UUID of the first version.</p>
+     * <br>
+     * <p>>  You can call the [DescribePopApiVersionList](~~DescribePopApiVersionList~~) operation to query the UUIDs of versions.</p>
+     */
     @NameInMap("OldPlaybookReleaseId")
     public Integer oldPlaybookReleaseId;
 
+    /**
+     * <p>The UUID of the playbook.</p>
+     * <br>
+     * <p>>  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the UUIDs of playbooks.</p>
+     */
     @NameInMap("PlaybookUuid")
     public String playbookUuid;
 

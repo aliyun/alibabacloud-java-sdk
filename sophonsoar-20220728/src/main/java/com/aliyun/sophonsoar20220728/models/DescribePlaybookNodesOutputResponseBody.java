@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribePlaybookNodesOutputResponseBody extends TeaModel {
+    /**
+     * <p>The output data of the component node.</p>
+     */
     @NameInMap("PlaybookNodesOutput")
     public DescribePlaybookNodesOutputResponseBodyPlaybookNodesOutput playbookNodesOutput;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribePlaybookNodesOutputResponseBody extends TeaModel {
     }
 
     public static class DescribePlaybookNodesOutputResponseBodyPlaybookNodesOutput extends TeaModel {
+        /**
+         * <p>The name of the component node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The historical output data of the component node. The value is in the JSON string format. If no data is found, the parameter is left empty.</p>
+         */
         @NameInMap("NodeOutput")
         public String nodeOutput;
 

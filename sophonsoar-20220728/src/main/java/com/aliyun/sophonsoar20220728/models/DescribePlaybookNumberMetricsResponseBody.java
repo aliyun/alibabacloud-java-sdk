@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribePlaybookNumberMetricsResponseBody extends TeaModel {
+    /**
+     * <p>The statistics.</p>
+     */
     @NameInMap("Metrics")
     public DescribePlaybookNumberMetricsResponseBodyMetrics metrics;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribePlaybookNumberMetricsResponseBody extends TeaModel {
     }
 
     public static class DescribePlaybookNumberMetricsResponseBodyMetrics extends TeaModel {
+        /**
+         * <p>The number of enabled playbooks.</p>
+         */
         @NameInMap("StartUpNum")
         public Integer startUpNum;
 
+        /**
+         * <p>The total number of playbooks.</p>
+         */
         @NameInMap("TotalNum")
         public Integer totalNum;
 

@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeNodeParamTagsResponseBody extends TeaModel {
+    /**
+     * <p>The configuration of the recommended path.</p>
+     */
     @NameInMap("ParamReferredPaths")
     public java.util.List<DescribeNodeParamTagsResponseBodyParamReferredPaths> paramReferredPaths;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeNodeParamTagsResponseBodyParamReferredPaths extends TeaModel {
+        /**
+         * <p>The name of the upstream node.</p>
+         */
         @NameInMap("ParamName")
         public String paramName;
 
+        /**
+         * <p>The paths.</p>
+         */
         @NameInMap("ReferredPath")
         public java.util.List<String> referredPath;
 

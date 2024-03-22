@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeDistinctReleasesResponseBody extends TeaModel {
+    /**
+     * <p>The version information.</p>
+     */
     @NameInMap("Records")
     public java.util.List<DescribeDistinctReleasesResponseBodyRecords> records;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
     }
 
     public static class DescribeDistinctReleasesResponseBodyRecords extends TeaModel {
+        /**
+         * <p>The version description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The MD5 value of the playbook XML configuration.</p>
+         */
         @NameInMap("TaskflowMd5")
         public String taskflowMd5;
 

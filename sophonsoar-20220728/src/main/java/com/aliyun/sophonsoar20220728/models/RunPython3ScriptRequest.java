@@ -4,15 +4,29 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class RunPython3ScriptRequest extends TeaModel {
+    /**
+     * <p>The name of the node in the playbook.</p>
+     */
     @NameInMap("NodeName")
     public String nodeName;
 
+    /**
+     * <p>The input parameters of the Python3 script.</p>
+     */
     @NameInMap("Params")
     public String params;
 
+    /**
+     * <p>The UUID of the playbook.</p>
+     * <br>
+     * <p>>  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the UUIDs of playbooks.</p>
+     */
     @NameInMap("PlaybookUuid")
     public String playbookUuid;
 
+    /**
+     * <p>The Python3 script.</p>
+     */
     @NameInMap("PythonScript")
     public String pythonScript;
 

@@ -4,9 +4,20 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeComponentAssetFormResponseBody extends TeaModel {
+    /**
+     * <p>The metadata of the asset in the component. The value is a JSON array and contains the following fields:</p>
+     * <br>
+     * <p>*   **name**: the parameter name.</p>
+     * <p>*   **defaultValue**: the default parameter value.</p>
+     * <p>*   **description**: the parameter description.</p>
+     * <p>*   **required**: indicates whether the parameter is required. Valid values: **true** and **false**.</p>
+     */
     @NameInMap("ComponentAssetForm")
     public String componentAssetForm;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

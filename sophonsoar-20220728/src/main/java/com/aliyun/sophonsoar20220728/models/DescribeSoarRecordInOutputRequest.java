@@ -4,9 +4,20 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeSoarRecordInOutputRequest extends TeaModel {
+    /**
+     * <p>The UUID of the component action.</p>
+     * <br>
+     * <p>>  You can call the [DescribeSoarTaskAndActions](~~DescribeSoarTaskAndActions~~) operation to query the UUIDs of component actions.</p>
+     */
     @NameInMap("ActionUuid")
     public String actionUuid;
 
+    /**
+     * <p>The language of the content within the request and the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh** (default): Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

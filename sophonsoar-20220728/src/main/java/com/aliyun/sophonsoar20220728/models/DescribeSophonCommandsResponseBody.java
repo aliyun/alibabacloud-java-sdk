@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeSophonCommandsResponseBody extends TeaModel {
+    /**
+     * <p>The commands.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeSophonCommandsResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,30 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
     }
 
     public static class DescribeSophonCommandsResponseBodyDataParamConfig extends TeaModel {
+        /**
+         * <p>The regular expression that is used to check the format of the parameter value. If the parameter is left empty, the check is not performed.</p>
+         */
         @NameInMap("CheckField")
         public String checkField;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("Field")
         public String field;
 
+        /**
+         * <p>Indicates whether the parameter is required. Valid values:</p>
+         * <br>
+         * <p>*   **true** (default)</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Necessary")
         public Boolean necessary;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -84,15 +105,27 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
     }
 
     public static class DescribeSophonCommandsResponseBodyData extends TeaModel {
+        /**
+         * <p>The description of the command.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The display name of the command.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The name of the command.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The parameter configurations.</p>
+         */
         @NameInMap("ParamConfig")
         public java.util.List<DescribeSophonCommandsResponseBodyDataParamConfig> paramConfig;
 

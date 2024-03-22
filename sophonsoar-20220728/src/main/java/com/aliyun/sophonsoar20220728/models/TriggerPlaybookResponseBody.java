@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class TriggerPlaybookResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The running UUID of the playbook. This parameter is used to query the running result of the playbook.</p>
+     */
     @NameInMap("TriggerUuid")
     public String triggerUuid;
 

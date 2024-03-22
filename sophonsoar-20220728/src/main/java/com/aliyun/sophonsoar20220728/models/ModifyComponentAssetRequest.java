@@ -4,9 +4,18 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class ModifyComponentAssetRequest extends TeaModel {
+    /**
+     * <p>The configuration of the asset. The value is a JSON object.</p>
+     */
     @NameInMap("AssetConfig")
     public String assetConfig;
 
+    /**
+     * <p>The language of the content within the request and response.</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

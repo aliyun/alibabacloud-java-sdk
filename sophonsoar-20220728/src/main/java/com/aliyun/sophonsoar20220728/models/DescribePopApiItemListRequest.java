@@ -4,18 +4,40 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribePopApiItemListRequest extends TeaModel {
+    /**
+     * <p>The API operation name of the Alibaba Cloud service. Fuzzy match is supported.</p>
+     */
     @NameInMap("ApiName")
     public String apiName;
 
+    /**
+     * <p>The version number of the API.</p>
+     * <br>
+     * <p>>  You can call the [DescribePopApiVersionList](~~DescribePopApiVersionList~~) operation to query the version number.</p>
+     */
     @NameInMap("ApiVersion")
     public String apiVersion;
 
+    /**
+     * <p>The environment in which the API operation parameters are used. Set the value to online.</p>
+     */
     @NameInMap("Env")
     public String env;
 
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh** (default): Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The POP code of the Alibaba Cloud service.</p>
+     * <br>
+     * <p>>  You can call the [DescribeApiList](~~DescribeApiList~~) operation to query the POP code.</p>
+     */
     @NameInMap("PopCode")
     public String popCode;
 

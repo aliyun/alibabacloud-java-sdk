@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeSoarRecordInOutputResponseBody extends TeaModel {
+    /**
+     * <p>The execution result of the component action.</p>
+     */
     @NameInMap("InOutputInfo")
     public String inOutputInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

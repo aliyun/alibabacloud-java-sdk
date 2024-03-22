@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class VerifyPlaybookResponseBody extends TeaModel {
+    /**
+     * <p>The result of the verification.</p>
+     */
     @NameInMap("CheckTaskInfos")
     public java.util.List<VerifyPlaybookResponseBodyCheckTaskInfos> checkTaskInfos;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,25 @@ public class VerifyPlaybookResponseBody extends TeaModel {
     }
 
     public static class VerifyPlaybookResponseBodyCheckTaskInfos extends TeaModel {
+        /**
+         * <p>The error message returned when the playbook does not pass the check.</p>
+         */
         @NameInMap("Detail")
         public String detail;
 
+        /**
+         * <p>The name of the node in the playbook.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The severity level of the verification information. Valid values:</p>
+         * <br>
+         * <p>*   warn: An issue may occur during playbook running.</p>
+         * <p>*   error: The playbook cannot be compiled.</p>
+         * <p>*   remind: The publishing and running of the playbook are not affected. We recommend that you optimize the playbook format.</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 

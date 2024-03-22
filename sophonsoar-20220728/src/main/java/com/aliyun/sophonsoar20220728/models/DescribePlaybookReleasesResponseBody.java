@@ -4,12 +4,21 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribePlaybookReleasesResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("Page")
     public DescribePlaybookReleasesResponseBodyPage page;
 
+    /**
+     * <p>The information about the playbook version.</p>
+     */
     @NameInMap("Records")
     public java.util.List<DescribePlaybookReleasesResponseBodyRecords> records;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +52,21 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
     }
 
     public static class DescribePlaybookReleasesResponseBodyPage extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -84,21 +102,39 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
     }
 
     public static class DescribePlaybookReleasesResponseBodyRecords extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to publish the version.</p>
+         */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p>The description of the layer version.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time when the version was created. The value is a 13-digit timestamp.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The time when the version was modified. The value is a 13-digit timestamp.</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The record ID.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The MD5 value configured for the published version of the playbook.</p>
+         */
         @NameInMap("TaskflowMd5")
         public String taskflowMd5;
 

@@ -4,15 +4,34 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DebugPlaybookRequest extends TeaModel {
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The playbook UUID.</p>
+     * <br>
+     * <p>>  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.</p>
+     */
     @NameInMap("PlaybookUuid")
     public String playbookUuid;
 
+    /**
+     * <p>The input parameters that you use to debug the playbook. You can define the parameters based on your business requirements.</p>
+     */
     @NameInMap("Record")
     public String record;
 
+    /**
+     * <p>The XML configuration of the playbook.</p>
+     * <br>
+     * <p>>  You can call the [DescribePlaybook](~~DescribePlaybook~~) operation to query the XML configuration of the playbook.</p>
+     */
     @NameInMap("Taskflow")
     public String taskflow;
 

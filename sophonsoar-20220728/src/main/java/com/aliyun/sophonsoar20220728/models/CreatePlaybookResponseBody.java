@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class CreatePlaybookResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public CreatePlaybookResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class CreatePlaybookResponseBody extends TeaModel {
     }
 
     public static class CreatePlaybookResponseBodyData extends TeaModel {
+        /**
+         * <p>The UUID of the playbook.</p>
+         */
         @NameInMap("PlaybookUuid")
         public String playbookUuid;
 

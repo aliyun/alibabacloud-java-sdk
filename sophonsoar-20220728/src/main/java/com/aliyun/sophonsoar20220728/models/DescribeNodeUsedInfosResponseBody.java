@@ -4,9 +4,20 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeNodeUsedInfosResponseBody extends TeaModel {
+    /**
+     * <p>The node reference information. The value is in the JSON format and contains the following fields:</p>
+     * <br>
+     * <p>*   **action**: the referencing action. This field contains the following information:</p>
+     * <br>
+     * <p>    *   **name**: the name of the referencing node.</p>
+     * <p>    *   **inputParams**: the parameter settings of the referencing node.</p>
+     */
     @NameInMap("NodeUsedInfos")
     public String nodeUsedInfos;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

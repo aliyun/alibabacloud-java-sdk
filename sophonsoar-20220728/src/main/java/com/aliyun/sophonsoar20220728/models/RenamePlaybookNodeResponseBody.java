@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class RenamePlaybookNodeResponseBody extends TeaModel {
+    /**
+     * <p>The returned new name of the node.</p>
+     */
     @NameInMap("RenameResult")
     public String renameResult;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

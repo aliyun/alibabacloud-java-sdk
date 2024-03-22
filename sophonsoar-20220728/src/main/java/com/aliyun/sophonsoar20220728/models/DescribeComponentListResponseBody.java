@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeComponentListResponseBody extends TeaModel {
+    /**
+     * <p>The information about the components. The value is a JSON array.</p>
+     */
     @NameInMap("Components")
     public String components;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

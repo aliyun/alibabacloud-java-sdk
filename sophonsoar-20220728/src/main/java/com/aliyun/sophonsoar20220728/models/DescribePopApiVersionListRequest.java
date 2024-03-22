@@ -4,12 +4,26 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribePopApiVersionListRequest extends TeaModel {
+    /**
+     * <p>The environment in which the API operation parameters are used. Set the value to **online**.</p>
+     */
     @NameInMap("Env")
     public String env;
 
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh** (default): Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The POP code of the Alibaba Cloud service.</p>
+     * <br>
+     * <p>>  You can call the [DescribeApiList](~~DescribeApiList~~) operation to query the POP code.</p>
+     */
     @NameInMap("PopCode")
     public String popCode;
 

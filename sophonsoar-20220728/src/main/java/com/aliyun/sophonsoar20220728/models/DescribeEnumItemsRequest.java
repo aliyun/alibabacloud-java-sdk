@@ -4,9 +4,20 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnumItemsRequest extends TeaModel {
+    /**
+     * <p>The type of the enumeration item. Valid values:</p>
+     * <br>
+     * <p>*   **process**: scenarios</p>
+     */
     @NameInMap("EnumType")
     public String enumType;
 
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh_cn**: Simplified Chinese (default)</p>
+     * <p>*   **en_us**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

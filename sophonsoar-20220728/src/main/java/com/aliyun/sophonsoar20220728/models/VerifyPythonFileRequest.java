@@ -4,6 +4,9 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class VerifyPythonFileRequest extends TeaModel {
+    /**
+     * <p>The Python code snippet.</p>
+     */
     @NameInMap("Content")
     public String content;
 

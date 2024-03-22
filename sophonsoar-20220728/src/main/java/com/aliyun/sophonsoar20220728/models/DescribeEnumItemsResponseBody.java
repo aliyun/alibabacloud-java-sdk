@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnumItemsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the enumeration item.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeEnumItemsResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
     }
 
     public static class DescribeEnumItemsResponseBodyData extends TeaModel {
+        /**
+         * <p>The key of the enumeration item.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the enumeration item.</p>
+         */
         @NameInMap("Value")
         public String value;
 

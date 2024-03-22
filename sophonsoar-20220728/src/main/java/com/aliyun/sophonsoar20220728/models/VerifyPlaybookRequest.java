@@ -4,9 +4,17 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class VerifyPlaybookRequest extends TeaModel {
+    /**
+     * <p>The playbook UUID.</p>
+     * <br>
+     * <p>>  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.</p>
+     */
     @NameInMap("PlaybookUuid")
     public String playbookUuid;
 
+    /**
+     * <p>The XML configuration of the playbook.</p>
+     */
     @NameInMap("TaskFlow")
     public String taskFlow;
 
