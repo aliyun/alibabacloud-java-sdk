@@ -16,6 +16,9 @@ public class CreateDiagnosticRequest extends TeaModel {
     @NameInMap("DiagnosticType")
     public String diagnosticType;
 
+    @NameInMap("Lang")
+    public String lang;
+
     /**
      * <p>The name of the product that is diagonosed.</p>
      */
@@ -41,6 +44,14 @@ public class CreateDiagnosticRequest extends TeaModel {
     }
     public String getDiagnosticType() {
         return this.diagnosticType;
+    }
+
+    public CreateDiagnosticRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public CreateDiagnosticRequest setProduct(String product) {

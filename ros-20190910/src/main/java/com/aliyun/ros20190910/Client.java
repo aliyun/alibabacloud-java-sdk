@@ -357,6 +357,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DiagnosticType", request.diagnosticType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.product)) {
             query.put("Product", request.product);
         }
@@ -1934,7 +1938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this topic, the information about a stack whose ID is `c754d2a4-28f1-46df-b557-9586173a****` is queried. The stack is deployed in the China (Hangzhou) region.
+      * In this example, the information about a stack whose ID is `c754d2a4-28f1-46df-b557-9586173a****` in the China (Hangzhou) region is queried.
       *
       * @param request GetStackRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1985,7 +1989,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this topic, the information about a stack whose ID is `c754d2a4-28f1-46df-b557-9586173a****` is queried. The stack is deployed in the China (Hangzhou) region.
+      * In this example, the information about a stack whose ID is `c754d2a4-28f1-46df-b557-9586173a****` in the China (Hangzhou) region is queried.
       *
       * @param request GetStackRequest
       * @return GetStackResponse
