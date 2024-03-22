@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
+    /**
+     * <p>The execution details of each task.</p>
+     */
     @NameInMap("Details")
     public DescribeSoarTaskAndActionsResponseBodyDetails details;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,39 +38,80 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
     }
 
     public static class DescribeSoarTaskAndActionsResponseBodyDetailsActions extends TeaModel {
+        /**
+         * <p>The action name of the component.</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The UUID of the component execution record.</p>
+         */
         @NameInMap("ActionUuid")
         public String actionUuid;
 
+        /**
+         * <p>The name of the asset that is used by the component.</p>
+         */
         @NameInMap("AssetName")
         public String assetName;
 
+        /**
+         * <p>The component name.</p>
+         */
         @NameInMap("Component")
         public String component;
 
+        /**
+         * <p>The end of the time range during which the component is run. The value is a 13-digit timestamp.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The custom name of the node in the component.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The request ID of the task. The value is unique.</p>
+         */
         @NameInMap("RequestUuid")
         public String requestUuid;
 
+        /**
+         * <p>The beginning of the time range during which the component is run. The value is a 13-digit timestamp.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The running result of the component. Valid values:</p>
+         * <br>
+         * <p>*   **success**</p>
+         * <p>*   **fail**</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The name of the task. The value is the same as the playbook UUID.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The status of the triggered component action.</p>
+         * <br>
+         * <p>>  This parameter is disabled and left empty.</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to execute the task.</p>
+         */
         @NameInMap("TriggerUser")
         public String triggerUser;
 
@@ -172,45 +219,95 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
     }
 
     public static class DescribeSoarTaskAndActionsResponseBodyDetails extends TeaModel {
+        /**
+         * <p>The list of component actions during the running of the playbook.</p>
+         */
         @NameInMap("Actions")
         public java.util.List<DescribeSoarTaskAndActionsResponseBodyDetailsActions> actions;
 
+        /**
+         * <p>The end of the time range during which the playbook is run. The value is a 13-digit timestamp.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The error message of the task. If the task is successful, this field is empty.</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <p>The request parameters of the task.</p>
+         */
         @NameInMap("RawEventReq")
         public String rawEventReq;
 
+        /**
+         * <p>The request ID of the task. The value is unique.</p>
+         */
         @NameInMap("RequestUuid")
         public String requestUuid;
 
+        /**
+         * <p>The flag of the task. For debugging tasks, the value is **DEBUG**. For other tasks, the parameter is left empty.</p>
+         */
         @NameInMap("ResultLevel")
         public String resultLevel;
 
+        /**
+         * <p>The returned information about the playbook. You can define the value in the playbook.</p>
+         */
         @NameInMap("ResultMessage")
         public String resultMessage;
 
+        /**
+         * <p>The beginning of the time range during which the playbook is run. The value is a 13-digit timestamp.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The task status. Valid values:</p>
+         * <br>
+         * <p>*   **success**</p>
+         * <p>*   **fail**</p>
+         * <p>*   **running**</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The MD5 value of the playbook.</p>
+         */
         @NameInMap("TaskFlowMd5")
         public String taskFlowMd5;
 
+        /**
+         * <p>The name of the task. The value is the same as the playbook UUID.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the task belongs.</p>
+         */
         @NameInMap("TaskTenantId")
         public String taskTenantId;
 
+        /**
+         * <p>The task type. Valid values:</p>
+         * <br>
+         * <p>*   **debug**: a debugging task</p>
+         * <p>*   **manual**: a manual task</p>
+         * <p>*   **siem**: an event-triggered task</p>
+         */
         @NameInMap("TriggerType")
         public String triggerType;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that triggers the task.</p>
+         */
         @NameInMap("TriggerUser")
         public String triggerUser;
 

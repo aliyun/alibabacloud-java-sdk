@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class VerifyPythonFileResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The verification result. If the parameter is left empty, the syntax of the code snippet is correct.</p>
+     */
     @NameInMap("Syntax")
     public java.util.List<VerifyPythonFileResponseBodySyntax> syntax;
 
@@ -32,21 +38,42 @@ public class VerifyPythonFileResponseBody extends TeaModel {
     }
 
     public static class VerifyPythonFileResponseBodySyntax extends TeaModel {
+        /**
+         * <p>The number that indicates the end column of the error code.</p>
+         */
         @NameInMap("EndColumn")
         public Integer endColumn;
 
+        /**
+         * <p>The number that indicates the end line of the error code.</p>
+         */
         @NameInMap("EndLineNumber")
         public Integer endLineNumber;
 
+        /**
+         * <p>The error message for the error code.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The severity level of the error code. Valid values:</p>
+         * <br>
+         * <p>*   4: moderate</p>
+         * <p>*   8: serious</p>
+         */
         @NameInMap("Severity")
         public Integer severity;
 
+        /**
+         * <p>The number that indicates the start column of the error code.</p>
+         */
         @NameInMap("StartColumn")
         public Integer startColumn;
 
+        /**
+         * <p>The number that indicates the start line of the error code.</p>
+         */
         @NameInMap("StartLineNumber")
         public Integer startLineNumber;
 

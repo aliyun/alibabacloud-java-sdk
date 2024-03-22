@@ -4,18 +4,33 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribePopApiItemListResponseBody extends TeaModel {
+    /**
+     * <p>The names of API operations.</p>
+     */
     @NameInMap("Names")
     public java.util.List<String> names;
 
+    /**
+     * <p>The POP code of the Alibaba Cloud service.</p>
+     */
     @NameInMap("PopCode")
     public String popCode;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Total")
     public Long total;
 
+    /**
+     * <p>The version number of the API for the Alibaba Cloud service.</p>
+     */
     @NameInMap("Version")
     public String version;
 

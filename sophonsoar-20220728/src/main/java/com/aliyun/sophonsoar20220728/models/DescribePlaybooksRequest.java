@@ -4,30 +4,72 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribePlaybooksRequest extends TeaModel {
+    /**
+     * <p>The status of the playbook. Valid values:</p>
+     * <br>
+     * <p>*   **1**: enabled</p>
+     * <p>*   **0**: disabled</p>
+     */
     @NameInMap("Active")
     public Integer active;
 
+    /**
+     * <p>The end of the time range to query. The value is a 13-digit timestamp.</p>
+     */
     @NameInMap("EndMillis")
     public Long endMillis;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The name of the playbook.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The type of the playbook. Valid values:</p>
+     * <br>
+     * <p>*   **preset**: predefined playbook</p>
+     * <p>*   **user**: custom playbook</p>
+     */
     @NameInMap("OwnType")
     public String ownType;
 
+    /**
+     * <p>The page number. Default value: 1. Pages start from page 1.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries per page. Default value: 10. If you leave this parameter empty, 10 entries are returned on each page.</p>
+     * <br>
+     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The playbook UUID.</p>
+     * <br>
+     * <p>>  You can use the UUID to query the information about a specific playbook.</p>
+     * <br>
+     * <p>*   You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.</p>
+     */
     @NameInMap("PlaybookUuid")
     public String playbookUuid;
 
+    /**
+     * <p>The beginning of the time range to query. The value is a 13-digit timestamp.</p>
+     */
     @NameInMap("StartMillis")
     public Long startMillis;
 

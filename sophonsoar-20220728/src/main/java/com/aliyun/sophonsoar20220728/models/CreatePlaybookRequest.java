@@ -4,12 +4,24 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class CreatePlaybookRequest extends TeaModel {
+    /**
+     * <p>The description of the playbook.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the playbook.</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <p>The language of the content within the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh** (default): Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

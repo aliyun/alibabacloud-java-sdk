@@ -4,9 +4,20 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DeleteComponentAssetRequest extends TeaModel {
+    /**
+     * <p>The ID of the asset.</p>
+     * <br>
+     * <p>>  You can call the [DescribeComponentAssets](~~DescribeComponentAssets~~) operation to query the ID.</p>
+     */
     @NameInMap("AssetId")
     public Long assetId;
 
+    /**
+     * <p>The language of the content within the request and the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh** (default): Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

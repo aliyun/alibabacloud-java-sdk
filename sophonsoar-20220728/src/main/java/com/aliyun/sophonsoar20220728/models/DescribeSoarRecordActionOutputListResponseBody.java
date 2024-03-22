@@ -4,18 +4,35 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeSoarRecordActionOutputListResponseBody extends TeaModel {
+    /**
+     * <p>The data that is returned when the component action is performed. The value is a JSON array.</p>
+     * <br>
+     * <p>>  The format of the output data is determined by the component that is configured when the playbook is written.</p>
+     */
     @NameInMap("ActionOutputs")
     public String actionOutputs;
 
+    /**
+     * <p>The page number. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

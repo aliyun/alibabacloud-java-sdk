@@ -4,15 +4,27 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribePopApiVersionListResponseBody extends TeaModel {
+    /**
+     * <p>The POP code of the Alibaba Cloud service.</p>
+     */
     @NameInMap("PopCode")
     public String popCode;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
+    /**
+     * <p>The information about the versions of API operations.</p>
+     */
     @NameInMap("VersionList")
     public java.util.List<DescribePopApiVersionListResponseBodyVersionList> versionList;
 
@@ -54,12 +66,21 @@ public class DescribePopApiVersionListResponseBody extends TeaModel {
     }
 
     public static class DescribePopApiVersionListResponseBodyVersionList extends TeaModel {
+        /**
+         * <p>The name of the API operation.</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The POP code of the Alibaba Cloud service.</p>
+         */
         @NameInMap("PopCode")
         public String popCode;
 
+        /**
+         * <p>The version number of the API for the Alibaba Cloud service.</p>
+         */
         @NameInMap("Version")
         public String version;
 

@@ -4,12 +4,21 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribePlaybooksResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("Page")
     public DescribePlaybooksResponseBodyPage page;
 
+    /**
+     * <p>The list of playbooks.</p>
+     */
     @NameInMap("Playbooks")
     public java.util.List<DescribePlaybooksResponseBodyPlaybooks> playbooks;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +52,21 @@ public class DescribePlaybooksResponseBody extends TeaModel {
     }
 
     public static class DescribePlaybooksResponseBodyPage extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -84,21 +102,45 @@ public class DescribePlaybooksResponseBody extends TeaModel {
     }
 
     public static class DescribePlaybooksResponseBodyPlaybooks extends TeaModel {
+        /**
+         * <p>The playbook status. Valid values:</p>
+         * <br>
+         * <p>*   **1**: The playbook is started.</p>
+         * <p>*   **0**: The playbook is stopped.</p>
+         */
         @NameInMap("Active")
         public Integer active;
 
+        /**
+         * <p>The display name of the playbook.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The time when the playbook was created. The value is a 13-digit timestamp.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The time when the playbook was last run. The value is a 13-digit timestamp.</p>
+         */
         @NameInMap("LastRuntime")
         public Long lastRuntime;
 
+        /**
+         * <p>The type of the playbook. Valid values:</p>
+         * <br>
+         * <p>*   **preset**: predefined playbook</p>
+         * <p>*   **user**: custom playbook</p>
+         */
         @NameInMap("OwnType")
         public String ownType;
 
+        /**
+         * <p>The UUID of the playbook.</p>
+         */
         @NameInMap("PlaybookUuid")
         public String playbookUuid;
 

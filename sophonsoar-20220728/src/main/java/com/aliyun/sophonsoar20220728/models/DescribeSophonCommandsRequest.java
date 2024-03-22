@@ -4,6 +4,9 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeSophonCommandsRequest extends TeaModel {
+    /**
+     * <p>The name of the command. Fuzzy match is supported.</p>
+     */
     @NameInMap("Name")
     public String name;
 

@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiListResponseBody extends TeaModel {
+    /**
+     * <p>The information about the service.</p>
+     */
     @NameInMap("ApiList")
     public java.util.List<DescribeApiListResponseBodyApiList> apiList;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeApiListResponseBody extends TeaModel {
     }
 
     public static class DescribeApiListResponseBodyApiList extends TeaModel {
+        /**
+         * <p>The link to the API references of the Alibaba Cloud service.</p>
+         */
         @NameInMap("DocUrl")
         public String docUrl;
 
+        /**
+         * <p>The POP code of the Alibaba Cloud service.</p>
+         */
         @NameInMap("PopCode")
         public String popCode;
 
+        /**
+         * <p>The name of the Alibaba Cloud service.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 

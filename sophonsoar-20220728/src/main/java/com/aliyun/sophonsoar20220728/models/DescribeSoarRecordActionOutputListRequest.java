@@ -4,15 +4,34 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeSoarRecordActionOutputListRequest extends TeaModel {
+    /**
+     * <p>The UUID of the component action.</p>
+     * <br>
+     * <p>>  You can call the [DescribeSoarTaskAndActions](~~DescribeSoarTaskAndActions~~) operation to query the UUID.</p>
+     */
     @NameInMap("ActionUuid")
     public String actionUuid;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The page number. Default value: 1. Pages start from page 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Default value: 10. If you leave this parameter empty, 10 entries are returned on each page.</p>
+     * <br>
+     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

@@ -4,9 +4,17 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class PublishPlaybookRequest extends TeaModel {
+    /**
+     * <p>The description of the released version.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The playbook UUID.</p>
+     * <br>
+     * <p>>  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.</p>
+     */
     @NameInMap("PlaybookUuid")
     public String playbookUuid;
 

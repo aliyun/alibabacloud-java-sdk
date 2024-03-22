@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class TriggerSophonPlaybookResponseBody extends TeaModel {
+    /**
+     * <p>The details that is returned after the command or playbook is triggered.</p>
+     */
     @NameInMap("Data")
     public TriggerSophonPlaybookResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class TriggerSophonPlaybookResponseBody extends TeaModel {
     }
 
     public static class TriggerSophonPlaybookResponseBodyData extends TeaModel {
+        /**
+         * <p>The custom ID. If you do not specify this parameter when the playbook is triggered, a random ID is generated for fault locating and troubleshooting.</p>
+         */
         @NameInMap("SophonTaskId")
         public String sophonTaskId;
 

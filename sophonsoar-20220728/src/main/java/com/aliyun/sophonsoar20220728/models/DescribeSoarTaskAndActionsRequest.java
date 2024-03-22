@@ -4,9 +4,18 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeSoarTaskAndActionsRequest extends TeaModel {
+    /**
+     * <p>The language of the content within the request and response.</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The playbook UUID.</p>
+     */
     @NameInMap("RequestUuid")
     public String requestUuid;
 

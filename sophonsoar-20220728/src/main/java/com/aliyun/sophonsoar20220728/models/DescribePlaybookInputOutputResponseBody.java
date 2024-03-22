@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribePlaybookInputOutputResponseBody extends TeaModel {
+    /**
+     * <p>The configurations.</p>
+     */
     @NameInMap("Config")
     public DescribePlaybookInputOutputResponseBodyConfig config;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,49 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
     }
 
     public static class DescribePlaybookInputOutputResponseBodyConfig extends TeaModel {
+        @NameInMap("ExeConfig")
+        public String exeConfig;
+
+        /**
+         * <p>The input parameter configuration of the playbook. The value is a JSON array.</p>
+         */
         @NameInMap("InputParams")
         public String inputParams;
 
+        /**
+         * <p>The output parameter configuration. This parameter is unavailable and is always left empty.</p>
+         */
         @NameInMap("OutputParams")
         public String outputParams;
 
+        /**
+         * <p>The input parameter type of the playbook. Valid values:</p>
+         * <br>
+         * <p>*   **template-ip**</p>
+         * <p>*   **template-file**</p>
+         * <p>*   **template-process**</p>
+         * <p>*   **custom**</p>
+         */
         @NameInMap("ParamType")
         public String paramType;
 
+        /**
+         * <p>The UUID of the playbook.</p>
+         */
         @NameInMap("PlaybookUuid")
         public String playbookUuid;
 
         public static DescribePlaybookInputOutputResponseBodyConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribePlaybookInputOutputResponseBodyConfig self = new DescribePlaybookInputOutputResponseBodyConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePlaybookInputOutputResponseBodyConfig setExeConfig(String exeConfig) {
+            this.exeConfig = exeConfig;
+            return this;
+        }
+        public String getExeConfig() {
+            return this.exeConfig;
         }
 
         public DescribePlaybookInputOutputResponseBodyConfig setInputParams(String inputParams) {

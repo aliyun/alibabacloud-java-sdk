@@ -4,18 +4,38 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class ModifyPlaybookRequest extends TeaModel {
+    /**
+     * <p>The description of the playbook.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The display name of the playbook.</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh** (default): Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The UUID of the playbook.</p>
+     * <br>
+     * <p>>  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the UUIDs of playbooks.</p>
+     */
     @NameInMap("PlaybookUuid")
     public String playbookUuid;
 
+    /**
+     * <p>The XML configuration of the playbook.</p>
+     */
     @NameInMap("Taskflow")
     public String taskflow;
 

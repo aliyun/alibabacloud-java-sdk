@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
+    /**
+     * <p>The output structure information of the playbook.</p>
+     */
     @NameInMap("PlaybookNodeSchema")
     public DescribeLatestRecordSchemaResponseBodyPlaybookNodeSchema playbookNodeSchema;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,27 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
     }
 
     public static class DescribeLatestRecordSchemaResponseBodyPlaybookNodeSchemaNodeSchema extends TeaModel {
+        /**
+         * <p>The action name of the component.</p>
+         */
         @NameInMap("ActionName")
         public String actionName;
 
+        /**
+         * <p>The name of the component.</p>
+         */
         @NameInMap("ComponentName")
         public String componentName;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The output fields.</p>
+         */
         @NameInMap("OutputFields")
         public java.util.List<String> outputFields;
 
@@ -84,6 +102,9 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
     }
 
     public static class DescribeLatestRecordSchemaResponseBodyPlaybookNodeSchema extends TeaModel {
+        /**
+         * <p>The structure information.</p>
+         */
         @NameInMap("NodeSchema")
         public java.util.List<DescribeLatestRecordSchemaResponseBodyPlaybookNodeSchemaNodeSchema> nodeSchema;
 

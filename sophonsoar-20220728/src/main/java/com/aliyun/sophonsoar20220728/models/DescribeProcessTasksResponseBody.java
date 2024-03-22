@@ -4,12 +4,21 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeProcessTasksResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("Page")
     public DescribeProcessTasksResponseBodyPage page;
 
+    /**
+     * <p>The handling tasks.</p>
+     */
     @NameInMap("ProcessTasks")
     public java.util.List<DescribeProcessTasksResponseBodyProcessTasks> processTasks;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +52,21 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeProcessTasksResponseBodyPage extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -84,53 +102,110 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeProcessTasksResponseBodyProcessTasks extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to submit the handling task.</p>
+         */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p>The name of the handling entity.</p>
+         */
         @NameInMap("EntityName")
         public String entityName;
 
+        /**
+         * <p>The type of the handling entity.</p>
+         */
         @NameInMap("EntityType")
         public String entityType;
 
+        /**
+         * <p>The creation time of the handling task. The value is a 13-digit timestamp.</p>
+         */
         @NameInMap("GmtCreateMillis")
         public Long gmtCreateMillis;
 
+        /**
+         * <p>The modification time of the handling task. The value is a 13-digit timestamp.</p>
+         */
         @NameInMap("GmtModifiedMillis")
         public Long gmtModifiedMillis;
 
+        /**
+         * <p>The input parameter of the handling task.</p>
+         */
         @NameInMap("InputParams")
         public String inputParams;
 
+        /**
+         * <p>The ID of the associated policy.</p>
+         */
         @NameInMap("ProcessStrategyUuid")
         public String processStrategyUuid;
 
+        /**
+         * <p>The delivery time of the handling task. The value is a 13-digit timestamp.</p>
+         */
         @NameInMap("ProcessTime")
         public Long processTime;
 
+        /**
+         * <p>The unblocking time of the handling task. The value is a 13-digit timestamp.</p>
+         */
         @NameInMap("RemoveTime")
         public Long removeTime;
 
+        /**
+         * <p>The scenario code of the handling task.</p>
+         */
         @NameInMap("SceneCode")
         public String sceneCode;
 
+        /**
+         * <p>The scenario name of the handling task.</p>
+         */
         @NameInMap("SceneName")
         public String sceneName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is specified in the handling task.</p>
+         */
         @NameInMap("Scope")
         public String scope;
 
+        /**
+         * <p>The submission source of the handling task.</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The unique identifier of the handling task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The status of the handling task.</p>
+         */
         @NameInMap("TaskStatus")
         public Integer taskStatus;
 
+        /**
+         * <p>The code of the cloud service that is associated with the handling task.</p>
+         */
         @NameInMap("YunCode")
         public String yunCode;
+
+        @NameInMap("errCode")
+        public String errCode;
+
+        @NameInMap("errMsg")
+        public String errMsg;
+
+        @NameInMap("errTip")
+        public String errTip;
 
         public static DescribeProcessTasksResponseBodyProcessTasks build(java.util.Map<String, ?> map) throws Exception {
             DescribeProcessTasksResponseBodyProcessTasks self = new DescribeProcessTasksResponseBodyProcessTasks();
@@ -263,6 +338,30 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         }
         public String getYunCode() {
             return this.yunCode;
+        }
+
+        public DescribeProcessTasksResponseBodyProcessTasks setErrCode(String errCode) {
+            this.errCode = errCode;
+            return this;
+        }
+        public String getErrCode() {
+            return this.errCode;
+        }
+
+        public DescribeProcessTasksResponseBodyProcessTasks setErrMsg(String errMsg) {
+            this.errMsg = errMsg;
+            return this;
+        }
+        public String getErrMsg() {
+            return this.errMsg;
+        }
+
+        public DescribeProcessTasksResponseBodyProcessTasks setErrTip(String errTip) {
+            this.errTip = errTip;
+            return this;
+        }
+        public String getErrTip() {
+            return this.errTip;
         }
 
     }

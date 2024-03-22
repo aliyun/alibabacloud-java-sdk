@@ -1085,6 +1085,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyPlaybookInputOutputResponse modifyPlaybookInputOutputWithOptions(ModifyPlaybookInputOutputRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.exeConfig)) {
+            body.put("ExeConfig", request.exeConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.inputParams)) {
             body.put("InputParams", request.inputParams);
         }
@@ -1302,6 +1306,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.revertPlaybookReleaseWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+      *
+      * @param request RunPython3ScriptRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RunPython3ScriptResponse
+     */
     public RunPython3ScriptResponse runPython3ScriptWithOptions(RunPython3ScriptRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1338,11 +1349,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RunPython3ScriptResponse());
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+      *
+      * @param request RunPython3ScriptRequest
+      * @return RunPython3ScriptResponse
+     */
     public RunPython3ScriptResponse runPython3Script(RunPython3ScriptRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.runPython3ScriptWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+      *
+      * @param request TriggerPlaybookRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return TriggerPlaybookResponse
+     */
     public TriggerPlaybookResponse triggerPlaybookWithOptions(TriggerPlaybookRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1371,6 +1395,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TriggerPlaybookResponse());
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+      *
+      * @param request TriggerPlaybookRequest
+      * @return TriggerPlaybookResponse
+     */
     public TriggerPlaybookResponse triggerPlaybook(TriggerPlaybookRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.triggerPlaybookWithOptions(request, runtime);
@@ -1411,6 +1441,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.triggerProcessTaskWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+      *
+      * @param request TriggerSophonPlaybookRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return TriggerSophonPlaybookResponse
+     */
     public TriggerSophonPlaybookResponse triggerSophonPlaybookWithOptions(TriggerSophonPlaybookRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1451,6 +1488,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TriggerSophonPlaybookResponse());
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+      *
+      * @param request TriggerSophonPlaybookRequest
+      * @return TriggerSophonPlaybookResponse
+     */
     public TriggerSophonPlaybookResponse triggerSophonPlaybook(TriggerSophonPlaybookRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.triggerSophonPlaybookWithOptions(request, runtime);

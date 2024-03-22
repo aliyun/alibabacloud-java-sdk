@@ -4,15 +4,35 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribePlaybookRequest extends TeaModel {
+    /**
+     * <p>The flag that indicates whether the playbook is of the debugging or published version. Valid values:</p>
+     * <br>
+     * <p>*   **1**: playbook of the debugging version</p>
+     * <p>*   **0**: playbook of the published version</p>
+     */
     @NameInMap("DebugFlag")
     public Integer debugFlag;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The UUID of the playbook.</p>
+     * <br>
+     * <p>>  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the UUIDs of playbooks.</p>
+     */
     @NameInMap("PlaybookUuid")
     public String playbookUuid;
 
+    /**
+     * <p>The MD5 hash value of the playbook.</p>
+     */
     @NameInMap("TaskflowMd5")
     public String taskflowMd5;
 

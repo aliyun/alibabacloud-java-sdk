@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class ComparePlaybooksResponseBody extends TeaModel {
+    /**
+     * <p>The comparison result.</p>
+     */
     @NameInMap("CompareResult")
     public ComparePlaybooksResponseBodyCompareResult compareResult;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,24 @@ public class ComparePlaybooksResponseBody extends TeaModel {
     }
 
     public static class ComparePlaybooksResponseBodyCompareResult extends TeaModel {
+        /**
+         * <p>The description of the comparison result.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether the second version provides more information than the first version. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("New")
         public Boolean _new;
 
+        /**
+         * <p>Indicates whether the configurations of the two versions are the same. Valid values: **true** and **false**.</p>
+         */
         @NameInMap("Same")
         public Boolean same;
 

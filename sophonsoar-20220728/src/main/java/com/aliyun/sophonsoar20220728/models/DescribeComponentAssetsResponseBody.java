@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeComponentAssetsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the assets.</p>
+     */
     @NameInMap("ComponentAssets")
     public java.util.List<DescribeComponentAssetsResponseBodyComponentAssets> componentAssets;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,47 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
     }
 
     public static class DescribeComponentAssetsResponseBodyComponentAssets extends TeaModel {
+        /**
+         * <p>The UUID of the asset.</p>
+         */
         @NameInMap("AssetUuid")
         public String assetUuid;
 
+        /**
+         * <p>The name of the component to which the asset belongs.</p>
+         */
         @NameInMap("Componentname")
         public String componentname;
 
+        /**
+         * <p>The time when the asset was created. The time is in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the asset was modified. The time is in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The UUID of the asset.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the asset.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The configurations of the asset in the JSON string format. DescribeComponentAssetForm</p>
+         * <br>
+         * <p>>  For more information, see [DescribeComponentAssetForm](~~DescribeComponentAssetForm~~).</p>
+         */
         @NameInMap("Params")
         public String params;
 

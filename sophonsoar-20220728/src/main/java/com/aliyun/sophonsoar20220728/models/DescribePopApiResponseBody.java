@@ -4,18 +4,33 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribePopApiResponseBody extends TeaModel {
+    /**
+     * <p>The name of the API.</p>
+     */
     @NameInMap("ApiName")
     public String apiName;
 
+    /**
+     * <p>The information about the API.</p>
+     */
     @NameInMap("OpenApiMetaList")
     public java.util.List<DescribePopApiResponseBodyOpenApiMetaList> openApiMetaList;
 
+    /**
+     * <p>The POP code of the Alibaba Cloud service.</p>
+     */
     @NameInMap("PopCode")
     public String popCode;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The version of the API.</p>
+     */
     @NameInMap("Version")
     public String version;
 
@@ -65,18 +80,41 @@ public class DescribePopApiResponseBody extends TeaModel {
     }
 
     public static class DescribePopApiResponseBodyOpenApiMetaList extends TeaModel {
+        /**
+         * <p>The parameter description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The example value.</p>
+         */
         @NameInMap("ExampleValue")
         public String exampleValue;
 
+        /**
+         * <p>The parameter name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether the parameter is required.</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 
+        /**
+         * <p>The data type of the parameter field. Valid values:</p>
+         * <br>
+         * <p>*   **string**</p>
+         * <p>*   **boolean**</p>
+         * <p>*   **integer**</p>
+         * <p>*   **long**</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -4,12 +4,29 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class BatchModifyInstanceStatusRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to start or stop the playbook.</p>
+     * <br>
+     * <p>*   **0**: stops the playbook.</p>
+     * <p>*   **1**: starts the playbook.</p>
+     */
     @NameInMap("Active")
     public Integer active;
 
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The playbook UUID. If you want to specify multiple playbooks, separate the playbook UUIDs with commas (,).</p>
+     * <br>
+     * <p>>  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.</p>
+     */
     @NameInMap("PlaybookUuid")
     public String playbookUuid;
 

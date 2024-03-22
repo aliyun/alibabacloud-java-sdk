@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeExecutePlaybooksResponseBody extends TeaModel {
+    /**
+     * <p>The playbook.</p>
+     */
     @NameInMap("PlaybookMetrics")
     public java.util.List<DescribeExecutePlaybooksResponseBodyPlaybookMetrics> playbookMetrics;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,40 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
     }
 
     public static class DescribeExecutePlaybooksResponseBodyPlaybookMetrics extends TeaModel {
+        /**
+         * <p>The playbook description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The playbook name.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The configuration of the input parameter. The value is a JSON array.</p>
+         * <br>
+         * <p>>  For more information, see [DescribePlaybookInputOutput](~~DescribePlaybookInputOutput~~).</p>
+         */
         @NameInMap("ParamConfig")
         public String paramConfig;
 
+        /**
+         * <p>The input parameter type of the playbook.</p>
+         * <br>
+         * <p>*   **template-ip**</p>
+         * <p>*   **template-file**</p>
+         * <p>*   **template-process**</p>
+         * <p>*   **custom**</p>
+         */
         @NameInMap("ParamType")
         public String paramType;
 
+        /**
+         * <p>The playbook UUID.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 

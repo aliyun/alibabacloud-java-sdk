@@ -4,9 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class QueryTreeDataResponseBody extends TeaModel {
+    /**
+     * <p>The returned information about the playbook. The value is a JSON string.</p>
+     */
     @NameInMap("Playbooks")
     public String playbooks;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

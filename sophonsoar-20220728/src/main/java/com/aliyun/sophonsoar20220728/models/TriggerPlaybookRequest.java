@@ -4,9 +4,17 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class TriggerPlaybookRequest extends TeaModel {
+    /**
+     * <p>The input parameters of the playbook.</p>
+     */
     @NameInMap("InputParam")
     public String inputParam;
 
+    /**
+     * <p>The playbook UUID.</p>
+     * <br>
+     * <p>>  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.</p>
+     */
     @NameInMap("PlaybookUuid")
     public String playbookUuid;
 

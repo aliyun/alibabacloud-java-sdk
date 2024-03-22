@@ -4,12 +4,21 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeFieldResponseBody extends TeaModel {
+    /**
+     * <p>The configuration content.</p>
+     */
     @NameInMap("Fields")
     public String fields;
 
+    /**
+     * <p>The name of the global configuration.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
