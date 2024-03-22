@@ -4,8 +4,8 @@ package com.aliyun.expressconnectrouter20230901.models;
 import com.aliyun.tea.*;
 
 public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends TeaModel {
-    @NameInMap("AssociatonId")
-    public String associatonId;
+    @NameInMap("AssociationId")
+    public String associationId;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -27,12 +27,12 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Tea
         return TeaModel.build(map, self);
     }
 
-    public DescribeExpressConnectRouterAllowedPrefixHistoryRequest setAssociatonId(String associatonId) {
-        this.associatonId = associatonId;
+    public DescribeExpressConnectRouterAllowedPrefixHistoryRequest setAssociationId(String associationId) {
+        this.associationId = associationId;
         return this;
     }
-    public String getAssociatonId() {
-        return this.associatonId;
+    public String getAssociationId() {
+        return this.associationId;
     }
 
     public DescribeExpressConnectRouterAllowedPrefixHistoryRequest setClientToken(String clientToken) {
