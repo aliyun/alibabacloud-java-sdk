@@ -118,6 +118,9 @@ public class CreateDBNodesRequest extends TeaModel {
         @NameInMap("classCode")
         public String classCode;
 
+        @NameInMap("vswId")
+        public String vswId;
+
         /**
          * <p>The zone ID of the node.</p>
          */
@@ -135,6 +138,14 @@ public class CreateDBNodesRequest extends TeaModel {
         }
         public String getClassCode() {
             return this.classCode;
+        }
+
+        public CreateDBNodesRequestDBNode setVswId(String vswId) {
+            this.vswId = vswId;
+            return this;
+        }
+        public String getVswId() {
+            return this.vswId;
         }
 
         public CreateDBNodesRequestDBNode setZoneId(String zoneId) {
