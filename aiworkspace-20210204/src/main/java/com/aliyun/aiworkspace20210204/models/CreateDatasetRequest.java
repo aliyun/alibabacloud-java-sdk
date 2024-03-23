@@ -28,6 +28,9 @@ public class CreateDatasetRequest extends TeaModel {
     @NameInMap("Property")
     public String property;
 
+    @NameInMap("Provider")
+    public String provider;
+
     @NameInMap("ProviderType")
     public String providerType;
 
@@ -110,6 +113,14 @@ public class CreateDatasetRequest extends TeaModel {
     }
     public String getProperty() {
         return this.property;
+    }
+
+    public CreateDatasetRequest setProvider(String provider) {
+        this.provider = provider;
+        return this;
+    }
+    public String getProvider() {
+        return this.provider;
     }
 
     public CreateDatasetRequest setProviderType(String providerType) {

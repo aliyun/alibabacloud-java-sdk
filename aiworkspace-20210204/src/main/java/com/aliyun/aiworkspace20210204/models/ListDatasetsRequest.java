@@ -28,6 +28,9 @@ public class ListDatasetsRequest extends TeaModel {
     @NameInMap("Properties")
     public String properties;
 
+    @NameInMap("Provider")
+    public String provider;
+
     @NameInMap("SourceId")
     public String sourceId;
 
@@ -104,6 +107,14 @@ public class ListDatasetsRequest extends TeaModel {
     }
     public String getProperties() {
         return this.properties;
+    }
+
+    public ListDatasetsRequest setProvider(String provider) {
+        this.provider = provider;
+        return this;
+    }
+    public String getProvider() {
+        return this.provider;
     }
 
     public ListDatasetsRequest setSourceId(String sourceId) {
