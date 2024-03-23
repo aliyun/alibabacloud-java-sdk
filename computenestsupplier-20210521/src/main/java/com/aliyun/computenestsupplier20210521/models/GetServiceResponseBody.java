@@ -934,7 +934,40 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
 
+    public static class GetServiceResponseBodyServiceInfosAgreements extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Url")
+        public String url;
+
+        public static GetServiceResponseBodyServiceInfosAgreements build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyServiceInfosAgreements self = new GetServiceResponseBodyServiceInfosAgreements();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyServiceInfosAgreements setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetServiceResponseBodyServiceInfosAgreements setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
     public static class GetServiceResponseBodyServiceInfos extends TeaModel {
+        @NameInMap("Agreements")
+        public java.util.List<GetServiceResponseBodyServiceInfosAgreements> agreements;
+
         @NameInMap("Image")
         public String image;
 
@@ -953,6 +986,14 @@ public class GetServiceResponseBody extends TeaModel {
         public static GetServiceResponseBodyServiceInfos build(java.util.Map<String, ?> map) throws Exception {
             GetServiceResponseBodyServiceInfos self = new GetServiceResponseBodyServiceInfos();
             return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyServiceInfos setAgreements(java.util.List<GetServiceResponseBodyServiceInfosAgreements> agreements) {
+            this.agreements = agreements;
+            return this;
+        }
+        public java.util.List<GetServiceResponseBodyServiceInfosAgreements> getAgreements() {
+            return this.agreements;
         }
 
         public GetServiceResponseBodyServiceInfos setImage(String image) {
