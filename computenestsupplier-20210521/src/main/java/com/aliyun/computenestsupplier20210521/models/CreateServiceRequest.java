@@ -295,7 +295,40 @@ public class CreateServiceRequest extends TeaModel {
         return this.versionName;
     }
 
+    public static class CreateServiceRequestServiceInfoAgreements extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Url")
+        public String url;
+
+        public static CreateServiceRequestServiceInfoAgreements build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceRequestServiceInfoAgreements self = new CreateServiceRequestServiceInfoAgreements();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceRequestServiceInfoAgreements setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public CreateServiceRequestServiceInfoAgreements setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
     public static class CreateServiceRequestServiceInfo extends TeaModel {
+        @NameInMap("Agreements")
+        public java.util.List<CreateServiceRequestServiceInfoAgreements> agreements;
+
         @NameInMap("Image")
         public String image;
 
@@ -314,6 +347,14 @@ public class CreateServiceRequest extends TeaModel {
         public static CreateServiceRequestServiceInfo build(java.util.Map<String, ?> map) throws Exception {
             CreateServiceRequestServiceInfo self = new CreateServiceRequestServiceInfo();
             return TeaModel.build(map, self);
+        }
+
+        public CreateServiceRequestServiceInfo setAgreements(java.util.List<CreateServiceRequestServiceInfoAgreements> agreements) {
+            this.agreements = agreements;
+            return this;
+        }
+        public java.util.List<CreateServiceRequestServiceInfoAgreements> getAgreements() {
+            return this.agreements;
         }
 
         public CreateServiceRequestServiceInfo setImage(String image) {
