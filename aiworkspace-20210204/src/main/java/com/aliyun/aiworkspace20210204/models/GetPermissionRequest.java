@@ -10,6 +10,9 @@ public class GetPermissionRequest extends TeaModel {
     @NameInMap("Creator")
     public String creator;
 
+    @NameInMap("Resource")
+    public String resource;
+
     public static GetPermissionRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPermissionRequest self = new GetPermissionRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class GetPermissionRequest extends TeaModel {
     }
     public String getCreator() {
         return this.creator;
+    }
+
+    public GetPermissionRequest setResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    public String getResource() {
+        return this.resource;
     }
 
 }
