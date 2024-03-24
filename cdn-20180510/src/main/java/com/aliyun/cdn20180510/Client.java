@@ -7968,6 +7968,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.pushObjectCacheWithOptions(request, runtime);
     }
 
+    public RefreshObjectCacheByCacheTagResponse refreshObjectCacheByCacheTagWithOptions(RefreshObjectCacheByCacheTagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cacheTag)) {
+            query.put("CacheTag", request.cacheTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RefreshObjectCacheByCacheTag"),
+            new TeaPair("version", "2018-05-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RefreshObjectCacheByCacheTagResponse());
+    }
+
+    public RefreshObjectCacheByCacheTagResponse refreshObjectCacheByCacheTag(RefreshObjectCacheByCacheTagRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.refreshObjectCacheByCacheTagWithOptions(request, runtime);
+    }
+
     /**
       * *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
       * *   You can call the [RefreshObjectCaches](~~91164~~) operation to refresh content and call the [PushObjectCache](~~91161~~) operation to prefetch content.
