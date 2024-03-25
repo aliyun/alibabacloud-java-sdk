@@ -3,7 +3,7 @@ package com.aliyun.sddp20190103.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeOssObjectDetailResponse extends TeaModel {
+public class DescribeParentInstanceResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeOssObjectDetailResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeOssObjectDetailResponseBody body;
+    public DescribeParentInstanceResponseBody body;
 
-    public static DescribeOssObjectDetailResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeOssObjectDetailResponse self = new DescribeOssObjectDetailResponse();
+    public static DescribeParentInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeParentInstanceResponse self = new DescribeParentInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeOssObjectDetailResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeParentInstanceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeOssObjectDetailResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeOssObjectDetailResponse setStatusCode(Integer statusCode) {
+    public DescribeParentInstanceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeOssObjectDetailResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeOssObjectDetailResponse setBody(DescribeOssObjectDetailResponseBody body) {
+    public DescribeParentInstanceResponse setBody(DescribeParentInstanceResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeOssObjectDetailResponseBody getBody() {
+    public DescribeParentInstanceResponseBody getBody() {
         return this.body;
     }
 
