@@ -39,6 +39,9 @@ public class ListLifecycleRetrieveJobsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("StorageType")
+    public String storageType;
+
     public static ListLifecycleRetrieveJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListLifecycleRetrieveJobsRequest self = new ListLifecycleRetrieveJobsRequest();
         return TeaModel.build(map, self);
@@ -74,6 +77,14 @@ public class ListLifecycleRetrieveJobsRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListLifecycleRetrieveJobsRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
 }

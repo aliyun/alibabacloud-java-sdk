@@ -78,6 +78,9 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         @NameInMap("FileId")
         public String fileId;
 
+        @NameInMap("HasArchiveFile")
+        public String hasArchiveFile;
+
         /**
          * <p>Indicates whether the directory contains files stored in the IA storage medium.</p>
          * <br>
@@ -189,6 +192,14 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         }
         public String getFileId() {
             return this.fileId;
+        }
+
+        public ListDirectoriesAndFilesResponseBodyEntries setHasArchiveFile(String hasArchiveFile) {
+            this.hasArchiveFile = hasArchiveFile;
+            return this;
+        }
+        public String getHasArchiveFile() {
+            return this.hasArchiveFile;
         }
 
         public ListDirectoriesAndFilesResponseBodyEntries setHasInfrequentAccessFile(Boolean hasInfrequentAccessFile) {
