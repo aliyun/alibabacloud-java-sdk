@@ -4,15 +4,29 @@ package com.aliyun.dyvmsapi_intl20211015.models;
 import com.aliyun.tea.*;
 
 public class BackendCallSignalResponseBody extends TeaModel {
+    /**
+     * <p>The unique receipt ID for the call. You can use this ID to query the details of a single call.</p>
+     */
     @NameInMap("CallId")
     public String callId;
 
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>The value OK indicates that the request was successful. Other values indicate that the request failed. For more information, see Error codes.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

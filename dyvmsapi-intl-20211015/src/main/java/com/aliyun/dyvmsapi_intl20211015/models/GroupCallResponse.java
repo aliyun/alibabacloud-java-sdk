@@ -3,25 +3,22 @@ package com.aliyun.dyvmsapi_intl20211015.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateNumberResponse extends TeaModel {
+public class GroupCallResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
-    public UpdateNumberResponseBody body;
+    public GroupCallResponseBody body;
 
-    public static UpdateNumberResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateNumberResponse self = new UpdateNumberResponse();
+    public static GroupCallResponse build(java.util.Map<String, ?> map) throws Exception {
+        GroupCallResponse self = new GroupCallResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateNumberResponse setHeaders(java.util.Map<String, String> headers) {
+    public GroupCallResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +26,7 @@ public class UpdateNumberResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateNumberResponse setStatusCode(Integer statusCode) {
+    public GroupCallResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +34,11 @@ public class UpdateNumberResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateNumberResponse setBody(UpdateNumberResponseBody body) {
+    public GroupCallResponse setBody(GroupCallResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateNumberResponseBody getBody() {
+    public GroupCallResponseBody getBody() {
         return this.body;
     }
 
