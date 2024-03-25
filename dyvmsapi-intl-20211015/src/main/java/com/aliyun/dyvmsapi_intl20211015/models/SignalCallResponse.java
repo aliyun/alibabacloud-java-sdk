@@ -3,25 +3,22 @@ package com.aliyun.dyvmsapi_intl20211015.models;
 
 import com.aliyun.tea.*;
 
-public class DownloadTemplateFileResponse extends TeaModel {
+public class SignalCallResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
-    public DownloadTemplateFileResponseBody body;
+    public SignalCallResponseBody body;
 
-    public static DownloadTemplateFileResponse build(java.util.Map<String, ?> map) throws Exception {
-        DownloadTemplateFileResponse self = new DownloadTemplateFileResponse();
+    public static SignalCallResponse build(java.util.Map<String, ?> map) throws Exception {
+        SignalCallResponse self = new SignalCallResponse();
         return TeaModel.build(map, self);
     }
 
-    public DownloadTemplateFileResponse setHeaders(java.util.Map<String, String> headers) {
+    public SignalCallResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +26,7 @@ public class DownloadTemplateFileResponse extends TeaModel {
         return this.headers;
     }
 
-    public DownloadTemplateFileResponse setStatusCode(Integer statusCode) {
+    public SignalCallResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +34,11 @@ public class DownloadTemplateFileResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DownloadTemplateFileResponse setBody(DownloadTemplateFileResponseBody body) {
+    public SignalCallResponse setBody(SignalCallResponseBody body) {
         this.body = body;
         return this;
     }
-    public DownloadTemplateFileResponseBody getBody() {
+    public SignalCallResponseBody getBody() {
         return this.body;
     }
 
