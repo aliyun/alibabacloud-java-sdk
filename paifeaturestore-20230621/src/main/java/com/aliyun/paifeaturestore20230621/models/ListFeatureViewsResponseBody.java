@@ -82,6 +82,9 @@ public class ListFeatureViewsResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        @NameInMap("WriteToFeatureDB")
+        public Boolean writeToFeatureDB;
+
         public static ListFeatureViewsResponseBodyFeatureViews build(java.util.Map<String, ?> map) throws Exception {
             ListFeatureViewsResponseBodyFeatureViews self = new ListFeatureViewsResponseBodyFeatureViews();
             return TeaModel.build(map, self);
@@ -189,6 +192,14 @@ public class ListFeatureViewsResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public ListFeatureViewsResponseBodyFeatureViews setWriteToFeatureDB(Boolean writeToFeatureDB) {
+            this.writeToFeatureDB = writeToFeatureDB;
+            return this;
+        }
+        public Boolean getWriteToFeatureDB() {
+            return this.writeToFeatureDB;
         }
 
     }

@@ -233,6 +233,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("WriteMethod", request.writeMethod);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.writeToFeatureDB)) {
+            body.put("WriteToFeatureDB", request.writeToFeatureDB);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
