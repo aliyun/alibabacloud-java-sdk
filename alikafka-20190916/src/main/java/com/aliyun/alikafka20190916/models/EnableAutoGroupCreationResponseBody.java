@@ -4,15 +4,29 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class EnableAutoGroupCreationResponseBody extends TeaModel {
+    /**
+     * <p>The returned HTTP status code.</p>
+     * <br>
+     * <p>If the value **200** is returned, the request is successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

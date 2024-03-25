@@ -11,7 +11,7 @@ public class GetInstanceListResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The information about the instance.</p>
+     * <p>The instances.</p>
      */
     @NameInMap("InstanceList")
     public GetInstanceListResponseBodyInstanceList instanceList;
@@ -381,14 +381,14 @@ public class GetInstanceListResponseBody extends TeaModel {
         /**
          * <p>The type of the network in which the instance is deployed. Valid values:</p>
          * <br>
-         * <p>*   **4**: the Internet and VPCs</p>
-         * <p>*   **5**: VPCs</p>
+         * <p>*   **4**: Internet and VPC</p>
+         * <p>*   **5**: VPC</p>
          */
         @NameInMap("DeployType")
         public Integer deployType;
 
         /**
-         * <p>The disk size of the instance. Unit: GB</p>
+         * <p>The disk size. Unit: GB.</p>
          */
         @NameInMap("DiskSize")
         public Integer diskSize;
@@ -451,13 +451,13 @@ public class GetInstanceListResponseBody extends TeaModel {
         public String ioMaxSpec;
 
         /**
-         * <p>The ID of the key that is used for disk encryption in the region where the instance resides.</p>
+         * <p>The ID of the key that is used for disk encryption in the region where the instance is deployed.</p>
          */
         @NameInMap("KmsKeyId")
         public String kmsKeyId;
 
         /**
-         * <p>The retention period of messages on the instance. Unit: hours.</p>
+         * <p>The retention period of messages in the instance. Unit: hours.</p>
          */
         @NameInMap("MsgRetain")
         public Integer msgRetain;
@@ -471,8 +471,8 @@ public class GetInstanceListResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <br>
-         * <p>*   **0**: the subscription billing method</p>
-         * <p>*   **1**: the pay-as-you-go billing method</p>
+         * <p>*   **0**: subscription</p>
+         * <p>*   **1**: pay-as-you-go</p>
          */
         @NameInMap("PaidType")
         public Integer paidType;
@@ -505,16 +505,16 @@ public class GetInstanceListResponseBody extends TeaModel {
         public String saslDomainEndpoint;
 
         /**
-         * <p>The security group to which the instance belongs.</p>
+         * <p>The security group of the instance.</p>
          * <br>
          * <p>*   If the instance is deployed by using the ApsaraMQ for Kafka console or calling the [StartInstance](~~157786~~) operation without a security group configured, no value is returned.</p>
-         * <p>*   If the instance is deployed by calling the [StartInstance](~~157786~~) operation with a security group configured, the return value is the configured security group.</p>
+         * <p>*   If the instance is deployed by calling the [StartInstance](~~157786~~) operation with a security group configured, the returned value is the configured security group.</p>
          */
         @NameInMap("SecurityGroup")
         public String securityGroup;
 
         /**
-         * <p>The status of the instance. Valid values:</p>
+         * <p>The instance status. Valid values:</p>
          * <br>
          * <p>*   **0**: pending</p>
          * <p>*   **1**: preparing hardware resources</p>
@@ -573,7 +573,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         public GetInstanceListResponseBodyInstanceListInstanceVOTags tags;
 
         /**
-         * <p>The maximum number of topics that can be created on the instance.</p>
+         * <p>The maximum number of topics on the instance.</p>
          */
         @NameInMap("TopicNumLimit")
         public Integer topicNumLimit;
@@ -585,7 +585,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         public GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo upgradeServiceDetailInfo;
 
         /**
-         * <p>The number of used consumer groups.</p>
+         * <p>The number of used groups.</p>
          */
         @NameInMap("UsedGroupCount")
         public Integer usedGroupCount;
@@ -608,8 +608,11 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        @NameInMap("ViewInstanceStatusCode")
+        public Integer viewInstanceStatusCode;
+
         /**
-         * <p>The ID of the virtual private cloud (VPC) in which the instance is deployed.</p>
+         * <p>The virtual private cloud (VPC) ID.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -903,6 +906,14 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
         public String getVSwitchId() {
             return this.vSwitchId;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setViewInstanceStatusCode(Integer viewInstanceStatusCode) {
+            this.viewInstanceStatusCode = viewInstanceStatusCode;
+            return this;
+        }
+        public Integer getViewInstanceStatusCode() {
+            return this.viewInstanceStatusCode;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setVpcId(String vpcId) {

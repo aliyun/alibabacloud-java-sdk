@@ -317,6 +317,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DiskType", request.diskType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
+            query.put("Duration", request.duration);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.eipMax)) {
             query.put("EipMax", request.eipMax);
         }
@@ -327,6 +331,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ioMaxSpec)) {
             query.put("IoMaxSpec", request.ioMaxSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paidType)) {
+            query.put("PaidType", request.paidType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.partitionNum)) {
@@ -941,8 +949,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ConsumerId", request.consumerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

@@ -4,21 +4,33 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetTopicSubscribeStatusResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The subscription details.</p>
+     */
     @NameInMap("TopicSubscribeStatus")
     public GetTopicSubscribeStatusResponseBodyTopicSubscribeStatus topicSubscribeStatus;
 
@@ -68,9 +80,15 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
     }
 
     public static class GetTopicSubscribeStatusResponseBodyTopicSubscribeStatus extends TeaModel {
+        /**
+         * <p>The groups that subscribe to the topic.</p>
+         */
         @NameInMap("ConsumerGroups")
         public java.util.List<String> consumerGroups;
 
+        /**
+         * <p>The topic name.</p>
+         */
         @NameInMap("Topic")
         public String topic;
 

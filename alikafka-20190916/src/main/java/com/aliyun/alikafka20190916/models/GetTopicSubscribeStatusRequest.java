@@ -4,12 +4,25 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetTopicSubscribeStatusRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     * <br>
+     * <p>You can call the [GetInstanceList](~~437663~~) operation to query instances.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The topic name.</p>
+     * <br>
+     * <p>You can call the [GetTopicList](~~437677~~) operation to query topics.</p>
+     */
     @NameInMap("Topic")
     public String topic;
 
