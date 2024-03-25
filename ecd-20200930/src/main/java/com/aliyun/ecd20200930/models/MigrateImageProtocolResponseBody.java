@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class MigrateImageProtocolResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of images whose protocols fail to be migrated.</p>
+     */
     @NameInMap("FailedIds")
     public java.util.List<String> failedIds;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

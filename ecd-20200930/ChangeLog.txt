@@ -1,3 +1,9 @@
+2024-03-25 Version: 3.5.1
+- Update API AddDevices: update response param.
+- Update API DescribeFotaPendingDesktops: update param TaskUid.
+- Update API UpdateFotaTask: update param UserStatus.
+
+
 2024-03-18 Version: 3.5.0
 - Support API DescribeDesktopGroupSessions.
 - Support API DisconnectDesktopSessions.

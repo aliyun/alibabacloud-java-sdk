@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DisconnectDesktopSessionsResponseBody extends TeaModel {
+    /**
+     * <p>The list of invalid sessions.</p>
+     */
     @NameInMap("InvalidSessions")
     public java.util.List<DisconnectDesktopSessionsResponseBodyInvalidSessions> invalidSessions;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DisconnectDesktopSessionsResponseBody extends TeaModel {
     }
 
     public static class DisconnectDesktopSessionsResponseBodyInvalidSessions extends TeaModel {
+        /**
+         * <p>The cloud desktop ID.</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
+        /**
+         * <p>The end user ID.</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 

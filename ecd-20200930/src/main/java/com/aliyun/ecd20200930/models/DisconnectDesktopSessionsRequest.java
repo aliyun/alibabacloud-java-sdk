@@ -4,12 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DisconnectDesktopSessionsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to perform precheck. If you perform precheck, the system does not disconnect from desktop sessions. Only the sessions that do not meet specific conditions are returned.</p>
+     */
     @NameInMap("PreCheck")
     public Boolean preCheck;
 
+    /**
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The session details.</p>
+     */
     @NameInMap("Sessions")
     public java.util.List<DisconnectDesktopSessionsRequestSessions> sessions;
 
@@ -43,9 +52,15 @@ public class DisconnectDesktopSessionsRequest extends TeaModel {
     }
 
     public static class DisconnectDesktopSessionsRequestSessions extends TeaModel {
+        /**
+         * <p>The cloud desktop ID.</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
+        /**
+         * <p>The end user ID.</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
