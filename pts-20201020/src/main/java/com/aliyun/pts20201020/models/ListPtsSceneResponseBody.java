@@ -85,6 +85,9 @@ public class ListPtsSceneResponseBody extends TeaModel {
         @NameInMap("SceneName")
         public String sceneName;
 
+        @NameInMap("Status")
+        public String status;
+
         public static ListPtsSceneResponseBodySceneViewList build(java.util.Map<String, ?> map) throws Exception {
             ListPtsSceneResponseBodySceneViewList self = new ListPtsSceneResponseBodySceneViewList();
             return TeaModel.build(map, self);
@@ -112,6 +115,14 @@ public class ListPtsSceneResponseBody extends TeaModel {
         }
         public String getSceneName() {
             return this.sceneName;
+        }
+
+        public ListPtsSceneResponseBodySceneViewList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
