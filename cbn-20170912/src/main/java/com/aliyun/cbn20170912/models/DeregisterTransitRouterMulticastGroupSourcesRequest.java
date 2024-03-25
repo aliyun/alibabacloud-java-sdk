@@ -13,10 +13,10 @@ public class DeregisterTransitRouterMulticastGroupSourcesRequest extends TeaMode
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, without sending the actual request. Valid values:</p>
      * <br>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and sends the request.</p>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -28,7 +28,7 @@ public class DeregisterTransitRouterMulticastGroupSourcesRequest extends TeaMode
     public String groupIpAddress;
 
     /**
-     * <p>The IDs of the multicast sources that you want to delete.</p>
+     * <p>A list of multicast source IDs.</p>
      */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;

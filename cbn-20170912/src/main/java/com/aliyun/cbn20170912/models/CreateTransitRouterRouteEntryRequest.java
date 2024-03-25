@@ -38,7 +38,7 @@ public class CreateTransitRouterRouteEntryRequest extends TeaModel {
     /**
      * <p>The description of the route.</p>
      * <br>
-     * <p>The description must be 0 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).</p>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
      */
     @NameInMap("TransitRouterRouteEntryDescription")
     public String transitRouterRouteEntryDescription;
@@ -52,7 +52,7 @@ public class CreateTransitRouterRouteEntryRequest extends TeaModel {
     /**
      * <p>The name of the route.</p>
      * <br>
-     * <p>The name must be 0 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
      */
     @NameInMap("TransitRouterRouteEntryName")
     public String transitRouterRouteEntryName;

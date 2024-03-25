@@ -17,7 +17,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -87,7 +87,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         public String cenId;
 
         /**
-         * <p>The description of the health check.</p>
+         * <p>The description.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -101,13 +101,13 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         /**
          * <p>Indicates whether probing is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
+         * <p>*   **true**: Probing is enabled.</p>
          * <br>
-         * <p>    If probing is enabled, the system does not switch to another route when the detected route is not reachable.</p>
+         * <p>        If you enable probing, the system does not switch to another route if the detected route is not reachable.</p>
          * <br>
-         * <p>*   **false**: no</p>
+         * <p>*   **false**: Probing is disabled.</p>
          * <br>
-         * <p>    If probing is disabled and a redundant route is specified, the system switches to the redundant route when the detected route is not reachable.</p>
+         * <p>          If probing is disabled and a redundant route is specified, the system switches to the redundant route when the detected route is not reachable.</p>
          */
         @NameInMap("HealthCheckOnly")
         public Boolean healthCheckOnly;
@@ -131,7 +131,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         public Integer healthyThreshold;
 
         /**
-         * <p>The ID of the VBR.</p>
+         * <p>The VBR ID.</p>
          */
         @NameInMap("VbrInstanceId")
         public String vbrInstanceId;

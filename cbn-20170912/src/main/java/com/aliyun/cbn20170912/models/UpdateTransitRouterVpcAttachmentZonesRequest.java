@@ -184,8 +184,6 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends TeaModel {
 
         /**
          * <p>The ID of the zone where the vSwitch that you want to remove from the VPC connection is deployed.</p>
-         * <br>
-         * <p>You can remove at most 10 vSwitches from a VPC in each call.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

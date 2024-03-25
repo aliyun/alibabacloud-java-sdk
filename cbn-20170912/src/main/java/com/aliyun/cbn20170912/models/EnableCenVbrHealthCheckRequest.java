@@ -10,6 +10,11 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The description of the health check.</p>
+     * <br>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 

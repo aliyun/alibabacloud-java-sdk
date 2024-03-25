@@ -11,7 +11,7 @@ public class DescribeRouteServicesInCenRequest extends TeaModel {
     public String accessRegionId;
 
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -25,7 +25,7 @@ public class DescribeRouteServicesInCenRequest extends TeaModel {
     public String host;
 
     /**
-     * <p>The ID of the region where the cloud service is deployed.</p>
+     * <p>The region ID of the cloud service.</p>
      * <br>
      * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
      */
@@ -33,7 +33,7 @@ public class DescribeRouteServicesInCenRequest extends TeaModel {
     public String hostRegionId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) that is associated with the cloud service.</p>
+     * <p>The ID of the VPC associated with the cloud service.</p>
      */
     @NameInMap("HostVpcId")
     public String hostVpcId;
@@ -51,7 +51,7 @@ public class DescribeRouteServicesInCenRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Default value: **10**. Valid values: **1** to **50**.</p>
+     * <p>The number of entries per page. Default value: **10**. Valid values: **1** to **50**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

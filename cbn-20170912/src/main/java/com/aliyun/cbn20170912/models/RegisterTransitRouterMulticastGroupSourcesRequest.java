@@ -32,9 +32,7 @@ public class RegisterTransitRouterMulticastGroupSourcesRequest extends TeaModel 
     public String groupIpAddress;
 
     /**
-     * <p>The IDs of ENIs.</p>
-     * <br>
-     * <p>>  This parameter is required.</p>
+     * <p>The IDs of the ENIs.</p>
      */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;

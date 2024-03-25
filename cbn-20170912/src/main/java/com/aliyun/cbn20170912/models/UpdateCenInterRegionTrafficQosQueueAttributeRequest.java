@@ -36,7 +36,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaMode
     /**
      * <p>The new description of the queue.</p>
      * <br>
-     * <p>The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.</p>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
      */
     @NameInMap("QosQueueDescription")
     public String qosQueueDescription;
@@ -50,7 +50,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaMode
     /**
      * <p>The new name of the queue.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
      */
     @NameInMap("QosQueueName")
     public String qosQueueName;

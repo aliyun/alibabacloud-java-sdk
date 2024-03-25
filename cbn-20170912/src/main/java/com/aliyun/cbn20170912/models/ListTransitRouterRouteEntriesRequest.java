@@ -59,11 +59,11 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
     public java.util.List<String> transitRouterRouteEntryIds;
 
     /**
-     * <p>The route name.</p>
+     * <p>The name of the route.</p>
      * <br>
-     * <p>The name must be 0 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
      * <br>
-     * <p>>  You can use this parameter to query only static routes in the specified route table. This parameter is incompatible with query conditions other than TransitRouterRouteEntryIds.</p>
+     * <p>>  You can use this parameter to query only static routes in the specified route table. This parameter conflicts with other query conditions except for TransitRouterRouteEntryIds.</p>
      */
     @NameInMap("TransitRouterRouteEntryNames")
     public java.util.List<String> transitRouterRouteEntryNames;

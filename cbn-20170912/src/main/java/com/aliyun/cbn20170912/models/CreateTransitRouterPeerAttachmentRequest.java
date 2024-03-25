@@ -14,7 +14,10 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     public Boolean autoPublishRouteEnabled;
 
     /**
-     * <p>The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
+     * <p>The bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
+     * <br>
+     * <p>*   This parameter specifies the maximum bandwidth value for the inter-region connection if you set **BandwidthType** to **BandwidthPackage**.</p>
+     * <p>*   This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set **BandwidthType** to **DataTransfer**.</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
@@ -22,7 +25,8 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     /**
      * <p>The method that is used to allocate bandwidth to the inter-region connection. Valid values:</p>
      * <br>
-     * <p>**BandwidthPackage**: allocates bandwidth from a bandwidth plan.</p>
+     * <p>*   **BandwidthPackage**: allocates bandwidth from a bandwidth plan.</p>
+     * <p>*   **DataTransfer**: bandwidth is billed based on the pay-by-data-transfer metering method.</p>
      */
     @NameInMap("BandwidthType")
     public String bandwidthType;
@@ -30,7 +34,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     /**
      * <p>The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.</p>
      * <br>
-     * <p>If this parameter is not set, the system allocates bandwidth that is used for testing purposes to the inter-region connection. The default bandwidth for testing purpose is 1 Kbit/s. You can use the bandwidth to test the connectivity of IPv4 networks.</p>
+     * <p>*   If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.</p>
      */
     @NameInMap("CenBandwidthPackageId")
     public String cenBandwidthPackageId;
@@ -52,9 +56,11 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The default link type. Valid values:</p>
-     * <p>- **Platinum**: only available for the **Pay-By-Data-Transfer** bandwidth.</p>
-     * <p>- **Gold** (default)</p>
+     * <p>The default line type.</p>
+     * <br>
+     * <p>Valid values: Platinum and Gold.</p>
+     * <br>
+     * <p>Platinum is supported only when BandwidthType is set to DataTransfer.</p>
      */
     @NameInMap("DefaultLinkType")
     public String defaultLinkType;
@@ -111,7 +117,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     /**
      * <p>The description of the inter-region connection.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
      */
     @NameInMap("TransitRouterAttachmentDescription")
     public String transitRouterAttachmentDescription;
@@ -119,7 +125,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     /**
      * <p>The name of the inter-region connection.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
      */
     @NameInMap("TransitRouterAttachmentName")
     public String transitRouterAttachmentName;

@@ -4,9 +4,22 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DeleteTransitRouteTableAggregationRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Default values:</p>
+     * <br>
+     * <p>*   **false** (default): performs only a dry run.</p>
+     * <p>*   **true**: performs a dry run and performs the actual request. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -22,9 +35,19 @@ public class DeleteTransitRouteTableAggregationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The destination CIDR block of the aggregate route.</p>
+     * <br>
+     * <p>>  The following CIDR blocks are not supported:</p>
+     * <p>>*   CIDR blocks that start with 0 or 100.64.</p>
+     * <p>>*   Multicast CIDR blocks, including 224.0.0.1 to 239.255.255.254.</p>
+     */
     @NameInMap("TransitRouteTableAggregationCidr")
     public String transitRouteTableAggregationCidr;
 
+    /**
+     * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+     */
     @NameInMap("TransitRouteTableId")
     public String transitRouteTableId;
 

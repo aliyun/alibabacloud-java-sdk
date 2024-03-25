@@ -45,9 +45,9 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The new description of the VPN attachment.</p>
+     * <p>The new description of the VPN connection.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</p>
      */
     @NameInMap("TransitRouterAttachmentDescription")
     public String transitRouterAttachmentDescription;
@@ -59,9 +59,9 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends TeaModel {
     public String transitRouterAttachmentId;
 
     /**
-     * <p>The name of the VPN attachment.</p>
+     * <p>The name of the VPN connection.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
      */
     @NameInMap("TransitRouterAttachmentName")
     public String transitRouterAttachmentName;

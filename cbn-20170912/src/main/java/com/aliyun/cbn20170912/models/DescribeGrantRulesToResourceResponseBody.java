@@ -85,7 +85,7 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
 
     public static class DescribeGrantRulesToResourceResponseBodyGrantRules extends TeaModel {
         /**
-         * <p>The CEN instance ID.</p>
+         * <p>The ID of the CEN instance.</p>
          */
         @NameInMap("CenId")
         public String cenId;
@@ -96,6 +96,9 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         @NameInMap("CenOwnerId")
         public Long cenOwnerId;
 
+        /**
+         * <p>The timestamp when the permissions were granted. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 

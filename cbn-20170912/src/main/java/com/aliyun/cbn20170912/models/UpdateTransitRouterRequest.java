@@ -46,7 +46,7 @@ public class UpdateTransitRouterRequest extends TeaModel {
     /**
      * <p>The description of the transit router.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
      */
     @NameInMap("TransitRouterDescription")
     public String transitRouterDescription;
@@ -60,7 +60,7 @@ public class UpdateTransitRouterRequest extends TeaModel {
     /**
      * <p>The transit router name.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
      */
     @NameInMap("TransitRouterName")
     public String transitRouterName;

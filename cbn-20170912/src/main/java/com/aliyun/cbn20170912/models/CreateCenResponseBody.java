@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateCenResponseBody extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The CEN instance ID.</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -58,7 +58,7 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
     /**
      * <p>The description of the custom route table.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the description empty.</p>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
      */
     @NameInMap("TransitRouterRouteTableDescription")
     public String transitRouterRouteTableDescription;
@@ -66,7 +66,7 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
     /**
      * <p>The name of the custom route table.</p>
      * <br>
-     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the name empty.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
      */
     @NameInMap("TransitRouterRouteTableName")
     public String transitRouterRouteTableName;
