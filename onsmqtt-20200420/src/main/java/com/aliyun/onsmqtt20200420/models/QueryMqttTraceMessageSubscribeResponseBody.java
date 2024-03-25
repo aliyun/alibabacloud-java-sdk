@@ -4,18 +4,33 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The delivery trace of the queried message.</p>
+     */
     @NameInMap("MessageTraceLists")
     public java.util.List<QueryMqttTraceMessageSubscribeResponseBodyMessageTraceLists> messageTraceLists;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The unique ID that the system generates for the request. You can use the ID to troubleshoot issues. This parameter is a common parameter.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned delivery traces.</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -65,21 +80,48 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
     }
 
     public static class QueryMqttTraceMessageSubscribeResponseBodyMessageTraceLists extends TeaModel {
+        /**
+         * <p>The action on the message. Valid values:</p>
+         * <br>
+         * <p>*   **sub**: The ApsaraMQ for MQTT client subscribes to the message.</p>
+         * <p>*   **push_offline**: The ApsaraMQ for MQTT broker pushes the offline message to the ApsaraMQ for MQTT client.</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The code returned for the action on the message. Valid values:</p>
+         * <br>
+         * <p>*   **mqtt.trace.action.msg.sub**: The value that is returned if the value of Action is **sub**.</p>
+         * <p>*   **mqtt.trace.action.msg.push.offline**: The value that is returned if the value of Action is **push_offline**.</p>
+         */
         @NameInMap("ActionCode")
         public String actionCode;
 
+        /**
+         * <p>The returned information for the action on the message. Valid values:</p>
+         * <br>
+         * <p>*   **Push To Mqtt Client**: The value that is returned if the value of Action is **sub**.</p>
+         * <p>*   **Push Offline Msg To Mqtt Client**: The value that is returned if the value of Action is **push_offline**.</p>
+         */
         @NameInMap("ActionInfo")
         public String actionInfo;
 
+        /**
+         * <p>The ID of the client that subscribes to the message.</p>
+         */
         @NameInMap("ClientId")
         public String clientId;
 
+        /**
+         * <p>The message ID.</p>
+         */
         @NameInMap("MsgId")
         public String msgId;
 
+        /**
+         * <p>The time when the message was delivered.</p>
+         */
         @NameInMap("Time")
         public String time;
 

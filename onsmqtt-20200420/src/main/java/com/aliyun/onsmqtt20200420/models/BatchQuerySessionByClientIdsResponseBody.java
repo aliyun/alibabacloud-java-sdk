@@ -4,9 +4,15 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
+    /**
+     * <p>The status list of all queried ApsaraMQ for MQTT clients.</p>
+     */
     @NameInMap("OnlineStatusList")
     public java.util.List<BatchQuerySessionByClientIdsResponseBodyOnlineStatusList> onlineStatusList;
 
+    /**
+     * <p>The request ID. This parameter is a common parameter.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,18 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
     }
 
     public static class BatchQuerySessionByClientIdsResponseBodyOnlineStatusList extends TeaModel {
+        /**
+         * <p>The ID of the ApsaraMQ for MQTT client. For more information about client IDs, see [Terms](~~42420~~).</p>
+         */
         @NameInMap("ClientId")
         public String clientId;
 
+        /**
+         * <p>Indicates whether the ApsaraMQ for MQTT client is online. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("OnlineStatus")
         public Boolean onlineStatus;
 
