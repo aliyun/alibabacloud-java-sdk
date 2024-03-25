@@ -40,6 +40,9 @@ public class CreateFeatureViewRequest extends TeaModel {
     @NameInMap("WriteMethod")
     public String writeMethod;
 
+    @NameInMap("WriteToFeatureDB")
+    public Boolean writeToFeatureDB;
+
     public static CreateFeatureViewRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFeatureViewRequest self = new CreateFeatureViewRequest();
         return TeaModel.build(map, self);
@@ -139,6 +142,14 @@ public class CreateFeatureViewRequest extends TeaModel {
     }
     public String getWriteMethod() {
         return this.writeMethod;
+    }
+
+    public CreateFeatureViewRequest setWriteToFeatureDB(Boolean writeToFeatureDB) {
+        this.writeToFeatureDB = writeToFeatureDB;
+        return this;
+    }
+    public Boolean getWriteToFeatureDB() {
+        return this.writeToFeatureDB;
     }
 
     public static class CreateFeatureViewRequestFields extends TeaModel {

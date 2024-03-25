@@ -73,6 +73,9 @@ public class GetFeatureViewResponseBody extends TeaModel {
     @NameInMap("WriteMethod")
     public String writeMethod;
 
+    @NameInMap("WriteToFeatureDB")
+    public Boolean writeToFeatureDB;
+
     public static GetFeatureViewResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetFeatureViewResponseBody self = new GetFeatureViewResponseBody();
         return TeaModel.build(map, self);
@@ -260,6 +263,14 @@ public class GetFeatureViewResponseBody extends TeaModel {
     }
     public String getWriteMethod() {
         return this.writeMethod;
+    }
+
+    public GetFeatureViewResponseBody setWriteToFeatureDB(Boolean writeToFeatureDB) {
+        this.writeToFeatureDB = writeToFeatureDB;
+        return this;
+    }
+    public Boolean getWriteToFeatureDB() {
+        return this.writeToFeatureDB;
     }
 
     public static class GetFeatureViewResponseBodyFields extends TeaModel {
