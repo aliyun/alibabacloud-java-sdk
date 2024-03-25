@@ -4,27 +4,62 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateAndBindNasFileSystemRequest extends TeaModel {
+    /**
+     * <p>The description of the NAS file system.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the desktop group.</p>
+     */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
+    /**
+     * <p>Specifies whether to encrypt data in the NAS file system. You can use keys that are hosted by Key Management Service (KMS) to encrypt data in a file system. When you read and write the encrypted data, the data is automatically decrypted. Valid values:</p>
+     * <br>
+     * <p>*   0: does not encrypt data in the NAS file system.</p>
+     * <p>*   1: encrypts data in the NAS file system by using a NAS-managed key. ` If you set  `FileSystemType`  to  `standard`  or  `extreme`, you can use a NAS-managed key to encrypt data in a NAS file system.`</p>
+     * <p>*   2: encrypts data in the NAS file system by using a KMS-managed key. `If` you set FileSystemType`  to  `extreme`, you can use a KMS-managed key to encrypt data in a NAS file system.`</p>
+     * <br>
+     * <p>Default value: 0.</p>
+     */
     @NameInMap("EncryptType")
     public Integer encryptType;
 
+    /**
+     * <p>The list of users.</p>
+     */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
+    /**
+     * <p>The name of the NAS file system.</p>
+     */
     @NameInMap("FileSystemName")
     public String fileSystemName;
 
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The storage type of the NAS file system. Valid values:</p>
+     * <br>
+     * <p>*   Capacity</p>
+     * <p>*   Performance</p>
+     * <br>
+     * <p>Default value: Capacity.</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 

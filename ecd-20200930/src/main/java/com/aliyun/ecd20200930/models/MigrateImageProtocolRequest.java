@@ -4,12 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class MigrateImageProtocolRequest extends TeaModel {
+    /**
+     * <p>The image IDs.</p>
+     */
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The protocol of the image. Valid value: ASP.</p>
+     */
     @NameInMap("TargetProtocolType")
     public String targetProtocolType;
 
