@@ -4,9 +4,15 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
+    /**
+     * <p>The message traces.</p>
+     */
     @NameInMap("MessageTraceLists")
     public java.util.List<QueryMqttTraceMessagePublishResponseBodyMessageTraceLists> messageTraceLists;
 
+    /**
+     * <p>The request ID. You can use the ID to troubleshoot issues. This parameter is a common parameter.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,48 @@ public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
     }
 
     public static class QueryMqttTraceMessagePublishResponseBodyMessageTraceLists extends TeaModel {
+        /**
+         * <p>The action on the message. Valid values:</p>
+         * <br>
+         * <p>*   **pub_mqtt**: indicates that the message was sent by an ApsaraMQ for MQTT client.</p>
+         * <p>*   **pub_mq**: indicates that the message was sent by an ApsaraMQ for RocketMQ client.</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The returned code for the action on the message. Valid values:</p>
+         * <br>
+         * <p>*   **mqtt.trace.action.msg.pub.mqtt**: This value is returned if the value of Action is **pub_mqtt**.</p>
+         * <p>*   **mqtt.trace.action.msg.pub.mq**: This value is returned if the value of Action is **pub_mq**.</p>
+         */
         @NameInMap("ActionCode")
         public String actionCode;
 
+        /**
+         * <p>The returned information for the action on the message. Valid values:</p>
+         * <br>
+         * <p>*   **Pub From Mqtt Client**: This value is returned if the value of Action is **pub_mqtt**.</p>
+         * <p>*   **Pub From MQ**: This value is returned if the value of Action is **pub_mq**.</p>
+         */
         @NameInMap("ActionInfo")
         public String actionInfo;
 
+        /**
+         * <p>The ID of the client that sends the message.</p>
+         */
         @NameInMap("ClientId")
         public String clientId;
 
+        /**
+         * <p>The message ID.</p>
+         */
         @NameInMap("MsgId")
         public String msgId;
 
+        /**
+         * <p>The time when the message was sent.</p>
+         */
         @NameInMap("Time")
         public String time;
 

@@ -4,9 +4,15 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class SendMessageResponseBody extends TeaModel {
+    /**
+     * <p>The unique message ID that is returned by the ApsaraMQ for MQTT broker after the message is sent.</p>
+     */
     @NameInMap("MsgId")
     public String msgId;
 
+    /**
+     * <p>The unique ID that the system generates for the request. This parameter is a common parameter.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

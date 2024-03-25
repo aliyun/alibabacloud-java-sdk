@@ -4,9 +4,15 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class ListGroupIdResponseBody extends TeaModel {
+    /**
+     * <p>The details of a queried group.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListGroupIdResponseBodyData> data;
 
+    /**
+     * <p>The request ID. This parameter is a common parameter.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,36 @@ public class ListGroupIdResponseBody extends TeaModel {
     }
 
     public static class ListGroupIdResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the group was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The queried group that belongs to the ApsaraMQ for MQTT instance.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>Indicates whether a separate namespace is configured for the ApsaraMQ for MQTT instance. Valid values:</p>
+         * <br>
+         * <p>*   **true**: A separate namespace is configured for the ApsaraMQ for MQTT instance. Resource names must be unique within an ApsaraMQ for MQTT instance but can be the same across ApsaraMQ for MQTT instances.</p>
+         * <p>*   **false**: No separate namespace is configured for the ApsaraMQ for MQTT instance. Resource names must be globally unique within an ApsaraMQ for MQTT instance and across ApsaraMQ for MQTT instances.</p>
+         */
         @NameInMap("IndependentNaming")
         public Boolean independentNaming;
 
+        /**
+         * <p>The ID of the ApsaraMQ for MQTT instance to which the group belongs.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The time when the group was last updated.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

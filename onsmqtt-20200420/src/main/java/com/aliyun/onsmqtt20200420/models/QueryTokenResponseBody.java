@@ -4,9 +4,18 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class QueryTokenResponseBody extends TeaModel {
+    /**
+     * <p>The unique ID that the system generates for the request. This parameter is a common parameter.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the queried token. Valid values:</p>
+     * <br>
+     * <p>*   **true**: indicates the token is valid.</p>
+     * <p>*   **false**: indicates the token is invalid.</p>
+     */
     @NameInMap("TokenStatus")
     public Boolean tokenStatus;
 
