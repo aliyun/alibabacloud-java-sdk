@@ -33,6 +33,9 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     @NameInMap("DiskType")
     public String diskType;
 
+    @NameInMap("Duration")
+    public Integer duration;
+
     /**
      * <p>The Internet traffic for the instance.</p>
      * <br>
@@ -59,6 +62,9 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
      */
     @NameInMap("IoMaxSpec")
     public String ioMaxSpec;
+
+    @NameInMap("PaidType")
+    public Integer paidType;
 
     /**
      * <p>The number of partitions. We recommend that you configure this parameter.</p>
@@ -150,6 +156,14 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
         return this.diskType;
     }
 
+    public CreatePrePayOrderShrinkRequest setDuration(Integer duration) {
+        this.duration = duration;
+        return this;
+    }
+    public Integer getDuration() {
+        return this.duration;
+    }
+
     public CreatePrePayOrderShrinkRequest setEipMax(Integer eipMax) {
         this.eipMax = eipMax;
         return this;
@@ -172,6 +186,14 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     }
     public String getIoMaxSpec() {
         return this.ioMaxSpec;
+    }
+
+    public CreatePrePayOrderShrinkRequest setPaidType(Integer paidType) {
+        this.paidType = paidType;
+        return this;
+    }
+    public Integer getPaidType() {
+        return this.paidType;
     }
 
     public CreatePrePayOrderShrinkRequest setPartitionNum(Integer partitionNum) {

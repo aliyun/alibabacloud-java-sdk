@@ -10,11 +10,17 @@ public class GetConsumerListRequest extends TeaModel {
     @NameInMap("ConsumerId")
     public String consumerId;
 
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
     /**
      * <p>The ID of the instance to which the consumer group belongs.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     /**
      * <p>The region ID of the instance to which the consumer group belongs.</p>
@@ -35,12 +41,28 @@ public class GetConsumerListRequest extends TeaModel {
         return this.consumerId;
     }
 
+    public GetConsumerListRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
     public GetConsumerListRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetConsumerListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public GetConsumerListRequest setRegionId(String regionId) {

@@ -4,15 +4,33 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class EnableAutoTopicCreationRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The operation that you want to perform. Valid values:</p>
+     * <br>
+     * <p>*   enable: enables the automatic topic creation feature.</p>
+     * <p>*   disable: disables the automatic topic creation feature.</p>
+     * <p>*   updatePartition: changes the number of partitions in topics that are automatically created.</p>
+     */
     @NameInMap("Operate")
     public String operate;
 
+    /**
+     * <p>The changed number of partitions in topics that are automatically created.</p>
+     * <br>
+     * <p>This parameter takes effect only if you set Operate to updatePartition.</p>
+     */
     @NameInMap("PartitionNum")
     public Long partitionNum;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

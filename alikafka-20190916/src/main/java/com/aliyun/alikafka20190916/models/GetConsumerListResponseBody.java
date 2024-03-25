@@ -16,11 +16,17 @@ public class GetConsumerListResponseBody extends TeaModel {
     @NameInMap("ConsumerList")
     public GetConsumerListResponseBodyConsumerList consumerList;
 
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
     /**
      * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
@@ -33,6 +39,9 @@ public class GetConsumerListResponseBody extends TeaModel {
      */
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Total")
+    public Long total;
 
     public static GetConsumerListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetConsumerListResponseBody self = new GetConsumerListResponseBody();
@@ -55,12 +64,28 @@ public class GetConsumerListResponseBody extends TeaModel {
         return this.consumerList;
     }
 
+    public GetConsumerListResponseBody setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
     public GetConsumerListResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public GetConsumerListResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public GetConsumerListResponseBody setRequestId(String requestId) {
@@ -77,6 +102,14 @@ public class GetConsumerListResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetConsumerListResponseBody setTotal(Long total) {
+        this.total = total;
+        return this;
+    }
+    public Long getTotal() {
+        return this.total;
     }
 
     public static class GetConsumerListResponseBodyConsumerListConsumerVOTagsTagVO extends TeaModel {
