@@ -14,7 +14,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     public Boolean autoPublishRouteEnabled;
 
     /**
-     * <p>The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
+     * <p>The bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
      * <br>
      * <p>*   This parameter specifies the maximum bandwidth value for the inter-region connection if you set **BandwidthType** to **BandwidthPackage**.</p>
      * <p>*   This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set **BandwidthType** to **DataTransfer**.</p>
@@ -34,7 +34,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     /**
      * <p>The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.</p>
      * <br>
-     * <p>> If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.</p>
+     * <p>>  If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.</p>
      */
     @NameInMap("CenBandwidthPackageId")
     public String cenBandwidthPackageId;
@@ -50,9 +50,11 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     public String clientToken;
 
     /**
-     * <p>The default link type. Valid values:</p>
-     * <p>- **Platinum**: only available for the **Pay-By-Data-Transfer** bandwidth.</p>
-     * <p>- **Gold** (default)</p>
+     * <p>The default line type.</p>
+     * <br>
+     * <p>Valid values: Platinum and Gold.</p>
+     * <br>
+     * <p>Platinum is supported only when BandwidthType is set to DataTransfer.</p>
      */
     @NameInMap("DefaultLinkType")
     public String defaultLinkType;
@@ -81,7 +83,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     /**
      * <p>The new description of the inter-region connection.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
      */
     @NameInMap("TransitRouterAttachmentDescription")
     public String transitRouterAttachmentDescription;
@@ -95,7 +97,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     /**
      * <p>The new name of the inter-region connection.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
      */
     @NameInMap("TransitRouterAttachmentName")
     public String transitRouterAttachmentName;

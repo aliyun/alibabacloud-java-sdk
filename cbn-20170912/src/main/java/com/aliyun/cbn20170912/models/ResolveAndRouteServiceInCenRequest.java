@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResolveAndRouteServiceInCenRequest extends TeaModel {
     /**
-     * <p>The ID of the region in which the cloud service that you want to access is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>The IDs of the regions where the cloud service is accessed.</p>
      */
     @NameInMap("AccessRegionIds")
     public java.util.List<String> accessRegionIds;
@@ -31,7 +29,7 @@ public class ResolveAndRouteServiceInCenRequest extends TeaModel {
     /**
      * <p>The description of the cloud service.</p>
      * <br>
-     * <p>The description can be empty or 2 to 256 characters in length. It must start with a letter, and can contain digits, hyphens (-), periods (.), and underscores (\_). It cannot start with `http://` or `https://`.</p>
+     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
      */
     @NameInMap("Description")
     public String description;

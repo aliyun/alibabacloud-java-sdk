@@ -29,7 +29,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The queried VBR connections.</p>
+     * <p>A list of VBR connections.</p>
      */
     @NameInMap("TransitRouterAttachments")
     public java.util.List<ListTransitRouterVbrAttachmentsResponseBodyTransitRouterAttachments> transitRouterAttachments;
@@ -117,10 +117,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
 
     public static class ListTransitRouterVbrAttachmentsResponseBodyTransitRouterAttachments extends TeaModel {
         /**
-         * <p>Indicates whether the Enterprise Edition transit router automatically advertises routes to the VBR. Valid values:</p>
+         * <p>Indicates whether the Enterprise Edition transit router is allowed to automatically advertise routes to the VBR. Valid values:</p>
          * <br>
-         * <p>*   **false** (default): no</p>
-         * <p>*   **true**: yes</p>
+         * <p>*   **false** (default)</p>
+         * <p>*   **true**</p>
          */
         @NameInMap("AutoPublishRouteEnabled")
         public Boolean autoPublishRouteEnabled;
@@ -132,23 +132,29 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         public String cenId;
 
         /**
-         * <p>The time when the VBR connection was established.</p>
+         * <p>The time when the VBR connection was created.</p>
          * <br>
-         * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The entity that pays the fees of the network instance. Valid values:</p>
+         * <br>
+         * <p>*   **PayByCenOwner**: the Alibaba Cloud account that owns the CEN instance.</p>
+         * <p>*   **PayByResourceOwner**: the Alibaba Cloud account that owns the network instance.</p>
+         */
         @NameInMap("OrderType")
         public String orderType;
 
         /**
          * <p>The type of resource to which the transit router is connected. Valid values:</p>
          * <br>
-         * <p>*   **VPC**: VPC</p>
-         * <p>*   **CCN**: Cloud Connect Network (CCN) instance</p>
-         * <p>*   **VBR**: VBR</p>
-         * <p>*   **TR**: transit router</p>
+         * <p>*   **VPC**</p>
+         * <p>*   **CCN**</p>
+         * <p>*   **VBR**</p>
+         * <p>*   **TR**</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -156,16 +162,16 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         /**
          * <p>The status of the VBR connection. Valid values:</p>
          * <br>
-         * <p>*   **Attached**: The VBR connection is created on the transit router.</p>
-         * <p>*   **Attaching**: The VBR connection is being created on the transit router.</p>
-         * <p>*   **Detaching**: The VBR connection is being deleted from the transit router.</p>
-         * <p>*   **Detached**: The VBR connection is deleted from the transit router.</p>
+         * <p>*   **Attached**</p>
+         * <p>*   **Attaching**</p>
+         * <p>*   **Detaching**</p>
+         * <p>*   **Detached**</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The tags.</p>
+         * <p>A list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterVbrAttachmentsResponseBodyTransitRouterAttachmentsTags> tags;
@@ -189,7 +195,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         public String transitRouterAttachmentName;
 
         /**
-         * <p>The ID of the Enterprise Edition transit router.</p>
+         * <p>The description of the Enterprise Edition transit router.</p>
          */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
@@ -201,7 +207,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         public String vbrId;
 
         /**
-         * <p>The ID of the account to which the VBR belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
          */
         @NameInMap("VbrOwnerId")
         public Long vbrOwnerId;

@@ -225,8 +225,8 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
          * <p>*   **VPC**: VPC</p>
          * <p>*   **local**: system route. No next hop is specified.</p>
          * <p>*   **TR**: transit router</p>
-         * <p>*   \*\*BlackHole\*\*: blackhole route. No next hop is specified.</p>
-         * <p>*   \*\*EcRouterInterface\*\*: router interface for Express Connect</p>
+         * <p>*   **BlackHole**: blackhole route. No next hop is specified.</p>
+         * <p>*   **EcRouterInterface**: router interface for Express Connect</p>
          * <p>*   **HealthCheck**: health check</p>
          * <p>*   **AS**: access gateway for CCN</p>
          * <p>*   **classicLink**: classic network-type instance</p>

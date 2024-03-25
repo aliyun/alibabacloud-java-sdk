@@ -66,9 +66,7 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends TeaMode
     public String transitRouterMulticastDomainId;
 
     /**
-     * <p>The vSwitch IDs.</p>
-     * <br>
-     * <p>You can specify at most 20 IDs.</p>
+     * <p>The IDs of vSwitches.</p>
      */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;

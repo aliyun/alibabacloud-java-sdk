@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeRouteServicesInCenResponseBody extends TeaModel {
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -130,13 +130,13 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         public String host;
 
         /**
-         * <p>The ID of the region where the cloud service is deployed.</p>
+         * <p>The region ID of the cloud service.</p>
          */
         @NameInMap("HostRegionId")
         public String hostRegionId;
 
         /**
-         * <p>The ID of the VPC that is associated with the cloud service.</p>
+         * <p>The ID of the VPC associated with the cloud service.</p>
          */
         @NameInMap("HostVpcId")
         public String hostVpcId;
@@ -144,9 +144,9 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         /**
          * <p>The status of the cloud service. Valid values:</p>
          * <br>
-         * <p>*   **Creating**: The cloud service is being created.</p>
-         * <p>*   **Active**: The cloud service is available.</p>
-         * <p>*   **Deleting**: The cloud service is being deleted.</p>
+         * <p>*   **Creating**</p>
+         * <p>*   **Active**</p>
+         * <p>*   **Deleting**</p>
          */
         @NameInMap("Status")
         public String status;

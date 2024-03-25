@@ -17,7 +17,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
     public String childInstanceRouteTableId;
 
     /**
-     * <p>The number of entries returned per page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: **20**.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;

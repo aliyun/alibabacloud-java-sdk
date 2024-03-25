@@ -85,7 +85,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
 
     public static class DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule extends TeaModel {
         /**
-         * <p>The CEN instance ID.</p>
+         * <p>The ID of the CEN instance.</p>
          */
         @NameInMap("CenId")
         public String cenId;
@@ -97,7 +97,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         public Long cenOwnerId;
 
         /**
-         * <p>The network instance ID.</p>
+         * <p>The ID of the network instance.</p>
          */
         @NameInMap("ChildInstanceId")
         public String childInstanceId;
@@ -117,14 +117,19 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         /**
          * <p>The type of the network instance. Valid values:</p>
          * <br>
-         * <p>*   **VPC**</p>
-         * <p>*   **VBR**</p>
-         * <p>*   **CCN**</p>
-         * <p>*   **VPN**</p>
+         * <p>*   **VPC**: VPC</p>
+         * <p>*   **VBR**: VBR</p>
+         * <p>*   **CCN**: CCN instance</p>
+         * <p>*   **VPN**: IPsec-VPN connection</p>
          */
         @NameInMap("ChildInstanceType")
         public String childInstanceType;
 
+        /**
+         * <p>The time when the permissions were granted to the CEN instance.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 

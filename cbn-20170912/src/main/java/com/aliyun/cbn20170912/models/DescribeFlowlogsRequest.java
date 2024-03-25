@@ -57,13 +57,13 @@ public class DescribeFlowlogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Minimum value: **1**. Default value: **20**.</p>
+     * <p>The number of entries per page. Minimum value: **1**. Default value: **20**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

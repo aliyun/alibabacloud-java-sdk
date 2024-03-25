@@ -229,7 +229,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tag key.</p>
+         * <p>The information about the tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsTags> tags;

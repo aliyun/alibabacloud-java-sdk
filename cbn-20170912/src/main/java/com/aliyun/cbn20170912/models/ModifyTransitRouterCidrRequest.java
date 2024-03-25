@@ -23,7 +23,7 @@ public class ModifyTransitRouterCidrRequest extends TeaModel {
     /**
      * <p>The new description of the transit router CIDR block.</p>
      * <br>
-     * <p>The description must be 1 to 256 characters in length.</p>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -40,7 +40,7 @@ public class ModifyTransitRouterCidrRequest extends TeaModel {
     /**
      * <p>The new name of the transit router CIDR block.</p>
      * <br>
-     * <p>The name must be 1 to 128 characters in length.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
      */
     @NameInMap("Name")
     public String name;

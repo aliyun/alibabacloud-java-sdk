@@ -32,7 +32,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The queried inter-region connections.</p>
+     * <p>A list of inter-region connections.</p>
      */
     @NameInMap("TransitRouterAttachments")
     public java.util.List<ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachments> transitRouterAttachments;
@@ -120,16 +120,16 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
 
     public static class ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachments extends TeaModel {
         /**
-         * <p>Indicates whether the local Enterprise Edition transit router automatically advertises routes of the inter-region connection to the peer transit router. Valid values:</p>
+         * <p>Indicates whether the local Enterprise Edition transit router automatically advertises routes of the cross-region connection to the peer transit router. Valid values:</p>
          * <br>
-         * <p>*   **false** (default): no</p>
-         * <p>*   **true**: yes</p>
+         * <p>*   **false** (default)</p>
+         * <p>*   **true**</p>
          */
         @NameInMap("AutoPublishRouteEnabled")
         public Boolean autoPublishRouteEnabled;
 
         /**
-         * <p>The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
+         * <p>The bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
          * <br>
          * <p>*   This parameter specifies the maximum bandwidth value for the inter-region connection if you set **BandwidthType** to **BandwidthPackage**.</p>
          * <p>*   This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set **BandwidthType** to **DataTransfer**.</p>
@@ -140,9 +140,8 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         /**
          * <p>The bandwidth allocation method. Valid values:</p>
          * <br>
-         * <p>**BandwidthPackage**: allocates bandwidth from a bandwidth plan.</p>
-         * <br>
-         * <p>**DataTransfer**: bills bandwidth based on the pay-by-data-transfer metering method.</p>
+         * <p>*   **BandwidthPackage**: allocates bandwidth from a bandwidth plan.</p>
+         * <p>*   **DataTransfer**: bandwidth is billed based on the pay-by-data-transfer metering method.</p>
          */
         @NameInMap("BandwidthType")
         public String bandwidthType;
@@ -168,9 +167,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The default link type. Valid values:</p>
-         * <p>- **Gold**</p>
-         * <p>- **Platinum**</p>
+         * <p>The default line type.</p>
+         * <br>
+         * <p>*   **Gold** (default)</p>
+         * <p>*   **Platinum**</p>
          */
         @NameInMap("DefaultLinkType")
         public String defaultLinkType;
@@ -208,7 +208,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         /**
          * <p>The type of the resource to which the transit router is connected. Valid values:</p>
          * <br>
-         * <p>*   **VPC**: VPC</p>
+         * <p>*   **VPC**: virtual private cloud (VPC)</p>
          * <p>*   **CCN**: Cloud Connect Network (CCN) instance</p>
          * <p>*   **VBR**: virtual border router (VBR)</p>
          * <p>*   **TR**: transit router</p>
@@ -219,16 +219,16 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         /**
          * <p>The status of the inter-region connection. Valid values:</p>
          * <br>
-         * <p>*   **Attached**: The inter-region connection is created.</p>
-         * <p>*   **Attaching**: The inter-region connection is being created on the transit router.</p>
-         * <p>*   **Detaching**: The inter-region connection is being deleted from the transit router.</p>
-         * <p>*   **Detached**: The inter-region connection is deleted from the transit router.</p>
+         * <p>*   **Attached**</p>
+         * <p>*   **Attaching**</p>
+         * <p>*   **Detaching**</p>
+         * <p>*   **Detached**</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The tags.</p>
+         * <p>A list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachmentsTags> tags;

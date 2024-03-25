@@ -13,7 +13,7 @@ public class ModifyCenBandwidthPackageAttributeRequest extends TeaModel {
     /**
      * <p>The new description of the bandwidth plan.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -21,7 +21,7 @@ public class ModifyCenBandwidthPackageAttributeRequest extends TeaModel {
     /**
      * <p>The new name of the bandwidth plan.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
      */
     @NameInMap("Name")
     public String name;

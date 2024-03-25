@@ -37,8 +37,6 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest extends TeaMod
 
     /**
      * <p>The ID of the traffic classification rule.</p>
-     * <br>
-     * <p>You can specify at most 20 traffic classification rules.</p>
      */
     @NameInMap("TrafficMarkRuleIds")
     public java.util.List<String> trafficMarkRuleIds;

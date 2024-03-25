@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCenVbrHealthCheckRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -41,13 +41,13 @@ public class DescribeCenVbrHealthCheckRequest extends TeaModel {
     public String vbrInstanceId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that owns the VBR.</p>
+     * <p>The ID of the Alibaba Cloud account that owns the VBRs.</p>
      */
     @NameInMap("VbrInstanceOwnerId")
     public Long vbrInstanceOwnerId;
 
     /**
-     * <p>The ID of the region where the VBR is deployed.</p>
+     * <p>The ID of the region where the VBRs are deployed.</p>
      * <br>
      * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
      */
