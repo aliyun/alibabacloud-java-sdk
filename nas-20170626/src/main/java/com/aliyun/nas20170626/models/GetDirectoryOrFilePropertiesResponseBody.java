@@ -58,6 +58,9 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         @NameInMap("CTime")
         public String CTime;
 
+        @NameInMap("HasArchiveFile")
+        public Boolean hasArchiveFile;
+
         /**
          * <p>Indicates whether the directory contains files stored in the IA storage medium.</p>
          * <br>
@@ -156,6 +159,14 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         }
         public String getCTime() {
             return this.CTime;
+        }
+
+        public GetDirectoryOrFilePropertiesResponseBodyEntry setHasArchiveFile(Boolean hasArchiveFile) {
+            this.hasArchiveFile = hasArchiveFile;
+            return this;
+        }
+        public Boolean getHasArchiveFile() {
+            return this.hasArchiveFile;
         }
 
         public GetDirectoryOrFilePropertiesResponseBodyEntry setHasInfrequentAccessFile(Boolean hasInfrequentAccessFile) {

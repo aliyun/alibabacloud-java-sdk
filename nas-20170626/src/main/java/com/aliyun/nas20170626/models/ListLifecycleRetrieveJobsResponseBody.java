@@ -126,6 +126,9 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("StorageType")
+        public String storageType;
+
         /**
          * <p>The time when the task was updated.</p>
          * <br>
@@ -193,6 +196,14 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListLifecycleRetrieveJobsResponseBodyLifecycleRetrieveJobs setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
         public ListLifecycleRetrieveJobsResponseBodyLifecycleRetrieveJobs setUpdateTime(String updateTime) {

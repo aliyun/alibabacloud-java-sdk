@@ -691,6 +691,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @NameInMap("Ldap")
         public DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap ldap;
 
+        @NameInMap("MeteredArchiveSize")
+        public Long meteredArchiveSize;
+
         /**
          * <p>The storage usage of the Infrequent Access (IA) storage medium.</p>
          * <br>
@@ -894,6 +897,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
         public DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap getLdap() {
             return this.ldap;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setMeteredArchiveSize(Long meteredArchiveSize) {
+            this.meteredArchiveSize = meteredArchiveSize;
+            return this;
+        }
+        public Long getMeteredArchiveSize() {
+            return this.meteredArchiveSize;
         }
 
         public DescribeFileSystemsResponseBodyFileSystemsFileSystem setMeteredIASize(Long meteredIASize) {

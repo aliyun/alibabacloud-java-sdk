@@ -36,6 +36,9 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("StorageType")
+    public String storageType;
+
     public static DescribeLifecyclePoliciesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLifecyclePoliciesRequest self = new DescribeLifecyclePoliciesRequest();
         return TeaModel.build(map, self);
@@ -71,6 +74,14 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeLifecyclePoliciesRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
 }
