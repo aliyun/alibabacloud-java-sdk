@@ -97,6 +97,9 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("Email")
+        public String email;
+
         @NameInMap("Mobile")
         public String mobile;
 
@@ -189,6 +192,14 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public QueryBrokerDemandResponseBodyData setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
         }
 
         public QueryBrokerDemandResponseBodyData setMobile(String mobile) {
