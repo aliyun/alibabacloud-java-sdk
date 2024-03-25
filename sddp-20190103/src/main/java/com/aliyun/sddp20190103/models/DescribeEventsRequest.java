@@ -107,6 +107,13 @@ public class DescribeEventsRequest extends TeaModel {
     @NameInMap("UserName")
     public String userName;
 
+    /**
+     * <p>The risk level of the alert that is triggered. Valid values:</p>
+     * <br>
+     * <p>*   **1**: low</p>
+     * <p>*   **2**: medium</p>
+     * <p>*   **3**: high</p>
+     */
     @NameInMap("WarnLevel")
     public Integer warnLevel;
 

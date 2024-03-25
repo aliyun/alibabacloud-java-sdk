@@ -13,10 +13,10 @@ public class ManualTriggerMaskingProcessRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the content within the request and response, default value zh_cn. Valid values:</p>
      * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>*   **zh_cn**: Chinese</p>
+     * <p>*   **en_us**: English</p>
      */
     @NameInMap("Lang")
     public String lang;
