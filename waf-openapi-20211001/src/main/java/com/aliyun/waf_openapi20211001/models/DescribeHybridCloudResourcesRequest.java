@@ -60,12 +60,6 @@ public class DescribeHybridCloudResourcesRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
-    /**
-     * <p>The source IP address of the request. The system specifies this parameter.</p>
-     */
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     public static DescribeHybridCloudResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeHybridCloudResourcesRequest self = new DescribeHybridCloudResourcesRequest();
         return TeaModel.build(map, self);
@@ -133,14 +127,6 @@ public class DescribeHybridCloudResourcesRequest extends TeaModel {
     }
     public String getResourceManagerResourceGroupId() {
         return this.resourceManagerResourceGroupId;
-    }
-
-    public DescribeHybridCloudResourcesRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
 }

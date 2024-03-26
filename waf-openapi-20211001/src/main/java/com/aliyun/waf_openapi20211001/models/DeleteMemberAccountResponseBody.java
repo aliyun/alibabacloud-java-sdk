@@ -3,19 +3,16 @@ package com.aliyun.waf_openapi20211001.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyDefenseRuleResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
+public class DeleteMemberAccountResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ModifyDefenseRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ModifyDefenseRuleResponseBody self = new ModifyDefenseRuleResponseBody();
+    public static DeleteMemberAccountResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteMemberAccountResponseBody self = new DeleteMemberAccountResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDefenseRuleResponseBody setRequestId(String requestId) {
+    public DeleteMemberAccountResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

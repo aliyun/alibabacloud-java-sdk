@@ -71,7 +71,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         /**
          * <p>The custom cipher suites.</p>
          * <br>
-         * <p>> This parameter is returned only if the value of **CipherSuite** is **99**.</p>
+         * <p>>  This parameter is returned only if the value of **CipherSuite** is **99**.</p>
          */
         @NameInMap("CustomCiphers")
         public java.util.List<String> customCiphers;
@@ -124,6 +124,12 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         @NameInMap("HttpsPorts")
         public java.util.List<Long> httpsPorts;
 
+        /**
+         * <p>Specifies whether to enable IPv6. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("IPv6Enabled")
         public Boolean IPv6Enabled;
 
@@ -149,17 +155,17 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         /**
          * <p>The method that is used to obtain the actual IP address of a client. Valid values:</p>
          * <br>
-         * <p>*   **0:** No Layer 7 proxies are deployed in front of WAF.</p>
-         * <p>*   **1:** WAF reads the first value of the X-Forwarded-For (XFF) header field as the actual IP address of the client.</p>
-         * <p>*   **2:** WAF reads the value of a custom header field as the actual IP address of the client.</p>
+         * <p>*   **0**: No Layer 7 proxies are deployed in front of WAF.</p>
+         * <p>*   **1**: WAF reads the first value of the X-Forwarded-For (XFF) header field as the actual IP address of the client.</p>
+         * <p>*   **2**: WAF reads the value of a custom header field as the actual IP address of the client.</p>
          */
         @NameInMap("XffHeaderMode")
         public Integer xffHeaderMode;
 
         /**
-         * <p>The custom header fields that are used to obtain the actual IP address of a client. The value is in the \["header1","header2",...] format.</p>
+         * <p>The custom header fields that are used to obtain the actual IP addresses of clients. The value is in the \["header1","header2",...] format.</p>
          * <br>
-         * <p>> This parameter is returned only if the value of **XffHeaderMode** is 2.</p>
+         * <p>>  This parameter is returned only if the value of **XffHeaderMode** is 2.</p>
          */
         @NameInMap("XffHeaders")
         public java.util.List<String> xffHeaders;
@@ -321,7 +327,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
 
     public static class DescribeHybridCloudResourcesResponseBodyDomainsRedirect extends TeaModel {
         /**
-         * <p>The back-to-origin IP addresses or domain names.</p>
+         * <p>The IP addresses or domain names of the origin server.</p>
          */
         @NameInMap("Backends")
         public java.util.List<String> backends;
@@ -336,7 +342,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         public Boolean cnameEnabled;
 
         /**
-         * <p>The connection timeout period. Unit: seconds. Valid values: 5 to 120.</p>
+         * <p>The timeout period for connections. Unit: seconds. Valid values: 5 to 120.</p>
          */
         @NameInMap("ConnectTimeout")
         public Long connectTimeout;
@@ -362,23 +368,23 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         /**
          * <p>The number of reused persistent connections. Valid values: 60 to 1000.</p>
          * <br>
-         * <p>> This parameter indicates the number of reused persistent connections after you enable the persistent connection feature.</p>
+         * <p>>  This parameter indicates the number of reused persistent connections after the persistent connection feature is enabled.</p>
          */
         @NameInMap("KeepaliveRequests")
         public Long keepaliveRequests;
 
         /**
-         * <p>The timeout period of persistent connections that are in the Idle state. Unit: seconds. Valid values: 1 to 60. Default value: 15.</p>
+         * <p>The timeout period for persistent connections that are in the Idle state. Unit: seconds. Valid values: 1 to 60. Default value: 15.</p>
          * <br>
-         * <p>> This parameter indicates the period of time during which a reused persistent connection is allowed to remain in the Idle state before the persistent connection is released.</p>
+         * <p>>  This parameter indicates the period of time during which a reused persistent connection can remain in the Idle state before the persistent connection is released.</p>
          */
         @NameInMap("KeepaliveTimeout")
         public Long keepaliveTimeout;
 
         /**
-         * <p>The load balancing algorithm that WAF uses to forward requests to the origin server. Valid values:</p>
+         * <p>The load balancing algorithm that is used to forward requests to the origin server. Valid values:</p>
          * <br>
-         * <p>*   **ip_hash**</p>
+         * <p>*   **iphash**</p>
          * <p>*   **roundRobin**</p>
          * <p>*   **leastTime**</p>
          */
@@ -386,19 +392,19 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         public String loadbalance;
 
         /**
-         * <p>The read timeout period. Unit: seconds. Valid values: 5 to 1800.</p>
+         * <p>The timeout period for read connections. Unit: seconds. Valid values: 5 to 1800.</p>
          */
         @NameInMap("ReadTimeout")
         public Long readTimeout;
 
         /**
-         * <p>The key-value pair that is used to mark the requests that pass through the WAF instance.</p>
+         * <p>The key-value pair that is used to label requests that pass through WAF.</p>
          */
         @NameInMap("RequestHeaders")
         public java.util.List<DescribeHybridCloudResourcesResponseBodyDomainsRedirectRequestHeaders> requestHeaders;
 
         /**
-         * <p>Indicates whether WAF retries to forward requests when requests fail to be forwarded to the origin server. Valid values:</p>
+         * <p>Indicates whether WAF retries forwarding requests if requests fail to be forwarded to the origin server. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>
@@ -407,11 +413,11 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         public Boolean retry;
 
         /**
-         * <p>The forwarding rules that you configured for the domain name that you added to WAF in hybrid cloud mode. The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</p>
+         * <p>The forwarding rules that are configured for the domain name. This parameter is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</p>
          * <br>
-         * <p>*   **rs:** The back-to-origin IP addresses or CNAMEs. The value is of the ARRAY type.</p>
-         * <p>*   **location:** The name of the protection node. The value is of the STRING type.</p>
-         * <p>*   **locationId:** The ID of the protection node. The value is of the LONG type.</p>
+         * <p>*   **rs**: the back-to-origin IP addresses or CNAMEs. The value is of the ARRAY type.</p>
+         * <p>*   **location**: the name of the protection node. The value is of the STRING type.</p>
+         * <p>*   **locationId**: the ID of the protection node. The value is of the LONG type.</p>
          */
         @NameInMap("RoutingRules")
         public String routingRules;
@@ -426,15 +432,15 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         public Boolean sniEnabled;
 
         /**
-         * <p>The value of the custom Server Name Indication (SNI) field. If the parameter is left empty, the value of the **Host** field in the request header is automatically used as the value of the SNI field.</p>
+         * <p>The value of the custom SNI field. If the parameter is left empty, the value of the **Host** field in the request header is automatically used as the value of the SNI field.</p>
          * <br>
-         * <p>> This parameter is returned only if the value of **SniEnabled** is **true**.</p>
+         * <p>>  This parameter is returned only if the value of **SniEnabled** is **true**.</p>
          */
         @NameInMap("SniHost")
         public String sniHost;
 
         /**
-         * <p>The write timeout period. Unit: seconds. Valid values: 5 to 1800.</p>
+         * <p>The timeout period for write connections. Unit: seconds. Valid values: 5 to 1800.</p>
          */
         @NameInMap("WriteTimeout")
         public Long writeTimeout;
@@ -568,9 +574,9 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
 
     public static class DescribeHybridCloudResourcesResponseBodyDomains extends TeaModel {
         /**
-         * <p>The CNAME that is assigned by WAF to the domain name.</p>
+         * <p>The CNAME assigned by WAF.</p>
          * <br>
-         * <p>> This parameter is returned only if you set **CnameEnabled** to true.</p>
+         * <p>>  This parameter is returned only if the value of **CnameEnabled** is true.</p>
          */
         @NameInMap("Cname")
         public String cname;
@@ -588,7 +594,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The configurations of the listeners.</p>
+         * <p>The listeners.</p>
          */
         @NameInMap("Listen")
         public DescribeHybridCloudResourcesResponseBodyDomainsListen listen;
@@ -600,7 +606,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         public DescribeHybridCloudResourcesResponseBodyDomainsRedirect redirect;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          */
         @NameInMap("ResourceManagerResourceGroupId")
         public String resourceManagerResourceGroupId;
@@ -608,11 +614,11 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         /**
          * <p>The status of the domain name. Valid values:</p>
          * <br>
-         * <p>*   **1:** The domain name is normal.</p>
+         * <p>*   **1:** The domain name is in a normal state.</p>
          * <p>*   **2:** The domain name is being created.</p>
          * <p>*   **3:** The domain name is being modified.</p>
          * <p>*   **4:** The domain name is being released.</p>
-         * <p>*   **5:** WAF no longer forwards traffic of the domain name.</p>
+         * <p>*   **5:** WAF no longer forwards the traffic of the domain name.</p>
          */
         @NameInMap("Status")
         public Integer status;

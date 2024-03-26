@@ -10,9 +10,15 @@ public class DescribeDomainsResponseBody extends TeaModel {
     @NameInMap("Domains")
     public java.util.List<DescribeDomainsResponseBodyDomains> domains;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 

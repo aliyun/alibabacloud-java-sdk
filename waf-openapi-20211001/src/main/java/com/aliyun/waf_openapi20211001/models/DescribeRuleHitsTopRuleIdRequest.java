@@ -18,6 +18,12 @@ public class DescribeRuleHitsTopRuleIdRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether protected objects that trigger protection rules are returned in the response. Valid values</p>
+     * <br>
+     * <p>- **true**: returns only the number of times each protection rule is triggered. If you set IsGroupResource to true, Resource is left empty.</p>
+     * <p>- **false**: returns the number of times each protection rule is triggered by each protected object.</p>
+     */
     @NameInMap("IsGroupResource")
     public String isGroupResource;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
     /**
-     * <p>The hybrid cloud node groups.</p>
+     * <p>The node groups.</p>
      */
     @NameInMap("Groups")
     public java.util.List<DescribeHybridCloudGroupsResponseBodyGroups> groups;
@@ -52,26 +52,36 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeHybridCloudGroupsResponseBodyGroups extends TeaModel {
+        /**
+         * <p>The back-to-origin mark of the protected cluster. The value is in the {ISP name}-{Continent name}-{City name}-{Back-to-origin identifier} format. The back-to-origin identifier is optional.</p>
+         * <br>
+         * <p>>  For more information about ISP names, continent names, city names, and back-to-origin identifiers, see the following sections.</p>
+         */
         @NameInMap("BackSourceMark")
         public String backSourceMark;
 
+        /**
+         * <p>The continent code of the protected cluster.</p>
+         * <br>
+         * <p>>  For more information about continent codes, see Continent codes in this topic.</p>
+         */
         @NameInMap("ContinentsValue")
         public Integer continentsValue;
 
         /**
-         * <p>The ID of the hybrid cloud node group.</p>
+         * <p>The ID of the node group.</p>
          */
         @NameInMap("GroupId")
         public Integer groupId;
 
         /**
-         * <p>The name of the hybrid cloud node group.</p>
+         * <p>The name of the node group.</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
-         * <p>The type of the hybrid cloud node group. Valid values:</p>
+         * <p>The type of the node group. Valid values:</p>
          * <br>
          * <p>*   **protect**</p>
          * <p>*   **control**</p>
@@ -82,7 +92,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         public String groupType;
 
         /**
-         * <p>The IP address of the server for load balancing.</p>
+         * <p>The IP address of the server used for load balancing.</p>
          */
         @NameInMap("LoadBalanceIp")
         public String loadBalanceIp;
@@ -93,6 +103,11 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         @NameInMap("LocationId")
         public Long locationId;
 
+        /**
+         * <p>The ISP code of the protected cluster.</p>
+         * <br>
+         * <p>>  For more information about ISP codes, see ISP codes in this topic.</p>
+         */
         @NameInMap("OperatorValue")
         public Integer operatorValue;
 
@@ -102,11 +117,16 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         @NameInMap("Ports")
         public String ports;
 
+        /**
+         * <p>The city code of the protected cluster.</p>
+         * <br>
+         * <p>>  For more information about city codes, see City codes in this topic.</p>
+         */
         @NameInMap("RegionCodeValue")
         public Integer regionCodeValue;
 
         /**
-         * <p>The description of the hybrid cloud node group.</p>
+         * <p>The description of the node group.</p>
          */
         @NameInMap("Remark")
         public String remark;

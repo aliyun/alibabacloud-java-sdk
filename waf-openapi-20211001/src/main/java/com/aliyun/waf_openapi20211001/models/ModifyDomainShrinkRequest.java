@@ -5,10 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyDomainShrinkRequest extends TeaModel {
     /**
-     * <p>The mode in which you want to add the domain name to WAF. Valid values:</p>
+     * <p>The mode in which you want to add the domain name to WAF. Set the value to share.</p>
      * <br>
      * <p>*   **share:** adds the domain name to WAF in CNAME record mode. This is the default value.</p>
-     * <p>*   **hybrid_cloud_cname:** adds the domain name to WAF in hybrid cloud reverse proxy mode.</p>
      */
     @NameInMap("AccessType")
     public String accessType;
@@ -47,12 +46,6 @@ public class ModifyDomainShrinkRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
-
-    /**
-     * <p>The source IP address of the request. The value of this parameter is specified by the system.</p>
-     */
-    @NameInMap("SourceIp")
-    public String sourceIp;
 
     public static ModifyDomainShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDomainShrinkRequest self = new ModifyDomainShrinkRequest();
@@ -105,14 +98,6 @@ public class ModifyDomainShrinkRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public ModifyDomainShrinkRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
 }

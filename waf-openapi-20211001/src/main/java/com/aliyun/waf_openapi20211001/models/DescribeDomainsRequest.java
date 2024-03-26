@@ -50,12 +50,6 @@ public class DescribeDomainsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The source IP address. The value of this parameter is specified by the system.</p>
-     */
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    /**
      * <p>The tag of the resource. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
@@ -120,14 +114,6 @@ public class DescribeDomainsRequest extends TeaModel {
     }
     public String getResourceManagerResourceGroupId() {
         return this.resourceManagerResourceGroupId;
-    }
-
-    public DescribeDomainsRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeDomainsRequest setTag(java.util.List<DescribeDomainsRequestTag> tag) {
