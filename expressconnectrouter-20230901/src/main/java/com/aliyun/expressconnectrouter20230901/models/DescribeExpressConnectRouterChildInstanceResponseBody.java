@@ -157,6 +157,9 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         @NameInMap("ChildInstanceType")
         public String childInstanceType;
 
+        @NameInMap("EcrId")
+        public String ecrId;
+
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
@@ -215,6 +218,14 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         }
         public String getChildInstanceType() {
             return this.childInstanceType;
+        }
+
+        public DescribeExpressConnectRouterChildInstanceResponseBodyChildInstanceList setEcrId(String ecrId) {
+            this.ecrId = ecrId;
+            return this;
+        }
+        public String getEcrId() {
+            return this.ecrId;
         }
 
         public DescribeExpressConnectRouterChildInstanceResponseBodyChildInstanceList setGmtCreate(String gmtCreate) {
