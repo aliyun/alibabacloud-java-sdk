@@ -275,6 +275,55 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
 
+    public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage extends TeaModel {
+        @NameInMap("ImageId")
+        public String imageId;
+
+        @NameInMap("LibId")
+        public String libId;
+
+        public static VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage build(java.util.Map<String, ?> map) throws Exception {
+            VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage self = new VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage setLibId(String libId) {
+            this.libId = libId;
+            return this;
+        }
+        public String getLibId() {
+            return this.libId;
+        }
+
+    }
+
+    public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure extends TeaModel {
+        @NameInMap("FigureId")
+        public String figureId;
+
+        public static VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure build(java.util.Map<String, ?> map) throws Exception {
+            VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure self = new VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure setFigureId(String figureId) {
+            this.figureId = figureId;
+            return this;
+        }
+        public String getFigureId() {
+            return this.figureId;
+        }
+
+    }
+
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsResult extends TeaModel {
         @NameInMap("Confidence")
         public Float confidence;
@@ -306,15 +355,40 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResults extends TeaModel {
+        @NameInMap("CustomImage")
+        public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage> customImage;
+
+        @NameInMap("PublicFigure")
+        public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure> publicFigure;
+
         @NameInMap("Result")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsResult> result;
 
         @NameInMap("Service")
         public String service;
 
+        @NameInMap("TextInImage")
+        public java.util.Map<String, ?> textInImage;
+
         public static VideoModerationResultResponseBodyDataFrameResultFramesResults build(java.util.Map<String, ?> map) throws Exception {
             VideoModerationResultResponseBodyDataFrameResultFramesResults self = new VideoModerationResultResponseBodyDataFrameResultFramesResults();
             return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResults setCustomImage(java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage> customImage) {
+            this.customImage = customImage;
+            return this;
+        }
+        public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage> getCustomImage() {
+            return this.customImage;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResults setPublicFigure(java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure> publicFigure) {
+            this.publicFigure = publicFigure;
+            return this;
+        }
+        public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure> getPublicFigure() {
+            return this.publicFigure;
         }
 
         public VideoModerationResultResponseBodyDataFrameResultFramesResults setResult(java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsResult> result) {
@@ -331,6 +405,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
         public String getService() {
             return this.service;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResults setTextInImage(java.util.Map<String, ?> textInImage) {
+            this.textInImage = textInImage;
+            return this;
+        }
+        public java.util.Map<String, ?> getTextInImage() {
+            return this.textInImage;
         }
 
     }
@@ -441,6 +523,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("LiveId")
         public String liveId;
 
+        @NameInMap("TaskId")
+        public String taskId;
+
         public static VideoModerationResultResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             VideoModerationResultResponseBodyData self = new VideoModerationResultResponseBodyData();
             return TeaModel.build(map, self);
@@ -476,6 +561,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
         public String getLiveId() {
             return this.liveId;
+        }
+
+        public VideoModerationResultResponseBodyData setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
         }
 
     }
