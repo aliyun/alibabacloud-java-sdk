@@ -13,6 +13,9 @@ public class CreateLivePortraitProjectRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    @NameInMap("CustomParams")
+    public String customParams;
+
     @NameInMap("ImageId")
     public String imageId;
 
@@ -26,6 +29,7 @@ public class CreateLivePortraitProjectRequest extends TeaModel {
     public String jwtToken;
 
     @NameInMap("LightModel")
+    @Deprecated
     public Boolean lightModel;
 
     @NameInMap("Mode")
@@ -73,6 +77,14 @@ public class CreateLivePortraitProjectRequest extends TeaModel {
     }
     public String getContent() {
         return this.content;
+    }
+
+    public CreateLivePortraitProjectRequest setCustomParams(String customParams) {
+        this.customParams = customParams;
+        return this;
+    }
+    public String getCustomParams() {
+        return this.customParams;
     }
 
     public CreateLivePortraitProjectRequest setImageId(String imageId) {
