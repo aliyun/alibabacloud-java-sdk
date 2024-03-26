@@ -11,7 +11,7 @@ public class AddVodTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the snapshot template. You can call the [SubmitSnapshotJob](~~72213~~) operation to take snapshots.</p>
+     * <p>The ID of the snapshot template. You can call the [SubmitSnapshotJob](~~72213~~) operation to submit snapshot jobs.</p>
      */
     @NameInMap("VodTemplateId")
     public String vodTemplateId;

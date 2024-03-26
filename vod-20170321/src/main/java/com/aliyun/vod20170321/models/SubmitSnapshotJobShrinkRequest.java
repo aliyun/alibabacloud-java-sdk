@@ -11,13 +11,17 @@ public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     public Long count;
 
     /**
-     * <p>The height of each snapshot. Valid values: `[8,4096]`. By default, the height of the video mezzanine file is used. Unit: pixel.</p>
+     * <p>The height of each snapshot. Valid values: `[8,4096]`. By default, the height of the video source is used. Unit: pixels.</p>
      */
     @NameInMap("Height")
     public String height;
 
     /**
-     * <p>The snapshot interval. The value must be **greater than or equal to 0**. Unit: seconds. If you set this parameter to **0**, snapshots are taken at even intervals based on the video duration divided by the value of the Count parameter. Default value: **1**.</p>
+     * <p>The snapshot interval. The value must be **greater than or equal to 0**.</p>
+     * <br>
+     * <p>*   Unit: seconds.</p>
+     * <p>*   Default value: **1**.</p>
+     * <p>*   If you set this parameter to **0**, snapshots are captured at even intervals based on the video duration divided by the value of the Count parameter.</p>
      */
     @NameInMap("Interval")
     public Long interval;
@@ -25,15 +29,14 @@ public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the snapshot template.</p>
      * <br>
-     * <p>*   We recommend that you create a snapshot template before you specify the ID of the snapshot template.</p>
+     * <p>*   We recommend that you create a snapshot template before you specify the template ID. For more information about how to create a snapshot template, see [AddVodTemplate](~~99406~~).</p>
      * <p>*   If you set the SnapshotTemplateId parameter, all the other request parameters except the Action and VideoId parameters are ignored.</p>
-     * <p>*   For more information about how to create a snapshot template, see [AddVodTemplate](~~99406~~).</p>
      */
     @NameInMap("SnapshotTemplateId")
     public String snapshotTemplateId;
 
     /**
-     * <p>The start time of the specified snapshot time period.</p>
+     * <p>The point in time when the first snapshot is captured.</p>
      * <br>
      * <p>*   Unit: milliseconds.</p>
      * <p>*   Default value: **0**.</p>
@@ -41,6 +44,9 @@ public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     @NameInMap("SpecifiedOffsetTime")
     public Long specifiedOffsetTime;
 
+    /**
+     * <p>The playback positions at which you want to capture snapshots. Unit: milliseconds. You can specify up to 30 playback positions in a request.</p>
+     */
     @NameInMap("SpecifiedOffsetTimes")
     public String specifiedOffsetTimesShrink;
 
@@ -51,23 +57,25 @@ public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     public String spriteSnapshotConfig;
 
     /**
-     * <p>The custom configurations, including the configuration of transparent data transmission and callback configurations. The value is a JSON-formatted string. For more information, see [UserData](~~86952~~).</p>
+     * <p>The custom configurations including the configuration of transparent data transmission and callback configurations. The value must be a JSON string. For more information, see [UserData](~~86952~~).</p>
      * <br>
-     * <p>**</p>
-     * <br>
-     * <p>**Note** The callback configurations take effect only when you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console.</p>
+     * <p>>  To use the message callback feature, you must specify an HTTP callback URL and the callback events in the ApsaraVideo VOD console. Otherwise, the callback settings do not take effect.</p>
      */
     @NameInMap("UserData")
     public String userData;
 
     /**
-     * <p>The ID of the video.</p>
+     * <p>The ID of the video. You can use one of the following methods to obtain the ID:</p>
+     * <br>
+     * <p>*   After you upload a video in the ApsaraVideo VOD console, you can log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com) and choose **Media Files** > **Audio/Video** to view the ID of the video.</p>
+     * <p>*   Obtain the video ID from the response to the [CreateUploadVideo](~~55407~~) operation that you called to obtain the upload URL and credential.</p>
+     * <p>*   Obtain the video ID from the response to the [SearchMedia](~~86044~~) operation that you called to query media information after the audio or video file is uploaded.</p>
      */
     @NameInMap("VideoId")
     public String videoId;
 
     /**
-     * <p>The width of each snapshot. Valid values: `[8,4096]`. By default, the width of the video mezzanine file is used. Unit: pixel.</p>
+     * <p>The width of each snapshot. Valid values: `[8,4096]`. By default, the width of the video source is used. Unit: pixels.</p>
      */
     @NameInMap("Width")
     public String width;

@@ -53,7 +53,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
 
     public static class GetPlayInfoResponseBodyPlayInfoListPlayInfo extends TeaModel {
         /**
-         * <p>The color depth. This value must be an integer.</p>
+         * <p>The color depth. This value is an integer.</p>
          */
         @NameInMap("BitDepth")
         public Integer bitDepth;
@@ -65,7 +65,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The time when the audio or video stream was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the audio or video stream was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -88,7 +88,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String definition;
 
         /**
-         * <p>The duration of the media stream. Unit: seconds.</p>
+         * <p>The duration of the media stream. Unit: seconds. 86,400 seconds is equivalent to 24 hours.</p>
          */
         @NameInMap("Duration")
         public String duration;
@@ -169,7 +169,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public Integer jobType;
 
         /**
-         * <p>The update time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the audio or video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
@@ -481,6 +481,19 @@ public class GetPlayInfoResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The storage class of the audio or video file. Valid values:</p>
+         * <br>
+         * <p>*   **Standard**: All media resources are stored as Standard objects.</p>
+         * <p>*   **IA**: All media resources are stored as IA objects.</p>
+         * <p>*   **Archive**: All media resources are stored as Archive objects.</p>
+         * <p>*   **ColdArchive**: All media resources are stored as Cold Archive objects.</p>
+         * <p>*   **SourceIA**: Only the source files are IA objects.</p>
+         * <p>*   **SourceArchive**: Only the source files are Archive objects.</p>
+         * <p>*   **SourceColdArchive**: Only the source files are Cold Archive objects.</p>
+         * <p>*   **Changing**: The storage class of the audio or video file is being changed.</p>
+         * <p>*   **SourceChanging**: The storage class of the source file is being changed.</p>
+         */
         @NameInMap("StorageClass")
         public String storageClass;
 

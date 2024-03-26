@@ -4,6 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodTranscodeDataRequest extends TeaModel {
+    @NameInMap("AppId")
+    public String appId;
+
     /**
      * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      */
@@ -58,6 +61,14 @@ public class DescribeVodTranscodeDataRequest extends TeaModel {
     public static DescribeVodTranscodeDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodTranscodeDataRequest self = new DescribeVodTranscodeDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVodTranscodeDataRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
     }
 
     public DescribeVodTranscodeDataRequest setEndTime(String endTime) {

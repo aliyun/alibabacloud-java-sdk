@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddVodStorageForAppRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can obtain the application ID from the response to the [CreateAppInfo](https://help.aliyun.com/zh/vod/developer-reference/api-vod-2017-03-21-createappinfo) or [ListAppInfo](https://help.aliyun.com/zh/vod/developer-reference/api-vod-2017-03-21-listappinfo) operation.</p>
+     * <p>The IDs of applications. You can obtain the application ID from the `AppId` parameter in the response to the [CreateAppInfo](~~CreateAppInfo~~) or [ListAppInfo](~~ListAppInfo~~) operation.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -17,7 +17,7 @@ public class AddVodStorageForAppRequest extends TeaModel {
     public String storageLocation;
 
     /**
-     * <p>The storage type. Default value: vod_oss_bucket.</p>
+     * <p>The storage class. Default value: **vod_oss_bucket**.</p>
      */
     @NameInMap("StorageType")
     public String storageType;

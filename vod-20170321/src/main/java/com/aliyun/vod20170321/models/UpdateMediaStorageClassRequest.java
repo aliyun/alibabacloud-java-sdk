@@ -4,6 +4,14 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateMediaStorageClassRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to change the storage class of a media asset that is stored for less than the minimum storage duration. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     * <br>
+     * <p>>  If you forcibly change the storage class of a media asset that is stored for less than the minimum storage duration, additional data retrieval fees are incurred.</p>
+     */
     @NameInMap("AllowUpdateWithoutTimeLimit")
     public Boolean allowUpdateWithoutTimeLimit;
 
@@ -37,7 +45,7 @@ public class UpdateMediaStorageClassRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The storage class to which you want to modify. Valid values:</p>
+     * <p>The storage class. Valid values:</p>
      * <br>
      * <p>*   **Standard**</p>
      * <p>*   **IA**</p>

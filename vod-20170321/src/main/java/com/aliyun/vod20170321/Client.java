@@ -486,8 +486,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > *   After you create a snapshot template, you can specify the ID of the snapshot template in the request of the [SubmitSnapshotJob](~~72213~~) operation to take snapshots.
-      * > *   You can receive the [SnapshotComplete](~~57337~~) event notification by using an HTTP or HTTPS URL or in Message Service (MNS). For more information, see [Overview](~~55627~~).
+      * *   After you add a snapshot template, you can call the [SubmitSnapshotJob](~~72213~~) operation and specify the template ID to submit a snapshot job.
+      * *   You can use the HTTP (HTTPS compatible) callback or MNS callback method to receive the [SnapshotComplete](~~57337~~) callback. For more information, see [Overview](~~55627~~).
       *
       * @param request AddVodTemplateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -530,8 +530,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > *   After you create a snapshot template, you can specify the ID of the snapshot template in the request of the [SubmitSnapshotJob](~~72213~~) operation to take snapshots.
-      * > *   You can receive the [SnapshotComplete](~~57337~~) event notification by using an HTTP or HTTPS URL or in Message Service (MNS). For more information, see [Overview](~~55627~~).
+      * *   After you add a snapshot template, you can call the [SubmitSnapshotJob](~~72213~~) operation and specify the template ID to submit a snapshot job.
+      * *   You can use the HTTP (HTTPS compatible) callback or MNS callback method to receive the [SnapshotComplete](~~57337~~) callback. For more information, see [Overview](~~55627~~).
       *
       * @param request AddVodTemplateRequest
       * @return AddVodTemplateResponse
@@ -1745,7 +1745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * All media processing operations in ApsaraVideo VOD, such as transcoding, snapshot capture, and content moderation, are performed on mezzanine files. If you delete the mezzanine files, you cannot perform follow-up media processing operations. Exercise caution when you call this operation.
+      * All media processing operations in ApsaraVideo VOD, such as transcoding, snapshot capture, and content moderation, are performed based on source files. If you delete the source files, you cannot perform media processing operations. Exercise caution when you call this operation.
       *
       * @param request DeleteMezzaninesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1780,7 +1780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * All media processing operations in ApsaraVideo VOD, such as transcoding, snapshot capture, and content moderation, are performed on mezzanine files. If you delete the mezzanine files, you cannot perform follow-up media processing operations. Exercise caution when you call this operation.
+      * All media processing operations in ApsaraVideo VOD, such as transcoding, snapshot capture, and content moderation, are performed based on source files. If you delete the source files, you cannot perform media processing operations. Exercise caution when you call this operation.
       *
       * @param request DeleteMezzaninesRequest
       * @return DeleteMezzaninesResponse
@@ -1791,9 +1791,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * * In a multipart upload, fragments may be generated if the upload fails. In most cases, the fragments are automatically deleted after seven days. You can call this operation to delete the generated fragments after the upload is successful or fails.
-      * * This operation does not delete the source file or transcoded file, but deletes only the fragments generated during the upload.
-      * * If you call the [DeleteVideo](~~52837~~) operation, the entire video file is deleted, including the generated fragments.
+      * *   During multipart upload, useless parts may be retained if the upload fails. These useless parts are automatically deleted after 7 days. You can call this operation to delete the generated parts after the upload is successful or fails.
+      * *   This operation does not delete the source file or transcoded file, but deletes only the parts generated during the upload.
+      * *   If you call the [DeleteVideo](~~52837~~) operation, the entire video file is deleted, including the generated parts.
       *
       * @param request DeleteMultipartUploadRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1832,9 +1832,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * * In a multipart upload, fragments may be generated if the upload fails. In most cases, the fragments are automatically deleted after seven days. You can call this operation to delete the generated fragments after the upload is successful or fails.
-      * * This operation does not delete the source file or transcoded file, but deletes only the fragments generated during the upload.
-      * * If you call the [DeleteVideo](~~52837~~) operation, the entire video file is deleted, including the generated fragments.
+      * *   During multipart upload, useless parts may be retained if the upload fails. These useless parts are automatically deleted after 7 days. You can call this operation to delete the generated parts after the upload is successful or fails.
+      * *   This operation does not delete the source file or transcoded file, but deletes only the parts generated during the upload.
+      * *   If you call the [DeleteVideo](~~52837~~) operation, the entire video file is deleted, including the generated parts.
       *
       * @param request DeleteMultipartUploadRequest
       * @return DeleteMultipartUploadResponse
@@ -3311,6 +3311,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeVodTranscodeDataResponse describeVodTranscodeDataWithOptions(DescribeVodTranscodeDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
         }
@@ -3512,6 +3516,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.detachAppPolicyFromIdentityWithOptions(request, runtime);
     }
 
+    /**
+      * *   To use the secure download feature, you must enable the download feature in the ApsaraVideo VOD console and set the download method to secure download. For more information, see [Configure download settings](~~86107~~).
+      * *   After you generate a key for secure download, you must configure the key in ApsaraVideo Player SDK. For more information, see [Secure download](~~124735~~).
+      *
+      * @param request GenerateDownloadSecretKeyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GenerateDownloadSecretKeyResponse
+     */
     public GenerateDownloadSecretKeyResponse generateDownloadSecretKeyWithOptions(GenerateDownloadSecretKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3552,6 +3564,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateDownloadSecretKeyResponse());
     }
 
+    /**
+      * *   To use the secure download feature, you must enable the download feature in the ApsaraVideo VOD console and set the download method to secure download. For more information, see [Configure download settings](~~86107~~).
+      * *   After you generate a key for secure download, you must configure the key in ApsaraVideo Player SDK. For more information, see [Secure download](~~124735~~).
+      *
+      * @param request GenerateDownloadSecretKeyRequest
+      * @return GenerateDownloadSecretKeyResponse
+     */
     public GenerateDownloadSecretKeyResponse generateDownloadSecretKey(GenerateDownloadSecretKeyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateDownloadSecretKeyWithOptions(request, runtime);
@@ -4986,8 +5005,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The video snapshot URLs.
-      * > This operation returns only data about the snapshots that are captured when you upload a video. The snapshot data includes data of the thumbnail and snapshot data that is generated based on the workflow setting. To query the snapshot data that is generated after the video is uploaded, call the [ListSnapshots](~~ListSnapshots~~) operation. For more information, see [Video snapshots](~~99368~~).
+      * * You can call this operation to obtain basic information about multiple media files based on media IDs. The basic information includes the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags.
+      * * After a media file is uploaded, ApsaraVideo VOD processes the source file. Then, information about the media file is asynchronously generated. You can configure notifications for the **VideoAnalysisComplete** event and call this operation to query information about a media file after you receive notifications for the **VideoAnalysisComplete** event. For more information, see [Overview](~~55627~~) .
       *
       * @param request GetVideoInfoRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5018,8 +5037,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The video snapshot URLs.
-      * > This operation returns only data about the snapshots that are captured when you upload a video. The snapshot data includes data of the thumbnail and snapshot data that is generated based on the workflow setting. To query the snapshot data that is generated after the video is uploaded, call the [ListSnapshots](~~ListSnapshots~~) operation. For more information, see [Video snapshots](~~99368~~).
+      * * You can call this operation to obtain basic information about multiple media files based on media IDs. The basic information includes the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags.
+      * * After a media file is uploaded, ApsaraVideo VOD processes the source file. Then, information about the media file is asynchronously generated. You can configure notifications for the **VideoAnalysisComplete** event and call this operation to query information about a media file after you receive notifications for the **VideoAnalysisComplete** event. For more information, see [Overview](~~55627~~) .
       *
       * @param request GetVideoInfoRequest
       * @return GetVideoInfoResponse
@@ -5949,17 +5968,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * *   **Make sure that you understand the billing methods and price of ApsaraVideo VOD before you call this operation. You are charged for using the online editing feature. For more information, see [Billing](~~188310#section-pyv-b8h-bo7~~).**
       * *   This operation returns only the submission result of a video production task. When the submission result is returned, video production may still be in progress. After a video production task is submitted, the task is queued in the background for asynchronous processing.
       * *   The source files that are used in the timeline of an online editing project can be materials directly uploaded to the online project or selected from the media asset library.
-      * *   Videos are produced based on ProjectId and Timeline. The following rules apply when you specify the parameters:
-      *     *   You must specify at least one of the ProjectId and Timeline parameters. Otherwise, video production fails.
-      *     *   If you specify only the Timeline parameter, the system automatically creates an online editing project based on the specified timeline. Then, the system uses the source files specified in the timeline to produce videos.
-      *     *   If you specify only the ProjectId parameter, the system obtains the latest timeline data of the specified project to produce videos.
-      *     *   If you specify both the ProjectId and Timeline parameters, the system produces videos based on the specified timeline and updates the timeline data for the specified online editing project. You can also specify other parameters to update the corresponding information about the online editing project.
+      * *   Videos are produced based on ProjectId and Timeline. The following content describes the parameter configurations:
+      *     *   You must specify ProjectId or Timeline. If you leave both parameters empty, the video cannot be produced.
+      *     *   If you specify Timeline and leave ProjectId empty, the system automatically creates an online editing project based on Timeline and adds the materials specified in the Timeline to the project to produce videos.
+      *     *   If you specify ProjectId and leave Timeline empty, the system automatically uses the latest timeline information of the project to produce videos.
+      *     *   If you specify both ProjectId and Timeline, the system automatically uses the timeline information that you specified to produce videos and updates the project timeline and materials. You can also specify other parameters to update the corresponding information about the online editing project.
       * *   After a video is produced, the video is automatically uploaded to ApsaraVideo VOD. Then, the **ProduceMediaComplete** and **FileUploadComplete** event notifications are sent to you. After the produced video is transcoded, the **StreamTranscodeComplete** and **TranscodeComplete** event notifications are sent to you.
       * *   You can add special effects to the video. For more information, see [Special effects](~~69082~~).
-      * ### QPS limits
-      * You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VOD](~~342790~~).
       *
       * @param request ProduceEditingProjectVideoRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6034,17 +6052,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * *   **Make sure that you understand the billing methods and price of ApsaraVideo VOD before you call this operation. You are charged for using the online editing feature. For more information, see [Billing](~~188310#section-pyv-b8h-bo7~~).**
       * *   This operation returns only the submission result of a video production task. When the submission result is returned, video production may still be in progress. After a video production task is submitted, the task is queued in the background for asynchronous processing.
       * *   The source files that are used in the timeline of an online editing project can be materials directly uploaded to the online project or selected from the media asset library.
-      * *   Videos are produced based on ProjectId and Timeline. The following rules apply when you specify the parameters:
-      *     *   You must specify at least one of the ProjectId and Timeline parameters. Otherwise, video production fails.
-      *     *   If you specify only the Timeline parameter, the system automatically creates an online editing project based on the specified timeline. Then, the system uses the source files specified in the timeline to produce videos.
-      *     *   If you specify only the ProjectId parameter, the system obtains the latest timeline data of the specified project to produce videos.
-      *     *   If you specify both the ProjectId and Timeline parameters, the system produces videos based on the specified timeline and updates the timeline data for the specified online editing project. You can also specify other parameters to update the corresponding information about the online editing project.
+      * *   Videos are produced based on ProjectId and Timeline. The following content describes the parameter configurations:
+      *     *   You must specify ProjectId or Timeline. If you leave both parameters empty, the video cannot be produced.
+      *     *   If you specify Timeline and leave ProjectId empty, the system automatically creates an online editing project based on Timeline and adds the materials specified in the Timeline to the project to produce videos.
+      *     *   If you specify ProjectId and leave Timeline empty, the system automatically uses the latest timeline information of the project to produce videos.
+      *     *   If you specify both ProjectId and Timeline, the system automatically uses the timeline information that you specified to produce videos and updates the project timeline and materials. You can also specify other parameters to update the corresponding information about the online editing project.
       * *   After a video is produced, the video is automatically uploaded to ApsaraVideo VOD. Then, the **ProduceMediaComplete** and **FileUploadComplete** event notifications are sent to you. After the produced video is transcoded, the **StreamTranscodeComplete** and **TranscodeComplete** event notifications are sent to you.
       * *   You can add special effects to the video. For more information, see [Special effects](~~69082~~).
-      * ### QPS limits
-      * You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VOD](~~342790~~).
       *
       * @param request ProduceEditingProjectVideoRequest
       * @return ProduceEditingProjectVideoResponse
@@ -6137,7 +6154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you want to overwrite a video or audio source file, you can obtain the upload URL of the source file by calling this operation. Then, you can upload a new source file without changing the video or audio ID. However, the file overwriting may automatically trigger transcoding and snapshot jobs if these jobs are configured. For more information, see [Upload URLs and credentials](~~55397~~).
+      * You can also call this operation to overwrite the source file of an audio or video file. After you call this operation, the system obtains the upload URL and uploads a new source file without changing the ID of the audio or video file. If you have configured transcoding or snapshot capture for the upload, the transcoding or snapshot capture job is automatically triggered. For more information, see [Upload URLs and credentials](~~55397~~).
       *
       * @param request RefreshUploadVideoRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6180,7 +6197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you want to overwrite a video or audio source file, you can obtain the upload URL of the source file by calling this operation. Then, you can upload a new source file without changing the video or audio ID. However, the file overwriting may automatically trigger transcoding and snapshot jobs if these jobs are configured. For more information, see [Upload URLs and credentials](~~55397~~).
+      * You can also call this operation to overwrite the source file of an audio or video file. After you call this operation, the system obtains the upload URL and uploads a new source file without changing the ID of the audio or video file. If you have configured transcoding or snapshot capture for the upload, the transcoding or snapshot capture job is automatically triggered. For more information, see [Upload URLs and credentials](~~55397~~).
       *
       * @param request RefreshUploadVideoRequest
       * @return RefreshUploadVideoResponse
@@ -6249,10 +6266,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you store an audio or video file in an Object Storage Service (OSS) bucket that is used for ApsaraVideo VOD, you can call the RegisterMedia operation to register the media file. After the media file is registered, you can use the media ID associated with the media file to submit transcoding jobs and snapshot jobs in ApsaraVideo VOD. For more information, see [SubmitTranscodeJobs](~~68570~~) and [SubmitSnapshotJob](~~72213~~).
-      * > *   You can register up to 10 OSS media files that have the same storage location at a time.
-      * > *   If you use the ApsaraVideo VOD console to upload a media file and do not specify a transcoding template group ID, ApsaraVideo VOD uses the default transcoding template group to transcode the media file. However, if you do not specify a transcoding template group ID when you call the RegisterMedia operation, ApsaraVideo VOD does not automatically transcode the media file after the media file is registered. If you specify a transcoding template group ID, ApsaraVideo VOD uses the specified transcoding template group to transcode the media file.
-      * > *   If the media file that you want to register is registered before, this operation returns only the unique media ID that is associated with the media file. No further processing is performed.
+      * *   After you add an OSS bucket to ApsaraVideo VOD, you must register media files in the OSS bucket to generate the required information. Then, you can use media IDs for features such as transcoding, snapshot capture, and AI processing.use features such as xxx on media files by specifying their IDs?
+      * *   You can register up to 10 media files in an OSS bucket in a request. The media files must be stored in the same bucket.
+      * *   If you do not specify a transcoding template group ID when you upload a media file to ApsaraVideo VOD, the media file is automatically transcoded based on the default template group. If you do not specify a transcoding template group ID after you register a media file, the media file is not automatically transcoded. The registered media files are automatically transcoded only if you specify a transcoding template group ID.
+      * *   If the media file that you want to register has been registered, this operation returns only the unique media ID that is associated with the media file. No further operation is performed.
+      * *   Make sure that the media file that you want to register has a valid suffix. Otherwise, the registration fails.
       *
       * @param request RegisterMediaRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6295,10 +6313,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you store an audio or video file in an Object Storage Service (OSS) bucket that is used for ApsaraVideo VOD, you can call the RegisterMedia operation to register the media file. After the media file is registered, you can use the media ID associated with the media file to submit transcoding jobs and snapshot jobs in ApsaraVideo VOD. For more information, see [SubmitTranscodeJobs](~~68570~~) and [SubmitSnapshotJob](~~72213~~).
-      * > *   You can register up to 10 OSS media files that have the same storage location at a time.
-      * > *   If you use the ApsaraVideo VOD console to upload a media file and do not specify a transcoding template group ID, ApsaraVideo VOD uses the default transcoding template group to transcode the media file. However, if you do not specify a transcoding template group ID when you call the RegisterMedia operation, ApsaraVideo VOD does not automatically transcode the media file after the media file is registered. If you specify a transcoding template group ID, ApsaraVideo VOD uses the specified transcoding template group to transcode the media file.
-      * > *   If the media file that you want to register is registered before, this operation returns only the unique media ID that is associated with the media file. No further processing is performed.
+      * *   After you add an OSS bucket to ApsaraVideo VOD, you must register media files in the OSS bucket to generate the required information. Then, you can use media IDs for features such as transcoding, snapshot capture, and AI processing.use features such as xxx on media files by specifying their IDs?
+      * *   You can register up to 10 media files in an OSS bucket in a request. The media files must be stored in the same bucket.
+      * *   If you do not specify a transcoding template group ID when you upload a media file to ApsaraVideo VOD, the media file is automatically transcoded based on the default template group. If you do not specify a transcoding template group ID after you register a media file, the media file is not automatically transcoded. The registered media files are automatically transcoded only if you specify a transcoding template group ID.
+      * *   If the media file that you want to register has been registered, this operation returns only the unique media ID that is associated with the media file. No further operation is performed.
+      * *   Make sure that the media file that you want to register has a valid suffix. Otherwise, the registration fails.
       *
       * @param request RegisterMediaRequest
       * @return RegisterMediaResponse
@@ -6508,7 +6527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > You can play videos in the Checking or Blocked state only from the IP addresses that are added to review security groups.
+      * You can play videos in the Checking or Blocked state only from the IP addresses that are added to review security groups.
       *
       * @param request SetAuditSecurityIpRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6547,7 +6566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > You can play videos in the Checking or Blocked state only from the IP addresses that are added to review security groups.
+      * You can play videos in the Checking or Blocked state only from the IP addresses that are added to review security groups.
       *
       * @param request SetAuditSecurityIpRequest
       * @return SetAuditSecurityIpResponse
@@ -7412,8 +7431,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > *   Only snapshots in the JPG format are generated.
-      * > *   After a snapshot job is complete, ApsaraVideo VOD sends a [SnapshotComplete](~~57337~~) event notification that contains EventType=SnapshotComplete and SubType=SpecifiedTime.
+      * *   Only snapshots in the JPG format are generated.
+      * *   After a snapshot is captured, the [SnapshotComplete](~~57337~~) callback is fired and EventType=SnapshotComplete, SubType=SpecifiedTime is returned.
+      * ### [](#qps-)QPS limits
+      * You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~342790~~).
       *
       * @param tmpReq SubmitSnapshotJobRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7486,8 +7507,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > *   Only snapshots in the JPG format are generated.
-      * > *   After a snapshot job is complete, ApsaraVideo VOD sends a [SnapshotComplete](~~57337~~) event notification that contains EventType=SnapshotComplete and SubType=SpecifiedTime.
+      * *   Only snapshots in the JPG format are generated.
+      * *   After a snapshot is captured, the [SnapshotComplete](~~57337~~) callback is fired and EventType=SnapshotComplete, SubType=SpecifiedTime is returned.
+      * ### [](#qps-)QPS limits
+      * You can call this operation up to 30 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~342790~~).
       *
       * @param request SubmitSnapshotJobRequest
       * @return SubmitSnapshotJobResponse
@@ -7893,10 +7916,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * UpdateMediaStorageClass is an asynchronous operation. You can call this operation to modify the storage classes of media assets. After the storage class is modified, a callback notification is sent.
-      * If the storage class of a media asset is Archive or Cold Archive, the media asset is automatically restored when you call this operation. After the media asset is restored, the storage class is modified. To restore the media asset, you do not need to call the RestoreMedia operation. To modify the storage class of a Cold Archive media asset, you must specify the restoration priority. By default, the restoration priority is set to Standard.
-      * Media assets whose storage classes are being modified cannot be used or processed.
-      * The media assets that are not of the Standard storage class have a limit on storage duration. If the storage duration does not meet the following requirements, you cannot change the storage classes: Infrequent Access (IA) media assets or source files are stored for at least 30 days, Archive media assets or source files are stored for at least 60 days, and Cold Archive media assets or source files are stored for at least 180 days.
+      * *   This operation is an asynchronous operation. You can call this operation to modify the storage classes of media assets. After the storage class is modified, a callback notification is sent.
+      * *   If the storage class of the media asset is Archive or Cold Archive and you call this operation to modify the storage class of the media asset, the media asset is automatically restored before the storage class is modified. You do not need to call the RestoreMedia operation to restore the media asset. You must specify the restoration priority for Cold Archive objects. Default configuration: RestoreTier=Standard.
+      * *   Media assets whose storage classes are being modified cannot be used or processed.
+      * *   Non-Standard objects have minimum storage durations. If an object is stored for less than the minimum storage duration, the storage class of the object cannot be changed. The following content describes the minimum storage durations for objects in different storage classes: IA or IA storage for source files: 30 days, Archive or Archive storage for source files: 60 days, Cold Archive or Cold Archive for source files: 180 days.
       *
       * @param request UpdateMediaStorageClassRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7943,10 +7966,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * UpdateMediaStorageClass is an asynchronous operation. You can call this operation to modify the storage classes of media assets. After the storage class is modified, a callback notification is sent.
-      * If the storage class of a media asset is Archive or Cold Archive, the media asset is automatically restored when you call this operation. After the media asset is restored, the storage class is modified. To restore the media asset, you do not need to call the RestoreMedia operation. To modify the storage class of a Cold Archive media asset, you must specify the restoration priority. By default, the restoration priority is set to Standard.
-      * Media assets whose storage classes are being modified cannot be used or processed.
-      * The media assets that are not of the Standard storage class have a limit on storage duration. If the storage duration does not meet the following requirements, you cannot change the storage classes: Infrequent Access (IA) media assets or source files are stored for at least 30 days, Archive media assets or source files are stored for at least 60 days, and Cold Archive media assets or source files are stored for at least 180 days.
+      * *   This operation is an asynchronous operation. You can call this operation to modify the storage classes of media assets. After the storage class is modified, a callback notification is sent.
+      * *   If the storage class of the media asset is Archive or Cold Archive and you call this operation to modify the storage class of the media asset, the media asset is automatically restored before the storage class is modified. You do not need to call the RestoreMedia operation to restore the media asset. You must specify the restoration priority for Cold Archive objects. Default configuration: RestoreTier=Standard.
+      * *   Media assets whose storage classes are being modified cannot be used or processed.
+      * *   Non-Standard objects have minimum storage durations. If an object is stored for less than the minimum storage duration, the storage class of the object cannot be changed. The following content describes the minimum storage durations for objects in different storage classes: IA or IA storage for source files: 30 days, Archive or Archive storage for source files: 60 days, Cold Archive or Cold Archive for source files: 180 days.
       *
       * @param request UpdateMediaStorageClassRequest
       * @return UpdateMediaStorageClassResponse
@@ -7957,8 +7980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > *   You cannot add, modify, or remove transcoding templates in a transcoding template group that is locked in the ApsaraVideo VOD console. To manage such transcoding template groups, contact the ApsaraVideo VOD technical support.
-      * > *   You can call the GetTranscodeTemplateGroup operation to query the configurations of a transcoding template group and check whether the transcoding template group is locked by using the response parameter Locked.
+      * For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. To check whether a transcoding template group is locked, call the [GetTranscodeTemplateGroup](~~GetTranscodeTemplateGroup~~) operation and check whether Locked is returned in the response. If the transcoding template group is locked, you can all this operation to unlock the transcoding template group before you add, modify, or delete transcoding templates in the transcoding template group.
       *
       * @param request UpdateTranscodeTemplateGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8001,8 +8023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > *   You cannot add, modify, or remove transcoding templates in a transcoding template group that is locked in the ApsaraVideo VOD console. To manage such transcoding template groups, contact the ApsaraVideo VOD technical support.
-      * > *   You can call the GetTranscodeTemplateGroup operation to query the configurations of a transcoding template group and check whether the transcoding template group is locked by using the response parameter Locked.
+      * For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. To check whether a transcoding template group is locked, call the [GetTranscodeTemplateGroup](~~GetTranscodeTemplateGroup~~) operation and check whether Locked is returned in the response. If the transcoding template group is locked, you can all this operation to unlock the transcoding template group before you add, modify, or delete transcoding templates in the transcoding template group.
       *
       * @param request UpdateTranscodeTemplateGroupRequest
       * @return UpdateTranscodeTemplateGroupResponse

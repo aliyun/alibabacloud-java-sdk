@@ -53,21 +53,22 @@ public class RegisterMediaResponseBody extends TeaModel {
 
     public static class RegisterMediaResponseBodyRegisteredMediaList extends TeaModel {
         /**
-         * <p>The OSS URL of the media file.</p>
+         * <p>The URL of the media file.</p>
          */
         @NameInMap("FileURL")
         public String fileURL;
 
         /**
-         * <p>The ID of the media file that is registered with ApsaraVideo VOD. If the registered media file is an audio or video file, the value of the VideoId parameter returned by ApsaraVideo VOD takes effect.</p>
+         * <p>The ID of the media file that is registered with ApsaraVideo VOD. If the registered media file is an audio or video file, the value of this parameter is the same as that of the VideoId parameter.</p>
          */
         @NameInMap("MediaId")
         public String mediaId;
 
         /**
-         * <p>Indicates whether the media file is newly registered or repeatedly registered. Valid values:  </p>
-         * <p>- **true**: The media file is newly registered.</p>
-         * <p>- **false**: The media file is repeatedly registered.</p>
+         * <p>Indicates whether the media file is newly registered or repeatedly registered. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The media file is newly registered.</p>
+         * <p>*   **false**: The media file is repeatedly registered.</p>
          */
         @NameInMap("NewRegister")
         public Boolean newRegister;

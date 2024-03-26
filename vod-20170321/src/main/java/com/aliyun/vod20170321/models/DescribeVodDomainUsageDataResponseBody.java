@@ -41,11 +41,10 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The type of content returned. Valid values:</p>
+     * <p>The type of the data. Valid values:</p>
      * <br>
-     * <p>*   **static**: static content</p>
-     * <p>*   **dynamic**: dynamic requests</p>
-     * <p>*   **all**: all content</p>
+     * <p>*   **bps**: bandwidth</p>
+     * <p>*   **traf**: traffic</p>
      */
     @NameInMap("Type")
     public String type;
@@ -127,7 +126,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
 
     public static class DescribeVodDomainUsageDataResponseBodyUsageDataPerIntervalDataModule extends TeaModel {
         /**
-         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The timestamp of the returned data. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
