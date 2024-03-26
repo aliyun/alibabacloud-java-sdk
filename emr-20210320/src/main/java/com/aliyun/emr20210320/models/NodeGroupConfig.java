@@ -10,6 +10,9 @@ public class NodeGroupConfig extends TeaModel {
     @NameInMap("AdditionalSecurityGroupIds")
     public java.util.List<String> additionalSecurityGroupIds;
 
+    @NameInMap("ComponentTags")
+    public java.util.List<String> componentTags;
+
     /**
      * <p>成本优化模式配置。</p>
      */
@@ -156,6 +159,14 @@ public class NodeGroupConfig extends TeaModel {
     }
     public java.util.List<String> getAdditionalSecurityGroupIds() {
         return this.additionalSecurityGroupIds;
+    }
+
+    public NodeGroupConfig setComponentTags(java.util.List<String> componentTags) {
+        this.componentTags = componentTags;
+        return this;
+    }
+    public java.util.List<String> getComponentTags() {
+        return this.componentTags;
     }
 
     public NodeGroupConfig setCostOptimizedConfig(CostOptimizedConfig costOptimizedConfig) {
