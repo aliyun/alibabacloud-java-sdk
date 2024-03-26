@@ -47,8 +47,9 @@ public class StopExecutionResponseBody extends TeaModel {
     public String startedTime;
 
     /**
-     * <p>The execution state. Valid values:</p>
+     * <p>The execution status. Valid values:</p>
      * <br>
+     * <p>*   **Starting**</p>
      * <p>*   **Running**</p>
      * <p>*   **Stopped**</p>
      * <p>*   **Succeeded**</p>

@@ -16,12 +16,6 @@ public class ListFlowsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
     public static ListFlowsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFlowsRequest self = new ListFlowsRequest();
         return TeaModel.build(map, self);
@@ -41,14 +35,6 @@ public class ListFlowsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public ListFlowsRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
 }

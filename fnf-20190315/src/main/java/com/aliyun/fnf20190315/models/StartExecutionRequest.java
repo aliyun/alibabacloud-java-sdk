@@ -11,7 +11,7 @@ public class StartExecutionRequest extends TeaModel {
     public String callbackFnFTaskToken;
 
     /**
-     * <p>The name of the execution, which is unique within a flow. Configure this parameter based on the following rules:</p>
+     * <p>The name of the execution. The execution name is unique within a workflow. Configure this parameter based on the following rules:</p>
      * <br>
      * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
      * <p>*   The name must start with a letter or an underscore (\_).</p>
@@ -22,7 +22,7 @@ public class StartExecutionRequest extends TeaModel {
     public String executionName;
 
     /**
-     * <p>The name of the flow you want to start to execute. The name is unique within the region and cannot be modified after the flow is created. Configure this parameter based on the following rules:</p>
+     * <p>The name of the workflow to be executed. The name is unique within a region and cannot be modified after the workflow is created. Configure this parameter based on the following rules:</p>
      * <br>
      * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
      * <p>*   The name must start with a letter or an underscore (\_).</p>
@@ -37,12 +37,6 @@ public class StartExecutionRequest extends TeaModel {
      */
     @NameInMap("Input")
     public String input;
-
-    /**
-     * <p>The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
 
     public static StartExecutionRequest build(java.util.Map<String, ?> map) throws Exception {
         StartExecutionRequest self = new StartExecutionRequest();
@@ -79,14 +73,6 @@ public class StartExecutionRequest extends TeaModel {
     }
     public String getInput() {
         return this.input;
-    }
-
-    public StartExecutionRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
 }

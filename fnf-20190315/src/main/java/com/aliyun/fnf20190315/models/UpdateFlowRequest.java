@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFlowRequest extends TeaModel {
     /**
-     * <p>The definition of the flow. The definition must comply with the Flow Definition Language (FDL) syntax.</p>
+     * <p>The flow definition, which follows the flow definition language (FDL) syntax standard. Considering compatibility, the system supports the two flow definition specifications.</p>
      */
     @NameInMap("Definition")
     public String definition;
@@ -17,7 +17,7 @@ public class UpdateFlowRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the flow. The name is unique within the region and cannot be modified after the time-based schedule is created. Configure this parameter based on the following rules:</p>
+     * <p>The name of the flow. The name must be unique within the region and cannot be modified after the flow is created. The name must meet the following conventions:</p>
      * <br>
      * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
      * <p>*   The name must start with a letter or an underscore (\_).</p>
@@ -28,13 +28,7 @@ public class UpdateFlowRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>The Alibaba Cloud resource name (ARN) of the specified Resource Access Management (RAM) role that Serverless Workflow assumes to invoke resources when the task is executed.</p>
+     * <p>The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, the flow execution engine assumes the role to call API operations of relevant services.</p>
      */
     @NameInMap("RoleArn")
     public String roleArn;
@@ -72,14 +66,6 @@ public class UpdateFlowRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public UpdateFlowRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateFlowRequest setRoleArn(String roleArn) {

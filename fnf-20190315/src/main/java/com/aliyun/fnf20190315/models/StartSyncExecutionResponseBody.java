@@ -4,30 +4,64 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class StartSyncExecutionResponseBody extends TeaModel {
+    /**
+     * <p>The error code that is returned if the execution failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message that indicates the execution timed out.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The name of the flow.</p>
+     */
     @NameInMap("FlowName")
     public String flowName;
 
+    /**
+     * <p>The name of the execution.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The output of the execution, which is in the JSON format.</p>
+     */
     @NameInMap("Output")
     public String output;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The time when the execution started.</p>
+     */
     @NameInMap("StartedTime")
     public String startedTime;
 
+    /**
+     * <p>The status of the execution. Valid values:</p>
+     * <br>
+     * <p>*   **Starting**</p>
+     * <p>*   **Running**</p>
+     * <p>*   **Stopped**</p>
+     * <p>*   **Succeeded**</p>
+     * <p>*   **Failed**</p>
+     * <p>*   **TimedOut**</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The time when the execution stopped.</p>
+     */
     @NameInMap("StoppedTime")
     public String stoppedTime;
 

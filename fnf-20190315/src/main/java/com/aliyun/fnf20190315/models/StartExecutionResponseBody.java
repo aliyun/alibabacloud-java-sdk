@@ -11,7 +11,7 @@ public class StartExecutionResponseBody extends TeaModel {
     public String flowDefinition;
 
     /**
-     * <p>The name of the flow.</p>
+     * <p>The name of the workflow.</p>
      */
     @NameInMap("FlowName")
     public String flowName;
@@ -47,8 +47,9 @@ public class StartExecutionResponseBody extends TeaModel {
     public String startedTime;
 
     /**
-     * <p>The execution state. Valid values:</p>
+     * <p>The execution status. Valid values:</p>
      * <br>
+     * <p>*   **Starting**</p>
      * <p>*   **Running**</p>
      * <p>*   **Stopped**</p>
      * <p>*   **Succeeded**</p>

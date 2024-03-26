@@ -11,7 +11,7 @@ public class CreateFlowResponseBody extends TeaModel {
     public String createdTime;
 
     /**
-     * <p>The definition of the flow.</p>
+     * <p>Considering compatibility, the system supports two flow definition specifications.</p>
      */
     @NameInMap("Definition")
     public String definition;
@@ -23,7 +23,7 @@ public class CreateFlowResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The execution mode or the enumeration type. Valid values: Express and Standard. The value Standard indicates an empty string.</p>
+     * <p>The execution mode. Valid values: Express and Standard. Considering compatibility, an empty string is equivalent to the Standard execution mode.</p>
      */
     @NameInMap("ExecutionMode")
     public String executionMode;
@@ -53,13 +53,23 @@ public class CreateFlowResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ARN of the RAM role.</p>
+     * <p>The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, CloudFlow assumes the role to call API operations of relevant services.</p>
      */
     @NameInMap("RoleArn")
     public String roleArn;
 
     /**
      * <p>The type of the flow.</p>
+     * <br>
+     * <p>Valid value:</p>
+     * <br>
+     * <p>*   FDL</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("Type")
     public String type;

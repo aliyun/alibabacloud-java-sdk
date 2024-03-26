@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteScheduleRequest extends TeaModel {
     /**
-     * <p>The name of the flow that is associated with the time-based schedule. The name is unique within the region and cannot be modified after the time-based schedule is created. Configure this parameter based on the following rules:</p>
+     * <p>The name of the flow that is associated with the time-based schedule. The name must be unique within the region and cannot be modified after the time-based schedule is created. The name must meet the following conventions:</p>
      * <br>
      * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
      * <p>*   The name must start with a letter or an underscore (\_).</p>
@@ -16,13 +16,7 @@ public class DeleteScheduleRequest extends TeaModel {
     public String flowName;
 
     /**
-     * <p>The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>The name of the time-based schedule. Configure this parameter based on the following rules:</p>
+     * <p>The name of the time-based schedule. The name must meet the following conventions:</p>
      * <br>
      * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
      * <p>*   The name must start with a letter or an underscore (\_).</p>
@@ -43,14 +37,6 @@ public class DeleteScheduleRequest extends TeaModel {
     }
     public String getFlowName() {
         return this.flowName;
-    }
-
-    public DeleteScheduleRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeleteScheduleRequest setScheduleName(String scheduleName) {

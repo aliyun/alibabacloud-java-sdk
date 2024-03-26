@@ -71,7 +71,7 @@ public class ListFlowsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The execution mode or the enumeration type. Valid values: Express and Standard. The value Standard indicates an empty string.</p>
+         * <p>The execution mode or the enumeration type. Valid values: Express and Standard. A value of Standard indicates an empty string.</p>
          */
         @NameInMap("ExecutionMode")
         public String executionMode;
@@ -95,7 +95,7 @@ public class ListFlowsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role.</p>
+         * <p>The Alibaba Cloud resource name (ARN) of the specified Resource Access Management (RAM) role that Serverless Workflow assumes to invoke resources when the flow is executed.</p>
          */
         @NameInMap("RoleArn")
         public String roleArn;
