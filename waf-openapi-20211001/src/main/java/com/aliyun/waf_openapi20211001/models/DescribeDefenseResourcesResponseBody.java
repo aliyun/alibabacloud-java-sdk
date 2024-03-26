@@ -62,7 +62,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         public Integer acwCookieStatus;
 
         /**
-         * <p>The status of the secure attribute of the tracking cookie.</p>
+         * <p>The status of the secure attribute in the tracking cookie.</p>
          * <br>
          * <p>*   **0:** disabled.</p>
          * <p>*   **1:** enabled.</p>
@@ -71,7 +71,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         public Integer acwSecureStatus;
 
         /**
-         * <p>The status of the secure attribute of the slider verification cookie.</p>
+         * <p>The status of the slider CAPTCHA cookie.</p>
          * <br>
          * <p>*   **0:** disabled.</p>
          * <p>*   **1:** enabled.</p>
@@ -80,7 +80,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         public Integer acwV3SecureStatus;
 
         /**
-         * <p>The custom XFF headers that are used to identify the originating IP addresses of clients. If the value of XffStatus is 1 and CustomHeaders is left empty, the first IP address in the XFF header is the originating IP address of the client.</p>
+         * <p>The custom XFF headers that are used to identify the originating IP addresses of clients. If the value of XffStatus is 1 and CustomHeaders is left empty, the first IP addresses in the XFF headers are used as the originating IP addresses of clients.</p>
          */
         @NameInMap("CustomHeaders")
         public java.util.List<String> customHeaders;
@@ -92,25 +92,28 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The details of the protected object. Different key-value pairs in a map indicate different properties of the protected object.</p>
+         * <p>The details of the protected object. Different key-value pairs indicate different attributes of the protected object.</p>
          */
         @NameInMap("Detail")
         public java.util.Map<String, ?> detail;
 
         /**
-         * <p>The creation time of the protected object. Unit: seconds.</p>
+         * <p>The time when the protected object was created. Unit: milliseconds.</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
-         * <p>The most recent modification time of the protected object. Unit: seconds.</p>
+         * <p>The time when the protected object was modified. Unit: milliseconds.</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        @NameInMap("OwnerUserId")
+        public String ownerUserId;
+
         /**
-         * <p>The protection pattern.</p>
+         * <p>The pattern in which the protected object is protected.</p>
          */
         @NameInMap("Pattern")
         public String pattern;
@@ -134,7 +137,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         public String resourceGroup;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          */
         @NameInMap("ResourceManagerResourceGroupId")
         public String resourceManagerResourceGroupId;
@@ -146,7 +149,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         public String resourceOrigin;
 
         /**
-         * <p>Indicates whether the X-Forwarded-For (XFF) header is used.</p>
+         * <p>Indicates whether the X-Forwarded-For (XFF) proxy feature is enabled for the protected object.</p>
          */
         @NameInMap("XffStatus")
         public Integer xffStatus;
@@ -218,6 +221,14 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         }
         public Long getGmtModified() {
             return this.gmtModified;
+        }
+
+        public DescribeDefenseResourcesResponseBodyResources setOwnerUserId(String ownerUserId) {
+            this.ownerUserId = ownerUserId;
+            return this;
+        }
+        public String getOwnerUserId() {
+            return this.ownerUserId;
         }
 
         public DescribeDefenseResourcesResponseBodyResources setPattern(String pattern) {

@@ -18,6 +18,12 @@ public class DescribeVisitUasRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <br>
+     * <p>*   **cn-hangzhou:** the Chinese mainland</p>
+     * <p>*   **ap-southeast-1:** outside the Chinese mainland.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -42,12 +42,6 @@ public class DeleteDomainRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The source IP address of the request. The value of this parameter is specified by the system.</p>
-     */
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     public static DeleteDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDomainRequest self = new DeleteDomainRequest();
         return TeaModel.build(map, self);
@@ -91,14 +85,6 @@ public class DeleteDomainRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public DeleteDomainRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
 }

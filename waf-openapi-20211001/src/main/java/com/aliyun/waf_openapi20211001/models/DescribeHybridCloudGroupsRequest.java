@@ -20,7 +20,7 @@ public class DescribeHybridCloudGroupsRequest extends TeaModel {
     public String clusterProxyType;
 
     /**
-     * <p>The name of the hybrid cloud node group that you want to query.</p>
+     * <p>The name of the node group that you want to query.</p>
      */
     @NameInMap("GroupName")
     public Integer groupName;

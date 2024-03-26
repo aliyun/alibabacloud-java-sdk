@@ -322,12 +322,27 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         @NameInMap("ProtectionResource")
         public String protectionResource;
 
+        /**
+         * <p>Indicates whether only SM certificate-based clients can access the domain name. This parameter is returned only if the value of SM2Enabled is true. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("SM2AccessOnly")
         public Boolean SM2AccessOnly;
 
+        /**
+         * <p>The ID of the SM certificate that is added. This parameter is returned only if the value of SM2Enabled is true.</p>
+         */
         @NameInMap("SM2CertId")
         public Boolean SM2CertId;
 
+        /**
+         * <p>Indicates whether SM certificate-based verification is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("SM2Enabled")
         public Boolean SM2Enabled;
 
@@ -524,7 +539,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
     public static class DescribeDomainDetailResponseBodyRedirectRequestHeaders extends TeaModel {
         /**
-         * <p>The key of the custom header field.</p>
+         * <p>The custom header field.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -657,6 +672,12 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         @NameInMap("WriteTimeout")
         public Integer writeTimeout;
 
+        /**
+         * <p>Indicates whether the X-Forward-For-Proto header is used to identify the protocol used by WAF to forward requests to the origin server. Valid values:</p>
+         * <br>
+         * <p>*   **true** (default)</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("XffProto")
         public Boolean xffProto;
 

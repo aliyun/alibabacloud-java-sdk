@@ -27,12 +27,6 @@ public class DescribeDomainDetailRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The source IP address of the request. The value of this parameter is specified by the system.</p>
-     */
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     public static DescribeDomainDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainDetailRequest self = new DescribeDomainDetailRequest();
         return TeaModel.build(map, self);
@@ -60,14 +54,6 @@ public class DescribeDomainDetailRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public DescribeDomainDetailRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
 }

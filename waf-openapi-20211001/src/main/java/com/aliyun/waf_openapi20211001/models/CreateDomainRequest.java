@@ -54,12 +54,6 @@ public class CreateDomainRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
-    /**
-     * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
-     */
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     public static CreateDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDomainRequest self = new CreateDomainRequest();
         return TeaModel.build(map, self);
@@ -119,14 +113,6 @@ public class CreateDomainRequest extends TeaModel {
     }
     public String getResourceManagerResourceGroupId() {
         return this.resourceManagerResourceGroupId;
-    }
-
-    public CreateDomainRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public static class CreateDomainRequestListen extends TeaModel {
@@ -410,7 +396,7 @@ public class CreateDomainRequest extends TeaModel {
 
     public static class CreateDomainRequestRedirectRequestHeaders extends TeaModel {
         /**
-         * <p>The key of the custom header field.</p>
+         * <p>The custom header field.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -461,7 +447,7 @@ public class CreateDomainRequest extends TeaModel {
         public Boolean cnameEnabled;
 
         /**
-         * <p>The connection timeout period. Unit: seconds. Valid values: 1 to 3600.</p>
+         * <p>The timeout period of connections. Unit: seconds. Valid values: 1 to 3600.</p>
          */
         @NameInMap("ConnectTimeout")
         public Integer connectTimeout;
@@ -487,45 +473,45 @@ public class CreateDomainRequest extends TeaModel {
         /**
          * <p>The number of reused persistent connections. Valid values: 60 to 1000.</p>
          * <br>
-         * <p>> This parameter specifies the number of reused persistent connections after you enable the persistent connection feature.</p>
+         * <p>>  This parameter specifies the number of reused persistent connections after you enable the persistent connection feature.</p>
          */
         @NameInMap("KeepaliveRequests")
         public Integer keepaliveRequests;
 
         /**
-         * <p>The timeout period of persistent connections that are in the Idle state. Valid values: 1 to 60. Default value: 15. Unit: seconds.</p>
+         * <p>The timeout period of idle persistent connections. Valid values: 1 to 60. Default value: 15. Unit: seconds.</p>
          * <br>
-         * <p>> This parameter specifies the period of time during which a reused persistent connection is allowed to remain in the Idle state before the persistent connection is released.</p>
+         * <p>>  This parameter specifies the period of time during which a reused persistent connection is allowed to remain in the Idle state before the persistent connection is released.</p>
          */
         @NameInMap("KeepaliveTimeout")
         public Integer keepaliveTimeout;
 
         /**
-         * <p>The load balancing algorithm that you want WAF to use to forward requests to the origin server. Valid values:</p>
+         * <p>The load balancing algorithm that you want to use to forward requests to the origin server. Valid values:</p>
          * <br>
          * <p>*   **iphash**</p>
          * <p>*   **roundRobin**</p>
-         * <p>*   **leastTime**. You can select this value only if you set **ProtectionResource** to **gslb**.</p>
+         * <p>*   **leastTime** You can set the parameter to this value only if you set **ProtectionResource** to **gslb**.</p>
          */
         @NameInMap("Loadbalance")
         public String loadbalance;
 
         /**
-         * <p>The read timeout period. Unit: seconds. Valid values: 1 to 3600.</p>
+         * <p>The timeout period of read connections. Unit: seconds. Valid values: 1 to 3600.</p>
          */
         @NameInMap("ReadTimeout")
         public Integer readTimeout;
 
         /**
-         * <p>The key-value pairs that you want to use to label the requests that pass through the WAF instance.</p>
+         * <p>The custom header field that you want to use to label requests that are processed by WAF.</p>
          * <br>
-         * <p>WAF automatically adds the key-value pairs to request headers. This way, the backend service can identify requests that pass through WAF.</p>
+         * <p>When a request passes through WAF, the custom header field is automatically used to label the request. This way, the backend service can identify requests that are processed by WAF.</p>
          */
         @NameInMap("RequestHeaders")
         public java.util.List<CreateDomainRequestRedirectRequestHeaders> requestHeaders;
 
         /**
-         * <p>Specifies whether WAF retries to forward requests when the requests fail to be forwarded to the origin server. Valid values:</p>
+         * <p>Specifies whether WAF retries forwarding requests to the origin server when the requests fail to be forwarded to the origin server. Valid values:</p>
          * <br>
          * <p>*   **true** (default)</p>
          * <p>*   **false**</p>
@@ -534,11 +520,11 @@ public class CreateDomainRequest extends TeaModel {
         public Boolean retry;
 
         /**
-         * <p>The forwarding rules that you want to configure for the domain name that you want to add to WAF in hybrid cloud mode. Set the value to a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</p>
+         * <p>The forwarding rules that you want to configure for the domain name that you want to add to WAF in hybrid cloud mode. This parameter is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</p>
          * <br>
-         * <p>*   **rs:** The back-to-origin IP addresses or CNAMEs. The value must be of the ARRAY type.</p>
-         * <p>*   **location:** The name of the protection node. The value must be of the STRING type.</p>
-         * <p>*   **locationId:** The ID of the protection node. The value must be of the LONG type.</p>
+         * <p>*   **rs**: the back-to-origin IP addresses or CNAMEs. The value must be of the ARRAY type.</p>
+         * <p>*   **location**: the name of the protection node. The value must be of the STRING type.</p>
+         * <p>*   **locationId**: the ID of the protection node. The value must be of the LONG type.</p>
          */
         @NameInMap("RoutingRules")
         public String routingRules;
@@ -553,19 +539,25 @@ public class CreateDomainRequest extends TeaModel {
         public Boolean sniEnabled;
 
         /**
-         * <p>The value of the SNI field. If you do not specify this parameter, the **Host** field value in the request header is used. If you want WAF to use an SNI field value that is different from the Host field value in back-to-origin requests, you can specify a custom value for the SNI field.</p>
+         * <p>The value of the SNI field. If you do not specify this parameter, the value of the **Host** field is automatically used. This parameter is optional. If you want WAF to use an SNI field value that is different from the Host field value in back-to-origin requests, you can specify a custom value for the SNI field.</p>
          * <br>
-         * <p>> You must specify this parameter only if you set **SniEnabled** to **true**.</p>
+         * <p>>  This parameter is required only if you set **SniEnalbed** to **true**.</p>
          */
         @NameInMap("SniHost")
         public String sniHost;
 
         /**
-         * <p>The write timeout period. Unit: seconds. Valid values: 1 to 3600.</p>
+         * <p>The timeout period of write connections. Unit: seconds. Valid values: 1 to 3600.</p>
          */
         @NameInMap("WriteTimeout")
         public Integer writeTimeout;
 
+        /**
+         * <p>Indicates whether the X-Forward-For-Proto header is used to identify the protocol used by WAF to forward requests to the origin server. Valid values:</p>
+         * <br>
+         * <p>*   **true** (default)</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("XffProto")
         public Boolean xffProto;
 
