@@ -4,9 +4,6 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class DeleteFlowRequest extends TeaModel {
-    /**
-     * <p>The name of the flow. The name can contain only letters, digits, underscores (\_), and hyphens (-). It cannot start with a digit or a hyphen (-). It must be 1 to 128 characters in length.</p>
-     */
     @NameInMap("Name")
     public String name;
 
