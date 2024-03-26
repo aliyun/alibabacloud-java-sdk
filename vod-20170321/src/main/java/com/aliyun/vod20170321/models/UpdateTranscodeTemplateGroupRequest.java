@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateTranscodeTemplateGroupRequest extends TeaModel {
     /**
-     * <p>The lock status of the template group. Valid values:</p>
+     * <p>The lock status of the transcoding template group. Valid values:</p>
      * <br>
-     * <p>*   **Enabled**: The template group is locked.</p>
-     * <p>*   **Disabled**: The template group is not locked.</p>
+     * <p>*   **Enabled**: The transcoding template group is locked and cannot be modified.</p>
+     * <p>*   **Disabled** (default): The transcoding template group is not locked.</p>
      */
     @NameInMap("Locked")
     public String locked;
@@ -16,7 +16,7 @@ public class UpdateTranscodeTemplateGroupRequest extends TeaModel {
     /**
      * <p>The name of the transcoding template group.</p>
      * <br>
-     * <p>*   The name can be up to 128 bytes in length.</p>
+     * <p>*   The name cannot exceed 128 bytes.</p>
      * <p>*   The value must be encoded in UTF-8.</p>
      */
     @NameInMap("Name")
@@ -29,7 +29,7 @@ public class UpdateTranscodeTemplateGroupRequest extends TeaModel {
     public String transcodeTemplateGroupId;
 
     /**
-     * <p>The configurations of the transcoding template. The value is a JSON-formatted string. For more information about the data structure, see the "TranscodeTemplate" section of the [Basic data types](~~52839~~) topic.</p>
+     * <p>The configurations of the transcoding template. The value must be a JSON string. For more information about the data structure, see [TranscodeTemplate](~~52839~~).</p>
      */
     @NameInMap("TranscodeTemplateList")
     public String transcodeTemplateList;

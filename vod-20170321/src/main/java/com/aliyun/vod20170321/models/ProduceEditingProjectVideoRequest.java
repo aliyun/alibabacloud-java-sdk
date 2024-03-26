@@ -32,9 +32,9 @@ public class ProduceEditingProjectVideoRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The configuration of video production. The value must be in JSON format. For more information about the parameter structure, see [ProduceConfig](~~52839#title_ybl\_7cs_y7d~~).</p>
+     * <p>The configuration of video production. The value must be in the JSON format. For more information about the parameter structure, see [ProduceConfig](~~52839#title-ybl-7cs-y7d~~).</p>
      * <br>
-     * <p>> The StorageLocation field is required if you create an online editing project in a region other than the China (Shanghai) region.</p>
+     * <p>>  StorageLocation is required if you produce videos in a region other than China (Shanghai).</p>
      */
     @NameInMap("ProduceConfig")
     public String produceConfig;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchMediaResponseBody extends TeaModel {
     /**
-     * <p>The AI type.</p>
+     * <p>The information about the media assets.</p>
      */
     @NameInMap("MediaList")
     public java.util.List<SearchMediaResponseBodyMediaList> mediaList;
@@ -181,7 +181,7 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaListAiDataOcrInfo extends TeaModel {
         /**
-         * <p>The text.</p>
+         * <p>The text content.</p>
          */
         @NameInMap("Content")
         public String content;
@@ -267,7 +267,7 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaListAiRoughData extends TeaModel {
         /**
-         * <p>The AI type.</p>
+         * <p>The AI category.</p>
          */
         @NameInMap("AiCategory")
         public String aiCategory;
@@ -285,7 +285,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String saveType;
 
         /**
-         * <p>The status of the data.</p>
+         * <p>The data status.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -349,7 +349,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public Long level;
 
         /**
-         * <p>The ID of the parent category.</p>
+         * <p>The ID of the parent node.</p>
          */
         @NameInMap("ParentId")
         public Long parentId;
@@ -417,7 +417,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public java.util.List<SearchMediaResponseBodyMediaListAttachedMediaCategories> categories;
 
         /**
-         * <p>The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -435,7 +435,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
@@ -443,15 +443,15 @@ public class SearchMediaResponseBody extends TeaModel {
         /**
          * <p>The status of the auxiliary media asset. Valid values:</p>
          * <br>
-         * <p>*   **Uploading**: The auxiliary media asset is being uploaded. This is the initial status.</p>
-         * <p>*   **Normal**: The auxiliary media asset is uploaded.</p>
-         * <p>*   **UploadFail**: The auxiliary media asset fails to be uploaded.</p>
+         * <p>*   **Uploading**</p>
+         * <p>*   **Normal**</p>
+         * <p>*   **UploadFail**</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The endpoint of the OSS bucket in which the auxiliary media asset is stored.</p>
+         * <p>The region in which the auxiliary media asset is stored.</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
@@ -591,7 +591,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String audioId;
 
         /**
-         * <p>The category ID of the audio file.</p>
+         * <p>The ID of the category.</p>
          */
         @NameInMap("CateId")
         public Long cateId;
@@ -609,7 +609,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String coverURL;
 
         /**
-         * <p>The time when the audio file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the audio stream was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -636,18 +636,18 @@ public class SearchMediaResponseBody extends TeaModel {
         public Float duration;
 
         /**
-         * <p>The source. Valid values:</p>
+         * <p>The source of the audio file. Valid values:</p>
          * <br>
          * <p>*   **general**: The audio file is uploaded by using ApsaraVideo VOD.</p>
          * <p>*   **short_video**: The audio file is uploaded to ApsaraVideo VOD by using the short video SDK. For more information, see [Introduction](~~53407~~).</p>
          * <p>*   **editing**: The audio file is uploaded to ApsaraVideo VOD after online editing and production. For more information, see [ProduceEditingProjectVideo](~~68536~~).</p>
-         * <p>*   **live**: The audio stream is recorded and uploaded as a file to ApsaraVideo VOD.</p>
+         * <p>*   **live**: The audio file is recorded and uploaded as a file to ApsaraVideo VOD.</p>
          */
         @NameInMap("MediaSource")
         public String mediaSource;
 
         /**
-         * <p>The time when the audio file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the audio file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
@@ -686,13 +686,13 @@ public class SearchMediaResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The list of automatic snapshots.</p>
+         * <p>The automatic snapshots.</p>
          */
         @NameInMap("Snapshots")
         public java.util.List<String> snapshots;
 
         /**
-         * <p>The list of sprite snapshots.</p>
+         * <p>The sprite snapshots.</p>
          */
         @NameInMap("SpriteSnapshots")
         public java.util.List<String> spriteSnapshots;
@@ -715,16 +715,16 @@ public class SearchMediaResponseBody extends TeaModel {
          * <p>*   **IA**: All media resources are stored as IA objects.</p>
          * <p>*   **Archive**: All media resources are stored as Archive objects.</p>
          * <p>*   **ColdArchive**: All media resources are stored as Cold Archive objects.</p>
-         * <p>*   **SourceIA**: Only the source files are IA objects.</p>
-         * <p>*   **SourceArchive**: Only the source files are Archive objects.</p>
-         * <p>*   **SourceColdArchive**: Only the source files are Cold Archive objects.</p>
+         * <p>*   **SourceIA**: Only the source file is stored as an IA object.</p>
+         * <p>*   **SourceArchive**: Only the source file is stored as an Archive object.</p>
+         * <p>*   **SourceColdArchive**: Only the source file is stored as a Cold Archive object.</p>
          * <p>*   **Changing**: The storage class is being modified.</p>
          */
         @NameInMap("StorageClass")
         public String storageClass;
 
         /**
-         * <p>The endpoint of the OSS bucket in which the audio file is stored.</p>
+         * <p>The region in which the audio is stored.</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
@@ -736,13 +736,13 @@ public class SearchMediaResponseBody extends TeaModel {
         public String tags;
 
         /**
-         * <p>The title of the audio file.</p>
+         * <p>The title of the audio file</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The transcoding mode. Default value: FastTranscode. Valid values:</p>
+         * <p>The transcoding mode. Valid values:</p>
          * <br>
          * <p>*   **FastTranscode**: The audio file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.</p>
          * <p>*   **NoTranscode**: The audio file can be played without being transcoded. You can immediately play the file after it is uploaded.</p>
@@ -950,7 +950,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The category ID of the image file.</p>
+         * <p>The ID of the category.</p>
          */
         @NameInMap("CateId")
         public Long cateId;
@@ -962,7 +962,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String cateName;
 
         /**
-         * <p>The time when the image file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the image was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -980,7 +980,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The time when the image file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the image file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
@@ -988,15 +988,15 @@ public class SearchMediaResponseBody extends TeaModel {
         /**
          * <p>The status of the image file.</p>
          * <br>
-         * <p>*   **Uploading**: The image file is being uploaded. This is the initial status.</p>
-         * <p>*   **Normal**: The image file is uploaded.</p>
-         * <p>*   **UploadFail**: The image file fails to be uploaded.</p>
+         * <p>*   **Uploading**</p>
+         * <p>*   **Normal**</p>
+         * <p>*   **UploadFail**</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The endpoint of the OSS bucket in which the image file is stored.</p>
+         * <p>The region in which the image is stored.</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
@@ -1130,7 +1130,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The category ID of the video file.</p>
+         * <p>The ID of the category.</p>
          */
         @NameInMap("CateId")
         public Long cateId;
@@ -1148,7 +1148,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String coverURL;
 
         /**
-         * <p>The time when the video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -1175,7 +1175,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public Float duration;
 
         /**
-         * <p>The source. Valid values:</p>
+         * <p>The source of the video file. Valid values:</p>
          * <br>
          * <p>*   **general**: The video file is uploaded by using ApsaraVideo VOD.</p>
          * <p>*   **short_video**: The video file is uploaded by using the short video SDK.</p>
@@ -1186,7 +1186,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String mediaSource;
 
         /**
-         * <p>The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
@@ -1225,19 +1225,19 @@ public class SearchMediaResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The list of automatic snapshots.</p>
+         * <p>The automatic snapshots.</p>
          */
         @NameInMap("Snapshots")
         public java.util.List<String> snapshots;
 
         /**
-         * <p>The list of sprite snapshots.</p>
+         * <p>The sprite snapshots.</p>
          */
         @NameInMap("SpriteSnapshots")
         public java.util.List<String> spriteSnapshots;
 
         /**
-         * <p>The status of the video file. Valid values:</p>
+         * <p>The status of the file. Valid values:</p>
          * <br>
          * <p>*   **Uploading**</p>
          * <p>*   **UploadFail**</p>
@@ -1257,16 +1257,17 @@ public class SearchMediaResponseBody extends TeaModel {
          * <p>*   **IA**: All media resources are stored as IA objects.</p>
          * <p>*   **Archive**: All media resources are stored as Archive objects.</p>
          * <p>*   **ColdArchive**: All media resources are stored as Cold Archive objects.</p>
-         * <p>*   **SourceIA**: Only the source files are IA objects.</p>
-         * <p>*   **SourceArchive**: Only the source files are Archive objects.</p>
-         * <p>*   **SourceColdArchive**: Only the source files are Cold Archive objects.</p>
-         * <p>*   **Changing**: The storage class is being modified.</p>
+         * <p>*   **SourceIA**: Only the source file is stored as an IA object.</p>
+         * <p>*   **SourceArchive**: Only the source file is stored as an Archive object.</p>
+         * <p>*   **SourceColdArchive**: Only the source file is stored as a Cold Archive object.</p>
+         * <p>*   **Changing**: The storage class of the video file is being changed.</p>
+         * <p>*   **SourceChanging**: The storage class of the source file is being changed.</p>
          */
         @NameInMap("StorageClass")
         public String storageClass;
 
         /**
-         * <p>The endpoint of the OSS bucket in which the video file is stored.</p>
+         * <p>The region in which the video is stored.</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
@@ -1278,13 +1279,13 @@ public class SearchMediaResponseBody extends TeaModel {
         public String tags;
 
         /**
-         * <p>The title of the video file.</p>
+         * <p>The title of the video.</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The transcoding mode. Default value: FastTranscode. Valid values:</p>
+         * <p>The transcoding mode. Valid values:</p>
          * <br>
          * <p>*   **FastTranscode**: The video file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.</p>
          * <p>*   **NoTranscode**: The video file can be played without being transcoded. You can immediately play the file after it is uploaded.</p>
@@ -1504,31 +1505,31 @@ public class SearchMediaResponseBody extends TeaModel {
         public SearchMediaResponseBodyMediaListAiRoughData aiRoughData;
 
         /**
-         * <p>[Details about auxiliary media assets](~~86991~~).</p>
+         * <p>[The information about the auxiliary media asset](~~86991~~).</p>
          */
         @NameInMap("AttachedMedia")
         public SearchMediaResponseBodyMediaListAttachedMedia attachedMedia;
 
         /**
-         * <p>[Details about audio files](~~86991~~).</p>
+         * <p>[The information about the audio](~~86991~~).</p>
          */
         @NameInMap("Audio")
         public SearchMediaResponseBodyMediaListAudio audio;
 
         /**
-         * <p>The time when the media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>[Details about image files](~~86991~~).</p>
+         * <p>[The information about the image](~~86991~~).</p>
          */
         @NameInMap("Image")
         public SearchMediaResponseBodyMediaListImage image;
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The ID of the file.</p>
          */
         @NameInMap("MediaId")
         public String mediaId;
@@ -1545,7 +1546,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String mediaType;
 
         /**
-         * <p>[Details about video files](~~86991~~).</p>
+         * <p>[The information about the video](~~86991~~).</p>
          */
         @NameInMap("Video")
         public SearchMediaResponseBodyMediaListVideo video;

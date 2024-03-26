@@ -10,6 +10,9 @@ public class GetAppInfosResponseBody extends TeaModel {
     @NameInMap("AppInfoList")
     public java.util.List<GetAppInfosResponseBodyAppInfoList> appInfoList;
 
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 

@@ -4,9 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GenerateDownloadSecretKeyResponseBody extends TeaModel {
+    /**
+     * <p>The key file for secure download.</p>
+     */
     @NameInMap("AppEncryptKey")
     public String appEncryptKey;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

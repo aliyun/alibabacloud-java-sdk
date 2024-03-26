@@ -16,6 +16,15 @@ public class DeleteVodSpecificConfigRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The environment of configuration. </p>
+     * <br>
+     * <p>Value:</p>
+     * <br>
+     * <p>online: production environment</p>
+     * <br>
+     * <p>gray: simulation environment</p>
+     */
     @NameInMap("Env")
     public String env;
 

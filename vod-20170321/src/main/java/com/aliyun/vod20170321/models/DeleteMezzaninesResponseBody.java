@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMezzaninesResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the videos that do not exist.</p>
+     * <p>The IDs of the audio or video files that do not exist.</p>
      */
     @NameInMap("NonExistVideoIds")
     public java.util.List<String> nonExistVideoIds;
@@ -17,8 +17,9 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The IDs of the videos whose mezzanine files cannot be deleted.</p>
-     * <p>> Generally, mezzanine files cannot be deleted if they are used for original-quality playback or you do not have required [permissions](~~113600~~) to delete them.</p>
+     * <p>The IDs of the audio or video files whose source files cannot be deleted.</p>
+     * <br>
+     * <p>>  In most cases, source files cannot be deleted if they are used for original-quality playback or you do not have required permissions to delete them. For more information, see [Overview](~~113600~~).</p>
      */
     @NameInMap("UnRemoveableVideoIds")
     public java.util.List<String> unRemoveableVideoIds;
