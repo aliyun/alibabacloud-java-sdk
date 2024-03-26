@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExecutionRequest extends TeaModel {
     /**
-     * <p>The name of the execution, which is unique within a flow. Configure this parameter based on the following rules:</p>
+     * <p>The name of the execution, which is unique within a flow. Set this parameter based on the following rules:</p>
      * <br>
      * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
      * <p>*   The name must start with a letter or an underscore (\_).</p>
@@ -16,7 +16,7 @@ public class DescribeExecutionRequest extends TeaModel {
     public String executionName;
 
     /**
-     * <p>The name of the flow. The name is unique within the region and cannot be modified after the flow is created. Configure this parameter based on the following rules:</p>
+     * <p>The name of the flow. The name is unique within the region and cannot be modified after the flow is created. Set this parameter based on the following rules:</p>
      * <br>
      * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
      * <p>*   The name must start with a letter or an underscore (\_).</p>
@@ -25,12 +25,6 @@ public class DescribeExecutionRequest extends TeaModel {
      */
     @NameInMap("FlowName")
     public String flowName;
-
-    /**
-     * <p>The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
 
     /**
      * <p>The maximum period of time for long polling waits. Valid values: 0 to 60. Unit: seconds. Configure this parameter based on the following rules:</p>
@@ -60,14 +54,6 @@ public class DescribeExecutionRequest extends TeaModel {
     }
     public String getFlowName() {
         return this.flowName;
-    }
-
-    public DescribeExecutionRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeExecutionRequest setWaitTimeSeconds(Integer waitTimeSeconds) {

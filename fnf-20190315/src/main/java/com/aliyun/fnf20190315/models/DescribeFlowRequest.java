@@ -10,12 +10,6 @@ public class DescribeFlowRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
     public static DescribeFlowRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFlowRequest self = new DescribeFlowRequest();
         return TeaModel.build(map, self);
@@ -27,14 +21,6 @@ public class DescribeFlowRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public DescribeFlowRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
 }

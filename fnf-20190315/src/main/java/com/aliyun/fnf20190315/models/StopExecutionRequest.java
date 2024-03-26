@@ -17,7 +17,7 @@ public class StopExecutionRequest extends TeaModel {
     public String error;
 
     /**
-     * <p>The name of the execution that you want to stop. You can call the **ListExecutions** operation to obtain the value of this parameter. The name is unique in a flow. Configure this parameter based on the following rules:</p>
+     * <p>The name of the execution that you want to stop. You can call the **ListExecutions** operation to obtain the value of this parameter. The name is unique in a flow. Set this parameter based on the following rules:</p>
      * <br>
      * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
      * <p>*   The name must start with a letter or an underscore (\_).</p>
@@ -28,7 +28,7 @@ public class StopExecutionRequest extends TeaModel {
     public String executionName;
 
     /**
-     * <p>The name of the flow that you want to stop. You can call the **ListFlows** operation to obtain the value of this parameter. The name is unique within the region and cannot be modified after the flow is created. Configure this parameter based on the following rules:</p>
+     * <p>The name of the flow in which that you want to stop the execution. You can call the **ListFlows** operation to obtain the value of this parameter. The name is unique within the same region and cannot be modified after the flow is created. Set this parameter based on the following rules:</p>
      * <br>
      * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
      * <p>*   The name must start with a letter or an underscore (\_).</p>
@@ -37,12 +37,6 @@ public class StopExecutionRequest extends TeaModel {
      */
     @NameInMap("FlowName")
     public String flowName;
-
-    /**
-     * <p>The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
 
     public static StopExecutionRequest build(java.util.Map<String, ?> map) throws Exception {
         StopExecutionRequest self = new StopExecutionRequest();
@@ -79,14 +73,6 @@ public class StopExecutionRequest extends TeaModel {
     }
     public String getFlowName() {
         return this.flowName;
-    }
-
-    public StopExecutionRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
 }

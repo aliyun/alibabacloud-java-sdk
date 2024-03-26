@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFlowRequest extends TeaModel {
     /**
-     * <p>The definition of the flow. The definition must comply with the Flow Definition Language (FDL) syntax.</p>
+     * <p>The definition of the flow. The definition must comply with the flow definition language (FDL) syntax. Considering compatibility, the system supports two flow definition specifications.</p>
      */
     @NameInMap("Definition")
     public String definition;
@@ -17,7 +17,7 @@ public class CreateFlowRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The execution mode or the enumeration type. Valid values: Express and Standard. The value Standard indicates an empty string.</p>
+     * <p>The execution mode. Valid values: Express and Standard. Considering compatibility, an empty string is equivalent to the Standard execution mode.</p>
      */
     @NameInMap("ExecutionMode")
     public String executionMode;
@@ -29,7 +29,7 @@ public class CreateFlowRequest extends TeaModel {
     public String externalStorageLocation;
 
     /**
-     * <p>The name of the flow. The name is unique within the region and cannot be modified after the flow is created. Configure this parameter based on the following rules:</p>
+     * <p>The name of the flow. The name is unique within the same region and cannot be modified after the flow is created. Set this parameter based on the following rules:</p>
      * <br>
      * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
      * <p>*   The name must start with a letter or an underscore (\_).</p>
@@ -40,19 +40,13 @@ public class CreateFlowRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>The Alibaba Cloud resource name (ARN) of the specified Resource Access Management (RAM) role that Serverless Workflow assumes to invoke resources when the task is executed.</p>
+     * <p>The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, CloudFlow assumes the role to call API operations of relevant services.</p>
      */
     @NameInMap("RoleArn")
     public String roleArn;
 
     /**
-     * <p>The type of the flow. Valid value: **FDL**.</p>
+     * <p>The type of the flow. Set this parameter to **FDL**.</p>
      */
     @NameInMap("Type")
     public String type;
@@ -100,14 +94,6 @@ public class CreateFlowRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public CreateFlowRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateFlowRequest setRoleArn(String roleArn) {

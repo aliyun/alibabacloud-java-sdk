@@ -11,7 +11,7 @@ public class DescribeFlowResponseBody extends TeaModel {
     public String createdTime;
 
     /**
-     * <p>The definition of the flow. The definition must comply with the Flow Definition Language (FDL) syntax.</p>
+     * <p>The flow definition, which follows the flow definition language (FDL) syntax standard. Considering compatibility, the system supports the two flow definition specifications.</p>
      */
     @NameInMap("Definition")
     public String definition;
@@ -23,7 +23,7 @@ public class DescribeFlowResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The execution mode or the enumeration type. Valid values: Express and Standard. The value Standard indicates an empty string.</p>
+     * <p>The execution mode or the enumeration type. Valid values: Express and Standard. A value of Standard indicates an empty string.</p>
      */
     @NameInMap("ExecutionMode")
     public String executionMode;
@@ -53,7 +53,7 @@ public class DescribeFlowResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+     * <p>The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, CloudFlow assumes the role to call API operations of relevant services.</p>
      */
     @NameInMap("RoleArn")
     public String roleArn;

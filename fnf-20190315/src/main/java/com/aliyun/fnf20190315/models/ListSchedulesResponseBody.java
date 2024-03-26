@@ -59,7 +59,7 @@ public class ListSchedulesResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The CRON expression of the scheduled task.</p>
+         * <p>The cron expression of the scheduled task.</p>
          */
         @NameInMap("CronExpression")
         public String cronExpression;

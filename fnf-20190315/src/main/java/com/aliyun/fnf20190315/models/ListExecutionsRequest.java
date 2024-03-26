@@ -11,7 +11,7 @@ public class ListExecutionsRequest extends TeaModel {
     public String executionNamePrefix;
 
     /**
-     * <p>The name of the flow. The name is unique within the region and cannot be modified after the flow is created. Configure this parameter based on the following rules:</p>
+     * <p>The name of the flow. The name must be unique within the region and cannot be modified after the flow is created. The name must meet the following conventions:</p>
      * <br>
      * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
      * <p>*   The name must start with a letter or an underscore (\_).</p>
@@ -34,12 +34,6 @@ public class ListExecutionsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
      * <p>The beginning of the time range to query executions. Specify the value in the UTC RFC3339 format.</p>
      */
     @NameInMap("StartedTimeBegin")
@@ -52,8 +46,9 @@ public class ListExecutionsRequest extends TeaModel {
     public String startedTimeEnd;
 
     /**
-     * <p>The state of the execution that you want to filter. Valid values:</p>
+     * <p>The status of the execution that you want to filter. Valid values:</p>
      * <br>
+     * <p>*   **Starting**</p>
      * <p>*   **Running**</p>
      * <p>*   **Stopped**</p>
      * <p>*   **Succeeded**</p>
@@ -98,14 +93,6 @@ public class ListExecutionsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public ListExecutionsRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListExecutionsRequest setStartedTimeBegin(String startedTimeBegin) {

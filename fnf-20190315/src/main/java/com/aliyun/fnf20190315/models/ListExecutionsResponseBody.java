@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListExecutionsResponseBody extends TeaModel {
     /**
-     * <p>The queried executions.</p>
+     * <p>The information about executions.</p>
      */
     @NameInMap("Executions")
     public java.util.List<ListExecutionsResponseBodyExecutions> executions;
@@ -77,7 +77,7 @@ public class ListExecutionsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The execution result, which is in the JSON format.</p>
+         * <p>The output of the execution, which is in the JSON format</p>
          */
         @NameInMap("Output")
         public String output;
@@ -89,7 +89,7 @@ public class ListExecutionsResponseBody extends TeaModel {
         public String startedTime;
 
         /**
-         * <p>The state of the execution.</p>
+         * <p>The status of the execution.</p>
          */
         @NameInMap("Status")
         public String status;

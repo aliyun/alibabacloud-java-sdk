@@ -26,7 +26,7 @@ public class UpdateScheduleRequest extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>The name of the flow that is associated with the time-based schedule. The name is unique within the region and cannot be modified after the time-based schedule is created. Configure this parameter based on the following rules:</p>
+     * <p>The name of the flow that is associated with the time-based schedule. The name must be unique within the region and cannot be modified after the time-based schedule is created. The name must meet the following conventions:</p>
      * <br>
      * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
      * <p>*   The name must start with a letter or an underscore (\_).</p>
@@ -43,13 +43,7 @@ public class UpdateScheduleRequest extends TeaModel {
     public String payload;
 
     /**
-     * <p>The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>The name of the time-based schedule. Configure this parameter based on the following rules:</p>
+     * <p>The name of the time-based schedule. The name must meet the following conventions:</p>
      * <br>
      * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
      * <p>*   The name must start with a letter or an underscore (\_).</p>
@@ -102,14 +96,6 @@ public class UpdateScheduleRequest extends TeaModel {
     }
     public String getPayload() {
         return this.payload;
-    }
-
-    public UpdateScheduleRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateScheduleRequest setScheduleName(String scheduleName) {

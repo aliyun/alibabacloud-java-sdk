@@ -38,12 +38,6 @@ public class CreateScheduleRequest extends TeaModel {
     public String payload;
 
     /**
-     * <p>The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
      * <p>The name of the time-based schedule. Configure this parameter based on the following rules:</p>
      * <br>
      * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
@@ -53,6 +47,9 @@ public class CreateScheduleRequest extends TeaModel {
      */
     @NameInMap("ScheduleName")
     public String scheduleName;
+
+    @NameInMap("SignatureVersion")
+    public String signatureVersion;
 
     public static CreateScheduleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateScheduleRequest self = new CreateScheduleRequest();
@@ -99,20 +96,20 @@ public class CreateScheduleRequest extends TeaModel {
         return this.payload;
     }
 
-    public CreateScheduleRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CreateScheduleRequest setScheduleName(String scheduleName) {
         this.scheduleName = scheduleName;
         return this;
     }
     public String getScheduleName() {
         return this.scheduleName;
+    }
+
+    public CreateScheduleRequest setSignatureVersion(String signatureVersion) {
+        this.signatureVersion = signatureVersion;
+        return this;
+    }
+    public String getSignatureVersion() {
+        return this.signatureVersion;
     }
 
 }
