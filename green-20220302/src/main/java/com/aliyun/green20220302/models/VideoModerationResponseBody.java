@@ -57,12 +57,23 @@ public class VideoModerationResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResponseBodyData extends TeaModel {
+        @NameInMap("DataId")
+        public String dataId;
+
         @NameInMap("TaskId")
         public String taskId;
 
         public static VideoModerationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             VideoModerationResponseBodyData self = new VideoModerationResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResponseBodyData setDataId(String dataId) {
+            this.dataId = dataId;
+            return this;
+        }
+        public String getDataId() {
+            return this.dataId;
         }
 
         public VideoModerationResponseBodyData setTaskId(String taskId) {

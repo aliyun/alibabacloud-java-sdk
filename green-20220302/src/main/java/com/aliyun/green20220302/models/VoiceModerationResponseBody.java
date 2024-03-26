@@ -57,12 +57,23 @@ public class VoiceModerationResponseBody extends TeaModel {
     }
 
     public static class VoiceModerationResponseBodyData extends TeaModel {
+        @NameInMap("DataId")
+        public String dataId;
+
         @NameInMap("TaskId")
         public String taskId;
 
         public static VoiceModerationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             VoiceModerationResponseBodyData self = new VoiceModerationResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public VoiceModerationResponseBodyData setDataId(String dataId) {
+            this.dataId = dataId;
+            return this;
+        }
+        public String getDataId() {
+            return this.dataId;
         }
 
         public VoiceModerationResponseBodyData setTaskId(String taskId) {

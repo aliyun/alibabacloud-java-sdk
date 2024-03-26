@@ -197,6 +197,9 @@ public class VoiceModerationResultResponseBody extends TeaModel {
     }
 
     public static class VoiceModerationResultResponseBodyData extends TeaModel {
+        @NameInMap("DataId")
+        public String dataId;
+
         @NameInMap("LiveId")
         public String liveId;
 
@@ -212,6 +215,14 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         public static VoiceModerationResultResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             VoiceModerationResultResponseBodyData self = new VoiceModerationResultResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public VoiceModerationResultResponseBodyData setDataId(String dataId) {
+            this.dataId = dataId;
+            return this;
+        }
+        public String getDataId() {
+            return this.dataId;
         }
 
         public VoiceModerationResultResponseBodyData setLiveId(String liveId) {
