@@ -308,6 +308,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Content", request.content);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.customParams)) {
+            body.put("CustomParams", request.customParams);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
             body.put("ImageId", request.imageId);
         }
