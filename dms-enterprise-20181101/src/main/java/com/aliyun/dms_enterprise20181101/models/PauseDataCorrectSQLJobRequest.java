@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class PauseDataCorrectSQLJobRequest extends TeaModel {
     /**
-     * <p>The ID of the SQL task. You can call the [GetDataCorrectTaskDetail](~~208481~~) and [ListDBTaskSQLJob](~~207049~~) operations to obtain the value of this parameter.</p>
+     * <p>The ID of the SQL task. You can call the [GetDataCorrectTaskDetail](~~208481~~) or [ListDBTaskSQLJob](~~207049~~) operation to obtain the value of this parameter.</p>
      * <br>
-     * <p>>  If the Type parameter is set to SINGLE, you must pass the value of the JobId parameter to confirm the ID of the SQL task that you want to rerun.</p>
+     * <p>>  If Type is set to SINGLE, you must pass in the value of JobId to confirm the ID of the SQL task that you want to pause.</p>
      */
     @NameInMap("JobId")
     public Long jobId;
@@ -19,7 +19,7 @@ public class PauseDataCorrectSQLJobRequest extends TeaModel {
     public Long orderId;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+     * <p>The tenant ID. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetStructSyncOrderDetailResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public GetStructSyncOrderDetailResponseBody body;
 
     public static GetStructSyncOrderDetailResponse build(java.util.Map<String, ?> map) throws Exception {

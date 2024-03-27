@@ -85,6 +85,9 @@ public class AddInstanceRequest extends TeaModel {
     @NameInMap("UseDsql")
     public Integer useDsql;
 
+    @NameInMap("UseSsl")
+    public Integer useSsl;
+
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -307,6 +310,14 @@ public class AddInstanceRequest extends TeaModel {
     }
     public Integer getUseDsql() {
         return this.useDsql;
+    }
+
+    public AddInstanceRequest setUseSsl(Integer useSsl) {
+        this.useSsl = useSsl;
+        return this;
+    }
+    public Integer getUseSsl() {
+        return this.useSsl;
     }
 
     public AddInstanceRequest setVpcId(String vpcId) {

@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class StopTaskFlowInstanceResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public StopTaskFlowInstanceResponseBody body;
 
     public static StopTaskFlowInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
