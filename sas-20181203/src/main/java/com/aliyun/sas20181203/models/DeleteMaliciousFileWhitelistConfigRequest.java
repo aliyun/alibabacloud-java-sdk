@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMaliciousFileWhitelistConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the whitelist rule. You can call the [ListMaliciousFileWhitelistConfigs](~~ListMaliciousFileWhitelistConfigs~~) operation to query the IDs of whitelist rules.</p>
+     * <p>The ID of the alert whitelist rule of sensitive files that are detected by using the agentless detection feature. You can call the [ListMaliciousFileWhitelistConfigs](~~ListMaliciousFileWhitelistConfigs~~) operation to query the IDs of alert whitelist rules.</p>
      */
     @NameInMap("ConfigId")
     public Long configId;

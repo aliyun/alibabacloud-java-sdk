@@ -20,6 +20,12 @@ public class ModifyClientUserDefineRuleRequest extends TeaModel {
     public String cmdline;
 
     /**
+     * <p>The domain name.</p>
+     */
+    @NameInMap("Domain")
+    public String domain;
+
+    /**
      * <p>The file path.</p>
      */
     @NameInMap("FilePath")
@@ -142,6 +148,14 @@ public class ModifyClientUserDefineRuleRequest extends TeaModel {
     }
     public String getCmdline() {
         return this.cmdline;
+    }
+
+    public ModifyClientUserDefineRuleRequest setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
     }
 
     public ModifyClientUserDefineRuleRequest setFilePath(String filePath) {

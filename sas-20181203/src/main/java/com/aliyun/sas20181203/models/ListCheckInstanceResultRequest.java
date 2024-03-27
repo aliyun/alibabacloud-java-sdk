@@ -44,7 +44,7 @@ public class ListCheckInstanceResultRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries to return on each page. Maximum value : 100.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

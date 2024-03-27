@@ -1,3 +1,22 @@
+2024-03-27 Version: 2.22.3
+- Update API AddClientUserDefineRule: add param Domain.
+- Update API DeleteMaliciousFileWhitelistConfig: update param ConfigId.
+- Update API DescribeExposedInstanceCriteria: add param ResourceDirectoryAccountId.
+- Update API DescribeExposedInstanceDetail: add param ResourceDirectoryAccountId.
+- Update API DescribeExposedInstanceList: add param ResourceDirectoryAccountId.
+- Update API DescribeExposedStatisticsDetail: add param ResourceDirectoryAccountId.
+- Update API DescribePropertyScaItem: update param SearchItem.
+- Update API DescribePropertyScaItem: update response param.
+- Update API DescribeVersionConfig: update response param.
+- Update API DescribeVulList: update response param.
+- Update API GetClientUserDefineRule: update response param.
+- Update API ListCheckInstanceResult: update param PageSize.
+- Update API ListCheckItem: update response param.
+- Update API ListCheckResult: update param PageSize.
+- Update API ModifyClientUserDefineRule: add param Domain.
+- Update API ModifyClientUserDefineRule: update response param.
+
+
 2024-02-28 Version: 2.22.2
 - Update API DescribeExposedInstanceCriteria: add param ResourceDirectoryAccountId.
 - Update API DescribeExposedInstanceDetail: add param ResourceDirectoryAccountId.

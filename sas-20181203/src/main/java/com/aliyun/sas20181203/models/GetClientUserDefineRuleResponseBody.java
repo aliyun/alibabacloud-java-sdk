@@ -54,6 +54,12 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
         public String cmdline;
 
         /**
+         * <p>The domain name.</p>
+         */
+        @NameInMap("Domain")
+        public String domain;
+
+        /**
          * <p>The file path.</p>
          */
         @NameInMap("FilePath")
@@ -186,6 +192,14 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
         }
         public String getCmdline() {
             return this.cmdline;
+        }
+
+        public GetClientUserDefineRuleResponseBodyUserDefineRuleDetail setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
         }
 
         public GetClientUserDefineRuleResponseBodyUserDefineRuleDetail setFilePath(String filePath) {

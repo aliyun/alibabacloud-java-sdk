@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the container assets returned.</p>
+     * <p>The information about the container.</p>
      */
     @NameInMap("GroupedContainerInstanceList")
     public java.util.List<DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList> groupedContainerInstanceList;
@@ -53,19 +53,19 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
 
     public static class DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList extends TeaModel {
         /**
-         * <p>The number of alerts that are detected from the current pod, application, namespace, or cluster.</p>
+         * <p>The number of alerts that are detected for the current pod, application, namespace, or cluster.</p>
          */
         @NameInMap("AlarmCount")
         public Integer alarmCount;
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the application.</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -81,13 +81,13 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
          * <br>
          * <p>*   **Kubernetes**: dedicated Kubernetes cluster.</p>
          * <p>*   **ManagedKubernetes**: standard managed cluster (edge cluster).</p>
-         * <p>*   **Ask**: standard serverless cluster.</p>
+         * <p>*   **Ask**: serverless Kubernetes (ASK) cluster.</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
-         * <p>The timestamp generated when the cluster was created. Unit: milliseconds.</p>
+         * <p>The time when the cluster was created. Unit: milliseconds.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -98,14 +98,14 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
          * <p>*   **running**: The cluster is running.</p>
          * <p>*   **stopped**: The cluster is stopped.</p>
          * <p>*   **deleted**: The cluster is deleted.</p>
-         * <p>*   **delete_failed**: The cluster fails to be deleted.</p>
-         * <p>*   **failed**: The cluster fails to be created.</p>
+         * <p>*   **delete_failed**: The cluster failed to be deleted.</p>
+         * <p>*   **failed**: The cluster failed to be created.</p>
          */
         @NameInMap("CusterState")
         public String custerState;
 
         /**
-         * <p>The number of baseline risks that are detected on the current pod, application, namespace, or cluster.</p>
+         * <p>The number of baseline risks that are detected for the current pod, application, namespace, or cluster.</p>
          */
         @NameInMap("HcCount")
         public Integer hcCount;
@@ -117,7 +117,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         public String hostIp;
 
         /**
-         * <p>The image of the container.</p>
+         * <p>The container image.</p>
          */
         @NameInMap("Image")
         public String image;
@@ -153,13 +153,13 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         public String imageUuid;
 
         /**
-         * <p>The number of pods, applications, clusters, or namespaces that is returned.</p>
+         * <p>The number of pods, applications, clusters, or namespaces.</p>
          */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
         /**
-         * <p>The ID of the server instance.</p>
+         * <p>The ID of the server.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -183,13 +183,13 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         public String podIp;
 
         /**
-         * <p>The ID of the region in which the instance resides.</p>
+         * <p>The region ID of the instance.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The number of potential risky instances.</p>
+         * <p>The number of at-risk instances.</p>
          */
         @NameInMap("RiskInstanceCount")
         public Integer riskInstanceCount;
@@ -213,14 +213,26 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         @NameInMap("RiskStatus")
         public String riskStatus;
 
+        /**
+         * <p>Indicates whether the synchronization of cluster audit logs is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **0**: disabled.</p>
+         * <p>*   **1**: enabled.</p>
+         */
         @NameInMap("SyncOpen")
         public Integer syncOpen;
 
+        /**
+         * <p>The status of the synchronization of cluster audit logs. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The synchronization failed.</p>
+         * <p>*   **1**: The synchronization is successful.</p>
+         */
         @NameInMap("SyncStatus")
         public Integer syncStatus;
 
         /**
-         * <p>The number of vulnerabilities that are detected from the current pod, application, namespace, or cluster.</p>
+         * <p>The number of vulnerabilities that are detected for the current pod, application, namespace, or cluster.</p>
          */
         @NameInMap("VulCount")
         public Integer vulCount;

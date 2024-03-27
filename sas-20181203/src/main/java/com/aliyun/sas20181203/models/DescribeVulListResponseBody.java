@@ -223,6 +223,9 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("ContainerName")
         public String containerName;
 
+        @NameInMap("ExtendField")
+        public String extendField;
+
         /**
          * <p>The complete version number.</p>
          */
@@ -288,6 +291,14 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
         public String getContainerName() {
             return this.containerName;
+        }
+
+        public DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setExtendField(String extendField) {
+            this.extendField = extendField;
+            return this;
+        }
+        public String getExtendField() {
+            return this.extendField;
         }
 
         public DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setFullVersion(String fullVersion) {

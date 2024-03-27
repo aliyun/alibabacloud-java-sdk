@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetCheckSummaryRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to return the statistics of the check items, including the number of check items supported by the system and the number of check items available to you.</p>
+     */
     @NameInMap("IsItemStatistic")
     public Boolean isItemStatistic;
 
@@ -23,7 +26,7 @@ public class GetCheckSummaryRequest extends TeaModel {
     public String resourceDirectoryAccountId;
 
     /**
-     * <p>The service provider (SP) of the cloud asset.</p>
+     * <p>The cloud service providers.</p>
      */
     @NameInMap("Vendors")
     public java.util.List<String> vendors;
