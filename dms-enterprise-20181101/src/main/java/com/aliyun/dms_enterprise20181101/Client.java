@@ -193,6 +193,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("UseDsql", request.useDsql);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.useSsl)) {
+            query.put("UseSsl", request.useSsl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
             query.put("VpcId", request.vpcId);
         }
@@ -1812,6 +1816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * You can call this operation only for database instances that are managed in Security Collaboration mode.
       * For more information about the SQL review feature, see [SQL review](~~60374~~).
       *
       * @param tmpReq CreateSQLReviewOrderRequest
@@ -1865,6 +1870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * You can call this operation only for database instances that are managed in Security Collaboration mode.
       * For more information about the SQL review feature, see [SQL review](~~60374~~).
       *
       * @param request CreateSQLReviewOrderRequest
@@ -8030,6 +8036,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("UseDsql", request.useDsql);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.useSsl)) {
+            query.put("UseSsl", request.useSsl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
             query.put("VpcId", request.vpcId);
         }
@@ -8126,6 +8136,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.offlineTaskFlowWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation only for database instances that are managed in Security Collaboration mode.
+      *
+      * @param request PauseDataCorrectSQLJobRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return PauseDataCorrectSQLJobResponse
+     */
     public PauseDataCorrectSQLJobResponse pauseDataCorrectSQLJobWithOptions(PauseDataCorrectSQLJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8162,6 +8179,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PauseDataCorrectSQLJobResponse());
     }
 
+    /**
+      * You can call this operation only for database instances that are managed in Security Collaboration mode.
+      *
+      * @param request PauseDataCorrectSQLJobRequest
+      * @return PauseDataCorrectSQLJobResponse
+     */
     public PauseDataCorrectSQLJobResponse pauseDataCorrectSQLJob(PauseDataCorrectSQLJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.pauseDataCorrectSQLJobWithOptions(request, runtime);
