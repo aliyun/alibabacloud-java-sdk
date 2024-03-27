@@ -234,6 +234,47 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
 
     }
 
+    public static class GetWorkItemInfoResponseBodyWorkitemTagDetails extends TeaModel {
+        @NameInMap("color")
+        public String color;
+
+        @NameInMap("identifier")
+        public String identifier;
+
+        @NameInMap("name")
+        public String name;
+
+        public static GetWorkItemInfoResponseBodyWorkitemTagDetails build(java.util.Map<String, ?> map) throws Exception {
+            GetWorkItemInfoResponseBodyWorkitemTagDetails self = new GetWorkItemInfoResponseBodyWorkitemTagDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemTagDetails setColor(String color) {
+            this.color = color;
+            return this;
+        }
+        public String getColor() {
+            return this.color;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemTagDetails setIdentifier(String identifier) {
+            this.identifier = identifier;
+            return this;
+        }
+        public String getIdentifier() {
+            return this.identifier;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitemTagDetails setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class GetWorkItemInfoResponseBodyWorkitem extends TeaModel {
         @NameInMap("assignedTo")
         public String assignedTo;
@@ -303,6 +344,9 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
 
         @NameInMap("tag")
         public java.util.List<String> tag;
+
+        @NameInMap("tagDetails")
+        public java.util.List<GetWorkItemInfoResponseBodyWorkitemTagDetails> tagDetails;
 
         @NameInMap("tracker")
         public java.util.List<String> tracker;
@@ -503,6 +547,14 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         }
         public java.util.List<String> getTag() {
             return this.tag;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitem setTagDetails(java.util.List<GetWorkItemInfoResponseBodyWorkitemTagDetails> tagDetails) {
+            this.tagDetails = tagDetails;
+            return this;
+        }
+        public java.util.List<GetWorkItemInfoResponseBodyWorkitemTagDetails> getTagDetails() {
+            return this.tagDetails;
         }
 
         public GetWorkItemInfoResponseBodyWorkitem setTracker(java.util.List<String> tracker) {
