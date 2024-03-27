@@ -4,9 +4,15 @@ package com.aliyun.carbonfootprint20230711.models;
 import com.aliyun.tea.*;
 
 public class QueryCarbonTrackResponseBody extends TeaModel {
+    /**
+     * <p>The data records.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryCarbonTrackResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,39 @@ public class QueryCarbonTrackResponseBody extends TeaModel {
     }
 
     public static class QueryCarbonTrackResponseBodyData extends TeaModel {
+        /**
+         * <p>The service code.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The carbon emissions within the specified time range, in kgCO₂e.</p>
+         */
         @NameInMap("QuotaValue")
         public Double quotaValue;
 
+        /**
+         * <p>The region in which the cloud service resides.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The date when the statistics are collected, which is a timestamp in milliseconds.</p>
+         */
         @NameInMap("StatisticsDate")
         public Long statisticsDate;
 
+        /**
+         * <p>The ID of the RAM user.</p>
+         */
         @NameInMap("SubUid")
         public String subUid;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("Uid")
         public String uid;
 

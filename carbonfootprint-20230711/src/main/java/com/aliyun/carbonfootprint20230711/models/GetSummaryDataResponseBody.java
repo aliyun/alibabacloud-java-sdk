@@ -4,11 +4,14 @@ package com.aliyun.carbonfootprint20230711.models;
 import com.aliyun.tea.*;
 
 public class GetSummaryDataResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetSummaryDataResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,33 +38,63 @@ public class GetSummaryDataResponseBody extends TeaModel {
     }
 
     public static class GetSummaryDataResponseBodyData extends TeaModel {
+        /**
+         * <p>Converted aircraft carbon emissions.</p>
+         */
         @NameInMap("AircraftConsumptionConversion")
         public String aircraftConsumptionConversion;
 
+        /**
+         * <p>Converted car carbon emissions.</p>
+         */
         @NameInMap("CarConsumptionConversion")
         public String carConsumptionConversion;
 
+        /**
+         * <p>The carbon emissions in the previous month, in kgCO₂e.</p>
+         */
         @NameInMap("LastMonthConsumptionConversion")
         public String lastMonthConsumptionConversion;
 
+        /**
+         * <p>The carbon emissions in the same month of the previous year, in kgCO₂e.</p>
+         */
         @NameInMap("LastYearConsumptionConversion")
         public String lastYearConsumptionConversion;
 
+        /**
+         * <p>The carbon emissions of the previous year, in kgCO₂e.</p>
+         */
         @NameInMap("LastYearConsumptionConversionSum")
         public String lastYearConsumptionConversionSum;
 
+        /**
+         * <p>The point in time at which the data is last updated.</p>
+         */
         @NameInMap("LatestDataTime")
         public String latestDataTime;
 
+        /**
+         * <p>The carbon emissions in this month, in kgCO₂e.</p>
+         */
         @NameInMap("ThisMonthConsumptionConversion")
         public String thisMonthConsumptionConversion;
 
+        /**
+         * <p>The carbon emissions in the year of this month, in kgCO₂e.</p>
+         */
         @NameInMap("ThisYearConsumptionConversion")
         public String thisYearConsumptionConversion;
 
+        /**
+         * <p>The total carbon emissions within the specified time range, in kgCO₂e.</p>
+         */
         @NameInMap("TotalCarbonConsumptionConversion")
         public String totalCarbonConsumptionConversion;
 
+        /**
+         * <p>Converted tree carbon absorption.</p>
+         */
         @NameInMap("TreeConsumptionConversion")
         public String treeConsumptionConversion;
 
