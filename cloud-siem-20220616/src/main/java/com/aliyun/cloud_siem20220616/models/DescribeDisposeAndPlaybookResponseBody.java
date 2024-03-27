@@ -166,6 +166,9 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         @NameInMap("OpLevel")
         public String opLevel;
 
+        /**
+         * <p>The playbook parameters and the corresponding properties.</p>
+         */
         @NameInMap("ParamConfig")
         public java.util.List<?> paramConfig;
 
@@ -287,7 +290,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public java.util.Map<String, String> opcodeMap;
 
         /**
-         * <p>An array consisting of the codes of playbooks that are recommended for entity handling.</p>
+         * <p>The codes of the playbooks that are recommended for entity handling.</p>
          */
         @NameInMap("OpcodeSet")
         public java.util.List<String> opcodeSet;
@@ -299,7 +302,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public java.util.List<DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList> playbookList;
 
         /**
-         * <p>An array consisting of the IDs of the users who can handle objects.</p>
+         * <p>The IDs of the users who can handle objects.</p>
          */
         @NameInMap("Scope")
         public java.util.List<?> scope;
@@ -383,7 +386,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public DescribeDisposeAndPlaybookResponseBodyDataPageInfo pageInfo;
 
         /**
-         * <p>The detailed data</p>
+         * <p>The detailed data.</p>
          */
         @NameInMap("ResponseData")
         public java.util.List<DescribeDisposeAndPlaybookResponseBodyDataResponseData> responseData;

@@ -17,7 +17,7 @@ public class DescribeEventDisposeRequest extends TeaModel {
     public String incidentUuid;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     * <p>The number of entries to return on each page. Maximum value: 500.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

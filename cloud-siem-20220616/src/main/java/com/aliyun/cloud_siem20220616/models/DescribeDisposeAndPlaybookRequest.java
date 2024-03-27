@@ -13,9 +13,9 @@ public class DescribeDisposeAndPlaybookRequest extends TeaModel {
     /**
      * <p>The entity type. Valid values:</p>
      * <br>
-     * <p>*   ip: IP address</p>
-     * <p>*   process: process</p>
-     * <p>*   file: file</p>
+     * <p>*   ip</p>
+     * <p>*   process</p>
+     * <p>*   file</p>
      */
     @NameInMap("EntityType")
     public String entityType;

@@ -170,17 +170,17 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>The risk type, which indicates the alert type.</p>
+         * <p>The threat type, which indicates the alert type.</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
-         * <p>The risk level. Valid values:</p>
+         * <p>The threat level. Valid values:</p>
          * <br>
-         * <p>*   serious: high</p>
-         * <p>*   suspicious: medium</p>
-         * <p>*   remind: low</p>
+         * <p>*   serious: high.</p>
+         * <p>*   suspicious: medium.</p>
+         * <p>*   remind: low.</p>
          */
         @NameInMap("Level")
         public String level;
@@ -212,8 +212,8 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
         /**
          * <p>The status of the alert data. Valid values:</p>
          * <br>
-         * <p>*   test: business test data</p>
-         * <p>*   online: online data</p>
+         * <p>*   test: business test data.</p>
+         * <p>*   online: online data.</p>
          */
         @NameInMap("OnlineStatus")
         public String onlineStatus;

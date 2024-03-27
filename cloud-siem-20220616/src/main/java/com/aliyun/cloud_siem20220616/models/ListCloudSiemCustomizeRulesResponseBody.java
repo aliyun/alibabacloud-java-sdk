@@ -11,7 +11,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ListCloudSiemCustomizeRulesResponseBodyData data;
@@ -31,8 +31,8 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -134,13 +134,13 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
 
     public static class ListCloudSiemCustomizeRulesResponseBodyDataResponseData extends TeaModel {
         /**
-         * <p>The type of the risk.</p>
+         * <p>The threat type.</p>
          */
         @NameInMap("AlertType")
         public String alertType;
 
         /**
-         * <p>The internal code of the risk type.</p>
+         * <p>The internal code of the threat type.</p>
          */
         @NameInMap("AlertTypeMds")
         public String alertTypeMds;
@@ -152,7 +152,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public Long aliuid;
 
         /**
-         * <p>The extended information about event generation. If the value of eventTransferType is allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.</p>
+         * <p>The extended information about event generation. If the value of **eventTransferType** is **allToSingle**, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.</p>
          */
         @NameInMap("EventTransferExt")
         public String eventTransferExt;
@@ -160,18 +160,18 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the system generates an event for the alert. Valid values:</p>
          * <br>
-         * <p>*   0: no.</p>
-         * <p>*   1: yes.</p>
+         * <p>*   **0**: no.</p>
+         * <p>*   **1**: yes.</p>
          */
         @NameInMap("EventTransferSwitch")
         public Integer eventTransferSwitch;
 
         /**
-         * <p>The event generation method. Valid values:</p>
+         * <p>The method that is used to generate an event. Valid values:</p>
          * <br>
-         * <p>*   default: The default method is used.</p>
-         * <p>*   singleToSingle: The system generates an event for each alert.</p>
-         * <p>*   allToSingle: The system generates an event for alerts within a period of time.</p>
+         * <p>*   **default**: The default method is used.</p>
+         * <p>*   **singleToSingle**: The system generates an event for each alert.</p>
+         * <p>*   **allToSingle**: The system generates an event for alerts within a period of time.</p>
          */
         @NameInMap("EventTransferType")
         public String eventTransferType;
@@ -225,7 +225,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public String queryCycle;
 
         /**
-         * <p>The query condition of the rule in the JSON format. The HTML escape characters are reversed.</p>
+         * <p>The query condition of the rule. The value is in the JSON format. The HTML escape characters are reversed.</p>
          */
         @NameInMap("RuleCondition")
         public String ruleCondition;
@@ -237,7 +237,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public String ruleDesc;
 
         /**
-         * <p>The log aggregation field of the rule. The value is a JSON string. The HTML escape characters are reversed.</p>
+         * <p>The log aggregation field. The value is in the JSON format. The HTML escape characters are reversed.</p>
          */
         @NameInMap("RuleGroup")
         public String ruleGroup;
@@ -257,20 +257,20 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         /**
          * <p>The type of the rule. Valid values:</p>
          * <br>
-         * <p>*   predefine</p>
-         * <p>*   customize</p>
+         * <p>*   **predefine**</p>
+         * <p>*   **customize**</p>
          */
         @NameInMap("RuleType")
         public String ruleType;
 
         /**
-         * <p>The rule status. Valid values:</p>
+         * <p>The status of the rule. Valid values:</p>
          * <br>
-         * <p>*   0: The rule is in the initial state.</p>
-         * <p>*   10: The simulation data is tested.</p>
-         * <p>*   15: The business data is being tested.</p>
-         * <p>*   20: The business data test ends.</p>
-         * <p>*   100: The rule takes effect.</p>
+         * <p>*   **0**: The rule is in the initial state.</p>
+         * <p>*   **10**: The simulation data is tested.</p>
+         * <p>*   **15**: The business data is being tested.</p>
+         * <p>*   **20**: The business data test is complete.</p>
+         * <p>*   **100**: The rule is in effect.</p>
          */
         @NameInMap("Status")
         public Integer status;
@@ -278,9 +278,9 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         /**
          * <p>The threat level. Valid values:</p>
          * <br>
-         * <p>*   serious: high</p>
-         * <p>*   suspicious: medium</p>
-         * <p>*   remind: low</p>
+         * <p>*   **serious**: high-risk.</p>
+         * <p>*   **suspicious**: medium-risk.</p>
+         * <p>*   **remind**: low-risk.</p>
          */
         @NameInMap("ThreatLevel")
         public String threatLevel;

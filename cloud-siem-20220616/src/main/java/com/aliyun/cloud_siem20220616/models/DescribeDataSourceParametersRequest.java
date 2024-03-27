@@ -19,9 +19,9 @@ public class DescribeDataSourceParametersRequest extends TeaModel {
     /**
      * <p>The type of the data source. Valid values:</p>
      * <br>
-     * <p>*   ckafka: Tencent Cloud Kafka (CKafka)</p>
-     * <p>*   obs: Huawei Cloud Object Storage Service (OBS)</p>
-     * <p>*   wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</p>
+     * <p>*   **ckafka**: Tencent Cloud TDMQ for CKafka</p>
+     * <p>*   **obs**: Huawei Cloud Object Storage Service (OBS)</p>
+     * <p>*   **wafApi**: download API of Tencent Cloud Web Application Firewall (WAF)</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;

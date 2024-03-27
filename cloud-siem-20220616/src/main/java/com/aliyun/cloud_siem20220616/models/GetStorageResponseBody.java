@@ -57,7 +57,9 @@ public class GetStorageResponseBody extends TeaModel {
         public Boolean displayRegion;
 
         /**
-         * <p>The region in which the logs are stored. Default value: cn-shanghai. Valid values: cn-shanghai for the China site and ap-southeast-1 for the international site.</p>
+         * <p>The region where the data is stored.</p>
+         * <br>
+         * <p>If the data management center is **cn-hangzhou**, the default value of **Region** is cn-shanghai, which specifies the China (Shanghai) region. If the data management center is **ap-southeast-1**, the default value of **Region** is ap-southeast-1, which specifies the Singapore region.</p>
          */
         @NameInMap("Region")
         public String region;

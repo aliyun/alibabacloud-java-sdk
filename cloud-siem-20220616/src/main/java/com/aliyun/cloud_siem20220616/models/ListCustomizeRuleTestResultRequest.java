@@ -17,7 +17,7 @@ public class ListCustomizeRuleTestResultRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

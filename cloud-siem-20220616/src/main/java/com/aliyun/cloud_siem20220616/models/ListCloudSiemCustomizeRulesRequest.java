@@ -35,10 +35,10 @@ public class ListCloudSiemCustomizeRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The data management center of the threat analysis feature. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
      * <br>
-     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
-     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     * <p>*   **cn-hangzhou**: Your assets reside in regions in China.</p>
+     * <p>*   **ap-southeast-1**: Your assets reside in regions outside China.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -52,8 +52,8 @@ public class ListCloudSiemCustomizeRulesRequest extends TeaModel {
     /**
      * <p>The type of the rule. Valid values:</p>
      * <br>
-     * <p>*   predefine</p>
-     * <p>*   customize</p>
+     * <p>*   **predefine**</p>
+     * <p>*   **customize**</p>
      */
     @NameInMap("RuleType")
     public String ruleType;
@@ -67,21 +67,21 @@ public class ListCloudSiemCustomizeRulesRequest extends TeaModel {
     /**
      * <p>The status of the rule. Valid values:</p>
      * <br>
-     * <p>*   0: The rule is in the initial state.</p>
-     * <p>*   10: The simulation data is tested.</p>
-     * <p>*   15: The business data is being tested.</p>
-     * <p>*   20: The business data test ends.</p>
-     * <p>*   100: The rule takes effect.</p>
+     * <p>*   **0**: The rule is in the initial state.</p>
+     * <p>*   **10**: The simulation data is tested.</p>
+     * <p>*   **15**: The business data is being tested.</p>
+     * <p>*   **20**: The business data test is complete.</p>
+     * <p>*   **100**: The rule is in effect.</p>
      */
     @NameInMap("Status")
     public Integer status;
 
     /**
-     * <p>The risk level. The value is a JSON array. Valid values:</p>
+     * <p>The threat level. The value must be a JSON array. Valid values:</p>
      * <br>
-     * <p>*   serious: high</p>
-     * <p>*   suspicious: medium</p>
-     * <p>*   remind: low</p>
+     * <p>*   **serious**: high-risk.</p>
+     * <p>*   **suspicious**: medium-risk.</p>
+     * <p>*   **remind**: low-risk.</p>
      */
     @NameInMap("ThreatLevel")
     public java.util.List<String> threatLevel;

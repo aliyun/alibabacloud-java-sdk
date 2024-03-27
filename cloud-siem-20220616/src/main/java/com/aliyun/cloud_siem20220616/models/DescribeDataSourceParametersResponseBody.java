@@ -77,8 +77,8 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the edit operation is supported. Valid values:</p>
          * <br>
-         * <p>*   0: no</p>
-         * <p>*   1: yes</p>
+         * <p>*   **0**</p>
+         * <p>*   **1**</p>
          */
         @NameInMap("CanEditted")
         public Integer canEditted;
@@ -86,9 +86,9 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         /**
          * <p>The code of the cloud service provider. Valid values:</p>
          * <br>
-         * <p>*   qcloud: Tencent Cloud</p>
-         * <p>*   aliyun: Alibaba Cloud</p>
-         * <p>*   hcloud: Huawei Cloud</p>
+         * <p>*   **qcloud**: Tencent Cloud</p>
+         * <p>*   **aliyun**: Alibaba Cloud</p>
+         * <p>*   **hcloud**: Huawei Cloud</p>
          */
         @NameInMap("CloudCode")
         public String cloudCode;
@@ -96,9 +96,9 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         /**
          * <p>The type of the data source. Valid values:</p>
          * <br>
-         * <p>*   obs: Huawei Cloud OBS</p>
-         * <p>*   wafApi: download API of Tencent Cloud WAF</p>
-         * <p>*   ckafka: Tencent Cloud CKafka</p>
+         * <p>*   **obs**: Huawei Cloud Object Storage Service (OBS)</p>
+         * <p>*   **wafApi**: download API of Tencent Cloud Web Application Firewall (WAF)</p>
+         * <p>*   **ckafka**: Tencent Cloud TDMQ for CKafka</p>
          */
         @NameInMap("DataSourceType")
         public String dataSourceType;
@@ -112,8 +112,8 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the modification operation is forbidden. Valid values:</p>
          * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Disabled")
         public Boolean disabled;
@@ -139,8 +139,8 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         /**
          * <p>The parameter level. Valid values:</p>
          * <br>
-         * <p>*   1: data source</p>
-         * <p>*   2: log</p>
+         * <p>*   **1**: the parameters of the data source</p>
+         * <p>*   **2**: the parameters of the log</p>
          */
         @NameInMap("ParaLevel")
         public Integer paraLevel;
@@ -166,14 +166,14 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the parameter is required. Valid values:</p>
          * <br>
-         * <p>*   1: yes</p>
-         * <p>*   0: no</p>
+         * <p>*   **1**: required</p>
+         * <p>*   **0**: optional</p>
          */
         @NameInMap("Required")
         public Integer required;
 
         /**
-         * <p>The note on the parameter value.</p>
+         * <p>The note for the parameter value.</p>
          */
         @NameInMap("Title")
         public String title;
