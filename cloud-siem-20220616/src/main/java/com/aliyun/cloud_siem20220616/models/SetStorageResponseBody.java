@@ -7,8 +7,8 @@ public class SetStorageResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the settings are saved. Valid values:</p>
      * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>*   true:</p>
+     * <p>*   false:</p>
      */
     @NameInMap("Data")
     public Boolean data;

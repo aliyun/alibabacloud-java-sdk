@@ -1,3 +1,9 @@
+2024-03-27 Version: 3.1.2
+- Update API BatchJobCheck: update response param.
+- Update API DescribeCloudSiemEventDetail: update response param.
+- Update API DescribeDisposeAndPlaybook: update response param.
+
+
 2024-02-22 Version: 3.1.1
 - Update API DescribeCloudSiemEventDetail: update response param.
 - Update API DescribeDisposeAndPlaybook: update response param.

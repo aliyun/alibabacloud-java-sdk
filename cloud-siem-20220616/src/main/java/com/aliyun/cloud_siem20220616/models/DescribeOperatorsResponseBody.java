@@ -108,19 +108,19 @@ public class DescribeOperatorsResponseBody extends TeaModel {
         public String operatorDescEn;
 
         /**
-         * <p>The display name of the operator.</p>
+         * <p>The name of the operator.</p>
          */
         @NameInMap("OperatorName")
         public String operatorName;
 
         /**
-         * <p>The data types that are supported by the current operator. The data types are separated by commas (,).</p>
+         * <p>The data types that are supported by the operator. The data types are separated by commas (,).</p>
          */
         @NameInMap("SupportDataType")
         public String supportDataType;
 
         /**
-         * <p>The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as AGGREGATE scenarios. This parameter is empty by default.</p>
+         * <p>The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as AGGREGATE scenarios. By default, this parameter is empty.</p>
          */
         @NameInMap("SupportTag")
         public java.util.List<String> supportTag;
