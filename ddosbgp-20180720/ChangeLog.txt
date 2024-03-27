@@ -1,3 +1,10 @@
+2024-03-27 Version: 2.2.0
+- Support API DescribeDdosOriginInstanceBill.
+- Support API ReleaseDdosOriginInstance.
+- Update API DescribeInstanceList: update response param.
+- Update API DescribePackIpList: update response param.
+
+
 2024-02-28 Version: 2.1.2
 - Update API DescribeInstanceList: update response param.
 - Update API DescribePackIpList: update response param.
