@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>emrstudio20231009</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
   <name>emrstudio20231009</name>
   <description>Alibaba Cloud EmrStudio (20231009) SDK for Java
