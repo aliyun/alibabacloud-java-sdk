@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ExportRecordRequest extends TeaModel {
+    /**
+     * <p>The type of the file to export. Valid values:</p>
+     * <br>
+     * <p>*   **virusScanExport**: The details of the virus scan tasks are exported. This parameter is available and required when ExportType is set to virusScanExport.</p>
+     */
     @NameInMap("ExportFileType")
     public String exportFileType;
 
@@ -22,12 +27,13 @@ public class ExportRecordRequest extends TeaModel {
      * <p>*   **autorun**: the list of fingerprints for startup items</p>
      * <p>*   **lkm**: the list of fingerprints for kernel modules</p>
      * <p>*   **webserver**: the list of fingerprints for websites</p>
+     * <p>*   **virusScanExport**: the details of the virus scan tasks</p>
      * <p>*   **imageVulExport**: the list of image system vulnerabilities</p>
      * <p>*   **imageBaseLineExport**: the list of check results for image baselines</p>
      * <p>*   **imageAffectedMaliciousExport**: the list of check results for malicious image samples</p>
-     * <p>*   **baseline**: the list of check results for configuration assessment</p>
+     * <p>*   **baselineCspm**: the list of check results for configuration assessment</p>
      * <p>*   **attack**: the list of alert events for attack analysis</p>
-     * <p>*   **accessKey**: the list of alert events that are generated for AccessKey pair leaks</p>
+     * <p>*   **accessKey**: the list of alerts that are generated for AccessKey pair leaks</p>
      */
     @NameInMap("ExportType")
     public String exportType;

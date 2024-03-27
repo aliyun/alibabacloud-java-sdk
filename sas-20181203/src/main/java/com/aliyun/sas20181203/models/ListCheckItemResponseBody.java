@@ -192,6 +192,9 @@ public class ListCheckItemResponseBody extends TeaModel {
         @NameInMap("Description")
         public ListCheckItemResponseBodyCheckItemsDescription description;
 
+        @NameInMap("EstimatedCount")
+        public Integer estimatedCount;
+
         /**
          * <p>The asset subtype of the cloud service. Valid value:</p>
          * <br>
@@ -316,6 +319,14 @@ public class ListCheckItemResponseBody extends TeaModel {
         }
         public ListCheckItemResponseBodyCheckItemsDescription getDescription() {
             return this.description;
+        }
+
+        public ListCheckItemResponseBodyCheckItems setEstimatedCount(Integer estimatedCount) {
+            this.estimatedCount = estimatedCount;
+            return this;
+        }
+        public Integer getEstimatedCount() {
+            return this.estimatedCount;
         }
 
         public ListCheckItemResponseBodyCheckItems setInstanceSubType(String instanceSubType) {

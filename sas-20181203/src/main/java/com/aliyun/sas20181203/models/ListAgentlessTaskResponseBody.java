@@ -76,6 +76,9 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The volume of detection data, in MB.</p>
+         */
         @NameInMap("MeasureSpace")
         public Long measureSpace;
 
@@ -85,12 +88,27 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         @NameInMap("Progress")
         public Integer progress;
 
+        /**
+         * <p>The execution progress of the inspection items.</p>
+         */
         @NameInMap("ProgressByProject")
         public String progressByProject;
 
+        /**
+         * <p>The download link for the report.</p>
+         */
         @NameInMap("ReportDownloadUrl")
         public String reportDownloadUrl;
 
+        /**
+         * <p>The status of the report. Possible values:</p>
+         * <br>
+         * <p>*   **PREPARED**: In preparation.</p>
+         * <p>*   **RUNNING**: In progress.</p>
+         * <p>*   **SUCCESS**: Successful.</p>
+         * <p>*   **TIMEOUT**: Timeout.</p>
+         * <p>*   **FAILED**: Failed.</p>
+         */
         @NameInMap("ReportStatus")
         public String reportStatus;
 

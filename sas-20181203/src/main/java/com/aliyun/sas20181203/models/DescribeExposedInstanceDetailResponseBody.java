@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
     /**
-     * <p>The list of exposure details of the server.</p>
+     * <p>The exposure details about the server.</p>
      */
     @NameInMap("ExposedChains")
     public java.util.List<DescribeExposedInstanceDetailResponseBodyExposedChains> exposedChains;
@@ -57,7 +57,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
          * <p>*   **later**: medium</p>
          * <p>*   **nntf**: low</p>
          * <br>
-         * <p>> We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.</p>
+         * <p>>  We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.</p>
          */
         @NameInMap("Necessity")
         public String necessity;
@@ -65,12 +65,12 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         /**
          * <p>The type of the vulnerability. Valid values:</p>
          * <br>
-         * <p>*   **cve**: Linux software vulnerability</p>
-         * <p>*   **sys**: Windows system vulnerability</p>
-         * <p>*   **cms**: Web-CMS vulnerability</p>
-         * <p>*   **app**: application vulnerability</p>
-         * <p>*   **emg**: urgent vulnerability</p>
-         * <p>*   **sca**: middleware vulnerability</p>
+         * <p>*   **cve**: Linux software vulnerabilities</p>
+         * <p>*   **sys**: Windows system vulnerabilities</p>
+         * <p>*   **cms**: Web-CMS vulnerabilities</p>
+         * <p>*   **app**: application vulnerabilities</p>
+         * <p>*   **emg**: urgent vulnerabilities</p>
+         * <p>*   **sca**: middleware vulnerabilities</p>
          */
         @NameInMap("Type")
         public String type;
@@ -148,7 +148,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
          * <p>*   **later**: medium</p>
          * <p>*   **nntf**: low</p>
          * <br>
-         * <p>> We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.</p>
+         * <p>>  We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.</p>
          */
         @NameInMap("Necessity")
         public String necessity;
@@ -156,12 +156,12 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         /**
          * <p>The type of the vulnerability. Valid values:</p>
          * <br>
-         * <p>*   **cve**: Linux software vulnerability</p>
-         * <p>*   **sys**: Windows system vulnerability</p>
-         * <p>*   **cms**: Web-CMS vulnerability</p>
-         * <p>*   **app**: application vulnerability</p>
-         * <p>*   **emg**: urgent vulnerability</p>
-         * <p>*   **sca**: middleware vulnerability</p>
+         * <p>*   **cve**: Linux software vulnerabilities</p>
+         * <p>*   **sys**: Windows system vulnerabilities</p>
+         * <p>*   **cms**: Web-CMS vulnerabilities</p>
+         * <p>*   **app**: application vulnerabilities</p>
+         * <p>*   **emg**: urgent vulnerabilities</p>
+         * <p>*   **sca**: middleware vulnerabilities</p>
          */
         @NameInMap("Type")
         public String type;
@@ -221,7 +221,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
 
     public static class DescribeExposedInstanceDetailResponseBodyExposedChains extends TeaModel {
         /**
-         * <p>The details of all vulnerabilities on the server.</p>
+         * <p>The information about all vulnerabilities on the server.</p>
          */
         @NameInMap("AllVulList")
         public java.util.List<DescribeExposedInstanceDetailResponseBodyExposedChainsAllVulList> allVulList;
@@ -233,7 +233,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         public String exposureComponent;
 
         /**
-         * <p>The IP address that is exposed.</p>
+         * <p>The public IP address.</p>
          */
         @NameInMap("ExposureIp")
         public String exposureIp;
@@ -256,10 +256,10 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         public String exposureType;
 
         /**
-         * <p>The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the ExposureType parameter.</p>
+         * <p>The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the value of the ExposureType parameter.</p>
          * <br>
-         * <p>*   If the value of the ExposureType parameter is **INTERNET_IP**, this parameter is empty.</p>
-         * <p>*   If the value of the ExposureType parameter is **SLB**, the value of this parameter is the ID of the SLB instance.</p>
+         * <p>*   If the value of the ExposureType parameter is **INTERNET_IP**, the value of this parameter is an empty string.</p>
+         * <p>*   If the value of the ExposureType parameter is **SLB**, the value of this parameter is the ID of the Internet-facing SLB instance.</p>
          * <p>*   If the value of the ExposureType parameter is **EIP**, the value of this parameter is the ID of the EIP.</p>
          * <p>*   If the value of the ExposureType parameter is **DNAT**, the value of this parameter is the ID of the NAT gateway.</p>
          */
@@ -273,7 +273,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         public String groupNo;
 
         /**
-         * <p>The instance ID of the server.</p>
+         * <p>The ID of the server.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -305,7 +305,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         /**
          * <p>The region in which the server resides.</p>
          * <br>
-         * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+         * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
          */
         @NameInMap("RegionId")
         public String regionId;

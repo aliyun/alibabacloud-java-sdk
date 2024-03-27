@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeExposedInstanceCriteriaRequest extends TeaModel {
+    /**
+     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <br>
+     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public String resourceDirectoryAccountId;
 
