@@ -215,6 +215,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SendMessageToGlobeResponse sendMessageToGlobeWithOptions(SendMessageToGlobeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            query.put("ChannelId", request.channelId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {
             query.put("From", request.from);
         }
@@ -277,6 +281,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SendMessageWithTemplateResponse sendMessageWithTemplateWithOptions(SendMessageWithTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            query.put("ChannelId", request.channelId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {
             query.put("From", request.from);
         }

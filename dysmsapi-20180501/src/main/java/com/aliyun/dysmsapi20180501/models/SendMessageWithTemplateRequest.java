@@ -4,6 +4,9 @@ package com.aliyun.dysmsapi20180501.models;
 import com.aliyun.tea.*;
 
 public class SendMessageWithTemplateRequest extends TeaModel {
+    @NameInMap("ChannelId")
+    public String channelId;
+
     /**
      * <p>The signature. To query the signature, log on to the [Short Message Service (SMS) console](https://sms-intl.console.aliyun.com/overview) and navigate to the **Signatures** tab of the **Go China** page.</p>
      */
@@ -45,6 +48,14 @@ public class SendMessageWithTemplateRequest extends TeaModel {
     public static SendMessageWithTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         SendMessageWithTemplateRequest self = new SendMessageWithTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SendMessageWithTemplateRequest setChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    public String getChannelId() {
+        return this.channelId;
     }
 
     public SendMessageWithTemplateRequest setFrom(String from) {

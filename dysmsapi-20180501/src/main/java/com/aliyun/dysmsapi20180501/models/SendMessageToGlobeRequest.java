@@ -4,6 +4,9 @@ package com.aliyun.dysmsapi20180501.models;
 import com.aliyun.tea.*;
 
 public class SendMessageToGlobeRequest extends TeaModel {
+    @NameInMap("ChannelId")
+    public String channelId;
+
     /**
      * <p>The mobile phone number of the sender. You can also specify a sender ID. The sender ID can contain both letters and digits. If it does, the ID must be between 1 to 11 characters in length. If the sender ID contains only digits, it must be 1 to 15 characters in length.</p>
      */
@@ -25,7 +28,7 @@ public class SendMessageToGlobeRequest extends TeaModel {
     /**
      * <p>The mobile phone number to which the message is sent. You must add the dialing code to the beginning of the mobile phone number. Example: 8521245567\*\*\*\*.</p>
      * <br>
-     * <p>For more information, see [Dialing codes](https://www.alibabacloud.com/help/zh/short-message-service/latest/dialing-codes).</p>
+     * <p>For more information, see [Dialing codes](https://www.alibabacloud.com/help/en/sms/product-overview/dialing-codes?spm=a2c63.p38356.0.0.48b940a1PFYRMz).</p>
      * <br>
      * <p>>  You cannot call the SendMessageToGlobe operation to send messages to the Chinese mainland.</p>
      */
@@ -41,6 +44,14 @@ public class SendMessageToGlobeRequest extends TeaModel {
     public static SendMessageToGlobeRequest build(java.util.Map<String, ?> map) throws Exception {
         SendMessageToGlobeRequest self = new SendMessageToGlobeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SendMessageToGlobeRequest setChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    public String getChannelId() {
+        return this.channelId;
     }
 
     public SendMessageToGlobeRequest setFrom(String from) {
