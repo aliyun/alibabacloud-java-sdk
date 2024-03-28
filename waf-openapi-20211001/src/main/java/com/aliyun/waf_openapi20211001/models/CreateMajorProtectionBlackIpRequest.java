@@ -52,7 +52,7 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The ID of the major event protection template.</p>
+     * <p>The ID of the IP address blacklist rule template for major event protection.</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;
