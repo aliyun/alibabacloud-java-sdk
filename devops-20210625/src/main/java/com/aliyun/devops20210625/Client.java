@@ -422,6 +422,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createCheckRunWithOptions(request, headers, runtime);
     }
 
+    public CreateCommentResponse createCommentWithOptions(CreateCommentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessToken)) {
+            query.put("accessToken", request.accessToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.localId)) {
+            query.put("localId", request.localId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("organizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repositoryIdentity)) {
+            query.put("repositoryIdentity", request.repositoryIdentity);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.commentType)) {
+            body.put("commentType", request.commentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            body.put("content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.draft)) {
+            body.put("draft", request.draft);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filePath)) {
+            body.put("filePath", request.filePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lineNumber)) {
+            body.put("lineNumber", request.lineNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentCommentBizId)) {
+            body.put("parentCommentBizId", request.parentCommentBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.patchSetBizId)) {
+            body.put("patchSetBizId", request.patchSetBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolved)) {
+            body.put("resolved", request.resolved);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateComment"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v4/projects/code_reviews/comments/create_comment"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCommentResponse());
+    }
+
+    public CreateCommentResponse createComment(CreateCommentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createCommentWithOptions(request, headers, runtime);
+    }
+
     public CreateCommitStatusResponse createCommitStatusWithOptions(CreateCommitStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -481,6 +558,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createCommitStatusWithOptions(request, headers, runtime);
+    }
+
+    public CreateCommitWithMultipleFilesResponse createCommitWithMultipleFilesWithOptions(CreateCommitWithMultipleFilesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessToken)) {
+            query.put("accessToken", request.accessToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("organizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repositoryIdentity)) {
+            query.put("repositoryIdentity", request.repositoryIdentity);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.actions)) {
+            body.put("actions", request.actions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.branch)) {
+            body.put("branch", request.branch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.commitMessage)) {
+            body.put("commitMessage", request.commitMessage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCommitWithMultipleFiles"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v4/projects/repository/commits/files"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCommitWithMultipleFilesResponse());
+    }
+
+    public CreateCommitWithMultipleFilesResponse createCommitWithMultipleFiles(CreateCommitWithMultipleFilesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createCommitWithMultipleFilesWithOptions(request, headers, runtime);
     }
 
     public CreateDeployKeyResponse createDeployKeyWithOptions(String repositoryId, CreateDeployKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -5866,6 +5996,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.archived)) {
             query.put("archived", request.archived);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minAccessLevel)) {
+            query.put("minAccessLevel", request.minAccessLevel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {

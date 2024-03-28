@@ -82,6 +82,12 @@ public class ListOrganizationsResponseBody extends TeaModel {
         @NameInMap("id")
         public Long id;
 
+        @NameInMap("namespaceId")
+        public String namespaceId;
+
+        @NameInMap("organizationAlias")
+        public String organizationAlias;
+
         @NameInMap("organizationId")
         public String organizationId;
 
@@ -110,6 +116,22 @@ public class ListOrganizationsResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListOrganizationsResponseBodyResult setNamespaceId(String namespaceId) {
+            this.namespaceId = namespaceId;
+            return this;
+        }
+        public String getNamespaceId() {
+            return this.namespaceId;
+        }
+
+        public ListOrganizationsResponseBodyResult setOrganizationAlias(String organizationAlias) {
+            this.organizationAlias = organizationAlias;
+            return this;
+        }
+        public String getOrganizationAlias() {
+            return this.organizationAlias;
         }
 
         public ListOrganizationsResponseBodyResult setOrganizationId(String organizationId) {
