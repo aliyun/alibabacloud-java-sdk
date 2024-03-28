@@ -38,11 +38,11 @@ public class GetWebHostingConfigResponseBody extends TeaModel {
         @NameInMap("DefaultDomain")
         public String defaultDomain;
 
+        @NameInMap("ErrorHttpStatus")
+        public String errorHttpStatus;
+
         @NameInMap("ErrorPath")
         public String errorPath;
-
-        @NameInMap("HistoryModePath")
-        public String historyModePath;
 
         @NameInMap("IndexPath")
         public String indexPath;
@@ -71,20 +71,20 @@ public class GetWebHostingConfigResponseBody extends TeaModel {
             return this.defaultDomain;
         }
 
+        public GetWebHostingConfigResponseBodyData setErrorHttpStatus(String errorHttpStatus) {
+            this.errorHttpStatus = errorHttpStatus;
+            return this;
+        }
+        public String getErrorHttpStatus() {
+            return this.errorHttpStatus;
+        }
+
         public GetWebHostingConfigResponseBodyData setErrorPath(String errorPath) {
             this.errorPath = errorPath;
             return this;
         }
         public String getErrorPath() {
             return this.errorPath;
-        }
-
-        public GetWebHostingConfigResponseBodyData setHistoryModePath(String historyModePath) {
-            this.historyModePath = historyModePath;
-            return this;
-        }
-        public String getHistoryModePath() {
-            return this.historyModePath;
         }
 
         public GetWebHostingConfigResponseBodyData setIndexPath(String indexPath) {

@@ -7,11 +7,11 @@ public class ModifyWebHostingConfigRequest extends TeaModel {
     @NameInMap("AllowedIps")
     public String allowedIps;
 
+    @NameInMap("ErrorHttpStatus")
+    public String errorHttpStatus;
+
     @NameInMap("ErrorPath")
     public String errorPath;
-
-    @NameInMap("HistoryModePath")
-    public String historyModePath;
 
     @NameInMap("IndexPath")
     public String indexPath;
@@ -32,20 +32,20 @@ public class ModifyWebHostingConfigRequest extends TeaModel {
         return this.allowedIps;
     }
 
+    public ModifyWebHostingConfigRequest setErrorHttpStatus(String errorHttpStatus) {
+        this.errorHttpStatus = errorHttpStatus;
+        return this;
+    }
+    public String getErrorHttpStatus() {
+        return this.errorHttpStatus;
+    }
+
     public ModifyWebHostingConfigRequest setErrorPath(String errorPath) {
         this.errorPath = errorPath;
         return this;
     }
     public String getErrorPath() {
         return this.errorPath;
-    }
-
-    public ModifyWebHostingConfigRequest setHistoryModePath(String historyModePath) {
-        this.historyModePath = historyModePath;
-        return this;
-    }
-    public String getHistoryModePath() {
-        return this.historyModePath;
     }
 
     public ModifyWebHostingConfigRequest setIndexPath(String indexPath) {
