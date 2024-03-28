@@ -37,8 +37,14 @@ public class Tensorboard extends TeaModel {
     @NameInMap("SummaryPath")
     public String summaryPath;
 
+    @NameInMap("TensorboardDataSources")
+    public java.util.List<TensorboardDataSourceSpec> tensorboardDataSources;
+
     @NameInMap("TensorboardId")
     public String tensorboardId;
+
+    @NameInMap("TensorboardSpec")
+    public TensorboardSpec tensorboardSpec;
 
     @NameInMap("TensorboardUrl")
     public String tensorboardUrl;
@@ -139,12 +145,28 @@ public class Tensorboard extends TeaModel {
         return this.summaryPath;
     }
 
+    public Tensorboard setTensorboardDataSources(java.util.List<TensorboardDataSourceSpec> tensorboardDataSources) {
+        this.tensorboardDataSources = tensorboardDataSources;
+        return this;
+    }
+    public java.util.List<TensorboardDataSourceSpec> getTensorboardDataSources() {
+        return this.tensorboardDataSources;
+    }
+
     public Tensorboard setTensorboardId(String tensorboardId) {
         this.tensorboardId = tensorboardId;
         return this;
     }
     public String getTensorboardId() {
         return this.tensorboardId;
+    }
+
+    public Tensorboard setTensorboardSpec(TensorboardSpec tensorboardSpec) {
+        this.tensorboardSpec = tensorboardSpec;
+        return this;
+    }
+    public TensorboardSpec getTensorboardSpec() {
+        return this.tensorboardSpec;
     }
 
     public Tensorboard setTensorboardUrl(String tensorboardUrl) {

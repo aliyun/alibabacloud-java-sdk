@@ -22,6 +22,9 @@ public class JobSpec extends TeaModel {
     @NameInMap("ResourceConfig")
     public ResourceConfig resourceConfig;
 
+    @NameInMap("SpotSpec")
+    public SpotSpec spotSpec;
+
     @NameInMap("Type")
     public String type;
 
@@ -79,6 +82,14 @@ public class JobSpec extends TeaModel {
     }
     public ResourceConfig getResourceConfig() {
         return this.resourceConfig;
+    }
+
+    public JobSpec setSpotSpec(SpotSpec spotSpec) {
+        this.spotSpec = spotSpec;
+        return this;
+    }
+    public SpotSpec getSpotSpec() {
+        return this.spotSpec;
     }
 
     public JobSpec setType(String type) {

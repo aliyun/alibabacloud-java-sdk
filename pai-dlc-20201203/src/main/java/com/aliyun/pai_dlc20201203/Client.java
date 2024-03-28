@@ -236,6 +236,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("SummaryRelativePath", request.summaryRelativePath);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tensorboardDataSources)) {
+            body.put("TensorboardDataSources", request.tensorboardDataSources);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tensorboardSpec)) {
+            body.put("TensorboardSpec", request.tensorboardSpec);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.uri)) {
             body.put("Uri", request.uri);
         }
@@ -937,6 +945,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paymentType)) {
+            query.put("PaymentType", request.paymentType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.showOwn)) {

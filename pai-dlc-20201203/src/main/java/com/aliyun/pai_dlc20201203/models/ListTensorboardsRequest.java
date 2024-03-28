@@ -22,6 +22,9 @@ public class ListTensorboardsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("PaymentType")
+    public String paymentType;
+
     @NameInMap("ShowOwn")
     public Boolean showOwn;
 
@@ -100,6 +103,14 @@ public class ListTensorboardsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListTensorboardsRequest setPaymentType(String paymentType) {
+        this.paymentType = paymentType;
+        return this;
+    }
+    public String getPaymentType() {
+        return this.paymentType;
     }
 
     public ListTensorboardsRequest setShowOwn(Boolean showOwn) {
