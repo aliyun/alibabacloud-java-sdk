@@ -1481,39 +1481,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getWebHostingUploadCredentialWithOptions(request, runtime);
     }
 
-    public ListAvailableCertificatesResponse listAvailableCertificatesWithOptions(ListAvailableCertificatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
-            body.put("Domain", request.domain);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.spaceId)) {
-            body.put("SpaceId", request.spaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListAvailableCertificates"),
-            new TeaPair("version", "2019-06-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAvailableCertificatesResponse());
-    }
-
-    public ListAvailableCertificatesResponse listAvailableCertificates(ListAvailableCertificatesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listAvailableCertificatesWithOptions(request, runtime);
-    }
-
     public ListCorsDomainsResponse listCorsDomainsWithOptions(ListCorsDomainsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1964,12 +1931,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AllowedIps", request.allowedIps);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.errorPath)) {
-            body.put("ErrorPath", request.errorPath);
+        if (!com.aliyun.teautil.Common.isUnset(request.errorHttpStatus)) {
+            body.put("ErrorHttpStatus", request.errorHttpStatus);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.historyModePath)) {
-            body.put("HistoryModePath", request.historyModePath);
+        if (!com.aliyun.teautil.Common.isUnset(request.errorPath)) {
+            body.put("ErrorPath", request.errorPath);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.indexPath)) {
