@@ -35,7 +35,7 @@ public class GetBasicIpSetResponseBody extends TeaModel {
     public String ipSetId;
 
     /**
-     * <p>The version of the accelerated IP address. Only **IPv4** is returned. This indicates that an IPv4 address is used.</p>
+     * <p>The Internet protocol version. Only **IPv4** may be returned.</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
@@ -43,19 +43,17 @@ public class GetBasicIpSetResponseBody extends TeaModel {
     /**
      * <p>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</p>
      * <br>
-     * <p>*   **BGP** (default)</p>
-     * <p>*   **BGP_PRO** If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.</p>
+     * <p>*   **BGP** (default): BGP (Multi-ISP) lines.</p>
+     * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines.</p>
      * <br>
-     * <p>If you are allowed to use single-ISP bandwidth, you can also specify one of the following values:</p>
+     * <p>Valid values if you are allowed to use single-ISP bandwidth:</p>
      * <br>
-     * <p>*   **ChinaTelecom**: China Telecom (single ISP)</p>
-     * <p>*   **ChinaUnicom**: China Unicom (single ISP)</p>
-     * <p>*   **ChinaMobile**: China Mobile (single ISP)</p>
-     * <p>*   **ChinaTelecom_L2**: China Telecom \_L2 (single ISP)</p>
-     * <p>*   **ChinaUnicom_L2**: China Unicom \_L2 (single ISP)</p>
-     * <p>*   **ChinaMobile_L2**: China Mobile \_L2 (single ISP)</p>
-     * <br>
-     * <p>> Different acceleration regions support different single-ISP BGP lines.</p>
+     * <p>*   **ChinaTelecom**</p>
+     * <p>*   **ChinaUnicom**</p>
+     * <p>*   **ChinaMobile**</p>
+     * <p>*   **ChinaTelecom_L2**</p>
+     * <p>*   **ChinaUnicom_L2**</p>
+     * <p>*   **ChinaMobile_L2**</p>
      */
     @NameInMap("IspType")
     public String ispType;

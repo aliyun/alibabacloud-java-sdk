@@ -32,9 +32,9 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     public Double originalPrice;
 
     /**
-     * <p>The list of coupons.</p>
+     * <p>The details of the coupon.</p>
      * <br>
-     * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+     * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
      */
     @NameInMap("Promotions")
     public java.util.List<DescribeCommodityPriceResponseBodyPromotions> promotions;
@@ -152,7 +152,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         public Double originalPrice;
 
         /**
-         * <p>The discounted price.</p>
+         * <p>The transaction price, which is equal to the original price minus the discount.</p>
          */
         @NameInMap("TradePrice")
         public Double tradePrice;
@@ -208,7 +208,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * <p>The discounted price.</p>
          * <br>
-         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          */
         @NameInMap("FinalPromFee")
         public Double finalPromFee;
@@ -216,7 +216,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * <p>The code of the discount option.</p>
          * <br>
-         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          */
         @NameInMap("OptionCode")
         public String optionCode;
@@ -224,7 +224,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * <p>The sub-type of the discount.</p>
          * <br>
-         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          */
         @NameInMap("PromType")
         public String promType;
@@ -232,7 +232,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * <p>The ID of the discount item.</p>
          * <br>
-         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          */
         @NameInMap("PromotionId")
         public String promotionId;
@@ -240,7 +240,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * <p>The name of the discount item.</p>
          * <br>
-         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
@@ -324,9 +324,9 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         public Double originalPrice;
 
         /**
-         * <p>The details about the discount.</p>
+         * <p>The details of the discount.</p>
          * <br>
-         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          */
         @NameInMap("PromDetails")
         public java.util.List<DescribeCommodityPriceResponseBodyOrderDetailsPromDetails> promDetails;
@@ -338,7 +338,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         public Long quantity;
 
         /**
-         * <p>The IDs of the discount rules.</p>
+         * <p>The IDs of discount rules.</p>
          */
         @NameInMap("RuleIds")
         public java.util.List<Long> ruleIds;
@@ -432,15 +432,15 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * <p>The discounted amount.</p>
          * <br>
-         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          */
         @NameInMap("CanPromFee")
         public Double canPromFee;
 
         /**
-         * <p>The code of the commodity to which the coupon applies.</p>
+         * <p>The code of the commodity to which the coupon can be applied.</p>
          * <br>
-         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          */
         @NameInMap("OptionCode")
         public String optionCode;
@@ -448,30 +448,26 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * <p>The name of the coupon.</p>
          * <br>
-         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
 
         /**
-         * <p>The coupon code.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   `youhuiquan_promotion_option_id_for_blank` indicates coupons that do not apply.</p>
-         * <br>
-         * <p>*   This parameter is unavailable on the China site (aliyun.com).</p>
+         * <p>The code of the coupon.</p>
+         * <p>> *   `youhuiquan_promotion_option_id_for_blank` indicates coupons that cannot be applied to the commodity.</p>
+         * <p>> *   This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          */
         @NameInMap("PromotionOptionNo")
         public String promotionOptionNo;
 
         /**
-         * <p>Indicates whether an item is selected. Valid values:</p>
+         * <p>Indicates whether the coupon was selected.</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          * <br>
-         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          */
         @NameInMap("Selected")
         public Boolean selected;

@@ -13,16 +13,14 @@ public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel 
     /**
      * <p>Indicates whether auto-renewal is enabled. Valid values:</p>
      * <br>
-     * <p>*   **true**: enabled</p>
-     * <p>*   **false** (default): disabled</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal duration. Unit: months.</p>
-     * <br>
-     * <p>This parameter is returned only if **AutoRenew** is set to **true**.</p>
+     * <p>The auto-renewal duration. Unit: month.</p>
      */
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;

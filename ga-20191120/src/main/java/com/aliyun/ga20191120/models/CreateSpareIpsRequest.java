@@ -15,7 +15,7 @@ public class CreateSpareIpsRequest extends TeaModel {
      * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -36,9 +36,9 @@ public class CreateSpareIpsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The secondary IP addresses to be created for the CNAME. If an acceleration area of the GA instance become unavailable, GA redirects the access traffic to the secondary IP addresses.</p>
+     * <p>The secondary IP addresses to be created for the CNAME. If an acceleration area of the GA instance becomes unavailable, access traffic is redirected to the secondary IP addresses.</p>
      * <br>
-     * <p>You can specify up to 2 secondary IP addresses. Separate IP addresses with commas (,).</p>
+     * <p>You can specify up to two secondary IP addresses.</p>
      */
     @NameInMap("SpareIps")
     public java.util.List<String> spareIps;

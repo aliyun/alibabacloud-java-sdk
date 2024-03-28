@@ -13,8 +13,10 @@ public class UpdateAcceleratorRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</p>
+     * <p>*   **false**: disables automatic payment. This is the default value. After an order is generated, you must go to the [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payment.</p>
      * <p>*   **true**: enables automatic payment. Payments are automatically completed.</p>
+     * <br>
+     * <p>>  This parameter takes effect only if you call the operation to upgrade a GA instance.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
@@ -33,9 +35,9 @@ public class UpdateAcceleratorRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -49,7 +51,7 @@ public class UpdateAcceleratorRequest extends TeaModel {
     /**
      * <p>The name of the GA instance.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("Name")
     public String name;

@@ -7,7 +7,7 @@ public class DescribeIpSetRequest extends TeaModel {
     /**
      * <p>The ID of the acceleration region.</p>
      * <br>
-     * <p>You can call the [ListIpSets](~~153247~~) operation to query IDs of acceleration regions of a specified GA instance.</p>
+     * <p>You can call the [ListIpSets](~~2253273~~) operation to query the IDs of acceleration regions of a specific GA instance.</p>
      */
     @NameInMap("IpSetId")
     public String ipSetId;

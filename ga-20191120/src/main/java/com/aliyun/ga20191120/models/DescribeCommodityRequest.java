@@ -7,15 +7,15 @@ public class DescribeCommodityRequest extends TeaModel {
     /**
      * <p>The commodity code.</p>
      * <br>
-     * <p>Examples for the China site (aliyun.com):</p>
+     * <p>Valid values on the China site (aliyun.com):</p>
      * <br>
      * <p>*   **ga_gapluspre_public_cn**: GA instance.</p>
      * <p>*   **ga_plusbwppre_public_cn**: basic bandwidth plan.</p>
      * <br>
-     * <p>Examples for the international site (alibabacloud.com):</p>
+     * <p>Valid values on the international site (alibabacloud.com):</p>
      * <br>
      * <p>*   **ga_pluspre_public_intl**: GA instance.</p>
-     * <p>*   **ga_bwppreintl_public_intl**: basic bandwidth plan.</p>
+     * <p>*   **ga_bwppreintl_public_intl:** basic bandwidth plan.</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
@@ -23,9 +23,9 @@ public class DescribeCommodityRequest extends TeaModel {
     /**
      * <p>The type of the order. Valid values:</p>
      * <br>
-     * <p>*   **BUY**: purchase</p>
-     * <p>*   **RENEW**: renewal</p>
-     * <p>*   **UPGRADE**: upgrade</p>
+     * <p>*   **BUY**: purchase order.</p>
+     * <p>*   **RENEW**: renewal order.</p>
+     * <p>*   **UPGRADE**: upgrade order.</p>
      */
     @NameInMap("OrderType")
     public String orderType;

@@ -39,15 +39,15 @@ public class UpdateIpSetsRequest extends TeaModel {
 
     public static class UpdateIpSetsRequestIpSets extends TeaModel {
         /**
-         * <p>The new bandwidth of the acceleration region. Unit: Mbit/s.</p>
+         * <p>The new bandwidth that you want to allocate to the acceleration regions. Unit: Mbit/s.</p>
          * <br>
-         * <p>You can specify the bandwidth for up to 100 acceleration regions.</p>
+         * <p>You must allocate at least 2 Mbit/s of bandwidth to each acceleration region. You can specify the bandwidth for up to 100 acceleration regions.</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
-         * <p>The ID of the acceleration region that you want to modify.</p>
+         * <p>The IDs of the acceleration regions that you want to modify.</p>
          * <br>
          * <p>You can specify the IDs of up to 100 acceleration regions.</p>
          */

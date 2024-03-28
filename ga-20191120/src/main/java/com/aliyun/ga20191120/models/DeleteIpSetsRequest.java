@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteIpSetsRequest extends TeaModel {
     /**
-     * <p>The ID of the acceleration region that you want to delete.</p>
+     * <p>The IDs of the acceleration regions that you want to delete.</p>
      */
     @NameInMap("IpSetIds")
     public java.util.List<String> ipSetIds;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the GA instance. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

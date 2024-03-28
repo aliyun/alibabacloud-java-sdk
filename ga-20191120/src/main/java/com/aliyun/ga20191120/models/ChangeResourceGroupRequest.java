@@ -16,8 +16,6 @@ public class ChangeResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the new resource group.</p>
-     * <br>
-     * <p>>  This parameter is required.</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
@@ -35,8 +33,6 @@ public class ChangeResourceGroupRequest extends TeaModel {
      * <p>*   If you set **ResourceType** to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.</p>
      * <p>*   If you set **ResourceType** to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.</p>
      * <p>*   If you set **ResourceType** to **acl**, set the value of ResourceId to the ID of an access control list (ACL).</p>
-     * <br>
-     * <p>>  This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -44,12 +40,10 @@ public class ChangeResourceGroupRequest extends TeaModel {
     /**
      * <p>The type of the GA resource. Valid values:</p>
      * <br>
-     * <p>*   **accelerator**: a standard GA instance</p>
-     * <p>*   **basicaccelerator**: a basic GA instance</p>
-     * <p>*   **bandwidthpackage**: a bandwidth plan</p>
-     * <p>*   **acl**: an ACL</p>
-     * <br>
-     * <p>>  This parameter is required.</p>
+     * <p>*   **accelerator:** a standard GA instance.</p>
+     * <p>*   **basicaccelerator:** a basic GA instance.</p>
+     * <p>*   **bandwidthpackage:** a bandwidth plan.</p>
+     * <p>*   **acl:** an ACL.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

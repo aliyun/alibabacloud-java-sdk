@@ -29,9 +29,9 @@ public class CreateBasicAccelerateIpEndpointRelationResponseBody extends TeaMode
     public String requestId;
 
     /**
-     * <p>The association status between the accelerated IP address and endpoint.</p>
+     * <p>The status of the mapping between the accelerated IP address and the endpoint.</p>
      * <br>
-     * <p>>  This parameter is not in use and empty.</p>
+     * <p>>  This parameter is not in use.</p>
      */
     @NameInMap("State")
     public String state;

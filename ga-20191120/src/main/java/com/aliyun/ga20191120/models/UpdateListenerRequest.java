@@ -41,6 +41,25 @@ public class UpdateListenerRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The maximum version of the HTTP protocol. Valid values:</p>
+     * <br>
+     * <p>*   **http3**</p>
+     * <p>*   **http2**</p>
+     * <p>*   **http1.1**</p>
+     * <br>
+     * <p>>  Only HTTPS listeners support this parameter.</p>
+     */
+    @NameInMap("HttpVersion")
+    public String httpVersion;
+
+    /**
+     * <p>The timeout period for idle connections. Unit: seconds.</p>
+     * <br>
+     * <p>*   TCP: 10-900. Default value: 900. Unit: seconds.</p>
+     * <p>*   UDP: 10-20. Default value: 20. Unit: seconds.</p>
+     * <p>*   HTTP/HTTPS: 1-60. Default value: 15. Unit: seconds.</p>
+     */
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
@@ -96,6 +115,13 @@ public class UpdateListenerRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The timeout period for HTTP or HTTPS requests.</p>
+     * <br>
+     * <p>Valid values: 1 to 180. Default value: 60. Unit: seconds.</p>
+     * <br>
+     * <p>>  This parameter takes effect only for HTTP or HTTPS listeners. If the backend server does not respond within the timeout period, GA returns an HTTP 504 error code to the client.</p>
+     */
     @NameInMap("RequestTimeout")
     public Integer requestTimeout;
 
@@ -181,6 +207,14 @@ public class UpdateListenerRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateListenerRequest setHttpVersion(String httpVersion) {
+        this.httpVersion = httpVersion;
+        return this;
+    }
+    public String getHttpVersion() {
+        return this.httpVersion;
     }
 
     public UpdateListenerRequest setIdleTimeout(Integer idleTimeout) {

@@ -80,17 +80,13 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     public Integer silenceTime;
 
     /**
-     * <p>The state of the application monitor task. Valid values:</p>
+     * <p>The status of the origin probing task. Valid values:</p>
      * <br>
-     * <p>- **init**</p>
-     * <br>
-     * <p>- **active**</p>
-     * <br>
-     * <p>- **updating**</p>
-     * <br>
-     * <p>- **inactive**</p>
-     * <br>
-     * <p>- **deleting**</p>
+     * <p>*   **init**</p>
+     * <p>*   **active**</p>
+     * <p>*   **updating**</p>
+     * <p>*   **inactive**</p>
+     * <p>*   **deleting**</p>
      */
     @NameInMap("State")
     public String state;
@@ -226,13 +222,13 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
 
     public static class DescribeApplicationMonitorResponseBodyIspCityList extends TeaModel {
         /**
-         * <p>The ID of the city where the probe point of the ISP is deployed.</p>
+         * <p>The ID of the city in which the probe point of the ISP is deployed.</p>
          */
         @NameInMap("City")
         public String city;
 
         /**
-         * <p>The name of the city where the probe point of the ISP is deployed.</p>
+         * <p>The name of the city in which the probe point of the ISP is deployed.</p>
          */
         @NameInMap("CityName")
         public String cityName;

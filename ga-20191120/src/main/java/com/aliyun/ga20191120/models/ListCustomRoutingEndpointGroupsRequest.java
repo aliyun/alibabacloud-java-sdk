@@ -10,6 +10,13 @@ public class ListCustomRoutingEndpointGroupsRequest extends TeaModel {
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>Specifies whether the access log feature is enabled.</p>
+     * <br>
+     * <p>You can set the parameter to **on**.</p>
+     * <br>
+     * <p>If you leave the parameter empty, all endpoint groups are returned.</p>
+     */
     @NameInMap("AccessLogSwitch")
     public String accessLogSwitch;
 
@@ -26,13 +33,13 @@ public class ListCustomRoutingEndpointGroupsRequest extends TeaModel {
     public String listenerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

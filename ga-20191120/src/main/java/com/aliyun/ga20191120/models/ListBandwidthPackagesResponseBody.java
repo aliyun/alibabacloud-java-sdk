@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBandwidthPackagesResponseBody extends TeaModel {
     /**
-     * <p>Details about the bandwidth plans.</p>
+     * <p>The details of the bandwidth plans.</p>
      */
     @NameInMap("BandwidthPackages")
     public java.util.List<ListBandwidthPackagesResponseBodyBandwidthPackages> bandwidthPackages;
@@ -117,7 +117,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
 
     public static class ListBandwidthPackagesResponseBodyBandwidthPackages extends TeaModel {
         /**
-         * <p>The ID of the GA instance that is associated with the bandwidth plan.</p>
+         * <p>The IDs of the GA instances that are associated with the bandwidth plans.</p>
          */
         @NameInMap("Accelerators")
         public java.util.List<String> accelerators;
@@ -137,9 +137,9 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         /**
          * <p>The type of the bandwidth. Valid values:</p>
          * <br>
-         * <p>*   **Basic**: standard</p>
-         * <p>*   **Enhanced**: enhanced</p>
-         * <p>*   **Advanced**: premium</p>
+         * <p>*   **Basic**</p>
+         * <p>*   **Enhanced**</p>
+         * <p>*   **Advanced**</p>
          */
         @NameInMap("BandwidthType")
         public String bandwidthType;
@@ -147,30 +147,33 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         /**
          * <p>The metering method that is used when you use the pay-as-you-go billing method.</p>
          * <br>
-         * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
-         * <p>*   **PayBY95**: pay-by-95th-percentile</p>
+         * <p>*   **PayByTraffic**: pay-by-data-transfer.</p>
+         * <p>*   **PayBY95**: pay-by-95th-percentile.</p>
          */
         @NameInMap("BillingType")
         public String billingType;
 
         /**
-         * <p>Area A of the cross-border acceleration bandwidth plan. Only **China-mainland** (the Chinese mainland) is returned.</p>
+         * <p>Area A of the cross-region acceleration bandwidth plan. **China-mainland** is returned.</p>
          * <br>
-         * <p>This parameter is returned only if you call this operation on the international site (alibabacloud.com).</p>
+         * <p>This parameter is returned only if you call the operation on the international site (alibabacloud.com).</p>
          */
         @NameInMap("CbnGeographicRegionIdA")
         public String cbnGeographicRegionIdA;
 
         /**
-         * <p>Area B of the cross-border acceleration bandwidth plan. Only **Global** (global) is returned.</p>
+         * <p>Area B of the cross-region acceleration bandwidth plan. **Global** is returned.</p>
          * <br>
-         * <p>This parameter is returned only if you call this operation on the international site (alibabacloud.com).</p>
+         * <p>This parameter is returned only if you call the operation on the international site (alibabacloud.com).</p>
          */
         @NameInMap("CbnGeographicRegionIdB")
         public String cbnGeographicRegionIdB;
 
         /**
-         * <p>The billing method of the bandwidth plan. Only **PREPAY** is returned, which indicates the subscription billing method.</p>
+         * <p>The billing method of the bandwidth plan.</p>
+         * <br>
+         * <p>*   **PREPAY**: subscription. This is the default value.</p>
+         * <p>*   **POSTPAY**: pay-as-you-go.</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
@@ -188,7 +191,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The timestamp when the bandwidth plan expires.</p>
+         * <p>The expiration time of the bandwidth plan.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -200,7 +203,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile metering method is used.</p>
+         * <p>The percentage of the guaranteed minimum bandwidth if the pay-by-95th-percentile metering method is used.</p>
          */
         @NameInMap("Ratio")
         public Integer ratio;
@@ -220,13 +223,13 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         /**
          * <p>The status of the bandwidth plan. Valid values:</p>
          * <br>
-         * <p>*   **init**: The bandwidth plan is being initialized.</p>
-         * <p>*   **active**: The bandwidth plan is available.</p>
-         * <p>*   **binded**: The bandwidth plan is associated.</p>
-         * <p>*   **binding**: The bandwidth plan is being associated.</p>
-         * <p>*   **unbinding**: The bandwidth plan is being disassociated.</p>
-         * <p>*   **updating**: The bandwidth plan is being updated.</p>
-         * <p>*   **finacialLocked**: The bandwidth plan is locked due to overdue payments.</p>
+         * <p>*   **init:** The bandwidth plan is being initialized.</p>
+         * <p>*   **active:** The bandwidth plan is available.</p>
+         * <p>*   **binded:** The bandwidth plan is associated with a GA instance.</p>
+         * <p>*   **binding:** The bandwidth plan is being associated with a GA instance.</p>
+         * <p>*   **unbinding:** The bandwidth plan is being disassociated from a GA instance.</p>
+         * <p>*   **updating:** The bandwidth plan is being updated.</p>
+         * <p>*   **finacialLocked:** The bandwidth plan is locked due to overdue payments.</p>
          * <p>*   **locked**: The bandwidth plan is locked.</p>
          */
         @NameInMap("State")
@@ -241,10 +244,10 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         /**
          * <p>The type of the bandwidth plan. Valid values:</p>
          * <br>
-         * <p>*   **Basic**: a basic bandwidth plan</p>
-         * <p>*   **CrossDomain**: a cross-border acceleration bandwidth plan</p>
+         * <p>*   **Basic:** a basic bandwidth plan.</p>
+         * <p>*   **CrossDomain:** a cross-region acceleration bandwidth plan.</p>
          * <br>
-         * <p>If you call this operation on the China site (aliyun.com), only **Basic** is returned.</p>
+         * <p>If you call the operation on the China site (aliyun.com), **Basic** is returned.</p>
          */
         @NameInMap("Type")
         public String type;

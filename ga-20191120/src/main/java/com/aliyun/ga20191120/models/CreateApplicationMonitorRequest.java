@@ -21,7 +21,7 @@ public class CreateApplicationMonitorRequest extends TeaModel {
      * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -84,7 +84,7 @@ public class CreateApplicationMonitorRequest extends TeaModel {
     /**
      * <p>The name of the origin probing task.</p>
      * <br>
-     * <p>The name must be 4 to 100 characters in length, and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("TaskName")
     public String taskName;

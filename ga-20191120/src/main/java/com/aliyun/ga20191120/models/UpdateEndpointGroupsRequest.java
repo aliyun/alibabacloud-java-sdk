@@ -88,7 +88,7 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
 
     public static class UpdateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations extends TeaModel {
         /**
-         * <p>Enter the IP address, domain name, or instance ID based on the value of the Type parameter.</p>
+         * <p>The IP address, domain name, or instance ID based on the value of Type.</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
@@ -108,17 +108,16 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
          * <p>*   **Ip:** a custom IP address.</p>
          * <p>*   **PublicIp:** a public IP address provided by Alibaba Cloud.</p>
          * <p>*   **ECS:** an Elastic Compute Service (ECS) instance.</p>
-         * <p>*   **SLB:** a Server Load Balancer (SLB) instance.</p>
+         * <p>*   **SLB:**: a Server Load Balancer (SLB) instance.</p>
          * <p>*   **ALB:** an Application Load Balancer (ALB) instance.</p>
          * <p>*   **OSS:** an Object Storage Service (OSS) bucket.</p>
          * <p>*   **ENI:** an elastic network interface (ENI).</p>
          * <p>*   **NLB:** a Network Load Balancer (NLB) instance.</p>
          * <br>
-         * <p>> *   If you set this parameter to **ECS** or **SLB** and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the service-linked role.</p>
-         * <p>>*   If you set this parameter to **ALB** and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the service-linked role.</p>
-         * <p>>*   If you set this parameter to **OSS** and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the service-linked role.</p>
-         * <br>
-         * <p>For more information, see [Service-linked roles](~~178360~~).</p>
+         * <p>> *   If you set this parameter to **ECS** or **SLB** and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the role.</p>
+         * <p>>*   If you set this parameter to **ALB** and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the role.</p>
+         * <p>>*   If you set this parameter to **OSS** and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the role.</p>
+         * <p>> >For more information, see [Service-linked roles](~~178360~~).</p>
          */
         @NameInMap("Type")
         public String type;
@@ -128,7 +127,7 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
          * <br>
          * <p>Valid values: **0** to **255**.</p>
          * <br>
-         * <p>>  If you set the weight of an endpoint to 0, the GA instance stops distributing traffic to the endpoint.</p>
+         * <p>>  If you set the weight of an endpoint to 0, GA stops distributing traffic to the endpoint. Proceed with caution.</p>
          */
         @NameInMap("Weight")
         public Long weight;
@@ -249,7 +248,7 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
         public String endpointGroupDescription;
 
         /**
-         * <p>The endpoint ID.</p>
+         * <p>The ID of the endpoint.</p>
          */
         @NameInMap("EndpointGroupId")
         public String endpointGroupId;
@@ -269,7 +268,7 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
          * <p>*   **HTTPS**</p>
          * <br>
          * <p>> *   You can specify this parameter only if the listener that is associated with the endpoint group uses HTTP or HTTPS.</p>
-         * <p>>*   The backend service protocol of an HTTP listener must be HTTP.</p>
+         * <p>> *   The backend service protocol of an HTTP listener must be HTTP.</p>
          */
         @NameInMap("EndpointRequestProtocol")
         public String endpointRequestProtocol;
@@ -284,7 +283,7 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
         public Boolean healthCheckEnabled;
 
         /**
-         * <p>The interval at which health checks are performed. Unit: seconds. Valid values: **1** to **50**.</p>
+         * <p>The interval between two consecutive health checks. Unit: seconds. Valid values: **1** to **50**.</p>
          */
         @NameInMap("HealthCheckIntervalSeconds")
         public Long healthCheckIntervalSeconds;
@@ -306,9 +305,9 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
         /**
          * <p>The protocol over which health check requests are sent. Valid values:</p>
          * <br>
-         * <p>*   **tcp**</p>
-         * <p>*   **http**</p>
-         * <p>*   **https**</p>
+         * <p>*   **tcp** or **TCP**</p>
+         * <p>*   **http** or **HTTP**</p>
+         * <p>*   **https** or **HTTPS**</p>
          */
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;

@@ -60,7 +60,7 @@ public class ListEndpointGroupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the endpoint group.</p>
+     * <p>The tag of the endpoint group.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListEndpointGroupsRequestTag> tag;
@@ -144,9 +144,9 @@ public class ListEndpointGroupsRequest extends TeaModel {
 
     public static class ListEndpointGroupsRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the Endpoint Group. The tag key cannot be an empty string.</p>
+         * <p>The tag key of the endpoint group. It cannot be an empty string.</p>
          * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
          * <br>
          * <p>You can specify up to 20 tag keys.</p>
          */
@@ -154,9 +154,9 @@ public class ListEndpointGroupsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the Endpoint Group. The tag value can be an empty string.</p>
+         * <p>The tag value of the endpoint group. The tag value can be an empty string.</p>
          * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
          * <br>
          * <p>You can specify up to 20 tag values.</p>
          */

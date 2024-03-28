@@ -35,10 +35,11 @@ public class DescribeIpSetResponseBody extends TeaModel {
     public String ipSetId;
 
     /**
-     * <p>The version of the IP protocol. Valid values:</p>
+     * <p>The IP version. Valid values:</p>
      * <br>
      * <p>*   **IPv4**</p>
      * <p>*   **IPv6**</p>
+     * <p>*   **DUAL_STACK**</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
@@ -46,19 +47,8 @@ public class DescribeIpSetResponseBody extends TeaModel {
     /**
      * <p>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</p>
      * <br>
-     * <p>*   **BGP**: BGP (Multi-ISP) lines.</p>
+     * <p>*   **BGP**: BGP (Multi-ISP) lines. This is the default value.</p>
      * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines.</p>
-     * <br>
-     * <p>If you are allowed to use single-ISP bandwidth, one of the following values is returned:</p>
-     * <br>
-     * <p>*   **ChinaTelecom**: China Telecom (single ISP).</p>
-     * <p>*   **ChinaUnicom**: China Unicom (single ISP).</p>
-     * <p>*   **ChinaMobile**: China Mobile (single ISP).</p>
-     * <p>*   **ChinaTelecom_L2**: China Telecom (single ISP)\_L2.</p>
-     * <p>*   **ChinaUnicom_L2**: China Unicom (single ISP)\_L2.</p>
-     * <p>*   **ChinaMobile_L2**: China Mobile (single ISP)\_L2.</p>
-     * <br>
-     * <p>>  The supported single-ISP type varies with the acceleration region.</p>
      */
     @NameInMap("IspType")
     public String ispType;
@@ -70,24 +60,27 @@ public class DescribeIpSetResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The service ID to which the managed instance belongs.</p>
+     * <p>The ID of the service that manages the instance.</p>
      * <br>
-     * <p>>  Valid only when the ServiceManaged parameter is True.</p>
+     * <p>>  This parameter is returned only if the value of **ServiceManaged** is **true**.</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
     /**
-     * <p>Is it a managed instance. Valid values:</p>
+     * <p>Indicates whether the GA instance is managed. Valid values:</p>
      * <br>
-     * <p>- true</p>
-     * <p>- false</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 
     /**
-     * <p>A list of action policies that users can execute on this managed instance.</p>
+     * <p>The actions that users can perform on the managed instance.</p>
+     * <br>
+     * <p>> *   This parameter is returned only if the value of **ServiceManaged** is **true**.</p>
+     * <p>>*   Users can perform only specific actions on a managed instance.</p>
      */
     @NameInMap("ServiceManagedInfos")
     public java.util.List<DescribeIpSetResponseBodyServiceManagedInfos> serviceManagedInfos;
@@ -206,40 +199,39 @@ public class DescribeIpSetResponseBody extends TeaModel {
 
     public static class DescribeIpSetResponseBodyServiceManagedInfos extends TeaModel {
         /**
-         * <p>Managed policy action name, Valid values:</p>
+         * <p>The name of the action on the managed instance. Valid values:</p>
          * <br>
-         * <p>- Create</p>
-         * <p>- Update</p>
-         * <p>- Delete</p>
-         * <p>- Associate</p>
-         * <p>- UserUnmanaged</p>
-         * <p>- CreateChild</p>
+         * <p>*   **Create**</p>
+         * <p>*   **Update**</p>
+         * <p>*   **Delete**</p>
+         * <p>*   **Associate**</p>
+         * <p>*   **UserUnmanaged**</p>
+         * <p>*   **CreateChild**</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
-         * <p>Sub resource type, Valid values:</p>
+         * <p>The type of the child resource. Valid values:</p>
          * <br>
-         * <p>- Listener</p>
-         * <p>- IpSet</p>
-         * <p>- EndpointGroup</p>
-         * <p>- ForwardingRule</p>
-         * <p>- Endpoint</p>
-         * <p>- EndpointGroupDestination</p>
-         * <p>- EndpointPolicy</p>
+         * <p>*   **Listener**: listener.</p>
+         * <p>*   **IpSet**: acceleration region.</p>
+         * <p>*   **EndpointGroup**: endpoint group.</p>
+         * <p>*   **ForwardingRule**: forwarding rule.</p>
+         * <p>*   **Endpoint**: endpoint.</p>
+         * <p>*   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.</p>
+         * <p>*   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.</p>
          * <br>
-         * <p>>Only valid when the Action parameter is CreateChild.</p>
+         * <p>>  This parameter takes effect only if **Action** is set to **CreateChild**.</p>
          */
         @NameInMap("ChildType")
         public String childType;
 
         /**
-         * <p>Is the managed policy action managed, Valid values:</p>
+         * <p>Indicates whether the specified actions are managed.</p>
          * <br>
-         * <p>- true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.</p>
-         * <br>
-         * <p>- false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.</p>
+         * <p>*   **true**: The specified actions are managed, and users cannot perform the actions on the managed instance.</p>
+         * <p>*   **false**: The specified actions are not managed, and users can perform the actions on the managed instance.</p>
          */
         @NameInMap("IsManaged")
         public Boolean isManaged;

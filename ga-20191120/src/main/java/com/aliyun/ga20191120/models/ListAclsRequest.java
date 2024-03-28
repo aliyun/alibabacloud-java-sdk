@@ -29,7 +29,7 @@ public class ListAclsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: **1** to **50**. Default value: **10**.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;

@@ -15,13 +15,15 @@ public class DeleteIpSetRequest extends TeaModel {
      * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the acceleration region that you want to delete.</p>
+     * <br>
+     * <p>You can call the [ListIpSets](~~2253273~~) operation to query the IDs of acceleration regions of a specified GA instance.</p>
      */
     @NameInMap("IpSetId")
     public String ipSetId;
