@@ -96,13 +96,13 @@ public class ListIpSetsResponseBody extends TeaModel {
         /**
          * <p>The type of the child resource. Valid values:</p>
          * <br>
-         * <p>*   **Listener**: listener</p>
-         * <p>*   **IpSet**: acceleration region</p>
-         * <p>*   **EndpointGroup**: endpoint group</p>
-         * <p>*   **ForwardingRule**: forwarding rule</p>
-         * <p>*   **Endpoint**: endpoint</p>
-         * <p>*   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener</p>
-         * <p>*   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener</p>
+         * <p>*   **Listener**: listener.</p>
+         * <p>*   **IpSet**: acceleration region.</p>
+         * <p>*   **EndpointGroup**: endpoint group.</p>
+         * <p>*   **ForwardingRule**: forwarding rule.</p>
+         * <p>*   **Endpoint**: endpoint.</p>
+         * <p>*   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.</p>
+         * <p>*   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.</p>
          * <br>
          * <p>>  This parameter takes effect only if **Action** is set to **CreateChild**.</p>
          */
@@ -110,10 +110,10 @@ public class ListIpSetsResponseBody extends TeaModel {
         public String childType;
 
         /**
-         * <p>Indicates whether the specified actions are managed. Valid values:</p>
+         * <p>Indicates whether the specified actions are managed.</p>
          * <br>
-         * <p>*   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.</p>
-         * <p>*   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.</p>
+         * <p>*   **true**: The specified actions are managed, and users cannot perform the actions on the managed instance.****</p>
+         * <p>*   **false**: The specified actions are not managed, and users can perform the actions on the managed instance.</p>
          */
         @NameInMap("IsManaged")
         public Boolean isManaged;
@@ -179,6 +179,7 @@ public class ListIpSetsResponseBody extends TeaModel {
          * <br>
          * <p>*   **IPv4**</p>
          * <p>*   **IPv6**</p>
+         * <p>*   **DUAL_STACK**</p>
          */
         @NameInMap("IpVersion")
         public String ipVersion;
@@ -186,33 +187,22 @@ public class ListIpSetsResponseBody extends TeaModel {
         /**
          * <p>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</p>
          * <br>
-         * <p>*   **BGP** (default)</p>
-         * <p>*   **BGP_PRO** If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.</p>
-         * <br>
-         * <p>If you are allowed to use single-ISP bandwidth, one of the following values is supported:</p>
-         * <br>
-         * <p>*   **ChinaTelecom**</p>
-         * <p>*   **ChinaUnicom**</p>
-         * <p>*   **ChinaMobile**</p>
-         * <p>*   **ChinaTelecom_L2**</p>
-         * <p>*   **ChinaUnicom_L2**</p>
-         * <p>*   **ChinaMobile_L2**</p>
-         * <br>
-         * <p>>  The supported line types vary based on the acceleration region.</p>
+         * <p>*   **BGP**: BGP (Multi-ISP) lines. This is the default value.</p>
+         * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines.</p>
          */
         @NameInMap("IspType")
         public String ispType;
 
         /**
-         * <p>The service that manages the instance.</p>
+         * <p>The ID of the service that manages the instance.</p>
          * <br>
-         * <p>>  This parameter takes effect only if **ServiceManaged** is set to **True**.</p>
+         * <p>>  This parameter takes effect only if **ServiceManaged** is set to **true**.</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;
 
         /**
-         * <p>Indicates whether the GA instance is managed. Valid values:</p>
+         * <p>Indicates whether the instance is managed. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>
@@ -223,9 +213,8 @@ public class ListIpSetsResponseBody extends TeaModel {
         /**
          * <p>The actions that users can perform on the managed instance.</p>
          * <br>
-         * <p>>  This parameter takes effect only if **ServiceManaged** is set to **True**.</p>
-         * <br>
-         * <p>*   Users can perform only specific actions on a managed instance.</p>
+         * <p>> *   This parameter takes effect only if **ServiceManaged** is set to **true**.</p>
+         * <p>>*   Users can perform only specific actions on a managed instance.</p>
          */
         @NameInMap("ServiceManagedInfos")
         public java.util.List<ListIpSetsResponseBodyIpSetsServiceManagedInfos> serviceManagedInfos;
@@ -233,10 +222,10 @@ public class ListIpSetsResponseBody extends TeaModel {
         /**
          * <p>The status of the acceleration region. Valid values:</p>
          * <br>
-         * <p>*   **init**</p>
-         * <p>*   **active**</p>
-         * <p>*   **updating**</p>
-         * <p>*   **deleting**</p>
+         * <p>*   **init:** The acceleration region is being initialized.</p>
+         * <p>*   **active:** The acceleration region is in the running state.</p>
+         * <p>*   **updating:** The acceleration region is being configured.</p>
+         * <p>*   **deleting:** The acceleration region is being deleted.</p>
          */
         @NameInMap("State")
         public String state;

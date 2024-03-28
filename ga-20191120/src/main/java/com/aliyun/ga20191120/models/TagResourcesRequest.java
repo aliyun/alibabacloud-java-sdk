@@ -7,9 +7,9 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>> If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** for each API request may be different.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -29,7 +29,7 @@ public class TagResourcesRequest extends TeaModel {
      * <p>*   If you set **ResourceType** to **acl**, set the value of ResourceId to the ID of an ACL.</p>
      * <p>*   If you set **ResourceType** to **endpointgroup**, set the value of ResourceId to the ID of an endpoint group.</p>
      * <br>
-     * <p>The parameter is required. You can enter up to 50 GA resource IDs.</p>
+     * <p>This parameter is required. You can enter up to 50 GA resource IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -37,11 +37,11 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the resource to which you want to add tags. Valid values:</p>
      * <br>
-     * <p>*   **accelerator**: a standard GA instance</p>
-     * <p>*   **basicaccelerator**: a basic GA instance</p>
-     * <p>*   **bandwidthpackage**: a bandwidth plan</p>
-     * <p>*   **acl**: an ACL</p>
-     * <p>*   **endpointgroup**: an endpoint group</p>
+     * <p>*   **accelerator:** a standard GA instance.</p>
+     * <p>*   **basicaccelerator:** a basic GA instance.</p>
+     * <p>*   **bandwidthpackage:** a bandwidth plan.</p>
+     * <p>*   **acl:** an ACL.</p>
+     * <p>*   **endpointgroup:** an endpoint group of a standard GA instance. You cannot call the TagResources operation to add tags to an endpoint group of a basic GA instance.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

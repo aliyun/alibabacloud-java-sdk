@@ -25,7 +25,7 @@ public class UpdateAcceleratorCrossBorderModeRequest extends TeaModel {
     /**
      * <p>The type of transmission network of the GA instance. Valid values:</p>
      * <br>
-     * <p>*   **bgpPro**: BGP (Multi-ISP) Pro. BGP (Multi-ISP) Pro lines are used for cross-border acceleration. You do not need to perform real-name verification.</p>
+     * <p>*   **bgpPro**: BGP (Multi-ISP) Pro. BGP (Multi-ISP) Pro lines are used for cross-border acceleration. You do not need to complete real-name verification.</p>
      * <p>*   **private**: cross-border Express Connect circuit. Cross-border Express Connect circuits provide better acceleration performance but require real-name verification.</p>
      */
     @NameInMap("CrossBorderMode")

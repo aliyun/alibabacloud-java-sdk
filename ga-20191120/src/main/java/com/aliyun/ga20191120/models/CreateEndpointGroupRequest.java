@@ -13,9 +13,9 @@ public class CreateEndpointGroupRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -23,7 +23,7 @@ public class CreateEndpointGroupRequest extends TeaModel {
     /**
      * <p>The description of the endpoint group.</p>
      * <br>
-     * <p>The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.</p>
+     * <p>The description can be up to 200 characters in length and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -41,12 +41,12 @@ public class CreateEndpointGroupRequest extends TeaModel {
     public String endpointGroupRegion;
 
     /**
-     * <p>The type of the endpoint group. Default value: default. Valid values:</p>
+     * <p>The type of the endpoint group. Valid values:</p>
      * <br>
-     * <p>*   **default**: a default endpoint group.</p>
+     * <p>*   **default** (default): a default endpoint group.</p>
      * <p>*   **virtual**: a virtual endpoint group.</p>
      * <br>
-     * <p>>  Only HTTP and HTTPS listeners support virtual endpoint groups.</p>
+     * <p>>  When you call this operation to create a virtual endpoint group for a Layer 4 listener, make sure that a default endpoint group is created.</p>
      */
     @NameInMap("EndpointGroupType")
     public String endpointGroupType;
@@ -64,10 +64,10 @@ public class CreateEndpointGroupRequest extends TeaModel {
     public String endpointRequestProtocol;
 
     /**
-     * <p>Specifies whether to enable the health check feature. Default value: true. Valid values:</p>
+     * <p>Specifies whether to enable the health check feature. Valid values:</p>
      * <br>
-     * <p>*   **true**: enables the health check feature.</p>
-     * <p>*   **false**: disables the health check feature.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("HealthCheckEnabled")
     public Boolean healthCheckEnabled;
@@ -93,9 +93,9 @@ public class CreateEndpointGroupRequest extends TeaModel {
     /**
      * <p>The protocol over which to send health check requests. Valid values:</p>
      * <br>
-     * <p>*   **tcp**: TCP</p>
-     * <p>*   **http**: HTTP</p>
-     * <p>*   **https**: HTTPS</p>
+     * <p>*   **tcp** or **TCP**</p>
+     * <p>*   **http** or **HTTP**</p>
+     * <p>*   **https** or **HTTPS**</p>
      */
     @NameInMap("HealthCheckProtocol")
     public String healthCheckProtocol;
@@ -109,7 +109,7 @@ public class CreateEndpointGroupRequest extends TeaModel {
     /**
      * <p>The name of the endpoint group.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -307,7 +307,7 @@ public class CreateEndpointGroupRequest extends TeaModel {
 
     public static class CreateEndpointGroupRequestEndpointConfigurations extends TeaModel {
         /**
-         * <p>Specifies whether to use the TCP Option Address (TOA) module to preserve client IP addresses. Valid values:</p>
+         * <p>Specifies whether to preserve client IP addresses by using the TCP Option Address (TOA) module. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false** (default)</p>
@@ -333,7 +333,7 @@ public class CreateEndpointGroupRequest extends TeaModel {
         /**
          * <p>The private IP address of the ENI.</p>
          * <br>
-         * <p>>  If you set the endpoint type to ENI, you can specify this parameter. If you leave this parameter empty, the primary private IP address of the ENI is used.</p>
+         * <p>>  This parameter is available only when you set the endpoint type to **ENI**. If you leave this parameter empty, the primary private IP address of the ENI is used.</p>
          */
         @NameInMap("SubAddress")
         public String subAddress;
@@ -345,15 +345,21 @@ public class CreateEndpointGroupRequest extends TeaModel {
          * <p>*   **Ip:** a custom IP address.</p>
          * <p>*   **PublicIp:** a public IP address provided by Alibaba Cloud.</p>
          * <p>*   **ECS:** an Elastic Compute Service (ECS) instance.</p>
-         * <p>*   **SLB:** a Server Load Balancer (SLB) instance.</p>
+         * <p>*   **SLB:** a Classic Load Balancer (CLB) instance.</p>
          * <p>*   **ALB:** an Application Load Balancer (ALB) instance.</p>
          * <p>*   **OSS:** an Object Storage Service (OSS) bucket.</p>
          * <p>*   **ENI:** an elastic network interface (ENI).</p>
          * <p>*   **NLB:** a Network Load Balancer (NLB) instance.</p>
          * <br>
-         * <p>>*   If you set this parameter to **ECS** or **SLB** and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the service-linked role.</p>
-         * <p>> *   If you set this parameter to **ALB** and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the service-linked role.</p>
-         * <p>> *   If you set this parameter to **OSS** and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the service-linked role.</p>
+         * <p>> </p>
+         * <br>
+         * <p>*   If you set this parameter to **ECS**, **ENI**, **SLB**, **ALB**, or **NLB** and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the service-linked role.</p>
+         * <br>
+         * <p>*   If you set this parameter to **ALB** and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the role.</p>
+         * <br>
+         * <p>*   If you set this parameter to **OSS** and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the role.</p>
+         * <br>
+         * <p>*   If you set this parameter to **NLB** and the AliyunServiceRoleForGaNlb service-linked role does not exist, the system automatically creates the role.</p>
          * <br>
          * <p>For more information, see [Service-linked roles](~~178360~~).</p>
          */
@@ -365,7 +371,7 @@ public class CreateEndpointGroupRequest extends TeaModel {
          * <br>
          * <p>Valid values: **0** to **255**.</p>
          * <br>
-         * <p>>  If you set the weight of an endpoint to 0, the GA instance stops distributing traffic to the endpoint.</p>
+         * <p>>  If you set the weight of an endpoint to 0, GA stops distributing traffic to the endpoint. Proceed with caution.</p>
          */
         @NameInMap("Weight")
         public Integer weight;

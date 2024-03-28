@@ -95,16 +95,16 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         /**
          * <p>The description of the diagnostic result. Valid values:</p>
          * <br>
-         * <p>*   **All forward nodes work well.**: The origin server is normal.</p>
-         * <p>*   **Endpoint network error.**: The origin server is abnormal. You must check whether the origin server is running as expected.</p>
-         * <p>*   **Public network error.**: An Internet error occurred. This refers to a network error that occurred when the client connects to the acceleration region.</p>
-         * <p>*   **Ga internal error.**: An internal error occurred. For example, an exception occurred when a request is processed by GA.</p>
-         * <p>*   **Ga has been deleted.**: The current GA instance is deleted.</p>
-         * <p>*   **Ga state is not stable**: The current GA instance is in an unstable state, such as the Configuring state.</p>
-         * <p>*   **Ga has no listener configuration.**: No listener is configured for the current GA instance.</p>
-         * <p>*   **Missing endpoint configuration.**: No endpoint is configured.</p>
-         * <p>*   **Missing acceleration region configuration.**: No acceleration region is configured.</p>
-         * <p>*   **Missing endpointgroup configuration.**: No endpoint group is configured.</p>
+         * <p>*   **All forward nodes work well.:** The origin server is normal.</p>
+         * <p>*   **Endpoint network error.:** The origin server is abnormal. You must check whether the origin server is running as expected.</p>
+         * <p>*   **Public network error.:** An Internet error occurred, which is a network error that occurred when the client connected to the acceleration region.</p>
+         * <p>*   **Ga internal error.:** An internal error occurred. For example, an exception occurred when GA processed a request.</p>
+         * <p>*   **Ga has been deleted.:** The current GA instance is deleted.</p>
+         * <p>*   **Ga state is not stable.:** The current GA instance is in an unstable state, such as the Configuring state.</p>
+         * <p>*   **Ga has no listener configuration.:** No listener is configured for the current GA instance.</p>
+         * <p>*   **Missing endpoint configuration.:** No endpoint is configured.</p>
+         * <p>*   **Missing acceleration region configuration.:** No acceleration region is configured.</p>
+         * <p>*   **Missing endpointgroup configuration.:** No endpoint group is configured.</p>
          */
         @NameInMap("Detail")
         public String detail;
@@ -131,7 +131,7 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         public String listenerId;
 
         /**
-         * <p>The listening port.</p>
+         * <p>The listener port.</p>
          */
         @NameInMap("Port")
         public String port;

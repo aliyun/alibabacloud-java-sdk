@@ -58,7 +58,10 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     public String cbnGeographicRegionIdB;
 
     /**
-     * <p>The billing method of the bandwidth plan. Only **PREPAY** is returned, which indicates the subscription billing method.</p>
+     * <p>The billing method of the bandwidth plan.</p>
+     * <br>
+     * <p>*   **PREPAY**: subscription. This is the default value.</p>
+     * <p>*   **POSTPAY**: pay-as-you-go.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
@@ -302,13 +305,13 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
 
     public static class DescribeBandwidthPackageResponseBodyTags extends TeaModel {
         /**
-         * <p>The tag key</p>
+         * <p>The key of tag N that is added to the bandwidth plan.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N that is added to the bandwidth plan.</p>
          */
         @NameInMap("Value")
         public String value;

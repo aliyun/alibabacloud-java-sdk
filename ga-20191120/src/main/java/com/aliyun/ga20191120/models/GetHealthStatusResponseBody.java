@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetHealthStatusResponseBody extends TeaModel {
     /**
-     * <p>The information about the endpoint group.</p>
+     * <p>The information about the endpoint groups.</p>
      */
     @NameInMap("EndpointGroups")
     public java.util.List<GetHealthStatusResponseBodyEndpointGroups> endpointGroups;
 
     /**
-     * <p>The health status of the listener. Valid values:</p>
+     * <p>The health status of endpoints and endpoint groups. Valid values:</p>
      * <br>
-     * <p>*   **normal**: The listener is normal.</p>
-     * <p>*   **Abnormal**: The listener is abnormal.</p>
-     * <p>*   **partiallyAbnormal**: Some exceptions occur to the listener.</p>
+     * <p>*   **normal**</p>
+     * <p>*   **abnormal**</p>
+     * <p>*   **partiallyAbnormal**</p>
      */
     @NameInMap("HealthStatus")
     public String healthStatus;
@@ -93,9 +93,9 @@ public class GetHealthStatusResponseBody extends TeaModel {
         /**
          * <p>The health status of the endpoint. Valid values:</p>
          * <br>
-         * <p>*   **init**: The endpoint is being initialized.</p>
-         * <p>*   **normal**: The endpoint is normal.</p>
-         * <p>*   **Abnormal**: The endpoint is abnormal.</p>
+         * <p>*   **init:** The endpoint is being initialized.</p>
+         * <p>*   **normal:** The endpoint is normal.</p>
+         * <p>*   **abnormal:** The endpoint is abnormal.</p>
          */
         @NameInMap("HealthStatus")
         public String healthStatus;
@@ -109,13 +109,15 @@ public class GetHealthStatusResponseBody extends TeaModel {
         /**
          * <p>The type of the endpoint. Valid values:</p>
          * <br>
-         * <p>*   **Domain**: a custom domain name</p>
-         * <p>*   **Ip**: a custom IP address</p>
-         * <p>*   **PublicIp**: a public IP address provided by Alibaba Cloud</p>
-         * <p>*   **ECS**: an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **SLB**: a Server Load Balancer (SLB) instance</p>
-         * <p>*   **ALB**: an Application Load Balancer (ALB) instance</p>
-         * <p>*   **OSS**: an Object Storage Service (OSS) bucket</p>
+         * <p>*   **Domain:** a custom domain name.</p>
+         * <p>*   **Ip:** a custom IP address.</p>
+         * <p>*   **PublicIp:** a public IP address provided by Alibaba Cloud.</p>
+         * <p>*   **ECS:** an Elastic Compute Service (ECS) instance.</p>
+         * <p>*   **SLB:** a Classic Load Balancer (CLB) instance.</p>
+         * <p>*   **ALB:** an Application Load Balancer (ALB) instance.</p>
+         * <p>*   **OSS:** an Object Storage Service (OSS) bucket.</p>
+         * <p>*   **ENI:** an elastic network interface (ENI).</p>
+         * <p>*   **NLB:** a Network Load Balancer (NLB) instance.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -185,8 +187,8 @@ public class GetHealthStatusResponseBody extends TeaModel {
         /**
          * <p>The type of the endpoint group. Valid values:</p>
          * <br>
-         * <p>*   **default**: a default endpoint group</p>
-         * <p>*   **virtual**: a virtual endpoint group</p>
+         * <p>*   **default:** the default endpoint group.</p>
+         * <p>*   **virtual:** a virtual endpoint group.</p>
          */
         @NameInMap("EndpointGroupType")
         public String endpointGroupType;
@@ -206,10 +208,10 @@ public class GetHealthStatusResponseBody extends TeaModel {
         /**
          * <p>The health status of the endpoint group. Valid values:</p>
          * <br>
-         * <p>*   **init**: The endpoint group is being initialized.</p>
-         * <p>*   **normal**: The endpoint group is normal.</p>
-         * <p>*   **Abnormal**: The endpoint group is abnormal.</p>
-         * <p>*   **partiallyAbnormal**: Some endpoint groups that are associated with the listener are abnormal.</p>
+         * <p>*   **init:** The endpoint group is being initialized.</p>
+         * <p>*   **normal:** The endpoint group is normal.</p>
+         * <p>*   **abnormal:** The endpoint group is abnormal.</p>
+         * <p>*   **partiallyAbnormal:** The endpoint group is partially abnormal.</p>
          */
         @NameInMap("HealthStatus")
         public String healthStatus;

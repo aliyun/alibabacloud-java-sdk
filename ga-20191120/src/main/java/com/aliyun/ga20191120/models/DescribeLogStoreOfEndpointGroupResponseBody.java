@@ -23,7 +23,7 @@ public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
     public String listenerId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -41,13 +41,16 @@ public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
     public String slsProjectName;
 
     /**
-     * <p>The ID of the region to which the Simple Log Service project belongs.</p>
+     * <p>The region ID of the Simple Log Service project.</p>
      */
     @NameInMap("SlsRegionId")
     public String slsRegionId;
 
     /**
-     * <p>Indicates whether the GA instance is associated with the project.</p>
+     * <p>Indicates whether the endpoint group is bound to the Simple Log Service project.</p>
+     * <br>
+     * <p>*   **on:** The endpoint group is bound to the Simple Log Service project.</p>
+     * <p>*   **off:** The endpoint group is not bound to the Simple Log Service project.</p>
      */
     @NameInMap("Status")
     public String status;

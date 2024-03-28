@@ -19,7 +19,9 @@ public class CreateBasicIpSetRequest extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The bandwidth to be allocated to the acceleration region. Unit: **Mbit/s**.</p>
+     * <p>The bandwidth that you want to allocate to the acceleration region. Unit: **Mbit/s**.</p>
+     * <br>
+     * <p>You must allocate at least 2 Mbit/s of bandwidth to the acceleration region.</p>
      */
     @NameInMap("Bandwidth")
     public Long bandwidth;
@@ -27,9 +29,9 @@ public class CreateBasicIpSetRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -37,19 +39,25 @@ public class CreateBasicIpSetRequest extends TeaModel {
     /**
      * <p>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</p>
      * <br>
-     * <p>*   **BGP** (default)</p>
-     * <p>*   **BGP_PRO** If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.</p>
+     * <p>*   **BGP** (default): BGP (Multi-ISP) lines.</p>
+     * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines.</p>
      * <br>
-     * <p>If you are allowed to use single-ISP bandwidth, you can also specify one of the following values:</p>
+     * <p>Valid values if you are allowed to use single-ISP bandwidth:</p>
      * <br>
-     * <p>*   **ChinaTelecom**: China Telecom (single ISP)</p>
-     * <p>*   **ChinaUnicom**: China Unicom (single ISP)</p>
-     * <p>*   **ChinaMobile**: China Mobile (single ISP)</p>
-     * <p>*   **ChinaTelecom_L2**: China Telecom \_L2 (single ISP)</p>
-     * <p>*   **ChinaUnicom_L2**: China Unicom \_L2 (single ISP)</p>
-     * <p>*   **ChinaMobile_L2**: China Mobile \_L2 (single ISP)</p>
+     * <p>*   **ChinaTelecom**</p>
+     * <p>*   **ChinaUnicom**</p>
+     * <p>*   **ChinaMobile**</p>
+     * <p>*   **ChinaTelecom_L2**</p>
+     * <p>*   **ChinaUnicom_L2**</p>
+     * <p>*   **ChinaMobile_L2**</p>
      * <br>
-     * <p>> Different acceleration regions support different single-ISP BGP lines.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   If the bandwidth metering method of the GA instance is **pay-by-data-transfer**, this parameter is required.</p>
+     * <br>
+     * <p>*   If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.</p>
+     * <br>
+     * <p>*   The supported single-ISP type varies based on the acceleration region.</p>
      */
     @NameInMap("IspType")
     public String ispType;

@@ -7,17 +7,17 @@ public class UpdateBasicEndpointGroupRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the endpoint group that is associated with the basic GA instance.</p>
+     * <p>The description of the endpoint group.</p>
      * <br>
-     * <p>The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.</p>
+     * <p>The description can be up to 200 characters in length and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -29,7 +29,7 @@ public class UpdateBasicEndpointGroupRequest extends TeaModel {
     public String endpointAddress;
 
     /**
-     * <p>The ID of the endpoint group that is associated with the basic GA instance.</p>
+     * <p>The ID of the endpoint group.</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
@@ -37,27 +37,28 @@ public class UpdateBasicEndpointGroupRequest extends TeaModel {
     /**
      * <p>The secondary address of the endpoint.</p>
      * <br>
-     * <p>This parameter is required when the accelerated IP address is associated with the secondary private IP address of an ECS instance or an ENI.</p>
+     * <p>This parameter is required only if the accelerated IP address is associated with the secondary private IP address of an ECS instance or an ENI.</p>
      * <br>
-     * <p>*   If the endpoint type is **ECS**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.</p>
-     * <p>*   If the endpoint type is **ENI**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.</p>
+     * <p>*   If you set the endpoint type to **ECS**, you can set **EndpointSubAddress** to the secondary private IP address of the primary ENI. If you leave this parameter empty, the primary private IP address of the primary ENI is used.</p>
+     * <p>*   If you set the endpoint type to **ENI**, you can set **EndpointSubAddress** to the secondary private IP address of the secondary ENI. If you leave this parameter empty, the primary private IP address of the secondary ENI is used.</p>
      */
     @NameInMap("EndpointSubAddress")
     public String endpointSubAddress;
 
     /**
-     * <p>The type of endpoint. Valid values:</p>
+     * <p>The type of the endpoint. Valid values:</p>
      * <br>
-     * <p>*   **ENI**: elastic network interface (ENI)</p>
-     * <p>*   **SLB**: Server Load Balancer (SLB) instance</p>
+     * <p>*   **ENI**: elastic network interface (ENI).</p>
+     * <p>*   **SLB**: Classic Load Balancer (CLB) instance.</p>
+     * <p>*   **ECS**: Elastic Compute Service (ECS) instance.</p>
      */
     @NameInMap("EndpointType")
     public String endpointType;
 
     /**
-     * <p>The name of the endpoint group that is associated with the basic GA instance.</p>
+     * <p>The name of the endpoint group.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.</p>
      */
     @NameInMap("Name")
     public String name;

@@ -13,7 +13,7 @@ public class UpdateEndpointGroupAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the endpoint group that you want to modify.</p>
+     * <p>The description of the endpoint group that you want to modify. The description can be up to 200 characters in length and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -27,7 +27,7 @@ public class UpdateEndpointGroupAttributeRequest extends TeaModel {
     /**
      * <p>The name of the endpoint group that you want to modify.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("Name")
     public String name;

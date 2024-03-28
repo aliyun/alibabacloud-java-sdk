@@ -228,9 +228,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * When you call this operation, take note of the following items:
-      * *   **AttachDdosToAccelerator** is an asynchronous operation. After you call the operation, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) or [ListAccelerators](~~153236~~) operation to query the status of the GA instance.
-      *     *   If the GA instance is in the **configuring** state, the Anti-DDoS Pro/Premium instance is being associated with the GA instance. In this case, you can perform only query operations.
-      *     *   If the GA instance is in the **active** state, the Anti-DDoS Pro/Premium instance is associated with the GA instance.
+      * *   **AttachDdosToAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) or [ListAccelerators](~~153236~~) operation to query the status of the GA instance.
+      *     *   If the GA instance is in the **configuring** state, the Anti-DDoS Pro or Anti-DDoS Premium instance is being associated with the GA instance. In this case, you can perform only query operations.
+      *     *   If the GA instance is in the **active** state, the Anti-DDoS Pro or Anti-DDoS Premium instance is associated with the GA instance.
       * *   You cannot repeatedly call the **AttachDdosToAccelerator** operation for the same GA instance within a specific period of time.
       *
       * @param request AttachDdosToAcceleratorRequest
@@ -275,9 +275,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * When you call this operation, take note of the following items:
-      * *   **AttachDdosToAccelerator** is an asynchronous operation. After you call the operation, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) or [ListAccelerators](~~153236~~) operation to query the status of the GA instance.
-      *     *   If the GA instance is in the **configuring** state, the Anti-DDoS Pro/Premium instance is being associated with the GA instance. In this case, you can perform only query operations.
-      *     *   If the GA instance is in the **active** state, the Anti-DDoS Pro/Premium instance is associated with the GA instance.
+      * *   **AttachDdosToAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) or [ListAccelerators](~~153236~~) operation to query the status of the GA instance.
+      *     *   If the GA instance is in the **configuring** state, the Anti-DDoS Pro or Anti-DDoS Premium instance is being associated with the GA instance. In this case, you can perform only query operations.
+      *     *   If the GA instance is in the **active** state, the Anti-DDoS Pro or Anti-DDoS Premium instance is associated with the GA instance.
       * *   You cannot repeatedly call the **AttachDdosToAccelerator** operation for the same GA instance within a specific period of time.
       *
       * @param request AttachDdosToAcceleratorRequest
@@ -477,7 +477,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Description
       * The **ChangeResourceGroup** operation cannot be repeatedly called for the same GA instance within a specific period of time.
       *
       * @param request ChangeResourceGroupRequest
@@ -525,7 +524,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Description
       * The **ChangeResourceGroup** operation cannot be repeatedly called for the same GA instance within a specific period of time.
       *
       * @param request ChangeResourceGroupRequest
@@ -801,10 +799,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * You can call the **CreateApplicationMonitor** operation to create an origin probing task. An origin probing task monitors the network quality between a client and an origin server and checks the availability of the origin server.
       * Before you call this operation, take note of the following items:
+      * *   You can create origin detection tasks only for subscription Standard Global Accelerator (GA) instances whose specification is Medium Ⅰ.
+      * *   You cannot create an origin probe task for a UDP listener.
+      * *   The service port of the URL or IP address that is probed must be within the listening port range.
       * *   **CreateApplicationMonitor** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeApplicationMonitor](~~408463~~) or [ListApplicationMonitor](~~408462~~) operation to query the status of the origin probing task.
-      *     *   If the origin probing task is in the **init** state, the task is being created. You can perform only query operations.
-      *     *   If the origin probing task is in the **active** state, the task is created.
-      * *   The **CreateApplicationMonitor** operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.
+      *     *   If the origin probing task is in the **init** state, it indicates that the task is being created. You can perform only query operations.
+      *     *   If the origin probing task is in the **active** state, it indicates that the task is created.
+      * *   The **CreateApplicationMonitor** operation cannot be called repeatedly for the same GA instance within a specific period of time.
       *
       * @param request CreateApplicationMonitorRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -877,10 +878,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * You can call the **CreateApplicationMonitor** operation to create an origin probing task. An origin probing task monitors the network quality between a client and an origin server and checks the availability of the origin server.
       * Before you call this operation, take note of the following items:
+      * *   You can create origin detection tasks only for subscription Standard Global Accelerator (GA) instances whose specification is Medium Ⅰ.
+      * *   You cannot create an origin probe task for a UDP listener.
+      * *   The service port of the URL or IP address that is probed must be within the listening port range.
       * *   **CreateApplicationMonitor** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeApplicationMonitor](~~408463~~) or [ListApplicationMonitor](~~408462~~) operation to query the status of the origin probing task.
-      *     *   If the origin probing task is in the **init** state, the task is being created. You can perform only query operations.
-      *     *   If the origin probing task is in the **active** state, the task is created.
-      * *   The **CreateApplicationMonitor** operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.
+      *     *   If the origin probing task is in the **init** state, it indicates that the task is being created. You can perform only query operations.
+      *     *   If the origin probing task is in the **active** state, it indicates that the task is created.
+      * *   The **CreateApplicationMonitor** operation cannot be called repeatedly for the same GA instance within a specific period of time.
       *
       * @param request CreateApplicationMonitorRequest
       * @return CreateApplicationMonitorResponse
@@ -1205,9 +1209,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Basic GA instances leverage the immense bandwidth of Alibaba Cloud\\"s high-quality global network to provide end-to-end acceleration services. You can use basic GA instances to accelerate content delivery at Layer 3 (IP). For more information, see [Overview of GA instances](~~153127~~).
-      * **CreateBasicAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicAccelerator](~~353188~~) or [ListBasicAccelerators](~~353189~~) operation to query the status of a basic GA instance:
-      * *   If the basic GA instance is in the **init** state, it indicates that the basic GA instance is being created. In this case, you can continue to perform query operations on the GA instance.
+      * **CreateBasicAccelerator** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetBasicAccelerator](~~353188~~) or [ListBasicAccelerators](~~353189~~) operation to query the status of the task.
+      * *   If the basic GA instance is in the **init** state, it indicates that the basic GA instance is being created. In this case, you can perform only query operations.
       * *   If the basic GA instance is in the **active** state, it indicates that the basic GA instance is created.
       *
       * @param request CreateBasicAcceleratorRequest
@@ -1291,9 +1294,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Basic GA instances leverage the immense bandwidth of Alibaba Cloud\\"s high-quality global network to provide end-to-end acceleration services. You can use basic GA instances to accelerate content delivery at Layer 3 (IP). For more information, see [Overview of GA instances](~~153127~~).
-      * **CreateBasicAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicAccelerator](~~353188~~) or [ListBasicAccelerators](~~353189~~) operation to query the status of a basic GA instance:
-      * *   If the basic GA instance is in the **init** state, it indicates that the basic GA instance is being created. In this case, you can continue to perform query operations on the GA instance.
+      * **CreateBasicAccelerator** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetBasicAccelerator](~~353188~~) or [ListBasicAccelerators](~~353189~~) operation to query the status of the task.
+      * *   If the basic GA instance is in the **init** state, it indicates that the basic GA instance is being created. In this case, you can perform only query operations.
       * *   If the basic GA instance is in the **active** state, it indicates that the basic GA instance is created.
       *
       * @param request CreateBasicAcceleratorRequest
@@ -1829,7 +1831,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * readAndWrite
+      * After you configure a custom routing listener for a Global Accelerator (GA) instance, the instance generates a port mapping table based on the listener port range, the protocols and port ranges of the associated endpoint groups, and the IP addresses of endpoints (vSwitches), and forwards client requests to specified IP addresses and ports in the vSwitches.
+      * This operation is used to create endpoints for custom routing listeners. When you call this operation, take note of the following items:
+      * *   **CreateCustomRoutingEndpoints** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the status of an endpoint group and determine whether endpoints are created in the endpoint group.
+      *     *   If the endpoint group is in the **updating** state, it indicates that endpoints are being created. In this case, you can perform only query operations.
+      *     *   If the endpoint group is in the **active** state, it indicates that endpoints are created.
+      * *   The **CreateCustomRoutingEndpoints** operation cannot be called repeatedly for the same GA instance within a specific period of time.
+      * ### Prerequisites
+      * The following operations are complete before you call this operation:
+      * *   Create a standard GA instance. For more information, see [CreateAccelerator](~~206786~~).
+      * *   Associate a bandwidth plan with the standard GA instance. For more information, see [BandwidthPackageAddAccelerator](~~153239~~).
+      * *   Deploy an application that serves as the endpoint of the GA instance. The application is used to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.
+      * *   Apply for permissions to use custom routing listeners and create a custom routing listener for the standard GA instance. Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager. For more information about how to create a custom routing listener, see [CreateListener](~~153253~~).
+      * *   Create an endpoint group for the custom routing listener. For more information, see [CreateCustomRoutingEndpointGroups](~~449363~~).
       *
       * @param request CreateCustomRoutingEndpointsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1872,7 +1886,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * readAndWrite
+      * After you configure a custom routing listener for a Global Accelerator (GA) instance, the instance generates a port mapping table based on the listener port range, the protocols and port ranges of the associated endpoint groups, and the IP addresses of endpoints (vSwitches), and forwards client requests to specified IP addresses and ports in the vSwitches.
+      * This operation is used to create endpoints for custom routing listeners. When you call this operation, take note of the following items:
+      * *   **CreateCustomRoutingEndpoints** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the status of an endpoint group and determine whether endpoints are created in the endpoint group.
+      *     *   If the endpoint group is in the **updating** state, it indicates that endpoints are being created. In this case, you can perform only query operations.
+      *     *   If the endpoint group is in the **active** state, it indicates that endpoints are created.
+      * *   The **CreateCustomRoutingEndpoints** operation cannot be called repeatedly for the same GA instance within a specific period of time.
+      * ### Prerequisites
+      * The following operations are complete before you call this operation:
+      * *   Create a standard GA instance. For more information, see [CreateAccelerator](~~206786~~).
+      * *   Associate a bandwidth plan with the standard GA instance. For more information, see [BandwidthPackageAddAccelerator](~~153239~~).
+      * *   Deploy an application that serves as the endpoint of the GA instance. The application is used to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.
+      * *   Apply for permissions to use custom routing listeners and create a custom routing listener for the standard GA instance. Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager. For more information about how to create a custom routing listener, see [CreateListener](~~153253~~).
+      * *   Create an endpoint group for the custom routing listener. For more information, see [CreateCustomRoutingEndpointGroups](~~449363~~).
       *
       * @param request CreateCustomRoutingEndpointsRequest
       * @return CreateCustomRoutingEndpointsResponse
@@ -1941,6 +1967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * *   When you call this operation to create a virtual endpoint group for a Layer 4 listener, make sure that a default endpoint group is created.
       * *   **CreateEndpointGroup** is an asynchronous operation. After you send a request, the system returns the ID of an endpoint group, but the endpoint group is still being created in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of the endpoint group.
       *     *   If the endpoint group is in the **init** state, it indicates that the endpoint group is being created. In this case, you can perform only query operations.
       *     *   If the endpoint group is in the **active** state, it indicates that the endpoint group is created.
@@ -2047,6 +2074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * *   When you call this operation to create a virtual endpoint group for a Layer 4 listener, make sure that a default endpoint group is created.
       * *   **CreateEndpointGroup** is an asynchronous operation. After you send a request, the system returns the ID of an endpoint group, but the endpoint group is still being created in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of the endpoint group.
       *     *   If the endpoint group is in the **init** state, it indicates that the endpoint group is being created. In this case, you can perform only query operations.
       *     *   If the endpoint group is in the **active** state, it indicates that the endpoint group is created.
@@ -2257,12 +2285,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * A listener listens for connection requests and then distributes the requests to endpoints based on the forwarding rules that are defined by a specified scheduling algorithm. You can call this operation to create a listener for a standard GA instance.
-      * Before you call this operation, take note of the following limits:
-      * *   **CreateListener** is an asynchronous operation. After you send a request, the system returns a listener ID and runs the task in the background. You can call the [DescribeListener](~~153254~~) operation to query the status of a listener:
-      *     *   If a listener is in the **init** state, the listener is being created. In this case, you can perform only query operations.
-      *     *   If a listener is in the **active** state, the listener is created.
-      * *   The **CreateListener** operation cannot be repeatedly called to create listeners for the same GA instance in a specific period of time.
+      * When you call this operation, take note of the following items:
+      * *   **CreateListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeListener](~~153254~~) operation to query the status of the task.
+      *     *   If the listener is in the **init** state, the listener is being created. In this state, you can perform only query operations.
+      *     *   If the listener is in the **active** state, the listener is created.
+      * *   You cannot repeatedly call the **CreateListener** operation for the same GA instance within the specified period of time.
       *
       * @param request CreateListenerRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2297,6 +2324,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endpointGroupConfigurations)) {
             query.put("EndpointGroupConfigurations", request.endpointGroupConfigurations);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpVersion)) {
+            query.put("HttpVersion", request.httpVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.idleTimeout)) {
@@ -2357,12 +2388,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * A listener listens for connection requests and then distributes the requests to endpoints based on the forwarding rules that are defined by a specified scheduling algorithm. You can call this operation to create a listener for a standard GA instance.
-      * Before you call this operation, take note of the following limits:
-      * *   **CreateListener** is an asynchronous operation. After you send a request, the system returns a listener ID and runs the task in the background. You can call the [DescribeListener](~~153254~~) operation to query the status of a listener:
-      *     *   If a listener is in the **init** state, the listener is being created. In this case, you can perform only query operations.
-      *     *   If a listener is in the **active** state, the listener is created.
-      * *   The **CreateListener** operation cannot be repeatedly called to create listeners for the same GA instance in a specific period of time.
+      * When you call this operation, take note of the following items:
+      * *   **CreateListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeListener](~~153254~~) operation to query the status of the task.
+      *     *   If the listener is in the **init** state, the listener is being created. In this state, you can perform only query operations.
+      *     *   If the listener is in the **active** state, the listener is created.
+      * *   You cannot repeatedly call the **CreateListener** operation for the same GA instance within the specified period of time.
       *
       * @param request CreateListenerRequest
       * @return CreateListenerResponse
@@ -2437,11 +2467,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Subscription GA instances cannot be deleted.
-      * *   GA instances that have bandwidth plans associated cannot be deleted. To delete such GA instances, disassociate the bandwidth plans first. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
-      * *   **DeleteAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can use the [DescribeAccelerator](~~153235~~) operation to query the state of a GA instance.
+      * *   You cannot delete subscription GA instances.
+      * *   **DeleteAccelerator** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of the task.
       *     *   If the GA instance is in the **deleting** state, the GA instance is being deleted. In this case, you can perform only query operations.
-      *     *   If the GA instance cannot be queried, it indicates that the GA instance is deleted.
+      *     *   If the GA instance cannot be queried, the GA instance is deleted.
       *
       * @param request DeleteAcceleratorRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2476,11 +2505,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Subscription GA instances cannot be deleted.
-      * *   GA instances that have bandwidth plans associated cannot be deleted. To delete such GA instances, disassociate the bandwidth plans first. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
-      * *   **DeleteAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can use the [DescribeAccelerator](~~153235~~) operation to query the state of a GA instance.
+      * *   You cannot delete subscription GA instances.
+      * *   **DeleteAccelerator** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of the task.
       *     *   If the GA instance is in the **deleting** state, the GA instance is being deleted. In this case, you can perform only query operations.
-      *     *   If the GA instance cannot be queried, it indicates that the GA instance is deleted.
+      *     *   If the GA instance cannot be queried, the GA instance is deleted.
       *
       * @param request DeleteAcceleratorRequest
       * @return DeleteAcceleratorResponse
@@ -2551,7 +2579,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * *   **DeleteApplicationMonitor** is an asynchronous operation. After you call this operation, the system returns a request ID, but the operation is still being performed in the system background. You can call the [ListApplicationMonitor](~~408462~~) operation to query the state of an origin probing task.
       *     *   If the origin probing task is in the **deleting** state, it indicates that the task is being deleted. In this case, you can perform only query operations.
-      *     <!---->
       *     *   If the origin probing task cannot be queried, it indicates that the task is deleted.
       * *   The **DeleteApplicationMonitor** operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.
       *
@@ -2594,7 +2621,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * *   **DeleteApplicationMonitor** is an asynchronous operation. After you call this operation, the system returns a request ID, but the operation is still being performed in the system background. You can call the [ListApplicationMonitor](~~408462~~) operation to query the state of an origin probing task.
       *     *   If the origin probing task is in the **deleting** state, it indicates that the task is being deleted. In this case, you can perform only query operations.
-      *     <!---->
       *     *   If the origin probing task cannot be queried, it indicates that the task is deleted.
       * *   The **DeleteApplicationMonitor** operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.
       *
@@ -2607,12 +2633,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   By default, subscription bandwidth plans cannot be deleted. If you want to delete subscription bandwidth plans, contact your account manager.
-      * *   Bandwidth plans that are associated with Global Accelerator (GA) instances cannot be deleted. Before you can delete a bandwidth plan that is associated with a GA instance, you must disassociate the bandwidth plan from the GA instance. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
+      * *   By default, subscription bandwidth plans cannot be deleted. If you want to unsubscribe from subscription bandwidth plans, go to the [Unsubscribe](https://usercenter2-intl.aliyun.com/refund/refund) page. Before you can unsubscribe from a subscription bandwidth plan that is associated with a Global Accelerator (GA) instance, you must disassociate the bandwidth plan from the GA instance. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
+      * *   Bandwidth plans that are associated with GA instances cannot be deleted. Before you can delete a bandwidth plan that is associated with a GA instance, you must disassociate the bandwidth plan from the GA instance. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
       * *   **DeleteBandwidthPackage** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the task.
-      *     *   If the bandwidth plan is in the **deleting** state, it indicates that the bandwidth plan is being deleted. In this case, you can perform only query operations.
-      *     *   If the bandwidth plan cannot be found, it indicates that the bandwidth plan is deleted.
-      * *   The **DeleteBandwidthPackage** operation cannot be called repeatedly for the same bandwidth plan within a specific period of time.
+      *     *   If the bandwidth plan is in the **deleting** state, the bandwidth plan is being deleted. In this case, you can perform only query operations.
+      *     *   If the bandwidth plan cannot be found, the bandwidth plan is deleted.
+      * *   The **DeleteBandwidthPackage** operation cannot be repeatedly called for the same bandwidth plan within a specific period of time.
       *
       * @param request DeleteBandwidthPackageRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2651,12 +2677,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   By default, subscription bandwidth plans cannot be deleted. If you want to delete subscription bandwidth plans, contact your account manager.
-      * *   Bandwidth plans that are associated with Global Accelerator (GA) instances cannot be deleted. Before you can delete a bandwidth plan that is associated with a GA instance, you must disassociate the bandwidth plan from the GA instance. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
+      * *   By default, subscription bandwidth plans cannot be deleted. If you want to unsubscribe from subscription bandwidth plans, go to the [Unsubscribe](https://usercenter2-intl.aliyun.com/refund/refund) page. Before you can unsubscribe from a subscription bandwidth plan that is associated with a Global Accelerator (GA) instance, you must disassociate the bandwidth plan from the GA instance. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
+      * *   Bandwidth plans that are associated with GA instances cannot be deleted. Before you can delete a bandwidth plan that is associated with a GA instance, you must disassociate the bandwidth plan from the GA instance. For information about how to disassociate a bandwidth plan from a GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
       * *   **DeleteBandwidthPackage** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the task.
-      *     *   If the bandwidth plan is in the **deleting** state, it indicates that the bandwidth plan is being deleted. In this case, you can perform only query operations.
-      *     *   If the bandwidth plan cannot be found, it indicates that the bandwidth plan is deleted.
-      * *   The **DeleteBandwidthPackage** operation cannot be called repeatedly for the same bandwidth plan within a specific period of time.
+      *     *   If the bandwidth plan is in the **deleting** state, the bandwidth plan is being deleted. In this case, you can perform only query operations.
+      *     *   If the bandwidth plan cannot be found, the bandwidth plan is deleted.
+      * *   The **DeleteBandwidthPackage** operation cannot be repeatedly called for the same bandwidth plan within a specific period of time.
       *
       * @param request DeleteBandwidthPackageRequest
       * @return DeleteBandwidthPackageResponse
@@ -2667,10 +2693,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **DeleteBasicAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicAccelerateIp](~~466794~~) API operation to query the status of an accelerated IP address:
-      *     *   If the accelerated IP address is in the **deleting** state, the accelerated IP address is being deleted. In this case, you can perform only query operations.
-      *     *   If the system fails to return information about the accelerated IP address, the accelerated IP address is deleted.
-      * *   The **DeleteBasicAccelerateIp** API operation cannot be repeatedly called for the same basic GA instance within a period of time.
+      * *   **DeleteBasicAccelerateIp** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetBasicAccelerateIp](~~466794~~) operation to query the status of an accelerated IP address.
+      *     *   If an accelerated IP address is in the **deleting** state, the accelerated IP address is being deleted. In this case, you can perform only query operations.
+      *     *   If the system fails to return information about an accelerated IP address, the accelerated IP address is deleted.
+      * *   You cannot repeatedly call the **DeleteBasicAccelerateIp** operation for the same basic GA instance within a specific period of time.
       *
       * @param request DeleteBasicAccelerateIpRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2709,10 +2735,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **DeleteBasicAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicAccelerateIp](~~466794~~) API operation to query the status of an accelerated IP address:
-      *     *   If the accelerated IP address is in the **deleting** state, the accelerated IP address is being deleted. In this case, you can perform only query operations.
-      *     *   If the system fails to return information about the accelerated IP address, the accelerated IP address is deleted.
-      * *   The **DeleteBasicAccelerateIp** API operation cannot be repeatedly called for the same basic GA instance within a period of time.
+      * *   **DeleteBasicAccelerateIp** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetBasicAccelerateIp](~~466794~~) operation to query the status of an accelerated IP address.
+      *     *   If an accelerated IP address is in the **deleting** state, the accelerated IP address is being deleted. In this case, you can perform only query operations.
+      *     *   If the system fails to return information about an accelerated IP address, the accelerated IP address is deleted.
+      * *   You cannot repeatedly call the **DeleteBasicAccelerateIp** operation for the same basic GA instance within a specific period of time.
       *
       * @param request DeleteBasicAccelerateIpRequest
       * @return DeleteBasicAccelerateIpResponse
@@ -2787,9 +2813,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **DeleteBasicAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [GetBasicAccelerator](~~353188~~) operation to query the state of a basic GA instance.
-      * *   If the basic GA instance is in the **deleting** state, it indicates that the instance is being deleted. In this case, you can perform only query operations.
-      * *   If the information of the basic GA instance is not displayed in the response, it indicates that the instance is deleted.
+      * *   You cannot delete subscription basic GA instances. You can unsubscribe from a basic GA instance on the [Unsubscribe](https://usercenter2-intl.aliyun.com/refund/refund) page. Before you unsubscribe from a basic GA instance, make sure that the acceleration areas and endpoint groups of the GA instance are deleted and no bandwidth plans are associated with the GA instance.
+      *     *   For information about how to delete an acceleration area, see [DeleteBasicIpSet](~~2253388~~).
+      *     *   For information about how to delete an endpoint group, see [DeleteBasicEndpointGroup](~~2253399~~).
+      *     *   For information about how to disassociate a bandwidth plan from a basic GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
+      * *   Before you call this operation to delete a pay-as-you-go basic GA instance, make sure that all data is migrated and the acceleration areas and endpoint groups of the instance are deleted.
+      *     *   For information about how to delete an acceleration area, see [DeleteBasicIpSet](~~2253388~~).
+      *     *   For information about how to delete an endpoint group, see [DeleteBasicEndpointGroup](~~2253399~~).
+      * *   **DeleteBasicAccelerator** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetBasicAccelerator](~~353188~~) operation to query the status of the task.
+      *     *   If the basic GA instance is in the **deleting** state, it indicates that the instance is being deleted. In this case, you can perform only query operations.
+      *     *   If the information about the basic GA instance is not displayed in the response, it indicates that the instance is deleted.
       *
       * @param request DeleteBasicAcceleratorRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2824,9 +2857,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **DeleteBasicAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [GetBasicAccelerator](~~353188~~) operation to query the state of a basic GA instance.
-      * *   If the basic GA instance is in the **deleting** state, it indicates that the instance is being deleted. In this case, you can perform only query operations.
-      * *   If the information of the basic GA instance is not displayed in the response, it indicates that the instance is deleted.
+      * *   You cannot delete subscription basic GA instances. You can unsubscribe from a basic GA instance on the [Unsubscribe](https://usercenter2-intl.aliyun.com/refund/refund) page. Before you unsubscribe from a basic GA instance, make sure that the acceleration areas and endpoint groups of the GA instance are deleted and no bandwidth plans are associated with the GA instance.
+      *     *   For information about how to delete an acceleration area, see [DeleteBasicIpSet](~~2253388~~).
+      *     *   For information about how to delete an endpoint group, see [DeleteBasicEndpointGroup](~~2253399~~).
+      *     *   For information about how to disassociate a bandwidth plan from a basic GA instance, see [BandwidthPackageRemoveAccelerator](~~153240~~).
+      * *   Before you call this operation to delete a pay-as-you-go basic GA instance, make sure that all data is migrated and the acceleration areas and endpoint groups of the instance are deleted.
+      *     *   For information about how to delete an acceleration area, see [DeleteBasicIpSet](~~2253388~~).
+      *     *   For information about how to delete an endpoint group, see [DeleteBasicEndpointGroup](~~2253399~~).
+      * *   **DeleteBasicAccelerator** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetBasicAccelerator](~~353188~~) operation to query the status of the task.
+      *     *   If the basic GA instance is in the **deleting** state, it indicates that the instance is being deleted. In this case, you can perform only query operations.
+      *     *   If the information about the basic GA instance is not displayed in the response, it indicates that the instance is deleted.
       *
       * @param request DeleteBasicAcceleratorRequest
       * @return DeleteBasicAcceleratorResponse
@@ -2897,9 +2937,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **DeleteBasicEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [GetBasicEndpointGroup](~~362984~~) operation to query the state of an endpoint group.
-      *     *   If the endpoint group is in the **deleting** state, it indicates that the endpoint group is being deleted. In this case, you can perform only query operations.
-      *     *   If the endpoint group cannot be queried, it indicates that the endpoint group is deleted.
+      * Before you delete an endpoint group, take note of the following items:
+      * *   If an endpoint in the endpoint group is associated with an accelerated IP address, you cannot delete the endpoint group. You can call the [DeleteBasicAccelerateIpEndpointRelation](~~2253413~~) operation to disassociate the endpoint from the accelerated IP address.
+      * *   If no endpoint in the endpoint group is associated with an accelerated IP address, you can delete the endpoint group. When you delete an endpoint group, all endpoints in the endpoint group are deleted.
+      * *   **DeleteBasicEndpointGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetBasicEndpointGroup](~~362984~~) operation to query the status of the task.
+      *     *   If the endpoint group is in the **deleting** state, the endpoint group is being deleted. In this case, you can perform only query operations.
+      *     *   If the endpoint group cannot be queried, the endpoint group is deleted.
       * *   The **DeleteBasicEndpointGroup** operation cannot be repeatedly called for the same GA instance within a specific period of time.
       *
       * @param request DeleteBasicEndpointGroupRequest
@@ -2935,9 +2978,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **DeleteBasicEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [GetBasicEndpointGroup](~~362984~~) operation to query the state of an endpoint group.
-      *     *   If the endpoint group is in the **deleting** state, it indicates that the endpoint group is being deleted. In this case, you can perform only query operations.
-      *     *   If the endpoint group cannot be queried, it indicates that the endpoint group is deleted.
+      * Before you delete an endpoint group, take note of the following items:
+      * *   If an endpoint in the endpoint group is associated with an accelerated IP address, you cannot delete the endpoint group. You can call the [DeleteBasicAccelerateIpEndpointRelation](~~2253413~~) operation to disassociate the endpoint from the accelerated IP address.
+      * *   If no endpoint in the endpoint group is associated with an accelerated IP address, you can delete the endpoint group. When you delete an endpoint group, all endpoints in the endpoint group are deleted.
+      * *   **DeleteBasicEndpointGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetBasicEndpointGroup](~~362984~~) operation to query the status of the task.
+      *     *   If the endpoint group is in the **deleting** state, the endpoint group is being deleted. In this case, you can perform only query operations.
+      *     *   If the endpoint group cannot be queried, the endpoint group is deleted.
       * *   The **DeleteBasicEndpointGroup** operation cannot be repeatedly called for the same GA instance within a specific period of time.
       *
       * @param request DeleteBasicEndpointGroupRequest
@@ -2949,10 +2995,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   \\*\\*DeleteBasicIpSet\\*\\* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of an acceleration region:
+      * *   If an accelerated IP address is associated with an endpoint, you cannot delete the acceleration region. You can call the [DeleteBasicAccelerateIpEndpointRelation](~~2253413~~) operation to disassociate the accelerated IP address from the endpoint.
+      * *   \\*\\*DeleteBasicIpSet\\*\\* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of the task.
       *     *   If the acceleration region is in the **deleting** state, it indicates that the acceleration region is being deleted. In this case, you can perform only query operations.
-      *     *   If the information of the acceleration region is not displayed in the response, it indicates that the acceleration region is deleted.
-      * *   The \\*\\*DeleteBasicIpSet\\*\\* operation cannot be called repeatedly for the same basic GA instance within a specific period of time.
+      *     *   If the acceleration region cannot be queried, it indicates that the acceleration region is deleted.
+      * *   The \\*\\*DeleteBasicIpSet\\*\\* operation cannot be repeatedly called for the same basic GA instance within a specific period of time.
       *
       * @param request DeleteBasicIpSetRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2991,10 +3038,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   \\*\\*DeleteBasicIpSet\\*\\* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of an acceleration region:
+      * *   If an accelerated IP address is associated with an endpoint, you cannot delete the acceleration region. You can call the [DeleteBasicAccelerateIpEndpointRelation](~~2253413~~) operation to disassociate the accelerated IP address from the endpoint.
+      * *   \\*\\*DeleteBasicIpSet\\*\\* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of the task.
       *     *   If the acceleration region is in the **deleting** state, it indicates that the acceleration region is being deleted. In this case, you can perform only query operations.
-      *     *   If the information of the acceleration region is not displayed in the response, it indicates that the acceleration region is deleted.
-      * *   The \\*\\*DeleteBasicIpSet\\*\\* operation cannot be called repeatedly for the same basic GA instance within a specific period of time.
+      *     *   If the acceleration region cannot be queried, it indicates that the acceleration region is deleted.
+      * *   The \\*\\*DeleteBasicIpSet\\*\\* operation cannot be repeatedly called for the same basic GA instance within a specific period of time.
       *
       * @param request DeleteBasicIpSetRequest
       * @return DeleteBasicIpSetResponse
@@ -3543,10 +3591,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **DeleteIpSets** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeIpSet](~~153246~~) operation to query the state of an acceleration region.
+      * *   **DeleteIpSets** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of the task.
       *     *   If the acceleration region is in the **deleting** state, the acceleration region is being deleted. In this case, you can perform only query operations.
-      *     *   If the acceleration region cannot be queried, the acceleration region is deleted.
-      * *   The **DeleteIpSets** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
+      *     *   If you cannot query the acceleration region, the acceleration region is deleted.
+      * *   You cannot repeatedly call the **DeleteIpSets** operation for the same Global Accelerator (GA) instance within a specific period of time.
       *
       * @param request DeleteIpSetsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3581,10 +3629,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **DeleteIpSets** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeIpSet](~~153246~~) operation to query the state of an acceleration region.
+      * *   **DeleteIpSets** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of the task.
       *     *   If the acceleration region is in the **deleting** state, the acceleration region is being deleted. In this case, you can perform only query operations.
-      *     *   If the acceleration region cannot be queried, the acceleration region is deleted.
-      * *   The **DeleteIpSets** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
+      *     *   If you cannot query the acceleration region, the acceleration region is deleted.
+      * *   You cannot repeatedly call the **DeleteIpSets** operation for the same Global Accelerator (GA) instance within a specific period of time.
       *
       * @param request DeleteIpSetsRequest
       * @return DeleteIpSetsResponse
@@ -3595,10 +3643,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **DeleteListener** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeListener](~~153254~~) operation to query the state of the listener.
-      *     *   If the listener is in the **deleting** state, it indicates that the listener is being deleted. In this case, you can continue to perform query operations on the listener.
-      *     *   If the listener cannot be queried, it indicates that the listener is deleted.
-      * *   The **DeleteListener** operation cannot be repeatedly called to delete listeners for the same Global Accelerator (GA) instance within a specific period of time.
+      * *   Before you call the **DeleteListener** operation, make sure that no endpoint groups are associated with the listener that you want to delete. For information about how to delete an endpoint group, see the following topics:
+      *     *   [DeleteEndpointGroup](~~2253305~~): deletes an endpoint group that is associated with an intelligent routing listener.
+      *     *   [DeleteEndpointGroups](~~2253311~~): deletes multiple endpoint groups that are associated with intelligent routing listeners at the same time.
+      *     *   [DeleteCustomRoutingEndpointGroups](~~2303183~~): deletes multiple endpoint groups that are associated with custom routing listeners at the same time.
+      * *   **DeleteListener** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeListener](~~153254~~) operation to query the status of the listener.
+      *     *   If the listener is in the **deleting** state, the listener is being deleted. In this case, you can perform only query operations.
+      *     *   If the listener cannot be queried, the listener is deleted.
+      * *   You cannot repeatedly call the **DeleteListener** operation to delete the listeners of the same Global Accelerator (GA) instance within a specific period of time.
       *
       * @param request DeleteListenerRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3637,10 +3689,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **DeleteListener** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeListener](~~153254~~) operation to query the state of the listener.
-      *     *   If the listener is in the **deleting** state, it indicates that the listener is being deleted. In this case, you can continue to perform query operations on the listener.
-      *     *   If the listener cannot be queried, it indicates that the listener is deleted.
-      * *   The **DeleteListener** operation cannot be repeatedly called to delete listeners for the same Global Accelerator (GA) instance within a specific period of time.
+      * *   Before you call the **DeleteListener** operation, make sure that no endpoint groups are associated with the listener that you want to delete. For information about how to delete an endpoint group, see the following topics:
+      *     *   [DeleteEndpointGroup](~~2253305~~): deletes an endpoint group that is associated with an intelligent routing listener.
+      *     *   [DeleteEndpointGroups](~~2253311~~): deletes multiple endpoint groups that are associated with intelligent routing listeners at the same time.
+      *     *   [DeleteCustomRoutingEndpointGroups](~~2303183~~): deletes multiple endpoint groups that are associated with custom routing listeners at the same time.
+      * *   **DeleteListener** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeListener](~~153254~~) operation to query the status of the listener.
+      *     *   If the listener is in the **deleting** state, the listener is being deleted. In this case, you can perform only query operations.
+      *     *   If the listener cannot be queried, the listener is deleted.
+      * *   You cannot repeatedly call the **DeleteListener** operation to delete the listeners of the same Global Accelerator (GA) instance within a specific period of time.
       *
       * @param request DeleteListenerRequest
       * @return DeleteListenerResponse
@@ -3949,6 +4005,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeCommodityWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the [DescribeCommodity](~~2253233~~) operation to query information about the commodity modules.
+      *
+      * @param request DescribeCommodityPriceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeCommodityPriceResponse
+     */
     public DescribeCommodityPriceResponse describeCommodityPriceWithOptions(DescribeCommodityPriceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3981,6 +4044,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCommodityPriceResponse());
     }
 
+    /**
+      * You can call the [DescribeCommodity](~~2253233~~) operation to query information about the commodity modules.
+      *
+      * @param request DescribeCommodityPriceRequest
+      * @return DescribeCommodityPriceResponse
+     */
     public DescribeCommodityPriceResponse describeCommodityPrice(DescribeCommodityPriceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCommodityPriceWithOptions(request, runtime);
@@ -4163,14 +4232,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeEndpointGroupWithOptions(request, runtime);
     }
 
-    /**
-      * ## Debugging
-      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=DescribeIpSet\\&type=RPC\\&version=2019-11-20)
-      *
-      * @param request DescribeIpSetRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeIpSetResponse
-     */
     public DescribeIpSetResponse describeIpSetWithOptions(DescribeIpSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4199,20 +4260,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeIpSetResponse());
     }
 
-    /**
-      * ## Debugging
-      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=DescribeIpSet\\&type=RPC\\&version=2019-11-20)
-      *
-      * @param request DescribeIpSetRequest
-      * @return DescribeIpSetResponse
-     */
     public DescribeIpSetResponse describeIpSet(DescribeIpSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeIpSetWithOptions(request, runtime);
     }
 
     /**
-      * This operation is used to query configuration information about a specified listener of a GA instance. The information includes the routing type of the listener, the state of the listener, the timestamp that indicates when the listener was created, and the listener ports.
+      * This operation is used to query configuration information about a listener of a GA instance. The information includes the routing type of the listener, the status of the listener, the timestamp that indicates when the listener was created, and the listener ports.
       *
       * @param request DescribeListenerRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4247,7 +4301,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is used to query configuration information about a specified listener of a GA instance. The information includes the routing type of the listener, the state of the listener, the timestamp that indicates when the listener was created, and the listener ports.
+      * This operation is used to query configuration information about a listener of a GA instance. The information includes the routing type of the listener, the status of the listener, the timestamp that indicates when the listener was created, and the listener ports.
       *
       * @param request DescribeListenerRequest
       * @return DescribeListenerResponse
@@ -6246,14 +6300,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listEndpointGroupIpAddressCidrBlocksWithOptions(request, runtime);
     }
 
-    /**
-      * ## Debugging
-      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=ListEndpointGroups\\&type=RPC\\&version=2019-11-20)
-      *
-      * @param request ListEndpointGroupsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListEndpointGroupsResponse
-     */
     public ListEndpointGroupsResponse listEndpointGroupsWithOptions(ListEndpointGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6310,13 +6356,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListEndpointGroupsResponse());
     }
 
-    /**
-      * ## Debugging
-      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=ListEndpointGroups\\&type=RPC\\&version=2019-11-20)
-      *
-      * @param request ListEndpointGroupsRequest
-      * @return ListEndpointGroupsResponse
-     */
     public ListEndpointGroupsResponse listEndpointGroups(ListEndpointGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listEndpointGroupsWithOptions(request, runtime);
@@ -6516,7 +6555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is used to query information about the listeners of a GA instance, including the state of each listener, the timestamp that indicates when each listener was created, and the listener ports.
+      * This operation is used to query information about the listeners of a GA instance, including the status of each listener, the timestamp that indicates when each listener was created, and the listener ports.
       *
       * @param request ListListenersRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6559,7 +6598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is used to query information about the listeners of a GA instance, including the state of each listener, the timestamp that indicates when each listener was created, and the listener ports.
+      * This operation is used to query information about the listeners of a GA instance, including the status of each listener, the timestamp that indicates when each listener was created, and the listener ports.
       *
       * @param request ListListenersRequest
       * @return ListListenersResponse
@@ -6661,10 +6700,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Description
-      * *   Specify **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request to specify the object to be queried.
-      * *   **Tag.N** is a resource tag that consists of a key-value pair. If you specify only **Tag.N.Key**, all tag values that are associated with the specified key are returned. If you specify only **Tag.N.Value**, an error message is returned.
-      * *   If you specify **Tag.N** and **ResourceId.N** to filter tags, **ResourceId.N** must match all specified key-value pairs.
+      * *   You must specify **ResourceId** or **Tag** in the request to specify the object that you want to query.********
+      * *   **Tag** is a resource tag that consists of a key-value pair (Key and Value). If you specify only **Key**, all tag values that are associated with the specified tag key are returned. If you specify only **Value**, an error message is returned.
+      * *   If you specify **Tag** and **ResourceId** to filter tags, **ResourceId** must match all specified key-value pairs.
       * *   If you specify multiple key-value pairs, resources that contain the key-value pairs are returned.
       *
       * @param request ListTagResourcesRequest
@@ -6716,10 +6754,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Description
-      * *   Specify **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request to specify the object to be queried.
-      * *   **Tag.N** is a resource tag that consists of a key-value pair. If you specify only **Tag.N.Key**, all tag values that are associated with the specified key are returned. If you specify only **Tag.N.Value**, an error message is returned.
-      * *   If you specify **Tag.N** and **ResourceId.N** to filter tags, **ResourceId.N** must match all specified key-value pairs.
+      * *   You must specify **ResourceId** or **Tag** in the request to specify the object that you want to query.********
+      * *   **Tag** is a resource tag that consists of a key-value pair (Key and Value). If you specify only **Key**, all tag values that are associated with the specified tag key are returned. If you specify only **Value**, an error message is returned.
+      * *   If you specify **Tag** and **ResourceId** to filter tags, **ResourceId** must match all specified key-value pairs.
       * *   If you specify multiple key-value pairs, resources that contain the key-value pairs are returned.
       *
       * @param request ListTagResourcesRequest
@@ -7106,7 +7143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The **UpdateAcceleratorAutoRenewAttribute** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+      * You cannot repeatedly call the **UpdateAcceleratorAutoRenewAttribute** operation for the same GA instance within a specific period of time.
       *
       * @param request UpdateAcceleratorAutoRenewAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7161,7 +7198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The **UpdateAcceleratorAutoRenewAttribute** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+      * You cannot repeatedly call the **UpdateAcceleratorAutoRenewAttribute** operation for the same GA instance within a specific period of time.
       *
       * @param request UpdateAcceleratorAutoRenewAttributeRequest
       * @return UpdateAcceleratorAutoRenewAttributeResponse
@@ -7226,10 +7263,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### Prerequisites
       * You can call this operation to change the type of transmission network for a **standard** GA instance whose bandwidth metering method is **pay-by-data-transfer**. Before you call this operation, make sure that the following requirements are met:
       * *   Cloud Data Transfer (CDT) is activated. When you call the [CreateAccelerator](~~206786~~) operation and set **BandwidthBillingType** to **CDT** to create a **standard** GA instance whose bandwidth metering method is **pay-by-data-transfer**, CDT is automatically activated. The data transfer fees are managed by CDT.
-      * *   If you want to set **CrossBorderMode** to **private**, which specifies cross-border Express Connect circuit as the type of transmission network, make sure that your enterprise account completed real-name verification. For more information, see [Real-name verification](~~52595~~).
+      * *   If you want to set **CrossBorderMode** to **private**, which specifies cross-border Express Connect circuit as the type of transmission network, make sure that real-name verification is complete for your enterprise account. For more information, see [Real-name verification](~~52595~~).
       *
       * @param request UpdateAcceleratorCrossBorderModeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7272,10 +7308,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### Prerequisites
       * You can call this operation to change the type of transmission network for a **standard** GA instance whose bandwidth metering method is **pay-by-data-transfer**. Before you call this operation, make sure that the following requirements are met:
       * *   Cloud Data Transfer (CDT) is activated. When you call the [CreateAccelerator](~~206786~~) operation and set **BandwidthBillingType** to **CDT** to create a **standard** GA instance whose bandwidth metering method is **pay-by-data-transfer**, CDT is automatically activated. The data transfer fees are managed by CDT.
-      * *   If you want to set **CrossBorderMode** to **private**, which specifies cross-border Express Connect circuit as the type of transmission network, make sure that your enterprise account completed real-name verification. For more information, see [Real-name verification](~~52595~~).
+      * *   If you want to set **CrossBorderMode** to **private**, which specifies cross-border Express Connect circuit as the type of transmission network, make sure that real-name verification is complete for your enterprise account. For more information, see [Real-name verification](~~52595~~).
       *
       * @param request UpdateAcceleratorCrossBorderModeRequest
       * @return UpdateAcceleratorCrossBorderModeResponse
@@ -7797,10 +7832,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **UpdateBasicEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. After you call this operation to modify an endpoint group that is associated with a basic GA instance, the system deletes the endpoint group and creates another endpoint group in the background for the basic GA instance. You can call the [GetBasicAccelerator](~~353188~~) operation to query the state of the basic GA instance.
-      *     *   If the basic GA instance is in the **configuring** state, it indicates that the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
-      *     *   If the basic GA instance is in the **active** state, it indicates that the configurations of the endpoint group are modified.
-      * *   The **UpdateBasicEndpointGroup** operation cannot be called repeatedly for the same basic GA instance within a specific period of time.
+      * *   **UpdateBasicEndpointGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. The system modifies the configurations of an endpoint group that is associated with a basic GA instance by deleting the endpoint group and creating a new endpoint group. You can call the [GetBasicAccelerator](~~353188~~) operation to query the status of the task.
+      *     *   If the basic GA instance is in the **configuring** state, the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
+      *     *   If the basic GA instance is in the **active** state, the configurations of the endpoint group are modified.
+      * *   The **UpdateBasicEndpointGroup** operation cannot be repeatedly called for the same basic GA instance within a specific period of time.
       *
       * @param request UpdateBasicEndpointGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7859,10 +7894,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **UpdateBasicEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. After you call this operation to modify an endpoint group that is associated with a basic GA instance, the system deletes the endpoint group and creates another endpoint group in the background for the basic GA instance. You can call the [GetBasicAccelerator](~~353188~~) operation to query the state of the basic GA instance.
-      *     *   If the basic GA instance is in the **configuring** state, it indicates that the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
-      *     *   If the basic GA instance is in the **active** state, it indicates that the configurations of the endpoint group are modified.
-      * *   The **UpdateBasicEndpointGroup** operation cannot be called repeatedly for the same basic GA instance within a specific period of time.
+      * *   **UpdateBasicEndpointGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. The system modifies the configurations of an endpoint group that is associated with a basic GA instance by deleting the endpoint group and creating a new endpoint group. You can call the [GetBasicAccelerator](~~353188~~) operation to query the status of the task.
+      *     *   If the basic GA instance is in the **configuring** state, the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
+      *     *   If the basic GA instance is in the **active** state, the configurations of the endpoint group are modified.
+      * *   The **UpdateBasicEndpointGroup** operation cannot be repeatedly called for the same basic GA instance within a specific period of time.
       *
       * @param request UpdateBasicEndpointGroupRequest
       * @return UpdateBasicEndpointGroupResponse
@@ -7874,11 +7909,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * Before you call this operation, take note of the following limits:
-      * *   You can call this operation for only basic GA instances whose bandwidth is billed by Cloud Data Transfer (CDT).
-      * *   The **UpdateBasicIpSet** operation is asynchronous. After you send a request, the system returns a request ID, but the operation is still being performed in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of an acceleration region:
-      *     *   If an acceleration region is in the **updating** state, the bandwidth of the acceleration region is being modified. In this state, you can perform only query operations.
-      *     *   If an acceleration region is in the **active** state, the bandwidth of the acceleration region is modified.
-      * *   You cannot repeatedly call the **UpdateBasicIpSet** operation for the same basic GA instance within the specified period of time.
+      * *   You can modify the bandwidth of an acceleration region of a basic GA instance only if the bandwidth metering method of the basic GA instance is **pay-by-data-transfer**.
+      * *   **UpdateBasicIpSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of the task.
+      *     *   If the acceleration region is in the **updating** state, it indicates that the bandwidth of the acceleration region is being modified. In this case, you can perform only query operations.
+      *     *   If the acceleration region is in the **active** state, it indicates that the bandwidth of the acceleration region is modified.
+      * *   You cannot repeatedly call the **UpdateBasicIpSet** operation for the same basic GA instance within a specific period of time.
       *
       * @param request UpdateBasicIpSetRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7922,11 +7957,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * Before you call this operation, take note of the following limits:
-      * *   You can call this operation for only basic GA instances whose bandwidth is billed by Cloud Data Transfer (CDT).
-      * *   The **UpdateBasicIpSet** operation is asynchronous. After you send a request, the system returns a request ID, but the operation is still being performed in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of an acceleration region:
-      *     *   If an acceleration region is in the **updating** state, the bandwidth of the acceleration region is being modified. In this state, you can perform only query operations.
-      *     *   If an acceleration region is in the **active** state, the bandwidth of the acceleration region is modified.
-      * *   You cannot repeatedly call the **UpdateBasicIpSet** operation for the same basic GA instance within the specified period of time.
+      * *   You can modify the bandwidth of an acceleration region of a basic GA instance only if the bandwidth metering method of the basic GA instance is **pay-by-data-transfer**.
+      * *   **UpdateBasicIpSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetBasicIpSet](~~362987~~) operation to query the status of the task.
+      *     *   If the acceleration region is in the **updating** state, it indicates that the bandwidth of the acceleration region is being modified. In this case, you can perform only query operations.
+      *     *   If the acceleration region is in the **active** state, it indicates that the bandwidth of the acceleration region is modified.
+      * *   You cannot repeatedly call the **UpdateBasicIpSet** operation for the same basic GA instance within a specific period of time.
       *
       * @param request UpdateBasicIpSetRequest
       * @return UpdateBasicIpSetResponse
@@ -8611,10 +8646,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **UpdateIpSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of the task.
+      * *   **UpdateIpSets** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of the task.
       *     *   If an acceleration region is in the **updating** state, the acceleration region is being modified. In this case, you can perform only query operations.
       *     *   If an acceleration region is in the **active** state, the acceleration region is modified.
-      * *   You cannot repeatedly call the **UpdateIpSet** operation for the same GA instance within a specific period of time.
+      * *   You cannot repeatedly call the **UpdateIpSets** operation for the same GA instance within a specific period of time.
       *
       * @param request UpdateIpSetsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8649,10 +8684,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **UpdateIpSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of the task.
+      * *   **UpdateIpSets** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of the task.
       *     *   If an acceleration region is in the **updating** state, the acceleration region is being modified. In this case, you can perform only query operations.
       *     *   If an acceleration region is in the **active** state, the acceleration region is modified.
-      * *   You cannot repeatedly call the **UpdateIpSet** operation for the same GA instance within a specific period of time.
+      * *   You cannot repeatedly call the **UpdateIpSets** operation for the same GA instance within a specific period of time.
       *
       * @param request UpdateIpSetsRequest
       * @return UpdateIpSetsResponse
@@ -8695,6 +8730,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpVersion)) {
+            query.put("HttpVersion", request.httpVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.idleTimeout)) {

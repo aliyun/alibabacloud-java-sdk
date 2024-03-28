@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBandwidthackagesResponseBody extends TeaModel {
     /**
-     * <p>Details about the bandwidth plans.</p>
+     * <p>The details of the bandwidth plans.</p>
      */
     @NameInMap("BandwidthPackages")
     public java.util.List<ListBandwidthackagesResponseBodyBandwidthPackages> bandwidthPackages;
@@ -117,13 +117,13 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
 
     public static class ListBandwidthackagesResponseBodyBandwidthPackages extends TeaModel {
         /**
-         * <p>The ID of the GA instance that is associated with the bandwidth plan.</p>
+         * <p>The IDs of the GA instances that are associated with the bandwidth plans.</p>
          */
         @NameInMap("Accelerators")
         public java.util.List<String> accelerators;
 
         /**
-         * <p>The bandwidth value of the bandwidth plan. Unit: Mbit/s.</p>
+         * <p>The bandwidth of the bandwidth plan. Unit: Mbit/s.</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
@@ -135,13 +135,16 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         public String bandwidthPackageId;
 
         /**
-         * <p>The billing method of the bandwidth plan. Only **PREPAY** is returned, which indicates the subscription billing method.</p>
+         * <p>The billing method of the bandwidth plan. Valid values:</p>
+         * <br>
+         * <p>*   **PREPAY**: subscription. This is the default value.</p>
+         * <p>*   **POSTPAY**: pay-as-you-go.</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
-         * <p>The timestamp when the bandwidth plan was created.</p>
+         * <p>The time when the bandwidth plan was created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -153,7 +156,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The timestamp when the bandwidth plan expires.</p>
+         * <p>The expiration time of the bandwidth plan.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -165,7 +168,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -177,22 +180,22 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The state of the bandwidth plan. Valid values:</p>
+         * <p>The status of the bandwidth plan. Valid values:</p>
          * <br>
-         * <p>*   **init**: The bandwidth plan is being initialized.</p>
-         * <p>*   **active**: The bandwidth plan is available.</p>
-         * <p>*   **binded**: The bandwidth plan is associated with a GA instance.</p>
-         * <p>*   **binding**: The bandwidth plan is being associated.</p>
-         * <p>*   **unbinding**: The bandwidth plan is being disassociated.</p>
-         * <p>*   **updating**: The bandwidth plan is being updated.</p>
-         * <p>*   **finacialLocked**: The bandwidth plan is locked due to overdue payments.</p>
-         * <p>*   **Locked**: The bandwidth plan is locked.</p>
+         * <p>*   **init:** The bandwidth plan is being initialized.</p>
+         * <p>*   **active:** The bandwidth plan is available.</p>
+         * <p>*   **binded:** The bandwidth plan is associated with a GA instance.</p>
+         * <p>*   **binding:** The bandwidth plan is being associated with a GA instance.</p>
+         * <p>*   **unbinding:** The bandwidth plan is being disassociated from a GA instance.</p>
+         * <p>*   **updating:** The bandwidth plan is being updated.</p>
+         * <p>*   **finacialLocked:** The bandwidth plan is locked due to overdue payments.</p>
+         * <p>*   **locked:** The bandwidth plan is locked.</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
-         * <p>The tags of the bandwidth plans.</p>
+         * <p>The tag of the bandwidth plan.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListBandwidthackagesResponseBodyBandwidthPackagesTags> tags;

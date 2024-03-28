@@ -11,13 +11,13 @@ public class ListBasicAcceleratorsRequest extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: **1 to 50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

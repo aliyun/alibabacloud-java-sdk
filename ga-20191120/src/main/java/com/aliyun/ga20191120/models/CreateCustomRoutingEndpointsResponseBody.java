@@ -11,7 +11,7 @@ public class CreateCustomRoutingEndpointsResponseBody extends TeaModel {
     public java.util.List<String> endpointIds;
 
     /**
-     * <p>The IDs of the endpoints.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

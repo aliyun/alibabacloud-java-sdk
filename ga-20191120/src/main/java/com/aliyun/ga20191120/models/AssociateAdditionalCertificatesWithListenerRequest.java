@@ -13,7 +13,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
     /**
      * <p>The additional certificates.</p>
      * <br>
-     * <p>You can specify up to 10 certificate IDs in each request.</p>
+     * <p>You can specify up to 10 certificates in each request.</p>
      */
     @NameInMap("Certificates")
     public java.util.List<AssociateAdditionalCertificatesWithListenerRequestCertificates> certificates;
@@ -23,7 +23,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
      * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -87,7 +87,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
 
     public static class AssociateAdditionalCertificatesWithListenerRequestCertificates extends TeaModel {
         /**
-         * <p>The domain name specified by the certificate. You can associate each domain name with only one additional certificate.</p>
+         * <p>The domain name that is specified by the certificate. You can associate each domain name with only one additional certificate.</p>
          * <br>
          * <p>You can specify up to 10 domain names in each request.</p>
          */
@@ -95,7 +95,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
         public String domain;
 
         /**
-         * <p>The certificate ID. Only server certificates are supported.</p>
+         * <p>The ID of the certificate. Only server certificates are supported.</p>
          * <br>
          * <p>You can specify up to 10 certificate IDs in each request.</p>
          */

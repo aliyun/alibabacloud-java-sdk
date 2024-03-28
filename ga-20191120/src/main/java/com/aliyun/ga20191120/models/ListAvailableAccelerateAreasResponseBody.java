@@ -39,36 +39,37 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
 
     public static class ListAvailableAccelerateAreasResponseBodyAreasRegionList extends TeaModel {
         /**
-         * <p>Whether China Mainland.</p>
+         * <p>Indicates whether the region is in the Chinese mainland. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("ChinaMainland")
         public Boolean chinaMainland;
 
         /**
-         * <p>The line types of EIPs in the acceleration region.</p>
+         * <p>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</p>
          * <br>
-         * <p>*   **BGP**: BGP (Multi-ISP) lines</p>
-         * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines</p>
-         * <br>
-         * <p>If you have the permissions to use single-ISP bandwidth, one of the following values may be returned:</p>
-         * <br>
-         * <p>*   **ChinaTelecom**: China Telecom (single ISP)</p>
-         * <p>*   **ChinaUnicom**: China Unicom (single ISP)</p>
-         * <p>*   **ChinaMobile**: China Mobile (single ISP)</p>
-         * <p>*   **ChinaTelecom_L2**: China Telecom_L2 (single ISP)</p>
-         * <p>*   **ChinaUnicom_L2**: China Unicom_L2 (single ISP)</p>
-         * <p>*   **ChinaMobile_L2**: China Mobile_L2 (single ISP)</p>
-         * <br>
-         * <p>> Different acceleration regions support different single-ISP BGP lines.</p>
+         * <p>*   **BGP**: BGP (Multi-ISP) lines.</p>
+         * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines.</p>
          */
         @NameInMap("IspTypeList")
         public java.util.List<String> ispTypeList;
 
         /**
-         * <p>The name of the acceleration region.</p>
+         * <p>The acceleration region name.</p>
          */
         @NameInMap("LocalName")
         public String localName;
+
+        /**
+         * <p>Indicates whether multiple zones are supported. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
+        @NameInMap("MultiAz")
+        public Boolean multiAz;
 
         /**
          * <p>The ID of the acceleration region.</p>
@@ -77,10 +78,10 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Ipv6 supported, Valid values:</p>
+         * <p>Indicates whether IPv6 is supported. Valid values:</p>
          * <br>
-         * <p>- true</p>
-         * <p>- false</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("SupportIpv6")
         public Boolean supportIpv6;
@@ -114,6 +115,14 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
             return this.localName;
         }
 
+        public ListAvailableAccelerateAreasResponseBodyAreasRegionList setMultiAz(Boolean multiAz) {
+            this.multiAz = multiAz;
+            return this;
+        }
+        public Boolean getMultiAz() {
+            return this.multiAz;
+        }
+
         public ListAvailableAccelerateAreasResponseBodyAreasRegionList setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -140,7 +149,7 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
         public String areaId;
 
         /**
-         * <p>The name of the acceleration area.</p>
+         * <p>The acceleration area name.</p>
          */
         @NameInMap("LocalName")
         public String localName;

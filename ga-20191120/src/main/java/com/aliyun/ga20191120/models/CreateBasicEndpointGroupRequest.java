@@ -13,9 +13,9 @@ public class CreateBasicEndpointGroupRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -23,7 +23,7 @@ public class CreateBasicEndpointGroupRequest extends TeaModel {
     /**
      * <p>The description of the endpoint group.</p>
      * <br>
-     * <p>The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.</p>
+     * <p>The description can be up to 200 characters in length and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -35,9 +35,9 @@ public class CreateBasicEndpointGroupRequest extends TeaModel {
     public String endpointAddress;
 
     /**
-     * <p>The ID of the region where you want to create the endpoint group.</p>
+     * <p>The ID of the region to which the endpoint group belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [ListAvailableBusiRegions](~~2253223~~) operation to query the region ID.</p>
      */
     @NameInMap("EndpointGroupRegion")
     public String endpointGroupRegion;

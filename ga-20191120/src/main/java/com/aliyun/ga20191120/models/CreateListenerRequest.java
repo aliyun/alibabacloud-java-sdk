@@ -62,6 +62,18 @@ public class CreateListenerRequest extends TeaModel {
     public java.util.List<CreateListenerRequestEndpointGroupConfigurations> endpointGroupConfigurations;
 
     /**
+     * <p>The maximum version of the HTTP protocol. Valid values:</p>
+     * <br>
+     * <p>*   **http3**</p>
+     * <p>*   **http2** (default)</p>
+     * <p>*   **http1.1**</p>
+     * <br>
+     * <p>>  Only HTTPS listeners support this parameter.</p>
+     */
+    @NameInMap("HttpVersion")
+    public String httpVersion;
+
+    /**
      * <p>The timeout period of idle connections. Unit: seconds.</p>
      * <br>
      * <p>*   TCP: 10-900. Default value: 900. Unit: seconds.</p>
@@ -233,6 +245,14 @@ public class CreateListenerRequest extends TeaModel {
     }
     public java.util.List<CreateListenerRequestEndpointGroupConfigurations> getEndpointGroupConfigurations() {
         return this.endpointGroupConfigurations;
+    }
+
+    public CreateListenerRequest setHttpVersion(String httpVersion) {
+        this.httpVersion = httpVersion;
+        return this;
+    }
+    public String getHttpVersion() {
+        return this.httpVersion;
     }
 
     public CreateListenerRequest setIdleTimeout(Integer idleTimeout) {

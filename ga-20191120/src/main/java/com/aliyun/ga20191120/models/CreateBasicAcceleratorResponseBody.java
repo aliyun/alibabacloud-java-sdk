@@ -11,7 +11,11 @@ public class CreateBasicAcceleratorResponseBody extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
+     * <br>
+     * <p>This parameter is returned only if ChargeType is set to PREPAY.</p>
+     * <br>
+     * <p>If **AutoPay** is set to **false**, go to [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payment after an order is generated.</p>
      */
     @NameInMap("OrderId")
     public String orderId;

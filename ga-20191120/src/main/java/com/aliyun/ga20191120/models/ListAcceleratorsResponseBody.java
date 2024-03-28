@@ -89,7 +89,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         /**
          * <p>The bandwidth type that is provided by the basic bandwidth plan. Valid values:</p>
          * <br>
-         * <p>*   **Basic**.</p>
+         * <p>*   **Basic**</p>
          * <p>*   **Enhanced**</p>
          * <p>*   **Advanced**</p>
          */
@@ -173,7 +173,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         /**
          * <p>The access mode of the acceleration area. Valid values:</p>
          * <br>
-         * <p>*   **UserDefine**: custom nearby access mode. You can select acceleration areas and regions based on your business requirements. GA allocates a separate EIP to each acceleration region.</p>
+         * <p>*   **UserDefine**: custom nearby access mode. You can select acceleration areas and regions based on your business requirements. GA allocates a separate elastic IP address (EIP) to each acceleration region.</p>
          * <p>*   **Anycast**: automatic nearby access mode. You do not need to specify an acceleration area. GA allocates an Anycast EIP to multiple regions across the globe. Users can connect to the nearest access point of the Alibaba Cloud global transmission network by sending requests to the Anycast EIP.</p>
          */
         @NameInMap("AccessMode")
@@ -196,7 +196,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
 
     public static class ListAcceleratorsResponseBodyAcceleratorsServiceManagedInfos extends TeaModel {
         /**
-         * <p>The name of the action performed on the managed instance. Valid values:</p>
+         * <p>The name of the action that is performed on the managed instance. Valid values:</p>
          * <br>
          * <p>*   **Create**</p>
          * <p>*   **Update**</p>
@@ -211,15 +211,15 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         /**
          * <p>The type of the child resource. Valid values:</p>
          * <br>
-         * <p>*   **Listener**: listener</p>
-         * <p>*   **IpSet**: acceleration region</p>
-         * <p>*   **EndpointGroup**: endpoint group</p>
-         * <p>*   **ForwardingRule**: forwarding rule</p>
-         * <p>*   **Endpoint**: endpoint</p>
-         * <p>*   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener</p>
-         * <p>*   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener</p>
+         * <p>*   **Listener**: listener.</p>
+         * <p>*   **IpSet**: acceleration region.</p>
+         * <p>*   **EndpointGroup**: endpoint group.</p>
+         * <p>*   **ForwardingRule**: forwarding rule.</p>
+         * <p>*   **Endpoint**: endpoint.</p>
+         * <p>*   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.</p>
+         * <p>*   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.</p>
          * <br>
-         * <p>>  This parameter takes effect only if **Action** is set to **CreateChild**.</p>
+         * <p>>  This parameter takes effect only if the value of **Action** is **CreateChild**.</p>
          */
         @NameInMap("ChildType")
         public String childType;
@@ -227,8 +227,8 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the specified actions are managed. Valid values:</p>
          * <br>
-         * <p>*   **true**: The specified actions are managed, and you cannot perform the specified actions on the managed instance.</p>
-         * <p>*   **false**: The specified actions are not managed, and you can perform the specified actions on the managed instance.</p>
+         * <p>*   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.</p>
+         * <p>*   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.</p>
          */
         @NameInMap("IsManaged")
         public Boolean isManaged;
@@ -308,7 +308,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         public String acceleratorId;
 
         /**
-         * <p>The bandwidth value of the GA instance. Unit: Mbit/s.</p>
+         * <p>The bandwidth of the GA instance. Unit: Mbit/s.</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
@@ -343,7 +343,8 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         /**
          * <p>The type of cross-border acceleration. This parameter is returned for GA instances whose bandwidth metering method is pay-by-data-transfer.</p>
          * <br>
-         * <p>Only **bpgPro** may be returned, which indicates BGP (Multi-ISP) Pro lines.</p>
+         * <p>*   **bpgPro**: BGP (Multi-ISP) Pro lines.</p>
+         * <p>*   **private**: cross-border Express Connect circuit.</p>
          */
         @NameInMap("CrossBorderMode")
         public String crossBorderMode;
@@ -366,7 +367,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         public ListAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage crossDomainBandwidthPackage;
 
         /**
-         * <p>The ID of the Anti-DDoS Pro/Premium instance that is associated with the GA instance.</p>
+         * <p>The ID of the Anti-DDoS Pro or Anti-DDOS Premium instance that is associated with the GA instance.</p>
          */
         @NameInMap("DdosId")
         public String ddosId;
@@ -378,7 +379,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The canonical name (CNAME) that is assigned to the GA instance.</p>
+         * <p>The CNAME that is assigned to the GA instance.</p>
          */
         @NameInMap("DnsName")
         public String dnsName;
@@ -408,7 +409,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The region ID of the GA instance. Only **cn-hangzhou** may be returned.</p>
+         * <p>The ID of the region where GA instance is deployed. Only **cn-hangzhou** may be returned.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -420,15 +421,15 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The CNAME that is used to associate the GA instance with an Anti-DDoS Pro/Premium instance.</p>
+         * <p>The CNAME that is used to associate the GA instance with an Anti-DDoS Pro instance or an Anti-DDOS Premium instance.</p>
          */
         @NameInMap("SecondDnsName")
         public String secondDnsName;
 
         /**
-         * <p>The ID of the service that manages the GA instance.</p>
+         * <p>The ID of the service that manages the instance.</p>
          * <br>
-         * <p>>  This parameter takes effect only if **ServiceManaged** is set to **True**.</p>
+         * <p>>  This parameter takes effect only if the value of **ServiceManaged** is **true**.</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;
@@ -443,11 +444,9 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         public Boolean serviceManaged;
 
         /**
-         * <p>The actions that you can perform on the managed instance.</p>
-         * <br>
-         * <p>>  This parameter takes effect only if **ServiceManaged** is set to **True**.</p>
-         * <br>
-         * <p>*   You can perform only specific actions on a managed instance.</p>
+         * <p>The actions that users can perform on the managed instance.</p>
+         * <p>> *   This parameter takes effect only if the value of **ServiceManaged** is **true**.</p>
+         * <p>> *   Users can perform only specific actions on a managed instance.</p>
          */
         @NameInMap("ServiceManagedInfos")
         public java.util.List<ListAcceleratorsResponseBodyAcceleratorsServiceManagedInfos> serviceManagedInfos;
@@ -455,26 +454,26 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         /**
          * <p>The specification of the GA instance. Valid values:</p>
          * <br>
-         * <p>*   **1**: Small Ⅰ</p>
-         * <p>*   **2**: Small Ⅱ</p>
-         * <p>*   **3**: Small Ⅲ</p>
-         * <p>*   **5**: Medium Ⅰ</p>
-         * <p>*   **8**: Medium Ⅱ</p>
-         * <p>*   **10**: Medium Ⅲ</p>
-         * <p>*   **20**: Large Ⅰ</p>
-         * <p>*   **30**: Large Ⅱ</p>
-         * <p>*   **40**: Large Ⅲ</p>
-         * <p>*   **50**: Large Ⅳ</p>
-         * <p>*   **60**: Large Ⅴ</p>
-         * <p>*   **70**: Large Ⅵ</p>
-         * <p>*   **80**: Large VⅡ</p>
-         * <p>*   **90**: Large VⅢ</p>
-         * <p>*   **100**: Super Large Ⅰ</p>
-         * <p>*   **200**: Super Large Ⅱ</p>
+         * <p>*   **1**: Small Ⅰ.</p>
+         * <p>*   **2**: Small Ⅱ.</p>
+         * <p>*   **3**: Small Ⅲ.</p>
+         * <p>*   **5**: Medium Ⅰ.</p>
+         * <p>*   **8**: Medium Ⅱ.</p>
+         * <p>*   **10**: Medium Ⅲ.</p>
+         * <p>*   **20**: Large Ⅰ.</p>
+         * <p>*   **30**: Large Ⅱ.</p>
+         * <p>*   **40**: Large Ⅲ.</p>
+         * <p>*   **50**: Large IV.</p>
+         * <p>*   **60**: Large V.</p>
+         * <p>*   **70**: Large VI.</p>
+         * <p>*   **80**: Large VII.</p>
+         * <p>*   **90**: Large VIII.</p>
+         * <p>*   **100**: Super Large Ⅰ.</p>
+         * <p>*   **200**: Super Large Ⅱ.</p>
          * <br>
          * <p>>  The Large Ⅲ specification and higher specifications are available only to accounts that are added to the whitelist. To use these specifications, contact your Alibaba Cloud account manager.</p>
          * <br>
-         * <p>Each instance specification provides different capabilities. For more information, see [Instance specifications](~~153127~~).</p>
+         * <p>Different specifications provide different capabilities. For more information, see [Instance specifications](~~153127~~).</p>
          */
         @NameInMap("Spec")
         public String spec;
@@ -482,13 +481,13 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         /**
          * <p>The status of the GA instance. Valid values:</p>
          * <br>
-         * <p>*   **init**</p>
-         * <p>*   **active**</p>
-         * <p>*   **configuring**</p>
-         * <p>*   **binding**</p>
-         * <p>*   **unbinding**</p>
-         * <p>*   **deleting**</p>
-         * <p>*   **finacialLocked**</p>
+         * <p>*   **init**: The GA instance is being initialized.</p>
+         * <p>*   **active**: The GA instance is available.</p>
+         * <p>*   **configuring**: The GA instance is being configured.</p>
+         * <p>*   **binding**: The GA instance is being associated.</p>
+         * <p>*   **unbinding**: The GA instance is being disassociated.</p>
+         * <p>*   **deleting**: The GA instance is being deleted.</p>
+         * <p>*   **finacialLocked**: The GA instance is locked due to overdue payments.</p>
          */
         @NameInMap("State")
         public String state;
