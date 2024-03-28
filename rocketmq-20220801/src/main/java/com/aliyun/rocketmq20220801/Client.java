@@ -494,6 +494,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listAvailableZonesWithOptions(headers, runtime);
     }
 
+    public ListConsumerConnectionsResponse listConsumerConnectionsWithOptions(String instanceId, String consumerGroupId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListConsumerConnections"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/consumerGroups/" + com.aliyun.openapiutil.Client.getEncodeParam(consumerGroupId) + "/connections"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListConsumerConnectionsResponse());
+    }
+
+    public ListConsumerConnectionsResponse listConsumerConnections(String instanceId, String consumerGroupId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listConsumerConnectionsWithOptions(instanceId, consumerGroupId, headers, runtime);
+    }
+
     public ListConsumerGroupSubscriptionsResponse listConsumerGroupSubscriptionsWithOptions(String instanceId, String consumerGroupId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -654,6 +678,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listRegionsWithOptions(headers, runtime);
+    }
+
+    public ListTopicSubscriptionsResponse listTopicSubscriptionsWithOptions(String instanceId, String topicName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTopicSubscriptions"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/topics/" + com.aliyun.openapiutil.Client.getEncodeParam(topicName) + "/subscriptions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTopicSubscriptionsResponse());
+    }
+
+    public ListTopicSubscriptionsResponse listTopicSubscriptions(String instanceId, String topicName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listTopicSubscriptionsWithOptions(instanceId, topicName, headers, runtime);
     }
 
     public ListTopicsResponse listTopicsWithOptions(String instanceId, ListTopicsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
