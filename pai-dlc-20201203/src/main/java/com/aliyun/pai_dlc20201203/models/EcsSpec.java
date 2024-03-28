@@ -10,6 +10,9 @@ public class EcsSpec extends TeaModel {
     @NameInMap("Cpu")
     public Integer cpu;
 
+    @NameInMap("DefaultGPUDriver")
+    public String defaultGPUDriver;
+
     @NameInMap("Gpu")
     public Integer gpu;
 
@@ -25,8 +28,20 @@ public class EcsSpec extends TeaModel {
     @NameInMap("Memory")
     public Integer memory;
 
+    @NameInMap("NonProtectSpotDiscount")
+    public Float nonProtectSpotDiscount;
+
+    @NameInMap("PaymentTypes")
+    public java.util.List<String> paymentTypes;
+
     @NameInMap("ResourceType")
     public String resourceType;
+
+    @NameInMap("SpotStockStatus")
+    public String spotStockStatus;
+
+    @NameInMap("SupportedGPUDrivers")
+    public java.util.List<String> supportedGPUDrivers;
 
     public static EcsSpec build(java.util.Map<String, ?> map) throws Exception {
         EcsSpec self = new EcsSpec();
@@ -47,6 +62,14 @@ public class EcsSpec extends TeaModel {
     }
     public Integer getCpu() {
         return this.cpu;
+    }
+
+    public EcsSpec setDefaultGPUDriver(String defaultGPUDriver) {
+        this.defaultGPUDriver = defaultGPUDriver;
+        return this;
+    }
+    public String getDefaultGPUDriver() {
+        return this.defaultGPUDriver;
     }
 
     public EcsSpec setGpu(Integer gpu) {
@@ -89,12 +112,44 @@ public class EcsSpec extends TeaModel {
         return this.memory;
     }
 
+    public EcsSpec setNonProtectSpotDiscount(Float nonProtectSpotDiscount) {
+        this.nonProtectSpotDiscount = nonProtectSpotDiscount;
+        return this;
+    }
+    public Float getNonProtectSpotDiscount() {
+        return this.nonProtectSpotDiscount;
+    }
+
+    public EcsSpec setPaymentTypes(java.util.List<String> paymentTypes) {
+        this.paymentTypes = paymentTypes;
+        return this;
+    }
+    public java.util.List<String> getPaymentTypes() {
+        return this.paymentTypes;
+    }
+
     public EcsSpec setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public EcsSpec setSpotStockStatus(String spotStockStatus) {
+        this.spotStockStatus = spotStockStatus;
+        return this;
+    }
+    public String getSpotStockStatus() {
+        return this.spotStockStatus;
+    }
+
+    public EcsSpec setSupportedGPUDrivers(java.util.List<String> supportedGPUDrivers) {
+        this.supportedGPUDrivers = supportedGPUDrivers;
+        return this;
+    }
+    public java.util.List<String> getSupportedGPUDrivers() {
+        return this.supportedGPUDrivers;
     }
 
 }
