@@ -10,6 +10,9 @@ public class ListRepositoriesRequest extends TeaModel {
     @NameInMap("archived")
     public Boolean archived;
 
+    @NameInMap("minAccessLevel")
+    public Integer minAccessLevel;
+
     @NameInMap("orderBy")
     public String orderBy;
 
@@ -47,6 +50,14 @@ public class ListRepositoriesRequest extends TeaModel {
     }
     public Boolean getArchived() {
         return this.archived;
+    }
+
+    public ListRepositoriesRequest setMinAccessLevel(Integer minAccessLevel) {
+        this.minAccessLevel = minAccessLevel;
+        return this;
+    }
+    public Integer getMinAccessLevel() {
+        return this.minAccessLevel;
     }
 
     public ListRepositoriesRequest setOrderBy(String orderBy) {
