@@ -110,6 +110,9 @@ public class GetOrderDetailResponseBody extends TeaModel {
         @NameInMap("Currency")
         public String currency;
 
+        @NameInMap("ExtendInfos")
+        public java.util.Map<String, String> extendInfos;
+
         /**
          * <p>The instance IDs.</p>
          */
@@ -303,6 +306,14 @@ public class GetOrderDetailResponseBody extends TeaModel {
         }
         public String getCurrency() {
             return this.currency;
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrder setExtendInfos(java.util.Map<String, String> extendInfos) {
+            this.extendInfos = extendInfos;
+            return this;
+        }
+        public java.util.Map<String, String> getExtendInfos() {
+            return this.extendInfos;
         }
 
         public GetOrderDetailResponseBodyDataOrderListOrder setInstanceIDs(String instanceIDs) {
