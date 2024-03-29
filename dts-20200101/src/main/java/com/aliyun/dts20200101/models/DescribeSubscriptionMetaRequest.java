@@ -16,6 +16,9 @@ public class DescribeSubscriptionMetaRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The ID of the consumer group.</p>
      */
@@ -57,6 +60,14 @@ public class DescribeSubscriptionMetaRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeSubscriptionMetaRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeSubscriptionMetaRequest setSid(String sid) {

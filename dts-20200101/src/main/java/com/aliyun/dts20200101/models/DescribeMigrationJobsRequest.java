@@ -39,6 +39,9 @@ public class DescribeMigrationJobsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Tag")
     public java.util.List<DescribeMigrationJobsRequestTag> tag;
 
@@ -93,6 +96,14 @@ public class DescribeMigrationJobsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeMigrationJobsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeMigrationJobsRequest setTag(java.util.List<DescribeMigrationJobsRequestTag> tag) {

@@ -19,6 +19,9 @@ public class ModifyDynamicConfigRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static ModifyDynamicConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDynamicConfigRequest self = new ModifyDynamicConfigRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class ModifyDynamicConfigRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyDynamicConfigRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

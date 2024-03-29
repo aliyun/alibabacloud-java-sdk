@@ -24,6 +24,9 @@ public class SuspendDtsJobRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The synchronization direction. Valid values:</p>
      * <br>
@@ -36,6 +39,9 @@ public class SuspendDtsJobRequest extends TeaModel {
      */
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
+
+    @NameInMap("ZeroEtlJob")
+    public Boolean zeroEtlJob;
 
     public static SuspendDtsJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SuspendDtsJobRequest self = new SuspendDtsJobRequest();
@@ -66,12 +72,28 @@ public class SuspendDtsJobRequest extends TeaModel {
         return this.regionId;
     }
 
+    public SuspendDtsJobRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public SuspendDtsJobRequest setSynchronizationDirection(String synchronizationDirection) {
         this.synchronizationDirection = synchronizationDirection;
         return this;
     }
     public String getSynchronizationDirection() {
         return this.synchronizationDirection;
+    }
+
+    public SuspendDtsJobRequest setZeroEtlJob(Boolean zeroEtlJob) {
+        this.zeroEtlJob = zeroEtlJob;
+        return this;
+    }
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
     }
 
 }

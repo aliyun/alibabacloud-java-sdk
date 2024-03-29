@@ -39,6 +39,12 @@ public class DescribeDtsJobsRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("InstanceType")
+    public String instanceType;
+
     /**
      * <p>The type of the DTS task. Valid values:</p>
      * <br>
@@ -197,6 +203,9 @@ public class DescribeDtsJobsRequest extends TeaModel {
     @NameInMap("WithoutDbList")
     public Boolean withoutDbList;
 
+    @NameInMap("ZeroEtlJob")
+    public Boolean zeroEtlJob;
+
     public static DescribeDtsJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDtsJobsRequest self = new DescribeDtsJobsRequest();
         return TeaModel.build(map, self);
@@ -240,6 +249,22 @@ public class DescribeDtsJobsRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DescribeDtsJobsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeDtsJobsRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public DescribeDtsJobsRequest setJobType(String jobType) {
@@ -352,6 +377,14 @@ public class DescribeDtsJobsRequest extends TeaModel {
     }
     public Boolean getWithoutDbList() {
         return this.withoutDbList;
+    }
+
+    public DescribeDtsJobsRequest setZeroEtlJob(Boolean zeroEtlJob) {
+        this.zeroEtlJob = zeroEtlJob;
+        return this;
+    }
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
     }
 
 }

@@ -22,6 +22,9 @@ public class DeleteMigrationJobRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static DeleteMigrationJobRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMigrationJobRequest self = new DeleteMigrationJobRequest();
         return TeaModel.build(map, self);
@@ -57,6 +60,14 @@ public class DeleteMigrationJobRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DeleteMigrationJobRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

@@ -45,6 +45,9 @@ public class DescribeDtsServiceLogRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The beginning of the time range to query.</p>
      * <br>
@@ -73,6 +76,9 @@ public class DescribeDtsServiceLogRequest extends TeaModel {
      */
     @NameInMap("SubJobType")
     public String subJobType;
+
+    @NameInMap("ZeroEtlJob")
+    public Boolean zeroEtlJob;
 
     public static DescribeDtsServiceLogRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDtsServiceLogRequest self = new DescribeDtsServiceLogRequest();
@@ -127,6 +133,14 @@ public class DescribeDtsServiceLogRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeDtsServiceLogRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribeDtsServiceLogRequest setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
@@ -149,6 +163,14 @@ public class DescribeDtsServiceLogRequest extends TeaModel {
     }
     public String getSubJobType() {
         return this.subJobType;
+    }
+
+    public DescribeDtsServiceLogRequest setZeroEtlJob(Boolean zeroEtlJob) {
+        this.zeroEtlJob = zeroEtlJob;
+        return this;
+    }
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
     }
 
 }

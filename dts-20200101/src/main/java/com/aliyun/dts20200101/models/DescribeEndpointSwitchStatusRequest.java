@@ -22,6 +22,9 @@ public class DescribeEndpointSwitchStatusRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The task ID, which is returned after you call the [SwitchSynchronizationEndpoint](~~201858~~) operation.</p>
      */
@@ -63,6 +66,14 @@ public class DescribeEndpointSwitchStatusRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeEndpointSwitchStatusRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeEndpointSwitchStatusRequest setTaskId(String taskId) {

@@ -23,6 +23,9 @@ public class WhiteIpListRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The ID of the region where the source instance resides. For more information, see [List of supported regions](~~141033~~).</p>
      * <br>
@@ -30,6 +33,9 @@ public class WhiteIpListRequest extends TeaModel {
      */
     @NameInMap("Type")
     public String type;
+
+    @NameInMap("ZeroEtlJob")
+    public Boolean zeroEtlJob;
 
     public static WhiteIpListRequest build(java.util.Map<String, ?> map) throws Exception {
         WhiteIpListRequest self = new WhiteIpListRequest();
@@ -60,12 +66,28 @@ public class WhiteIpListRequest extends TeaModel {
         return this.regionId;
     }
 
+    public WhiteIpListRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public WhiteIpListRequest setType(String type) {
         this.type = type;
         return this;
     }
     public String getType() {
         return this.type;
+    }
+
+    public WhiteIpListRequest setZeroEtlJob(Boolean zeroEtlJob) {
+        this.zeroEtlJob = zeroEtlJob;
+        return this;
+    }
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
     }
 
 }

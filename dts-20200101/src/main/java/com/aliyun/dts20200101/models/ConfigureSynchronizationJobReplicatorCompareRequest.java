@@ -22,6 +22,9 @@ public class ConfigureSynchronizationJobReplicatorCompareRequest extends TeaMode
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The synchronization direction. Valid values:</p>
      * <br>
@@ -85,6 +88,14 @@ public class ConfigureSynchronizationJobReplicatorCompareRequest extends TeaMode
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ConfigureSynchronizationJobReplicatorCompareRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ConfigureSynchronizationJobReplicatorCompareRequest setSynchronizationDirection(String synchronizationDirection) {

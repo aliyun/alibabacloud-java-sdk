@@ -27,11 +27,17 @@ public class DeleteDtsJobRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The dynamic error code. This parameter will be removed in the future.</p>
      */
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
+
+    @NameInMap("ZeroEtlJob")
+    public Boolean zeroEtlJob;
 
     public static DeleteDtsJobRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDtsJobRequest self = new DeleteDtsJobRequest();
@@ -70,12 +76,28 @@ public class DeleteDtsJobRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DeleteDtsJobRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DeleteDtsJobRequest setSynchronizationDirection(String synchronizationDirection) {
         this.synchronizationDirection = synchronizationDirection;
         return this;
     }
     public String getSynchronizationDirection() {
         return this.synchronizationDirection;
+    }
+
+    public DeleteDtsJobRequest setZeroEtlJob(Boolean zeroEtlJob) {
+        this.zeroEtlJob = zeroEtlJob;
+        return this;
+    }
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
     }
 
 }

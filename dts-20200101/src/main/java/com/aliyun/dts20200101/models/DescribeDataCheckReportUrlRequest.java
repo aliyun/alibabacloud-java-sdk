@@ -25,6 +25,9 @@ public class DescribeDataCheckReportUrlRequest extends TeaModel {
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The name of the table verified in the source database.</p>
      */
@@ -58,6 +61,14 @@ public class DescribeDataCheckReportUrlRequest extends TeaModel {
     }
     public String getDtsJobId() {
         return this.dtsJobId;
+    }
+
+    public DescribeDataCheckReportUrlRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeDataCheckReportUrlRequest setTbName(String tbName) {

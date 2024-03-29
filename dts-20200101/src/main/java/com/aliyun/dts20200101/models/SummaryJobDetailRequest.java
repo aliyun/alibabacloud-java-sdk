@@ -35,6 +35,9 @@ public class SummaryJobDetailRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The type of schema definition. Valid values:</p>
      * <br>
@@ -56,6 +59,9 @@ public class SummaryJobDetailRequest extends TeaModel {
      */
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
+
+    @NameInMap("ZeroEtlJob")
+    public Boolean zeroEtlJob;
 
     public static SummaryJobDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         SummaryJobDetailRequest self = new SummaryJobDetailRequest();
@@ -94,6 +100,14 @@ public class SummaryJobDetailRequest extends TeaModel {
         return this.regionId;
     }
 
+    public SummaryJobDetailRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public SummaryJobDetailRequest setStructType(String structType) {
         this.structType = structType;
         return this;
@@ -108,6 +122,14 @@ public class SummaryJobDetailRequest extends TeaModel {
     }
     public String getSynchronizationDirection() {
         return this.synchronizationDirection;
+    }
+
+    public SummaryJobDetailRequest setZeroEtlJob(Boolean zeroEtlJob) {
+        this.zeroEtlJob = zeroEtlJob;
+        return this;
+    }
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
     }
 
 }

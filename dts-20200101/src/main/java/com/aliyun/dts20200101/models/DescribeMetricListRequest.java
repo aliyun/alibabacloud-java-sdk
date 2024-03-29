@@ -70,6 +70,9 @@ public class DescribeMetricListRequest extends TeaModel {
     @NameInMap("Period")
     public Long period;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The timestamp that indicates the beginning of the time range to query. Unit: milliseconds.</p>
      */
@@ -159,6 +162,14 @@ public class DescribeMetricListRequest extends TeaModel {
     }
     public Long getPeriod() {
         return this.period;
+    }
+
+    public DescribeMetricListRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeMetricListRequest setStartTime(Long startTime) {

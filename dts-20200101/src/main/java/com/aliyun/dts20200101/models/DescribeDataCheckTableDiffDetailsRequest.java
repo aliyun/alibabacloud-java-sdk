@@ -19,6 +19,9 @@ public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("TbName")
     public String tbName;
 
@@ -65,6 +68,14 @@ public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeDataCheckTableDiffDetailsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeDataCheckTableDiffDetailsRequest setTbName(String tbName) {

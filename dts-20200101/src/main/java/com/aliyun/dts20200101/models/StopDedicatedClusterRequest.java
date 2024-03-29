@@ -35,6 +35,9 @@ public class StopDedicatedClusterRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static StopDedicatedClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         StopDedicatedClusterRequest self = new StopDedicatedClusterRequest();
         return TeaModel.build(map, self);
@@ -78,6 +81,14 @@ public class StopDedicatedClusterRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public StopDedicatedClusterRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

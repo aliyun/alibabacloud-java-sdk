@@ -19,6 +19,9 @@ public class DescribeCheckJobsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static DescribeCheckJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCheckJobsRequest self = new DescribeCheckJobsRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class DescribeCheckJobsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeCheckJobsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

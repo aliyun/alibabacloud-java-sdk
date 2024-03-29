@@ -36,6 +36,9 @@ public class TransferInstanceClassRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static TransferInstanceClassRequest build(java.util.Map<String, ?> map) throws Exception {
         TransferInstanceClassRequest self = new TransferInstanceClassRequest();
         return TeaModel.build(map, self);
@@ -71,6 +74,14 @@ public class TransferInstanceClassRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public TransferInstanceClassRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

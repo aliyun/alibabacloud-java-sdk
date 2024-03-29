@@ -28,6 +28,9 @@ public class SuspendMigrationJobRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static SuspendMigrationJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SuspendMigrationJobRequest self = new SuspendMigrationJobRequest();
         return TeaModel.build(map, self);
@@ -71,6 +74,14 @@ public class SuspendMigrationJobRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public SuspendMigrationJobRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

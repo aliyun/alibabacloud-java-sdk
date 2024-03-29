@@ -51,6 +51,9 @@ public class ListDedicatedClusterRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The status of the cluster. Valid values:</p>
      * <br>
@@ -137,6 +140,14 @@ public class ListDedicatedClusterRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListDedicatedClusterRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListDedicatedClusterRequest setState(String state) {

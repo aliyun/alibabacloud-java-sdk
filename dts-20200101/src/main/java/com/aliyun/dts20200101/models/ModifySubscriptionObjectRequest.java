@@ -16,6 +16,9 @@ public class ModifySubscriptionObjectRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The ID of the change tracking instance. You can call the [DescribeSubscriptionInstances](~~49442~~) operation to query the instance ID.</p>
      */
@@ -55,6 +58,14 @@ public class ModifySubscriptionObjectRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifySubscriptionObjectRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ModifySubscriptionObjectRequest setSubscriptionInstanceId(String subscriptionInstanceId) {

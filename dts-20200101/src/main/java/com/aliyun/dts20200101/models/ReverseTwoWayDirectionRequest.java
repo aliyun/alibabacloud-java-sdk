@@ -13,6 +13,9 @@ public class ReverseTwoWayDirectionRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static ReverseTwoWayDirectionRequest build(java.util.Map<String, ?> map) throws Exception {
         ReverseTwoWayDirectionRequest self = new ReverseTwoWayDirectionRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ReverseTwoWayDirectionRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ReverseTwoWayDirectionRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

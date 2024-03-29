@@ -64,6 +64,9 @@ public class CreateDedicatedClusterMonitorRuleRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateDedicatedClusterMonitorRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDedicatedClusterMonitorRuleRequest self = new CreateDedicatedClusterMonitorRuleRequest();
         return TeaModel.build(map, self);
@@ -147,6 +150,14 @@ public class CreateDedicatedClusterMonitorRuleRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateDedicatedClusterMonitorRuleRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }
