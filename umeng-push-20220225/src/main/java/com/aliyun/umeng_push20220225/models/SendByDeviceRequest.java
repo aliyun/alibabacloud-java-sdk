@@ -31,6 +31,9 @@ public class SendByDeviceRequest extends TeaModel {
     @NameInMap("ReceiptUrl")
     public String receiptUrl;
 
+    @NameInMap("ThirdPartyId")
+    public String thirdPartyId;
+
     public static SendByDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         SendByDeviceRequest self = new SendByDeviceRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class SendByDeviceRequest extends TeaModel {
     }
     public String getReceiptUrl() {
         return this.receiptUrl;
+    }
+
+    public SendByDeviceRequest setThirdPartyId(String thirdPartyId) {
+        this.thirdPartyId = thirdPartyId;
+        return this;
+    }
+    public String getThirdPartyId() {
+        return this.thirdPartyId;
     }
 
 }

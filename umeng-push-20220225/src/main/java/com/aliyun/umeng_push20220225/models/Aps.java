@@ -8,7 +8,7 @@ public class Aps extends TeaModel {
     public Alert alert;
 
     @NameInMap("badge")
-    public Integer badge;
+    public String badge;
 
     @NameInMap("category")
     public String category;
@@ -21,6 +21,9 @@ public class Aps extends TeaModel {
 
     @NameInMap("sound")
     public String sound;
+
+    @NameInMap("threadID")
+    public String threadID;
 
     public static Aps build(java.util.Map<String, ?> map) throws Exception {
         Aps self = new Aps();
@@ -35,11 +38,11 @@ public class Aps extends TeaModel {
         return this.alert;
     }
 
-    public Aps setBadge(Integer badge) {
+    public Aps setBadge(String badge) {
         this.badge = badge;
         return this;
     }
-    public Integer getBadge() {
+    public String getBadge() {
         return this.badge;
     }
 
@@ -73,6 +76,14 @@ public class Aps extends TeaModel {
     }
     public String getSound() {
         return this.sound;
+    }
+
+    public Aps setThreadID(String threadID) {
+        this.threadID = threadID;
+        return this;
+    }
+    public String getThreadID() {
+        return this.threadID;
     }
 
 }

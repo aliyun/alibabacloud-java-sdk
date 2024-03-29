@@ -8,7 +8,7 @@ public class IosPayload extends TeaModel {
     public Aps aps;
 
     @NameInMap("extra")
-    public java.util.Map<String, String> extra;
+    public java.util.Map<String, ?> extra;
 
     public static IosPayload build(java.util.Map<String, ?> map) throws Exception {
         IosPayload self = new IosPayload();
@@ -23,11 +23,11 @@ public class IosPayload extends TeaModel {
         return this.aps;
     }
 
-    public IosPayload setExtra(java.util.Map<String, String> extra) {
+    public IosPayload setExtra(java.util.Map<String, ?> extra) {
         this.extra = extra;
         return this;
     }
-    public java.util.Map<String, String> getExtra() {
+    public java.util.Map<String, ?> getExtra() {
         return this.extra;
     }
 
