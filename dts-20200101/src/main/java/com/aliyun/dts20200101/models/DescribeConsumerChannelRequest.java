@@ -44,6 +44,9 @@ public class DescribeConsumerChannelRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static DescribeConsumerChannelRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeConsumerChannelRequest self = new DescribeConsumerChannelRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class DescribeConsumerChannelRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeConsumerChannelRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

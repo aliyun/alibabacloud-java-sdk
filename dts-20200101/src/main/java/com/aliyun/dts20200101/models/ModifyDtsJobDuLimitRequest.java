@@ -27,6 +27,9 @@ public class ModifyDtsJobDuLimitRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static ModifyDtsJobDuLimitRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDtsJobDuLimitRequest self = new ModifyDtsJobDuLimitRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class ModifyDtsJobDuLimitRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyDtsJobDuLimitRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

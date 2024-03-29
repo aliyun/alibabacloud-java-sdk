@@ -44,6 +44,9 @@ public class CountJobByConditionRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The type of the source database.</p>
      */
@@ -170,6 +173,14 @@ public class CountJobByConditionRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CountJobByConditionRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CountJobByConditionRequest setSrcDbType(String srcDbType) {

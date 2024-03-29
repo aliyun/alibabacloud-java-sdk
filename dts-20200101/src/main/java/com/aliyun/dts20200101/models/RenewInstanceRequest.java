@@ -40,6 +40,9 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static RenewInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewInstanceRequest self = new RenewInstanceRequest();
         return TeaModel.build(map, self);
@@ -83,6 +86,14 @@ public class RenewInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public RenewInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

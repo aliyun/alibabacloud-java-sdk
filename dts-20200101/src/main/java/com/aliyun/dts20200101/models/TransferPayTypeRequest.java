@@ -51,6 +51,9 @@ public class TransferPayTypeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static TransferPayTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         TransferPayTypeRequest self = new TransferPayTypeRequest();
         return TeaModel.build(map, self);
@@ -94,6 +97,14 @@ public class TransferPayTypeRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public TransferPayTypeRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

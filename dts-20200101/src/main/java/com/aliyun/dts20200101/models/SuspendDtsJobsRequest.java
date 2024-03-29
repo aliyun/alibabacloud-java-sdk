@@ -20,6 +20,12 @@ public class SuspendDtsJobsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("ZeroEtlJob")
+    public Boolean zeroEtlJob;
+
     public static SuspendDtsJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         SuspendDtsJobsRequest self = new SuspendDtsJobsRequest();
         return TeaModel.build(map, self);
@@ -39,6 +45,22 @@ public class SuspendDtsJobsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public SuspendDtsJobsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public SuspendDtsJobsRequest setZeroEtlJob(Boolean zeroEtlJob) {
+        this.zeroEtlJob = zeroEtlJob;
+        return this;
+    }
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
     }
 
 }

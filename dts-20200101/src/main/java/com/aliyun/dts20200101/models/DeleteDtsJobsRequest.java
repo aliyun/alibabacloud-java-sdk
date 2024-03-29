@@ -19,6 +19,12 @@ public class DeleteDtsJobsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("ZeroEtlJob")
+    public Boolean zeroEtlJob;
+
     public static DeleteDtsJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDtsJobsRequest self = new DeleteDtsJobsRequest();
         return TeaModel.build(map, self);
@@ -38,6 +44,22 @@ public class DeleteDtsJobsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DeleteDtsJobsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DeleteDtsJobsRequest setZeroEtlJob(Boolean zeroEtlJob) {
+        this.zeroEtlJob = zeroEtlJob;
+        return this;
+    }
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
     }
 
 }

@@ -111,6 +111,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     @NameInMap("Reserve")
     public String reserve;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The name of the source database.</p>
      */
@@ -385,6 +388,14 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     }
     public String getReserve() {
         return this.reserve;
+    }
+
+    public ConfigureSubscriptionRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ConfigureSubscriptionRequest setSourceEndpointDatabaseName(String sourceEndpointDatabaseName) {

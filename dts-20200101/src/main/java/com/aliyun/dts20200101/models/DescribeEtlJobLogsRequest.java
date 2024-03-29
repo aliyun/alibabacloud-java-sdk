@@ -16,6 +16,9 @@ public class DescribeEtlJobLogsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static DescribeEtlJobLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEtlJobLogsRequest self = new DescribeEtlJobLogsRequest();
         return TeaModel.build(map, self);
@@ -35,6 +38,14 @@ public class DescribeEtlJobLogsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeEtlJobLogsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

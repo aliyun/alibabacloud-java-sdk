@@ -18,6 +18,9 @@ public class StartReverseWriterRequest extends TeaModel {
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static StartReverseWriterRequest build(java.util.Map<String, ?> map) throws Exception {
         StartReverseWriterRequest self = new StartReverseWriterRequest();
         return TeaModel.build(map, self);
@@ -37,6 +40,14 @@ public class StartReverseWriterRequest extends TeaModel {
     }
     public String getDtsJobId() {
         return this.dtsJobId;
+    }
+
+    public StartReverseWriterRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

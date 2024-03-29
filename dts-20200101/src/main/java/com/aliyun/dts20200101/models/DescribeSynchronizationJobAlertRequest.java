@@ -22,6 +22,9 @@ public class DescribeSynchronizationJobAlertRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The synchronization direction. Valid values:</p>
      * <br>
@@ -74,6 +77,14 @@ public class DescribeSynchronizationJobAlertRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeSynchronizationJobAlertRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeSynchronizationJobAlertRequest setSynchronizationDirection(String synchronizationDirection) {

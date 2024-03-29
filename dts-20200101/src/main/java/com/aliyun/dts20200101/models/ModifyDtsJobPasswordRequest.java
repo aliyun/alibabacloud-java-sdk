@@ -35,6 +35,9 @@ public class ModifyDtsJobPasswordRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The account of the source or destination database.</p>
      * <br>
@@ -42,6 +45,9 @@ public class ModifyDtsJobPasswordRequest extends TeaModel {
      */
     @NameInMap("UserName")
     public String userName;
+
+    @NameInMap("ZeroEtlJob")
+    public Boolean zeroEtlJob;
 
     public static ModifyDtsJobPasswordRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDtsJobPasswordRequest self = new ModifyDtsJobPasswordRequest();
@@ -80,12 +86,28 @@ public class ModifyDtsJobPasswordRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ModifyDtsJobPasswordRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public ModifyDtsJobPasswordRequest setUserName(String userName) {
         this.userName = userName;
         return this;
     }
     public String getUserName() {
         return this.userName;
+    }
+
+    public ModifyDtsJobPasswordRequest setZeroEtlJob(Boolean zeroEtlJob) {
+        this.zeroEtlJob = zeroEtlJob;
+        return this;
+    }
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
     }
 
 }

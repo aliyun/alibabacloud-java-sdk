@@ -296,6 +296,9 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("Reserve")
     public String reserve;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The password of the source database account.</p>
      */
@@ -775,6 +778,14 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     }
     public String getReserve() {
         return this.reserve;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ConfigureDtsJobAdvanceRequest setSourceEndpointDatabaseName(String sourceEndpointDatabaseName) {

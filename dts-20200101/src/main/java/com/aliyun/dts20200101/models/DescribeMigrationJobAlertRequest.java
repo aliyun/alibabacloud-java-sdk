@@ -28,6 +28,9 @@ public class DescribeMigrationJobAlertRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static DescribeMigrationJobAlertRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMigrationJobAlertRequest self = new DescribeMigrationJobAlertRequest();
         return TeaModel.build(map, self);
@@ -71,6 +74,14 @@ public class DescribeMigrationJobAlertRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeMigrationJobAlertRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

@@ -43,6 +43,9 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The tag key. You can call the [ListTagResources](~~191187~~) operation to query the tag key.</p>
      * <br>
@@ -107,6 +110,14 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeSynchronizationJobsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeSynchronizationJobsRequest setSynchronizationJobName(String synchronizationJobName) {

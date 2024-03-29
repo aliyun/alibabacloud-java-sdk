@@ -24,6 +24,12 @@ public class ModifyDtsJobNameRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("ZeroEtlJob")
+    public Boolean zeroEtlJob;
+
     public static ModifyDtsJobNameRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDtsJobNameRequest self = new ModifyDtsJobNameRequest();
         return TeaModel.build(map, self);
@@ -51,6 +57,22 @@ public class ModifyDtsJobNameRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyDtsJobNameRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public ModifyDtsJobNameRequest setZeroEtlJob(Boolean zeroEtlJob) {
+        this.zeroEtlJob = zeroEtlJob;
+        return this;
+    }
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
     }
 
 }

@@ -31,6 +31,9 @@ public class DescribeDataCheckTableDetailsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The name of the schema whose data is verified in the source database.</p>
      */
@@ -87,6 +90,14 @@ public class DescribeDataCheckTableDetailsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeDataCheckTableDetailsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeDataCheckTableDetailsRequest setSchemaName(String schemaName) {

@@ -51,6 +51,9 @@ public class InitDtsRdsInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static InitDtsRdsInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         InitDtsRdsInstanceRequest self = new InitDtsRdsInstanceRequest();
         return TeaModel.build(map, self);
@@ -102,6 +105,14 @@ public class InitDtsRdsInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public InitDtsRdsInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

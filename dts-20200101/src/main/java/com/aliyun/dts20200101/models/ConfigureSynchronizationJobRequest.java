@@ -50,6 +50,9 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>Specifies whether to perform initial schema synchronization. Valid values:</p>
      * <br>
@@ -169,6 +172,14 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ConfigureSynchronizationJobRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ConfigureSynchronizationJobRequest setStructureInitialization(Boolean structureInitialization) {

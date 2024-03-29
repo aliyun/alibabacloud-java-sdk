@@ -112,6 +112,9 @@ public class DescribeConnectionStatusRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>You must specify this parameter only if the **SourceEndpointEngineName** parameter is set to **Oracle**. Valid values:</p>
      * <br>
@@ -306,6 +309,14 @@ public class DescribeConnectionStatusRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeConnectionStatusRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeConnectionStatusRequest setSourceEndpointArchitecture(String sourceEndpointArchitecture) {

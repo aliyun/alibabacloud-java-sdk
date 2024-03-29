@@ -45,6 +45,9 @@ public class DescribePreCheckStatusRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The filter item used to filter tables, views, and functions during schema migration.</p>
      */
@@ -59,6 +62,9 @@ public class DescribePreCheckStatusRequest extends TeaModel {
      */
     @NameInMap("StructType")
     public String structType;
+
+    @NameInMap("ZeroEtlJob")
+    public Boolean zeroEtlJob;
 
     public static DescribePreCheckStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePreCheckStatusRequest self = new DescribePreCheckStatusRequest();
@@ -113,6 +119,14 @@ public class DescribePreCheckStatusRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribePreCheckStatusRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribePreCheckStatusRequest setStructPhase(String structPhase) {
         this.structPhase = structPhase;
         return this;
@@ -127,6 +141,14 @@ public class DescribePreCheckStatusRequest extends TeaModel {
     }
     public String getStructType() {
         return this.structType;
+    }
+
+    public DescribePreCheckStatusRequest setZeroEtlJob(Boolean zeroEtlJob) {
+        this.zeroEtlJob = zeroEtlJob;
+        return this;
+    }
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
     }
 
 }

@@ -51,6 +51,9 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The subscription length.</p>
      * <br>
@@ -129,6 +132,14 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateSubscriptionInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateSubscriptionInstanceRequest setUsedTime(Integer usedTime) {

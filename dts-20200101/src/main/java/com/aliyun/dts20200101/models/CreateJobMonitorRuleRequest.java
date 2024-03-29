@@ -51,6 +51,9 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>Specifies whether to enable the alert rule. Valid values:</p>
      * <br>
@@ -131,6 +134,14 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateJobMonitorRuleRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateJobMonitorRuleRequest setState(String state) {

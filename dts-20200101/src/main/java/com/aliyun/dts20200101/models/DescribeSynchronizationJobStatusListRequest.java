@@ -22,6 +22,9 @@ public class DescribeSynchronizationJobStatusListRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The IDs of the data synchronization instances. The value is a JSON array. You can call the [DescribeSynchronizationJobs](~~49454~~) operation to query the instance IDs.</p>
      */
@@ -63,6 +66,14 @@ public class DescribeSynchronizationJobStatusListRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeSynchronizationJobStatusListRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeSynchronizationJobStatusListRequest setSynchronizationJobIdListJsonStr(String synchronizationJobIdListJsonStr) {

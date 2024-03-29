@@ -19,6 +19,9 @@ public class DescribeDedicatedClusterRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static DescribeDedicatedClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDedicatedClusterRequest self = new DescribeDedicatedClusterRequest();
         return TeaModel.build(map, self);
@@ -46,6 +49,14 @@ public class DescribeDedicatedClusterRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeDedicatedClusterRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

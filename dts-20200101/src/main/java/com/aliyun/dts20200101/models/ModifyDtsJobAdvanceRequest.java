@@ -88,6 +88,9 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("Reserved")
     public String reserved;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>Specifies whether to perform schema migration or synchronization. Valid values:</p>
      * <br>
@@ -109,6 +112,9 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
      */
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
+
+    @NameInMap("ZeroEtlJob")
+    public Boolean zeroEtlJob;
 
     public static ModifyDtsJobAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDtsJobAdvanceRequest self = new ModifyDtsJobAdvanceRequest();
@@ -211,6 +217,14 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
         return this.reserved;
     }
 
+    public ModifyDtsJobAdvanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public ModifyDtsJobAdvanceRequest setStructureInitialization(Boolean structureInitialization) {
         this.structureInitialization = structureInitialization;
         return this;
@@ -225,6 +239,14 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     }
     public String getSynchronizationDirection() {
         return this.synchronizationDirection;
+    }
+
+    public ModifyDtsJobAdvanceRequest setZeroEtlJob(Boolean zeroEtlJob) {
+        this.zeroEtlJob = zeroEtlJob;
+        return this;
+    }
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
     }
 
 }

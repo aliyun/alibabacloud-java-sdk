@@ -42,6 +42,9 @@ public class DescribeDtsJobDetailRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("SyncSubJobHistory")
     public Boolean syncSubJobHistory;
 
@@ -50,6 +53,9 @@ public class DescribeDtsJobDetailRequest extends TeaModel {
      */
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
+
+    @NameInMap("ZeroEtlJob")
+    public Boolean zeroEtlJob;
 
     public static DescribeDtsJobDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDtsJobDetailRequest self = new DescribeDtsJobDetailRequest();
@@ -80,6 +86,14 @@ public class DescribeDtsJobDetailRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeDtsJobDetailRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribeDtsJobDetailRequest setSyncSubJobHistory(Boolean syncSubJobHistory) {
         this.syncSubJobHistory = syncSubJobHistory;
         return this;
@@ -94,6 +108,14 @@ public class DescribeDtsJobDetailRequest extends TeaModel {
     }
     public String getSynchronizationDirection() {
         return this.synchronizationDirection;
+    }
+
+    public DescribeDtsJobDetailRequest setZeroEtlJob(Boolean zeroEtlJob) {
+        this.zeroEtlJob = zeroEtlJob;
+        return this;
+    }
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
     }
 
 }

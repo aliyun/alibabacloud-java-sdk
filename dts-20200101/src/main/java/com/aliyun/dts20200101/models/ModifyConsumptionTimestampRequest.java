@@ -22,6 +22,9 @@ public class ModifyConsumptionTimestampRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The ID of the change tracking instance. You can call the **DescribeSubscriptionInstances** operation to query the instance ID.</p>
      */
@@ -63,6 +66,14 @@ public class ModifyConsumptionTimestampRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyConsumptionTimestampRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ModifyConsumptionTimestampRequest setSubscriptionInstanceId(String subscriptionInstanceId) {

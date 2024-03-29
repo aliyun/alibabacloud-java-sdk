@@ -25,6 +25,9 @@ public class DescribeSynchronizationObjectModifyStatusRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The task ID, which is returned after you call the [ModifySynchronizationObject](~~49451~~) operation to modify the objects to be synchronized.</p>
      */
@@ -66,6 +69,14 @@ public class DescribeSynchronizationObjectModifyStatusRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeSynchronizationObjectModifyStatusRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeSynchronizationObjectModifyStatusRequest setTaskId(String taskId) {

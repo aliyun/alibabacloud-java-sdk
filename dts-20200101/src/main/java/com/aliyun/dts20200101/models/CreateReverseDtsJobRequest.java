@@ -7,6 +7,9 @@ public class CreateReverseDtsJobRequest extends TeaModel {
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateReverseDtsJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateReverseDtsJobRequest self = new CreateReverseDtsJobRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class CreateReverseDtsJobRequest extends TeaModel {
     }
     public String getDtsJobId() {
         return this.dtsJobId;
+    }
+
+    public CreateReverseDtsJobRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }
