@@ -68,6 +68,9 @@ public class ListJoinedOrganizationsResponseBody extends TeaModel {
         @NameInMap("id")
         public String id;
 
+        @NameInMap("isOrgAdmin")
+        public Boolean isOrgAdmin;
+
         @NameInMap("name")
         public String name;
 
@@ -82,6 +85,14 @@ public class ListJoinedOrganizationsResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public ListJoinedOrganizationsResponseBodyOrganizations setIsOrgAdmin(Boolean isOrgAdmin) {
+            this.isOrgAdmin = isOrgAdmin;
+            return this;
+        }
+        public Boolean getIsOrgAdmin() {
+            return this.isOrgAdmin;
         }
 
         public ListJoinedOrganizationsResponseBodyOrganizations setName(String name) {
