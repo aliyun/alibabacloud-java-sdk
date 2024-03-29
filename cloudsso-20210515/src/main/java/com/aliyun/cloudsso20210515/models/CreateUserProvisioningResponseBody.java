@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class CreateUserProvisioningResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the RAM user provisioning.</p>
+     */
     @NameInMap("UserProvisioning")
     public CreateUserProvisioningResponseBodyUserProvisioning userProvisioning;
 
@@ -32,51 +38,117 @@ public class CreateUserProvisioningResponseBody extends TeaModel {
     }
 
     public static class CreateUserProvisioningResponseBodyUserProvisioning extends TeaModel {
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</p>
+         * <br>
+         * <p>*   Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</p>
+         * <p>*   Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</p>
+         */
         @NameInMap("DeletionStrategy")
         public String deletionStrategy;
 
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the resource directory.</p>
+         */
         @NameInMap("DirectoryId")
         public String directoryId;
 
+        /**
+         * <p>The conflict handling policy. The policy is used when a RAM user has the same username as the CloudSSO user who is synchronized to RAM. Valid values:</p>
+         * <br>
+         * <p>*   KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix `_sso`.</p>
+         * <p>*   TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</p>
+         */
         @NameInMap("DuplicationStrategy")
         public String duplicationStrategy;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the resource directory belongs.</p>
+         */
         @NameInMap("OwnerPk")
         public String ownerPk;
 
+        /**
+         * <p>The identity ID of the RAM user provisioning. Valid values:</p>
+         * <br>
+         * <p>*   If `Group` is returned for the `PrincipalType` parameter, the value of this parameter is the ID of a CloudSSO user group (g-\*\*\*\*\*\*\*\*).</p>
+         * <p>*   If `User` is returned for the `PrincipalType` parameter, the value of this parameter is the ID of a CloudSSO user (u-\*\*\*\*\*\*\*\*).</p>
+         */
         @NameInMap("PrincipalId")
         public String principalId;
 
+        /**
+         * <p>The identity name of the RAM user provisioning. Valid values:</p>
+         * <br>
+         * <p>*   If `Group` is returned for the `PrincipalType` parameter, the value of this parameter is the name of a CloudSSO user group.</p>
+         * <p>*   If `User` is returned for the `PrincipalType` parameter, the value of this parameter is the name of a CloudSSO user.</p>
+         */
         @NameInMap("PrincipalName")
         public String principalName;
 
+        /**
+         * <p>The identity type of the RAM user provisioning. Valid values:</p>
+         * <br>
+         * <p>*   User: The identity of the RAM user provisioning is a CloudSSO user.</p>
+         * <p>*   Group: The identity of the RAM user provisioning is a CloudSSO user group.</p>
+         */
         @NameInMap("PrincipalType")
         public String principalType;
 
+        /**
+         * <p>The status of the RAM user provisioning. Valid values:</p>
+         * <br>
+         * <p>*   Enabled</p>
+         * <p>*   Disabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the object for which you create the RAM user provisioning. The value is fixed as the ID of the member in the resource directory.</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>The name of the object for which you create the RAM user provisioning. The value is fixed as the name of the member in the resource directory.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The path of the resource directory in which you create the RAM user provisioning for the member.</p>
+         */
         @NameInMap("TargetPath")
         public String targetPath;
 
+        /**
+         * <p>The object for which you create the RAM user provisioning. The value is fixed as `RD-Account`.</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
+        /**
+         * <p>The modification time.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The ID of the RAM user provisioning.</p>
+         */
         @NameInMap("UserProvisioningId")
         public String userProvisioningId;
 

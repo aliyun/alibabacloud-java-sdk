@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class GetUserProvisioningRdAccountStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The statistics of the RAM user provisioning.</p>
+     */
     @NameInMap("UserProvisioningStatistics")
     public GetUserProvisioningRdAccountStatisticsResponseBodyUserProvisioningStatistics userProvisioningStatistics;
 
@@ -32,21 +38,39 @@ public class GetUserProvisioningRdAccountStatisticsResponseBody extends TeaModel
     }
 
     public static class GetUserProvisioningRdAccountStatisticsResponseBodyUserProvisioningStatistics extends TeaModel {
+        /**
+         * <p>The ID of the resource directory.</p>
+         */
         @NameInMap("DirectoryId")
         public String directoryId;
 
+        /**
+         * <p>The entity ID, which is the ID of the member in the resource directory.</p>
+         */
         @NameInMap("EntityId")
         public String entityId;
 
+        /**
+         * <p>The number of failed RAM user provisioning events.</p>
+         */
         @NameInMap("FailedEventCount")
         public Long failedEventCount;
 
+        /**
+         * <p>The time when the RAM user provisioning was last performed.</p>
+         */
         @NameInMap("LatestAsyncTime")
         public String latestAsyncTime;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the resource directory belongs.</p>
+         */
         @NameInMap("OwnerPk")
         public String ownerPk;
 
+        /**
+         * <p>The entity type. The value is fixed as `RD Account`.</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class GetUserProvisioningStatisticsRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The ID of the RAM user provisioning.</p>
+     */
     @NameInMap("UserProvisioningId")
     public String userProvisioningId;
 

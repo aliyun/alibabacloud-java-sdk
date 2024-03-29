@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class GetPasswordPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The password policy.</p>
+     */
     @NameInMap("PasswordPolicy")
     public GetPasswordPolicyResponseBodyPasswordPolicy passwordPolicy;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,39 +38,107 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
     }
 
     public static class GetPasswordPolicyResponseBodyPasswordPolicy extends TeaModel {
+        /**
+         * <p>Indicates whether to disable logon after a password expires. Valid values:</p>
+         * <br>
+         * <p>*   true: disables logon after a password expires.</p>
+         * <p>*   false: does not disable logon after a password expires.</p>
+         */
         @NameInMap("HardExpire")
         public Boolean hardExpire;
 
+        /**
+         * <p>The number of password retries.</p>
+         * <br>
+         * <p>If wrong passwords are entered for the specified consecutive times, the account is locked for 1 hour.</p>
+         * <br>
+         * <p>Valid values: 0 to 32. The value 0 indicates that the number of password retries is not limited.</p>
+         */
         @NameInMap("MaxLoginAttempts")
         public Integer maxLoginAttempts;
 
+        /**
+         * <p>The validity period of a password.</p>
+         * <br>
+         * <p>Valid values: 1 to 120. Unit: days.</p>
+         */
         @NameInMap("MaxPasswordAge")
         public Integer maxPasswordAge;
 
+        /**
+         * <p>The maximum password length.</p>
+         */
         @NameInMap("MaxPasswordLength")
         public Integer maxPasswordLength;
 
+        /**
+         * <p>The minimum number of different characters in a password.</p>
+         * <br>
+         * <p>The minimum value is 0, which indicates that the minimum number of different characters in a password is not limited. The maximum value is the value of the `MinPasswordLength` parameter.</p>
+         */
         @NameInMap("MinPasswordDifferentChars")
         public Integer minPasswordDifferentChars;
 
+        /**
+         * <p>The minimum password length.</p>
+         * <br>
+         * <p>Valid values: 8 to 32 characters.</p>
+         */
         @NameInMap("MinPasswordLength")
         public Integer minPasswordLength;
 
+        /**
+         * <p>Indicates whether to exclude the username from the password. Valid values:</p>
+         * <br>
+         * <p>*   true: A password cannot contain the username.</p>
+         * <p>*   false: A password can contain the username.</p>
+         */
         @NameInMap("PasswordNotContainUsername")
         public Boolean passwordNotContainUsername;
 
+        /**
+         * <p>The policy for password history check.</p>
+         * <br>
+         * <p>The previous N passwords cannot be reused. Valid values of N: 0 to 24. The value 0 indicates that all historical passwords can be reused.</p>
+         * <br>
+         * <p>>  Passwords that are generated before January 5, 2024 are not counted as historical passwords.</p>
+         */
         @NameInMap("PasswordReusePrevention")
         public Integer passwordReusePrevention;
 
+        /**
+         * <p>Indicates whether lowercase letters are required in a password. Valid values:</p>
+         * <br>
+         * <p>*   true: Lowercase letters are required in a password.</p>
+         * <p>*   false: Lowercase letters are not required in a password.</p>
+         */
         @NameInMap("RequireLowerCaseChars")
         public Boolean requireLowerCaseChars;
 
+        /**
+         * <p>Indicates whether digits are required in a password. Valid values:</p>
+         * <br>
+         * <p>*   true: Digits are required in a password.</p>
+         * <p>*   false: Digits are not required in a password.</p>
+         */
         @NameInMap("RequireNumbers")
         public Boolean requireNumbers;
 
+        /**
+         * <p>Indicates whether special characters are required in a password. Valid values:</p>
+         * <br>
+         * <p>*   true: Special characters are required in a password.</p>
+         * <p>*   false: Special characters are not required in a password.</p>
+         */
         @NameInMap("RequireSymbols")
         public Boolean requireSymbols;
 
+        /**
+         * <p>Indicates whether uppercase letters are required in a password. Valid values:</p>
+         * <br>
+         * <p>*   true: Uppercase letters are required in a password.</p>
+         * <p>*   false: Uppercase letters are not required in a password.</p>
+         */
         @NameInMap("RequireUpperCaseChars")
         public Boolean requireUpperCaseChars;
 

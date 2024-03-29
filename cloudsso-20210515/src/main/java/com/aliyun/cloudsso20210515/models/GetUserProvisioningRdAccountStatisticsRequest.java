@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class GetUserProvisioningRdAccountStatisticsRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The ID of the member in the resource directory.</p>
+     */
     @NameInMap("RdMemberId")
     public String rdMemberId;
 

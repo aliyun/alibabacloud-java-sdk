@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserProvisioningConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The global configurations of the RAM user provisioning.</p>
+     */
     @NameInMap("UserProvisioningConfiguration")
     public UpdateUserProvisioningConfigurationResponseBodyUserProvisioningConfiguration userProvisioningConfiguration;
 
@@ -32,18 +38,41 @@ public class UpdateUserProvisioningConfigurationResponseBody extends TeaModel {
     }
 
     public static class UpdateUserProvisioningConfigurationResponseBodyUserProvisioningConfiguration extends TeaModel {
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The default URL for a CloudSSO user who logs on to the Alibaba Cloud Management Console.</p>
+         * <br>
+         * <p>Default value: https://homenew.console.aliyun.com.</p>
+         */
         @NameInMap("DefaultLandingPage")
         public String defaultLandingPage;
 
+        /**
+         * <p>The ID of the resource directory.</p>
+         */
         @NameInMap("DirectoryId")
         public String directoryId;
 
+        /**
+         * <p>The duration of the logon session.</p>
+         * <br>
+         * <p>Unit: hours.</p>
+         * <br>
+         * <p>Valid values: 1 to 24.</p>
+         * <br>
+         * <p>Default value: 6.</p>
+         */
         @NameInMap("SessionDuration")
         public Integer sessionDuration;
 
+        /**
+         * <p>The modification time.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

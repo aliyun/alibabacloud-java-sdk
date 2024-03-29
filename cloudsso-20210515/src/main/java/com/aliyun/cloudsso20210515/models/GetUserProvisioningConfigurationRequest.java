@@ -4,6 +4,9 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class GetUserProvisioningConfigurationRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
