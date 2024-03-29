@@ -3,7 +3,7 @@ package com.aliyun.dfs20180620.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteMountPointResponse extends TeaModel {
+public class DetachVscMountPointResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteMountPointResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DeleteMountPointResponseBody body;
+    public DetachVscMountPointResponseBody body;
 
-    public static DeleteMountPointResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteMountPointResponse self = new DeleteMountPointResponse();
+    public static DetachVscMountPointResponse build(java.util.Map<String, ?> map) throws Exception {
+        DetachVscMountPointResponse self = new DetachVscMountPointResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteMountPointResponse setHeaders(java.util.Map<String, String> headers) {
+    public DetachVscMountPointResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteMountPointResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteMountPointResponse setStatusCode(Integer statusCode) {
+    public DetachVscMountPointResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteMountPointResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteMountPointResponse setBody(DeleteMountPointResponseBody body) {
+    public DetachVscMountPointResponse setBody(DetachVscMountPointResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteMountPointResponseBody getBody() {
+    public DetachVscMountPointResponseBody getBody() {
         return this.body;
     }
 

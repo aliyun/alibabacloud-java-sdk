@@ -8,7 +8,7 @@ public class CreateUserGroupsMappingRequest extends TeaModel {
     public String fileSystemId;
 
     @NameInMap("GroupNames")
-    public java.util.Map<String, ?> groupNames;
+    public java.util.List<String> groupNames;
 
     @NameInMap("InputRegionId")
     public String inputRegionId;
@@ -29,11 +29,11 @@ public class CreateUserGroupsMappingRequest extends TeaModel {
         return this.fileSystemId;
     }
 
-    public CreateUserGroupsMappingRequest setGroupNames(java.util.Map<String, ?> groupNames) {
+    public CreateUserGroupsMappingRequest setGroupNames(java.util.List<String> groupNames) {
         this.groupNames = groupNames;
         return this;
     }
-    public java.util.Map<String, ?> getGroupNames() {
+    public java.util.List<String> getGroupNames() {
         return this.groupNames;
     }
 
