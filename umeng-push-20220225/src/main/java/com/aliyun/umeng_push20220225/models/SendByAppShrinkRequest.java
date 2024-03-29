@@ -28,6 +28,9 @@ public class SendByAppShrinkRequest extends TeaModel {
     @NameInMap("ReceiptUrl")
     public String receiptUrl;
 
+    @NameInMap("ThirdPartyId")
+    public String thirdPartyId;
+
     public static SendByAppShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SendByAppShrinkRequest self = new SendByAppShrinkRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class SendByAppShrinkRequest extends TeaModel {
     }
     public String getReceiptUrl() {
         return this.receiptUrl;
+    }
+
+    public SendByAppShrinkRequest setThirdPartyId(String thirdPartyId) {
+        this.thirdPartyId = thirdPartyId;
+        return this;
+    }
+    public String getThirdPartyId() {
+        return this.thirdPartyId;
     }
 
 }

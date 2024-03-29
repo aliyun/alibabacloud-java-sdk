@@ -31,6 +31,9 @@ public class SendByFilterRequest extends TeaModel {
     @NameInMap("ReceiptUrl")
     public String receiptUrl;
 
+    @NameInMap("ThirdPartyId")
+    public String thirdPartyId;
+
     public static SendByFilterRequest build(java.util.Map<String, ?> map) throws Exception {
         SendByFilterRequest self = new SendByFilterRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class SendByFilterRequest extends TeaModel {
     }
     public String getReceiptUrl() {
         return this.receiptUrl;
+    }
+
+    public SendByFilterRequest setThirdPartyId(String thirdPartyId) {
+        this.thirdPartyId = thirdPartyId;
+        return this;
+    }
+    public String getThirdPartyId() {
+        return this.thirdPartyId;
     }
 
 }

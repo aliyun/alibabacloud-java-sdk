@@ -238,6 +238,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ReceiptUrl", request.receiptUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdPartyId)) {
+            body.put("ThirdPartyId", request.thirdPartyId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -313,6 +317,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.receiptUrl)) {
             body.put("ReceiptUrl", request.receiptUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdPartyId)) {
+            body.put("ThirdPartyId", request.thirdPartyId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -481,6 +489,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ReceiptUrl", request.receiptUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdPartyId)) {
+            body.put("ThirdPartyId", request.thirdPartyId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -560,6 +572,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.receiptUrl)) {
             body.put("ReceiptUrl", request.receiptUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdPartyId)) {
+            body.put("ThirdPartyId", request.thirdPartyId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
