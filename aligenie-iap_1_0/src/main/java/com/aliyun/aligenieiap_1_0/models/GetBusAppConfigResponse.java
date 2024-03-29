@@ -3,7 +3,7 @@ package com.aliyun.aligenieiap_1_0.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateReminderResponse extends TeaModel {
+public class GetBusAppConfigResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class UpdateReminderResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public UpdateReminderResponseBody body;
+    public GetBusAppConfigResponseBody body;
 
-    public static UpdateReminderResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateReminderResponse self = new UpdateReminderResponse();
+    public static GetBusAppConfigResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetBusAppConfigResponse self = new GetBusAppConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateReminderResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetBusAppConfigResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class UpdateReminderResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateReminderResponse setStatusCode(Integer statusCode) {
+    public GetBusAppConfigResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class UpdateReminderResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateReminderResponse setBody(UpdateReminderResponseBody body) {
+    public GetBusAppConfigResponse setBody(GetBusAppConfigResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateReminderResponseBody getBody() {
+    public GetBusAppConfigResponseBody getBody() {
         return this.body;
     }
 
