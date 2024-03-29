@@ -107,8 +107,17 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         @NameInMap("EnableCompute")
         public Boolean enableCompute;
 
+        @NameInMap("EnableLts")
+        public Boolean enableLts;
+
+        @NameInMap("EnableMessage")
+        public Boolean enableMessage;
+
         @NameInMap("EnableStream")
         public Boolean enableStream;
+
+        @NameInMap("EnableVector")
+        public Boolean enableVector;
 
         @NameInMap("EngineType")
         public String engineType;
@@ -192,12 +201,36 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             return this.enableCompute;
         }
 
+        public GetLindormInstanceListResponseBodyInstanceList setEnableLts(Boolean enableLts) {
+            this.enableLts = enableLts;
+            return this;
+        }
+        public Boolean getEnableLts() {
+            return this.enableLts;
+        }
+
+        public GetLindormInstanceListResponseBodyInstanceList setEnableMessage(Boolean enableMessage) {
+            this.enableMessage = enableMessage;
+            return this;
+        }
+        public Boolean getEnableMessage() {
+            return this.enableMessage;
+        }
+
         public GetLindormInstanceListResponseBodyInstanceList setEnableStream(Boolean enableStream) {
             this.enableStream = enableStream;
             return this;
         }
         public Boolean getEnableStream() {
             return this.enableStream;
+        }
+
+        public GetLindormInstanceListResponseBodyInstanceList setEnableVector(Boolean enableVector) {
+            this.enableVector = enableVector;
+            return this;
+        }
+        public Boolean getEnableVector() {
+            return this.enableVector;
         }
 
         public GetLindormInstanceListResponseBodyInstanceList setEngineType(String engineType) {
