@@ -98,6 +98,36 @@ public class ListUsersResponseBody extends TeaModel {
         return this.users;
     }
 
+    public static class ListUsersResponseBodyUsersExternalId extends TeaModel {
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Issuer")
+        public String issuer;
+
+        public static ListUsersResponseBodyUsersExternalId build(java.util.Map<String, ?> map) throws Exception {
+            ListUsersResponseBodyUsersExternalId self = new ListUsersResponseBodyUsersExternalId();
+            return TeaModel.build(map, self);
+        }
+
+        public ListUsersResponseBodyUsersExternalId setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public ListUsersResponseBodyUsersExternalId setIssuer(String issuer) {
+            this.issuer = issuer;
+            return this;
+        }
+        public String getIssuer() {
+            return this.issuer;
+        }
+
+    }
+
     public static class ListUsersResponseBodyUsers extends TeaModel {
         /**
          * <p>The time when the user was created.</p>
@@ -122,6 +152,9 @@ public class ListUsersResponseBody extends TeaModel {
          */
         @NameInMap("Email")
         public String email;
+
+        @NameInMap("ExternalId")
+        public ListUsersResponseBodyUsersExternalId externalId;
 
         /**
          * <p>The first name of the user.</p>
@@ -206,6 +239,14 @@ public class ListUsersResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public ListUsersResponseBodyUsers setExternalId(ListUsersResponseBodyUsersExternalId externalId) {
+            this.externalId = externalId;
+            return this;
+        }
+        public ListUsersResponseBodyUsersExternalId getExternalId() {
+            return this.externalId;
         }
 
         public ListUsersResponseBodyUsers setFirstName(String firstName) {

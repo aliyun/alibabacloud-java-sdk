@@ -37,6 +37,36 @@ public class GetUserResponseBody extends TeaModel {
         return this.user;
     }
 
+    public static class GetUserResponseBodyUserExternalId extends TeaModel {
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Issuer")
+        public String issuer;
+
+        public static GetUserResponseBodyUserExternalId build(java.util.Map<String, ?> map) throws Exception {
+            GetUserResponseBodyUserExternalId self = new GetUserResponseBodyUserExternalId();
+            return TeaModel.build(map, self);
+        }
+
+        public GetUserResponseBodyUserExternalId setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public GetUserResponseBodyUserExternalId setIssuer(String issuer) {
+            this.issuer = issuer;
+            return this;
+        }
+        public String getIssuer() {
+            return this.issuer;
+        }
+
+    }
+
     public static class GetUserResponseBodyUser extends TeaModel {
         /**
          * <p>The time when the user was created.</p>
@@ -61,6 +91,9 @@ public class GetUserResponseBody extends TeaModel {
          */
         @NameInMap("Email")
         public String email;
+
+        @NameInMap("ExternalId")
+        public GetUserResponseBodyUserExternalId externalId;
 
         /**
          * <p>The first name of the user.</p>
@@ -145,6 +178,14 @@ public class GetUserResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public GetUserResponseBodyUser setExternalId(GetUserResponseBodyUserExternalId externalId) {
+            this.externalId = externalId;
+            return this;
+        }
+        public GetUserResponseBodyUserExternalId getExternalId() {
+            return this.externalId;
         }
 
         public GetUserResponseBodyUser setFirstName(String firstName) {
