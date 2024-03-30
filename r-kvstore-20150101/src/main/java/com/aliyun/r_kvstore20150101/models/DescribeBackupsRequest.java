@@ -8,10 +8,10 @@ public class DescribeBackupsRequest extends TeaModel {
      * <p>The ID of the backup file.</p>
      */
     @NameInMap("BackupId")
-    public Integer backupId;
+    public Long backupId;
 
     @NameInMap("BackupJobId")
-    public Integer backupJobId;
+    public Long backupJobId;
 
     /**
      * <p>The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.</p>
@@ -74,19 +74,19 @@ public class DescribeBackupsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackupsRequest setBackupId(Integer backupId) {
+    public DescribeBackupsRequest setBackupId(Long backupId) {
         this.backupId = backupId;
         return this;
     }
-    public Integer getBackupId() {
+    public Long getBackupId() {
         return this.backupId;
     }
 
-    public DescribeBackupsRequest setBackupJobId(Integer backupJobId) {
+    public DescribeBackupsRequest setBackupJobId(Long backupJobId) {
         this.backupJobId = backupJobId;
         return this;
     }
-    public Integer getBackupJobId() {
+    public Long getBackupJobId() {
         return this.backupJobId;
     }
 

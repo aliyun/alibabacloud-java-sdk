@@ -17,7 +17,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The slow log entries.</p>
+     * <p>The slow query log entries.</p>
      */
     @NameInMap("Items")
     public DescribeSlowLogRecordsResponseBodyItems items;
@@ -155,13 +155,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String command;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          */
         @NameInMap("DBName")
         public String DBName;
 
         /**
-         * <p>The name of the database, which serves the same purpose as the **DBName** parameter. We recommend that you use the value of the **DBName** parameter.</p>
+         * <p>The database name. This parameter serves the same purpose as the **DBName** parameter. We recommend that you use the **DBName** parameter.</p>
          */
         @NameInMap("DataBaseName")
         public String dataBaseName;

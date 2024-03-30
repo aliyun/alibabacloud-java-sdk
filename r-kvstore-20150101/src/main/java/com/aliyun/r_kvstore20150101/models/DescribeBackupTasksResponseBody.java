@@ -183,7 +183,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
          * <p>The ID of the backup task.</p>
          */
         @NameInMap("BackupJobID")
-        public Integer backupJobID;
+        public Long backupJobID;
 
         /**
          * <p>The state of the backup task. Valid values:</p>
@@ -239,11 +239,11 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeBackupTasksResponseBodyBackupJobs setBackupJobID(Integer backupJobID) {
+        public DescribeBackupTasksResponseBodyBackupJobs setBackupJobID(Long backupJobID) {
             this.backupJobID = backupJobID;
             return this;
         }
-        public Integer getBackupJobID() {
+        public Long getBackupJobID() {
             return this.backupJobID;
         }
 

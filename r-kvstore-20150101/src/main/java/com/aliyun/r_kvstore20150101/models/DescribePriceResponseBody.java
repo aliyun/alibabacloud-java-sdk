@@ -162,12 +162,119 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
 
+    public static class DescribePriceResponseBodyOrderDepreciateInfoContractActivityOptionIds extends TeaModel {
+        @NameInMap("OptionId")
+        public java.util.List<Long> optionId;
+
+        public static DescribePriceResponseBodyOrderDepreciateInfoContractActivityOptionIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribePriceResponseBodyOrderDepreciateInfoContractActivityOptionIds self = new DescribePriceResponseBodyOrderDepreciateInfoContractActivityOptionIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePriceResponseBodyOrderDepreciateInfoContractActivityOptionIds setOptionId(java.util.List<Long> optionId) {
+            this.optionId = optionId;
+            return this;
+        }
+        public java.util.List<Long> getOptionId() {
+            return this.optionId;
+        }
+
+    }
+
+    public static class DescribePriceResponseBodyOrderDepreciateInfoContractActivity extends TeaModel {
+        @NameInMap("ActivityId")
+        public Long activityId;
+
+        @NameInMap("ActivityName")
+        public String activityName;
+
+        @NameInMap("FinalFee")
+        public Double finalFee;
+
+        @NameInMap("FinalPromFee")
+        public Double finalPromFee;
+
+        @NameInMap("OptionCode")
+        public String optionCode;
+
+        @NameInMap("OptionIds")
+        public DescribePriceResponseBodyOrderDepreciateInfoContractActivityOptionIds optionIds;
+
+        @NameInMap("ProdFee")
+        public Double prodFee;
+
+        public static DescribePriceResponseBodyOrderDepreciateInfoContractActivity build(java.util.Map<String, ?> map) throws Exception {
+            DescribePriceResponseBodyOrderDepreciateInfoContractActivity self = new DescribePriceResponseBodyOrderDepreciateInfoContractActivity();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePriceResponseBodyOrderDepreciateInfoContractActivity setActivityId(Long activityId) {
+            this.activityId = activityId;
+            return this;
+        }
+        public Long getActivityId() {
+            return this.activityId;
+        }
+
+        public DescribePriceResponseBodyOrderDepreciateInfoContractActivity setActivityName(String activityName) {
+            this.activityName = activityName;
+            return this;
+        }
+        public String getActivityName() {
+            return this.activityName;
+        }
+
+        public DescribePriceResponseBodyOrderDepreciateInfoContractActivity setFinalFee(Double finalFee) {
+            this.finalFee = finalFee;
+            return this;
+        }
+        public Double getFinalFee() {
+            return this.finalFee;
+        }
+
+        public DescribePriceResponseBodyOrderDepreciateInfoContractActivity setFinalPromFee(Double finalPromFee) {
+            this.finalPromFee = finalPromFee;
+            return this;
+        }
+        public Double getFinalPromFee() {
+            return this.finalPromFee;
+        }
+
+        public DescribePriceResponseBodyOrderDepreciateInfoContractActivity setOptionCode(String optionCode) {
+            this.optionCode = optionCode;
+            return this;
+        }
+        public String getOptionCode() {
+            return this.optionCode;
+        }
+
+        public DescribePriceResponseBodyOrderDepreciateInfoContractActivity setOptionIds(DescribePriceResponseBodyOrderDepreciateInfoContractActivityOptionIds optionIds) {
+            this.optionIds = optionIds;
+            return this;
+        }
+        public DescribePriceResponseBodyOrderDepreciateInfoContractActivityOptionIds getOptionIds() {
+            return this.optionIds;
+        }
+
+        public DescribePriceResponseBodyOrderDepreciateInfoContractActivity setProdFee(Double prodFee) {
+            this.prodFee = prodFee;
+            return this;
+        }
+        public Double getProdFee() {
+            return this.prodFee;
+        }
+
+    }
+
     public static class DescribePriceResponseBodyOrderDepreciateInfo extends TeaModel {
         @NameInMap("CheapRate")
         public Long cheapRate;
 
         @NameInMap("CheapStandAmount")
         public Long cheapStandAmount;
+
+        @NameInMap("ContractActivity")
+        public DescribePriceResponseBodyOrderDepreciateInfoContractActivity contractActivity;
 
         @NameInMap("Differential")
         public Long differential;
@@ -209,6 +316,14 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public Long getCheapStandAmount() {
             return this.cheapStandAmount;
+        }
+
+        public DescribePriceResponseBodyOrderDepreciateInfo setContractActivity(DescribePriceResponseBodyOrderDepreciateInfoContractActivity contractActivity) {
+            this.contractActivity = contractActivity;
+            return this;
+        }
+        public DescribePriceResponseBodyOrderDepreciateInfoContractActivity getContractActivity() {
+            return this.contractActivity;
         }
 
         public DescribePriceResponseBodyOrderDepreciateInfo setDifferential(Long differential) {
@@ -543,12 +658,119 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
 
+    public static class DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivityOptionIds extends TeaModel {
+        @NameInMap("OptionId")
+        public java.util.List<Long> optionId;
+
+        public static DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivityOptionIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivityOptionIds self = new DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivityOptionIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivityOptionIds setOptionId(java.util.List<Long> optionId) {
+            this.optionId = optionId;
+            return this;
+        }
+        public java.util.List<Long> getOptionId() {
+            return this.optionId;
+        }
+
+    }
+
+    public static class DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity extends TeaModel {
+        @NameInMap("ActivityId")
+        public Long activityId;
+
+        @NameInMap("ActivityName")
+        public String activityName;
+
+        @NameInMap("FinalFee")
+        public Double finalFee;
+
+        @NameInMap("FinalPromFee")
+        public Double finalPromFee;
+
+        @NameInMap("OptionCode")
+        public String optionCode;
+
+        @NameInMap("OptionIds")
+        public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivityOptionIds optionIds;
+
+        @NameInMap("ProdFee")
+        public Double prodFee;
+
+        public static DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity build(java.util.Map<String, ?> map) throws Exception {
+            DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity self = new DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity setActivityId(Long activityId) {
+            this.activityId = activityId;
+            return this;
+        }
+        public Long getActivityId() {
+            return this.activityId;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity setActivityName(String activityName) {
+            this.activityName = activityName;
+            return this;
+        }
+        public String getActivityName() {
+            return this.activityName;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity setFinalFee(Double finalFee) {
+            this.finalFee = finalFee;
+            return this;
+        }
+        public Double getFinalFee() {
+            return this.finalFee;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity setFinalPromFee(Double finalPromFee) {
+            this.finalPromFee = finalPromFee;
+            return this;
+        }
+        public Double getFinalPromFee() {
+            return this.finalPromFee;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity setOptionCode(String optionCode) {
+            this.optionCode = optionCode;
+            return this;
+        }
+        public String getOptionCode() {
+            return this.optionCode;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity setOptionIds(DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivityOptionIds optionIds) {
+            this.optionIds = optionIds;
+            return this;
+        }
+        public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivityOptionIds getOptionIds() {
+            return this.optionIds;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity setProdFee(Double prodFee) {
+            this.prodFee = prodFee;
+            return this;
+        }
+        public Double getProdFee() {
+            return this.prodFee;
+        }
+
+    }
+
     public static class DescribePriceResponseBodySubOrdersSubOrderDepreciateInfo extends TeaModel {
         @NameInMap("CheapRate")
         public Long cheapRate;
 
         @NameInMap("CheapStandAmount")
         public Long cheapStandAmount;
+
+        @NameInMap("ContractActivity")
+        public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity contractActivity;
 
         @NameInMap("Differential")
         public Long differential;
@@ -587,6 +809,14 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public Long getCheapStandAmount() {
             return this.cheapStandAmount;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfo setContractActivity(DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity contractActivity) {
+            this.contractActivity = contractActivity;
+            return this;
+        }
+        public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity getContractActivity() {
+            return this.contractActivity;
         }
 
         public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfo setDifferential(Long differential) {
@@ -711,6 +941,9 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance extends TeaModel {
+        @NameInMap("ContractActivity")
+        public Boolean contractActivity;
+
         @NameInMap("DiscountFee")
         public Double discountFee;
 
@@ -744,6 +977,14 @@ public class DescribePriceResponseBody extends TeaModel {
         public static DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance self = new DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance setContractActivity(Boolean contractActivity) {
+            this.contractActivity = contractActivity;
+            return this;
+        }
+        public Boolean getContractActivity() {
+            return this.contractActivity;
         }
 
         public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance setDiscountFee(Double discountFee) {
@@ -985,6 +1226,12 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodySubOrdersSubOrderPromDetailListPromDetail extends TeaModel {
+        @NameInMap("ActivityExtInfo")
+        public java.util.Map<String, ?> activityExtInfo;
+
+        @NameInMap("DerivedPromType")
+        public String derivedPromType;
+
         @NameInMap("FinalPromFee")
         public Double finalPromFee;
 
@@ -993,6 +1240,9 @@ public class DescribePriceResponseBody extends TeaModel {
 
         @NameInMap("PromType")
         public String promType;
+
+        @NameInMap("PromotionCode")
+        public String promotionCode;
 
         @NameInMap("PromotionId")
         public Long promotionId;
@@ -1003,6 +1253,22 @@ public class DescribePriceResponseBody extends TeaModel {
         public static DescribePriceResponseBodySubOrdersSubOrderPromDetailListPromDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribePriceResponseBodySubOrdersSubOrderPromDetailListPromDetail self = new DescribePriceResponseBodySubOrdersSubOrderPromDetailListPromDetail();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderPromDetailListPromDetail setActivityExtInfo(java.util.Map<String, ?> activityExtInfo) {
+            this.activityExtInfo = activityExtInfo;
+            return this;
+        }
+        public java.util.Map<String, ?> getActivityExtInfo() {
+            return this.activityExtInfo;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderPromDetailListPromDetail setDerivedPromType(String derivedPromType) {
+            this.derivedPromType = derivedPromType;
+            return this;
+        }
+        public String getDerivedPromType() {
+            return this.derivedPromType;
         }
 
         public DescribePriceResponseBodySubOrdersSubOrderPromDetailListPromDetail setFinalPromFee(Double finalPromFee) {
@@ -1027,6 +1293,14 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public String getPromType() {
             return this.promType;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderPromDetailListPromDetail setPromotionCode(String promotionCode) {
+            this.promotionCode = promotionCode;
+            return this;
+        }
+        public String getPromotionCode() {
+            return this.promotionCode;
         }
 
         public DescribePriceResponseBodySubOrdersSubOrderPromDetailListPromDetail setPromotionId(Long promotionId) {
@@ -1086,6 +1360,9 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodySubOrdersSubOrder extends TeaModel {
+        @NameInMap("ContractActivity")
+        public Boolean contractActivity;
+
         @NameInMap("DepreciateInfo")
         public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfo depreciateInfo;
 
@@ -1140,6 +1417,14 @@ public class DescribePriceResponseBody extends TeaModel {
         public static DescribePriceResponseBodySubOrdersSubOrder build(java.util.Map<String, ?> map) throws Exception {
             DescribePriceResponseBodySubOrdersSubOrder self = new DescribePriceResponseBodySubOrdersSubOrder();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrder setContractActivity(Boolean contractActivity) {
+            this.contractActivity = contractActivity;
+            return this;
+        }
+        public Boolean getContractActivity() {
+            return this.contractActivity;
         }
 
         public DescribePriceResponseBodySubOrdersSubOrder setDepreciateInfo(DescribePriceResponseBodySubOrdersSubOrderDepreciateInfo depreciateInfo) {

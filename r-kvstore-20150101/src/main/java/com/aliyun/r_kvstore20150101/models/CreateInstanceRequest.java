@@ -265,6 +265,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("SecondaryZoneId")
     public String secondaryZoneId;
 
+    /**
+     * <p>系统自动生成的安全 Token，无需传入</p>
+     */
     @NameInMap("SecurityToken")
     public String securityToken;
 

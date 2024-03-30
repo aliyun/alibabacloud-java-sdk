@@ -43,7 +43,7 @@ public class DescribePriceRequest extends TeaModel {
     public Boolean forceUpgrade;
 
     /**
-     * <p>The instance type.****</p>
+     * <p>The instance type.</p>
      * <br>
      * <p>**To view the instance type, perform the following steps:**</p>
      * <br>

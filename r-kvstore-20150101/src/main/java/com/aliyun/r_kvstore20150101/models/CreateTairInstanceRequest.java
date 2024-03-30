@@ -66,7 +66,7 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>集群备份集ID。</p>
+     * <p>The backup set ID.</p>
      */
     @NameInMap("ClusterBackupId")
     public String clusterBackupId;
