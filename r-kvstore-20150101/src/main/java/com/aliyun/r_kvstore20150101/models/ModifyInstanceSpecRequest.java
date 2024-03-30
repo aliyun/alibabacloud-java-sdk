@@ -78,6 +78,9 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("MajorVersion")
     public String majorVersion;
 
+    @NameInMap("NodeType")
+    public String nodeType;
+
     /**
      * <p>The change type. This parameter is required when you change the configurations of a subscription instance. Default value: UPGRADE. Valid values:</p>
      * <br>
@@ -97,7 +100,10 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of read-only nodes. This parameter is available only for read/write splitting instances that use cloud disks. Valid values: 1 to 5.</p>
+     * <p>The number of read replicas. Valid values: 0 to 5. This parameter applies only to the following scenarios:</p>
+     * <br>
+     * <p>*   If the instance is a standard instance that uses cloud disks, you can set this parameter to a value greater than 0 to enable the read/write splitting architecture.</p>
+     * <p>*   If the instance is a read/write splitting instance that uses cloud disks, you can use this parameter to customize the number of read replicas. You can also set this parameter to 0 to disable the read/write splitting architecture and switch the instance to the standard architecture.</p>
      */
     @NameInMap("ReadOnlyCount")
     public Integer readOnlyCount;
@@ -215,6 +221,14 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     }
     public String getMajorVersion() {
         return this.majorVersion;
+    }
+
+    public ModifyInstanceSpecRequest setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public String getNodeType() {
+        return this.nodeType;
     }
 
     public ModifyInstanceSpecRequest setOrderType(String orderType) {

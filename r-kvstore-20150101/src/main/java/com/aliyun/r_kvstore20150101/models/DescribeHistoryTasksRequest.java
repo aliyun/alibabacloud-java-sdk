@@ -11,13 +11,13 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     public Integer fromExecTime;
 
     /**
-     * <p>The beginning of the time range to query. Only tasks that have a start time later than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The start time can be up to 30 days earlier than the current time. If you set this parameter to a time more than 30 days earlier than the current time, this time is automatically converted to a time that is exactly 30 days earlier than the current time.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The start time can be up to 30 days earlier than the current time.</p>
      */
     @NameInMap("FromStartTime")
     public String fromStartTime;
 
     /**
-     * <p>The instance ID. Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs. This parameter is empty by default, which indicates that you can specify an unlimited number of instance IDs.</p>
+     * <p>The instance ID. This parameter is empty by default, which indicates that you can specify an unlimited number of instance IDs. Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -41,7 +41,7 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the pending task. You can call the [DescribeRegions](https://next.api.aliyun.com/document/R-kvstore/2015-01-01/DescribeRegions) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -58,27 +58,37 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     /**
      * <p>The task status. Valid values:</p>
      * <br>
-     * <p>*   Scheduled</p>
-     * <p>*   Running</p>
-     * <p>*   Succeed</p>
-     * <p>*   Failed</p>
-     * <p>*   Cancelling</p>
-     * <p>*   Canceled</p>
-     * <p>*   Waiting</p>
+     * <p>*   **Scheduled**</p>
+     * <p>*   **Running**</p>
+     * <p>*   **Succeed**</p>
+     * <p>*   **Failed**</p>
+     * <p>*   **Cancelling**</p>
+     * <p>*   **Canceled**</p>
+     * <p>*   **Waiting**</p>
      * <br>
-     * <p>Separate multiple states with commas (,). This parameter is empty by default, which indicates that tasks in all states are queried.</p>
+     * <p>>  This parameter is empty by default, which indicates that tasks in all states are queried. Separate multiple states with commas (,).</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The task ID. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs. This parameter is empty by default, which indicates that you can specify an unlimited number of task IDs.</p>
+     * <p>The task ID. This parameter is empty by default, which indicates that you can specify an unlimited number of task IDs. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs.</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
-     * <p>The task type. Separate multiple task types with commas (,). You can specify up to 30 task types. This parameter is empty by default, which indicates that you can specify an unlimited number of task types.</p>
+     * <p>The task type. This parameter is empty by default, which indicates that you can specify an unlimited number of task types.</p>
+     * <br>
+     * <p>*   **ModifyInsSpec**</p>
+     * <p>*   **DeleteInsNode**</p>
+     * <p>*   **AddInsNode**</p>
+     * <p>*   **HaSwitch**</p>
+     * <p>*   **RestartIns**</p>
+     * <p>*   **CreateIns**</p>
+     * <p>*   **ModifyInsConfig**</p>
+     * <br>
+     * <p>>  Separate multiple task types with commas (,).</p>
      */
     @NameInMap("TaskType")
     public String taskType;
@@ -90,7 +100,7 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     public Integer toExecTime;
 
     /**
-     * <p>The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried.</p>
      */
     @NameInMap("ToStartTime")
     public String toStartTime;

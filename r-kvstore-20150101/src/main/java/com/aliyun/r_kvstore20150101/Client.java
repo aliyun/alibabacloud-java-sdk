@@ -745,8 +745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
       * You can call this operation to create an ApsaraDB for Redis instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the [CreateTairInstance](~~208271~~) operation.
-      * **
-      * **Description** For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
+      * > For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
       *
       * @param request CreateInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -951,8 +950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
       * You can call this operation to create an ApsaraDB for Redis instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the [CreateTairInstance](~~208271~~) operation.
-      * **
-      * **Description** For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
+      * > For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
       *
       * @param request CreateInstanceRequest
       * @return CreateInstanceResponse
@@ -1063,7 +1061,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * For information about instance selection, see [Select an ApsaraDB for Redis instance](~~223808~~).
       * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-      * > 
       * *   For information about how to create a Tair instance in the Tair console, see [Create a Tair instance](~~443863~~).
       * *   If you want to create other types of instances, such as Community Edition instances or [Tair DRAM-based](~~126164~~) instances, you can call the [CreateInstance](~~60873~~) operation.
       *
@@ -1258,7 +1255,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * For information about instance selection, see [Select an ApsaraDB for Redis instance](~~223808~~).
       * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-      * > 
       * *   For information about how to create a Tair instance in the Tair console, see [Create a Tair instance](~~443863~~).
       * *   If you want to create other types of instances, such as Community Edition instances or [Tair DRAM-based](~~126164~~) instances, you can call the [CreateInstance](~~60873~~) operation.
       *
@@ -6638,6 +6634,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.majorVersion)) {
             query.put("MajorVersion", request.majorVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
+            query.put("NodeType", request.nodeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {

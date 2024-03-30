@@ -4,15 +4,31 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterBackupListResponseBody extends TeaModel {
+    /**
+     * <p>The backup sets of the instance. An instance backup contains the backup sets of all nodes in the instance.</p>
+     */
     @NameInMap("ClusterBackups")
     public java.util.List<DescribeClusterBackupListResponseBodyClusterBackups> clusterBackups;
 
+    /**
+     * <p>This parameter does not take effect. Ignore this parameter.</p>
+     */
     @NameInMap("FreeSize")
     public Long freeSize;
 
+    /**
+     * <p>The size of the full backup file of the instance. Unit: bytes. Full backups originate from scheduled backups, manual backups, and backups generated during cache analysis.</p>
+     * <br>
+     * <p>>  The value of this parameter is independent of the number and size of returned backup sets. Instead, it represents the size of all valid full backups of the instance.</p>
+     */
     @NameInMap("FullStorageSize")
     public Long fullStorageSize;
 
+    /**
+     * <p>The size of the log backup file of the instance. Unit: bytes. This parameter is valid only when flashback is enabled.</p>
+     * <br>
+     * <p>>  The value of this parameter is independent of the number and size of returned backup sets. Instead, it represents the size of all valid log backups of the instance.</p>
+     */
     @NameInMap("LogStorageSize")
     public Long logStorageSize;
 
@@ -98,6 +114,9 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterBackupListResponseBodyClusterBackupsBackupsExtraInfo extends TeaModel {
+        /**
+         * <p>The engine version.</p>
+         */
         @NameInMap("CustinsDbVersion")
         public String custinsDbVersion;
 
@@ -117,39 +136,83 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterBackupListResponseBodyClusterBackupsBackups extends TeaModel {
+        /**
+         * <p>The public download URL of the backup file.</p>
+         */
         @NameInMap("BackupDownloadURL")
         public String backupDownloadURL;
 
+        /**
+         * <p>The end time of the backup. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
+        /**
+         * <p>The ID of the backup file.</p>
+         */
         @NameInMap("BackupId")
         public String backupId;
 
+        /**
+         * <p>The internal download URL of the backup file.</p>
+         * <br>
+         * <p>>  You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance must belong to the same classic network or reside in the same virtual private cloud (VPC) as the ApsaraDB for Redis instance.</p>
+         */
         @NameInMap("BackupIntranetDownloadURL")
         public String backupIntranetDownloadURL;
 
+        /**
+         * <p>The backup name.</p>
+         */
         @NameInMap("BackupName")
         public String backupName;
 
+        /**
+         * <p>The size of the backup file. Unit: bytes.</p>
+         */
         @NameInMap("BackupSize")
         public String backupSize;
 
+        /**
+         * <p>The start time of the backup. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
+        /**
+         * <p>The status of the backup. Valid values:</p>
+         * <br>
+         * <p>*   **OK**</p>
+         * <p>*   **ERROR**</p>
+         */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
+        /**
+         * <p>The database engine. The return value is **redis**.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The additional information.</p>
+         */
         @NameInMap("ExtraInfo")
         public DescribeClusterBackupListResponseBodyClusterBackupsBackupsExtraInfo extraInfo;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>Indicates whether the backup set is available. Valid values:</p>
+         * <br>
+         * <p>*   **0**: unavailable</p>
+         * <p>*   **1**: available</p>
+         */
         @NameInMap("IsAvail")
         public String isAvail;
 
@@ -257,33 +320,67 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterBackupListResponseBodyClusterBackups extends TeaModel {
+        /**
+         * <p>The backup sets of all nodes in the instance.</p>
+         */
         @NameInMap("Backups")
         public java.util.List<DescribeClusterBackupListResponseBodyClusterBackupsBackups> backups;
 
+        /**
+         * <p>The end time of the backup.</p>
+         */
         @NameInMap("ClusterBackupEndTime")
         public String clusterBackupEndTime;
 
+        /**
+         * <p>The ID of the backup set.</p>
+         */
         @NameInMap("ClusterBackupId")
         public String clusterBackupId;
 
+        /**
+         * <p>The backup mode.</p>
+         */
         @NameInMap("ClusterBackupMode")
         public String clusterBackupMode;
 
+        /**
+         * <p>The size of the backup set.</p>
+         */
         @NameInMap("ClusterBackupSize")
         public String clusterBackupSize;
 
+        /**
+         * <p>The start time of the backup.</p>
+         */
         @NameInMap("ClusterBackupStartTime")
         public String clusterBackupStartTime;
 
+        /**
+         * <p>The status of the backup set.</p>
+         * <br>
+         * <p>*   OK</p>
+         * <p>*   RUNNING</p>
+         * <p>*   Failed</p>
+         */
         @NameInMap("ClusterBackupStatus")
         public String clusterBackupStatus;
 
+        /**
+         * <p>Indicates whether the backup set is valid. A value of 0 indicates that node-level backups failed or have not been completed.</p>
+         */
         @NameInMap("IsAvail")
         public Integer isAvail;
 
+        /**
+         * <p>The backup progress. The system displays only the progress of running backup tasks.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The memory size of a single node during a full backup. Unit: MB.</p>
+         */
         @NameInMap("ShardClassMemory")
         public Integer shardClassMemory;
 
