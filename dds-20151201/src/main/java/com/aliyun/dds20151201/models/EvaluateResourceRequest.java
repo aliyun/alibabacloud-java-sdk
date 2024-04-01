@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EvaluateResourceRequest extends TeaModel {
     /**
-     * <p>The stype of the instance.</p>
+     * <p>The type of the instance.</p>
      * <br>
      * <p>> This parameter is required when you check whether resources are sufficient for creating or upgrading a replica set instance. For more information about instance types, see [Instance types](~~57141~~).</p>
      */
@@ -27,11 +27,21 @@ public class EvaluateResourceRequest extends TeaModel {
     /**
      * <p>The version of the database engine. Valid values:</p>
      * <br>
+     * <p>*   **7.0**</p>
+     * <p>*   **6.0**</p>
      * <p>*   **5.0**</p>
      * <p>*   **4.4**</p>
      * <p>*   **4.2**</p>
      * <p>*   **4.0**</p>
-     * <p>*   **3.4**</p>
+     * <br>
+     * <p><!----></p>
+     * <br>
+     * <p>*   3.4</p>
+     * <p>*   4.0</p>
+     * <p>*   4.2</p>
+     * <p>*   4.4</p>
+     * <p>*   5.0</p>
+     * <p>*   6.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;

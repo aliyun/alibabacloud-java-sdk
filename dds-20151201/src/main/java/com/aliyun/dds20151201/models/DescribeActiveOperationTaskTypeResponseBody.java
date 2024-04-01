@@ -47,8 +47,8 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
         /**
          * <p>The type of the task. Valid values:</p>
          * <br>
-         * <p>*   \*\*rds_apsaradb_transfer\*\*: data migration</p>
-         * <p>*   \*\*rds_apsaradb_upgrade\*\*: minor version update</p>
+         * <p>*   **rds_apsaradb_transfer**: data migration</p>
+         * <p>*   **rds_apsaradb_upgrade**: minor version update</p>
          */
         @NameInMap("TaskType")
         public String taskType;

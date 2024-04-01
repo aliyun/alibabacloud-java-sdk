@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateNodeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the node.</p>
+     * <p>The node ID.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
