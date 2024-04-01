@@ -16,17 +16,32 @@ public class InitiateAttendedTransferRequest extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    @NameInMap("QueuingOverflowThreshold")
+    public Long queuingOverflowThreshold;
+
+    @NameInMap("QueuingTimeoutSeconds")
+    public Long queuingTimeoutSeconds;
+
+    @NameInMap("RoutingType")
+    public String routingType;
+
     @NameInMap("StrategyName")
     public String strategyName;
 
     @NameInMap("StrategyParams")
     public String strategyParams;
 
+    @NameInMap("Tags")
+    public String tags;
+
     @NameInMap("TimeoutSeconds")
     public Integer timeoutSeconds;
 
     @NameInMap("Transferee")
     public String transferee;
+
+    @NameInMap("TransfereeType")
+    public String transfereeType;
 
     @NameInMap("Transferor")
     public String transferor;
@@ -71,6 +86,30 @@ public class InitiateAttendedTransferRequest extends TeaModel {
         return this.jobId;
     }
 
+    public InitiateAttendedTransferRequest setQueuingOverflowThreshold(Long queuingOverflowThreshold) {
+        this.queuingOverflowThreshold = queuingOverflowThreshold;
+        return this;
+    }
+    public Long getQueuingOverflowThreshold() {
+        return this.queuingOverflowThreshold;
+    }
+
+    public InitiateAttendedTransferRequest setQueuingTimeoutSeconds(Long queuingTimeoutSeconds) {
+        this.queuingTimeoutSeconds = queuingTimeoutSeconds;
+        return this;
+    }
+    public Long getQueuingTimeoutSeconds() {
+        return this.queuingTimeoutSeconds;
+    }
+
+    public InitiateAttendedTransferRequest setRoutingType(String routingType) {
+        this.routingType = routingType;
+        return this;
+    }
+    public String getRoutingType() {
+        return this.routingType;
+    }
+
     public InitiateAttendedTransferRequest setStrategyName(String strategyName) {
         this.strategyName = strategyName;
         return this;
@@ -87,6 +126,14 @@ public class InitiateAttendedTransferRequest extends TeaModel {
         return this.strategyParams;
     }
 
+    public InitiateAttendedTransferRequest setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String getTags() {
+        return this.tags;
+    }
+
     public InitiateAttendedTransferRequest setTimeoutSeconds(Integer timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
         return this;
@@ -101,6 +148,14 @@ public class InitiateAttendedTransferRequest extends TeaModel {
     }
     public String getTransferee() {
         return this.transferee;
+    }
+
+    public InitiateAttendedTransferRequest setTransfereeType(String transfereeType) {
+        this.transfereeType = transfereeType;
+        return this;
+    }
+    public String getTransfereeType() {
+        return this.transfereeType;
     }
 
     public InitiateAttendedTransferRequest setTransferor(String transferor) {

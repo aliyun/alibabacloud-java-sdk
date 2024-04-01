@@ -615,12 +615,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("JobId", request.jobId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.queuingOverflowThreshold)) {
+            query.put("QueuingOverflowThreshold", request.queuingOverflowThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queuingTimeoutSeconds)) {
+            query.put("QueuingTimeoutSeconds", request.queuingTimeoutSeconds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routingType)) {
+            query.put("RoutingType", request.routingType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.strategyName)) {
             query.put("StrategyName", request.strategyName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.strategyParams)) {
             query.put("StrategyParams", request.strategyParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.timeoutSeconds)) {
@@ -2898,6 +2914,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("JobId", request.jobId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.queuingOverflowThreshold)) {
+            query.put("QueuingOverflowThreshold", request.queuingOverflowThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queuingTimeoutSeconds)) {
+            query.put("QueuingTimeoutSeconds", request.queuingTimeoutSeconds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routingType)) {
+            query.put("RoutingType", request.routingType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.strategyName)) {
             query.put("StrategyName", request.strategyName);
         }
@@ -2906,12 +2934,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StrategyParams", request.strategyParams);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.timeoutSeconds)) {
             query.put("TimeoutSeconds", request.timeoutSeconds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.transferee)) {
             query.put("Transferee", request.transferee);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transfereeType)) {
+            query.put("TransfereeType", request.transfereeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.transferor)) {
@@ -3316,6 +3352,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAudioFilesResponse listAudioFiles(ListAudioFilesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAudioFilesWithOptions(request, runtime);
+    }
+
+    public ListBlacklistCallTaggingsResponse listBlacklistCallTaggingsWithOptions(ListBlacklistCallTaggingsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.numberList)) {
+            query.put("NumberList", request.numberList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListBlacklistCallTaggings"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBlacklistCallTaggingsResponse());
+    }
+
+    public ListBlacklistCallTaggingsResponse listBlacklistCallTaggings(ListBlacklistCallTaggingsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listBlacklistCallTaggingsWithOptions(request, runtime);
     }
 
     public ListBriefSkillGroupsResponse listBriefSkillGroupsWithOptions(ListBriefSkillGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

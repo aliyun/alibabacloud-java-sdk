@@ -19,11 +19,23 @@ public class BlindTransferRequest extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    @NameInMap("QueuingOverflowThreshold")
+    public Long queuingOverflowThreshold;
+
+    @NameInMap("QueuingTimeoutSeconds")
+    public Long queuingTimeoutSeconds;
+
+    @NameInMap("RoutingType")
+    public String routingType;
+
     @NameInMap("StrategyName")
     public String strategyName;
 
     @NameInMap("StrategyParams")
     public String strategyParams;
+
+    @NameInMap("Tags")
+    public String tags;
 
     @NameInMap("TimeoutSeconds")
     public Integer timeoutSeconds;
@@ -85,6 +97,30 @@ public class BlindTransferRequest extends TeaModel {
         return this.jobId;
     }
 
+    public BlindTransferRequest setQueuingOverflowThreshold(Long queuingOverflowThreshold) {
+        this.queuingOverflowThreshold = queuingOverflowThreshold;
+        return this;
+    }
+    public Long getQueuingOverflowThreshold() {
+        return this.queuingOverflowThreshold;
+    }
+
+    public BlindTransferRequest setQueuingTimeoutSeconds(Long queuingTimeoutSeconds) {
+        this.queuingTimeoutSeconds = queuingTimeoutSeconds;
+        return this;
+    }
+    public Long getQueuingTimeoutSeconds() {
+        return this.queuingTimeoutSeconds;
+    }
+
+    public BlindTransferRequest setRoutingType(String routingType) {
+        this.routingType = routingType;
+        return this;
+    }
+    public String getRoutingType() {
+        return this.routingType;
+    }
+
     public BlindTransferRequest setStrategyName(String strategyName) {
         this.strategyName = strategyName;
         return this;
@@ -99,6 +135,14 @@ public class BlindTransferRequest extends TeaModel {
     }
     public String getStrategyParams() {
         return this.strategyParams;
+    }
+
+    public BlindTransferRequest setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String getTags() {
+        return this.tags;
     }
 
     public BlindTransferRequest setTimeoutSeconds(Integer timeoutSeconds) {
