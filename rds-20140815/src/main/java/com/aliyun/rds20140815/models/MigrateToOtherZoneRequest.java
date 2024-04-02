@@ -51,7 +51,7 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>A reserved parameter.</p>
      */
     @NameInMap("IoAccelerationEnabled")
     public String ioAccelerationEnabled;

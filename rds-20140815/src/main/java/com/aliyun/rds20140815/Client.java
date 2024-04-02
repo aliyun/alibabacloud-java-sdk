@@ -15017,98 +15017,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Supported database engine
-      * *   SQL Server
-      * ### [](#)Description
-      * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
-      * ### [](#)Precautions
-      * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-      * *   Before you call this operation, **make sure that the following conditions are met**:
-      *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-      *     *   The source and destination instances must be created by using the same user.
-      *     *   The instance is in the Running state.
-      *     *   The source and destination databases must be in the Running state.
-      *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
-      * > *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
-      * > *   You can migrate the data of multiple databases at a time.
-      *
-      * @param request ImportDatabaseBetweenInstancesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ImportDatabaseBetweenInstancesResponse
-     */
-    public ImportDatabaseBetweenInstancesResponse importDatabaseBetweenInstancesWithOptions(ImportDatabaseBetweenInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.DBInfo)) {
-            query.put("DBInfo", request.DBInfo);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
-            query.put("DBInstanceId", request.DBInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            query.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceDBInstanceId)) {
-            query.put("SourceDBInstanceId", request.sourceDBInstanceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ImportDatabaseBetweenInstances"),
-            new TeaPair("version", "2014-08-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ImportDatabaseBetweenInstancesResponse());
-    }
-
-    /**
-      * ### [](#)Supported database engine
-      * *   SQL Server
-      * ### [](#)Description
-      * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
-      * ### [](#)Precautions
-      * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-      * *   Before you call this operation, **make sure that the following conditions are met**:
-      *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-      *     *   The source and destination instances must be created by using the same user.
-      *     *   The instance is in the Running state.
-      *     *   The source and destination databases must be in the Running state.
-      *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
-      * > *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
-      * > *   You can migrate the data of multiple databases at a time.
-      *
-      * @param request ImportDatabaseBetweenInstancesRequest
-      * @return ImportDatabaseBetweenInstancesResponse
-     */
-    public ImportDatabaseBetweenInstancesResponse importDatabaseBetweenInstances(ImportDatabaseBetweenInstancesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.importDatabaseBetweenInstancesWithOptions(request, runtime);
-    }
-
-    /**
       * ### [](#)Supported database engines
       * *   MySQL
       * ### [](#)Description
@@ -16363,7 +16271,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > This operation is phased out.
+      * ### [](#)Supported database engines
+      * RDS SQL Server
+      * ### [](#)References
+      * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+      * [Change the character set collation and the time zone of system databases](~~95700~~)
       *
       * @param request ModifyCollationTimeZoneRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -16414,7 +16326,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > This operation is phased out.
+      * ### [](#)Supported database engines
+      * RDS SQL Server
+      * ### [](#)References
+      * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+      * [Change the character set collation and the time zone of system databases](~~95700~~)
       *
       * @param request ModifyCollationTimeZoneRequest
       * @return ModifyCollationTimeZoneResponse

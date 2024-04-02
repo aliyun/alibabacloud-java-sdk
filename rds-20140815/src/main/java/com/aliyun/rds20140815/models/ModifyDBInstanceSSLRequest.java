@@ -8,7 +8,7 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
      * <p>The method that is used to verify the identities of clients. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:</p>
      * <br>
      * <p>*   **cert**</p>
-     * <p>*   **perfer**</p>
+     * <p>*   **prefer**</p>
      * <p>*   **verify-ca**</p>
      * <p>*   **verify-full** (supported only when the instance runs PostgreSQL 12 or later)</p>
      */
@@ -24,6 +24,12 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     @NameInMap("CAType")
     public String CAType;
 
+    /**
+     * <p>User-defined certificate. The custom certificate is in pfx format.</p>
+     * <br>
+     * <p>- Public address: `oss-<region ID>.aliyuncs.com:<Bucket name >:< certificate file name (with file suffix)>`</p>
+     * <p>- Intranet address: `oss-<region ID>-internal.aliyuncs.com:<Bucket name >:< certificate file name (with file suffix)>`</p>
+     */
     @NameInMap("Certificate")
     public String certificate;
 
@@ -84,14 +90,17 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The password of the certificate.</p>
+     */
     @NameInMap("PassWord")
     public String passWord;
 
     /**
-     * <p>The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:</p>
+     * <p>The method that is used to verify the replication permissions. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:</p>
      * <br>
      * <p>*   **cert**</p>
-     * <p>*   **perfer**</p>
+     * <p>*   **prefer**</p>
      * <p>*   **verify-ca**</p>
      * <p>*   **verify-full** (supported only when the instance runs PostgreSQL 12 or later)</p>
      */

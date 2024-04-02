@@ -318,12 +318,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String instanceNetworkType;
 
     /**
-     * <p>Specifies whether to enable the I/O acceleration feature. Valid values:</p>
-     * <br>
-     * <p>*   1: The feature is enabled.</p>
-     * <p>*   0: The feature is disabled.</p>
-     * <br>
-     * <p>>  For more information about the I/O acceleration feature of general enhanced SSDs (ESSDs), see [Introduction](~~2527067~~).</p>
+     * <p>A reserved parameter.</p>
      */
     @NameInMap("IoAccelerationEnabled")
     public String ioAccelerationEnabled;

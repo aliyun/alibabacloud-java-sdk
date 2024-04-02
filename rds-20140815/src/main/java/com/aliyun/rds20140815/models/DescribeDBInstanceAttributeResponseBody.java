@@ -482,13 +482,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig babelfishConfig;
 
         /**
-         * <p>An invalid parameter. You can ignore this parameter.</p>
+         * <p>A deprecated parameter. You do not need to specify this parameter.</p>
          */
         @NameInMap("BpeEnabled")
         public String bpeEnabled;
 
         /**
-         * <p>An invalid parameter. You can ignore this parameter.</p>
+         * <p>An invalid parameter. You do not need to specify this parameter.</p>
          */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
@@ -507,7 +507,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>A reserved parameter. You do not need to specify this parameter.</p>
          */
         @NameInMap("ColdDataEnabled")
         public Boolean coldDataEnabled;
@@ -828,6 +828,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <br>
          * <p>*   **Postpaid**: pay-as-you-go</p>
          * <p>*   **Prepaid**: subscription</p>
+         * <p>*   **SERVERLESS**</p>
          */
         @NameInMap("PayType")
         public String payType;
