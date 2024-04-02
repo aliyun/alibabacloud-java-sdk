@@ -109,6 +109,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("EnableIncrementDataBackup")
     public Boolean enableIncrementDataBackup;
 
+    /**
+     * <p>Whether PITR recovery is enabled at any point in time (the upgraded version of the original log backup). Return value:</p>
+     * <br>
+     * <p>- True: Yes</p>
+     * <p>- False: no</p>
+     * <br>
+     * <p>> Only MySQL instances return this parameter.</p>
+     */
     @NameInMap("EnablePitrProtection")
     public Boolean enablePitrProtection;
 
@@ -156,6 +164,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("LogBackupRetentionPeriod")
     public Integer logBackupRetentionPeriod;
 
+    /**
+     * <p>The number of days to restore at any point in time.</p>
+     */
     @NameInMap("PitrRetentionPeriod")
     public Integer pitrRetentionPeriod;
 

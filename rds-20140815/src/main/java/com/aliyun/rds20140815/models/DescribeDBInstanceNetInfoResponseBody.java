@@ -88,7 +88,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
-         * <p>The role of the instance. Valid values:</p>
+         * <p>The type of the instance. Valid values:</p>
          * <br>
          * <p>*   **Master**: primary instance</p>
          * <p>*   **Readonly**: read-only instance</p>
@@ -182,7 +182,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String securityIPGroupName;
 
         /**
-         * <p>The IP addresses that is contained in the IP address whitelist.</p>
+         * <p>The IP address in the whitelist.</p>
          */
         @NameInMap("SecurityIPs")
         public String securityIPs;
@@ -233,22 +233,22 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         /**
          * <p>The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.</p>
          * <br>
-         * <p>> This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).</p>
+         * <p>>  This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).</p>
          */
         @NameInMap("BabelfishPort")
         public String babelfishPort;
 
         /**
-         * <p>The endpoints of the instance.</p>
+         * <p>The endpoint of the instance.</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
 
         /**
-         * <p>The types of the endpoints. Valid values:</p>
+         * <p>The type of the endpoint. Valid values:</p>
          * <br>
-         * <p>*   **Normal**: regular endpoints</p>
-         * <p>*   **ReadWriteSplitting**: read/write splitting endpoints</p>
+         * <p>*   **Normal**: a regular endpoint</p>
+         * <p>*   **ReadWriteSplitting**: a read/write splitting endpoint</p>
          */
         @NameInMap("ConnectionStringType")
         public String connectionStringType;
@@ -256,7 +256,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         /**
          * <p>The information about the instance weight.</p>
          * <br>
-         * <p>> This parameter is returned only for instances that have read/write splitting endpoints.</p>
+         * <p>>  This parameter is returned only when the read/write splitting feature is enabled for the instance.</p>
          */
         @NameInMap("DBInstanceWeights")
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeights DBInstanceWeights;
@@ -264,8 +264,8 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         /**
          * <p>The policy that is used to assign read weights. This parameter is returned only for a read/write splitting endpoint. Valid values:</p>
          * <br>
-         * <p>*   **Standard**: The system automatically assigns read weights to the instance and its read-only instances based on the specifications of these instances.</p>
-         * <p>*   **Custom**: You must manually assign read weights to the instance and its read-only instances.</p>
+         * <p>*   **Standard**: The system automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.</p>
+         * <p>*   **Custom**: You must manually allocate read weights to the instance and its read-only instances.</p>
          */
         @NameInMap("DistributionType")
         public String distributionType;
@@ -287,13 +287,13 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
          * <br>
          * <p>*   Valid values when the instance resides in the classic network:</p>
          * <br>
-         * <p>    *   **Inner:**: internal network</p>
-         * <p>    *   **Public**: Internet</p>
+         * <p>    *   **Inner**</p>
+         * <p>    *   **Public**</p>
          * <br>
          * <p>*   Valid values when the instance resides in a virtual private cloud (VPC):</p>
          * <br>
-         * <p>    *   **Private**: internal network</p>
-         * <p>    *   **Public**: Internet</p>
+         * <p>    *   **Private**</p>
+         * <p>    *   **Public**</p>
          */
         @NameInMap("IPType")
         public String IPType;
@@ -301,7 +301,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         /**
          * <p>The latency threshold. This parameter is returned only for a read/write splitting endpoint. Unit: seconds.</p>
          * <br>
-         * <p>> If the latency on a read-only instance exceeds the specified threshold, the system no longer forwards read requests to the read-only instance.</p>
+         * <p>>  If the latency on a read-only instance exceeds the specified threshold, ApsaraDB RDS no longer forwards read requests to the read-only instance.</p>
          */
         @NameInMap("MaxDelayTime")
         public String maxDelayTime;
@@ -309,7 +309,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         /**
          * <p>The PgBouncer port.</p>
          * <br>
-         * <p>> This parameter is returned only when PgBouncer is enabled for the instance that runs PostgreSQL.</p>
+         * <p>>  This parameter is returned only when PgBouncer is enabled for the instance that runs PostgreSQL.</p>
          */
         @NameInMap("PGBouncerPort")
         public String PGBouncerPort;
@@ -321,7 +321,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The details of the IP address whitelist.</p>
+         * <p>The IP addresses in the whitelist for the instance.</p>
          */
         @NameInMap("SecurityIPGroups")
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroups securityIPGroups;
@@ -329,16 +329,16 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the IP version can be updated. Valid values:</p>
          * <br>
-         * <p>*   **Enable**: The IP version can be updated.</p>
-         * <p>*   **Disabled**: The IP version cannot be updated.</p>
+         * <p>*   **Enable**</p>
+         * <p>*   **Disabled**</p>
          * <br>
-         * <p>> The IP version can be updated from IPv4 to IPv6.</p>
+         * <p>>  The IP version can be updated from IPv4 to IPv6.</p>
          */
         @NameInMap("Upgradeable")
         public String upgradeable;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The VPC ID of the instance.</p>
          */
         @NameInMap("VPCId")
         public String VPCId;

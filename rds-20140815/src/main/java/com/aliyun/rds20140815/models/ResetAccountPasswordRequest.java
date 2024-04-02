@@ -13,12 +13,9 @@ public class ResetAccountPasswordRequest extends TeaModel {
     /**
      * <p>The new password.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The value must be 8 to 32 characters in length.</p>
-     * <br>
-     * <p>*   The value must contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.</p>
-     * <p>*   The following special characters are supported: ! @ # $ & % ^ \* ( ) \_ + - =</p>
+     * <p>> *   The value must be 8 to 32 characters in length.</p>
+     * <p>> *   The value must contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * <p>> *   The following special characters are supported: ! @ # $ & % ^ \* ( ) \_ + - =</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;

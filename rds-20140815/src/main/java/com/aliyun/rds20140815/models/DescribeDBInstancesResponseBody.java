@@ -169,6 +169,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("ColdDataEnabled")
         public Boolean coldDataEnabled;
 
@@ -199,6 +202,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("DBInstanceClass")
         public String DBInstanceClass;
 
+        @NameInMap("DBInstanceCpuCores")
+        public String DBInstanceCpuCores;
+
         /**
          * <p>The instance description.</p>
          */
@@ -210,6 +216,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
+
+        @NameInMap("DBInstanceMemory")
+        public String DBInstanceMemory;
 
         /**
          * <p>The type of the network connection to the instance. Valid values:</p>
@@ -365,6 +374,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceNetworkType")
         public String instanceNetworkType;
 
+        /**
+         * <p>Whether IO acceleration is enabled. The value has the following meanings:</p>
+         * <br>
+         * <p>- 1: enabled</p>
+         * <p>- 0: not enabled</p>
+         */
         @NameInMap("IoAccelerationEnabled")
         public String ioAccelerationEnabled;
 
@@ -560,6 +575,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return this.DBInstanceClass;
         }
 
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceCpuCores(String DBInstanceCpuCores) {
+            this.DBInstanceCpuCores = DBInstanceCpuCores;
+            return this;
+        }
+        public String getDBInstanceCpuCores() {
+            return this.DBInstanceCpuCores;
+        }
+
         public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceDescription(String DBInstanceDescription) {
             this.DBInstanceDescription = DBInstanceDescription;
             return this;
@@ -574,6 +597,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getDBInstanceId() {
             return this.DBInstanceId;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceMemory(String DBInstanceMemory) {
+            this.DBInstanceMemory = DBInstanceMemory;
+            return this;
+        }
+        public String getDBInstanceMemory() {
+            return this.DBInstanceMemory;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceNetType(String DBInstanceNetType) {
