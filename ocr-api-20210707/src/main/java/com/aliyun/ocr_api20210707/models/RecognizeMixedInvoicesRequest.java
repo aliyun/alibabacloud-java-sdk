@@ -4,6 +4,9 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeMixedInvoicesRequest extends TeaModel {
+    @NameInMap("MergePdfPages")
+    public Boolean mergePdfPages;
+
     @NameInMap("PageNo")
     public Integer pageNo;
 
@@ -16,6 +19,14 @@ public class RecognizeMixedInvoicesRequest extends TeaModel {
     public static RecognizeMixedInvoicesRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeMixedInvoicesRequest self = new RecognizeMixedInvoicesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RecognizeMixedInvoicesRequest setMergePdfPages(Boolean mergePdfPages) {
+        this.mergePdfPages = mergePdfPages;
+        return this;
+    }
+    public Boolean getMergePdfPages() {
+        return this.mergePdfPages;
     }
 
     public RecognizeMixedInvoicesRequest setPageNo(Integer pageNo) {
