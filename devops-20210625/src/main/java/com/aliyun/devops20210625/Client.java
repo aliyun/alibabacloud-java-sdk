@@ -5361,6 +5361,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("accessLevel", request.accessLevel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.accessToken)) {
+            query.put("accessToken", request.accessToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.minAccessLevel)) {
             query.put("minAccessLevel", request.minAccessLevel);
         }
