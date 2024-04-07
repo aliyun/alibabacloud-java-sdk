@@ -2152,8 +2152,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createOrUpdateSwimmingLaneWithOptions(request, runtime);
     }
 
-    public CreateOrUpdateSwimmingLaneGroupResponse createOrUpdateSwimmingLaneGroupWithOptions(CreateOrUpdateSwimmingLaneGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateOrUpdateSwimmingLaneGroupResponse createOrUpdateSwimmingLaneGroupWithOptions(CreateOrUpdateSwimmingLaneGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateOrUpdateSwimmingLaneGroupShrinkRequest request = new CreateOrUpdateSwimmingLaneGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.paths)) {
+            request.pathsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.paths, "Paths", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.routeIds)) {
+            request.routeIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.routeIds, "RouteIds", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
             query.put("AcceptLanguage", request.acceptLanguage);
@@ -2161,6 +2171,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.appIds)) {
             query.put("AppIds", request.appIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.canaryModel)) {
+            query.put("CanaryModel", request.canaryModel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dbGrayEnable)) {
@@ -2191,12 +2205,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Namespace", request.namespace);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.pathsShrink)) {
+            query.put("Paths", request.pathsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.recordCanaryDetail)) {
             query.put("RecordCanaryDetail", request.recordCanaryDetail);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
             query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeIdsShrink)) {
+            query.put("RouteIds", request.routeIdsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {

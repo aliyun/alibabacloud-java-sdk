@@ -252,9 +252,138 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
 
     }
 
+    public static class QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions extends TeaModel {
+        @NameInMap("Cond")
+        public String cond;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions build(java.util.Map<String, ?> map) throws Exception {
+            QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions self = new QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions setCond(String cond) {
+            this.cond = cond;
+            return this;
+        }
+        public String getCond() {
+            return this.cond;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute extends TeaModel {
+        @NameInMap("CanaryModel")
+        public Integer canaryModel;
+
+        @NameInMap("Conditions")
+        public java.util.List<QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions> conditions;
+
+        @NameInMap("GatewayId")
+        public Long gatewayId;
+
+        @NameInMap("GatewayUniqueId")
+        public String gatewayUniqueId;
+
+        @NameInMap("Percentage")
+        public Integer percentage;
+
+        @NameInMap("RouteIdList")
+        public java.util.List<Long> routeIdList;
+
+        public static QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute build(java.util.Map<String, ?> map) throws Exception {
+            QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute self = new QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute setCanaryModel(Integer canaryModel) {
+            this.canaryModel = canaryModel;
+            return this;
+        }
+        public Integer getCanaryModel() {
+            return this.canaryModel;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute setConditions(java.util.List<QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions> conditions) {
+            this.conditions = conditions;
+            return this;
+        }
+        public java.util.List<QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions> getConditions() {
+            return this.conditions;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute setGatewayId(Long gatewayId) {
+            this.gatewayId = gatewayId;
+            return this;
+        }
+        public Long getGatewayId() {
+            return this.gatewayId;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute setGatewayUniqueId(String gatewayUniqueId) {
+            this.gatewayUniqueId = gatewayUniqueId;
+            return this;
+        }
+        public String getGatewayUniqueId() {
+            return this.gatewayUniqueId;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute setPercentage(Integer percentage) {
+            this.percentage = percentage;
+            return this;
+        }
+        public Integer getPercentage() {
+            return this.percentage;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute setRouteIdList(java.util.List<Long> routeIdList) {
+            this.routeIdList = routeIdList;
+            return this;
+        }
+        public java.util.List<Long> getRouteIdList() {
+            return this.routeIdList;
+        }
+
+    }
+
     public static class QueryAllSwimmingLaneResponseBodyData extends TeaModel {
         @NameInMap("EntryRules")
         public java.util.List<QueryAllSwimmingLaneResponseBodyDataEntryRules> entryRules;
+
+        @NameInMap("GatewaySwimmingLaneRoute")
+        public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute gatewaySwimmingLaneRoute;
 
         @NameInMap("GroupId")
         public String groupId;
@@ -306,6 +435,14 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
         public java.util.List<QueryAllSwimmingLaneResponseBodyDataEntryRules> getEntryRules() {
             return this.entryRules;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyData setGatewaySwimmingLaneRoute(QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute gatewaySwimmingLaneRoute) {
+            this.gatewaySwimmingLaneRoute = gatewaySwimmingLaneRoute;
+            return this;
+        }
+        public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute getGatewaySwimmingLaneRoute() {
+            return this.gatewaySwimmingLaneRoute;
         }
 
         public QueryAllSwimmingLaneResponseBodyData setGroupId(String groupId) {

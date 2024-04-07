@@ -419,6 +419,9 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     }
 
     public static class CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson extends TeaModel {
+        @NameInMap("CanaryModel")
+        public Integer canaryModel;
+
         /**
          * <p>The matching conditions.</p>
          */
@@ -437,6 +440,9 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        @NameInMap("Percentage")
+        public Integer percentage;
+
         /**
          * <p>The route IDs.</p>
          */
@@ -446,6 +452,14 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         public static CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson build(java.util.Map<String, ?> map) throws Exception {
             CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson self = new CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson();
             return TeaModel.build(map, self);
+        }
+
+        public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson setCanaryModel(Integer canaryModel) {
+            this.canaryModel = canaryModel;
+            return this;
+        }
+        public Integer getCanaryModel() {
+            return this.canaryModel;
         }
 
         public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson setConditions(java.util.List<CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions> conditions) {
@@ -470,6 +484,14 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         }
         public String getGatewayUniqueId() {
             return this.gatewayUniqueId;
+        }
+
+        public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson setPercentage(Integer percentage) {
+            this.percentage = percentage;
+            return this;
+        }
+        public Integer getPercentage() {
+            return this.percentage;
         }
 
         public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson setRouteIdList(java.util.List<Long> routeIdList) {

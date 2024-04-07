@@ -131,6 +131,9 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("AppIds")
         public String appIds;
 
+        @NameInMap("CanaryModel")
+        public Integer canaryModel;
+
         @NameInMap("EntryApp")
         public String entryApp;
 
@@ -148,6 +151,9 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
 
         @NameInMap("Namespace")
         public String namespace;
+
+        @NameInMap("Paths")
+        public String paths;
 
         @NameInMap("RecordCanaryDetail")
         public Boolean recordCanaryDetail;
@@ -169,6 +175,14 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
         public String getAppIds() {
             return this.appIds;
+        }
+
+        public QueryAllSwimmingLaneGroupResponseBodyData setCanaryModel(Integer canaryModel) {
+            this.canaryModel = canaryModel;
+            return this;
+        }
+        public Integer getCanaryModel() {
+            return this.canaryModel;
         }
 
         public QueryAllSwimmingLaneGroupResponseBodyData setEntryApp(String entryApp) {
@@ -217,6 +231,14 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
         public String getNamespace() {
             return this.namespace;
+        }
+
+        public QueryAllSwimmingLaneGroupResponseBodyData setPaths(String paths) {
+            this.paths = paths;
+            return this;
+        }
+        public String getPaths() {
+            return this.paths;
         }
 
         public QueryAllSwimmingLaneGroupResponseBodyData setRecordCanaryDetail(Boolean recordCanaryDetail) {
