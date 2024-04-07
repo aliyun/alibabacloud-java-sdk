@@ -15,6 +15,8 @@ public class MigrateToOtherZoneRequest extends TeaModel {
      * <br>
      * <p>*   **Immediately**: immediately switched after the data is migrated.</p>
      * <p>*   **MaintainTime**: switched within the maintenance window.</p>
+     * <p>*   **0**: immediately switched after the data is migrated.</p>
+     * <p>*   **1**: switched within the maintenance window.</p>
      * <br>
      * <p>>  Default value: **Immediately**.</p>
      */
