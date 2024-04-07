@@ -7,6 +7,9 @@ public class ListOrganizationsRequest extends TeaModel {
     @NameInMap("accessLevel")
     public Integer accessLevel;
 
+    @NameInMap("accessToken")
+    public String accessToken;
+
     @NameInMap("minAccessLevel")
     public Integer minAccessLevel;
 
@@ -21,6 +24,14 @@ public class ListOrganizationsRequest extends TeaModel {
     }
     public Integer getAccessLevel() {
         return this.accessLevel;
+    }
+
+    public ListOrganizationsRequest setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
+    public String getAccessToken() {
+        return this.accessToken;
     }
 
     public ListOrganizationsRequest setMinAccessLevel(Integer minAccessLevel) {
