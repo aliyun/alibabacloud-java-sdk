@@ -3,15 +3,9 @@ package com.aliyun.waf_openapi20211001.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDomainDNSRecordRequest extends TeaModel {
+public class SyncProductInstanceRequest extends TeaModel {
     /**
-     * <p>The domain name whose DNS settings you want to check.</p>
-     */
-    @NameInMap("Domain")
-    public String domain;
-
-    /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <br>
      * <p>>  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.</p>
      */
@@ -33,20 +27,12 @@ public class DescribeDomainDNSRecordRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
-    public static DescribeDomainDNSRecordRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDomainDNSRecordRequest self = new DescribeDomainDNSRecordRequest();
+    public static SyncProductInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        SyncProductInstanceRequest self = new SyncProductInstanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainDNSRecordRequest setDomain(String domain) {
-        this.domain = domain;
-        return this;
-    }
-    public String getDomain() {
-        return this.domain;
-    }
-
-    public DescribeDomainDNSRecordRequest setInstanceId(String instanceId) {
+    public SyncProductInstanceRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -54,7 +40,7 @@ public class DescribeDomainDNSRecordRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeDomainDNSRecordRequest setRegionId(String regionId) {
+    public SyncProductInstanceRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -62,7 +48,7 @@ public class DescribeDomainDNSRecordRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeDomainDNSRecordRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+    public SyncProductInstanceRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
         this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
         return this;
     }
