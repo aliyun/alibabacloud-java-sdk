@@ -3,7 +3,7 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
+public class CreateOrUpdateSwimmingLaneGroupShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <br>
@@ -65,7 +65,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     public String namespace;
 
     @NameInMap("Paths")
-    public java.util.List<String> paths;
+    public String pathsShrink;
 
     /**
      * <p>Specifies whether to record request details.</p>
@@ -80,7 +80,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     public String region;
 
     @NameInMap("RouteIds")
-    public java.util.List<Long> routeIds;
+    public String routeIdsShrink;
 
     /**
      * <p>The status of the lane group. The value 0 specifies that the lane group is disabled. The value 1 specifies that the lane group is enabled.</p>
@@ -88,12 +88,12 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
-    public static CreateOrUpdateSwimmingLaneGroupRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateOrUpdateSwimmingLaneGroupRequest self = new CreateOrUpdateSwimmingLaneGroupRequest();
+    public static CreateOrUpdateSwimmingLaneGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateOrUpdateSwimmingLaneGroupShrinkRequest self = new CreateOrUpdateSwimmingLaneGroupShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateOrUpdateSwimmingLaneGroupRequest setAcceptLanguage(String acceptLanguage) {
+    public CreateOrUpdateSwimmingLaneGroupShrinkRequest setAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
     }
@@ -101,7 +101,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
-    public CreateOrUpdateSwimmingLaneGroupRequest setAppIds(String appIds) {
+    public CreateOrUpdateSwimmingLaneGroupShrinkRequest setAppIds(String appIds) {
         this.appIds = appIds;
         return this;
     }
@@ -109,7 +109,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
         return this.appIds;
     }
 
-    public CreateOrUpdateSwimmingLaneGroupRequest setCanaryModel(Integer canaryModel) {
+    public CreateOrUpdateSwimmingLaneGroupShrinkRequest setCanaryModel(Integer canaryModel) {
         this.canaryModel = canaryModel;
         return this;
     }
@@ -117,7 +117,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
         return this.canaryModel;
     }
 
-    public CreateOrUpdateSwimmingLaneGroupRequest setDbGrayEnable(Boolean dbGrayEnable) {
+    public CreateOrUpdateSwimmingLaneGroupShrinkRequest setDbGrayEnable(Boolean dbGrayEnable) {
         this.dbGrayEnable = dbGrayEnable;
         return this;
     }
@@ -125,7 +125,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
         return this.dbGrayEnable;
     }
 
-    public CreateOrUpdateSwimmingLaneGroupRequest setEntryApp(String entryApp) {
+    public CreateOrUpdateSwimmingLaneGroupShrinkRequest setEntryApp(String entryApp) {
         this.entryApp = entryApp;
         return this;
     }
@@ -133,7 +133,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
         return this.entryApp;
     }
 
-    public CreateOrUpdateSwimmingLaneGroupRequest setId(Long id) {
+    public CreateOrUpdateSwimmingLaneGroupShrinkRequest setId(Long id) {
         this.id = id;
         return this;
     }
@@ -141,7 +141,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
         return this.id;
     }
 
-    public CreateOrUpdateSwimmingLaneGroupRequest setMessageQueueFilterSide(String messageQueueFilterSide) {
+    public CreateOrUpdateSwimmingLaneGroupShrinkRequest setMessageQueueFilterSide(String messageQueueFilterSide) {
         this.messageQueueFilterSide = messageQueueFilterSide;
         return this;
     }
@@ -149,7 +149,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
         return this.messageQueueFilterSide;
     }
 
-    public CreateOrUpdateSwimmingLaneGroupRequest setMessageQueueGrayEnable(Boolean messageQueueGrayEnable) {
+    public CreateOrUpdateSwimmingLaneGroupShrinkRequest setMessageQueueGrayEnable(Boolean messageQueueGrayEnable) {
         this.messageQueueGrayEnable = messageQueueGrayEnable;
         return this;
     }
@@ -157,7 +157,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
         return this.messageQueueGrayEnable;
     }
 
-    public CreateOrUpdateSwimmingLaneGroupRequest setName(String name) {
+    public CreateOrUpdateSwimmingLaneGroupShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -165,7 +165,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateOrUpdateSwimmingLaneGroupRequest setNamespace(String namespace) {
+    public CreateOrUpdateSwimmingLaneGroupShrinkRequest setNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
@@ -173,15 +173,15 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
         return this.namespace;
     }
 
-    public CreateOrUpdateSwimmingLaneGroupRequest setPaths(java.util.List<String> paths) {
-        this.paths = paths;
+    public CreateOrUpdateSwimmingLaneGroupShrinkRequest setPathsShrink(String pathsShrink) {
+        this.pathsShrink = pathsShrink;
         return this;
     }
-    public java.util.List<String> getPaths() {
-        return this.paths;
+    public String getPathsShrink() {
+        return this.pathsShrink;
     }
 
-    public CreateOrUpdateSwimmingLaneGroupRequest setRecordCanaryDetail(Boolean recordCanaryDetail) {
+    public CreateOrUpdateSwimmingLaneGroupShrinkRequest setRecordCanaryDetail(Boolean recordCanaryDetail) {
         this.recordCanaryDetail = recordCanaryDetail;
         return this;
     }
@@ -189,7 +189,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
         return this.recordCanaryDetail;
     }
 
-    public CreateOrUpdateSwimmingLaneGroupRequest setRegion(String region) {
+    public CreateOrUpdateSwimmingLaneGroupShrinkRequest setRegion(String region) {
         this.region = region;
         return this;
     }
@@ -197,15 +197,15 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
         return this.region;
     }
 
-    public CreateOrUpdateSwimmingLaneGroupRequest setRouteIds(java.util.List<Long> routeIds) {
-        this.routeIds = routeIds;
+    public CreateOrUpdateSwimmingLaneGroupShrinkRequest setRouteIdsShrink(String routeIdsShrink) {
+        this.routeIdsShrink = routeIdsShrink;
         return this;
     }
-    public java.util.List<Long> getRouteIds() {
-        return this.routeIds;
+    public String getRouteIdsShrink() {
+        return this.routeIdsShrink;
     }
 
-    public CreateOrUpdateSwimmingLaneGroupRequest setStatus(Integer status) {
+    public CreateOrUpdateSwimmingLaneGroupShrinkRequest setStatus(Integer status) {
         this.status = status;
         return this;
     }

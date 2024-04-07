@@ -85,6 +85,9 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("AppIds")
         public String appIds;
 
+        @NameInMap("CanaryModel")
+        public Integer canaryModel;
+
         @NameInMap("DbGrayEnable")
         public String dbGrayEnable;
 
@@ -106,6 +109,9 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("Namespace")
         public String namespace;
 
+        @NameInMap("Paths")
+        public String paths;
+
         @NameInMap("RecordCanaryDetail")
         public Boolean recordCanaryDetail;
 
@@ -126,6 +132,14 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
         public String getAppIds() {
             return this.appIds;
+        }
+
+        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setCanaryModel(Integer canaryModel) {
+            this.canaryModel = canaryModel;
+            return this;
+        }
+        public Integer getCanaryModel() {
+            return this.canaryModel;
         }
 
         public CreateOrUpdateSwimmingLaneGroupResponseBodyData setDbGrayEnable(String dbGrayEnable) {
@@ -182,6 +196,14 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
         public String getNamespace() {
             return this.namespace;
+        }
+
+        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setPaths(String paths) {
+            this.paths = paths;
+            return this;
+        }
+        public String getPaths() {
+            return this.paths;
         }
 
         public CreateOrUpdateSwimmingLaneGroupResponseBodyData setRecordCanaryDetail(Boolean recordCanaryDetail) {
