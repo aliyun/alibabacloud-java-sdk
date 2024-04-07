@@ -109,6 +109,9 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         */
         @NameInMap("OwnerUserId")
         public String ownerUserId;
 
