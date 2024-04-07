@@ -14,7 +14,7 @@ public class CreateVscMountPointRequest extends TeaModel {
     public String inputRegionId;
 
     @NameInMap("InstanceIds")
-    public java.util.Map<String, ?> instanceIds;
+    public java.util.List<String> instanceIds;
 
     public static CreateVscMountPointRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVscMountPointRequest self = new CreateVscMountPointRequest();
@@ -45,11 +45,11 @@ public class CreateVscMountPointRequest extends TeaModel {
         return this.inputRegionId;
     }
 
-    public CreateVscMountPointRequest setInstanceIds(java.util.Map<String, ?> instanceIds) {
+    public CreateVscMountPointRequest setInstanceIds(java.util.List<String> instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
-    public java.util.Map<String, ?> getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 

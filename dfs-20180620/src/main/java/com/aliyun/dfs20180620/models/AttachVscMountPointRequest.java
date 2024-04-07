@@ -14,7 +14,7 @@ public class AttachVscMountPointRequest extends TeaModel {
     public String inputRegionId;
 
     @NameInMap("InstanceIds")
-    public java.util.Map<String, ?> instanceIds;
+    public java.util.List<String> instanceIds;
 
     @NameInMap("MountPointId")
     public String mountPointId;
@@ -54,11 +54,11 @@ public class AttachVscMountPointRequest extends TeaModel {
         return this.inputRegionId;
     }
 
-    public AttachVscMountPointRequest setInstanceIds(java.util.Map<String, ?> instanceIds) {
+    public AttachVscMountPointRequest setInstanceIds(java.util.List<String> instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
-    public java.util.Map<String, ?> getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
