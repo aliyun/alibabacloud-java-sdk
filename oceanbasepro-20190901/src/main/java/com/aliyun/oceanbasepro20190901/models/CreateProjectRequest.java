@@ -40,6 +40,9 @@ public class CreateProjectRequest extends TeaModel {
     @NameInMap("OssKey")
     public String ossKey;
 
+    @NameInMap("ReverseIncrTransferConfig")
+    public CreateProjectRequestReverseIncrTransferConfig reverseIncrTransferConfig;
+
     @NameInMap("SinkEndpointId")
     public String sinkEndpointId;
 
@@ -160,6 +163,14 @@ public class CreateProjectRequest extends TeaModel {
     }
     public String getOssKey() {
         return this.ossKey;
+    }
+
+    public CreateProjectRequest setReverseIncrTransferConfig(CreateProjectRequestReverseIncrTransferConfig reverseIncrTransferConfig) {
+        this.reverseIncrTransferConfig = reverseIncrTransferConfig;
+        return this;
+    }
+    public CreateProjectRequestReverseIncrTransferConfig getReverseIncrTransferConfig() {
+        return this.reverseIncrTransferConfig;
     }
 
     public CreateProjectRequest setSinkEndpointId(String sinkEndpointId) {
@@ -423,6 +434,18 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("NonePkUkTruncateDstTable")
         public Boolean nonePkUkTruncateDstTable;
 
+        @NameInMap("ReadWorkerNum")
+        public Integer readWorkerNum;
+
+        @NameInMap("ThrottleIOPS")
+        public Integer throttleIOPS;
+
+        @NameInMap("ThrottleRps")
+        public Integer throttleRps;
+
+        @NameInMap("WriteWorkerNum")
+        public Integer writeWorkerNum;
+
         public static CreateProjectRequestFullTransferConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateProjectRequestFullTransferConfig self = new CreateProjectRequestFullTransferConfig();
             return TeaModel.build(map, self);
@@ -460,6 +483,38 @@ public class CreateProjectRequest extends TeaModel {
             return this.nonePkUkTruncateDstTable;
         }
 
+        public CreateProjectRequestFullTransferConfig setReadWorkerNum(Integer readWorkerNum) {
+            this.readWorkerNum = readWorkerNum;
+            return this;
+        }
+        public Integer getReadWorkerNum() {
+            return this.readWorkerNum;
+        }
+
+        public CreateProjectRequestFullTransferConfig setThrottleIOPS(Integer throttleIOPS) {
+            this.throttleIOPS = throttleIOPS;
+            return this;
+        }
+        public Integer getThrottleIOPS() {
+            return this.throttleIOPS;
+        }
+
+        public CreateProjectRequestFullTransferConfig setThrottleRps(Integer throttleRps) {
+            this.throttleRps = throttleRps;
+            return this;
+        }
+        public Integer getThrottleRps() {
+            return this.throttleRps;
+        }
+
+        public CreateProjectRequestFullTransferConfig setWriteWorkerNum(Integer writeWorkerNum) {
+            this.writeWorkerNum = writeWorkerNum;
+            return this;
+        }
+        public Integer getWriteWorkerNum() {
+            return this.writeWorkerNum;
+        }
+
     }
 
     public static class CreateProjectRequestIncrTransferConfig extends TeaModel {
@@ -480,6 +535,15 @@ public class CreateProjectRequest extends TeaModel {
 
         @NameInMap("StoreLogKeptHour")
         public Integer storeLogKeptHour;
+
+        @NameInMap("SupportDDLTypes")
+        public java.util.List<String> supportDDLTypes;
+
+        @NameInMap("ThrottleIOPS")
+        public Integer throttleIOPS;
+
+        @NameInMap("ThrottleRps")
+        public Integer throttleRps;
 
         public static CreateProjectRequestIncrTransferConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateProjectRequestIncrTransferConfig self = new CreateProjectRequestIncrTransferConfig();
@@ -532,6 +596,137 @@ public class CreateProjectRequest extends TeaModel {
         }
         public Integer getStoreLogKeptHour() {
             return this.storeLogKeptHour;
+        }
+
+        public CreateProjectRequestIncrTransferConfig setSupportDDLTypes(java.util.List<String> supportDDLTypes) {
+            this.supportDDLTypes = supportDDLTypes;
+            return this;
+        }
+        public java.util.List<String> getSupportDDLTypes() {
+            return this.supportDDLTypes;
+        }
+
+        public CreateProjectRequestIncrTransferConfig setThrottleIOPS(Integer throttleIOPS) {
+            this.throttleIOPS = throttleIOPS;
+            return this;
+        }
+        public Integer getThrottleIOPS() {
+            return this.throttleIOPS;
+        }
+
+        public CreateProjectRequestIncrTransferConfig setThrottleRps(Integer throttleRps) {
+            this.throttleRps = throttleRps;
+            return this;
+        }
+        public Integer getThrottleRps() {
+            return this.throttleRps;
+        }
+
+    }
+
+    public static class CreateProjectRequestReverseIncrTransferConfig extends TeaModel {
+        @NameInMap("EnableIncrSyncStatistics")
+        public Boolean enableIncrSyncStatistics;
+
+        @NameInMap("EnableSequencingWithinTxn")
+        public Boolean enableSequencingWithinTxn;
+
+        @NameInMap("IncrSyncConcurrency")
+        public Integer incrSyncConcurrency;
+
+        @NameInMap("RecordTypeWhiteList")
+        public java.util.List<String> recordTypeWhiteList;
+
+        @NameInMap("StartTimestamp")
+        public String startTimestamp;
+
+        @NameInMap("StoreLogKeptHour")
+        public Integer storeLogKeptHour;
+
+        @NameInMap("SupportDDLTypes")
+        public java.util.List<String> supportDDLTypes;
+
+        @NameInMap("ThrottleIOPS")
+        public Integer throttleIOPS;
+
+        @NameInMap("ThrottleRps")
+        public Integer throttleRps;
+
+        public static CreateProjectRequestReverseIncrTransferConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateProjectRequestReverseIncrTransferConfig self = new CreateProjectRequestReverseIncrTransferConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateProjectRequestReverseIncrTransferConfig setEnableIncrSyncStatistics(Boolean enableIncrSyncStatistics) {
+            this.enableIncrSyncStatistics = enableIncrSyncStatistics;
+            return this;
+        }
+        public Boolean getEnableIncrSyncStatistics() {
+            return this.enableIncrSyncStatistics;
+        }
+
+        public CreateProjectRequestReverseIncrTransferConfig setEnableSequencingWithinTxn(Boolean enableSequencingWithinTxn) {
+            this.enableSequencingWithinTxn = enableSequencingWithinTxn;
+            return this;
+        }
+        public Boolean getEnableSequencingWithinTxn() {
+            return this.enableSequencingWithinTxn;
+        }
+
+        public CreateProjectRequestReverseIncrTransferConfig setIncrSyncConcurrency(Integer incrSyncConcurrency) {
+            this.incrSyncConcurrency = incrSyncConcurrency;
+            return this;
+        }
+        public Integer getIncrSyncConcurrency() {
+            return this.incrSyncConcurrency;
+        }
+
+        public CreateProjectRequestReverseIncrTransferConfig setRecordTypeWhiteList(java.util.List<String> recordTypeWhiteList) {
+            this.recordTypeWhiteList = recordTypeWhiteList;
+            return this;
+        }
+        public java.util.List<String> getRecordTypeWhiteList() {
+            return this.recordTypeWhiteList;
+        }
+
+        public CreateProjectRequestReverseIncrTransferConfig setStartTimestamp(String startTimestamp) {
+            this.startTimestamp = startTimestamp;
+            return this;
+        }
+        public String getStartTimestamp() {
+            return this.startTimestamp;
+        }
+
+        public CreateProjectRequestReverseIncrTransferConfig setStoreLogKeptHour(Integer storeLogKeptHour) {
+            this.storeLogKeptHour = storeLogKeptHour;
+            return this;
+        }
+        public Integer getStoreLogKeptHour() {
+            return this.storeLogKeptHour;
+        }
+
+        public CreateProjectRequestReverseIncrTransferConfig setSupportDDLTypes(java.util.List<String> supportDDLTypes) {
+            this.supportDDLTypes = supportDDLTypes;
+            return this;
+        }
+        public java.util.List<String> getSupportDDLTypes() {
+            return this.supportDDLTypes;
+        }
+
+        public CreateProjectRequestReverseIncrTransferConfig setThrottleIOPS(Integer throttleIOPS) {
+            this.throttleIOPS = throttleIOPS;
+            return this;
+        }
+        public Integer getThrottleIOPS() {
+            return this.throttleIOPS;
+        }
+
+        public CreateProjectRequestReverseIncrTransferConfig setThrottleRps(Integer throttleRps) {
+            this.throttleRps = throttleRps;
+            return this;
+        }
+        public Integer getThrottleRps() {
+            return this.throttleRps;
         }
 
     }

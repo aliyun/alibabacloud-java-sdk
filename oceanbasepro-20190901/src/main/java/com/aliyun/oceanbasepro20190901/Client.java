@@ -527,6 +527,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.labelIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labelIds, "LabelIds", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.reverseIncrTransferConfig)) {
+            request.reverseIncrTransferConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.reverseIncrTransferConfig, "ReverseIncrTransferConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.structTransferConfig)) {
             request.structTransferConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.structTransferConfig, "StructTransferConfig", "json");
         }
@@ -582,6 +586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ossKey)) {
             body.put("OssKey", request.ossKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reverseIncrTransferConfigShrink)) {
+            body.put("ReverseIncrTransferConfig", request.reverseIncrTransferConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sinkEndpointId)) {
