@@ -34,6 +34,9 @@ public class Sku extends TeaModel {
     @NameInMap("quantity")
     public Long quantity;
 
+    @NameInMap("rankValue")
+    public Long rankValue;
+
     @NameInMap("shopId")
     public String shopId;
 
@@ -135,6 +138,14 @@ public class Sku extends TeaModel {
     }
     public Long getQuantity() {
         return this.quantity;
+    }
+
+    public Sku setRankValue(Long rankValue) {
+        this.rankValue = rankValue;
+        return this;
+    }
+    public Long getRankValue() {
+        return this.rankValue;
     }
 
     public Sku setShopId(String shopId) {
