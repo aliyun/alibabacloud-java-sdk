@@ -5,37 +5,41 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
     /**
-     * <p>The number of CPU cores used in the cluster.</p>
+     * <p>The ID of the OceanBase cluster.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The size of used memory in the cluster, in GB.</p>
+     * <p>The name of the OceanBase cluster. It must be 1 to 20 characters in length. If this parameter is not specified, the value is the instance ID of the cluster by default.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The total memory size of the cluster, in GB.</p>
+     * <p>The number of the page to return.</p>
+     * <p>- Pages start from page 1.</p>
+     * <p>- Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The information about the memory resources of the cluster.</p>
+     * <p>The number of rows to return on each page.</p>
+     * <p>- Maximum value: 100.</p>
+     * <p>- Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The number of CPU cores of each replica node in the cluster.</p>
+     * <p>The ID of the resource group. If you do not specify this parameter, all resources are returned.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The memory size of each replica node in the cluster, in GB.</p>
+     * <p>The keyword for fuzzy search, which can be an instance ID, instance name, tenant ID, or tenant name.</p>
      */
     @NameInMap("SearchKey")
     public String searchKey;

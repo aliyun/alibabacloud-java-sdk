@@ -552,6 +552,18 @@ public class DescribeProjectResponseBody extends TeaModel {
         @NameInMap("NonePkUkTruncateDstTable")
         public Boolean nonePkUkTruncateDstTable;
 
+        @NameInMap("ReadWorkerNum")
+        public Integer readWorkerNum;
+
+        @NameInMap("ThrottleIOPS")
+        public Integer throttleIOPS;
+
+        @NameInMap("ThrottleRps")
+        public Integer throttleRps;
+
+        @NameInMap("WriteWorkerNum")
+        public Integer writeWorkerNum;
+
         public static DescribeProjectResponseBodyDataFullTransferConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeProjectResponseBodyDataFullTransferConfig self = new DescribeProjectResponseBodyDataFullTransferConfig();
             return TeaModel.build(map, self);
@@ -589,6 +601,38 @@ public class DescribeProjectResponseBody extends TeaModel {
             return this.nonePkUkTruncateDstTable;
         }
 
+        public DescribeProjectResponseBodyDataFullTransferConfig setReadWorkerNum(Integer readWorkerNum) {
+            this.readWorkerNum = readWorkerNum;
+            return this;
+        }
+        public Integer getReadWorkerNum() {
+            return this.readWorkerNum;
+        }
+
+        public DescribeProjectResponseBodyDataFullTransferConfig setThrottleIOPS(Integer throttleIOPS) {
+            this.throttleIOPS = throttleIOPS;
+            return this;
+        }
+        public Integer getThrottleIOPS() {
+            return this.throttleIOPS;
+        }
+
+        public DescribeProjectResponseBodyDataFullTransferConfig setThrottleRps(Integer throttleRps) {
+            this.throttleRps = throttleRps;
+            return this;
+        }
+        public Integer getThrottleRps() {
+            return this.throttleRps;
+        }
+
+        public DescribeProjectResponseBodyDataFullTransferConfig setWriteWorkerNum(Integer writeWorkerNum) {
+            this.writeWorkerNum = writeWorkerNum;
+            return this;
+        }
+        public Integer getWriteWorkerNum() {
+            return this.writeWorkerNum;
+        }
+
     }
 
     public static class DescribeProjectResponseBodyDataIncrTransferConfig extends TeaModel {
@@ -609,6 +653,15 @@ public class DescribeProjectResponseBody extends TeaModel {
 
         @NameInMap("StoreLogKeptHour")
         public Integer storeLogKeptHour;
+
+        @NameInMap("SupportDDLTypes")
+        public java.util.List<String> supportDDLTypes;
+
+        @NameInMap("ThrottleIOPS")
+        public Integer throttleIOPS;
+
+        @NameInMap("ThrottleRps")
+        public Integer throttleRps;
 
         public static DescribeProjectResponseBodyDataIncrTransferConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeProjectResponseBodyDataIncrTransferConfig self = new DescribeProjectResponseBodyDataIncrTransferConfig();
@@ -663,6 +716,30 @@ public class DescribeProjectResponseBody extends TeaModel {
             return this.storeLogKeptHour;
         }
 
+        public DescribeProjectResponseBodyDataIncrTransferConfig setSupportDDLTypes(java.util.List<String> supportDDLTypes) {
+            this.supportDDLTypes = supportDDLTypes;
+            return this;
+        }
+        public java.util.List<String> getSupportDDLTypes() {
+            return this.supportDDLTypes;
+        }
+
+        public DescribeProjectResponseBodyDataIncrTransferConfig setThrottleIOPS(Integer throttleIOPS) {
+            this.throttleIOPS = throttleIOPS;
+            return this;
+        }
+        public Integer getThrottleIOPS() {
+            return this.throttleIOPS;
+        }
+
+        public DescribeProjectResponseBodyDataIncrTransferConfig setThrottleRps(Integer throttleRps) {
+            this.throttleRps = throttleRps;
+            return this;
+        }
+        public Integer getThrottleRps() {
+            return this.throttleRps;
+        }
+
     }
 
     public static class DescribeProjectResponseBodyDataLabels extends TeaModel {
@@ -691,6 +768,113 @@ public class DescribeProjectResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+    }
+
+    public static class DescribeProjectResponseBodyDataReverseIncrTransferConfig extends TeaModel {
+        @NameInMap("EnableIncrSyncStatistics")
+        public Boolean enableIncrSyncStatistics;
+
+        @NameInMap("EnableSequencingWithinTxn")
+        public Boolean enableSequencingWithinTxn;
+
+        @NameInMap("IncrSyncConcurrency")
+        public Integer incrSyncConcurrency;
+
+        @NameInMap("RecordTypeWhiteList")
+        public java.util.List<String> recordTypeWhiteList;
+
+        @NameInMap("StartTimestamp")
+        public Long startTimestamp;
+
+        @NameInMap("StoreLogKeptHour")
+        public Integer storeLogKeptHour;
+
+        @NameInMap("SupportDDLTypes")
+        public java.util.List<String> supportDDLTypes;
+
+        @NameInMap("ThrottleIOPS")
+        public Integer throttleIOPS;
+
+        @NameInMap("ThrottleRps")
+        public Integer throttleRps;
+
+        public static DescribeProjectResponseBodyDataReverseIncrTransferConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeProjectResponseBodyDataReverseIncrTransferConfig self = new DescribeProjectResponseBodyDataReverseIncrTransferConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeProjectResponseBodyDataReverseIncrTransferConfig setEnableIncrSyncStatistics(Boolean enableIncrSyncStatistics) {
+            this.enableIncrSyncStatistics = enableIncrSyncStatistics;
+            return this;
+        }
+        public Boolean getEnableIncrSyncStatistics() {
+            return this.enableIncrSyncStatistics;
+        }
+
+        public DescribeProjectResponseBodyDataReverseIncrTransferConfig setEnableSequencingWithinTxn(Boolean enableSequencingWithinTxn) {
+            this.enableSequencingWithinTxn = enableSequencingWithinTxn;
+            return this;
+        }
+        public Boolean getEnableSequencingWithinTxn() {
+            return this.enableSequencingWithinTxn;
+        }
+
+        public DescribeProjectResponseBodyDataReverseIncrTransferConfig setIncrSyncConcurrency(Integer incrSyncConcurrency) {
+            this.incrSyncConcurrency = incrSyncConcurrency;
+            return this;
+        }
+        public Integer getIncrSyncConcurrency() {
+            return this.incrSyncConcurrency;
+        }
+
+        public DescribeProjectResponseBodyDataReverseIncrTransferConfig setRecordTypeWhiteList(java.util.List<String> recordTypeWhiteList) {
+            this.recordTypeWhiteList = recordTypeWhiteList;
+            return this;
+        }
+        public java.util.List<String> getRecordTypeWhiteList() {
+            return this.recordTypeWhiteList;
+        }
+
+        public DescribeProjectResponseBodyDataReverseIncrTransferConfig setStartTimestamp(Long startTimestamp) {
+            this.startTimestamp = startTimestamp;
+            return this;
+        }
+        public Long getStartTimestamp() {
+            return this.startTimestamp;
+        }
+
+        public DescribeProjectResponseBodyDataReverseIncrTransferConfig setStoreLogKeptHour(Integer storeLogKeptHour) {
+            this.storeLogKeptHour = storeLogKeptHour;
+            return this;
+        }
+        public Integer getStoreLogKeptHour() {
+            return this.storeLogKeptHour;
+        }
+
+        public DescribeProjectResponseBodyDataReverseIncrTransferConfig setSupportDDLTypes(java.util.List<String> supportDDLTypes) {
+            this.supportDDLTypes = supportDDLTypes;
+            return this;
+        }
+        public java.util.List<String> getSupportDDLTypes() {
+            return this.supportDDLTypes;
+        }
+
+        public DescribeProjectResponseBodyDataReverseIncrTransferConfig setThrottleIOPS(Integer throttleIOPS) {
+            this.throttleIOPS = throttleIOPS;
+            return this;
+        }
+        public Integer getThrottleIOPS() {
+            return this.throttleIOPS;
+        }
+
+        public DescribeProjectResponseBodyDataReverseIncrTransferConfig setThrottleRps(Integer throttleRps) {
+            this.throttleRps = throttleRps;
+            return this;
+        }
+        public Integer getThrottleRps() {
+            return this.throttleRps;
         }
 
     }
@@ -3097,6 +3281,9 @@ public class DescribeProjectResponseBody extends TeaModel {
         @NameInMap("Owner")
         public String owner;
 
+        @NameInMap("ReverseIncrTransferConfig")
+        public DescribeProjectResponseBodyDataReverseIncrTransferConfig reverseIncrTransferConfig;
+
         @NameInMap("SinkConnectInfo")
         public DescribeProjectResponseBodyDataSinkConnectInfo sinkConnectInfo;
 
@@ -3325,6 +3512,14 @@ public class DescribeProjectResponseBody extends TeaModel {
         }
         public String getOwner() {
             return this.owner;
+        }
+
+        public DescribeProjectResponseBodyData setReverseIncrTransferConfig(DescribeProjectResponseBodyDataReverseIncrTransferConfig reverseIncrTransferConfig) {
+            this.reverseIncrTransferConfig = reverseIncrTransferConfig;
+            return this;
+        }
+        public DescribeProjectResponseBodyDataReverseIncrTransferConfig getReverseIncrTransferConfig() {
+            return this.reverseIncrTransferConfig;
         }
 
         public DescribeProjectResponseBodyData setSinkConnectInfo(DescribeProjectResponseBodyDataSinkConnectInfo sinkConnectInfo) {

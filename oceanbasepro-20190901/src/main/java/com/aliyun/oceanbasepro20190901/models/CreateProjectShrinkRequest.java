@@ -40,6 +40,9 @@ public class CreateProjectShrinkRequest extends TeaModel {
     @NameInMap("OssKey")
     public String ossKey;
 
+    @NameInMap("ReverseIncrTransferConfig")
+    public String reverseIncrTransferConfigShrink;
+
     @NameInMap("SinkEndpointId")
     public String sinkEndpointId;
 
@@ -160,6 +163,14 @@ public class CreateProjectShrinkRequest extends TeaModel {
     }
     public String getOssKey() {
         return this.ossKey;
+    }
+
+    public CreateProjectShrinkRequest setReverseIncrTransferConfigShrink(String reverseIncrTransferConfigShrink) {
+        this.reverseIncrTransferConfigShrink = reverseIncrTransferConfigShrink;
+        return this;
+    }
+    public String getReverseIncrTransferConfigShrink() {
+        return this.reverseIncrTransferConfigShrink;
     }
 
     public CreateProjectShrinkRequest setSinkEndpointId(String sinkEndpointId) {
