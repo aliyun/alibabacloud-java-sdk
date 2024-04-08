@@ -74,6 +74,9 @@ public class ApplyInvoiceTaskRequest extends TeaModel {
         @NameInMap("mail_province")
         public String mailProvince;
 
+        @NameInMap("meal_normal_invoice_fee")
+        public String mealNormalInvoiceFee;
+
         @NameInMap("penalty_fee")
         public String penaltyFee;
 
@@ -207,6 +210,14 @@ public class ApplyInvoiceTaskRequest extends TeaModel {
         }
         public String getMailProvince() {
             return this.mailProvince;
+        }
+
+        public ApplyInvoiceTaskRequestInvoiceTaskList setMealNormalInvoiceFee(String mealNormalInvoiceFee) {
+            this.mealNormalInvoiceFee = mealNormalInvoiceFee;
+            return this;
+        }
+        public String getMealNormalInvoiceFee() {
+            return this.mealNormalInvoiceFee;
         }
 
         public ApplyInvoiceTaskRequestInvoiceTaskList setPenaltyFee(String penaltyFee) {

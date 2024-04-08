@@ -124,6 +124,9 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         @NameInMap("mail_province")
         public String mailProvince;
 
+        @NameInMap("meal_normal_invoice_fee")
+        public String mealNormalInvoiceFee;
+
         @NameInMap("penalty_fee")
         public String penaltyFee;
 
@@ -257,6 +260,14 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         }
         public String getMailProvince() {
             return this.mailProvince;
+        }
+
+        public WaitApplyInvoiceTaskDetailQueryResponseBodyModule setMealNormalInvoiceFee(String mealNormalInvoiceFee) {
+            this.mealNormalInvoiceFee = mealNormalInvoiceFee;
+            return this;
+        }
+        public String getMealNormalInvoiceFee() {
+            return this.mealNormalInvoiceFee;
         }
 
         public WaitApplyInvoiceTaskDetailQueryResponseBodyModule setPenaltyFee(String penaltyFee) {
