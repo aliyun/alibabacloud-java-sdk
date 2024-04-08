@@ -158,8 +158,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("taobao_callback_url", request.taobaoCallbackUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.travelerId)) {
+            query.put("traveler_id", request.travelerId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             query.put("type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useBookingProxy)) {
+            query.put("use_booking_proxy", request.useBookingProxy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
@@ -7842,6 +7850,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         MealBillSettlementQueryHeaders headers = new MealBillSettlementQueryHeaders();
         return this.mealBillSettlementQueryWithOptions(request, headers, runtime);
+    }
+
+    public MealOrderDetailQueryResponse mealOrderDetailQueryWithOptions(String orderId, MealOrderDetailQueryRequest request, MealOrderDetailQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("user_id", request.userId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MealOrderDetailQuery"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/meal/v1/orders/" + com.aliyun.openapiutil.Client.getEncodeParam(orderId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MealOrderDetailQueryResponse());
+    }
+
+    public MealOrderDetailQueryResponse mealOrderDetailQuery(String orderId, MealOrderDetailQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        MealOrderDetailQueryHeaders headers = new MealOrderDetailQueryHeaders();
+        return this.mealOrderDetailQueryWithOptions(orderId, request, headers, runtime);
+    }
+
+    public MealOrderListQueryResponse mealOrderListQueryWithOptions(MealOrderListQueryRequest request, MealOrderListQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("user_id", request.userId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MealOrderListQuery"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/meal/v1/orders"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MealOrderListQueryResponse());
+    }
+
+    public MealOrderListQueryResponse mealOrderListQuery(MealOrderListQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        MealOrderListQueryHeaders headers = new MealOrderListQueryHeaders();
+        return this.mealOrderListQueryWithOptions(request, headers, runtime);
     }
 
     public MonthBillConfirmResponse monthBillConfirmWithOptions(MonthBillConfirmRequest request, MonthBillConfirmHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

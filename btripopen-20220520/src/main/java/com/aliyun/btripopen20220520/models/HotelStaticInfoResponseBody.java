@@ -248,6 +248,99 @@ public class HotelStaticInfoResponseBody extends TeaModel {
 
     }
 
+    public static class HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupListBedInfos extends TeaModel {
+        @NameInMap("bed_desc")
+        public String bedDesc;
+
+        @NameInMap("bed_num")
+        public Integer bedNum;
+
+        @NameInMap("bed_size")
+        public String bedSize;
+
+        @NameInMap("bed_type")
+        public String bedType;
+
+        @NameInMap("length")
+        public String length;
+
+        @NameInMap("width")
+        public String width;
+
+        public static HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupListBedInfos build(java.util.Map<String, ?> map) throws Exception {
+            HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupListBedInfos self = new HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupListBedInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupListBedInfos setBedDesc(String bedDesc) {
+            this.bedDesc = bedDesc;
+            return this;
+        }
+        public String getBedDesc() {
+            return this.bedDesc;
+        }
+
+        public HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupListBedInfos setBedNum(Integer bedNum) {
+            this.bedNum = bedNum;
+            return this;
+        }
+        public Integer getBedNum() {
+            return this.bedNum;
+        }
+
+        public HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupListBedInfos setBedSize(String bedSize) {
+            this.bedSize = bedSize;
+            return this;
+        }
+        public String getBedSize() {
+            return this.bedSize;
+        }
+
+        public HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupListBedInfos setBedType(String bedType) {
+            this.bedType = bedType;
+            return this;
+        }
+        public String getBedType() {
+            return this.bedType;
+        }
+
+        public HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupListBedInfos setLength(String length) {
+            this.length = length;
+            return this;
+        }
+        public String getLength() {
+            return this.length;
+        }
+
+        public HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupListBedInfos setWidth(String width) {
+            this.width = width;
+            return this;
+        }
+        public String getWidth() {
+            return this.width;
+        }
+
+    }
+
+    public static class HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupList extends TeaModel {
+        @NameInMap("bed_Infos")
+        public java.util.List<HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupListBedInfos> bedInfos;
+
+        public static HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupList build(java.util.Map<String, ?> map) throws Exception {
+            HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupList self = new HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupList();
+            return TeaModel.build(map, self);
+        }
+
+        public HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupList setBedInfos(java.util.List<HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupListBedInfos> bedInfos) {
+            this.bedInfos = bedInfos;
+            return this;
+        }
+        public java.util.List<HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupListBedInfos> getBedInfos() {
+            return this.bedInfos;
+        }
+
+    }
+
     public static class HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfos extends TeaModel {
         @NameInMap("bed_desc")
         public String bedDesc;
@@ -260,6 +353,12 @@ public class HotelStaticInfoResponseBody extends TeaModel {
 
         @NameInMap("bed_type")
         public String bedType;
+
+        @NameInMap("length")
+        public String length;
+
+        @NameInMap("width")
+        public String width;
 
         public static HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfos build(java.util.Map<String, ?> map) throws Exception {
             HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfos self = new HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfos();
@@ -298,9 +397,28 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             return this.bedType;
         }
 
+        public HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfos setLength(String length) {
+            this.length = length;
+            return this;
+        }
+        public String getLength() {
+            return this.length;
+        }
+
+        public HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfos setWidth(String width) {
+            this.width = width;
+            return this;
+        }
+        public String getWidth() {
+            return this.width;
+        }
+
     }
 
     public static class HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfos extends TeaModel {
+        @NameInMap("bed_info_group_list")
+        public java.util.List<HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupList> bedInfoGroupList;
+
         @NameInMap("bed_infos")
         public java.util.List<HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfos> bedInfos;
 
@@ -358,6 +476,14 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         public static HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfos build(java.util.Map<String, ?> map) throws Exception {
             HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfos self = new HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfos();
             return TeaModel.build(map, self);
+        }
+
+        public HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfos setBedInfoGroupList(java.util.List<HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupList> bedInfoGroupList) {
+            this.bedInfoGroupList = bedInfoGroupList;
+            return this;
+        }
+        public java.util.List<HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfoGroupList> getBedInfoGroupList() {
+            return this.bedInfoGroupList;
         }
 
         public HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfos setBedInfos(java.util.List<HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfos> bedInfos) {

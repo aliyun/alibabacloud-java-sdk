@@ -103,6 +103,15 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cascade_department")
         public String cascadeDepartment;
 
+        @NameInMap("consume_report_address")
+        public String consumeReportAddress;
+
+        @NameInMap("consume_report_city")
+        public String consumeReportCity;
+
+        @NameInMap("consume_report_city_code")
+        public String consumeReportCityCode;
+
         @NameInMap("consumer_scene")
         public String consumerScene;
 
@@ -301,6 +310,30 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getCascadeDepartment() {
             return this.cascadeDepartment;
+        }
+
+        public MealBillSettlementQueryResponseBodyModuleItems setConsumeReportAddress(String consumeReportAddress) {
+            this.consumeReportAddress = consumeReportAddress;
+            return this;
+        }
+        public String getConsumeReportAddress() {
+            return this.consumeReportAddress;
+        }
+
+        public MealBillSettlementQueryResponseBodyModuleItems setConsumeReportCity(String consumeReportCity) {
+            this.consumeReportCity = consumeReportCity;
+            return this;
+        }
+        public String getConsumeReportCity() {
+            return this.consumeReportCity;
+        }
+
+        public MealBillSettlementQueryResponseBodyModuleItems setConsumeReportCityCode(String consumeReportCityCode) {
+            this.consumeReportCityCode = consumeReportCityCode;
+            return this;
+        }
+        public String getConsumeReportCityCode() {
+            return this.consumeReportCityCode;
         }
 
         public MealBillSettlementQueryResponseBodyModuleItems setConsumerScene(String consumerScene) {

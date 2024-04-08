@@ -40,8 +40,14 @@ public class AddressGetRequest extends TeaModel {
     @NameInMap("taobao_callback_url")
     public String taobaoCallbackUrl;
 
+    @NameInMap("traveler_id")
+    public String travelerId;
+
     @NameInMap("type")
     public Integer type;
+
+    @NameInMap("use_booking_proxy")
+    public Integer useBookingProxy;
 
     @NameInMap("user_id")
     public String userId;
@@ -147,12 +153,28 @@ public class AddressGetRequest extends TeaModel {
         return this.taobaoCallbackUrl;
     }
 
+    public AddressGetRequest setTravelerId(String travelerId) {
+        this.travelerId = travelerId;
+        return this;
+    }
+    public String getTravelerId() {
+        return this.travelerId;
+    }
+
     public AddressGetRequest setType(Integer type) {
         this.type = type;
         return this;
     }
     public Integer getType() {
         return this.type;
+    }
+
+    public AddressGetRequest setUseBookingProxy(Integer useBookingProxy) {
+        this.useBookingProxy = useBookingProxy;
+        return this;
+    }
+    public Integer getUseBookingProxy() {
+        return this.useBookingProxy;
     }
 
     public AddressGetRequest setUserId(String userId) {
