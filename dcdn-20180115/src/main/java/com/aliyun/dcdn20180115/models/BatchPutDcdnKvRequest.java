@@ -4,9 +4,6 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class BatchPutDcdnKvRequest extends TeaModel {
-    /**
-     * <p>The key-value pairs. The key-value pairs can be up to 2 MB in size.</p>
-     */
     @NameInMap("KvList")
     public java.util.List<BatchPutDcdnKvRequestKvList> kvList;
 
@@ -38,27 +35,15 @@ public class BatchPutDcdnKvRequest extends TeaModel {
     }
 
     public static class BatchPutDcdnKvRequestKvList extends TeaModel {
-        /**
-         * <p>The expiration time. The value is a timestamp in seconds. The expiration time cannot be earlier than the current time. If you specify Expiration and ExpirationTtl, only ExpirationTtl takes effect.</p>
-         */
         @NameInMap("Expiration")
         public Long expiration;
 
-        /**
-         * <p>The relative expiration time. Unit: seconds. If you specify Expiration and ExpirationTtl, only ExpirationTtl takes effect.</p>
-         */
         @NameInMap("ExpirationTtl")
         public Long expirationTtl;
 
-        /**
-         * <p>The key. The key can be up to 512 characters in length and cannot contain spaces.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value.</p>
-         */
         @NameInMap("Value")
         public String value;
 
