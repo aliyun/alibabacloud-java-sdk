@@ -58,13 +58,13 @@ public class GetStatTrendResponseBody extends TeaModel {
         public Long affectedUserCount;
 
         @NameInMap("affectedUserRate")
-        public Long affectedUserRate;
+        public Double affectedUserRate;
 
         @NameInMap("errorCount")
         public Long errorCount;
 
         @NameInMap("errorRate")
-        public Long errorRate;
+        public Double errorRate;
 
         @NameInMap("timePoint")
         public String timePoint;
@@ -82,11 +82,11 @@ public class GetStatTrendResponseBody extends TeaModel {
             return this.affectedUserCount;
         }
 
-        public GetStatTrendResponseBodyData setAffectedUserRate(Long affectedUserRate) {
+        public GetStatTrendResponseBodyData setAffectedUserRate(Double affectedUserRate) {
             this.affectedUserRate = affectedUserRate;
             return this;
         }
-        public Long getAffectedUserRate() {
+        public Double getAffectedUserRate() {
             return this.affectedUserRate;
         }
 
@@ -98,11 +98,11 @@ public class GetStatTrendResponseBody extends TeaModel {
             return this.errorCount;
         }
 
-        public GetStatTrendResponseBodyData setErrorRate(Long errorRate) {
+        public GetStatTrendResponseBodyData setErrorRate(Double errorRate) {
             this.errorRate = errorRate;
             return this;
         }
-        public Long getErrorRate() {
+        public Double getErrorRate() {
             return this.errorRate;
         }
 
