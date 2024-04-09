@@ -14,7 +14,7 @@ public class ListExternalStoreResponseBody extends TeaModel {
      * <p>The names of the external stores.</p>
      */
     @NameInMap("externalstores")
-    public java.util.List<ExternalStore> externalstores;
+    public java.util.List<String> externalstores;
 
     /**
      * <p>The number of external stores that meet the query conditions.</p>
@@ -35,11 +35,11 @@ public class ListExternalStoreResponseBody extends TeaModel {
         return this.count;
     }
 
-    public ListExternalStoreResponseBody setExternalstores(java.util.List<ExternalStore> externalstores) {
+    public ListExternalStoreResponseBody setExternalstores(java.util.List<String> externalstores) {
         this.externalstores = externalstores;
         return this;
     }
-    public java.util.List<ExternalStore> getExternalstores() {
+    public java.util.List<String> getExternalstores() {
         return this.externalstores;
     }
 

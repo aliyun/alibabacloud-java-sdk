@@ -78,7 +78,7 @@ public class OSSExportConfiguration extends TeaModel {
         public String compressionType;
 
         @NameInMap("contentDetail")
-        public String contentDetail;
+        public java.util.Map<String, ?> contentDetail;
 
         @NameInMap("contentType")
         public String contentType;
@@ -144,11 +144,11 @@ public class OSSExportConfiguration extends TeaModel {
             return this.compressionType;
         }
 
-        public OSSExportConfigurationSink setContentDetail(String contentDetail) {
+        public OSSExportConfigurationSink setContentDetail(java.util.Map<String, ?> contentDetail) {
             this.contentDetail = contentDetail;
             return this;
         }
-        public String getContentDetail() {
+        public java.util.Map<String, ?> getContentDetail() {
             return this.contentDetail;
         }
 

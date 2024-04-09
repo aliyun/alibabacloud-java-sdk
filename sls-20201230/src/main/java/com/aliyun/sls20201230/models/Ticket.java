@@ -25,6 +25,9 @@ public class Ticket extends TeaModel {
     @NameInMap("number")
     public Integer number;
 
+    @NameInMap("sharingTo")
+    public String sharingTo;
+
     @NameInMap("ticket")
     public String ticket;
 
@@ -96,6 +99,14 @@ public class Ticket extends TeaModel {
     }
     public Integer getNumber() {
         return this.number;
+    }
+
+    public Ticket setSharingTo(String sharingTo) {
+        this.sharingTo = sharingTo;
+        return this;
+    }
+    public String getSharingTo() {
+        return this.sharingTo;
     }
 
     public Ticket setTicket(String ticket) {
