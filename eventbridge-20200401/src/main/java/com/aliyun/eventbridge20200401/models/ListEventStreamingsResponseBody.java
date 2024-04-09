@@ -3217,6 +3217,58 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
 
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsSourceSourcePrometheusParameters extends TeaModel {
+        @NameInMap("ClusterId")
+        public String clusterId;
+
+        @NameInMap("DataType")
+        public String dataType;
+
+        @NameInMap("Labels")
+        public String labels;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsSourceSourcePrometheusParameters build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsSourceSourcePrometheusParameters self = new ListEventStreamingsResponseBodyDataEventStreamingsSourceSourcePrometheusParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourcePrometheusParameters setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourcePrometheusParameters setDataType(String dataType) {
+            this.dataType = dataType;
+            return this;
+        }
+        public String getDataType() {
+            return this.dataType;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourcePrometheusParameters setLabels(String labels) {
+            this.labels = labels;
+            return this;
+        }
+        public String getLabels() {
+            return this.labels;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourcePrometheusParameters setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+    }
+
     public static class ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRabbitMQParameters extends TeaModel {
         /**
          * <p>The ID of the Message Queue for RabbitMQ instance.</p>
@@ -3619,6 +3671,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @NameInMap("SourceMQTTParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceMQTTParameters sourceMQTTParameters;
 
+        @NameInMap("SourcePrometheusParameters")
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourcePrometheusParameters sourcePrometheusParameters;
+
         /**
          * <p>The parameters that are returned if Message Queue for RabbitMQ is specified as the event source.</p>
          */
@@ -3672,6 +3727,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceMQTTParameters getSourceMQTTParameters() {
             return this.sourceMQTTParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSource setSourcePrometheusParameters(ListEventStreamingsResponseBodyDataEventStreamingsSourceSourcePrometheusParameters sourcePrometheusParameters) {
+            this.sourcePrometheusParameters = sourcePrometheusParameters;
+            return this;
+        }
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourcePrometheusParameters getSourcePrometheusParameters() {
+            return this.sourcePrometheusParameters;
         }
 
         public ListEventStreamingsResponseBodyDataEventStreamingsSource setSourceRabbitMQParameters(ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRabbitMQParameters sourceRabbitMQParameters) {

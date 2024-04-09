@@ -4,6 +4,9 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class DeleteEventSourceRequest extends TeaModel {
+    @NameInMap("EventBusName")
+    public String eventBusName;
+
     /**
      * <p>The name of the event source.</p>
      */
@@ -13,6 +16,14 @@ public class DeleteEventSourceRequest extends TeaModel {
     public static DeleteEventSourceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteEventSourceRequest self = new DeleteEventSourceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteEventSourceRequest setEventBusName(String eventBusName) {
+        this.eventBusName = eventBusName;
+        return this;
+    }
+    public String getEventBusName() {
+        return this.eventBusName;
     }
 
     public DeleteEventSourceRequest setEventSourceName(String eventSourceName) {
