@@ -35,7 +35,7 @@ public class DescribeKmsAssociateResourcesRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
-    public String resourceOwnerId;
+    public Long resourceOwnerId;
 
     public static DescribeKmsAssociateResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeKmsAssociateResourcesRequest self = new DescribeKmsAssociateResourcesRequest();
@@ -122,11 +122,11 @@ public class DescribeKmsAssociateResourcesRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribeKmsAssociateResourcesRequest setResourceOwnerId(String resourceOwnerId) {
+    public DescribeKmsAssociateResourcesRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getResourceOwnerId() {
+    public Long getResourceOwnerId() {
         return this.resourceOwnerId;
     }
 

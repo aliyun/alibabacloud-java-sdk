@@ -13,13 +13,16 @@ public class CreateAccountRequest extends TeaModel {
     public String accountDescription;
 
     /**
-     * <p>The username of the account.</p>
+     * <p>The name of the database account.</p>
      * <br>
-     * <p>*   The value must be unique.</p>
      * <br>
-     * <p>*   The value must start with a lowercase letter, and end with a lowercase letter or a digit.</p>
+     * <p>*   The name must be unique.</p>
      * <br>
-     * <p>*   The value can contain lowercase letters, digits, and underscores (\_).</p>
+     * <p>*   The name can contain lowercase letters, digits, and underscores (\_). For MySQL databases, the name can contain uppercase letters.</p>
+     * <br>
+     * <p>*   The name must start with a letter and end with a letter or digit.</p>
+     * <br>
+     * <p>*   For MySQL databases, the name of the privileged account cannot be the same as that of the standard account. For example, if the name of the privileged account is `Test1`, the name of the standard account cannot be `test1`.</p>
      * <br>
      * <p>*   The length of the value must meet the following requirements:</p>
      * <br>
@@ -30,7 +33,7 @@ public class CreateAccountRequest extends TeaModel {
      * <p>    *   If the instance runs PostgreSQL with local disks, the value must be 2 to 16 characters in length.</p>
      * <p>    *   If the instance runs MariaDB, the value must be 2 to 16 characters in length.</p>
      * <br>
-     * <p>*   For more information about invalid characters, see [Forbidden keywords table](~~26317~~).</p>
+     * <p>*   For more information about invalid characters, see [Forbidden keywords](~~26317~~).</p>
      */
     @NameInMap("AccountName")
     public String accountName;

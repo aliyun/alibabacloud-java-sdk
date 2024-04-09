@@ -11,7 +11,7 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
     public Integer crossBackupId;
 
     /**
-     * <p>The start time to which data can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The start time from which data can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("RecoveryBeginTime")
     public String recoveryBeginTime;
