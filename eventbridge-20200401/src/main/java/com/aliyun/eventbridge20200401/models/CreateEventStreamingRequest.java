@@ -4690,6 +4690,9 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("Labels")
         public String labels;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         public static CreateEventStreamingRequestSourceSourcePrometheusParameters build(java.util.Map<String, ?> map) throws Exception {
             CreateEventStreamingRequestSourceSourcePrometheusParameters self = new CreateEventStreamingRequestSourceSourcePrometheusParameters();
             return TeaModel.build(map, self);
@@ -4717,6 +4720,14 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public String getLabels() {
             return this.labels;
+        }
+
+        public CreateEventStreamingRequestSourceSourcePrometheusParameters setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
     }

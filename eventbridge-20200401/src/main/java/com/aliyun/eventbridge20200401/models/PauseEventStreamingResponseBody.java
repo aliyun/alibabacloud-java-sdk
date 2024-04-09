@@ -8,7 +8,7 @@ public class PauseEventStreamingResponseBody extends TeaModel {
      * <p>The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
      */
     @NameInMap("Code")
-    public Boolean code;
+    public String code;
 
     /**
      * <p>The error message that is returned if the request failed.</p>
@@ -33,11 +33,11 @@ public class PauseEventStreamingResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public PauseEventStreamingResponseBody setCode(Boolean code) {
+    public PauseEventStreamingResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Boolean getCode() {
+    public String getCode() {
         return this.code;
     }
 

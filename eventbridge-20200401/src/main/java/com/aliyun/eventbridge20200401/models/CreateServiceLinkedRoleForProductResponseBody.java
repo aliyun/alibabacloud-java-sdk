@@ -10,6 +10,9 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("HttpCode")
+    public Integer httpCode;
+
     /**
      * <p>The returned message. If the request is successful, success is returned.</p>
      */
@@ -39,6 +42,14 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CreateServiceLinkedRoleForProductResponseBody setHttpCode(Integer httpCode) {
+        this.httpCode = httpCode;
+        return this;
+    }
+    public Integer getHttpCode() {
+        return this.httpCode;
     }
 
     public CreateServiceLinkedRoleForProductResponseBody setMessage(String message) {

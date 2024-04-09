@@ -8,7 +8,7 @@ public class DeleteEventStreamingResponseBody extends TeaModel {
      * <p>The returned response code. The value Success indicates that the request is successful.</p>
      */
     @NameInMap("Code")
-    public Boolean code;
+    public String code;
 
     /**
      * <p>The returned error message.</p>
@@ -33,11 +33,11 @@ public class DeleteEventStreamingResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteEventStreamingResponseBody setCode(Boolean code) {
+    public DeleteEventStreamingResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Boolean getCode() {
+    public String getCode() {
         return this.code;
     }
 
