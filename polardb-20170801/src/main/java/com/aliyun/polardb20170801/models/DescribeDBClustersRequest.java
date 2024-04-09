@@ -51,7 +51,9 @@ public class DescribeDBClustersRequest extends TeaModel {
     public String DBVersion;
 
     /**
-     * <p>查询方式，当取值为Simple时，将返回简略版参数</p>
+     * <p>The query mode of the list. The value Simple indicates that the simple mode is used. In this mode, only the basic metadata information of the cluster is returned.</p>
+     * <br>
+     * <p>> If you do not specify this parameter, the detailed mode is used by default. Detailed information about the cluster is returned.</p>
      */
     @NameInMap("DescribeType")
     public String describeType;

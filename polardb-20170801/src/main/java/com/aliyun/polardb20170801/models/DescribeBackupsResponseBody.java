@@ -158,7 +158,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
-         * <p>�The expected expiration time of the backup set (This parameter is supported only for instances that are enabled with sparse backup).</p>
+         * <p>The expected expiration time of the backup set.</p>
+         * <p>> This parameter is supported only for instances that are enabled with sparse backup.</p>
          */
         @NameInMap("ExpectExpireTime")
         public String expectExpireTime;

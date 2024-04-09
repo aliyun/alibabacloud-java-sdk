@@ -5,25 +5,32 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterVersionResponseBody extends TeaModel {
     /**
-     * <p>The latest version of the database engine.</p>
+     * <p>The ID of cluster.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The release note of the kernel version.</p>
+     * <p>The latest version of the database engine.</p>
      */
     @NameInMap("DBLatestVersion")
     public String DBLatestVersion;
 
     /**
-     * <p>The versions to which the cluster can be upgraded.</p>
+     * <p>The minor version of the database engine.</p>
+     * <br>
+     * <p>- If DBVersion is 8.0, the valid values of this parameter are:</p>
+     * <p>  - 8.0.2</p>
+     * <p>  - 8.0.1</p>
+     * <p>- If DBVersion is 5.7, set the value of this parameter to 5.7.28.</p>
+     * <p>- If DBVersion is 5.6, the value of this parameter is 5.6.16.</p>
      */
     @NameInMap("DBMinorVersion")
     public String DBMinorVersion;
 
     /**
-     * <p>The version of PolarProxy.</p>
+     * <p>The revision version of the database engine.</p>
+     * <p>>For a cluster of the PolarDB for MySQL 5.6, the DBRevisionVersion parameter returns the revision version information only if the Revision Version is released later than August 31, 2020. Otherwise, this parameter returns an empty value.</p>
      */
     @NameInMap("DBRevisionVersion")
     public String DBRevisionVersion;
@@ -32,75 +39,70 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     public java.util.List<DescribeDBClusterVersionResponseBodyDBRevisionVersionList> DBRevisionVersionList;
 
     /**
-     * <p>The minor version of the database engine.</p>
+     * <p>The version of the database engine. Valid values:</p>
      * <br>
-     * <p>*   If `DBVersion` is **8.0**, the valid values of this parameter are:</p>
-     * <br>
-     * <p>    *   **8.0.2**</p>
-     * <p>    *   **8.0.1**</p>
-     * <br>
-     * <p>*   If `DBVersion` is **5.7**, set the value of this parameter to **5.7.28**.</p>
-     * <br>
-     * <p>*   If `DBVersion` is **5.6**, the value of this parameter is **5.6.16**.</p>
+     * <p>- 5.6</p>
+     * <p>- 5.7</p>
+     * <p>- 8.0</p>
      */
     @NameInMap("DBVersion")
     public String DBVersion;
-
-    /**
-     * <p>The latest version of PolarProxy.</p>
-     */
-    @NameInMap("DBVersionStatus")
-    public String DBVersionStatus;
 
     /**
      * <p>The status of the minor version. Valid values:</p>
      * <br>
      * <p>*   **Stable**: The minor version is stable.</p>
      * <p>*   **Old**: The minor version is outdated. We recommend that you upgrade the cluster to the latest version.</p>
-     * <p>*   **HighRisk**: The minor version has critical defects. We recommend that you immediately upgrade the cluster to the latest version.</p>
+     * <p>*   **HighRisk**: The minor version has critical defects. We recommend that you immediately update the cluster to the latest minor version.</p>
      * <br>
-     * <p>> For more information about how to upgrade the minor version, see [Upgrade versions](~~158572~~).</p>
+     * <p>>  For more information about how to update the minor version, see [Minor version update](~~158572~~).</p>
+     */
+    @NameInMap("DBVersionStatus")
+    public String DBVersionStatus;
+
+    /**
+     * <p>Indicates whether the kernel is of the latest version. Valid values:</p>
+     * <br>
+     * <p>- true</p>
+     * <p>- false</p>
      */
     @NameInMap("IsLatestVersion")
     public String isLatestVersion;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>Indicates whether PolarProxy uses the latest version. Valid values:</p>
+     * <br>
+     * <p>- true</p>
+     * <p>- false</p>
      */
     @NameInMap("IsProxyLatestVersion")
     public String isProxyLatestVersion;
 
     /**
-     * <p>The revision version of the database engine.</p>
+     * <p>The latest version of PolarProxy.</p>
      */
     @NameInMap("ProxyLatestVersion")
     public String proxyLatestVersion;
 
     /**
-     * <p>The release status of the kernel version. Valid values:</p>
-     * <br>
-     * <p>*   **Stable**: The kernel version is stable.</p>
-     * <p>*   **Old**: The kernel version is old. We recommend that you do not upgrade the cluster to this version returned for this parameter.</p>
-     * <p>*   **HighRisk**: The kernel version has critical defects. We recommend that you do not upgrade the cluster to this version returned for this parameter.</p>
+     * <p>The revision version of the database engine.</p>
      */
     @NameInMap("ProxyRevisionVersion")
     public String proxyRevisionVersion;
 
     /**
-     * <p>The code of the revision version of the database engine to which the cluster can be upgraded.</p>
+     * <p>The status of PolarProxy. Valid values:</p>
+     * <br>
+     * <p>- Stable: The minor version is stable.</p>
+     * <p>- Old: The minor version is outdated. We recommend that you upgrade the cluster to the latest version.</p>
+     * <p>- HighRisk: The minor version has critical defects. We recommend that you immediately upgrade the cluster to the latest version.</p>
+     * <p>- Beta: The minor version is a beta version.</p>
      */
     @NameInMap("ProxyVersionStatus")
     public String proxyVersionStatus;
 
     /**
-     * <p>The status of PolarProxy. Valid values:</p>
-     * <br>
-     * <p>*   **Stable**: The minor version is stable.</p>
-     * <p>*   **Old**: The minor version is outdated. We recommend that you upgrade the cluster to the latest version.</p>
-     * <p>*   **HighRisk**: The minor version has critical defects. We recommend that you immediately upgrade the cluster to the latest version.</p>
-     * <p>*   **Beta**: The minor version is a beta version.</p>
-     * <br>
-     * <p>> For more information about how to upgrade the PolarProxy version, see [Upgrade versions](~~158572~~).</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -215,15 +217,31 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterVersionResponseBodyDBRevisionVersionList extends TeaModel {
+        /**
+         * <p>The release notes for the revision version.</p>
+         */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
+        /**
+         * <p>The release status of the revision version. Valid values:</p>
+         * <br>
+         * <p>*   **Stable**: The revision version is stable.</p>
+         * <p>*   **Old**: The revision version is outdated. We recommend that you do not update the cluster to this version.</p>
+         * <p>*   **HighRisk**: The revision version has critical defects. We recommend that you do not update the cluster to this version.</p>
+         */
         @NameInMap("ReleaseType")
         public String releaseType;
 
+        /**
+         * <p>The code of the revision version of the database engine to which the cluster can be upgraded.</p>
+         */
         @NameInMap("RevisionVersionCode")
         public String revisionVersionCode;
 
+        /**
+         * <p>The revision version of the database engine.</p>
+         */
         @NameInMap("RevisionVersionName")
         public String revisionVersionName;
 

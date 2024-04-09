@@ -32,6 +32,9 @@ public class ModifyAccountPasswordRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PasswordType")
+    public String passwordType;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -81,6 +84,14 @@ public class ModifyAccountPasswordRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyAccountPasswordRequest setPasswordType(String passwordType) {
+        this.passwordType = passwordType;
+        return this;
+    }
+    public String getPasswordType() {
+        return this.passwordType;
     }
 
     public ModifyAccountPasswordRequest setResourceOwnerAccount(String resourceOwnerAccount) {

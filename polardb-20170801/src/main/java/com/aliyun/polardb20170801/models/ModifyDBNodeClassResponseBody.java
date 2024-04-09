@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyDBNodeClassResponseBody extends TeaModel {
     /**
-     * <p>The ID of the PolarDB cluster.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

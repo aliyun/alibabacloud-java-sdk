@@ -11,12 +11,12 @@ public class UpgradeDBClusterVersionRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to immediately run the task to modify parameters and restart the cluster. Valid values: </p>
+     * <p>Specifies whether to immediately run the kernel upgrade task. Valid values:</p>
      * <br>
-     * <p>- false: runs the task on schedule. </p>
-     * <p>- true: runs the task immediately. Default value: false.</p>
+     * <p>*   **false** (default)</p>
+     * <p>*   **true**</p>
      * <br>
-     * <p>> No need to use this parameter when calling this interface</p>
+     * <p>>  This parameter is not required when you call the operation.</p>
      */
     @NameInMap("FromTimeService")
     public Boolean fromTimeService;
@@ -58,27 +58,29 @@ public class UpgradeDBClusterVersionRequest extends TeaModel {
     public String targetDBRevisionVersionCode;
 
     /**
-     * <p>Kernel version upgrade label. The value is fixed as INNOVATE.</p>
-     * <p>> this parameter is passed in, UpgradePolicy must pass COLD.</p>
+     * <p>The upgrade tag. The value is fixed as **INNOVATE**.</p>
+     * <br>
+     * <p>> *   This parameter is applicable only when you upgrade PolarDB for MySQL 8.0.1 to PolarDB for MySQL 8.0.2.</p>
+     * <p>>*   If you specify this parameter, you must set `UpgradePolicy` to **COLD**.</p>
      */
     @NameInMap("UpgradeLabel")
     public String upgradeLabel;
 
     /**
-     * <p>Kernel version upgrade strategy. Value:</p>
+     * <p>The upgrade policy. Valid values:</p>
      * <br>
-     * <p>- HOT: Hot Upgrade</p>
-     * <p>- COLD: Cold upgrade. Currently, only PolarDB MySQL version 8.0 cluster version supports this upgrade method.</p>
+     * <p>*   **HOT**: hot upgrade.</p>
+     * <p>*   **COLD**: cold upgrade. Only PolarDB for MySQL Cluster Edition that runs MySQL 8.0 supports this upgrade method.</p>
      */
     @NameInMap("UpgradePolicy")
     public String upgradePolicy;
 
     /**
-     * <p>There is no need to use this parameter to upgrade the type when calling this interface. Value:</p>
+     * <p>The update type. Valid values:</p>
      * <br>
-     * <p>- PROXY: Upgrade database proxy only (Proxy)</p>
-     * <p>- DB: Upgrade kernel engine only</p>
-     * <p>- ALL (default): Upgrade both database proxy and kernel engine simultaneously</p>
+     * <p>*   **PROXY**: specifies to upgrade PloarProxy.</p>
+     * <p>*   **DB**: specifies to upgrade the kernel version.</p>
+     * <p>*   **ALL**: specifies to upgrade both PloarProxy and kernel version.</p>
      */
     @NameInMap("UpgradeType")
     public String upgradeType;

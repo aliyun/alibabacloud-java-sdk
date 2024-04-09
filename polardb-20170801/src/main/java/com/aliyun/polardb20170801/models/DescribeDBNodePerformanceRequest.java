@@ -22,6 +22,9 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("Interval")
+    public String interval;
+
     /**
      * <p>The performance metrics that you want to query. Separate multiple metrics with commas (,). For more information, see [Performance parameters](~~141787~~).</p>
      * <br>
@@ -35,6 +38,9 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
      */
     @NameInMap("StartTime")
     public String startTime;
+
+    @NameInMap("Type")
+    public String type;
 
     public static DescribeDBNodePerformanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBNodePerformanceRequest self = new DescribeDBNodePerformanceRequest();
@@ -65,6 +71,14 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeDBNodePerformanceRequest setInterval(String interval) {
+        this.interval = interval;
+        return this;
+    }
+    public String getInterval() {
+        return this.interval;
+    }
+
     public DescribeDBNodePerformanceRequest setKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +93,14 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeDBNodePerformanceRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

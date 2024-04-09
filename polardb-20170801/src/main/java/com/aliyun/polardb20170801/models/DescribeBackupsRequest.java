@@ -61,7 +61,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values:</p>
+     * <p>The number of entries to return on each page. Valid values:</p>
      * <br>
      * <p>*   **30**</p>
      * <p>*   **50**</p>
