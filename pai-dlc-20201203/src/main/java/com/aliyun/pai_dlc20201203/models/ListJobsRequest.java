@@ -40,6 +40,9 @@ public class ListJobsRequest extends TeaModel {
     @NameInMap("ResourceId")
     public String resourceId;
 
+    @NameInMap("ResourceQuotaName")
+    public String resourceQuotaName;
+
     @NameInMap("ShowOwn")
     public Boolean showOwn;
 
@@ -163,6 +166,14 @@ public class ListJobsRequest extends TeaModel {
     }
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    public ListJobsRequest setResourceQuotaName(String resourceQuotaName) {
+        this.resourceQuotaName = resourceQuotaName;
+        return this;
+    }
+    public String getResourceQuotaName() {
+        return this.resourceQuotaName;
     }
 
     public ListJobsRequest setShowOwn(Boolean showOwn) {
