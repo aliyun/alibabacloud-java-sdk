@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ddosbgp20180720</artifactId>
-  <version>2.2.0</version>
+  <version>2.3.0</version>
   <packaging>jar</packaging>
   <name>ddosbgp20180720</name>
   <description>Alibaba Cloud ddosbgp (20180720) SDK for Java
