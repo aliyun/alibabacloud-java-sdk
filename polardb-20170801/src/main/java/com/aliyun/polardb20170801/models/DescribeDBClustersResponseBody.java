@@ -96,7 +96,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
          * <p>The role of the node. Valid values:</p>
          * <br>
          * <p>*   **Writer**: The node is the primary node.</p>
-         * <p>*   **Reader**: The node is a read-only node.</p>
+         * <p>*   **Reader**: The node is the read-only node.</p>
          */
         @NameInMap("DBNodeRole")
         public String DBNodeRole;
@@ -126,7 +126,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Indicates whether the serverless feature is enabled for the current node. **ON** indicates that the serverless feature is enabled. An empty value indicates that the serverless feature is disabled.</p>
+         * <p>Indicates whether the serverless feature is enabled for the current node.</p>
+         * <br>
+         * <p>*   **ON** indicates that the serverless feature is enabled.</p>
+         * <p>*   An empty value indicates that the serverless feature is disabled.</p>
          */
         @NameInMap("Serverless")
         public String serverless;
@@ -286,52 +289,8 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         /**
          * <p>The type of the AI node. Valid values:</p>
          * <br>
-         * <p>*   SearchNode: Search node</p>
-         * <p>*   DLNode: ai node</p>
-         * <br>
-         * <p>Enumeration values:</p>
-         * <br>
-         * <p>*   SearchNode | DLNode</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    both</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   DLNode</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    DLNode</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   DLNode</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    DLNode</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
+         * <p>*   SearchNode: search node.</p>
+         * <p>*   DLNode: AI node.</p>
          */
         @NameInMap("AiType")
         public String aiType;
@@ -346,6 +305,9 @@ public class DescribeDBClustersResponseBody extends TeaModel {
          */
         @NameInMap("Category")
         public String category;
+
+        @NameInMap("CpuCores")
+        public String cpuCores;
 
         /**
          * <p>The time when the cluster was created.</p>
@@ -413,7 +375,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
          * <p>*   **0**: The cluster is not locked.</p>
          * <p>*   **1**: The cluster is locked.</p>
          * <br>
-         * <p>> If the cluster is locked, you cannot delete the cluster.</p>
+         * <p>> You cannot delete clusters that are locked.</p>
          */
         @NameInMap("DeletionLock")
         public Integer deletionLock;
@@ -444,7 +406,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         public String expired;
 
         /**
-         * <p>The lock status of the cluster. Valid values:</p>
+         * <p>The lock state of the cluster. Valid values:</p>
          * <br>
          * <p>*   **Unlock**: The cluster is not locked.</p>
          * <p>*   **ManualLock**: The cluster is manually locked.</p>
@@ -453,11 +415,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("LockMode")
         public String lockMode;
 
+        @NameInMap("MemorySize")
+        public String memorySize;
+
         /**
          * <p>The billing method of the cluster. Valid values:</p>
          * <br>
-         * <p>*   **Postpaid**: pay-as-you-go.</p>
-         * <p>*   **Prepaid**: subscription.</p>
+         * <p>*   **Postpaid**: pay-as-you-go</p>
+         * <p>*   **Prepaid**: subscription</p>
          */
         @NameInMap("PayType")
         public String payType;
@@ -467,6 +432,9 @@ public class DescribeDBClustersResponseBody extends TeaModel {
          */
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("RemoteMemorySize")
+        public String remoteMemorySize;
 
         /**
          * <p>The ID of the resource group.</p>
@@ -483,14 +451,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         /**
          * <p>The billing method of the storage space. Valid values:</p>
          * <br>
-         * <p>*   **Postpaid**: pay-as-you-go.</p>
-         * <p>*   **Prepaid**: subscription.</p>
+         * <p>*   **Postpaid**: pay-as-you-go</p>
+         * <p>*   **Prepaid**: subscription</p>
          */
         @NameInMap("StoragePayType")
         public String storagePayType;
 
         /**
-         * <p>The storage space that is billed based on the subscription billing method. Unit: bytes.</p>
+         * <p>The storage capacity that is billed based on the subscription billing method. Unit: byte.</p>
          */
         @NameInMap("StorageSpace")
         public Long storageSpace;
@@ -509,6 +477,9 @@ public class DescribeDBClustersResponseBody extends TeaModel {
          */
         @NameInMap("StrictConsistency")
         public String strictConsistency;
+
+        @NameInMap("SubCategory")
+        public String subCategory;
 
         /**
          * <p>The tags of the cluster.</p>
@@ -553,6 +524,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
         public String getCategory() {
             return this.category;
+        }
+
+        public DescribeDBClustersResponseBodyItemsDBCluster setCpuCores(String cpuCores) {
+            this.cpuCores = cpuCores;
+            return this;
+        }
+        public String getCpuCores() {
+            return this.cpuCores;
         }
 
         public DescribeDBClustersResponseBodyItemsDBCluster setCreateTime(String createTime) {
@@ -675,6 +654,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             return this.lockMode;
         }
 
+        public DescribeDBClustersResponseBodyItemsDBCluster setMemorySize(String memorySize) {
+            this.memorySize = memorySize;
+            return this;
+        }
+        public String getMemorySize() {
+            return this.memorySize;
+        }
+
         public DescribeDBClustersResponseBodyItemsDBCluster setPayType(String payType) {
             this.payType = payType;
             return this;
@@ -689,6 +676,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeDBClustersResponseBodyItemsDBCluster setRemoteMemorySize(String remoteMemorySize) {
+            this.remoteMemorySize = remoteMemorySize;
+            return this;
+        }
+        public String getRemoteMemorySize() {
+            return this.remoteMemorySize;
         }
 
         public DescribeDBClustersResponseBodyItemsDBCluster setResourceGroupId(String resourceGroupId) {
@@ -737,6 +732,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
         public String getStrictConsistency() {
             return this.strictConsistency;
+        }
+
+        public DescribeDBClustersResponseBodyItemsDBCluster setSubCategory(String subCategory) {
+            this.subCategory = subCategory;
+            return this;
+        }
+        public String getSubCategory() {
+            return this.subCategory;
         }
 
         public DescribeDBClustersResponseBodyItemsDBCluster setTags(DescribeDBClustersResponseBodyItemsDBClusterTags tags) {

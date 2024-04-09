@@ -22,6 +22,9 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("Interval")
+    public String interval;
+
     /**
      * <p>The performance metrics that you want to query. Separate multiple indicators with commas (,). For more information, see [Performance parameters](~~141787~~).</p>
      */
@@ -33,6 +36,9 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
      */
     @NameInMap("StartTime")
     public String startTime;
+
+    @NameInMap("Type")
+    public String type;
 
     public static DescribeDBProxyPerformanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBProxyPerformanceRequest self = new DescribeDBProxyPerformanceRequest();
@@ -63,6 +69,14 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeDBProxyPerformanceRequest setInterval(String interval) {
+        this.interval = interval;
+        return this;
+    }
+    public String getInterval() {
+        return this.interval;
+    }
+
     public DescribeDBProxyPerformanceRequest setKey(String key) {
         this.key = key;
         return this;
@@ -77,6 +91,14 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeDBProxyPerformanceRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

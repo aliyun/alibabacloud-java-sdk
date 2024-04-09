@@ -162,7 +162,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         /**
          * <p>The description of the GDN. The description must meet the following requirements:</p>
          * <br>
-         * <p>*   It cannot start with [http:// or https://.](http://https://。)</p>
+         * <p>*   It cannot start with `http://` or `https://`.</p>
          * <p>*   It must start with a letter.</p>
          * <p>*   It can contain letters, digits, underscores (\_), and hyphens (-).</p>
          * <p>*   It must be 2 to 126 characters in length.</p>

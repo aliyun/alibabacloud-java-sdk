@@ -27,6 +27,7 @@ public class CreateDBNodesRequest extends TeaModel {
      * <br>
      * <p>*   RO</p>
      * <p>*   STANDBY</p>
+     * <p>*   DLNode</p>
      */
     @NameInMap("DBNodeType")
     public String DBNodeType;

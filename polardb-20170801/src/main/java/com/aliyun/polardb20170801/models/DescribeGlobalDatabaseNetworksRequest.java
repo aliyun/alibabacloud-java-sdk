@@ -21,7 +21,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
     /**
      * <p>The description of the GDN. The description must meet the following requirements:</p>
      * <br>
-     * <p>*   It cannot start with [http:// or https://.](http://https://。)</p>
+     * <p>*   It cannot start with `http://` or `https://`.</p>
      * <p>*   It must start with a letter.</p>
      * <p>*   It can contain letters, digits, underscores (\_), and hyphens (-).</p>
      * <p>*   It must be 2 to 126 characters in length.</p>
@@ -48,7 +48,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 30. Valid values:</p>
+     * <p>The number of entries to return on each page. Default value: 30. Valid values:</p>
      * <br>
      * <p>*   30</p>
      * <p>*   50</p>
