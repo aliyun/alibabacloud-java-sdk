@@ -20,7 +20,7 @@ public class ModifySecurityGroupConfigurationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the ECS security group. Each instance can be added to up to three security groups. Separate the security group IDs with commas (,). To delete an ECS security group for the instance, leave this parameter empty. You can call the DescribeSecurityGroups operation to query the ID of the ECS security group.</p>
+     * <p>The ID of the ECS security group. Each instance can be added to up to 10 security groups. Separate multiple security groups with commas (,). To delete an ECS security group, leave this parameter empty. You can call the DescribeSecurityGroups operation to query the ID of the ECS security group.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

@@ -85,8 +85,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      * <p>*   **0**: Backup data is not compressed.</p>
      * <p>*   **1**: Backup data is compressed by using zlib.</p>
      * <p>*   **2**: Backup data is compressed by using zlib that invokes more than one thread in parallel for each backup.</p>
-     * <p>*   **4**: Backup data is compressed by using QuickLZ and can be used to restore individual databases and tables.</p>
-     * <p>*   **8**: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables. This value is available only when the instance runs MySQL 8.0.</p>
+     * <p>*   **4**: Backup data is compressed by using QuickLZ and can be used to restore individual databases or tables.</p>
+     * <p>*   **8**: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables.</p>
      */
     @NameInMap("CompressType")
     public String compressType;
@@ -94,8 +94,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
      * <br>
-     * <p>*   **1**: The log backup feature is enabled.</p>
-     * <p>*   **0**: The log backup feature is disabled.</p>
+     * <p>*   **1**: enabled</p>
+     * <p>*   **0**: disabled</p>
      */
     @NameInMap("EnableBackupLog")
     public String enableBackupLog;
@@ -110,12 +110,12 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public Boolean enableIncrementDataBackup;
 
     /**
-     * <p>Whether PITR recovery is enabled at any point in time (the upgraded version of the original log backup). Return value:</p>
+     * <p>Indicates whether the point-in-time restoration (PITR) feature is enabled. The PITR feature is an enhancement of the log backup feature. Valid values:</p>
      * <br>
-     * <p>- True: Yes</p>
-     * <p>- False: no</p>
+     * <p>*   **True**</p>
+     * <p>*   **False**</p>
      * <br>
-     * <p>> Only MySQL instances return this parameter.</p>
+     * <p>>  This parameter is returned only when the instance runs MySQL. For more information, see [Configure the PITR feature](~~2666046~~).</p>
      */
     @NameInMap("EnablePitrProtection")
     public Boolean enablePitrProtection;
@@ -147,7 +147,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      * <p>*   **LogInterval**: Log backups are performed every 30 minutes.</p>
      * <p>*   Default value: same as the value of the **PreferredBackupPeriod** parameter.</p>
      * <br>
-     * <p>> The **LogBackupFrequency** parameter is supported only when the instance runs **SQL Server**.</p>
+     * <p>>  This parameter is returned only when the instance runs SQL Server.</p>
      */
     @NameInMap("LogBackupFrequency")
     public String logBackupFrequency;
@@ -165,7 +165,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public Integer logBackupRetentionPeriod;
 
     /**
-     * <p>The number of days to restore at any point in time.</p>
+     * <p>The number of days during which you can restore data of the instance to any point in time.</p>
      */
     @NameInMap("PitrRetentionPeriod")
     public Integer pitrRetentionPeriod;
@@ -233,7 +233,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      * <p>*   **1**: The instance supports snapshot backups.</p>
      * <p>*   **0**: The instance does not support snapshot backups.</p>
      * <br>
-     * <p>> This parameter is returned only when the instance runs SQL Server.</p>
+     * <p>>  This parameter is returned only when the instance runs SQL Server.</p>
      */
     @NameInMap("SupportVolumeShadowCopy")
     public Integer supportVolumeShadowCopy;

@@ -25,10 +25,10 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public String CAType;
 
     /**
-     * <p>User-defined certificate. The custom certificate is in pfx format.</p>
+     * <p>The custom certificate. The custom certificate is in the `PFX` format.</p>
      * <br>
-     * <p>- Public address: `oss-<region ID>.aliyuncs.com:<Bucket name >:< certificate file name (with file suffix)>`</p>
-     * <p>- Intranet address: `oss-<region ID>-internal.aliyuncs.com:<Bucket name >:< certificate file name (with file suffix)>`</p>
+     * <p>*   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the certificate file (The file name contains the extension.)>`</p>
+     * <p>*   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the certificate file (The file name contains the extension.)>`</p>
      */
     @NameInMap("Certificate")
     public String certificate;
@@ -97,7 +97,7 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public String passWord;
 
     /**
-     * <p>The method that is used to verify the replication permissions. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:</p>
+     * <p>The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:</p>
      * <br>
      * <p>*   **cert**</p>
      * <p>*   **prefer**</p>
