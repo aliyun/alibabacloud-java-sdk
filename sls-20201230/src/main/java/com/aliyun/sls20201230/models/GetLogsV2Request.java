@@ -64,12 +64,6 @@ public class GetLogsV2Request extends TeaModel {
     public String session;
 
     /**
-     * <p>The ID of the shard.</p>
-     */
-    @NameInMap("shard")
-    public Integer shard;
-
-    /**
      * <p>The end of the time range to query. The value is the log time that is specified when log data is written.</p>
      * <br>
      * <p>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
@@ -158,14 +152,6 @@ public class GetLogsV2Request extends TeaModel {
     }
     public String getSession() {
         return this.session;
-    }
-
-    public GetLogsV2Request setShard(Integer shard) {
-        this.shard = shard;
-        return this;
-    }
-    public Integer getShard() {
-        return this.shard;
     }
 
     public GetLogsV2Request setTo(Integer to) {

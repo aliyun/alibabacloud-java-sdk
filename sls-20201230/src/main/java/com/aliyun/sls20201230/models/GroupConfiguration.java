@@ -4,8 +4,8 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GroupConfiguration extends TeaModel {
-    @NameInMap("fileds")
-    public java.util.List<String> fileds;
+    @NameInMap("fields")
+    public java.util.List<String> fields;
 
     @NameInMap("type")
     public String type;
@@ -15,12 +15,12 @@ public class GroupConfiguration extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GroupConfiguration setFileds(java.util.List<String> fileds) {
-        this.fileds = fileds;
+    public GroupConfiguration setFields(java.util.List<String> fields) {
+        this.fields = fields;
         return this;
     }
-    public java.util.List<String> getFileds() {
-        return this.fileds;
+    public java.util.List<String> getFields() {
+        return this.fields;
     }
 
     public GroupConfiguration setType(String type) {

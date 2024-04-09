@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListETLsRequest extends TeaModel {
+    @NameInMap("logstore")
+    public String logstore;
+
     @NameInMap("offset")
     public Integer offset;
 
@@ -13,6 +16,14 @@ public class ListETLsRequest extends TeaModel {
     public static ListETLsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListETLsRequest self = new ListETLsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListETLsRequest setLogstore(String logstore) {
+        this.logstore = logstore;
+        return this;
+    }
+    public String getLogstore() {
+        return this.logstore;
     }
 
     public ListETLsRequest setOffset(Integer offset) {
