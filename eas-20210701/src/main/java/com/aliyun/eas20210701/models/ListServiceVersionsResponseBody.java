@@ -16,6 +16,9 @@ public class ListServiceVersionsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The versions of the service.</p>
+     */
     @NameInMap("Versions")
     public java.util.List<ListServiceVersionsResponseBodyVersions> versions;
 
@@ -65,21 +68,47 @@ public class ListServiceVersionsResponseBody extends TeaModel {
     }
 
     public static class ListServiceVersionsResponseBodyVersions extends TeaModel {
+        /**
+         * <p>The time when the service version was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("BuildTime")
         public String buildTime;
 
+        /**
+         * <p>Indicates whether the image is available. Valid values:</p>
+         * <br>
+         * <p>*   true: The image is available.</p>
+         * <p>*   false: The image is unavailable.</p>
+         * <p>*   unknown: The availability of the image is unknown.</p>
+         */
         @NameInMap("ImageAvailable")
         public String imageAvailable;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public Integer imageId;
 
+        /**
+         * <p>The returned message.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The service deployment configurations. This parameter is returned only if the service is deployed by using a custom image.</p>
+         */
         @NameInMap("ServiceConfig")
         public String serviceConfig;
 
+        /**
+         * <p>Indicates whether EAS is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true: EAS is enabled.</p>
+         * <p>*   false: EAS is not enabled.</p>
+         * <p>*   unknown: The enabling status of EAS is unknown.</p>
+         */
         @NameInMap("ServiceRunnable")
         public String serviceRunnable;
 

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to isolate the service instance.</p>
+     * <p>Specifies whether to isolate the service instance. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Isolate")
     public Boolean isolate;

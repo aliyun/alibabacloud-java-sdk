@@ -10,21 +10,12 @@ public class ListServicesResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>请求ID。</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>服务列表。</p>
-     */
     @NameInMap("Services")
     public java.util.List<Service> services;
 
-    /**
-     * <p>服务总数。</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
