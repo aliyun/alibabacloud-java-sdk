@@ -10,6 +10,32 @@ public class UpdateServiceSafetyLockRequest extends TeaModel {
      * <p>*   all: locks all operations.</p>
      * <p>*   dangerous: locks high-risk operations such as delete and stop operations.</p>
      * <p>*   none: locks no operations.</p>
+     * <br>
+     * <p>Enumerated values:</p>
+     * <br>
+     * <p>*   all</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   dangerous</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   none</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("Lock")
     public String lock;

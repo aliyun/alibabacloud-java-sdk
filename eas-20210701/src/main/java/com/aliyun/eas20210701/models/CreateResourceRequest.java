@@ -36,9 +36,6 @@ public class CreateResourceRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
-    /**
-     * <p>自运维资源组配置选项</p>
-     */
     @NameInMap("SelfManagedResourceOptions")
     public CreateResourceRequestSelfManagedResourceOptions selfManagedResourceOptions;
 
@@ -124,27 +121,15 @@ public class CreateResourceRequest extends TeaModel {
     }
 
     public static class CreateResourceRequestSelfManagedResourceOptionsNodeTolerations extends TeaModel {
-        /**
-         * <p>效果</p>
-         */
         @NameInMap("effect")
         public String effect;
 
-        /**
-         * <p>键名</p>
-         */
         @NameInMap("key")
         public String key;
 
-        /**
-         * <p>键名和键值的关系</p>
-         */
         @NameInMap("operator")
         public String operator;
 
-        /**
-         * <p>键值</p>
-         */
         @NameInMap("value")
         public String value;
 
@@ -188,27 +173,15 @@ public class CreateResourceRequest extends TeaModel {
     }
 
     public static class CreateResourceRequestSelfManagedResourceOptions extends TeaModel {
-        /**
-         * <p>自运维集群Id</p>
-         */
         @NameInMap("ExternalClusterId")
         public String externalClusterId;
 
-        /**
-         * <p>节点的标签键值对集合</p>
-         */
         @NameInMap("NodeMatchLabels")
         public java.util.Map<String, String> nodeMatchLabels;
 
-        /**
-         * <p>节点污点的容忍度列表</p>
-         */
         @NameInMap("NodeTolerations")
         public java.util.List<CreateResourceRequestSelfManagedResourceOptionsNodeTolerations> nodeTolerations;
 
-        /**
-         * <p>授予云服务PAI-EAS相关权限的RAM角色名称</p>
-         */
         @NameInMap("RoleName")
         public String roleName;
 

@@ -70,9 +70,6 @@ public class ListServicesShrinkRequest extends TeaModel {
     @NameInMap("Label")
     public String labelShrink;
 
-    /**
-     * <p>所属的group。</p>
-     */
     @NameInMap("Order")
     public String order;
 
@@ -91,21 +88,12 @@ public class ListServicesShrinkRequest extends TeaModel {
     @NameInMap("QuotaId")
     public String quotaId;
 
-    /**
-     * <p>服务所属的资源组名称或ID。</p>
-     */
     @NameInMap("ResourceName")
     public String resourceName;
 
-    /**
-     * <p>服务名。</p>
-     */
     @NameInMap("ServiceName")
     public String serviceName;
 
-    /**
-     * <p>服务运行的状态。</p>
-     */
     @NameInMap("ServiceStatus")
     public String serviceStatus;
 
@@ -115,9 +103,6 @@ public class ListServicesShrinkRequest extends TeaModel {
     @NameInMap("ServiceUid")
     public String serviceUid;
 
-    /**
-     * <p>服务的类型定义。</p>
-     */
     @NameInMap("Sort")
     public String sort;
 

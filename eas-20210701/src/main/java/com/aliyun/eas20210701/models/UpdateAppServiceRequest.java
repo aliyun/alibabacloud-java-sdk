@@ -21,15 +21,11 @@ public class UpdateAppServiceRequest extends TeaModel {
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   LLM</p>
+     * <p>*   LLM: the large language model (LLM) application</p>
      * <br>
      * <p>    <!-- --></p>
      * <br>
-     * <p>    :</p>
-     * <br>
      * <p>    <!-- --></p>
-     * <br>
-     * <p>    the large language model (LLM) application</p>
      * <br>
      * <p>    <!-- --></p>
      */
@@ -43,19 +39,30 @@ public class UpdateAppServiceRequest extends TeaModel {
     public String appVersion;
 
     /**
-     * <p>Additional configurations that are required for the service deployment.</p>
+     * <p>The additional configurations that are required for service deployment.</p>
      */
     @NameInMap("Config")
     public java.util.Map<String, ?> config;
 
     /**
-     * <p>The number of instances.</p>
+     * <p>The number of instances. This value must be greater than 0.</p>
      */
     @NameInMap("Replicas")
     public Integer replicas;
 
     /**
-     * <p>The service specifications.</p>
+     * <p>The service specifications. Valid values:</p>
+     * <br>
+     * <p>*   llama\_7b_fp16</p>
+     * <p>*   llama\_7b_int8</p>
+     * <p>*   llama\_13b_fp16</p>
+     * <p>*   llama\_7b_int8</p>
+     * <p>*   chatglm\_6b_fp16</p>
+     * <p>*   chatglm\_6b_int8</p>
+     * <p>*   chatglm2\_6b_fp16</p>
+     * <p>*   baichuan\_7b_int8</p>
+     * <p>*   baichuan\_13b_fp16</p>
+     * <p>*   baichuan\_7b_fp16</p>
      */
     @NameInMap("ServiceSpec")
     public String serviceSpec;
