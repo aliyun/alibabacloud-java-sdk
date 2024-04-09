@@ -1,3 +1,8 @@
+2024-04-09 Version: 3.0.2
+- Delete API CreateOrderForCreateDBNodes.
+- Delete API PreCheckCreateOrderForCreateDBNodes.
+
+
 2024-04-09 Version: 3.0.1
 - Update API DescribeDBInstances: update response param.
 - Update API DescribeDatabases: update response param.
