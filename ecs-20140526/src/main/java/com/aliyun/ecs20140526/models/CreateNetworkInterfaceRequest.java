@@ -40,7 +40,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>IPv4 prefix N to assign to the ENI. Valid values of N: 1 to 10.</p>
+     * <p>IPv4 prefixes to assign to the ENI. Valid values of N: 1 to 10.</p>
      * <br>
      * <p>>  To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.</p>
      */
@@ -48,7 +48,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public java.util.List<String> ipv4Prefix;
 
     /**
-     * <p>IPv4 prefix N to assign to the ENI. Valid values: 1 to 10.</p>
+     * <p>The number of IPv4 prefixes to assign to the ENI. Valid values: 1 to 10.</p>
      * <br>
      * <p>>  To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.</p>
      */
@@ -56,7 +56,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer ipv4PrefixCount;
 
     /**
-     * <p>IPv6 address N to assign to the ENI. Valid values of N: 1 to 10.</p>
+     * <p>IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.</p>
      * <br>
      * <p>Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*</p>
      * <br>
@@ -74,7 +74,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer ipv6AddressCount;
 
     /**
-     * <p>IPv6 prefix N to assign to the ENI. Valid values of N: 1 to 10.</p>
+     * <p>IPv6 prefixes to assign to the ENI. Valid values of N: 1 to 10.</p>
      * <br>
      * <p>>  To assign IPv6 prefixes to the ENI, you must specify the Ipv6Prefix.N or Ipv6PrefixCount parameter, but not both.</p>
      */
@@ -82,7 +82,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public java.util.List<String> ipv6Prefix;
 
     /**
-     * <p>IPv6 prefix N to assign to the ENI. Valid values: 1 to 10.</p>
+     * <p>The number of IPv6 prefixes to assign to the ENI. Valid values: 1 to 10.</p>
      * <br>
      * <p>>  To assign IPv6 prefixes to the ENI, you must specify the Ipv6Prefix.N or Ipv6PrefixCount parameter, but not both.</p>
      */
@@ -90,7 +90,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer ipv6PrefixCount;
 
     /**
-     * <p>The name of the ENI. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the ENI. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.</p>
      * <br>
      * <p>This parameter is empty by default.</p>
      */
@@ -98,12 +98,12 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String networkInterfaceName;
 
     /**
-     * <p>The communication model of the ENI. Valid values:</p>
+     * <p>The communication mode of the ENI. Valid values:</p>
      * <br>
      * <p>*   Standard: uses the TCP communication mode.</p>
      * <p>*   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</p>
      * <br>
-     * <p>>  This parameter can have a value of HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance. The number of ERIs on a c7re instance cannot exceed the maximum number of ERIs that the instance type supports. The c7re instance family is in invitational preview in Beijing Zone K. For more information, see [Overview of instance families](~~25378~~).</p>
+     * <p>>  This parameter can have a value of HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance. The maximum number of ENIs in RDMA mode that can be attached to a c7re instance is determined based on the instance type. The c7re instance family is in invitational preview in Beijing Zone K. For more information, see [Overview of instance families](~~25378~~).</p>
      * <br>
      * <p>Default value: Standard.</p>
      */
@@ -125,7 +125,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String primaryIpAddress;
 
     /**
-     * <p>Secondary private IP address N to assign to the ENI. This IP address must be an idle IP address within the CIDR block of the vSwitch with which to associate the ENI. Valid values of N: 0 to 10.</p>
+     * <p>Secondary private IP addresses to assign to the ENI. The IP addresses must be idle IP addresses in the CIDR block of the vSwitch with which to associate the ENI. Valid values of N: 0 to 10.</p>
      * <br>
      * <p>>  To assign secondary private IP addresses to the ENI, you can specify the `PrivateIpAddress.N` or `SecondaryPrivateIpAddressCount` parameter, but not both.</p>
      */

@@ -11,7 +11,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>This parameter is deprecated. Use `Permissions.N.Description` to specify the description of security group rule N.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.Description` to specify the rule description.</p>
      */
     @NameInMap("Description")
     @Deprecated
@@ -46,7 +46,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String ipv6SourceCidrIp;
 
     /**
-     * <p>This parameter is deprecated. Use `Permissions.N.NicType` to specify the NIC type.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.NicType` to specify the network interface type.</p>
      */
     @NameInMap("NicType")
     @Deprecated
@@ -79,7 +79,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String portRange;
 
     /**
-     * <p>This parameter is deprecated. Use `Permissions.N.Priority` to specify the priority of the rule.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.Priority` to specify the rule priority.</p>
      */
     @NameInMap("Priority")
     @Deprecated

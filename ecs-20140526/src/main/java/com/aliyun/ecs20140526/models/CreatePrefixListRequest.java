@@ -14,7 +14,7 @@ public class CreatePrefixListRequest extends TeaModel {
     public String addressFamily;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -26,7 +26,7 @@ public class CreatePrefixListRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>前缀列表条目信息。</p>
+     * <p>The details of entries in the prefix list.</p>
      */
     @NameInMap("Entry")
     public java.util.List<CreatePrefixListRequestEntry> entry;
@@ -44,7 +44,7 @@ public class CreatePrefixListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the prefix list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://`, `https://`, `com.aliyun`, or `com.alibabacloud`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
+     * <p>The name of the prefix list. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). It must start with a letter and cannot start with `http://`, `https://`, `com.aliyun`, or `com.alibabacloud`.</p>
      */
     @NameInMap("PrefixListName")
     public String prefixListName;
@@ -158,13 +158,13 @@ public class CreatePrefixListRequest extends TeaModel {
         /**
          * <p>The CIDR block in entry N. Valid values of N: 0 to 200. Take note of the following items:</p>
          * <br>
-         * <p>*   The total number of entries must not exceed the `MaxEntries` value.</p>
+         * <p>*   The total number of entries cannot exceed the `MaxEntries` value.</p>
          * <p>*   CIDR block types are determined by the IP address family. You cannot combine IPv4 and IPv6 CIDR blocks in a single prefix list.</p>
          * <p>*   CIDR blocks must be unique across all entries in a prefix list. For example, you cannot specify 192.168.1.0/24 twice in the entries of the prefix list.</p>
          * <p>*   IP addresses are supported. The system converts IP addresses into CIDR blocks. For example, if you specify 192.168.1.100, the system converts it into the 192.168.1.100/32 CIDR block.</p>
-         * <p>*   If an IPv6 CIDR block is used, the system converts it to the zero compression format and changes uppercase letters into lowercase ones. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it into 2001:db8::/32.</p>
+         * <p>*   If an IPv6 CIDR block is used, the system converts it into the zero compression format and changes uppercase letters into lowercase ones. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it into 2001:db8::/32.</p>
          * <br>
-         * <p>For more information about CIDR blocks, see the "What is CIDR block?" section of the [Network FAQ](https://www.alibabacloud.com/help/doc-detail/40637.htm#title-gu4-uzk-12r) topic.</p>
+         * <p>For more information about CIDR blocks, see the [What is CIDR?](~~40637~~#title-gu4-uzk-12r) section in the "Network FAQ" topic.</p>
          * <br>
          * <p>This parameter is empty by default.</p>
          */

@@ -23,7 +23,7 @@ public class DescribeDiskMonitorDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The interval at which you want to query the monitoring data. Unit: seconds. Valid values:</p>
+     * <p>The interval at which to retrieve the monitoring data. Unit: seconds. Valid values:</p>
      * <br>
      * <p>*   60</p>
      * <p>*   600</p>

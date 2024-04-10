@@ -5,17 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     /**
-     * <p>The name of the automatic snapshot policy.</p>
+     * <p>The ID of the automatic snapshot policy.</p>
      */
     @NameInMap("AutoSnapshotPolicyId")
     public String autoSnapshotPolicyId;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>Page start from page 1.</p>
-     * <br>
-     * <p>Default value: 1.</p>
+     * <p>The name of the automatic snapshot policy.</p>
      */
     @NameInMap("AutoSnapshotPolicyName")
     public String autoSnapshotPolicyName;
@@ -27,29 +23,35 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The page number.</p>
      * <br>
-     * <p>Maximum value: 100.</p>
+     * <p>Pages start from page 1.</p>
      * <br>
-     * <p>Default value: 10.</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The tags.</p>
+     * <p>The number of entries per page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the automatic snapshot policy.</p>
+     * <p>The region ID of the automatic snapshot policy. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+     * <br>
+     * <p>> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -61,7 +63,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The key of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+     * <p>The tags of the automatic snapshot policy.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeAutoSnapshotPolicyExRequestTag> tag;
@@ -161,15 +163,13 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
 
     public static class DescribeAutoSnapshotPolicyExRequestTag extends TeaModel {
         /**
-         * <p>The value of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain http:// or https://.</p>
+         * <p>The key of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
-         * <br>
-         * <p>>  Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+         * <p>The value of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs:.</p>
          */
         @NameInMap("Value")
         public String value;

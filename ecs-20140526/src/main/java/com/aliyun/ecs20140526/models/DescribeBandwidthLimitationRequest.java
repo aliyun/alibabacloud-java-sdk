@@ -16,7 +16,12 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The instance type. For information about the values, see [Instance families](~~25378~~).</p>
+     * <p>The type of the elastic network interface (ENI). Valid values:</p>
+     * <br>
+     * <p>*   Secondary: secondary ENI.</p>
+     * <p>*   Trunk: trunk ENI. This value is in invitational preview.</p>
+     * <br>
+     * <p>Default value: Secondary.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -40,13 +45,13 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The resource ID.</p>
      * <br>
      * <p>>  This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.</p>
      */
@@ -62,8 +67,8 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     /**
      * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
      * <br>
-     * <p>*   NoSpot: The instance is a regular pay-as-you-go instance.</p>
-     * <p>*   SpotWithPriceLimit: The instance is a preemptible instance with user-defined maximum hourly prices.</p>
+     * <p>*   NoSpot: The instance is a pay-as-you-go instance.</p>
+     * <p>*   SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.</p>
      * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</p>
      * <br>
      * <p>Default value: NoSpot.</p>

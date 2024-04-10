@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAutoProvisioningGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the auto provisioning group to be deleted.</p>
+     * <p>The ID of the auto provisioning group.</p>
      */
     @NameInMap("AutoProvisioningGroupId")
     public String autoProvisioningGroupId;
@@ -31,8 +31,10 @@ public class DeleteAutoProvisioningGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to release instances in the auto provisioning group. Valid values:</p>
      * <br>
-     * <p>*   true: releases instances in the auto provisioning group.</p>
-     * <p>*   false: retains instances in the auto provisioning group.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     * <br>
+     * <p>>  By default, this parameter inherits the value of `TerminateInstances` that you specified when you call the `CreateAutoProvisioningGroup` operation to create an auto provisioning group. You can also change the value of `TerminateInstances` when you call the DeleteAutoProvisioningGroup operation to delete the auto provisioning group.</p>
      */
     @NameInMap("TerminateInstances")
     public Boolean terminateInstances;

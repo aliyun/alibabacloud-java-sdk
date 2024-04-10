@@ -11,70 +11,70 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>This parameter is no longer used. Use `Permissions.N.Description` to specify the description of security group rule N.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.Description` to specify the rule description.</p>
      */
     @NameInMap("Description")
     @Deprecated
     public String description;
 
     /**
-     * <p>This parameter is no longer used. Use `Permissions.N.DestCidrIp` to specify the destination IPv4 CIDR block.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.DestCidrIp` to specify the destination IPv4 CIDR block.</p>
      */
     @NameInMap("DestCidrIp")
     @Deprecated
     public String destCidrIp;
 
     /**
-     * <p>This parameter is no longer used. Use `Permissions.N.DestGroupId` to specify the ID of the destination security group.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.DestGroupId` to specify the ID of the destination security group.</p>
      */
     @NameInMap("DestGroupId")
     @Deprecated
     public String destGroupId;
 
     /**
-     * <p>This parameter is no longer used. Use `Permissions.N.DestGroupOwnerAccount` to specify the Alibaba Cloud account that manages the destination security group.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.DestGroupOwnerAccount` to specify the Alibaba Cloud account that manages the destination security group.</p>
      */
     @NameInMap("DestGroupOwnerAccount")
     @Deprecated
     public String destGroupOwnerAccount;
 
     /**
-     * <p>This parameter is no longer used. Use `Permissions.N.DestGroupOwnerId` to specify the ID of the Alibaba Cloud account that manages the destination security group.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.DestGroupOwnerId` to specify the ID of the Alibaba Cloud account that manages the destination security group.</p>
      */
     @NameInMap("DestGroupOwnerId")
     @Deprecated
     public Long destGroupOwnerId;
 
     /**
-     * <p>This parameter is no longer used. Use `Permissions.N.DestPrefixListId` to specify the ID of the destination prefix list.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.DestPrefixListId` to specify the ID of the destination prefix list.</p>
      */
     @NameInMap("DestPrefixListId")
     @Deprecated
     public String destPrefixListId;
 
     /**
-     * <p>This parameter is no longer used. Use `Permissions.N.IpProtocol` to specify the transport layer protocol.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.IpProtocol` to specify the transport layer protocol.</p>
      */
     @NameInMap("IpProtocol")
     @Deprecated
     public String ipProtocol;
 
     /**
-     * <p>This parameter is no longer used. Use `Permissions.N.Ipv6DestCidrIp` to specify the destination IPv6 CIDR block.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.Ipv6DestCidrIp` to specify the destination IPv6 CIDR block.</p>
      */
     @NameInMap("Ipv6DestCidrIp")
     @Deprecated
     public String ipv6DestCidrIp;
 
     /**
-     * <p>This parameter is no longer used. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.</p>
      */
     @NameInMap("Ipv6SourceCidrIp")
     @Deprecated
     public String ipv6SourceCidrIp;
 
     /**
-     * <p>This parameter is no longer used. Use `Permissions.N.NicType` to specify the network interface type.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.NicType` to specify the network interface type.</p>
      */
     @NameInMap("NicType")
     @Deprecated
@@ -93,21 +93,21 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     public java.util.List<RevokeSecurityGroupEgressRequestPermissions> permissions;
 
     /**
-     * <p>This parameter is no longer used. Use `Permissions.N.Policy` to specify whether to allow outbound access.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.Policy` to specify whether to allow outbound access.</p>
      */
     @NameInMap("Policy")
     @Deprecated
     public String policy;
 
     /**
-     * <p>This parameter is no longer used. Use `Permissions.N.PortRange` to specify the range of destination ports.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.PortRange` to specify the range of destination ports.</p>
      */
     @NameInMap("PortRange")
     @Deprecated
     public String portRange;
 
     /**
-     * <p>This parameter is no longer used. Use `Permissions.N.Priority` to specify the rule priority.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.Priority` to specify the rule priority.</p>
      */
     @NameInMap("Priority")
     @Deprecated
@@ -138,14 +138,14 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     public java.util.List<String> securityGroupRuleId;
 
     /**
-     * <p>This parameter is no longer used. Use `Permissions.N.SourceCidrIp` to specify the source IPv4 CIDR block.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.SourceCidrIp` to specify the source IPv4 CIDR block.</p>
      */
     @NameInMap("SourceCidrIp")
     @Deprecated
     public String sourceCidrIp;
 
     /**
-     * <p>This parameter is no longer used. Use `Permissions.N.SourcePortRange` to specify the range of source ports.</p>
+     * <p>This parameter is deprecated. Use `Permissions.N.SourcePortRange` to specify the range of source ports.</p>
      */
     @NameInMap("SourcePortRange")
     @Deprecated

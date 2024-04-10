@@ -13,7 +13,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public Integer cores;
 
     /**
-     * <p>The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:</p>
+     * <p>The billing method of the ECS instance. For more information, see [Billing overview](~~25398~~). Valid values:</p>
      * <br>
      * <p>*   PrePaid: subscription</p>
      * <p>*   PostPaid: pay-as-you-go</p>
@@ -97,7 +97,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
      * <p>The policy that is used to recommend instance types. Valid values:</p>
      * <br>
      * <p>*   InventoryFirst: recommends instance types in descending order of resource availability.</p>
-     * <p>*   PriceFirst: recommends instance types in ascending order of hourly price per vCPU.</p>
+     * <p>*   PriceFirst: recommends the most cost-effective instance type. Recommended instance types appear based on the hourly prices of vCPUs in ascending order.</p>
      * <p>*   NewProductFirst: recommends the latest instance types first.</p>
      * <br>
      * <p>Default value: InventoryFirst.</p>
@@ -132,10 +132,10 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
      * <p>The bidding policy of preemptible instances. Valid values:</p>
      * <br>
      * <p>*   NoSpot: The instance is a pay-as-you-go instance.</p>
-     * <p>*   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</p>
-     * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</p>
+     * <p>*   SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.</p>
+     * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</p>
      * <br>
-     * <p>> The `SpotStrategy` parameter takes effect only when `InstanceChargeType` is set to `PostPaid`.</p>
+     * <p>> If the `SpotStrategy` parameter is specified, the `InstanceChargeType` parameter must be set to `PostPaid`.</p>
      * <br>
      * <p>Default value: NoSpot.</p>
      */

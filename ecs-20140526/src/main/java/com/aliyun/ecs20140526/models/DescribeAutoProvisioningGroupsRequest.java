@@ -29,7 +29,7 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <br>
      * <p>Pages start from page 1.</p>
      * <br>
@@ -39,9 +39,9 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
-     * <p>Maximum value: 100.</p>
+     * <p>Valid values: 1 to 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -54,6 +54,9 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the auto provisioning group belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

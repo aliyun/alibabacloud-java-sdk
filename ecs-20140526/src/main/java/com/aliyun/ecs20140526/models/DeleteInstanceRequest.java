@@ -4,14 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <br>
+     * <p>*   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   false (default): performs a dry run and performs the actual request. If the request passes the dry run, the instance is released.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcefully release the instance in the `Running` state. Valid values:****</p>
+     * <p>Specifies whether to forcefully release the instance in the **Running** (`Running`) state. Valid values:</p>
      * <br>
-     * <p>*   true: forcefully releases the instance in the `Running` state.**** This operation is equivalent to performing a hard shut-down. Cache data that is not written to persistent storage will be lost.</p>
-     * <p>*   false: normally releases the instance. This value is valid only for instances in the `Stopped` state.****</p>
+     * <p>*   true: forcefully releases the instance in the **Running** (`Running`) state. This operation is equivalent to performing a hard shut-down. Cache data that is not written to persistent storage will be lost.</p>
+     * <p>*   false: normally releases the instance. This value is valid only for instances in the **Stopped** (`Stopped`) state.</p>
      * <br>
      * <p>Default value: false.</p>
      */
@@ -37,7 +43,10 @@ public class DeleteInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to release an expired subscription instance.</p>
+     * <p>Specifies whether to release the expired subscription instance. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      * <br>
      * <p>Default value: false.</p>
      */

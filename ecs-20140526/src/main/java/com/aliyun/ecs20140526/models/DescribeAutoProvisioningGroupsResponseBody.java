@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
     /**
-     * <p>Details about the auto provisioning groups.</p>
+     * <p>The details of the auto provisioning groups.</p>
      */
     @NameInMap("AutoProvisioningGroups")
     public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroups autoProvisioningGroups;
@@ -81,31 +81,31 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
     public static class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigsLaunchTemplateConfig extends TeaModel {
         /**
-         * <p>The instance type that is specified in the extended configurations.</p>
+         * <p>The instance type that is specified in the extended configuration.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The maximum price of the instance type specified in the extended configurations.</p>
+         * <p>The maximum price of the instance type specified in the extended configuration.</p>
          */
         @NameInMap("MaxPrice")
         public Float maxPrice;
 
         /**
-         * <p>The priority of the instance type specified in the extended configurations. A value of 0 indicates the highest priority.</p>
+         * <p>The priority of the instance type specified in the extended configuration. A value of 0 indicates the highest priority.</p>
          */
         @NameInMap("Priority")
         public Float priority;
 
         /**
-         * <p>The ID of the vSwitch specified in the extended configurations.</p>
+         * <p>The ID of the vSwitch specified in the extended configuration.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The weight of the instance type specified in the extended configurations.</p>
+         * <p>The weight of the instance type specified in the extended configuration.</p>
          */
         @NameInMap("WeightedCapacity")
         public Float weightedCapacity;
@@ -180,10 +180,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         /**
          * <p>The policy for creating pay-as-you-go instances. Valid values:</p>
          * <br>
-         * <p>*   lowest-price: the cost optimization policy. The auto provisioning group selects the instance type of the lowest price to create pay-as-you-go instances.</p>
-         * <p>*   prioritized: the priority-based policy. This policy indicates that instances are created based on the priority specified by the LaunchTemplateConfig.N.Priority parameter.</p>
+         * <p>*   lowest-price: cost optimization policy. This policy indicates that lowest-cost instance types are used to create instances.</p>
+         * <p>*   prioritized: priority-based policy. This policy indicates that instances are created based on the priority specified by LaunchTemplateConfig.N.Priority.</p>
          * <br>
-         * <p>> The LaunchTemplateConfig.N.Priority parameter is set when the auto provisioning group is created, and cannot be modified.</p>
+         * <p>>  The value of LaunchTemplateConfig.N.Priority is specified when the auto provisioning group is created, and the value cannot be modified.</p>
          */
         @NameInMap("AllocationStrategy")
         public String allocationStrategy;
@@ -205,18 +205,18 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
     public static class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions extends TeaModel {
         /**
-         * <p>The policy for creating preemptible instances. Valid values:</p>
+         * <p>The provisioning policy for preemptible instances. Valid values:</p>
          * <br>
-         * <p>*   lowest-price: the cost optimization policy. The auto provisioning group selects the instance type of the lowest price to create preemptible instances.</p>
-         * <p>*   diversified: the balanced distribution policy. The auto provisioning group creates the instances in the zones that are specified in extended configurations and evenly distributes the instances across the zones.</p>
+         * <p>*   lowest-price: cost optimization policy. This policy indicates that lowest-cost instance types are used to create instances.</p>
+         * <p>*   diversified: balanced distribution policy. This policy indicates that instances are created evenly across multiple zones specified in the extended configuration.</p>
          */
         @NameInMap("AllocationStrategy")
         public String allocationStrategy;
 
         /**
-         * <p>The action to be performed after the extra preemptible instances are stopped. Valid values:</p>
+         * <p>The action to be performed after the excess preemptible instances are stopped. Valid values:</p>
          * <br>
-         * <p>*   stop: retains the extra preemptible instances in the stopped state.</p>
+         * <p>*   stop: retains the excess preemptible instances in the stopped state.</p>
          * <p>*   terminate: releases the excess preemptible instances.</p>
          */
         @NameInMap("InstanceInterruptionBehavior")
@@ -225,7 +225,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         /**
          * <p>The number of instances that the auto provisioning group creates by selecting the instance type of the lowest price.</p>
          * <br>
-         * <p>> This parameter is set when the auto provisioning group is created, and cannot be modified.</p>
+         * <p>>  This parameter is set when the auto provisioning group is created, and cannot be modified.</p>
          */
         @NameInMap("InstancePoolsToUseCount")
         public Integer instancePoolsToUseCount;
@@ -312,7 +312,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
     public static class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification extends TeaModel {
         /**
-         * <p>The billing method of supplemental instances. The target capacity of the auto provisioning group must be at least the sum of the pay-as-you-go instance capacity specified by the PayAsYouGoTargetCapacity parameter and the preemptible instance capacity specified by the SpotTargetCapacity parameter. Valid values:</p>
+         * <p>The type of supplemental instances. When the sum of the `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` values is less than the `TotalTargetCapacity` value, the auto provisioning group creates instances of the specified billing method to meet the target capacity. Valid values:</p>
          * <br>
          * <p>*   PayAsYouGo: pay-as-you-go instances</p>
          * <p>*   Spot: preemptible instances</p>
@@ -337,7 +337,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
          * <br>
          * <p>*   PayAsYouGoTargetCapacity</p>
          * <p>*   SpotTargetCapacity</p>
-         * <p>*   The supplemental capacity besides instance capacities specified by the PayAsYouGoTargetCapacity and SpotTargetCapacity parameters</p>
+         * <p>*   The supplemental capacity besides instance capacities specified by PayAsYouGoTargetCapacity and SpotTargetCapacity.</p>
          */
         @NameInMap("TotalTargetCapacity")
         public Float totalTargetCapacity;
@@ -397,29 +397,29 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         /**
          * <p>The delivery type of the auto provisioning group. Valid values:</p>
          * <br>
-         * <p>*   request: the one-time delivery. When the auto provisioning group is started, the system delivers clusters only once. If the clusters fail to be delivered, the system does not retry the delivery.</p>
-         * <p>*   maintain: continuous delivery. When the auto provisioning group is started, the system delivers clusters until the target capacity is reached. The system also monitors the capacity in real time. If the target capacity of the auto provisioning group is not reached, the system continues creating ECS instances until the target capacity is reached.</p>
+         * <p>*   request: one-time delivery. When the auto provisioning group is started, it delivers instances only once. If the instances fail to be delivered, the auto provisioning group does not retry the delivery.</p>
+         * <p>*   maintain: continuous delivery. When the auto provisioning group is started, it attempts to deliver instances that meet the target capacity and monitors the real-time capacity. If the target capacity of the auto provisioning group is not reached, the auto provisioning group continues to create instances until the target capacity is reached.</p>
          */
         @NameInMap("AutoProvisioningGroupType")
         public String autoProvisioningGroupType;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the auto provisioning group was created.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>Specifies whether to release the removed instances when the capacity of the auto provisioning group exceeds the target capacity and a scale-in event is triggered. Valid values:</p>
+         * <p>Indicates whether to release the scaled-in instances when the real-time capacity exceeds the target capacity and the group scales in. Valid values:</p>
          * <br>
-         * <p>*   termination: releases the removed instances.</p>
-         * <p>*   no-termination: removes the instances from the auto provisioning group but does not release them.</p>
+         * <p>*   termination: releases the scaled-in instances.</p>
+         * <p>*   no-termination: only removes the scaled-in instances from the auto provisioning group but does not release the instances.</p>
          */
         @NameInMap("ExcessCapacityTerminationPolicy")
         public String excessCapacityTerminationPolicy;
 
         /**
-         * <p>Details about the extended configurations.</p>
+         * <p>The details of the extended configurations.</p>
          */
         @NameInMap("LaunchTemplateConfigs")
         public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigs launchTemplateConfigs;
@@ -439,9 +439,9 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         /**
          * <p>The maximum price for preemptible instances in the auto provisioning group.</p>
          * <br>
-         * <p>> If both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used.</p>
+         * <p>>  When both MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice are specified, the smaller one of the two parameter values is used.</p>
          * <br>
-         * <p>The LaunchTemplateConfig.N.MaxPrice parameter is set when the auto provisioning group is created, and cannot be modified.</p>
+         * <p>The value of LaunchTemplateConfig.N.MaxPrice is specified when the auto provisioning group is created, and the value cannot be modified.</p>
          */
         @NameInMap("MaxSpotPrice")
         public Float maxSpotPrice;
@@ -458,6 +458,9 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group to which the auto provisioning group belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -468,24 +471,24 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions spotOptions;
 
         /**
-         * <p>The overall status of instance scheduling of the auto provisioning group. Valid values:</p>
+         * <p>The overall state of instance scheduling in the auto provisioning group. Valid values:</p>
          * <br>
-         * <p>*   fulfilled: Scheduling is complete and the instance cluster is delivered.</p>
-         * <p>*   pending-fulfillment: The instances are being created.</p>
-         * <p>*   pending-termination: The instances are being removed.</p>
-         * <p>*   error: An exception occurred during scheduling and the instance cluster is not delivered.</p>
+         * <p>*   fulfilled: Scheduling was complete and the instances were delivered.</p>
+         * <p>*   pending-fulfillment: The instances were being created.</p>
+         * <p>*   pending-termination: The instances were being removed.</p>
+         * <p>*   error: An exception occurred during scheduling and the instances were not delivered.</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
-         * <p>The status of the auto provisioning group. Valid values:</p>
+         * <p>The state of the auto provisioning group. Valid values:</p>
          * <br>
-         * <p>*   submitted: The auto provisioning group is created but has not started to execute scheduling tasks.</p>
-         * <p>*   active: The auto provisioning group is executing scheduling tasks.</p>
-         * <p>*   deleted: The auto provisioning group is deleted.</p>
-         * <p>*   deleted-running: The auto provisioning group is being deleted.</p>
-         * <p>*   modifying: The auto provisioning group is being modified.</p>
+         * <p>*   submitted: The auto provisioning group was created but did not execute scheduling tasks.</p>
+         * <p>*   active: The auto provisioning group was executing scheduling tasks.</p>
+         * <p>*   deleted: The auto provisioning group was deleted.</p>
+         * <p>*   delete-running: The auto provisioning group was being deleted.</p>
+         * <p>*   modifying: The auto provisioning group was being modified.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -502,29 +505,29 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instances in the auto provisioning group are released when the auto provisioning group is deleted. Valid values:</p>
          * <br>
-         * <p>*   true: releases instances in the auto provisioning group.</p>
-         * <p>*   false: retains instances in the auto provisioning group.</p>
+         * <p>*   true: releases the instances.</p>
+         * <p>*   false: retains the instances.</p>
          */
         @NameInMap("TerminateInstances")
         public Boolean terminateInstances;
 
         /**
-         * <p>Indicates whether the instances in the auto provisioning group are released when the auto provisioning group expires. Valid values:</p>
+         * <p>Indicates whether to release instances in the auto provisioning group when the group expires. Valid values:</p>
          * <br>
-         * <p>*   true: releases instances in the auto provisioning group.</p>
-         * <p>*   false: removes instances from the auto provisioning group but does not release them.</p>
+         * <p>*   true: releases the instances.</p>
+         * <p>*   false: only removes the instances from the auto provisioning group but does not release the instances.</p>
          */
         @NameInMap("TerminateInstancesWithExpiration")
         public Boolean terminateInstancesWithExpiration;
 
         /**
-         * <p>The time at which the auto provisioning group is started. The provisioning group is effective to the point in time specified by the `ValidUntil` parameter.</p>
+         * <p>The time at which the auto provisioning group is started. The provisioning group is effective until the point in time specified by `ValidUntil`.</p>
          */
         @NameInMap("ValidFrom")
         public String validFrom;
 
         /**
-         * <p>The time at which the auto provisioning group expires. The provisioning group is started from the point in time specified by the `ValidFrom` parameter.</p>
+         * <p>The time at which the auto provisioning group expires. The period of time between this point in time and the point in time specified by the `ValidFrom` parameter is the validity period of the auto provisioning group.</p>
          */
         @NameInMap("ValidUntil")
         public String validUntil;

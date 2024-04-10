@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotsUsageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -17,7 +17,7 @@ public class DescribeSnapshotsUsageResponseBody extends TeaModel {
     public Integer snapshotCount;
 
     /**
-     * <p>The total size of snapshots stored in the current region. Unit: byte.</p>
+     * <p>The total size of snapshots stored in the current region. Unit: bytes.</p>
      */
     @NameInMap("SnapshotSize")
     public Long snapshotSize;

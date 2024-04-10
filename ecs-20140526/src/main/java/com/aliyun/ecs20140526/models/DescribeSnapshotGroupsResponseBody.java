@@ -19,7 +19,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The snapshot-consistent groups.</p>
+     * <p>Details of the snapshot-consistent groups.</p>
      */
     @NameInMap("SnapshotGroups")
     public DescribeSnapshotGroupsResponseBodySnapshotGroups snapshotGroups;
@@ -119,16 +119,18 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         public Boolean available;
 
         /**
-         * <p>Indicates whether the instant access feature was enabled. Valid values:</p>
+         * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
-         * <p>*   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</p>
+         * <p>*   true: The instant access feature is enabled. By default, the instant access feature is enabled for ESSDs.</p>
+         * <p>*   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</p>
          */
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
 
         /**
-         * <p>The validity period of the instant access feature. When the period expires, the instant access snapshot is automatically released.</p>
+         * <p>The retention period of the instant access feature. After the retention period ends, the snapshot is automatically released.</p>
+         * <br>
+         * <p>>  This parameter is deprecated. The normal snapshots of enhanced SSDs (ESSDs) are upgraded to support the instant access feature by default. No additional configurations are required to enable the feature and you are not charged for the feature. For more information, see [Use the instant access feature](~~193667~~).</p>
          */
         @NameInMap("InstantAccessRetentionDays")
         public Integer instantAccessRetentionDays;
@@ -146,7 +148,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         public String snapshotId;
 
         /**
-         * <p>The ID of the source disk. This parameter is retained even after the source disk is released.</p>
+         * <p>The ID of the source disk. This parameter is retained even after the source disk of the snapshot is released.</p>
          */
         @NameInMap("SourceDiskId")
         public String sourceDiskId;
@@ -325,7 +327,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the instance to which the snapshot-consistent group belongs. This parameter has a value only when all snapshots in the snapshot-consistent group belong to the same instance. If snapshots in the snapshot-consistent group belong to different instances, you can check the response parameters that start with `Snapshots.Snapshot.Tags.` for the ID of the instance to which each snapshot in the snapshot-consistent group belongs.</p>
+         * <p>The ID of the instance to which the snapshot-consistent group belongs. This parameter has a value only when all disk snapshots in the snapshot-consistent group belong to the same instance. If disk snapshots in the snapshot-consistent group belong to different instances, you can check the response parameters that start with `Snapshots.Snapshot.Tags.` to determine the ID of the instance to which each snapshot in the snapshot-consistent group belongs.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -355,7 +357,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         public String snapshotGroupId;
 
         /**
-         * <p>The snapshots in the snapshot-consistent group.</p>
+         * <p>Details of the snapshots in the snapshot-consistent group.</p>
          */
         @NameInMap("Snapshots")
         public DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshots snapshots;

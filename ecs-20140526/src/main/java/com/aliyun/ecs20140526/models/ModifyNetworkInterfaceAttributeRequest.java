@@ -63,6 +63,14 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The receive (Rx) queue depth of the ENI.</p>
+     * <br>
+     * <p>Take note of the following items:</p>
+     * <br>
+     * <p>*   The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</p>
+     * <p>*   A larger Rx queue depth yields higher inbound throughput but consumes more memory.</p>
+     */
     @NameInMap("RxQueueSize")
     public Integer rxQueueSize;
 
@@ -75,6 +83,14 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;
 
+    /**
+     * <p>The Tx queue depth of the ENI.</p>
+     * <br>
+     * <p>Take note of the following items:</p>
+     * <br>
+     * <p>*   The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</p>
+     * <p>*   A larger Tx queue depth yields higher outbound throughput but consumes more memory.</p>
+     */
     @NameInMap("TxQueueSize")
     public Integer txQueueSize;
 

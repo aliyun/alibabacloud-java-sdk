@@ -39,7 +39,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details about the security groups.</p>
+     * <p>The information about the security groups.</p>
      */
     @NameInMap("SecurityGroups")
     public DescribeSecurityGroupsResponseBodySecurityGroups securityGroups;
@@ -113,13 +113,13 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
 
     public static class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the security group.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value of the security group.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -168,7 +168,11 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
 
     public static class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>The number of private IP addresses that can be added to the security group. For more information, see the "Security group capacity" section in [Basic security groups and advanced security groups](~~605897#section-kj9-e46-6v5~~).</p>
+         * <br>
+         * <p>If you set IsQueryEcsCount to True, the return value of AvailableInstanceAmount is valid.</p>
+         * <br>
+         * <p>>  This parameter is deprecated. The returned quantity is provided only for reference. The actual quantity may differ from the returned quantity.</p>
          */
         @NameInMap("AvailableInstanceAmount")
         public Integer availableInstanceAmount;
@@ -186,7 +190,11 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>The number of private IP addresses that are contained in the security group. For more information, see the "Security group capacity" section in [Basic security groups and advanced security groups](~~605897#section-kj9-e46-6v5~~).</p>
+         * <br>
+         * <p>If you set IsQueryEcsCount to True, the return value of EcsCount is valid.</p>
+         * <br>
+         * <p>>  This parameter is deprecated. The returned quantity is provided only for reference. The actual quantity may differ from the returned quantity.</p>
          */
         @NameInMap("EcsCount")
         public Integer ecsCount;
@@ -198,7 +206,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The security group ID.</p>
+         * <p>The ID of the security group.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
@@ -231,7 +239,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         public Boolean serviceManaged;
 
         /**
-         * <p>The tags of the security groups.</p>
+         * <p>The tags of the security group.</p>
          */
         @NameInMap("Tags")
         public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTags tags;

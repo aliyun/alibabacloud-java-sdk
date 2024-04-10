@@ -7,14 +7,17 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     /**
      * <p>The retention period of the snapshot copy in the destination region. Unit: days. Valid values:</p>
      * <br>
-     * <p>*   \-1: The snapshot copy is permanently retained.</p>
-     * <p>*   A value in the range of 1 to 65535: The snapshot copy is retained for the specified number of days.</p>
+     * <p>*   \-1: The snapshot copy is retained until it is deleted.</p>
+     * <p>*   1 to 65535: The snapshot copy is retained for the specified number of days. After the retention period of the snapshot copy expires, the snapshot copy is automatically deleted.</p>
      * <br>
      * <p>Default value: -1.</p>
      */
     @NameInMap("CopiedSnapshotsRetentionDays")
     public Integer copiedSnapshotsRetentionDays;
 
+    /**
+     * <p>The encryption parameters for cross-region snapshot replication.</p>
+     */
     @NameInMap("CopyEncryptionConfiguration")
     public CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration copyEncryptionConfiguration;
 
@@ -61,9 +64,9 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String targetCopyRegions;
 
     /**
-     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with [http:// or https://. It can contain letters, digits, colons (.), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)</p>
+     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      * <br>
-     * <p>This parameter is empty by default.</p>
+     * <p>By default, this parameter is left empty.</p>
      */
     @NameInMap("autoSnapshotPolicyName")
     public String autoSnapshotPolicyName;
@@ -86,8 +89,8 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     /**
      * <p>The retention period of the automatic snapshot. Unit: days. Valid values:</p>
      * <br>
-     * <p>*   \-1: The snapshot is permanently retained.</p>
-     * <p>*   A value in the range of 1 to 65535: The snapshot is retained for the specified number of days.</p>
+     * <p>*   \-1: The automatic snapshot is retained until it is deleted.</p>
+     * <p>*   1 to 65535: The automatic snapshot is retained for the specified number of days. After the retention period of the automatic snapshot expires, the automatic snapshot is automatically deleted.</p>
      * <br>
      * <p>Default value: -1.</p>
      */
@@ -229,12 +232,21 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     }
 
     public static class CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn extends TeaModel {
+        /**
+         * <p>This parameter is not publicly available.</p>
+         */
         @NameInMap("AssumeRoleFor")
         public Long assumeRoleFor;
 
+        /**
+         * <p>This parameter is not publicly available.</p>
+         */
         @NameInMap("RoleType")
         public String roleType;
 
+        /**
+         * <p>This parameter is not publicly available.</p>
+         */
         @NameInMap("Rolearn")
         public String rolearn;
 
@@ -270,12 +282,26 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     }
 
     public static class CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration extends TeaModel {
+        /**
+         * <p>This parameter is not publicly available.</p>
+         */
         @NameInMap("Arn")
         public java.util.List<CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn> arn;
 
+        /**
+         * <p>Specifies whether to enable cross-region snapshot replication and encryption. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         * <br>
+         * <p>Default value: false.</p>
+         */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
+        /**
+         * <p>The ID of the KMS key used in cross-region snapshot replication and encryption.</p>
+         */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
 
@@ -312,13 +338,13 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
     public static class CreateAutoSnapshotPolicyRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. The tag key cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)</p>
+         * <p>The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. The tag value cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)</p>
+         * <p>The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs:.</p>
          */
         @NameInMap("Value")
         public String value;

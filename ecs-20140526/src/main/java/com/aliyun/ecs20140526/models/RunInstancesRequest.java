@@ -400,7 +400,7 @@ public class RunInstancesRequest extends TeaModel {
     public Integer minAmount;
 
     /**
-     * <p>The information of the ENI.</p>
+     * <p>The information of the ENIs.</p>
      */
     @NameInMap("NetworkInterface")
     public java.util.List<RunInstancesRequestNetworkInterface> networkInterface;
@@ -471,16 +471,18 @@ public class RunInstancesRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The private IP address to assign to the instance. To assign a private IP address to an instance of the VPC type, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by the `VSwitchId` parameter.</p>
+     * <p>The private IP address to assign to the instance. To assign a private IP address to an instance that resides in a VPC, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by `VSwitchId`.</p>
      * <br>
      * <p>Take note of the following items:</p>
      * <br>
-     * <p>*   If the `PrivateIpAddress` parameter is specified, take note of the following items:</p>
+     * <p>*   If `PrivateIpAddress` is specified, take note of the following items:</p>
      * <br>
      * <p>    *   If `Amount` is set to 1, a single instance is created and the specified private IP address is assigned to the instance.</p>
-     * <p>    *   If `Amount` is set to a numeric value greater than 1, the specified number of instances are created and consecutive private IP addresses starting from the specified one are assigned to the instances. In this case, you cannot specify parameters that start with `NetworkInterface.N` to bind secondary ENIs to the instances.</p>
+     * <p>    *   If `Amount` is set to a numeric value greater than 1, the specified number of instances are created and consecutive private IP addresses starting from the specified one are assigned to the instances. In this case, you cannot specify parameters that start with `NetworkInterface.N` to attach secondary ENIs to the instances.</p>
      * <br>
      * <p>*   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `PrivateIpAddress` but can specify `NetworkInterface.N.PrimaryIpAddress`.</p>
+     * <br>
+     * <p>>  The first IP address and last three IP addresses of each vSwitch CIDR block are reserved. You cannot specify the IP addresses. For example, if a vSwitch CIDR block is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -554,7 +556,15 @@ public class RunInstancesRequest extends TeaModel {
     public Integer spotDuration;
 
     /**
-     * <p>The interruption mode of the preemptible instance. Default value: Terminate. Set the value to Terminate, which specifies to release the instance.</p>
+     * <p>The interruption mode of the preemptible instance. Valid values:</p>
+     * <br>
+     * <p>*   Terminate: The instance is released.</p>
+     * <br>
+     * <p>*   Stop: The instance is stopped in economical mode. To use the economical mode, submit a ticket.</p>
+     * <br>
+     * <p>    For information about the economical mode, see [Economical mode](~~63353~~).</p>
+     * <br>
+     * <p>Default value: Terminate.</p>
      */
     @NameInMap("SpotInterruptionBehavior")
     public String spotInterruptionBehavior;
@@ -1509,16 +1519,16 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>The category of the system disk. Valid values:</p>
          * <br>
-         * <p>*   cloud_efficiency: ultra disk</p>
+         * <p>*   cloud_efficiency: utra disk</p>
          * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   cloud_essd: ESSD</p>
+         * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
          * <p>*   cloud: basic disk</p>
          * <p>*   cloud_auto: ESSD AutoPL disk</p>
          * <p>*   cloud_essd_entry: ESSD Entry disk</p>
          * <br>
-         * <p>>  Only when `InstanceType` is set to `ecs.u1` or `ecs.e`, this parameter supports `cloud_essd_entry`.</p>
+         * <p>>  The value of this parameter can be `cloud_essd_entry` only when `InstanceType` is set to `ecs.u1` or `ecs.e`. ecs.u1 indicates the u1 universal instance family and ecs.e indicates the e economy instance family. For information about the u1 and e instance families, see the [u1, universal instance family](~~457079~~) section in the "Universal instance families" topic and the [e, economy instance family](~~108489~~) section in the "Shared instance families" topic.</p>
          * <br>
-         * <p>For non-I/O optimized instances of retired instance types, the default value is cloud. For instances of other instance types, the default value is cloud_efficiency.</p>
+         * <p>For non-I/O optimized instances of retired instance types, the default value is cloud. For other types of instances, the default value is cloud_efficiency.</p>
          */
         @NameInMap("Category")
         public String category;
@@ -2074,7 +2084,7 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestNetworkInterface extends TeaModel {
         /**
-         * <p>Specifies whether to retain the ENI when the associated instance is released. Valid values:</p>
+         * <p>Specifies whether to retain ENI N when the associated instance is released. Valid values:</p>
          * <br>
          * <p>*   true</p>
          * <p>*   false</p>
@@ -2148,9 +2158,9 @@ public class RunInstancesRequest extends TeaModel {
         public Integer networkCardIndex;
 
         /**
-         * <p>The ID of the ENI to attach to the instance.</p>
+         * <p>The ID of ENI N to attach to the instance.</p>
          * <br>
-         * <p>>  This parameter takes effect only for secondary ENIs.</p>
+         * <p>>  This parameter takes effect only for secondary ENIs. After you specify an existing secondary ENI, you cannot configure other ENI creation parameters.</p>
          */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
@@ -2193,7 +2203,11 @@ public class RunInstancesRequest extends TeaModel {
          * <br>
          * <p>*   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, the specified primary IP address is assigned to the secondary ENI. The default value is an IP address that is randomly selected from within the CIDR block of the vSwitch to which to connect the secondary ENI.</p>
          * <br>
-         * <p>>  You can attach only a single secondary ENI when you create an instance. After the instance is created, you can call the [CreateNetworkInterface](~~58504~~) and [AttachNetworkInterface](~~58515~~) operations to attach more secondary ENIs.</p>
+         * <p>> </p>
+         * <br>
+         * <p>*   You can attach only a single secondary ENI when you create an instance. After the instance is created, you can call the [CreateNetworkInterface](~~58504~~) and [AttachNetworkInterface](~~58515~~) operations to attach more secondary ENIs.</p>
+         * <br>
+         * <p>*   The first IP address and last three IP addresses of each vSwitch CIDR block are reserved. You cannot specify the IP addresses. For example, if a vSwitch CIDR block is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.</p>
          */
         @NameInMap("PrimaryIpAddress")
         public String primaryIpAddress;
@@ -2218,12 +2232,12 @@ public class RunInstancesRequest extends TeaModel {
         public Long queuePairNumber;
 
         /**
-         * <p>Elastic Network Interface RxQueueSize.</p>
+         * <p>The receive (Rx) queue depth of ENI N.</p>
          * <br>
-         * <p>Please note:</p>
+         * <p>Take note of the following items:</p>
          * <br>
-         * <p>- RxQueueSize of the ENI must be equal to the TxQueueSize, with a value range from 8192 to 16384, and it must be a power of 2.</p>
-         * <p>- A larger RxQueueSize can improve the throughput of inbound traffic but will consume more memory.</p>
+         * <p>*   The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</p>
+         * <p>*   A larger Rx queue depth yields higher inbound throughput but consumes more memory.</p>
          */
         @NameInMap("RxQueueSize")
         public Integer rxQueueSize;
@@ -2244,7 +2258,7 @@ public class RunInstancesRequest extends TeaModel {
          * <p>The ID of security group N to which to assign ENI N.</p>
          * <br>
          * <p>*   Valid values of the first N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</p>
-         * <p>*   The second N indicates that one or more security group IDs can be specified. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see [Security group limits](~~25412#SecurityGroupQuota1~~).</p>
+         * <p>*   The second N indicates that one or more security group IDs can be specified. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the [Security group limits](~~25412#SecurityGroupQuota1~~) section in the "Limits" topic.</p>
          * <br>
          * <p>Take note of the following items:</p>
          * <br>
@@ -2255,12 +2269,12 @@ public class RunInstancesRequest extends TeaModel {
         public java.util.List<String> securityGroupIds;
 
         /**
-         * <p>Elastic Network Interface TxQueueSize.</p>
+         * <p>The Tx queue depth of ENI N.</p>
          * <br>
-         * <p>Please note:</p>
+         * <p>Take note of the following items:</p>
          * <br>
-         * <p>- TxQueueSize of the ENI must be equal to the RxQueueSize, with a value range from 8192 to 16384, and it must be a power of 2.</p>
-         * <p>- A larger TxQueueSize can improve the throughput of outbound traffic but will consume more memory.</p>
+         * <p>*   The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</p>
+         * <p>*   A larger Tx queue depth yields higher outbound throughput but consumes more memory.</p>
          */
         @NameInMap("TxQueueSize")
         public Integer txQueueSize;

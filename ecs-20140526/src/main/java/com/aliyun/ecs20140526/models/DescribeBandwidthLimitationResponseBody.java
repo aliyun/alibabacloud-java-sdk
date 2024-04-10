@@ -11,7 +11,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
     public DescribeBandwidthLimitationResponseBodyBandwidths bandwidths;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -41,8 +41,8 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
         /**
          * <p>The billing method for network usage. Valid values:</p>
          * <br>
-         * <p>*   PayByBandwidth: pay-by-bandwidth</p>
-         * <p>*   PayByTraffic: pay-by-traffic</p>
+         * <p>*   PayByBandwidth</p>
+         * <p>*   PayByTraffic</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;

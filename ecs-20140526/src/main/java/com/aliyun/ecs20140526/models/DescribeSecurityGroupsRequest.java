@@ -22,7 +22,9 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public Boolean fuzzyQuery;
 
     /**
-     * <p>> This parameter is deprecated.</p>
+     * <p>Specifies whether to query the capacity of the security group. If you set this parameter to True, the `EcsCount` and `AvailableInstanceAmount` values in the response are valid.</p>
+     * <br>
+     * <p>>  This parameter is deprecated.</p>
      */
     @NameInMap("IsQueryEcsCount")
     public Boolean isQueryEcsCount;
@@ -65,7 +67,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
      * <br>
      * <p>Default value: 1.</p>
      * <br>
-     * <p>> This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>>  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -77,7 +79,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
      * <br>
      * <p>Default value: 10.</p>
      * <br>
-     * <p>> This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>>  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -131,6 +133,12 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     @NameInMap("SecurityGroupType")
     public String securityGroupType;
 
+    /**
+     * <p>Specifies whether to query managed security groups. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 

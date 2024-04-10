@@ -41,9 +41,11 @@ public class DescribeImagesRequest extends TeaModel {
     public java.util.List<DescribeImagesRequestFilter> filter;
 
     /**
-     * <p>The name of the image family. You can specify this parameter to query images of the specified image family.</p>
+     * <p>The name of the image family. You can set this parameter to query images of the specified image family.</p>
      * <br>
      * <p>This parameter is empty by default.</p>
+     * <br>
+     * <p>>  For information about image families that are associated with Alibaba Cloud official images, see [Overview of public images](~~108393~~).</p>
      */
     @NameInMap("ImageFamily")
     public String imageFamily;
@@ -142,9 +144,9 @@ public class DescribeImagesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
-     * <p>Maximum value: 100.</p>
+     * <p>Valid values: 1 to 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -174,7 +176,7 @@ public class DescribeImagesRequest extends TeaModel {
     /**
      * <p>Specifies whether the subscription image has expired.</p>
      * <br>
-     * <p>> This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</p>
+     * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
      */
     @NameInMap("ShowExpired")
     public Boolean showExpired;
@@ -186,14 +188,14 @@ public class DescribeImagesRequest extends TeaModel {
     public String snapshotId;
 
     /**
-     * <p>The status of the image. By default, only images in the Available state are returned if you do not specify this parameter. Valid values:</p>
+     * <p>The status of the image. By default, if you do not specify this parameter, only images in the Available state are returned. Valid values:</p>
      * <br>
      * <p>*   Creating: The image is being created.</p>
      * <p>*   Waiting: The image is waiting to be processed.</p>
      * <p>*   Available: The image is available.</p>
      * <p>*   UnAvailable: The image is unavailable.</p>
-     * <p>*   CreateFailed: The image cannot be created.</p>
-     * <p>*   Deprecated: The image is deprecated.</p>
+     * <p>*   CreateFailed: The image fails to be created.</p>
+     * <p>*   Deprecated: The image is no longer used.</p>
      * <br>
      * <p>Default value: Available. You can specify multiple values for this parameter. Separate the values with commas (,).</p>
      */

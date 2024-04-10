@@ -23,7 +23,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details about the snapshot chains.</p>
+     * <p>The details of the snapshot chains.</p>
      */
     @NameInMap("SnapshotLinks")
     public DescribeSnapshotLinksResponseBodySnapshotLinks snapshotLinks;
@@ -81,15 +81,13 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
 
     public static class DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink extends TeaModel {
         /**
-         * <p>The type of the snapshot.</p>
-         * <br>
-         * <p>> This parameter will be removed in the future. We recommend that you configure `InstantAccess` to ensure compatibility.</p>
+         * <p>The category of the snapshot.</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -105,24 +103,26 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
          * <br>
          * <p>*   true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
          * <p>*   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</p>
+         * <br>
+         * <p>>  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).</p>
          */
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
 
         /**
-         * <p>The ID of the region where the source disk of the snapshot chain is located.</p>
+         * <p>The region ID of the source disk.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The snapshot chain IDs.</p>
+         * <p>The ID of the snapshot chain.</p>
          */
         @NameInMap("SnapshotLinkId")
         public String snapshotLinkId;
 
         /**
-         * <p>The source disk ID. This parameter is retained even if the source disk is deleted.</p>
+         * <p>The ID of the source disk. This parameter is retained even if the source disk is deleted.</p>
          */
         @NameInMap("SourceDiskId")
         public String sourceDiskId;
@@ -134,7 +134,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         public String sourceDiskName;
 
         /**
-         * <p>The size of the source disk. Unit: GiB.</p>
+         * <p>The capacity of the source disk. Unit: GiB.</p>
          */
         @NameInMap("SourceDiskSize")
         public Integer sourceDiskSize;
@@ -155,7 +155,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
-         * <p>The total size of all snapshots in the snapshot chain. Unit: bytes.</p>
+         * <p>The total size of all snapshots in the snapshot chain. Unit: byte.</p>
          */
         @NameInMap("TotalSize")
         public Long totalSize;

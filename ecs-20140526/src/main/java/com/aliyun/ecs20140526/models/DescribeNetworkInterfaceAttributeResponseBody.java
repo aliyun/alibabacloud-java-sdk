@@ -29,10 +29,10 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>Specifies whether to retain the ENI when the associated instance is released. Valid values:</p>
+     * <p>Indicates whether to retain the ENI when the associated instance is released. Valid values:</p>
      * <br>
-     * <p>- true</p>
-     * <p>- false</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("DeleteOnRelease")
     public Boolean deleteOnRelease;
@@ -52,13 +52,13 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+     * <p>The IPv4 prefixes of the ENI.</p>
      */
     @NameInMap("Ipv4PrefixSets")
     public DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSets ipv4PrefixSets;
 
     /**
-     * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+     * <p>The IPv6 prefixes of the ENI.</p>
      */
     @NameInMap("Ipv6PrefixSets")
     public DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSets ipv6PrefixSets;
@@ -200,6 +200,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("Tags")
     public DescribeNetworkInterfaceAttributeResponseBodyTags tags;
 
+    /**
+     * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+     */
     @NameInMap("TcpOptionAddressEnabled")
     public String tcpOptionAddressEnabled;
 
@@ -629,19 +632,19 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyBondInterfaceSpecificationSlaveInterfaceSpecificationSlaveInterfaceSpecificationSet extends TeaModel {
         /**
-         * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("BondNetworkInterfaceId")
         public String bondNetworkInterfaceId;
 
         /**
-         * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("SlaveNetworkInterfaceId")
         public String slaveNetworkInterfaceId;
 
         /**
-         * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("WorkState")
         public String workState;
@@ -734,7 +737,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSetsIpv4PrefixSet extends TeaModel {
         /**
-         * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+         * <p>The IPv4 prefix of the ENI.</p>
          */
         @NameInMap("Ipv4Prefix")
         public String ipv4Prefix;
@@ -775,7 +778,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSetsIpv6PrefixSet extends TeaModel {
         /**
-         * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+         * <p>The IPv6 prefix of the ENI.</p>
          */
         @NameInMap("Ipv6Prefix")
         public String ipv6Prefix;
@@ -816,7 +819,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyIpv6SetsIpv6Set extends TeaModel {
         /**
-         * <p>The IPv6 address assigned to the ENI.</p>
+         * <p>The IPv6 address of the ENI.</p>
          */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
@@ -857,7 +860,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp extends TeaModel {
         /**
-         * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("AllocationId")
         public String allocationId;
@@ -893,7 +896,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet extends TeaModel {
         /**
-         * <p>Details about the EIP that is associated with the secondary private IP address of the ENI.</p>
+         * <p>The elastic IP address (EIP) that is associated with the secondary private IP address of the ENI.</p>
          */
         @NameInMap("AssociatedPublicIp")
         public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp associatedPublicIp;
@@ -902,7 +905,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
          * <p>Indicates whether the IP address is the primary private IP address. Valid values:</p>
          * <br>
          * <p>*   true: The IP address is the primary private IP address.</p>
-         * <p>*   false: The IP address is the secondary private IP address.</p>
+         * <p>*   false: The IP address is a secondary private IP address.</p>
          */
         @NameInMap("Primary")
         public Boolean primary;
@@ -1034,13 +1037,13 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the ENI.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value of the ENI.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

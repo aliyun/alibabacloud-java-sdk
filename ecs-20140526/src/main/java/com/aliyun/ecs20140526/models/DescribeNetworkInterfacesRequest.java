@@ -54,14 +54,26 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>>This parameter is no longer used. We recommend that you specify the MaxResults or NextToken parameter for a paged query.</p>
+     * <p>The page number.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     * <br>
+     * <p>>  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
      */
     @NameInMap("PageNumber")
     @Deprecated
     public Integer pageNumber;
 
     /**
-     * <p>>This parameter is no longer used. We recommend that you specify the MaxResults or NextToken parameter for a paged query.</p>
+     * <p>The number of entries per page.</p>
+     * <br>
+     * <p>Valid values: 1 to 1000.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     * <br>
+     * <p>>  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
      */
     @NameInMap("PageSize")
     @Deprecated
@@ -152,7 +164,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the ENI belongs.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the elastic network interface (ENI) belongs.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

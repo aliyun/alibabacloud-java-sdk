@@ -14,9 +14,9 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
      * <br>
      * <p>    **</p>
      * <br>
-     * <p>    **Make sure that your payment account has sufficient balance. Otherwise, your order becomes invalid and is canceled.** If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.````</p>
+     * <p>    **Note** Make sure that your account balance is sufficient. Otherwise, your order becomes invalid. If your account balance is insufficient, you can set `AutoPay` to `false` to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
      * <br>
-     * <p>*   false: An order is generated but no payment is made.</p>
+     * <p>*   false: disables automatic payment. An order is generated but no payment is made.</p>
      * <br>
      * <p>Default value: true.</p>
      * <br>
@@ -32,13 +32,13 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>>该参数暂未开放使用。</p>
+     * <p>>  This parameter is not publicly available.</p>
      */
     @NameInMap("Disk")
     public java.util.List<ModifyPrepayInstanceSpecRequestDisk> disk;
 
     /**
-     * <p>The end time of the temporary change. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time of the temporary change. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -56,24 +56,32 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Specifies whether to support cross-cluster instance type upgrades.</p>
+     * <p>Specifies whether cross-cluster instance type upgrades are supported. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      * <br>
      * <p>Default value: false.</p>
      * <br>
      * <p>When you set `MigrateAcrossZone` to `true` and you upgrade the instance based on the returned information, take note of the following items:</p>
      * <br>
-     * <p>Instances of the classic network type:</p>
+     * <p>Instance that resides in the classic network:</p>
      * <br>
-     * <p>*   For retired instance types, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software license codes of the instance are changed. For more information, see [Retired instance types](~~55263~~). For Linux instances, basic disks (cloud) are identified by the prefix xvd. Ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified by the prefix vd.</p>
+     * <p>*   For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</p>
      * <p>*   For [instance families available for purchase](~~25378~~), when the instance type of an instance is changed, the private IP address of the instance changes.</p>
      * <br>
-     * <p>Instances of the Virtual Private Cloud (VPC) type: For retired instance types, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software license codes of the instance are changed. For Linux instances, basic disks (cloud) are identified by the prefix xvd. Ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified by the prefix vd.</p>
+     * <p>Instance that resides in a virtual private cloud (VPC): For retired instance types, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</p>
      */
     @NameInMap("MigrateAcrossZone")
     public Boolean migrateAcrossZone;
 
     /**
-     * <p>>该参数暂未开放使用。</p>
+     * <p>>  This parameter is not publicly available.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   Online</p>
+     * <p>*   Offline</p>
      */
     @NameInMap("ModifyMode")
     public String modifyMode;
@@ -98,7 +106,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The restart time of the instance. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The restart time of the instance. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */
     @NameInMap("RebootTime")
     public String rebootTime;
@@ -271,10 +279,12 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
 
     public static class ModifyPrepayInstanceSpecRequestSystemDisk extends TeaModel {
         /**
-         * <p>The new category of the system disk. This parameter is applicable only when you upgrade an instance from a retired instance type to a currently available instance type or when you upgrade a non-I/O optimized instance to an I/O optimized instance. For more information, see [Retired instance types](~~55263~~) and [Instance families](~~25378~~). Valid values:</p>
+         * <p>The new category of the system disk. Valid values:</p>
          * <br>
-         * <p>*   cloud_efficiency: ultra disk.</p>
-         * <p>*   cloud_ssd: standard SSD.</p>
+         * <p>*   cloud_efficiency: utra disk</p>
+         * <p>*   cloud_ssd: standard SSD</p>
+         * <br>
+         * <p>>  This parameter takes effect on an instance only when you change from a [retired instance type](~~55263~~) to an instance type in an [instance family available for purchase](~~25378~~) and upgrade the instance from a non-I/O optimized instance type to an I/O optimized instance type.</p>
          */
         @NameInMap("Category")
         public String category;
@@ -296,19 +306,19 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
 
     public static class ModifyPrepayInstanceSpecRequestDisk extends TeaModel {
         /**
-         * <p>>该参数暂未开放使用。</p>
+         * <p>>  This parameter is not publicly available.</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>>该参数暂未开放使用。</p>
+         * <p>>  This parameter is not publicly available.</p>
          */
         @NameInMap("DiskId")
         public String diskId;
 
         /**
-         * <p>>该参数暂未开放使用。</p>
+         * <p>>  This parameter is not publicly available.</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;

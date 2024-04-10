@@ -36,39 +36,21 @@ public class ImportImageRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The mode that you want to use to check the source image. If you do not specify this parameter, the source image is not checked. Only Linux images can be checked. Set the value to Standard, which indicates standard check mode.</p>
+     * <p>The mode in which to check the image. If you do not specify this parameter, the image is not checked. Only the standard check mode is supported.</p>
      * <br>
-     * <p>The following items are checked in standard check mode:</p>
-     * <br>
-     * <p>*   Virtio: whether the virtio driver is installed.</p>
-     * <p>*   Fstab: whether mounting configurations in the fstab file are correct.</p>
-     * <p>*   Grub: whether GRand Unified Bootloader (GRUB) configurations are correct.</p>
-     * <p>*   SystemImage: whether the image is valid. Do not import images that are empty or in the ISO format.</p>
-     * <p>*   CloudInit: whether cloud-init is installed.</p>
-     * <p>*   NVMe: whether the Non-Volatile Memory Express (NVMe) driver is installed.</p>
-     * <p>*   Selinux: whether SElinux is enabled.</p>
-     * <p>*   OnlineResizeFS: whether the root partition can be automatically resized.</p>
-     * <p>*   Dhcp: whether Dynamic Host Configuration Protocol (DHCP) is enabled for network interface controllers (NICs).</p>
-     * <p>*   RtcTimeMode: the RTC time mode.</p>
-     * <p>*   Platform: the platform. Examples: Linux and Windows.</p>
-     * <p>*   OSVersion: the operating system version. Example: Centos 7.9.</p>
-     * <p>*   Architecture: the architecture. Examples: ARM and x86\_64.</p>
-     * <p>*   BootMode: the boot mode. Examples: UEFI and Legacy.</p>
-     * <p>*   KernelVersion: the kernel version.</p>
-     * <p>*   CloudAssistant: whether the Cloud Assistant client is installed.</p>
-     * <p>*   SecurityCenterAgent: whether the Security Center agent is installed.</p>
+     * <p>>  This parameter is supported for most Linux and Windows operating system versions. For more information about image check items and operating system limits for image check, see [Overview](~~439819~~) and [Operating system limits for image check](~~475800~~).</p>
      */
     @NameInMap("DetectionStrategy")
     public String detectionStrategy;
 
     /**
-     * <p>The custom images.</p>
+     * <p>The information about the custom image.</p>
      */
     @NameInMap("DiskDeviceMapping")
     public java.util.List<ImportImageRequestDiskDeviceMapping> diskDeviceMapping;
 
     /**
-     * <p>The name of the custom image. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The image name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("ImageName")
     public String imageName;
@@ -102,23 +84,26 @@ public class ImportImageRequest extends TeaModel {
     /**
      * <p>The operating system distribution. Valid values:</p>
      * <br>
-     * <p>*   CentOS</p>
-     * <p>*   CentOS Stream</p>
-     * <p>*   Ubuntu</p>
-     * <p>*   SUSE</p>
-     * <p>*   openSUSE</p>
-     * <p>*   Debian</p>
-     * <p>*   CoreOS</p>
      * <p>*   Aliyun</p>
      * <p>*   Anolis</p>
-     * <p>*   AlmaLinux</p>
+     * <p>*   CentOS</p>
+     * <p>*   Ubuntu</p>
+     * <p>*   CoreOS</p>
+     * <p>*   SUSE</p>
+     * <p>*   Debian</p>
+     * <p>*   OpenSUSE</p>
      * <p>*   FreeBSD</p>
-     * <p>*   Fedora</p>
-     * <p>*   Rocky Linux</p>
-     * <p>*   UOS</p>
+     * <p>*   RedHat</p>
      * <p>*   Kylin</p>
-     * <p>*   Others Linux</p>
+     * <p>*   UOS</p>
+     * <p>*   Fedora</p>
+     * <p>*   Fedora CoreOS</p>
+     * <p>*   CentOS Stream</p>
+     * <p>*   AlmaLinux</p>
+     * <p>*   Rocky Linux</p>
+     * <p>*   Gentoo</p>
      * <p>*   Customized Linux</p>
+     * <p>*   Others Linux</p>
      * <p>*   Windows Server 2022</p>
      * <p>*   Windows Server 2019</p>
      * <p>*   Windows Server 2016</p>
@@ -154,6 +139,9 @@ public class ImportImageRequest extends TeaModel {
      */
     @NameInMap("RoleName")
     public String roleName;
+
+    @NameInMap("StorageLocationArn")
+    public String storageLocationArn;
 
     /**
      * <p>The image tags.</p>
@@ -286,6 +274,14 @@ public class ImportImageRequest extends TeaModel {
         return this.roleName;
     }
 
+    public ImportImageRequest setStorageLocationArn(String storageLocationArn) {
+        this.storageLocationArn = storageLocationArn;
+        return this;
+    }
+    public String getStorageLocationArn() {
+        return this.storageLocationArn;
+    }
+
     public ImportImageRequest setTag(java.util.List<ImportImageRequestTag> tag) {
         this.tag = tag;
         return this;
@@ -298,15 +294,22 @@ public class ImportImageRequest extends TeaModel {
         /**
          * <p>The device name of disk N in the custom image.</p>
          * <br>
-         * <p>> This parameter will be removed in the future. To ensure future compatibility, we recommend that you do not use this parameter.</p>
+         * <p>>  This parameter will be removed in the future. We recommend that you do not use this parameter to ensure future compatibility.</p>
          */
         @NameInMap("Device")
         public String device;
 
         /**
-         * <p>The size of the custom image.</p>
+         * <p>The size of disk N in the custom image. Unit: GiB</p>
          * <br>
-         * <p>> This parameter will be deprecated in the future. We recommend that you use the `DiskDeviceMapping.N.DiskImageSize` parameter to ensure future compatibility.</p>
+         * <p>You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the imported image file. Unit: GiB. Valid values:</p>
+         * <br>
+         * <p>*   When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 5 to 500.</p>
+         * <p>*   When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 5 to 2000.</p>
+         * <br>
+         * <p>After the image file is uploaded to an OSS bucket, you can view the size of the image file in the OSS bucket.</p>
+         * <br>
+         * <p>>  This parameter will be removed in the future. We recommend that you use `DiskDeviceMapping.N.DiskImageSize` to ensure future compatibility.</p>
          */
         @NameInMap("DiskImSize")
         public Integer diskImSize;
@@ -314,12 +317,12 @@ public class ImportImageRequest extends TeaModel {
         /**
          * <p>The size of disk N in the custom image after the image is imported.</p>
          * <br>
-         * <p>You can use this parameter to specify the sizes of the system disk and data disks in the image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the imported image file. Unit: GiB. Valid values:</p>
+         * <p>You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the imported image file. Unit: GiB. Valid values:</p>
          * <br>
-         * <p>*   When the N value is 1, this parameter specifies the size of the system disk in the image. Valid values: 5 to 500.</p>
-         * <p>*   When the value of N ranges from 2 to 17, this parameter specifies the size of the data disk in the custom image. Valid values: 5 to 2000.</p>
+         * <p>*   When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 5 to 500.</p>
+         * <p>*   When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 5 to 2000.</p>
          * <br>
-         * <p>After the image is uploaded to an OSS bucket, you can view the size of the image file in the OSS bucket.</p>
+         * <p>After the image file is uploaded to an OSS bucket, you can view the size of the image file in the OSS bucket.</p>
          */
         @NameInMap("DiskImageSize")
         public Integer diskImageSize;
@@ -331,15 +334,15 @@ public class ImportImageRequest extends TeaModel {
          * <p>*   VHD</p>
          * <p>*   QCOW2</p>
          * <br>
-         * <p>This parameter is empty by default, which indicates that the system checks the format of the image and uses the result as the value of this parameter.</p>
+         * <p>This parameter is empty by default, which indicates that the system checks the format of the image and uses the check result as the value of this parameter.</p>
          */
         @NameInMap("Format")
         public String format;
 
         /**
-         * <p>The OSS bucket where the image is stored.</p>
+         * <p>The OSS bucket where the image file is stored.</p>
          * <br>
-         * <p>> If this is the first time that you import images to ECS, you must use RAM to authorize ECS to access your OSS buckets. Otherwise, the `NoSetRoletoECSServiceAcount` error code is returned. For more information, see the **Description** section of this topic.</p>
+         * <p>>  Before you import images for the first time, you must use RAM to authorize ECS to access your OSS buckets. If ECS is not authorized to access your OSS buckets, the `NoSetRoletoECSServiceAcount` error code is returned when you call the ImportImage operation. For more information, see the "**Usage notes**" section in this topic.</p>
          */
         @NameInMap("OSSBucket")
         public String OSSBucket;
