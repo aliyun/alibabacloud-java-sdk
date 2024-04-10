@@ -11,24 +11,30 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public ModifyInstanceSpecRequestTemporary temporary;
 
     /**
-     * <p>Specifies whether to support cross-cluster instance type upgrades.</p>
+     * <p>Specifies whether cross-cluster instance type upgrades are supported.</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      * <br>
      * <p>Default value: false.</p>
      * <br>
-     * <p>When `AllowMigrateAcrossZone` is set to true and you upgrade the instance configurations based on the returned information, take note of the following items:</p>
+     * <p>When `AllowMigrateAcrossZone` is set to true and you upgrade the instance based on the returned information, take note of the following items:</p>
      * <br>
-     * <p>Instances of the classic network type:</p>
+     * <p>Instance that resides in the classic network:</p>
      * <br>
-     * <p>*   For [retired instance types](~~55263~~), the private IP address, disk device names, and software authorization codes of a non-I/O optimized instance change when you upgrade the instance to an I/O optimized instance. For Linux instances, basic disks (`cloud`) are identified by the prefix **xvd** such as **xvda and xvdb**. Ultra disks (`cloud_efficiency`) and standard SSDs (`cloud_ssd`) are identified by the prefix **vd** such as **vda and vdb**.</p>
-     * <p>*   For instance families that are available for purchase, when the instance type of an instance is changed, the private IP address of the instance is also changed. For more information, see [Overview of instance families](~~25378~~).</p>
+     * <p>*   For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (`cloud`) are identified as xvd\* such as **xvda** and **xvdb**, and ultra disks (`cloud_efficiency`) and standard SSDs (`cloud_ssd`) are identified as vd\* such as **vda** and **vdb**.</p>
+     * <p>*   For [instance families available for purchase](~~25378~~), when the instance type of an instance is changed, the private IP address of the instance changes.</p>
      * <br>
-     * <p>Instances of the Virtual Private Cloud (VPC) type: For [retired instance types](~~55263~~), if a non-I/O-optimized instance is upgraded to an I/O-optimized instance, the disk device names and software authorization codes of the instance change. For Linux instances, basic disks (`cloud`) are identified by the prefix **xvd** such as **xvda and xvdb**. Ultra disks (`cloud_efficiency`) and standard SSDs (`cloud_ssd`) are identified by the prefix **vd** such as **vda and vdb**.</p>
+     * <p>Instance that resides in a virtual private cloud (VPC): For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (`cloud`) are identified as xvd\* such as **xvda** and **xvdb**, and ultra disks (`cloud_efficiency`) and standard SSDs (`cloud_ssd`) are identified as vd\* such as **vda** and **vdb**.</p>
      */
     @NameInMap("AllowMigrateAcrossZone")
     public Boolean allowMigrateAcrossZone;
 
     /**
-     * <p>Specifies whether to submit an asynchronous request.</p>
+     * <p>Specifies whether to submit an asynchronous request. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      * <br>
      * <p>Default value: false.</p>
      */
@@ -36,17 +42,20 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public Boolean async;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>>该参数暂未开放使用。</p>
-     */
     @NameInMap("Disk")
     public java.util.List<ModifyInstanceSpecRequestDisk> disk;
 
+    /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <br>
+     * <p>*   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   false (default): performs a dry run and performs the actual request.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -57,7 +66,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The new instance type. For more information, see [Overview of instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent list of instance types.</p>
+     * <p>The new instance type. For more information, see [Overview of instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -81,9 +90,6 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
 
-    /**
-     * <p>>该参数暂未开放使用。</p>
-     */
     @NameInMap("ModifyMode")
     public String modifyMode;
 
@@ -234,10 +240,12 @@ public class ModifyInstanceSpecRequest extends TeaModel {
 
     public static class ModifyInstanceSpecRequestSystemDisk extends TeaModel {
         /**
-         * <p>The new category of the system disk. This parameter is valid only when you upgrade an instance from a retired instance type to an available instance type or when you upgrade a non-I/O optimized instance to an I/O optimized instance. For more information, see [Retired instance types](~~55263~~) and [Overview of instance families](~~25378~~). Valid values:</p>
+         * <p>The new category of the system disk. Valid values:</p>
          * <br>
-         * <p>*   cloud_efficiency: ultra disk.</p>
-         * <p>*   cloud_ssd: standard SSD.</p>
+         * <p>*   cloud_efficiency: ultra disk</p>
+         * <p>*   cloud_ssd: standard SSD</p>
+         * <br>
+         * <p>>  This parameter takes effect only when you upgrade a non-I/O optimized instance of [a retired instance type](~~55263~~) to an I/O optimized instance of [an instance type available for purchase](~~25378~~).</p>
          */
         @NameInMap("Category")
         public String category;
@@ -259,19 +267,19 @@ public class ModifyInstanceSpecRequest extends TeaModel {
 
     public static class ModifyInstanceSpecRequestTemporary extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("InternetMaxBandwidthOut")
         public Integer internetMaxBandwidthOut;
 
         /**
-         * <p>> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -308,21 +316,12 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     }
 
     public static class ModifyInstanceSpecRequestDisk extends TeaModel {
-        /**
-         * <p>>该参数暂未开放使用。</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>>该参数暂未开放使用。</p>
-         */
         @NameInMap("DiskId")
         public String diskId;
 
-        /**
-         * <p>>该参数暂未开放使用。</p>
-         */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 

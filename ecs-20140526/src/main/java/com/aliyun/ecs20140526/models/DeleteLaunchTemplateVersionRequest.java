@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteLaunchTemplateVersionRequest extends TeaModel {
     /**
-     * <p>The version numbers of instance launch templates that to be deleted. You can specify at most 29 version numbers.</p>
+     * <p>The version numbers of the launch template.</p>
      */
     @NameInMap("DeleteVersion")
     public java.util.List<Long> deleteVersion;
 
     /**
-     * <p>The ID of the instance launch template. For more information, call the [DescribeLaunchTemplates](~~73759~~) operation.</p>
+     * <p>The ID of the launch template. For more information, call the [DescribeLaunchTemplates](~~73759~~) operation.</p>
      */
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
     /**
-     * <p>The name of the instance launch template.</p>
+     * <p>The name of the launch template.</p>
      */
     @NameInMap("LaunchTemplateName")
     public String launchTemplateName;
@@ -29,7 +29,7 @@ public class DeleteLaunchTemplateVersionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the instance lauch template belongs. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the launch template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

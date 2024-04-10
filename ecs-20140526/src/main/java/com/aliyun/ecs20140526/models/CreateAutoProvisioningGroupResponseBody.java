@@ -11,7 +11,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
     public String autoProvisioningGroupId;
 
     /**
-     * <p>The instances created by the auto provisioning group. The values of parameters in this array are returned only when AutoProvisioningGroupType is set to `instant`.</p>
+     * <p>The instances created by the auto provisioning group. The values of the parameters in this array are returned only when AutoProvisioningGroupType is set to `instant`.</p>
      */
     @NameInMap("LaunchResults")
     public CreateAutoProvisioningGroupResponseBodyLaunchResults launchResults;
@@ -72,7 +72,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
 
     public static class CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult extends TeaModel {
         /**
-         * <p>The number of instances. Valid values: 1 to 100000.</p>
+         * <p>The number of created instances.</p>
          */
         @NameInMap("Amount")
         public Integer amount;
@@ -90,7 +90,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
-         * <p>The IDs of instances created.</p>
+         * <p>The IDs of created instances.</p>
          */
         @NameInMap("InstanceIds")
         public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResultInstanceIds instanceIds;
@@ -104,9 +104,9 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         /**
          * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
          * <br>
-         * <p>*   NoSpot: The instance is created as a regular pay-as-you-go instance.</p>
-         * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
-         * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</p>
+         * <p>*   NoSpot: The instance is a regular pay-as-you-go instance.</p>
+         * <p>*   SpotWithPriceLimit: The instance is a preemptible instance for which you specify the maximum hourly price.</p>
+         * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is used as the bid price.</p>
          */
         @NameInMap("SpotStrategy")
         public String spotStrategy;

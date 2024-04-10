@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImagesResponseBody extends TeaModel {
     /**
-     * <p>Details about the images.</p>
+     * <p>The information of the images.</p>
      */
     @NameInMap("Images")
     public DescribeImagesResponseBodyImages images;
@@ -101,18 +101,18 @@ public class DescribeImagesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The risk that is detected on the check item.</p>
+         * <p>The risk that the check item may have.</p>
          */
         @NameInMap("RiskCode")
         public String riskCode;
 
         /**
-         * <p>The severity level of the risk that is detected on the check item of the imported custom image. If the system detects a risk on the check item, this parameter is returned. If the system does not detect a risk on the check item, this parameter is not returned.</p>
+         * <p>The severity of the risk that the check item of the imported custom image has. If the check item is at risk, this parameter is returned. If the check item is not at risk, this parameter is not returned.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   High: The check item is a high-risk item that may affect the startup of the instance and mustbe fixed at your earliest convenience.</p>
-         * <p>*   Medium: The check item is a medium-risk item that may affect the startup performance or configurations of the instance. We recommend that you fix this item.</p>
+         * <p>*   High: The check item is a high-risk item that may affect the startup of the instance. We recommend that you handle the risk.</p>
+         * <p>*   Medium: The check item is a medium-risk item that may affect the startup performance or configurations of the instance. We recommend that you handle the risk.</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
@@ -189,10 +189,10 @@ public class DescribeImagesResponseBody extends TeaModel {
         public DescribeImagesResponseBodyImagesImageDetectionOptionsItems items;
 
         /**
-         * <p>The status of the image check task. Valid values:</p>
+         * <p>The state of the image check task. Valid values:</p>
          * <br>
-         * <p>*   Processing: The image check task is in progress.</p>
-         * <p>*   Finished: The image check task is completed.</p>
+         * <p>*   Processing</p>
+         * <p>*   Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -224,13 +224,13 @@ public class DescribeImagesResponseBody extends TeaModel {
         /**
          * <p>The device name of the disk. Example: /dev/xvdb.</p>
          * <br>
-         * <p>> This parameter will be removed in the future. To ensure compatibility, we recommend that you use other parameters.</p>
+         * <p>>  This parameter will be removed in the future. To ensure compatibility, we recommend that you use other parameters.</p>
          */
         @NameInMap("Device")
         public String device;
 
         /**
-         * <p>The image format.</p>
+         * <p>The format of the image.</p>
          */
         @NameInMap("Format")
         public String format;
@@ -248,31 +248,31 @@ public class DescribeImagesResponseBody extends TeaModel {
         public String importOSSObject;
 
         /**
-         * <p>The progress of an image copy task.</p>
+         * <p>The progress of the image copy task.</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
-         * <p>The remaining amount of time required for an image copy task. Unit: seconds.</p>
+         * <p>The remaining time of the image copy task. Unit: seconds.</p>
          */
         @NameInMap("RemainTime")
         public Integer remainTime;
 
         /**
-         * <p>The disk size.</p>
+         * <p>The size of the disk. Unit: GiB.</p>
          */
         @NameInMap("Size")
         public String size;
 
         /**
-         * <p>The snapshot ID.</p>
+         * <p>The ID of the snapshot.</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
         /**
-         * <p>The image type.</p>
+         * <p>The type of the image.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -379,8 +379,8 @@ public class DescribeImagesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</p>
          * <br>
-         * <p>*   supported: The image supports the NVMe protocol. Instances created from this image support NVMe.</p>
-         * <p>*   unsupported: The image does not support the NVMe protocol. Instances created from this image do not support the NVMe protocol.</p>
+         * <p>*   supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</p>
+         * <p>*   unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</p>
          */
         @NameInMap("NvmeSupport")
         public String nvmeSupport;
@@ -402,13 +402,13 @@ public class DescribeImagesResponseBody extends TeaModel {
 
     public static class DescribeImagesResponseBodyImagesImageTagsTag extends TeaModel {
         /**
-         * <p>The key of tag N of the image.</p>
+         * <p>The tag key of the image.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of tag N of the image.</p>
+         * <p>The tag value of the image.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -469,22 +469,20 @@ public class DescribeImagesResponseBody extends TeaModel {
         /**
          * <p>The boot mode of the image. Valid values:</p>
          * <br>
-         * <p>*   BIOS</p>
-         * <p>*   UEFI</p>
-         * <br>
-         * <p>> When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image. We recommend that you familiarize yourself with the boot modes supported by the specified image to ensure that instances that use this image can be started as expected.</p>
+         * <p>*   BIOS: Basic Input/Output System (BIOS)</p>
+         * <p>*   UEFI: Unified Extensible Firmware Interface (UEFI)</p>
          */
         @NameInMap("BootMode")
         public String bootMode;
 
         /**
-         * <p>The image creation time.</p>
+         * <p>The time when the image was created.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The image description.</p>
+         * <p>The description of the image.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -496,54 +494,54 @@ public class DescribeImagesResponseBody extends TeaModel {
         public DescribeImagesResponseBodyImagesImageDetectionOptions detectionOptions;
 
         /**
-         * <p>The mappings between the disks and snapshots in the image.</p>
+         * <p>The mappings between disks and snapshots in the image.</p>
          */
         @NameInMap("DiskDeviceMappings")
         public DescribeImagesResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings;
 
         /**
-         * <p>The image attributes.</p>
+         * <p>The attributes of the image.</p>
          */
         @NameInMap("Features")
         public DescribeImagesResponseBodyImagesImageFeatures features;
 
         /**
-         * <p>The image family name.</p>
+         * <p>The name of the image family.</p>
          */
         @NameInMap("ImageFamily")
         public String imageFamily;
 
         /**
-         * <p>The image ID.</p>
+         * <p>The ID of the image.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
-         * <p>The image name.</p>
+         * <p>The name of the image.</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
-         * <p>The image source. Valid values:</p>
+         * <p>The source of the image. Valid values:</p>
          * <br>
-         * <p>*   system: public images provided by Alibaba Cloud</p>
-         * <p>*   self: your custom images</p>
-         * <p>*   others: shared images from other Alibaba Cloud accounts, or community images published by other Alibaba Cloud accounts</p>
-         * <p>*   marketplace: Alibaba Cloud Marketplace images.</p>
+         * <p>*   system: a public image provided by Alibaba Cloud</p>
+         * <p>*   self: a custom image that you created</p>
+         * <p>*   others: a shared image from another Alibaba Cloud account or a community image published by another Alibaba Cloud account</p>
+         * <p>*   marketplace: an Alibaba Cloud Marketplace image</p>
          */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only when you query shared images or community images.</p>
+         * <p>The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only if you query shared images or community images.</p>
          */
         @NameInMap("ImageOwnerId")
         public Long imageOwnerId;
 
         /**
-         * <p>The image version.</p>
+         * <p>The version of the image.</p>
          */
         @NameInMap("ImageVersion")
         public String imageVersion;
@@ -558,7 +556,7 @@ public class DescribeImagesResponseBody extends TeaModel {
          * <p>Indicates whether the image is publicly available. Publicly available images include public images provided by Alibaba Cloud and custom images published as community images. Valid values:</p>
          * <br>
          * <p>*   true: The image is publicly available.</p>
-         * <p>*   false: The image is not publicly available.</p>
+         * <p>*   false: The image is publicly unavailable.</p>
          */
         @NameInMap("IsPublic")
         public Boolean isPublic;
@@ -570,7 +568,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         public String isSelfShared;
 
         /**
-         * <p>Indicates whether the Terms of Service of the image service that corresponds to the product code are accepted.</p>
+         * <p>Indicates whether you accepted the Terms of Service of the image service that corresponds to the product code.</p>
          */
         @NameInMap("IsSubscribed")
         public Boolean isSubscribed;
@@ -618,19 +616,19 @@ public class DescribeImagesResponseBody extends TeaModel {
         public String OSType;
 
         /**
-         * <p>The operating system.</p>
+         * <p>The operating system platform.</p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
-         * <p>The product code of the Alibaba Cloud Marketplace image.</p>
+         * <p>The Alibaba Cloud Marketplace product code of the image.</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
-         * <p>The image creation progress. Unit: percent (%).</p>
+         * <p>The creation progress of the image. Unit: percent (%).</p>
          */
         @NameInMap("Progress")
         public String progress;
@@ -642,30 +640,30 @@ public class DescribeImagesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The image size. Unit: GiB.</p>
+         * <p>The size of the image. Unit: GiB.</p>
          */
         @NameInMap("Size")
         public Integer size;
 
         /**
-         * <p>The image status. Valid values:</p>
+         * <p>The state of the image. Valid values:</p>
          * <br>
          * <p>*   UnAvailable: The image is unavailable.</p>
          * <p>*   Available: The image is available.</p>
          * <p>*   Creating: The image is being created.</p>
-         * <p>*   CreateFailed: The image cannot be created.</p>
+         * <p>*   CreateFailed: The image failed to be created.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The name of the provider that published the community image.</p>
+         * <p>The name of the supplier that published the community image.</p>
          */
         @NameInMap("SupplierName")
         public String supplierName;
 
         /**
-         * <p>The image tags.</p>
+         * <p>The tags of the image.</p>
          */
         @NameInMap("Tags")
         public DescribeImagesResponseBodyImagesImageTags tags;

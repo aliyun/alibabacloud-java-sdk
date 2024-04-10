@@ -23,7 +23,7 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number. Page starts from page 1.</p>
      * <br>
      * <p>Default value: 1.</p>
      */

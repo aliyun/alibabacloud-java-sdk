@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
     /**
-     * <p>实例启动模板版本。</p>
+     * <p>The versions of the launch template.</p>
      */
     @NameInMap("LaunchTemplateVersions")
     public DeleteLaunchTemplateVersionResponseBodyLaunchTemplateVersions launchTemplateVersions;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +39,13 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
 
     public static class DeleteLaunchTemplateVersionResponseBodyLaunchTemplateVersionsLaunchTemplateVersion extends TeaModel {
         /**
-         * <p>实例启动模板ID。</p>
+         * <p>The ID of the launch template.</p>
          */
         @NameInMap("LaunchTemplateId")
         public String launchTemplateId;
 
         /**
-         * <p>实例启动模板版本号。</p>
+         * <p>The version number of the launch template.</p>
          */
         @NameInMap("LaunchTemplateVersionNumber")
         public Long launchTemplateVersionNumber;

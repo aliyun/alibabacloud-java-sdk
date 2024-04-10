@@ -7,14 +7,16 @@ public class ModifyDiskSpecRequest extends TeaModel {
     /**
      * <p>The new category of the disk. Valid values:</p>
      * <br>
-     * <p>*   cloud_essd: ESSD</p>
+     * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
      * <p>*   cloud_auto: ESSD AutoPL disk</p>
      * <p>*   cloud_ssd: standard SSD</p>
      * <p>*   cloud_efficiency: ultra disk</p>
      * <br>
      * <p>This parameter is empty by default, which indicates that the disk category is not changed.</p>
      * <br>
-     * <p>>  The preceding values are listed in descending order of disk performance. Subscription disks cannot be downgraded.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   The preceding values are listed in descending order of disk performance. Subscription disks cannot be downgraded.</p>
      */
     @NameInMap("DiskCategory")
     public String diskCategory;

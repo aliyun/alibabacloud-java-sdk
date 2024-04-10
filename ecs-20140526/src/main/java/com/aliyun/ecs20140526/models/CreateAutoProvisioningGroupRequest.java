@@ -55,10 +55,10 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to release the removed instances when the real-time capacity of the auto provisioning group exceeds the target capacity and a scale-in event is triggered. Valid values:</p>
+     * <p>Specifies whether to release scaled-in instances when the real-time capacity of the auto provisioning group exceeds the target capacity and the group is triggered to scale in. Valid values:</p>
      * <br>
-     * <p>*   termination: releases the removed instances.</p>
-     * <p>*   no-termination: only removes the instances from the auto provisioning group but does not release them.</p>
+     * <p>*   termination: releases the scaled-in instances in the auto provisioning group.</p>
+     * <p>*   no-termination: removes the scaled-in instances from the auto provisioning group but does not release them.</p>
      * <br>
      * <p>Default value: no-termination.</p>
      */
@@ -127,7 +127,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public String payAsYouGoAllocationStrategy;
 
     /**
-     * <p>The target capacity of pay-as-you-go instances in the auto provisioning group. The value must be smaller than the `TotalTargetCapacity` value.</p>
+     * <p>The target capacity of pay-as-you-go instances in the auto provisioning group. The value must be less than or equal to the `TotalTargetCapacity` value.</p>
      */
     @NameInMap("PayAsYouGoTargetCapacity")
     public String payAsYouGoTargetCapacity;
@@ -182,7 +182,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public Integer spotInstancePoolsToUseCount;
 
     /**
-     * <p>The target capacity of preemptible instances in the auto provisioning group. The value must be smaller than the `TotalTargetCapacity` value.</p>
+     * <p>The target capacity of preemptible instances in the auto provisioning group. The value must be less than or equal to the `TotalTargetCapacity` value.</p>
      */
     @NameInMap("SpotTargetCapacity")
     public String spotTargetCapacity;
@@ -569,49 +569,49 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>The category of data disk N. Valid values of N: 1 to 16. Valid values:</p>
          * <br>
-         * <p>- cloud_efficiency: ultra disk.</p>
-         * <p>- cloud_ssd: standard SSD.</p>
-         * <p>- cloud_essd: ESSD</p>
-         * <p>- cloud: basic disk.</p>
+         * <p>*   cloud_efficiency: ultra disk</p>
+         * <p>*   cloud_ssd: standard SSD</p>
+         * <p>*   cloud_essd: ESSD</p>
+         * <p>*   cloud: basic disk</p>
          * <br>
          * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>
          * <br>
-         * <p>If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>Specifies whether to release the data disk after the instance with which the disk is associated is released. Valid values:</p>
+         * <p>Specifies whether to release data disk N when the instance to which the data disk is attached is released. Valid values:</p>
          * <br>
-         * <p>- true: yes</p>
-         * <p>- false: no</p>
+         * <p>*   true: releases data disk N when the instance is released.</p>
+         * <p>*   false: does not release data disk N when the instance is released.</p>
          * <br>
          * <p>Default value: true.</p>
          * <br>
-         * <p>If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("DeleteWithInstance")
         public Boolean deleteWithInstance;
 
         /**
-         * <p>The description of data disk N. The description must be 2 to 256 characters in length. The description can contain letters but cannot start with `http://` or `https://`. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.</p>
+         * <p>The description of data disk N. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The mount target of the data disk. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.</p>
+         * <p>The mount point of data disk N. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("Device")
         public String device;
 
         /**
-         * <p>The name of the data disk. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+         * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
          * <br>
          * <p>This parameter is empty by default.</p>
          * <br>
-         * <p>If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("DiskName")
         public String diskName;
@@ -619,35 +619,33 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>Specifies whether to encrypt data disk N. Valid values:</p>
          * <br>
-         * <p>- true</p>
-         * <p>- false</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          * <br>
          * <p>Default value: false.</p>
          * <br>
-         * <p>If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key to be used for the data disk. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.</p>
+         * <p>The ID of the Key Management Service (KMS) key to use for data disk N. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("KmsKeyId")
         public String kmsKeyId;
 
         /**
-         * <p>The performance level of the ESSD. Valid values:</p>
+         * <p>The performance level of the enhanced SSD (ESSD) to use as data disk N. The value of N in this parameter must be the same as the value of N in `LaunchConfiguration.DataDisk.N.Category`. Valid values:</p>
          * <br>
          * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
-         * <p>*   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
+         * <p>*   PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
          * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
          * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
          * <br>
-         * <p>Default value: PL1.</p>
+         * <p>For information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
          * <br>
-         * <p>For more information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
-         * <br>
-         * <p>If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
@@ -655,31 +653,32 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
          * <br>
-         * <p>- Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</p>
+         * <p>*   Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</p>
          * <br>
-         * <p>- Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</p>
+         * <p>*   Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</p>
          * <br>
-         * <p>- Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud_essd: depend on the `LaunchConfiguration.DataDisk.N.PerformanceLevel` value.</p>
+         * <p>*   Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud_essd: depend on the `LaunchConfiguration.DataDisk.N.PerformanceLevel` value.</p>
          * <br>
-         * <p>  - Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.</p>
-         * <p>  - Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</p>
-         * <p>  - Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</p>
-         * <p>  - Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</p>
-         * <p>- Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud: 5 to 2000.</p>
+         * <p>    *   Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.</p>
+         * <p>    *   Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</p>
+         * <p>    *   Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</p>
+         * <p>    *   Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</p>
          * <br>
-         * <p>>The parameter value must be greater than or equal to the size of the snapshot specified by the `LaunchConfiguration.DataDisk.N.SnapshotId` parameter.</p>
+         * <p>*   Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud: 5 to 2000.</p>
          * <br>
-         * <p>If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.</p>
+         * <p>>  The value of this parameter must be greater than or equal to the size of the snapshot specified by `LaunchConfiguration.DataDisk.N.SnapshotId`.</p>
+         * <br>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("Size")
         public Integer size;
 
         /**
-         * <p>The ID of the snapshot that you want to use to create the data disk. Valid values of N: 1 to 16.</p>
+         * <p>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.</p>
          * <br>
-         * <p>After this parameter is specified, the `LaunchConfiguration.DataDisk.N.Size` parameter is ignored. The size of the data disk is the same as that of the snapshot specified by this parameter. Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
+         * <p>After this parameter is specified, `LaunchConfiguration.DataDisk.N.Size` is ignored. The size of data disk N is the same as that of the snapshot specified by this parameter. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
          * <br>
-         * <p>If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
@@ -775,27 +774,33 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>The algorithm to use to encrypt the system disk. Valid values:</p>
          * <br>
-         * <p>- aes-256</p>
-         * <p>- sm4-128</p>
+         * <p>*   aes-256</p>
+         * <p>*   sm4-128</p>
          * <br>
-         * <p>Default value: aes-256. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>Default value: aes-256.</p>
+         * <br>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("EncryptAlgorithm")
         public String encryptAlgorithm;
 
         /**
-         * <p>Specifies whether to encrypt the system disk. Valid values:</p>
+         * <p>Specifies whether to encrypt system disk N. Valid values:</p>
          * <br>
-         * <p>- true</p>
-         * <p>- false</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          * <br>
-         * <p>Default value: false. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>Default value: false.</p>
+         * <br>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("Encrypted")
         public String encrypted;
 
         /**
-         * <p>The ID of the KMS key to use for the system disk. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>The ID of the KMS key to use for the system disk.</p>
+         * <br>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
@@ -875,11 +880,11 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationArn> arn;
 
         /**
-         * <p>The automatic release time of the instance. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The automatic release time of the pay-as-you-go instance. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in Coordinated Universal Time (UTC).</p>
          * <br>
-         * <p>*   If the value of `ss` is not `00`, the time is automatically rounded to the nearest minute based on the value of `mm`.</p>
+         * <p>*   If the value of `ss` is not `00`, the start time is automatically rounded down to the nearest minute based on the value of `mm`.</p>
          * <p>*   The specified time must be at least 30 minutes later than the current time.</p>
-         * <p>*   The specified time can be at most three years from the current time.</p>
+         * <p>*   The specified time can be at most three years later than the current time.</p>
          */
         @NameInMap("AutoReleaseTime")
         public String autoReleaseTime;
@@ -887,8 +892,8 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>The performance mode of the burstable instance. Valid values:</p>
          * <br>
-         * <p>*   Standard: the standard mode. For more information, see the "Standard mode" section in [Overview of burstable instances](~~59977~~).</p>
-         * <p>*   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Overview of burstable instances](~~59977~~).</p>
+         * <p>*   Standard: the standard mode. For more information, see the "Standard mode" section in the [Overview of burstable instances](~~59977~~) topic.</p>
+         * <p>*   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in the [Overview of burstable instances](~~59977~~) topic.</p>
          * <br>
          * <p>This parameter is empty by default.</p>
          * <br>
@@ -936,7 +941,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public java.util.List<String> hostNames;
 
         /**
-         * <p>The name of the image family. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `aliyun` or `acs:`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the image family. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `aliyun` or `acs:`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
          */
         @NameInMap("ImageFamily")
         public String imageFamily;
@@ -954,7 +959,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String instanceDescription;
 
         /**
-         * <p>The instance name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). The default value of this parameter is the `InstanceId` value.</p>
+         * <p>The instance name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
+         * <br>
+         * <p>The default value of this parameter is the `InstanceId` value.</p>
          * <br>
          * <p>When you batch create instances, you can batch configure sequential names for the instances. For more information, see [Batch configure sequential names or hostnames for multiple instances](~~196048~~).</p>
          * <br>
@@ -1076,7 +1083,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public java.util.List<String> securityGroupIds;
 
         /**
-         * <p>The information of the system disk on the instance. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.</p>
+         * <p>The information of the system disk on the instance. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("SystemDisk")
         public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk systemDisk;
@@ -1105,7 +1112,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String systemDiskDescription;
 
         /**
-         * <p>The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
          * <br>
          * <p>This parameter is empty by default.</p>
          * <br>
@@ -1467,8 +1474,8 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>The instance family level of the instance type in extended configuration N. This parameter is used to filter instance types. Valid values:</p>
          * <br>
-         * <p>*   EntryLevel: entry level (shared instance types) Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which CPU utilization is low. For more information, see [Shared instance families](~~108489~~).</p>
-         * <p>*   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see [Overview of instance families](~~25378~~).</p>
+         * <p>*   EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).</p>
+         * <p>*   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see the [Overview of instance families](~~25378~~) topic.</p>
          * <p>*   CreditEntryLevel: credit entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview of burstable instances](~~59977~~).</p>
          * <br>
          * <p>Valid values of N: 1 to 10.</p>
@@ -1477,7 +1484,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String instanceFamilyLevel;
 
         /**
-         * <p>The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see [Overview of instance families](~~25378~~).</p>
+         * <p>The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see [Instance families](~~25378~~).</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;

@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeKeyPairsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to include PublicKey in the response. Default value: false.</p>
+     */
     @NameInMap("IncludePublicKey")
     public Boolean includePublicKey;
 

@@ -161,7 +161,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The category of the snapshot.</p>
          * <br>
-         * <p>>  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.</p>
+         * <p>>  This parameter will be removed in the future. We recommend that you use `InstantAccess` to ensure future compatibility.</p>
          */
         @NameInMap("Category")
         public String category;
@@ -185,10 +185,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public Boolean encrypted;
 
         /**
-         * <p>Indicates whether the instant access feature was enabled. Valid values:</p>
+         * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
-         * <p>*   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</p>
+         * <p>*   true: The instant access feature is enabled. The instant access feature can be enabled only for enhanced SSDs (ESSDs).</p>
+         * <p>*   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</p>
          */
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
@@ -196,7 +196,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * <p>Indicates the validity period of the instant access feature. When the specified period expires, the instant access feature is automatically disabled.</p>
          * <br>
-         * <p>By default, the value of this parameter is the same as that of `RetentionDays`.</p>
+         * <p>By default, the value of this parameter is the same as the value of `RetentionDays`.</p>
          */
         @NameInMap("InstantAccessRetentionDays")
         public Integer instantAccessRetentionDays;
@@ -225,11 +225,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The ID of the region to which the snapshot belongs.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The remaining time required to create the snapshot. Unit: seconds.</p>
+         * <p>The amount of remaining time required to create the snapshot. Unit: seconds.</p>
          */
         @NameInMap("RemainTime")
         public Integer remainTime;
@@ -267,9 +270,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The type of snapshot. Valid values:</p>
          * <br>
-         * <p>*   auto or timer: automatic snapshot.</p>
-         * <p>*   user: manually created snapshot.</p>
-         * <p>*   all: all snapshot types.</p>
+         * <p>*   auto or timer: automatic snapshot</p>
+         * <p>*   user: manual snapshot</p>
+         * <p>*   all: all snapshot types</p>
          */
         @NameInMap("SnapshotType")
         public String snapshotType;

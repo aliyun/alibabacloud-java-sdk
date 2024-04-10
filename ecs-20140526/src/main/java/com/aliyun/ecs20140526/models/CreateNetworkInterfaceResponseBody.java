@@ -387,7 +387,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     public static class CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set extends TeaModel {
         /**
-         * <p>The IPv6 address.</p>
+         * <p>The IPv6 address assigned to the ENI.</p>
          */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
@@ -428,7 +428,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     public static class CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet extends TeaModel {
         /**
-         * <p>Indicates whether the IP address is the primary private IP address.</p>
+         * <p>Indicates whether the private IP address is the primary private IP address.</p>
          */
         @NameInMap("Primary")
         public Boolean primary;

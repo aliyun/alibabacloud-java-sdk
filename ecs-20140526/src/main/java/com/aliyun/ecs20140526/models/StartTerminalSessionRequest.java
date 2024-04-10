@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class StartTerminalSessionRequest extends TeaModel {
     /**
-     * <p>If you set this parameter to the IP address of an instance, the PortNumber parameter specifies the port number of the instance.</p>
+     * <p>The command to run after the session is initiated. The command length cannot exceed 512 characters.</p>
      * <br>
-     * <p>>If you specify `CommandLine`, you do not need to specify `PortNumber` or `TargetServer`.</p>
+     * <p>>  If you specify the `CommandLine` parameter, you cannot specify the `PortNumber` or `TargetServer` parameter.</p>
      */
     @NameInMap("CommandLine")
     public String commandLine;
@@ -25,7 +25,7 @@ public class StartTerminalSessionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The port number of the instance. The port is used to forward data. After this parameter is configured, Cloud Assistant Agent forwards data to the specified port for forwarding. Example: 22.</p>
+     * <p>The port number of the ECS instance. The port is used to forward data. After this parameter is configured, Cloud Assistant Agent forwards data to the specified port. For example, you can set this parameter to 22 for data forwarding over SSH.</p>
      * <br>
      * <p>This parameter is empty by default, which indicates that no port is configured to forward data.</p>
      */
@@ -45,13 +45,16 @@ public class StartTerminalSessionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IP address of the instance.</p>
+     * <p>The IP address of the instance. You can use the IP address to access the destination service in a virtual private cloud (VPC).</p>
      * <br>
-     * <p>>If you set this parameter to the IP address of an instance, the `PortNumber` parameter specifies the port number of the instance.</p>
+     * <p>>  If this parameter is not empty, `PortNumber` specifies the port number that is used by the managed instance to access the destination service in the VPC.</p>
      */
     @NameInMap("TargetServer")
     public String targetServer;
 
+    /**
+     * <p>指定连接时的用户名称。</p>
+     */
     @NameInMap("Username")
     public String username;
 

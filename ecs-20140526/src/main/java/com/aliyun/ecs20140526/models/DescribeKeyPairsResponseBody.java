@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeKeyPairsResponseBody extends TeaModel {
     /**
-     * <p>Details about the key pairs.</p>
+     * <p>The information of the key pairs.</p>
      */
     @NameInMap("KeyPairs")
     public DescribeKeyPairsResponseBodyKeyPairs keyPairs;
@@ -153,6 +153,9 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         @NameInMap("KeyPairName")
         public String keyPairName;
 
+        /**
+         * <p>The content of the public key.</p>
+         */
         @NameInMap("PublicKey")
         public String publicKey;
 
