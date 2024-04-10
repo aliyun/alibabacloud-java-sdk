@@ -36,6 +36,9 @@ public class ScaleInstanceRequest extends TeaModel {
     @NameInMap("cpu")
     public Long cpu;
 
+    @NameInMap("enableServerlessComputing")
+    public Boolean enableServerlessComputing;
+
     /**
      * <p>The number of gateways. Valid values: 2 to 50.</p>
      * <br>
@@ -86,6 +89,14 @@ public class ScaleInstanceRequest extends TeaModel {
     }
     public Long getCpu() {
         return this.cpu;
+    }
+
+    public ScaleInstanceRequest setEnableServerlessComputing(Boolean enableServerlessComputing) {
+        this.enableServerlessComputing = enableServerlessComputing;
+        return this;
+    }
+    public Boolean getEnableServerlessComputing() {
+        return this.enableServerlessComputing;
     }
 
     public ScaleInstanceRequest setGatewayCount(Long gatewayCount) {

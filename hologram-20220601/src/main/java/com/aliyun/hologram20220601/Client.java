@@ -114,6 +114,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("duration", request.duration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableServerlessComputing)) {
+            body.put("enableServerlessComputing", request.enableServerlessComputing);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayCount)) {
             body.put("gatewayCount", request.gatewayCount);
         }
@@ -556,6 +560,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.cpu)) {
             body.put("cpu", request.cpu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableServerlessComputing)) {
+            body.put("enableServerlessComputing", request.enableServerlessComputing);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayCount)) {

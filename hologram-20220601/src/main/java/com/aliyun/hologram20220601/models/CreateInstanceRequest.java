@@ -75,6 +75,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("duration")
     public Long duration;
 
+    @NameInMap("enableServerlessComputing")
+    public Boolean enableServerlessComputing;
+
     /**
      * <p>The number of gateways. Valid values: 2 to 50.</p>
      * <br>
@@ -227,6 +230,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public Long getDuration() {
         return this.duration;
+    }
+
+    public CreateInstanceRequest setEnableServerlessComputing(Boolean enableServerlessComputing) {
+        this.enableServerlessComputing = enableServerlessComputing;
+        return this;
+    }
+    public Boolean getEnableServerlessComputing() {
+        return this.enableServerlessComputing;
     }
 
     public CreateInstanceRequest setGatewayCount(Long gatewayCount) {
