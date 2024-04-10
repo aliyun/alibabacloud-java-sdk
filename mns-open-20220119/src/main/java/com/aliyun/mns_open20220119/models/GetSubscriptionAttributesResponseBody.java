@@ -97,9 +97,6 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         @NameInMap("SubscriptionName")
         public String subscriptionName;
 
-        @NameInMap("SubscriptionURL")
-        public String subscriptionURL;
-
         @NameInMap("TopicName")
         public String topicName;
 
@@ -165,14 +162,6 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         }
         public String getSubscriptionName() {
             return this.subscriptionName;
-        }
-
-        public GetSubscriptionAttributesResponseBodyData setSubscriptionURL(String subscriptionURL) {
-            this.subscriptionURL = subscriptionURL;
-            return this;
-        }
-        public String getSubscriptionURL() {
-            return this.subscriptionURL;
         }
 
         public GetSubscriptionAttributesResponseBodyData setTopicName(String topicName) {
