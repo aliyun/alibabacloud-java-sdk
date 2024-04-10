@@ -175,6 +175,9 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         @NameInMap("FirstTime")
         public Long firstTime;
 
+        @NameInMap("HasSubEvent")
+        public Boolean hasSubEvent;
+
         /**
          * <p>The timestamp at which the alert was last detected.</p>
          */
@@ -283,6 +286,14 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         }
         public Long getFirstTime() {
             return this.firstTime;
+        }
+
+        public ListObjectScanEventResponseBodyData setHasSubEvent(Boolean hasSubEvent) {
+            this.hasSubEvent = hasSubEvent;
+            return this;
+        }
+        public Boolean getHasSubEvent() {
+            return this.hasSubEvent;
         }
 
         public ListObjectScanEventResponseBodyData setLastTime(Long lastTime) {
