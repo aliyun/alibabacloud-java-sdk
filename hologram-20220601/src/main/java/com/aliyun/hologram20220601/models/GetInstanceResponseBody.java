@@ -486,6 +486,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("EnableHiveAccess")
         public String enableHiveAccess;
 
+        @NameInMap("EnableServerless")
+        public Boolean enableServerless;
+
         /**
          * <p>The list of endpoints.</p>
          */
@@ -808,6 +811,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getEnableHiveAccess() {
             return this.enableHiveAccess;
+        }
+
+        public GetInstanceResponseBodyInstance setEnableServerless(Boolean enableServerless) {
+            this.enableServerless = enableServerless;
+            return this;
+        }
+        public Boolean getEnableServerless() {
+            return this.enableServerless;
         }
 
         public GetInstanceResponseBodyInstance setEndpoints(java.util.List<GetInstanceResponseBodyInstanceEndpoints> endpoints) {
