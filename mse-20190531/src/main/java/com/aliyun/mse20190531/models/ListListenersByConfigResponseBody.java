@@ -145,6 +145,9 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         @NameInMap("Ip")
         public String ip;
 
+        @NameInMap("Labels")
+        public java.util.Map<String, String> labels;
+
         /**
          * <p>The verification string.</p>
          */
@@ -157,6 +160,9 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Version")
+        public String version;
+
         public static ListListenersByConfigResponseBodyListeners build(java.util.Map<String, ?> map) throws Exception {
             ListListenersByConfigResponseBodyListeners self = new ListListenersByConfigResponseBodyListeners();
             return TeaModel.build(map, self);
@@ -168,6 +174,14 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
         public String getIp() {
             return this.ip;
+        }
+
+        public ListListenersByConfigResponseBodyListeners setLabels(java.util.Map<String, String> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.Map<String, String> getLabels() {
+            return this.labels;
         }
 
         public ListListenersByConfigResponseBodyListeners setMd5(String md5) {
@@ -184,6 +198,14 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListListenersByConfigResponseBodyListeners setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }
