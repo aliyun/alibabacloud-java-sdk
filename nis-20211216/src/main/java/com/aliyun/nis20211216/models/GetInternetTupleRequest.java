@@ -23,6 +23,12 @@ public class GetInternetTupleRequest extends TeaModel {
     public String cloudIp;
 
     /**
+     * <p>The local IP addresses for filtering.</p>
+     */
+    @NameInMap("CloudIpList")
+    public java.util.List<String> cloudIpList;
+
+    /**
      * <p>The local Internet service provider (ISP).</p>
      * <br>
      * <p>>  In most cases, the value is Alibaba or Alibaba Cloud.</p>
@@ -205,6 +211,14 @@ public class GetInternetTupleRequest extends TeaModel {
     }
     public String getCloudIp() {
         return this.cloudIp;
+    }
+
+    public GetInternetTupleRequest setCloudIpList(java.util.List<String> cloudIpList) {
+        this.cloudIpList = cloudIpList;
+        return this;
+    }
+    public java.util.List<String> getCloudIpList() {
+        return this.cloudIpList;
     }
 
     public GetInternetTupleRequest setCloudIsp(String cloudIsp) {

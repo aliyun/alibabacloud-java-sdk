@@ -296,6 +296,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetInternetTupleShrinkRequest request = new GetInternetTupleShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.cloudIpList)) {
+            request.cloudIpListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.cloudIpList, "CloudIpList", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceList)) {
             request.instanceListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceList, "InstanceList", "json");
         }
@@ -311,6 +315,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.cloudIp)) {
             query.put("CloudIp", request.cloudIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudIpListShrink)) {
+            query.put("CloudIpList", request.cloudIpListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.cloudIsp)) {

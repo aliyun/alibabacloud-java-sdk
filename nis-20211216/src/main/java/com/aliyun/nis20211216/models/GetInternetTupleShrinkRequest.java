@@ -23,6 +23,12 @@ public class GetInternetTupleShrinkRequest extends TeaModel {
     public String cloudIp;
 
     /**
+     * <p>The local IP addresses for filtering.</p>
+     */
+    @NameInMap("CloudIpList")
+    public String cloudIpListShrink;
+
+    /**
      * <p>The local Internet service provider (ISP).</p>
      * <br>
      * <p>>  In most cases, the value is Alibaba or Alibaba Cloud.</p>
@@ -205,6 +211,14 @@ public class GetInternetTupleShrinkRequest extends TeaModel {
     }
     public String getCloudIp() {
         return this.cloudIp;
+    }
+
+    public GetInternetTupleShrinkRequest setCloudIpListShrink(String cloudIpListShrink) {
+        this.cloudIpListShrink = cloudIpListShrink;
+        return this;
+    }
+    public String getCloudIpListShrink() {
+        return this.cloudIpListShrink;
     }
 
     public GetInternetTupleShrinkRequest setCloudIsp(String cloudIsp) {
