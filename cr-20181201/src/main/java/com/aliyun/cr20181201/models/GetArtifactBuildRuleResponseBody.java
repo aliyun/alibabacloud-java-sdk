@@ -16,6 +16,9 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    @NameInMap("Parameters")
+    public GetArtifactBuildRuleResponseBodyParameters parameters;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -62,6 +65,14 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
         return this.isSuccess;
     }
 
+    public GetArtifactBuildRuleResponseBody setParameters(GetArtifactBuildRuleResponseBodyParameters parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public GetArtifactBuildRuleResponseBodyParameters getParameters() {
+        return this.parameters;
+    }
+
     public GetArtifactBuildRuleResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -84,6 +95,25 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
     }
     public String getScopeType() {
         return this.scopeType;
+    }
+
+    public static class GetArtifactBuildRuleResponseBodyParameters extends TeaModel {
+        @NameInMap("ImageIndexOnly")
+        public Boolean imageIndexOnly;
+
+        public static GetArtifactBuildRuleResponseBodyParameters build(java.util.Map<String, ?> map) throws Exception {
+            GetArtifactBuildRuleResponseBodyParameters self = new GetArtifactBuildRuleResponseBodyParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public GetArtifactBuildRuleResponseBodyParameters setImageIndexOnly(Boolean imageIndexOnly) {
+            this.imageIndexOnly = imageIndexOnly;
+            return this;
+        }
+        public Boolean getImageIndexOnly() {
+            return this.imageIndexOnly;
+        }
+
     }
 
 }
