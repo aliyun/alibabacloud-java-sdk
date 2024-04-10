@@ -2472,6 +2472,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Filters", request.filters);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.minScore)) {
+            body.put("MinScore", request.minScore);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.page)) {
             body.put("Page", request.page);
         }

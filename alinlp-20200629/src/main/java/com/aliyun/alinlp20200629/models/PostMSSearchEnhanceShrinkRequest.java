@@ -19,6 +19,9 @@ public class PostMSSearchEnhanceShrinkRequest extends TeaModel {
     @NameInMap("Filters")
     public String filters;
 
+    @NameInMap("MinScore")
+    public Double minScore;
+
     @NameInMap("Page")
     public Integer page;
 
@@ -86,6 +89,14 @@ public class PostMSSearchEnhanceShrinkRequest extends TeaModel {
     }
     public String getFilters() {
         return this.filters;
+    }
+
+    public PostMSSearchEnhanceShrinkRequest setMinScore(Double minScore) {
+        this.minScore = minScore;
+        return this;
+    }
+    public Double getMinScore() {
+        return this.minScore;
     }
 
     public PostMSSearchEnhanceShrinkRequest setPage(Integer page) {
