@@ -69,6 +69,9 @@ public class SendChatappMessageRequest extends TeaModel {
     @NameInMap("FallBackContent")
     public String fallBackContent;
 
+    /**
+     * <p>Specifies the period of time after which the fallback Short Message Service (SMS) message is sent if the message receipt that indicates the message is delivered to customers is not received. If this parameter is left empty, the fallback SMS message is sent only when the **message fails to be sent** or **the message receipt that indicates the message is not delivered to customers** is received. Valid values: 60 to 43200. Unit: seconds.</p>
+     */
     @NameInMap("FallBackDuration")
     public Integer fallBackDuration;
 
@@ -78,9 +81,24 @@ public class SendChatappMessageRequest extends TeaModel {
     @NameInMap("FallBackId")
     public String fallBackId;
 
+    /**
+     * <p>回落规则。</p>
+     * <br>
+     * <p>> 取值范围</p>
+     * <p>> - undelivered  消息不能发送到端时回落（在发送状态时模板、参数需要校验通过，模板被封、号码被封等不做校验）。参数值为空时默认使用此规则</p>
+     * <p>> - sentFailed  消息在校验模板、模板变量等参数时，校验不通过也会回落。只会强校验channelType, type, messageType, to, from(是否存在) 几个参数。</p>
+     * <br>
+     * <p><props="china"></p>
+     * <br>
+     * <p>> 中国站此字段无效</p>
+     * <p></props></p>
+     */
     @NameInMap("FallBackRule")
     public String fallBackRule;
 
+    /**
+     * <p>Flow发送数据</p>
+     */
     @NameInMap("FlowAction")
     public SendChatappMessageRequestFlowAction flowAction;
 
@@ -172,6 +190,9 @@ public class SendChatappMessageRequest extends TeaModel {
      */
     @NameInMap("TemplateCode")
     public String templateCode;
+
+    @NameInMap("TemplateName")
+    public String templateName;
 
     /**
      * <p>The variables of the message template.</p>
@@ -371,6 +392,14 @@ public class SendChatappMessageRequest extends TeaModel {
         return this.templateCode;
     }
 
+    public SendChatappMessageRequest setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
     public SendChatappMessageRequest setTemplateParams(java.util.Map<String, String> templateParams) {
         this.templateParams = templateParams;
         return this;
@@ -412,9 +441,15 @@ public class SendChatappMessageRequest extends TeaModel {
     }
 
     public static class SendChatappMessageRequestFlowAction extends TeaModel {
+        /**
+         * <p>flow默认参数</p>
+         */
         @NameInMap("FlowActionData")
         public java.util.Map<String, String> flowActionData;
 
+        /**
+         * <p>flow token信息</p>
+         */
         @NameInMap("FlowToken")
         public String flowToken;
 

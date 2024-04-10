@@ -17,7 +17,7 @@ public class ListProductRequest extends TeaModel {
     public String before;
 
     /**
-     * <p>The ID of the product catalog.</p>
+     * <p>The catalog ID.</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;

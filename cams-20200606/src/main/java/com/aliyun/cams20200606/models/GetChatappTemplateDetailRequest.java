@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetChatappTemplateDetailRequest extends TeaModel {
     /**
-     * <p>The space ID of the user under the ISV account.</p>
+     * <p>The space ID of the user within the ISV account.</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The ID of the WhatsApp account that you registered.</p>
+     * <p>The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.</p>
+     * <br>
+     * <p>>  CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
      */
     @NameInMap("CustWabaId")
     @Deprecated
@@ -34,6 +36,9 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
      */
     @NameInMap("TemplateCode")
     public String templateCode;
+
+    @NameInMap("TemplateName")
+    public String templateName;
 
     /**
      * <p>The type of the message template. Valid values:</p>
@@ -88,6 +93,14 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     }
     public String getTemplateCode() {
         return this.templateCode;
+    }
+
+    public GetChatappTemplateDetailRequest setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
     }
 
     public GetChatappTemplateDetailRequest setTemplateType(String templateType) {

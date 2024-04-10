@@ -4,9 +4,15 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetPreValidatePhoneIdRequest extends TeaModel {
+    /**
+     * <p>The phone number.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    /**
+     * <p>The verification code provided when you purchased the pre-registered phone number.</p>
+     */
     @NameInMap("VerifyCode")
     public String verifyCode;
 

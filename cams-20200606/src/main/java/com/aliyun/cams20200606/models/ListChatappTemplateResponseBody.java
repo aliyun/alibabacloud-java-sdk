@@ -4,9 +4,6 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListChatappTemplateResponseBody extends TeaModel {
-    /**
-     * <p>访问被拒绝详细信息。</p>
-     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
@@ -38,7 +35,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>总记录条数。</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -98,7 +95,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
 
     public static class ListChatappTemplateResponseBodyListTemplate extends TeaModel {
         /**
-         * <p>The review status of the message template. Valid values:</p>
+         * <p>The review state of the message template. Valid values:</p>
          * <br>
          * <p>*   **pass**: The message template is approved.</p>
          * <p>*   **fail**: The message template is rejected.</p>
@@ -109,11 +106,23 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         public String auditStatus;
 
         /**
-         * <p>The category of the message template. Valid values:</p>
+         * <p>The category of the WhatsApp template. Valid values:</p>
          * <br>
-         * <p>*   **TRANSACTIONAL**: a transactional template</p>
-         * <p>*   **MARKETING**: a marketing template</p>
-         * <p>*   **OTP**: a one-time password template</p>
+         * <p>*   **UTILITY**: utility template</p>
+         * <p>*   **MARKETING**: marketing template</p>
+         * <p>*   **AUTHENTICATION**: authentication template</p>
+         * <br>
+         * <p>The category of the Viber template. Valid values:</p>
+         * <br>
+         * <p>*   **text**: template that contains only text</p>
+         * <p>*   **image**: template that contains only an image</p>
+         * <p>*   **text_image_button**: template that contains text, an image, and a button</p>
+         * <p>*   **text_button**: template that contains text and a button</p>
+         * <p>*   **document**: template that contains only a document</p>
+         * <p>*   **video**: template that contains only a video</p>
+         * <p>*   **text_video**: template that contains text and a video</p>
+         * <p>*   **text_video_button**: template that contains text, a video, and a button</p>
+         * <p>*   **text_image**: template that contains text and an image</p>
          */
         @NameInMap("Category")
         public String category;
@@ -125,7 +134,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>模板审核被拒的原因</p>
+         * <p>The reason for the review failure.</p>
          */
         @NameInMap("Reason")
         public String reason;

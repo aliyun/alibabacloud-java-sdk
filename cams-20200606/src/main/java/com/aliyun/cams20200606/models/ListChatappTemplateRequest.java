@@ -22,7 +22,9 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The ID of the WhatsApp account that you register.</p>
+     * <p>The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.</p>
+     * <br>
+     * <p>>  CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
      */
     @NameInMap("CustWabaId")
     @Deprecated
@@ -47,7 +49,7 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The paging settings.</p>
+     * <p>The pagination settings.</p>
      */
     @NameInMap("Page")
     public ListChatappTemplateRequestPage page;
@@ -133,13 +135,13 @@ public class ListChatappTemplateRequest extends TeaModel {
 
     public static class ListChatappTemplateRequestPage extends TeaModel {
         /**
-         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          */
         @NameInMap("Index")
         public Integer index;
 
         /**
-         * <p>The number of message templates to return on each page. Default value: 10.</p>
+         * <p>The number of entries per page. Default value: 10.</p>
          */
         @NameInMap("Size")
         public Integer size;

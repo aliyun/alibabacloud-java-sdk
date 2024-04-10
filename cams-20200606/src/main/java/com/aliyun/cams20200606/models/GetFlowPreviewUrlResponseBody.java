@@ -4,17 +4,26 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetFlowPreviewUrlResponseBody extends TeaModel {
+    /**
+     * <p>If OK is returned, the request was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetFlowPreviewUrlResponseBodyData data;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request。</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -58,14 +67,20 @@ public class GetFlowPreviewUrlResponseBody extends TeaModel {
 
     public static class GetFlowPreviewUrlResponseBodyData extends TeaModel {
         /**
-         * <p>flow ID。</p>
+         * <p>The Flow ID.</p>
          */
         @NameInMap("FlowId")
         public String flowId;
 
+        /**
+         * <p>The temporary preview URL.</p>
+         */
         @NameInMap("PreviewUrl")
         public String previewUrl;
 
+        /**
+         * <p>The time when the preview URL expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("PreviewUrlExpires")
         public Long previewUrlExpires;
 

@@ -80,6 +80,9 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
     }
 
     public static class QueryPhoneBusinessProfileResponseBodyData extends TeaModel {
+        @NameInMap("About")
+        public String about;
+
         /**
          * <p>The address.</p>
          */
@@ -119,6 +122,14 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         public static QueryPhoneBusinessProfileResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryPhoneBusinessProfileResponseBodyData self = new QueryPhoneBusinessProfileResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryPhoneBusinessProfileResponseBodyData setAbout(String about) {
+            this.about = about;
+            return this;
+        }
+        public String getAbout() {
+            return this.about;
         }
 
         public QueryPhoneBusinessProfileResponseBodyData setAddress(String address) {

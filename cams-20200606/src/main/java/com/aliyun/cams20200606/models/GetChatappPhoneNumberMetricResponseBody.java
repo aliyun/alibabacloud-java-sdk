@@ -11,10 +11,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The HTTP status code returned.</p>
-     * <br>
-     * <p>*   A value of OK indicates that the call is successful.</p>
-     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     * <p>The value OK indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -26,13 +23,13 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
     public java.util.List<GetChatappPhoneNumberMetricResponseBodyData> data;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -84,19 +81,25 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
 
     public static class GetChatappPhoneNumberMetricResponseBodyData extends TeaModel {
         /**
-         * <p>Delivered count</p>
+         * <p>The number of delivered messages.</p>
          */
         @NameInMap("DeliveredCount")
         public Integer deliveredCount;
 
         /**
-         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The end of the time range that you queried.</p>
          */
         @NameInMap("End")
         public Long end;
 
         /**
-         * <p>The granularity at which bills are queried.</p>
+         * <p>The metric granularity.</p>
+         * <br>
+         * <p>>  Valid values:</p>
+         * <br>
+         * <p>*   DAILY</p>
+         * <br>
+         * <p>*   HALF_HOUR</p>
          */
         @NameInMap("Granularity")
         public String granularity;
@@ -108,13 +111,13 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>Sent count</p>
+         * <p>The number of sent messages.</p>
          */
         @NameInMap("SentCount")
         public Integer sentCount;
 
         /**
-         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The beginning of the time range that you queried.</p>
          */
         @NameInMap("Start")
         public Long start;

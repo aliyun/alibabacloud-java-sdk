@@ -29,9 +29,6 @@ public class SendChatappMassMessageRequest extends TeaModel {
     @NameInMap("FallBackContent")
     public String fallBackContent;
 
-    /**
-     * <p>消息在指定时间内没有返回已到达回执时回落, 不填代表不根据此时间判断回落，只有发送失败和有失败的状态报告时才会回落。时间单位为秒 最小值为60，最大值43200</p>
-     */
     @NameInMap("FallBackDuration")
     public Integer fallBackDuration;
 
@@ -41,6 +38,15 @@ public class SendChatappMassMessageRequest extends TeaModel {
     @NameInMap("FallBackId")
     public String fallBackId;
 
+    /**
+     * <p>The fallback rule.</p>
+     * <br>
+     * <p>>  Valid values:</p>
+     * <br>
+     * <p>*   undelivered: A fallback is triggered if the WhatsApp message is not delivered to clients. When the WhatsApp message is being sent, the template parameters are verified. If the parameters fail to pass the verification, the message fails to be sent. Whether the template and phone number are prohibited is not verified. By default, this value is used when FallBackRule is left empty.</p>
+     * <br>
+     * <p>*   sentfailed: A fallback is triggered even if the template parameters including variables fail to pass the verification. If the channelType, type, messageType, to, and from parameters fail to pass the verification, a fallback is not triggered.</p>
+     */
     @NameInMap("FallBackRule")
     public String fallBackRule;
 
@@ -69,7 +75,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The list of phone numbers that receive the message.</p>
+     * <p>The phone numbers to which the message is sent.</p>
      */
     @NameInMap("SenderList")
     public java.util.List<SendChatappMassMessageRequestSenderList> senderList;
@@ -91,6 +97,9 @@ public class SendChatappMassMessageRequest extends TeaModel {
      */
     @NameInMap("TemplateCode")
     public String templateCode;
+
+    @NameInMap("TemplateName")
+    public String templateName;
 
     /**
      * <p>The timeout period for sending messages when the ChannelType parameter is set to viber. Valid values: 30 to 1209600. Unit: seconds.</p>
@@ -223,6 +232,14 @@ public class SendChatappMassMessageRequest extends TeaModel {
         return this.templateCode;
     }
 
+    public SendChatappMassMessageRequest setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
     public SendChatappMassMessageRequest setTtl(Long ttl) {
         this.ttl = ttl;
         return this;
@@ -262,6 +279,9 @@ public class SendChatappMassMessageRequest extends TeaModel {
     }
 
     public static class SendChatappMassMessageRequestSenderListProductActionSectionsProductItems extends TeaModel {
+        /**
+         * <p>The retailer ID of the product.</p>
+         */
         @NameInMap("ProductRetailerId")
         public String productRetailerId;
 
@@ -281,9 +301,15 @@ public class SendChatappMassMessageRequest extends TeaModel {
     }
 
     public static class SendChatappMassMessageRequestSenderListProductActionSections extends TeaModel {
+        /**
+         * <p>The products.</p>
+         */
         @NameInMap("ProductItems")
         public java.util.List<SendChatappMassMessageRequestSenderListProductActionSectionsProductItems> productItems;
 
+        /**
+         * <p>The name of the category.</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -311,9 +337,15 @@ public class SendChatappMassMessageRequest extends TeaModel {
     }
 
     public static class SendChatappMassMessageRequestSenderListProductAction extends TeaModel {
+        /**
+         * <p>The products. Up to 30 products and 10 categories can be added.</p>
+         */
         @NameInMap("Sections")
         public java.util.List<SendChatappMassMessageRequestSenderListProductActionSections> sections;
 
+        /**
+         * <p>The retailer ID of the product.</p>
+         */
         @NameInMap("ThumbnailProductRetailerId")
         public String thumbnailProductRetailerId;
 
@@ -345,22 +377,25 @@ public class SendChatappMassMessageRequest extends TeaModel {
         public SendChatappMassMessageRequestSenderListFlowAction flowAction;
 
         /**
-         * <p>payload</p>
+         * <p>The payload.</p>
          */
         @NameInMap("Payload")
         public java.util.List<String> payload;
 
+        /**
+         * <p>The information about the product.</p>
+         */
         @NameInMap("ProductAction")
         public SendChatappMassMessageRequestSenderListProductAction productAction;
 
         /**
-         * <p>The parameters of the message template.</p>
+         * <p>The parameters of the template.</p>
          */
         @NameInMap("TemplateParams")
         public java.util.Map<String, String> templateParams;
 
         /**
-         * <p>The phone number that receives the message.</p>
+         * <p>The phone number to which the message is sent.</p>
          */
         @NameInMap("To")
         public String to;

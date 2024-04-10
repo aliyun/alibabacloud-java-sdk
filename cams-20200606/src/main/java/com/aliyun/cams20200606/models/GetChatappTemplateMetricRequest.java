@@ -11,47 +11,47 @@ public class GetChatappTemplateMetricRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end of the time range to query.</p>
      */
     @NameInMap("End")
     public Long end;
 
     /**
-     * <p>Metric granularity. Valid values:</p>
+     * <p>The metric granularity.</p>
      * <br>
-     * <p>- DAILY</p>
+     * <p>>  Valid values:</p>
+     * <br>
+     * <p>*   DAILY</p>
      */
     @NameInMap("Granularity")
     public String granularity;
 
     /**
-     * <p>The independent software vendor (ISV) verification code. This parameter is used to verify whether the user is authorized by the ISV account.</p>
+     * <p>The verification code used to verify whether the RAM user is authorized by the independent software vendor (ISV) account.</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
 
     /**
-     * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
+     * <p>The template language.</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
-     * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The beginning of the time range to query.</p>
      */
     @NameInMap("Start")
     public Long start;
 
     /**
-     * <p>The code of the message template.</p>
+     * <p>The template code.</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;
 
     /**
-     * <p>The type of the message template. Valid values:</p>
-     * <br>
-     * <p>*   **WHATSAPP**</p>
+     * <p>The template type. Valid values: WHATSAPP and VIBER. If you do not specify this parameter, WHATSAPP is used by default.</p>
      */
     @NameInMap("TemplateType")
     public String templateType;

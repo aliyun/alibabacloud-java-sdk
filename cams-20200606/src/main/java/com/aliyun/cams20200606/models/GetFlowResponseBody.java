@@ -4,17 +4,26 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetFlowResponseBody extends TeaModel {
+    /**
+     * <p>If OK is returned, the request was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetFlowResponseBodyData data;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request。</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,30 +66,77 @@ public class GetFlowResponseBody extends TeaModel {
     }
 
     public static class GetFlowResponseBodyData extends TeaModel {
+        /**
+         * <p>The categories of the Flow.</p>
+         */
         @NameInMap("Categories")
         public java.util.List<String> categories;
 
+        /**
+         * <p>The API version.</p>
+         */
         @NameInMap("DataApiVersion")
         public String dataApiVersion;
 
         /**
-         * <p>flow ID。</p>
+         * <p>The Flow ID.</p>
          */
         @NameInMap("FlowId")
         public String flowId;
 
+        /**
+         * <p>The name of the Flow.</p>
+         */
         @NameInMap("FlowName")
         public String flowName;
 
+        /**
+         * <p>The JSON version.</p>
+         */
         @NameInMap("JSONVersion")
         public String JSONVersion;
 
+        /**
+         * <p>The temporary preview URL.</p>
+         */
         @NameInMap("PreviewUrl")
         public String previewUrl;
 
+        /**
+         * <p>The time when the preview URL expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("PreviewUrlExpires")
         public Long previewUrlExpires;
 
+        /**
+         * <p>The state of the Flow.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   PUBLISHED</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   DRAFT</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   DEPRECATED</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("Status")
         public String status;
 

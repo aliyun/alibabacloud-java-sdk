@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ChatappEmbedSignUpResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
@@ -81,7 +84,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
 
     public static class ChatappEmbedSignUpResponseBodyWabas extends TeaModel {
         /**
-         * <p>The review status of the WhatsApp Business account.</p>
+         * <p>The review state of the WABA.</p>
          */
         @NameInMap("AccountReviewStatus")
         public String accountReviewStatus;
@@ -93,7 +96,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The ID of the WhatsApp Business account.</p>
+         * <p>The ID of the WABA.</p>
          */
         @NameInMap("Id")
         public String id;
@@ -105,7 +108,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
         public String messageTemplateNamespace;
 
         /**
-         * <p>The name of the WhatsApp Business account.</p>
+         * <p>The name of the WABA.</p>
          */
         @NameInMap("Name")
         public String name;

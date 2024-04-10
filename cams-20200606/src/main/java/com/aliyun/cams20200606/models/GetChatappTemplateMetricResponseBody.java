@@ -11,10 +11,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The HTTP status code returned.</p>
-     * <br>
-     * <p>*   A value of OK indicates that the call is successful.</p>
-     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     * <p>The value OK indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -26,13 +23,13 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
     public java.util.List<GetChatappTemplateMetricResponseBodyData> data;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -84,19 +81,27 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
 
     public static class GetChatappTemplateMetricResponseBodyDataCliented extends TeaModel {
         /**
-         * <p>Button name</p>
+         * <p>The text on the button.</p>
          */
         @NameInMap("ButtonContent")
         public String buttonContent;
 
         /**
-         * <p>Clicked count</p>
+         * <p>The number of clicks.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The type of button.</p>
+         * <p>The button type.</p>
+         * <br>
+         * <p>>  Valid values:</p>
+         * <br>
+         * <p>*   url_button</p>
+         * <br>
+         * <p>*   quick_relpy_button</p>
+         * <br>
+         * <p>*   phone_number_button</p>
          */
         @NameInMap("Type")
         public String type;
@@ -134,49 +139,49 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
 
     public static class GetChatappTemplateMetricResponseBodyData extends TeaModel {
         /**
-         * <p>Click Statistics</p>
+         * <p>The statistics on button clicks.</p>
          */
         @NameInMap("Cliented")
         public java.util.List<GetChatappTemplateMetricResponseBodyDataCliented> cliented;
 
         /**
-         * <p>Delivered count</p>
+         * <p>The number of delivered messages.</p>
          */
         @NameInMap("DeliveredCount")
         public Integer deliveredCount;
 
         /**
-         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The end of the time range you queried.</p>
          */
         @NameInMap("End")
         public Long end;
 
         /**
-         * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
+         * <p>The template language.</p>
          */
         @NameInMap("Language")
         public String language;
 
         /**
-         * <p>Read count</p>
+         * <p>The number of read messages.</p>
          */
         @NameInMap("ReadCount")
         public Integer readCount;
 
         /**
-         * <p>Sent count</p>
+         * <p>The number of sent messages.</p>
          */
         @NameInMap("SentCount")
         public Integer sentCount;
 
         /**
-         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The beginning of the time range you queried.</p>
          */
         @NameInMap("Start")
         public Long start;
 
         /**
-         * <p>The code of the message template.</p>
+         * <p>The template code.</p>
          */
         @NameInMap("TemplateCode")
         public String templateCode;

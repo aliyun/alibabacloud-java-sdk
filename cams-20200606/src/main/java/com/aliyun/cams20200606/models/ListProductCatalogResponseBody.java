@@ -26,7 +26,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The returned results.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Model")
     public ListProductCatalogResponseBodyModel model;

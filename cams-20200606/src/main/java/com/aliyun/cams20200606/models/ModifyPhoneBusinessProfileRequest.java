@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ModifyPhoneBusinessProfileRequest extends TeaModel {
+    @NameInMap("About")
+    public String about;
+
     /**
      * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
      */
@@ -57,6 +60,14 @@ public class ModifyPhoneBusinessProfileRequest extends TeaModel {
     public static ModifyPhoneBusinessProfileRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyPhoneBusinessProfileRequest self = new ModifyPhoneBusinessProfileRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyPhoneBusinessProfileRequest setAbout(String about) {
+        this.about = about;
+        return this;
+    }
+    public String getAbout() {
+        return this.about;
     }
 
     public ModifyPhoneBusinessProfileRequest setAddress(String address) {
