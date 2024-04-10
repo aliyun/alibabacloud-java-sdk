@@ -66,6 +66,9 @@ public class GetTaskInfoResponseBody extends TeaModel {
         @NameInMap("Summarization")
         public String summarization;
 
+        @NameInMap("TextPolish")
+        public String textPolish;
+
         @NameInMap("Transcription")
         public String transcription;
 
@@ -107,6 +110,14 @@ public class GetTaskInfoResponseBody extends TeaModel {
         }
         public String getSummarization() {
             return this.summarization;
+        }
+
+        public GetTaskInfoResponseBodyDataResult setTextPolish(String textPolish) {
+            this.textPolish = textPolish;
+            return this;
+        }
+        public String getTextPolish() {
+            return this.textPolish;
         }
 
         public GetTaskInfoResponseBodyDataResult setTranscription(String transcription) {
