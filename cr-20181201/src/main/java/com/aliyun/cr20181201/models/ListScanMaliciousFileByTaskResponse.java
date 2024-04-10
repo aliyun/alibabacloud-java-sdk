@@ -3,7 +3,7 @@ package com.aliyun.cr20181201.models;
 
 import com.aliyun.tea.*;
 
-public class ListInstanceEndpointResponse extends TeaModel {
+public class ListScanMaliciousFileByTaskResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListInstanceEndpointResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListInstanceEndpointResponseBody body;
+    public ListScanMaliciousFileByTaskResponseBody body;
 
-    public static ListInstanceEndpointResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListInstanceEndpointResponse self = new ListInstanceEndpointResponse();
+    public static ListScanMaliciousFileByTaskResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListScanMaliciousFileByTaskResponse self = new ListScanMaliciousFileByTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListInstanceEndpointResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListScanMaliciousFileByTaskResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListInstanceEndpointResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListInstanceEndpointResponse setStatusCode(Integer statusCode) {
+    public ListScanMaliciousFileByTaskResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListInstanceEndpointResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListInstanceEndpointResponse setBody(ListInstanceEndpointResponseBody body) {
+    public ListScanMaliciousFileByTaskResponse setBody(ListScanMaliciousFileByTaskResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListInstanceEndpointResponseBody getBody() {
+    public ListScanMaliciousFileByTaskResponseBody getBody() {
         return this.body;
     }
 
