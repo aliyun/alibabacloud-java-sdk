@@ -62,6 +62,12 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         @NameInMap("BucketNameList")
         public java.util.List<String> bucketNameList;
 
+        @NameInMap("DecompressMaxFileCount")
+        public Integer decompressMaxFileCount;
+
+        @NameInMap("DecompressMaxLayer")
+        public Integer decompressMaxLayer;
+
         /**
          * <p>Indicates whether the check policy is enabled. Valid values:</p>
          * <br>
@@ -154,6 +160,22 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         }
         public java.util.List<String> getBucketNameList() {
             return this.bucketNameList;
+        }
+
+        public GetOssScanConfigResponseBodyData setDecompressMaxFileCount(Integer decompressMaxFileCount) {
+            this.decompressMaxFileCount = decompressMaxFileCount;
+            return this;
+        }
+        public Integer getDecompressMaxFileCount() {
+            return this.decompressMaxFileCount;
+        }
+
+        public GetOssScanConfigResponseBodyData setDecompressMaxLayer(Integer decompressMaxLayer) {
+            this.decompressMaxLayer = decompressMaxLayer;
+            return this;
+        }
+        public Integer getDecompressMaxLayer() {
+            return this.decompressMaxLayer;
         }
 
         public GetOssScanConfigResponseBodyData setEnable(Integer enable) {

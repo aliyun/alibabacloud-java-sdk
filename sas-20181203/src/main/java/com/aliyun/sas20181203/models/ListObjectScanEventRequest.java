@@ -49,6 +49,9 @@ public class ListObjectScanEventRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ParentEventId")
+    public Long parentEventId;
+
     /**
      * <p>The risk level of the alert. Valid values:</p>
      * <br>
@@ -139,6 +142,14 @@ public class ListObjectScanEventRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListObjectScanEventRequest setParentEventId(Long parentEventId) {
+        this.parentEventId = parentEventId;
+        return this;
+    }
+    public Long getParentEventId() {
+        return this.parentEventId;
     }
 
     public ListObjectScanEventRequest setRiskLevel(String riskLevel) {

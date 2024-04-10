@@ -942,8 +942,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Criteria", request.criteria);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isPreBind)) {
+            query.put("IsPreBind", request.isPreBind);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.logicalExp)) {
             query.put("LogicalExp", request.logicalExp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ntmVersion)) {
+            query.put("NtmVersion", request.ntmVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.preBindOrderId)) {
+            query.put("PreBindOrderId", request.preBindOrderId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.unBind)) {
@@ -2741,6 +2753,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BucketNameList", request.bucketNameList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.decompressMaxFileCount)) {
+            query.put("DecompressMaxFileCount", request.decompressMaxFileCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.decompressMaxLayer)) {
+            query.put("DecompressMaxLayer", request.decompressMaxLayer);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.excludeKeySuffixList)) {
             query.put("ExcludeKeySuffixList", request.excludeKeySuffixList);
         }
@@ -2788,6 +2808,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.bucketNameList)) {
             query.put("BucketNameList", request.bucketNameList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.decompressMaxFileCount)) {
+            query.put("DecompressMaxFileCount", request.decompressMaxFileCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.decompressMaxLayer)) {
+            query.put("DecompressMaxLayer", request.decompressMaxLayer);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
@@ -20783,6 +20811,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.parentEventId)) {
+            query.put("ParentEventId", request.parentEventId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.riskLevel)) {
             query.put("RiskLevel", request.riskLevel);
         }
@@ -27773,6 +27805,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.bucketNameList)) {
             query.put("BucketNameList", request.bucketNameList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.decompressMaxFileCount)) {
+            query.put("DecompressMaxFileCount", request.decompressMaxFileCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.decompressMaxLayer)) {
+            query.put("DecompressMaxLayer", request.decompressMaxLayer);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enable)) {

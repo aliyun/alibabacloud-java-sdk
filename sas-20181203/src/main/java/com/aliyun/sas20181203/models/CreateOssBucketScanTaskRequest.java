@@ -16,6 +16,12 @@ public class CreateOssBucketScanTaskRequest extends TeaModel {
     @NameInMap("BucketNameList")
     public java.util.List<String> bucketNameList;
 
+    @NameInMap("DecompressMaxFileCount")
+    public Integer decompressMaxFileCount;
+
+    @NameInMap("DecompressMaxLayer")
+    public Integer decompressMaxLayer;
+
     /**
      * <p>The suffixes of the objects that you do not want to check.</p>
      */
@@ -62,6 +68,22 @@ public class CreateOssBucketScanTaskRequest extends TeaModel {
     }
     public java.util.List<String> getBucketNameList() {
         return this.bucketNameList;
+    }
+
+    public CreateOssBucketScanTaskRequest setDecompressMaxFileCount(Integer decompressMaxFileCount) {
+        this.decompressMaxFileCount = decompressMaxFileCount;
+        return this;
+    }
+    public Integer getDecompressMaxFileCount() {
+        return this.decompressMaxFileCount;
+    }
+
+    public CreateOssBucketScanTaskRequest setDecompressMaxLayer(Integer decompressMaxLayer) {
+        this.decompressMaxLayer = decompressMaxLayer;
+        return this;
+    }
+    public Integer getDecompressMaxLayer() {
+        return this.decompressMaxLayer;
     }
 
     public CreateOssBucketScanTaskRequest setExcludeKeySuffixList(java.util.List<String> excludeKeySuffixList) {

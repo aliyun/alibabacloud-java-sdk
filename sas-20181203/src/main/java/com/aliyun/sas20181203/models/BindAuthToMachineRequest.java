@@ -50,6 +50,9 @@ public class BindAuthToMachineRequest extends TeaModel {
     @NameInMap("Criteria")
     public String criteria;
 
+    @NameInMap("IsPreBind")
+    public Integer isPreBind;
+
     /**
      * <p>The logical relationship that you want to use to evaluate multiple search conditions. Default value: **OR**. Valid values:</p>
      * <br>
@@ -58,6 +61,12 @@ public class BindAuthToMachineRequest extends TeaModel {
      */
     @NameInMap("LogicalExp")
     public String logicalExp;
+
+    @NameInMap("NtmVersion")
+    public String ntmVersion;
+
+    @NameInMap("PreBindOrderId")
+    public Long preBindOrderId;
 
     /**
      * <p>The UUIDs of the servers that you want to unbind from Security Center.</p>
@@ -112,12 +121,36 @@ public class BindAuthToMachineRequest extends TeaModel {
         return this.criteria;
     }
 
+    public BindAuthToMachineRequest setIsPreBind(Integer isPreBind) {
+        this.isPreBind = isPreBind;
+        return this;
+    }
+    public Integer getIsPreBind() {
+        return this.isPreBind;
+    }
+
     public BindAuthToMachineRequest setLogicalExp(String logicalExp) {
         this.logicalExp = logicalExp;
         return this;
     }
     public String getLogicalExp() {
         return this.logicalExp;
+    }
+
+    public BindAuthToMachineRequest setNtmVersion(String ntmVersion) {
+        this.ntmVersion = ntmVersion;
+        return this;
+    }
+    public String getNtmVersion() {
+        return this.ntmVersion;
+    }
+
+    public BindAuthToMachineRequest setPreBindOrderId(Long preBindOrderId) {
+        this.preBindOrderId = preBindOrderId;
+        return this;
+    }
+    public Long getPreBindOrderId() {
+        return this.preBindOrderId;
     }
 
     public BindAuthToMachineRequest setUnBind(java.util.List<String> unBind) {

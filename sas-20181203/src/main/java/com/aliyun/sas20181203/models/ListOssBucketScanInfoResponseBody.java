@@ -68,6 +68,9 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
         @NameInMap("ConfigStatus")
         public Integer configStatus;
 
+        @NameInMap("DecompressStatus")
+        public Integer decompressStatus;
+
         /**
          * <p>The number of high-risk objects.</p>
          */
@@ -181,6 +184,14 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
         }
         public Integer getConfigStatus() {
             return this.configStatus;
+        }
+
+        public ListOssBucketScanInfoResponseBodyData setDecompressStatus(Integer decompressStatus) {
+            this.decompressStatus = decompressStatus;
+            return this;
+        }
+        public Integer getDecompressStatus() {
+            return this.decompressStatus;
         }
 
         public ListOssBucketScanInfoResponseBodyData setHighRisk(Long highRisk) {
