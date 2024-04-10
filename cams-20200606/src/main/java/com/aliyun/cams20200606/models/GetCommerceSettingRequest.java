@@ -4,9 +4,15 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetCommerceSettingRequest extends TeaModel {
+    /**
+     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <p>The phone number.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 

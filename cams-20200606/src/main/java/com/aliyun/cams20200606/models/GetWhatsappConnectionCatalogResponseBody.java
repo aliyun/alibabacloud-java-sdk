@@ -26,7 +26,7 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The returned results.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Model")
     public java.util.Map<String, ?> model;

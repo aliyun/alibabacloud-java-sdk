@@ -4,15 +4,27 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ModifyFlowRequest extends TeaModel {
+    /**
+     * <p>The categories of the Flow.</p>
+     */
     @NameInMap("Categories")
     public java.util.List<String> categories;
 
+    /**
+     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <p>The Flow ID.</p>
+     */
     @NameInMap("FlowId")
     public String flowId;
 
+    /**
+     * <p>The name of the Flow.</p>
+     */
     @NameInMap("FlowName")
     public String flowName;
 

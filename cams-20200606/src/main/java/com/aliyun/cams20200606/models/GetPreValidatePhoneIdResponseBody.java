@@ -4,17 +4,26 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetPreValidatePhoneIdResponseBody extends TeaModel {
+    /**
+     * <p>The response code. The value OK indicates the request was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetPreValidatePhoneIdResponseBodyData data;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,9 +66,15 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
     }
 
     public static class GetPreValidatePhoneIdResponseBodyData extends TeaModel {
+        /**
+         * <p>The phone number.</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <p>The ID of the phone number.</p>
+         */
         @NameInMap("PhoneNumberId")
         public String phoneNumberId;
 

@@ -4,18 +4,33 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class AddChatappPhoneNumberRequest extends TeaModel {
+    /**
+     * <p>The country code.</p>
+     */
     @NameInMap("Cc")
     public String cc;
 
+    /**
+     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <p>The phone number without a country code.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    /**
+     * <p>The ID of the pre-registered phone number.</p>
+     */
     @NameInMap("PreValidateId")
     public String preValidateId;
 
+    /**
+     * <p>The display name of the phone number.</p>
+     */
     @NameInMap("VerifiedName")
     public String verifiedName;
 

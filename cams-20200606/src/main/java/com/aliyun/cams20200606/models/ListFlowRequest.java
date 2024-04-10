@@ -4,12 +4,21 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListFlowRequest extends TeaModel {
+    /**
+     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <p>The name of the Flow.</p>
+     */
     @NameInMap("FlowName")
     public String flowName;
 
+    /**
+     * <p>The returned pages.</p>
+     */
     @NameInMap("Page")
     public ListFlowRequestPage page;
 
@@ -43,9 +52,15 @@ public class ListFlowRequest extends TeaModel {
     }
 
     public static class ListFlowRequestPage extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 

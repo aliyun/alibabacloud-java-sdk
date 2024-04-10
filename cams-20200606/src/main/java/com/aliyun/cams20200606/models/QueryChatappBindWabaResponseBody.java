@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class QueryChatappBindWabaResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
@@ -17,7 +20,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public QueryChatappBindWabaResponseBodyData data;
@@ -81,7 +84,17 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
 
     public static class QueryChatappBindWabaResponseBodyData extends TeaModel {
         /**
-         * <p>The review status of the WhatsApp Business account.</p>
+         * <p>The review state of the WhatsApp Business account (WABA).</p>
+         * <br>
+         * <p>>  Valid values:</p>
+         * <br>
+         * <p>*   PENDING: The WABA is to be reviewed.</p>
+         * <br>
+         * <p>*   APPROVED: The WABA was approved.</p>
+         * <br>
+         * <p>*   REJECTED: The WABA was rejected.</p>
+         * <br>
+         * <p>*   DISABLED: The WABA was forbidden.</p>
          */
         @NameInMap("AccountReviewStatus")
         public String accountReviewStatus;

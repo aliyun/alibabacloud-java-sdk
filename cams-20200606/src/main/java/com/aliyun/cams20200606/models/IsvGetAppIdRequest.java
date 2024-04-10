@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class IsvGetAppIdRequest extends TeaModel {
+    /**
+     * <p>权限</p>
+     */
     @NameInMap("Permissions")
     public String permissions;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWhatsappConnectionCatalogRequest extends TeaModel {
     /**
-     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     * <p>The space ID of the user within the ISV account.</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;

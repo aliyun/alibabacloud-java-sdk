@@ -11,7 +11,9 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The ID of the WhatsApp account that you register.</p>
+     * <p>The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.</p>
+     * <br>
+     * <p>>  CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
      */
     @NameInMap("CustWabaId")
     @Deprecated
@@ -23,11 +25,20 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     @NameInMap("IsvCode")
     public String isvCode;
 
+    @NameInMap("Language")
+    public String language;
+
     /**
      * <p>The code of the message template.</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;
+
+    @NameInMap("TemplateName")
+    public String templateName;
+
+    @NameInMap("TemplateType")
+    public String templateType;
 
     public static DeleteChatappTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteChatappTemplateRequest self = new DeleteChatappTemplateRequest();
@@ -58,12 +69,36 @@ public class DeleteChatappTemplateRequest extends TeaModel {
         return this.isvCode;
     }
 
+    public DeleteChatappTemplateRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
+    }
+
     public DeleteChatappTemplateRequest setTemplateCode(String templateCode) {
         this.templateCode = templateCode;
         return this;
     }
     public String getTemplateCode() {
         return this.templateCode;
+    }
+
+    public DeleteChatappTemplateRequest setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    public DeleteChatappTemplateRequest setTemplateType(String templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public String getTemplateType() {
+        return this.templateType;
     }
 
 }

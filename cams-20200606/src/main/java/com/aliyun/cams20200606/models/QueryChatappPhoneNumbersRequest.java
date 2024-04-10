@@ -16,6 +16,9 @@ public class QueryChatappPhoneNumbersRequest extends TeaModel {
     @NameInMap("IsvCode")
     public String isvCode;
 
+    @NameInMap("Status")
+    public String status;
+
     public static QueryChatappPhoneNumbersRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryChatappPhoneNumbersRequest self = new QueryChatappPhoneNumbersRequest();
         return TeaModel.build(map, self);
@@ -35,6 +38,14 @@ public class QueryChatappPhoneNumbersRequest extends TeaModel {
     }
     public String getIsvCode() {
         return this.isvCode;
+    }
+
+    public QueryChatappPhoneNumbersRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }
