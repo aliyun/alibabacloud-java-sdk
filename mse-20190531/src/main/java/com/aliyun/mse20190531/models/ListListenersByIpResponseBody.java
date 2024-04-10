@@ -157,6 +157,9 @@ public class ListListenersByIpResponseBody extends TeaModel {
         @NameInMap("Md5")
         public String md5;
 
+        @NameInMap("NamespaceId")
+        public String namespaceId;
+
         public static ListListenersByIpResponseBodyListeners build(java.util.Map<String, ?> map) throws Exception {
             ListListenersByIpResponseBodyListeners self = new ListListenersByIpResponseBodyListeners();
             return TeaModel.build(map, self);
@@ -184,6 +187,14 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
         public String getMd5() {
             return this.md5;
+        }
+
+        public ListListenersByIpResponseBodyListeners setNamespaceId(String namespaceId) {
+            this.namespaceId = namespaceId;
+            return this;
+        }
+        public String getNamespaceId() {
+            return this.namespaceId;
         }
 
     }
