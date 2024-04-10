@@ -106,14 +106,8 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         @NameInMap("PollingWaitSeconds")
         public Long pollingWaitSeconds;
 
-        @NameInMap("QueueInternalUrl")
-        public String queueInternalUrl;
-
         @NameInMap("QueueName")
         public String queueName;
-
-        @NameInMap("QueueUrl")
-        public String queueUrl;
 
         @NameInMap("VisibilityTimeout")
         public Long visibilityTimeout;
@@ -203,28 +197,12 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             return this.pollingWaitSeconds;
         }
 
-        public GetQueueAttributesResponseBodyData setQueueInternalUrl(String queueInternalUrl) {
-            this.queueInternalUrl = queueInternalUrl;
-            return this;
-        }
-        public String getQueueInternalUrl() {
-            return this.queueInternalUrl;
-        }
-
         public GetQueueAttributesResponseBodyData setQueueName(String queueName) {
             this.queueName = queueName;
             return this;
         }
         public String getQueueName() {
             return this.queueName;
-        }
-
-        public GetQueueAttributesResponseBodyData setQueueUrl(String queueUrl) {
-            this.queueUrl = queueUrl;
-            return this;
-        }
-        public String getQueueUrl() {
-            return this.queueUrl;
         }
 
         public GetQueueAttributesResponseBodyData setVisibilityTimeout(Long visibilityTimeout) {

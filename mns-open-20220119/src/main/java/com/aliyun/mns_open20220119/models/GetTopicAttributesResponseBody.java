@@ -94,14 +94,8 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         @NameInMap("MessageRetentionPeriod")
         public Long messageRetentionPeriod;
 
-        @NameInMap("TopicInnerUrl")
-        public String topicInnerUrl;
-
         @NameInMap("TopicName")
         public String topicName;
-
-        @NameInMap("TopicUrl")
-        public String topicUrl;
 
         public static GetTopicAttributesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetTopicAttributesResponseBodyData self = new GetTopicAttributesResponseBodyData();
@@ -156,28 +150,12 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             return this.messageRetentionPeriod;
         }
 
-        public GetTopicAttributesResponseBodyData setTopicInnerUrl(String topicInnerUrl) {
-            this.topicInnerUrl = topicInnerUrl;
-            return this;
-        }
-        public String getTopicInnerUrl() {
-            return this.topicInnerUrl;
-        }
-
         public GetTopicAttributesResponseBodyData setTopicName(String topicName) {
             this.topicName = topicName;
             return this;
         }
         public String getTopicName() {
             return this.topicName;
-        }
-
-        public GetTopicAttributesResponseBodyData setTopicUrl(String topicUrl) {
-            this.topicUrl = topicUrl;
-            return this;
-        }
-        public String getTopicUrl() {
-            return this.topicUrl;
         }
 
     }
