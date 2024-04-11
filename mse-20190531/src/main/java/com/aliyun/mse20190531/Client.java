@@ -364,8 +364,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcceptLanguage", request.acceptLanguage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.authResourceConfig)) {
+            query.put("AuthResourceConfig", request.authResourceConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.authResourceListShrink)) {
             query.put("AuthResourceList", request.authResourceListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authResourceMode)) {
+            query.put("AuthResourceMode", request.authResourceMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
