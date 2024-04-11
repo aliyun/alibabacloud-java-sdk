@@ -3104,6 +3104,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeVodDomainUsageDataWithOptions(request, runtime);
     }
 
+    public DescribeVodMediaPlayDataResponse describeVodMediaPlayDataWithOptions(DescribeVodMediaPlayDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
+            query.put("MediaId", request.mediaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderName)) {
+            query.put("OrderName", request.orderName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("OrderType", request.orderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.os)) {
+            query.put("Os", request.os);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.playDate)) {
+            query.put("PlayDate", request.playDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.terminalType)) {
+            query.put("TerminalType", request.terminalType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVodMediaPlayData"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVodMediaPlayDataResponse());
+    }
+
+    public DescribeVodMediaPlayDataResponse describeVodMediaPlayData(DescribeVodMediaPlayDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVodMediaPlayDataWithOptions(request, runtime);
+    }
+
     /**
       * > *   This operation is available only in the **China (Shanghai)** region.
       * > *   You can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh content and the [PreloadVodObjectCaches](~~69211~~) operation to prefetch content.
@@ -6219,6 +6280,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RefreshVodObjectCachesResponse refreshVodObjectCachesWithOptions(RefreshVodObjectCachesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.objectPath)) {
             query.put("ObjectPath", request.objectPath);
         }
@@ -6643,8 +6708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Regions that support this operation: **China (Beijing)**, **China (Shanghai)**, and **Singapore**.
-      * *   Before you can call this operation to specify an AI template as the default template, you must obtain the ID of the AI template. You cannot delete an AI template that is set as the default template.
+      * Specifies an AI template as the default template.
       *
       * @param request SetDefaultAITemplateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6675,8 +6739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Regions that support this operation: **China (Beijing)**, **China (Shanghai)**, and **Singapore**.
-      * *   Before you can call this operation to specify an AI template as the default template, you must obtain the ID of the AI template. You cannot delete an AI template that is set as the default template.
+      * Specifies an AI template as the default template.
       *
       * @param request SetDefaultAITemplateRequest
       * @return SetDefaultAITemplateResponse

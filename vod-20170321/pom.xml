@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>vod20170321</artifactId>
-  <version>2.19.2</version>
+  <version>2.20.0</version>
   <packaging>jar</packaging>
   <name>vod20170321</name>
   <description>Alibaba Cloud ApsaraVideo for VOD (20170321) SDK for Java
