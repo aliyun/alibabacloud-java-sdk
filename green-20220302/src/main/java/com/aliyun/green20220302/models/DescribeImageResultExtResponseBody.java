@@ -125,7 +125,51 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeImageResultExtResponseBodyDataTextInImageCustomTexts extends TeaModel {
+        @NameInMap("KeyWords")
+        public String keyWords;
+
+        @NameInMap("LibId")
+        public String libId;
+
+        @NameInMap("LibName")
+        public String libName;
+
+        public static DescribeImageResultExtResponseBodyDataTextInImageCustomTexts build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageResultExtResponseBodyDataTextInImageCustomTexts self = new DescribeImageResultExtResponseBodyDataTextInImageCustomTexts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageResultExtResponseBodyDataTextInImageCustomTexts setKeyWords(String keyWords) {
+            this.keyWords = keyWords;
+            return this;
+        }
+        public String getKeyWords() {
+            return this.keyWords;
+        }
+
+        public DescribeImageResultExtResponseBodyDataTextInImageCustomTexts setLibId(String libId) {
+            this.libId = libId;
+            return this;
+        }
+        public String getLibId() {
+            return this.libId;
+        }
+
+        public DescribeImageResultExtResponseBodyDataTextInImageCustomTexts setLibName(String libName) {
+            this.libName = libName;
+            return this;
+        }
+        public String getLibName() {
+            return this.libName;
+        }
+
+    }
+
     public static class DescribeImageResultExtResponseBodyDataTextInImage extends TeaModel {
+        @NameInMap("CustomTexts")
+        public java.util.List<DescribeImageResultExtResponseBodyDataTextInImageCustomTexts> customTexts;
+
         @NameInMap("OcrDatas")
         public java.util.List<String> ocrDatas;
 
@@ -135,6 +179,14 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         public static DescribeImageResultExtResponseBodyDataTextInImage build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageResultExtResponseBodyDataTextInImage self = new DescribeImageResultExtResponseBodyDataTextInImage();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeImageResultExtResponseBodyDataTextInImage setCustomTexts(java.util.List<DescribeImageResultExtResponseBodyDataTextInImageCustomTexts> customTexts) {
+            this.customTexts = customTexts;
+            return this;
+        }
+        public java.util.List<DescribeImageResultExtResponseBodyDataTextInImageCustomTexts> getCustomTexts() {
+            return this.customTexts;
         }
 
         public DescribeImageResultExtResponseBodyDataTextInImage setOcrDatas(java.util.List<String> ocrDatas) {
