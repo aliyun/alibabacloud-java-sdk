@@ -444,11 +444,17 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("IoMax")
         public Integer ioMax;
 
+        @NameInMap("IoMaxRead")
+        public Integer ioMaxRead;
+
         /**
          * <p>The traffic specification.</p>
          */
         @NameInMap("IoMaxSpec")
         public String ioMaxSpec;
+
+        @NameInMap("IoMaxWrite")
+        public Integer ioMaxWrite;
 
         /**
          * <p>The ID of the key that is used for disk encryption in the region where the instance is deployed.</p>
@@ -724,12 +730,28 @@ public class GetInstanceListResponseBody extends TeaModel {
             return this.ioMax;
         }
 
+        public GetInstanceListResponseBodyInstanceListInstanceVO setIoMaxRead(Integer ioMaxRead) {
+            this.ioMaxRead = ioMaxRead;
+            return this;
+        }
+        public Integer getIoMaxRead() {
+            return this.ioMaxRead;
+        }
+
         public GetInstanceListResponseBodyInstanceListInstanceVO setIoMaxSpec(String ioMaxSpec) {
             this.ioMaxSpec = ioMaxSpec;
             return this;
         }
         public String getIoMaxSpec() {
             return this.ioMaxSpec;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setIoMaxWrite(Integer ioMaxWrite) {
+            this.ioMaxWrite = ioMaxWrite;
+            return this;
+        }
+        public Integer getIoMaxWrite() {
+            return this.ioMaxWrite;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setKmsKeyId(String kmsKeyId) {

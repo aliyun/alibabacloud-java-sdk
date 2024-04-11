@@ -80,6 +80,9 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
     }
 
     public static class DescribeSaslUsersResponseBodySaslUserListSaslUserVO extends TeaModel {
+        @NameInMap("Mechanism")
+        public String mechanism;
+
         /**
          * <p>The password that is used to access the Elasticsearch cluster.</p>
          */
@@ -106,6 +109,14 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         public static DescribeSaslUsersResponseBodySaslUserListSaslUserVO build(java.util.Map<String, ?> map) throws Exception {
             DescribeSaslUsersResponseBodySaslUserListSaslUserVO self = new DescribeSaslUsersResponseBodySaslUserListSaslUserVO();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSaslUsersResponseBodySaslUserListSaslUserVO setMechanism(String mechanism) {
+            this.mechanism = mechanism;
+            return this;
+        }
+        public String getMechanism() {
+            return this.mechanism;
         }
 
         public DescribeSaslUsersResponseBodySaslUserListSaslUserVO setPassword(String password) {

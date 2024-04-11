@@ -89,6 +89,9 @@ public class DescribeAclsResponseBody extends TeaModel {
         @NameInMap("AclOperationType")
         public String aclOperationType;
 
+        @NameInMap("AclPermissionType")
+        public String aclPermissionType;
+
         /**
          * <p>The name of the resource.</p>
          * <br>
@@ -139,6 +142,14 @@ public class DescribeAclsResponseBody extends TeaModel {
         }
         public String getAclOperationType() {
             return this.aclOperationType;
+        }
+
+        public DescribeAclsResponseBodyKafkaAclListKafkaAclVO setAclPermissionType(String aclPermissionType) {
+            this.aclPermissionType = aclPermissionType;
+            return this;
+        }
+        public String getAclPermissionType() {
+            return this.aclPermissionType;
         }
 
         public DescribeAclsResponseBodyKafkaAclListKafkaAclVO setAclResourceName(String aclResourceName) {

@@ -107,6 +107,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AclOperationType", request.aclOperationType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.aclOperationTypes)) {
+            query.put("AclOperationTypes", request.aclOperationTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aclPermissionType)) {
+            query.put("AclPermissionType", request.aclPermissionType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.aclResourceName)) {
             query.put("AclResourceName", request.aclResourceName);
         }
@@ -117,6 +125,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.aclResourceType)) {
             query.put("AclResourceType", request.aclResourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.host)) {
+            query.put("Host", request.host);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -201,12 +213,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](~~84737~~).
       *
-      * @param request CreatePostPayOrderRequest
+      * @param tmpReq CreatePostPayOrderRequest
       * @param runtime runtime options for this request RuntimeOptions
       * @return CreatePostPayOrderResponse
      */
-    public CreatePostPayOrderResponse createPostPayOrderWithOptions(CreatePostPayOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreatePostPayOrderResponse createPostPayOrderWithOptions(CreatePostPayOrderRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreatePostPayOrderShrinkRequest request = new CreatePostPayOrderShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.serverlessConfig)) {
+            request.serverlessConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.serverlessConfig, "ServerlessConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.deployType)) {
             query.put("DeployType", request.deployType);
@@ -232,6 +250,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IoMaxSpec", request.ioMaxSpec);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.paidType)) {
+            query.put("PaidType", request.paidType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.partitionNum)) {
             query.put("PartitionNum", request.partitionNum);
         }
@@ -242,6 +264,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverlessConfigShrink)) {
+            query.put("ServerlessConfig", request.serverlessConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.specType)) {
@@ -397,6 +423,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mechanism)) {
+            query.put("Mechanism", request.mechanism);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.password)) {
             query.put("Password", request.password);
         }
@@ -526,6 +556,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AclOperationType", request.aclOperationType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.aclOperationTypes)) {
+            query.put("AclOperationTypes", request.aclOperationTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aclPermissionType)) {
+            query.put("AclPermissionType", request.aclPermissionType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.aclResourceName)) {
             query.put("AclResourceName", request.aclResourceName);
         }
@@ -536,6 +574,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.aclResourceType)) {
             query.put("AclResourceType", request.aclResourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.host)) {
+            query.put("Host", request.host);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -649,6 +691,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mechanism)) {
+            query.put("Mechanism", request.mechanism);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -723,6 +769,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAclsResponse describeAclsWithOptions(DescribeAclsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aclOperationType)) {
+            query.put("AclOperationType", request.aclOperationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aclPermissionType)) {
+            query.put("AclPermissionType", request.aclPermissionType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.aclResourceName)) {
             query.put("AclResourceName", request.aclResourceName);
         }
@@ -733,6 +787,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.aclResourceType)) {
             query.put("AclResourceType", request.aclResourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.host)) {
+            query.put("Host", request.host);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {

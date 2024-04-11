@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alikafka20190916</artifactId>
-  <version>1.7.1</version>
+  <version>1.7.2</version>
   <packaging>jar</packaging>
   <name>alikafka20190916</name>
   <description>Alibaba Cloud MQ for Kafka (20190916) SDK for Java
