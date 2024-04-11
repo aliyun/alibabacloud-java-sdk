@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDcdnDomainRequest extends TeaModel {
     /**
-     * <p>The top-level domain name.</p>
+     * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -14,7 +14,7 @@ public class UpdateDcdnDomainRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -23,13 +23,13 @@ public class UpdateDcdnDomainRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
+     * <p>The information about the addresses of origin servers.</p>
      */
     @NameInMap("Sources")
     public String sources;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **UpdateDcdnDomain**.</p>
+     * <p>The top-level domain.</p>
      */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;

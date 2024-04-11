@@ -5,18 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
     /**
-     * <p>The status of the feature. Valid values:</p>
-     * <br>
-     * <p>*   success</p>
-     * <p>*   testing</p>
-     * <p>*   failed</p>
-     * <p>*   configuring</p>
+     * <p>The configurations of accelerated domain names returned.</p>
      */
     @NameInMap("DomainConfigs")
     public java.util.List<DescribeDcdnDomainStagingConfigResponseBodyDomainConfigs> domainConfigs;
 
     /**
-     * <p>The configurations of accelerated domain names returned.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -44,11 +39,14 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainStagingConfigResponseBodyDomainConfigsFunctionArgs extends TeaModel {
         /**
-         * <p>The value of the configuration.</p>
+         * <p>The name of the configuration.</p>
          */
         @NameInMap("ArgName")
         public String argName;
 
+        /**
+         * <p>The value of the configuration.</p>
+         */
         @NameInMap("ArgValue")
         public String argValue;
 
@@ -77,25 +75,30 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainStagingConfigResponseBodyDomainConfigs extends TeaModel {
         /**
-         * <p>The name of the feature.</p>
+         * <p>The ID of the configuration.</p>
          */
         @NameInMap("ConfigId")
         public String configId;
 
         /**
-         * <p>The name of the configuration.</p>
+         * <p>The following table describes the features.</p>
          */
         @NameInMap("FunctionArgs")
         public java.util.List<DescribeDcdnDomainStagingConfigResponseBodyDomainConfigsFunctionArgs> functionArgs;
 
         /**
-         * <p>The descriptions of a feature.</p>
+         * <p>The name of the feature.</p>
          */
         @NameInMap("FunctionName")
         public String functionName;
 
         /**
-         * <p>The ID of the configuration.</p>
+         * <p>The status. Valid values:</p>
+         * <br>
+         * <p>*   success: The configuration is successful.</p>
+         * <p>*   testing: The configuration is under testing.</p>
+         * <p>*   failed: The task failed.</p>
+         * <p>*   configuring: The feature is being configured.</p>
          */
         @NameInMap("Status")
         public String status;
