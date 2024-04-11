@@ -1,3 +1,8 @@
+2024-04-11 Version: 2.3.4
+- Update API TransferPayType: add param MaxDu.
+- Update API TransferPayType: add param MinDu.
+
+
 2024-03-29 Version: 2.3.3
 - Update API ConfigureDtsJob: add param ResourceGroupId.
 - Update API ConfigureMigrationJob: add param ResourceGroupId.
