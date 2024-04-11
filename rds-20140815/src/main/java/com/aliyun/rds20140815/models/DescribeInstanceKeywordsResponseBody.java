@@ -17,7 +17,7 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of reserved keywords.</p>
+     * <p>The reserved keywords.</p>
      */
     @NameInMap("Words")
     public DescribeInstanceKeywordsResponseBodyWords words;

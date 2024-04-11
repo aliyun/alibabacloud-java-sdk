@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
+    @NameInMap("OrderParams")
+    public String orderParams;
+
     /**
      * <p>The price information.</p>
      */
@@ -21,6 +24,9 @@ public class DescribePriceResponseBody extends TeaModel {
      */
     @NameInMap("Rules")
     public DescribePriceResponseBodyRules rules;
+
+    @NameInMap("ServerlessPrice")
+    public DescribePriceResponseBodyServerlessPrice serverlessPrice;
 
     /**
      * <p>Indicates whether discounts can be used.</p>
@@ -45,6 +51,14 @@ public class DescribePriceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribePriceResponseBody setOrderParams(String orderParams) {
+        this.orderParams = orderParams;
+        return this;
+    }
+    public String getOrderParams() {
+        return this.orderParams;
+    }
+
     public DescribePriceResponseBody setPriceInfo(DescribePriceResponseBodyPriceInfo priceInfo) {
         this.priceInfo = priceInfo;
         return this;
@@ -67,6 +81,14 @@ public class DescribePriceResponseBody extends TeaModel {
     }
     public DescribePriceResponseBodyRules getRules() {
         return this.rules;
+    }
+
+    public DescribePriceResponseBody setServerlessPrice(DescribePriceResponseBodyServerlessPrice serverlessPrice) {
+        this.serverlessPrice = serverlessPrice;
+        return this;
+    }
+    public DescribePriceResponseBodyServerlessPrice getServerlessPrice() {
+        return this.serverlessPrice;
     }
 
     public DescribePriceResponseBody setShowDiscount(Boolean showDiscount) {
@@ -270,6 +292,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
+        @NameInMap("OrderLines")
+        public String orderLines;
+
         /**
          * <p>The original price.</p>
          */
@@ -281,6 +306,12 @@ public class DescribePriceResponseBody extends TeaModel {
          */
         @NameInMap("RuleIds")
         public DescribePriceResponseBodyPriceInfoRuleIds ruleIds;
+
+        @NameInMap("TradeMaxRCUAmount")
+        public Float tradeMaxRCUAmount;
+
+        @NameInMap("TradeMinRCUAmount")
+        public Float tradeMinRCUAmount;
 
         /**
          * <p>The transaction price, which is equal to the original price minus the discount.</p>
@@ -325,6 +356,14 @@ public class DescribePriceResponseBody extends TeaModel {
             return this.discountPrice;
         }
 
+        public DescribePriceResponseBodyPriceInfo setOrderLines(String orderLines) {
+            this.orderLines = orderLines;
+            return this;
+        }
+        public String getOrderLines() {
+            return this.orderLines;
+        }
+
         public DescribePriceResponseBodyPriceInfo setOriginalPrice(Float originalPrice) {
             this.originalPrice = originalPrice;
             return this;
@@ -339,6 +378,22 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public DescribePriceResponseBodyPriceInfoRuleIds getRuleIds() {
             return this.ruleIds;
+        }
+
+        public DescribePriceResponseBodyPriceInfo setTradeMaxRCUAmount(Float tradeMaxRCUAmount) {
+            this.tradeMaxRCUAmount = tradeMaxRCUAmount;
+            return this;
+        }
+        public Float getTradeMaxRCUAmount() {
+            return this.tradeMaxRCUAmount;
+        }
+
+        public DescribePriceResponseBodyPriceInfo setTradeMinRCUAmount(Float tradeMinRCUAmount) {
+            this.tradeMinRCUAmount = tradeMinRCUAmount;
+            return this;
+        }
+        public Float getTradeMinRCUAmount() {
+            return this.tradeMinRCUAmount;
         }
 
         public DescribePriceResponseBodyPriceInfo setTradePrice(Float tradePrice) {
@@ -416,6 +471,124 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public java.util.List<DescribePriceResponseBodyRulesRule> getRule() {
             return this.rule;
+        }
+
+    }
+
+    public static class DescribePriceResponseBodyServerlessPrice extends TeaModel {
+        @NameInMap("RCUDiscountMaxAmount")
+        public Float RCUDiscountMaxAmount;
+
+        @NameInMap("RCUDiscountMinAmount")
+        public Float RCUDiscountMinAmount;
+
+        @NameInMap("RCUOriginalMaxAmount")
+        public Float RCUOriginalMaxAmount;
+
+        @NameInMap("RCUOriginalMinAmount")
+        public Float RCUOriginalMinAmount;
+
+        @NameInMap("StorageOriginalAmount")
+        public Float storageOriginalAmount;
+
+        @NameInMap("TotalOriginalMaxAmount")
+        public Float totalOriginalMaxAmount;
+
+        @NameInMap("TotalOriginalMinAmount")
+        public Float totalOriginalMinAmount;
+
+        @NameInMap("TradeMaxRCUAmount")
+        public Float tradeMaxRCUAmount;
+
+        @NameInMap("TradeMinRCUAmount")
+        public Float tradeMinRCUAmount;
+
+        @NameInMap("storageDiscountAmount")
+        public Float storageDiscountAmount;
+
+        public static DescribePriceResponseBodyServerlessPrice build(java.util.Map<String, ?> map) throws Exception {
+            DescribePriceResponseBodyServerlessPrice self = new DescribePriceResponseBodyServerlessPrice();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePriceResponseBodyServerlessPrice setRCUDiscountMaxAmount(Float RCUDiscountMaxAmount) {
+            this.RCUDiscountMaxAmount = RCUDiscountMaxAmount;
+            return this;
+        }
+        public Float getRCUDiscountMaxAmount() {
+            return this.RCUDiscountMaxAmount;
+        }
+
+        public DescribePriceResponseBodyServerlessPrice setRCUDiscountMinAmount(Float RCUDiscountMinAmount) {
+            this.RCUDiscountMinAmount = RCUDiscountMinAmount;
+            return this;
+        }
+        public Float getRCUDiscountMinAmount() {
+            return this.RCUDiscountMinAmount;
+        }
+
+        public DescribePriceResponseBodyServerlessPrice setRCUOriginalMaxAmount(Float RCUOriginalMaxAmount) {
+            this.RCUOriginalMaxAmount = RCUOriginalMaxAmount;
+            return this;
+        }
+        public Float getRCUOriginalMaxAmount() {
+            return this.RCUOriginalMaxAmount;
+        }
+
+        public DescribePriceResponseBodyServerlessPrice setRCUOriginalMinAmount(Float RCUOriginalMinAmount) {
+            this.RCUOriginalMinAmount = RCUOriginalMinAmount;
+            return this;
+        }
+        public Float getRCUOriginalMinAmount() {
+            return this.RCUOriginalMinAmount;
+        }
+
+        public DescribePriceResponseBodyServerlessPrice setStorageOriginalAmount(Float storageOriginalAmount) {
+            this.storageOriginalAmount = storageOriginalAmount;
+            return this;
+        }
+        public Float getStorageOriginalAmount() {
+            return this.storageOriginalAmount;
+        }
+
+        public DescribePriceResponseBodyServerlessPrice setTotalOriginalMaxAmount(Float totalOriginalMaxAmount) {
+            this.totalOriginalMaxAmount = totalOriginalMaxAmount;
+            return this;
+        }
+        public Float getTotalOriginalMaxAmount() {
+            return this.totalOriginalMaxAmount;
+        }
+
+        public DescribePriceResponseBodyServerlessPrice setTotalOriginalMinAmount(Float totalOriginalMinAmount) {
+            this.totalOriginalMinAmount = totalOriginalMinAmount;
+            return this;
+        }
+        public Float getTotalOriginalMinAmount() {
+            return this.totalOriginalMinAmount;
+        }
+
+        public DescribePriceResponseBodyServerlessPrice setTradeMaxRCUAmount(Float tradeMaxRCUAmount) {
+            this.tradeMaxRCUAmount = tradeMaxRCUAmount;
+            return this;
+        }
+        public Float getTradeMaxRCUAmount() {
+            return this.tradeMaxRCUAmount;
+        }
+
+        public DescribePriceResponseBodyServerlessPrice setTradeMinRCUAmount(Float tradeMinRCUAmount) {
+            this.tradeMinRCUAmount = tradeMinRCUAmount;
+            return this;
+        }
+        public Float getTradeMinRCUAmount() {
+            return this.tradeMinRCUAmount;
+        }
+
+        public DescribePriceResponseBodyServerlessPrice setStorageDiscountAmount(Float storageDiscountAmount) {
+            this.storageDiscountAmount = storageDiscountAmount;
+            return this;
+        }
+        public Float getStorageDiscountAmount() {
+            return this.storageDiscountAmount;
         }
 
     }

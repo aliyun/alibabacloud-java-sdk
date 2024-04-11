@@ -9,6 +9,8 @@ public class DescribeInstanceKeywordsRequest extends TeaModel {
      * <br>
      * <p>*   **account**</p>
      * <p>*   **database**</p>
+     * <br>
+     * <p>>  This parameter is required.</p>
      */
     @NameInMap("Key")
     public String key;
