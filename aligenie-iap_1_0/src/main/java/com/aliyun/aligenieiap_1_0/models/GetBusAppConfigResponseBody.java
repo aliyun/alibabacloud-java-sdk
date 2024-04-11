@@ -43,6 +43,9 @@ public class GetBusAppConfigResponseBody extends TeaModel {
     }
 
     public static class GetBusAppConfigResponseBodyRetValue extends TeaModel {
+        @NameInMap("Cashier")
+        public String cashier;
+
         @NameInMap("ShoppingBar")
         public String shoppingBar;
 
@@ -55,6 +58,14 @@ public class GetBusAppConfigResponseBody extends TeaModel {
         public static GetBusAppConfigResponseBodyRetValue build(java.util.Map<String, ?> map) throws Exception {
             GetBusAppConfigResponseBodyRetValue self = new GetBusAppConfigResponseBodyRetValue();
             return TeaModel.build(map, self);
+        }
+
+        public GetBusAppConfigResponseBodyRetValue setCashier(String cashier) {
+            this.cashier = cashier;
+            return this;
+        }
+        public String getCashier() {
+            return this.cashier;
         }
 
         public GetBusAppConfigResponseBodyRetValue setShoppingBar(String shoppingBar) {
