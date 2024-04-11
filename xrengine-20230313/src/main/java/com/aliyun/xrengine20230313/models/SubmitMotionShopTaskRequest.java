@@ -10,6 +10,9 @@ public class SubmitMotionShopTaskRequest extends TeaModel {
     @NameInMap("JwtToken")
     public String jwtToken;
 
+    @NameInMap("SelectedBoxIndex")
+    public Integer selectedBoxIndex;
+
     @NameInMap("Title")
     public String title;
 
@@ -35,6 +38,14 @@ public class SubmitMotionShopTaskRequest extends TeaModel {
     }
     public String getJwtToken() {
         return this.jwtToken;
+    }
+
+    public SubmitMotionShopTaskRequest setSelectedBoxIndex(Integer selectedBoxIndex) {
+        this.selectedBoxIndex = selectedBoxIndex;
+        return this;
+    }
+    public Integer getSelectedBoxIndex() {
+        return this.selectedBoxIndex;
     }
 
     public SubmitMotionShopTaskRequest setTitle(String title) {

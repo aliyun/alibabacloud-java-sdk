@@ -74,6 +74,9 @@ public class QueryMotionShopVideoDetectResultResponseBody extends TeaModel {
         @NameInMap("CoverUrl")
         public String coverUrl;
 
+        @NameInMap("HumanBoxes")
+        public java.util.List<java.util.List<Double>> humanBoxes;
+
         @NameInMap("Message")
         public String message;
 
@@ -107,6 +110,14 @@ public class QueryMotionShopVideoDetectResultResponseBody extends TeaModel {
         }
         public String getCoverUrl() {
             return this.coverUrl;
+        }
+
+        public QueryMotionShopVideoDetectResultResponseBodyDataDetectResult setHumanBoxes(java.util.List<java.util.List<Double>> humanBoxes) {
+            this.humanBoxes = humanBoxes;
+            return this;
+        }
+        public java.util.List<java.util.List<Double>> getHumanBoxes() {
+            return this.humanBoxes;
         }
 
         public QueryMotionShopVideoDetectResultResponseBodyDataDetectResult setMessage(String message) {
