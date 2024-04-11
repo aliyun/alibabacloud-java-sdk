@@ -2491,6 +2491,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("JwtToken", request.jwtToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.selectedBoxIndex)) {
+            body.put("SelectedBoxIndex", request.selectedBoxIndex);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.title)) {
             body.put("Title", request.title);
         }
