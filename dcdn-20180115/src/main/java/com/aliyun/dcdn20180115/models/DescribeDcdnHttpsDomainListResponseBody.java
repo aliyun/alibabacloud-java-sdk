@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
     /**
-     * <p>The time when the certificate became effective.</p>
+     * <p>The information about the certificate.</p>
      */
     @NameInMap("CertInfos")
     public DescribeDcdnHttpsDomainListResponseBodyCertInfos certInfos;
 
     /**
-     * <p>The returned primary domain name of the certificate.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1 to 500**. Default value: **20**.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -53,49 +53,57 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
 
     public static class DescribeDcdnHttpsDomainListResponseBodyCertInfosCertInfo extends TeaModel {
         /**
-         * <p>The certificate information about the domain name.</p>
+         * <p>The returned primary domain name of the certificate.</p>
          */
         @NameInMap("CertCommonName")
         public String certCommonName;
 
         /**
-         * <p>The name of the certificate.</p>
+         * <p>The time at which the certificate expires.</p>
          */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
         /**
-         * <p>The accelerated domain name for which the certificate information was queried.</p>
+         * <p>The name of the certificate.</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
-         * <p>The time when the certificate expires.</p>
+         * <p>The time at which the certificate became effective.</p>
          */
         @NameInMap("CertStartTime")
         public String certStartTime;
 
         /**
-         * <p>The number of pages to return. Valid values: **1 to 100000**.</p>
+         * <p>The status of the certificate. Valid values:</p>
+         * <br>
+         * <p>*   **ok**: The certificate is working as expected.</p>
+         * <p>*   **mismatch**: The certificate does not match the specified domain name.</p>
+         * <p>*   **expired**: The certificate has expired.</p>
+         * <p>*   **expire_soon**: The certificate is about to expire.</p>
          */
         @NameInMap("CertStatus")
         public String certStatus;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **DescribeDcdnHttpsDomainList**.</p>
+         * <p>The type of the certificate. Valid values:</p>
+         * <br>
+         * <p>*   **cas**: a certificate that is purchased by using Certificate Management Service</p>
+         * <p>*   **upload**: a custom certificate that you upload</p>
          */
         @NameInMap("CertType")
         public String certType;
 
         /**
-         * <p>The keyword used for search.</p>
+         * <p>The time at which the certificate was updated.</p>
          */
         @NameInMap("CertUpdateTime")
         public String certUpdateTime;
 
         /**
-         * <p>The time when the certificate was updated.</p>
+         * <p>The accelerated domain name.</p>
          */
         @NameInMap("DomainName")
         public String domainName;

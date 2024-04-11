@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainStagingConfigRequest extends TeaModel {
     /**
-     * <p>The names of the features to query. You can specify multiple features and separate them with commas (,).</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The names of the features to query. You can separate multiple features with commas (,).</p>
      */
     @NameInMap("FunctionNames")
     public String functionNames;

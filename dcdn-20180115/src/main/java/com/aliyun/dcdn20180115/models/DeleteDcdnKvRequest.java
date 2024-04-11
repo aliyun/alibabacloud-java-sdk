@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDcdnKvRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the key that you want to delete.</p>
      */
     @NameInMap("Key")
     public String key;

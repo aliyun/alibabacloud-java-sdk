@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRoutineUserInfoResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The content returned by calling the operation.</p>
      */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeRoutineUserInfo**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

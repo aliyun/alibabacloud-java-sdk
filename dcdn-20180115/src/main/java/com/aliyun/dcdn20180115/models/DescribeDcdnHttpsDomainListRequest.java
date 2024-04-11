@@ -5,28 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnHttpsDomainListRequest extends TeaModel {
     /**
-     * <p>The status of the certificate. Valid values:</p>
-     * <br>
-     * <p>*   **ok**: The certificate is working as expected.</p>
-     * <p>*   **mismatch**: The certificate does not match the specified domain name.</p>
-     * <p>*   **expired**: The certificate has expired.</p>
-     * <p>*   **expire_soon**: The certificate is about to expire.</p>
+     * <p>The keyword that is used to search for certificates.</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of returned pages. Valid values: **1 to 100000**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The type of the certificate. Valid values:</p>
-     * <br>
-     * <p>*   **free**: A free certificate.</p>
-     * <p>*   **cas**: A certificate that is purchased through Alibaba Cloud SSL Certificates Service.</p>
-     * <p>*   **upload**: A user-uploaded certificate.</p>
+     * <p>The number of entries to return on each page. Valid values: **1 to 500**. Default value: **20**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
