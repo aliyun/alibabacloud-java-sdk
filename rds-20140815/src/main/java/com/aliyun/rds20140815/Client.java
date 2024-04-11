@@ -3366,9 +3366,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ### [](#)Supported database engines
-      * MySQL
+      * RDS MySQL
       * ### [](#)References
-      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
       * [Delete a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition](~~464130~~)
       *
       * @param tmpReq CreateOrderForDeleteDBNodesRequest
@@ -3467,9 +3467,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ### [](#)Supported database engines
-      * MySQL
+      * RDS MySQL
       * ### [](#)References
-      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
       * [Delete a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition](~~464130~~)
       *
       * @param request CreateOrderForDeleteDBNodesRequest
@@ -11008,6 +11008,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeInstanceCrossBackupPolicyWithOptions(request, runtime);
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * *   RDS MariaDB
+      *
+      * @param request DescribeInstanceKeywordsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeInstanceKeywordsResponse
+     */
     public DescribeInstanceKeywordsResponse describeInstanceKeywordsWithOptions(DescribeInstanceKeywordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11048,6 +11059,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceKeywordsResponse());
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * *   RDS MariaDB
+      *
+      * @param request DescribeInstanceKeywordsRequest
+      * @return DescribeInstanceKeywordsResponse
+     */
     public DescribeInstanceKeywordsResponse describeInstanceKeywords(DescribeInstanceKeywordsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceKeywordsWithOptions(request, runtime);

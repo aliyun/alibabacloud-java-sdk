@@ -1,3 +1,7 @@
+2024-04-11 Version: 3.0.3
+- Update API DescribePrice: update response param.
+
+
 2024-04-09 Version: 3.0.2
 - Delete API CreateOrderForCreateDBNodes.
 - Delete API PreCheckCreateOrderForCreateDBNodes.
