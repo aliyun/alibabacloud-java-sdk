@@ -6,19 +6,25 @@ import com.aliyun.aligenieiap_1_0.models.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public com.aliyun.gateway.spi.Client _client;
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._productId = "AliGenie";
-        this._client = new com.aliyun.gateway.pop.Client();
-        this._spi = _client;
         this._endpointRule = "";
-        if (com.aliyun.teautil.Common.empty(_endpoint)) {
-            this._endpoint = "openapi.aligenie.com/v1.0/iap";
-        }
-
+        this.checkConfig(config);
+        this._endpoint = this.getEndpoint("aligenie", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
 
+
+    public String getEndpoint(String productId, String regionId, String endpointRule, String network, String suffix, java.util.Map<String, String> endpointMap, String endpoint) throws Exception {
+        if (!com.aliyun.teautil.Common.empty(endpoint)) {
+            return endpoint;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get(regionId))) {
+            return endpointMap.get(regionId);
+        }
+
+        return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
+    }
 
     public AppUseTimeReportResponse appUseTimeReportWithOptions(AppUseTimeReportRequest tmpReq, AppUseTimeReportHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -77,12 +83,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new AppUseTimeReportResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new AppUseTimeReportResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AppUseTimeReportResponse());
     }
 
     public AppUseTimeReportResponse appUseTimeReport(AppUseTimeReportRequest request) throws Exception {
@@ -148,12 +149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateReminderResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateReminderResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateReminderResponse());
     }
 
     public CreateReminderResponse createReminder(CreateReminderRequest request) throws Exception {
@@ -219,12 +215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteReminderResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteReminderResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteReminderResponse());
     }
 
     public DeleteReminderResponse deleteReminder(DeleteReminderRequest request) throws Exception {
@@ -290,12 +281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccountForAppResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetAccountForAppResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccountForAppResponse());
     }
 
     public GetAccountForAppResponse getAccountForApp(GetAccountForAppRequest request) throws Exception {
@@ -361,12 +347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetBusAppConfigResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetBusAppConfigResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetBusAppConfigResponse());
     }
 
     public GetBusAppConfigResponse getBusAppConfig(GetBusAppConfigRequest request) throws Exception {
@@ -424,12 +405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetPhoneNumberResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetPhoneNumberResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPhoneNumberResponse());
     }
 
     public GetPhoneNumberResponse getPhoneNumber(GetPhoneNumberRequest request) throws Exception {
@@ -495,12 +471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetReminderResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetReminderResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetReminderResponse());
     }
 
     public GetReminderResponse getReminder(GetReminderRequest request) throws Exception {
@@ -566,12 +537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRemindersResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListRemindersResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRemindersResponse());
     }
 
     public ListRemindersResponse listReminders(ListRemindersRequest request) throws Exception {
@@ -637,12 +603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new PullCashierResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new PullCashierResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PullCashierResponse());
     }
 
     public PullCashierResponse pullCashier(PullCashierRequest request) throws Exception {
@@ -700,12 +661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "none")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new PushNotificationsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new PushNotificationsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PushNotificationsResponse());
     }
 
     public PushNotificationsResponse pushNotifications(PushNotificationsRequest request) throws Exception {
@@ -779,12 +735,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "none")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new SendNotificationsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new SendNotificationsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendNotificationsResponse());
     }
 
     public SendNotificationsResponse sendNotifications(SendNotificationsRequest request) throws Exception {
@@ -850,12 +801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateReminderResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateReminderResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateReminderResponse());
     }
 
     public UpdateReminderResponse updateReminder(UpdateReminderRequest request) throws Exception {
@@ -921,12 +867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new VideoAppReportResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new VideoAppReportResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VideoAppReportResponse());
     }
 
     public VideoAppReportResponse videoAppReport(VideoAppReportRequest request) throws Exception {
@@ -978,12 +919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "none")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new WakeUpAppResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new WakeUpAppResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new WakeUpAppResponse());
     }
 
     public WakeUpAppResponse wakeUpApp(WakeUpAppRequest request) throws Exception {
