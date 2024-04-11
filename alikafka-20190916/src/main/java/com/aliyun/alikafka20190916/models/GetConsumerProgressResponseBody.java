@@ -79,6 +79,99 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList extends TeaModel {
+        @NameInMap("Generation")
+        public Long generation;
+
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("LastRebalanceTimestamp")
+        public Long lastRebalanceTimestamp;
+
+        @NameInMap("Reason")
+        public String reason;
+
+        @NameInMap("RebalanceSuccess")
+        public Boolean rebalanceSuccess;
+
+        @NameInMap("RebalanceTimeConsuming")
+        public Long rebalanceTimeConsuming;
+
+        public static GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList build(java.util.Map<String, ?> map) throws Exception {
+            GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList self = new GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList setGeneration(Long generation) {
+            this.generation = generation;
+            return this;
+        }
+        public Long getGeneration() {
+            return this.generation;
+        }
+
+        public GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList setLastRebalanceTimestamp(Long lastRebalanceTimestamp) {
+            this.lastRebalanceTimestamp = lastRebalanceTimestamp;
+            return this;
+        }
+        public Long getLastRebalanceTimestamp() {
+            return this.lastRebalanceTimestamp;
+        }
+
+        public GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
+        }
+
+        public GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList setRebalanceSuccess(Boolean rebalanceSuccess) {
+            this.rebalanceSuccess = rebalanceSuccess;
+            return this;
+        }
+        public Boolean getRebalanceSuccess() {
+            return this.rebalanceSuccess;
+        }
+
+        public GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList setRebalanceTimeConsuming(Long rebalanceTimeConsuming) {
+            this.rebalanceTimeConsuming = rebalanceTimeConsuming;
+            return this;
+        }
+        public Long getRebalanceTimeConsuming() {
+            return this.rebalanceTimeConsuming;
+        }
+
+    }
+
+    public static class GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoList extends TeaModel {
+        @NameInMap("RebalanceInfoList")
+        public java.util.List<GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList> rebalanceInfoList;
+
+        public static GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoList build(java.util.Map<String, ?> map) throws Exception {
+            GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoList self = new GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoList setRebalanceInfoList(java.util.List<GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList> rebalanceInfoList) {
+            this.rebalanceInfoList = rebalanceInfoList;
+            return this;
+        }
+        public java.util.List<GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList> getRebalanceInfoList() {
+            return this.rebalanceInfoList;
+        }
+
+    }
+
     public static class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList extends TeaModel {
         /**
          * <p>The latest offset in the partition of the topic.</p>
@@ -252,6 +345,9 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
+        @NameInMap("RebalanceInfoList")
+        public GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoList rebalanceInfoList;
+
         /**
          * <p>The consumption progress of each topic to which the consumer group is subscribed.</p>
          */
@@ -275,6 +371,14 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
         public Long getLastTimestamp() {
             return this.lastTimestamp;
+        }
+
+        public GetConsumerProgressResponseBodyConsumerProgress setRebalanceInfoList(GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoList rebalanceInfoList) {
+            this.rebalanceInfoList = rebalanceInfoList;
+            return this;
+        }
+        public GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoList getRebalanceInfoList() {
+            return this.rebalanceInfoList;
         }
 
         public GetConsumerProgressResponseBodyConsumerProgress setTopicList(GetConsumerProgressResponseBodyConsumerProgressTopicList topicList) {

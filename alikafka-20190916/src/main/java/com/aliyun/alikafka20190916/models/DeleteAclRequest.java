@@ -13,6 +13,12 @@ public class DeleteAclRequest extends TeaModel {
     @NameInMap("AclOperationType")
     public String aclOperationType;
 
+    @NameInMap("AclOperationTypes")
+    public String aclOperationTypes;
+
+    @NameInMap("AclPermissionType")
+    public String aclPermissionType;
+
     /**
      * <p>The name of the resource.</p>
      * <br>
@@ -39,6 +45,9 @@ public class DeleteAclRequest extends TeaModel {
      */
     @NameInMap("AclResourceType")
     public String aclResourceType;
+
+    @NameInMap("Host")
+    public String host;
 
     /**
      * <p>The ID of the instance.</p>
@@ -71,6 +80,22 @@ public class DeleteAclRequest extends TeaModel {
         return this.aclOperationType;
     }
 
+    public DeleteAclRequest setAclOperationTypes(String aclOperationTypes) {
+        this.aclOperationTypes = aclOperationTypes;
+        return this;
+    }
+    public String getAclOperationTypes() {
+        return this.aclOperationTypes;
+    }
+
+    public DeleteAclRequest setAclPermissionType(String aclPermissionType) {
+        this.aclPermissionType = aclPermissionType;
+        return this;
+    }
+    public String getAclPermissionType() {
+        return this.aclPermissionType;
+    }
+
     public DeleteAclRequest setAclResourceName(String aclResourceName) {
         this.aclResourceName = aclResourceName;
         return this;
@@ -93,6 +118,14 @@ public class DeleteAclRequest extends TeaModel {
     }
     public String getAclResourceType() {
         return this.aclResourceType;
+    }
+
+    public DeleteAclRequest setHost(String host) {
+        this.host = host;
+        return this;
+    }
+    public String getHost() {
+        return this.host;
     }
 
     public DeleteAclRequest setInstanceId(String instanceId) {

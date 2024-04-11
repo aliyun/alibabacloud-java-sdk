@@ -15,6 +15,12 @@ public class CreateAclRequest extends TeaModel {
     @NameInMap("AclOperationType")
     public String aclOperationType;
 
+    @NameInMap("AclOperationTypes")
+    public String aclOperationTypes;
+
+    @NameInMap("AclPermissionType")
+    public String aclPermissionType;
+
     /**
      * <p>The name or ID of the resource.</p>
      * <br>
@@ -43,6 +49,9 @@ public class CreateAclRequest extends TeaModel {
      */
     @NameInMap("AclResourceType")
     public String aclResourceType;
+
+    @NameInMap("Host")
+    public String host;
 
     /**
      * <p>The instance ID.</p>
@@ -77,6 +86,22 @@ public class CreateAclRequest extends TeaModel {
         return this.aclOperationType;
     }
 
+    public CreateAclRequest setAclOperationTypes(String aclOperationTypes) {
+        this.aclOperationTypes = aclOperationTypes;
+        return this;
+    }
+    public String getAclOperationTypes() {
+        return this.aclOperationTypes;
+    }
+
+    public CreateAclRequest setAclPermissionType(String aclPermissionType) {
+        this.aclPermissionType = aclPermissionType;
+        return this;
+    }
+    public String getAclPermissionType() {
+        return this.aclPermissionType;
+    }
+
     public CreateAclRequest setAclResourceName(String aclResourceName) {
         this.aclResourceName = aclResourceName;
         return this;
@@ -99,6 +124,14 @@ public class CreateAclRequest extends TeaModel {
     }
     public String getAclResourceType() {
         return this.aclResourceType;
+    }
+
+    public CreateAclRequest setHost(String host) {
+        this.host = host;
+        return this;
+    }
+    public String getHost() {
+        return this.host;
     }
 
     public CreateAclRequest setInstanceId(String instanceId) {

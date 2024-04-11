@@ -4,6 +4,12 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class DescribeAclsRequest extends TeaModel {
+    @NameInMap("AclOperationType")
+    public String aclOperationType;
+
+    @NameInMap("AclPermissionType")
+    public String aclPermissionType;
+
     /**
      * <p>The name or ID of the resource.</p>
      * <br>
@@ -31,6 +37,9 @@ public class DescribeAclsRequest extends TeaModel {
     @NameInMap("AclResourceType")
     public String aclResourceType;
 
+    @NameInMap("Host")
+    public String host;
+
     /**
      * <p>The ID of the instance.</p>
      */
@@ -52,6 +61,22 @@ public class DescribeAclsRequest extends TeaModel {
     public static DescribeAclsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAclsRequest self = new DescribeAclsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAclsRequest setAclOperationType(String aclOperationType) {
+        this.aclOperationType = aclOperationType;
+        return this;
+    }
+    public String getAclOperationType() {
+        return this.aclOperationType;
+    }
+
+    public DescribeAclsRequest setAclPermissionType(String aclPermissionType) {
+        this.aclPermissionType = aclPermissionType;
+        return this;
+    }
+    public String getAclPermissionType() {
+        return this.aclPermissionType;
     }
 
     public DescribeAclsRequest setAclResourceName(String aclResourceName) {
@@ -76,6 +101,14 @@ public class DescribeAclsRequest extends TeaModel {
     }
     public String getAclResourceType() {
         return this.aclResourceType;
+    }
+
+    public DescribeAclsRequest setHost(String host) {
+        this.host = host;
+        return this;
+    }
+    public String getHost() {
+        return this.host;
     }
 
     public DescribeAclsRequest setInstanceId(String instanceId) {

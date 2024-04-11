@@ -10,6 +10,9 @@ public class DeleteSaslUserRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Mechanism")
+    public String mechanism;
+
     /**
      * <p>The ID of the region.</p>
      */
@@ -44,6 +47,14 @@ public class DeleteSaslUserRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DeleteSaslUserRequest setMechanism(String mechanism) {
+        this.mechanism = mechanism;
+        return this;
+    }
+    public String getMechanism() {
+        return this.mechanism;
     }
 
     public DeleteSaslUserRequest setRegionId(String regionId) {

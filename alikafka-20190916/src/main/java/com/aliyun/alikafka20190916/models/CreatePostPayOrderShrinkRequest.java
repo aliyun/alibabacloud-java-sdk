@@ -3,7 +3,7 @@ package com.aliyun.alikafka20190916.models;
 
 import com.aliyun.tea.*;
 
-public class CreatePostPayOrderRequest extends TeaModel {
+public class CreatePostPayOrderShrinkRequest extends TeaModel {
     /**
      * <p>The deployment mode of the instance. Valid values:</p>
      * <br>
@@ -85,7 +85,7 @@ public class CreatePostPayOrderRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("ServerlessConfig")
-    public CreatePostPayOrderRequestServerlessConfig serverlessConfig;
+    public String serverlessConfigShrink;
 
     /**
      * <p>The edition of the instance. Valid values:</p>
@@ -103,7 +103,7 @@ public class CreatePostPayOrderRequest extends TeaModel {
      * <p>The tags.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<CreatePostPayOrderRequestTag> tag;
+    public java.util.List<CreatePostPayOrderShrinkRequestTag> tag;
 
     /**
      * <p>The number of topics. We recommend that you do not configure this parameter.</p>
@@ -116,12 +116,12 @@ public class CreatePostPayOrderRequest extends TeaModel {
     @NameInMap("TopicQuota")
     public Integer topicQuota;
 
-    public static CreatePostPayOrderRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreatePostPayOrderRequest self = new CreatePostPayOrderRequest();
+    public static CreatePostPayOrderShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreatePostPayOrderShrinkRequest self = new CreatePostPayOrderShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreatePostPayOrderRequest setDeployType(Integer deployType) {
+    public CreatePostPayOrderShrinkRequest setDeployType(Integer deployType) {
         this.deployType = deployType;
         return this;
     }
@@ -129,7 +129,7 @@ public class CreatePostPayOrderRequest extends TeaModel {
         return this.deployType;
     }
 
-    public CreatePostPayOrderRequest setDiskSize(Integer diskSize) {
+    public CreatePostPayOrderShrinkRequest setDiskSize(Integer diskSize) {
         this.diskSize = diskSize;
         return this;
     }
@@ -137,7 +137,7 @@ public class CreatePostPayOrderRequest extends TeaModel {
         return this.diskSize;
     }
 
-    public CreatePostPayOrderRequest setDiskType(String diskType) {
+    public CreatePostPayOrderShrinkRequest setDiskType(String diskType) {
         this.diskType = diskType;
         return this;
     }
@@ -145,7 +145,7 @@ public class CreatePostPayOrderRequest extends TeaModel {
         return this.diskType;
     }
 
-    public CreatePostPayOrderRequest setEipMax(Integer eipMax) {
+    public CreatePostPayOrderShrinkRequest setEipMax(Integer eipMax) {
         this.eipMax = eipMax;
         return this;
     }
@@ -153,7 +153,7 @@ public class CreatePostPayOrderRequest extends TeaModel {
         return this.eipMax;
     }
 
-    public CreatePostPayOrderRequest setIoMax(Integer ioMax) {
+    public CreatePostPayOrderShrinkRequest setIoMax(Integer ioMax) {
         this.ioMax = ioMax;
         return this;
     }
@@ -161,7 +161,7 @@ public class CreatePostPayOrderRequest extends TeaModel {
         return this.ioMax;
     }
 
-    public CreatePostPayOrderRequest setIoMaxSpec(String ioMaxSpec) {
+    public CreatePostPayOrderShrinkRequest setIoMaxSpec(String ioMaxSpec) {
         this.ioMaxSpec = ioMaxSpec;
         return this;
     }
@@ -169,7 +169,7 @@ public class CreatePostPayOrderRequest extends TeaModel {
         return this.ioMaxSpec;
     }
 
-    public CreatePostPayOrderRequest setPaidType(Integer paidType) {
+    public CreatePostPayOrderShrinkRequest setPaidType(Integer paidType) {
         this.paidType = paidType;
         return this;
     }
@@ -177,7 +177,7 @@ public class CreatePostPayOrderRequest extends TeaModel {
         return this.paidType;
     }
 
-    public CreatePostPayOrderRequest setPartitionNum(Integer partitionNum) {
+    public CreatePostPayOrderShrinkRequest setPartitionNum(Integer partitionNum) {
         this.partitionNum = partitionNum;
         return this;
     }
@@ -185,7 +185,7 @@ public class CreatePostPayOrderRequest extends TeaModel {
         return this.partitionNum;
     }
 
-    public CreatePostPayOrderRequest setRegionId(String regionId) {
+    public CreatePostPayOrderShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -193,7 +193,7 @@ public class CreatePostPayOrderRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreatePostPayOrderRequest setResourceGroupId(String resourceGroupId) {
+    public CreatePostPayOrderShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -201,15 +201,15 @@ public class CreatePostPayOrderRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public CreatePostPayOrderRequest setServerlessConfig(CreatePostPayOrderRequestServerlessConfig serverlessConfig) {
-        this.serverlessConfig = serverlessConfig;
+    public CreatePostPayOrderShrinkRequest setServerlessConfigShrink(String serverlessConfigShrink) {
+        this.serverlessConfigShrink = serverlessConfigShrink;
         return this;
     }
-    public CreatePostPayOrderRequestServerlessConfig getServerlessConfig() {
-        return this.serverlessConfig;
+    public String getServerlessConfigShrink() {
+        return this.serverlessConfigShrink;
     }
 
-    public CreatePostPayOrderRequest setSpecType(String specType) {
+    public CreatePostPayOrderShrinkRequest setSpecType(String specType) {
         this.specType = specType;
         return this;
     }
@@ -217,15 +217,15 @@ public class CreatePostPayOrderRequest extends TeaModel {
         return this.specType;
     }
 
-    public CreatePostPayOrderRequest setTag(java.util.List<CreatePostPayOrderRequestTag> tag) {
+    public CreatePostPayOrderShrinkRequest setTag(java.util.List<CreatePostPayOrderShrinkRequestTag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<CreatePostPayOrderRequestTag> getTag() {
+    public java.util.List<CreatePostPayOrderShrinkRequestTag> getTag() {
         return this.tag;
     }
 
-    public CreatePostPayOrderRequest setTopicQuota(Integer topicQuota) {
+    public CreatePostPayOrderShrinkRequest setTopicQuota(Integer topicQuota) {
         this.topicQuota = topicQuota;
         return this;
     }
@@ -233,37 +233,7 @@ public class CreatePostPayOrderRequest extends TeaModel {
         return this.topicQuota;
     }
 
-    public static class CreatePostPayOrderRequestServerlessConfig extends TeaModel {
-        @NameInMap("ReservedPublishCapacity")
-        public Long reservedPublishCapacity;
-
-        @NameInMap("ReservedSubscribeCapacity")
-        public Long reservedSubscribeCapacity;
-
-        public static CreatePostPayOrderRequestServerlessConfig build(java.util.Map<String, ?> map) throws Exception {
-            CreatePostPayOrderRequestServerlessConfig self = new CreatePostPayOrderRequestServerlessConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public CreatePostPayOrderRequestServerlessConfig setReservedPublishCapacity(Long reservedPublishCapacity) {
-            this.reservedPublishCapacity = reservedPublishCapacity;
-            return this;
-        }
-        public Long getReservedPublishCapacity() {
-            return this.reservedPublishCapacity;
-        }
-
-        public CreatePostPayOrderRequestServerlessConfig setReservedSubscribeCapacity(Long reservedSubscribeCapacity) {
-            this.reservedSubscribeCapacity = reservedSubscribeCapacity;
-            return this;
-        }
-        public Long getReservedSubscribeCapacity() {
-            return this.reservedSubscribeCapacity;
-        }
-
-    }
-
-    public static class CreatePostPayOrderRequestTag extends TeaModel {
+    public static class CreatePostPayOrderShrinkRequestTag extends TeaModel {
         /**
          * <p>The key of tag N.</p>
          * <br>
@@ -284,12 +254,12 @@ public class CreatePostPayOrderRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreatePostPayOrderRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreatePostPayOrderRequestTag self = new CreatePostPayOrderRequestTag();
+        public static CreatePostPayOrderShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreatePostPayOrderShrinkRequestTag self = new CreatePostPayOrderShrinkRequestTag();
             return TeaModel.build(map, self);
         }
 
-        public CreatePostPayOrderRequestTag setKey(String key) {
+        public CreatePostPayOrderShrinkRequestTag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -297,7 +267,7 @@ public class CreatePostPayOrderRequest extends TeaModel {
             return this.key;
         }
 
-        public CreatePostPayOrderRequestTag setValue(String value) {
+        public CreatePostPayOrderShrinkRequestTag setValue(String value) {
             this.value = value;
             return this;
         }
