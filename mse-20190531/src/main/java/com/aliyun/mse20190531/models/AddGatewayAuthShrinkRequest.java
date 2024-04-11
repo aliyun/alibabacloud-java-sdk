@@ -7,11 +7,17 @@ public class AddGatewayAuthShrinkRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("AuthResourceConfig")
+    public String authResourceConfig;
+
     /**
      * <p>The information about the resource to be authorized.</p>
      */
     @NameInMap("AuthResourceList")
     public String authResourceListShrink;
+
+    @NameInMap("AuthResourceMode")
+    public Integer authResourceMode;
 
     /**
      * <p>The application ID registered with the OIDC authentication service.</p>
@@ -140,12 +146,28 @@ public class AddGatewayAuthShrinkRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
+    public AddGatewayAuthShrinkRequest setAuthResourceConfig(String authResourceConfig) {
+        this.authResourceConfig = authResourceConfig;
+        return this;
+    }
+    public String getAuthResourceConfig() {
+        return this.authResourceConfig;
+    }
+
     public AddGatewayAuthShrinkRequest setAuthResourceListShrink(String authResourceListShrink) {
         this.authResourceListShrink = authResourceListShrink;
         return this;
     }
     public String getAuthResourceListShrink() {
         return this.authResourceListShrink;
+    }
+
+    public AddGatewayAuthShrinkRequest setAuthResourceMode(Integer authResourceMode) {
+        this.authResourceMode = authResourceMode;
+        return this;
+    }
+    public Integer getAuthResourceMode() {
+        return this.authResourceMode;
     }
 
     public AddGatewayAuthShrinkRequest setClientId(String clientId) {

@@ -7,11 +7,17 @@ public class AddGatewayAuthRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("AuthResourceConfig")
+    public String authResourceConfig;
+
     /**
      * <p>The information about the resource to be authorized.</p>
      */
     @NameInMap("AuthResourceList")
     public java.util.List<AddGatewayAuthRequestAuthResourceList> authResourceList;
+
+    @NameInMap("AuthResourceMode")
+    public Integer authResourceMode;
 
     /**
      * <p>The application ID registered with the OIDC authentication service.</p>
@@ -140,12 +146,28 @@ public class AddGatewayAuthRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
+    public AddGatewayAuthRequest setAuthResourceConfig(String authResourceConfig) {
+        this.authResourceConfig = authResourceConfig;
+        return this;
+    }
+    public String getAuthResourceConfig() {
+        return this.authResourceConfig;
+    }
+
     public AddGatewayAuthRequest setAuthResourceList(java.util.List<AddGatewayAuthRequestAuthResourceList> authResourceList) {
         this.authResourceList = authResourceList;
         return this;
     }
     public java.util.List<AddGatewayAuthRequestAuthResourceList> getAuthResourceList() {
         return this.authResourceList;
+    }
+
+    public AddGatewayAuthRequest setAuthResourceMode(Integer authResourceMode) {
+        this.authResourceMode = authResourceMode;
+        return this;
+    }
+    public Integer getAuthResourceMode() {
+        return this.authResourceMode;
     }
 
     public AddGatewayAuthRequest setClientId(String clientId) {

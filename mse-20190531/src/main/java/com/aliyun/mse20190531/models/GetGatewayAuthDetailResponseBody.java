@@ -438,6 +438,12 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
     }
 
     public static class GetGatewayAuthDetailResponseBodyData extends TeaModel {
+        @NameInMap("AuthResourceConfig")
+        public String authResourceConfig;
+
+        @NameInMap("AuthResourceMode")
+        public Integer authResourceMode;
+
         @NameInMap("ClientId")
         public String clientId;
 
@@ -513,6 +519,22 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         public static GetGatewayAuthDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetGatewayAuthDetailResponseBodyData self = new GetGatewayAuthDetailResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetGatewayAuthDetailResponseBodyData setAuthResourceConfig(String authResourceConfig) {
+            this.authResourceConfig = authResourceConfig;
+            return this;
+        }
+        public String getAuthResourceConfig() {
+            return this.authResourceConfig;
+        }
+
+        public GetGatewayAuthDetailResponseBodyData setAuthResourceMode(Integer authResourceMode) {
+            this.authResourceMode = authResourceMode;
+            return this;
+        }
+        public Integer getAuthResourceMode() {
+            return this.authResourceMode;
         }
 
         public GetGatewayAuthDetailResponseBodyData setClientId(String clientId) {
