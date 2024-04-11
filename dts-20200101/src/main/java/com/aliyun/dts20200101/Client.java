@@ -7126,6 +7126,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DtsJobId", request.dtsJobId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maxDu)) {
+            query.put("MaxDu", request.maxDu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minDu)) {
+            query.put("MinDu", request.minDu);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.period)) {
             query.put("Period", request.period);
         }

@@ -34,6 +34,12 @@ public class TransferPayTypeRequest extends TeaModel {
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    @NameInMap("MaxDu")
+    public Integer maxDu;
+
+    @NameInMap("MinDu")
+    public Integer minDu;
+
     /**
      * <p>The billing cycle of the subscription instance. Valid values:</p>
      * <br>
@@ -81,6 +87,22 @@ public class TransferPayTypeRequest extends TeaModel {
     }
     public String getDtsJobId() {
         return this.dtsJobId;
+    }
+
+    public TransferPayTypeRequest setMaxDu(Integer maxDu) {
+        this.maxDu = maxDu;
+        return this;
+    }
+    public Integer getMaxDu() {
+        return this.maxDu;
+    }
+
+    public TransferPayTypeRequest setMinDu(Integer minDu) {
+        this.minDu = minDu;
+        return this;
+    }
+    public Integer getMinDu() {
+        return this.minDu;
     }
 
     public TransferPayTypeRequest setPeriod(String period) {
