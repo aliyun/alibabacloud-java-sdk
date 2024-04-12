@@ -145,6 +145,18 @@ public class GetTaskInfoResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        @NameInMap("OutputMp3Path")
+        public String outputMp3Path;
+
+        @NameInMap("OutputMp4Path")
+        public String outputMp4Path;
+
+        @NameInMap("OutputSpectrumPath")
+        public String outputSpectrumPath;
+
+        @NameInMap("OutputThumbnailPath")
+        public String outputThumbnailPath;
+
         @NameInMap("Result")
         public GetTaskInfoResponseBodyDataResult result;
 
@@ -176,6 +188,38 @@ public class GetTaskInfoResponseBody extends TeaModel {
         }
         public String getErrorMessage() {
             return this.errorMessage;
+        }
+
+        public GetTaskInfoResponseBodyData setOutputMp3Path(String outputMp3Path) {
+            this.outputMp3Path = outputMp3Path;
+            return this;
+        }
+        public String getOutputMp3Path() {
+            return this.outputMp3Path;
+        }
+
+        public GetTaskInfoResponseBodyData setOutputMp4Path(String outputMp4Path) {
+            this.outputMp4Path = outputMp4Path;
+            return this;
+        }
+        public String getOutputMp4Path() {
+            return this.outputMp4Path;
+        }
+
+        public GetTaskInfoResponseBodyData setOutputSpectrumPath(String outputSpectrumPath) {
+            this.outputSpectrumPath = outputSpectrumPath;
+            return this;
+        }
+        public String getOutputSpectrumPath() {
+            return this.outputSpectrumPath;
+        }
+
+        public GetTaskInfoResponseBodyData setOutputThumbnailPath(String outputThumbnailPath) {
+            this.outputThumbnailPath = outputThumbnailPath;
+            return this;
+        }
+        public String getOutputThumbnailPath() {
+            return this.outputThumbnailPath;
         }
 
         public GetTaskInfoResponseBodyData setResult(GetTaskInfoResponseBodyDataResult result) {
