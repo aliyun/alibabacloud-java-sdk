@@ -46,6 +46,9 @@ public class BuildPipelineRun extends TeaModel {
     @NameInMap("Steps")
     public java.util.List<BuildPipelineRunSteps> steps;
 
+    @NameInMap("TriggerConfig")
+    public BuildPipelineRunTriggerConfig triggerConfig;
+
     @NameInMap("VersionId")
     public String versionId;
 
@@ -169,6 +172,14 @@ public class BuildPipelineRun extends TeaModel {
         return this.steps;
     }
 
+    public BuildPipelineRun setTriggerConfig(BuildPipelineRunTriggerConfig triggerConfig) {
+        this.triggerConfig = triggerConfig;
+        return this;
+    }
+    public BuildPipelineRunTriggerConfig getTriggerConfig() {
+        return this.triggerConfig;
+    }
+
     public BuildPipelineRun setVersionId(String versionId) {
         this.versionId = versionId;
         return this;
@@ -189,6 +200,9 @@ public class BuildPipelineRun extends TeaModel {
         @NameInMap("BranchName")
         public String branchName;
 
+        @NameInMap("TagName")
+        public String tagName;
+
         @NameInMap("Type")
         public String type;
 
@@ -203,6 +217,14 @@ public class BuildPipelineRun extends TeaModel {
         }
         public String getBranchName() {
             return this.branchName;
+        }
+
+        public BuildPipelineRunBuildConfigTrigger setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
         }
 
         public BuildPipelineRunBuildConfigTrigger setType(String type) {
@@ -335,8 +357,8 @@ public class BuildPipelineRun extends TeaModel {
         @NameInMap("CommitUrl")
         public String commitUrl;
 
-        @NameInMap("OrgId")
-        public String orgId;
+        @NameInMap("OrganizationId")
+        public String organizationId;
 
         @NameInMap("Provider")
         public String provider;
@@ -384,12 +406,12 @@ public class BuildPipelineRun extends TeaModel {
             return this.commitUrl;
         }
 
-        public BuildPipelineRunCodeConfig setOrgId(String orgId) {
-            this.orgId = orgId;
+        public BuildPipelineRunCodeConfig setOrganizationId(String organizationId) {
+            this.organizationId = organizationId;
             return this;
         }
-        public String getOrgId() {
-            return this.orgId;
+        public String getOrganizationId() {
+            return this.organizationId;
         }
 
         public BuildPipelineRunCodeConfig setProvider(String provider) {
@@ -655,6 +677,47 @@ public class BuildPipelineRun extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+    }
+
+    public static class BuildPipelineRunTriggerConfig extends TeaModel {
+        @NameInMap("BranchName")
+        public String branchName;
+
+        @NameInMap("TagName")
+        public String tagName;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static BuildPipelineRunTriggerConfig build(java.util.Map<String, ?> map) throws Exception {
+            BuildPipelineRunTriggerConfig self = new BuildPipelineRunTriggerConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public BuildPipelineRunTriggerConfig setBranchName(String branchName) {
+            this.branchName = branchName;
+            return this;
+        }
+        public String getBranchName() {
+            return this.branchName;
+        }
+
+        public BuildPipelineRunTriggerConfig setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
+        }
+
+        public BuildPipelineRunTriggerConfig setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

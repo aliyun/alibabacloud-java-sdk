@@ -34,6 +34,9 @@ public class CustomDomain extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("routeConfig")
+    public RouteConfig routeConfig;
+
     @NameInMap("subdomainCount")
     public String subdomainCount;
 
@@ -126,6 +129,14 @@ public class CustomDomain extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CustomDomain setRouteConfig(RouteConfig routeConfig) {
+        this.routeConfig = routeConfig;
+        return this;
+    }
+    public RouteConfig getRouteConfig() {
+        return this.routeConfig;
     }
 
     public CustomDomain setSubdomainCount(String subdomainCount) {

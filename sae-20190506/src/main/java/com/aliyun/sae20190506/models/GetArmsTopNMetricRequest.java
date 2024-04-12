@@ -4,6 +4,12 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class GetArmsTopNMetricRequest extends TeaModel {
+    @NameInMap("AppSource")
+    public String appSource;
+
+    @NameInMap("CpuStrategy")
+    public String cpuStrategy;
+
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -22,6 +28,22 @@ public class GetArmsTopNMetricRequest extends TeaModel {
     public static GetArmsTopNMetricRequest build(java.util.Map<String, ?> map) throws Exception {
         GetArmsTopNMetricRequest self = new GetArmsTopNMetricRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetArmsTopNMetricRequest setAppSource(String appSource) {
+        this.appSource = appSource;
+        return this;
+    }
+    public String getAppSource() {
+        return this.appSource;
+    }
+
+    public GetArmsTopNMetricRequest setCpuStrategy(String cpuStrategy) {
+        this.cpuStrategy = cpuStrategy;
+        return this;
+    }
+    public String getCpuStrategy() {
+        return this.cpuStrategy;
     }
 
     public GetArmsTopNMetricRequest setEndTime(Long endTime) {
