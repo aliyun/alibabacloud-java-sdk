@@ -522,11 +522,23 @@ public class ApplyModifyRequest extends TeaModel {
         @NameInMap("flight_cabins")
         public String flightCabins;
 
+        @NameInMap("flight_intl_rule_code")
+        public Long flightIntlRuleCode;
+
+        @NameInMap("flight_rule_code")
+        public Long flightRuleCode;
+
         @NameInMap("hotel_citys")
         public java.util.List<ApplyModifyRequestExternalTravelerStandardHotelCitys> hotelCitys;
 
         @NameInMap("hotel_intl_citys")
         public java.util.List<ApplyModifyRequestExternalTravelerStandardHotelIntlCitys> hotelIntlCitys;
+
+        @NameInMap("hotel_intl_rule_code")
+        public Long hotelIntlRuleCode;
+
+        @NameInMap("hotel_rule_code")
+        public Long hotelRuleCode;
 
         /**
          * <p>超级经济舱折扣。1到10的整数</p>
@@ -536,6 +548,9 @@ public class ApplyModifyRequest extends TeaModel {
 
         @NameInMap("reserve_type")
         public Integer reserveType;
+
+        @NameInMap("train_rule_code")
+        public Long trainRuleCode;
 
         @NameInMap("train_seats")
         public String trainSeats;
@@ -577,6 +592,22 @@ public class ApplyModifyRequest extends TeaModel {
             return this.flightCabins;
         }
 
+        public ApplyModifyRequestExternalTravelerStandard setFlightIntlRuleCode(Long flightIntlRuleCode) {
+            this.flightIntlRuleCode = flightIntlRuleCode;
+            return this;
+        }
+        public Long getFlightIntlRuleCode() {
+            return this.flightIntlRuleCode;
+        }
+
+        public ApplyModifyRequestExternalTravelerStandard setFlightRuleCode(Long flightRuleCode) {
+            this.flightRuleCode = flightRuleCode;
+            return this;
+        }
+        public Long getFlightRuleCode() {
+            return this.flightRuleCode;
+        }
+
         public ApplyModifyRequestExternalTravelerStandard setHotelCitys(java.util.List<ApplyModifyRequestExternalTravelerStandardHotelCitys> hotelCitys) {
             this.hotelCitys = hotelCitys;
             return this;
@@ -593,6 +624,22 @@ public class ApplyModifyRequest extends TeaModel {
             return this.hotelIntlCitys;
         }
 
+        public ApplyModifyRequestExternalTravelerStandard setHotelIntlRuleCode(Long hotelIntlRuleCode) {
+            this.hotelIntlRuleCode = hotelIntlRuleCode;
+            return this;
+        }
+        public Long getHotelIntlRuleCode() {
+            return this.hotelIntlRuleCode;
+        }
+
+        public ApplyModifyRequestExternalTravelerStandard setHotelRuleCode(Long hotelRuleCode) {
+            this.hotelRuleCode = hotelRuleCode;
+            return this;
+        }
+        public Long getHotelRuleCode() {
+            return this.hotelRuleCode;
+        }
+
         public ApplyModifyRequestExternalTravelerStandard setPremiumEconomyDiscount(Integer premiumEconomyDiscount) {
             this.premiumEconomyDiscount = premiumEconomyDiscount;
             return this;
@@ -607,6 +654,14 @@ public class ApplyModifyRequest extends TeaModel {
         }
         public Integer getReserveType() {
             return this.reserveType;
+        }
+
+        public ApplyModifyRequestExternalTravelerStandard setTrainRuleCode(Long trainRuleCode) {
+            this.trainRuleCode = trainRuleCode;
+            return this;
+        }
+        public Long getTrainRuleCode() {
+            return this.trainRuleCode;
         }
 
         public ApplyModifyRequestExternalTravelerStandard setTrainSeats(String trainSeats) {
@@ -1202,11 +1257,23 @@ public class ApplyModifyRequest extends TeaModel {
         @NameInMap("flight_cabins")
         public String flightCabins;
 
+        @NameInMap("flight_intl_rule_code")
+        public Long flightIntlRuleCode;
+
+        @NameInMap("flight_rule_code")
+        public Long flightRuleCode;
+
         @NameInMap("hotel_citys")
         public java.util.List<ApplyModifyRequestTravelerStandardHotelCitys> hotelCitys;
 
         @NameInMap("hotel_intl_citys")
         public java.util.List<ApplyModifyRequestTravelerStandardHotelIntlCitys> hotelIntlCitys;
+
+        @NameInMap("hotel_intl_rule_code")
+        public Long hotelIntlRuleCode;
+
+        @NameInMap("hotel_rule_code")
+        public Long hotelRuleCode;
 
         /**
          * <p>超级经济舱折扣。1到10的整数</p>
@@ -1216,6 +1283,9 @@ public class ApplyModifyRequest extends TeaModel {
 
         @NameInMap("reserve_type")
         public Integer reserveType;
+
+        @NameInMap("train_rule_code")
+        public Long trainRuleCode;
 
         @NameInMap("train_seats")
         public String trainSeats;
@@ -1268,6 +1338,22 @@ public class ApplyModifyRequest extends TeaModel {
             return this.flightCabins;
         }
 
+        public ApplyModifyRequestTravelerStandard setFlightIntlRuleCode(Long flightIntlRuleCode) {
+            this.flightIntlRuleCode = flightIntlRuleCode;
+            return this;
+        }
+        public Long getFlightIntlRuleCode() {
+            return this.flightIntlRuleCode;
+        }
+
+        public ApplyModifyRequestTravelerStandard setFlightRuleCode(Long flightRuleCode) {
+            this.flightRuleCode = flightRuleCode;
+            return this;
+        }
+        public Long getFlightRuleCode() {
+            return this.flightRuleCode;
+        }
+
         public ApplyModifyRequestTravelerStandard setHotelCitys(java.util.List<ApplyModifyRequestTravelerStandardHotelCitys> hotelCitys) {
             this.hotelCitys = hotelCitys;
             return this;
@@ -1284,6 +1370,22 @@ public class ApplyModifyRequest extends TeaModel {
             return this.hotelIntlCitys;
         }
 
+        public ApplyModifyRequestTravelerStandard setHotelIntlRuleCode(Long hotelIntlRuleCode) {
+            this.hotelIntlRuleCode = hotelIntlRuleCode;
+            return this;
+        }
+        public Long getHotelIntlRuleCode() {
+            return this.hotelIntlRuleCode;
+        }
+
+        public ApplyModifyRequestTravelerStandard setHotelRuleCode(Long hotelRuleCode) {
+            this.hotelRuleCode = hotelRuleCode;
+            return this;
+        }
+        public Long getHotelRuleCode() {
+            return this.hotelRuleCode;
+        }
+
         public ApplyModifyRequestTravelerStandard setPremiumEconomyDiscount(Integer premiumEconomyDiscount) {
             this.premiumEconomyDiscount = premiumEconomyDiscount;
             return this;
@@ -1298,6 +1400,14 @@ public class ApplyModifyRequest extends TeaModel {
         }
         public Integer getReserveType() {
             return this.reserveType;
+        }
+
+        public ApplyModifyRequestTravelerStandard setTrainRuleCode(Long trainRuleCode) {
+            this.trainRuleCode = trainRuleCode;
+            return this;
+        }
+        public Long getTrainRuleCode() {
+            return this.trainRuleCode;
         }
 
         public ApplyModifyRequestTravelerStandard setTrainSeats(String trainSeats) {
