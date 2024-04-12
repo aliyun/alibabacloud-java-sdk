@@ -126,7 +126,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         public String lastTimestamp;
 
         /**
-         * <p>The information about the event.</p>
+         * <p>The message about the event.</p>
          */
         @NameInMap("Message")
         public String message;
@@ -138,13 +138,13 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The event cause.</p>
+         * <p>The reason for the transition into the current status of the event.</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
-         * <p>The event type. Valid values:</p>
+         * <p>The type of the event. Valid values:</p>
          * <br>
          * <p>*   Normal</p>
          * <p>*   Warning</p>
@@ -271,7 +271,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The data cache ID.</p>
+         * <p>The ID of the data cache.</p>
          */
         @NameInMap("DataCacheId")
         public String dataCacheId;
@@ -295,7 +295,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         public String expireDateTime;
 
         /**
-         * <p>The ID of the local snapshot.</p>
+         * <p>The ID of the on-premises snapshot.</p>
          */
         @NameInMap("FlashSnapshotId")
         public String flashSnapshotId;
@@ -307,13 +307,13 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         public String lastMatchedTime;
 
         /**
-         * <p>The data cache name.</p>
+         * <p>The name of the data cache.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The vHost directory in which the data cache resides.</p>
+         * <p>The directory in which the virtual host of the data cache resides.</p>
          */
         @NameInMap("Path")
         public String path;
@@ -331,7 +331,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -349,7 +349,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         public String snapshotId;
 
         /**
-         * <p>The state of the data cache. Valid values:</p>
+         * <p>The status of the data cache. Valid values:</p>
          * <br>
          * <p>*   Loading: The data cache is loading data.</p>
          * <p>*   Creating: The data cache is being created.</p>
@@ -358,7 +358,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
          * <p>*   Updating: The data cache is being updated.</p>
          * <p>*   UpdateFailed: The data cache failed to be updated.</p>
          * <br>
-         * <p>The data cache is available when it is in the Ready state.</p>
+         * <p>If the data cache is in the Available state, the data cache can be used.</p>
          */
         @NameInMap("Status")
         public String status;
