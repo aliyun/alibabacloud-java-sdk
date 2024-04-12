@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetHostResponseBody extends TeaModel {
     /**
-     * <p>The fingerprint of the host. This parameter uniquely identifies a host.</p>
+     * <p>The information about the host that was queried.</p>
      */
     @NameInMap("Host")
     public GetHostResponseBodyHost host;
 
     /**
-     * <p>The endpoint type of the host. Valid values:</p>
-     * <br>
-     * <p>*   **Public**: a public endpoint</p>
-     * <p>*   **Private**: an internal endpoint</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,17 +39,23 @@ public class GetHostResponseBody extends TeaModel {
 
     public static class GetHostResponseBodyHostProtocols extends TeaModel {
         /**
-         * <p>WB662865</p>
+         * <p>The fingerprint of the host. This parameter uniquely identifies a host.</p>
          */
         @NameInMap("HostFingerPrint")
         public String hostFingerPrint;
 
         /**
-         * <p>GetHost</p>
+         * <p>The service port of the host.</p>
          */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The protocol that is used to connect to the host. Valid values:</p>
+         * <br>
+         * <p>*   **SSH**</p>
+         * <p>*   **RDP**</p>
+         */
         @NameInMap("ProtocolName")
         public String protocolName;
 
@@ -89,49 +92,47 @@ public class GetHostResponseBody extends TeaModel {
 
     public static class GetHostResponseBodyHost extends TeaModel {
         /**
-         * <p>The public endpoint of the host. You can set this parameter to a domain name or an IP address.</p>
+         * <p>The address type of the host. Valid values:</p>
+         * <br>
+         * <p>*   **Public**: a public address</p>
+         * <p>*   **Private**: a private address</p>
          */
         @NameInMap("ActiveAddressType")
         public String activeAddressType;
 
         /**
-         * <p>The ID of the ECS instance or dedicated cluster host that was queried.</p>
-         * <br>
-         * <p>>  No value is returned for this parameter if the **Source** parameter is set to **Local**.</p>
+         * <p>The description of the host.</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the host.</p>
          */
         @NameInMap("HostId")
         public String hostId;
 
         /**
-         * <p>The ID of the Bastionhost instance where you want to query the host.</p>
-         * <br>
-         * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+         * <p>The hostname.</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
-         * <p>The description of the host.</p>
+         * <p>The internal endpoint of the host. The value is a domain name or an IP address.</p>
          */
         @NameInMap("HostPrivateAddress")
         public String hostPrivateAddress;
 
         /**
-         * <p>The status of the host. Valid values:</p>
-         * <br>
-         * <p>- **Normal**: The host is normal.</p>
-         * <br>
-         * <p>- **Release**: The host is released.</p>
+         * <p>The public address of the host. The value is a domain name or an IP address.</p>
          */
         @NameInMap("HostPublicAddress")
         public String hostPublicAddress;
 
+        /**
+         * <p>The ID of the new network domain to which the host belongs.</p>
+         */
         @NameInMap("NetworkDomainId")
         public String networkDomainId;
 
@@ -145,27 +146,34 @@ public class GetHostResponseBody extends TeaModel {
         public String OSType;
 
         /**
-         * <p>GetHost</p>
+         * <p>The protocol information about the host.</p>
          */
         @NameInMap("Protocols")
         public java.util.List<GetHostResponseBodyHostProtocols> protocols;
 
         /**
-         * <p>The protocol information of the host.</p>
+         * <p>The source of the host. Valid values:</p>
+         * <br>
+         * <p>*   **Local**: a host in a data center</p>
+         * <p>*   **Ecs**: an Elastic Compute Service (ECS) instance</p>
+         * <p>*   **Rds**: a host in an ApsaraDB MyBase dedicated cluster</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
-         * <p>Queries the details of a specified host, such as the name, source, endpoint, protocol, and service port of the host.</p>
+         * <p>The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.</p>
+         * <br>
+         * <p>>  If **Local** is returned for the **Source** parameter, no value is returned for this parameter.</p>
          */
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
 
         /**
-         * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).</p>
+         * <p>The status of the host. Valid values:</p>
          * <br>
-         * <p>For more information about sample requests, see the "Examples" section of this topic.</p>
+         * <p>*   **Normal**: normal</p>
+         * <p>*   **Release**: released</p>
          */
         @NameInMap("SourceInstanceState")
         public String sourceInstanceState;

@@ -5,33 +5,33 @@ import com.aliyun.tea.*;
 
 public class RemoveHostsFromGroupRequest extends TeaModel {
     /**
-     * <p>The return code that indicates whether the call was successful. Valid values:</p>
+     * <p>The ID of the host group from which you want to remove hosts.</p>
      * <br>
-     * <p>*   **OK**: The call was successful.</p>
-     * <p>*   **UNEXPECTED**: An unknown error occurred.</p>
-     * <p>*   **INVALID_ARGUMENT**: A request parameter is invalid.</p>
-     * <p>*   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.</p>
-     * <p>*   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.</p>
+     * <p>>  You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.</p>
      */
     @NameInMap("HostGroupId")
     public String hostGroupId;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("HostIds")
-    public String hostIds;
 
     /**
      * <p>The ID of the host that you want to remove from the host group. The value is a JSON string. You can add up to 100 host IDs.</p>
      * <br>
      * <p>>  You can call the [ListHosts](~~200665~~) operation to query the IDs of hosts.</p>
      */
+    @NameInMap("HostIds")
+    public String hostIds;
+
+    /**
+     * <p>The ID of the bastion host for which you want to remove hosts from the host group.</p>
+     * <br>
+     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the host group.</p>
+     * <p>The region ID of the bastion host for which you want to remove hosts from the host group.</p>
+     * <br>
+     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

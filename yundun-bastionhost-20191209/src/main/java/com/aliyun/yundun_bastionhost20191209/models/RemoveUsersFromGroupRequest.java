@@ -5,41 +5,33 @@ import com.aliyun.tea.*;
 
 public class RemoveUsersFromGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the user who you want to remove. The value is a JSON string. You can add up to 100 user IDs. If you specify multiple IDs, separate the IDs with commas (,).</p>
+     * <p>The ID of the bastion host for which you want to remove users from the user group.</p>
      * <br>
-     * <p>>  You can call the [ListUsers](~~204522~~) operation to query the IDs of users.</p>
+     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the user.</p>
+     * <p>The region ID of the bastion host for which you want to remove users from the user group.</p>
+     * <br>
+     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The return code that indicates whether the call was successful. Valid values:</p>
+     * <p>The ID of the user group from which you want to remove users.</p>
      * <br>
-     * <p>*   **OK**: The call was successful.</p>
-     * <br>
-     * <p>*   **UNEXPECTED**: An unknown error occurred.</p>
-     * <br>
-     * <p>*   **INVALID_ARGUMENT**: A request parameter is invalid.</p>
-     * <br>
-     * <p>> Make sure that the request parameters are valid and call the operation again.</p>
-     * <br>
-     * <p>*   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.</p>
-     * <br>
-     * <p>> Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.</p>
-     * <br>
-     * <p>*   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.</p>
+     * <p>>  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.</p>
      */
     @NameInMap("UserGroupId")
     public String userGroupId;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the user who you want to remove. The value is a JSON string. You can add up to 100 user IDs. If you specify multiple IDs, separate the IDs with commas (,).</p>
+     * <br>
+     * <p>>  You can call the [ListUsers](~~204522~~) operation to query the IDs of users.</p>
      */
     @NameInMap("UserIds")
     public String userIds;

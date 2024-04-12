@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateHostAccountResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The operation that you want to perform. Set the value to **CreateHostAccount**.</p>
      */
     @NameInMap("HostAccountId")
     public String hostAccountId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **CreateHostAccount**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

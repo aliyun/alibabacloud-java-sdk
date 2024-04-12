@@ -27,9 +27,7 @@ public class CreateHostGroupRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host on which you want to create a host group.</p>
      * <br>
-     * <p>**</p>
-     * <br>
-     * <p>**For more information about the mapping between region IDs and region names, see **Regions and zones[.](~~40654~~)</p>
+     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

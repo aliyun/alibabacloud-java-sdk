@@ -5,25 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListHostAccountsForUserResponseBody extends TeaModel {
     /**
-     * <p>The host accounts returned.</p>
+     * <p>An array that consists of the queried host accounts.</p>
      */
     @NameInMap("HostAccounts")
     public java.util.List<ListHostAccountsForUserResponseBodyHostAccounts> hostAccounts;
 
     /**
-     * <p>The ID of the Bastionhost instance where you want to query the host accounts that the user is authorized to manage on the host.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>The value of the PageSize parameter must not exceed 100. Default value: 20. If you leave the PageSize parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>>  We recommend that you do not leave the PageSize parameter empty.</p>
+     * <p>The total number of host accounts that were queried.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -59,39 +53,37 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
 
     public static class ListHostAccountsForUserResponseBodyHostAccounts extends TeaModel {
         /**
-         * <p>The protocol that is used by the host account. Valid values:</p>
-         * <br>
-         * <p>*   **SSH**</p>
-         * <p>*   **RDP**</p>
+         * <p>The ID of the host account.</p>
          */
         @NameInMap("HostAccountId")
         public String hostAccountId;
 
         /**
-         * <p>The ID of the host account.</p>
+         * <p>The name of the host account.</p>
          */
         @NameInMap("HostAccountName")
         public String hostAccountName;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the host for which the host accounts were queried.</p>
          */
         @NameInMap("HostId")
         public String hostId;
 
         /**
-         * <p>The ID of the host for which you want to query the host accounts that the user is authorized to manage.</p>
+         * <p>Indicates whether the user is authorized to manage the host account. Valid values:</p>
          * <br>
-         * <p>>  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.</p>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
          */
         @NameInMap("IsAuthorized")
         public Boolean isAuthorized;
 
         /**
-         * <p>Indicates whether the user is authorized to manage the host account. Valid values:</p>
+         * <p>The protocol that is used by the host. Valid values:</p>
          * <br>
-         * <p>*   **true**: The user is authorized to manage the host account.</p>
-         * <p>*   **false**: The user is not authorized to manage the host account.</p>
+         * <p>*   **SSH**</p>
+         * <p>*   **RDP**</p>
          */
         @NameInMap("ProtocolName")
         public String protocolName;

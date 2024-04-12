@@ -42,6 +42,12 @@ public class CreateUserRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Language")
+    public String language;
+
+    @NameInMap("LanguageStatus")
+    public String languageStatus;
+
     /**
      * <p>The mobile phone number of the user that you want to add.</p>
      */
@@ -199,6 +205,22 @@ public class CreateUserRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateUserRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
+    }
+
+    public CreateUserRequest setLanguageStatus(String languageStatus) {
+        this.languageStatus = languageStatus;
+        return this;
+    }
+    public String getLanguageStatus() {
+        return this.languageStatus;
     }
 
     public CreateUserRequest setMobile(String mobile) {

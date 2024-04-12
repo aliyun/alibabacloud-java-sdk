@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ConfigInstanceWhiteListRequest extends TeaModel {
     /**
-     * <p>The ID of the bastion host for which a whitelist of public IP addresses is configured.</p>
+     * <p>The ID of the bastion host for which you want to configure a whitelist of public IP addresses.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>Configures a whitelist of public IP addresses for a bastion host.</p>
+     * <p>The region ID of the bastion host.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>ConfigInstanceWhiteList</p>
+     * <p>The public IP addresses that you want to add to the whitelist.</p>
      */
     @NameInMap("WhiteList")
     public java.util.List<String> whiteList;

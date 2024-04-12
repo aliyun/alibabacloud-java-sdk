@@ -44,6 +44,12 @@ public class ModifyUserRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Language")
+    public String language;
+
+    @NameInMap("LanguageStatus")
+    public String languageStatus;
+
     /**
      * <p>The new mobile number of the user.</p>
      * <br>
@@ -182,6 +188,22 @@ public class ModifyUserRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyUserRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
+    }
+
+    public ModifyUserRequest setLanguageStatus(String languageStatus) {
+        this.languageStatus = languageStatus;
+        return this;
+    }
+    public String getLanguageStatus() {
+        return this.languageStatus;
     }
 
     public ModifyUserRequest setMobile(String mobile) {

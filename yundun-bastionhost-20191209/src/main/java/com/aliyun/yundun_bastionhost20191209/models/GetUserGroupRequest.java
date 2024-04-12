@@ -5,21 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetUserGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the bastion host in which you want to query the details of the user group.</p>
+     * <br>
+     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The name of the user group.</p>
+     * <p>The region ID of the bastion host in which you want to query the details of the user group.</p>
+     * <br>
+     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>All Bastionhost API requests must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).</p>
+     * <p>The ID of the user group.</p>
      * <br>
-     * <p>For more information about sample requests, see the "Examples" section of this topic.</p>
+     * <p>> You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.</p>
      */
     @NameInMap("UserGroupId")
     public String userGroupId;
