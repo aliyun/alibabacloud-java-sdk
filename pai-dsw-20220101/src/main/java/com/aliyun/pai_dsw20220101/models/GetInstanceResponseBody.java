@@ -82,6 +82,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("NodeErrorRecovery")
+    public GetInstanceResponseBodyNodeErrorRecovery nodeErrorRecovery;
+
     @NameInMap("PaymentType")
     public String paymentType;
 
@@ -342,6 +345,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public GetInstanceResponseBody setNodeErrorRecovery(GetInstanceResponseBodyNodeErrorRecovery nodeErrorRecovery) {
+        this.nodeErrorRecovery = nodeErrorRecovery;
+        return this;
+    }
+    public GetInstanceResponseBodyNodeErrorRecovery getNodeErrorRecovery() {
+        return this.nodeErrorRecovery;
     }
 
     public GetInstanceResponseBody setPaymentType(String paymentType) {
@@ -972,6 +983,47 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+    }
+
+    public static class GetInstanceResponseBodyNodeErrorRecovery extends TeaModel {
+        @NameInMap("autoSwitchCountdownSeconds")
+        public Long autoSwitchCountdownSeconds;
+
+        @NameInMap("enableAutoSwitchOnNodeError")
+        public Boolean enableAutoSwitchOnNodeError;
+
+        @NameInMap("hasNodeError")
+        public Boolean hasNodeError;
+
+        public static GetInstanceResponseBodyNodeErrorRecovery build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyNodeErrorRecovery self = new GetInstanceResponseBodyNodeErrorRecovery();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyNodeErrorRecovery setAutoSwitchCountdownSeconds(Long autoSwitchCountdownSeconds) {
+            this.autoSwitchCountdownSeconds = autoSwitchCountdownSeconds;
+            return this;
+        }
+        public Long getAutoSwitchCountdownSeconds() {
+            return this.autoSwitchCountdownSeconds;
+        }
+
+        public GetInstanceResponseBodyNodeErrorRecovery setEnableAutoSwitchOnNodeError(Boolean enableAutoSwitchOnNodeError) {
+            this.enableAutoSwitchOnNodeError = enableAutoSwitchOnNodeError;
+            return this;
+        }
+        public Boolean getEnableAutoSwitchOnNodeError() {
+            return this.enableAutoSwitchOnNodeError;
+        }
+
+        public GetInstanceResponseBodyNodeErrorRecovery setHasNodeError(Boolean hasNodeError) {
+            this.hasNodeError = hasNodeError;
+            return this;
+        }
+        public Boolean getHasNodeError() {
+            return this.hasNodeError;
         }
 
     }
