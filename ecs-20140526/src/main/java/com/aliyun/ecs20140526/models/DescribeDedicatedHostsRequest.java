@@ -37,6 +37,12 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     @NameInMap("LockReason")
     public String lockReason;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -156,6 +162,22 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     }
     public String getLockReason() {
         return this.lockReason;
+    }
+
+    public DescribeDedicatedHostsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeDedicatedHostsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeDedicatedHostsRequest setOwnerAccount(String ownerAccount) {

@@ -95,45 +95,45 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
     public static class DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance extends TeaModel {
         /**
-         * <p>The start time of the execution.</p>
+         * <p>The time when the command task was created.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The size of the text that is truncated and discarded when the Output value exceeds 24 KB in size.</p>
+         * <p>The size of the Output text that was truncated and discarded because the Output value exceeded 24 KB in size.</p>
          */
         @NameInMap("Dropped")
         public Integer dropped;
 
         /**
-         * <p>The code that indicates why the command failed to be sent or run. Valid values:</p>
+         * <p>The error code for the failure to send or run the command. Valid values:</p>
          * <br>
-         * <p>*   If this parameter is empty, the command is run normally.</p>
-         * <p>*   InstanceNotExists: The instance does not exist or was released.</p>
+         * <p>*   If this parameter is empty, the command was run as expected.</p>
+         * <p>*   InstanceNotExists: The specified instance did not exist or was released.</p>
          * <p>*   InstanceReleased: The instance was released while the command was being run.</p>
-         * <p>*   InstanceNotRunning: The instance was not in the Running state while the command started to be run.</p>
-         * <p>*   CommandNotApplicable: The command is not applicable to the specified instance.</p>
-         * <p>*   AccountNotExists: The specified account does not exist.</p>
-         * <p>*   DirectoryNotExists: The specified directory does not exist.</p>
-         * <p>*   BadCronExpression: The cron expression used to specify a schedule is invalid.</p>
-         * <p>*   ClientNotRunning: The Cloud Assistant client is not running.</p>
-         * <p>*   ClientNotResponse: The Cloud Assistant client does not respond.</p>
-         * <p>*   ClientIsUpgrading: The Cloud Assistant client is being upgraded.</p>
-         * <p>*   ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.</p>
+         * <p>*   InstanceNotRunning: The instance was not running when the command started to be run.</p>
+         * <p>*   CommandNotApplicable: The command was not applicable to the specified instance.</p>
+         * <p>*   AccountNotExists: The specified account did not exist.</p>
+         * <p>*   DirectoryNotExists: The specified directory did not exist.</p>
+         * <p>*   BadCronExpression: The specified cron expression for the execution schedule was invalid.</p>
+         * <p>*   ClientNotRunning: Cloud Assistant Agent was not running.</p>
+         * <p>*   ClientNotResponse: Cloud Assistant Agent did not respond.</p>
+         * <p>*   ClientIsUpgrading: Cloud Assistant Agent was being upgraded.</p>
+         * <p>*   ClientNeedUpgrade: Cloud Assistant Agent needed to be upgraded.</p>
          * <p>*   DeliveryTimeout: The request to send the command timed out.</p>
          * <p>*   ExecutionTimeout: The execution timed out.</p>
-         * <p>*   ExecutionException: An exception occurs while the command is being run.</p>
-         * <p>*   ExecutionInterrupted: The execution was interrupted.</p>
-         * <p>*   ExitCodeNonzero: The execution is complete, but the exit code is not 0.</p>
+         * <p>*   ExecutionException: An exception occurred while the command was being run.</p>
+         * <p>*   ExecutionInterrupted: The command task was interrupted.</p>
+         * <p>*   ExitCodeNonzero: The execution was complete, but the exit code was not 0.</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>Details about the reason why the command failed to be sent or run. Valid values:</p>
+         * <p>The error message returned when the command failed to be sent or run. Valid values:</p>
          * <br>
-         * <p>*   If this parameter is empty, the execution is normal.</p>
+         * <p>*   If this parameter is empty, the command was run as expected.</p>
          * <p>*   the specified instance does not exists</p>
          * <p>*   the instance has released when create task</p>
          * <p>*   the instance is not running when create task</p>
@@ -144,12 +144,13 @@ public class DescribeInvocationsResponseBody extends TeaModel {
          * <p>*   the aliyun service is not running on the instance</p>
          * <p>*   the aliyun service in the instance does not response</p>
          * <p>*   the aliyun service in the instance is upgrading now</p>
-         * <p>*   the aliyun service in the instance is upgrading now</p>
+         * <p>*   the aliyun service in the instance need upgrade</p>
          * <p>*   the command delivery has been timeout</p>
          * <p>*   the command execution has been timeout</p>
          * <p>*   the command execution got an exception</p>
          * <p>*   the command execution has been interrupted</p>
          * <p>*   the command execution exit code is not zero</p>
+         * <p>*   the specified instance has been released</p>
          */
         @NameInMap("ErrorInfo")
         public String errorInfo;
@@ -157,20 +158,20 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         /**
          * <p>The exit code of the execution. Valid values:</p>
          * <br>
-         * <p>*   For Linux instances, the exit code is the exit code of the shell process.</p>
-         * <p>*   For Windows instances, the exit code is the exit code of the batch or PowerShell process.</p>
+         * <p>*   For Linux instances, the value is the exit code of the shell process.</p>
+         * <p>*   For Windows instances, the value is the exit code of the batch or PowerShell process.</p>
          */
         @NameInMap("ExitCode")
         public Long exitCode;
 
         /**
-         * <p>The end time of the execution.</p>
+         * <p>The time when the execution ended.</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
         /**
-         * <p>The instance ID</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -178,7 +179,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         /**
          * <p>The execution state on a single instance.</p>
          * <br>
-         * <p>> We recommend that you ignore this parameter and check the value of the `InvocationStatus` response parameter for the overall execution state.</p>
+         * <p>>  We recommend that you ignore this parameter and check the value of `InvocationStatus` in the response to obtain the execution state.</p>
          */
         @NameInMap("InstanceInvokeStatus")
         public String instanceInvokeStatus;
@@ -186,53 +187,56 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         /**
          * <p>The execution state on a single instance. Valid values:</p>
          * <br>
-         * <p>*   Pending: The command is being verified or sent.</p>
+         * <p>*   Pending: The command was being verified or sent.</p>
          * <br>
-         * <p>*   Invalid: The specified command type or parameter is invalid.</p>
+         * <p>*   Invalid: The specified command type or parameter was invalid.</p>
          * <br>
-         * <p>*   Aborted: The command failed to be sent. To send a command to an instance, make sure that the instance is in the Running state and that the command is sent within 1 minute.</p>
+         * <p>*   Aborted: The command failed to be sent to the instance. To send a command to an instance, make sure that the instance is in the Running state and the command can be sent to the instance within 1 minute.</p>
          * <br>
-         * <p>*   Running: The command is being run on the instance.</p>
+         * <p>*   Running: The command was being run on the instance.</p>
          * <br>
          * <p>*   Success:</p>
          * <br>
-         * <p>    *   Command that is set to run only once: The execution is complete, and the exit code is 0.</p>
-         * <p>    *   Command that is set to run on a schedule: The previous execution is complete, the exit code is 0, and the specified cycle ends.</p>
+         * <p>    *   One-time task: The execution was complete, and the exit code was 0.</p>
+         * <p>    *   Scheduled task: The last execution was complete, the exit code was 0, and the specified period ended.</p>
          * <br>
          * <p>*   Failed:</p>
          * <br>
-         * <p>    *   Command that is set to run only once: The execution is complete, but the exit code is not 0.</p>
-         * <p>    *   Command that is set to run on a schedule: The previous execution is complete, the exit code is not 0, and the specified cycle is about to end.</p>
+         * <p>    *   One-time task: The execution was complete, but the exit code was not 0.</p>
+         * <p>    *   Scheduled task: The last execution was complete, but the exit code was not 0. The specified period is about to end.</p>
          * <br>
          * <p>*   Error: The execution cannot proceed due to an exception.</p>
          * <br>
-         * <p>*   Timeout: The execution times out.</p>
+         * <p>*   Timeout: The execution timed out.</p>
          * <br>
-         * <p>*   Cancelled: The execution is canceled, and the command is not started.</p>
+         * <p>*   Cancelled: The execution was canceled, and the command was not run.</p>
          * <br>
-         * <p>*   Stopping: The command task is being stopped.</p>
+         * <p>*   Stopping: The command task was being stopped.</p>
          * <br>
-         * <p>*   Terminated: The command task is terminated while it is being run.</p>
+         * <p>*   Terminated: The execution was terminated before completion.</p>
          * <br>
          * <p>*   Scheduled:</p>
          * <br>
-         * <p>    *   Command that is set to run only once: The overall execution state can never be Scheduled.</p>
-         * <p>    *   Command that is set to run on a schedule: The command is pending execution.</p>
+         * <p>    *   One-time task: The execution state can never be Scheduled.</p>
+         * <p>    *   Scheduled task: The command was waiting to be run.</p>
          */
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
         /**
          * <p>The command output.</p>
+         * <br>
+         * <p>*   If ContentEncoding is set to PlainText in the request, the original command output is returned.</p>
+         * <p>*   If ContentEncoding is set to Base64 in the request, the Base64-encoded command output is returned.</p>
          */
         @NameInMap("Output")
         public String output;
 
         /**
-         * <p>The number of times that the command is run on the instance.</p>
+         * <p>The number of times that the command was run on the instance.</p>
          * <br>
-         * <p>*   If the execution is a one-time execution, the value is 0 or 1.</p>
-         * <p>*   If the execution is a scheduled execution, the value is the number of times that the command is run.</p>
+         * <p>*   If the command is set to run only once, the value is 0 or 1.</p>
+         * <p>*   If the command is set to run on a schedule, the value is the number of times that the command has been run on the instance.</p>
          */
         @NameInMap("Repeats")
         public Integer repeats;
@@ -244,7 +248,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The time when the command stopped being run on the instance. If you call the `StopInvocation` operation to manually stop the execution, the value is the time when you called the operation.</p>
+         * <p>The time when the command task was stopped. If you call the `StopInvocation` operation to stop the command task, the value of this parameter is the time when the operation is called.</p>
          */
         @NameInMap("StopTime")
         public String stopTime;
@@ -256,7 +260,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public Boolean timed;
 
         /**
-         * <p>The time when the execution state was updated.</p>
+         * <p>The time when the execution status was updated.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
@@ -464,7 +468,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
     public static class DescribeInvocationsResponseBodyInvocationsInvocation extends TeaModel {
         /**
-         * <p>The Base64-encoded command content.</p>
+         * <p>The command content.</p>
+         * <br>
+         * <p>*   If ContentEncoding is set to PlainText in the request, the original command content is returned.</p>
+         * <p>*   If ContentEncoding is set to Base64 in the request, the Base64-encoded command content is returned.</p>
          */
         @NameInMap("CommandContent")
         public String commandContent;
@@ -512,63 +519,63 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The schedule on which to run the command. For information about the value specifications, see [Cron expression](~~64769~~).</p>
+         * <p>The schedule on which the command was run.</p>
          */
         @NameInMap("Frequency")
         public String frequency;
 
         /**
-         * <p>The overall execution state of the command. The value of this parameter depends on the execution states on all the involved instances. Valid values:</p>
+         * <p>The overall execution state of the command task. The value of this parameter depends on the execution states of the command task on all the involved instances. Valid values:</p>
          * <br>
-         * <p>*   Pending: The command is being verified or sent. When the execution state on at least one instance is Pending, the overall execution state is Pending.</p>
+         * <p>*   Pending: The command was being verified or sent. When the execution state on at least one instance is Pending, the overall execution state is Pending.</p>
          * <br>
-         * <p>*   Scheduled: The command scheduled to run is sent and pending execution. When the execution state on at least one instance is Scheduled, the overall execution state is Scheduled.</p>
+         * <p>*   Scheduled: The command that is set to run on a schedule was sent and waiting to be run. When the execution state on at least one instance is Scheduled, the overall execution state is Scheduled.</p>
          * <br>
-         * <p>*   Running: The command is being run on the instances. When the execution state on at least one instance is Running, the overall execution state is Running.</p>
+         * <p>*   Running: The command was being run on the instances. When the execution state on at least one instance is Running, the overall execution state is Running.</p>
          * <br>
-         * <p>*   Success: When the execution state on at least one instance is Success and the execution state on other instances is Stopped or Success, the overall execution state is Success.</p>
+         * <p>*   Success: When the execution state on at least one instance is Success and the execution state on the other instances is Stopped or Success, the overall execution state is Success.</p>
          * <br>
-         * <p>    *   Command that is set to run only once: The execution is complete, and the exit code is 0.</p>
-         * <p>    *   Command that is set to run on a schedule: The last execution is complete, the exit code is 0, and the specified cycle ends.</p>
+         * <p>    *   One-time task: The execution was complete, and the exit code was 0.</p>
+         * <p>    *   Scheduled task: The last execution was complete, the exit code was 0, and the specified period ended.</p>
          * <br>
          * <p>*   Failed: When the execution state on all instances is Stopped or Failed, the overall execution state is Failed. When the execution state on an instance is one of the following values, Failed is returned as the overall execution state:</p>
          * <br>
-         * <p>    *   Invalid: The command is invalid.</p>
+         * <p>    *   Invalid: The command was invalid.</p>
          * <p>    *   Aborted: The command failed to be sent.</p>
-         * <p>    *   Failed: The command execution is complete, but the exit code is not 0.</p>
+         * <p>    *   Failed: The execution was complete, but the exit code was not 0.</p>
          * <p>    *   Timeout: The execution timed out.</p>
-         * <p>    *   Error: An error occurred while the command was being run on the instance.</p>
+         * <p>    *   Error: An error occurred while the command was being run.</p>
          * <br>
-         * <p>*   Stopping: The command task is being stopped. When the execution state on at least one instance is Stopping, the overall execution state is Stopping.</p>
+         * <p>*   Stopping: The command task was being stopped. When the execution state on at least one instance is Stopping, the overall execution state is Stopping.</p>
          * <br>
-         * <p>*   Stopped: The command task is stopped. When the execution state on all instances is Stopped, the overall execution state is Stopped. When the execution state on an instance is one of the following values, Stopped is returned as the overall execution state:</p>
+         * <p>*   Stopped: The task was stopped. When the execution state on all instances is Stopped, the overall execution state is Stopped. When the execution state on an instance is one of the following values, Stopped is returned as the overall execution state:</p>
          * <br>
-         * <p>    *   Cancelled: The command task is canceled.</p>
-         * <p>    *   Terminated: The command task is terminated.</p>
+         * <p>    *   Cancelled: The task was canceled.</p>
+         * <p>    *   Terminated: The task was terminated.</p>
          * <br>
-         * <p>*   PartialFailed: The execution is complete on some instances and fails on other instances. When the execution state is Success on some instances and is Failed or Stopped on other instances, the overall execution state is PartialFailed.</p>
+         * <p>*   PartialFailed: The execution was complete on some instances and failed on other instances. When the execution state is Success on some instances and is Failed or Stopped on the other instances, the overall execution state is PartialFailed.</p>
          * <br>
-         * <p>> The `InvokeStatus` response parameter functions similarly to this parameter. We recommend that you ignore InvokeStatus and check the value of InvocationStatus.</p>
+         * <p>>  `InvokeStatus` in the response functions similarly to this parameter. We recommend that you check the value of this parameter.</p>
          */
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
         /**
-         * <p>The command task ID.</p>
+         * <p>The ID of the command task.</p>
          */
         @NameInMap("InvokeId")
         public String invokeId;
 
         /**
-         * <p>Details about the instances on which the command is run.</p>
+         * <p>The instances on which the command was run.</p>
          */
         @NameInMap("InvokeInstances")
         public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstances invokeInstances;
 
         /**
-         * <p>The overall execution state of the command.</p>
+         * <p>The overall execution state of the command task.</p>
          * <br>
-         * <p>> We recommend that you ignore this parameter and check the value of the `InvocationStatus` response parameter for the overall execution state.</p>
+         * <p>>  We recommend that you ignore this parameter and check the value of `InvocationStatus` in the response to obtain the overall execution state.</p>
          */
         @NameInMap("InvokeStatus")
         public String invokeStatus;
@@ -580,12 +587,12 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String parameters;
 
         /**
-         * <p>Indicates the execution mode of the command. Valid values:</p>
+         * <p>The execution mode of the command. Valid values:</p>
          * <br>
-         * <p>*   Once: immediately runs the command.</p>
+         * <p>*   Once: The command is immediately run.</p>
          * <p>*   Period: The command is run on a schedule.</p>
-         * <p>*   NextRebootOnly: The command is automatically run the next time the instance starts.</p>
-         * <p>*   EveryReboot: automatically runs the command every time the instance starts.</p>
+         * <p>*   NextRebootOnly: The command is run the next time the instances start.</p>
+         * <p>*   EveryReboot: The command is run every time the instances start.</p>
          */
         @NameInMap("RepeatMode")
         public String repeatMode;
@@ -603,15 +610,15 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public Boolean timed;
 
         /**
-         * <p>The maximum timeout period for the command execution on the instance. Unit: seconds.</p>
+         * <p>The maximum timeout period for the command execution. Unit: seconds.</p>
          * <br>
-         * <p>When a command cannot be run, the command execution times out. When a command execution times out, the Cloud Assistant client forcefully terminates the command process by canceling the PID of the command.</p>
+         * <p>When a command cannot be run, the command execution times out. When a command execution times out, Cloud Assistant Agent forcefully terminates the command process by canceling the process ID (PID) of the command.</p>
          */
         @NameInMap("Timeout")
         public Long timeout;
 
         /**
-         * <p>The username that was used to run the command on the instance.</p>
+         * <p>The username used to run the command on the instances.</p>
          */
         @NameInMap("Username")
         public String username;

@@ -11,13 +11,17 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String commandId;
 
     /**
-     * <p>The command name.</p>
+     * <p>The command name. If you specify both this parameter and `InstanceId`, this parameter does not take effect.</p>
      */
     @NameInMap("CommandName")
     public String commandName;
 
     /**
-     * <p>The command type. If this parameter and `InstanceId` are both specified, this parameter does not take effect.</p>
+     * <p>The command type. Valid values:</p>
+     * <br>
+     * <p>*   RunBatScript: batch command, applicable to Windows instances.</p>
+     * <p>*   RunPowerShellScript: PowerShell command, applicable to Windows instances.</p>
+     * <p>*   RunShellScript: shell command, applicable to Linux instances.</p>
      */
     @NameInMap("CommandType")
     public String commandType;
@@ -57,37 +61,41 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String invokeId;
 
     /**
-     * <p>The overall execution state of the command. The value of this parameter depends on the execution states on all involved instances. Valid values:</p>
+     * <p>The overall execution status of the command task. The value of this parameter depends on the execution states of the command task on all involved instances. Valid values:</p>
      * <br>
      * <p>*   Running:</p>
      * <br>
-     * <p>    *   Scheduled execution: Before you manually stop the execution of the command, the overall execution state is always Running.</p>
-     * <p>    *   One-time execution: If the execution is in progress on one or more instances, the overall execution state is Running.</p>
+     * <p>    *   Scheduled task: Before you stop the scheduled execution of the command, the overall execution state is always Running.</p>
+     * <p>    *   One-time task: If the command is being run on instances, the overall execution state is Running.</p>
      * <br>
      * <p>*   Finished:</p>
      * <br>
-     * <p>    *   Scheduled execution: The overall execution state can never be Finished.</p>
-     * <p>    *   One-time execution: The execution is complete on all instances, or the execution is manually stopped on some instances and is complete on other instances.</p>
+     * <p>    *   Scheduled task: The overall execution state can never be Finished.</p>
+     * <p>    *   One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.</p>
+     * <br>
+     * <p>*   Success: If the execution state on at least one instance is Success and the execution state on the other instances is Stopped or Success, the overall execution state is Success.</p>
+     * <br>
+     * <p>    *   One-time task: The execution is complete, and the exit code is 0.</p>
+     * <p>    *   Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.</p>
      * <br>
      * <p>*   Failed:</p>
      * <br>
-     * <p>    *   Scheduled execution: The overall execution state can never be Failed.</p>
-     * <p>    *   One-time execution: The execution fails on all instances.</p>
+     * <p>    *   Scheduled task: The overall execution state can never be Failed.</p>
+     * <p>    *   One-time task: The execution fails on all instances.</p>
      * <br>
-     * <p>*   PartialFailed:</p>
+     * <p>*   Stopped: The task is stopped.</p>
      * <br>
-     * <p>    *   Scheduled execution: The overall execution state can never be PartialFailed.</p>
-     * <p>    *   One-time execution: The execution fails on some instances.</p>
+     * <p>*   Stopping: The task is being stopped.</p>
      * <br>
-     * <p>*   Stopped: The execution is stopped.</p>
+     * <p>*   PartialFailed: The task fails on some instances. If you specify both this parameter and `InstanceId`, this parameter does not take effect.</p>
      */
     @NameInMap("InvokeStatus")
     public String invokeStatus;
 
     /**
-     * <p>The maximum number of entries per page. </p>
+     * <p>The maximum number of entries per page.</p>
      * <br>
-     * <p>Valid values: 1 to 50. </p>
+     * <p>Valid values: 1 to 50.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -133,12 +141,12 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The execution mode of the command. Valid values:</p>
+     * <p>The execution mode of the command. If you specify both this parameter and `InstanceId`, this parameter does not take effect. Valid values:</p>
      * <br>
-     * <p>*   Once: immediately runs the command.</p>
+     * <p>*   Once: The command is immediately run.</p>
      * <p>*   Period: The command is run on a schedule.</p>
-     * <p>*   NextRebootOnly: The command is automatically run the next time the instance starts.</p>
-     * <p>*   EveryReboot: The command is automatically run every time the instance starts.</p>
+     * <p>*   NextRebootOnly: The command is run the next time the instances start.</p>
+     * <p>*   EveryReboot: The command is run every time the instances start.</p>
      * <br>
      * <p>This parameter is empty by default, which indicates that commands run in all modes are queried.</p>
      */
@@ -164,14 +172,14 @@ public class DescribeInvocationsRequest extends TeaModel {
     public java.util.List<DescribeInvocationsRequestTag> tag;
 
     /**
-     * <p>Specifies whether to query commands that are to be automatically run. Valid values:</p>
+     * <p>Specifies whether the command is to be automatically run. Valid values:</p>
      * <br>
-     * <p>*   true: queries commands that meet the following requirements: The commands are run by calling the `RunCommand` or `InvokeCommand` operation with `RepeatMode` set to `Period`, `NextRebootOnly`, or `EveryReboot`. The executions of the commands are not canceled and not complete or are not stopped and not complete.</p>
+     * <p>*   true: The command is run by calling the `RunCommand` or `InvokeCommand` operation with `RepeatMode` set to `Period`, `NextRebootOnly`, or `EveryReboot`.</p>
      * <br>
-     * <p>*   false: queries commands that meet the following requirements:</p>
+     * <p>*   false: The command meets one of the following requirements:</p>
      * <br>
-     * <p>    *   The commands are run by calling the `RunCommand` or `InvokeCommand` operation with `RepeatMode` set to `Once`.</p>
-     * <p>    *   The executions of the commands are canceled, stopped, or complete.</p>
+     * <p>    *   The command is run by calling the `RunCommand` or `InvokeCommand` operation with `RepeatMode` set to `Once`.</p>
+     * <p>    *   The command task is canceled, stopped, or completed.</p>
      * <br>
      * <p>Default value: false.</p>
      */

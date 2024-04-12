@@ -17,7 +17,7 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The destination IPv4 CIDR block. IPv4 CIDR blocks and addresses are supported.</p>
+     * <p>The destination IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
      * <br>
      * <p>By default, this parameter is left empty.</p>
      */
@@ -25,7 +25,7 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     public String destCidrIp;
 
     /**
-     * <p>The transport layer protocol of the security group rule. The values of this parameter are not case-sensitive. Valid values:</p>
+     * <p>The transport layer protocol of the security group rule. The value of this parameter is case-insensitive. Valid values:</p>
      * <br>
      * <p>*   ICMP</p>
      * <p>*   GRE</p>
@@ -37,9 +37,9 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>The destination IPv6 CIDR block. IPv6 CIDR blocks and addresses are supported.</p>
+     * <p>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
      * <br>
-     * <p>> Only the IP addresses of instances in VPCs are supported. You cannot specify both Ipv6DestCidrIp and `DestCidrIp`.</p>
+     * <p>>  Only the IP addresses of instances in VPCs are supported. You cannot specify both Ipv6DestCidrIp and `DestCidrIp`.</p>
      * <br>
      * <p>By default, this parameter is left empty.</p>
      */
@@ -47,9 +47,9 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     public String ipv6DestCidrIp;
 
     /**
-     * <p>The source IPv6 CIDR block to which you want to control access. IPv6 CIDR blocks and addresses are supported.</p>
+     * <p>The source IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
      * <br>
-     * <p>> Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both Ipv6SourceCidrIp and `SourceCidrIp`.</p>
+     * <p>>  Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both Ipv6SourceCidrIp and `SourceCidrIp`.</p>
      * <br>
      * <p>By default, this parameter is left empty.</p>
      */
@@ -125,7 +125,7 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     public String securityGroupRuleId;
 
     /**
-     * <p>The source IPv4 CIDR block to which you want to control access. IPv4 CIDR blocks and addresses are supported.</p>
+     * <p>The source IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
      * <br>
      * <p>By default, this parameter is left empty.</p>
      */
