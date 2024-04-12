@@ -10,6 +10,9 @@ public class GetPermissionRequest extends TeaModel {
     @NameInMap("Creator")
     public String creator;
 
+    @NameInMap("Option")
+    public String option;
+
     @NameInMap("Resource")
     public String resource;
 
@@ -32,6 +35,14 @@ public class GetPermissionRequest extends TeaModel {
     }
     public String getCreator() {
         return this.creator;
+    }
+
+    public GetPermissionRequest setOption(String option) {
+        this.option = option;
+        return this;
+    }
+    public String getOption() {
+        return this.option;
     }
 
     public GetPermissionRequest setResource(String resource) {
