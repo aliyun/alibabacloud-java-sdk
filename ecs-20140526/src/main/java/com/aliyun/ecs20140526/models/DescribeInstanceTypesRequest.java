@@ -13,6 +13,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     @NameInMap("CpuArchitecture")
     public String cpuArchitecture;
 
+    @NameInMap("CpuArchitectures")
+    public java.util.List<String> cpuArchitectures;
+
     /**
      * <p>The GPU model.</p>
      * <br>
@@ -20,6 +23,12 @@ public class DescribeInstanceTypesRequest extends TeaModel {
      */
     @NameInMap("GPUSpec")
     public String GPUSpec;
+
+    @NameInMap("GpuSpecs")
+    public java.util.List<String> gpuSpecs;
+
+    @NameInMap("InstanceCategories")
+    public java.util.List<String> instanceCategories;
 
     /**
      * <p>The category of the instance type. Valid values:</p>
@@ -55,6 +64,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     @NameInMap("InstanceFamilyLevel")
     public String instanceFamilyLevel;
 
+    @NameInMap("InstanceTypeFamilies")
+    public java.util.List<String> instanceTypeFamilies;
+
     /**
      * <p>The instance family to which the instance type belongs. For information about the valid values of this parameter, see [DescribeInstanceTypeFamilies](~~25621~~).</p>
      * <br>
@@ -68,6 +80,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
      */
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
+
+    @NameInMap("LocalStorageCategories")
+    public java.util.List<String> localStorageCategories;
 
     /**
      * <p>The category of local disks. For more information, see [Local disks](~~63138#section_n2w\_8yc\_5u1~~). Valid values:</p>
@@ -321,6 +336,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     @NameInMap("PhysicalProcessorModel")
     public String physicalProcessorModel;
 
+    @NameInMap("PhysicalProcessorModels")
+    public java.util.List<String> physicalProcessorModels;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -340,12 +358,36 @@ public class DescribeInstanceTypesRequest extends TeaModel {
         return this.cpuArchitecture;
     }
 
+    public DescribeInstanceTypesRequest setCpuArchitectures(java.util.List<String> cpuArchitectures) {
+        this.cpuArchitectures = cpuArchitectures;
+        return this;
+    }
+    public java.util.List<String> getCpuArchitectures() {
+        return this.cpuArchitectures;
+    }
+
     public DescribeInstanceTypesRequest setGPUSpec(String GPUSpec) {
         this.GPUSpec = GPUSpec;
         return this;
     }
     public String getGPUSpec() {
         return this.GPUSpec;
+    }
+
+    public DescribeInstanceTypesRequest setGpuSpecs(java.util.List<String> gpuSpecs) {
+        this.gpuSpecs = gpuSpecs;
+        return this;
+    }
+    public java.util.List<String> getGpuSpecs() {
+        return this.gpuSpecs;
+    }
+
+    public DescribeInstanceTypesRequest setInstanceCategories(java.util.List<String> instanceCategories) {
+        this.instanceCategories = instanceCategories;
+        return this;
+    }
+    public java.util.List<String> getInstanceCategories() {
+        return this.instanceCategories;
     }
 
     public DescribeInstanceTypesRequest setInstanceCategory(String instanceCategory) {
@@ -364,6 +406,14 @@ public class DescribeInstanceTypesRequest extends TeaModel {
         return this.instanceFamilyLevel;
     }
 
+    public DescribeInstanceTypesRequest setInstanceTypeFamilies(java.util.List<String> instanceTypeFamilies) {
+        this.instanceTypeFamilies = instanceTypeFamilies;
+        return this;
+    }
+    public java.util.List<String> getInstanceTypeFamilies() {
+        return this.instanceTypeFamilies;
+    }
+
     public DescribeInstanceTypesRequest setInstanceTypeFamily(String instanceTypeFamily) {
         this.instanceTypeFamily = instanceTypeFamily;
         return this;
@@ -378,6 +428,14 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceTypes() {
         return this.instanceTypes;
+    }
+
+    public DescribeInstanceTypesRequest setLocalStorageCategories(java.util.List<String> localStorageCategories) {
+        this.localStorageCategories = localStorageCategories;
+        return this;
+    }
+    public java.util.List<String> getLocalStorageCategories() {
+        return this.localStorageCategories;
     }
 
     public DescribeInstanceTypesRequest setLocalStorageCategory(String localStorageCategory) {
@@ -642,6 +700,14 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     }
     public String getPhysicalProcessorModel() {
         return this.physicalProcessorModel;
+    }
+
+    public DescribeInstanceTypesRequest setPhysicalProcessorModels(java.util.List<String> physicalProcessorModels) {
+        this.physicalProcessorModels = physicalProcessorModels;
+        return this;
+    }
+    public java.util.List<String> getPhysicalProcessorModels() {
+        return this.physicalProcessorModels;
     }
 
     public DescribeInstanceTypesRequest setResourceOwnerAccount(String resourceOwnerAccount) {

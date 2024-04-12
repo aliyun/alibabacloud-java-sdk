@@ -10,6 +10,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     @NameInMap("DedicatedHosts")
     public DescribeDedicatedHostsResponseBodyDedicatedHosts dedicatedHosts;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The page number.</p>
      */
@@ -45,6 +48,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     }
     public DescribeDedicatedHostsResponseBodyDedicatedHosts getDedicatedHosts() {
         return this.dedicatedHosts;
+    }
+
+    public DescribeDedicatedHostsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeDedicatedHostsResponseBody setPageNumber(Integer pageNumber) {
