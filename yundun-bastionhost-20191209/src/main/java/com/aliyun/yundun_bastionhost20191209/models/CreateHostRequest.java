@@ -57,6 +57,9 @@ public class CreateHostRequest extends TeaModel {
     @NameInMap("InstanceRegionId")
     public String instanceRegionId;
 
+    /**
+     * <p>The ID of the network domain to which the host belongs.</p>
+     */
     @NameInMap("NetworkDomainId")
     public String networkDomainId;
 

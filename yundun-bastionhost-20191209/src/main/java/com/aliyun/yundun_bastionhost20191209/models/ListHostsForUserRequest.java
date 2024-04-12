@@ -5,73 +5,70 @@ import com.aliyun.tea.*;
 
 public class ListHostsForUserRequest extends TeaModel {
     /**
-     * <p>The operating system of the host that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **Linux**</p>
-     * <p>*   **Windows**</p>
+     * <p>The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.</p>
      */
     @NameInMap("HostAddress")
     public String hostAddress;
 
     /**
-     * <p>The ID of the Bastionhost instance where you want to query the hosts that the user is authorized or not authorized to manage.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+     * <p>The name of the host that you want to query. Only exact match is supported.</p>
      */
     @NameInMap("HostName")
     public String hostName;
 
     /**
-     * <p>The category of the host that you want to query. Valid values:</p>
+     * <p>The ID of the bastion host on which you want to query the hosts that the user is authorized or not authorized to manage.</p>
      * <br>
-     * <p>*   **Authorized**: Query the hosts that the user is authorized to manage. This is the default value.</p>
-     * <p>*   **Unauthorized**: Query the hosts that the user is not authorized to manage.</p>
+     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The operating system of the host. Valid values:</p>
+     * <p>Specifies the category of the hosts that you want to query. Valid values:</p>
      * <br>
-     * <p>*   **Linux**</p>
-     * <p>*   **Windows**</p>
+     * <p>*   **Authorized**: queries the hosts that the user is authorized to manage. This is the default value.</p>
+     * <p>*   **Unauthorized**: queries the hosts that the user is not authorized to manage.</p>
      */
     @NameInMap("Mode")
     public String mode;
 
     /**
-     * <p>The internal endpoint of the host. The value is a domain name or an IP address.</p>
+     * <p>The operating system of the host that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **Linux**</p>
+     * <p>*   **Windows**</p>
      */
     @NameInMap("OSType")
     public String OSType;
 
     /**
-     * <p>The endpoint type of the host. Valid values:</p>
-     * <br>
-     * <p>*   **Public**: a public endpoint</p>
-     * <p>*   **Private**: an internal endpoint</p>
+     * <p>The number of the page. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.\</p>
+     * <p>Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
      * <br>
-     * <p>The value of the PageSize parameter must not exceed 100. Default value: 20. If you leave the PageSize parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>>  We recommend that you do not leave the PageSize parameter empty.</p>
+     * <p>> We recommend that you do not leave this parameter empty.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.</p>
+     * <p>The region ID of the bastion host on which you want to query the hosts that the user is authorized or not authorized to manage.</p>
+     * <br>
+     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The ID of the user.</p>
+     * <br>
+     * <p>> You can call the [ListUsers](~~204522~~) operation to query the ID of the user.</p>
      */
     @NameInMap("UserId")
     public String userId;

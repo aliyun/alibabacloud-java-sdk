@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class RemoveHostsFromGroupResponseBody extends TeaModel {
     /**
-     * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).</p>
-     * <br>
-     * <p>For more information about sample requests, see the "Examples" section of this topic.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Removes one or more hosts from a host group.</p>
+     * <p>The result of the call.</p>
      */
     @NameInMap("Results")
     public java.util.List<RemoveHostsFromGroupResponseBodyResults> results;
@@ -41,22 +39,31 @@ public class RemoveHostsFromGroupResponseBody extends TeaModel {
 
     public static class RemoveHostsFromGroupResponseBodyResults extends TeaModel {
         /**
-         * <p>RemoveHostsFromGroup</p>
+         * <p>The return code that indicates whether the call was successful. Valid values:</p>
+         * <br>
+         * <p>*   **OK**: The call was successful.</p>
+         * <p>*   **UNEXPECTED**: An unknown error occurred.</p>
+         * <p>*   **INVALID_ARGUMENT**: A request parameter is invalid.</p>
+         * <p>*   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.</p>
+         * <p>*   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>RemoveHostsFromGroup</p>
+         * <p>The ID of the host group.</p>
          */
         @NameInMap("HostGroupId")
         public String hostGroupId;
 
+        /**
+         * <p>The ID of the host.</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
         /**
-         * <p>WB662865</p>
+         * <p>This parameter is deprecated.</p>
          */
         @NameInMap("Message")
         public String message;

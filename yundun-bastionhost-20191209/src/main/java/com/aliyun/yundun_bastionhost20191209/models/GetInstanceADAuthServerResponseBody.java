@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetInstanceADAuthServerResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **GetInstanceADAuthServer**.</p>
+     * <p>The settings of AD authentication.</p>
      */
     @NameInMap("AD")
     public GetInstanceADAuthServerResponseBodyAD AD;
 
     /**
-     * <p>Indicates whether SSL is supported. Valid values:</p>
-     * <br>
-     * <p>*   **true**: supported</p>
-     * <p>*   **false**: not supported</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,70 +39,80 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
 
     public static class GetInstanceADAuthServerResponseBodyAD extends TeaModel {
         /**
-         * <p>The port that is used to access the AD server.</p>
+         * <p>The distinguished name (DN) of the AD server account.</p>
          */
         @NameInMap("Account")
         public String account;
 
         /**
-         * <p>The ID of the bastion host to query.</p>
-         * <br>
-         * <p>You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+         * <p>The Base DN of the AD server.</p>
          */
         @NameInMap("BaseDN")
         public String baseDN;
 
         /**
-         * <p>The settings of AD authentication.</p>
+         * <p>The domain on the AD server.</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
-         * <p>The address of the secondary AD server.</p>
+         * <p>The field that is used to indicate the email address of a user on the AD server.</p>
          */
         @NameInMap("EmailMapping")
         public String emailMapping;
 
         /**
-         * <p>The field that is used to indicate the mobile phone number of a user on the AD server.</p>
+         * <p>The condition that is used to filter users.</p>
          */
         @NameInMap("Filter")
         public String filter;
 
         /**
-         * <p>The address of the AD server.</p>
+         * <p>Indicates whether passwords are required. Valid values:</p>
+         * <br>
+         * <p>*   **true**:</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("HasPassword")
         public Boolean hasPassword;
 
         /**
-         * <p>The Base DN of the AD server.</p>
+         * <p>Indicates whether SSL is supported. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("IsSSL")
         public Boolean isSSL;
 
         /**
-         * <p>The field that is used to indicate the name of a user on the AD server.</p>
+         * <p>The field that is used to indicate the mobile phone number of a user on the AD server.</p>
          */
         @NameInMap("MobileMapping")
         public String mobileMapping;
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The field that is used to indicate the name of a user on the AD server.</p>
          */
         @NameInMap("NameMapping")
         public String nameMapping;
 
         /**
-         * <p>Queries the settings of Active Directory (AD) authentication on a bastion host.</p>
+         * <p>The port that is used to access the AD server.</p>
          */
         @NameInMap("Port")
         public Long port;
 
+        /**
+         * <p>The address of the LDAP server.</p>
+         */
         @NameInMap("Server")
         public String server;
 
+        /**
+         * <p>The address of the secondary LDAP server.</p>
+         */
         @NameInMap("StandbyServer")
         public String standbyServer;
 

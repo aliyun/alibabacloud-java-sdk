@@ -5,27 +5,33 @@ import com.aliyun.tea.*;
 
 public class ListHostGroupAccountNamesForUserGroupRequest extends TeaModel {
     /**
-     * <p>WB662865</p>
+     * <p>The ID of the host group.</p>
+     * <br>
+     * <p>> You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.</p>
      */
     @NameInMap("HostGroupId")
     public String hostGroupId;
 
     /**
-     * <p>All Bastionhost API requests must include common request parameters. For more information about common request parameters, see [Common parameters](~~148139~~).</p>
+     * <p>The ID of the bastion host on which you want to query the host account names the user group is authorized to manage in a host group.</p>
      * <br>
-     * <p>For more information about sample requests, see the "Examples" section of this topic.</p>
+     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>Queries the names of the host accounts that a specified user group is authorized to manage in a specified host group.</p>
+     * <p>The region ID of the bastion host on which you want to query the host account names the user group is authorized to manage in a host group.</p>
+     * <br>
+     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>ListHostGroupAccountNamesForUserGroup</p>
+     * <p>The ID of the user group.</p>
+     * <br>
+     * <p>> You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.</p>
      */
     @NameInMap("UserGroupId")
     public String userGroupId;

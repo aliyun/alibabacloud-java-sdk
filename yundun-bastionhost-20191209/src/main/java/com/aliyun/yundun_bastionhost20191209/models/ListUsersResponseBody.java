@@ -82,6 +82,12 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("Email")
         public String email;
 
+        @NameInMap("Language")
+        public String language;
+
+        @NameInMap("LanguageStatus")
+        public String languageStatus;
+
         /**
          * <p>The mobile number of the user.</p>
          */
@@ -217,6 +223,22 @@ public class ListUsersResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public ListUsersResponseBodyUsers setLanguage(String language) {
+            this.language = language;
+            return this;
+        }
+        public String getLanguage() {
+            return this.language;
+        }
+
+        public ListUsersResponseBodyUsers setLanguageStatus(String languageStatus) {
+            this.languageStatus = languageStatus;
+            return this;
+        }
+        public String getLanguageStatus() {
+            return this.languageStatus;
         }
 
         public ListUsersResponseBodyUsers setMobile(String mobile) {

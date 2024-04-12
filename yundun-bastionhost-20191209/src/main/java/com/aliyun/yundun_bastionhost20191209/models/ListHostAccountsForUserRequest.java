@@ -5,47 +5,54 @@ import com.aliyun.tea.*;
 
 public class ListHostAccountsForUserRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The name of the host account that you want to query. Exact match is supported.</p>
      */
     @NameInMap("HostAccountName")
     public String hostAccountName;
 
     /**
-     * <p>The ID of the host for which the host accounts were queried.</p>
+     * <p>The ID of the host to query.</p>
+     * <br>
+     * <p>> You can call the [ListHosts](~~200665~~) operation to query the ID of the host.</p>
      */
     @NameInMap("HostId")
     public String hostId;
 
     /**
-     * <p>The total number of host accounts returned.</p>
+     * <p>The ID of the bastion host on which you want to perform the query. The host accounts that the specified user is authorized to manage on the specified host are queried.</p>
+     * <br>
+     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the user for which you want to query authorized host accounts.</p>
-     * <br>
-     * <p>>  You can call the [ListUsers](~~204522~~) operation to query the ID of the user ID.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The name of the host account that you want to query. Exact match is supported.</p>
+     * <p>The number of entries to return on each page.\</p>
+     * <p>Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <br>
+     * <p>> We recommend that you do not leave this parameter empty.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The name of the host account.</p>
+     * <p>The region ID of the bastion host on which you want to perform the query. The host accounts that the specified user is authorized to manage on the specified host are queried.</p>
+     * <br>
+     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The region ID of the Bastionhost instance where you want to query the host accounts that the user is authorized to manage on the host.</p>
+     * <p>The ID of the user for which you want to query authorized host accounts.</p>
      * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>> You can call the [ListUsers](~~204522~~) operation to query the ID of the user.</p>
      */
     @NameInMap("UserId")
     public String userId;

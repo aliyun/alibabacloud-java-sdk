@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteUserPublicKeyRequest extends TeaModel {
     /**
-     * <p>The region ID of the bastion host on which you want to delete the public key from the user.</p>
+     * <p>The ID of the Bastionhost instance to which the users to be queried belong.</p>
      * <br>
-     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
