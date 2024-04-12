@@ -1184,6 +1184,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Creator", request.creator);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.option)) {
+            query.put("Option", request.option);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resource)) {
             query.put("Resource", request.resource);
         }
