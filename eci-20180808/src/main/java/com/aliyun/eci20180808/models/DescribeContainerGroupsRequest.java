@@ -4,6 +4,9 @@ package com.aliyun.eci20180808.models;
 import com.aliyun.tea.*;
 
 public class DescribeContainerGroupsRequest extends TeaModel {
+    /**
+     * <p>The computing power type of the elastic container instance. A value of economy specifies economic elastic container instances.</p>
+     */
     @NameInMap("ComputeCategory")
     public String computeCategory;
 
@@ -48,7 +51,7 @@ public class DescribeContainerGroupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the elastic container instances belong. If you do not specify a resource group when you create an elastic container instance, the system automatically adds the instance to the default resource group in your account.</p>
+     * <p>The ID of the resource group to which the instance belongs.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -59,6 +62,9 @@ public class DescribeContainerGroupsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the security group to which the instance belongs.</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
@@ -92,7 +98,7 @@ public class DescribeContainerGroupsRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>Specifies whether to return event information.</p>
+     * <p>Specify whether to return event information.</p>
      */
     @NameInMap("WithEvent")
     public Boolean withEvent;

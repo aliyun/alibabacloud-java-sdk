@@ -110,7 +110,7 @@ public class CreateVirtualNodeRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>he name of the VNode. The name must be 2 to 128 characters in length, and can contain lowercase letters, digits, periods (.), and hyphens (-).</p>
+     * <p>The name of the VNode. The name must be 2 to 128 characters in length, and can contain lowercase letters, digits, periods (.), and hyphens (-).</p>
      */
     @NameInMap("VirtualNodeName")
     public String virtualNodeName;

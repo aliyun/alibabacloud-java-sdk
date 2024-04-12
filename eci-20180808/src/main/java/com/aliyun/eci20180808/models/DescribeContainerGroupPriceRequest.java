@@ -4,6 +4,9 @@ package com.aliyun.eci20180808.models;
 import com.aliyun.tea.*;
 
 public class DescribeContainerGroupPriceRequest extends TeaModel {
+    /**
+     * <p>The computing power type. A value of economy specifies economic instances.</p>
+     */
     @NameInMap("ComputeCategory")
     public String computeCategory;
 

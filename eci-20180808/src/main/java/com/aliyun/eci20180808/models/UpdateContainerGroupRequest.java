@@ -8,7 +8,7 @@ public class UpdateContainerGroupRequest extends TeaModel {
     public UpdateContainerGroupRequestDnsConfig dnsConfig;
 
     /**
-     * <p>The information about the Container Registry Enterprise Edition instance.</p>
+     * <p>Details of the Container Registry Enterprise Edition instance that hosts the image of the init container.</p>
      */
     @NameInMap("AcrRegistryInfo")
     public java.util.List<UpdateContainerGroupRequestAcrRegistryInfo> acrRegistryInfo;
@@ -32,7 +32,7 @@ public class UpdateContainerGroupRequest extends TeaModel {
     public String containerGroupId;
 
     /**
-     * <p>The number of vCPUs allocated to the elastic container instance.</p>
+     * <p>The number of vCPUs that are allocated to the elastic container instance.</p>
      */
     @NameInMap("Cpu")
     public Float cpu;
@@ -44,13 +44,13 @@ public class UpdateContainerGroupRequest extends TeaModel {
     public java.util.List<UpdateContainerGroupRequestImageRegistryCredential> imageRegistryCredential;
 
     /**
-     * <p>The information about the new init containers.</p>
+     * <p>The information about the new init container.</p>
      */
     @NameInMap("InitContainer")
     public java.util.List<UpdateContainerGroupRequestInitContainer> initContainer;
 
     /**
-     * <p>The memory size allocated to the elastic container instance. Unit: GiB.</p>
+     * <p>The size of the memory that is allocated to the elastic container instance. Unit: GiB.</p>
      */
     @NameInMap("Memory")
     public Float memory;
@@ -98,8 +98,8 @@ public class UpdateContainerGroupRequest extends TeaModel {
     /**
      * <p>The update type. Valid values:</p>
      * <br>
-     * <p>*   RenewUpdate: full update. You must specify all relevant parameters to update the instance. For a parameter of the List type, you must specify all the items contained in the parameter even if you want to update only some of the items. For a parameter of the struct type, you must specify all the members if you want to update only some of the members.</p>
-     * <p>*   IncrementalUpdate: incremental update. You can specify only the parameter that needs to be updated. Other related parameters remain unchanged.</p>
+     * <p>*   RenewUpdate: full updates. You must specify all relevant parameters to update the elastic container instance. For a parameter of the list type, you must specify all the items contained in the parameter even if you want to update only some of the items. For a parameter of the struct type, you must specify all the members even if you want to update only some of the members.</p>
+     * <p>*   IncrementalUpdate: incremental updates. You may specify only the parameter that you want to update. Other related parameters remain unchanged.</p>
      * <br>
      * <p>Default value: RenewUpdate.</p>
      */
@@ -307,7 +307,7 @@ public class UpdateContainerGroupRequest extends TeaModel {
 
     public static class UpdateContainerGroupRequestDnsConfig extends TeaModel {
         /**
-         * <p>The IP addresses of the DNS servers.</p>
+         * <p>The IP addresses of DNS servers.</p>
          */
         @NameInMap("NameServer")
         public java.util.List<String> nameServer;
@@ -357,7 +357,7 @@ public class UpdateContainerGroupRequest extends TeaModel {
 
     public static class UpdateContainerGroupRequestAcrRegistryInfo extends TeaModel {
         /**
-         * <p>The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
+         * <p>The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. You can specify specific domain names. Separate multiple domain names with commas (,).</p>
          */
         @NameInMap("Domain")
         public java.util.List<String> domain;
@@ -375,7 +375,7 @@ public class UpdateContainerGroupRequest extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The region ID of the Container Registry Enterprise Edition instance.</p>
+         * <p>The ID of the region where the Container Registry Enterprise Edition instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -897,13 +897,13 @@ public class UpdateContainerGroupRequest extends TeaModel {
 
     public static class UpdateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeaders extends TeaModel {
         /**
-         * <p>The request parameter of HTTP GET requests when you use HTTP requests to specify the postStart callback function.</p>
+         * <p>The request parameter of the HTTP GET request when you use an HTTP request to specify the postStart callback function.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The request parameter value of HTTP GET requests when you use HTTP requests to specify the postStart callback function.</p>
+         * <p>The request parameter value of the HTTP GET request when you use an HTTP request to specify the postStart callback function.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -933,13 +933,13 @@ public class UpdateContainerGroupRequest extends TeaModel {
 
     public static class UpdateContainerGroupRequestContainerLifecyclePreStopHandlerHttpGetHttpHeader extends TeaModel {
         /**
-         * <p>The request parameter of HTTP GET requests when you use HTTP requests to specify the preStop callback function.</p>
+         * <p>The request parameter of the HTTP GET request when you use an HTTP request to specify the preStop callback function.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The request parameter value of HTTP GET requests when you use HTTP requests to specify the preStop callback function.</p>
+         * <p>The request parameter value of the HTTP GET request when you use an HTTP request to specify the preStop callback function.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -1011,11 +1011,11 @@ public class UpdateContainerGroupRequest extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>The mount propagation setting of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:</p>
+         * <p>The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:</p>
          * <br>
-         * <p>*   None: This volume mount does not receive subsequent mounts that are mounted to this volume or subdirectories of this volume by the host.</p>
-         * <p>*   HostToCotainer: This volume mount receives all subsequent mounts that are mounted to this volume or subdirectories of this volume.</p>
-         * <p>*   Bidirectional: The volume mount behaves the same as the HostToCotainer mount. The volume mount receives all subsequent mounts that are mounted to this volume or subdirectories of this volume. In addition, all volume mounts created by the container are propagated back to the host and to all containers of all pods that use the same volume.</p>
+         * <p>*   None: This volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.</p>
+         * <p>*   HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume.</p>
+         * <p>*   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or the subdirectories of the volume. In addition, all volume mounts that are mounted on the container are propagated back to the host and all containers of all pods that use the same volume.</p>
          * <br>
          * <p>Default value: None.</p>
          */
@@ -1035,7 +1035,7 @@ public class UpdateContainerGroupRequest extends TeaModel {
         public Boolean readOnly;
 
         /**
-         * <p>The subdirectory of the volume that is mounted to the container. The pod can mount different directories of the same volume to different subdirectories of containers.</p>
+         * <p>The subdirectory of the volume that is mounted to the container. You can use this parameter to mount the same volume to different subdirectories of the container.</p>
          */
         @NameInMap("SubPath")
         public String subPath;
@@ -1098,19 +1098,19 @@ public class UpdateContainerGroupRequest extends TeaModel {
         public UpdateContainerGroupRequestContainerSecurityContext securityContext;
 
         /**
-         * <p>The arguments that are passed to the container startup command. You can specify up to 10 arguments.</p>
+         * <p>The arguments that you want to pass to the startup command of the container. You can specify up to 10 arguments.</p>
          */
         @NameInMap("Arg")
         public java.util.List<String> arg;
 
         /**
-         * <p>The commands that are used to run the probe.</p>
+         * <p>The commands that you want to run to perform the health check.</p>
          */
         @NameInMap("Command")
         public java.util.List<String> command;
 
         /**
-         * <p>The number of vCPUs that you want to allocate to the container.</p>
+         * <p>The number of vCPUs that you want to allocate to the container</p>
          */
         @NameInMap("Cpu")
         public Float cpu;
@@ -1134,19 +1134,23 @@ public class UpdateContainerGroupRequest extends TeaModel {
         public String image;
 
         /**
-         * <p>The image pulling policy.</p>
+         * <p>The image pulling policy. Valid values:</p>
+         * <br>
+         * <p>*   Always: Each time the instance is updated, image pulling is performed.</p>
+         * <p>*   IfNotPresent: On-premises images are used first. If no on-premises images are available, image pulling is performed.</p>
+         * <p>*   Never: On-premises images are always used. Image pulling is not performed.</p>
          */
         @NameInMap("ImagePullPolicy")
         public String imagePullPolicy;
 
         /**
-         * <p>The command that you run in the container when you use a command-line interface (CLI) to specify the postStart callback function.</p>
+         * <p>The commands to be executed in the container when you use the CLI to specify the postStart callback function.</p>
          */
         @NameInMap("LifecyclePostStartHandlerExec")
         public java.util.List<String> lifecyclePostStartHandlerExec;
 
         /**
-         * <p>The IP address of the host that receives HTTP GET requests when you use HTTP requests to specify the postStart callback function.</p>
+         * <p>The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify the postStart callback function.</p>
          */
         @NameInMap("LifecyclePostStartHandlerHttpGetHost")
         public String lifecyclePostStartHandlerHttpGetHost;
@@ -1158,67 +1162,67 @@ public class UpdateContainerGroupRequest extends TeaModel {
         public java.util.List<UpdateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeaders> lifecyclePostStartHandlerHttpGetHttpHeaders;
 
         /**
-         * <p>The path to which HTTP GET requests are sent when you use HTTP requests to specify the postStart callback function.</p>
+         * <p>The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the postStart callback function.</p>
          */
         @NameInMap("LifecyclePostStartHandlerHttpGetPath")
         public String lifecyclePostStartHandlerHttpGetPath;
 
         /**
-         * <p>The port to which HTTP GET requests are sent when you use HTTP requests to specify the postStart callback function.</p>
+         * <p>The port to which the system sends the HTTP GET request when you use an HTTP request to specify the postStart callback function.</p>
          */
         @NameInMap("LifecyclePostStartHandlerHttpGetPort")
         public Integer lifecyclePostStartHandlerHttpGetPort;
 
         /**
-         * <p>The path to which HTTP GET requests are sent when you use HTTP requests to specify the postStart callback function.</p>
+         * <p>The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the postStart callback function.</p>
          */
         @NameInMap("LifecyclePostStartHandlerHttpGetScheme")
         public String lifecyclePostStartHandlerHttpGetScheme;
 
         /**
-         * <p>The host IP address of TCP socket probes when you use TCP sockets to specify the postStart callback function.</p>
+         * <p>The IP address of the host that receives the TCP socket request when you use a TCP socket request to specify the postStart callback function.</p>
          */
         @NameInMap("LifecyclePostStartHandlerTcpSocketHost")
         public String lifecyclePostStartHandlerTcpSocketHost;
 
         /**
-         * <p>The port of TCP socket probes when you use TCP sockets to specify the postStart callback function.</p>
+         * <p>The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the postStart callback function.</p>
          */
         @NameInMap("LifecyclePostStartHandlerTcpSocketPort")
         public Integer lifecyclePostStartHandlerTcpSocketPort;
 
         /**
-         * <p>The command that you run in the container when you use a CLI to specify the preStop callback function.</p>
+         * <p>The commands to be executed in the container when you use the CLI to specify the preStop callback function.</p>
          */
         @NameInMap("LifecyclePreStopHandlerExec")
         public java.util.List<String> lifecyclePreStopHandlerExec;
 
         /**
-         * <p>The IP address of the host that receives HTTP GET requests when you use HTTP requests to specify the preStop callback function.</p>
+         * <p>The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify the preStop callback function.</p>
          */
         @NameInMap("LifecyclePreStopHandlerHttpGetHost")
         public String lifecyclePreStopHandlerHttpGetHost;
 
         /**
-         * <p>The information about the generated HTTP request headers.</p>
+         * <p>The information about the generated HTTP request header.</p>
          */
         @NameInMap("LifecyclePreStopHandlerHttpGetHttpHeader")
         public java.util.List<UpdateContainerGroupRequestContainerLifecyclePreStopHandlerHttpGetHttpHeader> lifecyclePreStopHandlerHttpGetHttpHeader;
 
         /**
-         * <p>The path to which HTTP GET requests are sent when you use HTTP requests to specify the preStop callback function.</p>
+         * <p>The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the preSop callback function.</p>
          */
         @NameInMap("LifecyclePreStopHandlerHttpGetPath")
         public String lifecyclePreStopHandlerHttpGetPath;
 
         /**
-         * <p>The port to which HTTP GET requests are sent when you use HTTP requests to specify the preStop callback function.</p>
+         * <p>The port to which the system sends the HTTP GET request for a health check when you use an HTTP request to specify the preStop callback function.</p>
          */
         @NameInMap("LifecyclePreStopHandlerHttpGetPort")
         public Integer lifecyclePreStopHandlerHttpGetPort;
 
         /**
-         * <p>The protocol type of HTTP GET requests when you use HTTP requests to specify the preStop callback function. Valid values:</p>
+         * <p>The protocol type of the HTTP GET request when you use an HTTP request to specify the preStop callback function. Valid values:</p>
          * <br>
          * <p>*   HTTP</p>
          * <p>*   HTTPS</p>
@@ -1227,13 +1231,13 @@ public class UpdateContainerGroupRequest extends TeaModel {
         public String lifecyclePreStopHandlerHttpGetScheme;
 
         /**
-         * <p>The host IP address of TCP socket probes when you use TCP sockets to specify the preStop callback function.</p>
+         * <p>The IP address of the host that receives the TCP socket request when you use a TCP socket request to specify the preStop callback function.</p>
          */
         @NameInMap("LifecyclePreStopHandlerTcpSocketHost")
         public String lifecyclePreStopHandlerTcpSocketHost;
 
         /**
-         * <p>The port of TCP socket probes when you use TCP sockets to specify the preStop callback function.</p>
+         * <p>The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the preStop callback function.</p>
          */
         @NameInMap("LifecyclePreStopHandlerTcpSocketPort")
         public Integer lifecyclePreStopHandlerTcpSocketPort;
@@ -1263,7 +1267,7 @@ public class UpdateContainerGroupRequest extends TeaModel {
         public Boolean stdin;
 
         /**
-         * <p>Whether the container runtime closes the stdin channel after the stdin channel has been opened by a sing attach. If stdin is true, the stdin stream remains open across multiple attach sessions. If StdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and receive data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.</p>
+         * <p>Specifies whether standard input streams are disconnected after a client is disconnected. If Stdin is set to true, standard input streams remain connected among multiple sessions. If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container restarts.</p>
          */
         @NameInMap("StdinOnce")
         public Boolean stdinOnce;
@@ -1275,7 +1279,7 @@ public class UpdateContainerGroupRequest extends TeaModel {
         public Boolean tty;
 
         /**
-         * <p>Pod volumes to mount into the filesystem of the container.</p>
+         * <p>Pod volumes that you want to mount into the filesystem of the container.</p>
          */
         @NameInMap("VolumeMount")
         public java.util.List<UpdateContainerGroupRequestContainerVolumeMount> volumeMount;
@@ -1567,7 +1571,7 @@ public class UpdateContainerGroupRequest extends TeaModel {
 
     public static class UpdateContainerGroupRequestImageRegistryCredential extends TeaModel {
         /**
-         * <p>The password that is used to access the image repository.</p>
+         * <p>The password that you use to access the image repository.</p>
          */
         @NameInMap("Password")
         public String password;
@@ -1579,7 +1583,7 @@ public class UpdateContainerGroupRequest extends TeaModel {
         public String server;
 
         /**
-         * <p>The username that is used to access the image repository.</p>
+         * <p>The username that you use to access the image repository.</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -1779,17 +1783,17 @@ public class UpdateContainerGroupRequest extends TeaModel {
 
     public static class UpdateContainerGroupRequestInitContainerVolumeMount extends TeaModel {
         /**
-         * <p>The directory of the volume that is mounted to the init container. The data in this directory is overwritten by the data on the volume. Specify this parameter with caution.</p>
+         * <p>The mount directory of the init container. The data in this directory is overwritten by the data on the volume. Specify this parameter with caution.</p>
          */
         @NameInMap("MountPath")
         public String mountPath;
 
         /**
-         * <p>The mount propagation setting of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:</p>
+         * <p>The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:</p>
          * <br>
-         * <p>*   None: This volume mount does not receive subsequent mounts that are mounted to this volume or subdirectories of this volume by the host.</p>
-         * <p>*   HostToCotainer: This volume mount receives all subsequent mounts that are mounted to this volume or subdirectories of this volume.</p>
-         * <p>*   Bidirectional: The volume mount behaves the same as the HostToCotainer mount. The volume mount receives all subsequent mounts that are mounted to this volume or subdirectories of this volume. In addition, all volume mounts created by the container are propagated back to the host and to all containers of all pods that use the same volume.</p>
+         * <p>*   None: The volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.</p>
+         * <p>*   HostToContainer: The volume mount receives all subsequent mounts that are performed on this volume or subdirectories of this volume.</p>
+         * <p>*   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or the subdirectories of the volume. In addition, all volume mounts that are mounted on the container are propagated back to the host and all containers of all pods that use the same volume.</p>
          * <br>
          * <p>Default value: None.</p>
          */
@@ -1809,7 +1813,7 @@ public class UpdateContainerGroupRequest extends TeaModel {
         public Boolean readOnly;
 
         /**
-         * <p>The subdirectory of the volume that is mounted to the init container. The pod can mount different directories of the same volume to different subdirectories of init containers.</p>
+         * <p>The subdirectory of the volume that is mounted to the init container. You can use this parameter to mount the same volume to different subdirectories of the init container.</p>
          */
         @NameInMap("SubPath")
         public String subPath;
@@ -1866,13 +1870,13 @@ public class UpdateContainerGroupRequest extends TeaModel {
         public UpdateContainerGroupRequestInitContainerSecurityContext securityContext;
 
         /**
-         * <p>The startup arguments of the init container.</p>
+         * <p>The arguments that you want to pass to the startup command of the init container.</p>
          */
         @NameInMap("Arg")
         public java.util.List<String> arg;
 
         /**
-         * <p>The commands of the init container.</p>
+         * <p>The commands that are used to start the init container.</p>
          */
         @NameInMap("Command")
         public java.util.List<String> command;
@@ -1884,13 +1888,13 @@ public class UpdateContainerGroupRequest extends TeaModel {
         public Float cpu;
 
         /**
-         * <p>The environment variables for the init container.</p>
+         * <p>The environment variable of the init container.</p>
          */
         @NameInMap("EnvironmentVar")
         public java.util.List<UpdateContainerGroupRequestInitContainerEnvironmentVar> environmentVar;
 
         /**
-         * <p>The number of GPUs that you want to allocate to the init container.</p>
+         * <p>The number of GPUs you want to allocate to the init container.</p>
          */
         @NameInMap("Gpu")
         public Integer gpu;
@@ -1902,13 +1906,17 @@ public class UpdateContainerGroupRequest extends TeaModel {
         public String image;
 
         /**
-         * <p>The image pulling policy.</p>
+         * <p>The image pulling policy. Valid values:</p>
+         * <br>
+         * <p>*   Always: Each time the instance is updated, image pulling is performed.</p>
+         * <p>*   IfNotPresent: On-premises images are used first. If no on-premises images are available, image pulling is performed.</p>
+         * <p>*   Never: On-premises images are always used. Image pulling is not performed.</p>
          */
         @NameInMap("ImagePullPolicy")
         public String imagePullPolicy;
 
         /**
-         * <p>The size of memory that you want to allocate to the init container.</p>
+         * <p>The memory size of the init container.</p>
          */
         @NameInMap("Memory")
         public Float memory;
@@ -1932,7 +1940,7 @@ public class UpdateContainerGroupRequest extends TeaModel {
         public Boolean stdin;
 
         /**
-         * <p>Whether the container runtime closes the stdin channel after the stdin channel has been opened by a sing attach. If stdin is true, the stdin stream remains open across multiple attach sessions. If StdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and receive data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.</p>
+         * <p>Specifies whether standard input streams are disconnected after a client is disconnected. If Stdin is set to true, standard input streams remain connected among multiple sessions. If StdinOnce is set to true, standard input streams are connected after the init container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the init container restarts.</p>
          */
         @NameInMap("StdinOnce")
         public Boolean stdinOnce;
@@ -1944,7 +1952,7 @@ public class UpdateContainerGroupRequest extends TeaModel {
         public Boolean tty;
 
         /**
-         * <p>Pod volumes to mount into the filesystem of the init container.</p>
+         * <p>The information about the volume that you want to mount on the init container.</p>
          */
         @NameInMap("VolumeMount")
         public java.util.List<UpdateContainerGroupRequestInitContainerVolumeMount> volumeMount;
@@ -2092,13 +2100,13 @@ public class UpdateContainerGroupRequest extends TeaModel {
 
     public static class UpdateContainerGroupRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -2334,7 +2342,7 @@ public class UpdateContainerGroupRequest extends TeaModel {
         public UpdateContainerGroupRequestVolumeNFSVolume NFSVolume;
 
         /**
-         * <p>The name of the volume.</p>
+         * <p>The volume name.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -2345,7 +2353,7 @@ public class UpdateContainerGroupRequest extends TeaModel {
          * <p>*   Directory</p>
          * <p>*   File</p>
          * <br>
-         * <p>> This parameter is unavailable.</p>
+         * <p>>  This parameter is not publicly available.</p>
          */
         @NameInMap("Type")
         public String type;

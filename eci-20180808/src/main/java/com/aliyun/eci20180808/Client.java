@@ -217,11 +217,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * When you create an elastic container instance, you can configure features such as instances, images, and storage based on your business requirements. For information about parameters configured for the features and the description of the parameters, see the following documents:
       * **Instances** You can use one of the following methods to create an elastic container instance:
       * *   [Specify the number of vCPUs and memory size to create an elastic container instance](~~114662~~)
-      *     *   [Create job-optimized elastic container instances](~~324246~~)
-      *     *   [Ignore special containers during resource adjustment](~~446853~~)
       * *   [Specify ECS instance types to create an elastic container instance](~~114664~~)
       * Both the preceding creation methods support the following features:
-      * *   [Specify custom CPU options](~~197781~~)
+      * *   [Specify CPU options](~~197781~~)
       * *   [Create a preemptible elastic container instance](~~157759~~)
       * *   [Configure multiple zones](~~157290~~)
       * *   [Configure multiple specifications](~~146468~~)
@@ -247,7 +245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   [Configure startup commands and arguments for a container](~~94593~~)
       * *   [Use probes to perform health checks on a container](~~99053~~)
       * *   [Obtain metadata by using environment variables](~~141788~~)
-      * *   [Configure a security context](~~462313~~)
+      * *   [Configure a security context for an elastic container instance or a container](~~462313~~)
       * *   [Configure the NTP service](~~462768~~)
       * **Logging and O\\&M**
       * *   [Use environment variables to configure log collection](~~121973~~)
@@ -374,6 +372,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fixedIpRetainHour)) {
             query.put("FixedIpRetainHour", request.fixedIpRetainHour);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuDriverVersion)) {
+            query.put("GpuDriverVersion", request.gpuDriverVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.hostAliase)) {
@@ -566,11 +568,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * When you create an elastic container instance, you can configure features such as instances, images, and storage based on your business requirements. For information about parameters configured for the features and the description of the parameters, see the following documents:
       * **Instances** You can use one of the following methods to create an elastic container instance:
       * *   [Specify the number of vCPUs and memory size to create an elastic container instance](~~114662~~)
-      *     *   [Create job-optimized elastic container instances](~~324246~~)
-      *     *   [Ignore special containers during resource adjustment](~~446853~~)
       * *   [Specify ECS instance types to create an elastic container instance](~~114664~~)
       * Both the preceding creation methods support the following features:
-      * *   [Specify custom CPU options](~~197781~~)
+      * *   [Specify CPU options](~~197781~~)
       * *   [Create a preemptible elastic container instance](~~157759~~)
       * *   [Configure multiple zones](~~157290~~)
       * *   [Configure multiple specifications](~~146468~~)
@@ -596,7 +596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   [Configure startup commands and arguments for a container](~~94593~~)
       * *   [Use probes to perform health checks on a container](~~99053~~)
       * *   [Obtain metadata by using environment variables](~~141788~~)
-      * *   [Configure a security context](~~462313~~)
+      * *   [Configure a security context for an elastic container instance or a container](~~462313~~)
       * *   [Configure the NTP service](~~462768~~)
       * **Logging and O\\&M**
       * *   [Use environment variables to configure log collection](~~121973~~)
@@ -2706,8 +2706,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can update only elastic container instances that are in the Pending or Running state. After you call this operation to update an elastic container instance, the instance enters the Updating state.
-      * *   You cannot update elastic container instances that were created before 15:00:00 March 7, 2019.
+      * *   Only elastic container instances that are in the Pending or Running state can be updated. After you call this operation to update an elastic container instance, the instance enters the Updating state.
+      * *   If the RestartPolicy parameter is set to Never for the elastic container instance that you are updating, the containers of the instance may fail. Exercise caution if you want to update the kind of instances.
       *
       * @param request UpdateContainerGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2814,8 +2814,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can update only elastic container instances that are in the Pending or Running state. After you call this operation to update an elastic container instance, the instance enters the Updating state.
-      * *   You cannot update elastic container instances that were created before 15:00:00 March 7, 2019.
+      * *   Only elastic container instances that are in the Pending or Running state can be updated. After you call this operation to update an elastic container instance, the instance enters the Updating state.
+      * *   If the RestartPolicy parameter is set to Never for the elastic container instance that you are updating, the containers of the instance may fail. Exercise caution if you want to update the kind of instances.
       *
       * @param request UpdateContainerGroupRequest
       * @return UpdateContainerGroupResponse

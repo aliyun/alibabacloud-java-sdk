@@ -43,6 +43,9 @@ public class CreateContainerGroupRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The computing power type of the instance.</p>
+     */
     @NameInMap("ComputeCategory")
     public java.util.List<String> computeCategory;
 
@@ -81,6 +84,12 @@ public class CreateContainerGroupRequest extends TeaModel {
     @NameInMap("Cpu")
     public Float cpu;
 
+    /**
+     * <p>The CPU architecture of the instance. Default value: AMD64. Valid values:</p>
+     * <br>
+     * <p>*   AMD64</p>
+     * <p>*   ARM64</p>
+     */
     @NameInMap("CpuArchitecture")
     public String cpuArchitecture;
 
@@ -200,6 +209,9 @@ public class CreateContainerGroupRequest extends TeaModel {
     @NameInMap("FixedIpRetainHour")
     public Integer fixedIpRetainHour;
 
+    @NameInMap("GpuDriverVersion")
+    public String gpuDriverVersion;
+
     /**
      * <p>The alias of the elastic container instance.</p>
      */
@@ -299,9 +311,20 @@ public class CreateContainerGroupRequest extends TeaModel {
     @NameInMap("NtpServer")
     public java.util.List<String> ntpServer;
 
+    /**
+     * <p>The operating system of the elastic container instance. Default value: Linux. Valid values:</p>
+     * <br>
+     * <p>*   Linux</p>
+     * <p>*   Windows</p>
+     * <br>
+     * <p>>  Windows instances are in invitational preview. To use the operating system, submit a ticket.</p>
+     */
     @NameInMap("OsType")
     public String osType;
 
+    /**
+     * <p>The options that you can configure when you enable the overhead reservation feature.</p>
+     */
     @NameInMap("OverheadReservationOption")
     public CreateContainerGroupRequestOverheadReservationOption overheadReservationOption;
 
@@ -714,6 +737,14 @@ public class CreateContainerGroupRequest extends TeaModel {
     }
     public Integer getFixedIpRetainHour() {
         return this.fixedIpRetainHour;
+    }
+
+    public CreateContainerGroupRequest setGpuDriverVersion(String gpuDriverVersion) {
+        this.gpuDriverVersion = gpuDriverVersion;
+        return this;
+    }
+    public String getGpuDriverVersion() {
+        return this.gpuDriverVersion;
     }
 
     public CreateContainerGroupRequest setHostAliase(java.util.List<CreateContainerGroupRequestHostAliase> hostAliase) {
@@ -1756,13 +1787,13 @@ public class CreateContainerGroupRequest extends TeaModel {
         public CreateContainerGroupRequestContainerEnvironmentVarFieldRef fieldRef;
 
         /**
-         * <p>The name of the environment variable. The name must be 1 to 128 characters in length, and can contain letters, digits, and underscores (\_). It cannot start with a digit.``</p>
+         * <p>The name of the environment variable. The name must be 1 to 128 bits in length and can contain letters, digits, and underscores (\_). It cannot start with a digit.``</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the environment variable. The value can be up to 256 characters in length.</p>
+         * <p>The value of the environment variable. The value must be 0 to 256 bits in length.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -1800,7 +1831,7 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     public static class CreateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeader extends TeaModel {
         /**
-         * <p>The key of the custom field in the HTTP GET request header when you use HTTP requests to specify the postStart callback function.</p>
+         * <p>The name of the custom field in the HTTP GET request header when you use HTTP requests to specify the postStart callback function.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -1921,9 +1952,9 @@ public class CreateContainerGroupRequest extends TeaModel {
         /**
          * <p>The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:</p>
          * <br>
-         * <p>*   None: This volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.</p>
+         * <p>*   None: The volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.</p>
          * <p>*   HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume.</p>
-         * <p>*   Bidirectional: The volume mount behaves the same as the HostToCotainer mount. The volume mount receives subsequent mounts that are performed on the volume or the subdirectories of the volume. In addition, all volume mounts created by the container are propagated back to the host and to all containers of all pods that use the same volume.</p>
+         * <p>*   Bidirectional: This value is similar to HostToContainer. The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume. In addition, all volume mounts that are mounted on the container are propagated back to the host and all containers of all pods that use the same volume.</p>
          * <br>
          * <p>Default value: None.</p>
          */
@@ -1931,7 +1962,7 @@ public class CreateContainerGroupRequest extends TeaModel {
         public String mountPropagation;
 
         /**
-         * <p>The name of the volume. This parameter is the same as Name in the Volume object.</p>
+         * <p>The name of the volume. The name of this parameter is the same as the name of the volume that is mounted to the containers.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -2006,34 +2037,34 @@ public class CreateContainerGroupRequest extends TeaModel {
         public CreateContainerGroupRequestContainerSecurityContext securityContext;
 
         /**
-         * <p>The arguments that are passed to the startup command of the container. You can specify a maximum of 10 arguments.</p>
+         * <p>The arguments that are passed to the startup command of the container. You can specify up to 10 arguments.</p>
          */
         @NameInMap("Arg")
         public java.util.List<String> arg;
 
         /**
-         * <p>The commands that you want to run to perform checks in containers.</p>
+         * <p>The commands that you want to run to perform health checks on containers.</p>
          */
         @NameInMap("Command")
         public java.util.List<String> command;
 
         /**
-         * <p>The number of vCPUs that you want to allocate to the container. Unit: cores.</p>
+         * <p>The number of vCPUs that you want to allocate to the container.</p>
          */
         @NameInMap("Cpu")
         public Float cpu;
 
         /**
-         * <p>The environment variable of the container.</p>
+         * <p>The value of the environment variable for the container.</p>
          */
         @NameInMap("EnvironmentVar")
         public java.util.List<CreateContainerGroupRequestContainerEnvironmentVar> environmentVar;
 
         /**
-         * <p>Specifies whether to hide the information about the environment variable when you query the details of an elastic container instance (ECI). Valid values:</p>
+         * <p>Specifies whether to hide the information about environment variables when you query the details of an elastic container instance. Default value: false. Valid values:</p>
          * <br>
-         * <p>*   false (default): does not hide the information about the environment variable.</p>
-         * <p>*   true: does not return the information about the environment variable. If the environment variable contains sensitive information, you can set this parameter to true to improve the security of the information.</p>
+         * <p>*   false</p>
+         * <p>*   true If environment variables contain sensitive information, you can set this parameter to true to improve security of the information.</p>
          */
         @NameInMap("EnvironmentVarHide")
         public Boolean environmentVarHide;
@@ -2053,21 +2084,21 @@ public class CreateContainerGroupRequest extends TeaModel {
         /**
          * <p>The policy that you want to use to pull an image. Valid values:</p>
          * <br>
-         * <p>*   Always: Image pulling is always performed.</p>
-         * <p>*   IfNotPresent: On-premises images are used first. If no on-premises images are available, image pulling is performed.</p>
-         * <p>*   Never: Image pulling is not performed. On-premises images are always used.</p>
+         * <p>*   Always: Each time instances are created, image pulling is performed.</p>
+         * <p>*   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</p>
+         * <p>*   Never: On-premises images are always used. Image pulling is not performed.</p>
          */
         @NameInMap("ImagePullPolicy")
         public String imagePullPolicy;
 
         /**
-         * <p>The commands to be executed in containers when you use the CLI to specify the postStart callback function.</p>
+         * <p>The commands to be executed in containers when you use a CLI to specify the postStart callback function.</p>
          */
         @NameInMap("LifecyclePostStartHandlerExec")
         public java.util.List<String> lifecyclePostStartHandlerExec;
 
         /**
-         * <p>The IP address of the host that receives HTTP GET requests when you use HTTP requests to specify the postStart callback function.</p>
+         * <p>The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify the postStart callback function.</p>
          */
         @NameInMap("LifecyclePostStartHandlerHttpGetHost")
         public String lifecyclePostStartHandlerHttpGetHost;
@@ -2079,13 +2110,13 @@ public class CreateContainerGroupRequest extends TeaModel {
         public java.util.List<CreateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeader> lifecyclePostStartHandlerHttpGetHttpHeader;
 
         /**
-         * <p>The path to which HTTP GET requests are sent when you use HTTP requests to specify the postStart callback function.</p>
+         * <p>The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the postStart callback function.</p>
          */
         @NameInMap("LifecyclePostStartHandlerHttpGetPath")
         public String lifecyclePostStartHandlerHttpGetPath;
 
         /**
-         * <p>The port to which HTTP GET requests are sent when you use HTTP requests to specify the postStart callback function.</p>
+         * <p>The port to which the system sends an HTTP GET request when you use an HTTP request to specify the postStart callback function.</p>
          */
         @NameInMap("LifecyclePostStartHandlerHttpGetPort")
         public Integer lifecyclePostStartHandlerHttpGetPort;
@@ -2100,25 +2131,25 @@ public class CreateContainerGroupRequest extends TeaModel {
         public String lifecyclePostStartHandlerHttpGetScheme;
 
         /**
-         * <p>The port that is detected by TCP sockets when you use TCP sockets to specify the postStart callback function.</p>
+         * <p>The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the postStart callback function.</p>
          */
         @NameInMap("LifecyclePostStartHandlerTcpSocketHost")
         public String lifecyclePostStartHandlerTcpSocketHost;
 
         /**
-         * <p>The port that is detected by TCP sockets when you use TCP sockets to specify the postStart callback function.</p>
+         * <p>The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the postStart callback function.</p>
          */
         @NameInMap("LifecyclePostStartHandlerTcpSocketPort")
         public Integer lifecyclePostStartHandlerTcpSocketPort;
 
         /**
-         * <p>The commands to be executed in containers when you use the CLI to specify the preStop callback function.</p>
+         * <p>The commands to be executed in containers when you use a CLI to specify the preStop callback function.</p>
          */
         @NameInMap("LifecyclePreStopHandlerExec")
         public java.util.List<String> lifecyclePreStopHandlerExec;
 
         /**
-         * <p>The IP address of the host that receives HTTP GET requests when you use HTTP requests to specify the preStop callback function.</p>
+         * <p>The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify the preStop callback function.</p>
          */
         @NameInMap("LifecyclePreStopHandlerHttpGetHost")
         public String lifecyclePreStopHandlerHttpGetHost;
@@ -2130,19 +2161,19 @@ public class CreateContainerGroupRequest extends TeaModel {
         public java.util.List<CreateContainerGroupRequestContainerLifecyclePreStopHandlerHttpGetHttpHeader> lifecyclePreStopHandlerHttpGetHttpHeader;
 
         /**
-         * <p>The path to which HTTP GET requests are sent when you use HTTP requests to specify the preStop callback function.</p>
+         * <p>The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the preSop callback function.</p>
          */
         @NameInMap("LifecyclePreStopHandlerHttpGetPath")
         public String lifecyclePreStopHandlerHttpGetPath;
 
         /**
-         * <p>The port to which HTTP GET requests are sent when you use HTTP requests to specify the preStop callback function.</p>
+         * <p>The port to which the system sends an HTTP GET request for a health check when you use HTTP requests to specify the preStop callback function.</p>
          */
         @NameInMap("LifecyclePreStopHandlerHttpGetPort")
         public Integer lifecyclePreStopHandlerHttpGetPort;
 
         /**
-         * <p>The protocol type of HTTP GET requests when you use HTTP requests to specify the preStop callback function. Valid values:</p>
+         * <p>The protocol type of the HTTP GET request when you use an HTTP request to specify the preStop callback function. Valid values:</p>
          * <br>
          * <p>*   HTTP</p>
          * <p>*   HTTPS</p>
@@ -2151,50 +2182,56 @@ public class CreateContainerGroupRequest extends TeaModel {
         public String lifecyclePreStopHandlerHttpGetScheme;
 
         /**
-         * <p>The host IP address that is detected by TCP sockets when you use TCP sockets to specify the preStop callback function.</p>
+         * <p>The IP address of the host that receives the TCP socket request when you use a TCP socket request to specify the preStop callback function.</p>
          */
         @NameInMap("LifecyclePreStopHandlerTcpSocketHost")
         public String lifecyclePreStopHandlerTcpSocketHost;
 
         /**
-         * <p>The port that is detected by TCP sockets when you use TCP sockets to specify the preStop callback function.</p>
+         * <p>The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the preStop callback function.</p>
          */
         @NameInMap("LifecyclePreStopHandlerTcpSocketPort")
         public Integer lifecyclePreStopHandlerTcpSocketPort;
 
         /**
-         * <p>The memory size of the container. Unit: GiB</p>
+         * <p>The memory size that you want to allocate to the container. Unit: GiB</p>
          */
         @NameInMap("Memory")
         public Float memory;
 
         /**
-         * <p>The container name.</p>
+         * <p>The name of the container.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The port to which HTTP GET requests are sent when you use HTTP requests to perform health checks.</p>
+         * <p>The port to which the system sends an HTTP GET request for a health check when you use HTTP requests to perform health checks.</p>
          */
         @NameInMap("Port")
         public java.util.List<CreateContainerGroupRequestContainerPort> port;
 
+        /**
+         * <p>The user group that runs the container.</p>
+         */
         @NameInMap("SecurityContextRunAsGroup")
         public Long securityContextRunAsGroup;
 
+        /**
+         * <p>Specifies whether to run the container as a non-root user.</p>
+         */
         @NameInMap("SecurityContextRunAsNonRoot")
         public Boolean securityContextRunAsNonRoot;
 
         /**
-         * <p>Specifies whether the container allocates a buffer for standard input in the container runtime. If you do not specify this parameter, an end-of-file (EOF) error occurs when standard input in the container is read. Default value: false.</p>
+         * <p>Specifies whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.</p>
          */
         @NameInMap("Stdin")
         public Boolean stdin;
 
         /**
-         * <p>Specifies whether to keep the standard input stream open in the container runtime across multiple attach sessions if Stdin is set to true.\</p>
-         * <p>If StdinOnce is set to true, the standard input stream is opened when the container is started, remains empty until the first client is attached to standard input, and then remains open and receives data until the client is disconnected. When the client is disconnected, the standard input stream is closed and remains closed until the container is restarted.</p>
+         * <p>Specifies whether standard input streams are disconnected from multiple sessions after a client is disconnected.\</p>
+         * <p>If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, standard input streams are also disconnected, and remain disconnected until the container restarts.</p>
          */
         @NameInMap("StdinOnce")
         public Boolean stdinOnce;
@@ -2206,7 +2243,7 @@ public class CreateContainerGroupRequest extends TeaModel {
         public String terminationMessagePath;
 
         /**
-         * <p>The message notification policy. This parameter is empty by default. You can use only Message Service (MNS) queues to configure notifications.</p>
+         * <p>The message notification policy. This parameter is empty by default. Only Message Service (MNS) queue message notifications can be sent.</p>
          */
         @NameInMap("TerminationMessagePolicy")
         public String terminationMessagePolicy;
@@ -2214,13 +2251,13 @@ public class CreateContainerGroupRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable interaction. Default value: false.</p>
          * <br>
-         * <p>If you set Command to /bin/bash, you must set this parameter to true.</p>
+         * <p>If the command is a /bin/bash command, set the value to true.</p>
          */
         @NameInMap("Tty")
         public Boolean tty;
 
         /**
-         * <p>The information about the volume that you want to mount on the container.</p>
+         * <p>The information about the volume that you want to mount to the container.</p>
          */
         @NameInMap("VolumeMount")
         public java.util.List<CreateContainerGroupRequestContainerVolumeMount> volumeMount;
@@ -3105,6 +3142,9 @@ public class CreateContainerGroupRequest extends TeaModel {
     }
 
     public static class CreateContainerGroupRequestOverheadReservationOption extends TeaModel {
+        /**
+         * <p>Specify whether to enable the overhead reservation feature. Default: false. Valid values: true and false. After you enable the overhead reservation feature, the system automatically adds the overhead to the specification of the elastic container instance, and then adjusts the specification of the instance upward to the most approximate specification. You are charged based on the new specification after the adjustment.</p>
+         */
         @NameInMap("EnableOverheadReservation")
         public Boolean enableOverheadReservation;
 
