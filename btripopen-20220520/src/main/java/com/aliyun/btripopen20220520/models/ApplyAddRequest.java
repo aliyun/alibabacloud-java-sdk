@@ -541,11 +541,23 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("flight_cabins")
         public String flightCabins;
 
+        @NameInMap("flight_intl_rule_code")
+        public Long flightIntlRuleCode;
+
+        @NameInMap("flight_rule_code")
+        public Long flightRuleCode;
+
         @NameInMap("hotel_citys")
         public java.util.List<ApplyAddRequestExternalTravelerStandardHotelCitys> hotelCitys;
 
         @NameInMap("hotel_intl_citys")
         public java.util.List<ApplyAddRequestExternalTravelerStandardHotelIntlCitys> hotelIntlCitys;
+
+        @NameInMap("hotel_intl_rule_code")
+        public Long hotelIntlRuleCode;
+
+        @NameInMap("hotel_rule_code")
+        public Long hotelRuleCode;
 
         @NameInMap("international_flight_cabins")
         public String internationalFlightCabins;
@@ -555,6 +567,9 @@ public class ApplyAddRequest extends TeaModel {
 
         @NameInMap("reserve_type")
         public Integer reserveType;
+
+        @NameInMap("train_rule_code")
+        public Long trainRuleCode;
 
         @NameInMap("train_seats")
         public String trainSeats;
@@ -596,6 +611,22 @@ public class ApplyAddRequest extends TeaModel {
             return this.flightCabins;
         }
 
+        public ApplyAddRequestExternalTravelerStandard setFlightIntlRuleCode(Long flightIntlRuleCode) {
+            this.flightIntlRuleCode = flightIntlRuleCode;
+            return this;
+        }
+        public Long getFlightIntlRuleCode() {
+            return this.flightIntlRuleCode;
+        }
+
+        public ApplyAddRequestExternalTravelerStandard setFlightRuleCode(Long flightRuleCode) {
+            this.flightRuleCode = flightRuleCode;
+            return this;
+        }
+        public Long getFlightRuleCode() {
+            return this.flightRuleCode;
+        }
+
         public ApplyAddRequestExternalTravelerStandard setHotelCitys(java.util.List<ApplyAddRequestExternalTravelerStandardHotelCitys> hotelCitys) {
             this.hotelCitys = hotelCitys;
             return this;
@@ -610,6 +641,22 @@ public class ApplyAddRequest extends TeaModel {
         }
         public java.util.List<ApplyAddRequestExternalTravelerStandardHotelIntlCitys> getHotelIntlCitys() {
             return this.hotelIntlCitys;
+        }
+
+        public ApplyAddRequestExternalTravelerStandard setHotelIntlRuleCode(Long hotelIntlRuleCode) {
+            this.hotelIntlRuleCode = hotelIntlRuleCode;
+            return this;
+        }
+        public Long getHotelIntlRuleCode() {
+            return this.hotelIntlRuleCode;
+        }
+
+        public ApplyAddRequestExternalTravelerStandard setHotelRuleCode(Long hotelRuleCode) {
+            this.hotelRuleCode = hotelRuleCode;
+            return this;
+        }
+        public Long getHotelRuleCode() {
+            return this.hotelRuleCode;
         }
 
         public ApplyAddRequestExternalTravelerStandard setInternationalFlightCabins(String internationalFlightCabins) {
@@ -634,6 +681,14 @@ public class ApplyAddRequest extends TeaModel {
         }
         public Integer getReserveType() {
             return this.reserveType;
+        }
+
+        public ApplyAddRequestExternalTravelerStandard setTrainRuleCode(Long trainRuleCode) {
+            this.trainRuleCode = trainRuleCode;
+            return this;
+        }
+        public Long getTrainRuleCode() {
+            return this.trainRuleCode;
         }
 
         public ApplyAddRequestExternalTravelerStandard setTrainSeats(String trainSeats) {
@@ -1229,11 +1284,23 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("flight_cabins")
         public String flightCabins;
 
+        @NameInMap("flight_intl_rule_code")
+        public Long flightIntlRuleCode;
+
+        @NameInMap("flight_rule_code")
+        public Long flightRuleCode;
+
         @NameInMap("hotel_citys")
         public java.util.List<ApplyAddRequestTravelerStandardHotelCitys> hotelCitys;
 
         @NameInMap("hotel_intl_citys")
         public java.util.List<ApplyAddRequestTravelerStandardHotelIntlCitys> hotelIntlCitys;
+
+        @NameInMap("hotel_intl_rule_code")
+        public Long hotelIntlRuleCode;
+
+        @NameInMap("hotel_rule_code")
+        public Long hotelRuleCode;
 
         @NameInMap("international_flight_cabins")
         public String internationalFlightCabins;
@@ -1243,6 +1310,9 @@ public class ApplyAddRequest extends TeaModel {
 
         @NameInMap("reserve_type")
         public Integer reserveType;
+
+        @NameInMap("train_rule_code")
+        public Long trainRuleCode;
 
         @NameInMap("train_seats")
         public String trainSeats;
@@ -1295,6 +1365,22 @@ public class ApplyAddRequest extends TeaModel {
             return this.flightCabins;
         }
 
+        public ApplyAddRequestTravelerStandard setFlightIntlRuleCode(Long flightIntlRuleCode) {
+            this.flightIntlRuleCode = flightIntlRuleCode;
+            return this;
+        }
+        public Long getFlightIntlRuleCode() {
+            return this.flightIntlRuleCode;
+        }
+
+        public ApplyAddRequestTravelerStandard setFlightRuleCode(Long flightRuleCode) {
+            this.flightRuleCode = flightRuleCode;
+            return this;
+        }
+        public Long getFlightRuleCode() {
+            return this.flightRuleCode;
+        }
+
         public ApplyAddRequestTravelerStandard setHotelCitys(java.util.List<ApplyAddRequestTravelerStandardHotelCitys> hotelCitys) {
             this.hotelCitys = hotelCitys;
             return this;
@@ -1309,6 +1395,22 @@ public class ApplyAddRequest extends TeaModel {
         }
         public java.util.List<ApplyAddRequestTravelerStandardHotelIntlCitys> getHotelIntlCitys() {
             return this.hotelIntlCitys;
+        }
+
+        public ApplyAddRequestTravelerStandard setHotelIntlRuleCode(Long hotelIntlRuleCode) {
+            this.hotelIntlRuleCode = hotelIntlRuleCode;
+            return this;
+        }
+        public Long getHotelIntlRuleCode() {
+            return this.hotelIntlRuleCode;
+        }
+
+        public ApplyAddRequestTravelerStandard setHotelRuleCode(Long hotelRuleCode) {
+            this.hotelRuleCode = hotelRuleCode;
+            return this;
+        }
+        public Long getHotelRuleCode() {
+            return this.hotelRuleCode;
         }
 
         public ApplyAddRequestTravelerStandard setInternationalFlightCabins(String internationalFlightCabins) {
@@ -1333,6 +1435,14 @@ public class ApplyAddRequest extends TeaModel {
         }
         public Integer getReserveType() {
             return this.reserveType;
+        }
+
+        public ApplyAddRequestTravelerStandard setTrainRuleCode(Long trainRuleCode) {
+            this.trainRuleCode = trainRuleCode;
+            return this;
+        }
+        public Long getTrainRuleCode() {
+            return this.trainRuleCode;
         }
 
         public ApplyAddRequestTravelerStandard setTrainSeats(String trainSeats) {
