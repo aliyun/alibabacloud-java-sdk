@@ -4,6 +4,12 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class GetChangeOrderMetricRequest extends TeaModel {
+    @NameInMap("AppSource")
+    public String appSource;
+
+    @NameInMap("CpuStrategy")
+    public String cpuStrategy;
+
     @NameInMap("CreateTime")
     public String createTime;
 
@@ -19,6 +25,22 @@ public class GetChangeOrderMetricRequest extends TeaModel {
     public static GetChangeOrderMetricRequest build(java.util.Map<String, ?> map) throws Exception {
         GetChangeOrderMetricRequest self = new GetChangeOrderMetricRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetChangeOrderMetricRequest setAppSource(String appSource) {
+        this.appSource = appSource;
+        return this;
+    }
+    public String getAppSource() {
+        return this.appSource;
+    }
+
+    public GetChangeOrderMetricRequest setCpuStrategy(String cpuStrategy) {
+        this.cpuStrategy = cpuStrategy;
+        return this;
+    }
+    public String getCpuStrategy() {
+        return this.cpuStrategy;
     }
 
     public GetChangeOrderMetricRequest setCreateTime(String createTime) {

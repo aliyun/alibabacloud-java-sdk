@@ -217,6 +217,9 @@ public class BuildPipeline extends TeaModel {
         @NameInMap("CommitUrl")
         public String commitUrl;
 
+        @NameInMap("OrganizationId")
+        public String organizationId;
+
         @NameInMap("Provider")
         public String provider;
 
@@ -261,6 +264,14 @@ public class BuildPipeline extends TeaModel {
         }
         public String getCommitUrl() {
             return this.commitUrl;
+        }
+
+        public BuildPipelineCodeConfig setOrganizationId(String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+        public String getOrganizationId() {
+            return this.organizationId;
         }
 
         public BuildPipelineCodeConfig setProvider(String provider) {
@@ -438,6 +449,9 @@ public class BuildPipeline extends TeaModel {
         @NameInMap("BranchName")
         public String branchName;
 
+        @NameInMap("TagName")
+        public String tagName;
+
         @NameInMap("Type")
         public String type;
 
@@ -452,6 +466,14 @@ public class BuildPipeline extends TeaModel {
         }
         public String getBranchName() {
             return this.branchName;
+        }
+
+        public BuildPipelineTriggerConfig setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
         }
 
         public BuildPipelineTriggerConfig setType(String type) {

@@ -4,6 +4,12 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class GetWarningEventMetricRequest extends TeaModel {
+    @NameInMap("AppSource")
+    public String appSource;
+
+    @NameInMap("CpuStrategy")
+    public String cpuStrategy;
+
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -19,6 +25,22 @@ public class GetWarningEventMetricRequest extends TeaModel {
     public static GetWarningEventMetricRequest build(java.util.Map<String, ?> map) throws Exception {
         GetWarningEventMetricRequest self = new GetWarningEventMetricRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetWarningEventMetricRequest setAppSource(String appSource) {
+        this.appSource = appSource;
+        return this;
+    }
+    public String getAppSource() {
+        return this.appSource;
+    }
+
+    public GetWarningEventMetricRequest setCpuStrategy(String cpuStrategy) {
+        this.cpuStrategy = cpuStrategy;
+        return this;
+    }
+    public String getCpuStrategy() {
+        return this.cpuStrategy;
     }
 
     public GetWarningEventMetricRequest setEndTime(Long endTime) {

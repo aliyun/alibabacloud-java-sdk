@@ -16,6 +16,9 @@ public class BatchStopApplicationsRequest extends TeaModel {
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    @NameInMap("Version")
+    public String version;
+
     public static BatchStopApplicationsRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchStopApplicationsRequest self = new BatchStopApplicationsRequest();
         return TeaModel.build(map, self);
@@ -35,6 +38,14 @@ public class BatchStopApplicationsRequest extends TeaModel {
     }
     public String getNamespaceId() {
         return this.namespaceId;
+    }
+
+    public BatchStopApplicationsRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

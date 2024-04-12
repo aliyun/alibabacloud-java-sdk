@@ -99,6 +99,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NamespaceId", request.namespaceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            query.put("Version", request.version);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -132,6 +136,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
             query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            query.put("Version", request.version);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2749,6 +2757,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetArmsTopNMetricResponse getArmsTopNMetricWithOptions(GetArmsTopNMetricRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appSource)) {
+            query.put("AppSource", request.appSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuStrategy)) {
+            query.put("CpuStrategy", request.cpuStrategy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
         }
@@ -2796,6 +2812,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAvailabilityMetricResponse getAvailabilityMetricWithOptions(GetAvailabilityMetricRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appSource)) {
+            query.put("AppSource", request.appSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuStrategy)) {
+            query.put("CpuStrategy", request.cpuStrategy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
             query.put("Limit", request.limit);
         }
@@ -2831,6 +2855,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetChangeOrderMetricResponse getChangeOrderMetricWithOptions(GetChangeOrderMetricRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appSource)) {
+            query.put("AppSource", request.appSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuStrategy)) {
+            query.put("CpuStrategy", request.cpuStrategy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.createTime)) {
             query.put("CreateTime", request.createTime);
         }
@@ -2874,6 +2906,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetScaleAppMetricResponse getScaleAppMetricWithOptions(GetScaleAppMetricRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appSource)) {
+            query.put("AppSource", request.appSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuStrategy)) {
+            query.put("CpuStrategy", request.cpuStrategy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
             query.put("Limit", request.limit);
         }
@@ -2909,6 +2949,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetWarningEventMetricResponse getWarningEventMetricWithOptions(GetWarningEventMetricRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appSource)) {
+            query.put("AppSource", request.appSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuStrategy)) {
+            query.put("CpuStrategy", request.cpuStrategy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
         }
