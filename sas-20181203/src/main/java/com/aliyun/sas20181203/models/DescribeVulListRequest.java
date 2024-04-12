@@ -41,6 +41,9 @@ public class DescribeVulListRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("Ids")
+    public String ids;
+
     /**
      * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
      * <br>
@@ -189,6 +192,14 @@ public class DescribeVulListRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DescribeVulListRequest setIds(String ids) {
+        this.ids = ids;
+        return this;
+    }
+    public String getIds() {
+        return this.ids;
     }
 
     public DescribeVulListRequest setLang(String lang) {
