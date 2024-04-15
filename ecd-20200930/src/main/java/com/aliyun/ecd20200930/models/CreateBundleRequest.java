@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateBundleRequest extends TeaModel {
     /**
-     * <p>The name of the desktop template.</p>
+     * <p>The name of the cloud computer template.</p>
      */
     @NameInMap("BundleName")
     public String bundleName;
 
     /**
-     * <p>The description of the desktop template.</p>
+     * <p>The description of the cloud computer template.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The type of the cloud desktop. You can call the DescribeBundles operation to query the cloud desktop templates and obtain the supported desktop type from the value of the DesktopType parameter.</p>
+     * <p>The instance type of the cloud computers. You can call the [DescribeBundles](~~436974~~) operation to query cloud computer templates and obtain the instance types supported by the cloud computers from the `DesktopType` response parameter.</p>
      * <br>
-     * <p>>  You can select GPU-accelerated desktop types only when you use GPU-accelerated images.</p>
+     * <p>>  If you want the template to use a non-GPU-accelerated image, you can only select a non-GPU-accelerated instance type. If you want the template to use a GPU-accelerated image, you can only select a GPU-accelerated instance type.</p>
      */
     @NameInMap("DesktopType")
     public String desktopType;
@@ -31,56 +31,111 @@ public class CreateBundleRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The language of the OS. This parameter is available only for system images. Valid values:</p>
+     * <p>The OS language. This parameter is available only for system images. Valid values:</p>
      * <br>
      * <p>*   zh-CN: Simplified Chinese</p>
      * <p>*   zh-HK: Traditional Chinese (Hong Kong)</p>
-     * <p>*   en-US: English</p>
+     * <p>*   en-US: American English</p>
      * <p>*   ja-JP: Japanese</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The performance level (PL) of the system disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the system disk. Valid values:</p>
+     * <p>The performance level (PL) of the system disk. When the cloud computer instance type that is specified by the DesktopType parameter is set to a graphical instance type or instance type with a high clock speed, you can set the performance level of the disks. For more information about the differences among disks at different PLs, see [Enhanced SSDs](~~122389~~).</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   PL1</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      * <br>
      * <p>*   PL0</p>
-     * <p>*   PL1</p>
-     * <p>*   PL2</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
      * <p>*   PL3</p>
      * <br>
-     * <p>For more information about the differences between disks at different PLs, see [Enhanced SSDs](~~122389~~).</p>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   PL2</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("RootDiskPerformanceLevel")
     public String rootDiskPerformanceLevel;
 
     /**
-     * <p>The size of the system disk. Unit: GiB.</p>
-     * <br>
-     * <p>The value of this parameter must be consistent with the system disk size supported by the cloud desktop type. For more information, see [Cloud desktop types](~~188609~~).</p>
+     * <p>The size of the system disk. Unit: GiB. The value of this parameter must be consistent with the system disk size supported by the cloud computer instance type. For more information, see [Overview](~~188609~~).</p>
      */
     @NameInMap("RootDiskSizeGib")
     public Integer rootDiskSizeGib;
 
     /**
-     * <p>The PL of the data disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the data disk. Valid values:</p>
+     * <p>The PL of the data disk. When the cloud computer instance type that is specified by the DesktopType parameter is set to a graphical instance type or instance type with a high clock speed, you can set the performance level of the disks. For more information about the differences among disks at different PLs, see [Enhanced SSDs](~~122389~~).</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   PL1</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      * <br>
      * <p>*   PL0</p>
-     * <p>*   PL1</p>
-     * <p>*   PL2</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
      * <p>*   PL3</p>
      * <br>
-     * <p>For more information about the differences between disks at different PLs, see [Enhanced SSDs](~~122389~~).</p>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   PL2</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("UserDiskPerformanceLevel")
     public String userDiskPerformanceLevel;
 
+    /**
+     * <p>The data disk sizes. You can configure only one data disk.</p>
+     */
     @NameInMap("UserDiskSizeGib")
     public java.util.List<Integer> userDiskSizeGib;
 

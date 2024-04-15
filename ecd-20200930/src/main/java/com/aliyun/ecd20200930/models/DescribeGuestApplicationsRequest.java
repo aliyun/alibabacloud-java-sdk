@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeGuestApplicationsRequest extends TeaModel {
     /**
-     * <p>The cloud desktop ID.</p>
+     * <p>The ID of the cloud computer.</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
-     * <p>The end user ID.</p>
+     * <p>The ID of the end user.</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;

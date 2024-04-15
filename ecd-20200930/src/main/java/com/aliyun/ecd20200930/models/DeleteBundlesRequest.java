@@ -4,11 +4,14 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteBundlesRequest extends TeaModel {
+    /**
+     * <p>The IDs of the cloud computer templates. You can specify 1 to 100 IDs.</p>
+     */
     @NameInMap("BundleId")
     public java.util.List<String> bundleId;
 
     /**
-     * <p>DeleteBundles</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

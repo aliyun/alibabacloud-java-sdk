@@ -24,30 +24,34 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the Cloud Enterprise Network (CEN) instance belongs.</p>
+     * <p>The Alibaba Cloud account that creates the Cloud Enterprise Network (CEN) instance.</p>
      * <br>
-     * <p>*   If you do not specify CenId or the CEN instance that is specified by CenId belongs to the current Alibaba Cloud account, leave this parameter empty.</p>
-     * <p>*   If you specify CenId and the CEN instance that is specified by CenId belongs to another Alibaba Cloud account, enter the ID of the Alibaba Cloud account.</p>
+     * <p>*   If you do not specify the CenId parameter, or the CEN instance that is specified by the CenId parameter belongs to the current Alibaba Cloud account, skip this parameter.</p>
+     * <p>*   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the Alibaba Cloud account.</p>
      */
     @NameInMap("CenOwnerId")
     public Long cenOwnerId;
 
     /**
-     * <p>The IPv4 CIDR block in the secure office network of the workspace. The IPv4 CIDR block that the system uses to create a virtual private cloud (VPC) for the workspace. We recommend that you set the IPv4 CIDR block to 10.0.0.0/12, 172.16.0.0/12, 192.168.0.0/16, or a subnet of these CIDR blocks. If you set the IPv4 CIDR block to 10.0.0.0/12 or 172.16.0.0/12, the mask is 1224 bits in length. If you set the IPv4 CIDR block to 192.168.0.0/16, the mask is 1624 bits in length.</p>
+     * <p>The IPv4 CIDR block of the virtual private cloud (VPC) that your office network uses. The system creates a VPC for your office network based on the IPv4 CIDR block. We recommend that you set this parameter to one of the following CIDR blocks and their subnets:</p>
+     * <br>
+     * <p>*   `10.0.0.0/12` (subnet mask range: 12 to 24 bits)</p>
+     * <p>*   `172.16.0.0/12` (subnet mask range: 12 to 24 bits)</p>
+     * <p>*   `192.168.0.0/16` (subnet mask range: 16 to 24 bits)</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
     /**
-     * <p>The connection method that is used to connect clients to cloud desktops. Valid values:</p>
+     * <p>The method to connect to cloud computers from WUYING clients.</p>
      * <br>
-     * <p>*   Internet: connects clients to cloud desktops only over the Internet.</p>
-     * <p>*   VPC: connects clients to cloud desktops only over a VPC.</p>
-     * <p>*   Any: connects clients to cloud desktops over the Internet or a VPC. You can select a connection method based on your business requirements when you connect to your cloud desktop from a client.</p>
+     * <p>>  The VPC connection depends on Alibaba Cloud PrivateLink. You can use PrivateLink for free. When you set this parameter to `VPC` or `Any`, PrivateLink is automatically activated.</p>
      * <br>
-     * <p>Default value: Internet</p>
+     * <p>Valid values:</p>
      * <br>
-     * <p>> VPC connections are established by using Alibaba Cloud PrivateLink. You can use PrivateLink free of charge. If you set this parameter to VPC or Any, PrivateLink is automatically activated.</p>
+     * <p>- Internet: connects clients to cloud desktops only over the Internet. [Default]</p>
+     * <p>- VPC: connects clients to cloud desktops only over a VPC.</p>
+     * <p>- Any: connects clients to cloud desktops over the Internet or a VPC. You can select a connection method based on your business requirements when you connect to your cloud desktop from a client.</p>
      */
     @NameInMap("DesktopAccessType")
     public String desktopAccessType;
@@ -79,7 +83,27 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public String domainUserName;
 
     /**
-     * <p>Specifies whether to grant the permissions of the local administrator to end users of the cloud desktops that belong to the workspace. Default value: `true`</p>
+     * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   <!-- --></p>
+     * <br>
+     * <p>    true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    (default)</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   <!-- --></p>
+     * <br>
+     * <p>    false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("EnableAdminAccess")
     public Boolean enableAdminAccess;
@@ -97,29 +121,54 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public Boolean mfaEnabled;
 
     /**
-     * <p>The name of the workspace. The name must be 2 to 255 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).\</p>
-     * <p>Default value: null</p>
+     * <p>The office network name. The name must be 2 to 255 characters in length. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.\</p>
+     * <p>This parameter is empty by default.</p>
      */
     @NameInMap("OfficeSiteName")
     public String officeSiteName;
 
     /**
-     * <p>The type of the protocol. Set the value to ASP.</p>
+     * <p>The protocol type.</p>
+     * <br>
+     * <p>Valid value:</p>
+     * <br>
+     * <p>*   Adaptive Streaming Protocol (ASP)</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
 
     /**
-     * <p>The region ID of the workspace.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The type of the AD connector.</p>
+     * <p>The AD connector type.</p>
+     * <br>
+     * <p>Valid values:</p>
      * <br>
      * <p>*   1: General</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
      * <p>*   2: Advanced</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("Specification")
     public Long specification;
@@ -137,7 +186,7 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     public String subDomainName;
 
     /**
-     * <p>The verification code. If the CEN instance that is specified by CenId belongs to another Alibaba Cloud account, you must call the SendVerifyCode operation to obtain the verification code.</p>
+     * <p>The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the [SendVerifyCode](~~436847~~) operation to obtain the verification code.</p>
      */
     @NameInMap("VerifyCode")
     public String verifyCode;

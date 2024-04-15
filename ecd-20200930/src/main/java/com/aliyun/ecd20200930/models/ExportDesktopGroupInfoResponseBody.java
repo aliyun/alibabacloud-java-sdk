@@ -11,7 +11,18 @@ public class ExportDesktopGroupInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The download URL of the exported file that contains the monitoring data of sessions in the desktop group.</p>
+     * <p>The URL from which you can download the exported cloud computer pools. The details of the cloud computer pools include:</p>
+     * <br>
+     * <p>*   IDs and names of the cloud computer pools</p>
+     * <p>*   IDs and names of the office networks</p>
+     * <p>*   Cloud computer pool templates</p>
+     * <p>*   Number of CPU cores and memory size</p>
+     * <p>*   System disks and data disks</p>
+     * <p>*   Names of security policies</p>
+     * <p>*   Number of current authorized users</p>
+     * <p>*   Billing methods</p>
+     * <p>*   The time when the cloud computer pools were created</p>
+     * <p>*   The time when the cloud computer pools expire</p>
      */
     @NameInMap("Url")
     public String url;

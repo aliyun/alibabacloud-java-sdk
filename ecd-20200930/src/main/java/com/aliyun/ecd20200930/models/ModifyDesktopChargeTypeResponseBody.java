@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDesktopChargeTypeResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the desktop groups. If multiple cloud desktops are created at a time, multiple cloud desktop IDs are returned.</p>
+     * <p>The IDs of the cloud computers.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;

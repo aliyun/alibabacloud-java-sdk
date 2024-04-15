@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetConnectionTicketRequest extends TeaModel {
     /**
-     * <p>The command that you want to run to configure a custom application in user mode. After you obtain the credentials, the application automatically starts.</p>
+     * <p>The command that you want to run to configure a custom application in user mode. After you obtain the credential, the application is automatically started. Parameter description in the command:</p>
      * <br>
-     * <p>*   appPath: the path of the application startup file. Example: C:\\\Program Files (x86)\\\000\\\000.exe. Use double slashes as delimiters.</p>
-     * <p>*   appParameter: the startup parameters of the application. The value must be of the String type. Separate multiple parameters with spaces. Example: meetingid 000 meetingname aaa.</p>
+     * <p>*   appPath: the path of the application startup file. Example: `"C:\\Program Files (x86)\\000\\000.exe"`. Use double slashes (\\\) as the delimiter. Type of the parameter value: string.</p>
+     * <p>*   appParameter: the startup arguments of the application. Example: `"meetingid 000 meetingname aaa"`. Separate multiple arguments with spaces. Type of the parameter value: string.</p>
      */
     @NameInMap("CommandContent")
     public String commandContent;
 
     /**
-     * <p>The ID of the cloud desktop.</p>
+     * <p>The ID of the cloud computer for which you want to generate a connection credential. This parameter is required.</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
-     * <p>The ID of the end user.</p>
+     * <p>The ID of the end user of the cloud computer. The end user must be the current end user of the cloud computer.</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
@@ -29,13 +29,13 @@ public class GetConnectionTicketRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The password for the username.</p>
+     * <p>The password of the current end user of the cloud computer.</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
-     * <p>The region ID of the cloud desktop.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -47,7 +47,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the desktop connection task.</p>
+     * <p>The ID of the cloud computer connection task.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

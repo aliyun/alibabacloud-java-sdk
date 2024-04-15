@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeUsersPasswordRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud desktop.</p>
+     * <p>The ID of the cloud computer.</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

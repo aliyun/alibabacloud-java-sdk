@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class RemoveUserFromDesktopGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the desktop group.</p>
+     * <p>The ID of the cloud computer pool for which you want to remove the authorized users.</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     /**
-     * <p>The IDs of the desktop groups.</p>
+     * <p>The IDs of cloud computer pools.</p>
      */
     @NameInMap("DesktopGroupIds")
     public java.util.List<String> desktopGroupIds;
 
     /**
-     * <p>The authorized user to be removed.</p>
+     * <p>The IDs of the authorized users that you want to remove.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

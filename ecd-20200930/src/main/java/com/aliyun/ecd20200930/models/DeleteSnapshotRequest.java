@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteSnapshotRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The IDs of the snapshots. You can specify 1 to 100 IDs of snapshots.</p>
+     * <p>The snapshot IDs. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("SnapshotId")
     public java.util.List<String> snapshotId;

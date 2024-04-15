@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CancelCopyImageRequest extends TeaModel {
     /**
-     * <p>The ID of the image that is being copied.</p>
+     * <p>The ID of the new image in the destination region.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region to which the image is copied.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUsersInGroupResponseBody extends TeaModel {
     /**
-     * <p>Details about the end users.</p>
+     * <p>The list of authorized users.</p>
      */
     @NameInMap("EndUsers")
     public java.util.List<DescribeUsersInGroupResponseBodyEndUsers> endUsers;
@@ -17,7 +17,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of authorized users that are connecting to cloud desktops.</p>
+     * <p>The total number of authorized users that is connected to cloud computers in the cloud computer pool.</p>
      */
     @NameInMap("OnlineUsersCount")
     public Integer onlineUsersCount;
@@ -29,7 +29,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of authorized users of the desktop group.</p>
+     * <p>The total number of authorized users of the cloud computer pool.</p>
      */
     @NameInMap("UsersCount")
     public Integer usersCount;
@@ -153,19 +153,24 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
 
     public static class DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels extends TeaModel {
         /**
-         * <p>The ID of the property.</p>
+         * <p>The property ID.</p>
          */
         @NameInMap("PropertyId")
         public Long propertyId;
 
         /**
-         * <p>The name of the property.</p>
+         * <p>The property name.</p>
          */
         @NameInMap("PropertyKey")
         public String propertyKey;
 
         /**
-         * <p>The type of the property.</p>
+         * <p>The property type.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   1: system property</p>
+         * <p>*   2: custom property</p>
          */
         @NameInMap("PropertyType")
         public Integer propertyType;
@@ -177,13 +182,13 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         public java.util.List<DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModelsPropertyValues> propertyValues;
 
         /**
-         * <p>The ID of the end user.</p>
+         * <p>The user ID.</p>
          */
         @NameInMap("UserId")
         public Long userId;
 
         /**
-         * <p>The name of the end user.</p>
+         * <p>The username.</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -245,19 +250,24 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
 
     public static class DescribeUsersInGroupResponseBodyEndUsers extends TeaModel {
         /**
-         * <p>The status of the desktop connection for the end user.</p>
+         * <p>The connection status.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   0: disconnected</p>
+         * <p>*   1: connecting</p>
          */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
         /**
-         * <p>The ID of the cloud desktop.</p>
+         * <p>The ID of the cloud computer.</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
-         * <p>The name of the cloud desktop.</p>
+         * <p>The name of the cloud computer.</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
@@ -269,37 +279,42 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The email address of the end user.</p>
+         * <p>The email address of the authorized user.</p>
          */
         @NameInMap("EndUserEmail")
         public String endUserEmail;
 
         /**
-         * <p>The name of the end user.</p>
+         * <p>The ID of the authorized user.</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
-         * <p>The name of the end user.</p>
+         * <p>The username of the authorized user.</p>
          */
         @NameInMap("EndUserName")
         public String endUserName;
 
         /**
-         * <p>The mobile number of the end user.</p>
+         * <p>The mobile number of the authorized user.</p>
          */
         @NameInMap("EndUserPhone")
         public String endUserPhone;
 
         /**
-         * <p>The remarks of the end user.</p>
+         * <p>The remarks.</p>
          */
         @NameInMap("EndUserRemark")
         public String endUserRemark;
 
         /**
-         * <p>The account type of the end user.</p>
+         * <p>The user account type.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   SIMPLE: convenience account</p>
+         * <p>*   AD_CONNECTOR: enterprise Active Directory (AD) account</p>
          */
         @NameInMap("EndUserType")
         public String endUserType;
@@ -311,13 +326,13 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         public DescribeUsersInGroupResponseBodyEndUsersExternalInfo externalInfo;
 
         /**
-         * <p>The ID of the desktop of the end user.</p>
+         * <p>The ID of the cloud computer that is used by the user.</p>
          */
         @NameInMap("UserDesktopId")
         public String userDesktopId;
 
         /**
-         * <p>Details about the seats of end users.</p>
+         * <p>Details about the seats of users.</p>
          */
         @NameInMap("UserSetPropertiesModels")
         public java.util.List<DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels> userSetPropertiesModels;

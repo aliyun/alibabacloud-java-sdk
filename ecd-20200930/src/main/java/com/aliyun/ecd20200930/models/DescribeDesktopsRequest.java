@@ -99,10 +99,10 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String managementFlag;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
-     * <p>*   Maximum value: 100.</p>
-     * <p>*   Default value: 10.</p>
+     * <p>*   Maximum value: 100</p>
+     * <p>*   Default value: 10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;

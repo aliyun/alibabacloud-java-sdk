@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDesktopsResponseBody extends TeaModel {
     /**
-     * <p>If multiple cloud desktops are created in a call, the IDs of the cloud desktops are returned.</p>
+     * <p>The IDs of the cloud computers that are created. If multiple cloud computers are created, multiple IDs are returned.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;

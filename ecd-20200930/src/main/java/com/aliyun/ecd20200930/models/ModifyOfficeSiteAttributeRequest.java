@@ -5,51 +5,57 @@ import com.aliyun.tea.*;
 
 public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     /**
-     * <p>The method that you want to use to connect the Alibaba Cloud Workspace client to cloud desktops. Valid values:</p>
+     * <p>The method to connect to cloud computers from WUYING clients.</p>
      * <br>
-     * <p>*   INTERNET: connects the client to cloud desktops only over the Internet.</p>
-     * <p>*   VPC: connects the client to cloud desktops only over a VPC.</p>
-     * <p>*   Any: connects clients to cloud desktops over the Internet or a VPC. You can select a connection method based on your business requirements when you connect to a cloud desktop from the client.</p>
+     * <p>>  VPC connection relies on the Alibaba Cloud PrivateLink service. You can use PrivateLink for free. When you set this parameter to `VPC` or `Any`, the system automatically activates PrivateLink.</p>
      * <br>
-     * <p>Default value: INTERNET.</p>
+     * <p>Valid values:</p>
      * <br>
-     * <p>> VPC connections are established by using Alibaba Cloud PrivateLink. You can use PrivateLink for free. When you set this parameter to VPC or Any, PrivateLink is automatically activated.</p>
+     * <p>*   INTERNET (default): allows end users to connect to cloud computers over the Internet.</p>
+     * <p>*   VPC: allows end users to connect to cloud computers over VPCs.</p>
+     * <p>*   ANY: allows end users to connect to cloud computers over the Internet and VPCs. When end users connect to cloud computers from WUYING clients, you can choose a connection method based on your business requirements.</p>
      */
     @NameInMap("DesktopAccessType")
     public String desktopAccessType;
 
     /**
-     * <p>Specifies whether to grant the local administrator permissions to end users.</p>
+     * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>* true (default)</p>
+     * <p>* false</p>
      */
     @NameInMap("EnableAdminAccess")
     public Boolean enableAdminAccess;
 
     /**
-     * <p>This parameter is only applicable to a workspace of the convenience account type, which indicates whether to require two-factor verification when you log on to the client. If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to the client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the verification code is correctly entered.</p>
+     * <p>Specifies whether to enable two-factor verification when an end user logs on to a WUYING client. This parameter is required only for convenience office networks. If two-factor verification is enabled, the system checks whether security risks exist within the logon account when the end user uses a convenience user to log on to the client. If risks are detected, the system sends a verification code to the email address that is associated with the account of the convenience user. Then, the end user can log on to the client only when the verification code is correct.</p>
      */
     @NameInMap("NeedVerifyLoginRisk")
     public Boolean needVerifyLoginRisk;
 
     /**
-     * <p>This parameter is only applicable to a workspace of the convenience account type, which indicates whether to require device verification when you log on to the client. For a workspace of the enterprise Active Directory (AD) account type, the value of this parameter is empty.</p>
+     * <p>Specifies whether to enable device verification. This parameter is required only for convenience office networks. This parameter is left empty for enterprise Active Directory (AD) office networks.</p>
      */
     @NameInMap("NeedVerifyZeroDevice")
     public Boolean needVerifyZeroDevice;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The office network ID.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The name of the workspace. We recommend that you specify a name that is easy to identify. The name must be 2 to 255 characters in length. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with http:// or https://.</p>
+     * <p>The office network name. The name must be 2 to 255 characters in length. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.\</p>
+     * <p>This parameter is empty by default.</p>
      */
     @NameInMap("OfficeSiteName")
     public String officeSiteName;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -11,13 +11,13 @@ public class MigrateImageProtocolRequest extends TeaModel {
     public java.util.List<String> imageId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The protocol of the image. Valid value: ASP.</p>
+     * <p>The protocol to which you want to update the image protocols. Set the value to ASP.</p>
      */
     @NameInMap("TargetProtocolType")
     public String targetProtocolType;

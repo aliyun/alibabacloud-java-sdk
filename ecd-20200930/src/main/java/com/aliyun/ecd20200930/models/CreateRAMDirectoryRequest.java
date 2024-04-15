@@ -5,50 +5,66 @@ import com.aliyun.tea.*;
 
 public class CreateRAMDirectoryRequest extends TeaModel {
     /**
-     * <p>The method that you use to connect clients to cloud desktops. Valid values:</p>
+     * <p>The method to connect clients to cloud desktops.</p>
      * <br>
-     * <p>*   Internet: connects clients to cloud desktops only over the Internet.</p>
-     * <p>*   VPC: connects clients to cloud desktops only over a VPC.</p>
-     * <p>*   Any: connects clients to cloud desktops over the Internet or a VPC. You can select a connection method when you connect clients to cloud desktops.</p>
+     * <p>Valid values:</p>
      * <br>
-     * <p>Default value: Internet.</p>
-     * <br>
-     * <br>
-     * <p>> The VPC connection method is provided by Alibaba Cloud PrivateLink. You are not charged for PrivateLink. If you set this parameter to VPC or Any, PrivateLink is automatically activated.</p>
+     * <p>*   VPC: connects to cloud desktops over VPCs.</p>
+     * <p>*   Internet (default): connects to the cloud desktops over the Internet.</p>
+     * <p>*   Any: connects to the cloud desktops over the Internet or VPCs.</p>
      */
     @NameInMap("DesktopAccessType")
     public String desktopAccessType;
 
     /**
-     * <p>The name of the directory. The name must be 2 to 255 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.</p>
-     * <br>
-     * <p>This parameter is empty by default.</p>
+     * <p>The directory name. The name must be 2 to 255 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("DirectoryName")
     public String directoryName;
 
     /**
-     * <p>Specifies whether to grant the permissions of the local administrator to the desktop users.</p>
+     * <p>Specifies whether to grant the permissions of the local administrator to end users of the cloud desktops that belong to the workspace.</p>
      * <br>
-     * <p>Default value: true.</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>* true (default)</p>
+     * <p>* false</p>
      */
     @NameInMap("EnableAdminAccess")
     public Boolean enableAdminAccess;
 
     /**
-     * <p>Specifies whether to enable the Internet access feature.</p>
+     * <p>Specifies whether to enable Internet access.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("EnableInternetAccess")
     public Boolean enableInternetAccess;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The IDs of vSwitches. You can configure only one vSwitch.</p>
+     * <p>The vSwitch IDs. You can configure only one vSwitch.</p>
      */
     @NameInMap("VSwitchId")
     public java.util.List<String> vSwitchId;

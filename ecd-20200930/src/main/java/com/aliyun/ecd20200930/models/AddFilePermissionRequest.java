@@ -23,7 +23,7 @@ public class AddFilePermissionRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The group ID.</p>
+     * <p>The ID of the team that uses cloud disks in Cloud Drive Service.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -171,111 +171,19 @@ public class AddFilePermissionRequest extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   <!-- --></p>
-         * <br>
-         * <p>    SystemFileEditorWithoutShareLink</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   <!-- --></p>
-         * <br>
-         * <p>    SystemFileUploaderAndDownloaderWithShareLink</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   <!-- --></p>
-         * <br>
-         * <p>    SystemFileDownloader</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   <!-- --></p>
-         * <br>
-         * <p>    SystemFileEditorWithoutDelete</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   <!-- --></p>
-         * <br>
-         * <p>    SystemFileOwner</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   <!-- --></p>
-         * <br>
-         * <p>    SystemFileDownloaderWithShareLink</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   <!-- --></p>
-         * <br>
-         * <p>    SystemFileUploaderAndViewer</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   <!-- --></p>
-         * <br>
-         * <p>    SystemFileViewer</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   <!-- --></p>
-         * <br>
-         * <p>    SystemFileEditor</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   <!-- --></p>
-         * <br>
-         * <p>    SystemFileUploaderWithShareLink</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   <!-- --></p>
-         * <br>
-         * <p>    SystemFileUploader</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   <!-- --></p>
-         * <br>
-         * <p>    SystemFileUploaderAndDownloader</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   <!-- --></p>
-         * <br>
-         * <p>    SystemFileMetaViewer</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>* SystemFileEditorWithoutShareLink</p>
+         * <p>* SystemFileUploaderAndDownloaderWithShareLink</p>
+         * <p>* SystemFileDownloader</p>
+         * <p>* SystemFileEditorWithoutDelete</p>
+         * <p>* SystemFileOwner</p>
+         * <p>* SystemFileDownloaderWithShareLink</p>
+         * <p>* SystemFileUploaderAndViewer</p>
+         * <p>* SystemFileViewer</p>
+         * <p>* SystemFileEditor</p>
+         * <p>* SystemFileUploaderWithShareLink</p>
+         * <p>* SystemFileUploader</p>
+         * <p>* SystemFileUploaderAndDownloader</p>
+         * <p>* SystemFileMetaViewer</p>
          */
         @NameInMap("RoleId")
         public String roleId;

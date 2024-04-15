@@ -19,22 +19,24 @@ public class DescribeAclEntriesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the instance corresponding to the ACL.</p>
+     * <p>The ID of the instance to which the ACL applies. You can specify an office network ID or a cloud computer ID.</p>
      */
     @NameInMap("SourceId")
     public String sourceId;
 
     /**
-     * <p>The object on which the ACL takes effect.</p>
+     * <p>The granularity of the ACL.</p>
      * <br>
-     * <p>*   **vpc**: workspace.</p>
-     * <p>*   **desktop**: cloud desktop.</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   desktop: cloud computer</p>
+     * <p>*   vpc: office network</p>
      */
     @NameInMap("SourceType")
     public String sourceType;

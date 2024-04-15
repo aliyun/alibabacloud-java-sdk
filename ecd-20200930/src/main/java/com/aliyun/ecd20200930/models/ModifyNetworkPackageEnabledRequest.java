@@ -5,22 +5,37 @@ import com.aliyun.tea.*;
 
 public class ModifyNetworkPackageEnabledRequest extends TeaModel {
     /**
-     * <p>Specifies whether to restore or disable Internet access for the cloud desktop. Valid values:</p>
+     * <p>Specifies whether to restore the premium bandwidth plan of the cloud computer.</p>
      * <br>
-     * <p>*   true: restores Internet access.</p>
-     * <p>*   false: disables Internet access.</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("Enabled")
     public Boolean enabled;
 
     /**
-     * <p>The ID of the Internet access package.</p>
+     * <p>The ID of the premium bandwidth plan.</p>
      */
     @NameInMap("NetworkPackageId")
     public String networkPackageId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

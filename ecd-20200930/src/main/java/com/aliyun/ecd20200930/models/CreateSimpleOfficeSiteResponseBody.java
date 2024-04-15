@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateSimpleOfficeSiteResponseBody extends TeaModel {
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The office network ID.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

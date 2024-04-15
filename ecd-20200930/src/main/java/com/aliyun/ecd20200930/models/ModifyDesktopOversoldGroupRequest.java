@@ -10,8 +10,14 @@ public class ModifyDesktopOversoldGroupRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("IdleDisconnectDuration")
+    public Long idleDisconnectDuration;
+
     @NameInMap("ImageId")
     public String imageId;
+
+    @NameInMap("KeepDuration")
+    public Integer keepDuration;
 
     @NameInMap("Name")
     public String name;
@@ -52,12 +58,28 @@ public class ModifyDesktopOversoldGroupRequest extends TeaModel {
         return this.description;
     }
 
+    public ModifyDesktopOversoldGroupRequest setIdleDisconnectDuration(Long idleDisconnectDuration) {
+        this.idleDisconnectDuration = idleDisconnectDuration;
+        return this;
+    }
+    public Long getIdleDisconnectDuration() {
+        return this.idleDisconnectDuration;
+    }
+
     public ModifyDesktopOversoldGroupRequest setImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public ModifyDesktopOversoldGroupRequest setKeepDuration(Integer keepDuration) {
+        this.keepDuration = keepDuration;
+        return this;
+    }
+    public Integer getKeepDuration() {
+        return this.keepDuration;
     }
 
     public ModifyDesktopOversoldGroupRequest setName(String name) {

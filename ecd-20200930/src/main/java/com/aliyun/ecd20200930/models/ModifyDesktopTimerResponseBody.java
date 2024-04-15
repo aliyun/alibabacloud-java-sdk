@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDesktopTimerResponseBody extends TeaModel {
     /**
-     * <p>The IDs of cloud desktops whose scheduled tasks are configured.</p>
+     * <p>The IDs of the cloud computers for which you successfully configure the scheduled task.</p>
      */
     @NameInMap("DesktopIds")
     public java.util.List<String> desktopIds;

@@ -5,56 +5,91 @@ import com.aliyun.tea.*;
 
 public class DescribeBundlesRequest extends TeaModel {
     /**
-     * <p>The IDs of the desktop templates. You can specify 1 to 100 desktop templates.</p>
+     * <p>The IDs of the cloud computer templates. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("BundleId")
     public java.util.List<String> bundleId;
 
     /**
-     * <p>The type of the cloud desktop template. Valid values:</p>
+     * <p>The type of the cloud computer template.</p>
      * <br>
-     * <p>*   SYSTEM: the system template</p>
-     * <p>*   CUSTOM: the custom template</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   SYSTEM: system template</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   CUSTOM: custom template</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("BundleType")
     public String bundleType;
 
     /**
-     * <p>Specifies whether to query the inventory status of the cloud desktop type.</p>
+     * <p>Specifies whether to query the inventory status of the cloud computer instance type.</p>
      */
     @NameInMap("CheckStock")
     public Boolean checkStock;
 
     /**
-     * <p>The number of vCPUs that is defined in the cloud desktop type.</p>
+     * <p>The number of vCPUs contained in the cloud computer instance type.</p>
      */
     @NameInMap("CpuCount")
     public Integer cpuCount;
 
     /**
-     * <p>The family of the cloud desktop type. Valid values:</p>
+     * <p>The instance family of the cloud computers.</p>
      * <br>
-     * <p>*   eds.general: General Office</p>
-     * <p>*   eds.hf: High Frequency</p>
-     * <p>*   eds.graphics: Graphics</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   eds.graphics: graphical instance families</p>
+     * <p>*   eds.hf: instance families with high clock speeds</p>
+     * <p>*   eds.general: general-purpose instance families</p>
      */
     @NameInMap("DesktopTypeFamily")
     public String desktopTypeFamily;
 
     /**
-     * <p>This parameter is now in invitational preview and unavailable.</p>
+     * <p>This parameter is now in invitational preview and not publicly available.</p>
      */
     @NameInMap("FotaChannel")
     public String fotaChannel;
 
     /**
-     * <p>Specifies whether the cloud desktop template belongs to a desktop group. Default value: false.</p>
+     * <p>Specifies whether the cloud computers in the template belong to a cloud computer pool.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("FromDesktopGroup")
     public Boolean fromDesktopGroup;
 
     /**
-     * <p>The number of GPUs that is defined in the cloud desktop type.</p>
+     * <p>The number of GPUs contained in the cloud computer instance type.</p>
      */
     @NameInMap("GpuCount")
     public Float gpuCount;
@@ -76,7 +111,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The memory size that is defined in the cloud desktop type. Unit: GiB.</p>
+     * <p>The memory size of the cloud computer instance type. Unit: GiB.</p>
      */
     @NameInMap("MemorySize")
     public Integer memorySize;
@@ -88,10 +123,25 @@ public class DescribeBundlesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The OS. Valid values:</p>
+     * <p>The type of the OS.</p>
      * <br>
-     * <p>* **Windows**</p>
-     * <p>* **Linux**</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   Linux</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Windows</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("OsType")
     public String osType;
@@ -99,14 +149,16 @@ public class DescribeBundlesRequest extends TeaModel {
     /**
      * <p>The protocol type.</p>
      * <br>
-     * <p>*   HDX</p>
-     * <p>*   ASP (Recommend)</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   HDX: High-definition Experience (HDX) protocol</p>
+     * <p>*   ASP: in-house Adaptive Streaming Protocol (ASP) (recommend)</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~436773~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -134,7 +186,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public String sessionType;
 
     /**
-     * <p>Specifies whether to return multi-session desktop templates in this call. Default value: false.</p>
+     * <p>Specifies whether to return multi-session cloud computer templates. Default value: false.</p>
      */
     @NameInMap("SupportMultiSession")
     public Boolean supportMultiSession;

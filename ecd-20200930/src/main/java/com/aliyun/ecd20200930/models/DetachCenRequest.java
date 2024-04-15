@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DetachCenRequest extends TeaModel {
     /**
-     * <p>The workspace ID.</p>
+     * <p>The office network ID.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
     /**
-     * <p>Details of the automatic snapshot policies.</p>
+     * <p>The details of the queried automatic snapshot policies.</p>
      */
     @NameInMap("AutoSnapshotPolicies")
     public java.util.List<DescribeAutoSnapshotPolicyResponseBodyAutoSnapshotPolicies> autoSnapshotPolicies;
@@ -53,19 +53,19 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
 
     public static class DescribeAutoSnapshotPolicyResponseBodyAutoSnapshotPolicies extends TeaModel {
         /**
-         * <p>The time when the automatic snapshot policy was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time is displayed in UTC.</p>
+         * <p>The time when the automatic snapshot policy was created. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-mm-ddthh:mm:ssz` format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The CRON expression that is used to create the snapshot.</p>
+         * <p>The cron expression that specifies when WUYING Workspace creates snapshots on the cloud computers.</p>
          */
         @NameInMap("CronExpression")
         public String cronExpression;
 
         /**
-         * <p>The number of cloud desktops that are associated with the automatic snapshot policy.</p>
+         * <p>The number of cloud computers to which the automatic snapshot policy is applied.</p>
          */
         @NameInMap("DesktopNum")
         public Integer desktopNum;
@@ -83,35 +83,45 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
         public String policyName;
 
         /**
-         * <p>The ID of the region where the automatic snapshot policy resides.</p>
+         * <p>The ID of the region to which the automatic snapshot policy belongs.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The retention period of the automatic snapshot. Unit: days. Valid values:</p>
-         * <br>
-         * <p>*   \-1: The snapshot is permanently retained.</p>
-         * <p>*   1 to 65536: The automatic snapshot is retained for the specified number of days.</p>
+         * <p>The retention period of the automatic snapshots. Unit: days. Valid values: 1 to 180.</p>
          */
         @NameInMap("RetentionDays")
         public String retentionDays;
 
         /**
-         * <p>The state of the automatic snapshot policy. Valid values:</p>
+         * <p>The status of the automatic snapshot policy.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Expire: The automatic snapshot policy cannot be used because you have overdue payments in your account.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          * <br>
          * <p>*   Normal: The automatic snapshot policy is normal.</p>
-         * <p>*   Expire: The automatic snapshot policy cannot be used because your account has an overdue payment.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The points in time at which automatic snapshots are created.</p>
+         * <p>The points in time at which the auto snapshots were created.</p>
          * <br>
-         * <p>The time is displayed in UTC+8. Unit: hours. Valid values are 0 to 23, which correspond to the 24 points in time on the hour from 00:00:00 to 23:00:00. 1 indicates 01:00:00. Multiple points in time can be specified.</p>
-         * <br>
-         * <p>The parameter value is a JSON array that contains up to 24 points in time separated by commas (,). Example: `["0", "1", ... "23"]`.</p>
+         * <p>The parameter values are a JSON array. Example: `["0", "1", ... "23"]`. A maximum of 24 points in time are returned. The points in time are separated with commas (,).</p>
          */
         @NameInMap("TimePoints")
         public String timePoints;

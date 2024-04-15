@@ -51,29 +51,8 @@ public class DescribeFotaTasksRequest extends TeaModel {
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   Running</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    automatically pushes the image update task.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Pending</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    does not automatically push the image update task.</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <p>*   Running: automatically pushes the image update task.</p>
+     * <p>*   Pending: does not automatically push the image update task.</p>
      */
     @NameInMap("UserStatus")
     public String userStatus;

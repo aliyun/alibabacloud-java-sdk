@@ -5,18 +5,35 @@ import com.aliyun.tea.*;
 
 public class RenewNetworkPackagesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <p>Specifies whether to enable the automatic payment feature.</p>
      * <br>
-     * <p>*   true: enables automatic payment. Make sure that you have sufficient balance in your account. Otherwise, abnormal orders are generated.</p>
-     * <p>*   false: generates the order with no payment made. You can log on to the EDS console and complete the payment based on the order number.</p>
+     * <p>Valid values:</p>
      * <br>
-     * <p>Default value: true.</p>
+     * <p>*   true (default): enables the auto-payment feature.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    Make sure that your account has sufficient balance. Otherwise, no order is generated.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   false: disables the auto-payment feature. In this case, an order is generated but you need to make the payment manually.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    To make the payment, log on to the WUYING Workspace console, go to the Orders page, and find the order based on the order ID.</p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>The IDs of Internet access packages.</p>
+     * <p>The IDs of premium bandwidth plans. You can specify up to 100 IDs.</p>
      */
     @NameInMap("NetworkPackageId")
     public java.util.List<String> networkPackageId;
@@ -43,13 +60,13 @@ public class RenewNetworkPackagesRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The ID of the promotion. You can call the `GetResourcePrice` operation to obtain the ID of the promotion.</p>
+     * <p>The promotion ID.</p>
      */
     @NameInMap("PromotionId")
     public String promotionId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

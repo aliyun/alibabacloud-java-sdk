@@ -5,24 +5,37 @@ import com.aliyun.tea.*;
 
 public class StopDesktopsRequest extends TeaModel {
     /**
-     * <p>The cloud desktop IDs. You can specify one or more IDs of cloud desktops. Valid values of N: 1 to 20.</p>
+     * <p>The IDs of the cloud computers. You can specify 1 to 20 IDs.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The billing mode after you stop the cloud desktop.</p>
+     * <p>The billing mode after you stop the cloud computer.</p>
      * <br>
-     * <p>*   StopCharging: Computing resources are not billed after you stop the cloud desktop. After the cloud desktop is stopped, the system automatically reclaims computing resources. From this point on, you are no longer charged for computing resources. However, you are still charged for storage resources.</p>
-     * <p>*   KeepCharging: The billing continues after you stop the cloud desktop. After the cloud desktop is stopped, the system does not reclaim resources to avoid startup failures due to insufficient resources. You are still charged for the resources.</p>
+     * <p>Default value: StopCharging. Valid values:</p>
      * <br>
-     * <p>Default value: StopCharging</p>
+     * <p>*   StopCharging: After the cloud computer is stopped, the system automatically reclaims computing resources. You are no longer charged for computing resources. However, you are still charged for storage resources.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   KeepCharging: After the cloud computer is stopped, the system does not reclaim resources to prevent insufficient resources and startup failures. You are still charged for the resources.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("StoppedMode")
     public String stoppedMode;

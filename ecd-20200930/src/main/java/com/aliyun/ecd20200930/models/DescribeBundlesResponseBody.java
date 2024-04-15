@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBundlesResponseBody extends TeaModel {
     /**
-     * <p>Details about the cloud desktop templates.</p>
+     * <p>The details of the queried cloud computer templates.</p>
      */
     @NameInMap("Bundles")
     public java.util.List<DescribeBundlesResponseBodyBundles> bundles;
@@ -71,7 +71,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public String gpuSpec;
 
         /**
-         * <p>The memory size. Unit: MB.</p>
+         * <p>The memory size. Unit: MiB.</p>
          */
         @NameInMap("MemorySize")
         public Integer memorySize;
@@ -117,7 +117,41 @@ public class DescribeBundlesResponseBody extends TeaModel {
 
     public static class DescribeBundlesResponseBodyBundlesDisks extends TeaModel {
         /**
-         * <p>The performance level (PL) of the disk.</p>
+         * <p>The PL of the disk.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   PL1</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   PL0</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   PL3</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   PL2</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("DiskPerformanceLevel")
         public String diskPerformanceLevel;
@@ -129,10 +163,25 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public Integer diskSize;
 
         /**
-         * <p>The disk type. Valid values:</p>
+         * <p>The type of the disk.</p>
          * <br>
-         * <p>*   SYSTEM: the system disk</p>
-         * <p>*   DATA: the data disk</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   SYSTEM: system disk</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   DATA: data disk</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("DiskType")
         public String diskType;
@@ -170,74 +219,91 @@ public class DescribeBundlesResponseBody extends TeaModel {
 
     public static class DescribeBundlesResponseBodyBundles extends TeaModel {
         /**
-         * <p>The ID of the cloud desktop template.</p>
+         * <p>The ID of the cloud computer template.</p>
          */
         @NameInMap("BundleId")
         public String bundleId;
 
         /**
-         * <p>The name of the cloud desktop template.</p>
+         * <p>The name of the cloud computer template.</p>
          */
         @NameInMap("BundleName")
         public String bundleName;
 
         /**
-         * <p>The type of the cloud desktop template. Valid values:</p>
+         * <p>The type of the cloud computer template.</p>
          * <br>
-         * <p>*   SYSTEM: the system template</p>
-         * <p>*   CUSTOM: the custom template</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   SYSTEM: system template</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   CUSTOM: custom template</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("BundleType")
         public String bundleType;
 
         /**
-         * <p>The time when the cloud desktop template was created.</p>
+         * <p>The time when the cloud computer template was created.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The description of the cloud desktop template.</p>
+         * <p>The description of the cloud computer template.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The type of the cloud desktop.</p>
+         * <p>The instance type of the cloud computer.</p>
          */
         @NameInMap("DesktopType")
         public String desktopType;
 
         /**
-         * <p>Details about the cloud desktop type.</p>
+         * <p>The details of the cloud computer instance type.</p>
          */
         @NameInMap("DesktopTypeAttribute")
         public DescribeBundlesResponseBodyBundlesDesktopTypeAttribute desktopTypeAttribute;
 
         /**
-         * <p>The family of the cloud desktop type. Valid values:</p>
+         * <p>The instance family of the cloud computer.</p>
          * <br>
-         * <p>*   eds.general: General Office</p>
-         * <p>*   eds.hf: High Frequency</p>
-         * <p>*   eds.graphics: Graphics</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   eds.graphics: graphical instance family</p>
+         * <p>*   eds.hf: instance family with a high clock speed</p>
+         * <p>*   eds.general: general-purpose instance family</p>
          */
         @NameInMap("DesktopTypeFamily")
         public String desktopTypeFamily;
 
         /**
-         * <p>Details about the disks.</p>
+         * <p>Details of the disks.</p>
          */
         @NameInMap("Disks")
         public java.util.List<DescribeBundlesResponseBodyBundlesDisks> disks;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
-         * <p>The name of the image.</p>
+         * <p>The image name.</p>
          */
         @NameInMap("ImageName")
         public String imageName;
@@ -255,19 +321,81 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>The OS type.</p>
+         * <p>The type of the OS.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Linux</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Windows</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("OsType")
         public String osType;
 
         /**
-         * <p>The information about the OS platform. Valid values:</p>
+         * <p>The OS.</p>
          * <br>
-         * <p>* CentOS</p>
-         * <p>* Ubuntu</p>
-         * <p>* Windows Server 2016</p>
-         * <p>* Windows Server 2019</p>
-         * <p>* UOS</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Ubuntu</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Windows Server 2022</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   UOS</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   CentOS</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Windows Server 2019</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Windows Server 2016</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Platform")
         public String platform;
@@ -275,23 +403,27 @@ public class DescribeBundlesResponseBody extends TeaModel {
         /**
          * <p>The protocol type.</p>
          * <br>
-         * <p>*   HDX</p>
-         * <p>*   ASP (Recommend)</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   HDX: HDX protocol</p>
+         * <p>*   ASP: in-house ASP</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
-         * <p>The session type. Valid values:</p>
+         * <p>The session type.</p>
          * <br>
-         * <p>*   0: single_session</p>
-         * <p>*   1: multiple_session</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   0: single-session</p>
+         * <p>*   1: multi-session</p>
          */
         @NameInMap("SessionType")
         public String sessionType;
 
         /**
-         * <p>The inventory status of the cloud desktop type, which is returned when the CheckStock parameter is set to true.</p>
+         * <p>The inventory status of the cloud computer instance type. This parameter is returned only if you set the `CheckStock` parameter to `true`.</p>
          */
         @NameInMap("StockState")
         public String stockState;

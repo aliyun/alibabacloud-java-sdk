@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateADConnectorOfficeSiteResponseBody extends TeaModel {
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The office network ID.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
     /**
-     * <p>The image modification record collection.</p>
+     * <p>Details about the image modification record.</p>
      */
     @NameInMap("ImageModifiedRecords")
     public java.util.List<DescribeImageModifiedRecordsResponseBodyImageModifiedRecords> imageModifiedRecords;
@@ -67,37 +67,45 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
 
     public static class DescribeImageModifiedRecordsResponseBodyImageModifiedRecords extends TeaModel {
         /**
-         * <p>The ID of the image before the change.</p>
+         * <p>The ID of the original image.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
-         * <p>The name of the image before the change.</p>
+         * <p>The name of the original image.</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
-         * <p>The ID of the new image.</p>
+         * <p>The ID of the new image after the image was modified.</p>
          */
         @NameInMap("NewImageId")
         public String newImageId;
 
         /**
-         * <p>Add the image name.</p>
+         * <p>The name of the new image after the image was modified.</p>
          */
         @NameInMap("NewImageName")
         public String newImageName;
 
         /**
-         * <p>The status of the workspace.</p>
+         * <p>The status of the image modification.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   0: The image is being modified.</p>
+         * <br>
+         * <p>*   1: The image is successfully modified.</p>
+         * <br>
+         * <p>*   2: The image fails to be modified.</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
-         * <p>The last time when the disaster recovery plan was updated.</p>
+         * <p>The time when the image was last modified.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

@@ -11,29 +11,43 @@ public class CreateSnapshotRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the cloud desktop.</p>
+     * <p>The ID of the cloud computer.</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the snapshot. The name must be 2 to 128 characters in length.\</p>
-     * <p>The name cannot start with auto because snapshots whose names start with auto are recognized as automatic snapshots.</p>
+     * <p>The name of the snapshot. The name must be 2 to 127 characters in length. The name must start with a letter. The name can contain letters, digits, underscores (\_), and hyphens (-). The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.</p>
      */
     @NameInMap("SnapshotName")
     public String snapshotName;
 
     /**
-     * <p>The type of the disk for which to create a snapshot. Valid values:</p>
+     * <p>The type of the disk for which you want to create a snapshot.</p>
+     * <br>
+     * <p>Valid values:</p>
      * <br>
      * <p>*   system: system disk</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
      * <p>*   data: data disk</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("SourceDiskType")
     public String sourceDiskType;

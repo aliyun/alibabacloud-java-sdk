@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGuestApplicationsResponseBody extends TeaModel {
     /**
-     * <p>The application details.</p>
+     * <p>The details of the applications.</p>
      */
     @NameInMap("Applications")
     public java.util.List<DescribeGuestApplicationsResponseBodyApplications> applications;
@@ -51,13 +51,13 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
         public String applicationVersion;
 
         /**
-         * <p>The CPU usage.</p>
+         * <p>The CPU utilization (%).</p>
          */
         @NameInMap("CpuPercent")
         public Double cpuPercent;
 
         /**
-         * <p>The GPU usage.</p>
+         * <p>The GPU utilization (%).</p>
          */
         @NameInMap("GpuPercent")
         public Double gpuPercent;
@@ -69,13 +69,13 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
         public Double iospeed;
 
         /**
-         * <p>The memory usage.</p>
+         * <p>The memory utilization (%).</p>
          */
         @NameInMap("MemPercent")
         public Double memPercent;
 
         /**
-         * <p>The process ID.</p>
+         * <p>The PID.</p>
          */
         @NameInMap("Pid")
         public Integer pid;
@@ -171,19 +171,19 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
         public String applicationVersion;
 
         /**
-         * <p>The CPU usage.</p>
+         * <p>The CPU utilization (%).</p>
          */
         @NameInMap("CpuPercent")
         public Double cpuPercent;
 
         /**
-         * <p>The GPU usage.</p>
+         * <p>The GPU utilization (%).</p>
          */
         @NameInMap("GpuPercent")
         public Double gpuPercent;
 
         /**
-         * <p>The icon address of the application.</p>
+         * <p>The icon URL of the application.</p>
          */
         @NameInMap("IconUrl")
         public String iconUrl;
@@ -195,13 +195,13 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
         public Double ioSpeed;
 
         /**
-         * <p>The memory usage.</p>
+         * <p>The memory utilization (%).</p>
          */
         @NameInMap("MemPercent")
         public Double memPercent;
 
         /**
-         * <p>The process ID.</p>
+         * <p>The process ID (PID).</p>
          */
         @NameInMap("Pid")
         public Integer pid;

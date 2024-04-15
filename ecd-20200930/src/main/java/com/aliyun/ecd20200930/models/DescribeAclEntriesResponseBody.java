@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAclEntriesResponseBody extends TeaModel {
     /**
-     * <p>The ACL entry.</p>
+     * <p>The ACL entries.</p>
      */
     @NameInMap("AclEntries")
     public java.util.List<DescribeAclEntriesResponseBodyAclEntries> aclEntries;
@@ -53,25 +53,29 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
 
     public static class DescribeAclEntriesResponseBodyAclEntries extends TeaModel {
         /**
-         * <p>The ACL policy.</p>
+         * <p>The ACL type.</p>
          * <br>
-         * <p>*   **allow**: allows access.</p>
-         * <p>*   **drop**: denies access.</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   allow: whitelist</p>
+         * <p>*   disable: blacklist</p>
          */
         @NameInMap("Policy")
         public String policy;
 
         /**
-         * <p>The ID of the instance corresponding to the ACL.</p>
+         * <p>The ID of the instance to which the ACL applies, such as an office network ID or a cloud computer ID.</p>
          */
         @NameInMap("SourceId")
         public String sourceId;
 
         /**
-         * <p>The object on which the ACL takes effect.</p>
+         * <p>The granularity of the ACL.</p>
          * <br>
-         * <p>*   **vpc**: workspace.</p>
-         * <p>*   **desktop**: cloud desktop.</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   desktop: cloud computer</p>
+         * <p>*   vpc: office network</p>
          */
         @NameInMap("SourceType")
         public String sourceType;

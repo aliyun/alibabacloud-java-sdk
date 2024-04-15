@@ -11,7 +11,7 @@ public class DescribeImagePermissionRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

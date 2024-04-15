@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkPackagesResponseBody extends TeaModel {
     /**
-     * <p>Details of the Internet access packages.</p>
+     * <p>The premium bandwidth plans.</p>
      */
     @NameInMap("NetworkPackages")
     public java.util.List<DescribeNetworkPackagesResponseBodyNetworkPackages> networkPackages;
@@ -53,100 +53,160 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
 
     public static class DescribeNetworkPackagesResponseBodyNetworkPackages extends TeaModel {
         /**
-         * <p>The maximum public bandwidth of the Internet access package. Unit: Mbit/s.</p>
+         * <p>The bandwidth provided by the premium bandwidth plan. Unit: Mbit/s.</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The business status.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Expired</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Normal</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
         /**
-         * <p>The time when the Internet access package was created.</p>
+         * <p>The time when the premium bandwidth plan was created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The elastic IP addresses (EIPs) of the Internet access package for outbound traffic.</p>
+         * <p>The public egress IP address of the premium bandwidth plan.</p>
          */
         @NameInMap("EipAddresses")
         public java.util.List<String> eipAddresses;
 
         /**
-         * <p>The time when the Internet access package expires.</p>
+         * <p>The time when the premium bandwidth plan expires.</p>
          * <br>
-         * <p>*   If the Internet access package is metered on a pay-by-bandwidth basis, the actual expiration time is returned.</p>
-         * <p>*   If the Internet access package is metered on a pay-by-data-transfer basis, 2099-12-31T15:59:59Z is returned.</p>
+         * <p>*   If the plan is a subscription one, the time when the plan expires is returned.</p>
+         * <p>*   If the plan is a pay-as-you-go one, `2099-12-31T15:59:59Z` is returned.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
-         * <p>The billing method of the network bandwidth.</p>
+         * <p>The charge type of the premium bandwidth plan.</p>
          * <br>
-         * <p>*   PayByTraffic: pay-by-data-transfer</p>
-         * <p>*   PayByBandwidth: pay-by-bandwidth</p>
+         * <p>*   Valid value when the `PayType` parameter is set to `PrePaid`:</p>
+         * <br>
+         * <p>    *   PayByBandwidth: charges by fixed bandwidth.</p>
+         * <br>
+         * <p>*   Valid values when the `PayType` parameter is set to `PostPaid`:</p>
+         * <br>
+         * <p>    *   PayByTraffic: charges by data transfer.</p>
+         * <p>    *   PayByBandwidth: charges by fixed bandwidth.</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
         /**
-         * <p>The ID of the Internet access package.</p>
+         * <p>The ID of the premium bandwidth plan.</p>
          */
         @NameInMap("NetworkPackageId")
         public String networkPackageId;
 
         /**
-         * <p>The state of the Internet access package. Valid values:</p>
+         * <p>The status of the premium bandwidth plan.</p>
+         * <br>
+         * <p>Valid values:</p>
          * <br>
          * <p>*   Creating</p>
-         * <p>*   InUse</p>
-         * <p>*   Releasing</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
          * <p>*   Released</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   InUse</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Releasing</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("NetworkPackageStatus")
         public String networkPackageStatus;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The office network ID.</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The office network name.</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
         /**
-         * <p>The type of the workspace. Valid values:</p>
+         * <p>The type of the office network.</p>
          * <br>
-         * <p>*   basic</p>
-         * <p>*   standard</p>
-         * <p>*   customized</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   standard: advanced office network</p>
+         * <p>*   customized: custom office network</p>
+         * <p>*   basic: basic office network</p>
          */
         @NameInMap("OfficeSiteVpcType")
         public String officeSiteVpcType;
 
         /**
-         * <p>The billing method for the network.</p>
+         * <p>The billing method of the premium bandwidth plan.</p>
          * <br>
-         * <p>*   PrePaid: subscription</p>
+         * <p>Valid values:</p>
+         * <br>
          * <p>*   PostPaid: pay-as-you-go</p>
+         * <p>*   PrePaid: subscription</p>
          */
         @NameInMap("PayType")
         public String payType;
 
         /**
-         * <p>The time when the reserved network bandwidth takes effect.</p>
+         * <p>The time when the reserved network bandwidth took effect.</p>
          */
         @NameInMap("ReservationActiveTime")
         public String reservationActiveTime;
 
         /**
-         * <p>The peak bandwidth of the reserved network bandwidth. Unit: Mbit/s.</p>
+         * <p>The peak bandwidth that is reserved for the premium bandwidth plan. Unit: Mbit/s.</p>
          */
         @NameInMap("ReservationBandwidth")
         public Integer reservationBandwidth;
@@ -154,8 +214,11 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         /**
          * <p>The billing method of the reserved network bandwidth.</p>
          * <br>
-         * <p>*   PayByTraffic: pay-by-data-transfer</p>
-         * <p>*   PayByBandwidth: pay-by-bandwidth</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   PayByTraffic: charges by data transfer.</p>
+         * <br>
+         * <p>*   PayByBandwidth: charges by fixed bandwidth.</p>
          */
         @NameInMap("ReservationInternetChargeType")
         public String reservationInternetChargeType;

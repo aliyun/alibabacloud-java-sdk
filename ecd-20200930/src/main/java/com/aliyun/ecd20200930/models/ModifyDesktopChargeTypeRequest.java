@@ -11,21 +11,39 @@ public class ModifyDesktopChargeTypeRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The new billing method that you want to use for the desktop group.</p>
+     * <p>The new billing method that you want to apply.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   PostPaid: changes the billing method from subscription to pay-as-you-go.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   PrePaid: changes the billing method from pay-as-you-go to subscription.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The IDs of the cloud desktops. You can specify 1 to 20 IDs.</p>
+     * <p>The IDs of the cloud computers. You can specify 1 to 20 IDs.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The subscription duration if you specify subscription as the new billing method for the cloud desktop. The unit of the value is specified by the `PeriodUnit` parameter. This parameter takes effect only when the `ChargeType` parameter is set to `PrePaid`.</p>
+     * <p>The subscription duration of the cloud computers if you set the ChargeType parameter to PrePaid. The unit is specified by the `PeriodUnit` parameter. This parameter is valid only when the `ChargeType` parameter is set to `PrePaid`. In this case, you must specify this parameter.</p>
      * <br>
-     * <p>*   If the `PeriodUnit` parameter is set to `Week`, the valid value of the Period parameter is 1.</p>
+     * <p>*   If the `PeriodUnit` parameter is set to `Week`, set the Period parameter to 1.</p>
      * <p>*   If the `PeriodUnit` parameter is set to `Month`, the valid values of the Period parameter are 1, 2, 3, and 6.</p>
      * <p>*   If the `PeriodUnit` parameter is set to `Year`, the valid values of the Period parameter are 1, 2, 3, 4, and 5.</p>
      */
@@ -39,19 +57,19 @@ public class ModifyDesktopChargeTypeRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The ID of the sales promotion.</p>
+     * <p>The ID of the promotional activity.</p>
      */
     @NameInMap("PromotionId")
     public String promotionId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>> 处于定向邀测中，暂不对外开放。</p>
+     * <p>>  This parameter is in invitational preview and not publicly available.</p>
      */
     @NameInMap("UseDuration")
     public Integer useDuration;

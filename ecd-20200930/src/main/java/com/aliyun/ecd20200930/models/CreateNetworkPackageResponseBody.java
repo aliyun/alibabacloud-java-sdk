@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkPackageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the Internet access package.</p>
+     * <p>The ID of the premium bandwidth plan.</p>
      */
     @NameInMap("NetworkPackageId")
     public String networkPackageId;

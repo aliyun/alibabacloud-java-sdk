@@ -4,30 +4,62 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateImageRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to clear private data of users. If you set AutoCleanUserdata to `true`, the custom image clears the data directories, excluding the `Administrator` and `Public` directories, in the `C:\Users` directory.</p>
+     */
     @NameInMap("AutoCleanUserdata")
     public Boolean autoCleanUserdata;
 
+    /**
+     * <p>The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the cloud computer.</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
+    /**
+     * <p>The disk data that is contained in the custom image.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>- SYSTEM: only contain data from system disks.</p>
+     * <p>- ALL: contain data from system disks and user disks. [default]</p>
+     */
     @NameInMap("DiskType")
     public String diskType;
 
+    /**
+     * <p>The name of the image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
+    /**
+     * <p>This parameter is not publicly available.</p>
+     */
     @NameInMap("ImageResourceType")
     public String imageResourceType;
 
+    /**
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the snapshot.</p>
+     */
     @NameInMap("SnapshotId")
     public String snapshotId;
 
+    /**
+     * <p>The IDs of the snapshots.</p>
+     */
     @NameInMap("SnapshotIds")
     public java.util.List<String> snapshotIds;
 

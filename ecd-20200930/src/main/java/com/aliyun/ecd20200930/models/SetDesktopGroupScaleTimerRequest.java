@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class SetDesktopGroupScaleTimerRequest extends TeaModel {
     /**
-     * <p>The ID of the desktop group.</p>
+     * <p>The ID of the cloud computer pool.</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The information about the scheduled auto scaling tasks.</p>
+     * <p>The information about the scheduled auto scaling task.</p>
      */
     @NameInMap("ScaleTimerInfos")
     public java.util.List<SetDesktopGroupScaleTimerRequestScaleTimerInfos> scaleTimerInfos;
@@ -53,49 +53,94 @@ public class SetDesktopGroupScaleTimerRequest extends TeaModel {
 
     public static class SetDesktopGroupScaleTimerRequestScaleTimerInfos extends TeaModel {
         /**
-         * <p>The number of cloud desktops that you want to create in the desktop group. Valid values: 0 to 200. You must configure this parameter for the scaling policy.</p>
+         * <p>One option for the auto scaling policy. This option specifies the number of cloud computers that you want to create in the cloud computer pool. Valid values: 0 to 200.</p>
          */
         @NameInMap("BuyResAmount")
         public Integer buyResAmount;
 
         /**
-         * <p>The CRON expression that is used when an auto scaling task is triggered.</p>
+         * <p>The cron expression of the trigger time.</p>
          */
         @NameInMap("Cron")
         public String cron;
 
         /**
-         * <p>The keep-alive duration after the cloud desktop is disconnected. Unit: milliseconds.</p>
+         * <p>The keep-alive duration of a session after the session is disconnected. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session always keeps alive.</p>
+         * <br>
+         * <p>If a session is disconnected by the end user or accidentally due to a factor and the end user does not re-establish a connection with the session within the keep-alive duration, the session expires and unsaved data is deleted. If the end user successfully re-establishes a connection with the session within the keep-alive duration, the end user returns to the session and can still access the original data.</p>
          */
         @NameInMap("KeepDuration")
         public Long keepDuration;
 
         /**
-         * <p>The load balancing policy of the multi-session desktop group.</p>
+         * <p>The load balancing policy for the multi-session cloud computer pool.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   0: depth-first</p>
+         * <p>*   1: breadth first.</p>
          */
         @NameInMap("LoadPolicy")
         public Integer loadPolicy;
 
         /**
-         * <p>The maximum number of cloud desktops in the workspace after scaling. Valid values: 0 to 200. You must configure this parameter for the scaling policy.</p>
+         * <p>One option for the auto scaling policy. This option specifies the maximum number of cloud computers that you can create in the cloud computer pool. Valid values: 0 to 200.</p>
          */
         @NameInMap("MaxResAmount")
         public Integer maxResAmount;
 
         /**
-         * <p>The minimum number of cloud desktops that can be connected. Valid values: 0 to 200.</p>
+         * <p>One option for the auto scaling policy. This option specifies the minimum number of cloud computers that you must create in the cloud computer pool. Valid values: 0 to 200.</p>
          */
         @NameInMap("MinResAmount")
         public Integer minResAmount;
 
         /**
-         * <p>The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session desktop group. `Ratio of connected sessions = Number of connected sessions/(Total number of cloud desktops × Maximum number of sessions supported by each cloud desktop) × 100%`. When the ratio of connected sessions is greater than the specified threshold, desktop scale-out is automatically triggered. When the ratio of connected sessions is smaller than the specified threshold, desktop scale-in is automatically triggered under a specific condition.</p>
+         * <p>The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session cloud computer pool. Formula:</p>
+         * <br>
+         * <p>`Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%`.</p>
+         * <br>
+         * <p>When the specified threshold is reached, new cloud computers are automatically created. When the specified threshold is not reached, idle cloud computers are released.</p>
          */
         @NameInMap("RatioThreshold")
         public Float ratioThreshold;
 
         /**
-         * <p>The type of the policy.</p>
+         * <p>The type of the auto scaling policy.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   drop</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   normal</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   peak</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   rise</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Type")
         public String type;

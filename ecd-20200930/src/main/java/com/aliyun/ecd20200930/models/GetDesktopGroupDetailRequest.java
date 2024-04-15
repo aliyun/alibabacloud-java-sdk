@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetDesktopGroupDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the desktop group.</p>
+     * <p>The ID of the cloud computer pool.</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     /**
-     * <p>The region ID of the desktop group.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

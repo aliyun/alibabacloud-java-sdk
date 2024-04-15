@@ -5,22 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyOfficeSiteCrossDesktopAccessRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the cross-desktop access feature for the workspace.</p>
-     * <br>
-     * <p>*   true: enable</p>
-     * <p>*   false: disable</p>
+     * <p>Specifies whether to enable the communication between cloud computers in an office network. If you enable the communication between cloud computers in an office network, the cloud computers can access each other.</p>
      */
     @NameInMap("EnableCrossDesktopAccess")
     public Boolean enableCrossDesktopAccess;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The office network ID.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

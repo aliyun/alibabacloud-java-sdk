@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DissociateNetworkPackageRequest extends TeaModel {
     /**
-     * <p>The ID of the Internet access package. You can call the [DescribeNetworkPackages](~~216079~~) operation to query the ID of the Internet access package.</p>
+     * <p>The ID of the premium bandwidth plan. You can call the [DescribeNetworkPackages](~~216079~~) operation to obtain the ID.</p>
      */
     @NameInMap("NetworkPackageId")
     public String networkPackageId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

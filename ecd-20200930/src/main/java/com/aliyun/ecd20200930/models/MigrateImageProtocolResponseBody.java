@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MigrateImageProtocolResponseBody extends TeaModel {
     /**
-     * <p>The IDs of images whose protocols fail to be migrated.</p>
+     * <p>The IDs of the images whose protocols failed to be updated.</p>
      */
     @NameInMap("FailedIds")
     public java.util.List<String> failedIds;

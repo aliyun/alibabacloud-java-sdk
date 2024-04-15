@@ -5,13 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopsInGroupRequest extends TeaModel {
     /**
-     * <p>The desktop group ID.</p>
+     * <p>The ID of the cloud computer pool.</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     /**
-     * <p>Specifies whether to ignore the deleted cloud desktops.</p>
+     * <p>Specifies whether to ignore deletion flags.</p>
+     * <br>
+     * <p>Default value: true. Valid values:</p>
+     * <br>
+     * <p>*   true: ignores deletion flags. The cloud computers that were deleted are returned.</p>
+     * <p>*   false: does not ignore deletion flags. The cloud computers that were deleted are not returned.</p>
      */
     @NameInMap("IgnoreDeleted")
     public Boolean ignoreDeleted;
@@ -35,7 +40,7 @@ public class DescribeDesktopsInGroupRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

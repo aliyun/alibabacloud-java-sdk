@@ -5,19 +5,29 @@ import com.aliyun.tea.*;
 
 public class ModifyCustomizedListHeadersRequest extends TeaModel {
     /**
-     * <p>The header of the response.</p>
+     * <p>The headers.</p>
      */
     @NameInMap("Headers")
     public java.util.List<ModifyCustomizedListHeadersRequestHeaders> headers;
 
     /**
      * <p>The type of the list.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   desktop: cloud computer</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("ListType")
     public String listType;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -53,13 +63,139 @@ public class ModifyCustomizedListHeadersRequest extends TeaModel {
 
     public static class ModifyCustomizedListHeadersRequestHeaders extends TeaModel {
         /**
-         * <p>The display type of the header. You can call the `ModifyCustomizedListHeaders` operation to modify the display type of the header.</p>
+         * <p>The display type of the header.</p>
+         * <br>
+         * <p>> For the desktop_id_name and office_site_id_name head keys, set the value of this parameter to required. For other header keys, set the value of this parameter to display or hide based on your requirements.</p>
          */
         @NameInMap("DisplayType")
         public String displayType;
 
         /**
          * <p>The key of the header.</p>
+         * <br>
+         * <p>> All header keys of the list must be specified.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   desktop_id_name: the IDs and names of the cloud computers.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   system_data_disk: the system disks and data disks of the cloud computers.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   office_site_type: the office network types of the cloud computers.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   create_time: the time when the cloud computers are created.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   ip: the IP addresses of the cloud computers.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   spec_system_protocol: the instance types, OSs, and protocol types of the cloud computers.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   monitor: the monitoring information of the cloud computers.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   assigned_users: the number of end users that are assigned to the cloud computers.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   encryption: indicates whether the cloud computers are encrypted.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   office_site_id_name: the IDs and names of the office networks.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   pay_type: the billing methods of the cloud computers.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   tag: the tags that are attached to the cloud computers.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   hostname: the hostnames of the cloud computers.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   status: the statuses of the cloud computers.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   current_user: the current end users of the cloud computers.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("HeaderKey")
         public String headerKey;

@@ -5,25 +5,39 @@ import com.aliyun.tea.*;
 
 public class SetDesktopGroupTimerStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the desktop group.</p>
+     * <p>The ID of the cloud computer pool.</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The status of the scheduled task.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   1: enabled</p>
+     * <p>*   2: disabled</p>
+     * <p>*   3: deleted</p>
+     * <p>*   100: unknown</p>
      */
     @NameInMap("Status")
     public Integer status;
 
     /**
      * <p>The type of the scheduled task.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   1: scheduled reset</p>
+     * <p>*   2: scheduled startup</p>
+     * <p>*   3: scheduled stop</p>
+     * <p>*   4: scheduled restart</p>
      */
     @NameInMap("TimerType")
     public Integer timerType;

@@ -5,22 +5,37 @@ import com.aliyun.tea.*;
 
 public class ModifyOfficeSiteMfaEnabledRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable MFA. Valid values:</p>
+     * <p>Specifies whether to enable MFA.</p>
+     * <br>
+     * <p>Valid values:</p>
      * <br>
      * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
      * <p>*   false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("MfaEnabled")
     public Boolean mfaEnabled;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The office network ID.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

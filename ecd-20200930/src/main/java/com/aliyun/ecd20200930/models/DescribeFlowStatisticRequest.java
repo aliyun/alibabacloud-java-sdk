@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeFlowStatisticRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud desktop.</p>
+     * <p>The ID of the cloud computer.</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The office network ID.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
@@ -30,17 +30,19 @@ public class DescribeFlowStatisticRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The interval to query the traffic data. Unit: seconds. Valid values:</p>
+     * <p>The statistic collection interval. Unit: seconds.</p>
      * <br>
-     * <p>*   3600</p>
-     * <p>*   10800</p>
-     * <p>*   86400</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   3600: 1 hour</p>
+     * <p>*   10800: 3 hours</p>
+     * <p>*   86400: 24 hours</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

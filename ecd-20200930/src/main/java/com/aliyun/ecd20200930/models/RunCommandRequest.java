@@ -32,7 +32,7 @@ public class RunCommandRequest extends TeaModel {
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The ID of the end user.</p>
+     * <p>The ID of the end user. If you specify a value, you run the command as the end user that is granted specific permissions. Note: The end user has sessions on a cloud computer. That is, when the cloud computer is started, the end user logs on to a WUYING client and connects to the cloud computer, and the cloud computer is not preempted by another end user during the connection. This parameter is not available for Linux cloud computers.</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;

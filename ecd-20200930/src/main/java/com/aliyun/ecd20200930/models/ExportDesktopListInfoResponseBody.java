@@ -11,7 +11,7 @@ public class ExportDesktopListInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The URL from which you can download the file that contains information about exported cloud desktops.</p>
+     * <p>The URL of the exported file of the cloud computer list.</p>
      */
     @NameInMap("Url")
     public String url;

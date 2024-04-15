@@ -4,6 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyPolicyGroupRequest extends TeaModel {
+    /**
+     * <p>Specifies whether the end user has administrator permissions after the end user connects to the cloud desktop.</p>
+     * <br>
+     * <p>>  This parameter is in invitational preview and not available to the public.</p>
+     */
     @NameInMap("AdminAccess")
     public String adminAccess;
 
@@ -267,9 +272,15 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("RecordingStartTime")
     public String recordingStartTime;
 
+    /**
+     * <p>Specifies whether to enable the screen recording notification feature. Valid values: on and off. on and off (default).</p>
+     */
     @NameInMap("RecordingUserNotify")
     public String recordingUserNotify;
 
+    /**
+     * <p>The content of the screen recording notification sent to the client. By default, you do not need to specify this parameter.</p>
+     */
     @NameInMap("RecordingUserNotifyMessage")
     public String recordingUserNotifyMessage;
 
@@ -357,6 +368,9 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("Watermark")
     public String watermark;
 
+    /**
+     * <p>Specifies whether to enable the anti-screen photo feature for invisible watermarks. on and off (default).</p>
+     */
     @NameInMap("WatermarkAntiCam")
     public String watermarkAntiCam;
 
@@ -387,6 +401,9 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("WatermarkFontStyle")
     public String watermarkFontStyle;
 
+    /**
+     * <p>The watermark enhancement feature. Valid values: low, medium, and high.</p>
+     */
     @NameInMap("WatermarkPower")
     public String watermarkPower;
 

@@ -17,7 +17,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The queried snapshots.</p>
+     * <p>Details of the queried snapshots.</p>
      */
     @NameInMap("Snapshots")
     public java.util.List<DescribeSnapshotsResponseBodySnapshots> snapshots;
@@ -53,75 +53,92 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     public static class DescribeSnapshotsResponseBodySnapshots extends TeaModel {
         /**
-         * <p>The time when the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The point in time at which the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-mm-ddthh:mm:ssz` format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The user that creates the cloud desktop.</p>
+         * <p>The user who creates the snapshot.</p>
          */
         @NameInMap("Creator")
         public String creator;
 
         /**
-         * <p>The time when the snapshot was deleted. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time is displayed in UTC.</p>
+         * <p>The time when the snapshot was deleted. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-mm-ddthh:mm:ssz` format. The time is displayed in UTC.</p>
          */
         @NameInMap("DeletionTime")
         public String deletionTime;
 
         /**
-         * <p>The snapshot description.</p>
+         * <p>The description of the snapshot.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the cloud desktop to which the snapshot belongs.</p>
+         * <p>The ID of the cloud computer to which the snapshot belongs.</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
-         * <p>The cloud desktop name.</p>
+         * <p>The name of the cloud computer.</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
 
         /**
-         * <p>The cloud desktop state. Valid values:</p>
+         * <p>The status of the cloud computer.</p>
          * <br>
-         * <p>*   Pending: The cloud desktop is pending.</p>
-         * <p>*   Starting: The cloud desktop is being started.</p>
-         * <p>*   Running: The cloud desktop is running.</p>
-         * <p>*   Stopping: The cloud desktop is being stopped.</p>
-         * <p>*   Rebuilding: The cloud desktop is being recreated.</p>
-         * <p>*   Stopped: The cloud desktop is stopped.</p>
-         * <p>*   Expired: The cloud desktop expired.</p>
-         * <p>*   Deleted: The cloud desktop is deleted.</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Stopped</p>
+         * <p>*   Starting</p>
+         * <p>*   Rebuilding</p>
+         * <p>*   Running</p>
+         * <p>*   Stopping</p>
+         * <p>*   Expired</p>
+         * <p>*   Deleted</p>
+         * <p>*   Pending</p>
          */
         @NameInMap("DesktopStatus")
         public String desktopStatus;
 
         /**
-         * <p>The progress of creating the snapshot. Unit: percentage (%).</p>
+         * <p>The progress of creating the snapshot. Unit: %.</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
-         * <p>The protocol. Valid values:</p>
+         * <p>The protocol type.</p>
          * <br>
-         * <p>*   ASP</p>
-         * <p>*   HDX</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   HDX: High-definition Experience (HDX) protocol</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   ASP: in-house Adaptive Streaming Protocol (ASP)</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
-         * <p>The remaining time required to create the snapshot. Unit: seconds.</p>
+         * <p>The remaining time that is required to complete the snapshot creation. Unit: seconds.</p>
          * <br>
-         * <p>> If the value of the `Status` parameter is `PROGRESSING` and the value of the `RemainTime` parameter is `-1`, the system is calculating the remaining time required to create the snapshot.</p>
+         * <p>>  When the `Status` value is `PROGRESSING`, the `RemainTime` value is `-1`. A value of -1 indicates that the system is calculating the remaining time.</p>
          */
         @NameInMap("RemainTime")
         public Integer remainTime;
@@ -133,41 +150,93 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String snapshotId;
 
         /**
-         * <p>The snapshot name.</p>
+         * <p>The name of the snapshot.</p>
          */
         @NameInMap("SnapshotName")
         public String snapshotName;
 
         /**
-         * <p>The snapshot type. Valid values:</p>
+         * <p>The type of the snapshot.</p>
+         * <br>
+         * <p>Valid values:</p>
          * <br>
          * <p>*   AUTO: automatic snapshot</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
          * <p>*   USER: manual snapshot</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("SnapshotType")
         public String snapshotType;
 
         /**
-         * <p>The size of the source disk. Unit: GiB.</p>
+         * <p>The capacity of the source disk. Unit: GiB.</p>
          */
         @NameInMap("SourceDiskSize")
         public String sourceDiskSize;
 
         /**
-         * <p>The type of the source disk. Valid values:</p>
+         * <p>The type of the source disk.</p>
+         * <br>
+         * <p>Valid values:</p>
          * <br>
          * <p>*   SYSTEM: system disk</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
          * <p>*   DATA: data disk</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("SourceDiskType")
         public String sourceDiskType;
 
         /**
-         * <p>The state of the snapshot. Valid values:</p>
+         * <p>The status of the snapshot.</p>
+         * <br>
+         * <p>Valid values:</p>
          * <br>
          * <p>*   PROGRESSING: The snapshot is being created.</p>
-         * <p>*   FAILED: The snapshot failed to be created.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   FAILED: The snapshot fails to be created.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
          * <p>*   ACCOMPLISHED: The snapshot is created.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Status")
         public String status;
@@ -179,7 +248,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public Boolean volumeEncryptionEnabled;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.</p>
+         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to query the list of KMS keys.</p>
          */
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;

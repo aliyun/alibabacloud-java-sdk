@@ -32,13 +32,13 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     public String OUPath;
 
     /**
-     * <p>The workspace ID. Only workspaces of the enterprise AD account type are supported.</p>
+     * <p>The office network ID. The office network must be of the enterprise AD account type.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

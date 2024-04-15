@@ -6,12 +6,17 @@ import com.aliyun.tea.*;
 public class DescribeUsersInGroupRequest extends TeaModel {
     /**
      * <p>The status of the desktop connection for the end user.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>- 0: Disconnected.</p>
+     * <p>- 1: Connected.</p>
      */
     @NameInMap("ConnectState")
     public Integer connectState;
 
     /**
-     * <p>The ID of the desktop group.</p>
+     * <p>The ID of the cloud computer pool.</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
@@ -23,7 +28,7 @@ public class DescribeUsersInGroupRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The IDs of the end users.</p>
+     * <p>The IDs of the authorized users.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
@@ -56,13 +61,31 @@ public class DescribeUsersInGroupRequest extends TeaModel {
     public String orgId;
 
     /**
-     * <p>Specifies whether to query the details about the end user.</p>
+     * <p>Specifies whether to query user details.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true (default)</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("QueryUserDetail")
     public Boolean queryUserDetail;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

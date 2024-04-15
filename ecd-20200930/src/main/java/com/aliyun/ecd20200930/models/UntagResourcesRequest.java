@@ -11,25 +11,29 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The resource IDs, namely the cloud desktop IDs. Valid values of N: 1 to 50.</p>
+     * <p>The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Valid value: ALIYUN::GWS::INSTANCE.</p>
+     * <p>The type of the resource.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>* ALIYUN::GWS::INSTANCE: cloud computer.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The tag key. You can specify up to 20 tag keys.</p>
+     * <p>The tag keys. You can specify 1 to 20 tag keys.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ModifyUserToDesktopGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the desktop group that you want to assign to users.</p>
+     * <p>The ID of the cloud computer pool whose end users you want to change.</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     /**
-     * <p>The IDs of the regular users to whom you want to grant the permissions on the cloud desktop.</p>
+     * <p>The IDs of the end users that you want to add. You can configure 1 to 500 IDs.</p>
      */
     @NameInMap("NewEndUserIds")
     public java.util.List<String> newEndUserIds;
 
     /**
-     * <p>The IDs of the original regular users who have the permissions on the cloud desktop.</p>
+     * <p>The IDs of the end users that you want to remove. You can configure 1 to 500 IDs.</p>
      */
     @NameInMap("OldEndUserIds")
     public java.util.List<String> oldEndUserIds;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

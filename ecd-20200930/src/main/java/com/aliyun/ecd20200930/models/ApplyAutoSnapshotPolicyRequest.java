@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
     /**
-     * <p>The IDs of cloud desktops. You can specify 1 to 20 cloud desktops.</p>
+     * <p>The IDs of the cloud computers. You can specify 1 to 20 IDs.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
@@ -17,7 +17,7 @@ public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
