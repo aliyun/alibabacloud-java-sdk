@@ -5,10 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkPackagesRequest extends TeaModel {
     /**
-     * <p>The billing method of the Internet access package. Valid values:</p>
+     * <p>The charge type of the pay-as-you-go premium bandwidth plan.</p>
      * <br>
-     * <p>*   PayByTraffic: pay-by-data-transfer</p>
-     * <p>*   PayByBandwidth: pay-by-bandwidth</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   PayByTraffic: charges by data transfer.</p>
+     * <br>
+     * <p>*   PayByBandwidth: charges by fixed bandwidth.</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
@@ -23,7 +26,7 @@ public class DescribeNetworkPackagesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The IDs of the Internet access packages. You can specify 1 to 100 IDs of Internet access packages.</p>
+     * <p>The ID of the premium bandwidth plan. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("NetworkPackageId")
     public java.util.List<String> networkPackageId;
@@ -35,7 +38,7 @@ public class DescribeNetworkPackagesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

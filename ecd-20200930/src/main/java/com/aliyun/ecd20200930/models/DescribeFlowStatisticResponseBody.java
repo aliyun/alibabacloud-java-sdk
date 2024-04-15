@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeFlowStatisticResponseBody extends TeaModel {
     /**
-     * <p>The number of available cloud desktops in the workspace.</p>
+     * <p>The number of available cloud computers in the office network.</p>
      */
     @NameInMap("DesktopCount")
     public Integer desktopCount;
 
     /**
-     * <p>Details of the traffic that is consumed by cloud desktops.</p>
+     * <p>The traffic statistics.</p>
      */
     @NameInMap("DesktopFlowStatistic")
     public java.util.List<DescribeFlowStatisticResponseBodyDesktopFlowStatistic> desktopFlowStatistic;
@@ -53,19 +53,19 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
 
     public static class DescribeFlowStatisticResponseBodyDesktopFlowStatistic extends TeaModel {
         /**
-         * <p>The ID of the cloud desktop.</p>
+         * <p>The ID of the cloud computer.</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
-         * <p>The name of the cloud desktop.</p>
+         * <p>The name of the cloud computer.</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
 
         /**
-         * <p>The amount of the traffic. Unit: KB.</p>
+         * <p>The traffic amount. Unit: KB.</p>
          */
         @NameInMap("FlowIn")
         public String flowIn;

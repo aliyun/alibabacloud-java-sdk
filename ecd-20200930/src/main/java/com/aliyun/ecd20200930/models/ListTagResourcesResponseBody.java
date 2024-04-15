@@ -53,25 +53,29 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
-         * <p>The resource ID, namely the cloud desktop ID.</p>
+         * <p>The resource ID, which is the cloud computer ID.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The resource type. Valid value: ALIYUN::GWS::INSTANCE.</p>
+         * <p>The type of the resource.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>* ALIYUN::GWS::INSTANCE: cloud computer.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The tag key.</p>
+         * <p>The tag keys.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag values.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

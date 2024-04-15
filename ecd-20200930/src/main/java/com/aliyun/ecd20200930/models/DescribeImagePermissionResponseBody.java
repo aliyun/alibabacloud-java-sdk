@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImagePermissionResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the recipient Alibaba Cloud accounts. You can share an image with up to 50 Alibaba Cloud accounts.</p>
+     * <p>The IDs of the Alibaba Cloud accounts with which the image is shared.</p>
      */
     @NameInMap("AliUids")
     public java.util.List<String> aliUids;

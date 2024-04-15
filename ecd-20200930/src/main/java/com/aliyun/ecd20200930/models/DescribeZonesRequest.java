@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The zone type. Default value: **AvailabilityZone**. This value specifies Alibaba Cloud zones.</p>
+     * <p>The type of the zone. Default value: `AvailabilityZone`. This value indicates Alibaba Cloud zones.</p>
      */
     @NameInMap("ZoneType")
     public String zoneType;

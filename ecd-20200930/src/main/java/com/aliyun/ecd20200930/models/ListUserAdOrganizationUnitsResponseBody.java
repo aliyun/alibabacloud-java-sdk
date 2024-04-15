@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
     /**
-     * <p>The token that is used to start the next query.</p>
+     * <p>A pagination token.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The names of the OUs in the AD domain.</p>
+     * <p>The OUs of the AD domain.</p>
      */
     @NameInMap("OUNames")
     public java.util.List<ListUserAdOrganizationUnitsResponseBodyOUNames> OUNames;
@@ -53,19 +53,19 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
 
     public static class ListUserAdOrganizationUnitsResponseBodyOUNames extends TeaModel {
         /**
-         * <p>The display name of the OU.</p>
+         * <p>The name of the OU.</p>
          */
         @NameInMap("DisplayOUName")
         public String displayOUName;
 
         /**
-         * <p>The name of the OU of the AD domain controller.</p>
+         * <p>The canonical name (CNAME) of the OU in the AD domain controller.</p>
          */
         @NameInMap("OUName")
         public String OUName;
 
         /**
-         * <p>The ID of the AD workspace.</p>
+         * <p>The enterprise AD office network ID.</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;

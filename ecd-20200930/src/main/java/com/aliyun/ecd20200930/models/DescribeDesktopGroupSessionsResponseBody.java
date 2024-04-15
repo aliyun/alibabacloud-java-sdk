@@ -158,29 +158,8 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   0</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    single-session</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   1</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    multi-session</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   0: single-session</p>
+         * <p>*   1: multi-session</p>
          */
         @NameInMap("OwnType")
         public Integer ownType;

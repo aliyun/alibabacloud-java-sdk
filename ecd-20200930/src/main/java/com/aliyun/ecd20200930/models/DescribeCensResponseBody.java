@@ -81,7 +81,7 @@ public class DescribeCensResponseBody extends TeaModel {
 
     public static class DescribeCensResponseBodyCensPackageIds extends TeaModel {
         /**
-         * <p>The ID of the bandwidth plan that is associated with the CEN instance.</p>
+         * <p>The ID of the bandwidth plan that is bound to the CEN instance.</p>
          */
         @NameInMap("PackageId")
         public String packageId;
@@ -103,13 +103,13 @@ public class DescribeCensResponseBody extends TeaModel {
 
     public static class DescribeCensResponseBodyCensTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -157,11 +157,19 @@ public class DescribeCensResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether IPv6 is supported. A value of DISABLED indicates that IPv6 is not supported.</p>
+         * <p>The IPv6 level.</p>
          * <br>
-         * <p>**</p>
+         * <p>>  IPv6 is not supported.</p>
          * <br>
-         * <p>**Description** IPv6 is not supported.</p>
+         * <p>Valid value:</p>
+         * <br>
+         * <p>*   DISABLED</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Ipv6Level")
         public String ipv6Level;
@@ -173,23 +181,49 @@ public class DescribeCensResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The IDs of the bandwidth plans that are associated with the CEN instance.</p>
+         * <p>The bandwidth plans that are bound to the CEN instance.</p>
          */
         @NameInMap("PackageIds")
         public java.util.List<DescribeCensResponseBodyCensPackageIds> packageIds;
 
         /**
-         * <p>The level of CIDR block overlapping. If REDUCED returns, the CIDR blocks can overlap with each other but must not be the same.</p>
+         * <p>The tolerated level of CIDR block conflict.</p>
+         * <br>
+         * <p>Valid value:</p>
+         * <br>
+         * <p>*   REDUCED: CIDR block conflicts are allowed, but the conflicting CIDR blocks cannot be identical.</p>
          */
         @NameInMap("ProtectionLevel")
         public String protectionLevel;
 
         /**
-         * <p>The status of the CEN instance. Valid values:</p>
+         * <p>The status of the CEN instance.</p>
+         * <br>
+         * <p>Valid values:</p>
          * <br>
          * <p>*   Creating</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
          * <p>*   Active</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
          * <p>*   Deleting</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Status")
         public String status;

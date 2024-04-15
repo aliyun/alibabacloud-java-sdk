@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class RenewDesktopsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the automatic payment feature.</p>
+     * <p>Specifies whether to enable the auto-payment feature.</p>
      * <br>
-     * <p>Valid values:</p>
+     * <p>Default value: true. Valid values:</p>
      * <br>
-     * <p>*   true (default): enables the auto-payment feature.</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <p>*   true: enables the auto-payment feature.</p>
      * <br>
      * <p>    <!-- --></p>
      * <br>
-     * <p>    Make sure that your account has sufficient balance. Otherwise, no order is generated.</p>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    Make sure that you have sufficient balance in your Alibaba Cloud account. Otherwise, your order becomes invalid.</p>
      * <br>
      * <p>    <!-- --></p>
      * <br>
@@ -25,7 +25,7 @@ public class RenewDesktopsRequest extends TeaModel {
      * <br>
      * <p>    <!-- --></p>
      * <br>
-     * <p>    You can log on to the EDS console and complete the payment based on the order number.</p>
+     * <p>    You can log on to the WUYING Workspace console and complete the payment based on the order ID on the Orders page.</p>
      * <br>
      * <p>    <!-- --></p>
      */
@@ -33,7 +33,7 @@ public class RenewDesktopsRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The cloud desktop ID. Only subscription cloud desktops can be renewed.</p>
+     * <p>The IDs of the cloud computers. Only IDs of subscription cloud computers are supported.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
@@ -50,11 +50,11 @@ public class RenewDesktopsRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the renewal duration that is specified by the Period parameter.</p>
+     * <p>The unit of the renewal duration specified by the `Period` parameter.</p>
      * <br>
-     * <p>Valid values:</p>
+     * <p>Default value: Month. Valid values:</p>
      * <br>
-     * <p>*   Month (default)</p>
+     * <p>*   Month</p>
      * <br>
      * <p>    <!-- --></p>
      * <br>
@@ -74,13 +74,13 @@ public class RenewDesktopsRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The ID of the sales promotion.</p>
+     * <p>The ID of the promotional activity.</p>
      */
     @NameInMap("PromotionId")
     public String promotionId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

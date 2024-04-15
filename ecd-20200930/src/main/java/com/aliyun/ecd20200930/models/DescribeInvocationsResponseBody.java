@@ -307,6 +307,9 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The ID of the end user.</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 

@@ -11,68 +11,50 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the desktop connection task.</p>
+     * <p>The ID of the cloud computer connection task.</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
-     * <p>The status of the task.</p>
+     * <p>The task status.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   FAILED</p>
+     * <p>*   FAILED: The credential fails to be obtained.</p>
      * <br>
      * <p>    <!-- --></p>
      * <br>
-     * <p>    :</p>
+     * <p>    <!-- --></p>
      * <br>
      * <p>    <!-- --></p>
      * <br>
-     * <p>    Failed to obtain the token</p>
+     * <p>*   RUNNING: The credential is being obtained.</p>
      * <br>
      * <p>    <!-- --></p>
      * <br>
-     * <p>    .</p>
-     * <br>
-     * <p>*   RUNNING</p>
+     * <p>    <!-- --></p>
      * <br>
      * <p>    <!-- --></p>
      * <br>
-     * <p>    :</p>
+     * <p>*   FINISHED: The credential is obtained.</p>
      * <br>
      * <p>    <!-- --></p>
      * <br>
-     * <p>    The token is being obtained</p>
-     * <br>
      * <p>    <!-- --></p>
      * <br>
-     * <p>    .</p>
-     * <br>
-     * <p>*   FINISHED</p>
-     * <br>
      * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    The token-based logon is successful</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
      */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
     /**
-     * <p>The credentials that are used to connect to the cloud desktop. To use the credentials, you must decode the credentials in Base64, save the credentials as a xxx.ica file, and then open the file. Sample Python code:</p>
+     * <p>The credential that is returned to connect to the cloud computer. Before you use the credential, you must Base64 decode the content of the credential, save the credential as an xxx.ica file, and then open the file. Python sample code:</p>
      * <br>
      * <p>    import base64</p>
      * <p>    response = {</p>
-     * <p>        "Ticket": "XXXX",</p>
-     * <p>        "RequestId": "XXX-XXX",</p>
+     * <p>        "Ticket": "W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********",</p>
+     * <p>        "RequestId": "1CBAFFAB-B697-4049-A9B1-67E1FC5F****",</p>
      * <p>    }</p>
      * <p>    f = open (\"xxx.ica\", \"w\")</p>
      * <p>    out = base64.b64decode(response[\"Ticket\"])</p>

@@ -83,7 +83,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         public Boolean gpuCategory;
 
         /**
-         * <p>The version of the GPU driver.</p>
+         * <p>The version number of the GPU driver.</p>
          */
         @NameInMap("GpuDriverVersion")
         public String gpuDriverVersion;
@@ -96,6 +96,24 @@ public class DescribeImagesResponseBody extends TeaModel {
 
         /**
          * <p>The type of the image.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   SYSTEM</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   CUSTOM</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("ImageType")
         public String imageType;
@@ -107,34 +125,100 @@ public class DescribeImagesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The OS type of the image.</p>
+         * <p>The type of the operating system.</p>
          */
         @NameInMap("OsType")
         public String osType;
 
         /**
-         * <p>The OS type of the image.</p>
+         * <p>The operating system type of the image.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Ubuntu</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Windows Server 2022</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   UOS</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   CentOS</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Windows Server 2019</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   SQL Server 2016</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Windows 10</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
-         * <p>The progress of image creation. Unit: percentage (%).</p>
+         * <p>The creation progress of the image. Unit: %.</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
-         * <p>The type of the protocol.</p>
+         * <p>The protocol type.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   HDX: High-definition Experience (HDX) protocol</p>
+         * <p>*   ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
-         * <p>The session type of the image. Valid values:</p>
+         * <p>The type of the image session.</p>
          * <br>
-         * <p>*   SINGLE_SESSION: single-session images</p>
-         * <p>*   MULTIPLE_SESSION: multi-session images</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   SINGLE_SESSION: single-session image.</p>
+         * <br>
+         * <p>*   MULTIPLE_SESSION: multi-session image.</p>
          */
         @NameInMap("SessionType")
         public String sessionType;
@@ -152,13 +236,39 @@ public class DescribeImagesResponseBody extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The state of the image.</p>
+         * <p>The status of the image.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Creating</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Available</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   CreateFailed</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The languages of the OS.</p>
+         * <p>The languages of the operating system.</p>
          */
         @NameInMap("SupportedLanguages")
         public java.util.List<String> supportedLanguages;
@@ -176,7 +286,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         public Boolean volumeEncryptionEnabled;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain the list of KMS keys.</p>
+         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to query the list of KMS keys.</p>
          */
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;

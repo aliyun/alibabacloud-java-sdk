@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ModifyDesktopTimerRequest extends TeaModel {
     /**
-     * <p>The cloud computer ID. You can specify 1 to 20 IDs.</p>
+     * <p>The IDs of the cloud computers.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The details of the scheduled task for the cloud desktops.</p>
+     * <p>The details of the scheduled task on cloud computers.</p>
      */
     @NameInMap("DesktopTimers")
     public java.util.List<ModifyDesktopTimerRequestDesktopTimers> desktopTimers;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Specifies whether to use DesktopTimers. If you want to use a timer, **set this parameter to true**.</p>
+     * <p>Specifies whether to use the `DesktopTimers`** parameter. Set the value to `true`**.</p>
      */
     @NameInMap("UseDesktopTimers")
     public Boolean useDesktopTimers;
@@ -67,95 +67,91 @@ public class ModifyDesktopTimerRequest extends TeaModel {
 
     public static class ModifyDesktopTimerRequestDesktopTimers extends TeaModel {
         /**
-         * <p>Specifies whether to allow end users to configure scheduled tasks on an Alibaba Cloud Workspace client.</p>
+         * <p>Specifies whether to allow end users to configure the scheduled task.</p>
          */
         @NameInMap("AllowClientSetting")
         public Boolean allowClientSetting;
 
         /**
-         * <p>The cron expression of the scheduled task.</p>
+         * <p>The cron expression of the schedule.</p>
          * <br>
-         * <p>>  You must specify the time in UTC format. For example, if you want to specify 00:00 of UTC+8, use the following cron expression: 0 0 16. \* 1,2,3,4,5,6,7</p>
+         * <p>> The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7</p>
          */
         @NameInMap("CronExpression")
         public String cronExpression;
 
         /**
-         * <p>Specifies whether to forcefully execute the scheduled task. A value of true indicates that the system forcefully executes the scheduled task regardless of the connection status of the cloud desktop.</p>
+         * <p>Specifies whether to forcibly execute the scheduled task.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true: forcibly executes the scheduled task regardless of the status and connection of the cloud computers.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   false: does not forcibly execute the scheduled task.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Enforce")
         public Boolean enforce;
 
         /**
-         * <p>The interval. Unit: minutes.</p>
+         * <p>The interval at which the scheduled task is executed. Unit: minutes.</p>
          */
         @NameInMap("Interval")
         public Integer interval;
 
         /**
-         * <p>The type of the scheduled operation. This parameter is valid only when TimerType is set to NoConnect.</p>
+         * <p>The operations that scheduled tasks support. This parameter is valid only when TimerType is set to NoConnect.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   Hibernate</p>
+         * <p>*   Hibernate: hibernates the cloud computers.</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>    :</p>
+         * <p>    <!-- --></p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>    hibernates the cloud desktops</p>
+         * <p>*   Shutdown: stops the cloud computers.</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   Shutdown</p>
-         * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>    :</p>
-         * <br>
          * <p>    <!-- --></p>
-         * <br>
-         * <p>    stops the cloud desktops</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
          */
         @NameInMap("OperationType")
         public String operationType;
 
         /**
-         * <p>Indicates which type of disk that is used by the cloud desktop is reset.</p>
+         * <p>The reset type of the cloud computers.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   RESET_TYPE_SYSTEM</p>
+         * <p>*   RESET_TYPE_SYSTE: resets the system disk.</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>    :</p>
+         * <p>    <!-- --></p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>    resets the system disks</p>
+         * <p>*   RESET_TYPE_BOTH: resets data and user disks.</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   RESET_TYPE_BOTH</p>
-         * <br>
          * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    resets the data disks and system disks.</p>
          * <br>
          * <p>    <!-- --></p>
          */
@@ -167,7 +163,7 @@ public class ModifyDesktopTimerRequest extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   NoOperationDisconnect: Disconnects the cloud desktops when no operations are performed on the cloud desktops.</p>
+         * <p>*   NoOperationDisconnect: Disconnects the cloud computers without performing operations on the cloud computers.</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
@@ -175,7 +171,7 @@ public class ModifyDesktopTimerRequest extends TeaModel {
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>*   LogoutShutdown: Stops the cloud desktops when end users log out of Alibaba Cloud Workspace clients.</p>
+         * <p>*   LogoutShutdown: Stops the cloud computers when end users log out Alibaba Cloud Workspace clients.</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
@@ -183,7 +179,7 @@ public class ModifyDesktopTimerRequest extends TeaModel {
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>*   NoConnect: Disconnets the cloud desktops when end users perform one of the actions that is specified by the OperationType parameter.</p>
+         * <p>*   NoConnect: Disconnects the cloud computers when end users perform one of the actions that is specified by the OperationType parameter.</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
@@ -191,7 +187,7 @@ public class ModifyDesktopTimerRequest extends TeaModel {
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>*   TimerBoot: Starts the cloud desktops at a scheduled point in time.</p>
+         * <p>*   TimerBoot: Starts the cloud computers on schedule.</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
@@ -199,7 +195,7 @@ public class ModifyDesktopTimerRequest extends TeaModel {
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>*   TimerReset: Resets the cloud desktops at a scheduled point in time.</p>
+         * <p>*   TimerReset: Resets the cloud computers on schedule.</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
@@ -207,7 +203,7 @@ public class ModifyDesktopTimerRequest extends TeaModel {
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>*   LoginAutoConnect: automatically connects to cloud desktops when end users log on to Alibaba Cloud Workspace clients.</p>
+         * <p>*   LoginAutoConnect: automatically connects to the cloud computers when end users log on to Alibaba Cloud Workspace clients.</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
@@ -215,7 +211,7 @@ public class ModifyDesktopTimerRequest extends TeaModel {
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>*   NoOperationShutdown: Stops the cloud desktops when no operations are performed on the cloud desktops.</p>
+         * <p>*   NoOperationShutdown: Stops the cloud computers without performing operations on the cloud computers.</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
@@ -223,7 +219,7 @@ public class ModifyDesktopTimerRequest extends TeaModel {
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>*   TimerShutdown: Stops the cloud desktops at a scheduled point in time.</p>
+         * <p>*   TimerShutdown: Stops the cloud computers on schedule.</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
@@ -231,7 +227,7 @@ public class ModifyDesktopTimerRequest extends TeaModel {
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>*   NoOperationReboot: Restarts the cloud desktops when no operations are performed on the cloud desktops.</p>
+         * <p>*   NoOperationReboot: Restarts the cloud computers without performing operations on the cloud computers.</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
@@ -239,7 +235,7 @@ public class ModifyDesktopTimerRequest extends TeaModel {
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>*   TimerReboot: Restarts the cloud desktops at a scheduled point in time.</p>
+         * <p>*   TimerReboot: Restarts the cloud computers on schedule.</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>

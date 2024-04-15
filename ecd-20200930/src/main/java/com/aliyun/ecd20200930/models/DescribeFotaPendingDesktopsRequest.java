@@ -5,46 +5,46 @@ import com.aliyun.tea.*;
 
 public class DescribeFotaPendingDesktopsRequest extends TeaModel {
     /**
-     * <p>The cloud desktop ID.</p>
+     * <p>The cloud computer ID.</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
-     * <p>The name of the cloud desktop.</p>
+     * <p>The cloud computer name.</p>
      */
     @NameInMap("DesktopName")
     public String desktopName;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
-     * <p>*   Maximum value: 100.</p>
+     * <p>*   Valid values: 1 to 100.</p>
      * <p>*   Default value: 20.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The office network ID. You can call the [DescribeOfficeSites](~~216071~~) operation to obtain the office network ID.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](https://next.api.aliyun.com/document/ecd/2020-09-30/DescribeRegions) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the image update task. You can call the [DescribeFotaTasks](~~DescribeFotaTasks~~) operation to obtain the value of this parameter.</p>
+     * <p>The ID of the image update task. You can call the DescribeFotaTasks operation to obtain the task ID.</p>
      */
     @NameInMap("TaskUid")
     public String taskUid;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolicyGroupsResponseBody extends TeaModel {
     /**
-     * <p>Details of the policies.</p>
+     * <p>The details of the policies.</p>
      */
     @NameInMap("DescribePolicyGroups")
     public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroups> describePolicyGroups;
@@ -53,13 +53,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeAccessPolicyRules extends TeaModel {
         /**
-         * <p>The CIDR block that you access from the client. The value is an IPv4 CIDR block.</p>
+         * <p>The CIDR block that is allowed to access the client. The value is an IPv4 CIDR block.</p>
          */
         @NameInMap("CidrIp")
         public String cidrIp;
 
         /**
-         * <p>The description of the IPv4 CIDR block.</p>
+         * <p>The remarks on the CIDR block that is allowed to access the client.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -89,7 +89,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeSecurityPolicyRules extends TeaModel {
         /**
-         * <p>The IPv4 CIDR block of the security group rule.</p>
+         * <p>The object to which the security group rule applies. The value is an IPv4 CIDR block.</p>
          */
         @NameInMap("CidrIp")
         public String cidrIp;
@@ -106,68 +106,21 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          * <p>Valid values:</p>
          * <br>
          * <p>*   tcp: Transmission Control Protocol (TCP)</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   udp: User Datagram Protocol (UDP)</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   all: all protocols</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   gre: Generic Routing Encapsulation (GRE)</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   icmp: ICMP (IPv4)</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   icmp: Internet Control Message Protocol (ICMP) for IPv4</p>
          */
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
         /**
-         * <p>The authorization policy of the security group rule.</p>
+         * <p>The authorization of the security group rule.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
          * <p>*   drop: denies all access requests.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   accept: accepts all access requests.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("Policy")
         public String policy;
@@ -190,20 +143,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          * <p>Valid values:</p>
          * <br>
          * <p>*   outflow: outbound</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   inflow: inbound</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("Type")
         public String type;
@@ -278,72 +218,11 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          * <p>Valid values:</p>
          * <br>
          * <p>*   html5: web client</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   linux</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    WUYING hardware client</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   android</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    Android client</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   windows</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    Windows client</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   ios</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    iOS client</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   macos</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    macOS client</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   linux: WUYING hardware terminal</p>
+         * <p>*   android: Android client</p>
+         * <p>*   windows: Windows client</p>
+         * <p>*   ios: iOS client</p>
+         * <p>*   macos: macOS client</p>
          */
         @NameInMap("ClientType")
         public String clientType;
@@ -354,28 +233,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          * <p>Valid values:</p>
          * <br>
          * <p>*   OFF</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    not allowed</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   ON</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    allowed</p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("Status")
         public String status;
@@ -405,7 +263,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroupsDomainResolveRule extends TeaModel {
         /**
-         * <p>The policy description.</p>
+         * <p>The rule description.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -417,10 +275,10 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>Indicates whether the resolution feature is allowed.</p>
+         * <p>Indicates whether the domain name resolution is allowed. Valid values:</p>
          * <br>
-         * <p>*   allow: The feature is allowed.</p>
-         * <p>*   block: The feature is not allowed.</p>
+         * <p>*   allow</p>
+         * <p>*   block</p>
          */
         @NameInMap("Policy")
         public String policy;
@@ -458,11 +316,19 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroupsNetRedirectRule extends TeaModel {
         /**
-         * <p>The content of the rule.</p>
+         * <p>The rule content.</p>
          */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>Indicates whether the rule is allowed.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   allow</p>
+         * <p>*   block</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
@@ -471,29 +337,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   prc</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    process</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   domain</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    domain name</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   prc: process</p>
+         * <p>*   domain: domain name</p>
          */
         @NameInMap("RuleType")
         public String ruleType;
@@ -537,13 +382,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The device class. If you set `UsbRuleType` to 1, you must specify this parameter. For more information, see [Defined Class Codes](https://www.usb.org/defined-class-codes).</p>
+         * <p>The device class. This parameter is required when `usbRuleType` is set to 1. For more information, see [Defined Class Codes](https://www.usb.org/defined-class-codes).</p>
          */
         @NameInMap("DeviceClass")
         public String deviceClass;
 
         /**
-         * <p>The device subclass. This parameter is required if `UsbRuleType` is set to 1. For more information, see [Defined Class Codes](https://www.usb.org/defined-class-codes).</p>
+         * <p>The subclass of the device. This parameter is required when `usbRuleType` is set to 1. For more information, see [Defined Class Codes](https://www.usb.org/defined-class-codes).</p>
          */
         @NameInMap("DeviceSubclass")
         public String deviceSubclass;
@@ -555,25 +400,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String productId;
 
         /**
-         * <p>The USB redirection type.</p>
+         * <p>Indicates whether USB redirection is allowed.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   1: allows USB redirection.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   2: forbids USB redirection.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   1: allowed</p>
+         * <p>*   2: not allowed</p>
          */
         @NameInMap("UsbRedirectType")
         public Long usbRedirectType;
@@ -584,26 +416,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          * <p>Valid values:</p>
          * <br>
          * <p>*   1: by device class</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   2: by device vendor</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("UsbRuleType")
         public Long usbRuleType;
 
         /**
-         * <p>The vendor ID. For more information, see [Valid USB Vendor IDs (VIDs)](https://www.usb.org/sites/default/files/vendor_ids032322.pdf\_1.pdf).</p>
+         * <p>The vendor ID (VID). For more information, see [Valid USB VIDs](https://www.usb.org/sites/default/files/vendor_ids032322.pdf\_1.pdf).</p>
          */
         @NameInMap("VendorId")
         public String vendorId;
@@ -672,14 +491,19 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroups extends TeaModel {
+        /**
+         * <p>Indicates whether users have the administrator permissions after they connect to cloud desktops.</p>
+         * <br>
+         * <p>>  This parameter is in invitational preview and not available to the public.</p>
+         */
         @NameInMap("AdminAccess")
         public String adminAccess;
 
         /**
          * <p>Indicates whether the anti-screenshot feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   on: This feature is enabled.</p>
-         * <p>*   off: This feature is disabled.</p>
+         * <p>*   on</p>
+         * <p>*   off</p>
          * <br>
          * <p>Default value: off.</p>
          */
@@ -687,7 +511,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String appContentProtection;
 
         /**
-         * <p>The client CIDR blocks in the whitelist.</p>
+         * <p>The client CIDR blocks in a whitelist.</p>
          */
         @NameInMap("AuthorizeAccessPolicyRules")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeAccessPolicyRules> authorizeAccessPolicyRules;
@@ -703,21 +527,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   off: The feature is disabled.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   on (default): The feature is enabled.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   off</p>
+         * <p>*   on (default)</p>
          */
         @NameInMap("CameraRedirect")
         public String cameraRedirect;
@@ -734,61 +545,59 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          * <p>Valid values:</p>
          * <br>
          * <p>*   read: One-way transfer is allowed.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   readwrite: Two-way transfer is allowed.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   off: Two-way transfer is not allowed.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("Clipboard")
         public String clipboard;
 
+        /**
+         * <p>The CPU underclocking duration. Valid values: 30 to 120.</p>
+         */
         @NameInMap("CpuDownGradeDuration")
         public Integer cpuDownGradeDuration;
 
+        /**
+         * <p>The process whitelist that is not restricted by the CPU usage limit.</p>
+         */
         @NameInMap("CpuProcessors")
         public java.util.List<String> cpuProcessors;
 
+        /**
+         * <p>Indicates whether the switch for CPU protection mode is turned on. Valid values: on and off.</p>
+         */
         @NameInMap("CpuProtectedMode")
         public String cpuProtectedMode;
 
+        /**
+         * <p>The overall CPU utilization. Valid values: 70 to 90.</p>
+         */
         @NameInMap("CpuRateLimit")
         public Integer cpuRateLimit;
 
+        /**
+         * <p>The overall CPU sampling duration. Valid values: 10 to 60.</p>
+         */
         @NameInMap("CpuSampleDuration")
         public Integer cpuSampleDuration;
 
+        /**
+         * <p>The usage of a single CPU. Valid values: 70 to 100.</p>
+         */
         @NameInMap("CpuSingleRateLimit")
         public Integer cpuSingleRateLimit;
 
         /**
-         * <p>The access control for domain names. The domain names can contain the wildcard character (\*). Multiple domain names are separated by commas (,). Valid values:</p>
+         * <p>Indicates whether the access control for domain names is enabled. The domain names can contain wildcard characters (\*). Multiple domain names are separated by commas (,). Valid values:</p>
          * <br>
-         * <p>*   off: This feature is disabled.</p>
-         * <p>*   on: This feature is enabled.</p>
+         * <p>*   off</p>
+         * <p>*   on</p>
          */
         @NameInMap("DomainList")
         public String domainList;
 
         /**
-         * <p>The resolution of domain names.</p>
+         * <p>The rule of domain name resolution.</p>
          */
         @NameInMap("DomainResolveRule")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsDomainResolveRule> domainResolveRule;
@@ -799,135 +608,61 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          * <p>Valid values:</p>
          * <br>
          * <p>*   off</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   on</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("DomainResolveRuleType")
         public String domainResolveRuleType;
 
         /**
          * <p>The number of cloud desktops that are associated with the policy.\</p>
-         * <p>This parameter is returned only if PolicyGroupType is set to CUSTOM.</p>
+         * <p>This parameter is returned only for custom policies.</p>
          */
         @NameInMap("EdsCount")
         public Integer edsCount;
 
         /**
-         * <p>Indicates whether the switch for end users to ask for assistance from the administrator is turned on. Valid values: on off</p>
+         * <p>Indicates whether the switch for end users to ask for assistance from the administrator is turned on. Valid values: on and off.</p>
          */
         @NameInMap("EndUserApplyAdminCoordinate")
         public String endUserApplyAdminCoordinate;
 
         /**
-         * <p>The switch for stream collaboration between end users. Valid values: on off</p>
+         * <p>Indicates whether the switch for stream collaboration between end users is turned on. Valid values: on and off.</p>
          */
         @NameInMap("EndUserGroupCoordinate")
         public String endUserGroupCoordinate;
 
         /**
-         * <p>Indicates whether the image quality policy is enabled for Graphics cloud desktops. If you have high requirements for desktop performance and user experience, we recommend that you enable this feature. For example, you can enable this feature in professional design scenarios.</p>
+         * <p>Indicates whether the image quality feature is enabled for Graphics cloud desktops. If you have high requirements for desktop performance and user experience, we recommend that you enable this feature. For example, you can enable this feature in professional graphic design scenarios.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   off: The feature is disabled.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   on: This feature is enabled.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   off</p>
+         * <p>*   on</p>
          */
         @NameInMap("GpuAcceleration")
         public String gpuAcceleration;
 
         /**
-         * <p>The HTML5 client access feature.</p>
+         * <p>Indicates whether the access policy on HTML5 clients is allowed.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
          * <p>*   off (default)</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    disabled</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   on</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    enabled</p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("Html5Access")
         public String html5Access;
 
         /**
-         * <p>The file transfer feature for the HTML5 client.</p>
+         * <p>The file transfer policy for HTML5 clients.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   all: Files can be uploaded and downloaded between your computer and HTML5 clients.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   download: Files on HTML5 clients can be downloaded to your computer.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   upload: Files on your computer can be uploaded to HTML5 clients.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
+         * <p>*   all: Files can be uploaded and downloaded between your local computer and HTML5 clients.</p>
+         * <p>*   download: Files on HTML5 clients can be downloaded to your local computer.</p>
+         * <p>*   upload: Files on your local computer can be uploaded to HTML5 clients.</p>
          * <p>*   off (default): File transfer between HTML5 clients and your computer is disabled.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("Html5FileTransfer")
         public String html5FileTransfer;
@@ -935,8 +670,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         /**
          * <p>The protocol that is used for network communication. Valid values:</p>
          * <br>
-         * <p>*   TCP: Only the TCP protocol is used.</p>
-         * <p>*   BOTH: The automatic switchover between the TCP protocol and the UDP protocol is supported.</p>
+         * <p>*   TCP: Only TCP can be used.</p>
+         * <p>*   BOTH: TCP or UDP can be used. The system switches between TCP and UDP based on the actual network condition.</p>
          * <br>
          * <p>Default value: TCP.</p>
          */
@@ -949,47 +684,45 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          * <p>Valid values:</p>
          * <br>
          * <p>*   read: read-only</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   readwrite: read and write</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   off: no permissions</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("LocalDrive")
         public String localDrive;
 
+        /**
+         * <p>The duration required for underclocking memory by a single process. Valid values: 30 to 120.</p>
+         */
         @NameInMap("MemoryDownGradeDuration")
         public Integer memoryDownGradeDuration;
 
+        /**
+         * <p>The whitelist of processes that are not restricted by the memory usage limit.</p>
+         */
         @NameInMap("MemoryProcessors")
         public java.util.List<String> memoryProcessors;
 
+        /**
+         * <p>Indicates whether the switch for memory protection mode is turned on. Valid values: on and off.</p>
+         */
         @NameInMap("MemoryProtectedMode")
         public String memoryProtectedMode;
 
+        /**
+         * <p>The overall memory usage. Valid values: 70 to 90.</p>
+         */
         @NameInMap("MemoryRateLimit")
         public Integer memoryRateLimit;
 
+        /**
+         * <p>The overall sampling duration of memory statistics. Valid values: 30 to 60.</p>
+         */
         @NameInMap("MemorySampleDuration")
         public Integer memorySampleDuration;
 
+        /**
+         * <p>The memory usage of a single process. Valid values: 30 to 60.</p>
+         */
         @NameInMap("MemorySingleRateLimit")
         public Integer memorySingleRateLimit;
 
@@ -1002,16 +735,20 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the network redirection feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   on: This feature is enabled.</p>
-         * <p>*   off: The feature is disabled.</p>
+         * <p>*   on</p>
+         * <p>*   off</p>
          * <br>
          * <p>Default value: off.</p>
+         * <br>
+         * <p>>  This parameter is in invitational preview and not available to the public.</p>
          */
         @NameInMap("NetRedirect")
         public String netRedirect;
 
         /**
-         * <p>The network redirection rules.</p>
+         * <p>The network redirection rule.</p>
+         * <br>
+         * <p>>  This parameter is in invitational preview and not available to the public.</p>
          */
         @NameInMap("NetRedirectRule")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsNetRedirectRule> netRedirectRule;
@@ -1023,49 +760,23 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String policyGroupId;
 
         /**
-         * <p>The rule type.</p>
+         * <p>The policy type.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
          * <p>*   SYSTEM</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   CUSTOM</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("PolicyGroupType")
         public String policyGroupType;
 
         /**
-         * <p>The state of the policy.</p>
+         * <p>The policy status.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
          * <p>*   AVAILABLE</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   CREATING</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("PolicyStatus")
         public String policyStatus;
@@ -1083,37 +794,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public java.util.List<String> preemptLoginUsers;
 
         /**
-         * <p>The printer redirection feature.</p>
+         * <p>Indicates whether the printer redirection feature is enabled.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
          * <p>*   off</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    The feature is disabled</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
          * <p>*   on</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    The feature is enabled</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
          */
         @NameInMap("PrinterRedirection")
         public String printerRedirection;
@@ -1121,8 +807,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the custom screen recording feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   on: This feature is enabled.</p>
-         * <p>*   off: This feature is disabled.</p>
+         * <p>*   on</p>
+         * <p>*   off</p>
          * <br>
          * <p>Default value: off.</p>
          */
@@ -1130,45 +816,25 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String recordContent;
 
         /**
-         * <p>The duration in which the custom screen recording is valid. Default value: 30. Unit: days.</p>
+         * <p>The period when the custom screen recording can be retained before expiration. Default value: 30 days.</p>
          */
         @NameInMap("RecordContentExpires")
         public Long recordContentExpires;
 
         /**
-         * <p>Indicates whether screen recording is enabled.</p>
+         * <p>Indicates whether the screen recording feature is enabled.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
          * <p>*   ALLTIME: All operations that are performed by end users on cloud desktops are recorded. The recording starts immediately when end users connect to cloud desktops and ends after the end users disconnect from the cloud desktops.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   PERIOD: The operations that are performed by end users on cloud desktops during a specified period of time are recorded. You must specify the start time and the end time of the recording.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   OFF: Screen recording is disabled.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   OFF: The screen recording feature is disabled.</p>
          */
         @NameInMap("Recording")
         public String recording;
 
         /**
-         * <p>Indicates whether the sound that is generated on the cloud desktop is recorded during screen recording. Valid values:</p>
+         * <p>Indicates whether to record audio or video data that is generated on the cloud desktop during screen recording. Valid values:</p>
          * <br>
          * <p>*   on: records audio and video data.</p>
          * <p>*   off: records only video data.</p>
@@ -1177,19 +843,19 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String recordingAudio;
 
         /**
-         * <p>This parameter is used together with Recording. After the specified period of the recording reaches, a screen recording file is generated.</p>
+         * <p>This parameter is used with the Recording parameter to generate a screen recording file after you specify the duration of screen recording.</p>
          */
         @NameInMap("RecordingDuration")
         public Integer recordingDuration;
 
         /**
-         * <p>The time when the screen recording ended. The value is in the HH:MM:SS format. The value of this parameter is valid only if Recording is set to PERIOD.</p>
+         * <p>The time when the screen recording ended. The value is in the HH:MM:SS format. The value takes effect only when Recording is set to PERIOD.</p>
          */
         @NameInMap("RecordingEndTime")
         public String recordingEndTime;
 
         /**
-         * <p>The period in which the screen recording audit is valid. Valid values: 15 to 180. Unit: days.</p>
+         * <p>The period in which the screen recording audit is valid. Valid values: 15 to 180. Unit: day.</p>
          */
         @NameInMap("RecordingExpires")
         public Long recordingExpires;
@@ -1206,14 +872,20 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public Long recordingFps;
 
         /**
-         * <p>The time when the screen recording was started. The value is in the HH:MM:SS format. The value of this parameter is valid only if Recording is set to PERIOD.</p>
+         * <p>The time when the screen recording was started. The value is in the HH:MM:SS format. The value takes effect only when Recording is set to PERIOD.</p>
          */
         @NameInMap("RecordingStartTime")
         public String recordingStartTime;
 
+        /**
+         * <p>Indicates whether the client notification of screen recording is enabled. Valid values: on and off.</p>
+         */
         @NameInMap("RecordingUserNotify")
         public String recordingUserNotify;
 
+        /**
+         * <p>The notification content of screen recording. By default, this parameter is left empty.</p>
+         */
         @NameInMap("RecordingUserNotifyMessage")
         public String recordingUserNotifyMessage;
 
@@ -1231,13 +903,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          * <p>The effective scope of the policy. Valid values:</p>
          * <br>
          * <p>*   GLOBAL: The policy takes effect globally.</p>
-         * <p>*   IP: The policy takes effect based on the IP address.</p>
+         * <p>*   IP: The policy takes effect based on IP addresses.</p>
          */
         @NameInMap("Scope")
         public String scope;
 
         /**
-         * <p>This parameter is specified if Scope is set to IP.</p>
+         * <p>This parameter is required when Scope is set to IP. This parameter takes effect when Scope is set to IP.</p>
          */
         @NameInMap("ScopeValue")
         public java.util.List<String> scopeValue;
@@ -1247,122 +919,56 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   off: The feature is disabled.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   on: This feature is enabled.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   off</p>
+         * <p>*   on</p>
          */
         @NameInMap("UsbRedirect")
         public String usbRedirect;
 
         /**
-         * <p>The USB redirection rules.</p>
+         * <p>The USB redirection rule.</p>
          */
         @NameInMap("UsbSupplyRedirectRule")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsUsbSupplyRedirectRule> usbSupplyRedirectRule;
 
         /**
-         * <p>Indicates whether the multimedia redirection feature is enabled. Valid values: on: The feature is enabled. off: The feature is disabled.</p>
+         * <p>Indicates whether the multimedia redirection feature is enabled. Valid values: on and off.</p>
          */
         @NameInMap("VideoRedirect")
         public String videoRedirect;
 
         /**
-         * <p>The image display quality feature.</p>
+         * <p>The image display quality.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   high</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    high-definition (HD)</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   low</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    fluent</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   medium (default)</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    adaptive</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   lossless</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    no quality loss</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   high: high-definition (HD)</p>
+         * <p>*   low: fluent</p>
+         * <p>*   medium (default): adaptive</p>
+         * <p>*   lossless: no quality loss</p>
          */
         @NameInMap("VisualQuality")
         public String visualQuality;
 
         /**
-         * <p>Indicates whether the watermark feature is enabled.</p>
+         * <p>Indicates whether the watermarking feature is enabled.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   off: The feature is disabled.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   on: This feature is enabled.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   off</p>
+         * <p>*   on</p>
          */
         @NameInMap("Watermark")
         public String watermark;
 
+        /**
+         * <p>Indicates whether the anti-screen photo feature is enabled for invisible watermarks. Valid values: on and off.</p>
+         */
         @NameInMap("WatermarkAntiCam")
         public String watermarkAntiCam;
 
         /**
-         * <p>The font color of the watermark. Valid values: 0 to 16777215.</p>
+         * <p>The font color in red, green, and blue (RGB) of the watermark. Valid values: 0 to 16777215.</p>
          */
         @NameInMap("WatermarkColor")
         public Integer watermarkColor;
@@ -1374,7 +980,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String watermarkCustomText;
 
         /**
-         * <p>The inclination angle of the watermark. Valid values: -10 to -30.</p>
+         * <p>The slope of the watermark. Valid values: -10 to -30.</p>
          */
         @NameInMap("WatermarkDegree")
         public Double watermarkDegree;
@@ -1394,6 +1000,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("WatermarkFontStyle")
         public String watermarkFontStyle;
 
+        /**
+         * <p>The invisible watermark enhancement feature. Valid values: low, medium, and high.</p>
+         */
         @NameInMap("WatermarkPower")
         public String watermarkPower;
 
@@ -1403,6 +1012,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("WatermarkRowAmount")
         public Integer watermarkRowAmount;
 
+        /**
+         * <p>Indicates whether the security priority for invisible watermarks is enabled. Valid values: on and off.</p>
+         */
         @NameInMap("WatermarkSecurity")
         public String watermarkSecurity;
 
@@ -1412,34 +1024,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          * <p>Valid values:</p>
          * <br>
          * <p>*   LIGHT</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   DARK</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   MIDDLE</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("WatermarkTransparency")
         public String watermarkTransparency;
 
         /**
-         * <p>The watermark transparency. A larger value indicates that the watermark is less transparent. Valid values: 10 to 100.</p>
+         * <p>The watermark transparency. A greater value indicates that the watermark is less transparent. Valid values: 10 to 100.</p>
          */
         @NameInMap("WatermarkTransparencyValue")
         public Integer watermarkTransparencyValue;
@@ -1450,36 +1042,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          * <p>Valid values:</p>
          * <br>
          * <p>*   HostName,EndUserId: The watermark is displayed in the following format: Rightmost 15 characters of the cloud desktop ID,Username.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   EndUserId: The username is displayed.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   EndUserId,HostName: The watermark is displayed in the following format: Username,Rightmost 15 characters of the cloud desktop ID.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   HostName: The rightmost 15 characters of the cloud desktop ID are displayed.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("WatermarkType")
         public String watermarkType;

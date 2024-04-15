@@ -26,19 +26,25 @@ public class ListOfficeSiteOverviewRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Details about the IDs of the workspaces. You can specify 1 to 100 workspace IDs.</p>
+     * <p>The office network IDs. You can specify IDs of 1 to 100 office networks.</p>
      */
     @NameInMap("OfficeSiteId")
     public java.util.List<String> officeSiteId;
 
     /**
-     * <p>The query scope. Default value: 1.</p>
+     * <p>The query scope. Cloud computers in a cloud computer pool are pooled cloud computers.</p>
+     * <br>
+     * <p>Default values:</p>
+     * <br>
+     * <p>*   1 (default): queries non-pooled cloud computers in the office network.</p>
+     * <p>*   2: queries pooled cloud computers in the office network.</p>
+     * <p>*   3: queries all cloud computers in the office network.</p>
      */
     @NameInMap("QueryRange")
     public Integer queryRange;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeClientEventsResponseBody extends TeaModel {
     /**
-     * <p>Details about the events.</p>
+     * <p>The information about the events of an end user.</p>
      */
     @NameInMap("Events")
     public java.util.List<DescribeClientEventsResponseBodyEvents> events;
 
     /**
-     * <p>The query token that is returned in this call.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -83,25 +83,25 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String clientOS;
 
         /**
-         * <p>The version of the client.</p>
+         * <p>The client version.</p>
          */
         @NameInMap("ClientVersion")
         public String clientVersion;
 
         /**
-         * <p>The ID of the desktop group.</p>
+         * <p>The desktop group ID.</p>
          */
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
         /**
-         * <p>The name of the desktop group.</p>
+         * <p>The desktop group name.</p>
          */
         @NameInMap("DesktopGroupName")
         public String desktopGroupName;
 
         /**
-         * <p>The ID of the cloud desktop.</p>
+         * <p>The cloud desktop ID.</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
@@ -113,7 +113,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String desktopIp;
 
         /**
-         * <p>The name of the cloud desktop.</p>
+         * <p>The cloud desktop name.</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
@@ -125,19 +125,19 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String directoryId;
 
         /**
-         * <p>The type of the directory.</p>
+         * <p>The directory type.</p>
          */
         @NameInMap("DirectoryType")
         public String directoryType;
 
         /**
-         * <p>The information about the regular user that connects to the cloud desktop from the EDS client. The information can be the RAM user ID or AD username.</p>
+         * <p>The information about the end user that connects to the cloud desktop from the EDS client. The information can be a RAM user ID or an AD username.</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
-         * <p>The ID of the event.</p>
+         * <p>The event ID.</p>
          */
         @NameInMap("EventId")
         public String eventId;
@@ -149,7 +149,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String eventTime;
 
         /**
-         * <p>The type of the event.</p>
+         * <p>The event type. Valid values:</p>
          */
         @NameInMap("EventType")
         public String eventType;
@@ -161,28 +161,43 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The workspace name.</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
         /**
-         * <p>The account type of the workspace. Valid values:</p>
+         * <p>The account type of the workspace.</p>
+         * <br>
+         * <p>Valid values:</p>
          * <br>
          * <p>*   SIMPLE: convenience account</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
          * <p>*   AD_CONNECTOR: enterprise AD account</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("OfficeSiteType")
         public String officeSiteType;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The status of the event. This parameter is returned if you set the EventType parameter to DESKTOP_DISCONNECT or GET_CONNECTION_TICKET. Valid values:</p>
+         * <p>The status of the event. If you set the EventType parameter to `DESKTOP_DISCONNECT` or `GET_CONNECTION_TICKET`, this parameter is returned. Valid values:</p>
          * <br>
          * <p>*   200\. The value indicates that the request is successful.</p>
          * <p>*   An error message. The value indicates that the request failed. Example: FailedToGetConnectionTicket.</p>

@@ -49,61 +49,13 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   COORDINATING</p>
+         * <p>*   COORDINATING: The collaboration task is being executed.</p>
          * <br>
-         * <p>    <!-- --></p>
+         * <p>*   TERMINATING: The collaboration task is being terminated.</p>
          * <br>
-         * <p>    :</p>
+         * <p>*   TERMINATED: The collaboration task is terminated.</p>
          * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    The collaboration task is being executed</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   TERMINATING</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    The collaboration task is being terminated</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   TERMINATED</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    The collaboration task is terminated</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   PENDING</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    The collaboration task is pending to be executed</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
+         * <p>*   PENDING: The collaboration task is pending to be executed.</p>
          */
         @NameInMap("CoordinateStatus")
         public String coordinateStatus;
@@ -119,47 +71,11 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   ADMIN_INITIATE_FORCE</p>
+         * <p>*   ADMIN_INITIATE_FORCE: The administrator forcibly initiates the collaboration request.</p>
          * <br>
-         * <p>    <!-- --></p>
+         * <p>*   ADMIN_INITIATE: The administrator initiates the collaboration request.</p>
          * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    The administrator forcibly initiates the collaboration request</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   ADMIN_INITIATE</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    The administrator initiates the collaboration request</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   COORDINATOR_INITIATE_FORCE</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    The coordinator forcibly initiates the collaboration request</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
+         * <p>*   COORDINATOR_INITIATE_FORCE: The coordinator forcibly initiates the collaboration request.</p>
          */
         @NameInMap("InitiatorType")
         public String initiatorType;

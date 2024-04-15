@@ -5,49 +5,25 @@ import com.aliyun.tea.*;
 
 public class ConfigADConnectorTrustRequest extends TeaModel {
     /**
-     * <p>The ID of the AD workspace.</p>
+     * <p>The ID of the enterprise AD office network.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>Specifies whether to configure the trust password for the RDS license domain of the AD workspace.</p>
+     * <p>Specifies whether to configure a trust password for the Remote Desktop Services (RDS) License Domain of the enterprise AD office network.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   true</p>
+     * <p>*   true: configures a trust password for the RDS License Domain of the AD office network.</p>
      * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    configures the trust password</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    for the RDS license domain of the AD workspace.</p>
-     * <br>
-     * <p>*   false</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    configures the trust password</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    for common AD workspaces.</p>
+     * <p>*   false: configures a trust password for a regular enterprise AD office network.</p>
      */
     @NameInMap("RdsLicenseDomain")
     public Boolean rdsLicenseDomain;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

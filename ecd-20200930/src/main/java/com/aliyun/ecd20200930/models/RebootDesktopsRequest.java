@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class RebootDesktopsRequest extends TeaModel {
     /**
-     * <p>The cloud desktop ID. You can specify one or more desktop IDs. Valid values of N: 1 to 100.</p>
+     * <p>The IDs of the cloud computers. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

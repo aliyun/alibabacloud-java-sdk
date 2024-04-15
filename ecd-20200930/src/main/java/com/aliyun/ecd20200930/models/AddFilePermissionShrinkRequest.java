@@ -23,7 +23,7 @@ public class AddFilePermissionShrinkRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The group ID.</p>
+     * <p>The ID of the team that uses cloud disks in Cloud Drive Service.</p>
      */
     @NameInMap("GroupId")
     public String groupId;

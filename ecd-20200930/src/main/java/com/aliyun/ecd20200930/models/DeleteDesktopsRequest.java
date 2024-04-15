@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteDesktopsRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud desktops that you want to release. You can configure up to 100 desktop IDs.</p>
+     * <p>The IDs of the cloud computers. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The ID of the region where the cloud desktops to release are located.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

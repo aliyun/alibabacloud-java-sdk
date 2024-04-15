@@ -23,19 +23,23 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource IDs, namely the cloud desktop IDs. You can specify 1 to 50 IDs of cloud desktops.</p>
+     * <p>The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Valid value: ALIYUN::GWS::INSTANCE.</p>
+     * <p>The type of the resource.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>* ALIYUN::GWS::INSTANCE: cloud computer.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags that you want to query.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -95,13 +99,13 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can specify 1 to 20 keys.</p>
+         * <p>The tag keys. You can specify 1 to 20 tag keys.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value. You can specify 1 to 20 values.</p>
+         * <p>The tag values. You can specify 1 to 20 tag values.</p>
          */
         @NameInMap("Value")
         public String value;

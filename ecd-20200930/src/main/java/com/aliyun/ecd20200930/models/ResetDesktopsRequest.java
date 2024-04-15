@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class ResetDesktopsRequest extends TeaModel {
     /**
-     * <p>The ID of the desktop group. If you specify the `DesktopId` parameter, ignore the `DesktopGroupId` parameter. If you do not specify the `DesktopId` parameter, specify the `DesktopGroupId` parameter in the call to request all IDs of the cloud desktops in the specified desktop group.``</p>
+     * <p>The ID of the cloud computer pool. If you specify the `DesktopId` parameter, ignore the `DesktopGroupId` parameter. If you do not specify the `DesktopId` parameter, specify the `DesktopGroupId` parameter in the call to request all IDs of the cloud computers in the specified pool.</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
+    /**
+     * <p>The IDs of the cloud computer pools.</p>
+     */
     @NameInMap("DesktopGroupIds")
     public java.util.List<String> desktopGroupIds;
 
     /**
-     * <p>The IDs of the cloud desktops. You can specify 1 to 100 cloud desktop IDs.</p>
+     * <p>The IDs of the cloud computers. You can specify the IDs of 1 to 100 cloud computers.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
@@ -28,22 +31,37 @@ public class ResetDesktopsRequest extends TeaModel {
     /**
      * <p>The billing method.</p>
      * <br>
-     * <p>> This parameter is available only when you reset desktop groups. If you leave this parameter empty, all cloud desktops in the specified desktop group are reset, regardless of how the cloud desktops are billed.</p>
+     * <p>> This parameter is available only when you reset cloud computer pools. If you leave this parameter empty, all cloud computers in the specified cloud computer pool are reset, regardless of how the cloud computers are billed.</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~436773~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~436773~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The reset scope. You can configure this parameter to reset the image or cloud computer.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   ALL (default): resets the image and cloud computer.</p>
+     * <p>*   IMAGE: resets only the image.</p>
+     */
     @NameInMap("ResetScope")
     public String resetScope;
 
     /**
-     * <p>The type of the disk that you want to reset.</p>
+     * <p>The disk reset type.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   0: does not reset disks.</p>
+     * <p>*   1: resets only the system disk.</p>
+     * <p>*   2: resets only the user disk.</p>
+     * <p>*   3: resets the system disk and the user disk.</p>
      */
     @NameInMap("ResetType")
     public String resetType;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImagesRequest extends TeaModel {
     /**
-     * <p>The cloud desktop type. You can call the [DescribeBundles](~~188884~~) operation to query the available cloud desktop types.</p>
+     * <p>The instance type of the cloud computer. You can call the [DescribeDesktopTypes](~~436816~~) operation to obtain the parameter value.</p>
      */
     @NameInMap("DesktopInstanceType")
     public String desktopInstanceType;
@@ -17,7 +17,25 @@ public class DescribeImagesRequest extends TeaModel {
     public String fotaVersion;
 
     /**
-     * <p>Specifies whether the image is a GPU-accelerated image.</p>
+     * <p>Specifies whether the images are GPU-accelerated images.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("GpuCategory")
     public Boolean gpuCategory;
@@ -74,19 +92,42 @@ public class DescribeImagesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The type of the OS. Default value: `null`.</p>
+     * <p>The type of the operating system of the images. Default value: `null`.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   Linux</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Windows</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("OsType")
     public String osType;
 
     /**
-     * <p>The type of the protocol.</p>
+     * <p>The protocol type.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   HDX: High-definition Experience (HDX) protocol</p>
+     * <p>*   ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

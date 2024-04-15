@@ -5,36 +5,37 @@ import com.aliyun.tea.*;
 
 public class ExportDesktopGroupInfoRequest extends TeaModel {
     /**
-     * <p>The billing method of the cloud desktop. Valid values:</p>
+     * <p>The billing method of the cloud computer pool.</p>
      * <br>
-     * <p>*   PostPaid: pay-as-you-go</p>
-     * <p>*   PrePaid: subscription</p>
+     * <p>Valid values:</p>
      * <br>
-     * <p>Default value: PostPaid.</p>
+     * <p>*   PostPaid: pay-as-you-go.</p>
+     * <br>
+     * <p>*   PrePaid: subscription.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The ID of the desktop group. You can set 1 to 100.</p>
+     * <p>The IDs of the cloud computer pools.</p>
      */
     @NameInMap("DesktopGroupId")
     public java.util.List<String> desktopGroupId;
 
     /**
-     * <p>The name of the desktop group.</p>
+     * <p>The name of the cloud computer pool.</p>
      */
     @NameInMap("DesktopGroupName")
     public String desktopGroupName;
 
     /**
-     * <p>The ID of the user who is authorized to use the desktop group. You can set 1 to 100.</p>
+     * <p>The authorized user IDs of cloud computer pools.</p>
      */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
-     * <p>The time when the subscription cloud desktop expires.</p>
+     * <p>The time when the subscription cloud computer pool expires.</p>
      */
     @NameInMap("ExpiredTime")
     public String expiredTime;
@@ -62,19 +63,19 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The ID of the office network to which the cloud computer pool belongs.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The ID of the policy that is associated with the cloud desktop.</p>
+     * <p>The ID of the policy that is associated with the cloud computer pool.</p>
      */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

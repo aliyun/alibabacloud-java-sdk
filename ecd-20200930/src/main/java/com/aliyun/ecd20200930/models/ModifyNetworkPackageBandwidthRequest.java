@@ -5,36 +5,57 @@ import com.aliyun.tea.*;
 
 public class ModifyNetworkPackageBandwidthRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+     * <p>Specifies whether to enable the automatic payment feature.</p>
      * <br>
-     * <p>*   `true`: automatically completes the payment. Make sure that your Alibaba Cloud account has sufficient balance. If your Alibaba Cloud account does not have sufficient balance, abnormal orders are generated.</p>
-     * <p>*   `false`: does not complete the payment. In this case, an order is generated, but no payment is made. You can log on to the Elastic Desktop Service (EDS) console and complete the payment based on the order ID on the **Orders** page.</p>
+     * <p>Valid values:</p>
      * <br>
-     * <p>Default value: `true`.</p>
+     * <p>*   true (default): enables the auto-payment feature.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    Make sure that your account has sufficient balance. Otherwise, no order is generated.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   false: disables the auto-payment feature. In this case, an order is generated but you need to make the payment manually.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    To make the payment, log on to the WUYING Workspace console, go to the Orders page, and find the order based on the order ID.</p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>The bandwidth of the network packet. Unit: Mbps. Value range: 10 to 1000.</p>
+     * <p>The bandwidth provided by the premium bandwidth plan. Unit: Mbit/s.</p>
+     * <br>
+     * <p>*   Valid values if the premium bandwidth plan is a subscription plan: 2 to 1000.</p>
+     * <p>*   Valid values if the premium bandwidth plan is a pay-as-you-go plan that charges by data transfer (PayByTraffic): 2 to 200.</p>
+     * <p>*   Valid values if the premium bandwidth plan is a pay-as-you-go plan that charges by fixed bandwidth (PayByBandwidth): 2 to 1000.</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
-     * <p>The ID of the Internet access package.</p>
+     * <p>The ID of the premium bandwidth plan.</p>
      */
     @NameInMap("NetworkPackageId")
     public String networkPackageId;
 
     /**
-     * <p>The ID of the promotion. You can call the `GetResourcePrice` operation to query the promotion ID.</p>
+     * <p>The promotion ID.</p>
      */
     @NameInMap("PromotionId")
     public String promotionId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
     /**
-     * <p>The change results.</p>
+     * <p>The modification results.</p>
      */
     @NameInMap("ModifyResults")
     public java.util.List<ModifyDesktopsPolicyGroupResponseBodyModifyResults> modifyResults;
@@ -39,7 +39,7 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
 
     public static class ModifyDesktopsPolicyGroupResponseBodyModifyResults extends TeaModel {
         /**
-         * <p>The change result. A value of success indicates that the policy is changed. If the policy is not changed, an error message is returned.</p>
+         * <p>The result of the modification. A value of success indicates that the policy is modified. If the policy failed to be modified, an error message is returned.</p>
          */
         @NameInMap("Code")
         public String code;
@@ -51,7 +51,7 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The error message. This parameter is empty if the Code value is success.</p>
+         * <p>The error message returned if the request failed. This parameter is not returned if the value of Code is success.``</p>
          */
         @NameInMap("Message")
         public String message;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RebuildDesktopsRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud desktops.</p>
+     * <p>The IDs of the cloud computers. You can specify 1 to 20 IDs.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
@@ -19,28 +19,28 @@ public class RebuildDesktopsRequest extends TeaModel {
     /**
      * <p>The operation type on the data disk.</p>
      * <br>
-     * <p>> For cloud desktops that do not have data disks, when you call this operation, you do not need to configure this parameter.</p>
+     * <p>>  This parameter is empty by default regardless of whether data disks are attached to the cloud computer.</p>
      * <br>
-     * <p>*   Cloud desktops do not have data disks\</p>
-     * <p>    The values that you configured have no impacts.</p>
+     * <p>*   No data disks are attached to the cloud computer:\</p>
+     * <p>    No operation is performed on the data disks of the cloud computer regardless of the value of this parameter.</p>
      * <br>
-     * <p>*   Cloud desktops have data disks</p>
+     * <p>*   Data disks are attached to the cloud computer:</p>
      * <br>
-     * <p>    1.  If the OS of the cloud desktop is the same as the OS of a destination image:</p>
+     * <p>    1.  The OS of the cloud computer is the same as the OS of the destination image:</p>
      * <br>
-     * <p>        *   The value replace indicates that the data disk of the cloud desktop is replaced.</p>
-     * <p>        *   If you do not specify this parameter, the data disk of the cloud desktop is retained.</p>
+     * <p>        *   If you set the OperateType parameter to `replace`, the data in the data disks of the cloud computer is replaced.</p>
+     * <p>        *   If you leave the OperateType parameter empty, the data in the data disks of the cloud computer is retained.</p>
      * <br>
-     * <p>    2.  If the OS of the cloud desktop is the different from the OS of a destination image:</p>
+     * <p>    2.  The OS of the cloud computer is different from the OS of the destination image:</p>
      * <br>
-     * <p>        *   The value replace indicates that the data disk of the cloud desktop is replaced.</p>
-     * <p>        *   If you do not specify this parameter, the data disk of the cloud desktop is cleared.</p>
+     * <p>        *   If you set the OperateType parameter to `replace`, the data in the data disks of the cloud computer is replaced.</p>
+     * <p>        *   If you leave the OperateType parameter empty, the data in the data disks of the cloud computer is cleared.</p>
      */
     @NameInMap("OperateType")
     public String operateType;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

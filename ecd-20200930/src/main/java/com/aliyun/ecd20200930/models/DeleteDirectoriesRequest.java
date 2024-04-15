@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteDirectoriesRequest extends TeaModel {
     /**
-     * <p>The IDs of directories.</p>
+     * <p>The directory IDs. You can specify one or more directory IDs.</p>
      */
     @NameInMap("DirectoryId")
     public java.util.List<String> directoryId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

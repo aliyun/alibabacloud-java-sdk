@@ -29,7 +29,7 @@ public class AddUserToDesktopGroupRequest extends TeaModel {
     public java.util.List<String> endUserIds;
 
     /**
-     * <p>The ID of the region</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

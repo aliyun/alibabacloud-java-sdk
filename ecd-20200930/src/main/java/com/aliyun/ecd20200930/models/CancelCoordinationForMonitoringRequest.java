@@ -27,15 +27,7 @@ public class CancelCoordinationForMonitoringRequest extends TeaModel {
      * <br>
      * <p>Valid value:</p>
      * <br>
-     * <p>*   <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    TENANT_ADMIN</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    : administrator.</p>
+     * <p>* TENANT_ADMIN: administrator.</p>
      */
     @NameInMap("UserType")
     public String userType;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBundleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the desktop template.</p>
+     * <p>The ID of the cloud computer template.</p>
      */
     @NameInMap("BundleId")
     public String bundleId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
     /**
-     * <p>Details about connection records.</p>
+     * <p>Details about connection records of the end user.</p>
      */
     @NameInMap("ConnectionRecords")
     public java.util.List<DescribeUserConnectionRecordsResponseBodyConnectionRecords> connectionRecords;
@@ -53,19 +53,19 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
 
     public static class DescribeUserConnectionRecordsResponseBodyConnectionRecords extends TeaModel {
         /**
-         * <p>The duration of the desktop connection. Unit: seconds.</p>
+         * <p>The duration for which the end user is connected to the cloud computer. Unit: seconds.</p>
          */
         @NameInMap("ConnectDuration")
         public String connectDuration;
 
         /**
-         * <p>The time when the cloud desktop was disconnected.</p>
+         * <p>The time when the end user disconnected from the cloud computer.</p>
          */
         @NameInMap("ConnectEndTime")
         public String connectEndTime;
 
         /**
-         * <p>The time when the cloud desktop was connected.</p>
+         * <p>The time when the end user connected to the cloud computer.</p>
          */
         @NameInMap("ConnectStartTime")
         public String connectStartTime;
@@ -77,13 +77,13 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         public String connectionRecordId;
 
         /**
-         * <p>The ID of the cloud desktop that is connected.</p>
+         * <p>The ID of the cloud computer to which the end user connected.</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
-         * <p>The name of the cloud desktop that is connected.</p>
+         * <p>The name of the cloud computer to which the end user connected.</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;

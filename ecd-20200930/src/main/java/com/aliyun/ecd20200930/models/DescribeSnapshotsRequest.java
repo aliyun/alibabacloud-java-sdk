@@ -11,19 +11,19 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String creator;
 
     /**
-     * <p>The cloud desktop ID.</p>
+     * <p>The ID of the cloud computer.</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
-     * <p>The cloud desktop name.</p>
+     * <p>The name of the cloud computer.</p>
      */
     @NameInMap("DesktopName")
     public String desktopName;
 
     /**
-     * <p>The end of the time range to query. The query is performed based on the time when the system stopped creating a snapshot. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -56,38 +56,71 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String snapshotId;
 
     /**
-     * <p>The snapshot name. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
-     * <br>
-     * <p>The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.</p>
+     * <p>The name of the snapshot. The name must be 2 to 127 characters in length. The name must start with a letter. The name can contain letters, digits, underscores (\_), and hyphens (-). The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.</p>
      */
     @NameInMap("SnapshotName")
     public String snapshotName;
 
     /**
-     * <p>The snapshot type.</p>
+     * <p>The category of the snapshots.</p>
      * <br>
-     * <p>Valid values:</p>
+     * <p>Default value: all. Valid values:</p>
      * <br>
-     * <p>*   auto: automatic snapshot</p>
-     * <p>*   user: manual snapshot</p>
-     * <p>*   all (default): all types of snapshots</p>
+     * <p>*   all: all snapshot categories</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   auto: automatic snapshots</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   user: manual snapshots</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("SnapshotType")
     public String snapshotType;
 
     /**
-     * <p>The type of the source disk of which you want to query snapshots. Valid values:</p>
+     * <p>The type of the disk for which the snapshot is created.</p>
      * <br>
-     * <p>*   System: system disk</p>
+     * <p>>  The value of this parameter is not case-sensitive.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
      * <p>*   Data: data disk</p>
      * <br>
-     * <p>> The value of this parameter is not case-sensitive.</p>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   System: system disk</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("SourceDiskType")
     public String sourceDiskType;
 
     /**
-     * <p>The beginning of the time range to query. The query is performed based on the time when the system created a snapshot. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

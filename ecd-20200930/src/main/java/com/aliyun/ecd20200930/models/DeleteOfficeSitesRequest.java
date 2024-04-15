@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteOfficeSitesRequest extends TeaModel {
     /**
-     * <p>The ID of the workspace that you want to delete. You can specify 1 to 100 IDs of workspaces.</p>
+     * <p>The IDs of the office networks. You can specify 1 to 100 office networks.</p>
      */
     @NameInMap("OfficeSiteId")
     public java.util.List<String> officeSiteId;
 
     /**
-     * <p>The region ID of the workspace that you want to delete. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

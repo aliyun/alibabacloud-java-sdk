@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteAutoSnapshotPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the policy template that you want to manage.</p>
+     * <p>The IDs of the automatic snapshot policies that you want to delete.</p>
      */
     @NameInMap("PolicyId")
     public java.util.List<String> policyId;
 
     /**
-     * <p>The ID of the region where the automatic snapshot policy is created.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

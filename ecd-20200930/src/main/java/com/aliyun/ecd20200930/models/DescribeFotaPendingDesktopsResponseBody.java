@@ -4,26 +4,32 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>Details about the cloud desktops whose images can be but are not yet updated to the version that is described in an image update task (TaskUid).</p>
+     * <p>The cloud computers whose images can be but are not yet updated to the version that is described in an image update task (TaskUid).</p>
      */
     @NameInMap("FotaPendingDesktops")
     public java.util.List<DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops> fotaPendingDesktops;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -74,6 +80,9 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
     }
 
     public static class DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktopsSessions extends TeaModel {
+        /**
+         * <p>The ID of the end user that connects to the cloud computer.</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
@@ -94,35 +103,44 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
 
     public static class DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops extends TeaModel {
         /**
-         * <p>The current version of the image used by the cloud desktop.</p>
+         * <p>The current version of the image used by the cloud computer.</p>
          */
         @NameInMap("CurrentAppVersion")
         public String currentAppVersion;
 
         /**
-         * <p>The cloud desktop ID.</p>
+         * <p>The cloud computer ID.</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
-         * <p>The cloud desktop name.</p>
+         * <p>The cloud computer name.</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
 
+        /**
+         * <p>The Firmware Over-The-Air (FOTA) update project of the cloud computer.</p>
+         */
         @NameInMap("FotaProject")
         public String fotaProject;
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The office network ID.</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
+        /**
+         * <p>The information about the connected sessions.</p>
+         */
         @NameInMap("Sessions")
         public java.util.List<DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktopsSessions> sessions;
 
+        /**
+         * <p>The status.</p>
+         */
         @NameInMap("Status")
         public Long status;
 

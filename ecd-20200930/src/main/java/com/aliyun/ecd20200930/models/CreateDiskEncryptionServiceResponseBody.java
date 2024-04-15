@@ -4,12 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateDiskEncryptionServiceResponseBody extends TeaModel {
+    /**
+     * <p>The order ID.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

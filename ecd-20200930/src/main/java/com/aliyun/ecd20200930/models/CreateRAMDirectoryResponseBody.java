@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateRAMDirectoryResponseBody extends TeaModel {
     /**
-     * <p>The ID of the RAM directory.</p>
+     * <p>The RAM directory ID.</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

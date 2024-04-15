@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopsResponseBody extends TeaModel {
     /**
-     * <p>Details of the cloud desktops.</p>
+     * <p>The details about the cloud desktops.</p>
      */
     @NameInMap("Desktops")
     public java.util.List<DescribeDesktopsResponseBodyDesktops> desktops;
@@ -67,32 +67,50 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     public static class DescribeDesktopsResponseBodyDesktopsDisks extends TeaModel {
         /**
-         * <p>The ID of the disk.</p>
+         * <p>The disk ID.</p>
          */
         @NameInMap("DiskId")
         public String diskId;
 
         /**
-         * <p>The size of the disk. Unit: GiB.</p>
+         * <p>The disk size. Unit: GiB.</p>
          */
         @NameInMap("DiskSize")
         public Integer diskSize;
 
         /**
          * <p>The type of the disk.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   SYSTEM: system disk</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   DATA: data disk</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("DiskType")
         public String diskType;
 
         /**
-         * <p>The performance level (PL) of the disk that is an enhanced SSD (ESSD). Valid values:</p>
+         * <p>The performance level (PL) of the disk when an enhanced SSD (ESSD) is used. Valid values:</p>
          * <br>
          * <p>*   PL0</p>
          * <p>*   PL1</p>
          * <p>*   PL2</p>
          * <p>*   PL3</p>
          * <br>
-         * <p>For more information about the differences between disks of different PLs, see [Enhanced SSDs](~~122389~~).</p>
+         * <p>For more information about the differences among ESSDs at different PLs, see [Enhanced SSDs](~~122389~~).</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
@@ -138,37 +156,37 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     public static class DescribeDesktopsResponseBodyDesktopsFotaUpdate extends TeaModel {
         /**
-         * <p>The current version of the cloud desktop.</p>
+         * <p>The current image version of the cloud desktop.</p>
          */
         @NameInMap("CurrentAppVersion")
         public String currentAppVersion;
 
         /**
-         * <p>The version to which the cloud desktop can be updated.</p>
+         * <p>The image version to which the cloud desktop can be updated.</p>
          */
         @NameInMap("NewAppVersion")
         public String newAppVersion;
 
         /**
-         * <p>The description of the version to which the cloud desktop can be updated.</p>
+         * <p>The description of the image version to which the cloud desktop can be updated.</p>
          */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
         /**
-         * <p>The description of the version that can be upgraded in English.</p>
+         * <p>The English description of the image version to which the cloud desktop can be updated.</p>
          */
         @NameInMap("ReleaseNoteEn")
         public String releaseNoteEn;
 
         /**
-         * <p>The description of the version that can be upgraded in Japanese.</p>
+         * <p>The Japanese description of the image version to which the cloud desktop can be updated.</p>
          */
         @NameInMap("ReleaseNoteJp")
         public String releaseNoteJp;
 
         /**
-         * <p>The size of the installation package for the version to which the cloud desktop can be updated. Unit: KB.</p>
+         * <p>The size of the installation package for the image to which the cloud desktop can be updated. Unit: KB.</p>
          */
         @NameInMap("Size")
         public Long size;
@@ -230,7 +248,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     public static class DescribeDesktopsResponseBodyDesktopsSessions extends TeaModel {
         /**
-         * <p>The ID of the end user that logged on to the cloud desktop.</p>
+         * <p>The ID of the end user who logged on to the cloud desktop.</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
@@ -280,13 +298,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     public static class DescribeDesktopsResponseBodyDesktopsTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -316,7 +334,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     public static class DescribeDesktopsResponseBodyDesktops extends TeaModel {
         /**
-         * <p>The number of sessions allowed for each cloud desktop in the multi-session desktop group.</p>
+         * <p>The number of sessions that are allowed for each cloud desktop in the multi-session desktop group.</p>
          */
         @NameInMap("BindAmount")
         public Integer bindAmount;
@@ -335,12 +353,56 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         /**
          * <p>The billing method of the cloud desktop.</p>
+         * <br>
+         * <p>Default value: PostPaid. Valid values:</p>
+         * <br>
+         * <p>*   Postpaid: pay-as-you-go</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   PrePaid: subscription</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The connection status of the end user.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Unknown</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Connected</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Disconnected</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
@@ -358,33 +420,31 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
 
         /**
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
 
         /**
-         * <p>The ID of the desktop group. Default value: null.</p>
-         * <br>
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>The ID of the desktop group to which the cloud desktop belongs. Default value: null.</p>
          */
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
         /**
-         * <p>The ID of the cloud desktop.</p>
+         * <p>The cloud desktop ID.</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
-         * <p>The name of the cloud desktop.</p>
+         * <p>The cloud desktop name.</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
@@ -396,19 +456,19 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public String desktopStatus;
 
         /**
-         * <p>The desktop type.</p>
+         * <p>The type of the cloud desktop.</p>
          */
         @NameInMap("DesktopType")
         public String desktopType;
 
         /**
-         * <p>The ID of the directory. The ID is the same as the workspace ID that is indicated by the OfficeSiteId parameter.</p>
+         * <p>The directory ID. The value of this parameter is the same as the workspace ID that is indicated by the OfficeSiteId parameter.</p>
          */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         /**
-         * <p>This parameter is in invitational preview and is unavailable.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("DirectoryType")
         public String directoryType;
@@ -432,13 +492,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public Long downgradedTimes;
 
         /**
-         * <p>The IDs of the end users that have the permissions to connect to the cloud desktops.</p>
+         * <p>The IDs of the end users who are authorized to connect to the cloud desktop.</p>
          */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
         /**
-         * <p>The time when the subscription cloud desktop expired.</p>
+         * <p>The time when the subscription cloud desktop expires.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -450,37 +510,37 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public DescribeDesktopsResponseBodyDesktopsFotaUpdate fotaUpdate;
 
         /**
-         * <p>Indicates whether the cloud desktop is of the GPU-accelerated type.</p>
+         * <p>Indicates whether the cloud desktop is a GPU-accelerated desktop.</p>
          */
         @NameInMap("GpuCategory")
         public Long gpuCategory;
 
         /**
-         * <p>The number of GPUs.</p>
+         * <p>The number of GPU cores.</p>
          */
         @NameInMap("GpuCount")
         public Float gpuCount;
 
         /**
-         * <p>The version of the GPU driver with which the cloud desktop is equipped.</p>
+         * <p>The version number of the GPU driver of the cloud desktop.</p>
          */
         @NameInMap("GpuDriverVersion")
         public String gpuDriverVersion;
 
         /**
-         * <p>The GPU specifications.</p>
+         * <p>The GPU Specifications.</p>
          */
         @NameInMap("GpuSpec")
         public String gpuSpec;
 
         /**
-         * <p>> This parameter is in invitational preview and is not available for use.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("HibernationBeta")
         public Boolean hibernationBeta;
 
         /**
-         * <p>> This parameter is in invitational preview and is not available for use.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("HibernationOptionsConfigured")
         public Boolean hibernationOptionsConfigured;
@@ -492,19 +552,37 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public String hostName;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
-         * <p>The flag that is used to manage the cloud desktops.</p>
+         * <p>The flag that is used to manage the cloud desktop.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Updating: The configurations of the cloud desktop are being updated.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   NoFlag: No flags are available.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("ManagementFlag")
         public String managementFlag;
 
         /**
-         * <p>The flag that is used to manage the cloud desktops.</p>
+         * <p>The flags that are used to manage the cloud desktops.</p>
          */
         @NameInMap("ManagementFlags")
         public java.util.List<String> managementFlags;
@@ -516,43 +594,87 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public Long memory;
 
         /**
-         * <p>The ID of the secondary network interface controller (NIC) created by the RAM user or Active Directory (AD) user in EDS. You do not have the permissions to modify this ID.</p>
+         * <p>The ID of the secondary network interface controller (NIC) created by the RAM or Active Directory (AD) user in Elastic Desktop Service (EDS). You do not have permissions to modify this parameter.</p>
          */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
         /**
-         * <p>The IP address of the secondary NIC that is created by the RAM user or AD user in EDS.</p>
+         * <p>The IP address of the secondary NIC that is created by the RAM or AD user in EDS.</p>
          */
         @NameInMap("NetworkInterfaceIp")
         public String networkInterfaceIp;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The workspace name.</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
         /**
          * <p>The account type of the workspace.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   SIMPLE: convenience account</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   AD_CONNECTOR: enterprise AD account</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("OfficeSiteType")
         public String officeSiteType;
 
         /**
          * <p>The virtual private cloud (VPC) type of the workspace.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   standard</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   customized</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   basic</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("OfficeSiteVpcType")
         public String officeSiteVpcType;
 
         /**
-         * <p>The type of the OS.</p>
+         * <p>The OS that is defined in the desktop template.</p>
          */
         @NameInMap("OsType")
         public String osType;
@@ -570,19 +692,19 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public String platform;
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The policy ID.</p>
          */
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
 
         /**
-         * <p>The policies IDs.</p>
+         * <p>The policy IDs.</p>
          */
         @NameInMap("PolicyGroupIdList")
         public java.util.List<String> policyGroupIdList;
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The policy name.</p>
          */
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
@@ -600,25 +722,55 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public String progress;
 
         /**
-         * <p>The type of the protocol.</p>
+         * <p>The protocol.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   HDX: High-definition Experience (HDX) protocol</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   ASP: Adaptive Streaming Protocol (ASP) developed by Alibaba Cloud</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
-         * <p>The session type.</p>
+         * <p>The type of the session.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>* **SINGLE_SESSION**</p>
+         * <p>*   SINGLE_SESSION</p>
          * <br>
-         * <p>* **MULTIPLE_SESSION**</p>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   MULTIPLE_SESSION</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("SessionType")
         public String sessionType;
 
         /**
-         * <p>Details of the desktop sessions that end users hold.</p>
+         * <p>The information about the desktop sessions of end users.</p>
          */
         @NameInMap("Sessions")
         public java.util.List<DescribeDesktopsResponseBodyDesktopsSessions> sessions;
@@ -636,31 +788,31 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public String snapshotPolicyName;
 
         /**
-         * <p>The first time when the cloud desktop was started.</p>
+         * <p>The time when the cloud desktop was first started.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>Indicates whether hibernation is supported for the cloud desktop.</p>
+         * <p>Indicates whether the cloud desktop supports hibernation.</p>
          */
         @NameInMap("SupportHibernation")
         public Boolean supportHibernation;
 
         /**
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
         /**
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
 
         /**
-         * <p>Details of the tags.</p>
+         * <p>Details about the tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeDesktopsResponseBodyDesktopsTags> tags;
@@ -672,13 +824,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public Boolean volumeEncryptionEnabled;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.</p>
+         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to query the list of KMS keys.</p>
          */
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;
 
         /**
-         * <p>The type of the zone. Default value: **AvailabilityZone**. This value indicates Alibaba Cloud zones.</p>
+         * <p>The zone type. Default value: **AvailabilityZone**. This value indicates Alibaba Cloud zones.</p>
          */
         @NameInMap("ZoneType")
         public String zoneType;

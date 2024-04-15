@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDesktopsRequest extends TeaModel {
     /**
-     * <p>The number of cloud desktops that you want to create. Valid values: 1 to 300. Default value: 1.</p>
+     * <p>The number of cloud computers that you want to create. Valid values: 1 to 300. Default value: 1.</p>
      */
     @NameInMap("Amount")
     public Integer amount;
@@ -23,84 +23,124 @@ public class CreateDesktopsRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The ID of the desktop template.</p>
+     * <p>The ID of the cloud computer template.</p>
      */
     @NameInMap("BundleId")
     public String bundleId;
 
     /**
-     * <p>The desktop templates that you want to use.</p>
+     * <p>The cloud computer templates.</p>
      */
     @NameInMap("BundleModels")
     public java.util.List<CreateDesktopsRequestBundleModels> bundleModels;
 
     /**
-     * <p>The billing method of the cloud desktop.</p>
+     * <p>The billing method of the cloud computers.</p>
+     * <br>
+     * <p>Default value: PostPaid. Valid values:</p>
+     * <br>
+     * <p>*   Postpaid: pay-as-you-go</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   PrePaid: subscription</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The private IP address of the cloud computer.</p>
+     */
     @NameInMap("DesktopMemberIp")
     public String desktopMemberIp;
 
     /**
-     * <p>The name of the cloud desktop. The name must meet the following requirements:</p>
+     * <p>The name of the cloud computer. The name must meet the following requirements:</p>
      * <br>
      * <p>*   The name must be 1 to 64 characters in length.</p>
-     * <p>*   The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). It must start with a letter but cannot start with http:// or https://.</p>
+     * <p>*   The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>*   The name can only contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
      */
     @NameInMap("DesktopName")
     public String desktopName;
 
     /**
-     * <p>Specifies whether to automatically add a suffix to the cloud desktop name when you create multiple cloud desktops at a time.</p>
+     * <p>Specifies whether to automatically add suffixes to the names of cloud computers when you create multiple cloud computers at the same time.</p>
+     * <br>
+     * <p>Default value: true. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   False</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("DesktopNameSuffix")
     public Boolean desktopNameSuffix;
 
+    /**
+     * <p>The details of the scheduled task on cloud computers.</p>
+     */
     @NameInMap("DesktopTimers")
     public java.util.List<CreateDesktopsRequestDesktopTimers> desktopTimers;
 
     /**
-     * <p>This parameter is not available.</p>
+     * <p>>  This parameter is not publicly available.</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
-     * <p>The IDs of the users that you want to authorize to use the cloud desktop. The cloud desktop is assigned to the users. You can specify IDs of 1 to 100 users.</p>
-     * <br>
-     * <p>*   Only one user can use the cloud desktop at a time.</p>
-     * <p>*   If you do not specify the `EndUserId` parameter, the cloud desktop that you create is not assigned to users.</p>
+     * <p>The IDs of the end users to which you want to assign the cloud computers. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
-     * <p>The ID of the desktop group.</p>
+     * <p>The ID of the cloud computer pool.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The hostname that you specify for the cloud desktop. You can specify only the hostname of a Windows cloud desktop in the workspace of the enterprise AD account type.</p>
+     * <p>The custom hostnames of the cloud computers. This parameter is valid only if the office network is an AD office network and the operating system type of the cloud computers is Windows.</p>
      * <br>
-     * <p>The hostname must meet the following requirements:</p>
+     * <p>The hostnames must meet the following requirements:</p>
      * <br>
-     * <p>*   It must be 2 to 15 characters in length.</p>
-     * <p>*   It can contain letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</p>
+     * <p>*   The hostnames must be 2 to 15 characters in length.</p>
+     * <p>*   The hostnames can contain only letters, digits, and hyphens (-). The hostnames cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</p>
      * <br>
-     * <p>If you create multiple cloud desktops, you can use the`  name_prefix[begin_number,bits]name_suffix ` format to determine the hostnames of the cloud desktops. For example, if you set Hostname to ecd-\[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test and the hostname of the second cloud desktop is ecd-0002-test. Other hostnames follow the same rule.</p>
+     * <p>When you create multiple cloud computers, you can use the `name_prefix[begin_number,bits]name_suffix` naming format to name the cloud computers. For example, if you set the value of the Hostname parameter to ecd-\[1,4]-test, the hostname of the first cloud computer is ecd-0001-test, the hostname of the second cloud computer is ecd-0002-test, and so on.</p>
      * <br>
      * <p>*   `name_prefix`: the prefix of the hostname.</p>
-     * <p>*   `[begin_number,bits]`: the ordered numbers in the hostname. begin_number: the start number. Valid values: 0 to 999999. Default value: 0. bits: the digit. Valid values: 1 to 6. Default value: 6.</p>
+     * <p>*   `[begin_number,bits]`: the sequential number in the hostname. The `begin_number` value is the starting digit. Valid values of begin_number: 0 to 999999. Default value: 0. The `bits` value is the number of digits. Valid values: 1 to 6. Default value: 6.</p>
      * <p>*   `name_suffix`: the suffix of the hostname.</p>
      */
     @NameInMap("Hostname")
     public String hostname;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The office network ID.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
@@ -157,21 +197,41 @@ public class CreateDesktopsRequest extends TeaModel {
     public java.util.List<CreateDesktopsRequestTag> tag;
 
     /**
-     * <p>The assignment mode of the cloud desktop.</p>
+     * <p>How the cloud computers are assigned.</p>
      * <br>
-     * <p>> If you do not specify the `EndUserId` parameter, the cloud desktop that you create is not assigned to users.</p>
+     * <p>>  If you do not specify the `EndUserId` parameter, the cloud computers are not assigned to end users after the cloud computers are created.</p>
+     * <br>
+     * <p>Default value: ALL. Valid values:</p>
+     * <br>
+     * <p>*   ALL: If you specify the EndUserId parameter, the cloud computers are assigned to all specified end users after the cloud computers are created.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   PER_USER: If you specify the EndUserId parameter, the cloud computers are evenly assigned to the specified end users after the cloud computers are created.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    In this case, you must make sure that the value of the Amount parameter can be divided by the N value of the EndUserId.N parameter that you specify.</p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("UserAssignMode")
     public String userAssignMode;
 
     /**
-     * <p>The custom command scripts of the user.</p>
+     * <p>Details about the custom command scripts.</p>
      */
     @NameInMap("UserCommands")
     public java.util.List<CreateDesktopsRequestUserCommands> userCommands;
 
     /**
-     * <p>This parameter is not available.</p>
+     * <p>>  This parameter is not publicly available.</p>
      */
     @NameInMap("UserName")
     public String userName;
@@ -189,7 +249,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public String volumeEncryptionKey;
 
     /**
-     * <p>This parameter is not available.</p>
+     * <p>>  This parameter is not publicly available.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -417,41 +477,45 @@ public class CreateDesktopsRequest extends TeaModel {
 
     public static class CreateDesktopsRequestBundleModels extends TeaModel {
         /**
-         * <p>The number of cloud desktops that you want to create. Valid values: 1 to 300. Default value: 0.</p>
+         * <p>The number of cloud computers that you want to create. Valid values: 1 to 300. Default value: null.</p>
          */
         @NameInMap("Amount")
         public Integer amount;
 
         /**
-         * <p>The ID of the desktop template.</p>
+         * <p>The ID of a cloud computer template.</p>
          */
         @NameInMap("BundleId")
         public String bundleId;
 
         /**
-         * <p>The name of the cloud desktop.</p>
+         * <p>The name of the cloud computer. The name must meet the following requirements:</p>
+         * <br>
+         * <p>*   The name must be 1 to 64 characters in length.</p>
+         * <p>*   The name must start with a letter but cannot start with `http://` or `https://`.</p>
+         * <p>*   The name can only contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
 
         /**
-         * <p>The users to whom you want to assign the cloud desktops.</p>
+         * <p>The IDs of the end users to whom the cloud computer are assigned.</p>
          */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
         /**
-         * <p>The hostname that you specify for the cloud desktop. You can only specify the hostname of a Windows cloud desktop in the workspace of the enterprise AD account type.</p>
+         * <p>The custom hostnames of the cloud computers. This parameter is valid only if the office network is an AD office network and the operating system type of the cloud computers is Windows.</p>
          * <br>
-         * <p>The hostname must meet the following requirements:</p>
+         * <p>The hostnames must meet the following requirements:</p>
          * <br>
-         * <p>*   It must be 2 to 15 characters in length.</p>
-         * <p>*   It can contain letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</p>
+         * <p>*   The hostnames must be 2 to 15 characters in length.</p>
+         * <p>*   The hostnames can contain only letters, digits, and hyphens (-). The hostnames cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</p>
          * <br>
-         * <p>If you create multiple cloud desktops, you can use the`  name_prefix[begin_number,bits]name_suffix ` format to determine the hostnames of the cloud desktops. For example, if you set Hostname to ecd-\[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test and the hostname of the second cloud desktop is ecd-0002-test. Other hostnames follow the same rule.</p>
+         * <p>When you create multiple cloud computers, you can use the `name_prefix[begin_number,bits]name_suffix` naming format to name the cloud computers. For example, if you set the value of the Hostname parameter to ecd-\[1,4]-test, the hostname of the first cloud computer is ecd-0001-test, the hostname of the second cloud computer is ecd-0002-test, and so on.</p>
          * <br>
          * <p>*   `name_prefix`: the prefix of the hostname.</p>
-         * <p>*   `[begin_number,bits]`: the ordered numbers in the hostname. begin_number: the start number. Valid values: 0 to 999999. Default value: 0. bits: the digit. Valid values: 1 to 6. Default value: 6.</p>
+         * <p>*   `[begin_number,bits]`: the sequential number in the hostname. The `begin_number` value is the starting digit. Valid values of begin_number: 0 to 999999. Default value: 0. The `bits` value is the number of digits. Valid values: 1 to 6. Default value: 6.</p>
          * <p>*   `name_suffix`: the suffix of the hostname.</p>
          */
         @NameInMap("Hostname")
@@ -464,7 +528,7 @@ public class CreateDesktopsRequest extends TeaModel {
         public Boolean volumeEncryptionEnabled;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key that you want to use when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.</p>
+         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to query the list of KMS keys.</p>
          */
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;
@@ -533,24 +597,101 @@ public class CreateDesktopsRequest extends TeaModel {
     }
 
     public static class CreateDesktopsRequestDesktopTimers extends TeaModel {
+        /**
+         * <p>Specifies whether to allow the end user to configure the scheduled task.</p>
+         */
         @NameInMap("AllowClientSetting")
         public Boolean allowClientSetting;
 
+        /**
+         * <p>The cron expression for the scheduled task.</p>
+         * <br>
+         * <p>>  The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7</p>
+         */
         @NameInMap("CronExpression")
         public String cronExpression;
 
+        /**
+         * <p>Specifies whether to forcibly execute the scheduled task.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true: forcibly executes the scheduled task regardless of the status and connection of the cloud computers.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   false: does not forcibly execute the scheduled task.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("Enforce")
         public Boolean enforce;
 
+        /**
+         * <p>The interval at which cloud computers are created. Unit: minutes.</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <p>The operations that scheduled tasks support. This parameter is valid only when TimerType is set to NoConnect.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Hibernate: hibernates the cloud computers.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Shutdown: stops the cloud computers.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("OperationType")
         public String operationType;
 
+        /**
+         * <p>The reset type of the cloud computers.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   RESET_TYPE_SYSTEM: resets the system disks.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   RESET_TYPE_BOTH: resets the system disks and data disks.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("ResetType")
         public String resetType;
 
+        /**
+         * <p>The type of the scheduled task.</p>
+         */
         @NameInMap("TimerType")
         public String timerType;
 
@@ -661,7 +802,7 @@ public class CreateDesktopsRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>The encoding mode of the command content (CommandContent).</p>
+         * <p>The encoding mode of the command content.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
@@ -685,11 +826,11 @@ public class CreateDesktopsRequest extends TeaModel {
         public String contentEncoding;
 
         /**
-         * <p>The command language.</p>
+         * <p>The language type of the command.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   RunPowerShellScript: PowerShell command (applicable to Windows cloud desktops).</p>
+         * <p>*   RunPowerShellScript: PowerShell commands (applicable to Windows cloud computers).</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
@@ -697,7 +838,7 @@ public class CreateDesktopsRequest extends TeaModel {
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>*   RunShellScript: shell command (applicable to Linux cloud desktops).</p>
+         * <p>*   RunShellScript: shell commands (applicable to Linux cloud computers).</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
@@ -705,7 +846,7 @@ public class CreateDesktopsRequest extends TeaModel {
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>*   RunBatScript: batch command (applicable to Windows cloud desktops).</p>
+         * <p>*   RunBatScript: batch commands (applicable to Windows cloud computers).</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyEntitlementRequest extends TeaModel {
     /**
-     * <p>The cloud desktop ID.</p>
+     * <p>The ID of the cloud computer.</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
-     * <p>The usernames. You can specify 1 to 100 usernames.</p>
+     * <p>The username IDs. End users specified by this parameter become the end users of the cloud computer, and the original end users of the cloud computer are removed. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

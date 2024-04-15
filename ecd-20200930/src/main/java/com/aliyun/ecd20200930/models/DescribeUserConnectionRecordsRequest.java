@@ -41,28 +41,43 @@ public class DescribeUserConnectionRecordsRequest extends TeaModel {
     public Long connectStartTimeTo;
 
     /**
-     * <p>The ID of the desktop group.</p>
+     * <p>The ID of the cloud computer pool.</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     /**
-     * <p>The ID of the cloud desktop.</p>
+     * <p>The ID of the cloud computer.</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
-     * <p>The user that you want to authorize to use the desktop group.</p>
+     * <p>The ID of the authorized user.</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
-     * <p>The account type of the user. Valid values:</p>
+     * <p>The type of the user account.</p>
      * <br>
-     * <p>*   SIMPLE: the convenience account type</p>
-     * <p>*   AD_CONNECTOR: the enterprise Active Directory (AD) account type</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   SIMPLE: convenience account</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   AD_CONNECTOR: enterprise AD account</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("EndUserType")
     public String endUserType;
@@ -80,7 +95,7 @@ public class DescribeUserConnectionRecordsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

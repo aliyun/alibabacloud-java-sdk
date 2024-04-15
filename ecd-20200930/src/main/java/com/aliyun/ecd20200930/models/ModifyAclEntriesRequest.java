@@ -5,25 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyAclEntriesRequest extends TeaModel {
     /**
-     * <p>The ACL policy.</p>
+     * <p>The Internet access control policy.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   allow</p>
+     * <p>*   allow: allows access to the Internet.</p>
      * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   deny</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <p>*   disable: forbids access to the Internet.</p>
      */
     @NameInMap("Policy")
     public String policy;
@@ -35,39 +23,19 @@ public class ModifyAclEntriesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of instances that correspond to the ACL granularity.</p>
+     * <p>The instance IDs (office network IDs or cloud computer IDs) to which the Internet access control policy is applicable.</p>
      */
     @NameInMap("SourceId")
     public java.util.List<String> sourceId;
 
     /**
-     * <p>The network granularity that corresponds to the access control list (ACL) policy.</p>
+     * <p>The granularity to which the Internet access control policy is applicable.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   desktop</p>
+     * <p>*   desktop: cloud computer granularity.</p>
      * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    cloud desktop</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   vpc</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    workspace</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <p>*   vpc: office network granularity.</p>
      */
     @NameInMap("SourceType")
     public String sourceType;

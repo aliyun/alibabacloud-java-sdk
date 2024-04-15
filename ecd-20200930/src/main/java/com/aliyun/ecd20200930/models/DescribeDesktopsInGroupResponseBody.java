@@ -11,37 +11,37 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of subscription cloud desktops that are connected.</p>
+     * <p>The number of subscription cloud computers that are in the Connected state.</p>
      */
     @NameInMap("OnlinePrePaidDesktopsCount")
     public Integer onlinePrePaidDesktopsCount;
 
     /**
-     * <p>The subscription cloud desktops.</p>
+     * <p>The details about subscription cloud computers.</p>
      */
     @NameInMap("PaidDesktops")
     public java.util.List<DescribeDesktopsInGroupResponseBodyPaidDesktops> paidDesktops;
 
     /**
-     * <p>The total number of subscription cloud desktops.</p>
+     * <p>The total number of queried subscription cloud computers.</p>
      */
     @NameInMap("PaidDesktopsCount")
     public Integer paidDesktopsCount;
 
     /**
-     * <p>The pay-as-you-go cloud desktops.</p>
+     * <p>The details about pay-as-you-go cloud computers.</p>
      */
     @NameInMap("PostPaidDesktops")
     public java.util.List<DescribeDesktopsInGroupResponseBodyPostPaidDesktops> postPaidDesktops;
 
     /**
-     * <p>The total number of pay-as-you-go cloud desktops.</p>
+     * <p>The total number of queried pay-as-you-go cloud computers.</p>
      */
     @NameInMap("PostPaidDesktopsCount")
     public Integer postPaidDesktopsCount;
 
     /**
-     * <p>The total bill amount for the pay-as-you-go cloud desktops.</p>
+     * <p>The total amount of bills for pay-as-you-go cloud computers.</p>
      */
     @NameInMap("PostPaidDesktopsTotalAmount")
     public Integer postPaidDesktopsTotalAmount;
@@ -53,19 +53,19 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of subscription cloud desktops that are running.</p>
+     * <p>The number of subscription cloud computers that are in the Running state.</p>
      */
     @NameInMap("RunningPrePaidDesktopsCount")
     public Integer runningPrePaidDesktopsCount;
 
     /**
-     * <p>The number of subscription cloud desktops that are stopped.</p>
+     * <p>The number of subscription cloud computers that are in the Stopped state.</p>
      */
     @NameInMap("StopedPrePaidDesktopsCount")
     public Integer stopedPrePaidDesktopsCount;
 
     /**
-     * <p>The number of subscription cloud desktops that are stopped.</p>
+     * <p>The number of subscription cloud computers that are in the Stopped state.</p>
      */
     @NameInMap("StoppedPrePaidDesktopsCount")
     public Integer stoppedPrePaidDesktopsCount;
@@ -165,7 +165,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
     public static class DescribeDesktopsInGroupResponseBodyPaidDesktops extends TeaModel {
         /**
-         * <p>The connection state.</p>
+         * <p>The connection status of the cloud computer.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
@@ -197,19 +197,19 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String connectionStatus;
 
         /**
-         * <p>The cloud desktop ID.</p>
+         * <p>The ID of the cloud computer.</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
-         * <p>The cloud desktop name.</p>
+         * <p>The name of the cloud computer.</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
 
         /**
-         * <p>The state of the cloud desktop.</p>
+         * <p>The status of the cloud computer.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
@@ -281,29 +281,23 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String desktopStatus;
 
         /**
-         * <p>The disk type.</p>
+         * <p>The type of the disk.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   SYSTEM</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    the system disk</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   DATA:</p>
+         * <p>*   SYSTEM: system disk</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>    the data disk</p>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   DATA: data disk</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          * <br>
          * <p>    <!-- --></p>
          */
@@ -311,13 +305,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The authorized user.</p>
+         * <p>The ID of the authorized user of the cloud computer.</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
-         * <p>The IDs of users that are connected to cloud desktops. If no users are connected, null is returned.</p>
+         * <p>The IDs of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</p>
          */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
@@ -329,7 +323,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String endUserName;
 
         /**
-         * <p>The names of users that are connected to cloud desktops. If no users are connected, null is returned.</p>
+         * <p>The usernames of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</p>
          */
         @NameInMap("EndUserNames")
         public java.util.List<String> endUserNames;
@@ -341,7 +335,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String fotaVersion;
 
         /**
-         * <p>The GPU driver version.</p>
+         * <p>The version of the GPU driver.</p>
          */
         @NameInMap("GpuDriverVersion")
         public String gpuDriverVersion;
@@ -359,11 +353,11 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String imageName;
 
         /**
-         * <p>The flag that is used for management.</p>
+         * <p>The flag that is used to manage the cloud computer.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   Updating: The configurations of the cloud desktop are being changed.</p>
+         * <p>*   Updating: The configurations of the cloud computer are being updated.</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
@@ -371,7 +365,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>*   NoFlag: No flags are available.</p>
+         * <p>*   NoFlag: No flags are attached to the cloud computer.</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
@@ -383,13 +377,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String managementFlag;
 
         /**
-         * <p>The flags that are used for management.</p>
+         * <p>The flags that are used to manage the cloud computers.</p>
          */
         @NameInMap("ManagementFlags")
         public java.util.List<String> managementFlags;
 
         /**
-         * <p>The IP address of the member Elastic Network Interface (ENI).</p>
+         * <p>The IP address of the member network interface controller (NIC) of the instance.</p>
          */
         @NameInMap("MemberEniIp")
         public String memberEniIp;
@@ -419,22 +413,37 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The IP address of the primary ENI.</p>
+         * <p>The IP address of the primary NIC of the instance.</p>
          */
         @NameInMap("PrimaryEniIp")
         public String primaryEniIp;
 
         /**
-         * <p>The protocol type. Valid values:</p>
+         * <p>The protocol.</p>
          * <br>
-         * <p>*   ASP</p>
-         * <p>*   HDX</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   HDX: High-definition Experience (HDX) protocol</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   ASP: Adaptive Streaming Protocol (ASP) protocol provided by Alibaba Cloud</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
-         * <p>The point in time when the cloud desktop was reset.</p>
+         * <p>The time when the cloud computer was reset.</p>
          */
         @NameInMap("ResetTime")
         public String resetTime;
@@ -622,7 +631,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
     public static class DescribeDesktopsInGroupResponseBodyPostPaidDesktops extends TeaModel {
         /**
-         * <p>The connection state.</p>
+         * <p>The connection status of the cloud computer.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
@@ -654,31 +663,31 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String connectionStatus;
 
         /**
-         * <p>The retention period.</p>
+         * <p>The retention period of the cloud computer.</p>
          */
         @NameInMap("CreateDuration")
         public String createDuration;
 
         /**
-         * <p>The time when the auxiliary media asset was created.</p>
+         * <p>The time when the cloud computer was created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The cloud desktop ID.</p>
+         * <p>The ID of the cloud computer.</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
-         * <p>The cloud desktop name.</p>
+         * <p>The name of the cloud computer.</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
 
         /**
-         * <p>The state of the cloud desktop.</p>
+         * <p>The status of the cloud computer.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
@@ -750,29 +759,23 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String desktopStatus;
 
         /**
-         * <p>The disk type.</p>
+         * <p>The type of the disk.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   SYSTEM</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    the system disk</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   DATA:</p>
+         * <p>*   SYSTEM: system disk</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>    the data disk</p>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   DATA: data disk</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          * <br>
          * <p>    <!-- --></p>
          */
@@ -780,13 +783,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The authorized user.</p>
+         * <p>The ID of the authorized user.</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
-         * <p>The IDs of users that are connected to cloud desktops. If no users are connected, null is returned.</p>
+         * <p>The IDs of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</p>
          */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
@@ -798,7 +801,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String endUserName;
 
         /**
-         * <p>The names of users that are connected to cloud desktops. If no users are connected, null is returned.</p>
+         * <p>The usernames of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</p>
          */
         @NameInMap("EndUserNames")
         public java.util.List<String> endUserNames;
@@ -810,7 +813,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String fotaVersion;
 
         /**
-         * <p>The GPU driver version.</p>
+         * <p>The version of the GPU driver.</p>
          */
         @NameInMap("GpuDriverVersion")
         public String gpuDriverVersion;
@@ -828,11 +831,11 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String imageName;
 
         /**
-         * <p>The flag that is used for management.</p>
+         * <p>The flag that is used to manage the cloud computer.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   Updating: The configurations of the cloud desktop are being changed.</p>
+         * <p>*   Updating: The configurations of the cloud computer are being updated.</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
@@ -840,7 +843,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>*   NoFlag: No flags are available.</p>
+         * <p>*   NoFlag: No flags are attached to the cloud computer.</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
@@ -852,13 +855,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String managementFlag;
 
         /**
-         * <p>The flags that are used for management.</p>
+         * <p>The flags that are used to manage the cloud computers.</p>
          */
         @NameInMap("ManagementFlags")
         public java.util.List<String> managementFlags;
 
         /**
-         * <p>The IP address of the member Elastic Network Interface (ENI).</p>
+         * <p>The IP address of the member NIC of the instance.</p>
          */
         @NameInMap("MemberEniIp")
         public String memberEniIp;
@@ -888,28 +891,43 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The IP address of the primary ENI.</p>
+         * <p>The IP address of the primary NIC of the instance.</p>
          */
         @NameInMap("PrimaryEniIp")
         public String primaryEniIp;
 
         /**
-         * <p>The protocol type. Valid values:</p>
+         * <p>The protocol.</p>
          * <br>
-         * <p>*   ASP</p>
-         * <p>*   HDX</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   HDX: HDX protocol</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   ASP: ASP protocol provided by Alibaba Cloud</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
-         * <p>The time when the cloud desktop was released.</p>
+         * <p>The time when the cloud computer was released.</p>
          */
         @NameInMap("ReleaseTime")
         public String releaseTime;
 
         /**
-         * <p>The point in time when the cloud desktop was reset.</p>
+         * <p>The time when the cloud computer was reset.</p>
          */
         @NameInMap("ResetTime")
         public String resetTime;

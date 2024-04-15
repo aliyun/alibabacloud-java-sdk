@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteNetworkPackagesRequest extends TeaModel {
     /**
-     * <p>The IDs of Internet access packages.</p>
+     * <p>The IDs of premium bandwidth plans. You can specify one or more IDs.</p>
      */
     @NameInMap("NetworkPackageId")
     public java.util.List<String> networkPackageId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

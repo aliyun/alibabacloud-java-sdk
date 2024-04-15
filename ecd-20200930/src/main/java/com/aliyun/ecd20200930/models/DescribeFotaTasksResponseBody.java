@@ -130,29 +130,8 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   valid</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    The end user can update the image.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   invalid</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    The end user cannot update the image.</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   valid: The end user can update the image.</p>
+         * <p>*   invalid: The end user cannot update the image.</p>
          */
         @NameInMap("Status")
         public String status;

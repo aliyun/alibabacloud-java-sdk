@@ -4,6 +4,12 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopSessionsRequest extends TeaModel {
+    @NameInMap("DesktopId")
+    public java.util.List<String> desktopId;
+
+    @NameInMap("DesktopName")
+    public String desktopName;
+
     /**
      * <p>The end of the time range to query.</p>
      */
@@ -58,6 +64,22 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public static DescribeDesktopSessionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDesktopSessionsRequest self = new DescribeDesktopSessionsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDesktopSessionsRequest setDesktopId(java.util.List<String> desktopId) {
+        this.desktopId = desktopId;
+        return this;
+    }
+    public java.util.List<String> getDesktopId() {
+        return this.desktopId;
+    }
+
+    public DescribeDesktopSessionsRequest setDesktopName(String desktopName) {
+        this.desktopName = desktopName;
+        return this;
+    }
+    public String getDesktopName() {
+        return this.desktopName;
     }
 
     public DescribeDesktopSessionsRequest setEndTime(String endTime) {

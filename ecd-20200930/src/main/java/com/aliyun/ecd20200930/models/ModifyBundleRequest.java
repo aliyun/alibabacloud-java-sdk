@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyBundleRequest extends TeaModel {
     /**
-     * <p>The desktop template ID.</p>
+     * <p>The ID of the cloud computer template that you want to modify.</p>
      */
     @NameInMap("BundleId")
     public String bundleId;
 
     /**
-     * <p>The name of the new desktop template.</p>
+     * <p>The name of the new cloud computer template.</p>
      */
     @NameInMap("BundleName")
     public String bundleName;
 
     /**
-     * <p>The description of the new desktop template.</p>
+     * <p>The description of the new cloud computer template.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -34,18 +34,21 @@ public class ModifyBundleRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The language of the OS. This parameter is available only for system images. Valid values:</p>
+     * <p>The OS language. This parameter is available only for system images.</p>
      * <br>
-     * <p>*   zh-CN: Simplified Chinese</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   en-US: American English</p>
      * <p>*   zh-HK: Traditional Chinese (Hong Kong)</p>
-     * <p>*   en-US: English</p>
+     * <p>*   zh-CN: Simplified Chinese.</p>
+     * <br>
      * <p>*   ja-JP: Japanese</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -11,7 +11,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Details of the workspaces.</p>
+     * <p>The office network information.</p>
      */
     @NameInMap("OfficeSiteOverviewResults")
     public java.util.List<ListOfficeSiteOverviewResponseBodyOfficeSiteOverviewResults> officeSiteOverviewResults;
@@ -53,79 +53,159 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
 
     public static class ListOfficeSiteOverviewResponseBodyOfficeSiteOverviewResults extends TeaModel {
         /**
-         * <p>The number of expired cloud desktops in the workspace.</p>
+         * <p>The number of expired cloud computers in the office network.</p>
          */
         @NameInMap("HasExpiredEdsCount")
         public Integer hasExpiredEdsCount;
 
         /**
-         * <p>The number of expired cloud desktops in the desktop group.</p>
+         * <p>The number of expired cloud computers in the cloud computer pool.</p>
          */
         @NameInMap("HasExpiredEdsCountForGroup")
         public Integer hasExpiredEdsCountForGroup;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The office network ID.</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The office network name.</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
         /**
-         * <p>The status of the workspace.</p>
+         * <p>The office network status.</p>
+         * <br>
+         * <p>Default values:</p>
+         * <br>
+         * <p>*   CONFIGUSERFAILED</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   REGISTERING</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   REGISTERED</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   NEEDCONFIGTRUST</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   CONFIGUSERING</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   CONFIGTRUSTFAILED</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   ERROR</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   CONFIGTRUSTING</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   NEEDCONFIGUSER</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("OfficeSiteStatus")
         public String officeSiteStatus;
 
         /**
-         * <p>The region ID of the workspace.</p>
+         * <p>The ID of the region where the office network resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The number of running cloud desktops in the workspace.</p>
+         * <p>The number of cloud computers that are running in the office network.</p>
          */
         @NameInMap("RunningEdsCount")
         public Integer runningEdsCount;
 
         /**
-         * <p>The number of running cloud desktops in the desktop group.</p>
+         * <p>The number of running cloud computers in the cloud computer pool.</p>
          */
         @NameInMap("RunningEdsCountForGroup")
         public Integer runningEdsCountForGroup;
 
         /**
-         * <p>The total number of cloud desktops in the workspace.</p>
+         * <p>The total number of cloud computers in the office network.</p>
          */
         @NameInMap("TotalEdsCount")
         public Integer totalEdsCount;
 
         /**
-         * <p>The total number of cloud desktops in the desktop group.</p>
+         * <p>The total number of cloud computers in the cloud computer pool.</p>
          */
         @NameInMap("TotalEdsCountForGroup")
         public Integer totalEdsCountForGroup;
 
         /**
-         * <p>The virtual private cloud (VPC) type of the workspace.</p>
+         * <p>The office network type and its suitable VPC type.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   standard (default): standard, exclusive VPC</p>
+         * <p>*   customized: custom, user VPC</p>
+         * <p>*   basic: basic, shared VPC</p>
          */
         @NameInMap("VpcType")
         public String vpcType;
 
         /**
-         * <p>The number of cloud desktops that are about to expire in the workspace.</p>
+         * <p>The number of cloud computers that are about to expire in the office network.</p>
          */
         @NameInMap("WillExpiredEdsCount")
         public Integer willExpiredEdsCount;
 
         /**
-         * <p>The number of cloud desktops that are about to expire in the desktop group.</p>
+         * <p>The number of cloud computers that are about to expire in the cloud computer pool.</p>
          */
         @NameInMap("WillExpiredEdsCountForGroup")
         public Integer willExpiredEdsCountForGroup;
