@@ -4,12 +4,21 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListTriggersRequest extends TeaModel {
+    /**
+     * <p>The number of triggers returned.</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 
+    /**
+     * <p>The token for the next page.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The trigger name prefix.</p>
+     */
     @NameInMap("prefix")
     public String prefix;
 

@@ -4,9 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
+    /**
+     * <p>The function version or alias.</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 
+    /**
+     * <p>Specifies whether to list all instances. Valid values: true and false.</p>
+     */
     @NameInMap("withAllActive")
     public Boolean withAllActive;
 

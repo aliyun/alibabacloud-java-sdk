@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class UpdateTriggerRequest extends TeaModel {
+    /**
+     * <p>The trigger configurations.</p>
+     */
     @NameInMap("body")
     public UpdateTriggerInput body;
 

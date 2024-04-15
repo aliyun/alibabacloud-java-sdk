@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CreateAliasRequest extends TeaModel {
+    /**
+     * <p>The request parameters for creating an alias.</p>
+     */
     @NameInMap("body")
     public CreateAliasInput body;
 

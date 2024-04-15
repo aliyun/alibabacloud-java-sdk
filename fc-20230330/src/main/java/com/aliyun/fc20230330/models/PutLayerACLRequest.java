@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class PutLayerACLRequest extends TeaModel {
+    /**
+     * <p>Specifies whether the layer is a public layer. Valid values: true and false.</p>
+     */
     @NameInMap("public")
     public String _public;
 

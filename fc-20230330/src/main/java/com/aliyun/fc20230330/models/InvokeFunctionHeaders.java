@@ -7,9 +7,18 @@ public class InvokeFunctionHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    @NameInMap("x-fc-async-task-id")
+    public String xFcAsyncTaskId;
+
+    /**
+     * <p>The type of function invocation. Valid values: Sync and Async.</p>
+     */
     @NameInMap("x-fc-invocation-type")
     public String xFcInvocationType;
 
+    /**
+     * <p>The log type of function invocation. Valid values: None and Tail.</p>
+     */
     @NameInMap("x-fc-log-type")
     public String xFcLogType;
 
@@ -24,6 +33,14 @@ public class InvokeFunctionHeaders extends TeaModel {
     }
     public java.util.Map<String, String> getCommonHeaders() {
         return this.commonHeaders;
+    }
+
+    public InvokeFunctionHeaders setXFcAsyncTaskId(String xFcAsyncTaskId) {
+        this.xFcAsyncTaskId = xFcAsyncTaskId;
+        return this;
+    }
+    public String getXFcAsyncTaskId() {
+        return this.xFcAsyncTaskId;
     }
 
     public InvokeFunctionHeaders setXFcInvocationType(String xFcInvocationType) {

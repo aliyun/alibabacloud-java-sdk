@@ -4,18 +4,33 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListLayersRequest extends TeaModel {
+    /**
+     * <p>The number of layers that are returned</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>Specifies whether the layer is official. Valid values: true and false.</p>
+     */
     @NameInMap("official")
     public String official;
 
+    /**
+     * <p>The name prefix of the layer.</p>
+     */
     @NameInMap("prefix")
     public String prefix;
 
+    /**
+     * <p>Specifies whether the layer is public. Valid values: true and false.</p>
+     */
     @NameInMap("public")
     public String _public;
 

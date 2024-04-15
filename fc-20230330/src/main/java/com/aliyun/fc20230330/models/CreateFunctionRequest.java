@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CreateFunctionRequest extends TeaModel {
+    /**
+     * <p>The information about function configurations.</p>
+     */
     @NameInMap("body")
     public CreateFunctionInput body;
 

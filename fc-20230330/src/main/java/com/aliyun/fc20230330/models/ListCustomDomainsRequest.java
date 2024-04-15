@@ -4,12 +4,21 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListCustomDomainsRequest extends TeaModel {
+    /**
+     * <p>The number of custom domain names returned.</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The domain name prefix.</p>
+     */
     @NameInMap("prefix")
     public String prefix;
 

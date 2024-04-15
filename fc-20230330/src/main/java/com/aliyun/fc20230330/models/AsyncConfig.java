@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class AsyncConfig extends TeaModel {
+    @NameInMap("asyncTask")
+    public Boolean asyncTask;
+
     @NameInMap("createdTime")
     public String createdTime;
 
@@ -25,6 +28,14 @@ public class AsyncConfig extends TeaModel {
     public static AsyncConfig build(java.util.Map<String, ?> map) throws Exception {
         AsyncConfig self = new AsyncConfig();
         return TeaModel.build(map, self);
+    }
+
+    public AsyncConfig setAsyncTask(Boolean asyncTask) {
+        this.asyncTask = asyncTask;
+        return this;
+    }
+    public Boolean getAsyncTask() {
+        return this.asyncTask;
     }
 
     public AsyncConfig setCreatedTime(String createdTime) {

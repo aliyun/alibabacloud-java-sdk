@@ -4,9 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class PutAsyncInvokeConfigRequest extends TeaModel {
+    /**
+     * <p>The configurations of asynchronous function invocation.</p>
+     */
     @NameInMap("body")
     public PutAsyncInvokeConfigInput body;
 
+    /**
+     * <p>The version or alias of the function.</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 
