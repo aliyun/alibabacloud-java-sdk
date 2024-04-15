@@ -4,9 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListLayerVersionsRequest extends TeaModel {
+    /**
+     * <p>The number of versions to be returned.</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 
+    /**
+     * <p>The initial version of the layer.</p>
+     */
     @NameInMap("startVersion")
     public String startVersion;
 

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>fc20230330</artifactId>
-  <version>3.1.0</version>
+  <version>4.0.0</version>
   <packaging>jar</packaging>
   <name>fc20230330</name>
   <description>Alibaba Cloud Function Compute (20230330) SDK for Java

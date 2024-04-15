@@ -4,12 +4,21 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListAliasesRequest extends TeaModel {
+    /**
+     * <p>The number of aliases returned.</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The alias prefix.</p>
+     */
     @NameInMap("prefix")
     public String prefix;
 

@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class UpdateFunctionRequest extends TeaModel {
+    /**
+     * <p>The function information</p>
+     */
     @NameInMap("body")
     public UpdateFunctionInput body;
 

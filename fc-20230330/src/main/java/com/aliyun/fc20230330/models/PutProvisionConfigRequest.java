@@ -4,9 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class PutProvisionConfigRequest extends TeaModel {
+    /**
+     * <p>The information about the provisioned configuration.</p>
+     */
     @NameInMap("body")
     public PutProvisionConfigInput body;
 
+    /**
+     * <p>The function alias or LATEST.</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 

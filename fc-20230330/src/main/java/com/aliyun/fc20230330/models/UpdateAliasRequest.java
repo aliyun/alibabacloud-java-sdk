@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class UpdateAliasRequest extends TeaModel {
+    /**
+     * <p>The alias information to be updated.</p>
+     */
     @NameInMap("body")
     public UpdateAliasInput body;
 

@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class GetAsyncInvokeConfigRequest extends TeaModel {
+    /**
+     * <p>The version or alias of the function.</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 

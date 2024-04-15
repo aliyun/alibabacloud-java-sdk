@@ -4,9 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class InvokeFunctionRequest extends TeaModel {
+    /**
+     * <p>The request parameters of function invocation.</p>
+     */
     @NameInMap("body")
     public java.io.InputStream body;
 
+    /**
+     * <p>The version or alias of the function.</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 

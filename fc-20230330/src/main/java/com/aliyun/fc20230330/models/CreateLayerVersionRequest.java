@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CreateLayerVersionRequest extends TeaModel {
+    /**
+     * <p>The information about layer configurations.</p>
+     */
     @NameInMap("body")
     public CreateLayerVersionInput body;
 

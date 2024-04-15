@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class PutAsyncInvokeConfigInput extends TeaModel {
+    @NameInMap("asyncTask")
+    public Boolean asyncTask;
+
     @NameInMap("destinationConfig")
     public DestinationConfig destinationConfig;
 
@@ -16,6 +19,14 @@ public class PutAsyncInvokeConfigInput extends TeaModel {
     public static PutAsyncInvokeConfigInput build(java.util.Map<String, ?> map) throws Exception {
         PutAsyncInvokeConfigInput self = new PutAsyncInvokeConfigInput();
         return TeaModel.build(map, self);
+    }
+
+    public PutAsyncInvokeConfigInput setAsyncTask(Boolean asyncTask) {
+        this.asyncTask = asyncTask;
+        return this;
+    }
+    public Boolean getAsyncTask() {
+        return this.asyncTask;
     }
 
     public PutAsyncInvokeConfigInput setDestinationConfig(DestinationConfig destinationConfig) {

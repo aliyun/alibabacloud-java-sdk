@@ -680,53 +680,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getProvisionConfigWithOptions(functionName, request, headers, runtime);
     }
 
-    /**
-      * @deprecated
-      *
-      * @param request GetResourceTagsRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetResourceTagsResponse
-     */
-    // Deprecated
-    public GetResourceTagsResponse getResourceTagsWithOptions(GetResourceTagsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.arn)) {
-            query.put("arn", request.arn);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetResourceTags"),
-            new TeaPair("version", "2023-03-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2023-03-30/tag"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceTagsResponse());
-    }
-
-    /**
-      * @deprecated
-      *
-      * @param request GetResourceTagsRequest
-      * @return GetResourceTagsResponse
-     */
-    // Deprecated
-    public GetResourceTagsResponse getResourceTags(GetResourceTagsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getResourceTagsWithOptions(request, headers, runtime);
-    }
-
     public GetTriggerResponse getTriggerWithOptions(String functionName, String triggerName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -761,6 +714,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAsyncTaskId)) {
+            realHeaders.put("x-fc-async-task-id", com.aliyun.teautil.Common.toJSONString(headers.xFcAsyncTaskId));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
@@ -1261,61 +1218,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listTagResourcesWithOptions(request, headers, runtime);
     }
 
-    /**
-      * @deprecated
-      *
-      * @param request ListTaggedResourcesRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListTaggedResourcesResponse
-     */
-    // Deprecated
-    public ListTaggedResourcesResponse listTaggedResourcesWithOptions(ListTaggedResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
-            query.put("limit", request.limit);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
-            query.put("nextToken", request.nextToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
-            query.put("resourceType", request.resourceType);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListTaggedResources"),
-            new TeaPair("version", "2023-03-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2023-03-30/tags"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTaggedResourcesResponse());
-    }
-
-    /**
-      * @deprecated
-      *
-      * @param request ListTaggedResourcesRequest
-      * @return ListTaggedResourcesResponse
-     */
-    // Deprecated
-    public ListTaggedResourcesResponse listTaggedResources(ListTaggedResourcesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listTaggedResourcesWithOptions(request, headers, runtime);
-    }
-
     public ListTriggersResponse listTriggersWithOptions(String functionName, ListTriggersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1526,48 +1428,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.putProvisionConfigWithOptions(functionName, request, headers, runtime);
     }
 
-    /**
-      * @deprecated
-      *
-      * @param request TagResourceRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return TagResourceResponse
-     */
-    // Deprecated
-    public TagResourceResponse tagResourceWithOptions(TagResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "TagResource"),
-            new TeaPair("version", "2023-03-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2023-03-30/tag"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourceResponse());
-    }
-
-    /**
-      * @deprecated
-      *
-      * @param request TagResourceRequest
-      * @return TagResourceResponse
-     */
-    // Deprecated
-    public TagResourceResponse tagResource(TagResourceRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.tagResourceWithOptions(request, headers, runtime);
-    }
-
     public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1592,61 +1452,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.tagResourcesWithOptions(request, headers, runtime);
-    }
-
-    /**
-      * @deprecated
-      *
-      * @param request UntagResourceRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UntagResourceResponse
-     */
-    // Deprecated
-    public UntagResourceResponse untagResourceWithOptions(UntagResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.all)) {
-            query.put("all", request.all);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.arn)) {
-            query.put("arn", request.arn);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tagKeys)) {
-            query.put("tagKeys", request.tagKeys);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UntagResource"),
-            new TeaPair("version", "2023-03-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2023-03-30/tag"),
-            new TeaPair("method", "DELETE"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourceResponse());
-    }
-
-    /**
-      * @deprecated
-      *
-      * @param request UntagResourceRequest
-      * @return UntagResourceResponse
-     */
-    // Deprecated
-    public UntagResourceResponse untagResource(UntagResourceRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.untagResourceWithOptions(request, headers, runtime);
     }
 
     public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
