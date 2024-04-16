@@ -4,18 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListSensitivityLevelResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The sensitivity levels.</p>
+     */
     @NameInMap("SensitivityLevelList")
     public java.util.List<ListSensitivityLevelResponseBodySensitivityLevelList> sensitivityLevelList;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +83,30 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
     }
 
     public static class ListSensitivityLevelResponseBodySensitivityLevelList extends TeaModel {
+        /**
+         * <p>Indicates whether the fields of the sensitive level are displayed in plaintext.</p>
+         */
         @NameInMap("IsPlain")
         public Boolean isPlain;
 
+        /**
+         * <p>The name of the sensitive level.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the classification template.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <p>The type of the classification template. Valid values:</p>
+         * <br>
+         * <p>*   **INNER**: a built-in template.</p>
+         * <p>*   **USER_DEFINE**: a custom template.</p>
+         */
         @NameInMap("TemplateType")
         public String templateType;
 

@@ -23,7 +23,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The created security rule set.</p>
+     * <p>The information about the created security rule set.</p>
      */
     @NameInMap("StandardGroup")
     public CreateStandardGroupResponseBodyStandardGroup standardGroup;
@@ -95,6 +95,9 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The security rule set ID.</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 

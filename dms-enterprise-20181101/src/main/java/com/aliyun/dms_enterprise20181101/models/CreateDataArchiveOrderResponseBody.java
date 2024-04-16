@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateDataArchiveOrderResponseBody extends TeaModel {
     /**
-     * <p>The data archiving ticket IDs.</p>
+     * <p>The ID of the data archiving ticket.</p>
      */
     @NameInMap("CreateOrderResult")
     public java.util.List<Long> createOrderResult;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -29,10 +29,10 @@ public class CreateDataArchiveOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Success")
     public Boolean success;
