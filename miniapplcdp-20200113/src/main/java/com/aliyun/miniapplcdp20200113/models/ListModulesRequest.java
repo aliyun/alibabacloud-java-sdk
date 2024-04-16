@@ -7,11 +7,20 @@ public class ListModulesRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("HasOwnerApp")
+    public Boolean hasOwnerApp;
+
+    @NameInMap("ModuleId")
+    public String moduleId;
+
     @NameInMap("ModuleName")
     public String moduleName;
 
-    @NameInMap("TargetAppSource")
-    public String targetAppSource;
+    @NameInMap("Platform")
+    public String platform;
+
+    @NameInMap("Source")
+    public String source;
 
     public static ListModulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListModulesRequest self = new ListModulesRequest();
@@ -26,6 +35,22 @@ public class ListModulesRequest extends TeaModel {
         return this.description;
     }
 
+    public ListModulesRequest setHasOwnerApp(Boolean hasOwnerApp) {
+        this.hasOwnerApp = hasOwnerApp;
+        return this;
+    }
+    public Boolean getHasOwnerApp() {
+        return this.hasOwnerApp;
+    }
+
+    public ListModulesRequest setModuleId(String moduleId) {
+        this.moduleId = moduleId;
+        return this;
+    }
+    public String getModuleId() {
+        return this.moduleId;
+    }
+
     public ListModulesRequest setModuleName(String moduleName) {
         this.moduleName = moduleName;
         return this;
@@ -34,12 +59,20 @@ public class ListModulesRequest extends TeaModel {
         return this.moduleName;
     }
 
-    public ListModulesRequest setTargetAppSource(String targetAppSource) {
-        this.targetAppSource = targetAppSource;
+    public ListModulesRequest setPlatform(String platform) {
+        this.platform = platform;
         return this;
     }
-    public String getTargetAppSource() {
-        return this.targetAppSource;
+    public String getPlatform() {
+        return this.platform;
+    }
+
+    public ListModulesRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

@@ -13,8 +13,8 @@ public class DeleteResourceRequest extends TeaModel {
     @NameInMap("ResourceId")
     public String resourceId;
 
-    @NameInMap("Scope")
-    public String scope;
+    @NameInMap("Source")
+    public String source;
 
     public static DeleteResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteResourceRequest self = new DeleteResourceRequest();
@@ -45,12 +45,12 @@ public class DeleteResourceRequest extends TeaModel {
         return this.resourceId;
     }
 
-    public DeleteResourceRequest setScope(String scope) {
-        this.scope = scope;
+    public DeleteResourceRequest setSource(String source) {
+        this.source = source;
         return this;
     }
-    public String getScope() {
-        return this.scope;
+    public String getSource() {
+        return this.source;
     }
 
 }

@@ -16,6 +16,9 @@ public class SetEnvironmentDefaultDomainRequest extends TeaModel {
     @NameInMap("EnvId")
     public String envId;
 
+    @NameInMap("Source")
+    public String source;
+
     public static SetEnvironmentDefaultDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         SetEnvironmentDefaultDomainRequest self = new SetEnvironmentDefaultDomainRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class SetEnvironmentDefaultDomainRequest extends TeaModel {
     }
     public String getEnvId() {
         return this.envId;
+    }
+
+    public SetEnvironmentDefaultDomainRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

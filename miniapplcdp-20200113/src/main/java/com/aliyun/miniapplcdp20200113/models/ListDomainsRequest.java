@@ -10,6 +10,9 @@ public class ListDomainsRequest extends TeaModel {
     @NameInMap("EnvId")
     public String envId;
 
+    @NameInMap("Source")
+    public String source;
+
     public static ListDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDomainsRequest self = new ListDomainsRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ListDomainsRequest extends TeaModel {
     }
     public String getEnvId() {
         return this.envId;
+    }
+
+    public ListDomainsRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

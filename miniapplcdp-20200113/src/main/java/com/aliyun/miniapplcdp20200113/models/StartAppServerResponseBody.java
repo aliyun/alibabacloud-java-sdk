@@ -4,23 +4,15 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class StartAppServerResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public StartAppServerResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static StartAppServerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StartAppServerResponseBody self = new StartAppServerResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public StartAppServerResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public StartAppServerResponseBody setData(StartAppServerResponseBodyData data) {
@@ -31,27 +23,27 @@ public class StartAppServerResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class StartAppServerResponseBodyData extends TeaModel {
-        @NameInMap("EnvId")
-        public String envId;
+    public StartAppServerResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class StartAppServerResponseBodyData extends TeaModel {
         @NameInMap("AppId")
         public String appId;
 
         @NameInMap("AppServerStatus")
         public String appServerStatus;
 
+        @NameInMap("EnvId")
+        public String envId;
+
         public static StartAppServerResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             StartAppServerResponseBodyData self = new StartAppServerResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public StartAppServerResponseBodyData setEnvId(String envId) {
-            this.envId = envId;
-            return this;
-        }
-        public String getEnvId() {
-            return this.envId;
         }
 
         public StartAppServerResponseBodyData setAppId(String appId) {
@@ -68,6 +60,14 @@ public class StartAppServerResponseBody extends TeaModel {
         }
         public String getAppServerStatus() {
             return this.appServerStatus;
+        }
+
+        public StartAppServerResponseBodyData setEnvId(String envId) {
+            this.envId = envId;
+            return this;
+        }
+        public String getEnvId() {
+            return this.envId;
         }
 
     }

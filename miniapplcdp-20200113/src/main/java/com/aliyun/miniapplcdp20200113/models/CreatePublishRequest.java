@@ -4,11 +4,11 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class CreatePublishRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("AppId")
     public String appId;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("CommitId")
     public String commitId;
@@ -22,6 +22,9 @@ public class CreatePublishRequest extends TeaModel {
     @NameInMap("PublishType")
     public String publishType;
 
+    @NameInMap("Source")
+    public String source;
+
     @NameInMap("VersionNumber")
     public String versionNumber;
 
@@ -30,20 +33,20 @@ public class CreatePublishRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreatePublishRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
     public CreatePublishRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public CreatePublishRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreatePublishRequest setCommitId(String commitId) {
@@ -76,6 +79,14 @@ public class CreatePublishRequest extends TeaModel {
     }
     public String getPublishType() {
         return this.publishType;
+    }
+
+    public CreatePublishRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public CreatePublishRequest setVersionNumber(String versionNumber) {

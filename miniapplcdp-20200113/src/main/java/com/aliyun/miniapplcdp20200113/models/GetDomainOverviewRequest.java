@@ -13,6 +13,9 @@ public class GetDomainOverviewRequest extends TeaModel {
     @NameInMap("EnvId")
     public String envId;
 
+    @NameInMap("Source")
+    public String source;
+
     public static GetDomainOverviewRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDomainOverviewRequest self = new GetDomainOverviewRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class GetDomainOverviewRequest extends TeaModel {
     }
     public String getEnvId() {
         return this.envId;
+    }
+
+    public GetDomainOverviewRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

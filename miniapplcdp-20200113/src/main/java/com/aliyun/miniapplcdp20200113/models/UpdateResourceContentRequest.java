@@ -16,8 +16,8 @@ public class UpdateResourceContentRequest extends TeaModel {
     @NameInMap("ResourceId")
     public String resourceId;
 
-    @NameInMap("Scope")
-    public String scope;
+    @NameInMap("Source")
+    public String source;
 
     public static UpdateResourceContentRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateResourceContentRequest self = new UpdateResourceContentRequest();
@@ -56,12 +56,12 @@ public class UpdateResourceContentRequest extends TeaModel {
         return this.resourceId;
     }
 
-    public UpdateResourceContentRequest setScope(String scope) {
-        this.scope = scope;
+    public UpdateResourceContentRequest setSource(String source) {
+        this.source = source;
         return this;
     }
-    public String getScope() {
-        return this.scope;
+    public String getSource() {
+        return this.source;
     }
 
 }

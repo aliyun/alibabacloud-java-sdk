@@ -4,23 +4,15 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class ListArtifactsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ListArtifactsResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListArtifactsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListArtifactsResponseBody self = new ListArtifactsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListArtifactsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListArtifactsResponseBody setData(ListArtifactsResponseBodyData data) {
@@ -31,18 +23,20 @@ public class ListArtifactsResponseBody extends TeaModel {
         return this.data;
     }
 
+    public ListArtifactsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListArtifactsResponseBodyDataItems extends TeaModel {
-        @NameInMap("ArtifactId")
-        public String artifactId;
-
-        @NameInMap("ModifiedTime")
-        public String modifiedTime;
-
         @NameInMap("AppId")
         public String appId;
 
-        @NameInMap("CreateTime")
-        public String createTime;
+        @NameInMap("ArtifactId")
+        public String artifactId;
 
         @NameInMap("ArtifactType")
         public String artifactType;
@@ -50,28 +44,18 @@ public class ListArtifactsResponseBody extends TeaModel {
         @NameInMap("Available")
         public Boolean available;
 
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
+
         @NameInMap("Url")
         public String url;
 
         public static ListArtifactsResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             ListArtifactsResponseBodyDataItems self = new ListArtifactsResponseBodyDataItems();
             return TeaModel.build(map, self);
-        }
-
-        public ListArtifactsResponseBodyDataItems setArtifactId(String artifactId) {
-            this.artifactId = artifactId;
-            return this;
-        }
-        public String getArtifactId() {
-            return this.artifactId;
-        }
-
-        public ListArtifactsResponseBodyDataItems setModifiedTime(String modifiedTime) {
-            this.modifiedTime = modifiedTime;
-            return this;
-        }
-        public String getModifiedTime() {
-            return this.modifiedTime;
         }
 
         public ListArtifactsResponseBodyDataItems setAppId(String appId) {
@@ -82,12 +66,12 @@ public class ListArtifactsResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public ListArtifactsResponseBodyDataItems setCreateTime(String createTime) {
-            this.createTime = createTime;
+        public ListArtifactsResponseBodyDataItems setArtifactId(String artifactId) {
+            this.artifactId = artifactId;
             return this;
         }
-        public String getCreateTime() {
-            return this.createTime;
+        public String getArtifactId() {
+            return this.artifactId;
         }
 
         public ListArtifactsResponseBodyDataItems setArtifactType(String artifactType) {
@@ -104,6 +88,22 @@ public class ListArtifactsResponseBody extends TeaModel {
         }
         public Boolean getAvailable() {
             return this.available;
+        }
+
+        public ListArtifactsResponseBodyDataItems setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListArtifactsResponseBodyDataItems setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public String getModifiedTime() {
+            return this.modifiedTime;
         }
 
         public ListArtifactsResponseBodyDataItems setUrl(String url) {

@@ -7,6 +7,9 @@ public class GetRealtimeStatsRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("Source")
+    public String source;
+
     public static GetRealtimeStatsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRealtimeStatsRequest self = new GetRealtimeStatsRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class GetRealtimeStatsRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public GetRealtimeStatsRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

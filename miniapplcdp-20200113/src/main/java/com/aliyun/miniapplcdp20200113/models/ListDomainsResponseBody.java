@@ -4,23 +4,15 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class ListDomainsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ListDomainsResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListDomainsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDomainsResponseBody self = new ListDomainsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListDomainsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListDomainsResponseBody setData(ListDomainsResponseBodyData data) {
@@ -31,47 +23,48 @@ public class ListDomainsResponseBody extends TeaModel {
         return this.data;
     }
 
+    public ListDomainsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListDomainsResponseBodyDataItems extends TeaModel {
-        @NameInMap("Applied")
-        public Boolean applied;
-
-        @NameInMap("Domain")
-        public String domain;
-
         @NameInMap("AppId")
         public String appId;
 
-        @NameInMap("Path")
-        public String path;
+        @NameInMap("Applied")
+        public Boolean applied;
+
+        @NameInMap("Checked")
+        public Boolean checked;
+
+        @NameInMap("Cname")
+        public String cname;
 
         @NameInMap("Deleted")
         public Boolean deleted;
 
-        @NameInMap("EnvId")
-        public String envId;
+        @NameInMap("Domain")
+        public String domain;
 
         @NameInMap("DomainType")
         public String domainType;
 
+        @NameInMap("EnvId")
+        public String envId;
+
+        @NameInMap("Path")
+        public String path;
+
+        @NameInMap("WithCertificate")
+        public Boolean withCertificate;
+
         public static ListDomainsResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             ListDomainsResponseBodyDataItems self = new ListDomainsResponseBodyDataItems();
             return TeaModel.build(map, self);
-        }
-
-        public ListDomainsResponseBodyDataItems setApplied(Boolean applied) {
-            this.applied = applied;
-            return this;
-        }
-        public Boolean getApplied() {
-            return this.applied;
-        }
-
-        public ListDomainsResponseBodyDataItems setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
         }
 
         public ListDomainsResponseBodyDataItems setAppId(String appId) {
@@ -82,12 +75,28 @@ public class ListDomainsResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public ListDomainsResponseBodyDataItems setPath(String path) {
-            this.path = path;
+        public ListDomainsResponseBodyDataItems setApplied(Boolean applied) {
+            this.applied = applied;
             return this;
         }
-        public String getPath() {
-            return this.path;
+        public Boolean getApplied() {
+            return this.applied;
+        }
+
+        public ListDomainsResponseBodyDataItems setChecked(Boolean checked) {
+            this.checked = checked;
+            return this;
+        }
+        public Boolean getChecked() {
+            return this.checked;
+        }
+
+        public ListDomainsResponseBodyDataItems setCname(String cname) {
+            this.cname = cname;
+            return this;
+        }
+        public String getCname() {
+            return this.cname;
         }
 
         public ListDomainsResponseBodyDataItems setDeleted(Boolean deleted) {
@@ -98,12 +107,12 @@ public class ListDomainsResponseBody extends TeaModel {
             return this.deleted;
         }
 
-        public ListDomainsResponseBodyDataItems setEnvId(String envId) {
-            this.envId = envId;
+        public ListDomainsResponseBodyDataItems setDomain(String domain) {
+            this.domain = domain;
             return this;
         }
-        public String getEnvId() {
-            return this.envId;
+        public String getDomain() {
+            return this.domain;
         }
 
         public ListDomainsResponseBodyDataItems setDomainType(String domainType) {
@@ -112,6 +121,30 @@ public class ListDomainsResponseBody extends TeaModel {
         }
         public String getDomainType() {
             return this.domainType;
+        }
+
+        public ListDomainsResponseBodyDataItems setEnvId(String envId) {
+            this.envId = envId;
+            return this;
+        }
+        public String getEnvId() {
+            return this.envId;
+        }
+
+        public ListDomainsResponseBodyDataItems setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public ListDomainsResponseBodyDataItems setWithCertificate(Boolean withCertificate) {
+            this.withCertificate = withCertificate;
+            return this;
+        }
+        public Boolean getWithCertificate() {
+            return this.withCertificate;
         }
 
     }

@@ -10,6 +10,9 @@ public class ListEnvironmentsRequest extends TeaModel {
     @NameInMap("EnvType")
     public String envType;
 
+    @NameInMap("Source")
+    public String source;
+
     public static ListEnvironmentsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEnvironmentsRequest self = new ListEnvironmentsRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ListEnvironmentsRequest extends TeaModel {
     }
     public String getEnvType() {
         return this.envType;
+    }
+
+    public ListEnvironmentsRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

@@ -22,8 +22,14 @@ public class UpdateModelRequest extends TeaModel {
     @NameInMap("ModelName")
     public String modelName;
 
+    @NameInMap("ModuleId")
+    public String moduleId;
+
     @NameInMap("SchemaVersion")
     public String schemaVersion;
+
+    @NameInMap("Source")
+    public String source;
 
     public static UpdateModelRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateModelRequest self = new UpdateModelRequest();
@@ -78,12 +84,28 @@ public class UpdateModelRequest extends TeaModel {
         return this.modelName;
     }
 
+    public UpdateModelRequest setModuleId(String moduleId) {
+        this.moduleId = moduleId;
+        return this;
+    }
+    public String getModuleId() {
+        return this.moduleId;
+    }
+
     public UpdateModelRequest setSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
     }
     public String getSchemaVersion() {
         return this.schemaVersion;
+    }
+
+    public UpdateModelRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

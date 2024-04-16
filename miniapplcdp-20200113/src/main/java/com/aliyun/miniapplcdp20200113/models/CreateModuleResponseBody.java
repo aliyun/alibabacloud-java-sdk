@@ -4,23 +4,15 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class CreateModuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public CreateModuleResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateModuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateModuleResponseBody self = new CreateModuleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateModuleResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateModuleResponseBody setData(CreateModuleResponseBodyData data) {
@@ -31,9 +23,32 @@ public class CreateModuleResponseBody extends TeaModel {
         return this.data;
     }
 
+    public CreateModuleResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class CreateModuleResponseBodyData extends TeaModel {
-        @NameInMap("ModuleName")
-        public String moduleName;
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Icon")
+        public String icon;
+
+        @NameInMap("LatestPublishedCommit")
+        public String latestPublishedCommit;
+
+        @NameInMap("LatestPublishedVersion")
+        public String latestPublishedVersion;
+
+        @NameInMap("MinimumPlatformVersion")
+        public String minimumPlatformVersion;
 
         @NameInMap("ModifiedTime")
         public String modifiedTime;
@@ -41,26 +56,75 @@ public class CreateModuleResponseBody extends TeaModel {
         @NameInMap("ModuleId")
         public String moduleId;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("ModuleName")
+        public String moduleName;
 
-        @NameInMap("CreateTime")
-        public String createTime;
+        @NameInMap("ModuleType")
+        public String moduleType;
 
-        @NameInMap("TargetAppSource")
-        public String targetAppSource;
+        @NameInMap("OwnerAppId")
+        public String ownerAppId;
+
+        @NameInMap("OwnerUserId")
+        public String ownerUserId;
+
+        @NameInMap("Platform")
+        public String platform;
+
+        @NameInMap("PlatformVersion")
+        public String platformVersion;
 
         public static CreateModuleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateModuleResponseBodyData self = new CreateModuleResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public CreateModuleResponseBodyData setModuleName(String moduleName) {
-            this.moduleName = moduleName;
+        public CreateModuleResponseBodyData setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getModuleName() {
-            return this.moduleName;
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public CreateModuleResponseBodyData setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public CreateModuleResponseBodyData setIcon(String icon) {
+            this.icon = icon;
+            return this;
+        }
+        public String getIcon() {
+            return this.icon;
+        }
+
+        public CreateModuleResponseBodyData setLatestPublishedCommit(String latestPublishedCommit) {
+            this.latestPublishedCommit = latestPublishedCommit;
+            return this;
+        }
+        public String getLatestPublishedCommit() {
+            return this.latestPublishedCommit;
+        }
+
+        public CreateModuleResponseBodyData setLatestPublishedVersion(String latestPublishedVersion) {
+            this.latestPublishedVersion = latestPublishedVersion;
+            return this;
+        }
+        public String getLatestPublishedVersion() {
+            return this.latestPublishedVersion;
+        }
+
+        public CreateModuleResponseBodyData setMinimumPlatformVersion(String minimumPlatformVersion) {
+            this.minimumPlatformVersion = minimumPlatformVersion;
+            return this;
+        }
+        public String getMinimumPlatformVersion() {
+            return this.minimumPlatformVersion;
         }
 
         public CreateModuleResponseBodyData setModifiedTime(String modifiedTime) {
@@ -79,28 +143,52 @@ public class CreateModuleResponseBody extends TeaModel {
             return this.moduleId;
         }
 
-        public CreateModuleResponseBodyData setDescription(String description) {
-            this.description = description;
+        public CreateModuleResponseBodyData setModuleName(String moduleName) {
+            this.moduleName = moduleName;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getModuleName() {
+            return this.moduleName;
         }
 
-        public CreateModuleResponseBodyData setCreateTime(String createTime) {
-            this.createTime = createTime;
+        public CreateModuleResponseBodyData setModuleType(String moduleType) {
+            this.moduleType = moduleType;
             return this;
         }
-        public String getCreateTime() {
-            return this.createTime;
+        public String getModuleType() {
+            return this.moduleType;
         }
 
-        public CreateModuleResponseBodyData setTargetAppSource(String targetAppSource) {
-            this.targetAppSource = targetAppSource;
+        public CreateModuleResponseBodyData setOwnerAppId(String ownerAppId) {
+            this.ownerAppId = ownerAppId;
             return this;
         }
-        public String getTargetAppSource() {
-            return this.targetAppSource;
+        public String getOwnerAppId() {
+            return this.ownerAppId;
+        }
+
+        public CreateModuleResponseBodyData setOwnerUserId(String ownerUserId) {
+            this.ownerUserId = ownerUserId;
+            return this;
+        }
+        public String getOwnerUserId() {
+            return this.ownerUserId;
+        }
+
+        public CreateModuleResponseBodyData setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        public CreateModuleResponseBodyData setPlatformVersion(String platformVersion) {
+            this.platformVersion = platformVersion;
+            return this;
+        }
+        public String getPlatformVersion() {
+            return this.platformVersion;
         }
 
     }

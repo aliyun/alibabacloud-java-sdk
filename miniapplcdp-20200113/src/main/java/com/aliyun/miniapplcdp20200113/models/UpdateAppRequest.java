@@ -7,14 +7,17 @@ public class UpdateAppRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("AppName")
+    public String appName;
+
     @NameInMap("Description")
     public String description;
 
     @NameInMap("Icon")
     public String icon;
 
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("Source")
+    public String source;
 
     public static UpdateAppRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAppRequest self = new UpdateAppRequest();
@@ -27,6 +30,14 @@ public class UpdateAppRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public UpdateAppRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
     }
 
     public UpdateAppRequest setDescription(String description) {
@@ -45,12 +56,12 @@ public class UpdateAppRequest extends TeaModel {
         return this.icon;
     }
 
-    public UpdateAppRequest setAppName(String appName) {
-        this.appName = appName;
+    public UpdateAppRequest setSource(String source) {
+        this.source = source;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public String getSource() {
+        return this.source;
     }
 
 }

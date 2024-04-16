@@ -4,23 +4,15 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class ListModulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ListModulesResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListModulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListModulesResponseBody self = new ListModulesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListModulesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListModulesResponseBody setData(ListModulesResponseBodyData data) {
@@ -31,9 +23,32 @@ public class ListModulesResponseBody extends TeaModel {
         return this.data;
     }
 
+    public ListModulesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListModulesResponseBodyDataItems extends TeaModel {
-        @NameInMap("ModuleName")
-        public String moduleName;
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Icon")
+        public String icon;
+
+        @NameInMap("LatestPublishedCommit")
+        public String latestPublishedCommit;
+
+        @NameInMap("LatestPublishedVersion")
+        public String latestPublishedVersion;
+
+        @NameInMap("MinimumPlatformVersion")
+        public String minimumPlatformVersion;
 
         @NameInMap("ModifiedTime")
         public String modifiedTime;
@@ -41,26 +56,72 @@ public class ListModulesResponseBody extends TeaModel {
         @NameInMap("ModuleId")
         public String moduleId;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("ModuleName")
+        public String moduleName;
 
-        @NameInMap("CreateTime")
-        public String createTime;
+        @NameInMap("OwnerAppId")
+        public String ownerAppId;
 
-        @NameInMap("TargetAppSource")
-        public String targetAppSource;
+        @NameInMap("OwnerUserId")
+        public String ownerUserId;
+
+        @NameInMap("Platform")
+        public String platform;
+
+        @NameInMap("PlatformVersion")
+        public String platformVersion;
 
         public static ListModulesResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             ListModulesResponseBodyDataItems self = new ListModulesResponseBodyDataItems();
             return TeaModel.build(map, self);
         }
 
-        public ListModulesResponseBodyDataItems setModuleName(String moduleName) {
-            this.moduleName = moduleName;
+        public ListModulesResponseBodyDataItems setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getModuleName() {
-            return this.moduleName;
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListModulesResponseBodyDataItems setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListModulesResponseBodyDataItems setIcon(String icon) {
+            this.icon = icon;
+            return this;
+        }
+        public String getIcon() {
+            return this.icon;
+        }
+
+        public ListModulesResponseBodyDataItems setLatestPublishedCommit(String latestPublishedCommit) {
+            this.latestPublishedCommit = latestPublishedCommit;
+            return this;
+        }
+        public String getLatestPublishedCommit() {
+            return this.latestPublishedCommit;
+        }
+
+        public ListModulesResponseBodyDataItems setLatestPublishedVersion(String latestPublishedVersion) {
+            this.latestPublishedVersion = latestPublishedVersion;
+            return this;
+        }
+        public String getLatestPublishedVersion() {
+            return this.latestPublishedVersion;
+        }
+
+        public ListModulesResponseBodyDataItems setMinimumPlatformVersion(String minimumPlatformVersion) {
+            this.minimumPlatformVersion = minimumPlatformVersion;
+            return this;
+        }
+        public String getMinimumPlatformVersion() {
+            return this.minimumPlatformVersion;
         }
 
         public ListModulesResponseBodyDataItems setModifiedTime(String modifiedTime) {
@@ -79,28 +140,44 @@ public class ListModulesResponseBody extends TeaModel {
             return this.moduleId;
         }
 
-        public ListModulesResponseBodyDataItems setDescription(String description) {
-            this.description = description;
+        public ListModulesResponseBodyDataItems setModuleName(String moduleName) {
+            this.moduleName = moduleName;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getModuleName() {
+            return this.moduleName;
         }
 
-        public ListModulesResponseBodyDataItems setCreateTime(String createTime) {
-            this.createTime = createTime;
+        public ListModulesResponseBodyDataItems setOwnerAppId(String ownerAppId) {
+            this.ownerAppId = ownerAppId;
             return this;
         }
-        public String getCreateTime() {
-            return this.createTime;
+        public String getOwnerAppId() {
+            return this.ownerAppId;
         }
 
-        public ListModulesResponseBodyDataItems setTargetAppSource(String targetAppSource) {
-            this.targetAppSource = targetAppSource;
+        public ListModulesResponseBodyDataItems setOwnerUserId(String ownerUserId) {
+            this.ownerUserId = ownerUserId;
             return this;
         }
-        public String getTargetAppSource() {
-            return this.targetAppSource;
+        public String getOwnerUserId() {
+            return this.ownerUserId;
+        }
+
+        public ListModulesResponseBodyDataItems setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        public ListModulesResponseBodyDataItems setPlatformVersion(String platformVersion) {
+            this.platformVersion = platformVersion;
+            return this;
+        }
+        public String getPlatformVersion() {
+            return this.platformVersion;
         }
 
     }

@@ -10,6 +10,9 @@ public class GetDefaultAppUserRequest extends TeaModel {
     @NameInMap("EnvId")
     public String envId;
 
+    @NameInMap("Source")
+    public String source;
+
     public static GetDefaultAppUserRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDefaultAppUserRequest self = new GetDefaultAppUserRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class GetDefaultAppUserRequest extends TeaModel {
     }
     public String getEnvId() {
         return this.envId;
+    }
+
+    public GetDefaultAppUserRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class ListEnvironmentOverviewsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ListEnvironmentOverviewsResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListEnvironmentOverviewsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListEnvironmentOverviewsResponseBody self = new ListEnvironmentOverviewsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListEnvironmentOverviewsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListEnvironmentOverviewsResponseBody setData(ListEnvironmentOverviewsResponseBodyData data) {
@@ -31,83 +23,54 @@ public class ListEnvironmentOverviewsResponseBody extends TeaModel {
         return this.data;
     }
 
+    public ListEnvironmentOverviewsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListEnvironmentOverviewsResponseBodyDataItems extends TeaModel {
-        @NameInMap("ModifiedTime")
-        public String modifiedTime;
+        @NameInMap("AppId")
+        public String appId;
 
-        @NameInMap("EnvStatus")
-        public String envStatus;
-
-        @NameInMap("CurrentPublish")
-        public java.util.Map<String, ?> currentPublish;
-
-        @NameInMap("OpsRecord")
-        public java.util.Map<String, ?> opsRecord;
+        @NameInMap("Config")
+        public java.util.Map<String, String> config;
 
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("AppId")
-        public String appId;
+        @NameInMap("CurrentPublish")
+        public java.util.Map<String, String> currentPublish;
 
         @NameInMap("Endpoint")
         public String endpoint;
 
-        @NameInMap("Publishing")
-        public java.util.Map<String, ?> publishing;
-
         @NameInMap("EnvId")
         public String envId;
 
-        @NameInMap("Config")
-        public java.util.Map<String, ?> config;
+        @NameInMap("EnvStatus")
+        public String envStatus;
 
         @NameInMap("EnvType")
         public String envType;
 
+        @NameInMap("LatestAppAccessTime")
+        public String latestAppAccessTime;
+
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
+
+        @NameInMap("OpsRecord")
+        public java.util.Map<String, String> opsRecord;
+
+        @NameInMap("Publishing")
+        public java.util.Map<String, String> publishing;
+
         public static ListEnvironmentOverviewsResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             ListEnvironmentOverviewsResponseBodyDataItems self = new ListEnvironmentOverviewsResponseBodyDataItems();
             return TeaModel.build(map, self);
-        }
-
-        public ListEnvironmentOverviewsResponseBodyDataItems setModifiedTime(String modifiedTime) {
-            this.modifiedTime = modifiedTime;
-            return this;
-        }
-        public String getModifiedTime() {
-            return this.modifiedTime;
-        }
-
-        public ListEnvironmentOverviewsResponseBodyDataItems setEnvStatus(String envStatus) {
-            this.envStatus = envStatus;
-            return this;
-        }
-        public String getEnvStatus() {
-            return this.envStatus;
-        }
-
-        public ListEnvironmentOverviewsResponseBodyDataItems setCurrentPublish(java.util.Map<String, ?> currentPublish) {
-            this.currentPublish = currentPublish;
-            return this;
-        }
-        public java.util.Map<String, ?> getCurrentPublish() {
-            return this.currentPublish;
-        }
-
-        public ListEnvironmentOverviewsResponseBodyDataItems setOpsRecord(java.util.Map<String, ?> opsRecord) {
-            this.opsRecord = opsRecord;
-            return this;
-        }
-        public java.util.Map<String, ?> getOpsRecord() {
-            return this.opsRecord;
-        }
-
-        public ListEnvironmentOverviewsResponseBodyDataItems setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
         public ListEnvironmentOverviewsResponseBodyDataItems setAppId(String appId) {
@@ -118,20 +81,36 @@ public class ListEnvironmentOverviewsResponseBody extends TeaModel {
             return this.appId;
         }
 
+        public ListEnvironmentOverviewsResponseBodyDataItems setConfig(java.util.Map<String, String> config) {
+            this.config = config;
+            return this;
+        }
+        public java.util.Map<String, String> getConfig() {
+            return this.config;
+        }
+
+        public ListEnvironmentOverviewsResponseBodyDataItems setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListEnvironmentOverviewsResponseBodyDataItems setCurrentPublish(java.util.Map<String, String> currentPublish) {
+            this.currentPublish = currentPublish;
+            return this;
+        }
+        public java.util.Map<String, String> getCurrentPublish() {
+            return this.currentPublish;
+        }
+
         public ListEnvironmentOverviewsResponseBodyDataItems setEndpoint(String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
         public String getEndpoint() {
             return this.endpoint;
-        }
-
-        public ListEnvironmentOverviewsResponseBodyDataItems setPublishing(java.util.Map<String, ?> publishing) {
-            this.publishing = publishing;
-            return this;
-        }
-        public java.util.Map<String, ?> getPublishing() {
-            return this.publishing;
         }
 
         public ListEnvironmentOverviewsResponseBodyDataItems setEnvId(String envId) {
@@ -142,12 +121,12 @@ public class ListEnvironmentOverviewsResponseBody extends TeaModel {
             return this.envId;
         }
 
-        public ListEnvironmentOverviewsResponseBodyDataItems setConfig(java.util.Map<String, ?> config) {
-            this.config = config;
+        public ListEnvironmentOverviewsResponseBodyDataItems setEnvStatus(String envStatus) {
+            this.envStatus = envStatus;
             return this;
         }
-        public java.util.Map<String, ?> getConfig() {
-            return this.config;
+        public String getEnvStatus() {
+            return this.envStatus;
         }
 
         public ListEnvironmentOverviewsResponseBodyDataItems setEnvType(String envType) {
@@ -156,6 +135,38 @@ public class ListEnvironmentOverviewsResponseBody extends TeaModel {
         }
         public String getEnvType() {
             return this.envType;
+        }
+
+        public ListEnvironmentOverviewsResponseBodyDataItems setLatestAppAccessTime(String latestAppAccessTime) {
+            this.latestAppAccessTime = latestAppAccessTime;
+            return this;
+        }
+        public String getLatestAppAccessTime() {
+            return this.latestAppAccessTime;
+        }
+
+        public ListEnvironmentOverviewsResponseBodyDataItems setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public String getModifiedTime() {
+            return this.modifiedTime;
+        }
+
+        public ListEnvironmentOverviewsResponseBodyDataItems setOpsRecord(java.util.Map<String, String> opsRecord) {
+            this.opsRecord = opsRecord;
+            return this;
+        }
+        public java.util.Map<String, String> getOpsRecord() {
+            return this.opsRecord;
+        }
+
+        public ListEnvironmentOverviewsResponseBodyDataItems setPublishing(java.util.Map<String, String> publishing) {
+            this.publishing = publishing;
+            return this;
+        }
+        public java.util.Map<String, String> getPublishing() {
+            return this.publishing;
         }
 
     }

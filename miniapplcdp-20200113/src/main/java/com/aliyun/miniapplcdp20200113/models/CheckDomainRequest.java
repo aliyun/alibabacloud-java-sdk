@@ -10,11 +10,14 @@ public class CheckDomainRequest extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
+    @NameInMap("DomainType")
+    public String domainType;
+
     @NameInMap("EnvId")
     public String envId;
 
-    @NameInMap("DomainType")
-    public String domainType;
+    @NameInMap("Source")
+    public String source;
 
     public static CheckDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckDomainRequest self = new CheckDomainRequest();
@@ -37,6 +40,14 @@ public class CheckDomainRequest extends TeaModel {
         return this.domain;
     }
 
+    public CheckDomainRequest setDomainType(String domainType) {
+        this.domainType = domainType;
+        return this;
+    }
+    public String getDomainType() {
+        return this.domainType;
+    }
+
     public CheckDomainRequest setEnvId(String envId) {
         this.envId = envId;
         return this;
@@ -45,12 +56,12 @@ public class CheckDomainRequest extends TeaModel {
         return this.envId;
     }
 
-    public CheckDomainRequest setDomainType(String domainType) {
-        this.domainType = domainType;
+    public CheckDomainRequest setSource(String source) {
+        this.source = source;
         return this;
     }
-    public String getDomainType() {
-        return this.domainType;
+    public String getSource() {
+        return this.source;
     }
 
 }

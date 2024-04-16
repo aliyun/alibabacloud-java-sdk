@@ -7,14 +7,17 @@ public class GetResourceRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("ImageProcessParameter")
+    public String imageProcessParameter;
+
     @NameInMap("ModuleId")
     public String moduleId;
 
     @NameInMap("ResourceId")
     public String resourceId;
 
-    @NameInMap("Scope")
-    public String scope;
+    @NameInMap("Source")
+    public String source;
 
     public static GetResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetResourceRequest self = new GetResourceRequest();
@@ -27,6 +30,14 @@ public class GetResourceRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public GetResourceRequest setImageProcessParameter(String imageProcessParameter) {
+        this.imageProcessParameter = imageProcessParameter;
+        return this;
+    }
+    public String getImageProcessParameter() {
+        return this.imageProcessParameter;
     }
 
     public GetResourceRequest setModuleId(String moduleId) {
@@ -45,12 +56,12 @@ public class GetResourceRequest extends TeaModel {
         return this.resourceId;
     }
 
-    public GetResourceRequest setScope(String scope) {
-        this.scope = scope;
+    public GetResourceRequest setSource(String source) {
+        this.source = source;
         return this;
     }
-    public String getScope() {
-        return this.scope;
+    public String getSource() {
+        return this.source;
     }
 
 }

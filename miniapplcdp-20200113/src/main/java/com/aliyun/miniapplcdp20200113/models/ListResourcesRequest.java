@@ -10,17 +10,23 @@ public class ListResourcesRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("ImageProcessParameter")
+    public String imageProcessParameter;
+
     @NameInMap("ModuleId")
     public String moduleId;
+
+    @NameInMap("ResourceId")
+    public String resourceId;
 
     @NameInMap("ResourceName")
     public String resourceName;
 
-    @NameInMap("Scope")
-    public String scope;
-
     @NameInMap("ResourceType")
     public String resourceType;
+
+    @NameInMap("Source")
+    public String source;
 
     @NameInMap("WithContent")
     public Boolean withContent;
@@ -46,12 +52,28 @@ public class ListResourcesRequest extends TeaModel {
         return this.description;
     }
 
+    public ListResourcesRequest setImageProcessParameter(String imageProcessParameter) {
+        this.imageProcessParameter = imageProcessParameter;
+        return this;
+    }
+    public String getImageProcessParameter() {
+        return this.imageProcessParameter;
+    }
+
     public ListResourcesRequest setModuleId(String moduleId) {
         this.moduleId = moduleId;
         return this;
     }
     public String getModuleId() {
         return this.moduleId;
+    }
+
+    public ListResourcesRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     public ListResourcesRequest setResourceName(String resourceName) {
@@ -62,20 +84,20 @@ public class ListResourcesRequest extends TeaModel {
         return this.resourceName;
     }
 
-    public ListResourcesRequest setScope(String scope) {
-        this.scope = scope;
-        return this;
-    }
-    public String getScope() {
-        return this.scope;
-    }
-
     public ListResourcesRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public ListResourcesRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public ListResourcesRequest setWithContent(Boolean withContent) {

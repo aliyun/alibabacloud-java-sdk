@@ -10,6 +10,9 @@ public class GetEnvironmentRequest extends TeaModel {
     @NameInMap("EnvId")
     public String envId;
 
+    @NameInMap("Source")
+    public String source;
+
     public static GetEnvironmentRequest build(java.util.Map<String, ?> map) throws Exception {
         GetEnvironmentRequest self = new GetEnvironmentRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class GetEnvironmentRequest extends TeaModel {
     }
     public String getEnvId() {
         return this.envId;
+    }
+
+    public GetEnvironmentRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

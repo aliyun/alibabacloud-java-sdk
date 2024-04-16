@@ -13,6 +13,9 @@ public class DeleteDomainRequest extends TeaModel {
     @NameInMap("EnvId")
     public String envId;
 
+    @NameInMap("Source")
+    public String source;
+
     public static DeleteDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDomainRequest self = new DeleteDomainRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class DeleteDomainRequest extends TeaModel {
     }
     public String getEnvId() {
         return this.envId;
+    }
+
+    public DeleteDomainRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

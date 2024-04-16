@@ -4,23 +4,15 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class GetEnvironmentResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public GetEnvironmentResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetEnvironmentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetEnvironmentResponseBody self = new GetEnvironmentResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetEnvironmentResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetEnvironmentResponseBody setData(GetEnvironmentResponseBodyData data) {
@@ -31,18 +23,26 @@ public class GetEnvironmentResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class GetEnvironmentResponseBodyData extends TeaModel {
-        @NameInMap("CurrentPublishId")
-        public String currentPublishId;
+    public GetEnvironmentResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        @NameInMap("ModifiedTime")
-        public String modifiedTime;
+    public static class GetEnvironmentResponseBodyData extends TeaModel {
+        @NameInMap("AccountOpsEndpoint")
+        public String accountOpsEndpoint;
 
         @NameInMap("AppId")
         public String appId;
 
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("CurrentPublishId")
+        public String currentPublishId;
 
         @NameInMap("Endpoint")
         public String endpoint;
@@ -53,6 +53,9 @@ public class GetEnvironmentResponseBody extends TeaModel {
         @NameInMap("EnvType")
         public String envType;
 
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
+
         @NameInMap("PublishingId")
         public String publishingId;
 
@@ -61,20 +64,12 @@ public class GetEnvironmentResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetEnvironmentResponseBodyData setCurrentPublishId(String currentPublishId) {
-            this.currentPublishId = currentPublishId;
+        public GetEnvironmentResponseBodyData setAccountOpsEndpoint(String accountOpsEndpoint) {
+            this.accountOpsEndpoint = accountOpsEndpoint;
             return this;
         }
-        public String getCurrentPublishId() {
-            return this.currentPublishId;
-        }
-
-        public GetEnvironmentResponseBodyData setModifiedTime(String modifiedTime) {
-            this.modifiedTime = modifiedTime;
-            return this;
-        }
-        public String getModifiedTime() {
-            return this.modifiedTime;
+        public String getAccountOpsEndpoint() {
+            return this.accountOpsEndpoint;
         }
 
         public GetEnvironmentResponseBodyData setAppId(String appId) {
@@ -91,6 +86,14 @@ public class GetEnvironmentResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public GetEnvironmentResponseBodyData setCurrentPublishId(String currentPublishId) {
+            this.currentPublishId = currentPublishId;
+            return this;
+        }
+        public String getCurrentPublishId() {
+            return this.currentPublishId;
         }
 
         public GetEnvironmentResponseBodyData setEndpoint(String endpoint) {
@@ -115,6 +118,14 @@ public class GetEnvironmentResponseBody extends TeaModel {
         }
         public String getEnvType() {
             return this.envType;
+        }
+
+        public GetEnvironmentResponseBodyData setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public String getModifiedTime() {
+            return this.modifiedTime;
         }
 
         public GetEnvironmentResponseBodyData setPublishingId(String publishingId) {

@@ -4,23 +4,15 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class ResetAppUserPasswordResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ResetAppUserPasswordResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ResetAppUserPasswordResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ResetAppUserPasswordResponseBody self = new ResetAppUserPasswordResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ResetAppUserPasswordResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ResetAppUserPasswordResponseBody setData(ResetAppUserPasswordResponseBodyData data) {
@@ -31,24 +23,24 @@ public class ResetAppUserPasswordResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class ResetAppUserPasswordResponseBodyData extends TeaModel {
-        @NameInMap("UserName")
-        public String userName;
+    public ResetAppUserPasswordResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ResetAppUserPasswordResponseBodyData extends TeaModel {
         @NameInMap("Password")
         public String password;
+
+        @NameInMap("UserName")
+        public String userName;
 
         public static ResetAppUserPasswordResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ResetAppUserPasswordResponseBodyData self = new ResetAppUserPasswordResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ResetAppUserPasswordResponseBodyData setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-        public String getUserName() {
-            return this.userName;
         }
 
         public ResetAppUserPasswordResponseBodyData setPassword(String password) {
@@ -57,6 +49,14 @@ public class ResetAppUserPasswordResponseBody extends TeaModel {
         }
         public String getPassword() {
             return this.password;
+        }
+
+        public ResetAppUserPasswordResponseBodyData setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
     }

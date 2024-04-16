@@ -10,6 +10,9 @@ public class StopAppServerRequest extends TeaModel {
     @NameInMap("EnvId")
     public String envId;
 
+    @NameInMap("Source")
+    public String source;
+
     public static StopAppServerRequest build(java.util.Map<String, ?> map) throws Exception {
         StopAppServerRequest self = new StopAppServerRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class StopAppServerRequest extends TeaModel {
     }
     public String getEnvId() {
         return this.envId;
+    }
+
+    public StopAppServerRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

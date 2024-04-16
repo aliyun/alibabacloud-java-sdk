@@ -4,23 +4,15 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class DeleteModuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DeleteModuleResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DeleteModuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteModuleResponseBody self = new DeleteModuleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteModuleResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeleteModuleResponseBody setData(DeleteModuleResponseBodyData data) {
@@ -31,9 +23,32 @@ public class DeleteModuleResponseBody extends TeaModel {
         return this.data;
     }
 
+    public DeleteModuleResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DeleteModuleResponseBodyData extends TeaModel {
-        @NameInMap("ModuleName")
-        public String moduleName;
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Icon")
+        public String icon;
+
+        @NameInMap("LatestPublishedCommit")
+        public String latestPublishedCommit;
+
+        @NameInMap("LatestPublishedVersion")
+        public String latestPublishedVersion;
+
+        @NameInMap("MinimumPlatformVersion")
+        public String minimumPlatformVersion;
 
         @NameInMap("ModifiedTime")
         public String modifiedTime;
@@ -41,26 +56,69 @@ public class DeleteModuleResponseBody extends TeaModel {
         @NameInMap("ModuleId")
         public String moduleId;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("ModuleName")
+        public String moduleName;
 
-        @NameInMap("CreateTime")
-        public String createTime;
+        @NameInMap("OwnerAppId")
+        public String ownerAppId;
 
-        @NameInMap("TargetAppSource")
-        public String targetAppSource;
+        @NameInMap("OwnerUserId")
+        public String ownerUserId;
+
+        @NameInMap("Platform")
+        public String platform;
 
         public static DeleteModuleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DeleteModuleResponseBodyData self = new DeleteModuleResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public DeleteModuleResponseBodyData setModuleName(String moduleName) {
-            this.moduleName = moduleName;
+        public DeleteModuleResponseBodyData setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getModuleName() {
-            return this.moduleName;
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DeleteModuleResponseBodyData setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DeleteModuleResponseBodyData setIcon(String icon) {
+            this.icon = icon;
+            return this;
+        }
+        public String getIcon() {
+            return this.icon;
+        }
+
+        public DeleteModuleResponseBodyData setLatestPublishedCommit(String latestPublishedCommit) {
+            this.latestPublishedCommit = latestPublishedCommit;
+            return this;
+        }
+        public String getLatestPublishedCommit() {
+            return this.latestPublishedCommit;
+        }
+
+        public DeleteModuleResponseBodyData setLatestPublishedVersion(String latestPublishedVersion) {
+            this.latestPublishedVersion = latestPublishedVersion;
+            return this;
+        }
+        public String getLatestPublishedVersion() {
+            return this.latestPublishedVersion;
+        }
+
+        public DeleteModuleResponseBodyData setMinimumPlatformVersion(String minimumPlatformVersion) {
+            this.minimumPlatformVersion = minimumPlatformVersion;
+            return this;
+        }
+        public String getMinimumPlatformVersion() {
+            return this.minimumPlatformVersion;
         }
 
         public DeleteModuleResponseBodyData setModifiedTime(String modifiedTime) {
@@ -79,28 +137,36 @@ public class DeleteModuleResponseBody extends TeaModel {
             return this.moduleId;
         }
 
-        public DeleteModuleResponseBodyData setDescription(String description) {
-            this.description = description;
+        public DeleteModuleResponseBodyData setModuleName(String moduleName) {
+            this.moduleName = moduleName;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getModuleName() {
+            return this.moduleName;
         }
 
-        public DeleteModuleResponseBodyData setCreateTime(String createTime) {
-            this.createTime = createTime;
+        public DeleteModuleResponseBodyData setOwnerAppId(String ownerAppId) {
+            this.ownerAppId = ownerAppId;
             return this;
         }
-        public String getCreateTime() {
-            return this.createTime;
+        public String getOwnerAppId() {
+            return this.ownerAppId;
         }
 
-        public DeleteModuleResponseBodyData setTargetAppSource(String targetAppSource) {
-            this.targetAppSource = targetAppSource;
+        public DeleteModuleResponseBodyData setOwnerUserId(String ownerUserId) {
+            this.ownerUserId = ownerUserId;
             return this;
         }
-        public String getTargetAppSource() {
-            return this.targetAppSource;
+        public String getOwnerUserId() {
+            return this.ownerUserId;
+        }
+
+        public DeleteModuleResponseBodyData setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
         }
 
     }

@@ -10,6 +10,9 @@ public class ResetAppUserPasswordRequest extends TeaModel {
     @NameInMap("EnvId")
     public String envId;
 
+    @NameInMap("Source")
+    public String source;
+
     @NameInMap("UserName")
     public String userName;
 
@@ -32,6 +35,14 @@ public class ResetAppUserPasswordRequest extends TeaModel {
     }
     public String getEnvId() {
         return this.envId;
+    }
+
+    public ResetAppUserPasswordRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public ResetAppUserPasswordRequest setUserName(String userName) {
