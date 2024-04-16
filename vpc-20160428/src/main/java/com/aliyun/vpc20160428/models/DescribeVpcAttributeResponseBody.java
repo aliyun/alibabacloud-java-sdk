@@ -13,7 +13,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     public DescribeVpcAttributeResponseBodyAssociatedCens associatedCens;
 
     /**
-     * <p>The propagation source associated with the VPC.</p>
+     * <p>The route source associated with the VPC.</p>
      */
     @NameInMap("AssociatedPropagationSources")
     public DescribeVpcAttributeResponseBodyAssociatedPropagationSources associatedPropagationSources;
@@ -67,6 +67,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
      */
     @NameInMap("DhcpOptionsSetStatus")
     public String dhcpOptionsSetStatus;
+
+    /**
+     * <p>是否开启IPv6。</p>
+     */
+    @NameInMap("EnabledIpv6")
+    public Boolean enabledIpv6;
 
     /**
      * <p>The ID of the IPv4 gateway.</p>
@@ -254,6 +260,14 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     }
     public String getDhcpOptionsSetStatus() {
         return this.dhcpOptionsSetStatus;
+    }
+
+    public DescribeVpcAttributeResponseBody setEnabledIpv6(Boolean enabledIpv6) {
+        this.enabledIpv6 = enabledIpv6;
+        return this;
+    }
+    public Boolean getEnabledIpv6() {
+        return this.enabledIpv6;
     }
 
     public DescribeVpcAttributeResponseBody setIpv4GatewayId(String ipv4GatewayId) {
@@ -465,40 +479,40 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     public static class DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources extends TeaModel {
         /**
-         * <p>Indicates whether to propagate the routes of the VPC.</p>
+         * <p>Indicates whether routes are advertised to the VPC.</p>
          */
         @NameInMap("RoutePropagated")
         public Boolean routePropagated;
 
         /**
-         * <p>The instance ID of the propagation source.</p>
+         * <p>The instance ID of the source.</p>
          */
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
 
         /**
-         * <p>The ID of the account to which the propagation source belongs.</p>
+         * <p>The account ID of the source.</p>
          */
         @NameInMap("SourceOwnerId")
         public Long sourceOwnerId;
 
         /**
-         * <p>The type of the propagation source. Valid values:</p>
+         * <p>The source type.</p>
          * <br>
-         * <p>- **CEN**</p>
-         * <p>- **VPN**</p>
-         * <p>- **TR**</p>
-         * <p>- **ECR**</p>
+         * <p>*   **CEN**</p>
+         * <p>*   **VPN**</p>
+         * <p>*   **TR**</p>
+         * <p>*   **ECR**</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
-         * <p>The status indicating whether the propagation source is attached to the VPC. Valid values:</p>
+         * <p>The binding status.</p>
          * <br>
-         * <p>- **Attaching**</p>
-         * <p>- **Attached**</p>
-         * <p>- **Detaching**</p>
+         * <p>*   **Attaching**</p>
+         * <p>*   **Attached**</p>
+         * <p>*   **Detaching**</p>
          */
         @NameInMap("Status")
         public String status;

@@ -17,7 +17,9 @@ public class AllocateEipAddressProResponseBody extends TeaModel {
     public String eipAddress;
 
     /**
-     * <p>The order ID. This parameter is returned only when **InstanceChargeType** is set to **PrePaid**.</p>
+     * <p>The order ID.</p>
+     * <br>
+     * <p>This parameter is returned when InstanceChargeType is set to PrePaid. If AutoPay is set to false, you must manually complete the payment in the [Order Center](https://usercenter2-intl.aliyun.com/order/list).</p>
      */
     @NameInMap("OrderId")
     public Long orderId;

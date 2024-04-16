@@ -117,7 +117,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
          * <p>The billing method of the Internet bandwidth of the IPv6 address. Valid values:</p>
          * <br>
          * <p>*   **PayByTraffic**</p>
-         * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
+         * <p>*   **PayByBandwidth**</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
@@ -129,7 +129,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         public String ipv6InternetBandwidthId;
 
         /**
-         * <p>The time when the renewal took effect. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The time when the renewal takes effect. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
          */
         @NameInMap("ReservationActiveTime")
         public String reservationActiveTime;
@@ -144,7 +144,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
          * <p>The metering method that is used after the renewal takes effect.</p>
          * <br>
          * <p>*   **PayByTraffic**</p>
-         * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
+         * <p>*   **PayByBandwidth**</p>
          */
         @NameInMap("ReservationInternetChargeType")
         public String reservationInternetChargeType;
@@ -244,15 +244,15 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
 
     public static class DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressTagsTag extends TeaModel {
         /**
-         * <p>The key of tag N. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 128 characters in length. The tag key cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N.</p>
+         * <p>The tag value.</p>
          * <br>
          * <p>The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          * <br>
@@ -359,7 +359,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressIpv6InternetBandwidth ipv6InternetBandwidth;
 
         /**
-         * <p>The ISP of the IPv6 address.</p>
+         * <p>The ISP of the IPv6 address. Valid values:</p>
          * <br>
          * <p>*   **BGP** (default)</p>
          * <p>*   **ChinaMobile**</p>
@@ -389,6 +389,15 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        /**
+         * <p>Indicates whether the instance is managed. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
+         */
+        @NameInMap("ServiceManaged")
+        public Integer serviceManaged;
 
         /**
          * <p>The status of the IPv6 address.</p>
@@ -524,6 +533,14 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6Address setServiceManaged(Integer serviceManaged) {
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
+        public Integer getServiceManaged() {
+            return this.serviceManaged;
         }
 
         public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6Address setStatus(String status) {

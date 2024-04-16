@@ -61,8 +61,8 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
     /**
      * <p>The weight of the destination-based route. Valid values:</p>
      * <br>
-     * <p>*   **0**: a low priority</p>
-     * <p>*   **100**: a high priority</p>
+     * <p>*   **0**: a low priority.</p>
+     * <p>*   **100**: a high priority.</p>
      */
     @NameInMap("Weight")
     public Integer weight;

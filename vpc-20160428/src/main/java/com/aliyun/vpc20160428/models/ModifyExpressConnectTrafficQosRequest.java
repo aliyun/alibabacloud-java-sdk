@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
+    @NameInMap("AddInstanceList")
+    public java.util.List<ModifyExpressConnectTrafficQosRequestAddInstanceList> addInstanceList;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -12,9 +15,6 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
 
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("PconnIdList")
-    public String pconnIdList;
 
     @NameInMap("QosDescription")
     public String qosDescription;
@@ -28,12 +28,23 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RemoveInstanceList")
+    public java.util.List<ModifyExpressConnectTrafficQosRequestRemoveInstanceList> removeInstanceList;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     public static ModifyExpressConnectTrafficQosRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyExpressConnectTrafficQosRequest self = new ModifyExpressConnectTrafficQosRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyExpressConnectTrafficQosRequest setAddInstanceList(java.util.List<ModifyExpressConnectTrafficQosRequestAddInstanceList> addInstanceList) {
+        this.addInstanceList = addInstanceList;
+        return this;
+    }
+    public java.util.List<ModifyExpressConnectTrafficQosRequestAddInstanceList> getAddInstanceList() {
+        return this.addInstanceList;
     }
 
     public ModifyExpressConnectTrafficQosRequest setClientToken(String clientToken) {
@@ -58,14 +69,6 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public ModifyExpressConnectTrafficQosRequest setPconnIdList(String pconnIdList) {
-        this.pconnIdList = pconnIdList;
-        return this;
-    }
-    public String getPconnIdList() {
-        return this.pconnIdList;
     }
 
     public ModifyExpressConnectTrafficQosRequest setQosDescription(String qosDescription) {
@@ -100,12 +103,80 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ModifyExpressConnectTrafficQosRequest setRemoveInstanceList(java.util.List<ModifyExpressConnectTrafficQosRequestRemoveInstanceList> removeInstanceList) {
+        this.removeInstanceList = removeInstanceList;
+        return this;
+    }
+    public java.util.List<ModifyExpressConnectTrafficQosRequestRemoveInstanceList> getRemoveInstanceList() {
+        return this.removeInstanceList;
+    }
+
     public ModifyExpressConnectTrafficQosRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
     public String getResourceOwnerAccount() {
         return this.resourceOwnerAccount;
+    }
+
+    public static class ModifyExpressConnectTrafficQosRequestAddInstanceList extends TeaModel {
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        public static ModifyExpressConnectTrafficQosRequestAddInstanceList build(java.util.Map<String, ?> map) throws Exception {
+            ModifyExpressConnectTrafficQosRequestAddInstanceList self = new ModifyExpressConnectTrafficQosRequestAddInstanceList();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyExpressConnectTrafficQosRequestAddInstanceList setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ModifyExpressConnectTrafficQosRequestAddInstanceList setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+    }
+
+    public static class ModifyExpressConnectTrafficQosRequestRemoveInstanceList extends TeaModel {
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        public static ModifyExpressConnectTrafficQosRequestRemoveInstanceList build(java.util.Map<String, ?> map) throws Exception {
+            ModifyExpressConnectTrafficQosRequestRemoveInstanceList self = new ModifyExpressConnectTrafficQosRequestRemoveInstanceList();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyExpressConnectTrafficQosRequestRemoveInstanceList setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ModifyExpressConnectTrafficQosRequestRemoveInstanceList setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
     }
 
 }

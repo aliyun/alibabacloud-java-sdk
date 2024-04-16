@@ -333,6 +333,9 @@ public class DescribeVpcsResponseBody extends TeaModel {
         @NameInMap("DhcpOptionsSetStatus")
         public String dhcpOptionsSetStatus;
 
+        @NameInMap("EnabledIpv6")
+        public Boolean enabledIpv6;
+
         /**
          * <p>The IPv6 CIDR block of the VPC.</p>
          */
@@ -488,6 +491,14 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
         public String getDhcpOptionsSetStatus() {
             return this.dhcpOptionsSetStatus;
+        }
+
+        public DescribeVpcsResponseBodyVpcsVpc setEnabledIpv6(Boolean enabledIpv6) {
+            this.enabledIpv6 = enabledIpv6;
+            return this;
+        }
+        public Boolean getEnabledIpv6() {
+            return this.enabledIpv6;
         }
 
         public DescribeVpcsResponseBodyVpcsVpc setIpv6CidrBlock(String ipv6CidrBlock) {

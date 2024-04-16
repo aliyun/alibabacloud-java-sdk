@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CheckVpnBgpEnabledResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the BGP feature is supported in the current region.</p>
+     * <p>Indicates whether the region supports BGP.</p>
      * <br>
-     * <p>*   **true**: supported.</p>
-     * <p>*   **false**: not supported.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("BgpEnabled")
     public Boolean bgpEnabled;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
