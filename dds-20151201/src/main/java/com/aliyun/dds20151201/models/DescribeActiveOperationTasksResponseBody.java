@@ -23,7 +23,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,16 +81,16 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
 
     public static class DescribeActiveOperationTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>None</p>
+         * <p>N/A</p>
          */
         @NameInMap("AllowCancel")
         public String allowCancel;
 
         /**
-         * <p>Indicates whether the change is allowed.</p>
+         * <p>Indicates whether the modification operation is allowed.</p>
          * <br>
-         * <p>*   **0**: The change is not allowed.</p>
-         * <p>*   **1**: The change is allowed.</p>
+         * <p>*   **0**: The modification operation is not allowed.</p>
+         * <p>*   **1**: The modification operation is allowed.</p>
          */
         @NameInMap("AllowChange")
         public String allowChange;
@@ -102,7 +102,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String changeLevel;
 
         /**
-         * <p>None</p>
+         * <p>N/A</p>
          */
         @NameInMap("ChangeLevelEn")
         public String changeLevelEn;
@@ -120,7 +120,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>None</p>
+         * <p>N/A</p>
          */
         @NameInMap("CurrentAVZ")
         public String currentAVZ;
@@ -150,13 +150,13 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public Integer id;
 
         /**
-         * <p>None</p>
+         * <p>N/A</p>
          */
         @NameInMap("ImpactEn")
         public String impactEn;
 
         /**
-         * <p>None</p>
+         * <p>N/A</p>
          */
         @NameInMap("ImpactZh")
         public String impactZh;
@@ -168,13 +168,13 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String insComment;
 
         /**
-         * <p>The node ID.</p>
+         * <p>The ID of the node.</p>
          */
         @NameInMap("InsName")
         public String insName;
 
         /**
-         * <p>The time when the O\&M task was modified. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the task is modified. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
@@ -198,13 +198,13 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String resultInfo;
 
         /**
-         * <p>The time when the O\&M task started to run. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The start time of the task. The time follows the ISO 8601 standard in the *yyyy-mm-dd* T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>None</p>
+         * <p>N/A</p>
          */
         @NameInMap("Status")
         public Integer status;
@@ -216,7 +216,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public java.util.List<String> subInsNames;
 
         /**
-         * <p>The point in time when the switchover is performed. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC. Service interruptions may occur during switchover.</p>
+         * <p>The switchover point in time in which disconnection may occur. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("SwitchTime")
         public String switchTime;
@@ -228,7 +228,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>None</p>
+         * <p>N/A</p>
          */
         @NameInMap("TaskTypeEn")
         public String taskTypeEn;

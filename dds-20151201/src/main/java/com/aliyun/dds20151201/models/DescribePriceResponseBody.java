@@ -909,6 +909,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("OriginalStandAmount")
         public Double originalStandAmount;
 
+        @NameInMap("StartTime")
+        public String startTime;
+
         public static DescribePriceResponseBodySubOrdersSubOrderDepreciateInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribePriceResponseBodySubOrdersSubOrderDepreciateInfo self = new DescribePriceResponseBodySubOrdersSubOrderDepreciateInfo();
             return TeaModel.build(map, self);
@@ -992,6 +995,14 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public Double getOriginalStandAmount() {
             return this.originalStandAmount;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfo setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
     }

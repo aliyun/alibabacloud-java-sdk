@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupTasksRequest extends TeaModel {
     @NameInMap("BackupJobId")
-    public Long backupJobId;
+    public String backupJobId;
 
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -30,11 +30,11 @@ public class DescribeBackupTasksRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackupTasksRequest setBackupJobId(Long backupJobId) {
+    public DescribeBackupTasksRequest setBackupJobId(String backupJobId) {
         this.backupJobId = backupJobId;
         return this;
     }
-    public Long getBackupJobId() {
+    public String getBackupJobId() {
         return this.backupJobId;
     }
 

@@ -136,7 +136,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
          * <br>
          * <p>The value of the LocalName parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the RegionId parameter in the response is **cn-hangzhou**, the following values are returned for the LocalName parameter:</p>
          * <br>
-         * <p>*   If the value of the **AcceptLanguage** parameter is **zh**, the value **1（）** is returned for the LocalName parameter.</p>
+         * <p>*   If the value of the **AcceptLanguage** parameter is **zh**, the value **华东1（杭州）** is returned for the LocalName parameter.</p>
          * <p>*   If the value of the **AcceptLanguage** parameter is **en**, the value **China (Hangzhou)** is returned for the LocalName parameter.</p>
          */
         @NameInMap("RegionName")
