@@ -16,6 +16,9 @@ public class ListAgentRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProductCode")
+    public String productCode;
+
     public static ListAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAgentRequest self = new ListAgentRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ListAgentRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAgentRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
     }
 
 }

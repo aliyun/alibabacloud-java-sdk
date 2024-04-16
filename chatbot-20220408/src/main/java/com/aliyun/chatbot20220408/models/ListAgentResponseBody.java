@@ -77,6 +77,9 @@ public class ListAgentResponseBody extends TeaModel {
         @NameInMap("AgentName")
         public String agentName;
 
+        @NameInMap("DefaultAgent")
+        public Boolean defaultAgent;
+
         @NameInMap("InstanceInfos")
         public java.util.Map<String, ?> instanceInfos;
 
@@ -107,6 +110,14 @@ public class ListAgentResponseBody extends TeaModel {
         }
         public String getAgentName() {
             return this.agentName;
+        }
+
+        public ListAgentResponseBodyData setDefaultAgent(Boolean defaultAgent) {
+            this.defaultAgent = defaultAgent;
+            return this;
+        }
+        public Boolean getDefaultAgent() {
+            return this.defaultAgent;
         }
 
         public ListAgentResponseBodyData setInstanceInfos(java.util.Map<String, ?> instanceInfos) {

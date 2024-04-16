@@ -1,3 +1,24 @@
+2024-04-16 Version: 1.3.0
+- Support API CreateDoc.
+- Support API DeleteDoc.
+- Support API DescribeDoc.
+- Support API RetryDoc.
+- Support API SearchDoc.
+- Support API UpdateDoc.
+- Update API BeginSession: update response param.
+- Update API CreateCategory: add param BizCode.
+- Update API CreateCategory: add param KnowledgeType.
+- Update API CreateCategory: update response param.
+- Update API DeleteCategory: update response param.
+- Update API DescribeCategory: update response param.
+- Update API ListAgent: add param ProductCode.
+- Update API ListAgent: update response param.
+- Update API ListCategory: add param KnowledgeType.
+- Update API ListCategory: update response param.
+- Update API UpdateCategory: add param BizCode.
+- Update API UpdateCategory: update response param.
+
+
 2024-02-22 Version: 1.2.0
 - Support API CreateDoc.
 - Support API DeleteDoc.
