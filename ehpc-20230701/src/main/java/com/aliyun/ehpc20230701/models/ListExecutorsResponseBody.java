@@ -7,9 +7,6 @@ public class ListExecutorsResponseBody extends TeaModel {
     @NameInMap("Executors")
     public java.util.List<ListExecutorsResponseBodyExecutors> executors;
 
-    @NameInMap("JobId")
-    public String jobId;
-
     @NameInMap("PageNumber")
     public String pageNumber;
 
@@ -18,9 +15,6 @@ public class ListExecutorsResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("TaskName")
-    public String taskName;
 
     @NameInMap("TotalCount")
     public String totalCount;
@@ -36,14 +30,6 @@ public class ListExecutorsResponseBody extends TeaModel {
     }
     public java.util.List<ListExecutorsResponseBodyExecutors> getExecutors() {
         return this.executors;
-    }
-
-    public ListExecutorsResponseBody setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
     }
 
     public ListExecutorsResponseBody setPageNumber(String pageNumber) {
@@ -68,14 +54,6 @@ public class ListExecutorsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ListExecutorsResponseBody setTaskName(String taskName) {
-        this.taskName = taskName;
-        return this;
-    }
-    public String getTaskName() {
-        return this.taskName;
     }
 
     public ListExecutorsResponseBody setTotalCount(String totalCount) {

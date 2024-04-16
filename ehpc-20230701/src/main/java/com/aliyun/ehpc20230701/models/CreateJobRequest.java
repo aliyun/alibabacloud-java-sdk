@@ -244,6 +244,88 @@ public class CreateJobRequest extends TeaModel {
 
     }
 
+    public static class CreateJobRequestTasksTaskSpecTaskExecutorContainerEnvironmentVars extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateJobRequestTasksTaskSpecTaskExecutorContainerEnvironmentVars build(java.util.Map<String, ?> map) throws Exception {
+            CreateJobRequestTasksTaskSpecTaskExecutorContainerEnvironmentVars self = new CreateJobRequestTasksTaskSpecTaskExecutorContainerEnvironmentVars();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateJobRequestTasksTaskSpecTaskExecutorContainerEnvironmentVars setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public CreateJobRequestTasksTaskSpecTaskExecutorContainerEnvironmentVars setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateJobRequestTasksTaskSpecTaskExecutorContainer extends TeaModel {
+        @NameInMap("Command")
+        public java.util.List<String> command;
+
+        @NameInMap("EnvironmentVars")
+        public java.util.List<CreateJobRequestTasksTaskSpecTaskExecutorContainerEnvironmentVars> environmentVars;
+
+        @NameInMap("Image")
+        public String image;
+
+        @NameInMap("WorkingDir")
+        public String workingDir;
+
+        public static CreateJobRequestTasksTaskSpecTaskExecutorContainer build(java.util.Map<String, ?> map) throws Exception {
+            CreateJobRequestTasksTaskSpecTaskExecutorContainer self = new CreateJobRequestTasksTaskSpecTaskExecutorContainer();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateJobRequestTasksTaskSpecTaskExecutorContainer setCommand(java.util.List<String> command) {
+            this.command = command;
+            return this;
+        }
+        public java.util.List<String> getCommand() {
+            return this.command;
+        }
+
+        public CreateJobRequestTasksTaskSpecTaskExecutorContainer setEnvironmentVars(java.util.List<CreateJobRequestTasksTaskSpecTaskExecutorContainerEnvironmentVars> environmentVars) {
+            this.environmentVars = environmentVars;
+            return this;
+        }
+        public java.util.List<CreateJobRequestTasksTaskSpecTaskExecutorContainerEnvironmentVars> getEnvironmentVars() {
+            return this.environmentVars;
+        }
+
+        public CreateJobRequestTasksTaskSpecTaskExecutorContainer setImage(String image) {
+            this.image = image;
+            return this;
+        }
+        public String getImage() {
+            return this.image;
+        }
+
+        public CreateJobRequestTasksTaskSpecTaskExecutorContainer setWorkingDir(String workingDir) {
+            this.workingDir = workingDir;
+            return this;
+        }
+        public String getWorkingDir() {
+            return this.workingDir;
+        }
+
+    }
+
     public static class CreateJobRequestTasksTaskSpecTaskExecutorVM extends TeaModel {
         @NameInMap("Image")
         public String image;
@@ -286,12 +368,23 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestTasksTaskSpecTaskExecutor extends TeaModel {
+        @NameInMap("Container")
+        public CreateJobRequestTasksTaskSpecTaskExecutorContainer container;
+
         @NameInMap("VM")
         public CreateJobRequestTasksTaskSpecTaskExecutorVM VM;
 
         public static CreateJobRequestTasksTaskSpecTaskExecutor build(java.util.Map<String, ?> map) throws Exception {
             CreateJobRequestTasksTaskSpecTaskExecutor self = new CreateJobRequestTasksTaskSpecTaskExecutor();
             return TeaModel.build(map, self);
+        }
+
+        public CreateJobRequestTasksTaskSpecTaskExecutor setContainer(CreateJobRequestTasksTaskSpecTaskExecutorContainer container) {
+            this.container = container;
+            return this;
+        }
+        public CreateJobRequestTasksTaskSpecTaskExecutorContainer getContainer() {
+            return this.container;
         }
 
         public CreateJobRequestTasksTaskSpecTaskExecutor setVM(CreateJobRequestTasksTaskSpecTaskExecutorVM VM) {
@@ -304,12 +397,56 @@ public class CreateJobRequest extends TeaModel {
 
     }
 
+    public static class CreateJobRequestTasksTaskSpecVolumeMount extends TeaModel {
+        @NameInMap("MountOptions")
+        public String mountOptions;
+
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        @NameInMap("VolumeDriver")
+        public String volumeDriver;
+
+        public static CreateJobRequestTasksTaskSpecVolumeMount build(java.util.Map<String, ?> map) throws Exception {
+            CreateJobRequestTasksTaskSpecVolumeMount self = new CreateJobRequestTasksTaskSpecVolumeMount();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateJobRequestTasksTaskSpecVolumeMount setMountOptions(String mountOptions) {
+            this.mountOptions = mountOptions;
+            return this;
+        }
+        public String getMountOptions() {
+            return this.mountOptions;
+        }
+
+        public CreateJobRequestTasksTaskSpecVolumeMount setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public CreateJobRequestTasksTaskSpecVolumeMount setVolumeDriver(String volumeDriver) {
+            this.volumeDriver = volumeDriver;
+            return this;
+        }
+        public String getVolumeDriver() {
+            return this.volumeDriver;
+        }
+
+    }
+
     public static class CreateJobRequestTasksTaskSpec extends TeaModel {
         @NameInMap("Resource")
         public CreateJobRequestTasksTaskSpecResource resource;
 
         @NameInMap("TaskExecutor")
         public java.util.List<CreateJobRequestTasksTaskSpecTaskExecutor> taskExecutor;
+
+        @NameInMap("VolumeMount")
+        public java.util.List<CreateJobRequestTasksTaskSpecVolumeMount> volumeMount;
 
         public static CreateJobRequestTasksTaskSpec build(java.util.Map<String, ?> map) throws Exception {
             CreateJobRequestTasksTaskSpec self = new CreateJobRequestTasksTaskSpec();
@@ -330,6 +467,14 @@ public class CreateJobRequest extends TeaModel {
         }
         public java.util.List<CreateJobRequestTasksTaskSpecTaskExecutor> getTaskExecutor() {
             return this.taskExecutor;
+        }
+
+        public CreateJobRequestTasksTaskSpec setVolumeMount(java.util.List<CreateJobRequestTasksTaskSpecVolumeMount> volumeMount) {
+            this.volumeMount = volumeMount;
+            return this;
+        }
+        public java.util.List<CreateJobRequestTasksTaskSpecVolumeMount> getVolumeMount() {
+            return this.volumeMount;
         }
 
     }
