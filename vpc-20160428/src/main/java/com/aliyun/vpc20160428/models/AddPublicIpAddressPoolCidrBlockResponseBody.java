@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class AddPublicIpAddressPoolCidrBlockResponseBody extends TeaModel {
     /**
+     * <p>The CIDR blocks.</p>
+     */
+    @NameInMap("CidrBlock")
+    public String cidrBlock;
+
+    /**
      * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
@@ -13,6 +19,14 @@ public class AddPublicIpAddressPoolCidrBlockResponseBody extends TeaModel {
     public static AddPublicIpAddressPoolCidrBlockResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddPublicIpAddressPoolCidrBlockResponseBody self = new AddPublicIpAddressPoolCidrBlockResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AddPublicIpAddressPoolCidrBlockResponseBody setCidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
+        return this;
+    }
+    public String getCidrBlock() {
+        return this.cidrBlock;
     }
 
     public AddPublicIpAddressPoolCidrBlockResponseBody setRequestId(String requestId) {

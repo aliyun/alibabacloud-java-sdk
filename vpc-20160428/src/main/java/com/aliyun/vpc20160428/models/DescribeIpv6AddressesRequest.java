@@ -13,7 +13,8 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     /**
      * <p>The type of instance associated with the IPv6 address. Valid values:</p>
      * <br>
-     * <p>**EcsInstance**: Elastic Compute Service (ECS) instance in a virtual private cloud (VPC).</p>
+     * <p>*   **EcsInstance**: Elastic Compute Service (ECS) instance in a virtual private cloud (VPC)</p>
+     * <p>*   **NetworkInterface**: secondary elastic network interface (ENI)</p>
      */
     @NameInMap("AssociatedInstanceType")
     public String associatedInstanceType;
@@ -97,6 +98,17 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    /**
+     * <p>Indicates whether the instance is managed. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     * <br>
+     * <p>If you do not specify this parameter, all instances are queried.</p>
+     */
+    @NameInMap("ServiceManaged")
+    public Boolean serviceManaged;
 
     /**
      * <p>The tag list.</p>
@@ -247,6 +259,14 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeIpv6AddressesRequest setServiceManaged(Boolean serviceManaged) {
+        this.serviceManaged = serviceManaged;
+        return this;
+    }
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
     }
 
     public DescribeIpv6AddressesRequest setTag(java.util.List<DescribeIpv6AddressesRequestTag> tag) {

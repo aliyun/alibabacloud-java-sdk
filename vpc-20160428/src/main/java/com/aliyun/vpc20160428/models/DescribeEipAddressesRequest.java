@@ -173,6 +173,9 @@ public class DescribeEipAddressesRequest extends TeaModel {
     @NameInMap("SegmentInstanceId")
     public String segmentInstanceId;
 
+    @NameInMap("ServiceManaged")
+    public Boolean serviceManaged;
+
     /**
      * <p>The state of the EIP. Valid values:</p>
      * <br>
@@ -370,6 +373,14 @@ public class DescribeEipAddressesRequest extends TeaModel {
     }
     public String getSegmentInstanceId() {
         return this.segmentInstanceId;
+    }
+
+    public DescribeEipAddressesRequest setServiceManaged(Boolean serviceManaged) {
+        this.serviceManaged = serviceManaged;
+        return this;
+    }
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
     }
 
     public DescribeEipAddressesRequest setStatus(String status) {

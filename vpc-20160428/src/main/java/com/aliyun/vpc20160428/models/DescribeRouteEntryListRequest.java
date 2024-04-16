@@ -38,16 +38,20 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     public String nextHopId;
 
     /**
-     * <p>The type of the next hop. Valid values:</p>
+     * <p>The next hop type. Valid values:</p>
      * <br>
-     * <p>*   **Instance** (default): an Elastic Compute Service (ECS) instance</p>
+     * <p>*   **Instance**: an Elastic Compute Service (ECS) instance. This is the default value.</p>
      * <p>*   **HaVip**: a high-availability virtual IP address (HAVIP).</p>
-     * <p>*   **VpnGateway**: a VPN gateway</p>
-     * <p>*   **NatGateway**: a NAT gateway</p>
-     * <p>*   **NetworkInterface**: a secondary elastic network interface (ENI)</p>
-     * <p>*   **RouterInterface**: a router interface</p>
-     * <p>*   **IPv6Gateway**: an IPv6 gateway</p>
-     * <p>*   **Attachment**: a transit router</p>
+     * <p>*   **VpnGateway**: a VPN gateway.</p>
+     * <p>*   **NatGateway**: a NAT gateway.</p>
+     * <p>*   **NetworkInterface**: a secondary elastic network interface (ENI).</p>
+     * <p>*   **RouterInterface**: a router interface.</p>
+     * <p>*   **IPv6Gateway**: an IPv6 gateway.</p>
+     * <p>*   **Attachment**: a transit router.</p>
+     * <p>*   **Ipv4Gateway**: an IPv4 gateway.</p>
+     * <p>*   **GatewayEndpoint**: a gateway endpoint.</p>
+     * <p>*   **CenBasic**: CEN does not support transit routers.</p>
+     * <p>*   **Ecr**: Express Connect Router (ECR).</p>
      */
     @NameInMap("NextHopType")
     public String nextHopType;
@@ -98,10 +102,11 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     /**
      * <p>The route type. Valid values:</p>
      * <br>
-     * <p>*   **Custom**</p>
-     * <p>*   **System**</p>
-     * <p>*   **BGP**</p>
-     * <p>*   **CEN**</p>
+     * <p>*   **Custom**: custom routes.</p>
+     * <p>*   **System**: system routes.</p>
+     * <p>*   **BGP**: BGP routes.</p>
+     * <p>*   **CEN**: Cloud Enterprise Network (CEN) routes.</p>
+     * <p>*   **ECR**: Express Connect Router (ECR) routes.</p>
      */
     @NameInMap("RouteEntryType")
     public String routeEntryType;

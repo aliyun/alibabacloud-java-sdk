@@ -141,16 +141,20 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         public DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHopsNextHopNextHopRelatedInfo nextHopRelatedInfo;
 
         /**
-         * <p>The type of the next hop. Valid values:</p>
+         * <p>The next hop type. Valid values:</p>
          * <br>
-         * <p>*   **Instance**: an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **HaVip**: a high-availability virtual IP address (HAVIP)</p>
-         * <p>*   **VpnGateway**: a VPN gateway</p>
-         * <p>*   **NatGateway**: a NAT gateway</p>
-         * <p>*   **NetworkInterface**: a secondary elastic network interface (ENI)</p>
-         * <p>*   **RouterInterface**: a router interface</p>
-         * <p>*   **IPv6Gateway**: an IPv6 gateway</p>
-         * <p>*   **Attachment**: a transit router</p>
+         * <p>*   **Instance**: an ECS instance.</p>
+         * <p>*   **HaVip**: an HAVIP.</p>
+         * <p>*   **VpnGateway**: a VPN gateway.</p>
+         * <p>*   **NatGateway**: a NAT gateway.</p>
+         * <p>*   **NetworkInterface**: a secondary ENI.</p>
+         * <p>*   **RouterInterface**: a router interface.</p>
+         * <p>*   **IPv6Gateway**: an IPv6 gateway.</p>
+         * <p>*   **Attachment**: a transit router.</p>
+         * <p>*   **Ipv4Gateway**: an IPv4 gateway.</p>
+         * <p>*   **GatewayEndpoint**: a gateway endpoint.</p>
+         * <p>*   **CenBasic**: CEN does not support transit routers.</p>
+         * <p>*   **Ecr**: ECR.</p>
          */
         @NameInMap("NextHopType")
         public String nextHopType;
@@ -251,13 +255,13 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         public String destinationCidrBlock;
 
         /**
-         * <p>The time when the route was modified. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.</p>
+         * <p>The time when the route was modified. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
-         * <p>The IP version. Valid values:</p>
+         * <p>The IP version. Valid values: Valid values:</p>
          * <br>
          * <p>*   **ipv4**</p>
          * <p>*   **ipv6**</p>
@@ -287,7 +291,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         public String routeEntryId;
 
         /**
-         * <p>The route name.</p>
+         * <p>The name of the route.</p>
          */
         @NameInMap("RouteEntryName")
         public String routeEntryName;
@@ -311,7 +315,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
          * <br>
          * <p>*   **Pending**</p>
          * <p>*   **Available**</p>
-         * <p>*   **Modifying**: The Internet Shared Bandwidth instance is being modified.</p>
+         * <p>*   **Modifying**</p>
          */
         @NameInMap("Status")
         public String status;
@@ -319,10 +323,11 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         /**
          * <p>The route type. Valid values:</p>
          * <br>
-         * <p>*   **Custom**</p>
-         * <p>*   **System**</p>
-         * <p>*   **BGP**</p>
-         * <p>*   **CEN**</p>
+         * <p>*   **Custom**: custom routes.</p>
+         * <p>*   **System**: system routes.</p>
+         * <p>*   **BGP**: BGP routes.</p>
+         * <p>*   **CEN**: CEN routes.</p>
+         * <p>*   **ECR**: ECR routes.</p>
          */
         @NameInMap("Type")
         public String type;

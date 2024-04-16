@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateSslVpnServerRequest extends TeaModel {
     /**
-     * <p>The encryption algorithm that is used for the SSL-VPN connection. Valid values:</p>
+     * <p>The encryption algorithm that is used by the SSL-VPN connection.</p>
      * <br>
-     * <p>*   **AES-128-CBC** (default)</p>
-     * <p>*   **AES-192-CBC**</p>
-     * <p>*   **AES-256-CBC**</p>
-     * <p>*   **none**</p>
+     * <p>*   If the client uses Tunnelblick or OpenVPN 2.4.0 or later, the SSL server dynamically negotiates with the client about the encryption algorithm and uses the most secure encryption algorithm that is supported by the SSL server and the client. The encryption algorithm that you specify for the SSL server does not take effect.</p>
+     * <br>
+     * <p>*   If the client uses OpenVPN of a version that is earlier than 2.4.0, the SSL server and the client use the encryption algorithm that you specify for the SSL server. You can specify one of the following encryption algorithms for the SSL server:</p>
+     * <br>
+     * <p>    *   **AES-128-CBC** (default)</p>
+     * <p>    *   **AES-192-CBC**</p>
+     * <p>    *   **AES-256-CBC**</p>
+     * <p>    *   **none**</p>
      */
     @NameInMap("Cipher")
     public String cipher;
@@ -18,11 +22,45 @@ public class CreateSslVpnServerRequest extends TeaModel {
     /**
      * <p>The client CIDR block.</p>
      * <br>
-     * <p>The client CIDR block from which an IP address is allocated to the virtual network interface controller (NIC) of the client. It is not the CIDR block where the client resides.</p>
+     * <p>It is the CIDR block from which an IP address is allocated to the virtual network interface controller (NIC) of the client. It is not the private CIDR block of the client.</p>
      * <br>
-     * <p>When the client accesses the local virtual private cloud (VPC) by using an SSL-VPN connection, the VPN gateway allocates an IP address from the client CIDR block to the client.</p>
+     * <p>If the client accesses the SSL server over an SSL-VPN connection, the VPN gateway assigns an IP address from the specified client CIDR block to the client. The client uses the assigned IP address to access cloud resources.</p>
      * <br>
-     * <p>>  This CIDR block cannot overlap with the CIDR block specified by **LocalSubnet**.</p>
+     * <p>Make sure that the number of IP addresses in the client CIDR block is at least four times the maximum number of SSL-VPN connections supported by the VPN gateway.</p>
+     * <br>
+     * <p><details></p>
+     * <p><summary>Click to view the reason.</summary></p>
+     * <br>
+     * <p>For example, if you specify 192.168.0.0/24 as the client CIDR block, the system first divides a subnet CIDR block with a subnet mask of 30 from 192.168.0.0/24, such as 192.168.0.4/30. This subnet provides up to four IP addresses. Then, the system allocates an IP address from 192.168.0.4/30 to the client and uses the other three IP addresses to ensure network communication. In this case, one client consumes four IP addresses. Therefore, to ensure that an IP address is assigned to your client, you must make sure that the number of IP addresses in the client CIDR block is at least four times the maximum number of SSL-VPN connections supported by the VPN gateway with which the SSL server is associated.</p>
+     * <p></details></p>
+     * <br>
+     * <p><details></p>
+     * <p><summary>Click to view the CIDR blocks that are not supported.</summary></p>
+     * <br>
+     * <p>*   100.64.0.0~100.127.255.255</p>
+     * <p>*   127.0.0.0~127.255.255.255</p>
+     * <p>*   169.254.0.0~169.254.255.255</p>
+     * <p>*   224.0.0.0~239.255.255.255</p>
+     * <p>*   255.0.0.0~255.255.255.255</p>
+     * <p></details></p>
+     * <br>
+     * <p><details></p>
+     * <p><summary>Click to view the recommended client CIDR blocks for different numbers of SSL-VPN connections.</summary></p>
+     * <br>
+     * <p>*   If the number of SSL-VPN connections is 5, we recommend that you specify a client CIDR block with a subnet mask that is less than or equal to 27 bits in length. Examples: 10.0.0.0/27 and 10.0.0.0/26.</p>
+     * <p>*   If the number of SSL-VPN connections is 10, we recommend that you specify a client CIDR block with a subnet mask that is less than or equal to 26 bits in length. Examples: 10.0.0.0/26 and 10.0.0.0/25.</p>
+     * <p>*   If the number of SSL-VPN connections is 20, we recommend that you specify a client CIDR block with a subnet mask that is less than or equal to 25 bits in length. Examples: 10.0.0.0/25 and 10.0.0.0/24.</p>
+     * <p>*   If the number of SSL-VPN connections is 50, we recommend that you specify a client CIDR block with a subnet mask that is less than or equal to 24 bits in length. Examples: 10.0.0.0/24 and 10.0.0.0/23.</p>
+     * <p>*   If the number of SSL-VPN connections is 100, we recommend that you specify a client CIDR block with a subnet mask that is less than or equal to 23 bits in length. Examples: 10.0.0.0/23 and 10.0.0.0/22.</p>
+     * <p>*   If the number of SSL-VPN connections is 200, we recommend that you specify a client CIDR block with a subnet mask that is less than or equal to 22 bits in length. Examples: 10.0.0.0/22 and 10.0.0.0/21.</p>
+     * <p>*   If the number of SSL-VPN connections is 500, we recommend that you specify a client CIDR block with a subnet mask that is less than or equal to 21 bits in length. Examples: 10.0.0.0/21 and 10.0.0.0/20.</p>
+     * <p>*   If the number of SSL-VPN connections is 1,000, we recommend that you specify a client CIDR block with a subnet mask that is less than or equal to 20 bits in length. Examples: 10.0.0.0/20 and 10.0.0.0/19.</p>
+     * <p></details></p>
+     * <br>
+     * <p>> - The subnet mask of the client CIDR block must be 16 to 29 bits in length.</p>
+     * <p>> - Make sure that the local CIDR block and the client CIDR block do not overlap with each other.</p>
+     * <p>> - We recommend that you use 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, or one of their subnets as the client CIDR block. If you want to specify a public CIDR block as the client CIDR block, you must specify the public CIDR block as the user CIDR block of the virtual private cloud (VPC). This way, the VPC can access the public CIDR block. For more information, see [VPC FAQ](~~185311~~).</p>
+     * <p>> - After you create an SSL server, the system automatically adds routes that point to the client CIDR block to the VPC route table, which is not displayed in the console by default. Do not add routes that point to the client CIDR block to the VPC route table again. Otherwise, SSL-VPN connections cannot work as expected.</p>
      */
     @NameInMap("ClientIpPool")
     public String clientIpPool;
@@ -47,13 +85,13 @@ public class CreateSslVpnServerRequest extends TeaModel {
     public Boolean compress;
 
     /**
-     * <p>Specifies whether to enable two-factor authentication. If you enable two-factor authentication, you must also specify an IDaaS instance ID. Valid values:</p>
+     * <p>Specifies whether to enable two-factor authentication. If you enable two-factor authentication, you must configure `IDaaSInstanceId` and `IDaaSRegionId`. Valid values:</p>
      * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <p>*   **true**: enables this feature.</p>
+     * <p>*   **false** (default): disables this feature.</p>
      * <br>
-     * <p>>*   Two-factor authentication supports only IDaaS instances of earlier versions. If you do not have and cannot create IDaaS instances of earlier versions, you cannot enable two-factor authentication.</p>
-     * <p>>*   For existing SSL servers, if two-factor authentication is already enabled, you can continue to use two-factor authentication.</p>
+     * <p>> - Two-factor authentication supports only earlier versions of IDaaS instances. If you do not have and cannot create earlier versions of IDaaS instances, you cannot enable two-factor authentication.</p>
+     * <p>> - If two-factor authentication is already enabled for existing SSL servers, you can continue to use two-factor authentication.</p>
      */
     @NameInMap("EnableMultiFactorAuth")
     public Boolean enableMultiFactorAuth;
@@ -73,9 +111,17 @@ public class CreateSslVpnServerRequest extends TeaModel {
     /**
      * <p>The local CIDR block.</p>
      * <br>
-     * <p>The CIDR block to be accessed by the client by using the SSL-VPN connection.</p>
+     * <p>It is the CIDR block that your client needs to access by using the SSL-VPN connection.</p>
      * <br>
      * <p>This value can be the CIDR block of a VPC, a vSwitch, a data center that is connected to a VPC by using an Express Connect circuit, or an Alibaba Cloud service such as Object Storage Service (OSS).</p>
+     * <br>
+     * <p>The subnet mask of the specified local CIDR block must be 8 to 32 bits in length. You cannot specify the following CIDR blocks as the local CIDR blocks:</p>
+     * <br>
+     * <p>*   100.64.0.0~100.127.255.255</p>
+     * <p>*   127.0.0.0~127.255.255.255</p>
+     * <p>*   169.254.0.0~169.254.255.255</p>
+     * <p>*   224.0.0.0~239.255.255.255</p>
+     * <p>*   255.0.0.0~255.255.255.255</p>
      */
     @NameInMap("LocalSubnet")
     public String localSubnet;
