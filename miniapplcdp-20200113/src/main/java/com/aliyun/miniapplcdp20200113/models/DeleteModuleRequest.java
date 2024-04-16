@@ -7,6 +7,9 @@ public class DeleteModuleRequest extends TeaModel {
     @NameInMap("ModuleId")
     public String moduleId;
 
+    @NameInMap("Source")
+    public String source;
+
     public static DeleteModuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteModuleRequest self = new DeleteModuleRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DeleteModuleRequest extends TeaModel {
     }
     public String getModuleId() {
         return this.moduleId;
+    }
+
+    public DeleteModuleRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

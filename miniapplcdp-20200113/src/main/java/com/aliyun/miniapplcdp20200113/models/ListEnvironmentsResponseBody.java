@@ -4,23 +4,15 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class ListEnvironmentsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ListEnvironmentsResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListEnvironmentsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListEnvironmentsResponseBody self = new ListEnvironmentsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListEnvironmentsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListEnvironmentsResponseBody setData(ListEnvironmentsResponseBodyData data) {
@@ -31,18 +23,26 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class ListEnvironmentsResponseBodyDataItems extends TeaModel {
-        @NameInMap("CurrentPublishId")
-        public String currentPublishId;
+    public ListEnvironmentsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        @NameInMap("ModifiedTime")
-        public String modifiedTime;
+    public static class ListEnvironmentsResponseBodyDataItems extends TeaModel {
+        @NameInMap("AccountOpsEndpoint")
+        public String accountOpsEndpoint;
 
         @NameInMap("AppId")
         public String appId;
 
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("CurrentPublishId")
+        public String currentPublishId;
 
         @NameInMap("Endpoint")
         public String endpoint;
@@ -53,6 +53,9 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         @NameInMap("EnvType")
         public String envType;
 
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
+
         @NameInMap("PublishingId")
         public String publishingId;
 
@@ -61,20 +64,12 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListEnvironmentsResponseBodyDataItems setCurrentPublishId(String currentPublishId) {
-            this.currentPublishId = currentPublishId;
+        public ListEnvironmentsResponseBodyDataItems setAccountOpsEndpoint(String accountOpsEndpoint) {
+            this.accountOpsEndpoint = accountOpsEndpoint;
             return this;
         }
-        public String getCurrentPublishId() {
-            return this.currentPublishId;
-        }
-
-        public ListEnvironmentsResponseBodyDataItems setModifiedTime(String modifiedTime) {
-            this.modifiedTime = modifiedTime;
-            return this;
-        }
-        public String getModifiedTime() {
-            return this.modifiedTime;
+        public String getAccountOpsEndpoint() {
+            return this.accountOpsEndpoint;
         }
 
         public ListEnvironmentsResponseBodyDataItems setAppId(String appId) {
@@ -91,6 +86,14 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListEnvironmentsResponseBodyDataItems setCurrentPublishId(String currentPublishId) {
+            this.currentPublishId = currentPublishId;
+            return this;
+        }
+        public String getCurrentPublishId() {
+            return this.currentPublishId;
         }
 
         public ListEnvironmentsResponseBodyDataItems setEndpoint(String endpoint) {
@@ -115,6 +118,14 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
         public String getEnvType() {
             return this.envType;
+        }
+
+        public ListEnvironmentsResponseBodyDataItems setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public String getModifiedTime() {
+            return this.modifiedTime;
         }
 
         public ListEnvironmentsResponseBodyDataItems setPublishingId(String publishingId) {

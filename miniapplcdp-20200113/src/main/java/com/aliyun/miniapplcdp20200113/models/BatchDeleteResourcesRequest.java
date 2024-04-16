@@ -13,8 +13,8 @@ public class BatchDeleteResourcesRequest extends TeaModel {
     @NameInMap("ResourceIdList")
     public String resourceIdList;
 
-    @NameInMap("Scope")
-    public String scope;
+    @NameInMap("Source")
+    public String source;
 
     public static BatchDeleteResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchDeleteResourcesRequest self = new BatchDeleteResourcesRequest();
@@ -45,12 +45,12 @@ public class BatchDeleteResourcesRequest extends TeaModel {
         return this.resourceIdList;
     }
 
-    public BatchDeleteResourcesRequest setScope(String scope) {
-        this.scope = scope;
+    public BatchDeleteResourcesRequest setSource(String source) {
+        this.source = source;
         return this;
     }
-    public String getScope() {
-        return this.scope;
+    public String getSource() {
+        return this.source;
     }
 
 }

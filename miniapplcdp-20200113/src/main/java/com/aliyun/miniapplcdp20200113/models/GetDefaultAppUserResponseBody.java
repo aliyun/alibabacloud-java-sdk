@@ -4,23 +4,15 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class GetDefaultAppUserResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public GetDefaultAppUserResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetDefaultAppUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDefaultAppUserResponseBody self = new GetDefaultAppUserResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetDefaultAppUserResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetDefaultAppUserResponseBody setData(GetDefaultAppUserResponseBodyData data) {
@@ -31,24 +23,24 @@ public class GetDefaultAppUserResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class GetDefaultAppUserResponseBodyData extends TeaModel {
-        @NameInMap("UserName")
-        public String userName;
+    public GetDefaultAppUserResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class GetDefaultAppUserResponseBodyData extends TeaModel {
         @NameInMap("HasPassword")
         public Boolean hasPassword;
+
+        @NameInMap("UserName")
+        public String userName;
 
         public static GetDefaultAppUserResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetDefaultAppUserResponseBodyData self = new GetDefaultAppUserResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetDefaultAppUserResponseBodyData setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-        public String getUserName() {
-            return this.userName;
         }
 
         public GetDefaultAppUserResponseBodyData setHasPassword(Boolean hasPassword) {
@@ -57,6 +49,14 @@ public class GetDefaultAppUserResponseBody extends TeaModel {
         }
         public Boolean getHasPassword() {
             return this.hasPassword;
+        }
+
+        public GetDefaultAppUserResponseBodyData setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
     }

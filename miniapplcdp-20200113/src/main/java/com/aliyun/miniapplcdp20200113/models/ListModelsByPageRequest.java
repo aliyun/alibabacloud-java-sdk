@@ -10,6 +10,12 @@ public class ListModelsByPageRequest extends TeaModel {
     @NameInMap("ModelName")
     public String modelName;
 
+    @NameInMap("ModelType")
+    public String modelType;
+
+    @NameInMap("ModuleId")
+    public String moduleId;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -19,11 +25,11 @@ public class ListModelsByPageRequest extends TeaModel {
     @NameInMap("SchemaVersion")
     public String schemaVersion;
 
+    @NameInMap("Source")
+    public String source;
+
     @NameInMap("SubType")
     public String subType;
-
-    @NameInMap("ModelType")
-    public String modelType;
 
     @NameInMap("WithContent")
     public Boolean withContent;
@@ -47,6 +53,22 @@ public class ListModelsByPageRequest extends TeaModel {
     }
     public String getModelName() {
         return this.modelName;
+    }
+
+    public ListModelsByPageRequest setModelType(String modelType) {
+        this.modelType = modelType;
+        return this;
+    }
+    public String getModelType() {
+        return this.modelType;
+    }
+
+    public ListModelsByPageRequest setModuleId(String moduleId) {
+        this.moduleId = moduleId;
+        return this;
+    }
+    public String getModuleId() {
+        return this.moduleId;
     }
 
     public ListModelsByPageRequest setPageNumber(Integer pageNumber) {
@@ -73,20 +95,20 @@ public class ListModelsByPageRequest extends TeaModel {
         return this.schemaVersion;
     }
 
+    public ListModelsByPageRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
+    }
+
     public ListModelsByPageRequest setSubType(String subType) {
         this.subType = subType;
         return this;
     }
     public String getSubType() {
         return this.subType;
-    }
-
-    public ListModelsByPageRequest setModelType(String modelType) {
-        this.modelType = modelType;
-        return this;
-    }
-    public String getModelType() {
-        return this.modelType;
     }
 
     public ListModelsByPageRequest setWithContent(Boolean withContent) {

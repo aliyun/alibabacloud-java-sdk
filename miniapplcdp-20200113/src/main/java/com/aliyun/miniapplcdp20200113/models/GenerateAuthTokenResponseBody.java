@@ -4,23 +4,15 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class GenerateAuthTokenResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public GenerateAuthTokenResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GenerateAuthTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GenerateAuthTokenResponseBody self = new GenerateAuthTokenResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GenerateAuthTokenResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GenerateAuthTokenResponseBody setData(GenerateAuthTokenResponseBodyData data) {
@@ -29,6 +21,14 @@ public class GenerateAuthTokenResponseBody extends TeaModel {
     }
     public GenerateAuthTokenResponseBodyData getData() {
         return this.data;
+    }
+
+    public GenerateAuthTokenResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class GenerateAuthTokenResponseBodyData extends TeaModel {

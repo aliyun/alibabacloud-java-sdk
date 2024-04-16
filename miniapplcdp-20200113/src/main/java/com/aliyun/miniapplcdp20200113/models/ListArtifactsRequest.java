@@ -10,6 +10,9 @@ public class ListArtifactsRequest extends TeaModel {
     @NameInMap("PublishId")
     public String publishId;
 
+    @NameInMap("Source")
+    public String source;
+
     public static ListArtifactsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListArtifactsRequest self = new ListArtifactsRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ListArtifactsRequest extends TeaModel {
     }
     public String getPublishId() {
         return this.publishId;
+    }
+
+    public ListArtifactsRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

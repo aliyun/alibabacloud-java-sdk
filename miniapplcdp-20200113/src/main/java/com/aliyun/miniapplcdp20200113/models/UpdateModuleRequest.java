@@ -13,6 +13,9 @@ public class UpdateModuleRequest extends TeaModel {
     @NameInMap("ModuleName")
     public String moduleName;
 
+    @NameInMap("Source")
+    public String source;
+
     public static UpdateModuleRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateModuleRequest self = new UpdateModuleRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class UpdateModuleRequest extends TeaModel {
     }
     public String getModuleName() {
         return this.moduleName;
+    }
+
+    public UpdateModuleRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

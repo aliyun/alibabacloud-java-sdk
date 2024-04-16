@@ -16,6 +16,9 @@ public class ListPublishVersionsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Source")
+    public String source;
+
     public static ListPublishVersionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPublishVersionsRequest self = new ListPublishVersionsRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ListPublishVersionsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListPublishVersionsRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

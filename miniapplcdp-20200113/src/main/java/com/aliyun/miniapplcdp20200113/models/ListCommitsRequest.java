@@ -7,11 +7,23 @@ public class ListCommitsRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("CommitLog")
+    public String commitLog;
+
+    @NameInMap("CustomParentId")
+    public String customParentId;
+
+    @NameInMap("ModuleId")
+    public String moduleId;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("Source")
+    public String source;
 
     public static ListCommitsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCommitsRequest self = new ListCommitsRequest();
@@ -24,6 +36,30 @@ public class ListCommitsRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public ListCommitsRequest setCommitLog(String commitLog) {
+        this.commitLog = commitLog;
+        return this;
+    }
+    public String getCommitLog() {
+        return this.commitLog;
+    }
+
+    public ListCommitsRequest setCustomParentId(String customParentId) {
+        this.customParentId = customParentId;
+        return this;
+    }
+    public String getCustomParentId() {
+        return this.customParentId;
+    }
+
+    public ListCommitsRequest setModuleId(String moduleId) {
+        this.moduleId = moduleId;
+        return this;
+    }
+    public String getModuleId() {
+        return this.moduleId;
     }
 
     public ListCommitsRequest setPageNumber(Integer pageNumber) {
@@ -40,6 +76,14 @@ public class ListCommitsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListCommitsRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

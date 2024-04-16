@@ -4,23 +4,15 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class ListPublishVersionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ListPublishVersionsResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListPublishVersionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPublishVersionsResponseBody self = new ListPublishVersionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListPublishVersionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListPublishVersionsResponseBody setData(ListPublishVersionsResponseBodyData data) {
@@ -31,24 +23,32 @@ public class ListPublishVersionsResponseBody extends TeaModel {
         return this.data;
     }
 
+    public ListPublishVersionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListPublishVersionsResponseBodyDataItems extends TeaModel {
+        @NameInMap("AppId")
+        public String appId;
+
         @NameInMap("CommitId")
         public String commitId;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("PublishStatus")
-        public String publishStatus;
 
         @NameInMap("CompletionTime")
         public String completionTime;
 
-        @NameInMap("VersionNumber")
-        public String versionNumber;
+        @NameInMap("CreateTime")
+        public String createTime;
 
-        @NameInMap("StartTime")
-        public String startTime;
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("EnvId")
+        public String envId;
 
         @NameInMap("ModifiedTime")
         public String modifiedTime;
@@ -56,27 +56,35 @@ public class ListPublishVersionsResponseBody extends TeaModel {
         @NameInMap("PublishId")
         public String publishId;
 
+        @NameInMap("PublishStatus")
+        public String publishStatus;
+
         @NameInMap("PublishType")
         public String publishType;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("AppId")
-        public String appId;
-
-        @NameInMap("EnvId")
-        public String envId;
 
         @NameInMap("Reason")
         public String reason;
 
+        @NameInMap("StartTime")
+        public String startTime;
+
         @NameInMap("SubTasks")
-        public java.util.List<java.util.Map<String, ?>> subTasks;
+        public java.util.List<java.util.Map<String, String>> subTasks;
+
+        @NameInMap("VersionNumber")
+        public String versionNumber;
 
         public static ListPublishVersionsResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             ListPublishVersionsResponseBodyDataItems self = new ListPublishVersionsResponseBodyDataItems();
             return TeaModel.build(map, self);
+        }
+
+        public ListPublishVersionsResponseBodyDataItems setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
         }
 
         public ListPublishVersionsResponseBodyDataItems setCommitId(String commitId) {
@@ -87,22 +95,6 @@ public class ListPublishVersionsResponseBody extends TeaModel {
             return this.commitId;
         }
 
-        public ListPublishVersionsResponseBodyDataItems setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public ListPublishVersionsResponseBodyDataItems setPublishStatus(String publishStatus) {
-            this.publishStatus = publishStatus;
-            return this;
-        }
-        public String getPublishStatus() {
-            return this.publishStatus;
-        }
-
         public ListPublishVersionsResponseBodyDataItems setCompletionTime(String completionTime) {
             this.completionTime = completionTime;
             return this;
@@ -111,20 +103,28 @@ public class ListPublishVersionsResponseBody extends TeaModel {
             return this.completionTime;
         }
 
-        public ListPublishVersionsResponseBodyDataItems setVersionNumber(String versionNumber) {
-            this.versionNumber = versionNumber;
+        public ListPublishVersionsResponseBodyDataItems setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getVersionNumber() {
-            return this.versionNumber;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
-        public ListPublishVersionsResponseBodyDataItems setStartTime(String startTime) {
-            this.startTime = startTime;
+        public ListPublishVersionsResponseBodyDataItems setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getStartTime() {
-            return this.startTime;
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListPublishVersionsResponseBodyDataItems setEnvId(String envId) {
+            this.envId = envId;
+            return this;
+        }
+        public String getEnvId() {
+            return this.envId;
         }
 
         public ListPublishVersionsResponseBodyDataItems setModifiedTime(String modifiedTime) {
@@ -143,36 +143,20 @@ public class ListPublishVersionsResponseBody extends TeaModel {
             return this.publishId;
         }
 
+        public ListPublishVersionsResponseBodyDataItems setPublishStatus(String publishStatus) {
+            this.publishStatus = publishStatus;
+            return this;
+        }
+        public String getPublishStatus() {
+            return this.publishStatus;
+        }
+
         public ListPublishVersionsResponseBodyDataItems setPublishType(String publishType) {
             this.publishType = publishType;
             return this;
         }
         public String getPublishType() {
             return this.publishType;
-        }
-
-        public ListPublishVersionsResponseBodyDataItems setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListPublishVersionsResponseBodyDataItems setAppId(String appId) {
-            this.appId = appId;
-            return this;
-        }
-        public String getAppId() {
-            return this.appId;
-        }
-
-        public ListPublishVersionsResponseBodyDataItems setEnvId(String envId) {
-            this.envId = envId;
-            return this;
-        }
-        public String getEnvId() {
-            return this.envId;
         }
 
         public ListPublishVersionsResponseBodyDataItems setReason(String reason) {
@@ -183,17 +167,36 @@ public class ListPublishVersionsResponseBody extends TeaModel {
             return this.reason;
         }
 
-        public ListPublishVersionsResponseBodyDataItems setSubTasks(java.util.List<java.util.Map<String, ?>> subTasks) {
+        public ListPublishVersionsResponseBodyDataItems setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public ListPublishVersionsResponseBodyDataItems setSubTasks(java.util.List<java.util.Map<String, String>> subTasks) {
             this.subTasks = subTasks;
             return this;
         }
-        public java.util.List<java.util.Map<String, ?>> getSubTasks() {
+        public java.util.List<java.util.Map<String, String>> getSubTasks() {
             return this.subTasks;
+        }
+
+        public ListPublishVersionsResponseBodyDataItems setVersionNumber(String versionNumber) {
+            this.versionNumber = versionNumber;
+            return this;
+        }
+        public String getVersionNumber() {
+            return this.versionNumber;
         }
 
     }
 
     public static class ListPublishVersionsResponseBodyData extends TeaModel {
+        @NameInMap("Items")
+        public java.util.List<ListPublishVersionsResponseBodyDataItems> items;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -203,12 +206,17 @@ public class ListPublishVersionsResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("Items")
-        public java.util.List<ListPublishVersionsResponseBodyDataItems> items;
-
         public static ListPublishVersionsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListPublishVersionsResponseBodyData self = new ListPublishVersionsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListPublishVersionsResponseBodyData setItems(java.util.List<ListPublishVersionsResponseBodyDataItems> items) {
+            this.items = items;
+            return this;
+        }
+        public java.util.List<ListPublishVersionsResponseBodyDataItems> getItems() {
+            return this.items;
         }
 
         public ListPublishVersionsResponseBodyData setPageNumber(Integer pageNumber) {
@@ -233,14 +241,6 @@ public class ListPublishVersionsResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListPublishVersionsResponseBodyData setItems(java.util.List<ListPublishVersionsResponseBodyDataItems> items) {
-            this.items = items;
-            return this;
-        }
-        public java.util.List<ListPublishVersionsResponseBodyDataItems> getItems() {
-            return this.items;
         }
 
     }

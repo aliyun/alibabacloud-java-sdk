@@ -16,6 +16,9 @@ public class UpdateAppModelRequest extends TeaModel {
     @NameInMap("SchemaVersion")
     public String schemaVersion;
 
+    @NameInMap("Source")
+    public String source;
+
     @NameInMap("SubType")
     public String subType;
 
@@ -54,6 +57,14 @@ public class UpdateAppModelRequest extends TeaModel {
     }
     public String getSchemaVersion() {
         return this.schemaVersion;
+    }
+
+    public UpdateAppModelRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public UpdateAppModelRequest setSubType(String subType) {

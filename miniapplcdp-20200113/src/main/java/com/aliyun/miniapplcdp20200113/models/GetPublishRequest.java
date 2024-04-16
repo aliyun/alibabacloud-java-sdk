@@ -10,6 +10,9 @@ public class GetPublishRequest extends TeaModel {
     @NameInMap("PublishId")
     public String publishId;
 
+    @NameInMap("Source")
+    public String source;
+
     public static GetPublishRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPublishRequest self = new GetPublishRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class GetPublishRequest extends TeaModel {
     }
     public String getPublishId() {
         return this.publishId;
+    }
+
+    public GetPublishRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

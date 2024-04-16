@@ -4,23 +4,15 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class GetDomainCnameResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public GetDomainCnameResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetDomainCnameResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDomainCnameResponseBody self = new GetDomainCnameResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetDomainCnameResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetDomainCnameResponseBody setData(GetDomainCnameResponseBodyData data) {
@@ -29,6 +21,14 @@ public class GetDomainCnameResponseBody extends TeaModel {
     }
     public GetDomainCnameResponseBodyData getData() {
         return this.data;
+    }
+
+    public GetDomainCnameResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class GetDomainCnameResponseBodyData extends TeaModel {

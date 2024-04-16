@@ -7,17 +7,26 @@ public class RunLogicModelRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("CommitId")
+    public String commitId;
+
     @NameInMap("Content")
     public String content;
 
     @NameInMap("EncodeType")
     public String encodeType;
 
+    @NameInMap("ModuleId")
+    public String moduleId;
+
     @NameInMap("Parameters")
     public String parameters;
 
     @NameInMap("SchemaVersion")
     public String schemaVersion;
+
+    @NameInMap("Source")
+    public String source;
 
     @NameInMap("SubType")
     public String subType;
@@ -33,6 +42,14 @@ public class RunLogicModelRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public RunLogicModelRequest setCommitId(String commitId) {
+        this.commitId = commitId;
+        return this;
+    }
+    public String getCommitId() {
+        return this.commitId;
     }
 
     public RunLogicModelRequest setContent(String content) {
@@ -51,6 +68,14 @@ public class RunLogicModelRequest extends TeaModel {
         return this.encodeType;
     }
 
+    public RunLogicModelRequest setModuleId(String moduleId) {
+        this.moduleId = moduleId;
+        return this;
+    }
+    public String getModuleId() {
+        return this.moduleId;
+    }
+
     public RunLogicModelRequest setParameters(String parameters) {
         this.parameters = parameters;
         return this;
@@ -65,6 +90,14 @@ public class RunLogicModelRequest extends TeaModel {
     }
     public String getSchemaVersion() {
         return this.schemaVersion;
+    }
+
+    public RunLogicModelRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public RunLogicModelRequest setSubType(String subType) {

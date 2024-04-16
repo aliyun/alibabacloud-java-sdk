@@ -10,6 +10,12 @@ public class DeleteCommitRequest extends TeaModel {
     @NameInMap("CommitId")
     public String commitId;
 
+    @NameInMap("ModuleId")
+    public String moduleId;
+
+    @NameInMap("Source")
+    public String source;
+
     public static DeleteCommitRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteCommitRequest self = new DeleteCommitRequest();
         return TeaModel.build(map, self);
@@ -29,6 +35,22 @@ public class DeleteCommitRequest extends TeaModel {
     }
     public String getCommitId() {
         return this.commitId;
+    }
+
+    public DeleteCommitRequest setModuleId(String moduleId) {
+        this.moduleId = moduleId;
+        return this;
+    }
+    public String getModuleId() {
+        return this.moduleId;
+    }
+
+    public DeleteCommitRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

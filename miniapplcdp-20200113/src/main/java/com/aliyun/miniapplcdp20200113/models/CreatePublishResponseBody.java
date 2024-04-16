@@ -4,23 +4,15 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class CreatePublishResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public CreatePublishResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreatePublishResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreatePublishResponseBody self = new CreatePublishResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreatePublishResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreatePublishResponseBody setData(CreatePublishResponseBodyData data) {
@@ -31,24 +23,32 @@ public class CreatePublishResponseBody extends TeaModel {
         return this.data;
     }
 
+    public CreatePublishResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class CreatePublishResponseBodyData extends TeaModel {
+        @NameInMap("AppId")
+        public String appId;
+
         @NameInMap("CommitId")
         public String commitId;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("PublishStatus")
-        public String publishStatus;
 
         @NameInMap("CompletionTime")
         public String completionTime;
 
-        @NameInMap("VersionNumber")
-        public String versionNumber;
+        @NameInMap("CreateTime")
+        public String createTime;
 
-        @NameInMap("StartTime")
-        public String startTime;
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("EnvId")
+        public String envId;
 
         @NameInMap("ModifiedTime")
         public String modifiedTime;
@@ -56,27 +56,35 @@ public class CreatePublishResponseBody extends TeaModel {
         @NameInMap("PublishId")
         public String publishId;
 
+        @NameInMap("PublishStatus")
+        public String publishStatus;
+
         @NameInMap("PublishType")
         public String publishType;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("AppId")
-        public String appId;
-
-        @NameInMap("EnvId")
-        public String envId;
 
         @NameInMap("Reason")
         public String reason;
 
+        @NameInMap("StartTime")
+        public String startTime;
+
         @NameInMap("SubTasks")
-        public java.util.List<java.util.Map<String, ?>> subTasks;
+        public java.util.List<java.util.Map<String, String>> subTasks;
+
+        @NameInMap("VersionNumber")
+        public String versionNumber;
 
         public static CreatePublishResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreatePublishResponseBodyData self = new CreatePublishResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CreatePublishResponseBodyData setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
         }
 
         public CreatePublishResponseBodyData setCommitId(String commitId) {
@@ -87,22 +95,6 @@ public class CreatePublishResponseBody extends TeaModel {
             return this.commitId;
         }
 
-        public CreatePublishResponseBodyData setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public CreatePublishResponseBodyData setPublishStatus(String publishStatus) {
-            this.publishStatus = publishStatus;
-            return this;
-        }
-        public String getPublishStatus() {
-            return this.publishStatus;
-        }
-
         public CreatePublishResponseBodyData setCompletionTime(String completionTime) {
             this.completionTime = completionTime;
             return this;
@@ -111,20 +103,28 @@ public class CreatePublishResponseBody extends TeaModel {
             return this.completionTime;
         }
 
-        public CreatePublishResponseBodyData setVersionNumber(String versionNumber) {
-            this.versionNumber = versionNumber;
+        public CreatePublishResponseBodyData setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getVersionNumber() {
-            return this.versionNumber;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
-        public CreatePublishResponseBodyData setStartTime(String startTime) {
-            this.startTime = startTime;
+        public CreatePublishResponseBodyData setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getStartTime() {
-            return this.startTime;
+        public String getDescription() {
+            return this.description;
+        }
+
+        public CreatePublishResponseBodyData setEnvId(String envId) {
+            this.envId = envId;
+            return this;
+        }
+        public String getEnvId() {
+            return this.envId;
         }
 
         public CreatePublishResponseBodyData setModifiedTime(String modifiedTime) {
@@ -143,36 +143,20 @@ public class CreatePublishResponseBody extends TeaModel {
             return this.publishId;
         }
 
+        public CreatePublishResponseBodyData setPublishStatus(String publishStatus) {
+            this.publishStatus = publishStatus;
+            return this;
+        }
+        public String getPublishStatus() {
+            return this.publishStatus;
+        }
+
         public CreatePublishResponseBodyData setPublishType(String publishType) {
             this.publishType = publishType;
             return this;
         }
         public String getPublishType() {
             return this.publishType;
-        }
-
-        public CreatePublishResponseBodyData setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public CreatePublishResponseBodyData setAppId(String appId) {
-            this.appId = appId;
-            return this;
-        }
-        public String getAppId() {
-            return this.appId;
-        }
-
-        public CreatePublishResponseBodyData setEnvId(String envId) {
-            this.envId = envId;
-            return this;
-        }
-        public String getEnvId() {
-            return this.envId;
         }
 
         public CreatePublishResponseBodyData setReason(String reason) {
@@ -183,12 +167,28 @@ public class CreatePublishResponseBody extends TeaModel {
             return this.reason;
         }
 
-        public CreatePublishResponseBodyData setSubTasks(java.util.List<java.util.Map<String, ?>> subTasks) {
+        public CreatePublishResponseBodyData setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public CreatePublishResponseBodyData setSubTasks(java.util.List<java.util.Map<String, String>> subTasks) {
             this.subTasks = subTasks;
             return this;
         }
-        public java.util.List<java.util.Map<String, ?>> getSubTasks() {
+        public java.util.List<java.util.Map<String, String>> getSubTasks() {
             return this.subTasks;
+        }
+
+        public CreatePublishResponseBodyData setVersionNumber(String versionNumber) {
+            this.versionNumber = versionNumber;
+            return this;
+        }
+        public String getVersionNumber() {
+            return this.versionNumber;
         }
 
     }

@@ -10,6 +10,9 @@ public class StartAppServerRequest extends TeaModel {
     @NameInMap("EnvId")
     public String envId;
 
+    @NameInMap("Source")
+    public String source;
+
     public static StartAppServerRequest build(java.util.Map<String, ?> map) throws Exception {
         StartAppServerRequest self = new StartAppServerRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class StartAppServerRequest extends TeaModel {
     }
     public String getEnvId() {
         return this.envId;
+    }
+
+    public StartAppServerRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

@@ -4,6 +4,18 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class CreateAppRequest extends TeaModel {
+    @NameInMap("AppName")
+    public String appName;
+
+    @NameInMap("AppType")
+    public String appType;
+
+    @NameInMap("Asynchronous")
+    public Boolean asynchronous;
+
+    @NameInMap("CategoryId")
+    public String categoryId;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -13,21 +25,59 @@ public class CreateAppRequest extends TeaModel {
     @NameInMap("Icon")
     public String icon;
 
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("PlatformVersion")
+    public String platformVersion;
+
+    @NameInMap("SchemaVersion")
+    public String schemaVersion;
 
     @NameInMap("Source")
     public String source;
 
+    @NameInMap("SourceCommitId")
+    public String sourceCommitId;
+
     @NameInMap("TemplateId")
     public String templateId;
 
-    @NameInMap("AppType")
-    public String appType;
+    @NameInMap("Templated")
+    public Boolean templated;
 
     public static CreateAppRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppRequest self = new CreateAppRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAppRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
+    public CreateAppRequest setAppType(String appType) {
+        this.appType = appType;
+        return this;
+    }
+    public String getAppType() {
+        return this.appType;
+    }
+
+    public CreateAppRequest setAsynchronous(Boolean asynchronous) {
+        this.asynchronous = asynchronous;
+        return this;
+    }
+    public Boolean getAsynchronous() {
+        return this.asynchronous;
+    }
+
+    public CreateAppRequest setCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    public String getCategoryId() {
+        return this.categoryId;
     }
 
     public CreateAppRequest setClientToken(String clientToken) {
@@ -54,12 +104,20 @@ public class CreateAppRequest extends TeaModel {
         return this.icon;
     }
 
-    public CreateAppRequest setAppName(String appName) {
-        this.appName = appName;
+    public CreateAppRequest setPlatformVersion(String platformVersion) {
+        this.platformVersion = platformVersion;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public String getPlatformVersion() {
+        return this.platformVersion;
+    }
+
+    public CreateAppRequest setSchemaVersion(String schemaVersion) {
+        this.schemaVersion = schemaVersion;
+        return this;
+    }
+    public String getSchemaVersion() {
+        return this.schemaVersion;
     }
 
     public CreateAppRequest setSource(String source) {
@@ -70,6 +128,14 @@ public class CreateAppRequest extends TeaModel {
         return this.source;
     }
 
+    public CreateAppRequest setSourceCommitId(String sourceCommitId) {
+        this.sourceCommitId = sourceCommitId;
+        return this;
+    }
+    public String getSourceCommitId() {
+        return this.sourceCommitId;
+    }
+
     public CreateAppRequest setTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
@@ -78,12 +144,12 @@ public class CreateAppRequest extends TeaModel {
         return this.templateId;
     }
 
-    public CreateAppRequest setAppType(String appType) {
-        this.appType = appType;
+    public CreateAppRequest setTemplated(Boolean templated) {
+        this.templated = templated;
         return this;
     }
-    public String getAppType() {
-        return this.appType;
+    public Boolean getTemplated() {
+        return this.templated;
     }
 
 }

@@ -10,8 +10,14 @@ public class BatchCreateModelRequest extends TeaModel {
     @NameInMap("ModelDataJson")
     public String modelDataJson;
 
+    @NameInMap("ModuleId")
+    public String moduleId;
+
     @NameInMap("SchemaVersion")
     public String schemaVersion;
+
+    @NameInMap("Source")
+    public String source;
 
     @NameInMap("SubType")
     public String subType;
@@ -37,12 +43,28 @@ public class BatchCreateModelRequest extends TeaModel {
         return this.modelDataJson;
     }
 
+    public BatchCreateModelRequest setModuleId(String moduleId) {
+        this.moduleId = moduleId;
+        return this;
+    }
+    public String getModuleId() {
+        return this.moduleId;
+    }
+
     public BatchCreateModelRequest setSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
     }
     public String getSchemaVersion() {
         return this.schemaVersion;
+    }
+
+    public BatchCreateModelRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public BatchCreateModelRequest setSubType(String subType) {

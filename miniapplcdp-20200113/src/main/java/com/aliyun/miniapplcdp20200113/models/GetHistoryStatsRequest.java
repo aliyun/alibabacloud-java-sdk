@@ -10,6 +10,9 @@ public class GetHistoryStatsRequest extends TeaModel {
     @NameInMap("EndDate")
     public String endDate;
 
+    @NameInMap("Source")
+    public String source;
+
     @NameInMap("StartDate")
     public String startDate;
 
@@ -32,6 +35,14 @@ public class GetHistoryStatsRequest extends TeaModel {
     }
     public String getEndDate() {
         return this.endDate;
+    }
+
+    public GetHistoryStatsRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public GetHistoryStatsRequest setStartDate(String startDate) {

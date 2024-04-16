@@ -4,44 +4,42 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("AppId")
     public String appId;
 
-    @NameInMap("SchemaVersion")
-    public String schemaVersion;
-
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("Content")
     public String content;
 
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("ModuleId")
     public String moduleId;
+
+    @NameInMap("ResourceId")
+    public String resourceId;
 
     @NameInMap("ResourceName")
     public String resourceName;
 
-    @NameInMap("Scope")
-    public String scope;
-
     @NameInMap("ResourceType")
     public String resourceType;
+
+    @NameInMap("SchemaVersion")
+    public String schemaVersion;
+
+    @NameInMap("Source")
+    public String source;
+
+    @NameInMap("Visibility")
+    public String visibility;
 
     public static CreateResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateResourceRequest self = new CreateResourceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateResourceRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public CreateResourceRequest setAppId(String appId) {
@@ -52,20 +50,12 @@ public class CreateResourceRequest extends TeaModel {
         return this.appId;
     }
 
-    public CreateResourceRequest setSchemaVersion(String schemaVersion) {
-        this.schemaVersion = schemaVersion;
+    public CreateResourceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getSchemaVersion() {
-        return this.schemaVersion;
-    }
-
-    public CreateResourceRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateResourceRequest setContent(String content) {
@@ -76,12 +66,28 @@ public class CreateResourceRequest extends TeaModel {
         return this.content;
     }
 
+    public CreateResourceRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
     public CreateResourceRequest setModuleId(String moduleId) {
         this.moduleId = moduleId;
         return this;
     }
     public String getModuleId() {
         return this.moduleId;
+    }
+
+    public CreateResourceRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     public CreateResourceRequest setResourceName(String resourceName) {
@@ -92,20 +98,36 @@ public class CreateResourceRequest extends TeaModel {
         return this.resourceName;
     }
 
-    public CreateResourceRequest setScope(String scope) {
-        this.scope = scope;
-        return this;
-    }
-    public String getScope() {
-        return this.scope;
-    }
-
     public CreateResourceRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public CreateResourceRequest setSchemaVersion(String schemaVersion) {
+        this.schemaVersion = schemaVersion;
+        return this;
+    }
+    public String getSchemaVersion() {
+        return this.schemaVersion;
+    }
+
+    public CreateResourceRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
+    }
+
+    public CreateResourceRequest setVisibility(String visibility) {
+        this.visibility = visibility;
+        return this;
+    }
+    public String getVisibility() {
+        return this.visibility;
     }
 
 }

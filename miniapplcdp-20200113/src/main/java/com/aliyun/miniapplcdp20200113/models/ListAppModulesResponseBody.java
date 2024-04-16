@@ -4,23 +4,15 @@ package com.aliyun.miniapplcdp20200113.models;
 import com.aliyun.tea.*;
 
 public class ListAppModulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ListAppModulesResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListAppModulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAppModulesResponseBody self = new ListAppModulesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAppModulesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListAppModulesResponseBody setData(ListAppModulesResponseBodyData data) {
@@ -31,52 +23,56 @@ public class ListAppModulesResponseBody extends TeaModel {
         return this.data;
     }
 
+    public ListAppModulesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListAppModulesResponseBodyDataItems extends TeaModel {
-        @NameInMap("ModuleName")
-        public String moduleName;
-
-        @NameInMap("ModifiedTime")
-        public String modifiedTime;
-
-        @NameInMap("ModuleId")
-        public String moduleId;
+        @NameInMap("CommitId")
+        public String commitId;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("CreateTime")
-        public String createTime;
+        @NameInMap("DirectDependency")
+        public Boolean directDependency;
 
-        @NameInMap("TargetAppSource")
-        public String targetAppSource;
+        @NameInMap("Icon")
+        public String icon;
+
+        @NameInMap("MinimumPlatformVersion")
+        public String minimumPlatformVersion;
+
+        @NameInMap("ModuleId")
+        public String moduleId;
+
+        @NameInMap("ModuleName")
+        public String moduleName;
+
+        @NameInMap("OwnerUserId")
+        public String ownerUserId;
+
+        @NameInMap("Platform")
+        public String platform;
+
+        @NameInMap("Version")
+        public String version;
 
         public static ListAppModulesResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             ListAppModulesResponseBodyDataItems self = new ListAppModulesResponseBodyDataItems();
             return TeaModel.build(map, self);
         }
 
-        public ListAppModulesResponseBodyDataItems setModuleName(String moduleName) {
-            this.moduleName = moduleName;
+        public ListAppModulesResponseBodyDataItems setCommitId(String commitId) {
+            this.commitId = commitId;
             return this;
         }
-        public String getModuleName() {
-            return this.moduleName;
-        }
-
-        public ListAppModulesResponseBodyDataItems setModifiedTime(String modifiedTime) {
-            this.modifiedTime = modifiedTime;
-            return this;
-        }
-        public String getModifiedTime() {
-            return this.modifiedTime;
-        }
-
-        public ListAppModulesResponseBodyDataItems setModuleId(String moduleId) {
-            this.moduleId = moduleId;
-            return this;
-        }
-        public String getModuleId() {
-            return this.moduleId;
+        public String getCommitId() {
+            return this.commitId;
         }
 
         public ListAppModulesResponseBodyDataItems setDescription(String description) {
@@ -87,20 +83,68 @@ public class ListAppModulesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListAppModulesResponseBodyDataItems setCreateTime(String createTime) {
-            this.createTime = createTime;
+        public ListAppModulesResponseBodyDataItems setDirectDependency(Boolean directDependency) {
+            this.directDependency = directDependency;
             return this;
         }
-        public String getCreateTime() {
-            return this.createTime;
+        public Boolean getDirectDependency() {
+            return this.directDependency;
         }
 
-        public ListAppModulesResponseBodyDataItems setTargetAppSource(String targetAppSource) {
-            this.targetAppSource = targetAppSource;
+        public ListAppModulesResponseBodyDataItems setIcon(String icon) {
+            this.icon = icon;
             return this;
         }
-        public String getTargetAppSource() {
-            return this.targetAppSource;
+        public String getIcon() {
+            return this.icon;
+        }
+
+        public ListAppModulesResponseBodyDataItems setMinimumPlatformVersion(String minimumPlatformVersion) {
+            this.minimumPlatformVersion = minimumPlatformVersion;
+            return this;
+        }
+        public String getMinimumPlatformVersion() {
+            return this.minimumPlatformVersion;
+        }
+
+        public ListAppModulesResponseBodyDataItems setModuleId(String moduleId) {
+            this.moduleId = moduleId;
+            return this;
+        }
+        public String getModuleId() {
+            return this.moduleId;
+        }
+
+        public ListAppModulesResponseBodyDataItems setModuleName(String moduleName) {
+            this.moduleName = moduleName;
+            return this;
+        }
+        public String getModuleName() {
+            return this.moduleName;
+        }
+
+        public ListAppModulesResponseBodyDataItems setOwnerUserId(String ownerUserId) {
+            this.ownerUserId = ownerUserId;
+            return this;
+        }
+        public String getOwnerUserId() {
+            return this.ownerUserId;
+        }
+
+        public ListAppModulesResponseBodyDataItems setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        public ListAppModulesResponseBodyDataItems setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }

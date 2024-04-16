@@ -10,8 +10,14 @@ public class BatchRestoreModelRequest extends TeaModel {
     @NameInMap("ModelIdList")
     public String modelIdList;
 
+    @NameInMap("ModuleId")
+    public String moduleId;
+
     @NameInMap("SchemaVersion")
     public String schemaVersion;
+
+    @NameInMap("Source")
+    public String source;
 
     public static BatchRestoreModelRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchRestoreModelRequest self = new BatchRestoreModelRequest();
@@ -34,12 +40,28 @@ public class BatchRestoreModelRequest extends TeaModel {
         return this.modelIdList;
     }
 
+    public BatchRestoreModelRequest setModuleId(String moduleId) {
+        this.moduleId = moduleId;
+        return this;
+    }
+    public String getModuleId() {
+        return this.moduleId;
+    }
+
     public BatchRestoreModelRequest setSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
     }
     public String getSchemaVersion() {
         return this.schemaVersion;
+    }
+
+    public BatchRestoreModelRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

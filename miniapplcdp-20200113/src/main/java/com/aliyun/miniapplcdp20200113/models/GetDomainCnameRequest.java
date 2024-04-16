@@ -10,11 +10,14 @@ public class GetDomainCnameRequest extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
+    @NameInMap("DomainType")
+    public String domainType;
+
     @NameInMap("EnvId")
     public String envId;
 
-    @NameInMap("DomainType")
-    public String domainType;
+    @NameInMap("Source")
+    public String source;
 
     public static GetDomainCnameRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDomainCnameRequest self = new GetDomainCnameRequest();
@@ -37,6 +40,14 @@ public class GetDomainCnameRequest extends TeaModel {
         return this.domain;
     }
 
+    public GetDomainCnameRequest setDomainType(String domainType) {
+        this.domainType = domainType;
+        return this;
+    }
+    public String getDomainType() {
+        return this.domainType;
+    }
+
     public GetDomainCnameRequest setEnvId(String envId) {
         this.envId = envId;
         return this;
@@ -45,12 +56,12 @@ public class GetDomainCnameRequest extends TeaModel {
         return this.envId;
     }
 
-    public GetDomainCnameRequest setDomainType(String domainType) {
-        this.domainType = domainType;
+    public GetDomainCnameRequest setSource(String source) {
+        this.source = source;
         return this;
     }
-    public String getDomainType() {
-        return this.domainType;
+    public String getSource() {
+        return this.source;
     }
 
 }

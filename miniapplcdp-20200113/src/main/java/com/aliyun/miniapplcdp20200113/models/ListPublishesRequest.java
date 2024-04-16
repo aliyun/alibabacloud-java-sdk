@@ -22,6 +22,9 @@ public class ListPublishesRequest extends TeaModel {
     @NameInMap("PublishType")
     public String publishType;
 
+    @NameInMap("Source")
+    public String source;
+
     public static ListPublishesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPublishesRequest self = new ListPublishesRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class ListPublishesRequest extends TeaModel {
     }
     public String getPublishType() {
         return this.publishType;
+    }
+
+    public ListPublishesRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }
