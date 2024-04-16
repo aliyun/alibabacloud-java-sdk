@@ -92,6 +92,154 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.appUseTimeReportWithOptions(request, headers, runtime);
     }
 
+    public CallBackThirdRightSendPlanResponse callBackThirdRightSendPlanWithOptions(CallBackThirdRightSendPlanRequest tmpReq, CallBackThirdRightSendPlanHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CallBackThirdRightSendPlanShrinkRequest request = new CallBackThirdRightSendPlanShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extendInfo)) {
+            request.extendInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extendInfo, "ExtendInfo", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizGroup)) {
+            query.put("BizGroup", request.bizGroup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cardType)) {
+            query.put("CardType", request.cardType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.errorMsg)) {
+            query.put("ErrorMsg", request.errorMsg);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extendInfoShrink)) {
+            query.put("ExtendInfo", request.extendInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.genieOpenId)) {
+            query.put("GenieOpenId", request.genieOpenId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.receiveStatus)) {
+            query.put("ReceiveStatus", request.receiveStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sn)) {
+            query.put("Sn", request.sn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supplierId)) {
+            query.put("SupplierId", request.supplierId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CallBackThirdRightSendPlan"),
+            new TeaPair("version", "iap_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/1.0/iap/business/CallBackThirdRightSendPlan"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CallBackThirdRightSendPlanResponse());
+    }
+
+    public CallBackThirdRightSendPlanResponse callBackThirdRightSendPlan(CallBackThirdRightSendPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CallBackThirdRightSendPlanHeaders headers = new CallBackThirdRightSendPlanHeaders();
+        return this.callBackThirdRightSendPlanWithOptions(request, headers, runtime);
+    }
+
+    public CheckThirdRightSendPlanResponse checkThirdRightSendPlanWithOptions(CheckThirdRightSendPlanRequest tmpReq, CheckThirdRightSendPlanHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CheckThirdRightSendPlanShrinkRequest request = new CheckThirdRightSendPlanShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extendInfo)) {
+            request.extendInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extendInfo, "ExtendInfo", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizGroup)) {
+            query.put("BizGroup", request.bizGroup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extendInfoShrink)) {
+            query.put("ExtendInfo", request.extendInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sn)) {
+            query.put("Sn", request.sn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supplierId)) {
+            query.put("SupplierId", request.supplierId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckThirdRightSendPlan"),
+            new TeaPair("version", "iap_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/iap/business/CheckThirdRightSendPlan"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckThirdRightSendPlanResponse());
+    }
+
+    public CheckThirdRightSendPlanResponse checkThirdRightSendPlan(CheckThirdRightSendPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CheckThirdRightSendPlanHeaders headers = new CheckThirdRightSendPlanHeaders();
+        return this.checkThirdRightSendPlanWithOptions(request, headers, runtime);
+    }
+
     public CreateReminderResponse createReminderWithOptions(CreateReminderRequest tmpReq, CreateReminderHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateReminderShrinkRequest request = new CreateReminderShrinkRequest();
