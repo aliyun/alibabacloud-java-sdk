@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ehpc20230701</artifactId>
-  <version>2.2.0</version>
+  <version>3.0.0</version>
   <packaging>jar</packaging>
   <name>ehpc20230701</name>
   <description>Alibaba Cloud Elastic High Performance Computing (20230701) SDK for Java
