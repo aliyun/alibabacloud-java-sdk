@@ -4,9 +4,6 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class MigrateAvailableZoneRequest extends TeaModel {
-    @NameInMap("Category")
-    public String category;
-
     /**
      * <p>The ID of the instance.</p>
      * <br>
@@ -61,14 +58,6 @@ public class MigrateAvailableZoneRequest extends TeaModel {
     public static MigrateAvailableZoneRequest build(java.util.Map<String, ?> map) throws Exception {
         MigrateAvailableZoneRequest self = new MigrateAvailableZoneRequest();
         return TeaModel.build(map, self);
-    }
-
-    public MigrateAvailableZoneRequest setCategory(String category) {
-        this.category = category;
-        return this;
-    }
-    public String getCategory() {
-        return this.category;
     }
 
     public MigrateAvailableZoneRequest setDBInstanceId(String DBInstanceId) {

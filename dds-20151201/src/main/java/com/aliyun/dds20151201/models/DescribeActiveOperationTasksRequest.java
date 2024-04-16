@@ -5,19 +5,29 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
-     * <p>Specifies whether the task can be canceled. Valid values: -**0**: The task cannot be canceled. -**1**: The task can be canceled.</p>
+     * <p>Specifies whether to allow the cancellation operation. Valid values:</p>
+     * <br>
+     * <p>*   **0**: The cancellation operation is not allowed.</p>
+     * <p>*   **1**: The cancellation operation is allowed.</p>
      */
     @NameInMap("AllowCancel")
     public Integer allowCancel;
 
     /**
-     * <p>Specifies whether the time can be modified. Valid values: -**0**: The time cannot be modified. -**1**: The time can be modified.</p>
+     * <p>Specifies whether to allow the modification operation. Valid values:</p>
+     * <br>
+     * <p>*   **0**: The modification operation is not allowed.</p>
+     * <p>*   **1**: The modification operation is allowed.</p>
      */
     @NameInMap("AllowChange")
     public Integer allowChange;
 
     /**
-     * <p>The type of configuration change. Valid values: -**all** (default): All O\&M tasks are returned. -**S0**: O\&M tasks that are executed for exception fixing are returned. -**S1**: O\&M tasks that are executed for regular O\&M are returned.</p>
+     * <p>The type of task configuration change. Valid values:</p>
+     * <br>
+     * <p>*   **all** (default): The configurations of all O\&M tasks are changed.</p>
+     * <p>*   **S0**: The configurations of tasks initiated to fix exceptions are changed.</p>
+     * <p>*   **S1**: The configurations of system O\&M tasks are changed.</p>
      */
     @NameInMap("ChangeLevel")
     public String changeLevel;
@@ -59,7 +69,9 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String productId;
 
     /**
-     * <p>The region of the instance. If you set the Region parameter to all, all tasks created within your Alibaba Cloud account are queried. In this case, you must also set the TaskType parameter to all.</p>
+     * <p>The region ID of the instance.</p>
+     * <br>
+     * <p>>  If you set the Region parameter to **all**, all tasks created within your Alibaba Cloud account are queried. In this case, you must set the **taskType** parameter to **all**.</p>
      */
     @NameInMap("Region")
     public String region;
@@ -71,7 +83,12 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies the status of the task. Valid values: **0**: The task is waiting to be run. **1**: The task is running. **2**: The task is run. **3**: The task failed to be run.</p>
+     * <p>The status of the task. Valid values:</p>
+     * <br>
+     * <p>*   **0**: waiting for execution</p>
+     * <p>*   **1**: being executed</p>
+     * <p>*   **2**: successful</p>
+     * <p>*   **3**: failed</p>
      */
     @NameInMap("Status")
     public Integer status;

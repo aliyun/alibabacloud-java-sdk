@@ -106,7 +106,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
          * <p>The ID of the backup set.</p>
          */
         @NameInMap("BackupId")
-        public Long backupId;
+        public String backupId;
 
         /**
          * <p>The internal download URL of the backup set.</p>
@@ -117,7 +117,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupIntranetDownloadURL;
 
         @NameInMap("BackupJobId")
-        public Long backupJobId;
+        public String backupJobId;
 
         /**
          * <p>The method that is used to generate the backup set. Valid values:</p>
@@ -197,11 +197,11 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.backupEndTime;
         }
 
-        public DescribeBackupsResponseBodyBackupsBackup setBackupId(Long backupId) {
+        public DescribeBackupsResponseBodyBackupsBackup setBackupId(String backupId) {
             this.backupId = backupId;
             return this;
         }
-        public Long getBackupId() {
+        public String getBackupId() {
             return this.backupId;
         }
 
@@ -213,11 +213,11 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.backupIntranetDownloadURL;
         }
 
-        public DescribeBackupsResponseBodyBackupsBackup setBackupJobId(Long backupJobId) {
+        public DescribeBackupsResponseBodyBackupsBackup setBackupJobId(String backupJobId) {
             this.backupJobId = backupJobId;
             return this;
         }
-        public Long getBackupJobId() {
+        public String getBackupJobId() {
             return this.backupJobId;
         }
 

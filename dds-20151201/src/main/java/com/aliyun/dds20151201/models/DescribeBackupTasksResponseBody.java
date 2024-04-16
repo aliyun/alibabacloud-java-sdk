@@ -39,7 +39,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public String backupStartTime;
 
         @NameInMap("BackupjobId")
-        public Long backupjobId;
+        public String backupjobId;
 
         @NameInMap("JobMode")
         public String jobMode;
@@ -68,11 +68,11 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             return this.backupStartTime;
         }
 
-        public DescribeBackupTasksResponseBodyBackupJobs setBackupjobId(Long backupjobId) {
+        public DescribeBackupTasksResponseBodyBackupJobs setBackupjobId(String backupjobId) {
             this.backupjobId = backupjobId;
             return this;
         }
-        public Long getBackupjobId() {
+        public String getBackupjobId() {
             return this.backupjobId;
         }
 
