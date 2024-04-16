@@ -17,13 +17,13 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
     public CreateDataArchiveOrderRequestParam param;
 
     /**
-     * <p>The ID of the parent ticket. A parent ticket is generated only when a sub ticket is created.</p>
+     * <p>The ID of the parent ticket. A parent ticket is generated only when a child ticket is created.</p>
      */
     @NameInMap("ParentId")
     public Long parentId;
 
     /**
-     * <p>The plugin type. Default value: DATA_ARCHIVE.</p>
+     * <p>The type of the plug-in. Default value: DATA_ARCHIVE.</p>
      */
     @NameInMap("PluginType")
     public String pluginType;
@@ -101,7 +101,7 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
         public String tableName;
 
         /**
-         * <p>The filter condition specified by the WHERE clause of the archiving configuration.</p>
+         * <p>The filter condition specified by the WHERE clause of the archiving configuration. If a time variable is used in the filter condition, the filter condition is specified in the following format: field name <=\"${variable name}\". The variable name in the filter condition must be the same as the Name value of Variables.</p>
          */
         @NameInMap("TableWhere")
         public String tableWhere;
@@ -161,20 +161,22 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
 
     public static class CreateDataArchiveOrderRequestParam extends TeaModel {
         /**
-         * <p>The database for archiving data. Valid values:</p>
+         * <p>The type of the destination database for archiving data. Valid values:</p>
          * <br>
-         * <p>*   inner_oss: Built-in Object Storage Service (OSS) of Database Backup (DBS).</p>
-         * <p>*   oss_userself: OSS of user.</p>
-         * <p>*   mysql: ApsaraDB RDS for MySQL.</p>
-         * <p>*   polardb: PolarDB for MySQL.</p>
-         * <p>*   lindorm: Lindorm.</p>
+         * <p>>  If you set ArchiveMethod to a value other than inner_oss, you must connect the destination database for archiving data to Data Management (DMS) before you create the data archiving ticket. After the database is connected to DMS, the database is displayed in the Instances Connected section of the DMS console.</p>
+         * <br>
+         * <p>*   **inner_oss**: dedicated storage, which is a built-in Object Storage Service (OSS) bucket.</p>
+         * <p>*   **oss_userself**: OSS bucket of the user.</p>
+         * <p>*   **mysql**: ApsaraDB RDS for MySQL instance.</p>
+         * <p>*   **polardb**: PolarDB for MySQL cluster.</p>
+         * <p>*   **adb_mysql**: AnalyticDB for MySQL V3.0 cluster.</p>
+         * <p>*   **lindorm**: ApsaraDB for Lindorm instance.</p>
          */
         @NameInMap("ArchiveMethod")
         public String archiveMethod;
 
         /**
-         * <p>填写Crontab表达式，以便定期执行任务，更多信息，请参见[Crontab表达式](~~206581~~)。</p>
-         * <p>当运行方式为周期归档时需要填写该参数。</p>
+         * <p>A crontab expression that specifies the scheduling cycle to run the task. For more information, see the [Crontab expressions](~~206581~~) section of the "Create shadow tables for synchronization" topic. This parameter is required if RunMethod is set to schedule.</p>
          */
         @NameInMap("CronStr")
         public String cronStr;
@@ -192,29 +194,32 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
         public java.util.List<String> orderAfter;
 
         /**
-         * <p>The running mode. Only now is supported, which indicates that data archiving is immediately executed.</p>
+         * <p>The method that is used to run the data archiving task. Valid values:</p>
+         * <br>
+         * <p>*   **schedule**: The data archiving task is periodically scheduled.</p>
+         * <p>*   **now**: The data archiving task is immediately run.</p>
          */
         @NameInMap("RunMethod")
         public String runMethod;
 
         /**
-         * <p>源库目录（catalog）。</p>
-         * <p>- **def**：对于两层逻辑结构的数据库，如MySQL，PolarDB MySQL，AnalyticDB MySQL，固定为def。</p>
-         * <p>- **空字符串**： 对于lindorm与MongoDB，填入空字符串。</p>
-         * <p>- **catalog名**：对于三层逻辑结构的数据库，如PostgreSQL，填入catalog名。</p>
+         * <p>The catalog of the source database. Valid values:</p>
+         * <br>
+         * <p>*   **def**: Set this parameter to def if the source database is of the two-layer logical schema, such as a MySQL database, a PolarDB for MySQL cluster, or an AnalyticDB for MySQL instance.</p>
+         * <p>*   **An empty string**: Set this parameter to an empty string if the source database is an ApsaraDB for Lindorm or ApsaraDB for MongoDB instance.</p>
+         * <p>*   **Catalog name**: Set this parameter to the catalog name of the source database if the source database is of the three-layer logical schema, such as a PostgreSQL database.</p>
          */
         @NameInMap("SourceCatalogName")
         public String sourceCatalogName;
 
         /**
-         * <p>源实例名称。</p>
+         * <p>The name of the source instance.</p>
          */
         @NameInMap("SourceInstanceName")
         public String sourceInstanceName;
 
         /**
-         * <p>源库Schema，源库与目标库同名。</p>
-         * <p>如MySQL为库名，PostgreSQL为Schema名。</p>
+         * <p>The schema name of the source database. The schema name of the source database is the same as that of the destination database. If the source database is a MySQL database, this parameter specifies the name of the source database. If the source database is a PostgreSQL database, this parameter specifies the schema name of the source database.</p>
          */
         @NameInMap("SourceSchemaName")
         public String sourceSchemaName;
@@ -226,22 +231,22 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
         public java.util.List<CreateDataArchiveOrderRequestParamTableIncludes> tableIncludes;
 
         /**
-         * <p>The table names mapped in the destination database.</p>
+         * <p>The table names mapped to the destination database. If you call an API operation to create the data archiving ticket, you do not need to specify this parameter. The default value is used.</p>
          */
         @NameInMap("TableMapping")
         public java.util.List<String> tableMapping;
 
         /**
-         * <p>目标库Host，若目标实例同时开放了内网与公网，优先写入内网Host。</p>
+         * <p>The host of the destination instance. If the destination instance can be accessed over an internal network or the Internet, preferentially set the value to the internal endpoint of the destination instance.</p>
          * <br>
-         * <p>- 若归档目标为OSS，则为Bucket名。</p>
-         * <p>- 若归档目标为专属存储，则为inner_oss。</p>
+         * <p>*   If the data is archived in an OSS bucket, set the value to the name of the bucket.</p>
+         * <p>*   If the data is archived in the dedicated storage space, set the value to inner_oss.</p>
          */
         @NameInMap("TargetInstanceHost")
         public String targetInstanceHost;
 
         /**
-         * <p>The configuration of archiving variables.</p>
+         * <p>The configuration of archiving variables. You can use a time variable as a filter condition for archiving data. Each variable has two attributes: name and pattern.</p>
          */
         @NameInMap("Variables")
         public java.util.List<CreateDataArchiveOrderRequestParamVariables> variables;

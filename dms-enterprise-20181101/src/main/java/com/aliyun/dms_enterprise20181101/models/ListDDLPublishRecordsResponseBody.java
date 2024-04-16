@@ -306,6 +306,9 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         @NameInMap("AuditStatus")
         public String auditStatus;
 
+        /**
+         * <p>Release remarks.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 

@@ -37,6 +37,9 @@ public class CreateAuthorityTemplateResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

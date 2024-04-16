@@ -17,13 +17,13 @@ public class CreateDataArchiveOrderShrinkRequest extends TeaModel {
     public String paramShrink;
 
     /**
-     * <p>The ID of the parent ticket. A parent ticket is generated only when a sub ticket is created.</p>
+     * <p>The ID of the parent ticket. A parent ticket is generated only when a child ticket is created.</p>
      */
     @NameInMap("ParentId")
     public Long parentId;
 
     /**
-     * <p>The plugin type. Default value: DATA_ARCHIVE.</p>
+     * <p>The type of the plug-in. Default value: DATA_ARCHIVE.</p>
      */
     @NameInMap("PluginType")
     public String pluginType;

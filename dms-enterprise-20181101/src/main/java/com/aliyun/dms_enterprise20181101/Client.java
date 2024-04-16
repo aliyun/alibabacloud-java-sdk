@@ -6951,6 +6951,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listScenariosWithOptions(request, runtime);
     }
 
+    public ListSensitiveColumnInfoResponse listSensitiveColumnInfoWithOptions(ListSensitiveColumnInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.columnName)) {
+            query.put("ColumnName", request.columnName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schemaName)) {
+            query.put("SchemaName", request.schemaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("TableName", request.tableName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSensitiveColumnInfo"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSensitiveColumnInfoResponse());
+    }
+
+    public ListSensitiveColumnInfoResponse listSensitiveColumnInfo(ListSensitiveColumnInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listSensitiveColumnInfoWithOptions(request, runtime);
+    }
+
     public ListSensitiveColumnsResponse listSensitiveColumnsWithOptions(ListSensitiveColumnsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();

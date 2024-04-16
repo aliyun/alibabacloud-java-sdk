@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefundPayAsYouGoOrderRequest extends TeaModel {
     /**
-     * <p>The ID of the sales order instance.</p>
+     * <p>The instance ID in the sales order.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
