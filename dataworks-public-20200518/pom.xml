@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dataworks_public20200518</artifactId>
-  <version>5.1.0</version>
+  <version>5.2.0</version>
   <packaging>jar</packaging>
   <name>dataworks_public20200518</name>
   <description>Alibaba Cloud dataworks-public (20200518) SDK for Java
@@ -77,7 +77,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openplatform20191219</artifactId>
-      <version>5.0.0</version>
+      <version>5.0.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
