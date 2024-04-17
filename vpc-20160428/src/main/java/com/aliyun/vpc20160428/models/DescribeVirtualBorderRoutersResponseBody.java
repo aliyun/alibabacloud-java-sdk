@@ -551,6 +551,9 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         @NameInMap("EcrId")
         public String ecrId;
 
+        @NameInMap("EcrOwnerId")
+        public String ecrOwnerId;
+
         /**
          * <p>Indicates whether IPv6 is enabled. Valid values:</p>
          * <br>
@@ -844,6 +847,14 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         }
         public String getEcrId() {
             return this.ecrId;
+        }
+
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setEcrOwnerId(String ecrOwnerId) {
+            this.ecrOwnerId = ecrOwnerId;
+            return this;
+        }
+        public String getEcrOwnerId() {
+            return this.ecrOwnerId;
         }
 
         public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setEnableIpv6(Boolean enableIpv6) {
