@@ -83,6 +83,18 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomizeRuleCountResponseBodyData extends TeaModel {
+        @NameInMap("AggregationRuleNum")
+        public Integer aggregationRuleNum;
+
+        @NameInMap("CustomizeRuleNum")
+        public Integer customizeRuleNum;
+
+        @NameInMap("ExpertRuleNum")
+        public Integer expertRuleNum;
+
+        @NameInMap("GraphComputingRuleNum")
+        public Integer graphComputingRuleNum;
+
         /**
          * <p>The number of rules that are used to identify high-risk threats.</p>
          */
@@ -107,9 +119,53 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
         @NameInMap("MediumRuleNum")
         public Integer mediumRuleNum;
 
+        @NameInMap("PredefinedRuleNum")
+        public Integer predefinedRuleNum;
+
+        @NameInMap("SingleAlertRuleNum")
+        public Integer singleAlertRuleNum;
+
+        @NameInMap("TotalRuleNum")
+        public Integer totalRuleNum;
+
+        @NameInMap("UnEventRuleNum")
+        public Integer unEventRuleNum;
+
         public static DescribeCustomizeRuleCountResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeCustomizeRuleCountResponseBodyData self = new DescribeCustomizeRuleCountResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCustomizeRuleCountResponseBodyData setAggregationRuleNum(Integer aggregationRuleNum) {
+            this.aggregationRuleNum = aggregationRuleNum;
+            return this;
+        }
+        public Integer getAggregationRuleNum() {
+            return this.aggregationRuleNum;
+        }
+
+        public DescribeCustomizeRuleCountResponseBodyData setCustomizeRuleNum(Integer customizeRuleNum) {
+            this.customizeRuleNum = customizeRuleNum;
+            return this;
+        }
+        public Integer getCustomizeRuleNum() {
+            return this.customizeRuleNum;
+        }
+
+        public DescribeCustomizeRuleCountResponseBodyData setExpertRuleNum(Integer expertRuleNum) {
+            this.expertRuleNum = expertRuleNum;
+            return this;
+        }
+        public Integer getExpertRuleNum() {
+            return this.expertRuleNum;
+        }
+
+        public DescribeCustomizeRuleCountResponseBodyData setGraphComputingRuleNum(Integer graphComputingRuleNum) {
+            this.graphComputingRuleNum = graphComputingRuleNum;
+            return this;
+        }
+        public Integer getGraphComputingRuleNum() {
+            return this.graphComputingRuleNum;
         }
 
         public DescribeCustomizeRuleCountResponseBodyData setHighRuleNum(Integer highRuleNum) {
@@ -142,6 +198,38 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
         }
         public Integer getMediumRuleNum() {
             return this.mediumRuleNum;
+        }
+
+        public DescribeCustomizeRuleCountResponseBodyData setPredefinedRuleNum(Integer predefinedRuleNum) {
+            this.predefinedRuleNum = predefinedRuleNum;
+            return this;
+        }
+        public Integer getPredefinedRuleNum() {
+            return this.predefinedRuleNum;
+        }
+
+        public DescribeCustomizeRuleCountResponseBodyData setSingleAlertRuleNum(Integer singleAlertRuleNum) {
+            this.singleAlertRuleNum = singleAlertRuleNum;
+            return this;
+        }
+        public Integer getSingleAlertRuleNum() {
+            return this.singleAlertRuleNum;
+        }
+
+        public DescribeCustomizeRuleCountResponseBodyData setTotalRuleNum(Integer totalRuleNum) {
+            this.totalRuleNum = totalRuleNum;
+            return this;
+        }
+        public Integer getTotalRuleNum() {
+            return this.totalRuleNum;
+        }
+
+        public DescribeCustomizeRuleCountResponseBodyData setUnEventRuleNum(Integer unEventRuleNum) {
+            this.unEventRuleNum = unEventRuleNum;
+            return this;
+        }
+        public Integer getUnEventRuleNum() {
+            return this.unEventRuleNum;
         }
 
     }

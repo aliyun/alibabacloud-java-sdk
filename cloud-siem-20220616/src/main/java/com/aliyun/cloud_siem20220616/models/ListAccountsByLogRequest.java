@@ -37,6 +37,12 @@ public class ListAccountsByLogRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     public static ListAccountsByLogRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAccountsByLogRequest self = new ListAccountsByLogRequest();
         return TeaModel.build(map, self);
@@ -72,6 +78,22 @@ public class ListAccountsByLogRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListAccountsByLogRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public ListAccountsByLogRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
 }

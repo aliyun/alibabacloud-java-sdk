@@ -37,6 +37,12 @@ public class DescribeAlertsWithEntityRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     /**
      * <p>The ID of the SOAR handing policy.</p>
      */
@@ -86,6 +92,22 @@ public class DescribeAlertsWithEntityRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeAlertsWithEntityRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public DescribeAlertsWithEntityRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
     public DescribeAlertsWithEntityRequest setSophonTaskId(String sophonTaskId) {

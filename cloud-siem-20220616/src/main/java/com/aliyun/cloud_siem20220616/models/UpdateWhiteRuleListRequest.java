@@ -25,6 +25,12 @@ public class UpdateWhiteRuleListRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     /**
      * <p>The unique ID of the whitelist rule.</p>
      */
@@ -58,6 +64,22 @@ public class UpdateWhiteRuleListRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public UpdateWhiteRuleListRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public UpdateWhiteRuleListRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
     public UpdateWhiteRuleListRequest setWhiteRuleId(Long whiteRuleId) {

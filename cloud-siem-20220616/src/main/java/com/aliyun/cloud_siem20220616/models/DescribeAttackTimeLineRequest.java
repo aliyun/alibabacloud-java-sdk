@@ -31,6 +31,12 @@ public class DescribeAttackTimeLineRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     /**
      * <p>The beginning of the time range to query. Unit: milliseconds.</p>
      */
@@ -72,6 +78,22 @@ public class DescribeAttackTimeLineRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeAttackTimeLineRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public DescribeAttackTimeLineRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
     public DescribeAttackTimeLineRequest setStartTime(Long startTime) {

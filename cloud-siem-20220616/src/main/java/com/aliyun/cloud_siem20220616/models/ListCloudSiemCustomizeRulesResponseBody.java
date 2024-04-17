@@ -151,6 +151,12 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         @NameInMap("Aliuid")
         public Long aliuid;
 
+        @NameInMap("AttCk")
+        public String attCk;
+
+        @NameInMap("DataType")
+        public Integer dataType;
+
         /**
          * <p>The extended information about event generation. If the value of **eventTransferType** is **allToSingle**, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.</p>
          */
@@ -312,6 +318,22 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         }
         public Long getAliuid() {
             return this.aliuid;
+        }
+
+        public ListCloudSiemCustomizeRulesResponseBodyDataResponseData setAttCk(String attCk) {
+            this.attCk = attCk;
+            return this;
+        }
+        public String getAttCk() {
+            return this.attCk;
+        }
+
+        public ListCloudSiemCustomizeRulesResponseBodyDataResponseData setDataType(Integer dataType) {
+            this.dataType = dataType;
+            return this;
+        }
+        public Integer getDataType() {
+            return this.dataType;
         }
 
         public ListCloudSiemCustomizeRulesResponseBodyDataResponseData setEventTransferExt(String eventTransferExt) {

@@ -89,6 +89,9 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         @NameInMap("MasterUserName")
         public String masterUserName;
 
+        @NameInMap("RdOrder")
+        public Integer rdOrder;
+
         /**
          * <p>The instance ID of Security Center.</p>
          */
@@ -174,6 +177,14 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         }
         public String getMasterUserName() {
             return this.masterUserName;
+        }
+
+        public DescribeUserBuyStatusResponseBodyData setRdOrder(Integer rdOrder) {
+            this.rdOrder = rdOrder;
+            return this;
+        }
+        public Integer getRdOrder() {
+            return this.rdOrder;
         }
 
         public DescribeUserBuyStatusResponseBodyData setSasInstanceId(String sasInstanceId) {

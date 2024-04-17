@@ -28,6 +28,12 @@ public class PostRuleStatusChangeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     /**
      * <p>The type of the rule. Valid values:</p>
      * <br>
@@ -64,6 +70,22 @@ public class PostRuleStatusChangeRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public PostRuleStatusChangeRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public PostRuleStatusChangeRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
     public PostRuleStatusChangeRequest setRuleType(String ruleType) {

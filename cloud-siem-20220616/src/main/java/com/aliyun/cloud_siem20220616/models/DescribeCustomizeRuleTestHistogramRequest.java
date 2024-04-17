@@ -19,6 +19,12 @@ public class DescribeCustomizeRuleTestHistogramRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     public static DescribeCustomizeRuleTestHistogramRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomizeRuleTestHistogramRequest self = new DescribeCustomizeRuleTestHistogramRequest();
         return TeaModel.build(map, self);
@@ -38,6 +44,22 @@ public class DescribeCustomizeRuleTestHistogramRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeCustomizeRuleTestHistogramRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public DescribeCustomizeRuleTestHistogramRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
 }

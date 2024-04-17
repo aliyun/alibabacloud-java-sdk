@@ -22,6 +22,12 @@ public class DescribeAutomateResponseConfigFeatureRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     public static DescribeAutomateResponseConfigFeatureRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAutomateResponseConfigFeatureRequest self = new DescribeAutomateResponseConfigFeatureRequest();
         return TeaModel.build(map, self);
@@ -41,6 +47,22 @@ public class DescribeAutomateResponseConfigFeatureRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeAutomateResponseConfigFeatureRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public DescribeAutomateResponseConfigFeatureRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
 }

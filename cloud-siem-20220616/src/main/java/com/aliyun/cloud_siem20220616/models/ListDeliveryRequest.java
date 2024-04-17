@@ -13,6 +13,12 @@ public class ListDeliveryRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     public static ListDeliveryRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDeliveryRequest self = new ListDeliveryRequest();
         return TeaModel.build(map, self);
@@ -24,6 +30,22 @@ public class ListDeliveryRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListDeliveryRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public ListDeliveryRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
 }

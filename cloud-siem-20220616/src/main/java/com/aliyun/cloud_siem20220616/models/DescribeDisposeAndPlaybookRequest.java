@@ -41,6 +41,12 @@ public class DescribeDisposeAndPlaybookRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     public static DescribeDisposeAndPlaybookRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDisposeAndPlaybookRequest self = new DescribeDisposeAndPlaybookRequest();
         return TeaModel.build(map, self);
@@ -84,6 +90,22 @@ public class DescribeDisposeAndPlaybookRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeDisposeAndPlaybookRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public DescribeDisposeAndPlaybookRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
 }

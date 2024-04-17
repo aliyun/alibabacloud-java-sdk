@@ -13,6 +13,12 @@ public class GetCapacityRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     public static GetCapacityRequest build(java.util.Map<String, ?> map) throws Exception {
         GetCapacityRequest self = new GetCapacityRequest();
         return TeaModel.build(map, self);
@@ -24,6 +30,22 @@ public class GetCapacityRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public GetCapacityRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public GetCapacityRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
 }

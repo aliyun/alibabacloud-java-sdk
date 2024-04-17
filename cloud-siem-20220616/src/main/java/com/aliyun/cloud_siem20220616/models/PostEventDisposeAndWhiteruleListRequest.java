@@ -37,6 +37,12 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     /**
      * <p>The status of the event. Valid values:</p>
      * <br>
@@ -91,6 +97,22 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public PostEventDisposeAndWhiteruleListRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public PostEventDisposeAndWhiteruleListRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
     public PostEventDisposeAndWhiteruleListRequest setStatus(Integer status) {

@@ -19,6 +19,12 @@ public class PostFinishCustomizeRuleTestRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     public static PostFinishCustomizeRuleTestRequest build(java.util.Map<String, ?> map) throws Exception {
         PostFinishCustomizeRuleTestRequest self = new PostFinishCustomizeRuleTestRequest();
         return TeaModel.build(map, self);
@@ -38,6 +44,22 @@ public class PostFinishCustomizeRuleTestRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public PostFinishCustomizeRuleTestRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public PostFinishCustomizeRuleTestRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
 }

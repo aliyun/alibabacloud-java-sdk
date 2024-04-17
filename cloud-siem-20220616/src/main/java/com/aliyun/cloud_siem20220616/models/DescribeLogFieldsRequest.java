@@ -25,6 +25,12 @@ public class DescribeLogFieldsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     public static DescribeLogFieldsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogFieldsRequest self = new DescribeLogFieldsRequest();
         return TeaModel.build(map, self);
@@ -52,6 +58,22 @@ public class DescribeLogFieldsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeLogFieldsRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public DescribeLogFieldsRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
 }

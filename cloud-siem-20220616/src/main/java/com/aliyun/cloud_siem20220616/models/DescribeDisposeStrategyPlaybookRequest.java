@@ -19,6 +19,12 @@ public class DescribeDisposeStrategyPlaybookRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     /**
      * <p>The beginning of the time range to query. Unit: milliseconds.</p>
      */
@@ -44,6 +50,22 @@ public class DescribeDisposeStrategyPlaybookRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeDisposeStrategyPlaybookRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public DescribeDisposeStrategyPlaybookRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
     public DescribeDisposeStrategyPlaybookRequest setStartTime(Long startTime) {

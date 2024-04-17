@@ -16,6 +16,9 @@ public class PostCustomizeRuleRequest extends TeaModel {
     @NameInMap("AlertTypeMds")
     public String alertTypeMds;
 
+    @NameInMap("AttCk")
+    public String attCk;
+
     /**
      * <p>The extended information about event generation. If eventTransferType is set to allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window.</p>
      */
@@ -86,6 +89,12 @@ public class PostCustomizeRuleRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     /**
      * <p>The query condition of the rule. The value is in the JSON format.</p>
      */
@@ -145,6 +154,14 @@ public class PostCustomizeRuleRequest extends TeaModel {
     }
     public String getAlertTypeMds() {
         return this.alertTypeMds;
+    }
+
+    public PostCustomizeRuleRequest setAttCk(String attCk) {
+        this.attCk = attCk;
+        return this;
+    }
+    public String getAttCk() {
+        return this.attCk;
     }
 
     public PostCustomizeRuleRequest setEventTransferExt(String eventTransferExt) {
@@ -225,6 +242,22 @@ public class PostCustomizeRuleRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public PostCustomizeRuleRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public PostCustomizeRuleRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
     public PostCustomizeRuleRequest setRuleCondition(String ruleCondition) {

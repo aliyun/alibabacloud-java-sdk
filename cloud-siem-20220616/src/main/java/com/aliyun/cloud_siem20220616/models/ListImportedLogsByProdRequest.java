@@ -29,6 +29,12 @@ public class ListImportedLogsByProdRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     public static ListImportedLogsByProdRequest build(java.util.Map<String, ?> map) throws Exception {
         ListImportedLogsByProdRequest self = new ListImportedLogsByProdRequest();
         return TeaModel.build(map, self);
@@ -56,6 +62,22 @@ public class ListImportedLogsByProdRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListImportedLogsByProdRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public ListImportedLogsByProdRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
 }

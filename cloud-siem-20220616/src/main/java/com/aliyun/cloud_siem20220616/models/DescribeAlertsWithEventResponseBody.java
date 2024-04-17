@@ -317,6 +317,9 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("EntityList")
+        public String entityList;
+
         /**
          * <p>The time when the alert was received.</p>
          */
@@ -557,6 +560,14 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public DescribeAlertsWithEventResponseBodyDataResponseData setEntityList(String entityList) {
+            this.entityList = entityList;
+            return this;
+        }
+        public String getEntityList() {
+            return this.entityList;
         }
 
         public DescribeAlertsWithEventResponseBodyDataResponseData setGmtCreate(String gmtCreate) {
