@@ -4,9 +4,15 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class RemoveInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the scaling activity.</p>
+     */
     @NameInMap("ScalingActivityId")
     public String scalingActivityId;
 

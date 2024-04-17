@@ -19,6 +19,9 @@ public class DescribeScalingInstancesRequest extends TeaModel {
     @NameInMap("LifecycleState")
     public String lifecycleState;
 
+    /**
+     * <p>The lifecycle states of the ECS instance in the scaling group. You can specify only one of the LifecycleStates and LifecycleState parameters at the same time. We recommend that you specify this parameter.</p>
+     */
     @NameInMap("LifecycleStates")
     public java.util.List<String> lifecycleStates;
 
