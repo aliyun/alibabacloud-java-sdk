@@ -44,6 +44,9 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
         @NameInMap("AuthLimit")
         public Long authLimit;
 
+        @NameInMap("AuthLimitList")
+        public String authLimitList;
+
         /**
          * <p>The end time of the trial use.</p>
          */
@@ -85,6 +88,14 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
         }
         public Long getAuthLimit() {
             return this.authLimit;
+        }
+
+        public AddSasModuleTrialResponseBodyDataTrialRecordList setAuthLimitList(String authLimitList) {
+            this.authLimitList = authLimitList;
+            return this;
+        }
+        public String getAuthLimitList() {
+            return this.authLimitList;
         }
 
         public AddSasModuleTrialResponseBodyDataTrialRecordList setGmtEnd(Long gmtEnd) {
