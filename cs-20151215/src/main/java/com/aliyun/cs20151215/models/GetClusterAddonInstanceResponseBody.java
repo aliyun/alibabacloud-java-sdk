@@ -4,18 +4,38 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class GetClusterAddonInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The custom configurations of the component.</p>
+     */
     @NameInMap("config")
     public String config;
 
+    /**
+     * <p>The status of Simple Log Service.</p>
+     */
     @NameInMap("logging")
     public GetClusterAddonInstanceResponseBodyLogging logging;
 
+    /**
+     * <p>The name of the component instance.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The status of the component. Valid values:</p>
+     * <br>
+     * <p>*   active: The component is installed.</p>
+     * <p>*   updating: The component is being modified.</p>
+     * <p>*   upgrading: The component is being updated.</p>
+     * <p>*   deleting: The component is being uninstalled.</p>
+     */
     @NameInMap("state")
     public String state;
 
+    /**
+     * <p>The version of the component instance.</p>
+     */
     @NameInMap("version")
     public String version;
 
@@ -65,15 +85,27 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
     }
 
     public static class GetClusterAddonInstanceResponseBodyLogging extends TeaModel {
+        /**
+         * <p>Indicates whether Simple Log Service is supported by the component.</p>
+         */
         @NameInMap("capable")
         public Boolean capable;
 
+        /**
+         * <p>Indicates whether Simple Log Service is enabled for the component.</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The Simple Log Service project that is used to collect logs for the component.</p>
+         */
         @NameInMap("log_project")
         public String logProject;
 
+        /**
+         * <p>The Simple Log Service Logstore that is used to collect logs for the component.</p>
+         */
         @NameInMap("logstore")
         public String logstore;
 

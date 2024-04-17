@@ -50,7 +50,11 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     public Integer noConfig;
 
     /**
-     * <p>The severity level of the policy.</p>
+     * <p>The severity level of the policy. Valid values:</p>
+     * <br>
+     * <p>*   `high`</p>
+     * <p>*   `medium`</p>
+     * <p>*   `low`</p>
      */
     @NameInMap("severity")
     public String severity;

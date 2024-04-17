@@ -4,12 +4,21 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UpdateControlPlaneLogResponseBody extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("cluster_id")
     public String clusterId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("request_id")
     public String requestId;
 
+    /**
+     * <p>The task ID.</p>
+     */
     @NameInMap("task_id")
     public String taskId;
 

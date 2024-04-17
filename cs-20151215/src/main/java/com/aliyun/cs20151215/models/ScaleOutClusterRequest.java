@@ -22,10 +22,10 @@ public class ScaleOutClusterRequest extends TeaModel {
     public Long count;
 
     /**
-     * <p>The CPU management policy. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.</p>
+     * <p>The CPU management policy of the nodes in a node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.</p>
      * <br>
      * <p>*   `static`: This policy allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.</p>
-     * <p>*   `none`: specifies that the default CPU affinity is used.</p>
+     * <p>*   `none`: The default CPU affinity is used.</p>
      * <br>
      * <p>Default value: `none`.</p>
      */
@@ -33,7 +33,7 @@ public class ScaleOutClusterRequest extends TeaModel {
     public String cpuPolicy;
 
     /**
-     * <p>Specifies a custom image for nodes. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see [Custom images](~~146647~~).</p>
+     * <p>Specifies a custom image for nodes. By default, the image provided by Container Service for Kubernetes (ACK) is used. You can select a custom image to replace the default image. For more information, see [Custom images](~~146647~~).</p>
      */
     @NameInMap("image_id")
     public String imageId;
@@ -51,7 +51,7 @@ public class ScaleOutClusterRequest extends TeaModel {
     public String loginPassword;
 
     /**
-     * <p>After you specify the list of RDS instances, the ECS instances in the cluster are automatically added to the whitelist of the RDS instances.</p>
+     * <p>After you specify the list of ApsaraDB RDS instances, the ECS instances in the cluster are automatically added to the whitelist of the ApsaraDB RDS instances.</p>
      */
     @NameInMap("rds_instances")
     public java.util.List<String> rdsInstances;
@@ -72,7 +72,7 @@ public class ScaleOutClusterRequest extends TeaModel {
     public java.util.List<Tag> tags;
 
     /**
-     * <p>The taints that you want to add to nodes. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see [taint-and-toleration](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).</p>
+     * <p>The taints that you want to add to nodes. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see [Taints and Tolerations](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).</p>
      */
     @NameInMap("taints")
     public java.util.List<Taint> taints;
@@ -120,9 +120,9 @@ public class ScaleOutClusterRequest extends TeaModel {
      * <p>The billing method of worker nodes. Valid values:</p>
      * <br>
      * <p>*   `PrePaid`: subscription.</p>
-     * <p>*   `PostPaid`: pay-as-you-go</p>
+     * <p>*   `PostPaid`: pay-as-you-go.</p>
      * <br>
-     * <p>Default value: `PostPaid`</p>
+     * <p>Default value: `PostPaid`.</p>
      */
     @NameInMap("worker_instance_charge_type")
     public String workerInstanceChargeType;
@@ -350,7 +350,7 @@ public class ScaleOutClusterRequest extends TeaModel {
         /**
          * <p>The ID of an automatic snapshot policy. Automatic backup is performed for a disk based on the specified automatic snapshot policy.</p>
          * <br>
-         * <p>By default, this parameter is empty. This indicates that automatic backup is disabled.</p>
+         * <p>By default, this parameter is empty, which indicates that automatic backup is disabled.</p>
          */
         @NameInMap("auto_snapshot_policy_id")
         public String autoSnapshotPolicyId;

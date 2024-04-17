@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterTasksRequest extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("page_number")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 

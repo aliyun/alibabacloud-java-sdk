@@ -3840,6 +3840,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("kubelet_config", request.kubeletConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.osConfig)) {
+            body.put("os_config", request.osConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.rollingPolicy)) {
             body.put("rolling_policy", request.rollingPolicy);
         }

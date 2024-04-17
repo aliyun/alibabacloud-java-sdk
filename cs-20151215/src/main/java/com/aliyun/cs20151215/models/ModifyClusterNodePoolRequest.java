@@ -10,6 +10,9 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
     @NameInMap("auto_scaling")
     public ModifyClusterNodePoolRequestAutoScaling autoScaling;
 
+    /**
+     * <p>Specifies whether concurrency is supported.</p>
+     */
     @NameInMap("concurrency")
     public Boolean concurrency;
 
@@ -178,7 +181,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
          * <br>
          * <p>*   `cpu`: regular instance.</p>
          * <p>*   `gpu`: GPU-accelerated instance.</p>
-         * <p>*   `gpushare`: shared GPU-accelerated instance.</p>
+         * <p>*   `gpushare`: shared GPU-accelerated instance</p>
          * <p>*   `spot`: preemptible instance</p>
          * <br>
          * <p>Default value: `cpu`.</p>
@@ -263,7 +266,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public Boolean cmsEnabled;
 
         /**
-         * <p>The CPU management policy of the nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.</p>
+         * <p>The CPU management policy of the nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
          * <br>
          * <p>*   `static`: allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</p>
          * <p>*   `none`: specifies that the default CPU affinity is used.</p>
@@ -276,7 +279,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         /**
          * <p>The labels of the nodes in the node pool. You can add labels to the nodes in the cluster. You must add labels based on the following rules:</p>
          * <br>
-         * <p>*   Each label is a case-sensitive key-value pair. You can add at most 20 labels.</p>
+         * <p>*   A tag is a case-sensitive key-value pair. You can add up to 20 tags.</p>
          * <p>*   The key must be unique and cannot exceed 64 characters in length. The value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with `aliyun`, `acs:`, `https://`, or `http://`. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).</p>
          */
         @NameInMap("labels")
@@ -582,7 +585,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
          * <p>Specifies whether ACK is allowed to automatically patch CVE vulnerabilities. Valid values:</p>
          * <br>
          * <p>*   `true`: yes</p>
-         * <p>*   `false`: no</p>
+         * <p>*   `true`: no</p>
          */
         @NameInMap("auto_vul_fix")
         public Boolean autoVulFix;
@@ -692,7 +695,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the resource group to which the node pool belongs.</p>
+         * <p>The ID of the resource group.</p>
          */
         @NameInMap("resource_group_id")
         public String resourceGroupId;
@@ -821,7 +824,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         /**
          * <p>Specifies whether to automatically create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created due to reasons such as the cost or insufficient inventory. This parameter takes effect when you set `multi_az_policy` to `COST_OPTIMIZED`. Valid values:</p>
          * <br>
-         * <p>*   `true`: automatically creates pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created.</p>
+         * <p>*   `true`: automatically creates pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created</p>
          * <p>*   `false`: does not create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created.</p>
          */
         @NameInMap("compensate_with_on_demand")
@@ -845,6 +848,9 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         @NameInMap("image_id")
         public String imageId;
 
+        /**
+         * <p>The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values: CentOS, AliyunLinux, AliyunLinux Qboot, AliyunLinuxUEFI, AliyunLinux3, Windows, WindowsCore, AliyunLinux3Arm64, and ContainerOS.</p>
+         */
         @NameInMap("image_type")
         public String imageType;
 
@@ -893,7 +899,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String loginPassword;
 
         /**
-         * <p>The ECS instance scaling policy for a multi-zone scaling group. Valid values:</p>
+         * <p>The ECS instance scaling policy for the multi-zone scaling group. Valid values:</p>
          * <br>
          * <p>*   `PRIORITY`: The scaling group is scaled based on the VSwitchIds.N parameter. If an ECS instance cannot be created in the zone where the vSwitch that has the highest priority resides, Auto Scaling creates the ECS instance in the zone where the vSwitch that has the next highest priority resides.</p>
          * <br>
@@ -903,7 +909,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
          * <br>
          * <p>    **Note** `COST_OPTIMIZED` is valid only when multiple instance types are specified or at least one preemptible instance type is specified.</p>
          * <br>
-         * <p>*   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call the `RebalanceInstances` operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](~~71516~~).</p>
+         * <p>*   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to the insufficient inventory, you can call the `RebalanceInstances` operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](~~71516~~).</p>
          * <br>
          * <p>Default value: `PRIORITY`.</p>
          */
@@ -967,7 +973,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         /**
          * <p>The scaling mode of the scaling group. Valid values:</p>
          * <br>
-         * <p>*   `release`: the standard mode. ECS instances are created and released based on resource usage.</p>
+         * <p>*   `release`: the standard mode. ECS instances are created and released based on the resource usage.</p>
          * <p>*   `recycle`: the swift mode. ECS instances are created, stopped, or started during scaling events. This reduces the time required for the next scale-out event. When the instance is stopped, you are charged only for the storage service. This does not apply to ECS instances that are attached with local disks.</p>
          */
         @NameInMap("scaling_policy")
@@ -1006,9 +1012,15 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         @NameInMap("spot_strategy")
         public String spotStrategy;
 
+        /**
+         * <p>Indicates whether Burst is enabled for the system disk when the disk type is cloud_auto.</p>
+         */
         @NameInMap("system_disk_bursting_enabled")
         public Boolean systemDiskBurstingEnabled;
 
+        /**
+         * <p>The types of system disks. The system attempts to create system disks from a disk type with a lower priority when the disk type with a higher priority is unavailable. Valid values: cloud: disk cloud_efficiency: ultra disk cloud_ssd: standard SSD cloud_essd: indicates an enhanced SSD (ESSD).</p>
+         */
         @NameInMap("system_disk_categories")
         public java.util.List<String> systemDiskCategories;
 
@@ -1016,19 +1028,28 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
          * <p>The type of system disk. Valid values:</p>
          * <br>
          * <p>*   `cloud_efficiency`: ultra disk.</p>
-         * <p>*   `cloud_ssd`: standard SSD.</p>
+         * <p>*   `cloud_ssd`: standard SSD</p>
          * <br>
          * <p>Default value: `cloud_ssd`.</p>
          */
         @NameInMap("system_disk_category")
         public String systemDiskCategory;
 
+        /**
+         * <p>The algorithm that you want to use to encrypt the system disk. The value is aes-256.</p>
+         */
         @NameInMap("system_disk_encrypt_algorithm")
         public String systemDiskEncryptAlgorithm;
 
+        /**
+         * <p>Indicates whether the system disk is encrypted. Valid values: true: encrypts the system disk. false: does not encrypt the system disk.</p>
+         */
         @NameInMap("system_disk_encrypted")
         public Boolean systemDiskEncrypted;
 
+        /**
+         * <p>The ID of the Key Management Service (KMS) key that is used to encrypt the system disk.</p>
+         */
         @NameInMap("system_disk_kms_key_id")
         public String systemDiskKmsKeyId;
 
@@ -1038,31 +1059,34 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         @NameInMap("system_disk_performance_level")
         public String systemDiskPerformanceLevel;
 
+        /**
+         * <p>The predefined read and write IOPS of the system disk when the disk type is cloud_auto.</p>
+         */
         @NameInMap("system_disk_provisioned_iops")
         public Long systemDiskProvisionedIops;
 
         /**
-         * <p>The system disk size of a node. Unit: GiB.</p>
+         * <p>The size of the system disk in GiB.</p>
          * <br>
          * <p>Valid values: 20 to 500.</p>
          * <br>
-         * <p>The value of this parameter must be at least 20 and greater than or equal to the size of the specified image.</p>
+         * <p>The value of this parameter must be at least 20 and greater than or equal to the size of the image.</p>
          * <br>
-         * <p>The default value is the greater one between 40 and the image size.</p>
+         * <p>Default value: the greater value between 40 and the image size.</p>
          */
         @NameInMap("system_disk_size")
         public Long systemDiskSize;
 
         /**
-         * <p>The labels that you want to add to the ECS instances.</p>
+         * <p>The labels that you want to add only to ECS instances.</p>
          * <br>
-         * <p>The key must be unique and cannot exceed 128 characters in length. Neither keys nor values can start with aliyun or acs:. Neither keys nor values can contain https:// or http://.</p>
+         * <p>The tag key must be unique and cannot exceed 128 characters in length. The tag key and value must not start with aliyun or acs: or contain https:// or http://.</p>
          */
         @NameInMap("tags")
         public java.util.List<Tag> tags;
 
         /**
-         * <p>The vSwitch IDs. You can specify 1 to 20 vSwitches.</p>
+         * <p>The IDs of vSwitches. You can specify 1 to 20 vSwitches.</p>
          * <br>
          * <p>>  To ensure high availability, we recommend that you select vSwitches in different zones.</p>
          */
