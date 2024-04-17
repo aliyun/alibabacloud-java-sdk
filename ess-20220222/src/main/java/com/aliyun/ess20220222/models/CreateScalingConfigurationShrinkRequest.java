@@ -51,6 +51,17 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
     @NameInMap("CreditSpecification")
     public String creditSpecification;
 
+    /**
+     * <p>The priority of the custom ECS instance type + vSwitch combination.</p>
+     * <br>
+     * <p>>  This parameter takes effect only when Scaling Policy of the scaling group is set to Priority Policy.</p>
+     * <br>
+     * <p>If Auto Scaling cannot create ECS instances by using the custom ECS instance type + vSwitch combination of the highest priority, Auto Scaling creates ECS instances by using the custom ECS instance type + vSwitch combination of the next highest priority.</p>
+     * <br>
+     * <p>>  If you specify the priorities of only partial custom ECS instance type + vSwitch combinations, Auto Scaling preferentially creates ECS instances by using the custom combinations that have specified priorities. If the custom combinations that have specified priorities do not provide sufficient resources, Auto Scaling creates ECS instances by using the custom combinations that do not have specified priorities based on the specified orders of vSwitches and instance types.</p>
+     * <br>
+     * <p>*   Example: the specified order of vSwitches for your scaling group is vsw1 and vsw2 and the specified order of instance types in your scaling configuration is type1 and type 2. In addition, you use CustomPriorities to specify \["vsw2+type2", "vsw1+type2"]. In this example, the vsw2+type2 combination has the highest priority and the vsw2+type1 combination has the lowest priority. The vsw1+type2 combination has a higher priority than the vsw1+type1 combination.</p>
+     */
     @NameInMap("CustomPriorities")
     public java.util.List<CreateScalingConfigurationShrinkRequestCustomPriorities> customPriorities;
 
@@ -131,7 +142,7 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
     public java.util.List<CreateScalingConfigurationShrinkRequestInstancePatternInfos> instancePatternInfos;
 
     /**
-     * <p>The instance type of the ECS instance. For more information, see the "Instance families" topic.</p>
+     * <p>The instance type of the ECS instance. For more information, see the [Instance families](~~25378~~) topic.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -849,6 +860,14 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
     }
 
     public static class CreateScalingConfigurationShrinkRequestImageOptions extends TeaModel {
+        /**
+         * <p>For more information about whether an ECS instance uses the ecs-user user user to log on to an ECS instance, see [Manage the login name of an ECS instance](~~388447~~). Value range:</p>
+         * <br>
+         * <p>- true: Yes.</p>
+         * <p>- false: No.</p>
+         * <br>
+         * <p>Default value: false.</p>
+         */
         @NameInMap("LoginAsNonRoot")
         public Boolean loginAsNonRoot;
 
@@ -984,14 +1003,14 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
         public String KMSKeyId;
 
         /**
-         * <p>The performance level (PL) of the system disk that is an ESSD. Valid values:</p>
+         * <p>The performance level (PL) of the system disk that is an enhanced SSD (ESSD). Valid values:</p>
          * <br>
          * <p>*   PL0: An ESSD can provide up to 10,000 random read/write IOPS.</p>
          * <p>*   PL1: An ESSD can provide up to 50,000 random read/write IOPS.</p>
          * <p>*   PL2: An ESSD can provide up to 100,000 random read/write IOPS.</p>
          * <p>*   PL3: An ESSD can provide up to 1,000,000 random read/write IOPS.</p>
          * <br>
-         * <p>Default value: PL0</p>
+         * <p>Default value: PL1.</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
@@ -1116,9 +1135,19 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
     }
 
     public static class CreateScalingConfigurationShrinkRequestCustomPriorities extends TeaModel {
+        /**
+         * <p>The ECS instance type.</p>
+         * <br>
+         * <p>>  The ECS instance type must be included in the instance types specified in the scaling configuration.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * <br>
+         * <p>>  The vSwitch must be included in the vSwitch list of the scaling group.</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 

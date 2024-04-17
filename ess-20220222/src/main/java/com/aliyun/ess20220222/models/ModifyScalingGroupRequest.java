@@ -59,14 +59,6 @@ public class ModifyScalingGroupRequest extends TeaModel {
     @NameInMap("DesiredCapacity")
     public Integer desiredCapacity;
 
-    /**
-     * <p>伸缩组是否关闭期望实例数功能。取值范围：</p>
-     * <br>
-     * <p>- false：启用期望实例数功能。</p>
-     * <p>- true：关闭期望实例数功能。</p>
-     * <br>
-     * <p>> 只有伸缩组当前无伸缩活动时，才能将该参数设置为true（即关闭伸缩组的期望实例数功能），关闭伸缩组的期望实例数功能时伸缩组当前的DesiredCapacity属性也会被清空，但伸缩组中当前的实例数量不发生变化。</p>
-     */
     @NameInMap("DisableDesiredCapacity")
     public Boolean disableDesiredCapacity;
 
@@ -82,12 +74,20 @@ public class ModifyScalingGroupRequest extends TeaModel {
     /**
      * <p>The health check mode of the scaling group. Valid values:</p>
      * <br>
-     * <p>*   NONE: Auto Scaling does not perform health checks on instances in the scaling group.</p>
-     * <p>*   ECS: Auto Scaling performs health checks on ECS instances in the scaling group.</p>
+     * <p>*   NONE: Auto Scaling does not check the health status of instances in the scaling group.</p>
+     * <p>*   ECS: Auto Scaling checks the health status of Elastic Compute Service (ECS) instances in the scaling group.</p>
+     * <p>*   LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of Classic Load Balancer (CLB) instances are not supported as the health check basis of instances in the scaling group.</p>
      */
     @NameInMap("HealthCheckType")
     public String healthCheckType;
 
+    /**
+     * <p>The health check modes of the scaling group. Valid values:</p>
+     * <br>
+     * <p>*   NONE: Auto Scaling does not check the health status of instances in the scaling group.</p>
+     * <p>*   ECS: Auto Scaling checks the health status of ECS instances in the scaling group.</p>
+     * <p>*   LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of CLB instances are not supported as the health check basis of instances in the scaling group.</p>
+     */
     @NameInMap("HealthCheckTypes")
     public java.util.List<String> healthCheckTypes;
 
@@ -207,6 +207,27 @@ public class ModifyScalingGroupRequest extends TeaModel {
     @NameInMap("ScalingGroupName")
     public String scalingGroupName;
 
+    /**
+     * <p>The reclaim mode of the scaling group. Valid values:</p>
+     * <br>
+     * <p>*   recycle: economical mode</p>
+     * <br>
+     * <p>*   release: release mode</p>
+     * <br>
+     * <p>*   forcerelease: forced release mode</p>
+     * <br>
+     * <p>    **</p>
+     * <br>
+     * <p>    **Note** If you set the value to `forcerelease`, Auto Scaling forcibly releases instances that are in the `Running` state during scale-ins. Forced release is equivalent to power outage. If an instance is forcibly released, ephemeral data on the instance will be cleared and cannot be recovered. Exercise caution when you select this option.</p>
+     * <br>
+     * <p>*   forcerecycle: forced recycle mode</p>
+     * <br>
+     * <p>    **</p>
+     * <br>
+     * <p>    **Note** If you set the value to `forcerecycle`, Auto Scaling forcibly shuts down instances that are in the `Running` state during scale-ins. Forced shutdown is equivalent to power outage. If an instance is forcibly shut down, ephemeral data on the instance will be cleared and cannot be recovered. Exercise caution when you select this option.</p>
+     * <br>
+     * <p>ScalingPolicy specifies only the reclaim mode of the scaling group. RemovePolicy of the RemoveInstances operation specifies the manner how instances are removed from the scaling group. For more information, see [RemoveInstances](~~25955~~).</p>
+     */
     @NameInMap("ScalingPolicy")
     public String scalingPolicy;
 
@@ -519,10 +540,6 @@ public class ModifyScalingGroupRequest extends TeaModel {
         @NameInMap("InstanceType")
         public String instanceType;
 
-        /**
-         * <p>本参数用于指定实例启动模板覆盖规格（即`LaunchTemplateOverride.N.InstanceType`）的竞价价格上限。您可以指定N个该参数，扩展启动模板支持N个实例规格。N的取值范围：1~10。</p>
-         * <p>>仅当`LaunchTemplateId`参数指定了启动模板时，该参数才生效。</p>
-         */
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
 
