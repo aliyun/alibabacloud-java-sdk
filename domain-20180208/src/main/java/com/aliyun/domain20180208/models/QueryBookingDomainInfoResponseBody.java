@@ -22,6 +22,9 @@ public class QueryBookingDomainInfoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SnatchNo")
+    public String snatchNo;
+
     @NameInMap("TransferInPrice")
     public Float transferInPrice;
 
@@ -76,6 +79,14 @@ public class QueryBookingDomainInfoResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public QueryBookingDomainInfoResponseBody setSnatchNo(String snatchNo) {
+        this.snatchNo = snatchNo;
+        return this;
+    }
+    public String getSnatchNo() {
+        return this.snatchNo;
     }
 
     public QueryBookingDomainInfoResponseBody setTransferInPrice(Float transferInPrice) {
