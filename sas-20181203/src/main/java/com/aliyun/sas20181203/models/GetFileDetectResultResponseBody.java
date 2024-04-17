@@ -44,6 +44,9 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
+        @NameInMap("Compress")
+        public Boolean compress;
+
         /**
          * <p>The extended information about the file detection result.</p>
          */
@@ -120,6 +123,14 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         }
         public String getCode() {
             return this.code;
+        }
+
+        public GetFileDetectResultResponseBodyResultList setCompress(Boolean compress) {
+            this.compress = compress;
+            return this;
+        }
+        public Boolean getCompress() {
+            return this.compress;
         }
 
         public GetFileDetectResultResponseBodyResultList setExt(String ext) {

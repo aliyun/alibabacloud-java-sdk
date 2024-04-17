@@ -155,6 +155,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("MVUnusedAuthCount")
     public Integer MVUnusedAuthCount;
 
+    @NameInMap("NewThreatAnalysis")
+    public Integer newThreatAnalysis;
+
     /**
      * <p>The timestamp when Security Center is purchased. Unit: milliseconds.</p>
      */
@@ -245,6 +248,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     @NameInMap("ThreatAnalysisCapacity")
     public Long threatAnalysisCapacity;
+
+    @NameInMap("ThreatAnalysisFlow")
+    public Integer threatAnalysisFlow;
 
     /**
      * <p>Indicates whether the custom alert feature is enabled. Valid values:</p>
@@ -455,6 +461,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         return this.MVUnusedAuthCount;
     }
 
+    public DescribeVersionConfigResponseBody setNewThreatAnalysis(Integer newThreatAnalysis) {
+        this.newThreatAnalysis = newThreatAnalysis;
+        return this;
+    }
+    public Integer getNewThreatAnalysis() {
+        return this.newThreatAnalysis;
+    }
+
     public DescribeVersionConfigResponseBody setOpenTime(Long openTime) {
         this.openTime = openTime;
         return this;
@@ -557,6 +571,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
     public Long getThreatAnalysisCapacity() {
         return this.threatAnalysisCapacity;
+    }
+
+    public DescribeVersionConfigResponseBody setThreatAnalysisFlow(Integer threatAnalysisFlow) {
+        this.threatAnalysisFlow = threatAnalysisFlow;
+        return this;
+    }
+    public Integer getThreatAnalysisFlow() {
+        return this.threatAnalysisFlow;
     }
 
     public DescribeVersionConfigResponseBody setUserDefinedAlarms(Integer userDefinedAlarms) {

@@ -4,6 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateFileDetectRequest extends TeaModel {
+    @NameInMap("Decompress")
+    public Boolean decompress;
+
+    @NameInMap("DecompressMaxFileCount")
+    public Integer decompressMaxFileCount;
+
+    @NameInMap("DecompressMaxLayer")
+    public Integer decompressMaxLayer;
+
     /**
      * <p>The URL that is used to download the file. You can specify this parameter to trigger file detection without the need to upload the file in advance.</p>
      */
@@ -44,6 +53,30 @@ public class CreateFileDetectRequest extends TeaModel {
     public static CreateFileDetectRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFileDetectRequest self = new CreateFileDetectRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateFileDetectRequest setDecompress(Boolean decompress) {
+        this.decompress = decompress;
+        return this;
+    }
+    public Boolean getDecompress() {
+        return this.decompress;
+    }
+
+    public CreateFileDetectRequest setDecompressMaxFileCount(Integer decompressMaxFileCount) {
+        this.decompressMaxFileCount = decompressMaxFileCount;
+        return this;
+    }
+    public Integer getDecompressMaxFileCount() {
+        return this.decompressMaxFileCount;
+    }
+
+    public CreateFileDetectRequest setDecompressMaxLayer(Integer decompressMaxLayer) {
+        this.decompressMaxLayer = decompressMaxLayer;
+        return this;
+    }
+    public Integer getDecompressMaxLayer() {
+        return this.decompressMaxLayer;
     }
 
     public CreateFileDetectRequest setDownloadUrl(String downloadUrl) {
