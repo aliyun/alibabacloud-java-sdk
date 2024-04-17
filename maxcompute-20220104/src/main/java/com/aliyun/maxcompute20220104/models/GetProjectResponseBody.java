@@ -320,6 +320,9 @@ public class GetProjectResponseBody extends TeaModel {
         @NameInMap("enableDecimal2")
         public Boolean enableDecimal2;
 
+        @NameInMap("enableFdcCacheForce")
+        public Boolean enableFdcCacheForce;
+
         /**
          * <p>Indicates whether tunnel quota routing is enabled.</p>
          */
@@ -331,6 +334,9 @@ public class GetProjectResponseBody extends TeaModel {
          */
         @NameInMap("encryption")
         public GetProjectResponseBodyDataPropertiesEncryption encryption;
+
+        @NameInMap("fdcQuota")
+        public String fdcQuota;
 
         /**
          * <p>The number of days for which backup data can be retained.</p>
@@ -403,6 +409,14 @@ public class GetProjectResponseBody extends TeaModel {
             return this.enableDecimal2;
         }
 
+        public GetProjectResponseBodyDataProperties setEnableFdcCacheForce(Boolean enableFdcCacheForce) {
+            this.enableFdcCacheForce = enableFdcCacheForce;
+            return this;
+        }
+        public Boolean getEnableFdcCacheForce() {
+            return this.enableFdcCacheForce;
+        }
+
         public GetProjectResponseBodyDataProperties setEnableTunnelQuotaRoute(Boolean enableTunnelQuotaRoute) {
             this.enableTunnelQuotaRoute = enableTunnelQuotaRoute;
             return this;
@@ -417,6 +431,14 @@ public class GetProjectResponseBody extends TeaModel {
         }
         public GetProjectResponseBodyDataPropertiesEncryption getEncryption() {
             return this.encryption;
+        }
+
+        public GetProjectResponseBodyDataProperties setFdcQuota(String fdcQuota) {
+            this.fdcQuota = fdcQuota;
+            return this;
+        }
+        public String getFdcQuota() {
+            return this.fdcQuota;
         }
 
         public GetProjectResponseBodyDataProperties setRetentionDays(Long retentionDays) {
