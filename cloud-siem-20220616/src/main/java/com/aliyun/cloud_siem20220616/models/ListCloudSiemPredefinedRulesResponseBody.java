@@ -139,6 +139,12 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         @NameInMap("AlertType")
         public String alertType;
 
+        @NameInMap("AttCk")
+        public String attCk;
+
+        @NameInMap("EventTransferType")
+        public String eventTransferType;
+
         /**
          * <p>The time when the rule was created.</p>
          */
@@ -168,6 +174,12 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
          */
         @NameInMap("RuleName")
         public String ruleName;
+
+        @NameInMap("RuleNameCn")
+        public String ruleNameCn;
+
+        @NameInMap("RuleNameEn")
+        public String ruleNameEn;
 
         /**
          * <p>The internal code of the rule name.</p>
@@ -213,6 +225,22 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             return this.alertType;
         }
 
+        public ListCloudSiemPredefinedRulesResponseBodyDataResponseData setAttCk(String attCk) {
+            this.attCk = attCk;
+            return this;
+        }
+        public String getAttCk() {
+            return this.attCk;
+        }
+
+        public ListCloudSiemPredefinedRulesResponseBodyDataResponseData setEventTransferType(String eventTransferType) {
+            this.eventTransferType = eventTransferType;
+            return this;
+        }
+        public String getEventTransferType() {
+            return this.eventTransferType;
+        }
+
         public ListCloudSiemPredefinedRulesResponseBodyDataResponseData setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
@@ -251,6 +279,22 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         }
         public String getRuleName() {
             return this.ruleName;
+        }
+
+        public ListCloudSiemPredefinedRulesResponseBodyDataResponseData setRuleNameCn(String ruleNameCn) {
+            this.ruleNameCn = ruleNameCn;
+            return this;
+        }
+        public String getRuleNameCn() {
+            return this.ruleNameCn;
+        }
+
+        public ListCloudSiemPredefinedRulesResponseBodyDataResponseData setRuleNameEn(String ruleNameEn) {
+            this.ruleNameEn = ruleNameEn;
+            return this;
+        }
+        public String getRuleNameEn() {
+            return this.ruleNameEn;
         }
 
         public ListCloudSiemPredefinedRulesResponseBodyDataResponseData setRuleNameMds(String ruleNameMds) {

@@ -89,6 +89,9 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         @NameInMap("AliUid")
         public Long aliUid;
 
+        @NameInMap("CloudCode")
+        public String cloudCode;
+
         /**
          * <p>An array consisting of the domain names that are protected by the WAF instance.</p>
          */
@@ -100,6 +103,9 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
          */
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("UserId")
+        public String userId;
 
         /**
          * <p>The username.</p>
@@ -120,6 +126,14 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
             return this.aliUid;
         }
 
+        public DescribeScopeUsersResponseBodyData setCloudCode(String cloudCode) {
+            this.cloudCode = cloudCode;
+            return this;
+        }
+        public String getCloudCode() {
+            return this.cloudCode;
+        }
+
         public DescribeScopeUsersResponseBodyData setDomains(java.util.List<String> domains) {
             this.domains = domains;
             return this;
@@ -134,6 +148,14 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeScopeUsersResponseBodyData setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
         public DescribeScopeUsersResponseBodyData setUserName(String userName) {

@@ -19,6 +19,12 @@ public class PostEventWhiteruleListRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     /**
      * <p>The alert whitelist rule. The value is a JSON object.</p>
      */
@@ -44,6 +50,22 @@ public class PostEventWhiteruleListRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public PostEventWhiteruleListRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public PostEventWhiteruleListRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
     public PostEventWhiteruleListRequest setWhiteruleList(String whiteruleList) {

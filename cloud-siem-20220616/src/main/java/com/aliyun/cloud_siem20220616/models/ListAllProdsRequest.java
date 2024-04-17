@@ -13,6 +13,12 @@ public class ListAllProdsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     public static ListAllProdsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAllProdsRequest self = new ListAllProdsRequest();
         return TeaModel.build(map, self);
@@ -24,6 +30,22 @@ public class ListAllProdsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListAllProdsRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public ListAllProdsRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
 }

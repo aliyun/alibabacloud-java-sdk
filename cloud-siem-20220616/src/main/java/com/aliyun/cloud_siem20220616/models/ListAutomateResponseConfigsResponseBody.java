@@ -164,6 +164,9 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         @NameInMap("AutoResponseType")
         public String autoResponseType;
 
+        @NameInMap("DataType")
+        public Integer dataType;
+
         /**
          * <p>The trigger condition of the rule. The value is in the JSON format.</p>
          */
@@ -244,6 +247,14 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         }
         public String getAutoResponseType() {
             return this.autoResponseType;
+        }
+
+        public ListAutomateResponseConfigsResponseBodyDataResponseData setDataType(Integer dataType) {
+            this.dataType = dataType;
+            return this;
+        }
+        public Integer getDataType() {
+            return this.dataType;
         }
 
         public ListAutomateResponseConfigsResponseBodyDataResponseData setExecutionCondition(String executionCondition) {

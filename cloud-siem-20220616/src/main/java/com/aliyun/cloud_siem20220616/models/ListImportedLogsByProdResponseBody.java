@@ -84,6 +84,9 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
         @NameInMap("LogMdsCode")
         public String logMdsCode;
 
+        @NameInMap("LogType")
+        public Integer logType;
+
         /**
          * <p>The time when the log was last added.</p>
          */
@@ -159,6 +162,14 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
         }
         public String getLogMdsCode() {
             return this.logMdsCode;
+        }
+
+        public ListImportedLogsByProdResponseBodyData setLogType(Integer logType) {
+            this.logType = logType;
+            return this;
+        }
+        public Integer getLogType() {
+            return this.logType;
         }
 
         public ListImportedLogsByProdResponseBodyData setModifyTime(String modifyTime) {

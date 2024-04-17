@@ -13,6 +13,12 @@ public class DescribeAlertSceneRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     public static DescribeAlertSceneRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlertSceneRequest self = new DescribeAlertSceneRequest();
         return TeaModel.build(map, self);
@@ -24,6 +30,22 @@ public class DescribeAlertSceneRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeAlertSceneRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public DescribeAlertSceneRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
 }

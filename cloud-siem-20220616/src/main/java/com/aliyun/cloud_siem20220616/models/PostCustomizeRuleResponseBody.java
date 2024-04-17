@@ -101,6 +101,12 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         @NameInMap("Aliuid")
         public Long aliuid;
 
+        @NameInMap("AttCk")
+        public String attCk;
+
+        @NameInMap("DataType")
+        public Integer dataType;
+
         /**
          * <p>The extended information about event generation. If eventTransferType is set to allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.</p>
          */
@@ -262,6 +268,22 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         }
         public Long getAliuid() {
             return this.aliuid;
+        }
+
+        public PostCustomizeRuleResponseBodyData setAttCk(String attCk) {
+            this.attCk = attCk;
+            return this;
+        }
+        public String getAttCk() {
+            return this.attCk;
+        }
+
+        public PostCustomizeRuleResponseBodyData setDataType(Integer dataType) {
+            this.dataType = dataType;
+            return this;
+        }
+        public Integer getDataType() {
+            return this.dataType;
         }
 
         public PostCustomizeRuleResponseBodyData setEventTransferExt(String eventTransferExt) {

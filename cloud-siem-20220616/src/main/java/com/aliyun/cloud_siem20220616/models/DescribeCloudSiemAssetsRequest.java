@@ -44,6 +44,12 @@ public class DescribeCloudSiemAssetsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     public static DescribeCloudSiemAssetsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCloudSiemAssetsRequest self = new DescribeCloudSiemAssetsRequest();
         return TeaModel.build(map, self);
@@ -87,6 +93,22 @@ public class DescribeCloudSiemAssetsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeCloudSiemAssetsRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public DescribeCloudSiemAssetsRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
 }

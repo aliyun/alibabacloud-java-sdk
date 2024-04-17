@@ -49,6 +49,12 @@ public class CloseDeliveryRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     public static CloseDeliveryRequest build(java.util.Map<String, ?> map) throws Exception {
         CloseDeliveryRequest self = new CloseDeliveryRequest();
         return TeaModel.build(map, self);
@@ -76,6 +82,22 @@ public class CloseDeliveryRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CloseDeliveryRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public CloseDeliveryRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
 }

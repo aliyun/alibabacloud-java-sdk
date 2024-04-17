@@ -19,6 +19,12 @@ public class DeleteAutomateResponseConfigRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     public static DeleteAutomateResponseConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAutomateResponseConfigRequest self = new DeleteAutomateResponseConfigRequest();
         return TeaModel.build(map, self);
@@ -38,6 +44,22 @@ public class DeleteAutomateResponseConfigRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DeleteAutomateResponseConfigRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public DeleteAutomateResponseConfigRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
 }

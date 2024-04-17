@@ -19,6 +19,12 @@ public class PostCustomizeRuleTestRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     /**
      * <p>The simulation data for the test. This parameter is available only when TestType is set to simulate.</p>
      */
@@ -53,6 +59,22 @@ public class PostCustomizeRuleTestRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public PostCustomizeRuleTestRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public PostCustomizeRuleTestRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
     public PostCustomizeRuleTestRequest setSimulatedData(String simulatedData) {

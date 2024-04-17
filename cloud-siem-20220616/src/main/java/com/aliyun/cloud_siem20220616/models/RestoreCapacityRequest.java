@@ -13,6 +13,12 @@ public class RestoreCapacityRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     public static RestoreCapacityRequest build(java.util.Map<String, ?> map) throws Exception {
         RestoreCapacityRequest self = new RestoreCapacityRequest();
         return TeaModel.build(map, self);
@@ -24,6 +30,22 @@ public class RestoreCapacityRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public RestoreCapacityRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public RestoreCapacityRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
 }

@@ -28,6 +28,12 @@ public class ListCloudSiemCustomizeRulesRequest extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    @NameInMap("Order")
+    public String order;
+
+    @NameInMap("OrderField")
+    public String orderField;
+
     /**
      * <p>The number of entries per page. The value can be up to 100.</p>
      */
@@ -42,6 +48,12 @@ public class ListCloudSiemCustomizeRulesRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
 
     /**
      * <p>The name of the rule. The name can contain letters, digits, underscores (\_), and periods (.).</p>
@@ -123,6 +135,22 @@ public class ListCloudSiemCustomizeRulesRequest extends TeaModel {
         return this.id;
     }
 
+    public ListCloudSiemCustomizeRulesRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
+    }
+
+    public ListCloudSiemCustomizeRulesRequest setOrderField(String orderField) {
+        this.orderField = orderField;
+        return this;
+    }
+    public String getOrderField() {
+        return this.orderField;
+    }
+
     public ListCloudSiemCustomizeRulesRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -137,6 +165,22 @@ public class ListCloudSiemCustomizeRulesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListCloudSiemCustomizeRulesRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public ListCloudSiemCustomizeRulesRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
     public ListCloudSiemCustomizeRulesRequest setRuleName(String ruleName) {
