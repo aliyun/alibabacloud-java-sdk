@@ -7,9 +7,9 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     /**
      * <p>The cluster type that you want to use. Valid values:</p>
      * <br>
-     * <p>*   `Kubernetes`: ACK dedicated cluster</p>
-     * <p>*   `ManagedKubernetes`: ACK managed cluster</p>
-     * <p>*   `ExternalKubernetes`: registered cluster</p>
+     * <p>*   `Kubernetes`: ACK dedicated cluster.</p>
+     * <p>*   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.</p>
+     * <p>*   `ExternalKubernetes`: registered cluster.</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;

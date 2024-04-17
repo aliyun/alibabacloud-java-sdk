@@ -35,41 +35,9 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   nntf</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    low</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   later</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    medium</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   asap</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    high</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   nntf: low</p>
+         * <p>*   later: medium     </p>
+         * <p>*   asap: high</p>
          */
         @NameInMap("necessity")
         public String necessity;
@@ -109,77 +77,12 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   app</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    application vulnerabilities</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   sca</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    application vulnerabilities (software component analysis)</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   cve</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    Linux vulnerabilities</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   cms</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    Web-CMS vulnerabilities</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   sys</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    Windows vulnerabilities</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   emg</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    emergency vulnerabilities</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   app: application vulnerabilities</p>
+         * <p>*   sca: application vulnerabilities (software component analysis)</p>
+         * <p>*   cve: Linux vulnerabilities</p>
+         * <p>*   cms: Web-CMS vulnerabilities</p>
+         * <p>*   sys: Windows vulnerabilities</p>
+         * <p>*   emg:  emergency vulnerabilities</p>
          */
         @NameInMap("vul_type")
         public String vulType;

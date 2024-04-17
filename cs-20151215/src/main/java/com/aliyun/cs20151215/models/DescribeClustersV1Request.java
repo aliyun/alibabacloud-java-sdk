@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClustersV1Request extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("cluster_id")
     public String clusterId;

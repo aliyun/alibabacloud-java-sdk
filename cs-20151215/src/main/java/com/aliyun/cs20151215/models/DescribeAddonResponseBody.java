@@ -4,30 +4,65 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeAddonResponseBody extends TeaModel {
+    /**
+     * <p>Architectures supported by the component. Valid values:</p>
+     * <br>
+     * <p>*   amd64</p>
+     * <p>*   arm64</p>
+     */
     @NameInMap("architecture")
     public java.util.List<String> architecture;
 
+    /**
+     * <p>The category of the component.</p>
+     */
     @NameInMap("category")
     public String category;
 
+    /**
+     * <p>The custom parameter schema of the component.</p>
+     */
     @NameInMap("config_schema")
     public String configSchema;
 
+    /**
+     * <p>Indicates whether the component is automatically installed by default.</p>
+     */
     @NameInMap("install_by_default")
     public Boolean installByDefault;
 
+    /**
+     * <p>Indicates whether the component is fully managed.</p>
+     */
     @NameInMap("managed")
     public Boolean managed;
 
+    /**
+     * <p>The name of the component.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The latest version of the component.</p>
+     */
     @NameInMap("newer_versions")
     public java.util.List<DescribeAddonResponseBodyNewerVersions> newerVersions;
 
+    /**
+     * <p>Operations supported by the component. Valid values:</p>
+     * <br>
+     * <p>*   Install</p>
+     * <p>*   Upgrade</p>
+     * <p>*   Modify</p>
+     * <p>*   Uninstall</p>
+     */
     @NameInMap("supported_actions")
     public java.util.List<String> supportedActions;
 
+    /**
+     * <p>The version of the component.</p>
+     */
     @NameInMap("version")
     public String version;
 
@@ -109,12 +144,21 @@ public class DescribeAddonResponseBody extends TeaModel {
     }
 
     public static class DescribeAddonResponseBodyNewerVersions extends TeaModel {
+        /**
+         * <p>The minimum cluster version required by the component version.</p>
+         */
         @NameInMap("minimum_cluster_version")
         public String minimumClusterVersion;
 
+        /**
+         * <p>Indicates whether the component can be updated to the version.</p>
+         */
         @NameInMap("upgradable")
         public Boolean upgradable;
 
+        /**
+         * <p>The version number.</p>
+         */
         @NameInMap("version")
         public String version;
 

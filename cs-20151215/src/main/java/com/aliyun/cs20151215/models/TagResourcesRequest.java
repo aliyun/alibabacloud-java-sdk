@@ -11,7 +11,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the resources that you want to label.</p>
+     * <p>The list of resource IDs.</p>
      */
     @NameInMap("resource_ids")
     public java.util.List<String> resourceIds;
@@ -23,11 +23,11 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The labels that you want to add to the resources in key-value pairs. You can add up to 20 labels. Note:</p>
+     * <p>The labels that you want to add to the resources in key-value pairs. You can add up to 20 labels. Usage notes:</p>
      * <br>
-     * <p>*   A value cannot be empty and can contain up to 128 characters.</p>
-     * <p>*   A key or value must not start with `aliyun` or `acs:`.</p>
-     * <p>*   A key or value must not contain `http://` or `https://`.</p>
+     * <p>*   Label values must not be empty strings. A label value must be 1 to 128 characters in length.</p>
+     * <p>*   The label value must not start with `aliyun` or `acs:`.</p>
+     * <p>*   The label value must not contain `http://` or `https://`.</p>
      */
     @NameInMap("tags")
     public java.util.List<Tag> tags;

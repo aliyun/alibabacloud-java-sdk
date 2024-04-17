@@ -58,47 +58,9 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   nntf</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    You can ignore the vulnerability</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   later</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    You can fix the vulnerability later</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   asap</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    You need to fix the vulnerability at the earliest opportunity</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
+         * <p>*   nntf: You can ignore the vulnerability</p>
+         * <p>*   later: You can fix the vulnerability later</p>
+         * <p>*   asap: You need to fix the vulnerability at the earliest opportunity</p>
          */
         @NameInMap("necessity")
         public String necessity;

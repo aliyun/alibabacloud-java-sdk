@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ListAddonsResponseBody extends TeaModel {
+    /**
+     * <p>The list of available components.</p>
+     */
     @NameInMap("addons")
     public java.util.List<ListAddonsResponseBodyAddons> addons;
 
@@ -21,27 +24,59 @@ public class ListAddonsResponseBody extends TeaModel {
     }
 
     public static class ListAddonsResponseBodyAddons extends TeaModel {
+        /**
+         * <p>Architectures supported by the component. Valid values:</p>
+         * <br>
+         * <p>*   amd64</p>
+         * <p>*   arm64</p>
+         */
         @NameInMap("architecture")
         public java.util.List<String> architecture;
 
+        /**
+         * <p>The category of the component.</p>
+         */
         @NameInMap("category")
         public String category;
 
+        /**
+         * <p>The schema of the custom parameters of the component.</p>
+         */
         @NameInMap("config_schema")
         public String configSchema;
 
+        /**
+         * <p>Indicates whether the component is automatically installed by default.</p>
+         */
         @NameInMap("install_by_default")
         public Boolean installByDefault;
 
+        /**
+         * <p>Indicates whether the component is fully managed.</p>
+         */
         @NameInMap("managed")
         public Boolean managed;
 
+        /**
+         * <p>The component name.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Operations supported by the component. Valid values:</p>
+         * <br>
+         * <p>*   Install</p>
+         * <p>*   Upgrade</p>
+         * <p>*   Modify</p>
+         * <p>*   Uninstall</p>
+         */
         @NameInMap("supported_actions")
         public java.util.List<String> supportedActions;
 
+        /**
+         * <p>The version number.</p>
+         */
         @NameInMap("version")
         public String version;
 

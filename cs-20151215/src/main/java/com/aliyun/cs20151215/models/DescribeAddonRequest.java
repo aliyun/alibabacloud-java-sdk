@@ -4,24 +4,45 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeAddonRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster. If you specify a cluster ID, only components used in the cluster are queried. Other parameters are ignored.</p>
+     */
     @NameInMap("cluster_id")
     public String clusterId;
 
+    /**
+     * <p>The specifications of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</p>
+     */
     @NameInMap("cluster_spec")
     public String clusterSpec;
 
+    /**
+     * <p>The type of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</p>
+     */
     @NameInMap("cluster_type")
     public String clusterType;
 
+    /**
+     * <p>The version of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</p>
+     */
     @NameInMap("cluster_version")
     public String clusterVersion;
 
+    /**
+     * <p>The subtype of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</p>
+     */
     @NameInMap("profile")
     public String profile;
 
+    /**
+     * <p>The region ID. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</p>
+     */
     @NameInMap("region_id")
     public String regionId;
 
+    /**
+     * <p>The version of the component. If you do not specify this parameter, the latest version of the component is queried.</p>
+     */
     @NameInMap("version")
     public String version;
 
