@@ -10,6 +10,9 @@ public class DescribeCategoryTemplateRuleListRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("FeatureType")
     public Integer featureType;
 

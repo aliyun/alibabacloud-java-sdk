@@ -212,6 +212,9 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         @NameInMap("LogStoreDay")
         public Integer logStoreDay;
 
+        @NameInMap("MemberAccount")
+        public Long memberAccount;
+
         /**
          * <p>The next time when the data asset is scanned. The value is a UNIX timestamp. Unit: milliseconds.</p>
          */
@@ -516,6 +519,14 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         }
         public Integer getLogStoreDay() {
             return this.logStoreDay;
+        }
+
+        public DescribeDataLimitsResponseBodyItems setMemberAccount(Long memberAccount) {
+            this.memberAccount = memberAccount;
+            return this;
+        }
+        public Long getMemberAccount() {
+            return this.memberAccount;
         }
 
         public DescribeDataLimitsResponseBodyItems setNextStartTime(Long nextStartTime) {

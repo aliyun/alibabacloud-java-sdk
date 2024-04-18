@@ -28,6 +28,9 @@ public class DescribeParentInstanceRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("MemberAccount")
+    public Long memberAccount;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -104,6 +107,14 @@ public class DescribeParentInstanceRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeParentInstanceRequest setMemberAccount(Long memberAccount) {
+        this.memberAccount = memberAccount;
+        return this;
+    }
+    public Long getMemberAccount() {
+        return this.memberAccount;
     }
 
     public DescribeParentInstanceRequest setPageSize(Integer pageSize) {

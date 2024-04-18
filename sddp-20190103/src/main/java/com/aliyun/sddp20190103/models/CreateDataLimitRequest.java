@@ -62,6 +62,9 @@ public class CreateDataLimitRequest extends TeaModel {
     @NameInMap("EventStatus")
     public Integer eventStatus;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("FeatureType")
     public Integer featureType;
 
@@ -148,6 +151,9 @@ public class CreateDataLimitRequest extends TeaModel {
     @NameInMap("ServiceRegionId")
     public String serviceRegionId;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

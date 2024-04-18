@@ -10,6 +10,9 @@ public class CreateScanTaskRequest extends TeaModel {
     @NameInMap("DataLimitId")
     public Long dataLimitId;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("FeatureType")
     public Integer featureType;
 
@@ -69,6 +72,9 @@ public class CreateScanTaskRequest extends TeaModel {
     @NameInMap("ScanRangeContent")
     public String scanRangeContent;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

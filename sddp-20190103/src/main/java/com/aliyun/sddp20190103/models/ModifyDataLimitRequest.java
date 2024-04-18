@@ -33,6 +33,9 @@ public class ModifyDataLimitRequest extends TeaModel {
     @NameInMap("EngineType")
     public String engineType;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("FeatureType")
     public Integer featureType;
 

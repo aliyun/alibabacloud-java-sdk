@@ -90,6 +90,9 @@ public class CreateRuleRequest extends TeaModel {
     @NameInMap("RuleType")
     public Integer ruleType;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

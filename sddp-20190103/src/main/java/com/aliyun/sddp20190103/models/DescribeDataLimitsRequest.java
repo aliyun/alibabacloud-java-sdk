@@ -61,6 +61,9 @@ public class DescribeDataLimitsRequest extends TeaModel {
     @NameInMap("EngineType")
     public String engineType;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("FeatureType")
     public Integer featureType;
 
@@ -72,6 +75,9 @@ public class DescribeDataLimitsRequest extends TeaModel {
      */
     @NameInMap("Lang")
     public String lang;
+
+    @NameInMap("MemberAccount")
+    public Long memberAccount;
 
     /**
      * <p>The number of entries to return on each page.</p>
@@ -189,6 +195,14 @@ public class DescribeDataLimitsRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeDataLimitsRequest setMemberAccount(Long memberAccount) {
+        this.memberAccount = memberAccount;
+        return this;
+    }
+    public Long getMemberAccount() {
+        return this.memberAccount;
     }
 
     public DescribeDataLimitsRequest setPageSize(Integer pageSize) {
