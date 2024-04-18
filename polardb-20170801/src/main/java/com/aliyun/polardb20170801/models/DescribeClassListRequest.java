@@ -5,7 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeClassListRequest extends TeaModel {
     /**
-     * <p>The maximum number of IOPS.</p>
+     * <p>The code of the commodity. Valid values:</p>
+     * <br>
+     * <p>*   polardb_sub: the subscription cluster in regions in the Chinese mainland</p>
+     * <p>*   polardb_sub \_intl: the subscription cluster in regions outside the Chinese mainland</p>
+     * <p>*   polardb_payg: the pay-as-you-go cluster in regions in the Chinese mainland</p>
+     * <p>*   polardb_payg_intl: the pay-as-you-go cluster in regions outside the Chinese mainland</p>
+     * <p>*   polardb_sub_jushita: the subscription cluster for CloudTmall</p>
+     * <p>*   polardb_payg_jushita: the pay-as-you-go cluster for CloudTmall</p>
+     * <p>*   polardb_sub_cainiao: the subscription cluster for Cainiao</p>
+     * <p>*   polardb_payg_cainiao: the pay-as-you-go cluster for Cainiao</p>
+     * <br>
+     * <p>> *   If you use an Alibaba Cloud account on the China site, you can view only the codes of the commodities that are available in the Chinese mainland.</p>
+     * <p>>*   If you are using an Alibaba Cloud international account, you can view only the codes of the commodities that are available outside the Chinese mainland.</p>
+     * <p>>*   If you use a CloudTmall account, you can view only the codes of the commodities that are available in CloudTmall.</p>
+     * <p>>*   If you use a Cainiao account, you can view only the codes of the commodities that are available in Cainiao.</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
@@ -13,15 +27,20 @@ public class DescribeClassListRequest extends TeaModel {
     /**
      * <p>The number of nodes. Valid values:</p>
      * <br>
-     * <p>*   single</p>
-     * <p>*   cluster</p>
-     * <p>*   all</p>
+     * <p>*   single: Standalone Edition.</p>
+     * <p>*   cluster: Cluster Edition.</p>
+     * <p>*   all: both Standalone Edition and Cluster Edition.</p>
      */
     @NameInMap("MasterHa")
     public String masterHa;
 
     /**
-     * <p>The specification type of the cluster.</p>
+     * <p>The type of the order. Valid values:</p>
+     * <br>
+     * <p>*   BUY: The order is used to purchase a cluster.</p>
+     * <p>*   UPGRADE: The order is used to change the specifications of a cluster.</p>
+     * <p>*   RENEW: The order is used to renew a cluster.</p>
+     * <p>*   CONVERT: The order is used to change the billing method of a cluster.</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -33,13 +52,13 @@ public class DescribeClassListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of CPU cores.</p>
+     * <p>The region ID of the cluster.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

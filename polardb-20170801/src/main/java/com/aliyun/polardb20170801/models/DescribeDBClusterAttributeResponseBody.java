@@ -357,6 +357,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("SubCategory")
     public String subCategory;
 
+    @NameInMap("SupportInstantSwitchWithImci")
+    public String supportInstantSwitchWithImci;
+
     /**
      * <p>Details about the tags.</p>
      */
@@ -792,6 +795,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
     public String getSubCategory() {
         return this.subCategory;
+    }
+
+    public DescribeDBClusterAttributeResponseBody setSupportInstantSwitchWithImci(String supportInstantSwitchWithImci) {
+        this.supportInstantSwitchWithImci = supportInstantSwitchWithImci;
+        return this;
+    }
+    public String getSupportInstantSwitchWithImci() {
+        return this.supportInstantSwitchWithImci;
     }
 
     public DescribeDBClusterAttributeResponseBody setTags(java.util.List<DescribeDBClusterAttributeResponseBodyTags> tags) {

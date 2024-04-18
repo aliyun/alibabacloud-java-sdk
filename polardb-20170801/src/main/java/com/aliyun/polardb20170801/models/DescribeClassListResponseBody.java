@@ -10,16 +10,14 @@ public class DescribeClassListResponseBody extends TeaModel {
     @NameInMap("Items")
     public java.util.List<DescribeClassListResponseBodyItems> items;
 
+    /**
+     * <p>The region ID of the cluster.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The price.</p>
-     * <br>
-     * <p>Unit: cents (US dollars).</p>
-     * <br>
-     * <p>> *   If you set the CommodityCode parameter to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.</p>
-     * <p>> *   If you set the CommodityCode parameter to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
