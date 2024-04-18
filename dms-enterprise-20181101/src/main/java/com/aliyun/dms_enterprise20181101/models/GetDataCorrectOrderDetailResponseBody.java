@@ -82,6 +82,250 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailCronExtConfig extends TeaModel {
+        @NameInMap("CurrentClearTaskCount")
+        public Integer currentClearTaskCount;
+
+        @NameInMap("OptimizeTableAfterEveryClearTimes")
+        public Integer optimizeTableAfterEveryClearTimes;
+
+        public static GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailCronExtConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailCronExtConfig self = new GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailCronExtConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailCronExtConfig setCurrentClearTaskCount(Integer currentClearTaskCount) {
+            this.currentClearTaskCount = currentClearTaskCount;
+            return this;
+        }
+        public Integer getCurrentClearTaskCount() {
+            return this.currentClearTaskCount;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailCronExtConfig setOptimizeTableAfterEveryClearTimes(Integer optimizeTableAfterEveryClearTimes) {
+            this.optimizeTableAfterEveryClearTimes = optimizeTableAfterEveryClearTimes;
+            return this;
+        }
+        public Integer getOptimizeTableAfterEveryClearTimes() {
+            return this.optimizeTableAfterEveryClearTimes;
+        }
+
+    }
+
+    public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailImportExtConfig extends TeaModel {
+        @NameInMap("CsvFirstRowIsColumnDef")
+        public Boolean csvFirstRowIsColumnDef;
+
+        @NameInMap("IgnoreError")
+        public Boolean ignoreError;
+
+        @NameInMap("ImportMode")
+        public String importMode;
+
+        @NameInMap("InsertType")
+        public String insertType;
+
+        public static GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailImportExtConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailImportExtConfig self = new GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailImportExtConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailImportExtConfig setCsvFirstRowIsColumnDef(Boolean csvFirstRowIsColumnDef) {
+            this.csvFirstRowIsColumnDef = csvFirstRowIsColumnDef;
+            return this;
+        }
+        public Boolean getCsvFirstRowIsColumnDef() {
+            return this.csvFirstRowIsColumnDef;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailImportExtConfig setIgnoreError(Boolean ignoreError) {
+            this.ignoreError = ignoreError;
+            return this;
+        }
+        public Boolean getIgnoreError() {
+            return this.ignoreError;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailImportExtConfig setImportMode(String importMode) {
+            this.importMode = importMode;
+            return this;
+        }
+        public String getImportMode() {
+            return this.importMode;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailImportExtConfig setInsertType(String insertType) {
+            this.insertType = insertType;
+            return this;
+        }
+        public String getInsertType() {
+            return this.insertType;
+        }
+
+    }
+
+    public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail extends TeaModel {
+        @NameInMap("Cron")
+        public Boolean cron;
+
+        @NameInMap("CronCallTimes")
+        public Integer cronCallTimes;
+
+        @NameInMap("CronExtConfig")
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailCronExtConfig cronExtConfig;
+
+        @NameInMap("CronFormat")
+        public String cronFormat;
+
+        @NameInMap("CronLastCallStartTime")
+        public String cronLastCallStartTime;
+
+        @NameInMap("CronNextCallTime")
+        public String cronNextCallTime;
+
+        @NameInMap("CronStatus")
+        public String cronStatus;
+
+        @NameInMap("CsvTableName")
+        public String csvTableName;
+
+        @NameInMap("CurrentTaskId")
+        public Long currentTaskId;
+
+        @NameInMap("DetailType")
+        public String detailType;
+
+        @NameInMap("Duration")
+        public Integer duration;
+
+        @NameInMap("FileEncoding")
+        public String fileEncoding;
+
+        @NameInMap("FileType")
+        public String fileType;
+
+        @NameInMap("ImportExtConfig")
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailImportExtConfig importExtConfig;
+
+        public static GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail build(java.util.Map<String, ?> map) throws Exception {
+            GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail self = new GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail setCron(Boolean cron) {
+            this.cron = cron;
+            return this;
+        }
+        public Boolean getCron() {
+            return this.cron;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail setCronCallTimes(Integer cronCallTimes) {
+            this.cronCallTimes = cronCallTimes;
+            return this;
+        }
+        public Integer getCronCallTimes() {
+            return this.cronCallTimes;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail setCronExtConfig(GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailCronExtConfig cronExtConfig) {
+            this.cronExtConfig = cronExtConfig;
+            return this;
+        }
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailCronExtConfig getCronExtConfig() {
+            return this.cronExtConfig;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail setCronFormat(String cronFormat) {
+            this.cronFormat = cronFormat;
+            return this;
+        }
+        public String getCronFormat() {
+            return this.cronFormat;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail setCronLastCallStartTime(String cronLastCallStartTime) {
+            this.cronLastCallStartTime = cronLastCallStartTime;
+            return this;
+        }
+        public String getCronLastCallStartTime() {
+            return this.cronLastCallStartTime;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail setCronNextCallTime(String cronNextCallTime) {
+            this.cronNextCallTime = cronNextCallTime;
+            return this;
+        }
+        public String getCronNextCallTime() {
+            return this.cronNextCallTime;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail setCronStatus(String cronStatus) {
+            this.cronStatus = cronStatus;
+            return this;
+        }
+        public String getCronStatus() {
+            return this.cronStatus;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail setCsvTableName(String csvTableName) {
+            this.csvTableName = csvTableName;
+            return this;
+        }
+        public String getCsvTableName() {
+            return this.csvTableName;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail setCurrentTaskId(Long currentTaskId) {
+            this.currentTaskId = currentTaskId;
+            return this;
+        }
+        public Long getCurrentTaskId() {
+            return this.currentTaskId;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail setDetailType(String detailType) {
+            this.detailType = detailType;
+            return this;
+        }
+        public String getDetailType() {
+            return this.detailType;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail setDuration(Integer duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Integer getDuration() {
+            return this.duration;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail setFileEncoding(String fileEncoding) {
+            this.fileEncoding = fileEncoding;
+            return this;
+        }
+        public String getFileEncoding() {
+            return this.fileEncoding;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail setFileType(String fileType) {
+            this.fileType = fileType;
+            return this;
+        }
+        public String getFileType() {
+            return this.fileType;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail setImportExtConfig(GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailImportExtConfig importExtConfig) {
+            this.importExtConfig = importExtConfig;
+            return this;
+        }
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetailImportExtConfig getImportExtConfig() {
+            return this.importExtConfig;
+        }
+
+    }
+
     public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailDatabaseListDatabase extends TeaModel {
         /**
          * <p>The ID of the database.</p>
@@ -442,6 +686,9 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetail extends TeaModel {
+        @NameInMap("ConfigDetail")
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail configDetail;
+
         /**
          * <p>The information about the database in which data is changed.</p>
          */
@@ -491,6 +738,14 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         public static GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetail build(java.util.Map<String, ?> map) throws Exception {
             GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetail self = new GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetail();
             return TeaModel.build(map, self);
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetail setConfigDetail(GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail configDetail) {
+            this.configDetail = configDetail;
+            return this;
+        }
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailConfigDetail getConfigDetail() {
+            return this.configDetail;
         }
 
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetail setDatabaseList(GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailDatabaseList databaseList) {

@@ -43,6 +43,9 @@ public class ApproveOrderRequest extends TeaModel {
     @NameInMap("NewApprover")
     public Long newApprover;
 
+    @NameInMap("NewApproverList")
+    public String newApproverList;
+
     /**
      * <p>The ID of the user that transfers the ticket to another user. The default value is the ID of the current user. If the current user is an administrator or a database administrator (DBA), the user can change the value of this parameter to the ID of another user.</p>
      */
@@ -104,6 +107,14 @@ public class ApproveOrderRequest extends TeaModel {
     }
     public Long getNewApprover() {
         return this.newApprover;
+    }
+
+    public ApproveOrderRequest setNewApproverList(String newApproverList) {
+        this.newApproverList = newApproverList;
+        return this;
+    }
+    public String getNewApproverList() {
+        return this.newApproverList;
     }
 
     public ApproveOrderRequest setOldApprover(Long oldApprover) {
