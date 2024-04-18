@@ -42,6 +42,80 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class QueryModifyInstancePriceResponseBodyPriceInfoDepreciateInfo extends TeaModel {
+        @NameInMap("CheapRate")
+        public String cheapRate;
+
+        @NameInMap("CheapStandAmount")
+        public String cheapStandAmount;
+
+        @NameInMap("IsShow")
+        public Boolean isShow;
+
+        @NameInMap("MonthPrice")
+        public String monthPrice;
+
+        @NameInMap("OriginalStandAmount")
+        public String originalStandAmount;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        public static QueryModifyInstancePriceResponseBodyPriceInfoDepreciateInfo build(java.util.Map<String, ?> map) throws Exception {
+            QueryModifyInstancePriceResponseBodyPriceInfoDepreciateInfo self = new QueryModifyInstancePriceResponseBodyPriceInfoDepreciateInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryModifyInstancePriceResponseBodyPriceInfoDepreciateInfo setCheapRate(String cheapRate) {
+            this.cheapRate = cheapRate;
+            return this;
+        }
+        public String getCheapRate() {
+            return this.cheapRate;
+        }
+
+        public QueryModifyInstancePriceResponseBodyPriceInfoDepreciateInfo setCheapStandAmount(String cheapStandAmount) {
+            this.cheapStandAmount = cheapStandAmount;
+            return this;
+        }
+        public String getCheapStandAmount() {
+            return this.cheapStandAmount;
+        }
+
+        public QueryModifyInstancePriceResponseBodyPriceInfoDepreciateInfo setIsShow(Boolean isShow) {
+            this.isShow = isShow;
+            return this;
+        }
+        public Boolean getIsShow() {
+            return this.isShow;
+        }
+
+        public QueryModifyInstancePriceResponseBodyPriceInfoDepreciateInfo setMonthPrice(String monthPrice) {
+            this.monthPrice = monthPrice;
+            return this;
+        }
+        public String getMonthPrice() {
+            return this.monthPrice;
+        }
+
+        public QueryModifyInstancePriceResponseBodyPriceInfoDepreciateInfo setOriginalStandAmount(String originalStandAmount) {
+            this.originalStandAmount = originalStandAmount;
+            return this;
+        }
+        public String getOriginalStandAmount() {
+            return this.originalStandAmount;
+        }
+
+        public QueryModifyInstancePriceResponseBodyPriceInfoDepreciateInfo setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
     public static class QueryModifyInstancePriceResponseBodyPriceInfoOptionalPromotions extends TeaModel {
         @NameInMap("PromotionDesc")
         public String promotionDesc;
@@ -131,8 +205,14 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         @NameInMap("Currency")
         public String currency;
 
+        @NameInMap("DepreciateInfo")
+        public QueryModifyInstancePriceResponseBodyPriceInfoDepreciateInfo depreciateInfo;
+
         @NameInMap("DiscountAmount")
         public Float discountAmount;
+
+        @NameInMap("IsContractActivity")
+        public Boolean isContractActivity;
 
         @NameInMap("Message")
         public String message;
@@ -145,6 +225,12 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
 
         @NameInMap("Rules")
         public java.util.List<QueryModifyInstancePriceResponseBodyPriceInfoRules> rules;
+
+        @NameInMap("StandDiscountPrice")
+        public String standDiscountPrice;
+
+        @NameInMap("StandPrice")
+        public String standPrice;
 
         @NameInMap("TradeAmount")
         public Float tradeAmount;
@@ -170,12 +256,28 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
             return this.currency;
         }
 
+        public QueryModifyInstancePriceResponseBodyPriceInfo setDepreciateInfo(QueryModifyInstancePriceResponseBodyPriceInfoDepreciateInfo depreciateInfo) {
+            this.depreciateInfo = depreciateInfo;
+            return this;
+        }
+        public QueryModifyInstancePriceResponseBodyPriceInfoDepreciateInfo getDepreciateInfo() {
+            return this.depreciateInfo;
+        }
+
         public QueryModifyInstancePriceResponseBodyPriceInfo setDiscountAmount(Float discountAmount) {
             this.discountAmount = discountAmount;
             return this;
         }
         public Float getDiscountAmount() {
             return this.discountAmount;
+        }
+
+        public QueryModifyInstancePriceResponseBodyPriceInfo setIsContractActivity(Boolean isContractActivity) {
+            this.isContractActivity = isContractActivity;
+            return this;
+        }
+        public Boolean getIsContractActivity() {
+            return this.isContractActivity;
         }
 
         public QueryModifyInstancePriceResponseBodyPriceInfo setMessage(String message) {
@@ -208,6 +310,22 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         }
         public java.util.List<QueryModifyInstancePriceResponseBodyPriceInfoRules> getRules() {
             return this.rules;
+        }
+
+        public QueryModifyInstancePriceResponseBodyPriceInfo setStandDiscountPrice(String standDiscountPrice) {
+            this.standDiscountPrice = standDiscountPrice;
+            return this;
+        }
+        public String getStandDiscountPrice() {
+            return this.standDiscountPrice;
+        }
+
+        public QueryModifyInstancePriceResponseBodyPriceInfo setStandPrice(String standPrice) {
+            this.standPrice = standPrice;
+            return this;
+        }
+        public String getStandPrice() {
+            return this.standPrice;
         }
 
         public QueryModifyInstancePriceResponseBodyPriceInfo setTradeAmount(Float tradeAmount) {

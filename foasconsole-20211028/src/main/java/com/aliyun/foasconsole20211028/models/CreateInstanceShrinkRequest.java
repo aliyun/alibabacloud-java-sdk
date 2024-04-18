@@ -55,6 +55,9 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     @NameInMap("Storage")
     public String storageShrink;
 
+    @NameInMap("Tag")
+    public String tagShrink;
+
     @NameInMap("UsePromotionCode")
     public Boolean usePromotionCode;
 
@@ -206,6 +209,14 @@ public class CreateInstanceShrinkRequest extends TeaModel {
     }
     public String getStorageShrink() {
         return this.storageShrink;
+    }
+
+    public CreateInstanceShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
+        return this;
+    }
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
     public CreateInstanceShrinkRequest setUsePromotionCode(Boolean usePromotionCode) {
