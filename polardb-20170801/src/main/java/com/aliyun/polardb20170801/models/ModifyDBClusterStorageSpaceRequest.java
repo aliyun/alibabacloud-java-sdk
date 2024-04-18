@@ -46,9 +46,9 @@ public class ModifyDBClusterStorageSpaceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The new storage capacity. Unit: GB.</p>
+     * <p>The storage capacity that you can select when you change the cluster. Unit: GB.</p>
      * <br>
-     * <p>> Valid values for PolarDB for MySQL Standard Edition are 20 to 32000.</p>
+     * <p>>  You can set this parameter for PolarDB for MySQL clusters of Standard Edition to a value that ranges from 20 to 32000.</p>
      */
     @NameInMap("StorageSpace")
     public Long storageSpace;
@@ -57,7 +57,7 @@ public class ModifyDBClusterStorageSpaceRequest extends TeaModel {
      * <p>The category of the cluster. Default value: ON. Valid values:</p>
      * <br>
      * <p>*   **normal_exclusive**: dedicated</p>
-     * <p>*   **normal_general**: genera-purpose</p>
+     * <p>*   **normal_general**: general-purpose</p>
      */
     @NameInMap("SubCategory")
     public String subCategory;
