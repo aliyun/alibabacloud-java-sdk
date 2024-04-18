@@ -158,7 +158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CallBackThirdRightSendPlan"),
             new TeaPair("version", "iap_1.0"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/1.0/iap/business/CallBackThirdRightSendPlan"),
+            new TeaPair("pathname", "/v1.0/iap/business/CallBackThirdRightSendPlan"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
