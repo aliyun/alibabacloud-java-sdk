@@ -48,7 +48,7 @@ public class ListTemplatesRequest extends TeaModel {
     public Boolean isFavorite;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 20 to 100. Default value: 50.</p>
+     * <p>The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;

@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListInstancePatchesRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The token that is used to retrieve the next page of results.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ</p>
+     * <p>The token that is used to retrieve the next page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The token that is used to retrieve the next page of results.</p>
+     * <p>The status of the patches that you want to query. If you do not set this parameter, patches are not filtered.</p>
      */
     @NameInMap("PatchStatuses")
     public String patchStatuses;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the region in which the instance whose patches you want to query resides.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

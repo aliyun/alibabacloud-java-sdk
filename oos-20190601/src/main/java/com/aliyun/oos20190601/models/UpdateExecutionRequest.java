@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateExecutionRequest extends TeaModel {
     /**
-     * <p>The description of the execution.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;

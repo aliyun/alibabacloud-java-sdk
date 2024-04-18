@@ -56,6 +56,9 @@ public class CreateSecretParameterResponseBody extends TeaModel {
         @NameInMap("CreatedDate")
         public String createdDate;
 
+        @NameInMap("DKMSInstanceId")
+        public String DKMSInstanceId;
+
         /**
          * <p>The description of the encryption parameter.</p>
          */
@@ -149,6 +152,14 @@ public class CreateSecretParameterResponseBody extends TeaModel {
         }
         public String getCreatedDate() {
             return this.createdDate;
+        }
+
+        public CreateSecretParameterResponseBodyParameter setDKMSInstanceId(String DKMSInstanceId) {
+            this.DKMSInstanceId = DKMSInstanceId;
+            return this;
+        }
+        public String getDKMSInstanceId() {
+            return this.DKMSInstanceId;
         }
 
         public CreateSecretParameterResponseBodyParameter setDescription(String description) {

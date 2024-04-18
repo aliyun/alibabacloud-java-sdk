@@ -21,6 +21,9 @@ public class CreateSecretParameterRequest extends TeaModel {
     @NameInMap("Constraints")
     public String constraints;
 
+    @NameInMap("DKMSInstanceId")
+    public String DKMSInstanceId;
+
     /**
      * <p>The description of the encryption parameter. The description must be 1 to 200 characters in length.</p>
      */
@@ -88,6 +91,14 @@ public class CreateSecretParameterRequest extends TeaModel {
     }
     public String getConstraints() {
         return this.constraints;
+    }
+
+    public CreateSecretParameterRequest setDKMSInstanceId(String DKMSInstanceId) {
+        this.DKMSInstanceId = DKMSInstanceId;
+        return this;
+    }
+    public String getDKMSInstanceId() {
+        return this.DKMSInstanceId;
     }
 
     public CreateSecretParameterRequest setDescription(String description) {
