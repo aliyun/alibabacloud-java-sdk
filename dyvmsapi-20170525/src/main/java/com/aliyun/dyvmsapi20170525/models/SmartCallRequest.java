@@ -130,6 +130,9 @@ public class SmartCallRequest extends TeaModel {
     @NameInMap("MuteTime")
     public Integer muteTime;
 
+    @NameInMap("NoiseThreshold")
+    public Double noiseThreshold;
+
     /**
      * <p>The ID that is reserved for the caller of the operation. This ID is returned to the caller in a receipt message.</p>
      * <br>
@@ -349,6 +352,14 @@ public class SmartCallRequest extends TeaModel {
     }
     public Integer getMuteTime() {
         return this.muteTime;
+    }
+
+    public SmartCallRequest setNoiseThreshold(Double noiseThreshold) {
+        this.noiseThreshold = noiseThreshold;
+        return this;
+    }
+    public Double getNoiseThreshold() {
+        return this.noiseThreshold;
     }
 
     public SmartCallRequest setOutId(String outId) {
