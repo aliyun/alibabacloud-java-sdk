@@ -39,6 +39,9 @@ public class InviteSubAccountRequest extends TeaModel {
         @NameInMap("CreditLine")
         public String creditLine;
 
+        @NameInMap("CustomerBd")
+        public String customerBd;
+
         /**
          * <p>Customer ID, Returning ID from CreateCustomer API.</p>
          */
@@ -103,6 +106,14 @@ public class InviteSubAccountRequest extends TeaModel {
         }
         public String getCreditLine() {
             return this.creditLine;
+        }
+
+        public InviteSubAccountRequestAccountInfoList setCustomerBd(String customerBd) {
+            this.customerBd = customerBd;
+            return this;
+        }
+        public String getCustomerBd() {
+            return this.customerBd;
         }
 
         public InviteSubAccountRequestAccountInfoList setCustomerId(String customerId) {
