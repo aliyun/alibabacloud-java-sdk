@@ -318,6 +318,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.cancelRobotTaskWithOptions(request, runtime);
     }
 
+    public ChangeMediaTypeResponse changeMediaTypeWithOptions(ChangeMediaTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callId)) {
+            query.put("CallId", request.callId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.calledNum)) {
+            query.put("CalledNum", request.calledNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
+            query.put("MediaType", request.mediaType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChangeMediaType"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeMediaTypeResponse());
+    }
+
+    public ChangeMediaTypeResponse changeMediaType(ChangeMediaTypeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.changeMediaTypeWithOptions(request, runtime);
+    }
+
     /**
       * You can create up to 1,000 voice notifications for each task.
       * ### QPS limits
@@ -510,6 +563,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createRobotTaskWithOptions(request, runtime);
     }
 
+    public DegradeVideoFileResponse degradeVideoFileWithOptions(DegradeVideoFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callId)) {
+            query.put("CallId", request.callId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
+            query.put("CalledNumber", request.calledNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
+            query.put("MediaType", request.mediaType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DegradeVideoFile"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DegradeVideoFileResponse());
+    }
+
+    public DegradeVideoFileResponse degradeVideoFile(DegradeVideoFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.degradeVideoFileWithOptions(request, runtime);
+    }
+
     /**
       * You can call this operation to delete only tasks that are not started, that are completed, and that are terminated.
       * ### QPS limits
@@ -632,6 +738,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.executeCallTaskWithOptions(request, runtime);
     }
 
+    public GetCallProgressResponse getCallProgressWithOptions(GetCallProgressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callId)) {
+            query.put("CallId", request.callId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.calledNum)) {
+            query.put("CalledNum", request.calledNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCallProgress"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCallProgressResponse());
+    }
+
+    public GetCallProgressResponse getCallProgress(GetCallProgressRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCallProgressWithOptions(request, runtime);
+    }
+
     /**
       * ### QPS limits
       * You can call this operation up to 100 times per second per account.
@@ -742,6 +893,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetTokenResponse getToken(GetTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTokenWithOptions(request, runtime);
+    }
+
+    public GetVideoFieldUrlResponse getVideoFieldUrlWithOptions(GetVideoFieldUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoFile)) {
+            query.put("VideoFile", request.videoFile);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVideoFieldUrl"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVideoFieldUrlResponse());
+    }
+
+    public GetVideoFieldUrlResponse getVideoFieldUrl(GetVideoFieldUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getVideoFieldUrlWithOptions(request, runtime);
     }
 
     /**
@@ -1128,6 +1320,104 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListHotlineTransferRegisterFileResponse listHotlineTransferRegisterFile(ListHotlineTransferRegisterFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listHotlineTransferRegisterFileWithOptions(request, runtime);
+    }
+
+    public PauseVideoFileResponse pauseVideoFileWithOptions(PauseVideoFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callId)) {
+            query.put("CallId", request.callId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
+            query.put("CalledNumber", request.calledNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PauseVideoFile"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PauseVideoFileResponse());
+    }
+
+    public PauseVideoFileResponse pauseVideoFile(PauseVideoFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.pauseVideoFileWithOptions(request, runtime);
+    }
+
+    public PlayVideoFileResponse playVideoFileWithOptions(PlayVideoFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callId)) {
+            query.put("CallId", request.callId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
+            query.put("CalledNumber", request.calledNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoId)) {
+            query.put("VideoId", request.videoId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PlayVideoFile"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PlayVideoFileResponse());
+    }
+
+    public PlayVideoFileResponse playVideoFile(PlayVideoFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.playVideoFileWithOptions(request, runtime);
     }
 
     /**
@@ -1750,6 +2040,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryRobotv2AllListWithOptions(request, runtime);
     }
 
+    public QueryVideoPlayProgressResponse queryVideoPlayProgressWithOptions(QueryVideoPlayProgressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callId)) {
+            query.put("CallId", request.callId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
+            query.put("CalledNumber", request.calledNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryVideoPlayProgress"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryVideoPlayProgressResponse());
+    }
+
+    public QueryVideoPlayProgressResponse queryVideoPlayProgress(QueryVideoPlayProgressRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryVideoPlayProgressWithOptions(request, runtime);
+    }
+
     /**
       * ### QPS limits
       * You can call this operation up to 100 times per second per account.
@@ -1992,6 +2327,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.recoverCallInConfigWithOptions(request, runtime);
     }
 
+    public ResumeVideoFileResponse resumeVideoFileWithOptions(ResumeVideoFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callId)) {
+            query.put("CallId", request.callId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
+            query.put("CalledNumber", request.calledNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResumeVideoFile"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResumeVideoFileResponse());
+    }
+
+    public ResumeVideoFileResponse resumeVideoFile(ResumeVideoFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.resumeVideoFileWithOptions(request, runtime);
+    }
+
+    public SeekVideoFileResponse seekVideoFileWithOptions(SeekVideoFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callId)) {
+            query.put("CallId", request.callId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
+            query.put("CalledNumber", request.calledNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.seekTimes)) {
+            query.put("SeekTimes", request.seekTimes);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SeekVideoFile"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SeekVideoFileResponse());
+    }
+
+    public SeekVideoFileResponse seekVideoFile(SeekVideoFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.seekVideoFileWithOptions(request, runtime);
+    }
+
     /**
       * ### QPS limits
       * You can call this operation up to 100 times per second per account.
@@ -2212,6 +2641,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.singleCallByTtsWithOptions(request, runtime);
     }
 
+    public SingleCallByVideoResponse singleCallByVideoWithOptions(SingleCallByVideoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
+            query.put("CalledNumber", request.calledNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.calledShowNumber)) {
+            query.put("CalledShowNumber", request.calledShowNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.playTimes)) {
+            query.put("PlayTimes", request.playTimes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speed)) {
+            query.put("Speed", request.speed);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoCode)) {
+            query.put("VideoCode", request.videoCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.voiceCode)) {
+            query.put("VoiceCode", request.voiceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.volume)) {
+            query.put("Volume", request.volume);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SingleCallByVideo"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SingleCallByVideoResponse());
+    }
+
+    public SingleCallByVideoResponse singleCallByVideo(SingleCallByVideoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.singleCallByVideoWithOptions(request, runtime);
+    }
+
     /**
       * > Due to business adjustments, the updates of the voice notification and voice verification code services have been stopped in regions outside the Chinese mainland and the services have been discontinued since March 2022. Only qualified customers can continue using the voice notification and voice verification code services.
       * You can call the [SingleCallByTts](~~393519~~) operation to send voice notifications with variables.
@@ -2296,6 +2794,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.singleCallByVoiceWithOptions(request, runtime);
     }
 
+    public SkipVideoFileResponse skipVideoFileWithOptions(SkipVideoFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callId)) {
+            query.put("CallId", request.callId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
+            query.put("CalledNumber", request.calledNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skipTimes)) {
+            query.put("SkipTimes", request.skipTimes);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SkipVideoFile"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SkipVideoFileResponse());
+    }
+
+    public SkipVideoFileResponse skipVideoFile(SkipVideoFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.skipVideoFileWithOptions(request, runtime);
+    }
+
     /**
       * *   The SmartCall operation must be used together with the [intelligent outbound HTTP operation](~~112703~~). After the call initiated by the Voice Messaging Service (VMS) platform is connected, the VMS platform sends the text converted from speech back to the business side, and the business side then returns the follow-up action to the VMS platform.
       * *   The SmartCall operation does not support the following characters: `@ = : "" $ { } ^ * ￥`.
@@ -2359,6 +2910,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.muteTime)) {
             query.put("MuteTime", request.muteTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.noiseThreshold)) {
+            query.put("NoiseThreshold", request.noiseThreshold);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
@@ -2773,6 +3328,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitHotlineTransferRegisterResponse submitHotlineTransferRegister(SubmitHotlineTransferRegisterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitHotlineTransferRegisterWithOptions(request, runtime);
+    }
+
+    public UpgradeVideoFileResponse upgradeVideoFileWithOptions(UpgradeVideoFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callId)) {
+            query.put("CallId", request.callId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
+            query.put("CalledNumber", request.calledNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
+            query.put("MediaType", request.mediaType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpgradeVideoFile"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeVideoFileResponse());
+    }
+
+    public UpgradeVideoFileResponse upgradeVideoFile(UpgradeVideoFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.upgradeVideoFileWithOptions(request, runtime);
     }
 
     /**
