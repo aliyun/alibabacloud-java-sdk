@@ -125,6 +125,15 @@ public class GetAccountInfoResponseBody extends TeaModel {
         @NameInMap("Cid")
         public Long cid;
 
+        @NameInMap("CustomerBd")
+        public String customerBd;
+
+        @NameInMap("DelayAmount")
+        public String delayAmount;
+
+        @NameInMap("DelayStatus")
+        public String delayStatus;
+
         /**
          * <p>The E-mail of Distribution Customer.</p>
          */
@@ -136,6 +145,9 @@ public class GetAccountInfoResponseBody extends TeaModel {
          */
         @NameInMap("Mobile")
         public String mobile;
+
+        @NameInMap("NewBuyStatus")
+        public String newBuyStatus;
 
         /**
          * <p>Description of Distribution Customer.</p>
@@ -198,6 +210,30 @@ public class GetAccountInfoResponseBody extends TeaModel {
             return this.cid;
         }
 
+        public GetAccountInfoResponseBodyAccountInfoListAccountInfo setCustomerBd(String customerBd) {
+            this.customerBd = customerBd;
+            return this;
+        }
+        public String getCustomerBd() {
+            return this.customerBd;
+        }
+
+        public GetAccountInfoResponseBodyAccountInfoListAccountInfo setDelayAmount(String delayAmount) {
+            this.delayAmount = delayAmount;
+            return this;
+        }
+        public String getDelayAmount() {
+            return this.delayAmount;
+        }
+
+        public GetAccountInfoResponseBodyAccountInfoListAccountInfo setDelayStatus(String delayStatus) {
+            this.delayStatus = delayStatus;
+            return this;
+        }
+        public String getDelayStatus() {
+            return this.delayStatus;
+        }
+
         public GetAccountInfoResponseBodyAccountInfoListAccountInfo setEmail(String email) {
             this.email = email;
             return this;
@@ -212,6 +248,14 @@ public class GetAccountInfoResponseBody extends TeaModel {
         }
         public String getMobile() {
             return this.mobile;
+        }
+
+        public GetAccountInfoResponseBodyAccountInfoListAccountInfo setNewBuyStatus(String newBuyStatus) {
+            this.newBuyStatus = newBuyStatus;
+            return this;
+        }
+        public String getNewBuyStatus() {
+            return this.newBuyStatus;
         }
 
         public GetAccountInfoResponseBodyAccountInfoListAccountInfo setRemark(String remark) {

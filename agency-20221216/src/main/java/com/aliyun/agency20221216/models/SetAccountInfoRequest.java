@@ -12,6 +12,9 @@ public class SetAccountInfoRequest extends TeaModel {
     @NameInMap("AccountNickname")
     public String accountNickname;
 
+    @NameInMap("CustomerBd")
+    public String customerBd;
+
     /**
      * <p>Description of Sub Account.</p>
      */
@@ -35,6 +38,14 @@ public class SetAccountInfoRequest extends TeaModel {
     }
     public String getAccountNickname() {
         return this.accountNickname;
+    }
+
+    public SetAccountInfoRequest setCustomerBd(String customerBd) {
+        this.customerBd = customerBd;
+        return this;
+    }
+    public String getCustomerBd() {
+        return this.customerBd;
     }
 
     public SetAccountInfoRequest setRemark(String remark) {

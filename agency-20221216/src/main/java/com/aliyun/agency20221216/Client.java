@@ -820,6 +820,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AccountNickname", request.accountNickname);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.customerBd)) {
+            query.put("CustomerBd", request.customerBd);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
             query.put("Remark", request.remark);
         }
