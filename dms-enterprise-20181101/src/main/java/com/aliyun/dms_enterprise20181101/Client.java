@@ -469,6 +469,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NewApprover", request.newApprover);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.newApproverList)) {
+            query.put("NewApproverList", request.newApproverList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.oldApprover)) {
             query.put("OldApprover", request.oldApprover);
         }
