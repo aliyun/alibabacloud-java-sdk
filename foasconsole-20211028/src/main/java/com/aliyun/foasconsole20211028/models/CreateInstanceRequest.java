@@ -55,6 +55,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("Storage")
     public CreateInstanceRequestStorage storage;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateInstanceRequestTag> tag;
+
     @NameInMap("UsePromotionCode")
     public Boolean usePromotionCode;
 
@@ -208,6 +211,14 @@ public class CreateInstanceRequest extends TeaModel {
         return this.storage;
     }
 
+    public CreateInstanceRequest setTag(java.util.List<CreateInstanceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateInstanceRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateInstanceRequest setUsePromotionCode(Boolean usePromotionCode) {
         this.usePromotionCode = usePromotionCode;
         return this;
@@ -334,6 +345,36 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public CreateInstanceRequestStorageOss getOss() {
             return this.oss;
+        }
+
+    }
+
+    public static class CreateInstanceRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateInstanceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestTag self = new CreateInstanceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateInstanceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

@@ -101,6 +101,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.storageShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.storage, "Storage", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.vSwitchIds)) {
             request.vSwitchIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.vSwitchIds, "VSwitchIds", "json");
         }
@@ -172,6 +176,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageShrink)) {
             body.put("Storage", request.storageShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            body.put("Tag", request.tagShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.usePromotionCode)) {
