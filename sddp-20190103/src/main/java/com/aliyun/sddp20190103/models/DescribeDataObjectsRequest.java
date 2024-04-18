@@ -25,6 +25,9 @@ public class DescribeDataObjectsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("MemberAccount")
+    public Long memberAccount;
+
     @NameInMap("ModelIds")
     public String modelIds;
 
@@ -111,6 +114,14 @@ public class DescribeDataObjectsRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeDataObjectsRequest setMemberAccount(Long memberAccount) {
+        this.memberAccount = memberAccount;
+        return this;
+    }
+    public Long getMemberAccount() {
+        return this.memberAccount;
     }
 
     public DescribeDataObjectsRequest setModelIds(String modelIds) {

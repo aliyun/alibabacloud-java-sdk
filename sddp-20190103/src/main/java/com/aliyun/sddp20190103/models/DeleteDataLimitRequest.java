@@ -4,6 +4,9 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DeleteDataLimitRequest extends TeaModel {
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("FeatureType")
     public Integer featureType;
 
@@ -24,6 +27,9 @@ public class DeleteDataLimitRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

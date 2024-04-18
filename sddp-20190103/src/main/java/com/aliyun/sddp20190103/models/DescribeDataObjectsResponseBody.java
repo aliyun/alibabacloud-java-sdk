@@ -173,6 +173,9 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         @NameInMap("LastScanTime")
         public Long lastScanTime;
 
+        @NameInMap("MemberAccount")
+        public Long memberAccount;
+
         @NameInMap("ModelTags")
         public java.util.List<DescribeDataObjectsResponseBodyItemsModelTags> modelTags;
 
@@ -249,6 +252,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         }
         public Long getLastScanTime() {
             return this.lastScanTime;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setMemberAccount(Long memberAccount) {
+            this.memberAccount = memberAccount;
+            return this;
+        }
+        public Long getMemberAccount() {
+            return this.memberAccount;
         }
 
         public DescribeDataObjectsResponseBodyItems setModelTags(java.util.List<DescribeDataObjectsResponseBodyItemsModelTags> modelTags) {

@@ -14,6 +14,9 @@ public class ExecDatamaskRequest extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("FeatureType")
     public Integer featureType;
 

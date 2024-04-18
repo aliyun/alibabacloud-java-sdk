@@ -10,6 +10,9 @@ public class DisableUserConfigRequest extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("FeatureType")
     public Integer featureType;
 

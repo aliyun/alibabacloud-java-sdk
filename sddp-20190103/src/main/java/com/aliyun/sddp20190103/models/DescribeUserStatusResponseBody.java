@@ -90,7 +90,7 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         public Integer dataManagerRole;
 
         /**
-         * <p>The ID of the instance within the current account.</p>
+         * <p>The ID of the data security center instance purchased by the main account.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

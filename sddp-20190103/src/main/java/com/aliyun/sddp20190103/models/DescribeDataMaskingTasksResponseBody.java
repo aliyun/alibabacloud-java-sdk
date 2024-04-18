@@ -80,6 +80,9 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeDataMaskingTasksResponseBodyItems extends TeaModel {
+        @NameInMap("DstMemberAccount")
+        public Long dstMemberAccount;
+
         /**
          * <p>The destination directory.</p>
          */
@@ -134,6 +137,9 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         @NameInMap("RunCount")
         public Integer runCount;
 
+        @NameInMap("SrcMemberAccount")
+        public Long srcMemberAccount;
+
         /**
          * <p>The source path.</p>
          */
@@ -186,6 +192,14 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public static DescribeDataMaskingTasksResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDataMaskingTasksResponseBodyItems self = new DescribeDataMaskingTasksResponseBodyItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDataMaskingTasksResponseBodyItems setDstMemberAccount(Long dstMemberAccount) {
+            this.dstMemberAccount = dstMemberAccount;
+            return this;
+        }
+        public Long getDstMemberAccount() {
+            return this.dstMemberAccount;
         }
 
         public DescribeDataMaskingTasksResponseBodyItems setDstPath(String dstPath) {
@@ -258,6 +272,14 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         }
         public Integer getRunCount() {
             return this.runCount;
+        }
+
+        public DescribeDataMaskingTasksResponseBodyItems setSrcMemberAccount(Long srcMemberAccount) {
+            this.srcMemberAccount = srcMemberAccount;
+            return this;
+        }
+        public Long getSrcMemberAccount() {
+            return this.srcMemberAccount;
         }
 
         public DescribeDataMaskingTasksResponseBodyItems setSrcPath(String srcPath) {

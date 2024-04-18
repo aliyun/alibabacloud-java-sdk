@@ -95,6 +95,9 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         @NameInMap("LocalName")
         public String localName;
 
+        @NameInMap("MemberAccount")
+        public Long memberAccount;
+
         @NameInMap("ParentId")
         public String parentId;
 
@@ -199,6 +202,14 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         }
         public String getLocalName() {
             return this.localName;
+        }
+
+        public DescribeParentInstanceResponseBodyItems setMemberAccount(Long memberAccount) {
+            this.memberAccount = memberAccount;
+            return this;
+        }
+        public Long getMemberAccount() {
+            return this.memberAccount;
         }
 
         public DescribeParentInstanceResponseBodyItems setParentId(String parentId) {
