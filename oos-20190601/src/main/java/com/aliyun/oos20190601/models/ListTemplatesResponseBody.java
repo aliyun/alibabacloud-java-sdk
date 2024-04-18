@@ -23,7 +23,7 @@ public class ListTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The metadata of the template.</p>
+     * <p>The template metadata.</p>
      */
     @NameInMap("Templates")
     public java.util.List<ListTemplatesResponseBodyTemplates> templates;
@@ -67,7 +67,7 @@ public class ListTemplatesResponseBody extends TeaModel {
 
     public static class ListTemplatesResponseBodyTemplates extends TeaModel {
         /**
-         * <p>The type of the template.</p>
+         * <p>The template type.</p>
          */
         @NameInMap("Category")
         public String category;
@@ -91,13 +91,13 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String createdDate;
 
         /**
-         * <p>The description of the template.</p>
+         * <p>The template description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Indicates whether the template is configured with a trigger.</p>
+         * <p>Indicates whether the template was configured with a trigger.</p>
          */
         @NameInMap("HasTrigger")
         public Boolean hasTrigger;
@@ -115,9 +115,9 @@ public class ListTemplatesResponseBody extends TeaModel {
         public Boolean isFavorite;
 
         /**
-         * <p>The popularity of the public template. Valid values: **1-10**. A greater value indicates higher popularity. If the **ShareType** parameter is set to **Private**, the value of this parameter is `-1`.</p>
+         * <p>The popularity of the public template. Valid values: **1-10**. A greater value indicates higher popularity. If **ShareType** is set to **Private**, the value of this parameter is `-1`.</p>
          * <br>
-         * <p>**Notes** This parameter is valid only if the value of the **ShareType** parameter is set to **Public**.</p>
+         * <p>>  This parameter is valid only if the value of **ShareType** is set to **Public**.</p>
          */
         @NameInMap("Popularity")
         public Integer popularity;
@@ -129,13 +129,13 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String publisher;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The share type of the template. The share type of the template that you create is **Private**. Valid values:</p>
+         * <p>The share type of the template. The share type of a template created by a user is **Private**. Valid values:</p>
          * <br>
          * <p>*   **Public**</p>
          * <p>*   **Private**</p>
@@ -150,38 +150,39 @@ public class ListTemplatesResponseBody extends TeaModel {
         public java.util.Map<String, ?> tags;
 
         /**
-         * <p>The format of the template. The system automatically determines whether the format is JSON or YAML.</p>
+         * <p>The template format. The system automatically determines whether the format is JSON or YAML.</p>
          */
         @NameInMap("TemplateFormat")
         public String templateFormat;
 
         /**
-         * <p>The ID of the template.</p>
+         * <p>The template ID.</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The template name.</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
-         * <p>The type of the template.</p>
+         * <p>The template type.</p>
          */
         @NameInMap("TemplateType")
         public String templateType;
 
         /**
-         * <p>The version of the template. The name of the version consists of the letter v and a number. The number starts from 1.</p>
+         * <p>The template version. The name of the version consists of the letter v and a number. The number starts from 1.</p>
          */
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
         /**
-         * <p>The number of times for which the private template is executed. If the **ShareType** parameter is set to **Public**, the value of this parameter is `-1`.</p>
-         * <p>**Notes** This parameter is valid only if the **ShareType** parameter is set to **Private**.</p>
+         * <p>The number of times for which the private template is executed. If **ShareType** is set to **Public**, the value of this parameter is `-1`.</p>
+         * <br>
+         * <p>>  This parameter is valid only if the value of **ShareType** is **Private**.</p>
          */
         @NameInMap("TotalExecutionCount")
         public Integer totalExecutionCount;

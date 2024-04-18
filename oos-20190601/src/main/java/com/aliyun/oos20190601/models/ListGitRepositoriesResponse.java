@@ -3,7 +3,7 @@ package com.aliyun.oos20190601.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateStateConfigurationResponse extends TeaModel {
+public class ListGitRepositoriesResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class UpdateStateConfigurationResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public UpdateStateConfigurationResponseBody body;
+    public ListGitRepositoriesResponseBody body;
 
-    public static UpdateStateConfigurationResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateStateConfigurationResponse self = new UpdateStateConfigurationResponse();
+    public static ListGitRepositoriesResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListGitRepositoriesResponse self = new ListGitRepositoriesResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateStateConfigurationResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListGitRepositoriesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class UpdateStateConfigurationResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateStateConfigurationResponse setStatusCode(Integer statusCode) {
+    public ListGitRepositoriesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class UpdateStateConfigurationResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateStateConfigurationResponse setBody(UpdateStateConfigurationResponseBody body) {
+    public ListGitRepositoriesResponse setBody(ListGitRepositoriesResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateStateConfigurationResponseBody getBody() {
+    public ListGitRepositoriesResponseBody getBody() {
         return this.body;
     }
 
