@@ -11,13 +11,13 @@ public class ApproveFotaUpdateRequest extends TeaModel {
     public String appVersion;
 
     /**
-     * <p>The ID of the cloud desktop.</p>
+     * <p>The ID of the cloud computer.</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

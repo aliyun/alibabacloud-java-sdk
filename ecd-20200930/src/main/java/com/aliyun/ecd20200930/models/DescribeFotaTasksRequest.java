@@ -5,16 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeFotaTasksRequest extends TeaModel {
     /**
-     * <p>This parameter is not available.</p>
+     * <p>>  This parameter is not publicly available.</p>
      */
     @NameInMap("FotaStatus")
     public String fotaStatus;
 
     /**
-     * <p>The language of the image version to update. Valid values:</p>
+     * <p>The language of the image version to update.</p>
      * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   en: English.</p>
+     * <p>*   zh: Simplified Chinese.</p>
      */
     @NameInMap("Lang")
     public String lang;
@@ -35,13 +37,13 @@ public class DescribeFotaTasksRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The IDs of the image update tasks. You can call the DescribeFotaTasks operation to obtain the value of this parameter.</p>
+     * <p>The IDs of the image update tasks.</p>
      */
     @NameInMap("TaskUid")
     public java.util.List<String> taskUid;

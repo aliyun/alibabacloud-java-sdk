@@ -75,8 +75,14 @@ public class DescribeDesktopOversoldGroupResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        @NameInMap("IdleDisconnectDuration")
+        public String idleDisconnectDuration;
+
         @NameInMap("ImageId")
         public String imageId;
+
+        @NameInMap("KeepDuration")
+        public String keepDuration;
 
         @NameInMap("Name")
         public String name;
@@ -166,12 +172,28 @@ public class DescribeDesktopOversoldGroupResponseBody extends TeaModel {
             return this.expireTime;
         }
 
+        public DescribeDesktopOversoldGroupResponseBodyData setIdleDisconnectDuration(String idleDisconnectDuration) {
+            this.idleDisconnectDuration = idleDisconnectDuration;
+            return this;
+        }
+        public String getIdleDisconnectDuration() {
+            return this.idleDisconnectDuration;
+        }
+
         public DescribeDesktopOversoldGroupResponseBodyData setImageId(String imageId) {
             this.imageId = imageId;
             return this;
         }
         public String getImageId() {
             return this.imageId;
+        }
+
+        public DescribeDesktopOversoldGroupResponseBodyData setKeepDuration(String keepDuration) {
+            this.keepDuration = keepDuration;
+            return this;
+        }
+        public String getKeepDuration() {
+            return this.keepDuration;
         }
 
         public DescribeDesktopOversoldGroupResponseBodyData setName(String name) {
