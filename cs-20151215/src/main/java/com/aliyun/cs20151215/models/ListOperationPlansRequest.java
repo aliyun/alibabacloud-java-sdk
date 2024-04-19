@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ListOperationPlansRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("cluster_id")
     public String clusterId;
 
+    /**
+     * <p>The operation plan type.</p>
+     */
     @NameInMap("type")
     public String type;
 
