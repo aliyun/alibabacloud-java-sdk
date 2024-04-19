@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteRuleV4Response extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public DeleteRuleV4ResponseBody body;
 
     public static DeleteRuleV4Response build(java.util.Map<String, ?> map) throws Exception {
