@@ -53,6 +53,55 @@ public class ImageModerationResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ImageModerationResponseBodyDataExtRecognition extends TeaModel {
+        @NameInMap("Classification")
+        public String classification;
+
+        @NameInMap("Confidence")
+        public Float confidence;
+
+        public static ImageModerationResponseBodyDataExtRecognition build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtRecognition self = new ImageModerationResponseBodyDataExtRecognition();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtRecognition setClassification(String classification) {
+            this.classification = classification;
+            return this;
+        }
+        public String getClassification() {
+            return this.classification;
+        }
+
+        public ImageModerationResponseBodyDataExtRecognition setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+    }
+
+    public static class ImageModerationResponseBodyDataExt extends TeaModel {
+        @NameInMap("Recognition")
+        public java.util.List<ImageModerationResponseBodyDataExtRecognition> recognition;
+
+        public static ImageModerationResponseBodyDataExt build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExt self = new ImageModerationResponseBodyDataExt();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExt setRecognition(java.util.List<ImageModerationResponseBodyDataExtRecognition> recognition) {
+            this.recognition = recognition;
+            return this;
+        }
+        public java.util.List<ImageModerationResponseBodyDataExtRecognition> getRecognition() {
+            return this.recognition;
+        }
+
+    }
+
     public static class ImageModerationResponseBodyDataResult extends TeaModel {
         @NameInMap("Confidence")
         public Float confidence;
@@ -87,6 +136,9 @@ public class ImageModerationResponseBody extends TeaModel {
         @NameInMap("DataId")
         public String dataId;
 
+        @NameInMap("Ext")
+        public ImageModerationResponseBodyDataExt ext;
+
         @NameInMap("Result")
         public java.util.List<ImageModerationResponseBodyDataResult> result;
 
@@ -101,6 +153,14 @@ public class ImageModerationResponseBody extends TeaModel {
         }
         public String getDataId() {
             return this.dataId;
+        }
+
+        public ImageModerationResponseBodyData setExt(ImageModerationResponseBodyDataExt ext) {
+            this.ext = ext;
+            return this;
+        }
+        public ImageModerationResponseBodyDataExt getExt() {
+            return this.ext;
         }
 
         public ImageModerationResponseBodyData setResult(java.util.List<ImageModerationResponseBodyDataResult> result) {
