@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>qualitycheck20190115</artifactId>
-  <version>4.13.0</version>
+  <version>5.0.0</version>
   <packaging>jar</packaging>
   <name>qualitycheck20190115</name>
   <description>Alibaba Cloud Qualitycheck (20190115) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.1</version>
+      <version>0.3.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -56,7 +56,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
-      <version>1.2.0</version>
+      <version>1.2.7</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

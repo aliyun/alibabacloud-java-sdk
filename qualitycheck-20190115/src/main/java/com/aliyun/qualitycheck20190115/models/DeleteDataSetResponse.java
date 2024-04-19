@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteDataSetResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public DeleteDataSetResponseBody body;
 
     public static DeleteDataSetResponse build(java.util.Map<String, ?> map) throws Exception {
