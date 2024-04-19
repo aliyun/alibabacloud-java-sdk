@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ListOperationPlansResponseBody extends TeaModel {
+    /**
+     * <p>The operation plans.</p>
+     */
     @NameInMap("plans")
     public java.util.List<ListOperationPlansResponseBodyPlans> plans;
 
@@ -21,30 +24,62 @@ public class ListOperationPlansResponseBody extends TeaModel {
     }
 
     public static class ListOperationPlansResponseBodyPlans extends TeaModel {
+        /**
+         * <p>The cluster ID.</p>
+         */
         @NameInMap("cluster_id")
         public String clusterId;
 
+        /**
+         * <p>The time when the operation plan was created.</p>
+         */
         @NameInMap("created")
         public String created;
 
+        /**
+         * <p>The expected end time of the plan.</p>
+         */
         @NameInMap("end_time")
         public String endTime;
 
+        /**
+         * <p>The operation plan ID.</p>
+         */
         @NameInMap("plan_id")
         public String planId;
 
+        /**
+         * <p>The expected start time of the plan.</p>
+         */
         @NameInMap("start_time")
         public String startTime;
 
+        /**
+         * <p>The plan status. Valid values:</p>
+         * <br>
+         * <p>*   scheduled</p>
+         * <p>*   Canceled</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <p>The target ID.</p>
+         */
         @NameInMap("target_id")
         public String targetId;
 
+        /**
+         * <p>The target type.</p>
+         */
         @NameInMap("target_type")
         public String targetType;
 
+        /**
+         * <p>The plan type. Valid values:</p>
+         * <br>
+         * <p>*   cluster_upgrade</p>
+         */
         @NameInMap("type")
         public String type;
 

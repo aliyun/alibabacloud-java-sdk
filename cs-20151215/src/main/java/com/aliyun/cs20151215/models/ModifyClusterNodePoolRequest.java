@@ -418,6 +418,12 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         @NameInMap("auto_upgrade_kubelet")
         public Boolean autoUpgradeKubelet;
 
+        @NameInMap("auto_upgrade_os")
+        public Boolean autoUpgradeOs;
+
+        @NameInMap("auto_upgrade_runtime")
+        public Boolean autoUpgradeRuntime;
+
         public static ModifyClusterNodePoolRequestManagementAutoUpgradePolicy build(java.util.Map<String, ?> map) throws Exception {
             ModifyClusterNodePoolRequestManagementAutoUpgradePolicy self = new ModifyClusterNodePoolRequestManagementAutoUpgradePolicy();
             return TeaModel.build(map, self);
@@ -429,6 +435,22 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         }
         public Boolean getAutoUpgradeKubelet() {
             return this.autoUpgradeKubelet;
+        }
+
+        public ModifyClusterNodePoolRequestManagementAutoUpgradePolicy setAutoUpgradeOs(Boolean autoUpgradeOs) {
+            this.autoUpgradeOs = autoUpgradeOs;
+            return this;
+        }
+        public Boolean getAutoUpgradeOs() {
+            return this.autoUpgradeOs;
+        }
+
+        public ModifyClusterNodePoolRequestManagementAutoUpgradePolicy setAutoUpgradeRuntime(Boolean autoUpgradeRuntime) {
+            this.autoUpgradeRuntime = autoUpgradeRuntime;
+            return this;
+        }
+        public Boolean getAutoUpgradeRuntime() {
+            return this.autoUpgradeRuntime;
         }
 
     }
