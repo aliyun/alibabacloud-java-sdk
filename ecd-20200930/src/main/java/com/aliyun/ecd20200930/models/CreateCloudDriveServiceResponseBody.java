@@ -19,6 +19,9 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     @NameInMap("CenId")
     public String cenId;
 
+    @NameInMap("ConflictCdsAndOrder")
+    public CreateCloudDriveServiceResponseBodyConflictCdsAndOrder conflictCdsAndOrder;
+
     @NameInMap("DomainName")
     public String domainName;
 
@@ -72,6 +75,14 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         return this.cenId;
     }
 
+    public CreateCloudDriveServiceResponseBody setConflictCdsAndOrder(CreateCloudDriveServiceResponseBodyConflictCdsAndOrder conflictCdsAndOrder) {
+        this.conflictCdsAndOrder = conflictCdsAndOrder;
+        return this;
+    }
+    public CreateCloudDriveServiceResponseBodyConflictCdsAndOrder getConflictCdsAndOrder() {
+        return this.conflictCdsAndOrder;
+    }
+
     public CreateCloudDriveServiceResponseBody setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -118,6 +129,107 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictCds extends TeaModel {
+        @NameInMap("CdsId")
+        public String cdsId;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        public static CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictCds build(java.util.Map<String, ?> map) throws Exception {
+            CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictCds self = new CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictCds();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictCds setCdsId(String cdsId) {
+            this.cdsId = cdsId;
+            return this;
+        }
+        public String getCdsId() {
+            return this.cdsId;
+        }
+
+        public CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictCds setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+    }
+
+    public static class CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictOrder extends TeaModel {
+        @NameInMap("CdsId")
+        public String cdsId;
+
+        @NameInMap("OrderId")
+        public String orderId;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        public static CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictOrder build(java.util.Map<String, ?> map) throws Exception {
+            CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictOrder self = new CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictOrder();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictOrder setCdsId(String cdsId) {
+            this.cdsId = cdsId;
+            return this;
+        }
+        public String getCdsId() {
+            return this.cdsId;
+        }
+
+        public CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictOrder setOrderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+        public String getOrderId() {
+            return this.orderId;
+        }
+
+        public CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictOrder setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+    }
+
+    public static class CreateCloudDriveServiceResponseBodyConflictCdsAndOrder extends TeaModel {
+        @NameInMap("ConflictCds")
+        public java.util.List<CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictCds> conflictCds;
+
+        @NameInMap("ConflictOrder")
+        public java.util.List<CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictOrder> conflictOrder;
+
+        public static CreateCloudDriveServiceResponseBodyConflictCdsAndOrder build(java.util.Map<String, ?> map) throws Exception {
+            CreateCloudDriveServiceResponseBodyConflictCdsAndOrder self = new CreateCloudDriveServiceResponseBodyConflictCdsAndOrder();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCloudDriveServiceResponseBodyConflictCdsAndOrder setConflictCds(java.util.List<CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictCds> conflictCds) {
+            this.conflictCds = conflictCds;
+            return this;
+        }
+        public java.util.List<CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictCds> getConflictCds() {
+            return this.conflictCds;
+        }
+
+        public CreateCloudDriveServiceResponseBodyConflictCdsAndOrder setConflictOrder(java.util.List<CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictOrder> conflictOrder) {
+            this.conflictOrder = conflictOrder;
+            return this;
+        }
+        public java.util.List<CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictOrder> getConflictOrder() {
+            return this.conflictOrder;
+        }
+
     }
 
 }

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDirectoriesResponseBody extends TeaModel {
     /**
-     * <p>The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows.</p>
+     * <p>The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows. This parameter is returned only when the directory type is AD office network.</p>
      */
     @NameInMap("AdHostname")
     public String adHostname;
 
     /**
-     * <p>Details of the directories.</p>
+     * <p>The directories.</p>
      */
     @NameInMap("Directories")
     public java.util.List<DescribeDirectoriesResponseBodyDirectories> directories;
@@ -67,25 +67,49 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
     public static class DescribeDirectoriesResponseBodyDirectoriesADConnectors extends TeaModel {
         /**
-         * <p>The address of the AD connector.</p>
+         * <p>The connection address.</p>
          */
         @NameInMap("ADConnectorAddress")
         public String ADConnectorAddress;
 
         /**
-         * <p>The status of the AD connector.</p>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   CONNECT_ERROR</p>
+         * <p>*   RUNNING</p>
+         * <p>*   CONNECTING: You must configure domain trust for your AD system.</p>
+         * <p>*   EXPIRED</p>
+         * <p>*   CREATING</p>
          */
         @NameInMap("ConnectorStatus")
         public String connectorStatus;
 
         /**
-         * <p>The ID of the network interface controller (NIC) with which the AD connector is associated.</p>
+         * <p>The ID of the NIC to which the AD connector is mounted.</p>
          */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
         /**
-         * <p>The type of the AD connector.</p>
+         * <p>The AD connector type.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   1: General</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   2: Advanced</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Specification")
         public String specification;
@@ -160,6 +184,32 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     public static class DescribeDirectoriesResponseBodyDirectoriesLogs extends TeaModel {
         /**
          * <p>The level of the log entry.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   ERROR</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   INFO</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   WARN</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Level")
         public String level;
@@ -223,7 +273,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
     public static class DescribeDirectoriesResponseBodyDirectories extends TeaModel {
         /**
-         * <p>Details of the AD connectors.</p>
+         * <p>Details of the AD connector.</p>
          */
         @NameInMap("ADConnectors")
         public java.util.List<DescribeDirectoriesResponseBodyDirectoriesADConnectors> ADConnectors;
@@ -235,55 +285,99 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The ID of the security group.</p>
+         * <p>The security group ID. This parameter is returned only when the directory type is AD office network.</p>
          */
         @NameInMap("CustomSecurityGroupId")
         public String customSecurityGroupId;
 
         /**
-         * <p>The method that is used to connect the client to cloud desktops.</p>
+         * <p>The method in which the cloud computer is connected.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   VPC</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Internet</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Any</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("DesktopAccessType")
         public String desktopAccessType;
 
         /**
-         * <p>The endpoint that is used to connect to cloud desktops over a VPC.</p>
+         * <p>The endpoint that is used to connect to cloud computers in the directory over a VPC.</p>
          */
         @NameInMap("DesktopVpcEndpoint")
         public String desktopVpcEndpoint;
 
         /**
-         * <p>The ID of the directory.</p>
+         * <p>The directory ID.</p>
          */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         /**
-         * <p>The type of the directory.</p>
+         * <p>The directory type.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   AD_CONNECTOR: AD directory</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   RAM: RAM directory</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("DirectoryType")
         public String directoryType;
 
         /**
-         * <p>Details of the DNS addresses of the directory.</p>
+         * <p>The DNS address of the directory.</p>
          */
         @NameInMap("DnsAddress")
         public java.util.List<String> dnsAddress;
 
         /**
-         * <p>The username of the Domain Name System (DNS) user.</p>
+         * <p>The username of a DNS user.</p>
          */
         @NameInMap("DnsUserName")
         public String dnsUserName;
 
         /**
-         * <p>The name of the domain.</p>
+         * <p>The domain name.</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
-         * <p>The password of the domain administrator.</p>
+         * <p>The password of the domain administrator. This parameter is returned only when the directory type is AD office network.</p>
          */
         @NameInMap("DomainPassword")
         public String domainPassword;
@@ -295,21 +389,19 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String domainUserName;
 
         /**
-         * <p>Indicates whether the permissions of the local administrator are granted to the regular user of the cloud desktop.</p>
+         * <p>Indicates whether the local administrator permissions are granted to users that use cloud computers in the office network.</p>
          */
         @NameInMap("EnableAdminAccess")
         public Boolean enableAdminAccess;
 
         /**
-         * <p>Indicates whether the desktop communication feature is enabled for cloud desktops in the same workspace.</p>
-         * <br>
-         * <p>If the feature is enabled, the cloud desktops in the same workspace can access each other.</p>
+         * <p>Indicates whether cloud computers can communicate with each other in the directory.</p>
          */
         @NameInMap("EnableCrossDesktopAccess")
         public Boolean enableCrossDesktopAccess;
 
         /**
-         * <p>Indicates whether access over the Internet is allowed.</p>
+         * <p>Indicates whether access over the Internet is enabled.</p>
          * <br>
          * <p>>  This parameter is unavailable.</p>
          */
@@ -317,38 +409,38 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public Boolean enableInternetAccess;
 
         /**
-         * <p>Details of the IDs of the Apsara File Storage NAS (NAS) file systems.</p>
+         * <p>The IDs of Apsara File Storage NAS (NAS) file systems.</p>
          */
         @NameInMap("FileSystemIds")
         public java.util.List<String> fileSystemIds;
 
         /**
-         * <p>Details of the registration logs.</p>
+         * <p>The registration logs. This parameter is returned only when the directory type is AD office network.</p>
          */
         @NameInMap("Logs")
         public java.util.List<DescribeDirectoriesResponseBodyDirectoriesLogs> logs;
 
         /**
-         * <p>Indicates whether multi-factor authentication (MFA) is enabled.</p>
+         * <p>Indicates whether MFA is enabled.</p>
          */
         @NameInMap("MfaEnabled")
         public Boolean mfaEnabled;
 
         /**
-         * <p>The name of the directory.</p>
+         * <p>The directory name.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Indicates whether two-factor verification for logons is enabled. This parameter is returned only for workspaces of the convenience account type.\</p>
-         * <p>If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to the Elastic Desktop Service (EDS) client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.</p>
+         * <p>Indicates whether two-step verification for logons is enabled. This parameter is returned only for directories of convenience account type.\</p>
+         * <p>If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to an Alibaba Cloud Workspace client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.</p>
          */
         @NameInMap("NeedVerifyLoginRisk")
         public Boolean needVerifyLoginRisk;
 
         /**
-         * <p>The name of the organizational unit (OU) that you specified when you add cloud desktops to domains.</p>
+         * <p>The organization unit that you selected when you added the cloud computer to the domain.</p>
          */
         @NameInMap("OuName")
         public String ouName;
@@ -360,40 +452,55 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public Boolean ssoEnabled;
 
         /**
-         * <p>The status of the AD directory. Valid values:</p>
+         * <p>The status of the AD directory.</p>
+         * <br>
+         * <p>Valid values:</p>
          * <br>
          * <p>*   REGISTERING</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
          * <p>*   REGISTERED</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>Details of the DNS addresses of the AD subdomain.</p>
+         * <p>The DNS address of the enterprise AD subdomain.</p>
          */
         @NameInMap("SubDnsAddress")
         public java.util.List<String> subDnsAddress;
 
         /**
-         * <p>The fully qualified domain name (FQDN) of the enterprise AD subdomain. The value must contain the hostname and the subdomain name. Example: child.example.com.</p>
+         * <p>The fully qualified domain name (FQDN) of the existing AD subdomain. The value contains both the host name and the domain name.</p>
          */
         @NameInMap("SubDomainName")
         public String subDomainName;
 
         /**
-         * <p>The AD trust password.</p>
+         * <p>The AD trust password. This parameter is returned only when the directory type is AD office network.</p>
          */
         @NameInMap("TrustPassword")
         public String trustPassword;
 
         /**
-         * <p>Details of vSwitch IDs that are specified when the directory is being created.</p>
+         * <p>The IDs of the vSwitches specified when the directory was created.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) to which the vSwitch belongs.</p>
+         * <p>The ID of the VPC to which the vSwitch belongs. This parameter is returned only when the directory type is AD office network.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

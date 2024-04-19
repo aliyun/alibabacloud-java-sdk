@@ -17,7 +17,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The names of users corresponding to the AD directory. If the AD directory corresponds only to the `Administrator` and `Guest` users, the returned `Users` value is empty.</p>
+     * <p>The names of users corresponding to the AD directory. If the AD directory contains only Administrator and Guest, an empty Users array is returned.</p>
      */
     @NameInMap("Users")
     public java.util.List<ListDirectoryUsersResponseBodyUsers> users;
@@ -53,7 +53,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
 
     public static class ListDirectoryUsersResponseBodyUsers extends TeaModel {
         /**
-         * <p>The display name.</p>
+         * <p>The display name of the user.</p>
          */
         @NameInMap("DisplayName")
         public String displayName;

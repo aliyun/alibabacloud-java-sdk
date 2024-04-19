@@ -11,13 +11,19 @@ public class DescribeDirectoriesRequest extends TeaModel {
     public java.util.List<String> directoryId;
 
     /**
-     * <p>The status of the directory. The value of this parameter is the same as the value of the `Status` parameter.</p>
+     * <p>The directory status. This parameter is equivalent to `Status`.</p>
      */
     @NameInMap("DirectoryStatus")
     public String directoryStatus;
 
     /**
-     * <p>The type of the directory.</p>
+     * <p>The directory type.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   SIMPLE: a directory of the convenience account type</p>
+     * <p>*   AD_CONNECTOR: an AD directory</p>
+     * <p>*   RAM: a RAM directory</p>
      */
     @NameInMap("DirectoryType")
     public String directoryType;
@@ -39,13 +45,87 @@ public class DescribeDirectoriesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The status of the workspace.</p>
+     * <p>The directory status.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   REGISTERING: The directory is being registered.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   DEREGISTERING: The directory is being deregistered.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   REGISTERED: The directory is registered.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   NEEDCONFIGTRUST: A trust relationship needs to be configured for the directory.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   CONFIGTRUSTFAILED: A trust relationship fails to be configured for the directory.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   DEREGISTERED: The directory is deregistered.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   ERROR: One or more configurations of the directory are invalid.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   CONFIGTRUSTING: A trust relationship is being configured.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   NEEDCONFIGUSER: Users need to be configured for the directory.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("Status")
     public String status;

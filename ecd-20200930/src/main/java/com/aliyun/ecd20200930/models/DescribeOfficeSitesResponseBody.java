@@ -593,7 +593,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public Boolean ssoEnabled;
 
         /**
-         * <p>The SSO type.</p>
+         * <p>>  This parameter is unavailable.</p>
          */
         @NameInMap("SsoType")
         public String ssoType;

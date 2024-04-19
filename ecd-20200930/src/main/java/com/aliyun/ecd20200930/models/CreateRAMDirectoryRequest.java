@@ -5,30 +5,65 @@ import com.aliyun.tea.*;
 
 public class CreateRAMDirectoryRequest extends TeaModel {
     /**
-     * <p>The method to connect clients to cloud desktops.</p>
+     * <p>The method in which the cloud computer is connected.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   VPC: connects to cloud desktops over VPCs.</p>
-     * <p>*   Internet (default): connects to the cloud desktops over the Internet.</p>
-     * <p>*   Any: connects to the cloud desktops over the Internet or VPCs.</p>
+     * <p>*   VPC</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Internet (default)</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Any</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("DesktopAccessType")
     public String desktopAccessType;
 
     /**
-     * <p>The directory name. The name must be 2 to 255 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The directory name. The name must be 2 to 255 characters in length. It must start with a letter but cannot start with `http://` or `https://`. The name can contain digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("DirectoryName")
     public String directoryName;
 
     /**
-     * <p>Specifies whether to grant the permissions of the local administrator to end users of the cloud desktops that belong to the workspace.</p>
+     * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>* true (default)</p>
-     * <p>* false</p>
+     * <p>*   <!-- --></p>
+     * <br>
+     * <p>    true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    (default)</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   <!-- --></p>
+     * <br>
+     * <p>    false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("EnableAdminAccess")
     public Boolean enableAdminAccess;

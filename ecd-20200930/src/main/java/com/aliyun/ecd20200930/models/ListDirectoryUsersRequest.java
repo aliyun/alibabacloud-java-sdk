@@ -39,7 +39,7 @@ public class ListDirectoryUsersRequest extends TeaModel {
     public String OUPath;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

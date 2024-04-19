@@ -464,6 +464,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.applyCoordinationForMonitoringWithOptions(request, runtime);
     }
 
+    /**
+      * The cloud computers for which you want to allow image updates must be in the Running state.
+      *
+      * @param request ApproveFotaUpdateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ApproveFotaUpdateResponse
+     */
     public ApproveFotaUpdateResponse approveFotaUpdateWithOptions(ApproveFotaUpdateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -496,6 +503,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ApproveFotaUpdateResponse());
     }
 
+    /**
+      * The cloud computers for which you want to allow image updates must be in the Running state.
+      *
+      * @param request ApproveFotaUpdateRequest
+      * @return ApproveFotaUpdateResponse
+     */
     public ApproveFotaUpdateResponse approveFotaUpdate(ApproveFotaUpdateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.approveFotaUpdateWithOptions(request, runtime);
@@ -1078,7 +1091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * AD directories are used to connect to enterprise AD systems and are suitable for large-scale desktop deployments. You are charged for AD directories that are used to connect to enterprise AD systems. For more information, see [Billing overview](~~188395~~).
+      * An AD directory is used to connect to an enterprise\\"s existing Active Directory and is suitable for large-scale cloud computer deployment. You are charged directory fees when you connect your AD to cloud computers. For more information, see [Billing overview](~~188395~~).
       *
       * @param request CreateADConnectorDirectoryRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1157,7 +1170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * AD directories are used to connect to enterprise AD systems and are suitable for large-scale desktop deployments. You are charged for AD directories that are used to connect to enterprise AD systems. For more information, see [Billing overview](~~188395~~).
+      * An AD directory is used to connect to an enterprise\\"s existing Active Directory and is suitable for large-scale cloud computer deployment. You are charged directory fees when you connect your AD to cloud computers. For more information, see [Billing overview](~~188395~~).
       *
       * @param request CreateADConnectorDirectoryRequest
       * @return CreateADConnectorDirectoryResponse
@@ -2675,9 +2688,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you create a RAM directory, make sure that you have completed the following operations:
-      * *   You have created a virtual private cloud (VPC) by calling the CreateVpc operation in a region where Elastic Desktop Service (EDS) is available.
-      * *   You have created a vSwitch by calling the CreateVSwitch operation in a region where the VPC resides. You can call the [DescribeZones](~~196648~~) operation to obtain the zones where EDS is available in a region.
+      * Before you create a RAM directory, complete the following preparations:
+      * *   Call the `CreateVpc` operation to create a virtual private cloud (VPC) in a region supported by WUYING Workspace.
+      * *   Call the `CreateVSwitch` operation to create a vSwitch in the VPC. The vSwitch is in a zone that is supported by WUYING Workspace. You can call the [DescribeZones](~~196648~~) operation to obtain the most recent zone list for a region supported by WUYING Workspace.
       *
       * @param request CreateRAMDirectoryRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2728,9 +2741,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you create a RAM directory, make sure that you have completed the following operations:
-      * *   You have created a virtual private cloud (VPC) by calling the CreateVpc operation in a region where Elastic Desktop Service (EDS) is available.
-      * *   You have created a vSwitch by calling the CreateVSwitch operation in a region where the VPC resides. You can call the [DescribeZones](~~196648~~) operation to obtain the zones where EDS is available in a region.
+      * Before you create a RAM directory, complete the following preparations:
+      * *   Call the `CreateVpc` operation to create a virtual private cloud (VPC) in a region supported by WUYING Workspace.
+      * *   Call the `CreateVSwitch` operation to create a vSwitch in the VPC. The vSwitch is in a zone that is supported by WUYING Workspace. You can call the [DescribeZones](~~196648~~) operation to obtain the most recent zone list for a region supported by WUYING Workspace.
       *
       * @param request CreateRAMDirectoryRequest
       * @return CreateRAMDirectoryResponse
@@ -3202,7 +3215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You cannot delete directories that are used by cloud desktops.
+      * You cannot delete a directory that has a cloud computer or is used by a cloud computer.
       *
       * @param request DeleteDirectoriesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3237,7 +3250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You cannot delete directories that are used by cloud desktops.
+      * You cannot delete a directory that has a cloud computer or is used by a cloud computer.
       *
       * @param request DeleteDirectoriesRequest
       * @return DeleteDirectoriesResponse
@@ -7800,6 +7813,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.migrateImageProtocolWithOptions(request, runtime);
     }
 
+    /**
+      * You can modify the following domain name- and Domain Name System (DNS)-related parameters only for Active Directory (AD) directories that are in the ERROR or REGISTERING state: `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress`.
+      *
+      * @param request ModifyADConnectorDirectoryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyADConnectorDirectoryResponse
+     */
     public ModifyADConnectorDirectoryResponse modifyADConnectorDirectoryWithOptions(ModifyADConnectorDirectoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7868,6 +7888,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyADConnectorDirectoryResponse());
     }
 
+    /**
+      * You can modify the following domain name- and Domain Name System (DNS)-related parameters only for Active Directory (AD) directories that are in the ERROR or REGISTERING state: `DomainName`, `SubDomainName`, `DnsAddress.N`, and `SubDomainDnsAddress`.
+      *
+      * @param request ModifyADConnectorDirectoryRequest
+      * @return ModifyADConnectorDirectoryResponse
+     */
     public ModifyADConnectorDirectoryResponse modifyADConnectorDirectory(ModifyADConnectorDirectoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyADConnectorDirectoryWithOptions(request, runtime);
@@ -11363,6 +11389,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.untagResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to manage each image update task. This operation is valid only when the auto-update switch in the image update module for global image updates is turned off. If the auto-update switch is turned on, the switches for each image update task are always turned on. If you want to turn on or off the auto-update switch, go to the WUYING Workspace console and choose **Operations > Image Updates** in the left-side navigation pane.
+      *
+      * @param request UpdateFotaTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateFotaTaskResponse
+     */
     public UpdateFotaTaskResponse updateFotaTaskWithOptions(UpdateFotaTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11395,6 +11428,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFotaTaskResponse());
     }
 
+    /**
+      * You can call this operation to manage each image update task. This operation is valid only when the auto-update switch in the image update module for global image updates is turned off. If the auto-update switch is turned on, the switches for each image update task are always turned on. If you want to turn on or off the auto-update switch, go to the WUYING Workspace console and choose **Operations > Image Updates** in the left-side navigation pane.
+      *
+      * @param request UpdateFotaTaskRequest
+      * @return UpdateFotaTaskResponse
+     */
     public UpdateFotaTaskResponse updateFotaTask(UpdateFotaTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateFotaTaskWithOptions(request, runtime);

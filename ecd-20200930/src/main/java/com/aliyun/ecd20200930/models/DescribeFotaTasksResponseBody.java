@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFotaTasksResponseBody extends TeaModel {
     /**
-     * <p>The operation result. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+     * <p>The returned message. If the request was successful, a `success` is returned. If the request failed, an error message is returned.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -17,16 +17,13 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
     public java.util.List<DescribeFotaTasksResponseBodyFotaTasks> fotaTasks;
 
     /**
-     * <p>The returned error message. This parameter is not returned if the value of Code is `success`.</p>
+     * <p>The returned error message. This parameter is not returned if the Code value is a `success` message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is the token that is used for the next query.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -84,13 +81,13 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
 
     public static class DescribeFotaTasksResponseBodyFotaTasks extends TeaModel {
         /**
-         * <p>The version of the image. You can call the [DescribeImages](~~188895~~) operation to obtain this parameter.</p>
+         * <p>The image version. You can call the [DescribeImages](~~188895~~) operation to obtain the value of this parameter.</p>
          */
         @NameInMap("AppVersion")
         public String appVersion;
 
         /**
-         * <p>This parameter is not available.</p>
+         * <p>>  This parameter is not publicly available.</p>
          */
         @NameInMap("FotaProject")
         public String fotaProject;
@@ -102,42 +99,42 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         public Integer pendingCustomImageCount;
 
         /**
-         * <p>The number of cloud desktops for which images can be updated to this version.</p>
+         * <p>The number of cloud computers whose images can be updated to this version.</p>
          */
         @NameInMap("PendingDesktopCount")
         public Integer pendingDesktopCount;
 
         /**
-         * <p>The time when the image version is available for update was published.</p>
+         * <p>The time when the image version available for update was published.</p>
          */
         @NameInMap("PublishTime")
         public String publishTime;
 
         /**
-         * <p>The description of the image version that is available for update.</p>
+         * <p>The description of the image version available for update.</p>
          */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
         /**
-         * <p>The size of the image update package. Unit: KB.</p>
+         * <p>The size of the update package. Unit: KB.</p>
          */
         @NameInMap("Size")
         public Integer size;
 
         /**
-         * <p>Indicates whether an end user can update the image.</p>
+         * <p>Indicates whether the image update task is automatically pushed.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   valid: The end user can update the image.</p>
-         * <p>*   invalid: The end user cannot update the image.</p>
+         * <p>*   Running: automatically pushes the image update task.</p>
+         * <p>*   Pending: does not automatically push the image update task.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the image update task.</p>
+         * <p>The ID of the image upgrade task.</p>
          */
         @NameInMap("TaskUid")
         public String taskUid;
