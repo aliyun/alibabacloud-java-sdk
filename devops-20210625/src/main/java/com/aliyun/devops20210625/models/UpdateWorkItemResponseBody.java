@@ -77,6 +77,9 @@ public class UpdateWorkItemResponseBody extends TeaModel {
         @NameInMap("document")
         public String document;
 
+        @NameInMap("documentFormat")
+        public String documentFormat;
+
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
@@ -163,6 +166,14 @@ public class UpdateWorkItemResponseBody extends TeaModel {
         }
         public String getDocument() {
             return this.document;
+        }
+
+        public UpdateWorkItemResponseBodyWorkitem setDocumentFormat(String documentFormat) {
+            this.documentFormat = documentFormat;
+            return this;
+        }
+        public String getDocumentFormat() {
+            return this.documentFormat;
         }
 
         public UpdateWorkItemResponseBodyWorkitem setGmtCreate(Long gmtCreate) {
