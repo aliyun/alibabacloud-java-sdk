@@ -74,6 +74,12 @@ public class ListConversationsResponseBody extends TeaModel {
         @NameInMap("ConversationId")
         public String conversationId;
 
+        @NameInMap("DsReport")
+        public String dsReport;
+
+        @NameInMap("DsReportTitles")
+        public java.util.List<String> dsReportTitles;
+
         @NameInMap("EndReason")
         public Integer endReason;
 
@@ -125,6 +131,22 @@ public class ListConversationsResponseBody extends TeaModel {
         }
         public String getConversationId() {
             return this.conversationId;
+        }
+
+        public ListConversationsResponseBodyConversations setDsReport(String dsReport) {
+            this.dsReport = dsReport;
+            return this;
+        }
+        public String getDsReport() {
+            return this.dsReport;
+        }
+
+        public ListConversationsResponseBodyConversations setDsReportTitles(java.util.List<String> dsReportTitles) {
+            this.dsReportTitles = dsReportTitles;
+            return this;
+        }
+        public java.util.List<String> getDsReportTitles() {
+            return this.dsReportTitles;
         }
 
         public ListConversationsResponseBodyConversations setEndReason(Integer endReason) {
