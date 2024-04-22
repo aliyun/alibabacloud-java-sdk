@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class InitModifyRefund4DistributionResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public InitModifyRefund4DistributionResponseBody body;
 
     public static InitModifyRefund4DistributionResponse build(java.util.Map<String, ?> map) throws Exception {
