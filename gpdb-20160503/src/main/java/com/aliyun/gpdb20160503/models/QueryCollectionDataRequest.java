@@ -16,6 +16,12 @@ public class QueryCollectionDataRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("HybridSearch")
+    public String hybridSearch;
+
+    @NameInMap("HybridSearchArgs")
+    public java.util.Map<String, java.util.Map<String, ?>> hybridSearchArgs;
+
     @NameInMap("IncludeValues")
     public Boolean includeValues;
 
@@ -75,6 +81,22 @@ public class QueryCollectionDataRequest extends TeaModel {
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public QueryCollectionDataRequest setHybridSearch(String hybridSearch) {
+        this.hybridSearch = hybridSearch;
+        return this;
+    }
+    public String getHybridSearch() {
+        return this.hybridSearch;
+    }
+
+    public QueryCollectionDataRequest setHybridSearchArgs(java.util.Map<String, java.util.Map<String, ?>> hybridSearchArgs) {
+        this.hybridSearchArgs = hybridSearchArgs;
+        return this;
+    }
+    public java.util.Map<String, java.util.Map<String, ?>> getHybridSearchArgs() {
+        return this.hybridSearchArgs;
     }
 
     public QueryCollectionDataRequest setIncludeValues(Boolean includeValues) {
