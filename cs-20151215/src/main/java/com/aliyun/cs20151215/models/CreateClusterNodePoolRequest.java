@@ -1019,6 +1019,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Long autoRenewPeriod;
 
         @NameInMap("cis_enabled")
+        @Deprecated
         public Boolean cisEnabled;
 
         /**
@@ -1211,6 +1212,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          */
         @NameInMap("security_group_ids")
         public java.util.List<String> securityGroupIds;
+
+        @NameInMap("security_hardening_os")
+        public Boolean securityHardeningOs;
 
         @NameInMap("soc_enabled")
         public Boolean socEnabled;
@@ -1545,6 +1549,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setSecurityHardeningOs(Boolean securityHardeningOs) {
+            this.securityHardeningOs = securityHardeningOs;
+            return this;
+        }
+        public Boolean getSecurityHardeningOs() {
+            return this.securityHardeningOs;
         }
 
         public CreateClusterNodePoolRequestScalingGroup setSocEnabled(Boolean socEnabled) {

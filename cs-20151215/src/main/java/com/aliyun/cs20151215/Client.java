@@ -698,6 +698,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("security_group_id", request.securityGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.securityHardeningOs)) {
+            body.put("security_hardening_os", request.securityHardeningOs);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serviceAccountIssuer)) {
             body.put("service_account_issuer", request.serviceAccountIssuer);
         }

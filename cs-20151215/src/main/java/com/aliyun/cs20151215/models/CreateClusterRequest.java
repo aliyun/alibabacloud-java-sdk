@@ -79,6 +79,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>Default value: `false`.</p>
      */
     @NameInMap("cis_enabled")
+    @Deprecated
     public Boolean cisEnabled;
 
     /**
@@ -261,7 +262,7 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<String> instances;
 
     /**
-     * <p>The cluster IP stack.</p>
+     * <p>The cluster ip_stack.</p>
      */
     @NameInMap("ip_stack")
     public String ipStack;
@@ -601,6 +602,9 @@ public class CreateClusterRequest extends TeaModel {
      */
     @NameInMap("security_group_id")
     public String securityGroupId;
+
+    @NameInMap("security_hardening_os")
+    public Boolean securityHardeningOs;
 
     /**
      * <p>Service accounts provide identities for pods when pods communicate with the `API server` of the cluster. `service-account-issuer` is the issuer of the `serviceaccount token`, which corresponds to the `iss` field in the `token payload`.</p>
@@ -1358,6 +1362,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public CreateClusterRequest setSecurityHardeningOs(Boolean securityHardeningOs) {
+        this.securityHardeningOs = securityHardeningOs;
+        return this;
+    }
+    public Boolean getSecurityHardeningOs() {
+        return this.securityHardeningOs;
     }
 
     public CreateClusterRequest setServiceAccountIssuer(String serviceAccountIssuer) {

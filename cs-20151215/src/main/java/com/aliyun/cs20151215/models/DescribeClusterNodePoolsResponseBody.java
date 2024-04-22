@@ -906,6 +906,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
          * <p>是否开启CIS加固，仅当系统镜像选择Alibaba Cloud Linux 2或Alibaba Cloud Linux 3时，可为节点开启CIS加固。</p>
          */
         @NameInMap("cis_enabled")
+        @Deprecated
         public Boolean cisEnabled;
 
         /**
@@ -1095,6 +1096,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
          */
         @NameInMap("security_group_ids")
         public java.util.List<String> securityGroupIds;
+
+        @NameInMap("security_hardening_os")
+        public Boolean securityHardeningOs;
 
         /**
          * <p>是否开启等保加固，仅当系统镜像选择Alibaba Cloud Linux 2或Alibaba Cloud Linux 3时，可为节点开启等保加固。阿里云为Alibaba Cloud Linux 2和Alibaba Cloud Linux 3等保2.0三级版镜像提供等保合规的基线检查标准和扫描程序。</p>
@@ -1445,6 +1449,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
         public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setSecurityHardeningOs(Boolean securityHardeningOs) {
+            this.securityHardeningOs = securityHardeningOs;
+            return this;
+        }
+        public Boolean getSecurityHardeningOs() {
+            return this.securityHardeningOs;
         }
 
         public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setSocEnabled(Boolean socEnabled) {
