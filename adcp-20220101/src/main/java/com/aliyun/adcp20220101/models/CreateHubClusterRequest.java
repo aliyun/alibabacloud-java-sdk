@@ -13,6 +13,12 @@ public class CreateHubClusterRequest extends TeaModel {
     @NameInMap("ApiServerPublicEip")
     public Boolean apiServerPublicEip;
 
+    /**
+     * <p>Specifies whether to enable the workflow instance UI. This parameter takes effect only if Profile is set to XFlow. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("ArgoServerEnabled")
     public Boolean argoServerEnabled;
 
@@ -37,6 +43,9 @@ public class CreateHubClusterRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The limit on the prices of containers in the workflow. This parameter takes effect only if the WorkflowScheduleMode parameter is set to cost-optimized.</p>
+     */
     @NameInMap("PriceLimit")
     public String priceLimit;
 
@@ -58,6 +67,12 @@ public class CreateHubClusterRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The Resource Group ID.</p>
+     */
+    @NameInMap("ResourceGroupID")
+    public String resourceGroupID;
+
+    /**
      * <p>The ID of the vSwitch.</p>
      */
     @NameInMap("VSwitches")
@@ -69,6 +84,12 @@ public class CreateHubClusterRequest extends TeaModel {
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The scheduling mode of the workflow. This parameter takes effect only if Profile is set to XFlow. Valid values:</p>
+     * <br>
+     * <p>*   cost-optimized: cost-prioritized scheduling mode.</p>
+     * <p>*   stock-optimized: inventory-prioritized scheduling mode.</p>
+     */
     @NameInMap("WorkflowScheduleMode")
     public String workflowScheduleMode;
 
@@ -139,6 +160,14 @@ public class CreateHubClusterRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateHubClusterRequest setResourceGroupID(String resourceGroupID) {
+        this.resourceGroupID = resourceGroupID;
+        return this;
+    }
+    public String getResourceGroupID() {
+        return this.resourceGroupID;
     }
 
     public CreateHubClusterRequest setVSwitches(String vSwitches) {

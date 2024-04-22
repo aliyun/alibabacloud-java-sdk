@@ -4,9 +4,15 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHubClustersResponseBody extends TeaModel {
+    /**
+     * <p>The information about clusters.</p>
+     */
     @NameInMap("Clusters")
     public java.util.List<DescribeHubClustersResponseBodyClusters> clusters;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,24 @@ public class DescribeHubClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClustersResponseBodyClustersApiServer extends TeaModel {
+        /**
+         * <p>The elastic IP address (EIP) ID.</p>
+         */
         @NameInMap("ApiServerEipId")
         public String apiServerEipId;
 
+        /**
+         * <p>Indicates whether public endpoint is enabled for the API server. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("EnabledPublic")
         public Boolean enabledPublic;
 
+        /**
+         * <p>The ID of the Server Load Balancer (SLB) instance that is associated with the cluster.</p>
+         */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
@@ -73,33 +91,79 @@ public class DescribeHubClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClustersResponseBodyClustersClusterInfo extends TeaModel {
+        /**
+         * <p>The cluster ID.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The specification of the cluster.</p>
+         * <br>
+         * <p>*   Only ack.pro.small is returned.</p>
+         */
         @NameInMap("ClusterSpec")
         public String clusterSpec;
 
+        /**
+         * <p>The time when the cluster was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The error message that is returned if the cluster failed to be created.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The configurations of the cluster.</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of Resource Group.</p>
+         */
+        @NameInMap("ResourceGroupID")
+        public String resourceGroupID;
+
+        /**
+         * <p>The status of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   initial: The cluster is being initialized.</p>
+         * <p>*   failed: The cluster failed to be created.</p>
+         * <p>*   running: The cluster is running</p>
+         * <p>*   inactive: The cluster is pending.</p>
+         * <p>*   deleting: The cluster is being deleted.</p>
+         * <p>*   delete_failed: The cluster failed to be deleted.</p>
+         * <p>*   deleted: The cluster is deleted.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The time when the cluster was last updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The Kubernetes version of the cluster.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -164,6 +228,14 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeHubClustersResponseBodyClustersClusterInfo setResourceGroupID(String resourceGroupID) {
+            this.resourceGroupID = resourceGroupID;
+            return this;
+        }
+        public String getResourceGroupID() {
+            return this.resourceGroupID;
+        }
+
         public DescribeHubClustersResponseBodyClustersClusterInfo setState(String state) {
             this.state = state;
             return this;
@@ -191,15 +263,31 @@ public class DescribeHubClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClustersResponseBodyClustersConditions extends TeaModel {
+        /**
+         * <p>The error message that is returned.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The reason for the deletion condition.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>The status of the cluster that the deletion condition indicates. Valid values:</p>
+         * <br>
+         * <p>*   True: The cluster cannot be deleted.</p>
+         * <p>*   False: The cluster can be deleted.</p>
+         * <p>*   Unknow: Whether the cluster can be deleted is unknown.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The type of deletion condition.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -243,9 +331,15 @@ public class DescribeHubClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClustersResponseBodyClustersEndpoints extends TeaModel {
+        /**
+         * <p>The internal endpoint of the API server.</p>
+         */
         @NameInMap("IntranetApiServerEndpoint")
         public String intranetApiServerEndpoint;
 
+        /**
+         * <p>The public endpoint of the API server.</p>
+         */
         @NameInMap("PublicApiServerEndpoint")
         public String publicApiServerEndpoint;
 
@@ -273,12 +367,24 @@ public class DescribeHubClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClustersResponseBodyClustersLogConfig extends TeaModel {
+        /**
+         * <p>Indicates whether the audit logging feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("EnableLog")
         public Boolean enableLog;
 
+        /**
+         * <p>The name of the project in Simple Log Service.</p>
+         */
         @NameInMap("LogProject")
         public String logProject;
 
+        /**
+         * <p>The number of days that logs are retained by Simple Log Service.</p>
+         */
         @NameInMap("LogStoreTTL")
         public String logStoreTTL;
 
@@ -314,9 +420,18 @@ public class DescribeHubClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClustersResponseBodyClustersMeshConfig extends TeaModel {
+        /**
+         * <p>Indicates whether ASM is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("EnableMesh")
         public Boolean enableMesh;
 
+        /**
+         * <p>The ASM instance ID.</p>
+         */
         @NameInMap("MeshId")
         public String meshId;
 
@@ -344,15 +459,27 @@ public class DescribeHubClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClustersResponseBodyClustersNetwork extends TeaModel {
+        /**
+         * <p>The domain name of the cluster.</p>
+         */
         @NameInMap("ClusterDomain")
         public String clusterDomain;
 
+        /**
+         * <p>The security group IDs.</p>
+         */
         @NameInMap("SecurityGroupIDs")
         public java.util.List<String> securityGroupIDs;
 
+        /**
+         * <p>The IDs of vSwitches to which the cluster belongs.</p>
+         */
         @NameInMap("VSwitches")
         public java.util.List<String> vSwitches;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC) to which the cluster belongs.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -396,24 +523,45 @@ public class DescribeHubClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClustersResponseBodyClusters extends TeaModel {
+        /**
+         * <p>The information about the API server.</p>
+         */
         @NameInMap("ApiServer")
         public DescribeHubClustersResponseBodyClustersApiServer apiServer;
 
+        /**
+         * <p>The details of the cluster.</p>
+         */
         @NameInMap("ClusterInfo")
         public DescribeHubClustersResponseBodyClustersClusterInfo clusterInfo;
 
+        /**
+         * <p>The deletion conditions of the cluster.</p>
+         */
         @NameInMap("Conditions")
         public java.util.List<DescribeHubClustersResponseBodyClustersConditions> conditions;
 
+        /**
+         * <p>The endpoint of the cluster.</p>
+         */
         @NameInMap("Endpoints")
         public DescribeHubClustersResponseBodyClustersEndpoints endpoints;
 
+        /**
+         * <p>The logging configurations.</p>
+         */
         @NameInMap("LogConfig")
         public DescribeHubClustersResponseBodyClustersLogConfig logConfig;
 
+        /**
+         * <p>The configurations of Alibaba Cloud Service Mesh (ASM).</p>
+         */
         @NameInMap("MeshConfig")
         public DescribeHubClustersResponseBodyClustersMeshConfig meshConfig;
 
+        /**
+         * <p>The network configurations of the cluster.</p>
+         */
         @NameInMap("Network")
         public DescribeHubClustersResponseBodyClustersNetwork network;
 

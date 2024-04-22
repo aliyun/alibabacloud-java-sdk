@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolicyDetailsResponseBody extends TeaModel {
     /**
-     * <p>Detailed information about the policy.</p>
+     * <p>The policies.</p>
      */
     @NameInMap("Policy")
     public DescribePolicyDetailsResponseBodyPolicy policy;
@@ -75,7 +75,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
          * <p>Indicates whether parameters are required. Valid values:</p>
          * <br>
          * <p>*   0: Parameters are required.</p>
-         * <p>*   1: Parameters are optional.</p>
+         * <p>*   1: Parameters are not required.</p>
          */
         @NameInMap("NoConfig")
         public Integer noConfig;

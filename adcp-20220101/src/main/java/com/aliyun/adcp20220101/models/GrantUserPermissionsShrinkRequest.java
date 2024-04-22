@@ -4,9 +4,15 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class GrantUserPermissionsShrinkRequest extends TeaModel {
+    /**
+     * <p>The list of permissions that you want to grant to the RAM user.</p>
+     */
     @NameInMap("Permissions")
     public String permissionsShrink;
 
+    /**
+     * <p>The ID of the RAM user.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

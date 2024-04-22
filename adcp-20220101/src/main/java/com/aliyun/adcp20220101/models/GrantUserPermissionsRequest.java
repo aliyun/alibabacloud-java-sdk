@@ -4,9 +4,15 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class GrantUserPermissionsRequest extends TeaModel {
+    /**
+     * <p>The list of permissions that you want to grant to the RAM user.</p>
+     */
     @NameInMap("Permissions")
     public java.util.List<GrantUserPermissionsRequestPermissions> permissions;
 
+    /**
+     * <p>The ID of the RAM user.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
@@ -32,18 +38,42 @@ public class GrantUserPermissionsRequest extends TeaModel {
     }
 
     public static class GrantUserPermissionsRequestPermissions extends TeaModel {
+        /**
+         * <p>The master instance ID.</p>
+         * <br>
+         * <p>*   When the role_type parameter is set to all-clusters, set the parameter to an empty string.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The entity to which the permissions are granted. A value of `true` indicates that the permissions are granted to a RAM user. A value of `false` indicates that the permissions are granted to a RAM role.</p>
+         */
         @NameInMap("IsRamRole")
         public Boolean isRamRole;
 
+        /**
+         * <p>The namespace to which the permissions are scoped. By default, this parameter is empty when you set RoleType to cluster.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The predefined role that you want to assign. Valid values:</p>
+         * <br>
+         * <p>*   admin: the administrator role.</p>
+         * <p>*   dev: the developer role.</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 
+        /**
+         * <p>The authorization type. Valid values:</p>
+         * <br>
+         * <p>*   cluster: specifies that the permissions are scoped to a master instance.</p>
+         * <p>*   namespace: specifies that the permissions are scoped to a namespace of a cluster.</p>
+         * <p>*   all-clusters: specifies that the permissions are scoped to all master instances.</p>
+         */
         @NameInMap("RoleType")
         public String roleType;
 

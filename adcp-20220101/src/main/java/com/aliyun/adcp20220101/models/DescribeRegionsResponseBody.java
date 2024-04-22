@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
-     * <p>Example 1</p>
+     * <p>A list of available regions that are returned.</p>
      */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
     /**
-     * <p>The name of the region.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,11 +38,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>You can call the DescribeRegions operation to query available regions.</p>
+         * <p>The ID of the region.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

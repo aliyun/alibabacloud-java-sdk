@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The language. Valid values: zh and en.</p>
      */
     @NameInMap("Language")
     public String language;

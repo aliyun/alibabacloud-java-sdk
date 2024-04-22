@@ -90,6 +90,232 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneGitOps extends TeaModel {
+        /**
+         * <p>The Internet access control list (ACL). This parameter takes effect only if PublicAccessEnabled is set to true.</p>
+         */
+        @NameInMap("AccessControlList")
+        public java.util.List<String> accessControlList;
+
+        /**
+         * <p>Indicates whether GitOps is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true: GitOps is enabled.</p>
+         * <p>*   false: GitOps is disabled.</p>
+         */
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        /**
+         * <p>Indicates whether GitOps High Availability is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true:  GitOps High Availability is enabled.</p>
+         * <p>*   false:  GitOps High Availability is disabled.</p>
+         */
+        @NameInMap("HAEnabled")
+        public Boolean HAEnabled;
+
+        /**
+         * <p>Specifies whether to enable public domain name resolution in the Argo CD or Argo Workflow console. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
+        @NameInMap("PublicAccessEnabled")
+        public Boolean publicAccessEnabled;
+
+        public static DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneGitOps build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneGitOps self = new DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneGitOps();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneGitOps setAccessControlList(java.util.List<String> accessControlList) {
+            this.accessControlList = accessControlList;
+            return this;
+        }
+        public java.util.List<String> getAccessControlList() {
+            return this.accessControlList;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneGitOps setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneGitOps setHAEnabled(Boolean HAEnabled) {
+            this.HAEnabled = HAEnabled;
+            return this;
+        }
+        public Boolean getHAEnabled() {
+            return this.HAEnabled;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneGitOps setPublicAccessEnabled(Boolean publicAccessEnabled) {
+            this.publicAccessEnabled = publicAccessEnabled;
+            return this;
+        }
+        public Boolean getPublicAccessEnabled() {
+            return this.publicAccessEnabled;
+        }
+
+    }
+
+    public static class DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlowArgoWorkflow extends TeaModel {
+        /**
+         * <p>The Internet access control list (ACL). This parameter takes effect only if PublicAccessEnabled is set to true.</p>
+         */
+        @NameInMap("AccessControlList")
+        public java.util.List<String> accessControlList;
+
+        /**
+         * <p>Specifies whether to enable the argo workflow. Valid values:</p>
+         * <br>
+         * <p>*   **false** (default)</p>
+         * <p>*   **true**</p>
+         */
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        /**
+         * <p>Specifies whether to enable public domain name resolution in the Argo CD or Argo Workflow console. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
+        @NameInMap("PublicAccessEnabled")
+        public Boolean publicAccessEnabled;
+
+        /**
+         * <p>Specifies whether to enable the argo workflow. UI Valid values:</p>
+         * <br>
+         * <p>*   **false** (default)</p>
+         * <p>*   **true**</p>
+         */
+        @NameInMap("ServerEnabled")
+        public String serverEnabled;
+
+        public static DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlowArgoWorkflow build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlowArgoWorkflow self = new DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlowArgoWorkflow();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlowArgoWorkflow setAccessControlList(java.util.List<String> accessControlList) {
+            this.accessControlList = accessControlList;
+            return this;
+        }
+        public java.util.List<String> getAccessControlList() {
+            return this.accessControlList;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlowArgoWorkflow setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlowArgoWorkflow setPublicAccessEnabled(Boolean publicAccessEnabled) {
+            this.publicAccessEnabled = publicAccessEnabled;
+            return this;
+        }
+        public Boolean getPublicAccessEnabled() {
+            return this.publicAccessEnabled;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlowArgoWorkflow setServerEnabled(String serverEnabled) {
+            this.serverEnabled = serverEnabled;
+            return this;
+        }
+        public String getServerEnabled() {
+            return this.serverEnabled;
+        }
+
+    }
+
+    public static class DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlow extends TeaModel {
+        /**
+         * <p>The Argo workflow metadata.</p>
+         */
+        @NameInMap("ArgoWorkflow")
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlowArgoWorkflow argoWorkflow;
+
+        public static DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlow build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlow self = new DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlow();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlow setArgoWorkflow(DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlowArgoWorkflow argoWorkflow) {
+            this.argoWorkflow = argoWorkflow;
+            return this;
+        }
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlowArgoWorkflow getArgoWorkflow() {
+            return this.argoWorkflow;
+        }
+
+    }
+
+    public static class DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOne extends TeaModel {
+        /**
+         * <p>The GitOps metadata.</p>
+         */
+        @NameInMap("GitOps")
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneGitOps gitOps;
+
+        /**
+         * <p>The workflow metadata.</p>
+         */
+        @NameInMap("WorkFlow")
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlow workFlow;
+
+        public static DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOne build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOne self = new DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOne();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOne setGitOps(DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneGitOps gitOps) {
+            this.gitOps = gitOps;
+            return this;
+        }
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneGitOps getGitOps() {
+            return this.gitOps;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOne setWorkFlow(DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlow workFlow) {
+            this.workFlow = workFlow;
+            return this;
+        }
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOneWorkFlow getWorkFlow() {
+            return this.workFlow;
+        }
+
+    }
+
+    public static class DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaData extends TeaModel {
+        /**
+         * <p>The cluster metadata.</p>
+         */
+        @NameInMap("ACKOne")
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOne ACKOne;
+
+        public static DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaData build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaData self = new DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaData();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaData setACKOne(DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOne ACKOne) {
+            this.ACKOne = ACKOne;
+            return this;
+        }
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaDataACKOne getACKOne() {
+            return this.ACKOne;
+        }
+
+    }
+
     public static class DescribeHubClusterDetailsResponseBodyClusterClusterInfo extends TeaModel {
         /**
          * <p>The ID of the master instance.</p>
@@ -118,6 +344,12 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The cluster metadata.</p>
+         */
+        @NameInMap("MetaData")
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaData metaData;
+
+        /**
          * <p>The name of the master instance.</p>
          */
         @NameInMap("Name")
@@ -134,6 +366,12 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
          */
         @NameInMap("RegionId")
         public String regionId;
+
+        /**
+         * <p>The ID of Resource Group.</p>
+         */
+        @NameInMap("ResourceGroupID")
+        public String resourceGroupID;
 
         /**
          * <p>The status of the master instance. Valid values:</p>
@@ -198,6 +436,14 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             return this.errorMessage;
         }
 
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfo setMetaData(DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaData metaData) {
+            this.metaData = metaData;
+            return this;
+        }
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoMetaData getMetaData() {
+            return this.metaData;
+        }
+
         public DescribeHubClusterDetailsResponseBodyClusterClusterInfo setName(String name) {
             this.name = name;
             return this;
@@ -220,6 +466,14 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfo setResourceGroupID(String resourceGroupID) {
+            this.resourceGroupID = resourceGroupID;
+            return this;
+        }
+        public String getResourceGroupID() {
+            return this.resourceGroupID;
         }
 
         public DescribeHubClusterDetailsResponseBodyClusterClusterInfo setState(String state) {
@@ -527,9 +781,17 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnitsVSwitches extends TeaModel {
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
+        /**
+         * <p>The zone ID of the cluster.</p>
+         * <br>
+         * <p>> You can call the [DescribeRegions](~~143074~~) operation to query the most recent zone list.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -557,12 +819,23 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnits extends TeaModel {
+        /**
+         * <p>The region ID of the cluster.</p>
+         * <br>
+         * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The vSwitches.</p>
+         */
         @NameInMap("VSwitches")
         public java.util.List<DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnitsVSwitches> vSwitches;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -598,15 +871,33 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyClusterWorkflowConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to enable the workflow instance UI. This parameter takes effect only if Profile is set to XFlow. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("ArgoServerEnabled")
         public Boolean argoServerEnabled;
 
+        /**
+         * <p>The limit on the prices of containers in the workflow. This parameter takes effect only if the WorkflowScheduleMode parameter is set to cost-optimized.</p>
+         */
         @NameInMap("PriceLimit")
         public String priceLimit;
 
+        /**
+         * <p>The scheduling mode of the workflow. This parameter takes effect only if Profile is set to XFlow. Valid values:</p>
+         * <br>
+         * <p>*   cost-optimized: cost-prioritized scheduling mode.</p>
+         * <p>*   stock-optimized: inventory-prioritized scheduling mode.</p>
+         */
         @NameInMap("WorkflowScheduleMode")
         public String workflowScheduleMode;
 
+        /**
+         * <p>The Argo workflow regions  configuration.</p>
+         */
         @NameInMap("WorkflowUnits")
         public java.util.List<DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnits> workflowUnits;
 
@@ -692,6 +983,9 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         @NameInMap("Network")
         public DescribeHubClusterDetailsResponseBodyClusterNetwork network;
 
+        /**
+         * <p>The Argo workflow configuration.</p>
+         */
         @NameInMap("WorkflowConfig")
         public DescribeHubClusterDetailsResponseBodyClusterWorkflowConfig workflowConfig;
 
