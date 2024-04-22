@@ -50,6 +50,9 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         @NameInMap("Y")
         public java.util.List<String> y;
 
+        @NameInMap("Z")
+        public java.util.List<String> z;
+
         public static DescribeEventDetailResponseBodyEventDetailChartData build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventDetailResponseBodyEventDetailChartData self = new DescribeEventDetailResponseBodyEventDetailChartData();
             return TeaModel.build(map, self);
@@ -71,9 +74,20 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             return this.y;
         }
 
+        public DescribeEventDetailResponseBodyEventDetailChartData setZ(java.util.List<String> z) {
+            this.z = z;
+            return this;
+        }
+        public java.util.List<String> getZ() {
+            return this.z;
+        }
+
     }
 
     public static class DescribeEventDetailResponseBodyEventDetailChart extends TeaModel {
+        @NameInMap("ChatType")
+        public Integer chatType;
+
         /**
          * <p>The data in the baseline behavior profile of the anomalous event.</p>
          */
@@ -85,6 +99,9 @@ public class DescribeEventDetailResponseBody extends TeaModel {
          */
         @NameInMap("Label")
         public String label;
+
+        @NameInMap("Name")
+        public String name;
 
         /**
          * <p>The type of the chart. Valid values:</p>
@@ -107,9 +124,20 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         @NameInMap("YLabel")
         public String YLabel;
 
+        @NameInMap("ZLabel")
+        public String ZLabel;
+
         public static DescribeEventDetailResponseBodyEventDetailChart build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventDetailResponseBodyEventDetailChart self = new DescribeEventDetailResponseBodyEventDetailChart();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeEventDetailResponseBodyEventDetailChart setChatType(Integer chatType) {
+            this.chatType = chatType;
+            return this;
+        }
+        public Integer getChatType() {
+            return this.chatType;
         }
 
         public DescribeEventDetailResponseBodyEventDetailChart setData(DescribeEventDetailResponseBodyEventDetailChartData data) {
@@ -126,6 +154,14 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         }
         public String getLabel() {
             return this.label;
+        }
+
+        public DescribeEventDetailResponseBodyEventDetailChart setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public DescribeEventDetailResponseBodyEventDetailChart setType(String type) {
@@ -152,6 +188,14 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             return this.YLabel;
         }
 
+        public DescribeEventDetailResponseBodyEventDetailChart setZLabel(String ZLabel) {
+            this.ZLabel = ZLabel;
+            return this;
+        }
+        public String getZLabel() {
+            return this.ZLabel;
+        }
+
     }
 
     public static class DescribeEventDetailResponseBodyEventDetailContent extends TeaModel {
@@ -160,6 +204,9 @@ public class DescribeEventDetailResponseBody extends TeaModel {
          */
         @NameInMap("Label")
         public String label;
+
+        @NameInMap("Name")
+        public String name;
 
         /**
          * <p>The description of the content in the anomalous event.</p>
@@ -178,6 +225,14 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         }
         public String getLabel() {
             return this.label;
+        }
+
+        public DescribeEventDetailResponseBodyEventDetailContent setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public DescribeEventDetailResponseBodyEventDetailContent setValue(String value) {
@@ -497,6 +552,9 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         @NameInMap("LoginName")
         public String loginName;
 
+        @NameInMap("NewAlarm")
+        public Boolean newAlarm;
+
         /**
          * <p>The name of the service in which the anomalous event was detected. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.</p>
          */
@@ -676,6 +734,14 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         }
         public String getLoginName() {
             return this.loginName;
+        }
+
+        public DescribeEventDetailResponseBodyEvent setNewAlarm(Boolean newAlarm) {
+            this.newAlarm = newAlarm;
+            return this;
+        }
+        public Boolean getNewAlarm() {
+            return this.newAlarm;
         }
 
         public DescribeEventDetailResponseBodyEvent setProductCode(String productCode) {
