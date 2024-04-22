@@ -15,9 +15,7 @@ public class CreateCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel 
     public String clientToken;
 
     /**
-     * <p>The ID of the endpoint for which you want to create the traffic destinations.</p>
-     * <br>
-     * <p>> This parameter is required.</p>
+     * <p>The ID of the endpoint for which you want to create traffic destinations.</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
