@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>facebody20191230</artifactId>
-  <version>5.1.1</version>
+  <version>5.1.2</version>
   <packaging>jar</packaging>
   <name>facebody20191230</name>
   <description>Alibaba Cloud facebody (20191230) SDK for Java
@@ -60,7 +60,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openplatform20191219</artifactId>
-      <version>5.0.0</version>
+      <version>5.0.1</version>
       <exclusions>
         <exclusion>
           <groupId>com.aliyun</groupId>
