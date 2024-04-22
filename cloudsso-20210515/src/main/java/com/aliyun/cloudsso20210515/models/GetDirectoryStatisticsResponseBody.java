@@ -86,6 +86,9 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
         @NameInMap("InProgressTaskCount")
         public Integer inProgressTaskCount;
 
+        @NameInMap("InlinePolicyPerAccessConfigurationQuota")
+        public Integer inlinePolicyPerAccessConfigurationQuota;
+
         /**
          * <p>The region ID of the directory.</p>
          */
@@ -201,6 +204,14 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
         }
         public Integer getInProgressTaskCount() {
             return this.inProgressTaskCount;
+        }
+
+        public GetDirectoryStatisticsResponseBodyDirectoryStatistics setInlinePolicyPerAccessConfigurationQuota(Integer inlinePolicyPerAccessConfigurationQuota) {
+            this.inlinePolicyPerAccessConfigurationQuota = inlinePolicyPerAccessConfigurationQuota;
+            return this;
+        }
+        public Integer getInlinePolicyPerAccessConfigurationQuota() {
+            return this.inlinePolicyPerAccessConfigurationQuota;
         }
 
         public GetDirectoryStatisticsResponseBodyDirectoryStatistics setRegion(String region) {
