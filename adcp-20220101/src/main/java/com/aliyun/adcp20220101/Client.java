@@ -8,7 +8,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._signatureAlgorithm = "v2";
         this._endpointRule = "central";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-beijing", "adcp.cn-beijing.aliyuncs.com"),
@@ -124,6 +123,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupID)) {
+            body.put("ResourceGroupID", request.resourceGroupID);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitches)) {
@@ -430,6 +433,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.profile)) {
             query.put("Profile", request.profile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -766,6 +773,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.grantUserPermissionWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : GrantUserPermissions is deprecated, please use adcp::2022-01-01::GrantUserPermission instead.
+      *
+      * @param tmpReq GrantUserPermissionsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GrantUserPermissionsResponse
+     */
+    // Deprecated
     public GrantUserPermissionsResponse grantUserPermissionsWithOptions(GrantUserPermissionsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GrantUserPermissionsShrinkRequest request = new GrantUserPermissionsShrinkRequest();
@@ -800,6 +815,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GrantUserPermissionsResponse());
     }
 
+    /**
+      * @deprecated : GrantUserPermissions is deprecated, please use adcp::2022-01-01::GrantUserPermission instead.
+      *
+      * @param request GrantUserPermissionsRequest
+      * @return GrantUserPermissionsResponse
+     */
+    // Deprecated
     public GrantUserPermissionsResponse grantUserPermissions(GrantUserPermissionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.grantUserPermissionsWithOptions(request, runtime);
@@ -834,6 +856,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ArgoCDHAEnabled", request.argoCDHAEnabled);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.argoEventsEnabled)) {
+            query.put("ArgoEventsEnabled", request.argoEventsEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.argoServerEnabled)) {
             query.put("ArgoServerEnabled", request.argoServerEnabled);
         }
@@ -852,6 +878,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableMesh)) {
             query.put("EnableMesh", request.enableMesh);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayEnabled)) {
+            query.put("GatewayEnabled", request.gatewayEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.monitorEnabled)) {
