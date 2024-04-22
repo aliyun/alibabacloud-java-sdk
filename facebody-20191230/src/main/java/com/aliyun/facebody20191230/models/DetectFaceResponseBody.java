@@ -170,6 +170,9 @@ public class DetectFaceResponseBody extends TeaModel {
         @NameInMap("LandmarkCount")
         public Integer landmarkCount;
 
+        @NameInMap("LandmarkScore")
+        public java.util.List<Float> landmarkScore;
+
         /**
          * <p>1</p>
          */
@@ -226,6 +229,14 @@ public class DetectFaceResponseBody extends TeaModel {
         }
         public Integer getLandmarkCount() {
             return this.landmarkCount;
+        }
+
+        public DetectFaceResponseBodyData setLandmarkScore(java.util.List<Float> landmarkScore) {
+            this.landmarkScore = landmarkScore;
+            return this;
+        }
+        public java.util.List<Float> getLandmarkScore() {
+            return this.landmarkScore;
         }
 
         public DetectFaceResponseBodyData setLandmarks(java.util.List<Float> landmarks) {
