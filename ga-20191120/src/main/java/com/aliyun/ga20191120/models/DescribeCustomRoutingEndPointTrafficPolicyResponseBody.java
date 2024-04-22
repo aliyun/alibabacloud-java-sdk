@@ -59,24 +59,26 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
     public String requestId;
 
     /**
-     * <p>The service ID to which the managed instance belongs.</p>
+     * <p>The ID of the service that manages the instance.</p>
      * <br>
-     * <p>>  Valid only when the ServiceManaged parameter is True.</p>
+     * <p>>  This parameter is returned only if the value of **ServiceManaged** is **true**.</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
     /**
-     * <p>Is it a managed instance. Valid values:</p>
+     * <p>Indicates whether the instance is managed. Valid values:</p>
      * <br>
-     * <p>- true</p>
-     * <p>- false</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 
     /**
-     * <p>A list of action policies that users can execute on this managed instance.</p>
+     * <p>The actions that users can perform on the managed instance.</p>
+     * <p>> *   This parameter is returned only if the value of **ServiceManaged** is **true**.</p>
+     * <p>> *   Users can perform only specific actions on a managed instance.</p>
      */
     @NameInMap("ServiceManagedInfos")
     public java.util.List<DescribeCustomRoutingEndPointTrafficPolicyResponseBodyServiceManagedInfos> serviceManagedInfos;
@@ -203,13 +205,13 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
 
     public static class DescribeCustomRoutingEndPointTrafficPolicyResponseBodyPortRanges extends TeaModel {
         /**
-         * <p>The port range of the traffic destination.</p>
+         * <p>The first port of the port range used by the traffic destination to process requests.</p>
          */
         @NameInMap("FromPort")
         public Integer fromPort;
 
         /**
-         * <p>The first port of the port range.</p>
+         * <p>The last port of the port range used by the traffic destination to process requests.</p>
          */
         @NameInMap("ToPort")
         public Integer toPort;
@@ -239,39 +241,39 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
 
     public static class DescribeCustomRoutingEndPointTrafficPolicyResponseBodyServiceManagedInfos extends TeaModel {
         /**
-         * <p>Managed policy action name, Valid values:</p>
-         * <p>- Create</p>
-         * <p>- Update</p>
-         * <p>- Delete</p>
-         * <p>- Associate</p>
-         * <p>- UserUnmanaged</p>
-         * <p>- CreateChild</p>
+         * <p>The name of the action performed on the managed instance. Valid values:</p>
+         * <br>
+         * <p>*   **Create**</p>
+         * <p>*   **Update**</p>
+         * <p>*   **Delete**</p>
+         * <p>*   **Associate**</p>
+         * <p>*   **UserUnmanaged**</p>
+         * <p>*   **CreateChild**</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
-         * <p>Sub resource type, Valid values:</p>
+         * <p>The type of the child resource. Valid values:</p>
          * <br>
-         * <p>- Listener</p>
-         * <p>- IpSet</p>
-         * <p>- EndpointGroup</p>
-         * <p>- ForwardingRule</p>
-         * <p>- Endpoint</p>
-         * <p>- EndpointGroupDestination</p>
-         * <p>- EndpointPolicy</p>
+         * <p>*   **Listener**: listener.</p>
+         * <p>*   **IpSet**: acceleration region.</p>
+         * <p>*   **EndpointGroup**: endpoint group.</p>
+         * <p>*   **ForwardingRule**: forwarding rule.</p>
+         * <p>*   **Endpoint**: endpoint.</p>
+         * <p>*   **EndpointGroupDestination**: protocol mapping of an endpoint group that is associated with a custom routing listener.</p>
+         * <p>*   **EndpointPolicy**: traffic policy of an endpoint that is associated with a custom routing listener.</p>
          * <br>
-         * <p>>Only valid when the Action parameter is CreateChild.</p>
+         * <p>>  This parameter takes effect only if the value of **Action** is **CreateChild**.</p>
          */
         @NameInMap("ChildType")
         public String childType;
 
         /**
-         * <p>Is the managed policy action managed, Valid values:</p>
+         * <p>Indicates whether the specified actions are managed.</p>
          * <br>
-         * <p>- true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.</p>
-         * <br>
-         * <p>- false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.</p>
+         * <p>*   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.</p>
+         * <p>*   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.</p>
          */
         @NameInMap("IsManaged")
         public Boolean isManaged;

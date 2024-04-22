@@ -39,7 +39,7 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
 
     public static class ListAccelerateAreasResponseBodyAreasRegionList extends TeaModel {
         /**
-         * <p>The region name.</p>
+         * <p>The name of the region.</p>
          */
         @NameInMap("LocalName")
         public String localName;
@@ -81,7 +81,7 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
         public String areaId;
 
         /**
-         * <p>The area name.</p>
+         * <p>The name of the area.</p>
          */
         @NameInMap("LocalName")
         public String localName;

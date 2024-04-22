@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBusiRegionsResponseBody extends TeaModel {
     /**
-     * <p>The information of the regions.</p>
+     * <p>The information about the acceleration regions that are supported by GA.</p>
      */
     @NameInMap("Regions")
     public java.util.List<ListBusiRegionsResponseBodyRegions> regions;
@@ -45,7 +45,7 @@ public class ListBusiRegionsResponseBody extends TeaModel {
         public String localName;
 
         /**
-         * <p>The ID of the region where the GA instance is deployed. Only **cn-hangzhou** is returned.</p>
+         * <p>The ID of the region.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

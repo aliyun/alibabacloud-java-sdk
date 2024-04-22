@@ -11,10 +11,10 @@ public class AssociateAclsWithListenerRequest extends TeaModel {
     public java.util.List<String> aclIds;
 
     /**
-     * <p>The type of ACL. Valid values:</p>
+     * <p>The type of the ACL. Valid values:</p>
      * <br>
-     * <p>*   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios in which you want to allow only specific IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. After you configure a whitelist for a listener, only requests from the IP addresses that are added to the whitelist are forwarded by the listener. If the whitelist is enabled but no IP addresses are added to it, the listener does not forward requests.</p>
-     * <p>*   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are denied. Blacklists apply to scenarios in which you want to deny access from specific IP addresses to an application. If the blacklist is enabled but no IP addresses are added to it, the listener forwards all requests.</p>
+     * <p>*   **white**: Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists are suitable for scenarios in which you want to allow access from specific IP addresses to an application. If a whitelist is improperly configured, risks may arise. After a whitelist is configured for a listener, only requests from the IP addresses that are added to the whitelist are distributed by the listener. If a whitelist is enabled but no IP address is added to the whitelist, the listener forwards all requests.</p>
+     * <p>*   **black**: All requests from the IP addresses or CIDR blocks in the ACL are rejected. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses to an application. If the blacklist is enabled but no IP addresses are added to the ACL, the listener forwards all requests.</p>
      */
     @NameInMap("AclType")
     public String aclType;
@@ -39,7 +39,9 @@ public class AssociateAclsWithListenerRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the listener.</p>
+     * <p>The listener ID.</p>
+     * <br>
+     * <p>Only intelligent routing listeners support ACLs.</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
