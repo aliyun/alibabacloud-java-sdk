@@ -22,6 +22,12 @@ public class QueryContentAdvanceRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("HybridSearch")
+    public String hybridSearch;
+
+    @NameInMap("HybridSearchArgs")
+    public java.util.Map<String, java.util.Map<String, ?>> hybridSearchArgs;
+
     @NameInMap("IncludeVector")
     public Boolean includeVector;
 
@@ -103,6 +109,22 @@ public class QueryContentAdvanceRequest extends TeaModel {
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public QueryContentAdvanceRequest setHybridSearch(String hybridSearch) {
+        this.hybridSearch = hybridSearch;
+        return this;
+    }
+    public String getHybridSearch() {
+        return this.hybridSearch;
+    }
+
+    public QueryContentAdvanceRequest setHybridSearchArgs(java.util.Map<String, java.util.Map<String, ?>> hybridSearchArgs) {
+        this.hybridSearchArgs = hybridSearchArgs;
+        return this;
+    }
+    public java.util.Map<String, java.util.Map<String, ?>> getHybridSearchArgs() {
+        return this.hybridSearchArgs;
     }
 
     public QueryContentAdvanceRequest setIncludeVector(Boolean includeVector) {

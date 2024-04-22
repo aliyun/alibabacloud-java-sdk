@@ -22,6 +22,12 @@ public class QueryContentShrinkRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("HybridSearch")
+    public String hybridSearch;
+
+    @NameInMap("HybridSearchArgs")
+    public String hybridSearchArgsShrink;
+
     @NameInMap("IncludeVector")
     public Boolean includeVector;
 
@@ -103,6 +109,22 @@ public class QueryContentShrinkRequest extends TeaModel {
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public QueryContentShrinkRequest setHybridSearch(String hybridSearch) {
+        this.hybridSearch = hybridSearch;
+        return this;
+    }
+    public String getHybridSearch() {
+        return this.hybridSearch;
+    }
+
+    public QueryContentShrinkRequest setHybridSearchArgsShrink(String hybridSearchArgsShrink) {
+        this.hybridSearchArgsShrink = hybridSearchArgsShrink;
+        return this;
+    }
+    public String getHybridSearchArgsShrink() {
+        return this.hybridSearchArgsShrink;
     }
 
     public QueryContentShrinkRequest setIncludeVector(Boolean includeVector) {

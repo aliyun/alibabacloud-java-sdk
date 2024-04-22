@@ -27,16 +27,16 @@ public class DescribeSQLLogsV2Request extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The execution duration of the query. Unit: seconds.</p>
+     * <p>The execution duration of the SQL statement. Unit: seconds.</p>
      */
     @NameInMap("ExecuteCost")
     public String executeCost;
 
     /**
-     * <p>The execution state of the query. Valid values:</p>
+     * <p>The execution status of the SQL statement. Valid values:</p>
      * <br>
-     * <p>*   **success**</p>
-     * <p>*   **fail**</p>
+     * <p>*   **1**: successful.</p>
+     * <p>*   **0**: failed.</p>
      */
     @NameInMap("ExecuteState")
     public String executeState;

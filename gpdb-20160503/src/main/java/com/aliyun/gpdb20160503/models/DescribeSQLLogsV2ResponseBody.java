@@ -85,13 +85,13 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
         public String DBRole;
 
         /**
-         * <p>The execution duration of the query.</p>
+         * <p>The execution duration of the SQL statement.</p>
          */
         @NameInMap("ExecuteCost")
         public Float executeCost;
 
         /**
-         * <p>The execution state of the query. Valid values:</p>
+         * <p>The execution status of the SQL statement. Valid values:</p>
          * <br>
          * <p>*   **success**</p>
          * <p>*   **fail**</p>

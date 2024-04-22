@@ -5585,6 +5585,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         QueryCollectionDataShrinkRequest request = new QueryCollectionDataShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.hybridSearchArgs)) {
+            request.hybridSearchArgsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.hybridSearchArgs, "HybridSearchArgs", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.vector)) {
             request.vectorShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.vector, "Vector", "json");
         }
@@ -5604,6 +5608,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
             query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hybridSearch)) {
+            query.put("HybridSearch", request.hybridSearch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hybridSearchArgsShrink)) {
+            query.put("HybridSearchArgs", request.hybridSearchArgsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.includeValues)) {
@@ -5664,6 +5676,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         QueryContentShrinkRequest request = new QueryContentShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.hybridSearchArgs)) {
+            request.hybridSearchArgsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.hybridSearchArgs, "HybridSearchArgs", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.recallWindow)) {
             request.recallWindowShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.recallWindow, "RecallWindow", "json");
         }
@@ -5691,6 +5707,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
             query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hybridSearch)) {
+            query.put("HybridSearch", request.hybridSearch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hybridSearchArgsShrink)) {
+            query.put("HybridSearchArgs", request.hybridSearchArgsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.includeVector)) {

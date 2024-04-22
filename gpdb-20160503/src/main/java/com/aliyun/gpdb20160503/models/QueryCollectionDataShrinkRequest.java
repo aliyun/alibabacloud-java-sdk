@@ -16,6 +16,12 @@ public class QueryCollectionDataShrinkRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("HybridSearch")
+    public String hybridSearch;
+
+    @NameInMap("HybridSearchArgs")
+    public String hybridSearchArgsShrink;
+
     @NameInMap("IncludeValues")
     public Boolean includeValues;
 
@@ -75,6 +81,22 @@ public class QueryCollectionDataShrinkRequest extends TeaModel {
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public QueryCollectionDataShrinkRequest setHybridSearch(String hybridSearch) {
+        this.hybridSearch = hybridSearch;
+        return this;
+    }
+    public String getHybridSearch() {
+        return this.hybridSearch;
+    }
+
+    public QueryCollectionDataShrinkRequest setHybridSearchArgsShrink(String hybridSearchArgsShrink) {
+        this.hybridSearchArgsShrink = hybridSearchArgsShrink;
+        return this;
+    }
+    public String getHybridSearchArgsShrink() {
+        return this.hybridSearchArgsShrink;
     }
 
     public QueryCollectionDataShrinkRequest setIncludeValues(Boolean includeValues) {

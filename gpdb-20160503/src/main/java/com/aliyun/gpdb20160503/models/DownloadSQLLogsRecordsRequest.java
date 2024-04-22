@@ -31,10 +31,10 @@ public class DownloadSQLLogsRecordsRequest extends TeaModel {
     public String executeCost;
 
     /**
-     * <p>The execution state of the SQL statement.</p>
+     * <p>The execution status of the SQL statement.</p>
      * <br>
-     * <p>*   **success**</p>
-     * <p>*   **fail**</p>
+     * <p>*   **1**: successful.</p>
+     * <p>*   **0**: failed.</p>
      */
     @NameInMap("ExecuteState")
     public String executeState;
