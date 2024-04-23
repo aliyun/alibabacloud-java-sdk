@@ -519,6 +519,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("SecurityGroup")
         public String securityGroup;
 
+        @NameInMap("Series")
+        public String series;
+
         /**
          * <p>The instance status. Valid values:</p>
          * <br>
@@ -832,6 +835,14 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
         public String getSecurityGroup() {
             return this.securityGroup;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setSeries(String series) {
+            this.series = series;
+            return this;
+        }
+        public String getSeries() {
+            return this.series;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setServiceStatus(Integer serviceStatus) {

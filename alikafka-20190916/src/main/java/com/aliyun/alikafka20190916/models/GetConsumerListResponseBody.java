@@ -16,6 +16,9 @@ public class GetConsumerListResponseBody extends TeaModel {
     @NameInMap("ConsumerList")
     public GetConsumerListResponseBodyConsumerList consumerList;
 
+    /**
+     * <p>The number of the page to return. Pages start from page 1.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -25,6 +28,9 @@ public class GetConsumerListResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -40,6 +46,9 @@ public class GetConsumerListResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -169,13 +178,13 @@ public class GetConsumerListResponseBody extends TeaModel {
 
     public static class GetConsumerListResponseBodyConsumerListConsumerVO extends TeaModel {
         /**
-         * <p>The consumer group that is automatically created by the system.</p>
+         * <p>Indicates that the consumer group was automatically created by the system.</p>
          */
         @NameInMap("AutomaticallyCreatedGroup")
         public Boolean automaticallyCreatedGroup;
 
         /**
-         * <p>The ID of the consumer group.</p>
+         * <p>The consumer group ID.</p>
          */
         @NameInMap("ConsumerId")
         public String consumerId;
@@ -187,13 +196,13 @@ public class GetConsumerListResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The ID of the region where the instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The description of the consumer group.</p>
+         * <p>The instance description.</p>
          */
         @NameInMap("Remark")
         public String remark;

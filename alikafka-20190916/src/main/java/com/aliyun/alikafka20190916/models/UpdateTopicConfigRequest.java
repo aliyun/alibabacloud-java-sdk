@@ -7,10 +7,10 @@ public class UpdateTopicConfigRequest extends TeaModel {
     /**
      * <p>The key of the topic configuration.</p>
      * <br>
-     * <p>*   Valid values: retention.hours, max.message.bytes, and replications.</p>
-     * <p>*   retention.hours specifies the message retention period.</p>
-     * <p>*   max.message.bytes specifies the maximum size of a sent message.</p>
-     * <p>*   replications specifies the number of topic replicas.</p>
+     * <p>*   ApsaraMQ for Kafka V2 instances allow you to modify configurations only for topics that use local storage.</p>
+     * <p>*   ApsaraMQ for Kafka V3 instances allow you to modify configurations for all topics.</p>
+     * <p>*   The following keys are supported by `local topic` of ApsaraMQ for Kafka V2 instances: retention.ms, retention.bytes, and replications.</p>
+     * <p>*   The following keys are supported by ApsaraMQ for Kafka V3 instances: retention.hours and max.message.bytes.</p>
      */
     @NameInMap("Config")
     public String config;
@@ -36,9 +36,8 @@ public class UpdateTopicConfigRequest extends TeaModel {
     /**
      * <p>The value of the topic configuration.</p>
      * <br>
-     * <p>*   retention.hours specifies the message retention period. The value is a string. Valid values: 24 to 8760.</p>
-     * <p>*   max.message.bytes specifies the maximum size of a sent message. The value is a string. Valid values: 1048576 to 10485760.</p>
-     * <p>*   replications specifies the number of topic replicas. The value is a string. Valid values: 1 to 3.</p>
+     * <p>*   `retention.hours` specifies the message retention period. Value type: string. Valid values: 24 to 8760.</p>
+     * <p>*   `max.message.bytes` specifies the maximum size of a sent message. Value type: string. Valid values: 1048576 to 10485760.</p>
      */
     @NameInMap("Value")
     public String value;

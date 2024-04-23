@@ -8,7 +8,9 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
      * <p>The disk size. Unit: GB.</p>
      * <br>
      * <p>*   The disk size that you specify must be greater than or equal to the current disk size of the instance.</p>
-     * <p>*   For more information about the valid values, see [Billing](~~84737~~).</p>
+     * <p>*   For information about the valid values of this parameter, see [Billing](~~84737~~).</p>
+     * <br>
+     * <p>>  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</p>
      */
     @NameInMap("DiskSize")
     public Integer diskSize;
@@ -16,10 +18,16 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
     /**
      * <p>The Internet traffic for the instance.</p>
      * <br>
-     * <p>*   The Internet traffic volume that you specify must be greater than or equal to the current Internet traffic volume of the instance.</p>
-     * <p>*   For more information about the valid values, see [Billing](~~84737~~).</p>
-     * <p>> - If the **EipModel** parameter is set to **true**, set the **EipMax** parameter to a value that is greater than 0.</p>
-     * <p>> - If the **EipModel** parameter is set to **false**, set the **EipMax** parameter to **0**.</p>
+     * <p>*   The Internet traffic that you specify must be greater than or equal to the current Internet traffic of the instance.</p>
+     * <p>*   For information about the valid values of this parameter, see [Billing](~~84737~~).</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   If you set **EipModel** to **true**, set **EipMax** to a value that is greater than 0.</p>
+     * <br>
+     * <p>*   If you set **EipModel** to **false**, set **EipMax** to **0**.</p>
+     * <br>
+     * <p>*   When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</p>
      */
     @NameInMap("EipMax")
     public Integer eipMax;
@@ -43,8 +51,10 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
      * <p>The maximum traffic for the instance. We recommend that you do not configure this parameter.</p>
      * <br>
      * <p>*   The maximum traffic that you specify must be greater than or equal to the current maximum traffic of the instance.</p>
-     * <p>*   You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you specify only the IoMaxSpec parameter.</p>
-     * <p>*   For more information about the valid values, see [Billing](~~84737~~).</p>
+     * <p>*   You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.</p>
+     * <p>*   For information about the valid values of this parameter, see [Billing](~~84737~~).</p>
+     * <br>
+     * <p>>  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</p>
      */
     @NameInMap("IoMax")
     public Integer ioMax;
@@ -53,8 +63,10 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
      * <p>The traffic specification of the instance. We recommend that you configure this parameter.</p>
      * <br>
      * <p>*   The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.</p>
-     * <p>*   You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you specify only the IoMaxSpec parameter.</p>
-     * <p>*   For more information about the valid values, see [Billing](~~84737~~).</p>
+     * <p>*   You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.</p>
+     * <p>*   For information about the valid values of this parameter, see [Billing](~~84737~~).</p>
+     * <br>
+     * <p>>  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</p>
      */
     @NameInMap("IoMaxSpec")
     public String ioMaxSpec;
@@ -62,9 +74,11 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
     /**
      * <p>The number of partitions. We recommend that you configure this parameter.</p>
      * <br>
-     * <p>*   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.</p>
-     * <p>*   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.</p>
-     * <p>*   For more information about the valid values, see [Billing](~~84737~~).</p>
+     * <p>*   You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.</p>
+     * <p>*   If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</p>
+     * <p>*   For information about the valid values of this parameter, see [Billing](~~84737~~).</p>
+     * <br>
+     * <p>>  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</p>
      */
     @NameInMap("PartitionNum")
     public Integer partitionNum;
@@ -75,17 +89,27 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The parameters configured for the Serverless instance. When you create an ApsaraMQ for Kafka V3 serverless instance, you must configure these parameters.</p>
+     */
     @NameInMap("ServerlessConfig")
     public String serverlessConfigShrink;
 
     /**
-     * <p>The edition of the instance. Valid values:</p>
+     * <p>The instance edition.</p>
      * <br>
-     * <p>*   **normal**: Standard Edition (High Write)</p>
-     * <p>*   **professional**: Professional Edition (High Write)</p>
-     * <p>*   **professionalForHighRead**: Professional Edition (High Read)</p>
+     * <p>Valid values for this parameter if you set PaidType to 1:</p>
      * <br>
-     * <p>You cannot downgrade an instance from the Professional Edition to the Standard Edition. For more information about these instance editions, see [Billing](~~84737~~).</p>
+     * <p>*   normal: Standard Edition (High Write)</p>
+     * <p>*   professional: Professional Edition (High Write)</p>
+     * <p>*   professionalForHighRead: Professional Edition (High Read)</p>
+     * <br>
+     * <p>Valid values for this parameter if you set PaidType to 3:</p>
+     * <br>
+     * <p>*   normal: Serverless Standard Edition</p>
+     * <p>*   professional: Serverless Professional Edition</p>
+     * <br>
+     * <p>For more information, see [Billing](~~84737~~).</p>
      */
     @NameInMap("SpecType")
     public String specType;
@@ -93,10 +117,12 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
     /**
      * <p>The number of topics. We recommend that you do not configure this parameter.</p>
      * <br>
-     * <p>*   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.</p>
-     * <p>*   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.</p>
-     * <p>*   The default value of the TopicQuota parameter varies based on the value of the IoMaxSpec parameter. If the number of topics that you consume exceeds the default value, you are charged additional fees.</p>
-     * <p>*   For more information about the valid values, see [Billing](~~84737~~).</p>
+     * <p>*   You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.</p>
+     * <p>*   If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</p>
+     * <p>*   The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you consume exceeds the default value, you are charged additional fees.</p>
+     * <p>*   For information about the valid values of this parameter, see [Billing](~~84737~~).</p>
+     * <br>
+     * <p>>  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</p>
      */
     @NameInMap("TopicQuota")
     public Integer topicQuota;

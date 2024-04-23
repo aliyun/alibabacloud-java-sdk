@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetConsumerProgressResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     * <p>The returned HTTP status code. If the request is successful, 200 is returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The consumption status of the consumer group.</p>
+     * <p>The consumer progress of the consumer group.</p>
      */
     @NameInMap("ConsumerProgress")
     public GetConsumerProgressResponseBodyConsumerProgress consumerProgress;
@@ -23,7 +23,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -80,21 +80,39 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     }
 
     public static class GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList extends TeaModel {
+        /**
+         * <p>The number of rebalances.</p>
+         */
         @NameInMap("Generation")
         public Long generation;
 
+        /**
+         * <p>The group ID of the subscriber.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The time when the last rebalance occurred. Unit: milliseconds.</p>
+         */
         @NameInMap("LastRebalanceTimestamp")
         public Long lastRebalanceTimestamp;
 
+        /**
+         * <p>The cause of the rebalance.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>Indicates whether new members are added to the consumer group in the rebalance.</p>
+         */
         @NameInMap("RebalanceSuccess")
         public Boolean rebalanceSuccess;
 
+        /**
+         * <p>The duration of the rebalance. Unit: milliseconds.</p>
+         */
         @NameInMap("RebalanceTimeConsuming")
         public Long rebalanceTimeConsuming;
 
@@ -192,7 +210,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         public Long lastTimestamp;
 
         /**
-         * <p>The ID of the partition.</p>
+         * <p>The partition ID.</p>
          */
         @NameInMap("Partition")
         public Integer partition;
@@ -263,19 +281,19 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         public Long lastTimestamp;
 
         /**
-         * <p>The information about offsets in the topic.</p>
+         * <p>The consumer offsets.</p>
          */
         @NameInMap("OffsetList")
         public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetList offsetList;
 
         /**
-         * <p>The name of the topic.</p>
+         * <p>The topic name.</p>
          */
         @NameInMap("Topic")
         public String topic;
 
         /**
-         * <p>The number of messages that were not consumed in the topic. This is also known as the number of accumulated messages in the topic.</p>
+         * <p>The number of unconsumed messages in the topic to which the consumer group subscribes.</p>
          */
         @NameInMap("TotalDiff")
         public Long totalDiff;
@@ -345,17 +363,20 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
+        /**
+         * <p>The details of rebalances in the consumer group.</p>
+         */
         @NameInMap("RebalanceInfoList")
         public GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoList rebalanceInfoList;
 
         /**
-         * <p>The consumption progress of each topic to which the consumer group is subscribed.</p>
+         * <p>The consumer progress of each topic to which the consumer group subscribes.</p>
          */
         @NameInMap("TopicList")
         public GetConsumerProgressResponseBodyConsumerProgressTopicList topicList;
 
         /**
-         * <p>The number of messages that were not consumed in all topics. This is also known as the number of accumulated messages in all topics.</p>
+         * <p>The total number of unconsumed messages in all topics to which the consumer group subscribes.</p>
          */
         @NameInMap("TotalDiff")
         public Long totalDiff;

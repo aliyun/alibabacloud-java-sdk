@@ -4,15 +4,27 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class StopInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The returned status code. If the request is successful, 200 is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
