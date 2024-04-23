@@ -313,7 +313,7 @@ public class GetDiskResponseBody extends TeaModel {
         public Boolean encrypted;
 
         /**
-         * <p>IOPS。</p>
+         * <p>IOPS.</p>
          */
         @NameInMap("Iops")
         public Long iops;
