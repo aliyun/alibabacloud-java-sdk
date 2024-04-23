@@ -4,9 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the instances.</p>
+     */
     @NameInMap("InstanceRisks")
     public java.util.List<DescribeInstanceRiskLevelsResponseBodyInstanceRisks> instanceRisks;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,23 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceRiskLevelsResponseBodyInstanceRisksDetails extends TeaModel {
+        /**
+         * <p>The IP addresses of servers.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The risk levels. Valid values:</p>
+         * <br>
+         * <p>*   **medium**</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The type.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -73,12 +90,23 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceRiskLevelsResponseBodyInstanceRisks extends TeaModel {
+        /**
+         * <p>The risk levels of the Elastic Compute Service (ECS) instance.</p>
+         */
         @NameInMap("Details")
         public java.util.List<DescribeInstanceRiskLevelsResponseBodyInstanceRisksDetails> details;
 
+        /**
+         * <p>The instance ID of your Cloud Firewall.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The risk levels. Valid values:</p>
+         * <br>
+         * <p>*   **medium**</p>
+         */
         @NameInMap("Level")
         public String level;
 

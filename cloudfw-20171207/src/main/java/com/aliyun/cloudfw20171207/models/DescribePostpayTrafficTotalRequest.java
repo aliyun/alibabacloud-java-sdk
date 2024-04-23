@@ -3,9 +3,9 @@ package com.aliyun.cloudfw20171207.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeNatAclPageStatusRequest extends TeaModel {
+public class DescribePostpayTrafficTotalRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the content within the response. Valid values:</p>
      * <br>
      * <p>*   **zh** (default): Chinese</p>
      * <p>*   **en**: English</p>
@@ -13,12 +13,12 @@ public class DescribeNatAclPageStatusRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    public static DescribeNatAclPageStatusRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeNatAclPageStatusRequest self = new DescribeNatAclPageStatusRequest();
+    public static DescribePostpayTrafficTotalRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribePostpayTrafficTotalRequest self = new DescribePostpayTrafficTotalRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeNatAclPageStatusRequest setLang(String lang) {
+    public DescribePostpayTrafficTotalRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }

@@ -4,9 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the IPS whitelist of the VPC firewall.</p>
+     */
     @NameInMap("Whitelists")
     public java.util.List<DescribeVpcFirewallIPSWhitelistResponseBodyWhitelists> whitelists;
 
@@ -32,18 +38,39 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallIPSWhitelistResponseBodyWhitelists extends TeaModel {
+        /**
+         * <p>The type of the list. Valid values:</p>
+         * <br>
+         * <p>*   **1**: user-defined</p>
+         * <p>*   **2**: address book</p>
+         */
         @NameInMap("ListType")
         public Long listType;
 
+        /**
+         * <p>The entries in the list.</p>
+         */
         @NameInMap("ListValue")
         public String listValue;
 
+        /**
+         * <p>The instance ID of the VPC firewall.</p>
+         */
         @NameInMap("VpcFirewallId")
         public String vpcFirewallId;
 
+        /**
+         * <p>An array of entries in the list.</p>
+         */
         @NameInMap("WhiteListValue")
         public java.util.List<String> whiteListValue;
 
+        /**
+         * <p>The type of the whitelist. Valid values:</p>
+         * <br>
+         * <p>*   **1**: destination</p>
+         * <p>*   **2**: source</p>
+         */
         @NameInMap("WhiteType")
         public Long whiteType;
 

@@ -4,9 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcListLiteResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the VPCs.</p>
+     */
     @NameInMap("VpcList")
     public java.util.List<DescribeVpcListLiteResponseBodyVpcList> vpcList;
 
@@ -32,12 +38,21 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcListLiteResponseBodyVpcList extends TeaModel {
+        /**
+         * <p>The region ID of the VPC.</p>
+         */
         @NameInMap("RegionNo")
         public String regionNo;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The name of the VPC.</p>
+         */
         @NameInMap("VpcName")
         public String vpcName;
 

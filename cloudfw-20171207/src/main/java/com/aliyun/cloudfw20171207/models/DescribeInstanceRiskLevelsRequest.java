@@ -4,9 +4,18 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceRiskLevelsRequest extends TeaModel {
+    /**
+     * <p>The information about the instances.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<DescribeInstanceRiskLevelsRequestInstances> instances;
 
+    /**
+     * <p>The language of the content within the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh** (default): Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
@@ -32,15 +41,27 @@ public class DescribeInstanceRiskLevelsRequest extends TeaModel {
     }
 
     public static class DescribeInstanceRiskLevelsRequestInstances extends TeaModel {
+        /**
+         * <p>The instance ID of your Cloud Firewall.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The public IP addresses of instances.</p>
+         */
         @NameInMap("InternetIp")
         public java.util.List<String> internetIp;
 
+        /**
+         * <p>The private IP address of the instance.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The UUID of the instance.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 

@@ -4,12 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeDownloadTaskResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tasks.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<DescribeDownloadTaskResponseBodyTasks> tasks;
 
+    /**
+     * <p>The total number of tasks.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,27 +52,56 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeDownloadTaskResponseBodyTasks extends TeaModel {
+        /**
+         * <p>The time when the task was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The time when the task expires. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <p>The size of the file.</p>
+         */
         @NameInMap("FileSize")
         public String fileSize;
 
+        /**
+         * <p>The URL of the OSS file.</p>
+         */
         @NameInMap("FileURL")
         public String fileURL;
 
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   **finish**</p>
+         * <p>*   **start**</p>
+         * <p>*   **error**</p>
+         * <p>*   **expire**: The task file is invalid and cannot be downloaded.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The task ID.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The type of the task.</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 

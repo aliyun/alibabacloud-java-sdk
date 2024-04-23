@@ -4,9 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribePrefixListsResponseBody extends TeaModel {
+    /**
+     * <p>Details about the prefix lists.</p>
+     */
     @NameInMap("PrefixList")
     public java.util.List<DescribePrefixListsResponseBodyPrefixList> prefixList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,48 @@ public class DescribePrefixListsResponseBody extends TeaModel {
     }
 
     public static class DescribePrefixListsResponseBodyPrefixList extends TeaModel {
+        /**
+         * <p>The IP address family of the prefix list. Valid values:</p>
+         * <br>
+         * <p>*   IPv4</p>
+         * <p>*   IPv6</p>
+         */
         @NameInMap("AddressFamily")
         public String addressFamily;
 
+        /**
+         * <p>The number of associated resources.</p>
+         */
         @NameInMap("AssociationCount")
         public Integer associationCount;
 
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The maximum number of entries in the prefix list.</p>
+         */
         @NameInMap("MaxEntries")
         public Integer maxEntries;
 
+        /**
+         * <p>The ID of the prefix list.</p>
+         */
         @NameInMap("PrefixListId")
         public String prefixListId;
 
+        /**
+         * <p>The name of the prefix list.</p>
+         */
         @NameInMap("PrefixListName")
         public String prefixListName;
 

@@ -4,18 +4,38 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcListLiteRequest extends TeaModel {
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh** (default): Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The region ID of the VPC.</p>
+     * <br>
+     * <p>>  For more information about Cloud Firewall supported regions, see [Supported regions](~~195657~~).</p>
+     */
     @NameInMap("RegionNo")
     public String regionNo;
 
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>The ID of the VPC.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The name of the VPC.</p>
+     */
     @NameInMap("VpcName")
     public String vpcName;
 

@@ -76,6 +76,9 @@ public class CreateTrFirewallV2Request extends TeaModel {
     @NameInMap("TrAttachmentMasterCidr")
     public String trAttachmentMasterCidr;
 
+    /**
+     * <p>The primary zone for the vSwitch.</p>
+     */
     @NameInMap("TrAttachmentMasterZone")
     public String trAttachmentMasterZone;
 
@@ -85,6 +88,9 @@ public class CreateTrFirewallV2Request extends TeaModel {
     @NameInMap("TrAttachmentSlaveCidr")
     public String trAttachmentSlaveCidr;
 
+    /**
+     * <p>The secondary zone for the vSwitch.</p>
+     */
     @NameInMap("TrAttachmentSlaveZone")
     public String trAttachmentSlaveZone;
 
