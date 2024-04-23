@@ -28,6 +28,9 @@ public class GetInstanceListRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Series")
+    public String series;
+
     /**
      * <p>The tags.</p>
      */
@@ -69,6 +72,14 @@ public class GetInstanceListRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public GetInstanceListRequest setSeries(String series) {
+        this.series = series;
+        return this;
+    }
+    public String getSeries() {
+        return this.series;
     }
 
     public GetInstanceListRequest setTag(java.util.List<GetInstanceListRequestTag> tag) {

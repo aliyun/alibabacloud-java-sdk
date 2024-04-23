@@ -10,6 +10,16 @@ public class CreateSaslUserRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The encryption method. Valid values:</p>
+     * <br>
+     * <p>*   SCRAM-SHA-512 (default)</p>
+     * <p>*   SCRAM-SHA-256</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     */
     @NameInMap("Mechanism")
     public String mechanism;
 

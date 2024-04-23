@@ -1101,6 +1101,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.series)) {
+            query.put("Series", request.series);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
         }
@@ -1518,6 +1522,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.releaseInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation only if your instance is in the Stopped state.
+      *
+      * @param request ReopenInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ReopenInstanceResponse
+     */
     public ReopenInstanceResponse reopenInstanceWithOptions(ReopenInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1546,6 +1557,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReopenInstanceResponse());
     }
 
+    /**
+      * You can call this operation only if your instance is in the Stopped state.
+      *
+      * @param request ReopenInstanceRequest
+      * @return ReopenInstanceResponse
+     */
     public ReopenInstanceResponse reopenInstance(ReopenInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.reopenInstanceWithOptions(request, runtime);
@@ -1673,6 +1690,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.startInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.
+      *
+      * @param request StopInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StopInstanceResponse
+     */
     public StopInstanceResponse stopInstanceWithOptions(StopInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1701,6 +1725,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopInstanceResponse());
     }
 
+    /**
+      * You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.
+      *
+      * @param request StopInstanceRequest
+      * @return StopInstanceResponse
+     */
     public StopInstanceResponse stopInstance(StopInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopInstanceWithOptions(request, runtime);

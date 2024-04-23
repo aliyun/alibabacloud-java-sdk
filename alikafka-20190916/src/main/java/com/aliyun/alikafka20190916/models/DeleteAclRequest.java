@@ -5,17 +5,39 @@ import com.aliyun.tea.*;
 
 public class DeleteAclRequest extends TeaModel {
     /**
-     * <p>The operation type. Valid values:</p>
+     * <p>The operation allowed by the access control list (ACL). Valid values:</p>
      * <br>
-     * <p>*   **Write**</p>
-     * <p>*   **Read**</p>
+     * <p>*   **Write**: data writes</p>
+     * <p>*   **Read**: data reads</p>
+     * <p>*   **Describe**: reads of transactional IDs</p>
+     * <p>*   **IdempotentWrite**: idempotent data writes to clusters</p>
      */
     @NameInMap("AclOperationType")
     public String aclOperationType;
 
+    /**
+     * <p>The operations allowed by the ACL. Separate multiple operations with commas (,).</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   **Write**: data writes</p>
+     * <p>*   **Read**: data reads</p>
+     * <p>*   **Describe**: reads of **transactional IDs**</p>
+     * <p>*   **IdempotentWrite**: idempotent data writes to **clusters**</p>
+     * <br>
+     * <p>>  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     */
     @NameInMap("AclOperationTypes")
     public String aclOperationTypes;
 
+    /**
+     * <p>The authorization method. Valid values:</p>
+     * <br>
+     * <p>*   Deny</p>
+     * <p>*   ALLOW</p>
+     * <br>
+     * <p>>  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     */
     @NameInMap("AclPermissionType")
     public String aclPermissionType;
 
@@ -38,14 +60,19 @@ public class DeleteAclRequest extends TeaModel {
     public String aclResourcePatternType;
 
     /**
-     * <p>The type of the resource.</p>
+     * <p>The resource type. Valid values:</p>
      * <br>
-     * <p>*   **Topic**</p>
-     * <p>*   **Group**</p>
+     * <p>*   **Topic**: topic</p>
+     * <p>*   **Group**: consumer group</p>
+     * <p>*   **Cluster**: cluster</p>
+     * <p>*   **TransactionalId**: transactional ID</p>
      */
     @NameInMap("AclResourceType")
     public String aclResourceType;
 
+    /**
+     * <p>The IP address of the source.</p>
+     */
     @NameInMap("Host")
     public String host;
 

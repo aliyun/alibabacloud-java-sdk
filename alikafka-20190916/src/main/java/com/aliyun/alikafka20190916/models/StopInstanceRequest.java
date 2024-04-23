@@ -4,9 +4,15 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class StopInstanceRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the region where the instance resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -10,6 +10,9 @@ public class GetConsumerListRequest extends TeaModel {
     @NameInMap("ConsumerId")
     public String consumerId;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -19,6 +22,9 @@ public class GetConsumerListRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of entries to be returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
