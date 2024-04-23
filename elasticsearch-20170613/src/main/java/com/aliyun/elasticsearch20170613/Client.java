@@ -486,60 +486,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDataStreamWithOptions(InstanceId, request, headers, runtime);
     }
 
-    /**
-      * @deprecated
-      * Before you call this operation, note that:
-      * *   Currently, the one-click index migration feature only supports the China (Beijing) region.
-      * *   The source and destination Elasticsearch clusters must meet the following requirements: a user-created or Alibaba Cloud Elasticsearch Elasticsearch cluster with a source of version 6.7.0 and a Alibaba Cloud Elasticsearch Elasticsearch cluster with a destination of version 6.3.2 or 6.7.0.
-      *
-      * @param request CreateDataTasksRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateDataTasksResponse
-     */
-    // Deprecated
-    public CreateDataTasksResponse createDataTasksWithOptions(String InstanceId, CreateDataTasksRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
-            query.put("ClientToken", request.clientToken);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toArray(request.body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateDataTasks"),
-            new TeaPair("version", "2017-06-13"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/data-task"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataTasksResponse());
-    }
-
-    /**
-      * @deprecated
-      * Before you call this operation, note that:
-      * *   Currently, the one-click index migration feature only supports the China (Beijing) region.
-      * *   The source and destination Elasticsearch clusters must meet the following requirements: a user-created or Alibaba Cloud Elasticsearch Elasticsearch cluster with a source of version 6.7.0 and a Alibaba Cloud Elasticsearch Elasticsearch cluster with a destination of version 6.3.2 or 6.7.0.
-      *
-      * @param request CreateDataTasksRequest
-      * @return CreateDataTasksResponse
-     */
-    // Deprecated
-    public CreateDataTasksResponse createDataTasks(String InstanceId, CreateDataTasksRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createDataTasksWithOptions(InstanceId, request, headers, runtime);
-    }
-
     public CreateILMPolicyResponse createILMPolicyWithOptions(String InstanceId, CreateILMPolicyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
