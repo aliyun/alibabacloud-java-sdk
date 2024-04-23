@@ -40,7 +40,7 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <p>*   **Memcache**</p>
      * <p>*   **SSL**</p>
      * <br>
-     * <p>>  The value ANY** indicates all types of applications.</p>
+     * <p>>  The value *ANY* indicates all types of applications.</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
@@ -134,7 +134,7 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <p>*   **UDP**</p>
      * <p>*   **ICMP**</p>
      * <br>
-     * <p>>  The value ANY** indicates all types of applications.</p>
+     * <p>>  The value *ANY* indicates all types of applications.</p>
      */
     @NameInMap("Proto")
     public String proto;

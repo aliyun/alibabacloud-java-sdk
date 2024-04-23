@@ -4,6 +4,9 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeTrFirewallPolicyBackUpAssociationListRequest extends TeaModel {
+    /**
+     * <p>An array that consists of the details about the traffic redirection instance.</p>
+     */
     @NameInMap("CandidateList")
     public java.util.List<DescribeTrFirewallPolicyBackUpAssociationListRequestCandidateList> candidateList;
 
@@ -66,9 +69,15 @@ public class DescribeTrFirewallPolicyBackUpAssociationListRequest extends TeaMod
     }
 
     public static class DescribeTrFirewallPolicyBackUpAssociationListRequestCandidateList extends TeaModel {
+        /**
+         * <p>The ID of the traffic redirection instance.</p>
+         */
         @NameInMap("CandidateId")
         public String candidateId;
 
+        /**
+         * <p>The type of the traffic redirection instance.</p>
+         */
         @NameInMap("CandidateType")
         public String candidateType;
 

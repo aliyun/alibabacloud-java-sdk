@@ -4,12 +4,24 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ResetNatFirewallRuleHitCountRequest extends TeaModel {
+    /**
+     * <p>The UUID of the access control policy.</p>
+     */
     @NameInMap("AclUuid")
     public String aclUuid;
 
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh** (default): Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the NAT gateway.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 

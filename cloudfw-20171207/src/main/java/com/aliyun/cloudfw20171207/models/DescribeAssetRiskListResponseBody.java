@@ -4,12 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeAssetRiskListResponseBody extends TeaModel {
+    /**
+     * <p>The details of the asset.</p>
+     */
     @NameInMap("AssetList")
     public java.util.List<DescribeAssetRiskListResponseBodyAssetList> assetList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,15 +52,36 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
     }
 
     public static class DescribeAssetRiskListResponseBodyAssetList extends TeaModel {
+        /**
+         * <p>The IP address of the server.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The IP version of the asset that is protected by Cloud Firewall.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   **4**: IPv4</p>
+         * <p>*   **6**: IPv6</p>
+         */
         @NameInMap("IpVersion")
         public Long ipVersion;
 
+        /**
+         * <p>The reason for the risk.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>The risk level. Valid values:</p>
+         * <br>
+         * <p>*   **low**</p>
+         * <p>*   **middle**</p>
+         * <p>*   **high**</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 

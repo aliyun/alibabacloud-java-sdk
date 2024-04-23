@@ -29,7 +29,7 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   ANY</p>
+     * <p>*   ANY: all application types</p>
      * <p>*   FTP</p>
      * <p>*   HTTP</p>
      * <p>*   HTTPS</p>
@@ -44,7 +44,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>*   MongoDB</p>
      * <p>*   Memcache</p>
      * <p>*   SSL</p>
-     * <p>*   ANY: all application types</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;

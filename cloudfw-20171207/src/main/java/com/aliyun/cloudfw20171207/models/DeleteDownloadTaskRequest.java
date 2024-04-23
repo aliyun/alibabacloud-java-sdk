@@ -4,9 +4,18 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DeleteDownloadTaskRequest extends TeaModel {
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh** (default): Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the file download task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

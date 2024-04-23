@@ -4,6 +4,9 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeTrFirewallPolicyBackUpAssociationListShrinkRequest extends TeaModel {
+    /**
+     * <p>An array that consists of the details about the traffic redirection instance.</p>
+     */
     @NameInMap("CandidateList")
     public String candidateListShrink;
 

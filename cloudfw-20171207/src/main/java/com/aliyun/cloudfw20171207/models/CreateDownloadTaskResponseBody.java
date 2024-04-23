@@ -4,15 +4,35 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class CreateDownloadTaskResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the task. Valid values:</p>
+     * <br>
+     * <p>finish: You can query the task to obtain the download link of the file.</p>
+     * <br>
+     * <p>start</p>
+     * <br>
+     * <p>error</p>
+     * <br>
+     * <p>expire: The task file is invalid and cannot be downloaded.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The unique ID of the task.</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 
+    /**
+     * <p>The name of the file download task.</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 

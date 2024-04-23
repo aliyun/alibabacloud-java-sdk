@@ -4,21 +4,48 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpcFirewallIPSWhitelistRequest extends TeaModel {
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh** (default): Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The type of the list. Valid values:</p>
+     * <br>
+     * <p>*   **1**: user-defined</p>
+     * <p>*   **2**: address book</p>
+     */
     @NameInMap("ListType")
     public Long listType;
 
+    /**
+     * <p>The entry in the list.</p>
+     */
     @NameInMap("ListValue")
     public String listValue;
 
+    /**
+     * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     */
     @NameInMap("MemberUid")
     public Long memberUid;
 
+    /**
+     * <p>The instance ID of the VPC firewall.</p>
+     */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 
+    /**
+     * <p>The type of the whitelist. Valid values:</p>
+     * <br>
+     * <p>*   **1**: destination</p>
+     * <p>*   **2**: source</p>
+     */
     @NameInMap("WhiteType")
     public Long whiteType;
 

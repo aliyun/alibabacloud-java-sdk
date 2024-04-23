@@ -4,12 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeSignatureLibVersionResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The information about the versions.</p>
+     */
     @NameInMap("Version")
     public java.util.List<DescribeSignatureLibVersionResponseBodyVersion> version;
 
@@ -43,9 +52,43 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
     }
 
     public static class DescribeSignatureLibVersionResponseBodyVersion extends TeaModel {
+        /**
+         * <p>The type.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   ips</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    Basic Rules and Virtual Patching</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   intelligence</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    Threat Intelligence</p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The version number.</p>
+         */
         @NameInMap("Version")
         public String version;
 

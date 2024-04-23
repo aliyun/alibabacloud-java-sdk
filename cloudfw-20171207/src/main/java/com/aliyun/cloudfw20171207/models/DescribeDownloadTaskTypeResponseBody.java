@@ -4,12 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The task types.</p>
+     */
     @NameInMap("TaskTypeArray")
     public java.util.List<DescribeDownloadTaskTypeResponseBodyTaskTypeArray> taskTypeArray;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,9 +52,15 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeDownloadTaskTypeResponseBodyTaskTypeArray extends TeaModel {
+        /**
+         * <p>The name of the task type.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The type of the task.</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 

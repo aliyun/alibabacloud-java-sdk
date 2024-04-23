@@ -4,9 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeNatAclPageStatusResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether pagination for access control policies for NAT firewalls is supported.</p>
+     */
     @NameInMap("NatAclPageEnable")
     public Boolean natAclPageEnable;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

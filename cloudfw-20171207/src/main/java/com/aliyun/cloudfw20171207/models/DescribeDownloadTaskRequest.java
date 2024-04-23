@@ -4,15 +4,30 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeDownloadTaskRequest extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("CurrentPage")
     public String currentPage;
 
+    /**
+     * <p>The language of the content within the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh** (default): Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The type of the task. For more information about task types, see the descriptions in the "DescribeDownloadTaskType" topic. If you do not specify this parameter, all files are queried by default.</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 

@@ -52,7 +52,7 @@ public class DescribeVpcFirewallListRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>Default value: **10**.**** Maximum value: **50**.</p>
+     * <p>Default value: **10**. Maximum value: **50**.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

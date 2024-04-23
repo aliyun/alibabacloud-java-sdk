@@ -4,9 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribePrefixListsRequest extends TeaModel {
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionNo")
     public String regionNo;
 
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

@@ -4,9 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of risks.</p>
+     */
     @NameInMap("RiskList")
     public java.util.List<DescribeCfwRiskLevelSummaryResponseBodyRiskList> riskList;
 
@@ -32,12 +38,23 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeCfwRiskLevelSummaryResponseBodyRiskList extends TeaModel {
+        /**
+         * <p>The risk levels. Valid values:</p>
+         * <br>
+         * <p>*   **medium**</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The number of at-risk Elastic Compute Service (ECS) instances.</p>
+         */
         @NameInMap("Num")
         public String num;
 
+        /**
+         * <p>The type.</p>
+         */
         @NameInMap("Type")
         public String type;
 

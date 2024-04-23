@@ -4,12 +4,24 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DeleteControlPolicyTemplateRequest extends TeaModel {
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh** (default): Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>The ID of the access control policy template.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
