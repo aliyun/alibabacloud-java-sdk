@@ -199,6 +199,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createArtifactBuildRuleWithOptions(request, runtime);
     }
 
+    public CreateArtifactLifecycleRuleResponse createArtifactLifecycleRuleWithOptions(CreateArtifactLifecycleRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.auto)) {
+            query.put("Auto", request.auto);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableDeleteTag)) {
+            query.put("EnableDeleteTag", request.enableDeleteTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceName)) {
+            query.put("NamespaceName", request.namespaceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repoName)) {
+            query.put("RepoName", request.repoName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retentionTagCount)) {
+            query.put("RetentionTagCount", request.retentionTagCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleTime)) {
+            query.put("ScheduleTime", request.scheduleTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            query.put("Scope", request.scope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagRegexp)) {
+            query.put("TagRegexp", request.tagRegexp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateArtifactLifecycleRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateArtifactLifecycleRuleResponse());
+    }
+
+    public CreateArtifactLifecycleRuleResponse createArtifactLifecycleRule(CreateArtifactLifecycleRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createArtifactLifecycleRuleWithOptions(request, runtime);
+    }
+
     public CreateBuildRecordByRecordResponse createBuildRecordByRecordWithOptions(CreateBuildRecordByRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1045,6 +1106,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createRepositoryWithOptions(request, runtime);
     }
 
+    public DeleteArtifactLifecycleRuleResponse deleteArtifactLifecycleRuleWithOptions(DeleteArtifactLifecycleRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteArtifactLifecycleRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteArtifactLifecycleRuleResponse());
+    }
+
+    public DeleteArtifactLifecycleRuleResponse deleteArtifactLifecycleRule(DeleteArtifactLifecycleRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteArtifactLifecycleRuleWithOptions(request, runtime);
+    }
+
     public DeleteChainResponse deleteChainWithOptions(DeleteChainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1613,6 +1707,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetArtifactBuildTaskResponse getArtifactBuildTask(GetArtifactBuildTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getArtifactBuildTaskWithOptions(request, runtime);
+    }
+
+    public GetArtifactLifecycleRuleResponse getArtifactLifecycleRuleWithOptions(GetArtifactLifecycleRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetArtifactLifecycleRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetArtifactLifecycleRuleResponse());
+    }
+
+    public GetArtifactLifecycleRuleResponse getArtifactLifecycleRule(GetArtifactLifecycleRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getArtifactLifecycleRuleWithOptions(request, runtime);
     }
 
     /**
@@ -2356,6 +2475,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListArtifactBuildTaskLogResponse listArtifactBuildTaskLog(ListArtifactBuildTaskLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listArtifactBuildTaskLogWithOptions(request, runtime);
+    }
+
+    public ListArtifactLifecycleRuleResponse listArtifactLifecycleRuleWithOptions(ListArtifactLifecycleRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListArtifactLifecycleRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListArtifactLifecycleRuleResponse());
+    }
+
+    public ListArtifactLifecycleRuleResponse listArtifactLifecycleRule(ListArtifactLifecycleRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listArtifactLifecycleRuleWithOptions(request, runtime);
     }
 
     public ListChainResponse listChainWithOptions(ListChainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3430,6 +3574,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagResourcesWithOptions(request, runtime);
+    }
+
+    public UpdateArtifactLifecycleRuleResponse updateArtifactLifecycleRuleWithOptions(UpdateArtifactLifecycleRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.auto)) {
+            query.put("Auto", request.auto);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableDeleteTag)) {
+            query.put("EnableDeleteTag", request.enableDeleteTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceName)) {
+            query.put("NamespaceName", request.namespaceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repoName)) {
+            query.put("RepoName", request.repoName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retentionTagCount)) {
+            query.put("RetentionTagCount", request.retentionTagCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleTime)) {
+            query.put("ScheduleTime", request.scheduleTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            query.put("Scope", request.scope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagRegexp)) {
+            query.put("TagRegexp", request.tagRegexp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateArtifactLifecycleRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateArtifactLifecycleRuleResponse());
+    }
+
+    public UpdateArtifactLifecycleRuleResponse updateArtifactLifecycleRule(UpdateArtifactLifecycleRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateArtifactLifecycleRuleWithOptions(request, runtime);
     }
 
     public UpdateChainResponse updateChainWithOptions(UpdateChainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
