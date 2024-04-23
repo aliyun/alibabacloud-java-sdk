@@ -665,6 +665,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("DataDisks")
         public java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsDataDisks> dataDisks;
 
+        @NameInMap("DedicatedHostClusterId")
+        public String dedicatedHostClusterId;
+
         /**
          * <p>The ID of the dedicated host on which the ECS instance is created. Preemptible instances cannot be created on dedicated hosts. If you specify the DedicatedHostId parameter, the SpotStrategy and SpotPriceLimit parameters are ignored.</p>
          * <br>
@@ -1127,6 +1130,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsDataDisks> getDataDisks() {
             return this.dataDisks;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurations setDedicatedHostClusterId(String dedicatedHostClusterId) {
+            this.dedicatedHostClusterId = dedicatedHostClusterId;
+            return this;
+        }
+        public String getDedicatedHostClusterId() {
+            return this.dedicatedHostClusterId;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurations setDedicatedHostId(String dedicatedHostId) {

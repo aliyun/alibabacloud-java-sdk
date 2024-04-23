@@ -117,6 +117,47 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeScalingGroupsResponseBodyScalingGroupsDBInstances extends TeaModel {
+        @NameInMap("DBInstanceId")
+        public String DBInstanceId;
+
+        @NameInMap("SecurityGroupIds")
+        public java.util.List<String> securityGroupIds;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeScalingGroupsResponseBodyScalingGroupsDBInstances build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingGroupsResponseBodyScalingGroupsDBInstances self = new DescribeScalingGroupsResponseBodyScalingGroupsDBInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroupsDBInstances setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroupsDBInstances setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroupsDBInstances setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class DescribeScalingGroupsResponseBodyScalingGroupsLaunchTemplateOverrides extends TeaModel {
         /**
          * <p>The instance type. The instance type that is specified by this parameter overrides the instance type that is specified in the launch template.</p>
@@ -482,6 +523,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
          */
         @NameInMap("DBInstanceIds")
         public java.util.List<String> DBInstanceIds;
+
+        @NameInMap("DBInstances")
+        public java.util.List<DescribeScalingGroupsResponseBodyScalingGroupsDBInstances> DBInstances;
 
         /**
          * <p>The cooldown period of the scaling group. During the cooldown period, Auto Scaling does not execute the scaling activities that are triggered by [CloudMonitor](~~35170~~) event-triggered tasks.</p>
@@ -920,6 +964,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         }
         public java.util.List<String> getDBInstanceIds() {
             return this.DBInstanceIds;
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroups setDBInstances(java.util.List<DescribeScalingGroupsResponseBodyScalingGroupsDBInstances> DBInstances) {
+            this.DBInstances = DBInstances;
+            return this;
+        }
+        public java.util.List<DescribeScalingGroupsResponseBodyScalingGroupsDBInstances> getDBInstances() {
+            return this.DBInstances;
         }
 
         public DescribeScalingGroupsResponseBodyScalingGroups setDefaultCooldown(Integer defaultCooldown) {

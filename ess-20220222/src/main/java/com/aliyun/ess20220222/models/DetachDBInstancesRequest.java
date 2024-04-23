@@ -38,6 +38,9 @@ public class DetachDBInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RemoveSecurityGroup")
+    public Boolean removeSecurityGroup;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -90,6 +93,14 @@ public class DetachDBInstancesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DetachDBInstancesRequest setRemoveSecurityGroup(Boolean removeSecurityGroup) {
+        this.removeSecurityGroup = removeSecurityGroup;
+        return this;
+    }
+    public Boolean getRemoveSecurityGroup() {
+        return this.removeSecurityGroup;
     }
 
     public DetachDBInstancesRequest setResourceOwnerAccount(String resourceOwnerAccount) {

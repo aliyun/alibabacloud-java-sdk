@@ -50,6 +50,9 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     @NameInMap("DataDisks")
     public java.util.List<ModifyScalingConfigurationShrinkRequestDataDisks> dataDisks;
 
+    @NameInMap("DedicatedHostClusterId")
+    public String dedicatedHostClusterId;
+
     /**
      * <p>The ID of the dedicated host on which you want to create ECS instances. You cannot create preemptible instances on dedicated hosts. If you specify DedicatedHostId, SpotStrategy and SpotPriceLimit are ignored.</p>
      * <br>
@@ -412,6 +415,14 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     }
     public java.util.List<ModifyScalingConfigurationShrinkRequestDataDisks> getDataDisks() {
         return this.dataDisks;
+    }
+
+    public ModifyScalingConfigurationShrinkRequest setDedicatedHostClusterId(String dedicatedHostClusterId) {
+        this.dedicatedHostClusterId = dedicatedHostClusterId;
+        return this;
+    }
+    public String getDedicatedHostClusterId() {
+        return this.dedicatedHostClusterId;
     }
 
     public ModifyScalingConfigurationShrinkRequest setDedicatedHostId(String dedicatedHostId) {
