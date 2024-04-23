@@ -4,18 +4,35 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesShrinkRequest extends TeaModel {
+    /**
+     * <p>The number of resources to return.</p>
+     */
     @NameInMap("Limit")
     public Integer limit;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceIdShrink;
 
+    /**
+     * <p>The resource type.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags.</p>
+     * <br>
+     * <p>You can query up to 20 tags at a time.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 

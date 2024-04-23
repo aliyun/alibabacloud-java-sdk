@@ -4,15 +4,27 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesShrinkRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to delete all tags.</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
+    /**
+     * <p>The resource identifiers.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceIdShrink;
 
+    /**
+     * <p>The resource type.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tag to remove. You can specify a maximum of 50 tags.</p>
+     */
     @NameInMap("TagKey")
     public String tagKeyShrink;
 
