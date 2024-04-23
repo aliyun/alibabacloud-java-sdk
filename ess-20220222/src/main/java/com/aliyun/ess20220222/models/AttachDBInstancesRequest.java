@@ -4,6 +4,9 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class AttachDBInstancesRequest extends TeaModel {
+    @NameInMap("AttachMode")
+    public String attachMode;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
      * <br>
@@ -47,9 +50,20 @@ public class AttachDBInstancesRequest extends TeaModel {
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
+    @NameInMap("Type")
+    public String type;
+
     public static AttachDBInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachDBInstancesRequest self = new AttachDBInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AttachDBInstancesRequest setAttachMode(String attachMode) {
+        this.attachMode = attachMode;
+        return this;
+    }
+    public String getAttachMode() {
+        return this.attachMode;
     }
 
     public AttachDBInstancesRequest setClientToken(String clientToken) {
@@ -106,6 +120,14 @@ public class AttachDBInstancesRequest extends TeaModel {
     }
     public String getScalingGroupId() {
         return this.scalingGroupId;
+    }
+
+    public AttachDBInstancesRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

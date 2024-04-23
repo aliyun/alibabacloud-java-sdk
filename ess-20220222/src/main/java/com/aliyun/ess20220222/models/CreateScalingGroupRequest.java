@@ -69,6 +69,9 @@ public class CreateScalingGroupRequest extends TeaModel {
     @NameInMap("DBInstanceIds")
     public String DBInstanceIds;
 
+    @NameInMap("DBInstances")
+    public java.util.List<CreateScalingGroupRequestDBInstances> DBInstances;
+
     /**
      * <p>The cooldown period of the scaling group after a scaling activity is complete. Valid values: 0 to 86400. Unit: seconds.</p>
      * <br>
@@ -431,6 +434,14 @@ public class CreateScalingGroupRequest extends TeaModel {
         return this.DBInstanceIds;
     }
 
+    public CreateScalingGroupRequest setDBInstances(java.util.List<CreateScalingGroupRequestDBInstances> DBInstances) {
+        this.DBInstances = DBInstances;
+        return this;
+    }
+    public java.util.List<CreateScalingGroupRequestDBInstances> getDBInstances() {
+        return this.DBInstances;
+    }
+
     public CreateScalingGroupRequest setDefaultCooldown(Integer defaultCooldown) {
         this.defaultCooldown = defaultCooldown;
         return this;
@@ -767,6 +778,47 @@ public class CreateScalingGroupRequest extends TeaModel {
         }
         public Integer getWeight() {
             return this.weight;
+        }
+
+    }
+
+    public static class CreateScalingGroupRequestDBInstances extends TeaModel {
+        @NameInMap("AttachMode")
+        public String attachMode;
+
+        @NameInMap("DBInstanceId")
+        public String DBInstanceId;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static CreateScalingGroupRequestDBInstances build(java.util.Map<String, ?> map) throws Exception {
+            CreateScalingGroupRequestDBInstances self = new CreateScalingGroupRequestDBInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateScalingGroupRequestDBInstances setAttachMode(String attachMode) {
+            this.attachMode = attachMode;
+            return this;
+        }
+        public String getAttachMode() {
+            return this.attachMode;
+        }
+
+        public CreateScalingGroupRequestDBInstances setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
+        public CreateScalingGroupRequestDBInstances setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
