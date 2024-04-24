@@ -57,6 +57,9 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDbInstancesResponseBodyItemsDBInstance extends TeaModel {
+        @NameInMap("AllowAllCategory")
+        public Boolean allowAllCategory;
+
         /**
          * <p>The description of the storage instance.</p>
          */
@@ -131,6 +134,14 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
         public static DescribeDbInstancesResponseBodyItemsDBInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDbInstancesResponseBodyItemsDBInstance self = new DescribeDbInstancesResponseBodyItemsDBInstance();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDbInstancesResponseBodyItemsDBInstance setAllowAllCategory(Boolean allowAllCategory) {
+            this.allowAllCategory = allowAllCategory;
+            return this;
+        }
+        public Boolean getAllowAllCategory() {
+            return this.allowAllCategory;
         }
 
         public DescribeDbInstancesResponseBodyItemsDBInstance setDBInstanceDescription(String DBInstanceDescription) {
