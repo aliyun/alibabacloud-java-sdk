@@ -4,9 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeMemberAccountsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the member.</p>
+     */
     @NameInMap("AccountInfos")
     public java.util.List<DescribeMemberAccountsResponseBodyAccountInfos> accountInfos;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,37 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeMemberAccountsResponseBodyAccountInfos extends TeaModel {
+        /**
+         * <p>The ID of the member.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The name of the member.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The status of the member.</p>
+         * <br>
+         * <p>*   **enabled**: managed.</p>
+         * <p>*   **disabled**: not managed.</p>
+         * <p>*   **disabling**: being deleted.</p>
+         */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
+        /**
+         * <p>The description of the member.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time when the member was added.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 

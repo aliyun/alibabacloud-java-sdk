@@ -3,17 +3,7 @@ package com.aliyun.waf_openapi20211001.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeMemberAccountsRequest extends TeaModel {
-    /**
-     * <p>The status of the member that you want to query.</p>
-     * <br>
-     * <p>*   **enabled**: managed.</p>
-     * <p>*   **disabled**: not managed.</p>
-     * <p>*   **disabling**: being deleted.</p>
-     */
-    @NameInMap("AccountStatus")
-    public String accountStatus;
-
+public class CopyDefenseTemplateRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <br>
@@ -38,25 +28,17 @@ public class DescribeMemberAccountsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The source IP address of the request. The system specifies this parameter.</p>
+     * <p>The ID of the protection template that you want to copy.</p>
      */
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("TemplateId")
+    public Long templateId;
 
-    public static DescribeMemberAccountsRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeMemberAccountsRequest self = new DescribeMemberAccountsRequest();
+    public static CopyDefenseTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
+        CopyDefenseTemplateRequest self = new CopyDefenseTemplateRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeMemberAccountsRequest setAccountStatus(String accountStatus) {
-        this.accountStatus = accountStatus;
-        return this;
-    }
-    public String getAccountStatus() {
-        return this.accountStatus;
-    }
-
-    public DescribeMemberAccountsRequest setInstanceId(String instanceId) {
+    public CopyDefenseTemplateRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -64,7 +46,7 @@ public class DescribeMemberAccountsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeMemberAccountsRequest setRegionId(String regionId) {
+    public CopyDefenseTemplateRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -72,7 +54,7 @@ public class DescribeMemberAccountsRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeMemberAccountsRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+    public CopyDefenseTemplateRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
         this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
         return this;
     }
@@ -80,12 +62,12 @@ public class DescribeMemberAccountsRequest extends TeaModel {
         return this.resourceManagerResourceGroupId;
     }
 
-    public DescribeMemberAccountsRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public CopyDefenseTemplateRequest setTemplateId(Long templateId) {
+        this.templateId = templateId;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public Long getTemplateId() {
+        return this.templateId;
     }
 
 }

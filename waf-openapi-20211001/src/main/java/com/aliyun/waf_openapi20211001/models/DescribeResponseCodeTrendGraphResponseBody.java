@@ -51,6 +51,12 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
         public Long code405Pv;
 
         /**
+         * <p>The number of 444 error codes that are returned.</p>
+         */
+        @NameInMap("444Pv")
+        public Long code444Pv;
+
+        /**
          * <p>The number of 499 error codes that are returned.</p>
          */
         @NameInMap("499Pv")
@@ -87,6 +93,14 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
         }
         public Long getCode405Pv() {
             return this.code405Pv;
+        }
+
+        public DescribeResponseCodeTrendGraphResponseBodyResponseCodes setCode444Pv(Long code444Pv) {
+            this.code444Pv = code444Pv;
+            return this;
+        }
+        public Long getCode444Pv() {
+            return this.code444Pv;
         }
 
         public DescribeResponseCodeTrendGraphResponseBodyResponseCodes setCode499Pv(Long code499Pv) {

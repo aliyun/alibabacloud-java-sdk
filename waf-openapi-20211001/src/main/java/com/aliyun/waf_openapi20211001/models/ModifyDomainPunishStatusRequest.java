@@ -3,11 +3,17 @@ package com.aliyun.waf_openapi20211001.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeAccountDelegatedStatusRequest extends TeaModel {
+public class ModifyDomainPunishStatusRequest extends TeaModel {
+    /**
+     * <p>The domain name that is penalized for failing to obtain an ICP filing.</p>
+     */
+    @NameInMap("Domain")
+    public String domain;
+
     /**
      * <p>The ID of the WAF instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.</p>
+     * <p>> You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -27,12 +33,20 @@ public class DescribeAccountDelegatedStatusRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
-    public static DescribeAccountDelegatedStatusRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeAccountDelegatedStatusRequest self = new DescribeAccountDelegatedStatusRequest();
+    public static ModifyDomainPunishStatusRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyDomainPunishStatusRequest self = new ModifyDomainPunishStatusRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAccountDelegatedStatusRequest setInstanceId(String instanceId) {
+    public ModifyDomainPunishStatusRequest setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
+    }
+
+    public ModifyDomainPunishStatusRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -40,7 +54,7 @@ public class DescribeAccountDelegatedStatusRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeAccountDelegatedStatusRequest setRegionId(String regionId) {
+    public ModifyDomainPunishStatusRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -48,7 +62,7 @@ public class DescribeAccountDelegatedStatusRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeAccountDelegatedStatusRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+    public ModifyDomainPunishStatusRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
         this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
         return this;
     }

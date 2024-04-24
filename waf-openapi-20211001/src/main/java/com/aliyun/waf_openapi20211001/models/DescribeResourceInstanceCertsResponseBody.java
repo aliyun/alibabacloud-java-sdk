@@ -4,12 +4,21 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
+    /**
+     * <p>The certificates.</p>
+     */
     @NameInMap("Certs")
     public java.util.List<DescribeResourceInstanceCertsResponseBodyCerts> certs;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,24 +52,45 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceInstanceCertsResponseBodyCerts extends TeaModel {
+        /**
+         * <p>The time when the certificate expires.</p>
+         */
         @NameInMap("AfterDate")
         public Long afterDate;
 
+        /**
+         * <p>The time when the certificate was issued.</p>
+         */
         @NameInMap("BeforeDate")
         public Long beforeDate;
 
+        /**
+         * <p>The globally unique ID of the certificate. The value is in the "Certificate ID-cn-hangzhou" format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.</p>
+         */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
+        /**
+         * <p>The name of the certificate.</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
+        /**
+         * <p>The common name.</p>
+         */
         @NameInMap("CommonName")
         public String commonName;
 
+        /**
+         * <p>The domain name for which the certificate is issued.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>Indicates whether the certificate chain is complete.</p>
+         */
         @NameInMap("IsChainCompleted")
         public Boolean isChainCompleted;
 

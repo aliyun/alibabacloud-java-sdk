@@ -3,15 +3,7 @@ package com.aliyun.waf_openapi20211001.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeAccountDelegatedStatusRequest extends TeaModel {
-    /**
-     * <p>The ID of the WAF instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.</p>
-     */
-    @NameInMap("InstanceId")
-    public String instanceId;
-
+public class CreatePostpaidInstanceRequest extends TeaModel {
     /**
      * <p>The region in which the WAF instance is deployed. Valid values:</p>
      * <br>
@@ -27,20 +19,12 @@ public class DescribeAccountDelegatedStatusRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
-    public static DescribeAccountDelegatedStatusRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeAccountDelegatedStatusRequest self = new DescribeAccountDelegatedStatusRequest();
+    public static CreatePostpaidInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreatePostpaidInstanceRequest self = new CreatePostpaidInstanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAccountDelegatedStatusRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DescribeAccountDelegatedStatusRequest setRegionId(String regionId) {
+    public CreatePostpaidInstanceRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -48,7 +32,7 @@ public class DescribeAccountDelegatedStatusRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeAccountDelegatedStatusRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+    public CreatePostpaidInstanceRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
         this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
         return this;
     }

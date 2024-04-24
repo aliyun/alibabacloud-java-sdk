@@ -3,9 +3,9 @@ package com.aliyun.waf_openapi20211001.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeAccountDelegatedStatusRequest extends TeaModel {
+public class DescribeDefenseResourceRequest extends TeaModel {
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <br>
      * <p>>  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.</p>
      */
@@ -22,17 +22,23 @@ public class DescribeAccountDelegatedStatusRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the protected object that you want to query. Only exact queries are supported.</p>
+     */
+    @NameInMap("Resource")
+    public String resource;
+
+    /**
      * <p>The ID of the Alibaba Cloud resource group.</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
-    public static DescribeAccountDelegatedStatusRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeAccountDelegatedStatusRequest self = new DescribeAccountDelegatedStatusRequest();
+    public static DescribeDefenseResourceRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDefenseResourceRequest self = new DescribeDefenseResourceRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAccountDelegatedStatusRequest setInstanceId(String instanceId) {
+    public DescribeDefenseResourceRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -40,7 +46,7 @@ public class DescribeAccountDelegatedStatusRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeAccountDelegatedStatusRequest setRegionId(String regionId) {
+    public DescribeDefenseResourceRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -48,7 +54,15 @@ public class DescribeAccountDelegatedStatusRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeAccountDelegatedStatusRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+    public DescribeDefenseResourceRequest setResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    public String getResource() {
+        return this.resource;
+    }
+
+    public DescribeDefenseResourceRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
         this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
         return this;
     }
