@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
     /**
-     * <p>Details about the returned automatic snapshot policies.</p>
+     * <p>Details about the automatic snapshot policies.</p>
      */
     @NameInMap("AutoSnapshotPolicies")
     public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPolicies autoSnapshotPolicies;
@@ -80,9 +80,20 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyCopyEncryptionConfiguration extends TeaModel {
+        /**
+         * <p>Whether to enable encryption for cross-region snapshot replication. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         * <br>
+         * <p>Default value: false.</p>
+         */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
+        /**
+         * <p>The ID of the Key Management Service (KMS) key used to encrypt snapshots in cross-region snapshot replication.</p>
+         */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
 
@@ -178,28 +189,31 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         public String autoSnapshotPolicyName;
 
         /**
-         * <p>> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("CopiedSnapshotsRetentionDays")
         public Integer copiedSnapshotsRetentionDays;
 
+        /**
+         * <p>Encryption configurations for cross-region snapshot replication.</p>
+         */
         @NameInMap("CopyEncryptionConfiguration")
         public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyCopyEncryptionConfiguration copyEncryptionConfiguration;
 
         /**
-         * <p>The time when the automatic snapshot policy was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the automatic snapshot policy was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The number of disks that are associated with the automatic snapshot policy.</p>
+         * <p>The number of disks to which the automatic snapshot policy is applied.</p>
          */
         @NameInMap("DiskNums")
         public Integer diskNums;
 
         /**
-         * <p>> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("EnableCrossRegionCopy")
         public Boolean enableCrossRegionCopy;
@@ -223,7 +237,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The retention period of automatic snapshots. Unit: days. Valid values:</p>
+         * <p>The retention period of the automatic snapshots. Unit: days. Valid values:</p>
          * <br>
          * <p>*   \-1: Automatic snapshots are retained until they are deleted.</p>
          * <p>*   1 to 65536: Auto snapshots are retained for the specified number of days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.</p>
@@ -232,10 +246,10 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         public Integer retentionDays;
 
         /**
-         * <p>The state of the automatic snapshot policy. Valid values:</p>
+         * <p>The status of the automatic snapshot policy. Valid values:</p>
          * <br>
          * <p>*   Normal: The automatic snapshot policy is normal.</p>
-         * <p>*   Expire: The automatic snapshot policy cannot be used because your account has an overdue payment.</p>
+         * <p>*   Expire: The automatic snapshot policy cannot be used because your account has overdue payments.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -247,7 +261,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTags tags;
 
         /**
-         * <p>> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("TargetCopyRegions")
         public String targetCopyRegions;
@@ -263,16 +277,16 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         public String timePoints;
 
         /**
-         * <p>自动快照策略类型。</p>
+         * <p>The type of the automatic snapshot policy. Valid values:</p>
          * <br>
-         * <p>- Custom：用户定义的快照策略。</p>
-         * <p>- System：系统定义的快照策略。</p>
+         * <p>*   Custom: user-defined snapshot policy.</p>
+         * <p>*   System: system-defined snapshot policy.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The number of extended volumes that are associated with the automatic snapshot policy.</p>
+         * <p>The number of extended volumes to which the automatic snapshot policy is applied.</p>
          */
         @NameInMap("VolumeNums")
         public Integer volumeNums;

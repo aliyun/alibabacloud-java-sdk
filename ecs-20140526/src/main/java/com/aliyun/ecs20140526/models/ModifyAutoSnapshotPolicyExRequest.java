@@ -10,6 +10,9 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     @NameInMap("CopiedSnapshotsRetentionDays")
     public Integer copiedSnapshotsRetentionDays;
 
+    /**
+     * <p>The encryption configurations for cross-region snapshot replication.</p>
+     */
     @NameInMap("CopyEncryptionConfiguration")
     public ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration copyEncryptionConfiguration;
 
@@ -203,12 +206,21 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     }
 
     public static class ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn extends TeaModel {
+        /**
+         * <p>This parameter is not publicly available.</p>
+         */
         @NameInMap("AssumeRoleFor")
         public Long assumeRoleFor;
 
+        /**
+         * <p>This parameter is not publicly available.</p>
+         */
         @NameInMap("RoleType")
         public String roleType;
 
+        /**
+         * <p>This parameter is not publicly available.</p>
+         */
         @NameInMap("Rolearn")
         public String rolearn;
 
@@ -244,12 +256,26 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     }
 
     public static class ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration extends TeaModel {
+        /**
+         * <p>This parameter is not publicly available.</p>
+         */
         @NameInMap("Arn")
         public java.util.List<ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn> arn;
 
+        /**
+         * <p>Specifies whether to enable encryption for cross-region snapshot replication. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         * <br>
+         * <p>Default value: false.</p>
+         */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
+        /**
+         * <p>The ID of the KMS key used for encryption in cross-region snapshot replication.</p>
+         */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
 

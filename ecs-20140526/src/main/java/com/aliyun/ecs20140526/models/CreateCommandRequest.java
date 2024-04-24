@@ -5,39 +5,39 @@ import com.aliyun.tea.*;
 
 public class CreateCommandRequest extends TeaModel {
     /**
-     * <p>The Base64-encoded content of the command.</p>
+     * <p>The Base64-encoded content of the command. Take note of the following items:</p>
      * <br>
-     * <p>*   The parameter value must be Base64-encoded and cannot exceed 18 KB in size.</p>
+     * <p>*   The value must be Base64-encoded and cannot exceed 18 KB in size.</p>
      * <br>
-     * <p>*   Custom parameters can be added to the command. To enable the custom parameter feature, you must set `EnableParameter` to true.</p>
+     * <p>*   You can use custom parameters in the command content. To enable the custom parameter feature, you must set `EnableParameter` to true.</p>
      * <br>
      * <p>    *   Custom parameters are defined in the `{{}}` format. Within `{{}}`, the spaces and line feeds before and after the parameter names are ignored.</p>
-     * <p>    *   The number of custom parameters cannot exceed 20.</p>
-     * <p>    *   A custom parameter name can contain only letters, digits, underscores (\_), and hyphens (-). The name is case-insensitive.</p>
-     * <p>    *   Each custom parameter name cannot exceed 64 bytes in length.</p>
+     * <p>    *   You can specify up to 20 custom parameters.</p>
+     * <p>    *   A custom parameter name can contain only letters, digits, underscores (\_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</p>
+     * <p>    *   Each custom parameter name can be up to 64 bytes in length.</p>
      * <br>
-     * <p>*   You can specify built-in environment parameters as custom parameters. Then, when you run the command, these parameters are automatically specified by Cloud Assistant. You can specify the following built-in environment parameters:</p>
+     * <p>*   You can specify built-in environment parameters as custom parameters in a command. When you run the command, Cloud Assistant automatically uses the environment parameter values for the custom parameters. You can specify the following built-in environment variables:</p>
      * <br>
      * <p>    *   `{{ACS::RegionId}}`: the region ID.</p>
      * <br>
-     * <p>    *   `{{ACS::AccountId}}`: the instance ID.</p>
+     * <p>    *   `{{ACS::AccountId}}`: the UID of the Alibaba Cloud account.</p>
      * <br>
-     * <p>    *   `{{ACS::InstanceId}}`: the ID of the instance. When the command is run on multiple instances, if you want to specify `{{ACS::InstanceId}}` as a built-in environment variable, make sure that the version of the Cloud Assistant client is not earlier than the following ones:</p>
+     * <p>    *   `{{ACS::InstanceId}}`: the instance ID. If you want to run the command on multiple instances and specify `{{ACS::InstanceId}}` as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</p>
      * <br>
      * <p>        *   Linux: 2.2.3.309</p>
      * <p>        *   Windows: 2.1.3.309</p>
      * <br>
-     * <p>    *   `{{ACS::InstanceName}}`: the instance name. If you want to run the command on multiple instances and specify `{{ACS::InstanceName}}` as a built-in environment parameter, make sure that the version of the Cloud Assistant client is not earlier than the following ones:</p>
+     * <p>    *   `{{ACS::InstanceName}}`: the instance name. If you want to run the command on multiple instances and specify `{{ACS::InstanceName}}` as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</p>
      * <br>
      * <p>        *   Linux: 2.2.3.344</p>
      * <p>        *   Windows: 2.1.3.344</p>
      * <br>
-     * <p>    *   `{{ACS::InvokeId}}`: the task ID. If you want to specify `{{ACS::InvokeId}}` as a built-in environment variable, make sure that the version of the Cloud Assistant client is not earlier than the following one:</p>
+     * <p>    *   `{{ACS::InvokeId}}`: the ID of the task. If you want to specify `{{ACS::InvokeId}}` as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</p>
      * <br>
      * <p>        *   Linux: 2.2.3.309</p>
      * <p>        *   Windows: 2.1.3.309</p>
      * <br>
-     * <p>    *   `{{ACS::CommandId}}`: the ID of the command. When you call the [RunCommand](~~141751~~) operation, if you want to specify `{{ACS::CommandId}}` as a built-in environment parameter, make sure that the version of the Cloud Assistant client is not earlier than the following ones:</p>
+     * <p>    *   `{{ACS::CommandId}}`: the command ID. If you want to call the [RunCommand](~~141751~~) operation to run the command and specify `{{ACS::CommandId}}` as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</p>
      * <br>
      * <p>        *   Linux: 2.2.3.309</p>
      * <p>        *   Windows: 2.1.3.309</p>
@@ -127,12 +127,14 @@ public class CreateCommandRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The working directory of the command on the instance.</p>
+     * <p>The execution path of the command on ECS instances. The value can be up to 200 characters in length.</p>
      * <br>
-     * <p>Default value:</p>
+     * <p>Default values:</p>
      * <br>
-     * <p>*   For Linux instances, the default value is the home directory of the root user, which is the `/root` directory.</p>
-     * <p>*   For Windows instances, the default value is the directory where the Cloud Assistant client process resides. Example: `C:\Windows\System32\`.</p>
+     * <p>*   For Linux instance, the default value is the home directory of the root user, which is the `/root` directory.</p>
+     * <p>*   For Windows instances, the default value is the directory where the Cloud Assistant Agent process resides, such as `C:\Windows\System32\`.</p>
+     * <br>
+     * <p>>  If you set WorkingDir to a directory other than default ones, make sure that the directory exists on the instances.</p>
      */
     @NameInMap("WorkingDir")
     public String workingDir;

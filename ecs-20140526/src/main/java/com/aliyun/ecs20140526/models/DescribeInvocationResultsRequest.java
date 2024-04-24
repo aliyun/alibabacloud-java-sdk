@@ -11,7 +11,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public String commandId;
 
     /**
-     * <p>The encoding method of the `Output` response parameter. Valid values:</p>
+     * <p>The encoding mode of the `CommandContent` and `Output` values in the response. Valid values:</p>
      * <br>
      * <p>*   PlainText: returns the original command content and command output.</p>
      * <p>*   Base64: returns the Base64-encoded command content and command output.</p>
@@ -24,7 +24,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     /**
      * <p>Specifies whether to return the results of historical scheduled executions. Valid values:</p>
      * <br>
-     * <p>*   true: returns the results of historical scheduled executions. When this parameter is set to true, the `InvokeId` parameter must be set to the ID of a scheduled command task.</p>
+     * <p>*   true: returns the results of historical scheduled executions. If you set this parameter to true, you must set InvokeId to the ID of a task that is run on a schedule (RepeatMode set to Period) or on each system startup (RepeatMode set to EveryReboot).</p>
      * <p>*   false: does not return the results of historical scheduled executions.</p>
      * <br>
      * <p>Default value: false.</p>
@@ -45,22 +45,44 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public String invokeId;
 
     /**
-     * <p>The execution state of the command task. Valid values:</p>
+     * <p>The execution status of the command task. Valid values:</p>
      * <br>
-     * <p>*   Running</p>
-     * <p>*   Finished</p>
-     * <p>*   Failed</p>
-     * <p>*   Stopped</p>
+     * <p>*   Running:</p>
      * <br>
-     * <p>> To ensure compatibility, we recommend that you use `InvocationStatus` instead of InvokeRecordStatus.</p>
+     * <p>    *   Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.</p>
+     * <p>    *   One-time task: If the command is being run on instances, the execution state is Running.</p>
+     * <br>
+     * <p>*   Finished:</p>
+     * <br>
+     * <p>    *   Scheduled task: The execution state can never be Finished.</p>
+     * <p>    *   One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.</p>
+     * <br>
+     * <p>*   Success:</p>
+     * <br>
+     * <p>    *   One-time task: The execution is complete, and the exit code is 0.</p>
+     * <p>    *   Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.</p>
+     * <br>
+     * <p>*   Failed:</p>
+     * <br>
+     * <p>    *   Scheduled task: The execution state can never be Failed.</p>
+     * <p>    *   One-time task: The execution fails on all instances.</p>
+     * <br>
+     * <p>*   PartialFailed:</p>
+     * <br>
+     * <p>    *   Scheduled task: The execution state can never be PartialFailed.</p>
+     * <p>    *   One-time task: The execution fails on some instances.</p>
+     * <br>
+     * <p>*   Stopped: The task is stopped.</p>
+     * <br>
+     * <p>*   Stopping: The task is being stopped.</p>
      */
     @NameInMap("InvokeRecordStatus")
     public String invokeRecordStatus;
 
     /**
-     * <p>The maximum number of entries per page. </p>
+     * <p>The maximum number of entries per page.</p>
      * <br>
-     * <p>Valid values: 1 to 50. </p>
+     * <p>Valid values: 1 to 50.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -68,7 +90,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

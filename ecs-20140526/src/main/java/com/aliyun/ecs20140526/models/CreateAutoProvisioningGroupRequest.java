@@ -193,6 +193,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     @NameInMap("SystemDiskConfig")
     public java.util.List<CreateAutoProvisioningGroupRequestSystemDiskConfig> systemDiskConfig;
 
+    /**
+     * <p>The tags to add to the auto provisioning group.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateAutoProvisioningGroupRequestTag> tag;
 
@@ -1665,9 +1668,19 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N to add to the auto provisioning group.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N to add to the auto provisioning group.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
+         */
         @NameInMap("Value")
         public String value;
 

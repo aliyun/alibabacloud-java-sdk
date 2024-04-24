@@ -92,6 +92,25 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSupportedBootModes extends TeaModel {
+        @NameInMap("SupportedBootMode")
+        public java.util.List<String> supportedBootMode;
+
+        public static DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSupportedBootModes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSupportedBootModes self = new DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSupportedBootModes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSupportedBootModes setSupportedBootMode(java.util.List<String> supportedBootMode) {
+            this.supportedBootMode = supportedBootMode;
+            return this;
+        }
+        public java.util.List<String> getSupportedBootMode() {
+            return this.supportedBootMode;
+        }
+
+    }
+
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceType extends TeaModel {
         /**
          * <p>The baseline vCPU computing performance (overall computing performance of all vCPUs) of the t5 or t6 burstable instance.</p>
@@ -354,6 +373,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
          */
         @NameInMap("SecondaryEniQueueNumber")
         public Integer secondaryEniQueueNumber;
+
+        @NameInMap("SupportedBootModes")
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSupportedBootModes supportedBootModes;
 
         /**
          * <p>The maximum number of queues on ENIs that the instance type supports.</p>
@@ -660,6 +682,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
         public Integer getSecondaryEniQueueNumber() {
             return this.secondaryEniQueueNumber;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setSupportedBootModes(DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSupportedBootModes supportedBootModes) {
+            this.supportedBootModes = supportedBootModes;
+            return this;
+        }
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSupportedBootModes getSupportedBootModes() {
+            return this.supportedBootModes;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setTotalEniQueueQuantity(Integer totalEniQueueQuantity) {

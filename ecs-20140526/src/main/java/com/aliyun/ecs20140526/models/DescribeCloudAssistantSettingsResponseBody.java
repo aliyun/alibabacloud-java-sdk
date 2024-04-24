@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
     /**
-     * <p>云助手Agent升级配置。</p>
+     * <p>The configurations for upgrading Cloud Assistant Agent.</p>
      */
     @NameInMap("AgentUpgradeConfig")
     public DescribeCloudAssistantSettingsResponseBodyAgentUpgradeConfig agentUpgradeConfig;
@@ -86,19 +86,19 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
     public static class DescribeCloudAssistantSettingsResponseBodyAgentUpgradeConfig extends TeaModel {
         /**
-         * <p>允许升级的时间段列表。</p>
+         * <p>The time windows during which Cloud Assistant Agent can be upgraded.</p>
          */
         @NameInMap("AllowedUpgradeWindows")
         public DescribeCloudAssistantSettingsResponseBodyAgentUpgradeConfigAllowedUpgradeWindows allowedUpgradeWindows;
 
         /**
-         * <p>是否开启自定义Agent升级配置。如查询结果为false或空，默认保持每30分钟尝试升级一次。</p>
+         * <p>Indicates whether custom upgrade is enabled for Cloud Assistant Agent. If the value is false or empty, an upgrade attempt is performed for Cloud Assistant Agent every 30 minutes.</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
-         * <p>允许升级时间段的时区。</p>
+         * <p>The time zone of the time window.</p>
          */
         @NameInMap("TimeZone")
         public String timeZone;
@@ -157,7 +157,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>OSS encryption algorithm. Valid values:</p>
+         * <p>The OSS encryption algorithm. Valid values:</p>
          * <br>
          * <p>*   AES256</p>
          * <p>*   SM4</p>
@@ -166,17 +166,17 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public String encryptionAlgorithm;
 
         /**
-         * <p>The ID of the customer master key (CMK) when the encryption method is KMS.</p>
+         * <p>The ID of the customer master key (CMK) when EncryptionType is KMS.</p>
          */
         @NameInMap("EncryptionKeyId")
         public String encryptionKeyId;
 
         /**
-         * <p>OSS encryption method. Valid values:</p>
+         * <p>The OSS encryption method. Valid values:</p>
          * <br>
          * <p>*   Inherit: the encryption method used by the specified bucket.</p>
          * <p>*   OssManaged: server-side encryption by using OSS-managed keys (SSE-OSS).</p>
-         * <p>*   KMS: server-side encryption with Key Management Service (SSE-KMS).</p>
+         * <p>*   KMS: server-side encryption by using Key Management Service managed keys (SSE-KMS).</p>
          */
         @NameInMap("EncryptionType")
         public String encryptionType;

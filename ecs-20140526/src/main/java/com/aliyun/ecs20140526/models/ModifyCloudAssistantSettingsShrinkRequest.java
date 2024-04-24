@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCloudAssistantSettingsShrinkRequest extends TeaModel {
     /**
-     * <p>云助手Agent升级配置。</p>
+     * <p>The configurations for upgrading Cloud Assistant Agent.</p>
      */
     @NameInMap("AgentUpgradeConfig")
     public String agentUpgradeConfigShrink;
