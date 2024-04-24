@@ -22,6 +22,9 @@ public class StartInstanceRequest extends TeaModel {
     @NameInMap("ProcessCode")
     public String processCode;
 
+    @NameInMap("ProcessData")
+    public String processData;
+
     @NameInMap("SystemToken")
     public String systemToken;
 
@@ -76,6 +79,14 @@ public class StartInstanceRequest extends TeaModel {
     }
     public String getProcessCode() {
         return this.processCode;
+    }
+
+    public StartInstanceRequest setProcessData(String processData) {
+        this.processData = processData;
+        return this;
+    }
+    public String getProcessData() {
+        return this.processData;
     }
 
     public StartInstanceRequest setSystemToken(String systemToken) {
