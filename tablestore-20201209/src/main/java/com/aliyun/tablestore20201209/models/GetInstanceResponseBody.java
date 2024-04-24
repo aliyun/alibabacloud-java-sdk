@@ -241,15 +241,29 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
         @NameInMap("TagKey")
         public String tagKey;
 
         @NameInMap("TagValue")
         public String tagValue;
 
+        @NameInMap("Value")
+        public String value;
+
         public static GetInstanceResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseBodyTags self = new GetInstanceResponseBodyTags();
             return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
         }
 
         public GetInstanceResponseBodyTags setTagKey(String tagKey) {
@@ -266,6 +280,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getTagValue() {
             return this.tagValue;
+        }
+
+        public GetInstanceResponseBodyTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

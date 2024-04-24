@@ -7,6 +7,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ClusterType")
     public String clusterType;
 
+    @NameInMap("DisableReplication")
+    public Boolean disableReplication;
+
     @NameInMap("InstanceDescription")
     public String instanceDescription;
 
@@ -42,6 +45,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getClusterType() {
         return this.clusterType;
+    }
+
+    public CreateInstanceRequest setDisableReplication(Boolean disableReplication) {
+        this.disableReplication = disableReplication;
+        return this;
+    }
+    public Boolean getDisableReplication() {
+        return this.disableReplication;
     }
 
     public CreateInstanceRequest setInstanceDescription(String instanceDescription) {
