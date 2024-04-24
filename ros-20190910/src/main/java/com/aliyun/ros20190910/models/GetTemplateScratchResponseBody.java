@@ -110,6 +110,9 @@ public class GetTemplateScratchResponseBody extends TeaModel {
     }
 
     public static class GetTemplateScratchResponseBodyTemplateScratchSourceResources extends TeaModel {
+        @NameInMap("RelatedResourceTypeFilter")
+        public java.util.List<String> relatedResourceTypeFilter;
+
         /**
          * <p>The resource ID.</p>
          */
@@ -125,6 +128,14 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         public static GetTemplateScratchResponseBodyTemplateScratchSourceResources build(java.util.Map<String, ?> map) throws Exception {
             GetTemplateScratchResponseBodyTemplateScratchSourceResources self = new GetTemplateScratchResponseBodyTemplateScratchSourceResources();
             return TeaModel.build(map, self);
+        }
+
+        public GetTemplateScratchResponseBodyTemplateScratchSourceResources setRelatedResourceTypeFilter(java.util.List<String> relatedResourceTypeFilter) {
+            this.relatedResourceTypeFilter = relatedResourceTypeFilter;
+            return this;
+        }
+        public java.util.List<String> getRelatedResourceTypeFilter() {
+            return this.relatedResourceTypeFilter;
         }
 
         public GetTemplateScratchResponseBodyTemplateScratchSourceResources setResourceId(String resourceId) {

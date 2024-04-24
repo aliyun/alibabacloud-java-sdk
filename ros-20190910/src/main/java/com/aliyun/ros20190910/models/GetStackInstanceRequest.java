@@ -4,6 +4,14 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetStackInstanceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to return the Outputs parameter. The Outputs parameter specifies the outputs of the stack. Valid values:</p>
+     * <br>
+     * <p>*   Enabled: returns the Outputs parameter.</p>
+     * <p>*   Disabled (default): does not return the Outputs parameter.</p>
+     * <br>
+     * <p>>  The Outputs parameter requires a long period of time to calculate. If you do not require the outputs of the stack, we recommend that you set OutputOption to Disabled to improve the response speed of the API operation.</p>
+     */
     @NameInMap("OutputOption")
     public String outputOption;
 
