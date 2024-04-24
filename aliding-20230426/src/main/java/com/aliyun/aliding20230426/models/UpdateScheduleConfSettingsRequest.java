@@ -46,6 +46,9 @@ public class UpdateScheduleConfSettingsRequest extends TeaModel {
         @NameInMap("EnableChat")
         public Integer enableChat;
 
+        @NameInMap("EnableWebAnonymousJoin")
+        public Boolean enableWebAnonymousJoin;
+
         @NameInMap("JoinBeforeHost")
         public Integer joinBeforeHost;
 
@@ -69,6 +72,14 @@ public class UpdateScheduleConfSettingsRequest extends TeaModel {
         }
         public Integer getEnableChat() {
             return this.enableChat;
+        }
+
+        public UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSetting setEnableWebAnonymousJoin(Boolean enableWebAnonymousJoin) {
+            this.enableWebAnonymousJoin = enableWebAnonymousJoin;
+            return this;
+        }
+        public Boolean getEnableWebAnonymousJoin() {
+            return this.enableWebAnonymousJoin;
         }
 
         public UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSetting setJoinBeforeHost(Integer joinBeforeHost) {

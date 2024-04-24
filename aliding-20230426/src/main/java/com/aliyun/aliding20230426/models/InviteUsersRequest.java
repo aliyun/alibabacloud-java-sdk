@@ -13,6 +13,9 @@ public class InviteUsersRequest extends TeaModel {
     @NameInMap("conferenceId")
     public String conferenceId;
 
+    @NameInMap("phoneInviteeList")
+    public java.util.List<InviteUsersRequestPhoneInviteeList> phoneInviteeList;
+
     public static InviteUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         InviteUsersRequest self = new InviteUsersRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class InviteUsersRequest extends TeaModel {
     }
     public String getConferenceId() {
         return this.conferenceId;
+    }
+
+    public InviteUsersRequest setPhoneInviteeList(java.util.List<InviteUsersRequestPhoneInviteeList> phoneInviteeList) {
+        this.phoneInviteeList = phoneInviteeList;
+        return this;
+    }
+    public java.util.List<InviteUsersRequestPhoneInviteeList> getPhoneInviteeList() {
+        return this.phoneInviteeList;
     }
 
     public static class InviteUsersRequestInviteeList extends TeaModel {
@@ -87,6 +98,36 @@ public class InviteUsersRequest extends TeaModel {
         }
         public String getTenantId() {
             return this.tenantId;
+        }
+
+    }
+
+    public static class InviteUsersRequestPhoneInviteeList extends TeaModel {
+        @NameInMap("Nick")
+        public String nick;
+
+        @NameInMap("PhoneNumber")
+        public String phoneNumber;
+
+        public static InviteUsersRequestPhoneInviteeList build(java.util.Map<String, ?> map) throws Exception {
+            InviteUsersRequestPhoneInviteeList self = new InviteUsersRequestPhoneInviteeList();
+            return TeaModel.build(map, self);
+        }
+
+        public InviteUsersRequestPhoneInviteeList setNick(String nick) {
+            this.nick = nick;
+            return this;
+        }
+        public String getNick() {
+            return this.nick;
+        }
+
+        public InviteUsersRequestPhoneInviteeList setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
+            return this;
+        }
+        public String getPhoneNumber() {
+            return this.phoneNumber;
         }
 
     }

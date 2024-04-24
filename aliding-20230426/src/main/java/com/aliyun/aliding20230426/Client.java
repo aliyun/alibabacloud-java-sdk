@@ -6722,6 +6722,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.phoneInviteeList)) {
+            request.phoneInviteeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.phoneInviteeList, "phoneInviteeList", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.inviteeListShrink)) {
             body.put("InviteeList", request.inviteeListShrink);
@@ -6733,6 +6737,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.conferenceId)) {
             body.put("conferenceId", request.conferenceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneInviteeListShrink)) {
+            body.put("phoneInviteeList", request.phoneInviteeListShrink);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -10261,6 +10269,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.processCode)) {
             body.put("ProcessCode", request.processCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processData)) {
+            body.put("ProcessData", request.processData);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.systemToken)) {

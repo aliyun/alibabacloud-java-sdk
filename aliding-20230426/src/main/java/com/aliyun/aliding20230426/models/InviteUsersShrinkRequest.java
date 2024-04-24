@@ -13,6 +13,9 @@ public class InviteUsersShrinkRequest extends TeaModel {
     @NameInMap("conferenceId")
     public String conferenceId;
 
+    @NameInMap("phoneInviteeList")
+    public String phoneInviteeListShrink;
+
     public static InviteUsersShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         InviteUsersShrinkRequest self = new InviteUsersShrinkRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class InviteUsersShrinkRequest extends TeaModel {
     }
     public String getConferenceId() {
         return this.conferenceId;
+    }
+
+    public InviteUsersShrinkRequest setPhoneInviteeListShrink(String phoneInviteeListShrink) {
+        this.phoneInviteeListShrink = phoneInviteeListShrink;
+        return this;
+    }
+    public String getPhoneInviteeListShrink() {
+        return this.phoneInviteeListShrink;
     }
 
 }
