@@ -27,7 +27,7 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
      * <br>
-     * <p>Valid values: 1 to 100</p>
+     * <p>Valid values: 1 to 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */

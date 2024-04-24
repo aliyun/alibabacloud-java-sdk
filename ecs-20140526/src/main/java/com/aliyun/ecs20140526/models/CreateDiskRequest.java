@@ -160,7 +160,7 @@ public class CreateDiskRequest extends TeaModel {
      * <br>
      * <p>*   Valid values when DiskCategory is set to cloud_essd: depends on the `PerformanceLevel` value.</p>
      * <br>
-     * <p>    *   Valid values when PerformanceLevel is set to PL0: 40 to 32,768.</p>
+     * <p>    *   Valid values when PerformanceLevel is set to PL0: 1 to 32,768.</p>
      * <p>    *   Valid values when PerformanceLevel is set to PL1: 20 to 32,768.</p>
      * <p>    *   Valid values when PerformanceLevel is set to PL2: 461 to 32,768.</p>
      * <p>    *   Valid values when PerformanceLevel is set to PL3: 1,261 to 32,768.</p>

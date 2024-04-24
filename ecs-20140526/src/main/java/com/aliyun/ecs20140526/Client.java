@@ -3091,19 +3091,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## [](#)Usage notes
       * *   You can create commands of the following types:
-      *     *   RunBatScript: batch commands. These commands are applicable to Windows instances.
-      *     *   RunPowerShellScript: PowerShell commands. These commands are applicable to Windows instances.
-      *     *   RunShellScript: shell commands. These commands are applicable to Linux instances.
-      * *   You can specify the TimeOut parameter to set the maximum timeout period for executions of a command on Elastic Compute Service (ECS) instances. If an execution times out, the Cloud Assistant client forcefully terminates the command process by canceling the process ID (PID) of the command. For more information, see [Install the Cloud Assistant client](~~64921~~).
-      *     *   When the one-time execution of a command times out, the execution state ([InvokeRecordStatus](~~64845~~)) of the command becomes Failed.
+      *     *   Batch commands (RunBatScript), applicable to Windows instances
+      *     *   PowerShell commands (RunPowerShellScript), applicable to Windows instances
+      *     *   Shell commands (RunShellScript), applicable to Linux instances
+      * *   You can specify the Timeout parameter to set the maximum timeout period for executions of a command on Elastic Compute Service (ECS) instances. If an execution times out, [Cloud Assistant Agent](~~64921~~) forcefully terminates the command process by canceling the process ID (PID) of the command.
+      *     *   For a one-time task, when the execution times out, the state of the command ([InvokeRecordStatus](~~64845~~)) becomes Failed.
       *     *   For a scheduled task, take note of the following items:
-      *         *   The timeout period takes effect on each execution of the command.
-      *         *   When a scheduled execution of a command times out, the execution state ([InvokeRecordStatus](~~64845~~)) of the command becomes Failed.
-      *         *   The timeout of one execution does not affect the subsequent executions of the command.
-      * *   You can retain up to 500 to 10,000 Cloud Assistant commands in each region.
-      * *   You can use the WorkingDir parameter to specify the execution directory of a Cloud Assistant command. For Linux instances, the default execution directory of a command is the home directory of the root user, which is `/root`. For Windows instances, the default execution directory of a command is the directory where the Cloud Assistant client process resides, such as `C:\\Windows\\System32`.
-      * *   You can enable the custom parameter feature for a Cloud Assistant command by setting EnableParameter to true when you create the command. When you configure the CommandContent parameter, you can define custom parameters in the {{parameter}} format. Then, when the [InvokeCommand](~~64841~~) operation is called, the key-value pairs of custom parameters are passed in. For example, assume that the command content is `echo {{name}}`. You can use the Parameters parameter to pass in the `<name, Jack>` key-value pair when the InvokeCommand operation is called. The name key of the custom parameter is automatically replaced by the paired Jack value to generate a new command. Therefore, the `echo Jack` command is actually run.
+      *         *   The timeout period takes effect on each execution.
+      *         *   When an execution times out, the state ([InvokeRecordStatus](~~64845~~)) of the command becomes Failed.
+      *         *   The timeout of one execution does not affect the subsequent executions.
+      * *   You can retain up to 500 to 50,000 Cloud Assistant commands in each region. You can also apply for a quota increase. For information about how to query and increase quotas, see [Manage quotas](~~184116~~).
+      * *   You can use WorkingDir to specify the execution directory of a Cloud Assistant command. For Linux instances, the default execution directory of Cloud Assistant commands is the home directory of the root user, which is `/root`. For Windows instances, the default execution directory of Cloud Assistant commands is the directory where the Cloud Assistant Agent process resides, such as `C:\\Windows\\System32`.
+      * *   You can enable the custom parameter feature for a Cloud Assistant command by setting EnableParameter to true. When you set CommandContent, you can define custom parameters in the {{parameter}} format. Then, when the [InvokeCommand](~~64841~~) operation is called, the key-value pairs of custom parameters are passed in. For example, if a command is `echo {{name}}`, the Parameters parameter can be used to pass in the `<name, Jack>` key-value pair when the InvokeCommand operation is called. The name key of the custom parameter is automatically replaced by the paired Jack value to generate a new command. As a result, the `echo Jack` command is run.
       *
       * @param request CreateCommandRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3194,19 +3195,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## [](#)Usage notes
       * *   You can create commands of the following types:
-      *     *   RunBatScript: batch commands. These commands are applicable to Windows instances.
-      *     *   RunPowerShellScript: PowerShell commands. These commands are applicable to Windows instances.
-      *     *   RunShellScript: shell commands. These commands are applicable to Linux instances.
-      * *   You can specify the TimeOut parameter to set the maximum timeout period for executions of a command on Elastic Compute Service (ECS) instances. If an execution times out, the Cloud Assistant client forcefully terminates the command process by canceling the process ID (PID) of the command. For more information, see [Install the Cloud Assistant client](~~64921~~).
-      *     *   When the one-time execution of a command times out, the execution state ([InvokeRecordStatus](~~64845~~)) of the command becomes Failed.
+      *     *   Batch commands (RunBatScript), applicable to Windows instances
+      *     *   PowerShell commands (RunPowerShellScript), applicable to Windows instances
+      *     *   Shell commands (RunShellScript), applicable to Linux instances
+      * *   You can specify the Timeout parameter to set the maximum timeout period for executions of a command on Elastic Compute Service (ECS) instances. If an execution times out, [Cloud Assistant Agent](~~64921~~) forcefully terminates the command process by canceling the process ID (PID) of the command.
+      *     *   For a one-time task, when the execution times out, the state of the command ([InvokeRecordStatus](~~64845~~)) becomes Failed.
       *     *   For a scheduled task, take note of the following items:
-      *         *   The timeout period takes effect on each execution of the command.
-      *         *   When a scheduled execution of a command times out, the execution state ([InvokeRecordStatus](~~64845~~)) of the command becomes Failed.
-      *         *   The timeout of one execution does not affect the subsequent executions of the command.
-      * *   You can retain up to 500 to 10,000 Cloud Assistant commands in each region.
-      * *   You can use the WorkingDir parameter to specify the execution directory of a Cloud Assistant command. For Linux instances, the default execution directory of a command is the home directory of the root user, which is `/root`. For Windows instances, the default execution directory of a command is the directory where the Cloud Assistant client process resides, such as `C:\\Windows\\System32`.
-      * *   You can enable the custom parameter feature for a Cloud Assistant command by setting EnableParameter to true when you create the command. When you configure the CommandContent parameter, you can define custom parameters in the {{parameter}} format. Then, when the [InvokeCommand](~~64841~~) operation is called, the key-value pairs of custom parameters are passed in. For example, assume that the command content is `echo {{name}}`. You can use the Parameters parameter to pass in the `<name, Jack>` key-value pair when the InvokeCommand operation is called. The name key of the custom parameter is automatically replaced by the paired Jack value to generate a new command. Therefore, the `echo Jack` command is actually run.
+      *         *   The timeout period takes effect on each execution.
+      *         *   When an execution times out, the state ([InvokeRecordStatus](~~64845~~)) of the command becomes Failed.
+      *         *   The timeout of one execution does not affect the subsequent executions.
+      * *   You can retain up to 500 to 50,000 Cloud Assistant commands in each region. You can also apply for a quota increase. For information about how to query and increase quotas, see [Manage quotas](~~184116~~).
+      * *   You can use WorkingDir to specify the execution directory of a Cloud Assistant command. For Linux instances, the default execution directory of Cloud Assistant commands is the home directory of the root user, which is `/root`. For Windows instances, the default execution directory of Cloud Assistant commands is the directory where the Cloud Assistant Agent process resides, such as `C:\\Windows\\System32`.
+      * *   You can enable the custom parameter feature for a Cloud Assistant command by setting EnableParameter to true. When you set CommandContent, you can define custom parameters in the {{parameter}} format. Then, when the [InvokeCommand](~~64841~~) operation is called, the key-value pairs of custom parameters are passed in. For example, if a command is `echo {{name}}`, the Parameters parameter can be used to pass in the `<name, Jack>` key-value pair when the InvokeCommand operation is called. The name key of the custom parameter is automatically replaced by the paired Jack value to generate a new command. As a result, the `echo Jack` command is run.
       *
       * @param request CreateCommandRequest
       * @return CreateCommandResponse
@@ -5426,6 +5428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   If NetworkInterfaceId is empty in the response, no ENI is created. Call the operation again to create an ENI.
       * *   An ENI can be attached only to a single instance that resides in a virtual private cloud (VPC).
       * *   When an ENI is detached from an instance and attached to another instance, the attributes of the ENI remain unchanged and network traffic is redirected to the new instance.
+      * *   When you call this operation to create an ENI, you can assign up to 49 secondary private IP addresses to the ENI.
       * *   If you want to assign IPv6 addresses when you create an ENI, make sure that IPv6 is enabled for the vSwitch with which you want to associate the ENI. For more information, see [What is an IPv6 gateway?](~~98896~~)
       * *   A quota is imposed on the number of ENIs that can be created per Alibaba Cloud region per account. You can view the quota in the ECS console. For more information, see [View and increase resource quotas](~~184115~~).
       * **For information about examples on how to call this operation, see** [Create an ENI](~~471552~~).
@@ -5589,6 +5592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   If NetworkInterfaceId is empty in the response, no ENI is created. Call the operation again to create an ENI.
       * *   An ENI can be attached only to a single instance that resides in a virtual private cloud (VPC).
       * *   When an ENI is detached from an instance and attached to another instance, the attributes of the ENI remain unchanged and network traffic is redirected to the new instance.
+      * *   When you call this operation to create an ENI, you can assign up to 49 secondary private IP addresses to the ENI.
       * *   If you want to assign IPv6 addresses when you create an ENI, make sure that IPv6 is enabled for the vSwitch with which you want to associate the ENI. For more information, see [What is an IPv6 gateway?](~~98896~~)
       * *   A quota is imposed on the number of ENIs that can be created per Alibaba Cloud region per account. You can view the quota in the ECS console. For more information, see [View and increase resource quotas](~~184115~~).
       * **For information about examples on how to call this operation, see** [Create an ENI](~~471552~~).
@@ -13715,13 +13719,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeInstanceStatusWithOptions(request, runtime);
     }
 
-    /**
-      * > The DescribeInstanceTopology operation is in invitational preview and is not commercially available.
-      *
-      * @param request DescribeInstanceTopologyRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeInstanceTopologyResponse
-     */
     public DescribeInstanceTopologyResponse describeInstanceTopologyWithOptions(DescribeInstanceTopologyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -13762,12 +13759,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceTopologyResponse());
     }
 
-    /**
-      * > The DescribeInstanceTopology operation is in invitational preview and is not commercially available.
-      *
-      * @param request DescribeInstanceTopologyRequest
-      * @return DescribeInstanceTopologyResponse
-     */
     public DescribeInstanceTopologyResponse describeInstanceTopology(DescribeInstanceTopologyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceTopologyWithOptions(request, runtime);
@@ -14463,10 +14454,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   After you run a command, the command may fail to run or may return unexpected results. You can call this operation to query the actual execution results.
+      * ## [](#)Usage notes
+      * *   After you run a command, the command may fail to run or may return unexpected results. You can call this operation to query the execution results of a command.
       * *   You can query information about command executions within the last four weeks. Up to 100,000 pieces of execution information can be retained.
-      *     - Method 1: During a paged query, when you call the DescribeInvocationResults operation to retrieve the first page of results, set MaxResults to specify the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeInvocationResults operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call. 
-      *     - Method 2: Use PageSize to specify the number of entries to return on each page and then use PageNumber to specify the number of the page to return. You can use only one of the preceding methods. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.
+      * *   You can use one of the following methods to check the responses:
+      *     *   Method 1: During a paged query, when you call the DescribeInvocationResults operation to retrieve the first page of results, set `MaxResults` to specify the maximum number of entries to return in the call. The return value of `NextToken` is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeInvocationResults operation to retrieve a new page of results, set `NextToken` to the `NextToken` value returned in the previous call and set `MaxResults` to specify the maximum number of entries to return in this call.
+      *     *   Method 2: Use `PageSize` to specify the number of entries to return on each page and then use `PageNumber` to specify the number of the page to return. You can use only one of the preceding methods. If you specify `MaxResults` or `NextToken`, the `PageSize` and `PageNumber` request parameters do not take effect and the `TotalCount` response parameter is invalid.
       *
       * @param request DescribeInvocationResultsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -14565,10 +14558,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   After you run a command, the command may fail to run or may return unexpected results. You can call this operation to query the actual execution results.
+      * ## [](#)Usage notes
+      * *   After you run a command, the command may fail to run or may return unexpected results. You can call this operation to query the execution results of a command.
       * *   You can query information about command executions within the last four weeks. Up to 100,000 pieces of execution information can be retained.
-      *     - Method 1: During a paged query, when you call the DescribeInvocationResults operation to retrieve the first page of results, set MaxResults to specify the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeInvocationResults operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call. 
-      *     - Method 2: Use PageSize to specify the number of entries to return on each page and then use PageNumber to specify the number of the page to return. You can use only one of the preceding methods. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.
+      * *   You can use one of the following methods to check the responses:
+      *     *   Method 1: During a paged query, when you call the DescribeInvocationResults operation to retrieve the first page of results, set `MaxResults` to specify the maximum number of entries to return in the call. The return value of `NextToken` is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeInvocationResults operation to retrieve a new page of results, set `NextToken` to the `NextToken` value returned in the previous call and set `MaxResults` to specify the maximum number of entries to return in this call.
+      *     *   Method 2: Use `PageSize` to specify the number of entries to return on each page and then use `PageNumber` to specify the number of the page to return. You can use only one of the preceding methods. If you specify `MaxResults` or `NextToken`, the `PageSize` and `PageNumber` request parameters do not take effect and the `TotalCount` response parameter is invalid.
       *
       * @param request DescribeInvocationResultsRequest
       * @return DescribeInvocationResultsResponse
@@ -20408,17 +20403,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * ## [](#)Usage notes
       * *   The Elastic Compute Service (ECS) instances on which you want to run the Cloud Assistant command must meet the following requirements. If multiple ECS instances are specified and one of the instances does not meet the requirements for running the command, the call fails. You must specify instances that meet the requirements and call the InvokeCommand operation again.
       *     *   The instances are in the Running (`Running`) state. You can call the [DescribeInstances](~~25506~~) operation to query the status of instances.
-      *     *   Cloud Assistant Agent is installed on the instances. For more information, see [Install Cloud Assistant Agent](~~64921~~).
+      *     *   Cloud Assistant Agent is installed on the instances. For more information, see [Install Cloud Assistant Agent on an ECS instance](~~64921~~).
       *     *   Before you run PowerShell commands on the instances, make sure that the instances have the PowerShell module configured.
       * *   You can configure the command to run only once on the instances.
       * *   You can configure the command to run multiple times on the instances based on a schedule.
       *     *   The schedule is specified by the Frequency parameter. The results of each execution of the command do not affect the next execution of the command.
-      *     *   If you use a cron expression to specify a schedule, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instance. Make sure that the time or time zone of the instance meets your business requirements. For more information, see [Configure the NTP service for ECS instances that run CentOS 6](~~92803~~) or [Configure the NTP service for Windows instances](~~51890~~).
-      *     To ensure that scheduled tasks can run as expected, make sure that the version of Cloud Assistant Agent is not earlier than the following ones. You can configure a command to run at a fixed interval based on a rate expression, run only once at a specified time, or run at designated times based on a cron expression. If the ClientNeedUpgrade error code is returned, you must upgrade Cloud Assistant Agent to the latest version. For more information, see [Upgrade or disable upgrades for Cloud Assistant Agent](~~134383~~).
+      *     *   If you use a cron expression to specify a schedule, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instance. Make sure that the time or time zone of the instances meets your business requirements. For more information, see [Manage the time synchronization service](~~92803~~).[](~~51890~~)
+      *     To ensure that scheduled tasks can run as expected, make sure that the version of Cloud Assistant Agent is not earlier than the following ones. A scheduled task can run a command at a fixed interval, only once at a specific time, or at specific times based on a cron expression in a specified year or time zone. If the ClientNeedUpgrade error code is returned, you must upgrade Cloud Assistant Agent to the latest version. For more information, see [Upgrade or disable upgrades for Cloud Assistant Agent](~~134383~~).
       *     *   Linux: 2.2.3.282
       *     *   Windows: 2.1.3.282
-      * *   Commands may fail to run due to instance status exceptions, network exceptions, or exceptions on Cloud Assistant Agent. If a command fails to run, no execution information is generated. For more information, see [Check execution results and troubleshoot common issues](~~87029~~).
-      * *   If you enabled the custom parameter feature when you created the command, you must specify custom parameters (`Parameters`) to run the command.
+      * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on Cloud Assistant Agent. If a command execution fails, no execution information is generated. For more information, see [Check execution results and troubleshoot common issues](~~87029~~).
+      * *   If you enable the custom parameter feature when you create the command, you must specify custom parameters (`Parameters`) to run the command.
       * *   Before you run the command on instances, especially new instances, we recommend that you call the [DescribeCloudAssistantStatus](~~87346~~) operation to query the status of Cloud Assistant Agent on the instances. Run the command when the return value of CloudAssistantStatus is true.
       *
       * @param tmpReq InvokeCommandRequest
@@ -20539,17 +20534,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * ## [](#)Usage notes
       * *   The Elastic Compute Service (ECS) instances on which you want to run the Cloud Assistant command must meet the following requirements. If multiple ECS instances are specified and one of the instances does not meet the requirements for running the command, the call fails. You must specify instances that meet the requirements and call the InvokeCommand operation again.
       *     *   The instances are in the Running (`Running`) state. You can call the [DescribeInstances](~~25506~~) operation to query the status of instances.
-      *     *   Cloud Assistant Agent is installed on the instances. For more information, see [Install Cloud Assistant Agent](~~64921~~).
+      *     *   Cloud Assistant Agent is installed on the instances. For more information, see [Install Cloud Assistant Agent on an ECS instance](~~64921~~).
       *     *   Before you run PowerShell commands on the instances, make sure that the instances have the PowerShell module configured.
       * *   You can configure the command to run only once on the instances.
       * *   You can configure the command to run multiple times on the instances based on a schedule.
       *     *   The schedule is specified by the Frequency parameter. The results of each execution of the command do not affect the next execution of the command.
-      *     *   If you use a cron expression to specify a schedule, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instance. Make sure that the time or time zone of the instance meets your business requirements. For more information, see [Configure the NTP service for ECS instances that run CentOS 6](~~92803~~) or [Configure the NTP service for Windows instances](~~51890~~).
-      *     To ensure that scheduled tasks can run as expected, make sure that the version of Cloud Assistant Agent is not earlier than the following ones. You can configure a command to run at a fixed interval based on a rate expression, run only once at a specified time, or run at designated times based on a cron expression. If the ClientNeedUpgrade error code is returned, you must upgrade Cloud Assistant Agent to the latest version. For more information, see [Upgrade or disable upgrades for Cloud Assistant Agent](~~134383~~).
+      *     *   If you use a cron expression to specify a schedule, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instance. Make sure that the time or time zone of the instances meets your business requirements. For more information, see [Manage the time synchronization service](~~92803~~).[](~~51890~~)
+      *     To ensure that scheduled tasks can run as expected, make sure that the version of Cloud Assistant Agent is not earlier than the following ones. A scheduled task can run a command at a fixed interval, only once at a specific time, or at specific times based on a cron expression in a specified year or time zone. If the ClientNeedUpgrade error code is returned, you must upgrade Cloud Assistant Agent to the latest version. For more information, see [Upgrade or disable upgrades for Cloud Assistant Agent](~~134383~~).
       *     *   Linux: 2.2.3.282
       *     *   Windows: 2.1.3.282
-      * *   Commands may fail to run due to instance status exceptions, network exceptions, or exceptions on Cloud Assistant Agent. If a command fails to run, no execution information is generated. For more information, see [Check execution results and troubleshoot common issues](~~87029~~).
-      * *   If you enabled the custom parameter feature when you created the command, you must specify custom parameters (`Parameters`) to run the command.
+      * *   Command executions may fail due to instance status exceptions, network exceptions, or exceptions on Cloud Assistant Agent. If a command execution fails, no execution information is generated. For more information, see [Check execution results and troubleshoot common issues](~~87029~~).
+      * *   If you enable the custom parameter feature when you create the command, you must specify custom parameters (`Parameters`) to run the command.
       * *   Before you run the command on instances, especially new instances, we recommend that you call the [DescribeCloudAssistantStatus](~~87346~~) operation to query the status of Cloud Assistant Agent on the instances. Run the command when the return value of CloudAssistantStatus is true.
       *
       * @param request InvokeCommandRequest
@@ -24299,18 +24294,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can modify the execution information of a command that is run in one of the following modes:
-      *     *   Period: The command is run on a schedule.
-      *     *   NextRebootOnly: The command is run the next time the instance starts.
-      *     *   EveryReboot: The command is run every time the instance starts.
-      * *   You can modify the execution information of a command that is in one of the following status (For more information, see the [InvocationStatus](~~64840~~) response parameter of `DescribeInvocations`.):
-      *     *   Pending: The command is being verified or sent. When the execution status on at least one instance is Pending, the overall execution status is Pending.
-      *     *   Running: The command is being run on the instance. When the execution status on at least one instance is Running, the overall execution status is Running.
-      *     *   Scheduled: The command that is set to run on a schedule is sent and waiting to be run. When the execution status on at least one instance is Scheduled, the overall execution status is Scheduled.
-      *     *   Stopping: The command that is running is being stopped. When the execution status on at least one instance is Stopping, the overall execution status is Stopping.
-      * *   The Cloud Assistant Agent version that is installed on the instance must be later than one of the following versions to support the ModifyInvocationAttribute operation. If the `ClientNeedUpgrade` error code is returned, update Cloud Assistant Agent to the latest version.
+      * *   You can modify the execution information of a task that runs a command in one of the following modes. To query the execution mode of a command, you can call the [DescribeInvocations](~~2679916~~) operation and check the `RepeatMode` value in the response.
+      *     *   Period: The task runs the command on a schedule.
+      *     *   NextRebootOnly: The task runs the command the next time the associated instances start.
+      *     *   EveryReboot: The task runs the command every time the associated instances start.
+      * *   You can modify the execution information of a command task in one of the following execution states. To query the execution status of a command, you can call the [DescribeInvocations](~~2679916~~) operation and check the `InvocationStatus` value.
+      *     *   Pending: The command is being verified or sent. When the execution state on at least one instance is Pending, the overall execution state is Pending.
+      *     *   Running: The command is being run on instances. When the execution state on at least one instance is Running, the overall execution state is Running.
+      *     *   Scheduled: The command that is set to run on a schedule is sent and waiting to be run. When the execution state on at least one instance is Scheduled, the overall execution state is Scheduled.
+      *     *   Stopping: The command task is being stopped. When the execution state on at least one instance is Stopping, the overall execution state is Stopping.
+      * *   Before you modify the execution information of a scheduled task, such as the command content, custom parameters, and execution frequency, make sure that the version of Cloud Assistant Agent on the ECS instances or managed instances associated with the task is later than the following versions:
       *     *   Linux: 2.2.3.541
       *     *   Windows: 2.1.3.541
+      *     *   If the `InvalidOperation.CloudAssistantVersionUnsupported` error code is returned in the response, update Cloud Assistant Agent to the latest version.
+      * *   You cannot modify `CommandContent` for a common Cloud Assistant command.
+      * *   If you modify the `CommandContent` value of a command and set `KeepCommand` to `true` when you call the [InvokeCommand](~~64841~~) or [RunCommand](~~141751~~) operation to run the command, a new command is added and retained. The new command consumes the quota for Cloud Assistant commands. You can retain up to 500 to 50,000 Cloud Assistant commands in each region. You can apply for a quota increase. For information about how to query and increase quotas, see [Manage quotas](~~184116~~).
       *
       * @param tmpReq ModifyInvocationAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -24395,18 +24393,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can modify the execution information of a command that is run in one of the following modes:
-      *     *   Period: The command is run on a schedule.
-      *     *   NextRebootOnly: The command is run the next time the instance starts.
-      *     *   EveryReboot: The command is run every time the instance starts.
-      * *   You can modify the execution information of a command that is in one of the following status (For more information, see the [InvocationStatus](~~64840~~) response parameter of `DescribeInvocations`.):
-      *     *   Pending: The command is being verified or sent. When the execution status on at least one instance is Pending, the overall execution status is Pending.
-      *     *   Running: The command is being run on the instance. When the execution status on at least one instance is Running, the overall execution status is Running.
-      *     *   Scheduled: The command that is set to run on a schedule is sent and waiting to be run. When the execution status on at least one instance is Scheduled, the overall execution status is Scheduled.
-      *     *   Stopping: The command that is running is being stopped. When the execution status on at least one instance is Stopping, the overall execution status is Stopping.
-      * *   The Cloud Assistant Agent version that is installed on the instance must be later than one of the following versions to support the ModifyInvocationAttribute operation. If the `ClientNeedUpgrade` error code is returned, update Cloud Assistant Agent to the latest version.
+      * *   You can modify the execution information of a task that runs a command in one of the following modes. To query the execution mode of a command, you can call the [DescribeInvocations](~~2679916~~) operation and check the `RepeatMode` value in the response.
+      *     *   Period: The task runs the command on a schedule.
+      *     *   NextRebootOnly: The task runs the command the next time the associated instances start.
+      *     *   EveryReboot: The task runs the command every time the associated instances start.
+      * *   You can modify the execution information of a command task in one of the following execution states. To query the execution status of a command, you can call the [DescribeInvocations](~~2679916~~) operation and check the `InvocationStatus` value.
+      *     *   Pending: The command is being verified or sent. When the execution state on at least one instance is Pending, the overall execution state is Pending.
+      *     *   Running: The command is being run on instances. When the execution state on at least one instance is Running, the overall execution state is Running.
+      *     *   Scheduled: The command that is set to run on a schedule is sent and waiting to be run. When the execution state on at least one instance is Scheduled, the overall execution state is Scheduled.
+      *     *   Stopping: The command task is being stopped. When the execution state on at least one instance is Stopping, the overall execution state is Stopping.
+      * *   Before you modify the execution information of a scheduled task, such as the command content, custom parameters, and execution frequency, make sure that the version of Cloud Assistant Agent on the ECS instances or managed instances associated with the task is later than the following versions:
       *     *   Linux: 2.2.3.541
       *     *   Windows: 2.1.3.541
+      *     *   If the `InvalidOperation.CloudAssistantVersionUnsupported` error code is returned in the response, update Cloud Assistant Agent to the latest version.
+      * *   You cannot modify `CommandContent` for a common Cloud Assistant command.
+      * *   If you modify the `CommandContent` value of a command and set `KeepCommand` to `true` when you call the [InvokeCommand](~~64841~~) or [RunCommand](~~141751~~) operation to run the command, a new command is added and retained. The new command consumes the quota for Cloud Assistant commands. You can retain up to 500 to 50,000 Cloud Assistant commands in each region. You can apply for a quota increase. For information about how to query and increase quotas, see [Manage quotas](~~184116~~).
       *
       * @param request ModifyInvocationAttributeRequest
       * @return ModifyInvocationAttributeResponse

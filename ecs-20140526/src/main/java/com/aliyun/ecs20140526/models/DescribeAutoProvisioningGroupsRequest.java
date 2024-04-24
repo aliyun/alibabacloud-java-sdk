@@ -66,6 +66,9 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags that are added to the auto provisioning group.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeAutoProvisioningGroupsRequestTag> tag;
 
@@ -171,9 +174,19 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     }
 
     public static class DescribeAutoProvisioningGroupsRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N that is added to the auto provisioning group.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N that is added to the auto provisioning group.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceTopologyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,7 +45,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         public String hostId;
 
         /**
-         * <p>The ID of the ECS instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

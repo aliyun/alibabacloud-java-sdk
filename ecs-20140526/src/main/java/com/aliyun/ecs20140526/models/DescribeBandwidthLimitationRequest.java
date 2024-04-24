@@ -16,12 +16,7 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The type of the elastic network interface (ENI). Valid values:</p>
-     * <br>
-     * <p>*   Secondary: secondary ENI.</p>
-     * <p>*   Trunk: trunk ENI. This value is in invitational preview.</p>
-     * <br>
-     * <p>Default value: Secondary.</p>
+     * <p>The instance type. For information about the values, see [Overview of ECS instance families](~~25378~~).</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
