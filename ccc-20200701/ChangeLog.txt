@@ -1,3 +1,7 @@
+2024-04-24 Version: 2.15.1
+- Update API ListSkillGroupSummaryReportsSinceMidnight: update response param.
+
+
 2024-04-01 Version: 2.15.0
 - Support API AddBlacklistCallTagging.
 - Support API ListBlacklistCallTaggings.

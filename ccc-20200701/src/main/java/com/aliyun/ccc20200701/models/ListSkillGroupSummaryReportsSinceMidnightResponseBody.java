@@ -426,14 +426,44 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         @NameInMap("AverageWorkTime")
         public Long averageWorkTime;
 
+        @NameInMap("CallsAbandoned")
+        public Long callsAbandoned;
+
+        @NameInMap("CallsAgentHandled")
+        public Long callsAgentHandled;
+
         @NameInMap("CallsAnswered")
         public Long callsAnswered;
 
         @NameInMap("CallsDialed")
         public Long callsDialed;
 
+        @NameInMap("CallsOffered")
+        public Long callsOffered;
+
+        @NameInMap("CallsQueuingCancelled")
+        public Long callsQueuingCancelled;
+
+        @NameInMap("CallsQueuingFailed")
+        public Long callsQueuingFailed;
+
+        @NameInMap("CallsQueuingFailure")
+        public Long callsQueuingFailure;
+
+        @NameInMap("CallsQueuingOverflow")
+        public Long callsQueuingOverflow;
+
+        @NameInMap("CallsQueuingRerouted")
+        public Long callsQueuingRerouted;
+
+        @NameInMap("CallsQueuingTimeout")
+        public Long callsQueuingTimeout;
+
         @NameInMap("CallsServiceLevel30")
         public String callsServiceLevel30;
+
+        @NameInMap("CallsServiceLevel30V2")
+        public Long callsServiceLevel30V2;
 
         @NameInMap("MaxDialingTime")
         public Long maxDialingTime;
@@ -458,6 +488,9 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
 
         @NameInMap("TotalTalkTime")
         public Long totalTalkTime;
+
+        @NameInMap("TotalWaitTime")
+        public Long totalWaitTime;
 
         @NameInMap("TotalWorkTime")
         public Long totalWorkTime;
@@ -499,6 +532,22 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             return this.averageWorkTime;
         }
 
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound setCallsAbandoned(Long callsAbandoned) {
+            this.callsAbandoned = callsAbandoned;
+            return this;
+        }
+        public Long getCallsAbandoned() {
+            return this.callsAbandoned;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound setCallsAgentHandled(Long callsAgentHandled) {
+            this.callsAgentHandled = callsAgentHandled;
+            return this;
+        }
+        public Long getCallsAgentHandled() {
+            return this.callsAgentHandled;
+        }
+
         public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound setCallsAnswered(Long callsAnswered) {
             this.callsAnswered = callsAnswered;
             return this;
@@ -515,12 +564,76 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             return this.callsDialed;
         }
 
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound setCallsOffered(Long callsOffered) {
+            this.callsOffered = callsOffered;
+            return this;
+        }
+        public Long getCallsOffered() {
+            return this.callsOffered;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound setCallsQueuingCancelled(Long callsQueuingCancelled) {
+            this.callsQueuingCancelled = callsQueuingCancelled;
+            return this;
+        }
+        public Long getCallsQueuingCancelled() {
+            return this.callsQueuingCancelled;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound setCallsQueuingFailed(Long callsQueuingFailed) {
+            this.callsQueuingFailed = callsQueuingFailed;
+            return this;
+        }
+        public Long getCallsQueuingFailed() {
+            return this.callsQueuingFailed;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound setCallsQueuingFailure(Long callsQueuingFailure) {
+            this.callsQueuingFailure = callsQueuingFailure;
+            return this;
+        }
+        public Long getCallsQueuingFailure() {
+            return this.callsQueuingFailure;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound setCallsQueuingOverflow(Long callsQueuingOverflow) {
+            this.callsQueuingOverflow = callsQueuingOverflow;
+            return this;
+        }
+        public Long getCallsQueuingOverflow() {
+            return this.callsQueuingOverflow;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound setCallsQueuingRerouted(Long callsQueuingRerouted) {
+            this.callsQueuingRerouted = callsQueuingRerouted;
+            return this;
+        }
+        public Long getCallsQueuingRerouted() {
+            return this.callsQueuingRerouted;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound setCallsQueuingTimeout(Long callsQueuingTimeout) {
+            this.callsQueuingTimeout = callsQueuingTimeout;
+            return this;
+        }
+        public Long getCallsQueuingTimeout() {
+            return this.callsQueuingTimeout;
+        }
+
         public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound setCallsServiceLevel30(String callsServiceLevel30) {
             this.callsServiceLevel30 = callsServiceLevel30;
             return this;
         }
         public String getCallsServiceLevel30() {
             return this.callsServiceLevel30;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound setCallsServiceLevel30V2(Long callsServiceLevel30V2) {
+            this.callsServiceLevel30V2 = callsServiceLevel30V2;
+            return this;
+        }
+        public Long getCallsServiceLevel30V2() {
+            return this.callsServiceLevel30V2;
         }
 
         public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound setMaxDialingTime(Long maxDialingTime) {
@@ -585,6 +698,14 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         }
         public Long getTotalTalkTime() {
             return this.totalTalkTime;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound setTotalWaitTime(Long totalWaitTime) {
+            this.totalWaitTime = totalWaitTime;
+            return this;
+        }
+        public Long getTotalWaitTime() {
+            return this.totalWaitTime;
         }
 
         public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound setTotalWorkTime(Long totalWorkTime) {
