@@ -68,6 +68,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ClusterType", request.clusterType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.disableReplication)) {
+            body.put("DisableReplication", request.disableReplication);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceDescription)) {
             body.put("InstanceDescription", request.instanceDescription);
         }
