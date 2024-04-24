@@ -3,9 +3,15 @@ package com.aliyun.waf_openapi20211001.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeResourceInstanceCertsRequest extends TeaModel {
+public class DescribeDefenseResourceGroupNamesRequest extends TeaModel {
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>The name of the protected object group. Fuzzy queries are supported.</p>
+     */
+    @NameInMap("GroupNameLike")
+    public String groupNameLike;
+
+    /**
+     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <br>
      * <p>>  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.</p>
      */
@@ -16,13 +22,13 @@ public class DescribeResourceInstanceCertsRequest extends TeaModel {
      * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
-    public Long pageNumber;
+    public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: **10**.</p>
+     * <p>The number of entries per page. Default value: **20**.</p>
      */
     @NameInMap("PageSize")
-    public Long pageSize;
+    public Integer pageSize;
 
     /**
      * <p>The region in which the WAF instance is deployed. Valid values:</p>
@@ -34,23 +40,25 @@ public class DescribeResourceInstanceCertsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the instance.</p>
-     */
-    @NameInMap("ResourceInstanceId")
-    public String resourceInstanceId;
-
-    /**
      * <p>The ID of the Alibaba Cloud resource group.</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
-    public static DescribeResourceInstanceCertsRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeResourceInstanceCertsRequest self = new DescribeResourceInstanceCertsRequest();
+    public static DescribeDefenseResourceGroupNamesRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDefenseResourceGroupNamesRequest self = new DescribeDefenseResourceGroupNamesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeResourceInstanceCertsRequest setInstanceId(String instanceId) {
+    public DescribeDefenseResourceGroupNamesRequest setGroupNameLike(String groupNameLike) {
+        this.groupNameLike = groupNameLike;
+        return this;
+    }
+    public String getGroupNameLike() {
+        return this.groupNameLike;
+    }
+
+    public DescribeDefenseResourceGroupNamesRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -58,23 +66,23 @@ public class DescribeResourceInstanceCertsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeResourceInstanceCertsRequest setPageNumber(Long pageNumber) {
+    public DescribeDefenseResourceGroupNamesRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
-    public Long getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
-    public DescribeResourceInstanceCertsRequest setPageSize(Long pageSize) {
+    public DescribeDefenseResourceGroupNamesRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
-    public DescribeResourceInstanceCertsRequest setRegionId(String regionId) {
+    public DescribeDefenseResourceGroupNamesRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -82,15 +90,7 @@ public class DescribeResourceInstanceCertsRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeResourceInstanceCertsRequest setResourceInstanceId(String resourceInstanceId) {
-        this.resourceInstanceId = resourceInstanceId;
-        return this;
-    }
-    public String getResourceInstanceId() {
-        return this.resourceInstanceId;
-    }
-
-    public DescribeResourceInstanceCertsRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+    public DescribeDefenseResourceGroupNamesRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
         this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
         return this;
     }

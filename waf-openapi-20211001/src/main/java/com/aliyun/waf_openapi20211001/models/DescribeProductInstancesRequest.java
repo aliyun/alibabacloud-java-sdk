@@ -12,6 +12,9 @@ public class DescribeProductInstancesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+     */
     @NameInMap("OwnerUserId")
     public String ownerUserId;
 

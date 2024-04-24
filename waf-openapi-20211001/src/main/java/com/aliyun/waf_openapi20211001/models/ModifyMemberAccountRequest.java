@@ -4,21 +4,44 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class ModifyMemberAccountRequest extends TeaModel {
+    /**
+     * <p>The description of the member. The description must be 1 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), hyphens (-), and asterisks (\*).</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the WAF instance.</p>
+     * <br>
+     * <p>>  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the managed member.</p>
+     */
     @NameInMap("MemberAccountId")
     public String memberAccountId;
 
+    /**
+     * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+     * <br>
+     * <p>*   **cn-hangzhou**: Chinese mainland.</p>
+     * <p>*   **ap-southeast-1**: outside the Chinese mainland.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud resource group.</p>
+     */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
+    /**
+     * <p>The source IP address of the request. The system automatically obtains the value of this parameter.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

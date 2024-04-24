@@ -3,31 +3,25 @@ package com.aliyun.waf_openapi20211001.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDefenseResourcesResponseBody extends TeaModel {
+public class DescribeDefenseResourceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The protected objects.</p>
+     * <p>The information about the protected object.</p>
      */
-    @NameInMap("Resources")
-    public java.util.List<DescribeDefenseResourcesResponseBodyResources> resources;
+    @NameInMap("Resource")
+    public DescribeDefenseResourceResponseBodyResource resource;
 
-    /**
-     * <p>The total number of entries that are returned.</p>
-     */
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
-    public static DescribeDefenseResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDefenseResourcesResponseBody self = new DescribeDefenseResourcesResponseBody();
+    public static DescribeDefenseResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDefenseResourceResponseBody self = new DescribeDefenseResourceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDefenseResourcesResponseBody setRequestId(String requestId) {
+    public DescribeDefenseResourceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -35,52 +29,46 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDefenseResourcesResponseBody setResources(java.util.List<DescribeDefenseResourcesResponseBodyResources> resources) {
-        this.resources = resources;
+    public DescribeDefenseResourceResponseBody setResource(DescribeDefenseResourceResponseBodyResource resource) {
+        this.resource = resource;
         return this;
     }
-    public java.util.List<DescribeDefenseResourcesResponseBodyResources> getResources() {
-        return this.resources;
+    public DescribeDefenseResourceResponseBodyResource getResource() {
+        return this.resource;
     }
 
-    public DescribeDefenseResourcesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public static class DescribeDefenseResourcesResponseBodyResources extends TeaModel {
+    public static class DescribeDefenseResourceResponseBodyResource extends TeaModel {
         /**
          * <p>The status of the tracking cookie.</p>
          * <br>
-         * <p>*   **0:** disabled.</p>
-         * <p>*   **1:** enabled.</p>
+         * <p>*   **0**: disabled.</p>
+         * <p>*   **1**: enabled.</p>
          */
         @NameInMap("AcwCookieStatus")
         public Integer acwCookieStatus;
 
         /**
-         * <p>The status of the secure attribute in the tracking cookie.</p>
+         * <p>The status of the secure attribute of the tracking cookie.</p>
          * <br>
-         * <p>*   **0:** disabled.</p>
-         * <p>*   **1:** enabled.</p>
+         * <p>*   **0**: disabled.</p>
+         * <p>*   **1**: enabled.</p>
          */
         @NameInMap("AcwSecureStatus")
         public Integer acwSecureStatus;
 
         /**
-         * <p>The status of the secure attribute in the slider CAPTCHA cookie.</p>
+         * <p>The status of the secure attribute of the slider CAPTCHA cookie.</p>
          * <br>
-         * <p>*   **0:** disabled.</p>
-         * <p>*   **1:** enabled.</p>
+         * <p>*   **0**: disabled.</p>
+         * <p>*   **1**: enabled.</p>
          */
         @NameInMap("AcwV3SecureStatus")
         public Integer acwV3SecureStatus;
 
         /**
-         * <p>The custom XFF headers that are used to identify the originating IP addresses of clients. If the value of XffStatus is 1 and CustomHeaders is left empty, the first IP addresses in the XFF headers are used as the originating IP addresses of clients.</p>
+         * <p>The custom header fields.</p>
+         * <br>
+         * <p>>  If the value of XffStatus is 1, the first IP address in the specified header field is used as the originating IP address of the client to prevent X-Forwarded-For (XFF) forgery. If you specify multiple header fields, WAF reads the values of the header fields in sequence until the originating IP address is obtained. If the originating IP address cannot be obtained, the first IP address in the XFF header field is used as the originating IP address of the client.</p>
          */
         @NameInMap("CustomHeaders")
         public java.util.List<String> customHeaders;
@@ -110,13 +98,13 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * <p>The user ID (UID) of the Alibaba Cloud account to which the protected object belongs.</p>
          */
         @NameInMap("OwnerUserId")
         public String ownerUserId;
 
         /**
-         * <p>The pattern in which the protected object is protected.</p>
+         * <p>The pattern used for the protected object.</p>
          */
         @NameInMap("Pattern")
         public String pattern;
@@ -146,23 +134,29 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         public String resourceManagerResourceGroupId;
 
         /**
-         * <p>The origin of the protected object.</p>
+         * <p>The origin of the protected object. Valid values:</p>
+         * <br>
+         * <p>*   **custom**</p>
+         * <p>*   **access**</p>
          */
         @NameInMap("ResourceOrigin")
         public String resourceOrigin;
 
         /**
-         * <p>Indicates whether the X-Forwarded-For (XFF) proxy is enabled.</p>
+         * <p>Indicates whether a Layer 7 proxy is deployed in front of WAF, such as Anti-DDoS Proxy and Alibaba Cloud CDN. Valid values:</p>
+         * <br>
+         * <p>*   **0**: No Layer 7 proxy is deployed.</p>
+         * <p>*   **1**: A Layer 7 proxy is deployed.</p>
          */
         @NameInMap("XffStatus")
         public Integer xffStatus;
 
-        public static DescribeDefenseResourcesResponseBodyResources build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDefenseResourcesResponseBodyResources self = new DescribeDefenseResourcesResponseBodyResources();
+        public static DescribeDefenseResourceResponseBodyResource build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDefenseResourceResponseBodyResource self = new DescribeDefenseResourceResponseBodyResource();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDefenseResourcesResponseBodyResources setAcwCookieStatus(Integer acwCookieStatus) {
+        public DescribeDefenseResourceResponseBodyResource setAcwCookieStatus(Integer acwCookieStatus) {
             this.acwCookieStatus = acwCookieStatus;
             return this;
         }
@@ -170,7 +164,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             return this.acwCookieStatus;
         }
 
-        public DescribeDefenseResourcesResponseBodyResources setAcwSecureStatus(Integer acwSecureStatus) {
+        public DescribeDefenseResourceResponseBodyResource setAcwSecureStatus(Integer acwSecureStatus) {
             this.acwSecureStatus = acwSecureStatus;
             return this;
         }
@@ -178,7 +172,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             return this.acwSecureStatus;
         }
 
-        public DescribeDefenseResourcesResponseBodyResources setAcwV3SecureStatus(Integer acwV3SecureStatus) {
+        public DescribeDefenseResourceResponseBodyResource setAcwV3SecureStatus(Integer acwV3SecureStatus) {
             this.acwV3SecureStatus = acwV3SecureStatus;
             return this;
         }
@@ -186,7 +180,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             return this.acwV3SecureStatus;
         }
 
-        public DescribeDefenseResourcesResponseBodyResources setCustomHeaders(java.util.List<String> customHeaders) {
+        public DescribeDefenseResourceResponseBodyResource setCustomHeaders(java.util.List<String> customHeaders) {
             this.customHeaders = customHeaders;
             return this;
         }
@@ -194,7 +188,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             return this.customHeaders;
         }
 
-        public DescribeDefenseResourcesResponseBodyResources setDescription(String description) {
+        public DescribeDefenseResourceResponseBodyResource setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -202,7 +196,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeDefenseResourcesResponseBodyResources setDetail(java.util.Map<String, ?> detail) {
+        public DescribeDefenseResourceResponseBodyResource setDetail(java.util.Map<String, ?> detail) {
             this.detail = detail;
             return this;
         }
@@ -210,7 +204,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             return this.detail;
         }
 
-        public DescribeDefenseResourcesResponseBodyResources setGmtCreate(Long gmtCreate) {
+        public DescribeDefenseResourceResponseBodyResource setGmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
         }
@@ -218,7 +212,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public DescribeDefenseResourcesResponseBodyResources setGmtModified(Long gmtModified) {
+        public DescribeDefenseResourceResponseBodyResource setGmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
             return this;
         }
@@ -226,7 +220,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public DescribeDefenseResourcesResponseBodyResources setOwnerUserId(String ownerUserId) {
+        public DescribeDefenseResourceResponseBodyResource setOwnerUserId(String ownerUserId) {
             this.ownerUserId = ownerUserId;
             return this;
         }
@@ -234,7 +228,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             return this.ownerUserId;
         }
 
-        public DescribeDefenseResourcesResponseBodyResources setPattern(String pattern) {
+        public DescribeDefenseResourceResponseBodyResource setPattern(String pattern) {
             this.pattern = pattern;
             return this;
         }
@@ -242,7 +236,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             return this.pattern;
         }
 
-        public DescribeDefenseResourcesResponseBodyResources setProduct(String product) {
+        public DescribeDefenseResourceResponseBodyResource setProduct(String product) {
             this.product = product;
             return this;
         }
@@ -250,7 +244,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             return this.product;
         }
 
-        public DescribeDefenseResourcesResponseBodyResources setResource(String resource) {
+        public DescribeDefenseResourceResponseBodyResource setResource(String resource) {
             this.resource = resource;
             return this;
         }
@@ -258,7 +252,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             return this.resource;
         }
 
-        public DescribeDefenseResourcesResponseBodyResources setResourceGroup(String resourceGroup) {
+        public DescribeDefenseResourceResponseBodyResource setResourceGroup(String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
@@ -266,7 +260,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             return this.resourceGroup;
         }
 
-        public DescribeDefenseResourcesResponseBodyResources setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+        public DescribeDefenseResourceResponseBodyResource setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
             return this;
         }
@@ -274,7 +268,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             return this.resourceManagerResourceGroupId;
         }
 
-        public DescribeDefenseResourcesResponseBodyResources setResourceOrigin(String resourceOrigin) {
+        public DescribeDefenseResourceResponseBodyResource setResourceOrigin(String resourceOrigin) {
             this.resourceOrigin = resourceOrigin;
             return this;
         }
@@ -282,7 +276,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             return this.resourceOrigin;
         }
 
-        public DescribeDefenseResourcesResponseBodyResources setXffStatus(Integer xffStatus) {
+        public DescribeDefenseResourceResponseBodyResource setXffStatus(Integer xffStatus) {
             this.xffStatus = xffStatus;
             return this;
         }

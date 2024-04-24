@@ -3,7 +3,13 @@ package com.aliyun.waf_openapi20211001.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeAccountDelegatedStatusRequest extends TeaModel {
+public class DescribePunishedDomainsRequest extends TeaModel {
+    /**
+     * <p>The domain names.</p>
+     */
+    @NameInMap("Domains")
+    public java.util.List<String> domains;
+
     /**
      * <p>The ID of the WAF instance.</p>
      * <br>
@@ -27,12 +33,20 @@ public class DescribeAccountDelegatedStatusRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
-    public static DescribeAccountDelegatedStatusRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeAccountDelegatedStatusRequest self = new DescribeAccountDelegatedStatusRequest();
+    public static DescribePunishedDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribePunishedDomainsRequest self = new DescribePunishedDomainsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAccountDelegatedStatusRequest setInstanceId(String instanceId) {
+    public DescribePunishedDomainsRequest setDomains(java.util.List<String> domains) {
+        this.domains = domains;
+        return this;
+    }
+    public java.util.List<String> getDomains() {
+        return this.domains;
+    }
+
+    public DescribePunishedDomainsRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -40,7 +54,7 @@ public class DescribeAccountDelegatedStatusRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeAccountDelegatedStatusRequest setRegionId(String regionId) {
+    public DescribePunishedDomainsRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -48,7 +62,7 @@ public class DescribeAccountDelegatedStatusRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeAccountDelegatedStatusRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+    public DescribePunishedDomainsRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
         this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
         return this;
     }
