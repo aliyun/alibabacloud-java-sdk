@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateDiagnosticRequest extends TeaModel {
     /**
      * <p>The keyword in the diagnosis.</p>
+     * <br>
+     * <p>You can specify the ID of the stack that you want to diagnose.</p>
      */
     @NameInMap("DiagnosticKey")
     public String diagnosticKey;
@@ -16,6 +18,14 @@ public class CreateDiagnosticRequest extends TeaModel {
     @NameInMap("DiagnosticType")
     public String diagnosticType;
 
+    /**
+     * <p>The language of the diagnostic report to be generated. Only Chinese and English are supported.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   zh-cn</p>
+     * <p>*   en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

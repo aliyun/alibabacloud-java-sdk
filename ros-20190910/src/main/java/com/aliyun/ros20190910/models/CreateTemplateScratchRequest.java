@@ -281,6 +281,9 @@ public class CreateTemplateScratchRequest extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("RelatedResourceTypeFilter")
+        public java.util.List<String> relatedResourceTypeFilter;
+
         /**
          * <p>The ID of the resource.</p>
          */
@@ -304,6 +307,14 @@ public class CreateTemplateScratchRequest extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public CreateTemplateScratchRequestSourceResources setRelatedResourceTypeFilter(java.util.List<String> relatedResourceTypeFilter) {
+            this.relatedResourceTypeFilter = relatedResourceTypeFilter;
+            return this;
+        }
+        public java.util.List<String> getRelatedResourceTypeFilter() {
+            return this.relatedResourceTypeFilter;
         }
 
         public CreateTemplateScratchRequestSourceResources setResourceId(String resourceId) {

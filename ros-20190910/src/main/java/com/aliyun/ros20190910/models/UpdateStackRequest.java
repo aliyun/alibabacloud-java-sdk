@@ -23,6 +23,7 @@ public class UpdateStackRequest extends TeaModel {
      * <p>*   false</p>
      */
     @NameInMap("DisableRollback")
+    @Deprecated
     public Boolean disableRollback;
 
     /**

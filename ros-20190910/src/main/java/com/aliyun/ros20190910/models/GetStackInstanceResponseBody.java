@@ -88,6 +88,11 @@ public class GetStackInstanceResponseBody extends TeaModel {
         @NameInMap("DriftDetectionTime")
         public String driftDetectionTime;
 
+        /**
+         * <p>The outputs of the stack.</p>
+         * <br>
+         * <p>>  This parameter is returned if OutputOption is set to Enabled.</p>
+         */
         @NameInMap("Outputs")
         public java.util.List<java.util.Map<String, ?>> outputs;
 
