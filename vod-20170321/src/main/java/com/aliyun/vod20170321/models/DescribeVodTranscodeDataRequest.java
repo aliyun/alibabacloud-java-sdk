@@ -4,6 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodTranscodeDataRequest extends TeaModel {
+    /**
+     * <p>The ID of the application. You can specify this parameter to query the transcoding statistics of a specific application. By default, the transcoding statistics of all applications is returned. You can obtain the application ID from the `AppId` parameter in the response to the [CreateAppInfo](~~CreateAppInfo~~) operation.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 

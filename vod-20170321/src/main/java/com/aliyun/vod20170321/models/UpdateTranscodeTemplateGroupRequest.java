@@ -29,7 +29,7 @@ public class UpdateTranscodeTemplateGroupRequest extends TeaModel {
     public String transcodeTemplateGroupId;
 
     /**
-     * <p>The configurations of the transcoding template. The value must be a JSON string. For more information about the data structure, see [TranscodeTemplate](~~52839~~).</p>
+     * <p>The configurations of the transcoding template. The value must be a JSON string. For more information about the data structure, see [TranscodeTemplate](~~52839#title-9mb-8o2-uu6~~).</p>
      */
     @NameInMap("TranscodeTemplateList")
     public String transcodeTemplateList;
