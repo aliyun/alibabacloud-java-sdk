@@ -59,13 +59,13 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The time when the transcoding job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the transcoding job was complete. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CompleteTime")
         public String completeTime;
 
         /**
-         * <p>The time when the transcoding job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the transcoding job was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -114,9 +114,10 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
 
         /**
          * <p>The status of the transcoding job. Valid values:</p>
-         * <p>*   **Transcoding**</p>
-         * <p>*   **TranscodeSuccess**</p>
-         * <p>*   **TranscodeFail**</p>
+         * <br>
+         * <p>*   **Transcoding**: Transcoding is in process.</p>
+         * <p>*   **TranscodeSuccess**: The job was successful.</p>
+         * <p>*   **TranscodeFail**: The job failed.</p>
          */
         @NameInMap("TranscodeJobStatus")
         public String transcodeJobStatus;
@@ -274,13 +275,13 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
 
     public static class GetTranscodeSummaryResponseBodyTranscodeSummaryList extends TeaModel {
         /**
-         * <p>The time when the transcoding task was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the transcoding task was complete. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CompleteTime")
         public String completeTime;
 
         /**
-         * <p>The time when the transcoding task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the transcoding task was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -293,7 +294,8 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
 
         /**
          * <p>The status of the transcoding task. Valid values:</p>
-         * <p>*   **Processing**: In progress.</p>
+         * <br>
+         * <p>*   **Processing**: Transcoding is in process.</p>
          * <p>*   **Partial**: Some transcoding jobs were complete.</p>
          * <p>*   **CompleteAllSucc**: All transcoding jobs were successful.</p>
          * <p>*   **CompleteAllFail**: All transcoding jobs failed. If an exception occurs in the source file, no transcoding job is initiated and the transcoding task fails.</p>

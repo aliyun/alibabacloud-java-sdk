@@ -14,7 +14,10 @@ public class VerifyVodDomainOwnerRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The DNS verification method that is used to verify the ownership of the specified domain name.</p>
+     * <p>The verification method. Valid values:</p>
+     * <br>
+     * <p>*   **dnsCheck**: uses a Domain Name System (DNS) record</p>
+     * <p>*   **fileCheck**: uses a verification file</p>
      */
     @NameInMap("VerifyType")
     public String verifyType;

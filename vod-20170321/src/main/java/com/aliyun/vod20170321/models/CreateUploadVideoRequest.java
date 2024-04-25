@@ -45,7 +45,7 @@ public class CreateUploadVideoRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The size of the audio or video file. Unit: bytes.</p>
+     * <p>The size of the source file. Unit: bytes.</p>
      */
     @NameInMap("FileSize")
     public Long fileSize;

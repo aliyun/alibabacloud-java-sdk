@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SubmitAIImageAuditJobRequest extends TeaModel {
     /**
-     * <p>The configuration information about the review task.</p>
+     * <p>The configuration information about the review job.</p>
      * <br>
-     * <p>*   Other configuration items of the review task. Only the ResourceType field is supported. This field is used to specify the type of media files. You can adjust review standards and rules based on the type of media files.</p>
-     * <p>*   If you want to adjust moderation policies and rules based on ResourceType, submit a ticket to request technical support.</p>
+     * <p>*   Other configuration items of the review job. Only the ResourceType field is supported. This field is used to specify the type of media files. You can adjust review standards and rules based on the type of media files.</p>
      * <p>*   The value of ResourceType can contain only letters, digits, and underscores (\_).</p>
      * <br>
-     * <p>>  You can specify a value for the ResourceType field based on the preceding limits. After you specify a value for the ResourceType field, you must submit a ticket. The value takes effect after Alibaba Cloud processes your ticket.</p>
+     * <p>> *   You can specify a value for the ResourceType field based on the preceding limits. After you specify a value for the ResourceType field, you must [submit a ticket](https://yida.alibaba-inc.com/o/ticketapply). The value takes effect after Alibaba Cloud processes your ticket.</p>
+     * <p>>*   If you want to change moderation policies and rules based on ResourceType, [submit a ticket](https://yida.alibaba-inc.com/o/ticketapply) to contact technical support.</p>
      */
     @NameInMap("MediaAuditConfiguration")
     public String mediaAuditConfiguration;

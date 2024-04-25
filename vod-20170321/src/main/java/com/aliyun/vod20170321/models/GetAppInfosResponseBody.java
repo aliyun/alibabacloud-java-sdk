@@ -17,7 +17,7 @@ public class GetAppInfosResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the application that was not found.</p>
+     * <p>The IDs of applications that do not exist.</p>
      */
     @NameInMap("NonExistAppIds")
     public java.util.List<String> nonExistAppIds;
@@ -79,7 +79,7 @@ public class GetAppInfosResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The time when the application was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the application was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -91,23 +91,25 @@ public class GetAppInfosResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The last time when the application was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The last time when the application was modified. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
          * <p>The status of the application. Valid values:</p>
-         * <p>- **Normal**</p>
-         * <p>- **Disable**</p>
+         * <br>
+         * <p>*   **Normal**</p>
+         * <p>*   **Disable**</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the application. Valid values:</p>
-         * <p>- **System**</p>
-         * <p>- **Custom**</p>
+         * <br>
+         * <p>*   **System**</p>
+         * <p>*   **Custom**</p>
          */
         @NameInMap("Type")
         public String type;

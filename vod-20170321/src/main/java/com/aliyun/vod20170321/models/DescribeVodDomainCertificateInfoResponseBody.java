@@ -45,7 +45,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         public String certDomainName;
 
         /**
-         * <p>The time at which the certificate expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time at which the certificate expires. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
@@ -57,7 +57,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         public String certLife;
 
         /**
-         * <p>The name of the certificate.</p>
+         * <p>The certificate name.</p>
          */
         @NameInMap("CertName")
         public String certName;
@@ -79,13 +79,13 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         public String certType;
 
         /**
-         * <p>The accelerated domain name.</p>
+         * <p>The accelerated domain name whose ICP filing status you want to update.</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
-         * <p>Indicates whether the SSL certificate is enabled.</p>
+         * <p>The status of the SSL certificate.</p>
          * <br>
          * <p>*   **on**</p>
          * <p>*   **off**</p>
@@ -94,7 +94,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         public String serverCertificateStatus;
 
         /**
-         * <p>The status of the certificate. Valid values:</p>
+         * <p>The status of the certificate.</p>
          * <br>
          * <p>*   **success**: The certificate is in effect.</p>
          * <p>*   **checking**: The system is checking whether the domain name is added to ApsaraVideo VOD.</p>
@@ -104,7 +104,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
          * <p>*   **applying**: The certificate application is in progress.</p>
          * <p>*   **failed**: The certificate application failed.</p>
          * <br>
-         * <p>> A value is returned for this parameter only if `free` is returned for `CertType`. If a value other than free is returned for CertType, an empty string is returned for this parameter.</p>
+         * <p>>  A value is returned for this parameter only when you set `CertType` to `free`. Otherwise, an empty value is returned for this parameter.</p>
          */
         @NameInMap("Status")
         public String status;

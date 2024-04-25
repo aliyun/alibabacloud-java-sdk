@@ -65,13 +65,13 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The time when the audio or video stream was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the audio or video stream was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The quality of the media stream. Valid values:</p>
+         * <p>The quality of the video stream. Valid values:</p>
          * <br>
          * <p>*   **FD**: low definition</p>
          * <p>*   **LD**: standard definition</p>
@@ -88,7 +88,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String definition;
 
         /**
-         * <p>The duration of the media stream. Unit: seconds. 86,400 seconds is equivalent to 24 hours.</p>
+         * <p>The duration of the media stream. Unit: seconds.</p>
          */
         @NameInMap("Duration")
         public String duration;
@@ -106,7 +106,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
          * <p>The encryption type of the media stream. Valid values:</p>
          * <br>
          * <p>*   **AliyunVoDEncryption**: Alibaba Cloud proprietary cryptography</p>
-         * <p>*   **HLSEncryption**: HTTP Live Streaming (HLS) encryption</p>
+         * <p>*   **HLSEncryption**: HTTP-Live-Streaming (HLS) encryption</p>
          * <br>
          * <p>>  If the encryption type is AliyunVoDEncryption, only ApsaraVideo Player SDK can be used to play videos.</p>
          */
@@ -169,7 +169,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public Integer jobType;
 
         /**
-         * <p>The time when the audio or video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the audio or video file was last updated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
@@ -177,11 +177,11 @@ public class GetPlayInfoResponseBody extends TeaModel {
         /**
          * <p>The type of Narrowband HD transcoding. Valid values:</p>
          * <br>
-         * <p>*   **0**: normal transcoding</p>
-         * <p>*   **1.0**: Narrowband HD 1.0</p>
-         * <p>*   **2.0**: Narrowband HD 2.0</p>
+         * <p>*   **0**: regular transcoding</p>
+         * <p>*   **1.0**: Narrowband HD™ 1.0 transcoding</p>
+         * <p>*   **2.0**: Narrowband HD™ 2.0 transcoding</p>
          * <br>
-         * <p>This parameter is returned only when a quality that is available in the built-in Narrowband HD 1.0 transcoding template is specified. For more information, see the [Definition parameter in the TranscodeTemplate](~~52839~~) table.</p>
+         * <p>This parameter is returned only when a definition that is available in the built-in Narrowband HD™ 1.0 transcoding template is specified. For more information, see the [Definition parameter in the TranscodeTemplate](~~52839~~) table.</p>
          */
         @NameInMap("NarrowBandType")
         public String narrowBandType;
@@ -482,7 +482,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The storage class of the audio or video file. Valid values:</p>
+         * <p>The storage class of the audio file. Valid values:</p>
          * <br>
          * <p>*   **Standard**: All media resources are stored as Standard objects.</p>
          * <p>*   **IA**: All media resources are stored as IA objects.</p>
@@ -490,8 +490,8 @@ public class GetPlayInfoResponseBody extends TeaModel {
          * <p>*   **ColdArchive**: All media resources are stored as Cold Archive objects.</p>
          * <p>*   **SourceIA**: Only the source files are IA objects.</p>
          * <p>*   **SourceArchive**: Only the source files are Archive objects.</p>
-         * <p>*   **SourceColdArchive**: Only the source files are Cold Archive objects.</p>
-         * <p>*   **Changing**: The storage class of the audio or video file is being changed.</p>
+         * <p>*   **SourceColdArchive**: Only the source file is stored as a Cold Archive object.</p>
+         * <p>*   **Changing**: The storage class of the video file is being changed.</p>
          * <p>*   **SourceChanging**: The storage class of the source file is being changed.</p>
          */
         @NameInMap("StorageClass")

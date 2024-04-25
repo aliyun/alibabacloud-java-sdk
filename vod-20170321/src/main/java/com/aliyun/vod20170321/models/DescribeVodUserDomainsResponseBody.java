@@ -11,13 +11,13 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
     public DescribeVodUserDomainsResponseBodyDomains domains;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -29,7 +29,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -101,9 +101,9 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         /**
          * <p>The type of the origin server. Valid values:</p>
          * <br>
-         * <p>*   **ipaddr**: a server that you can access by using an IP address.</p>
-         * <p>*   **domain**: a server that you can access by using a domain name.</p>
-         * <p>*   **oss**: an Object Storage Service (OSS) bucket.</p>
+         * <p>*   **ipaddr**: an IP address.</p>
+         * <p>*   **domain**: an origin domain name</p>
+         * <p>*   **oss**: the OSS domain of an Object Storage Service (OSS) bucket</p>
          */
         @NameInMap("Type")
         public String type;
@@ -168,7 +168,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
 
     public static class DescribeVodUserDomainsResponseBodyDomainsPageData extends TeaModel {
         /**
-         * <p>The canonical domain name that is assigned to the domain name for CDN.</p>
+         * <p>The CNAME that is assigned to the domain name for CDN.</p>
          */
         @NameInMap("Cname")
         public String cname;
@@ -199,19 +199,19 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         public String domainStatus;
 
         /**
-         * <p>The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the domain name for CDN was added. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
         /**
-         * <p>The last time when the domain name for CDN was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The last time when the domain name for CDN was modified. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
-         * <p>Indicates whether the domain name for CDN is in a sandbox environment.</p>
+         * <p>Indicates whether the accelerated domain name was in a sandbox.</p>
          */
         @NameInMap("Sandbox")
         public String sandbox;
@@ -225,8 +225,8 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether HTTPS is enabled.</p>
          * <br>
-         * <p>- **on**: indicates that HTTPS is enabled.</p>
-         * <p>- **off**: indicates that HTTPS is disabled.</p>
+         * <p>*   **on**: HTTPS is enabled.</p>
+         * <p>*   **off**: HTTPS is not eabled.</p>
          */
         @NameInMap("SslProtocol")
         public String sslProtocol;

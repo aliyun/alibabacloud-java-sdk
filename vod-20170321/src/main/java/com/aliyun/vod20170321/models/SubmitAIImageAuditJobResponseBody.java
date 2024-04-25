@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitAIImageAuditJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the image review task.</p>
+     * <p>The ID of the image review job.</p>
      */
     @NameInMap("JobId")
     public String jobId;

@@ -2578,8 +2578,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeVodDomainBpsDataWithOptions(request, runtime);
     }
 
+    public DescribeVodDomainBpsDataByLayerResponse describeVodDomainBpsDataByLayerWithOptions(DescribeVodDomainBpsDataByLayerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ispNameEn)) {
+            query.put("IspNameEn", request.ispNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.layer)) {
+            query.put("Layer", request.layer);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locationNameEn)) {
+            query.put("LocationNameEn", request.locationNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVodDomainBpsDataByLayer"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVodDomainBpsDataByLayerResponse());
+    }
+
+    public DescribeVodDomainBpsDataByLayerResponse describeVodDomainBpsDataByLayer(DescribeVodDomainBpsDataByLayerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVodDomainBpsDataByLayerWithOptions(request, runtime);
+    }
+
     /**
-      * > This operation is available only in the **China (Shanghai)** region.
+      * This operation is available only in the **China (Shanghai)** region.
       *
       * @param request DescribeVodDomainCertificateInfoRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2614,7 +2671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > This operation is available only in the **China (Shanghai)** region.
+      * This operation is available only in the **China (Shanghai)** region.
       *
       * @param request DescribeVodDomainCertificateInfoRequest
       * @return DescribeVodDomainCertificateInfoResponse
@@ -2728,6 +2785,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeVodDomainDetailWithOptions(request, runtime);
     }
 
+    public DescribeVodDomainHitRateDataResponse describeVodDomainHitRateDataWithOptions(DescribeVodDomainHitRateDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVodDomainHitRateData"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVodDomainHitRateDataResponse());
+    }
+
+    public DescribeVodDomainHitRateDataResponse describeVodDomainHitRateData(DescribeVodDomainHitRateDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVodDomainHitRateDataWithOptions(request, runtime);
+    }
+
     /**
       * *   This operation is available only in the **China (Shanghai)** region.
       * *   For more information about the log format and latency, see [Download logs](~~86099~~).
@@ -2798,6 +2900,245 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeVodDomainLogResponse describeVodDomainLog(DescribeVodDomainLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeVodDomainLogWithOptions(request, runtime);
+    }
+
+    public DescribeVodDomainRealTimeBpsDataResponse describeVodDomainRealTimeBpsDataWithOptions(DescribeVodDomainRealTimeBpsDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVodDomainRealTimeBpsData"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVodDomainRealTimeBpsDataResponse());
+    }
+
+    public DescribeVodDomainRealTimeBpsDataResponse describeVodDomainRealTimeBpsData(DescribeVodDomainRealTimeBpsDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVodDomainRealTimeBpsDataWithOptions(request, runtime);
+    }
+
+    public DescribeVodDomainRealTimeByteHitRateDataResponse describeVodDomainRealTimeByteHitRateDataWithOptions(DescribeVodDomainRealTimeByteHitRateDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVodDomainRealTimeByteHitRateData"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVodDomainRealTimeByteHitRateDataResponse());
+    }
+
+    public DescribeVodDomainRealTimeByteHitRateDataResponse describeVodDomainRealTimeByteHitRateData(DescribeVodDomainRealTimeByteHitRateDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVodDomainRealTimeByteHitRateDataWithOptions(request, runtime);
+    }
+
+    public DescribeVodDomainRealTimeHttpCodeDataResponse describeVodDomainRealTimeHttpCodeDataWithOptions(DescribeVodDomainRealTimeHttpCodeDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ispNameEn)) {
+            query.put("IspNameEn", request.ispNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locationNameEn)) {
+            query.put("LocationNameEn", request.locationNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVodDomainRealTimeHttpCodeData"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVodDomainRealTimeHttpCodeDataResponse());
+    }
+
+    public DescribeVodDomainRealTimeHttpCodeDataResponse describeVodDomainRealTimeHttpCodeData(DescribeVodDomainRealTimeHttpCodeDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVodDomainRealTimeHttpCodeDataWithOptions(request, runtime);
+    }
+
+    public DescribeVodDomainRealTimeQpsDataResponse describeVodDomainRealTimeQpsDataWithOptions(DescribeVodDomainRealTimeQpsDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVodDomainRealTimeQpsData"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVodDomainRealTimeQpsDataResponse());
+    }
+
+    public DescribeVodDomainRealTimeQpsDataResponse describeVodDomainRealTimeQpsData(DescribeVodDomainRealTimeQpsDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVodDomainRealTimeQpsDataWithOptions(request, runtime);
+    }
+
+    public DescribeVodDomainRealTimeReqHitRateDataResponse describeVodDomainRealTimeReqHitRateDataWithOptions(DescribeVodDomainRealTimeReqHitRateDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVodDomainRealTimeReqHitRateData"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVodDomainRealTimeReqHitRateDataResponse());
+    }
+
+    public DescribeVodDomainRealTimeReqHitRateDataResponse describeVodDomainRealTimeReqHitRateData(DescribeVodDomainRealTimeReqHitRateDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVodDomainRealTimeReqHitRateDataWithOptions(request, runtime);
+    }
+
+    public DescribeVodDomainRealTimeTrafficDataResponse describeVodDomainRealTimeTrafficDataWithOptions(DescribeVodDomainRealTimeTrafficDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ispNameEn)) {
+            query.put("IspNameEn", request.ispNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locationNameEn)) {
+            query.put("LocationNameEn", request.locationNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVodDomainRealTimeTrafficData"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVodDomainRealTimeTrafficDataResponse());
+    }
+
+    public DescribeVodDomainRealTimeTrafficDataResponse describeVodDomainRealTimeTrafficData(DescribeVodDomainRealTimeTrafficDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVodDomainRealTimeTrafficDataWithOptions(request, runtime);
+    }
+
+    public DescribeVodDomainReqHitRateDataResponse describeVodDomainReqHitRateDataWithOptions(DescribeVodDomainReqHitRateDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVodDomainReqHitRateData"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVodDomainReqHitRateDataResponse());
+    }
+
+    public DescribeVodDomainReqHitRateDataResponse describeVodDomainReqHitRateData(DescribeVodDomainReqHitRateDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVodDomainReqHitRateDataWithOptions(request, runtime);
     }
 
     /**
@@ -3165,6 +3506,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeVodMediaPlayDataWithOptions(request, runtime);
     }
 
+    public DescribeVodRangeDataByLocateAndIspServiceResponse describeVodRangeDataByLocateAndIspServiceWithOptions(DescribeVodRangeDataByLocateAndIspServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ispNameEn)) {
+            query.put("IspNameEn", request.ispNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locationNameEn)) {
+            query.put("LocationNameEn", request.locationNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVodRangeDataByLocateAndIspService"),
+            new TeaPair("version", "2017-03-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVodRangeDataByLocateAndIspServiceResponse());
+    }
+
+    public DescribeVodRangeDataByLocateAndIspServiceResponse describeVodRangeDataByLocateAndIspService(DescribeVodRangeDataByLocateAndIspServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVodRangeDataByLocateAndIspServiceWithOptions(request, runtime);
+    }
+
     /**
       * > *   This operation is available only in the **China (Shanghai)** region.
       * > *   You can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh content and the [PreloadVodObjectCaches](~~69211~~) operation to prefetch content.
@@ -3433,6 +3823,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeVodTranscodeDataWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can filter domain names by name and status. Fuzzy match is supported for domain name-based query.
+      * *   This operation is available only in the China (Shanghai) region.
+      *
+      * @param request DescribeVodUserDomainsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeVodUserDomainsResponse
+     */
     public DescribeVodUserDomainsResponse describeVodUserDomainsWithOptions(DescribeVodUserDomainsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3485,6 +3883,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVodUserDomainsResponse());
     }
 
+    /**
+      * *   You can filter domain names by name and status. Fuzzy match is supported for domain name-based query.
+      * *   This operation is available only in the China (Shanghai) region.
+      *
+      * @param request DescribeVodUserDomainsRequest
+      * @return DescribeVodUserDomainsResponse
+     */
     public DescribeVodUserDomainsResponse describeVodUserDomains(DescribeVodUserDomainsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeVodUserDomainsWithOptions(request, runtime);
@@ -3887,7 +4292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Supports batch query.
+      * You can specify multiple accelerated domain names in a request.
       *
       * @param request GetAppInfosRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3918,7 +4323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Supports batch query.
+      * You can specify multiple accelerated domain names in a request.
       *
       * @param request GetAppInfosRequest
       * @return GetAppInfosResponse
@@ -4824,10 +5229,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   A media file may be transcoded multiple times. This operation returns only the latest transcoding summary.
-      * *   You can query transcoding summaries for a maximum of 10 media files in one request.
+      * *   An audio or video file may be transcoded multiple times. This operation returns only the latest transcoding summary.
+      * *   You can query transcoding summaries for a maximum of 10 audio and video files in one request.
       * *   You can call the [ListTranscodeTask](~~109120~~) operation to query historical transcoding tasks.
-      * *   **You can call this operation to query information only about transcoding tasks created within the past year.**
+      * *   **You can call this operation to query information only about transcoding tasks created within the past year.
       *
       * @param request GetTranscodeSummaryRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4858,10 +5263,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   A media file may be transcoded multiple times. This operation returns only the latest transcoding summary.
-      * *   You can query transcoding summaries for a maximum of 10 media files in one request.
+      * *   An audio or video file may be transcoded multiple times. This operation returns only the latest transcoding summary.
+      * *   You can query transcoding summaries for a maximum of 10 audio and video files in one request.
       * *   You can call the [ListTranscodeTask](~~109120~~) operation to query historical transcoding tasks.
-      * *   **You can call this operation to query information only about transcoding tasks created within the past year.**
+      * *   **You can call this operation to query information only about transcoding tasks created within the past year.
       *
       * @param request GetTranscodeSummaryRequest
       * @return GetTranscodeSummaryResponse
@@ -4914,7 +5319,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
+      * This operation returns information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
       *
       * @param request GetTranscodeTemplateGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4945,7 +5350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
+      * This operation returns information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
       *
       * @param request GetTranscodeTemplateGroupRequest
       * @return GetTranscodeTemplateGroupResponse
@@ -5646,7 +6051,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can query a maximum of 5,000 videos based on the specified filter condition.
+      * You can query up to 5,000 videos based on the specified filter condition.
       *
       * @param request ListLiveRecordVideoRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5705,7 +6110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can query a maximum of 5,000 videos based on the specified filter condition.
+      * You can query up to 5,000 videos based on the specified filter condition.
       *
       * @param request ListLiveRecordVideoRequest
       * @return ListLiveRecordVideoResponse
@@ -6516,12 +6921,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The maximum number of data records that you can query is limited based on the method used to query the data. You can use the following methods to query data:
-      * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter condition. This allows you to traverse data page by page. If the number of data records that meet the specified filter condition exceeds 5,000, use Method 2.
-      * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter condition, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the target page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
-      *     *   When the PageNo parameter is set to **1**, you can scroll forward to traverse data records from page 1 to page **60** at most.
-      *     *   When the PageNo parameter is set to **2**, you can scroll forward to traverse data records from page 2 to page **61** at most.
-      *     *   When the PageNo parameter is set to **61**, you can scroll backward to traverse data records from page 61 to page **2** at most or scroll forward to traverse data records from page 61 to page **120** at most.
+      * The maximum number of data records that you can query varies based on the method used to query the data. You can use the following methods to query data:
+      * *   Method 1: Traverse data by page
+      *     You can use the PageNo and PageSize parameters to traverse up to 5,000 data records that meet the specified filter condition. PageNo specifies the page number and PageSize specifies the number of data records displayed on a page. If the number of data records that meet the specified filter condition exceeds 5,000, change the filter conditions to narrow down the results. You cannot use this method to traverse all data records. If you want to traverse more data records, use Method 2.
+      * *   Method 2: Traverse all data (available only for audio and video files)
+      *     You can use this method to traverse up to 2 million data records related to audio and video files. If the number of data records that meet the specified filter condition exceeds 2 million, change the filter conditions to narrow down the results. To traverse data page by page, you must set the PageNo, PageSize, and ScrollToken parameters. The total number of data records from the current page to the target page cannot exceed 100. For example, you set PageSize to 20. The following content describes the traverse logic:
+      *     *   When the PageNo parameter is set to 1, you can traverse data records from page 1 to page 5.
+      *     *   When the PageNo parameter is set to 2, you can traverse data records from page 2 to page 6.
+      * Make sure that you set the appropriate page number and page size, and use a traverse method based on the number of results that meet your filter condition.
       *
       * @param request SearchMediaRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6576,12 +6983,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The maximum number of data records that you can query is limited based on the method used to query the data. You can use the following methods to query data:
-      * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter condition. This allows you to traverse data page by page. If the number of data records that meet the specified filter condition exceeds 5,000, use Method 2.
-      * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter condition, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the target page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
-      *     *   When the PageNo parameter is set to **1**, you can scroll forward to traverse data records from page 1 to page **60** at most.
-      *     *   When the PageNo parameter is set to **2**, you can scroll forward to traverse data records from page 2 to page **61** at most.
-      *     *   When the PageNo parameter is set to **61**, you can scroll backward to traverse data records from page 61 to page **2** at most or scroll forward to traverse data records from page 61 to page **120** at most.
+      * The maximum number of data records that you can query varies based on the method used to query the data. You can use the following methods to query data:
+      * *   Method 1: Traverse data by page
+      *     You can use the PageNo and PageSize parameters to traverse up to 5,000 data records that meet the specified filter condition. PageNo specifies the page number and PageSize specifies the number of data records displayed on a page. If the number of data records that meet the specified filter condition exceeds 5,000, change the filter conditions to narrow down the results. You cannot use this method to traverse all data records. If you want to traverse more data records, use Method 2.
+      * *   Method 2: Traverse all data (available only for audio and video files)
+      *     You can use this method to traverse up to 2 million data records related to audio and video files. If the number of data records that meet the specified filter condition exceeds 2 million, change the filter conditions to narrow down the results. To traverse data page by page, you must set the PageNo, PageSize, and ScrollToken parameters. The total number of data records from the current page to the target page cannot exceed 100. For example, you set PageSize to 20. The following content describes the traverse logic:
+      *     *   When the PageNo parameter is set to 1, you can traverse data records from page 1 to page 5.
+      *     *   When the PageNo parameter is set to 2, you can traverse data records from page 2 to page 6.
+      * Make sure that you set the appropriate page number and page size, and use a traverse method based on the number of results that meet your filter condition.
       *
       * @param request SearchMediaRequest
       * @return SearchMediaResponse
@@ -6998,6 +7407,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setVodDomainCertificateWithOptions(request, runtime);
     }
 
+    /**
+      * This operation is available only in the Singapore region.
+      *
+      * @param request SubmitAIImageAuditJobRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SubmitAIImageAuditJobResponse
+     */
     public SubmitAIImageAuditJobResponse submitAIImageAuditJobWithOptions(SubmitAIImageAuditJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7046,6 +7462,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitAIImageAuditJobResponse());
     }
 
+    /**
+      * This operation is available only in the Singapore region.
+      *
+      * @param request SubmitAIImageAuditJobRequest
+      * @return SubmitAIImageAuditJobResponse
+     */
     public SubmitAIImageAuditJobResponse submitAIImageAuditJob(SubmitAIImageAuditJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitAIImageAuditJobWithOptions(request, runtime);
@@ -8043,7 +8465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. To check whether a transcoding template group is locked, call the [GetTranscodeTemplateGroup](~~GetTranscodeTemplateGroup~~) operation and check whether Locked is returned in the response. If the transcoding template group is locked, you can all this operation to unlock the transcoding template group before you add, modify, or delete transcoding templates in the transcoding template group.
+      * For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. You can call the [GetTranscodeTemplateGroup](~~GetTranscodeTemplateGroup~~) operation to query the configurations of a transcoding template group, check whether the transcoding template group is locked by using the response parameter Locked, and unlock the transcoding template group before you perform operations such as add, modify, and delete transcoding templates.
       *
       * @param request UpdateTranscodeTemplateGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8086,7 +8508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. To check whether a transcoding template group is locked, call the [GetTranscodeTemplateGroup](~~GetTranscodeTemplateGroup~~) operation and check whether Locked is returned in the response. If the transcoding template group is locked, you can all this operation to unlock the transcoding template group before you add, modify, or delete transcoding templates in the transcoding template group.
+      * For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. You can call the [GetTranscodeTemplateGroup](~~GetTranscodeTemplateGroup~~) operation to query the configurations of a transcoding template group, check whether the transcoding template group is locked by using the response parameter Locked, and unlock the transcoding template group before you perform operations such as add, modify, and delete transcoding templates.
       *
       * @param request UpdateTranscodeTemplateGroupRequest
       * @return UpdateTranscodeTemplateGroupResponse
@@ -8493,6 +8915,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.uploadStreamByURLWithOptions(request, runtime);
     }
 
+    /**
+      * This operation is available only in the **China (Shanghai)** region.
+      *
+      * @param request VerifyVodDomainOwnerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return VerifyVodDomainOwnerResponse
+     */
     public VerifyVodDomainOwnerResponse verifyVodDomainOwnerWithOptions(VerifyVodDomainOwnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8525,6 +8954,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyVodDomainOwnerResponse());
     }
 
+    /**
+      * This operation is available only in the **China (Shanghai)** region.
+      *
+      * @param request VerifyVodDomainOwnerRequest
+      * @return VerifyVodDomainOwnerResponse
+     */
     public VerifyVodDomainOwnerResponse verifyVodDomainOwner(VerifyVodDomainOwnerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.verifyVodDomainOwnerWithOptions(request, runtime);

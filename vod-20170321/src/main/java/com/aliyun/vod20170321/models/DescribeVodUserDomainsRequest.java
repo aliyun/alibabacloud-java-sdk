@@ -12,16 +12,18 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
 
     /**
      * <p>The search method. Valid values:</p>
-     * <p>*   **fuzzy_match**: fuzzy match. This is the default value.</p>
-     * <p>*   **pre_match**: prefix match.</p>
-     * <p>*   **suf_match**: suffix match.</p>
-     * <p>*   **full_match**: exact match.</p>
+     * <br>
+     * <p>*   **fuzzy_match** (default): fuzzy match.</p>
+     * <p>*   **pre_match**: prefix match</p>
+     * <p>*   **suf_match**: suffix match</p>
+     * <p>*   **full_match**: exact match</p>
      */
     @NameInMap("DomainSearchType")
     public String domainSearchType;
 
     /**
-     * <p>The status of the domain name. The value of this parameter is used as a condition to filter domain names. Value values:</p>
+     * <p>The status of the domain name. Value values:</p>
+     * <br>
      * <p>*   **online**: indicates that the domain name is enabled.</p>
      * <p>*   **offline**: indicates that the domain name is disabled.</p>
      * <p>*   **configuring**: indicates that the domain name is being configured.</p>
@@ -36,13 +38,13 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**. Maximum value: **50**. Valid values: integers in the range of **1** to **50**.</p>
+     * <p>The number of entries per page. Default value: **20**. Maximum value: **50**. Valid values: **1** to **50**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -51,7 +53,7 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>Tag.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeVodUserDomainsRequestTag> tag;
@@ -129,7 +131,7 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
         /**
          * <p>The key of tag N. Valid values of N: **1** to **20**.</p>
          * <br>
-         * <p>If you do not specify this parameter, all tag keys are queried.</p>
+         * <p>By default, all tag keys are queried.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -137,7 +139,7 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
         /**
          * <p>The value of tag N. Valid values of N: **1** to **20**.</p>
          * <br>
-         * <p>If you do not specify this parameter, all tag values are queried.</p>
+         * <p>By default, all tag values are queried.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetAppInfosRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can specify a maximum of 10 application IDs. Separate them with commas (,).</p>
+     * <p>The IDs of applications. You can obtain application IDs from the response to the [CreateAppInfo](~~113266~~) or [ListAppInfo](~~114000~~) operation.</p>
+     * <br>
+     * <p>*   You can specify a maximum of 10 application IDs.</p>
+     * <p>*   Separate application IDs with commas (,).</p>
      */
     @NameInMap("AppIds")
     public String appIds;

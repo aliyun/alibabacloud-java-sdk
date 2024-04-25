@@ -35,9 +35,10 @@ public class ListLiveRecordVideoRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sorting rule of results. Valid values:</p>
-     * <p>*   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.</p>
-     * <p>*   **CreationTime:Asc**: sorts the results based on the creation time in ascending order.</p>
+     * <p>The sorting rule of the results. Valid values:</p>
+     * <br>
+     * <p>*   **CreationTime:Desc**: The results are sorted in reverse chronological order based on the creation time.</p>
+     * <p>*   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
