@@ -2154,6 +2154,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("VSwitchId", request.vSwitchId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.whitelistTemplateList)) {
+            query.put("WhitelistTemplateList", request.whitelistTemplateList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
             query.put("ZoneId", request.zoneId);
         }
@@ -18575,6 +18579,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchIds)) {
+            query.put("VSwitchIds", request.vSwitchIds);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

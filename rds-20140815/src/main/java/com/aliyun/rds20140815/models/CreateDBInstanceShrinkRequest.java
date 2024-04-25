@@ -540,6 +540,9 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    @NameInMap("WhitelistTemplateList")
+    public String whitelistTemplateList;
+
     /**
      * <p>The zone ID of the primary instance.</p>
      * <br>
@@ -986,6 +989,14 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public CreateDBInstanceShrinkRequest setWhitelistTemplateList(String whitelistTemplateList) {
+        this.whitelistTemplateList = whitelistTemplateList;
+        return this;
+    }
+    public String getWhitelistTemplateList() {
+        return this.whitelistTemplateList;
     }
 
     public CreateDBInstanceShrinkRequest setZoneId(String zoneId) {

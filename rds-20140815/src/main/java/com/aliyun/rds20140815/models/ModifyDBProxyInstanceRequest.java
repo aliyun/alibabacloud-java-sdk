@@ -65,6 +65,9 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("VSwitchIds")
+    public String vSwitchIds;
+
     public static ModifyDBProxyInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBProxyInstanceRequest self = new ModifyDBProxyInstanceRequest();
         return TeaModel.build(map, self);
@@ -148,6 +151,14 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyDBProxyInstanceRequest setVSwitchIds(String vSwitchIds) {
+        this.vSwitchIds = vSwitchIds;
+        return this;
+    }
+    public String getVSwitchIds() {
+        return this.vSwitchIds;
     }
 
 }
