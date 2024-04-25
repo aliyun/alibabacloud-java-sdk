@@ -11,7 +11,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The queried SQL sample data.</p>
+     * <p>The SQL sample data.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetPfsSqlSampleResponseBodyData> data;
@@ -146,7 +146,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
         public Double lockLatency;
 
         /**
-         * <p>The logical database ID.</p>
+         * <p>The ID of the logical database.</p>
          */
         @NameInMap("LogicId")
         public String logicId;
@@ -154,8 +154,8 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the server failed to find an index that can be used for the SQL statement. Valid values:</p>
          * <br>
-         * <p>* **1:** yes.</p>
-         * <p>* **0:** no.</p>
+         * <p>*   **1**: yes.</p>
+         * <p>*   **0**: no.</p>
          */
         @NameInMap("NoGoodIndexUsed")
         public Integer noGoodIndexUsed;
@@ -163,8 +163,8 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
         /**
          * <p>Indicates whether table scans were performed when indexes were not used. Valid values:</p>
          * <br>
-         * <p>* **1:** yes.</p>
-         * <p>* **0:** no.</p>
+         * <p>*   **1**: yes.</p>
+         * <p>*   **0**: no.</p>
          */
         @NameInMap("NoIndexUsed")
         public Integer noIndexUsed;
@@ -172,7 +172,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
         /**
          * <p>The node ID.</p>
          * <br>
-         * <p>> This parameter is returned only for ApsaraDB RDS for MySQL Cluster Edition instances and PolarDB for MySQL clusters.</p>
+         * <p>>  This parameter is returned only for ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
@@ -198,7 +198,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
         /**
          * <p>The number of joins that are used to perform table scans without using indexes.</p>
          * <br>
-         * <p>> This parameter is used to count the number of joins that did not use indexes. If the value of this parameter is not 0, check the table indexes.</p>
+         * <p>> : This parameter is used for the scenario in which indexes are not used in a union query. If the returned value is not 0, check the indexes of tables.</p>
          */
         @NameInMap("SelectFullJoin")
         public Integer selectFullJoin;
@@ -218,7 +218,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
         /**
          * <p>The number of joins that did not have key values. The keys and values were checked for each row of data.</p>
          * <br>
-         * <p>>  This parameter is used to count the number of joins that did not use indexes. If the value of this parameter is not 0, check the table indexes.</p>
+         * <p>> : This parameter is used for the scenario in which indexes are not used in a union query. If the returned value is not 0, check the indexes of tables.</p>
          */
         @NameInMap("SelectRangeCheck")
         public Integer selectRangeCheck;
@@ -254,13 +254,13 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
         public Integer sortScan;
 
         /**
-         * <p>The SQL sample.</p>
+         * <p>The sample SQL statement.</p>
          */
         @NameInMap("Sql")
         public String sql;
 
         /**
-         * <p>The SQL ID.</p>
+         * <p>The SQL statement ID.</p>
          */
         @NameInMap("SqlId")
         public String sqlId;

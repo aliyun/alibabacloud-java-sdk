@@ -78,10 +78,10 @@ public class GetFullRequestStatResultByInstanceIdRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The role of the PolarDB-X 2.0 node. Valid values:</p>
+     * <p>The role of the node in the PolarDB-X 2.0 instance. Valid values:</p>
      * <br>
-     * <p>*   **polarx_cn**: compute node</p>
-     * <p>*   **polarx_en**: data node</p>
+     * <p>*   **polarx_cn**: compute node.</p>
+     * <p>*   **polarx_dn**: data node.</p>
      */
     @NameInMap("Role")
     public String role;

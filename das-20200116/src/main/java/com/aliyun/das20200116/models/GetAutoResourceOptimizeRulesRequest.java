@@ -13,12 +13,12 @@ public class GetAutoResourceOptimizeRulesRequest extends TeaModel {
     /**
      * <p>The database instance IDs.</p>
      * <br>
-     * <p>*   Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: `[\"Instance ID1\",\"Instance ID2\"]`.</p>
+     * <p>*   Specify the parameter value as a JSON array, such as `[\"Database account 1\",\"Database account 2\"]`. Separate database instance IDs with commas (,).</p>
      * <br>
      * <p>*   By default, if you leave this parameter empty, all database instances for which the automatic fragment recycling feature has been enabled within the current Alibaba Cloud account are returned. The following types of database instances are returned:</p>
      * <br>
      * <p>    *   Database instances for which the automatic fragment recycling feature is currently enabled.</p>
-     * <p>    *   Database instances for which the automatic fragment recycling feature was once enabled but is currently disabled, including those for which DAS Professional Edition has been disabled but excluding those that have been released.</p>
+     * <p>    *   Database instances for which the automatic fragment recycling feature was once enabled but is currently disabled, including those for which DAS Enterprise Edition has been disabled but excluding those that have been released.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;

@@ -136,7 +136,7 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Boolean downgrade;
 
         /**
-         * <p>The observation window of the automatic bandwidth upgrade feature. The value of this parameter consists of a numeric value and a time unit suffix. The **m** time unit suffix specifies the minute. Valid values:</p>
+         * <p>The observation window of the automatic bandwidth adjustment feature. The value of this parameter consists of a numeric value and a time unit suffix. The **m** time unit suffix specifies the minute. Valid values:</p>
          * <br>
          * <p>*   **1m**</p>
          * <p>*   **5m**</p>
@@ -320,7 +320,7 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
          * <p>*   **true**</p>
          * <p>*   **false**</p>
          * <br>
-         * <p>>  The auto scaling feature for shards is available only for ApsaraDB for Redis Community Edition instances that use cloud disks on the China site (aliyun.com).</p>
+         * <p>> The auto scaling feature for shards is available only for ApsaraDB for Redis Community Edition cloud-native instances on the China site (aliyun.com).</p>
          */
         @NameInMap("Apply")
         public Boolean apply;
@@ -509,7 +509,7 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
          * <p>*   **80**</p>
          * <p>*   **90**</p>
          * <br>
-         * <p>>  This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.</p>
+         * <p>> This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.</p>
          */
         @NameInMap("CpuUsageUpperThreshold")
         public Integer cpuUsageUpperThreshold;
@@ -520,7 +520,7 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
          * <p>*   **true**</p>
          * <p>*   **false**</p>
          * <br>
-         * <p>>  This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.</p>
+         * <p>> This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.</p>
          */
         @NameInMap("Downgrade")
         public Boolean downgrade;
@@ -528,16 +528,16 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         /**
          * <p>The maximum number of read-only nodes of the instance.</p>
          * <br>
-         * <p>>  This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance.</p>
+         * <p>> This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance.</p>
          */
         @NameInMap("MaxReadOnlyNodes")
         public Integer maxReadOnlyNodes;
 
         /**
-         * <p>The maximum specifications to which the database instance can be upgraded. The database instance can be upgraded only to a database instance of the same edition with higher specifications. For information about the specifications of different database instances, refer to the following topics:</p>
+         * <p>The maximum specifications to which the database instance can be scaled up. The database instance can be upgraded only to a database instance of the same edition with higher specifications. For information about the specifications of different database instances, see the following topics:</p>
          * <br>
-         * <p>*   PolarDB for MySQL Cluster Edition instances: [Specifications of compute nodes](~~102542~~).</p>
-         * <p>*   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: [Specifications](~~276974~~).</p>
+         * <p>*   PolarDB for MySQL Cluster Edition instances: [Specifications of compute nodes](~~102542~~)</p>
+         * <p>*   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: [Specifications](~~276974~~)</p>
          */
         @NameInMap("MaxSpec")
         public String maxSpec;
@@ -551,7 +551,7 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
          * <p>*   **80**</p>
          * <p>*   **90**</p>
          * <br>
-         * <p>>  This parameter must be specified if the database instance is an ApsaraDB for Redis Community Edition instance that uses cloud disks on the China site (aliyun.com).</p>
+         * <p>> This parameter must be specified if the database instance is an ApsaraDB for Redis Community Edition cloud-native instance on the China site (aliyun.com).</p>
          */
         @NameInMap("MemUsageUpperThreshold")
         public Integer memUsageUpperThreshold;
@@ -561,7 +561,7 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
          * <br>
          * <p>*   Valid values for PolarDB for MySQL Cluster Edition instances: **5m**, **10m**, **15m**, and **30m**.</p>
          * <p>*   Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: **5m**, **20m**, **30m**, **40m**, and **1h**.</p>
-         * <p>*   Valid values for ApsaraDB for Redis Community Edition instances that use cloud disks: **5m**, **10m**, **15m**, and **30m**.</p>
+         * <p>*   Valid values for ApsaraDB for Redis Community Edition cloud-native instances: **5m**, **10m**, **15m**, and **30m**.</p>
          */
         @NameInMap("ObservationWindowSize")
         public String observationWindowSize;

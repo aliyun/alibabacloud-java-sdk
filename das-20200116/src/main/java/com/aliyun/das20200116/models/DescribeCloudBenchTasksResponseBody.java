@@ -133,7 +133,7 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
          * <p>* **WAIT_INSTALL_JDK**: Install the Java Development Kit (JDK).</p>
          * <p>* **WAIT_INSTALL_DBGATEWAY**: Install the database gateway (DBGateway).</p>
          * <p>* **ADD_SECURITY_IPS_STEP**: Configure the whitelist of the security group.</p>
-         * <p>* **ARCHIVIE**: Archive the file that stores the analysis results of full SQL statistics.</p>
+         * <p>* **ARCHIVE**: Archive the file that stores the analysis results of full SQL statistics.</p>
          * <p>* **DOWNLOAD**: Download the file that stores the analysis result of full SQL statistics.</p>
          * <p>* **PROCEED**: Preprocess the file that stores the analysis result of full SQL statistics.</p>
          * <p>* **PRE_LOAD**: Preload the file that stores the analysis result of full SQL statistics.</p>

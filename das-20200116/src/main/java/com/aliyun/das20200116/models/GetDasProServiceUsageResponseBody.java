@@ -86,7 +86,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
 
     public static class GetDasProServiceUsageResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the DAS Professional Edition instance.</p>
+         * <p>The ID of the DAS Enterprise Edition instance.</p>
          */
         @NameInMap("commodityInstanceId")
         public String commodityInstanceId;
@@ -98,7 +98,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The point of time when DAS Professional Edition for the database instance expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The point of time when DAS Enterprise Edition for the database instance expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("expireTime")
         public Long expireTime;
@@ -122,7 +122,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>Indicates whether DAS Professional Edition for the database instance has expired. Valid values:</p>
+         * <p>Indicates whether DAS Enterprise Edition for the database instance has expired. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>
@@ -163,7 +163,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         public String sqlRetention;
 
         /**
-         * <p>The time when DAS Professional Edition was enabled for the database instance. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when DAS Enterprise Edition was enabled for the database instance. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("startTime")
         public Long startTime;

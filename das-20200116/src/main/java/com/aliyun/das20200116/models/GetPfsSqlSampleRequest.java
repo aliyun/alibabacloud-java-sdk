@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetPfsSqlSampleRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <br>
-     * <p>>  The end time must be later than the start time. You can query the data of up to seven days within the last month.</p>
+     * <p>>  The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -15,7 +15,7 @@ public class GetPfsSqlSampleRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <br>
-     * <p>>  Only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters are supported.</p>
+     * <p>>  Only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters are supported</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -23,7 +23,7 @@ public class GetPfsSqlSampleRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <br>
-     * <p>>  This parameter must be specified for ApsaraDB RDS for MySQL Cluster Edition instances and PolarDB for MySQL clusters.</p>
+     * <p>>  For ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters, you must specify the node ID.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -35,7 +35,7 @@ public class GetPfsSqlSampleRequest extends TeaModel {
     public String sqlId;
 
     /**
-     * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

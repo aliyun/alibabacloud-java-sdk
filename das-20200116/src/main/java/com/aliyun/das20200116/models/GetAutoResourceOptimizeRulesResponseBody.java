@@ -88,17 +88,17 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
          * <br>
-         * <p>* **true**</p>
-         * <p>* **false**</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("AutoDefragment")
         public Boolean autoDefragment;
 
         /**
-         * <p>Indicates whether DAS Professional Edition is enabled. Valid values:</p>
+         * <p>Indicates whether DAS Enterprise Edition is enabled. Valid values:</p>
          * <br>
-         * <p>* **true**</p>
-         * <p>* **false**</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("DasProOn")
         public Boolean dasProOn;
@@ -186,17 +186,17 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
          * <br>
-         * <p>* **true**</p>
-         * <p>* **false**</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("AutoDefragment")
         public Boolean autoDefragment;
 
         /**
-         * <p>Indicates whether DAS Professional Edition is enabled. Valid values:</p>
+         * <p>Indicates whether DAS Enterprise Edition is enabled. Valid values:</p>
          * <br>
-         * <p>* **true**</p>
-         * <p>* **false**</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("DasProOn")
         public Boolean dasProOn;
@@ -284,17 +284,17 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
          * <br>
-         * <p>* **true**</p>
-         * <p>* **false**</p>
+         * <p>*   **true**:</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("AutoDefragment")
         public Boolean autoDefragment;
 
         /**
-         * <p>Indicates whether DAS Professional Edition is enabled. Valid values:</p>
+         * <p>Indicates whether DAS Enterprise Edition is enabled. Valid values:</p>
          * <br>
-         * <p>* **true**</p>
-         * <p>* **false**</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("DasProOn")
         public Boolean dasProOn;
@@ -312,10 +312,7 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         public Double tableFragmentationRatio;
 
         /**
-         * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
-         * <br>
-         * <p>true</p>
-         * <p>false</p>
+         * <p>The minimum storage usage of a single physical table for which the automatic fragment recycling feature is enabled. Unit: GB.</p>
          */
         @NameInMap("TableSpaceSize")
         public Double tableSpaceSize;
@@ -395,15 +392,15 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         public java.util.List<GetAutoResourceOptimizeRulesResponseBodyDataEnableAutoResourceOptimizeList> enableAutoResourceOptimizeList;
 
         /**
-         * <p>The number of database instances for which the automatic fragment recycling feature is enabled and DAS Professional Edition is disabled.</p>
+         * <p>The number of database instances for which the automatic fragment recycling feature is enabled and DAS Enterprise Edition is disabled.</p>
          */
         @NameInMap("HasEnableRuleButNotDasProCount")
         public Long hasEnableRuleButNotDasProCount;
 
         /**
-         * <p>The database instances for which the automatic fragment recycling feature is enabled and DAS Professional Edition is disabled.</p>
+         * <p>The database instances for which the automatic fragment recycling feature is enabled and DAS Enterprise Edition is disabled.</p>
          * <br>
-         * <p>> This type of database instance does not perform automatic fragment recycling tasks until DAS Professional Edition is enabled for the instances again.</p>
+         * <p>>  Automatic fragment recycling tasks are run on this type of database instances only if DAS Enterprise Edition is enabled for the database instances again.</p>
          */
         @NameInMap("HasEnableRuleButNotDasProList")
         public java.util.List<GetAutoResourceOptimizeRulesResponseBodyDataHasEnableRuleButNotDasProList> hasEnableRuleButNotDasProList;
