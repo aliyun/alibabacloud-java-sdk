@@ -69,7 +69,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     public String dhcpOptionsSetStatus;
 
     /**
-     * <p>是否开启IPv6。</p>
+     * <p>Indicates whether the VPC enables IPv6 .</p>
+     * <p>- true</p>
+     * <p>- false</p>
      */
     @NameInMap("EnabledIpv6")
     public Boolean enabledIpv6;
