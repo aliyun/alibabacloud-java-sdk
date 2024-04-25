@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeWhitelistTemplateRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     /**
      * <p>The resource group ID.</p>
      */
@@ -25,6 +28,14 @@ public class DescribeWhitelistTemplateRequest extends TeaModel {
     public static DescribeWhitelistTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeWhitelistTemplateRequest self = new DescribeWhitelistTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeWhitelistTemplateRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeWhitelistTemplateRequest setResourceGroupId(String resourceGroupId) {

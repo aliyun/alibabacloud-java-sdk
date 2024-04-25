@@ -25,6 +25,9 @@ public class DescribeAllWhitelistTemplateRequest extends TeaModel {
     @NameInMap("PageNumbers")
     public Integer pageNumbers;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     /**
      * <p>The resource group ID. For more information about resource groups, see related documentation.</p>
      */
@@ -70,6 +73,14 @@ public class DescribeAllWhitelistTemplateRequest extends TeaModel {
     }
     public Integer getPageNumbers() {
         return this.pageNumbers;
+    }
+
+    public DescribeAllWhitelistTemplateRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeAllWhitelistTemplateRequest setResourceGroupId(String resourceGroupId) {

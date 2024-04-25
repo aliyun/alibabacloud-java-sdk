@@ -4,12 +4,24 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The information about the associated ApsaraDB RDS instance.</p>
+     */
     @NameInMap("AssociateDBInstances")
     public java.util.List<DescribeKmsAssociateResourcesResponseBodyAssociateDBInstances> associateDBInstances;
 
+    /**
+     * <p>Indicates whether an associated RDS instance exists.</p>
+     * <br>
+     * <p>- **true**: Yes</p>
+     * <p>- **false**: No</p>
+     */
     @NameInMap("AssociateStatus")
     public Boolean associateStatus;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +55,43 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeKmsAssociateResourcesResponseBodyAssociateDBInstances extends TeaModel {
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        /**
+         * <p>The database engine. Valid values:</p>
+         * <br>
+         * <p>*   **MySQL**</p>
+         * <p>*   **SQLServer**</p>
+         * <p>*   **PostgreSQL**</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The way in which the key is used. Return values:</p>
+         * <br>
+         * <p>*   **DiskEncryption**: cloud disk encryption</p>
+         * <p>*   **TDE**: transparent data encryption</p>
+         */
         @NameInMap("KeyUsedBy")
         public String keyUsedBy;
 
+        /**
+         * <p>The state of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **CREATING**: The instance is being created.</p>
+         * <p>*   **ACTIVATION**: The instance is running.</p>
+         * <p>*   **DELETING**: The instance is being deleted.</p>
+         * <p>*   **RESTARTING**: The instance is being restarted.</p>
+         * <p>*   **INS_MAINTAINING**: The configuration of the instance is being changed.</p>
+         * <p>*   **INS_MAINTAINING**: The instance is being maintained.</p>
+         * <p>*   **BACKUP_RECOVERING**: The instance is being restored.</p>
+         * <p>*   **NET_MODIFYING**: The network type of the instance is being changed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
