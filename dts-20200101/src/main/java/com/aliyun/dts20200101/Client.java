@@ -1666,6 +1666,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.shardPassword)) {
+            query.put("ShardPassword", request.shardPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shardUsername)) {
+            query.put("ShardUsername", request.shardUsername);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -5358,6 +5366,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endpointPort)) {
             query.put("EndpointPort", request.endpointPort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointRegionId)) {
+            query.put("EndpointRegionId", request.endpointRegionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.password)) {

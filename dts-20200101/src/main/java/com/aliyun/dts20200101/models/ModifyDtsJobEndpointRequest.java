@@ -34,6 +34,9 @@ public class ModifyDtsJobEndpointRequest extends TeaModel {
     @NameInMap("EndpointPort")
     public String endpointPort;
 
+    @NameInMap("EndpointRegionId")
+    public String endpointRegionId;
+
     @NameInMap("Password")
     public String password;
 
@@ -141,6 +144,14 @@ public class ModifyDtsJobEndpointRequest extends TeaModel {
     }
     public String getEndpointPort() {
         return this.endpointPort;
+    }
+
+    public ModifyDtsJobEndpointRequest setEndpointRegionId(String endpointRegionId) {
+        this.endpointRegionId = endpointRegionId;
+        return this;
+    }
+    public String getEndpointRegionId() {
+        return this.endpointRegionId;
     }
 
     public ModifyDtsJobEndpointRequest setPassword(String password) {
