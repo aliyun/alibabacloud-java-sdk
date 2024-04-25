@@ -11,12 +11,12 @@ public class GetInstanceSqlOptimizeStatisticRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Specifies whether to filter instances for which DAS Professional Edition is enabled. Valid values:</p>
+     * <p>Specifies whether to filter instances for which DAS Enterprise Edition is enabled. Valid values:</p>
      * <br>
-     * <p>*   **true**: filters instances for which DAS Professional Edition is enabled.</p>
-     * <p>*   **false**: does not filter instances for which DAS Professional Edition is enabled.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      * <br>
-     * <p>>  If you set the value to **true**, only database instances for which DAS Professional Edition is disabled are queried. If you set the value to **false**, all database instances are queried.</p>
+     * <p>>  If you set this parameter to **true**, only database instances for which DAS Enterprise Edition is disabled are queried. If you set this parameter to **false**, all database instances are queried.</p>
      */
     @NameInMap("FilterEnable")
     public String filterEnable;
@@ -32,7 +32,7 @@ public class GetInstanceSqlOptimizeStatisticRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <br>
-     * <p>>  This parameter must be specified if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster.</p>
+     * <p>>  For ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters, you must specify the node ID.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

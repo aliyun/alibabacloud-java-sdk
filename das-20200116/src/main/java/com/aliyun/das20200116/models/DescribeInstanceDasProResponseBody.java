@@ -11,7 +11,7 @@ public class DescribeInstanceDasProResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether DAS Professional Edition is enabled for the database instance.</p>
+     * <p>Indicates whether DAS Enterprise Edition is enabled for the database instance. Valid values:</p>
      * <br>
      * <p>*   **true**</p>
      * <p>*   **false**</p>

@@ -82,7 +82,7 @@ public class SetEventSubscriptionRequest extends TeaModel {
      * <p>*   **Notice**: events that trigger notifications, including events at the **Notice**, **Optimization**, **Warn**, and **Critical** levels.</p>
      * <p>*   **Optimization**: events that trigger optimizations, including events at the **Optimization**, **Warn**, and **Critical** levels.</p>
      * <p>*   **Warn**: events that trigger warnings, including events at the **Warn** and **Critical** levels.</p>
-     * <p>*   **Critical**: events that trigger critical warnings.****</p>
+     * <p>*   **Critical**: events that trigger critical warnings.</p>
      * <br>
      * <p>The following content describes the events at each level in detail:</p>
      * <br>

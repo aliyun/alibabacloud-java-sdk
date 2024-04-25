@@ -11,7 +11,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The inspection and scoring results.</p>
+     * <p>The details.</p>
      */
     @NameInMap("Data")
     public GetInstanceInspectionsResponseBodyData data;
@@ -88,9 +88,9 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the feature of automatically creating and deleting indexes is enabled. Valid values:</p>
          * <br>
-         * <p>* **0**: disabled.</p>
-         * <p>* **1**: enabled.</p>
-         * <p>* **2**: not supported.</p>
+         * <p>*   **0**: disabled.</p>
+         * <p>*   **1**: enabled.</p>
+         * <p>*   **2**: not supported.</p>
          */
         @NameInMap("AutoIndex")
         public Integer autoIndex;
@@ -98,19 +98,19 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the automatic throttling feature is enabled. Valid values:</p>
          * <br>
-         * <p>* **0**: disabled.</p>
-         * <p>* **1**: enabled.</p>
-         * <p>* **2**: not supported.</p>
+         * <p>*   **0**: disabled.</p>
+         * <p>*   **1**: enabled.</p>
+         * <p>*   **2**: not supported.</p>
          */
         @NameInMap("AutoLimitedSql")
         public Integer autoLimitedSql;
 
         /**
-         * <p>Indicates whether automatic reclamation of fragments is enabled. Valid values:</p>
+         * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
          * <br>
-         * <p>* **0**: disabled.</p>
-         * <p>* **1**: enabled.</p>
-         * <p>* **2**: not supported.</p>
+         * <p>*   **0**: disabled.</p>
+         * <p>*   **1**: enabled.</p>
+         * <p>*   **2**: not supported.</p>
          */
         @NameInMap("AutoResourceOptimize")
         public Integer autoResourceOptimize;
@@ -118,9 +118,9 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the auto scaling feature is enabled. Valid values:</p>
          * <br>
-         * <p>* **0**: disabled.</p>
-         * <p>* **1**: enabled.</p>
-         * <p>* **2**: not supported.</p>
+         * <p>*   **0**: disabled.</p>
+         * <p>*   **1**: enabled.</p>
+         * <p>*   **2**: not supported.</p>
          */
         @NameInMap("AutoScale")
         public Integer autoScale;
@@ -128,9 +128,9 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the event subscription feature is enabled. Valid values:</p>
          * <br>
-         * <p>* **0**: disabled.</p>
-         * <p>* **1**: enabled.</p>
-         * <p>* **2**: not supported.</p>
+         * <p>*   **0**: disabled.</p>
+         * <p>*   **1**: enabled.</p>
+         * <p>*   **2**: not supported.</p>
          */
         @NameInMap("EventSubscription")
         public Integer eventSubscription;
@@ -184,7 +184,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
 
     public static class GetInstanceInspectionsResponseBodyDataListInstance extends TeaModel {
         /**
-         * <p>The account ID. You can obtain the account ID on the **Security Settings** page in the Alibaba Cloud **account management center**.</p>
+         * <p>The account ID. You can view the ID of the logon account by moving the pointer over the profile in the Alibaba Cloud management console.</p>
          */
         @NameInMap("AccountId")
         public String accountId;
@@ -192,8 +192,8 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         /**
          * <p>The connection mode of the instance. Valid values:</p>
          * <br>
-         * <p>* **standard**: standard mode.</p>
-         * <p>* **safe**: database proxy mode.</p>
+         * <p>*   **standard**: standard mode.</p>
+         * <p>*   **safe**: database proxy mode.</p>
          */
         @NameInMap("Category")
         public String category;
@@ -207,9 +207,9 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         /**
          * <p>The database engine. Valid values:</p>
          * <br>
-         * <p>* **MySQL**</p>
-         * <p>* **Redis**</p>
-         * <p>* **PolarDBMySQL**</p>
+         * <p>*   **MySQL**</p>
+         * <p>*   **Redis**</p>
+         * <p>*   **PolarDBMySQL**</p>
          */
         @NameInMap("Engine")
         public String engine;
@@ -221,7 +221,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          */
         @NameInMap("InstanceAlias")
         public String instanceAlias;
@@ -229,11 +229,11 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         /**
          * <p>The type of the instance on which the database is deployed. Valid values:</p>
          * <br>
-         * <p>* **RDS**: an Alibaba Cloud database instance.</p>
-         * <p>* **ECS**: an ECS instance on which a self-managed database is deployed.</p>
-         * <p>* **IDC**: a self-managed database instance that is not deployed on Alibaba Cloud.</p>
+         * <p>*   **RDS**: an Alibaba Cloud database instance.</p>
+         * <p>*   **ECS**: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.</p>
+         * <p>*   **IDC**: a self-managed database instance that is not deployed on Alibaba Cloud.</p>
          * <br>
-         * <p>> The value IDC indicates that the instance is deployed in a data center.</p>
+         * <p>>  The value IDC indicates that the instance is deployed in a data center.</p>
          */
         @NameInMap("InstanceArea")
         public String instanceArea;
@@ -269,7 +269,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The ID of the region in which the instance resides.</p>
+         * <p>The region ID of the instance.</p>
          */
         @NameInMap("Region")
         public String region;
@@ -435,17 +435,17 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         public GetInstanceInspectionsResponseBodyDataListAutoFunction autoFunction;
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data returned.</p>
          */
         @NameInMap("Data")
         public java.util.Map<String, ?> data;
 
         /**
-         * <p>Indicates whether DAS Professional Edition is enabled. Valid values:</p>
+         * <p>Indicates whether DAS Enterprise Edition is enabled. Valid values:</p>
          * <br>
-         * <p>* **0**: disabled.</p>
-         * <p>* **1**: enabled.</p>
-         * <p>* **2**: not supported.</p>
+         * <p>*   **0**: disabled.</p>
+         * <p>*   **1**: enabled.</p>
+         * <p>*   **2**: not supported.</p>
          */
         @NameInMap("EnableDasPro")
         public Integer enableDasPro;
@@ -453,7 +453,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         /**
          * <p>The end time of the inspection and scoring task. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * <br>
-         * <p>> The end time must be later than the start time.</p>
+         * <p>>  The end time must be later than the start time.</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
@@ -465,13 +465,13 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The details of the instance.</p>
+         * <p>The information about the instance.</p>
          */
         @NameInMap("Instance")
         public GetInstanceInspectionsResponseBodyDataListInstance instance;
 
         /**
-         * <p>The inspection scores of the instance.</p>
+         * <p>The inspection score of the instance.</p>
          */
         @NameInMap("Score")
         public Integer score;
@@ -483,7 +483,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         public java.util.Map<String, ?> scoreMap;
 
         /**
-         * <p>The start time of the inspection and scoring task. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The start time of the inspection and scoring task. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
@@ -491,9 +491,9 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         /**
          * <p>The state of the inspection and scoring task. Valid values:</p>
          * <br>
-         * <p>* **0**: The task is waiting for execution.</p>
-         * <p>* **1**: The task is in progress.</p>
-         * <p>* **2**: The task is complete.</p>
+         * <p>*   **0**: The task is waiting for execution.</p>
+         * <p>*   **1**: The task is in progress.</p>
+         * <p>*   **2**: The task is complete.</p>
          */
         @NameInMap("State")
         public Integer state;
@@ -501,8 +501,8 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         /**
          * <p>The mode in which the inspection and scoring task was initiated. Valid values:</p>
          * <br>
-         * <p>* **0**: automatic mode</p>
-         * <p>* **1**: manual mode</p>
+         * <p>*   **0**: automatic mode.</p>
+         * <p>*   **1**: manual mode.</p>
          */
         @NameInMap("TaskType")
         public Integer taskType;
@@ -604,10 +604,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
 
     public static class GetInstanceInspectionsResponseBodyData extends TeaModel {
         /**
-         * <p>The mode in which the inspection and scoring task was initiated. Valid values:</p>
-         * <br>
-         * <p>*   **0**: automatic mode</p>
-         * <p>*   **1**: manual mode</p>
+         * <p>The detailed information.</p>
          */
         @NameInMap("List")
         public java.util.List<GetInstanceInspectionsResponseBodyDataList> list;
