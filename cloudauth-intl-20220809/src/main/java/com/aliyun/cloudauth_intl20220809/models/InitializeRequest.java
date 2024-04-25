@@ -28,9 +28,6 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("FacePictureUrl")
     public String facePictureUrl;
 
-    @NameInMap("FlowType")
-    public String flowType;
-
     @NameInMap("IdFaceQuality")
     public String idFaceQuality;
 
@@ -55,17 +52,8 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("Ocr")
     public String ocr;
 
-    @NameInMap("OperationMode")
-    public String operationMode;
-
-    @NameInMap("Pages")
-    public String pages;
-
     @NameInMap("ProductCode")
     public String productCode;
-
-    @NameInMap("ProductConfig")
-    public String productConfig;
 
     @NameInMap("ProductFlow")
     public String productFlow;
@@ -79,8 +67,8 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("SecurityLevel")
     public String securityLevel;
 
-    @NameInMap("ServiceLevel")
-    public String serviceLevel;
+    @NameInMap("StyleConfig")
+    public String styleConfig;
 
     public static InitializeRequest build(java.util.Map<String, ?> map) throws Exception {
         InitializeRequest self = new InitializeRequest();
@@ -151,14 +139,6 @@ public class InitializeRequest extends TeaModel {
         return this.facePictureUrl;
     }
 
-    public InitializeRequest setFlowType(String flowType) {
-        this.flowType = flowType;
-        return this;
-    }
-    public String getFlowType() {
-        return this.flowType;
-    }
-
     public InitializeRequest setIdFaceQuality(String idFaceQuality) {
         this.idFaceQuality = idFaceQuality;
         return this;
@@ -215,36 +195,12 @@ public class InitializeRequest extends TeaModel {
         return this.ocr;
     }
 
-    public InitializeRequest setOperationMode(String operationMode) {
-        this.operationMode = operationMode;
-        return this;
-    }
-    public String getOperationMode() {
-        return this.operationMode;
-    }
-
-    public InitializeRequest setPages(String pages) {
-        this.pages = pages;
-        return this;
-    }
-    public String getPages() {
-        return this.pages;
-    }
-
     public InitializeRequest setProductCode(String productCode) {
         this.productCode = productCode;
         return this;
     }
     public String getProductCode() {
         return this.productCode;
-    }
-
-    public InitializeRequest setProductConfig(String productConfig) {
-        this.productConfig = productConfig;
-        return this;
-    }
-    public String getProductConfig() {
-        return this.productConfig;
     }
 
     public InitializeRequest setProductFlow(String productFlow) {
@@ -279,12 +235,12 @@ public class InitializeRequest extends TeaModel {
         return this.securityLevel;
     }
 
-    public InitializeRequest setServiceLevel(String serviceLevel) {
-        this.serviceLevel = serviceLevel;
+    public InitializeRequest setStyleConfig(String styleConfig) {
+        this.styleConfig = styleConfig;
         return this;
     }
-    public String getServiceLevel() {
-        return this.serviceLevel;
+    public String getStyleConfig() {
+        return this.styleConfig;
     }
 
 }
