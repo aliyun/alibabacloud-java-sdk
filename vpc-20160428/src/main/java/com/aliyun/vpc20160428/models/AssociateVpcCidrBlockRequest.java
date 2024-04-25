@@ -76,6 +76,9 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     @NameInMap("SecondaryCidrBlock")
     public String secondaryCidrBlock;
 
+    @NameInMap("SecondaryCidrMask")
+    public Integer secondaryCidrMask;
+
     /**
      * <p>The ID of the VPC to which you want to add a secondary CIDR block.</p>
      */
@@ -165,6 +168,14 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     }
     public String getSecondaryCidrBlock() {
         return this.secondaryCidrBlock;
+    }
+
+    public AssociateVpcCidrBlockRequest setSecondaryCidrMask(Integer secondaryCidrMask) {
+        this.secondaryCidrMask = secondaryCidrMask;
+        return this;
+    }
+    public Integer getSecondaryCidrMask() {
+        return this.secondaryCidrMask;
     }
 
     public AssociateVpcCidrBlockRequest setVpcId(String vpcId) {

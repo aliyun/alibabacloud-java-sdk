@@ -49,6 +49,9 @@ public class CreateVpcRequest extends TeaModel {
     @NameInMap("EnableIpv6")
     public Boolean enableIpv6;
 
+    @NameInMap("Ipv4CidrMask")
+    public Integer ipv4CidrMask;
+
     /**
      * <p>The ID of the IP Address Manager (IPAM) pool of the IPv4 type.</p>
      */
@@ -167,6 +170,14 @@ public class CreateVpcRequest extends TeaModel {
     }
     public Boolean getEnableIpv6() {
         return this.enableIpv6;
+    }
+
+    public CreateVpcRequest setIpv4CidrMask(Integer ipv4CidrMask) {
+        this.ipv4CidrMask = ipv4CidrMask;
+        return this;
+    }
+    public Integer getIpv4CidrMask() {
+        return this.ipv4CidrMask;
     }
 
     public CreateVpcRequest setIpv4IpamPoolId(String ipv4IpamPoolId) {

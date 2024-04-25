@@ -2143,6 +2143,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecondaryCidrBlock", request.secondaryCidrBlock);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.secondaryCidrMask)) {
+            query.put("SecondaryCidrMask", request.secondaryCidrMask);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
             query.put("VpcId", request.vpcId);
         }
@@ -7764,6 +7768,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableIpv6)) {
             query.put("EnableIpv6", request.enableIpv6);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv4CidrMask)) {
+            query.put("Ipv4CidrMask", request.ipv4CidrMask);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipv4IpamPoolId)) {
