@@ -39,7 +39,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
 
     public static class DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers extends TeaModel {
         /**
-         * <p>The node ID.</p>
+         * <p>The ID of the node.</p>
          */
         @NameInMap("DBInstanceID")
         public String DBInstanceID;
@@ -67,21 +67,21 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The ID of the region in which the node resides.</p>
+         * <p>The ID of the region where the node resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The node type. Valid values:</p>
+         * <p>The type of the node. Valid values:</p>
          * <br>
-         * <p>*   **CENTRAL**: The node is the central node. Each global active database cluster has only one central node. All unit nodes synchronize data from the central node.</p>
+         * <p>*   **CENTRAL**: The node is a central node. Each global active database cluster has only one central node. All unit nodes synchronize data from the central node.</p>
          * <p>*   **UNIT**: The node is a unit node. Each global active database cluster can have up to 10 unit nodes. All unit nodes synchronize data from the central node.</p>
          */
         @NameInMap("Role")
@@ -175,7 +175,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The cluster name.</p>
+         * <p>The name of the cluster.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -207,7 +207,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String service;
 
         /**
-         * <p>The cluster status. Valid values:</p>
+         * <p>The status of the cluster. Valid values:</p>
          * <br>
          * <p>*   **activation**: The cluster is running.</p>
          * <p>*   **creating**: The cluster is being created.</p>

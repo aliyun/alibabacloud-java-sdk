@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBProxyEndpointRequest extends TeaModel {
     /**
-     * <p>The features that you want to enable for the proxy endpoint. If you specify more than one feature, separate the features with semicolons (;). Format: `Feature 1:Status;Feature 2:Status;...`. Do not add a semicolon (;) at the end of the last value.</p>
+     * <p>The features that you want to enable for the proxy endpoint. If you specify more than one feature, separate the features with semicolons (;). Format: `Feature 1:Status;Feature 2:Status;...`. Do not add a semicolon (;) at the end of the value.</p>
      * <br>
      * <p>Valid feature values:</p>
      * <br>
@@ -18,7 +18,7 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
      * <p>*   **1**: enabled</p>
      * <p>*   **0**: disabled</p>
      * <br>
-     * <p>> If the instance runs PostgreSQL, you can enable only the read/write splitting feature, which is specified by **ReadWriteSpliting**.</p>
+     * <p>>  If the instance runs PostgreSQL, you can enable only the read/write splitting feature, which is specified by **ReadWriteSpliting**.</p>
      */
     @NameInMap("ConfigDBProxyFeatures")
     public String configDBProxyFeatures;
@@ -30,7 +30,7 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The proxy endpoint ID. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.</p>
+     * <p>The ID of the proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.</p>
      * <br>
      * <p>> *   If the instance runs MySQL and you set **DbEndpointOperator** to **Delete** or **Modify**, you must specify DBProxyEndpointId.</p>
      * <p>> *   If the instance runs PostgreSQL and you set **DbEndpointOperator** to **Delete**, **Modify**, or **Create**, you must specify DBProxyEndpointId.</p>
@@ -39,7 +39,7 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public String DBProxyEndpointId;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>A deprecated parameter. You do not need to specify this parameter.</p>
      */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;

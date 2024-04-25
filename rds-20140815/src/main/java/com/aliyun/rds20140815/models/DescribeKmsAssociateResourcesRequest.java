@@ -4,18 +4,35 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeKmsAssociateResourcesRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+     * <br>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the KMS resource. Only key IDs are supported.</p>
+     */
     @NameInMap("KmsResourceId")
     public String kmsResourceId;
 
+    /**
+     * <p>The ID of the region to which the KMS resource belongs.</p>
+     */
     @NameInMap("KmsResourceRegionId")
     public String kmsResourceRegionId;
 
+    /**
+     * <p>The type of the KMS resource. Only key is supported.</p>
+     */
     @NameInMap("KmsResourceType")
     public String kmsResourceType;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the KMS resource belongs.</p>
+     */
     @NameInMap("KmsResourceUser")
     public String kmsResourceUser;
 
@@ -25,9 +42,15 @@ public class DescribeKmsAssociateResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

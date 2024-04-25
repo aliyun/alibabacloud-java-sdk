@@ -10,6 +10,9 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends TeaModel {
     @NameInMap("InsName")
     public String insName;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     /**
      * <p>The resource group ID. You can leave this parameter empty.</p>
      */
@@ -33,6 +36,14 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends TeaModel {
     }
     public String getInsName() {
         return this.insName;
+    }
+
+    public DescribeInstanceLinkedWhitelistTemplateRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeInstanceLinkedWhitelistTemplateRequest setResourceGroupId(String resourceGroupId) {

@@ -118,8 +118,8 @@ public class CreateDBNodesRequest extends TeaModel {
         @NameInMap("classCode")
         public String classCode;
 
-        @NameInMap("vswId")
-        public String vswId;
+        @NameInMap("vswitchId")
+        public String vswitchId;
 
         /**
          * <p>The zone ID of the node.</p>
@@ -140,12 +140,12 @@ public class CreateDBNodesRequest extends TeaModel {
             return this.classCode;
         }
 
-        public CreateDBNodesRequestDBNode setVswId(String vswId) {
-            this.vswId = vswId;
+        public CreateDBNodesRequestDBNode setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
             return this;
         }
-        public String getVswId() {
-            return this.vswId;
+        public String getVswitchId() {
+            return this.vswitchId;
         }
 
         public CreateDBNodesRequestDBNode setZoneId(String zoneId) {

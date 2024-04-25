@@ -466,6 +466,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InsName", request.insName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
@@ -5747,6 +5751,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageNumbers", request.pageNumbers);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
@@ -6153,11 +6161,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### Supported database engines
-      * *   MySQL
-      * *   PostgreSQL
-      * *   SQL Server
-      * *   MariaDB
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * *   RDS MariaDB
+      * > You can call this operation to query the available zones for an instance. The query result may be different from the zones available on the buy page of the ApsaraDB RDS console. The values of some parameters on the buy page vary based on the actual sales policy. The actual information on the [buy page](https://rdsbuy.console.aliyun.com/create/rds/PostgreSQL) prevails.
       *
       * @param request DescribeAvailableZonesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6220,11 +6229,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### Supported database engines
-      * *   MySQL
-      * *   PostgreSQL
-      * *   SQL Server
-      * *   MariaDB
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * *   RDS MariaDB
+      * > You can call this operation to query the available zones for an instance. The query result may be different from the zones available on the buy page of the ApsaraDB RDS console. The values of some parameters on the buy page vary based on the actual sales policy. The actual information on the [buy page](https://rdsbuy.console.aliyun.com/create/rds/PostgreSQL) prevails.
       *
       * @param request DescribeAvailableZonesRequest
       * @return DescribeAvailableZonesResponse
@@ -11091,6 +11101,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InsName", request.insName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
@@ -11134,6 +11148,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeInstanceLinkedWhitelistTemplateWithOptions(request, runtime);
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      *
+      * @param request DescribeKmsAssociateResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeKmsAssociateResourcesResponse
+     */
     public DescribeKmsAssociateResourcesResponse describeKmsAssociateResourcesWithOptions(DescribeKmsAssociateResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11198,6 +11222,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeKmsAssociateResourcesResponse());
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      *
+      * @param request DescribeKmsAssociateResourcesRequest
+      * @return DescribeKmsAssociateResourcesResponse
+     */
     public DescribeKmsAssociateResourcesResponse describeKmsAssociateResources(DescribeKmsAssociateResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeKmsAssociateResourcesWithOptions(request, runtime);
@@ -14323,6 +14356,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeWhitelistTemplateResponse describeWhitelistTemplateWithOptions(DescribeWhitelistTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
@@ -14383,6 +14420,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeWhitelistTemplateLinkedInstanceResponse describeWhitelistTemplateLinkedInstanceWithOptions(DescribeWhitelistTemplateLinkedInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
@@ -14569,6 +14610,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.insName)) {
             query.put("InsName", request.insName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
@@ -18277,9 +18322,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   RDS MySQL
       * *   RDS PostgreSQL
       * ### [](#)References
-      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-      * *   [Enable and configure the dedicated proxy feature](~~197456~~)
-      * *   [Create a database proxy terminal for an ApsaraDB RDS for PostgreSQL instance](~~418273~~)
+      * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for MySQL instance](~~2621331~~)
+      * *   [Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for PostgreSQL instance](~~418273~~)
       *
       * @param request ModifyDBProxyEndpointRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -18374,9 +18419,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   RDS MySQL
       * *   RDS PostgreSQL
       * ### [](#)References
-      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-      * *   [Enable and configure the dedicated proxy feature](~~197456~~)
-      * *   [Create a database proxy terminal for an ApsaraDB RDS for PostgreSQL instance](~~418273~~)
+      * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for MySQL instance](~~2621331~~)
+      * *   [Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for PostgreSQL instance](~~418273~~)
       *
       * @param request ModifyDBProxyEndpointRequest
       * @return ModifyDBProxyEndpointResponse
@@ -20195,6 +20240,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ipWhitelist)) {
             query.put("IpWhitelist", request.ipWhitelist);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {

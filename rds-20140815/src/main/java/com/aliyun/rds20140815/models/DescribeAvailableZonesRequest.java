@@ -100,7 +100,7 @@ public class DescribeAvailableZonesRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -109,7 +109,7 @@ public class DescribeAvailableZonesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The zone ID of the instance. If the instance spans more than one zone, the value of this parameter contains an `MAZ` part, such as `cn-hangzhou-MAZ6(b,f)` and `cn-hangzhou-MAZ5(b,e,f)`. You can call the [DescribeRegions](~~26243~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID. If the instance spans more than one zone, the value of this parameter contains an `MAZ` part, such as `cn-hangzhou-MAZ6(b,f)` and `cn-hangzhou-MAZ5(b,e,f)`. You can call the DescribeRegions operation to query the most recent zone list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

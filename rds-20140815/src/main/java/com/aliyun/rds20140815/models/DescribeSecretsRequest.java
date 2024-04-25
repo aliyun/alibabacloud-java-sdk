@@ -62,7 +62,7 @@ public class DescribeSecretsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group where the instance is located.</p>
+     * <p>The ID of the resource group to which the instance belongs.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

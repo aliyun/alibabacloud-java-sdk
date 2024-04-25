@@ -10,6 +10,9 @@ public class AttachWhitelistTemplateToInstanceRequest extends TeaModel {
     @NameInMap("InsName")
     public String insName;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     /**
      * <p>The ID of the resource group. For more information about resource groups, see Resource groups.</p>
      */
@@ -39,6 +42,14 @@ public class AttachWhitelistTemplateToInstanceRequest extends TeaModel {
     }
     public String getInsName() {
         return this.insName;
+    }
+
+    public AttachWhitelistTemplateToInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public AttachWhitelistTemplateToInstanceRequest setResourceGroupId(String resourceGroupId) {

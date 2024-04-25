@@ -15,6 +15,9 @@ public class ModifyWhitelistTemplateRequest extends TeaModel {
     @NameInMap("IpWhitelist")
     public String ipWhitelist;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     /**
      * <p>The resource group ID. For more information about resource groups, see related documentation.</p>
      */
@@ -50,6 +53,14 @@ public class ModifyWhitelistTemplateRequest extends TeaModel {
     }
     public String getIpWhitelist() {
         return this.ipWhitelist;
+    }
+
+    public ModifyWhitelistTemplateRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyWhitelistTemplateRequest setResourceGroupId(String resourceGroupId) {
