@@ -881,6 +881,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SessionToken", request.sessionToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            query.put("Uuid", request.uuid);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1320,7 +1324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the client.
+      * The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.
       *
       * @param request StartDesktopsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1361,6 +1365,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SessionId", request.sessionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            query.put("Uuid", request.uuid);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1379,7 +1387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the client.
+      * The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.
       *
       * @param request StartDesktopsRequest
       * @return StartDesktopsResponse
@@ -1447,7 +1455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The cloud desktops that you want to stop by calling this operation must be in the Running state. If the call is successful, the cloud desktops enter the Stopped state.
+      * The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.
       *
       * @param request StopDesktopsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1510,7 +1518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The cloud desktops that you want to stop by calling this operation must be in the Running state. If the call is successful, the cloud desktops enter the Stopped state.
+      * The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.
       *
       * @param request StopDesktopsRequest
       * @return StopDesktopsResponse
