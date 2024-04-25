@@ -10,6 +10,12 @@ public class CreateReverseDtsJobRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("ShardPassword")
+    public String shardPassword;
+
+    @NameInMap("ShardUsername")
+    public String shardUsername;
+
     public static CreateReverseDtsJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateReverseDtsJobRequest self = new CreateReverseDtsJobRequest();
         return TeaModel.build(map, self);
@@ -29,6 +35,22 @@ public class CreateReverseDtsJobRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateReverseDtsJobRequest setShardPassword(String shardPassword) {
+        this.shardPassword = shardPassword;
+        return this;
+    }
+    public String getShardPassword() {
+        return this.shardPassword;
+    }
+
+    public CreateReverseDtsJobRequest setShardUsername(String shardUsername) {
+        this.shardUsername = shardUsername;
+        return this;
+    }
+    public String getShardUsername() {
+        return this.shardUsername;
     }
 
 }
