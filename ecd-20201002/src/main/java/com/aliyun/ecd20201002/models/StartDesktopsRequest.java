@@ -5,46 +5,55 @@ import com.aliyun.tea.*;
 
 public class StartDesktopsRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the Alibaba Cloud Workspace client (hereinafter referred to as WUYING client). The system generates a unique ID for each client.</p>
      */
     @NameInMap("ClientId")
     public String clientId;
 
     /**
-     * <p>The OS used by the client.</p>
+     * <p>The operating system (OS) of the device that run the client.</p>
      */
     @NameInMap("ClientOS")
     public String clientOS;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>StartDesktops</p>
+     * <p>The client version. If you use a WUYING client, you can click **About** on the client logon page to view the version of the client.</p>
      */
     @NameInMap("ClientVersion")
     public String clientVersion;
 
+    /**
+     * <p>The IDs of the cloud computers. You can specify the IDs of 1 to 20 cloud computers.</p>
+     */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The ID of cloud desktop N. You can specify one or more IDs of cloud desktops. Valid values of N: 1 to 20.</p>
+     * <p>The logon token.</p>
      */
     @NameInMap("LoginToken")
     public String loginToken;
 
     /**
-     * <p>The logon credential.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to StartDesktops.</p>
+     * <p>The session ID.</p>
      */
     @NameInMap("SessionId")
     public String sessionId;
+
+    @NameInMap("Uuid")
+    public String uuid;
 
     public static StartDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         StartDesktopsRequest self = new StartDesktopsRequest();
@@ -113,6 +122,14 @@ public class StartDesktopsRequest extends TeaModel {
     }
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    public StartDesktopsRequest setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

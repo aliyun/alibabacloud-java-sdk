@@ -77,6 +77,9 @@ public class GetLoginTokenResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("RiskVerifyInfo")
+    public GetLoginTokenResponseBodyRiskVerifyInfo riskVerifyInfo;
+
     /**
      * <p>The key that is generated when you bind the virtual MFA device. This parameter is required when the CurrentStage parameter is set to `MFABind`.</p>
      * <br>
@@ -198,6 +201,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetLoginTokenResponseBody setRiskVerifyInfo(GetLoginTokenResponseBodyRiskVerifyInfo riskVerifyInfo) {
+        this.riskVerifyInfo = riskVerifyInfo;
+        return this;
+    }
+    public GetLoginTokenResponseBodyRiskVerifyInfo getRiskVerifyInfo() {
+        return this.riskVerifyInfo;
+    }
+
     public GetLoginTokenResponseBody setSecret(String secret) {
         this.secret = secret;
         return this;
@@ -228,6 +239,58 @@ public class GetLoginTokenResponseBody extends TeaModel {
     }
     public String getWindowDisplayMode() {
         return this.windowDisplayMode;
+    }
+
+    public static class GetLoginTokenResponseBodyRiskVerifyInfo extends TeaModel {
+        @NameInMap("Email")
+        public String email;
+
+        @NameInMap("LastLockDuration")
+        public Long lastLockDuration;
+
+        @NameInMap("Locked")
+        public String locked;
+
+        @NameInMap("Phone")
+        public String phone;
+
+        public static GetLoginTokenResponseBodyRiskVerifyInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetLoginTokenResponseBodyRiskVerifyInfo self = new GetLoginTokenResponseBodyRiskVerifyInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetLoginTokenResponseBodyRiskVerifyInfo setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
+        }
+
+        public GetLoginTokenResponseBodyRiskVerifyInfo setLastLockDuration(Long lastLockDuration) {
+            this.lastLockDuration = lastLockDuration;
+            return this;
+        }
+        public Long getLastLockDuration() {
+            return this.lastLockDuration;
+        }
+
+        public GetLoginTokenResponseBodyRiskVerifyInfo setLocked(String locked) {
+            this.locked = locked;
+            return this;
+        }
+        public String getLocked() {
+            return this.locked;
+        }
+
+        public GetLoginTokenResponseBodyRiskVerifyInfo setPhone(String phone) {
+            this.phone = phone;
+            return this;
+        }
+        public String getPhone() {
+            return this.phone;
+        }
+
     }
 
 }

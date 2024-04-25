@@ -11,7 +11,7 @@ public class RebootDesktopsRequest extends TeaModel {
     public String clientId;
 
     /**
-     * <p>The client OS.</p>
+     * <p>The operating system (OS) of the device that runs the Alibaba Cloud Workspace client (hereinafter referred to as WUYING client).</p>
      */
     @NameInMap("ClientOS")
     public String clientOS;
@@ -23,13 +23,13 @@ public class RebootDesktopsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The client version.</p>
+     * <p>The client version. If you use a WUYING client, you can view the client version in the **About** dialog box on the client logon page.</p>
      */
     @NameInMap("ClientVersion")
     public String clientVersion;
 
     /**
-     * <p>The cloud desktop IDs. You can specify 1 to 20 IDs.</p>
+     * <p>The IDs of the cloud computers. You can specify the IDs of 1 to 20 cloud computers.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
@@ -41,7 +41,7 @@ public class RebootDesktopsRequest extends TeaModel {
     public String loginToken;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -57,6 +57,9 @@ public class RebootDesktopsRequest extends TeaModel {
      */
     @NameInMap("SessionToken")
     public String sessionToken;
+
+    @NameInMap("Uuid")
+    public String uuid;
 
     public static RebootDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         RebootDesktopsRequest self = new RebootDesktopsRequest();
@@ -133,6 +136,14 @@ public class RebootDesktopsRequest extends TeaModel {
     }
     public String getSessionToken() {
         return this.sessionToken;
+    }
+
+    public RebootDesktopsRequest setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
     }
 
 }
