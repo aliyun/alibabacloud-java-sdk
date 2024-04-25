@@ -4,6 +4,12 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationResponseBody extends TeaModel {
+    @NameInMap("appTemplateDisplayName")
+    public String appTemplateDisplayName;
+
+    @NameInMap("appTemplateName")
+    public String appTemplateName;
+
     @NameInMap("creatorAccountId")
     public String creatorAccountId;
 
@@ -22,6 +28,22 @@ public class GetApplicationResponseBody extends TeaModel {
     public static GetApplicationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetApplicationResponseBody self = new GetApplicationResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetApplicationResponseBody setAppTemplateDisplayName(String appTemplateDisplayName) {
+        this.appTemplateDisplayName = appTemplateDisplayName;
+        return this;
+    }
+    public String getAppTemplateDisplayName() {
+        return this.appTemplateDisplayName;
+    }
+
+    public GetApplicationResponseBody setAppTemplateName(String appTemplateName) {
+        this.appTemplateName = appTemplateName;
+        return this;
+    }
+    public String getAppTemplateName() {
+        return this.appTemplateName;
     }
 
     public GetApplicationResponseBody setCreatorAccountId(String creatorAccountId) {
