@@ -13,6 +13,12 @@ public class ListUsersByProdRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    @NameInMap("RoleType")
+    public Integer roleType;
+
     /**
      * <p>The code of the cloud service.</p>
      */
@@ -30,6 +36,22 @@ public class ListUsersByProdRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListUsersByProdRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public ListUsersByProdRequest setRoleType(Integer roleType) {
+        this.roleType = roleType;
+        return this;
+    }
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
     public ListUsersByProdRequest setSourceProdCode(String sourceProdCode) {
