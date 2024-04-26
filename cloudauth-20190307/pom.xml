@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cloudauth20190307</artifactId>
-  <version>2.5.0</version>
+  <version>2.6.0</version>
   <packaging>jar</packaging>
   <name>cloudauth20190307</name>
   <description>Alibaba Cloud ID Verification (20190307) SDK for Java
