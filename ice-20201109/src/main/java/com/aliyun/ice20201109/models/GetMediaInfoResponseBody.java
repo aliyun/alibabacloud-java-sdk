@@ -31,6 +31,88 @@ public class GetMediaInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJobResults extends TeaModel {
+        @NameInMap("Data")
+        public String data;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJobResults build(java.util.Map<String, ?> map) throws Exception {
+            GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJobResults self = new GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJobResults();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJobResults setData(String data) {
+            this.data = data;
+            return this;
+        }
+        public String getData() {
+            return this.data;
+        }
+
+        public GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJobResults setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJob extends TeaModel {
+        @NameInMap("AiJobId")
+        public String aiJobId;
+
+        @NameInMap("ResultUrl")
+        public String resultUrl;
+
+        @NameInMap("Results")
+        public java.util.List<GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJobResults> results;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJob build(java.util.Map<String, ?> map) throws Exception {
+            GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJob self = new GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJob();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJob setAiJobId(String aiJobId) {
+            this.aiJobId = aiJobId;
+            return this;
+        }
+        public String getAiJobId() {
+            return this.aiJobId;
+        }
+
+        public GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJob setResultUrl(String resultUrl) {
+            this.resultUrl = resultUrl;
+            return this;
+        }
+        public String getResultUrl() {
+            return this.resultUrl;
+        }
+
+        public GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJob setResults(java.util.List<GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJobResults> results) {
+            this.results = results;
+            return this;
+        }
+        public java.util.List<GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJobResults> getResults() {
+            return this.results;
+        }
+
+        public GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJob setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class GetMediaInfoResponseBodyMediaInfoAiRoughData extends TeaModel {
         @NameInMap("AiCategory")
         public String aiCategory;
@@ -43,6 +125,9 @@ public class GetMediaInfoResponseBody extends TeaModel {
 
         @NameInMap("SaveType")
         public String saveType;
+
+        @NameInMap("StandardSmartTagJob")
+        public GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJob standardSmartTagJob;
 
         @NameInMap("Status")
         public String status;
@@ -82,6 +167,14 @@ public class GetMediaInfoResponseBody extends TeaModel {
         }
         public String getSaveType() {
             return this.saveType;
+        }
+
+        public GetMediaInfoResponseBodyMediaInfoAiRoughData setStandardSmartTagJob(GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJob standardSmartTagJob) {
+            this.standardSmartTagJob = standardSmartTagJob;
+            return this;
+        }
+        public GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJob getStandardSmartTagJob() {
+            return this.standardSmartTagJob;
         }
 
         public GetMediaInfoResponseBodyMediaInfoAiRoughData setStatus(String status) {

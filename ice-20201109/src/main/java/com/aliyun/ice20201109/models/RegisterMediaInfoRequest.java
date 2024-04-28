@@ -37,6 +37,9 @@ public class RegisterMediaInfoRequest extends TeaModel {
     @NameInMap("RegisterConfig")
     public String registerConfig;
 
+    @NameInMap("SmartTagTemplateId")
+    public String smartTagTemplateId;
+
     @NameInMap("Title")
     public String title;
 
@@ -137,6 +140,14 @@ public class RegisterMediaInfoRequest extends TeaModel {
     }
     public String getRegisterConfig() {
         return this.registerConfig;
+    }
+
+    public RegisterMediaInfoRequest setSmartTagTemplateId(String smartTagTemplateId) {
+        this.smartTagTemplateId = smartTagTemplateId;
+        return this;
+    }
+    public String getSmartTagTemplateId() {
+        return this.smartTagTemplateId;
     }
 
     public RegisterMediaInfoRequest setTitle(String title) {

@@ -106,6 +106,12 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
     }
 
     public static class GetBatchMediaProducingJobResponseBodyEditingBatchJob extends TeaModel {
+        @NameInMap("CompleteTime")
+        public String completeTime;
+
+        @NameInMap("CreateTime")
+        public String createTime;
+
         @NameInMap("EditingConfig")
         public String editingConfig;
 
@@ -117,6 +123,12 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
 
         @NameInMap("JobId")
         public String jobId;
+
+        @NameInMap("JobType")
+        public String jobType;
+
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
 
         @NameInMap("OutputConfig")
         public String outputConfig;
@@ -133,6 +145,22 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public static GetBatchMediaProducingJobResponseBodyEditingBatchJob build(java.util.Map<String, ?> map) throws Exception {
             GetBatchMediaProducingJobResponseBodyEditingBatchJob self = new GetBatchMediaProducingJobResponseBodyEditingBatchJob();
             return TeaModel.build(map, self);
+        }
+
+        public GetBatchMediaProducingJobResponseBodyEditingBatchJob setCompleteTime(String completeTime) {
+            this.completeTime = completeTime;
+            return this;
+        }
+        public String getCompleteTime() {
+            return this.completeTime;
+        }
+
+        public GetBatchMediaProducingJobResponseBodyEditingBatchJob setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public GetBatchMediaProducingJobResponseBodyEditingBatchJob setEditingConfig(String editingConfig) {
@@ -165,6 +193,22 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         }
         public String getJobId() {
             return this.jobId;
+        }
+
+        public GetBatchMediaProducingJobResponseBodyEditingBatchJob setJobType(String jobType) {
+            this.jobType = jobType;
+            return this;
+        }
+        public String getJobType() {
+            return this.jobType;
+        }
+
+        public GetBatchMediaProducingJobResponseBodyEditingBatchJob setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public String getModifiedTime() {
+            return this.modifiedTime;
         }
 
         public GetBatchMediaProducingJobResponseBodyEditingBatchJob setOutputConfig(String outputConfig) {
