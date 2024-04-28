@@ -4,15 +4,30 @@ package com.aliyun.ddosdiversion20230701.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * <br>
+     * <p>*   **200**: The request was successful.</p>
+     * <p>*   Other codes: The request failed.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
-    public java.util.List<ListInstanceResponseBodyData> data;
+    public ListInstanceResponseBodyData data;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -29,11 +44,11 @@ public class ListInstanceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListInstanceResponseBody setData(java.util.List<ListInstanceResponseBodyData> data) {
+    public ListInstanceResponseBody setData(ListInstanceResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<ListInstanceResponseBodyData> getData() {
+    public ListInstanceResponseBodyData getData() {
         return this.data;
     }
 

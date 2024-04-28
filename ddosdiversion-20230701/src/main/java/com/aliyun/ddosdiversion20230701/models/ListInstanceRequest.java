@@ -4,18 +4,38 @@ package com.aliyun.ddosdiversion20230701.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceRequest extends TeaModel {
+    /**
+     * <p>The name of the instance.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The number of entries per page. Default value: 100.</p>
+     */
     @NameInMap("Num")
     public Long num;
 
+    /**
+     * <p>The page number. Default value: 1</p>
+     */
     @NameInMap("Page")
     public Long page;
 
+    /**
+     * <p>The ID of the anti-DDoS diversion instance.</p>
+     */
     @NameInMap("SaleId")
     public String saleId;
 
+    /**
+     * <p>The status of the instance. Valid values:</p>
+     * <br>
+     * <p>*   normal</p>
+     * <p>*   expired</p>
+     * <p>*   deleting</p>
+     * <p>*   stopped</p>
+     */
     @NameInMap("Status")
     public String status;
 

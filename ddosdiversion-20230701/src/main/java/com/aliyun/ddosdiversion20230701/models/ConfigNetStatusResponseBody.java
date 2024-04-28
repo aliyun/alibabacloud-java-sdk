@@ -4,12 +4,24 @@ package com.aliyun.ddosdiversion20230701.models;
 import com.aliyun.tea.*;
 
 public class ConfigNetStatusResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * <br>
+     * <p>*   **200**: The request was successful.</p>
+     * <p>*   Other codes: The request failed.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
