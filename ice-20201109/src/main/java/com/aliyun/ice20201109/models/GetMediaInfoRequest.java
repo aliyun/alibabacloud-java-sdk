@@ -13,6 +13,9 @@ public class GetMediaInfoRequest extends TeaModel {
     @NameInMap("OutputType")
     public String outputType;
 
+    @NameInMap("ReturnDetailedInfo")
+    public String returnDetailedInfo;
+
     public static GetMediaInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMediaInfoRequest self = new GetMediaInfoRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class GetMediaInfoRequest extends TeaModel {
     }
     public String getOutputType() {
         return this.outputType;
+    }
+
+    public GetMediaInfoRequest setReturnDetailedInfo(String returnDetailedInfo) {
+        this.returnDetailedInfo = returnDetailedInfo;
+        return this;
+    }
+    public String getReturnDetailedInfo() {
+        return this.returnDetailedInfo;
     }
 
 }
