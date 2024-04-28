@@ -4,15 +4,30 @@ package com.aliyun.ddosdiversion20230701.models;
 import com.aliyun.tea.*;
 
 public class QueryNetListResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * <br>
+     * <p>*   **200**: The request was successful.</p>
+     * <p>*   Other codes: The request failed.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The CIDR blocks.</p>
+     */
     @NameInMap("Data")
-    public java.util.List<QueryNetListResponseBodyData> data;
+    public QueryNetListResponseBodyData data;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -29,11 +44,11 @@ public class QueryNetListResponseBody extends TeaModel {
         return this.code;
     }
 
-    public QueryNetListResponseBody setData(java.util.List<QueryNetListResponseBodyData> data) {
+    public QueryNetListResponseBody setData(QueryNetListResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<QueryNetListResponseBodyData> getData() {
+    public QueryNetListResponseBodyData getData() {
         return this.data;
     }
 
@@ -54,15 +69,9 @@ public class QueryNetListResponseBody extends TeaModel {
     }
 
     public static class QueryNetListResponseBodyDataNetsDDoSDefenseCleanTh extends TeaModel {
-        /**
-         * <p>Mbps。</p>
-         */
         @NameInMap("Mbps")
         public Integer mbps;
 
-        /**
-         * <p>Pps。</p>
-         */
         @NameInMap("Pps")
         public Integer pps;
 
@@ -224,10 +233,10 @@ public class QueryNetListResponseBody extends TeaModel {
         public String net;
 
         @NameInMap("NetExtend")
-        public Long netExtend;
+        public String netExtend;
 
         @NameInMap("NetMain")
-        public String netMain;
+        public Long netMain;
 
         @NameInMap("NetType")
         public String netType;
@@ -310,19 +319,19 @@ public class QueryNetListResponseBody extends TeaModel {
             return this.net;
         }
 
-        public QueryNetListResponseBodyDataNets setNetExtend(Long netExtend) {
+        public QueryNetListResponseBodyDataNets setNetExtend(String netExtend) {
             this.netExtend = netExtend;
             return this;
         }
-        public Long getNetExtend() {
+        public String getNetExtend() {
             return this.netExtend;
         }
 
-        public QueryNetListResponseBodyDataNets setNetMain(String netMain) {
+        public QueryNetListResponseBodyDataNets setNetMain(Long netMain) {
             this.netMain = netMain;
             return this;
         }
-        public String getNetMain() {
+        public Long getNetMain() {
             return this.netMain;
         }
 
