@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeFotaPendingDesktopsRequest extends TeaModel {
     /**
-     * <p>The cloud computer ID.</p>
+     * <p>The ID of the cloud computer.</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
-     * <p>The cloud computer name.</p>
+     * <p>The name of the cloud computer.</p>
      */
     @NameInMap("DesktopName")
     public String desktopName;
@@ -26,25 +26,25 @@ public class DescribeFotaPendingDesktopsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The office network ID. You can call the [DescribeOfficeSites](~~216071~~) operation to obtain the office network ID.</p>
+     * <p>The ID of the office network. You can call the [DescribeOfficeSites](~~216071~~) operation to obtain the value of this parameter.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the image update task. You can call the DescribeFotaTasks operation to obtain the task ID.</p>
+     * <p>The ID of the image update task. You can call the [DescribeFotaTasks](~~437001~~) operation to obtain the value of this parameter.</p>
      */
     @NameInMap("TaskUid")
     public String taskUid;

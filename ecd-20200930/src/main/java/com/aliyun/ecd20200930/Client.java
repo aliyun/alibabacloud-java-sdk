@@ -2147,6 +2147,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Hostname", request.hostname);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.monthDesktopSetting)) {
+            query.put("MonthDesktopSetting", request.monthDesktopSetting);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
             query.put("OfficeSiteId", request.officeSiteId);
         }
@@ -10345,6 +10349,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
