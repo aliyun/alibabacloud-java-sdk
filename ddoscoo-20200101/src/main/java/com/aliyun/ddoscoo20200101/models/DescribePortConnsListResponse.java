@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribePortConnsListResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public DescribePortConnsListResponseBody body;
 
     public static DescribePortConnsListResponse build(java.util.Map<String, ?> map) throws Exception {
