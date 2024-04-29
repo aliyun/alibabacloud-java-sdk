@@ -11,7 +11,7 @@ public class CreateDownloadResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The information about the download task.</p>
      */
     @NameInMap("Data")
     public CreateDownloadResponseBodyData data;
@@ -185,7 +185,7 @@ public class CreateDownloadResponseBody extends TeaModel {
         /**
          * <p>The destination path to which the backup set is downloaded.</p>
          * <br>
-         * <p>> This parameter is returned if the TargetType parameter is set to OSS.</p>
+         * <p>>  This parameter is returned if the value of **TargetType is OSS**.</p>
          */
         @NameInMap("TargetPath")
         public String targetPath;

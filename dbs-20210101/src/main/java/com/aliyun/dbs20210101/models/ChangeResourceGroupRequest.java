@@ -16,6 +16,9 @@ public class ChangeResourceGroupRequest extends TeaModel {
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionCode")
     public String regionCode;
 
