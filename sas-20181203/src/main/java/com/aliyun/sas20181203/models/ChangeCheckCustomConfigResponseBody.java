@@ -10,6 +10,9 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
     @NameInMap("IllegalCustomConfigs")
     public java.util.List<ChangeCheckCustomConfigResponseBodyIllegalCustomConfigs> illegalCustomConfigs;
 
+    @NameInMap("IllegalRepairConfigs")
+    public java.util.List<ChangeCheckCustomConfigResponseBodyIllegalRepairConfigs> illegalRepairConfigs;
+
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
@@ -27,6 +30,14 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
     }
     public java.util.List<ChangeCheckCustomConfigResponseBodyIllegalCustomConfigs> getIllegalCustomConfigs() {
         return this.illegalCustomConfigs;
+    }
+
+    public ChangeCheckCustomConfigResponseBody setIllegalRepairConfigs(java.util.List<ChangeCheckCustomConfigResponseBodyIllegalRepairConfigs> illegalRepairConfigs) {
+        this.illegalRepairConfigs = illegalRepairConfigs;
+        return this;
+    }
+    public java.util.List<ChangeCheckCustomConfigResponseBodyIllegalRepairConfigs> getIllegalRepairConfigs() {
+        return this.illegalRepairConfigs;
     }
 
     public ChangeCheckCustomConfigResponseBody setRequestId(String requestId) {
@@ -50,6 +61,25 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
         }
 
         public ChangeCheckCustomConfigResponseBodyIllegalCustomConfigs setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class ChangeCheckCustomConfigResponseBodyIllegalRepairConfigs extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        public static ChangeCheckCustomConfigResponseBodyIllegalRepairConfigs build(java.util.Map<String, ?> map) throws Exception {
+            ChangeCheckCustomConfigResponseBodyIllegalRepairConfigs self = new ChangeCheckCustomConfigResponseBodyIllegalRepairConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public ChangeCheckCustomConfigResponseBodyIllegalRepairConfigs setName(String name) {
             this.name = name;
             return this;
         }

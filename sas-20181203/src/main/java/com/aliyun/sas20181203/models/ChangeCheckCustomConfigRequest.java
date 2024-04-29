@@ -27,6 +27,9 @@ public class ChangeCheckCustomConfigRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RepairConfigs")
+    public java.util.List<ChangeCheckCustomConfigRequestRepairConfigs> repairConfigs;
+
     public static ChangeCheckCustomConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeCheckCustomConfigRequest self = new ChangeCheckCustomConfigRequest();
         return TeaModel.build(map, self);
@@ -54,6 +57,14 @@ public class ChangeCheckCustomConfigRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ChangeCheckCustomConfigRequest setRepairConfigs(java.util.List<ChangeCheckCustomConfigRequestRepairConfigs> repairConfigs) {
+        this.repairConfigs = repairConfigs;
+        return this;
+    }
+    public java.util.List<ChangeCheckCustomConfigRequestRepairConfigs> getRepairConfigs() {
+        return this.repairConfigs;
     }
 
     public static class ChangeCheckCustomConfigRequestCustomConfigs extends TeaModel {
@@ -97,6 +108,58 @@ public class ChangeCheckCustomConfigRequest extends TeaModel {
         }
 
         public ChangeCheckCustomConfigRequestCustomConfigs setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ChangeCheckCustomConfigRequestRepairConfigs extends TeaModel {
+        @NameInMap("FlowId")
+        public String flowId;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Operation")
+        public String operation;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ChangeCheckCustomConfigRequestRepairConfigs build(java.util.Map<String, ?> map) throws Exception {
+            ChangeCheckCustomConfigRequestRepairConfigs self = new ChangeCheckCustomConfigRequestRepairConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public ChangeCheckCustomConfigRequestRepairConfigs setFlowId(String flowId) {
+            this.flowId = flowId;
+            return this;
+        }
+        public String getFlowId() {
+            return this.flowId;
+        }
+
+        public ChangeCheckCustomConfigRequestRepairConfigs setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ChangeCheckCustomConfigRequestRepairConfigs setOperation(String operation) {
+            this.operation = operation;
+            return this;
+        }
+        public String getOperation() {
+            return this.operation;
+        }
+
+        public ChangeCheckCustomConfigRequestRepairConfigs setValue(String value) {
             this.value = value;
             return this;
         }

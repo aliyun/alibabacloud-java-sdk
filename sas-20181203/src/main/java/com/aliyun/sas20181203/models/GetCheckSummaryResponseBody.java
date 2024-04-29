@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCheckSummaryResponseBody extends TeaModel {
     /**
-     * <p>The statistics of the check items.</p>
+     * <p>The statistics about the number of check items.</p>
      */
     @NameInMap("OverallItemStatistic")
     public GetCheckSummaryResponseBodyOverallItemStatistic overallItemStatistic;
@@ -623,7 +623,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         public Integer notPassMediumCount;
 
         /**
-         * <p>The number of check items that passed the check.</p>
+         * <p>The number of check items that pass the check.</p>
          */
         @NameInMap("PassCount")
         public Integer passCount;
@@ -771,9 +771,9 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         /**
          * <p>The type of the check item. Valid values:</p>
          * <br>
-         * <p>*   **COMPLIANCE**: compliance</p>
-         * <p>*   **RISK**: security risk</p>
-         * <p>*   **IDENTITY_PERMISSION**: identity and permission</p>
+         * <p>*   **COMPLIANCE**</p>
+         * <p>*   **RISK**</p>
+         * <p>*   **IDENTITY_PERMISSION**</p>
          */
         @NameInMap("Type")
         public String type;

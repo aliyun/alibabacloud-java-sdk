@@ -79,6 +79,88 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListCheckInstanceResultResponseBodyBasicDataInstanceInfoConfig extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("ShowName")
+        public String showName;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListCheckInstanceResultResponseBodyBasicDataInstanceInfoConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListCheckInstanceResultResponseBodyBasicDataInstanceInfoConfig self = new ListCheckInstanceResultResponseBodyBasicDataInstanceInfoConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCheckInstanceResultResponseBodyBasicDataInstanceInfoConfig setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListCheckInstanceResultResponseBodyBasicDataInstanceInfoConfig setShowName(String showName) {
+            this.showName = showName;
+            return this;
+        }
+        public String getShowName() {
+            return this.showName;
+        }
+
+        public ListCheckInstanceResultResponseBodyBasicDataInstanceInfoConfig setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListCheckInstanceResultResponseBodyBasicDataInstanceInfo extends TeaModel {
+        @NameInMap("Config")
+        public java.util.List<ListCheckInstanceResultResponseBodyBasicDataInstanceInfoConfig> config;
+
+        @NameInMap("FirstUpdateTime")
+        public Long firstUpdateTime;
+
+        @NameInMap("LastUpdateTime")
+        public Long lastUpdateTime;
+
+        public static ListCheckInstanceResultResponseBodyBasicDataInstanceInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListCheckInstanceResultResponseBodyBasicDataInstanceInfo self = new ListCheckInstanceResultResponseBodyBasicDataInstanceInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCheckInstanceResultResponseBodyBasicDataInstanceInfo setConfig(java.util.List<ListCheckInstanceResultResponseBodyBasicDataInstanceInfoConfig> config) {
+            this.config = config;
+            return this;
+        }
+        public java.util.List<ListCheckInstanceResultResponseBodyBasicDataInstanceInfoConfig> getConfig() {
+            return this.config;
+        }
+
+        public ListCheckInstanceResultResponseBodyBasicDataInstanceInfo setFirstUpdateTime(Long firstUpdateTime) {
+            this.firstUpdateTime = firstUpdateTime;
+            return this;
+        }
+        public Long getFirstUpdateTime() {
+            return this.firstUpdateTime;
+        }
+
+        public ListCheckInstanceResultResponseBodyBasicDataInstanceInfo setLastUpdateTime(Long lastUpdateTime) {
+            this.lastUpdateTime = lastUpdateTime;
+            return this;
+        }
+        public Long getLastUpdateTime() {
+            return this.lastUpdateTime;
+        }
+
+    }
+
     public static class ListCheckInstanceResultResponseBodyBasicData extends TeaModel {
         /**
          * <p>The check result ID of the instance.</p>
@@ -91,6 +173,9 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
          */
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("InstanceInfo")
+        public ListCheckInstanceResultResponseBodyBasicDataInstanceInfo instanceInfo;
 
         /**
          * <p>The instance name.</p>
@@ -141,6 +226,14 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListCheckInstanceResultResponseBodyBasicData setInstanceInfo(ListCheckInstanceResultResponseBodyBasicDataInstanceInfo instanceInfo) {
+            this.instanceInfo = instanceInfo;
+            return this;
+        }
+        public ListCheckInstanceResultResponseBodyBasicDataInstanceInfo getInstanceInfo() {
+            return this.instanceInfo;
         }
 
         public ListCheckInstanceResultResponseBodyBasicData setInstanceName(String instanceName) {
