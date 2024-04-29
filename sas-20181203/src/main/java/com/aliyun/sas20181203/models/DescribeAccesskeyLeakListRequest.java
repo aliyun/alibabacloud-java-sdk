@@ -25,6 +25,9 @@ public class DescribeAccesskeyLeakListRequest extends TeaModel {
     @NameInMap("Query")
     public String query;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The beginning of the time range to query. You can query all AccessKey pair leaks that are detected later than this time point. The value of this parameter is a UNIX timestamp. Unit: milliseconds.</p>
      */
@@ -67,6 +70,14 @@ public class DescribeAccesskeyLeakListRequest extends TeaModel {
     }
     public String getQuery() {
         return this.query;
+    }
+
+    public DescribeAccesskeyLeakListRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeAccesskeyLeakListRequest setStartTs(Long startTs) {

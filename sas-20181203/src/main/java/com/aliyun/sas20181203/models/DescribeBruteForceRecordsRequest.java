@@ -16,11 +16,17 @@ public class DescribeBruteForceRecordsRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     /**
      * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page. We recommend that you do not leave this parameter empty.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("Remark")
+    public String remark;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
@@ -56,12 +62,28 @@ public class DescribeBruteForceRecordsRequest extends TeaModel {
         return this.currentPage;
     }
 
+    public DescribeBruteForceRecordsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public DescribeBruteForceRecordsRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeBruteForceRecordsRequest setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
     }
 
     public DescribeBruteForceRecordsRequest setResourceOwnerId(Long resourceOwnerId) {

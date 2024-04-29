@@ -10,6 +10,9 @@ public class DescribeAccessKeyLeakDetailRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     public static DescribeAccessKeyLeakDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccessKeyLeakDetailRequest self = new DescribeAccessKeyLeakDetailRequest();
         return TeaModel.build(map, self);
@@ -21,6 +24,14 @@ public class DescribeAccessKeyLeakDetailRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public DescribeAccessKeyLeakDetailRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
 }

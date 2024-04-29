@@ -22,6 +22,15 @@ public class GetCheckDetailResponseBody extends TeaModel {
     @NameInMap("Description")
     public GetCheckDetailResponseBodyDescription description;
 
+    @NameInMap("RepairReset")
+    public String repairReset;
+
+    @NameInMap("RepairSetting")
+    public GetCheckDetailResponseBodyRepairSetting repairSetting;
+
+    @NameInMap("RepairSupportType")
+    public Integer repairSupportType;
+
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
@@ -61,6 +70,30 @@ public class GetCheckDetailResponseBody extends TeaModel {
     }
     public GetCheckDetailResponseBodyDescription getDescription() {
         return this.description;
+    }
+
+    public GetCheckDetailResponseBody setRepairReset(String repairReset) {
+        this.repairReset = repairReset;
+        return this;
+    }
+    public String getRepairReset() {
+        return this.repairReset;
+    }
+
+    public GetCheckDetailResponseBody setRepairSetting(GetCheckDetailResponseBodyRepairSetting repairSetting) {
+        this.repairSetting = repairSetting;
+        return this;
+    }
+    public GetCheckDetailResponseBodyRepairSetting getRepairSetting() {
+        return this.repairSetting;
+    }
+
+    public GetCheckDetailResponseBody setRepairSupportType(Integer repairSupportType) {
+        this.repairSupportType = repairSupportType;
+        return this;
+    }
+    public Integer getRepairSupportType() {
+        return this.repairSupportType;
     }
 
     public GetCheckDetailResponseBody setRequestId(String requestId) {
@@ -256,6 +289,195 @@ public class GetCheckDetailResponseBody extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+    }
+
+    public static class GetCheckDetailResponseBodyRepairSettingFlowStep extends TeaModel {
+        @NameInMap("ShowText")
+        public String showText;
+
+        @NameInMap("Step")
+        public String step;
+
+        public static GetCheckDetailResponseBodyRepairSettingFlowStep build(java.util.Map<String, ?> map) throws Exception {
+            GetCheckDetailResponseBodyRepairSettingFlowStep self = new GetCheckDetailResponseBodyRepairSettingFlowStep();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCheckDetailResponseBodyRepairSettingFlowStep setShowText(String showText) {
+            this.showText = showText;
+            return this;
+        }
+        public String getShowText() {
+            return this.showText;
+        }
+
+        public GetCheckDetailResponseBodyRepairSettingFlowStep setStep(String step) {
+            this.step = step;
+            return this;
+        }
+        public String getStep() {
+            return this.step;
+        }
+
+    }
+
+    public static class GetCheckDetailResponseBodyRepairSettingRepairConfigs extends TeaModel {
+        @NameInMap("CustomFlag")
+        public Boolean customFlag;
+
+        @NameInMap("DefaultValue")
+        public String defaultValue;
+
+        @NameInMap("ExclusiveName")
+        public java.util.List<String> exclusiveName;
+
+        @NameInMap("FlowId")
+        public String flowId;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("ShowName")
+        public String showName;
+
+        @NameInMap("TypeDefine")
+        public String typeDefine;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetCheckDetailResponseBodyRepairSettingRepairConfigs build(java.util.Map<String, ?> map) throws Exception {
+            GetCheckDetailResponseBodyRepairSettingRepairConfigs self = new GetCheckDetailResponseBodyRepairSettingRepairConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCheckDetailResponseBodyRepairSettingRepairConfigs setCustomFlag(Boolean customFlag) {
+            this.customFlag = customFlag;
+            return this;
+        }
+        public Boolean getCustomFlag() {
+            return this.customFlag;
+        }
+
+        public GetCheckDetailResponseBodyRepairSettingRepairConfigs setDefaultValue(String defaultValue) {
+            this.defaultValue = defaultValue;
+            return this;
+        }
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        public GetCheckDetailResponseBodyRepairSettingRepairConfigs setExclusiveName(java.util.List<String> exclusiveName) {
+            this.exclusiveName = exclusiveName;
+            return this;
+        }
+        public java.util.List<String> getExclusiveName() {
+            return this.exclusiveName;
+        }
+
+        public GetCheckDetailResponseBodyRepairSettingRepairConfigs setFlowId(String flowId) {
+            this.flowId = flowId;
+            return this;
+        }
+        public String getFlowId() {
+            return this.flowId;
+        }
+
+        public GetCheckDetailResponseBodyRepairSettingRepairConfigs setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetCheckDetailResponseBodyRepairSettingRepairConfigs setShowName(String showName) {
+            this.showName = showName;
+            return this;
+        }
+        public String getShowName() {
+            return this.showName;
+        }
+
+        public GetCheckDetailResponseBodyRepairSettingRepairConfigs setTypeDefine(String typeDefine) {
+            this.typeDefine = typeDefine;
+            return this;
+        }
+        public String getTypeDefine() {
+            return this.typeDefine;
+        }
+
+        public GetCheckDetailResponseBodyRepairSettingRepairConfigs setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetCheckDetailResponseBodyRepairSetting extends TeaModel {
+        @NameInMap("FlowStep")
+        public java.util.List<GetCheckDetailResponseBodyRepairSettingFlowStep> flowStep;
+
+        @NameInMap("RepairConfigs")
+        public java.util.List<GetCheckDetailResponseBodyRepairSettingRepairConfigs> repairConfigs;
+
+        @NameInMap("RepairReset")
+        public Boolean repairReset;
+
+        @NameInMap("RepairSupport")
+        public Boolean repairSupport;
+
+        @NameInMap("RepairSupportType")
+        public Integer repairSupportType;
+
+        public static GetCheckDetailResponseBodyRepairSetting build(java.util.Map<String, ?> map) throws Exception {
+            GetCheckDetailResponseBodyRepairSetting self = new GetCheckDetailResponseBodyRepairSetting();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCheckDetailResponseBodyRepairSetting setFlowStep(java.util.List<GetCheckDetailResponseBodyRepairSettingFlowStep> flowStep) {
+            this.flowStep = flowStep;
+            return this;
+        }
+        public java.util.List<GetCheckDetailResponseBodyRepairSettingFlowStep> getFlowStep() {
+            return this.flowStep;
+        }
+
+        public GetCheckDetailResponseBodyRepairSetting setRepairConfigs(java.util.List<GetCheckDetailResponseBodyRepairSettingRepairConfigs> repairConfigs) {
+            this.repairConfigs = repairConfigs;
+            return this;
+        }
+        public java.util.List<GetCheckDetailResponseBodyRepairSettingRepairConfigs> getRepairConfigs() {
+            return this.repairConfigs;
+        }
+
+        public GetCheckDetailResponseBodyRepairSetting setRepairReset(Boolean repairReset) {
+            this.repairReset = repairReset;
+            return this;
+        }
+        public Boolean getRepairReset() {
+            return this.repairReset;
+        }
+
+        public GetCheckDetailResponseBodyRepairSetting setRepairSupport(Boolean repairSupport) {
+            this.repairSupport = repairSupport;
+            return this;
+        }
+        public Boolean getRepairSupport() {
+            return this.repairSupport;
+        }
+
+        public GetCheckDetailResponseBodyRepairSetting setRepairSupportType(Integer repairSupportType) {
+            this.repairSupportType = repairSupportType;
+            return this;
+        }
+        public Integer getRepairSupportType() {
+            return this.repairSupportType;
         }
 
     }
