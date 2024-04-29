@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopGroupsResponseBody extends TeaModel {
     /**
-     * <p>Details of the desktop groups.</p>
+     * <p>The cloud computer pools.</p>
      */
     @NameInMap("DesktopGroups")
     public java.util.List<DescribeDesktopGroupsResponseBodyDesktopGroups> desktopGroups;
@@ -52,9 +52,81 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopGroupsResponseBodyDesktopGroupsCountPerStatus extends TeaModel {
+        /**
+         * <p>The total number of cloud computers.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The status of the cloud computer.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Stopped</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Starting</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Rebuilding</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Running</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Stopping</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Expired</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Deleted</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Pending</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -83,29 +155,33 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
 
     public static class DescribeDesktopGroupsResponseBodyDesktopGroups extends TeaModel {
         /**
-         * <p>The number of sessions that are allowed for each cloud desktop in the multi-session desktop group.</p>
+         * <p>The number of concurrent sessions that is allowed for each cloud computer pool in a multi-session cloud computer pool.</p>
          */
         @NameInMap("BindAmount")
         public Long bindAmount;
 
         /**
-         * <p>The number of purchased cloud desktops. Valid values: 0 to 200.</p>
+         * <p>*   This parameter has different meanings based on the billing method of the cloud computer pool. For a subscription pool, this parameter specifies the number of cloud computers to purchase in the pool. Valid values: 0 to 200.</p>
+         * <p>*   For a pay-as-you-go pool, this parameter specifies the minimum number of cloud computers to create in the pool. Valid values: 0 to `MaxDesktopsCount`. Default value: 1.</p>
          */
         @NameInMap("BuyDesktopsCount")
         public Integer buyDesktopsCount;
 
         /**
-         * <p>The remarks of the desktop group.</p>
+         * <p>The remarks.</p>
          */
         @NameInMap("Comments")
         public String comments;
 
         /**
-         * <p>The maximum period of time during which the session is connected. When the specified maximum period of time is reached, the session is automatically disconnected. Unit: milliseconds. This parameter is required only for cloud desktops of the same desktop group.</p>
+         * <p>The maximum period of time during which a session is connected. When the specified maximum period of time is reached, the session is automatically disconnected. Unit: milliseconds.</p>
          */
         @NameInMap("ConnectDuration")
         public Long connectDuration;
 
+        /**
+         * <p>The number of cloud computers in each state.</p>
+         */
         @NameInMap("CountPerStatus")
         public java.util.List<DescribeDesktopGroupsResponseBodyDesktopGroupsCountPerStatus> countPerStatus;
 
@@ -116,93 +192,67 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The time when the desktop group was created.</p>
+         * <p>The time when the cloud computer pool was created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to create the desktop group.</p>
+         * <p>The Alibaba Cloud account that creates the cloud computer pool.</p>
          */
         @NameInMap("Creator")
         public String creator;
 
         /**
-         * <p>The category of the data disk.</p>
+         * <p>The category of the user disk.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   cloud_efficiency</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    ultra disk</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   cloud_ssd</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    standard SSD</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   cloud_essd</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    ESSD</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   cloud_efficiency: ultra disk</p>
+         * <p>*   cloud_ssd: standard SSD</p>
+         * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
          */
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
 
         /**
-         * <p>The size of the data disk. Unit: GiB.</p>
+         * <p>The user disk capacity. Unit: GiB.</p>
          */
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
 
+        /**
+         * <p>The number of cloud computers that are created.</p>
+         */
         @NameInMap("DesktopCount")
         public Integer desktopCount;
 
         /**
-         * <p>The ID of the desktop group.</p>
+         * <p>The ID of the cloud computer pool.</p>
          */
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
         /**
-         * <p>The name of the desktop group.</p>
+         * <p>The name of the cloud computer pool.</p>
          */
         @NameInMap("DesktopGroupName")
         public String desktopGroupName;
 
+        /**
+         * <p>The cloud computer type. You can call the [DescribeDesktopTypes](~~188882~~) operation to query the IDs of the cloud computer types supported by WUYING Workspace.</p>
+         */
         @NameInMap("DesktopType")
         public String desktopType;
 
         /**
-         * <p>The number of end users that are authorized to use the desktop group.</p>
+         * <p>The number of users that are granted permissions to use the cloud computer pool.</p>
          */
         @NameInMap("EndUserCount")
         public Integer endUserCount;
 
         /**
-         * <p>The time when the subscription cloud desktop expires.</p>
+         * <p>The time when the subscription cloud computer pool expires.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -213,6 +263,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("GpuCount")
         public Float gpuCount;
 
+        /**
+         * <p>The version of the GPU driver.</p>
+         */
         @NameInMap("GpuDriverVersion")
         public String gpuDriverVersion;
 
@@ -223,7 +276,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String gpuSpec;
 
         /**
-         * <p>The maximum period of time during which the session is idle. When a session is idle, no inputs of keyboards or mouses are detected. When the specified maximum period of time is reached, the session is automatically disconnected. Unit: milliseconds. This parameter is required only for cloud desktops of the same desktop group.</p>
+         * <p>The period of time after which a session is closed. After an end user connects to a cloud computer, the session is established. If the system does not detect inputs from the keyboard or mouse within the specified period of time, the session is closed. Unit: milliseconds.</p>
          */
         @NameInMap("IdleDisconnectDuration")
         public Long idleDisconnectDuration;
@@ -235,45 +288,26 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The retention period of the cloud desktop after the end user is disconnected from the cloud desktop. Unit: milliseconds.</p>
+         * <p>The keep-alive duration of a session after the session is disconnected. Valid values: 180000 (3 minutes) to 345600000 (4 days). Unit: milliseconds. If you set this parameter to 0, the session is permanently retained after it is disconnected.</p>
+         * <br>
+         * <p>When a session is disconnected, take note of the following situations: If an end user does not resume the session within the specified duration, the session is closed and all unsaved data is cleared. If the end user resumes the session within the specified duration, the end user can continue to access data of the session.</p>
          */
         @NameInMap("KeepDuration")
         public Long keepDuration;
 
         /**
-         * <p>The load balancing policy of the multi-session desktop group.</p>
+         * <p>The load balancing policy of the multi-session cloud computer pool.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   0</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    depth first</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   1</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    breadth first</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   0: depth-first</p>
+         * <p>*   1: breadth-first</p>
          */
         @NameInMap("LoadPolicy")
         public Long loadPolicy;
 
         /**
-         * <p>The maximum number of cloud desktops that the desktop group can contain.</p>
+         * <p>The maximum number of cloud computers that can be housed in the pay-as-you-go cloud computer pool.</p>
          */
         @NameInMap("MaxDesktopsCount")
         public Integer maxDesktopsCount;
@@ -285,305 +319,174 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Long memory;
 
         /**
-         * <p>The minimum number of cloud desktops that the desktop group must contain.</p>
+         * <p>The maximum number of cloud computers that can be automatically created in the subscription cloud computer pool.</p>
          */
         @NameInMap("MinDesktopsCount")
         public Integer minDesktopsCount;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The name of the office network in which the cloud computer pool resides.</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The ID of the office network to which the cloud computer pool belongs.</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
         /**
-         * <p>The account type of the workspace. Possible values: -simple: convenience account type. -ad_connector: enterprise Active Directory (AD) account.</p>
+         * <p>The account type of the office network.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   PERSONAL</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    personal account type</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   SIMPLE</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    convenience account type</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   AD_CONNECTOR:</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    enterprise AD account type</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   RAM</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    Resource Access Management (RAM) account type</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
+         * <p>*   PERSONAL: individual office network</p>
+         * <p>*   SIMPLE: convenience office network</p>
+         * <p>*   AD_CONNECTOR: enterprise Active Directory (AD) office network</p>
+         * <p>*   RAM: Resource Access Management (RAM)-based office network</p>
          */
         @NameInMap("OfficeSiteType")
         public String officeSiteType;
 
         /**
-         * <p>The OS. Valid values:</p>
+         * <p>The OS.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Linux</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          * <br>
          * <p>*   Windows</p>
-         * <p>*   Linux</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("OsType")
         public String osType;
 
         /**
-         * <p>The ID of the desktop template.</p>
+         * <p>The ID of the cloud computer template.</p>
          */
         @NameInMap("OwnBundleId")
         public String ownBundleId;
 
         /**
-         * <p>The name of the desktop template.</p>
+         * <p>The name of the cloud computer template.</p>
          */
         @NameInMap("OwnBundleName")
         public String ownBundleName;
 
         /**
-         * <p>The type of the desktop group.</p>
+         * <p>The type of the cloud computer pool.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   0</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    personal desktop group</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   1</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    shared desktop group (multi-session)</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   0: individual (single session)</p>
+         * <p>*   1: shared (multiple sessions)</p>
          */
         @NameInMap("OwnType")
         public Long ownType;
 
         /**
-         * <p>The billing method of the desktop group.</p>
+         * <p>The billing method of the cloud computer pool.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   PostPaid</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    pay-as-you-go</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   PrePaid</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    subscription</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
+         * <p>*   PostPaid: pay-as-you-go</p>
+         * <p>*   PrePaid: subscription</p>
          */
         @NameInMap("PayType")
         public String payType;
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The ID of the policy that is associated with the cloud computer pool.</p>
          */
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The name of the policy that is associated with the cloud computer pool.</p>
          */
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
 
         /**
-         * <p>The type of the protocol. Valid values:</p>
+         * <p>The protocol type.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   HDX</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          * <br>
          * <p>*   ASP</p>
-         * <p>*   HDX</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
-         * <p>The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session desktop group. `Ratio of connected sessions = Number of connected sessions/(Total number of cloud desktops × Maximum number of sessions allowed for each cloud desktop) × 100%`. When the specified threshold is reached, new cloud desktops are automatically created. When the specified threshold is not reached, idle cloud desktops are released.</p>
+         * <p>The threshold for the ratio of connected sessions. This parameter indicates the condition that triggers auto scaling in a multi-session cloud computer pool. The ratio of connected sessions is calculated by using the following formula:</p>
+         * <br>
+         * <p>`Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%`.</p>
+         * <br>
+         * <p>When the specified threshold is reached, new cloud computers are automatically created. When the specified threshold is not reached, idle cloud computers are released.</p>
          */
         @NameInMap("RatioThreshold")
         public Float ratioThreshold;
 
         /**
-         * <p>Indicates which type of disk that is used by cloud desktops in the desktop group is reset.</p>
+         * <p>The disk reset type of the cloud computer pool.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   0</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    No disks are reset.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   1</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    Only the system disk is reset.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   2</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    Only the data disk is reset.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   3</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    Both the system disk and data disk are reset.</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   0: does not reset disks</p>
+         * <p>*   1: resets only the system disks</p>
+         * <p>*   2: resets only the user disks</p>
+         * <p>*   3: resets the system disks and user disks</p>
          */
         @NameInMap("ResetType")
         public Long resetType;
 
         /**
-         * <p>The payment status of the desktop group.</p>
+         * <p>The payment status of the cloud computer pool.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   0</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    unpaid</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   1</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    paid</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   2</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    overdue or expired</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   0: unpaid</p>
+         * <p>*   1: paid</p>
+         * <p>*   2: overdue or expired</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
-         * <p>The period of time before the idle cloud desktop enters the Stopped state. When the specified period of time is reached, the idle cloud desktop automatically enters the Stopped state. If an end user connects to a cloud desktop that is in the Stopped state, the cloud desktop automatically starts. Unit: milliseconds.</p>
+         * <p>The period of time after which an idle cloud computer is stopped. When the specified period of time is reached, the cloud computer is automatically stopped. If an end user connects to the stopped cloud computer, the cloud computer is automatically started. Unit: milliseconds.</p>
          */
         @NameInMap("StopDuration")
         public Long stopDuration;
 
+        /**
+         * <p>The ID of the subnet.</p>
+         */
         @NameInMap("SubnetId")
         public String subnetId;
 
@@ -592,53 +495,21 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   cloud_efficiency</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    ultra disk</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   cloud_ssd</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    standard SSD</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   cloud_essd</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    ESSD</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   cloud_efficiency: ultra disk</p>
+         * <p>*   cloud_ssd: standard SSD</p>
+         * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
          */
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
         /**
-         * <p>The size of the system disk. Unit: GiB.</p>
+         * <p>The system disk capacity. Unit: GiB.</p>
          */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
 
         /**
-         * <p>The version number of the desktop group.</p>
+         * <p>The version number of the cloud computer pool.</p>
          */
         @NameInMap("Version")
         public Integer version;

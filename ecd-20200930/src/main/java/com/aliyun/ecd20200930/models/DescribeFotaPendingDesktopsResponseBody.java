@@ -11,7 +11,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The cloud computers whose images can be but are not yet updated to the version that is described in an image update task (TaskUid).</p>
+     * <p>The cloud computers whose images can be and are pending to be updated to the version specified in `TaskUid`.</p>
      */
     @NameInMap("FotaPendingDesktops")
     public java.util.List<DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops> fotaPendingDesktops;
@@ -109,37 +109,48 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         public String currentAppVersion;
 
         /**
-         * <p>The cloud computer ID.</p>
+         * <p>The ID of the cloud computer.</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
-         * <p>The cloud computer name.</p>
+         * <p>The name of the cloud computer.</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
 
         /**
-         * <p>The Firmware Over-The-Air (FOTA) update project of the cloud computer.</p>
+         * <p>> This parameter is not publicly available.</p>
          */
         @NameInMap("FotaProject")
         public String fotaProject;
 
         /**
-         * <p>The office network ID.</p>
+         * <p>The ID of the office network.</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
         /**
-         * <p>The information about the connected sessions.</p>
+         * <p>The connected sessions.</p>
          */
         @NameInMap("Sessions")
         public java.util.List<DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktopsSessions> sessions;
 
         /**
-         * <p>The status.</p>
+         * <p>The status of the cloud computer.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   0: The cloud computer is being created.</p>
+         * <p>*   1: The cloud computer is being started.</p>
+         * <p>*   2: The cloud computer is running.</p>
+         * <p>*   3: The cloud computer is being stopped.</p>
+         * <p>*   5: The cloud computer is stopped.</p>
+         * <p>*   6: The cloud computer expires.</p>
+         * <p>*   7: The cloud computer is deleted.</p>
+         * <p>*   9: Failed to create the cloud computer.</p>
          */
         @NameInMap("Status")
         public Long status;

@@ -308,6 +308,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("AdHostname")
         public String adHostname;
 
+        @NameInMap("BackupDCHostname")
+        public String backupDCHostname;
+
+        @NameInMap("BackupDns")
+        public String backupDns;
+
         /**
          * <p>The maximum public bandwidth value. Valid values: 0 to 1000.\</p>
          * <p>If you leave this parameter empty or set this parameter to 0, Internet access is not enabled.</p>
@@ -447,6 +453,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         @NameInMap("EnableInternetAccess")
         public Boolean enableInternetAccess;
+
+        @NameInMap("EnableServiceRoute")
+        public Boolean enableServiceRoute;
 
         /**
          * <p>An array of Apsara File Storage NAS (NAS) file system IDs.</p>
@@ -773,6 +782,22 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             return this.adHostname;
         }
 
+        public DescribeOfficeSitesResponseBodyOfficeSites setBackupDCHostname(String backupDCHostname) {
+            this.backupDCHostname = backupDCHostname;
+            return this;
+        }
+        public String getBackupDCHostname() {
+            return this.backupDCHostname;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setBackupDns(String backupDns) {
+            this.backupDns = backupDns;
+            return this;
+        }
+        public String getBackupDns() {
+            return this.backupDns;
+        }
+
         public DescribeOfficeSitesResponseBodyOfficeSites setBandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
             return this;
@@ -915,6 +940,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public Boolean getEnableInternetAccess() {
             return this.enableInternetAccess;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setEnableServiceRoute(Boolean enableServiceRoute) {
+            this.enableServiceRoute = enableServiceRoute;
+            return this;
+        }
+        public Boolean getEnableServiceRoute() {
+            return this.enableServiceRoute;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setFileSystemIds(java.util.List<String> fileSystemIds) {

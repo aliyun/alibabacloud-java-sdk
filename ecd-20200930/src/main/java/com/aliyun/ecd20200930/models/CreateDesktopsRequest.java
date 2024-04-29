@@ -139,6 +139,9 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("Hostname")
     public String hostname;
 
+    @NameInMap("MonthDesktopSetting")
+    public CreateDesktopsRequestMonthDesktopSetting monthDesktopSetting;
+
     /**
      * <p>The office network ID.</p>
      */
@@ -369,6 +372,14 @@ public class CreateDesktopsRequest extends TeaModel {
     }
     public String getHostname() {
         return this.hostname;
+    }
+
+    public CreateDesktopsRequest setMonthDesktopSetting(CreateDesktopsRequestMonthDesktopSetting monthDesktopSetting) {
+        this.monthDesktopSetting = monthDesktopSetting;
+        return this;
+    }
+    public CreateDesktopsRequestMonthDesktopSetting getMonthDesktopSetting() {
+        return this.monthDesktopSetting;
     }
 
     public CreateDesktopsRequest setOfficeSiteId(String officeSiteId) {
@@ -754,6 +765,47 @@ public class CreateDesktopsRequest extends TeaModel {
         }
         public String getTimerType() {
             return this.timerType;
+        }
+
+    }
+
+    public static class CreateDesktopsRequestMonthDesktopSetting extends TeaModel {
+        @NameInMap("BuyerId")
+        public Long buyerId;
+
+        @NameInMap("DesktopId")
+        public String desktopId;
+
+        @NameInMap("UseDuration")
+        public Integer useDuration;
+
+        public static CreateDesktopsRequestMonthDesktopSetting build(java.util.Map<String, ?> map) throws Exception {
+            CreateDesktopsRequestMonthDesktopSetting self = new CreateDesktopsRequestMonthDesktopSetting();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDesktopsRequestMonthDesktopSetting setBuyerId(Long buyerId) {
+            this.buyerId = buyerId;
+            return this;
+        }
+        public Long getBuyerId() {
+            return this.buyerId;
+        }
+
+        public CreateDesktopsRequestMonthDesktopSetting setDesktopId(String desktopId) {
+            this.desktopId = desktopId;
+            return this;
+        }
+        public String getDesktopId() {
+            return this.desktopId;
+        }
+
+        public CreateDesktopsRequestMonthDesktopSetting setUseDuration(Integer useDuration) {
+            this.useDuration = useDuration;
+            return this;
+        }
+        public Integer getUseDuration() {
+            return this.useDuration;
         }
 
     }

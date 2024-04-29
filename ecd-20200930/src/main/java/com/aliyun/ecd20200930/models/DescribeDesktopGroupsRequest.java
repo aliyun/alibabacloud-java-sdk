@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopGroupsRequest extends TeaModel {
     /**
-     * <p>The IDs of the desktop templates.</p>
+     * <p>The IDs of the cloud computer templates.</p>
      */
     @NameInMap("BundleId")
     public java.util.List<String> bundleId;
 
     /**
-     * <p>The desktop group ID.</p>
+     * <p>The ID of the cloud computer pool.</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     /**
-     * <p>The name of the desktop group that you want to query. Fuzzy search is supported.</p>
+     * <p>The name of the cloud computer pool to query. Fuzzy search is supported.</p>
      */
     @NameInMap("DesktopGroupName")
     public String desktopGroupName;
 
     /**
-     * <p>The authorized users.</p>
+     * <p>The authorized user IDs of cloud computer pools.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
@@ -53,142 +53,95 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The workspace ID of the desktop group that you want to query.</p>
+     * <p>The ID of the office network to which the cloud computer pool belongs.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The desktop group type.</p>
+     * <p>The type of the cloud computer pool.</p>
+     * <br>
+     * <p>>  This parameter is not publicly available.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   0</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    personal desktop group</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   1</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    shared desktop group (multi-session)</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <p>*   0: individual (single session)</p>
+     * <p>*   1: shared (multiple sessions)</p>
      */
     @NameInMap("OwnType")
     public Long ownType;
 
     /**
-     * <p>The validity period of the desktop group. The unit is specified by the PeriodUnit parameter.</p>
+     * <p>The subscription duration of the cloud computer pool. The unit is specified by the `PeriodUnit` parameter.</p>
+     * <br>
+     * <p>*   Valid values if the `PeriodUnit` parameter is set to `Month`:</p>
+     * <br>
+     * <p>    *   1</p>
+     * <p>    *   2</p>
+     * <p>    *   3</p>
+     * <p>    *   6</p>
+     * <br>
+     * <p>*   Valid values if the `PeriodUnit` parameter is set to `Year`:</p>
+     * <br>
+     * <p>    *   1</p>
+     * <p>    *   2</p>
+     * <p>    *   3</p>
+     * <p>    *   4</p>
+     * <p>    *   5</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
-     * <p>The unit of the duration.</p>
-     * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   Month</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Year</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Day</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <p>The unit of the subscription duration.</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
-     * <p>The ID of the policy with which the desktop group is associated.</p>
+     * <p>The ID of the policy that you want to associate with the cloud computer pool.</p>
      */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
     /**
-     * <p>The protocol. Valid values:</p>
+     * <p>The protocol type.</p>
      * <br>
-     * <p>*   ASP</p>
-     * <p>*   HDX</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   High-definition Experience (HDX)</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Adaptive Streaming Protocol (ASP)</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The payment status of the desktop group.</p>
+     * <p>The payment status of the cloud computer pool.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   0</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    unpaid</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   1</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    paid</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   2</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    overdue or expired</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <p>*   0: unpaid</p>
+     * <p>*   1: paid</p>
+     * <p>*   2: overdue or expired</p>
      */
     @NameInMap("Status")
     public Integer status;

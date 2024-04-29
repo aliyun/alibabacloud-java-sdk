@@ -85,6 +85,9 @@ public class RenewDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     public static RenewDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewDesktopsRequest self = new RenewDesktopsRequest();
         return TeaModel.build(map, self);
@@ -136,6 +139,14 @@ public class RenewDesktopsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public RenewDesktopsRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }

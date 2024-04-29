@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopSessionsRequest extends TeaModel {
+    /**
+     * <p>The IDs of the cloud computers.</p>
+     */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    /**
+     * <p>The name of the cloud computer.</p>
+     */
     @NameInMap("DesktopName")
     public String desktopName;
 
