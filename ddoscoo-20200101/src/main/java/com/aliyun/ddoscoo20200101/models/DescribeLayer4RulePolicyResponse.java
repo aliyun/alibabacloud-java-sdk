@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeLayer4RulePolicyResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public DescribeLayer4RulePolicyResponseBody body;
 
     public static DescribeLayer4RulePolicyResponse build(java.util.Map<String, ?> map) throws Exception {

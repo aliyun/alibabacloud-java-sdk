@@ -18,7 +18,6 @@ public class ConfigNetworkRegionBlockRequest extends TeaModel {
      * <br>
      * <p>    **Note**For more information, see the **Codes of countries and areas** section of the [Codes of administrative regions in China and codes of countries and areas](~~167926~~) topic.</p>
      * <br>
-     * <p>    For example, `[1,2]` specifies China and Australia.</p>
      * <br>
      * <p>*   **Provinces**: the codes of the administrative regions in China from which you want to block requests. This field is optional and must be of the array type.</p>
      * <br>
