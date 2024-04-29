@@ -16,6 +16,9 @@ public class QueryCollectionDataResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Total")
+    public Integer total;
+
     public static QueryCollectionDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryCollectionDataResponseBody self = new QueryCollectionDataResponseBody();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class QueryCollectionDataResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public QueryCollectionDataResponseBody setTotal(Integer total) {
+        this.total = total;
+        return this;
+    }
+    public Integer getTotal() {
+        return this.total;
     }
 
     public static class QueryCollectionDataResponseBodyMatchesMatchValues extends TeaModel {
