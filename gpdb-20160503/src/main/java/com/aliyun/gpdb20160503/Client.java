@@ -5618,6 +5618,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("HybridSearchArgs", request.hybridSearchArgsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.includeMetadataFields)) {
+            query.put("IncludeMetadataFields", request.includeMetadataFields);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.includeValues)) {
             query.put("IncludeValues", request.includeValues);
         }
@@ -5632,6 +5636,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.namespacePassword)) {
             query.put("NamespacePassword", request.namespacePassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
@@ -5715,6 +5727,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.hybridSearchArgsShrink)) {
             query.put("HybridSearchArgs", request.hybridSearchArgsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeMetadataFields)) {
+            query.put("IncludeMetadataFields", request.includeMetadataFields);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.includeVector)) {

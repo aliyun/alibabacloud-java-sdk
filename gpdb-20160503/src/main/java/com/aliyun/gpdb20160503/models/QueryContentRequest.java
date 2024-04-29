@@ -28,6 +28,9 @@ public class QueryContentRequest extends TeaModel {
     @NameInMap("HybridSearchArgs")
     public java.util.Map<String, java.util.Map<String, ?>> hybridSearchArgs;
 
+    @NameInMap("IncludeMetadataFields")
+    public String includeMetadataFields;
+
     @NameInMap("IncludeVector")
     public Boolean includeVector;
 
@@ -125,6 +128,14 @@ public class QueryContentRequest extends TeaModel {
     }
     public java.util.Map<String, java.util.Map<String, ?>> getHybridSearchArgs() {
         return this.hybridSearchArgs;
+    }
+
+    public QueryContentRequest setIncludeMetadataFields(String includeMetadataFields) {
+        this.includeMetadataFields = includeMetadataFields;
+        return this;
+    }
+    public String getIncludeMetadataFields() {
+        return this.includeMetadataFields;
     }
 
     public QueryContentRequest setIncludeVector(Boolean includeVector) {

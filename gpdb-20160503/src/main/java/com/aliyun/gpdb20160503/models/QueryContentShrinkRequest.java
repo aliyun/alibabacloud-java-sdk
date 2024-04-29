@@ -28,6 +28,9 @@ public class QueryContentShrinkRequest extends TeaModel {
     @NameInMap("HybridSearchArgs")
     public String hybridSearchArgsShrink;
 
+    @NameInMap("IncludeMetadataFields")
+    public String includeMetadataFields;
+
     @NameInMap("IncludeVector")
     public Boolean includeVector;
 
@@ -125,6 +128,14 @@ public class QueryContentShrinkRequest extends TeaModel {
     }
     public String getHybridSearchArgsShrink() {
         return this.hybridSearchArgsShrink;
+    }
+
+    public QueryContentShrinkRequest setIncludeMetadataFields(String includeMetadataFields) {
+        this.includeMetadataFields = includeMetadataFields;
+        return this;
+    }
+    public String getIncludeMetadataFields() {
+        return this.includeMetadataFields;
     }
 
     public QueryContentShrinkRequest setIncludeVector(Boolean includeVector) {

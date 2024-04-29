@@ -22,6 +22,9 @@ public class QueryCollectionDataRequest extends TeaModel {
     @NameInMap("HybridSearchArgs")
     public java.util.Map<String, java.util.Map<String, ?>> hybridSearchArgs;
 
+    @NameInMap("IncludeMetadataFields")
+    public String includeMetadataFields;
+
     @NameInMap("IncludeValues")
     public Boolean includeValues;
 
@@ -33,6 +36,12 @@ public class QueryCollectionDataRequest extends TeaModel {
 
     @NameInMap("NamespacePassword")
     public String namespacePassword;
+
+    @NameInMap("Offset")
+    public Integer offset;
+
+    @NameInMap("OrderBy")
+    public String orderBy;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -99,6 +108,14 @@ public class QueryCollectionDataRequest extends TeaModel {
         return this.hybridSearchArgs;
     }
 
+    public QueryCollectionDataRequest setIncludeMetadataFields(String includeMetadataFields) {
+        this.includeMetadataFields = includeMetadataFields;
+        return this;
+    }
+    public String getIncludeMetadataFields() {
+        return this.includeMetadataFields;
+    }
+
     public QueryCollectionDataRequest setIncludeValues(Boolean includeValues) {
         this.includeValues = includeValues;
         return this;
@@ -129,6 +146,22 @@ public class QueryCollectionDataRequest extends TeaModel {
     }
     public String getNamespacePassword() {
         return this.namespacePassword;
+    }
+
+    public QueryCollectionDataRequest setOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    public Integer getOffset() {
+        return this.offset;
+    }
+
+    public QueryCollectionDataRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
     }
 
     public QueryCollectionDataRequest setOwnerId(Long ownerId) {
