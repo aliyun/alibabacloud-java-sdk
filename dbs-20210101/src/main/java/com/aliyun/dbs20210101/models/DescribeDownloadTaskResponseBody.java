@@ -11,7 +11,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details of the download task.</p>
+     * <p>The details of the tasks.</p>
      */
     @NameInMap("Data")
     public DescribeDownloadTaskResponseBodyData data;
@@ -112,7 +112,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
 
     public static class DescribeDownloadTaskResponseBodyDataContentList extends TeaModel {
         /**
-         * <p>The point in time of the backup set if the task is used to download a backup set at a specific point in time. The value is a timestamp of the LONG type. Unit: milliseconds.</p>
+         * <p>The point in time of the backup set if the task is used to download a backup set at a specific point in time. The value is a timestamp of the LONG type. Unit: millisecond.</p>
          */
         @NameInMap("BackupSetTime")
         public String backupSetTime;
@@ -124,20 +124,20 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         public String bakSetId;
 
         /**
-         * <p>The databases.</p>
+         * <p>The details of the databases.</p>
          */
         @NameInMap("DbList")
         public String dbList;
 
         /**
-         * <p>The state of the download task. Valid values:</p>
+         * <p>The status of the download task. Valid values:</p>
          * <br>
-         * <p>*   **Initializing**: The download task was being initialized.</p>
-         * <p>*   **queuing**: The download task was queuing.</p>
-         * <p>*   **running**: The download task was running.</p>
-         * <p>*   **failed**: The download task failed.</p>
-         * <p>*   **finished**: The download task was complete.</p>
-         * <p>*   **expired**: The download task expired.</p>
+         * <p>*   **Initializing**: The download task is being initialized.</p>
+         * <p>*   **queuing**: The download task is queuing.</p>
+         * <p>*   **running**: The download task is running.</p>
+         * <p>*   **failed**: The download task fails.</p>
+         * <p>*   **finished**: The download task is complete.</p>
+         * <p>*   **expired**: The download task expires.</p>
          */
         @NameInMap("DownloadStatus")
         public String downloadStatus;
@@ -183,7 +183,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         public String regionCode;
 
         /**
-         * <p>The destination path to which the data is downloaded if the TargeType parameter is set to OSS.</p>
+         * <p>The destination path to which the data is downloaded if the value of **TargetType is OSS**.</p>
          */
         @NameInMap("TargetPath")
         public String targetPath;
@@ -198,7 +198,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         public String targetType;
 
         /**
-         * <p>The ID of the download task.</p>
+         * <p>The download task ID.</p>
          */
         @NameInMap("TaskId")
         public String taskId;
@@ -335,7 +335,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
 
     public static class DescribeDownloadTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The details of the download task.</p>
+         * <p>The details of the task.</p>
          */
         @NameInMap("Content")
         public DescribeDownloadTaskResponseBodyDataContent content;

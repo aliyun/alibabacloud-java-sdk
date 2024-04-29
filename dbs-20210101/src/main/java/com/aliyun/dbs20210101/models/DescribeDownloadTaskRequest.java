@@ -73,7 +73,7 @@ public class DescribeDownloadTaskRequest extends TeaModel {
      * <p>The state of the download task. Valid values:</p>
      * <br>
      * <p>*   **Initializing**: The download task is being initialized.</p>
-     * <p>*   **queuing**: The download task is queuing.</p>
+     * <p>*   **queueing**: The download task is queuing.</p>
      * <p>*   **running**: The download task is running.</p>
      * <p>*   **failed**: The download task fails.</p>
      * <p>*   **finished**: The download task is complete.</p>
