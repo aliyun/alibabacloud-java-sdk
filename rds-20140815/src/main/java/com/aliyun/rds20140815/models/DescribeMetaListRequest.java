@@ -10,7 +10,7 @@ public class DescribeMetaListRequest extends TeaModel {
      * <p>>  This parameter must be specified when the **RestoreType** parameter is set to **BackupSetID**.</p>
      */
     @NameInMap("BackupSetID")
-    public Integer backupSetID;
+    public Long backupSetID;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
@@ -95,11 +95,11 @@ public class DescribeMetaListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeMetaListRequest setBackupSetID(Integer backupSetID) {
+    public DescribeMetaListRequest setBackupSetID(Long backupSetID) {
         this.backupSetID = backupSetID;
         return this;
     }
-    public Integer getBackupSetID() {
+    public Long getBackupSetID() {
         return this.backupSetID;
     }
 

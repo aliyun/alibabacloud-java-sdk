@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the available regions and zones.</p>
+     * <p>The available regions and zones.</p>
      */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,37 +39,37 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static class DescribeRegionsResponseBodyRegionsRDSRegion extends TeaModel {
         /**
-         * <p>The name of the region. The return value of the LocalName parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the RegionId parameter in the response is cn-hangzhou, the following values are returned for the LocalName parameter:</p>
+         * <p>The region name. The return value of this parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the RegionId parameter in the response is cn-hangzhou, the following values are returned for the LocalName parameter:</p>
          * <br>
-         * <p>*   If the value of the **AcceptLanguage** parameter is **zh-CN**, the value China (Hangzhou)  is returned for the LocalName parameter.</p>
+         * <p>*   If the value of the **AcceptLanguage** parameter is **zh-CN**, the value  1（）is returned for the LocalName parameter.</p>
          * <p>*   If the value of the **AcceptLanguage** parameter is **en-US**, the value China (Hangzhou) is returned for the LocalName parameter.</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>The endpoint that is used to connect to Alibaba Cloud services in the region. For more information, see [Request structure](~~26223~~).</p>
+         * <p>The endpoint that is used to connect to Alibaba Cloud services in the region. For more information, see [Endpoints](~~610370~~).</p>
          */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
 
         /**
-         * <p>The name of the zone. The return value of the ZoneName parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the RegionId parameter in the response is cn-hangzhou-h, the following values are returned for the LocalName parameter:</p>
+         * <p>The zone name. The return value of this parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the ZoneId parameter in the response is cn-hangzhou-h, the following values are returned for the ZoneName parameter:</p>
          * <br>
-         * <p>*   If the value of the **AcceptLanguage** parameter is **zh-CN**, the value Hangzhou Zone H is returned for the LocalName parameter.</p>
-         * <p>*   If the value of the **AcceptLanguage** parameter is **en-US**, the value Hangzhou Zone H is returned for the LocalName parameter.</p>
+         * <p>*   If the value of the **AcceptLanguage** parameter is **zh-CN**, the value   H is returned for the ZoneName parameter.</p>
+         * <p>*   If the value of the **AcceptLanguage** parameter is **en-US**, the value Hangzhou Zone H is returned for the ZoneName parameter.</p>
          */
         @NameInMap("ZoneName")
         public String zoneName;

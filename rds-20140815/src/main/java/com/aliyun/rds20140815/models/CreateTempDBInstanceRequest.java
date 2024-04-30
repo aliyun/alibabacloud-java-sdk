@@ -10,7 +10,7 @@ public class CreateTempDBInstanceRequest extends TeaModel {
      * <p>>  You must specify at least one of the **BackupId** or **RestoreTime** parameters.</p>
      */
     @NameInMap("BackupId")
-    public Integer backupId;
+    public Long backupId;
 
     /**
      * <p>The instance ID.</p>
@@ -50,11 +50,11 @@ public class CreateTempDBInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateTempDBInstanceRequest setBackupId(Integer backupId) {
+    public CreateTempDBInstanceRequest setBackupId(Long backupId) {
         this.backupId = backupId;
         return this;
     }
-    public Integer getBackupId() {
+    public Long getBackupId() {
         return this.backupId;
     }
 
