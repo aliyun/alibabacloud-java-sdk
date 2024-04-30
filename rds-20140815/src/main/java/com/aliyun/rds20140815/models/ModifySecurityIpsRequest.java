@@ -77,8 +77,11 @@ public class ModifySecurityIpsRequest extends TeaModel {
      * <br>
      * <p>Default value: **MIX**.</p>
      * <br>
-     * <p>> *   In standard whitelist mode, IP addresses and CIDR blocks are added only to the default IP address whitelist. In enhanced whitelist mode, IP addresses and CIDR blocks are added to the IP address whitelists of the classic network type and the VPC network type.</p>
-     * <p>> *   If your RDS instance runs PostgreSQL and uses cloud disks, set this parameter to MIX. If you set it to another value, the system automatically changes the value to MIX.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   In standard whitelist mode, IP addresses and CIDR blocks are added only to the default IP address whitelist. In enhanced whitelist mode, IP addresses and CIDR blocks are added to the IP address whitelists of the classic network type and the VPC network type.</p>
+     * <br>
+     * <p>*   If your RDS instance runs PostgreSQL and uses cloud disks, set this parameter to MIX. If you set it to another value, the system automatically changes the value to MIX.</p>
      */
     @NameInMap("WhitelistNetworkType")
     public String whitelistNetworkType;
