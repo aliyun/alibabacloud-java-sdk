@@ -15,6 +15,12 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enables auto-renewal. The instance is renewed based on the specified renewal duration. For example, if you set the renewal duration to three months, you are charged for three months of service each time the instance is automatically renewed.</p>
+     * <p>*   **false** (default): disables auto-renewal.</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 

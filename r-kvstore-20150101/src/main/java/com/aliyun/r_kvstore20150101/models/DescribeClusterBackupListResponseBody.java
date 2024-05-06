@@ -32,15 +32,29 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
     @NameInMap("LogStorageSize")
     public Long logStorageSize;
 
+    /**
+     * <p>The number of entries to return per page. Valid values: 1 to 100.</p>
+     * <p>Default value: 30.</p>
+     * <p>>If you specify this parameter, PageSize and PageNumber are unavailable.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The maximum number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

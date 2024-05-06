@@ -4,6 +4,9 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class CreateGlobalDistributeCacheRequest extends TeaModel {
+    @NameInMap("EffectiveTime")
+    public String effectiveTime;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -36,6 +39,14 @@ public class CreateGlobalDistributeCacheRequest extends TeaModel {
     public static CreateGlobalDistributeCacheRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGlobalDistributeCacheRequest self = new CreateGlobalDistributeCacheRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateGlobalDistributeCacheRequest setEffectiveTime(String effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+    }
+    public String getEffectiveTime() {
+        return this.effectiveTime;
     }
 
     public CreateGlobalDistributeCacheRequest setOwnerAccount(String ownerAccount) {

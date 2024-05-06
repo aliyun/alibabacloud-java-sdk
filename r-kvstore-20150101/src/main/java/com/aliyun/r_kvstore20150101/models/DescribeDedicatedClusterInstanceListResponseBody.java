@@ -17,7 +17,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -29,7 +29,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -93,7 +93,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
          */
         @NameInMap("NodeId")
         public Integer nodeId;
@@ -223,7 +223,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String characterType;
 
         /**
-         * <p>The ID of the dedicated cluster.</p>
+         * <p>The ID of the dedicated cluster to which the instance belongs.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -247,19 +247,19 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The current bandwidth of the instance, which consists of the default bandwidth and the additional bandwidth. Unit: Mbit/s.</p>
+         * <p>The current bandwidth of the instance, which is the sum of the default bandwidth and any extra bandwidth that is purchased. Unit: Mbit/s.</p>
          */
         @NameInMap("CurrentBandWidth")
         public Long currentBandWidth;
 
         /**
-         * <p>The custom ID that is used for instance internal maintenance.</p>
+         * <p>An internal parameter used for the maintenance and management of instances.</p>
          */
         @NameInMap("CustomId")
         public String customId;
 
         /**
-         * <p>The database engine of the instance. The return value is **Redis**.</p>
+         * <p>The database engine. The return value is **redis**.</p>
          */
         @NameInMap("Engine")
         public String engine;
@@ -271,7 +271,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The instance type of the instance.</p>
+         * <p>The instance type.</p>
          */
         @NameInMap("InstanceClass")
         public String instanceClass;
@@ -283,13 +283,13 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>Details about the nodes.</p>
+         * <p>The nodes.</p>
          */
         @NameInMap("InstanceNodeList")
         public java.util.List<DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList> instanceNodeList;
@@ -304,13 +304,13 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
          * <p>*   **Flushing**: The instance is being released.</p>
          * <p>*   **Released**: The instance is released.</p>
          * <p>*   **Transforming**: The billing method of the instance is being changed.</p>
-         * <p>*   **Unavailable**: The instance is suspended.</p>
+         * <p>*   **Unavailable**: The instance is unavailable.</p>
          * <p>*   **Error**: The instance failed to be created.</p>
          * <p>*   **Migrating**: The instance is being migrated.</p>
          * <p>*   **BackupRecovering**: The instance is being restored from a backup.</p>
          * <p>*   **MinorVersionUpgrading**: The minor version of the instance is being updated.</p>
          * <p>*   **NetworkModifying**: The network type of the instance is being changed.</p>
-         * <p>*   **SSLModifying**: The SSL certificate of the instance is being changed.</p>
+         * <p>*   **SSLModifying**: The SSL configurations of the instance are being changed.</p>
          * <p>*   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</p>
          */
         @NameInMap("InstanceStatus")
@@ -331,14 +331,17 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         /**
          * <p>The number of proxy nodes.</p>
          * <br>
-         * <p>> *   If the return value is **0**, the proxy mode is disabled. If the return value is an integer that is greater than **0**, the proxy mode is enabled. This integer indicates the number of proxy nodes in the instance. For example, a value of **1** indicates that the instance has one proxy node.</p>
-         * <p>> *   This parameter is returned only when the instance is a [cluster instance](~~52228~~).</p>
+         * <p>> </p>
+         * <br>
+         * <p>*   If the return value is **0**, the proxy mode is disabled for the instance. If the return value is an integer greater than **0**, such as **1**, the proxy mode is enabled for the instance.</p>
+         * <br>
+         * <p>*   This parameter is returned only when the instance is a cluster instance. For more information about cluster instances, see [Cluster master-replica instances](~~52228~~).</p>
          */
         @NameInMap("ProxyCount")
         public Integer proxyCount;
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The ID of the region.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -346,7 +349,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         /**
          * <p>The number of shards.</p>
          * <br>
-         * <p>> This parameter is returned only when the ApsaraDB for Redis instance is a [cluster instance](~~52228~~).</p>
+         * <p>>  This parameter is returned only when the instance is a cluster instance. For more information about cluster instances, see [Cluster master-replica instances](~~52228~~).</p>
          */
         @NameInMap("ShardCount")
         public Integer shardCount;
@@ -358,19 +361,19 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String storageType;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          */
         @NameInMap("VswitchId")
         public String vswitchId;
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

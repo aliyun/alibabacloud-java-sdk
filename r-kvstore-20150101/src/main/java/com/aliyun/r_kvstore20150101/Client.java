@@ -622,6 +622,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateGlobalDistributeCacheResponse createGlobalDistributeCacheWithOptions(CreateGlobalDistributeCacheRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveTime)) {
+            query.put("EffectiveTime", request.effectiveTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -1185,6 +1189,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.restoreTime)) {
+            query.put("RestoreTime", request.restoreTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.secondaryZoneId)) {
