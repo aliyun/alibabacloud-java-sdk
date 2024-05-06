@@ -4,9 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListAdvanceConfigDirResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The file list in the advanced configuration directory.</p>
+     */
     @NameInMap("result")
     public java.util.List<ListAdvanceConfigDirResponseBodyResult> result;
 
@@ -32,15 +38,27 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
     }
 
     public static class ListAdvanceConfigDirResponseBodyResult extends TeaModel {
+        /**
+         * <p>The name of the absolute path.</p>
+         */
         @NameInMap("fullPathName")
         public String fullPathName;
 
+        /**
+         * <p>Indicates whether it is a directory. Valid values: true and false. true indicates that it is a directory, and false indicates that it is not a directory.</p>
+         */
         @NameInMap("isDir")
         public Boolean isDir;
 
+        /**
+         * <p>Indicates whether it is a template. Valid values: **true** and **false**. true indicates that it is a template, and false indicates that it is not a template.</p>
+         */
         @NameInMap("isTemplate")
         public Boolean isTemplate;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("name")
         public String name;
 

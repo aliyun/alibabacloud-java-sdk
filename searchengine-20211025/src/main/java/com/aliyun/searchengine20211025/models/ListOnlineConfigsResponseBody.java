@@ -38,9 +38,15 @@ public class ListOnlineConfigsResponseBody extends TeaModel {
     }
 
     public static class ListOnlineConfigsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The configuration information</p>
+         */
         @NameInMap("config")
         public String config;
 
+        /**
+         * <p>The name of the index</p>
+         */
         @NameInMap("indexName")
         public String indexName;
 

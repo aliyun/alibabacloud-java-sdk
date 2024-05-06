@@ -10,6 +10,9 @@ public class GetNodeConfigResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result set.</p>
+     */
     @NameInMap("result")
     public GetNodeConfigResponseBodyResult result;
 
@@ -35,18 +38,36 @@ public class GetNodeConfigResponseBody extends TeaModel {
     }
 
     public static class GetNodeConfigResponseBodyResult extends TeaModel {
+        /**
+         * <p>Indicates whether the expression is the default one.</p>
+         */
         @NameInMap("active")
         public Boolean active;
 
+        /**
+         * <p>The number of data replicas.</p>
+         */
         @NameInMap("dataDuplicateNumber")
         public Integer dataDuplicateNumber;
 
+        /**
+         * <p>The number of data shards.</p>
+         */
         @NameInMap("dataFragmentNumber")
         public Integer dataFragmentNumber;
 
+        @NameInMap("flowRatio")
+        public Integer flowRatio;
+
+        /**
+         * <p>The minimum service ratio.</p>
+         */
         @NameInMap("minServicePercent")
         public Integer minServicePercent;
 
+        /**
+         * <p>Indicates whether the node is associated with the cluster.</p>
+         */
         @NameInMap("published")
         public Boolean published;
 
@@ -77,6 +98,14 @@ public class GetNodeConfigResponseBody extends TeaModel {
         }
         public Integer getDataFragmentNumber() {
             return this.dataFragmentNumber;
+        }
+
+        public GetNodeConfigResponseBodyResult setFlowRatio(Integer flowRatio) {
+            this.flowRatio = flowRatio;
+            return this;
+        }
+        public Integer getFlowRatio() {
+            return this.flowRatio;
         }
 
         public GetNodeConfigResponseBodyResult setMinServicePercent(Integer minServicePercent) {

@@ -10,6 +10,9 @@ public class GetDeployGraphResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result returned</p>
+     */
     @NameInMap("result")
     public GetDeployGraphResponseBodyResult result;
 
@@ -298,21 +301,39 @@ public class GetDeployGraphResponseBody extends TeaModel {
     }
 
     public static class GetDeployGraphResponseBodyResultGraph extends TeaModel {
+        /**
+         * <p>索引元信息</p>
+         */
         @NameInMap("indexMetas")
         public java.util.List<GetDeployGraphResponseBodyResultGraphIndexMetas> indexMetas;
 
+        /**
+         * <p>在线集群元信息</p>
+         */
         @NameInMap("onlineMaster")
         public java.util.List<GetDeployGraphResponseBodyResultGraphOnlineMaster> onlineMaster;
 
+        /**
+         * <p>数据源和索引关联关系</p>
+         */
         @NameInMap("tableIndexRelation")
         public java.util.Map<String, java.util.List<String>> tableIndexRelation;
 
+        /**
+         * <p>数据源元信息</p>
+         */
         @NameInMap("tableMetas")
         public java.util.List<GetDeployGraphResponseBodyResultGraphTableMetas> tableMetas;
 
+        /**
+         * <p>zone和索引关联关系</p>
+         */
         @NameInMap("zoneIndexRelation")
         public java.util.Map<String, java.util.List<String>> zoneIndexRelation;
 
+        /**
+         * <p>zone元信息</p>
+         */
         @NameInMap("zoneMetas")
         public java.util.List<GetDeployGraphResponseBodyResultGraphZoneMetas> zoneMetas;
 

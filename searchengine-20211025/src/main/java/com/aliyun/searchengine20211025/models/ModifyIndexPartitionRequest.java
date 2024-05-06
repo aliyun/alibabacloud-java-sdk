@@ -11,19 +11,19 @@ public class ModifyIndexPartitionRequest extends TeaModel {
     public String dataSourceName;
 
     /**
-     * <p>The information about each index.</p>
+     * <p>The name of the data center.</p>
      */
     @NameInMap("domainName")
     public String domainName;
 
     /**
-     * <p>The name of the data center.</p>
+     * <p>The primary key of generation.</p>
      */
     @NameInMap("generation")
     public Long generation;
 
     /**
-     * <p>The number of shards of the index.</p>
+     * <p>The information about shards of the index.</p>
      */
     @NameInMap("indexInfos")
     public java.util.List<ModifyIndexPartitionRequestIndexInfos> indexInfos;
@@ -67,13 +67,13 @@ public class ModifyIndexPartitionRequest extends TeaModel {
 
     public static class ModifyIndexPartitionRequestIndexInfos extends TeaModel {
         /**
-         * <p>auditing</p>
+         * <p>The name of the index.</p>
          */
         @NameInMap("indexName")
         public String indexName;
 
         /**
-         * <p>The parameters in the request body.</p>
+         * <p>The number of concurrency. The default value is 1.</p>
          */
         @NameInMap("parallelNum")
         public Integer parallelNum;

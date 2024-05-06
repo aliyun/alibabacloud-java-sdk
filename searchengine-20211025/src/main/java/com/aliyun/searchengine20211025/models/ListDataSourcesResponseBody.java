@@ -5,19 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDataSourcesResponseBody extends TeaModel {
     /**
-     * <p>## Method</p>
-     * <br>
-     * <p>`GET`</p>
-     * <br>
-     * <p>## URI</p>
-     * <br>
-     * <p>`/openapi/ha3/instances/{instanceId}/data-sources`</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The returned results.</p>
+     * <p>The result returned.</p>
      */
     @NameInMap("result")
     public java.util.List<ListDataSourcesResponseBodyResult> result;
@@ -45,19 +39,19 @@ public class ListDataSourcesResponseBody extends TeaModel {
 
     public static class ListDataSourcesResponseBodyResult extends TeaModel {
         /**
-         * <p>The data sources deployed in offline mode.</p>
+         * <p>The data center where the data source is deployed in offline mode.</p>
          */
         @NameInMap("domain")
         public String domain;
 
         /**
-         * <p>The indexes.</p>
+         * <p>The information about indexes.</p>
          */
         @NameInMap("indexes")
         public java.util.List<String> indexes;
 
         /**
-         * <p>The time when the full data of the data source was last queried.</p>
+         * <p>The time when an index for full data was last built.</p>
          */
         @NameInMap("lastFulTime")
         public Long lastFulTime;
@@ -69,7 +63,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the data source.</p>
+         * <p>The state of the data source.</p>
          */
         @NameInMap("status")
         public String status;

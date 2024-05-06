@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyDataSourceResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The ID of the request</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The schema information.</p>
+     * <p>The result returned</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

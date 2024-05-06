@@ -4,6 +4,9 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class DeleteIndexRequest extends TeaModel {
+    /**
+     * <p>The data source</p>
+     */
     @NameInMap("dataSource")
     public String dataSource;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
     /**
-     * <p>The information about the instance type.</p>
+     * <p>A list of instance-related specifications.</p>
      */
     @NameInMap("components")
     public java.util.List<UpdateInstanceRequestComponents> components;
@@ -17,7 +17,7 @@ public class UpdateInstanceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The type of the order. Valid values: UPGRADE and DOWNGRADE. UPGRADE indicates the instance type is to be upgraded. DOWNGRADE indicates the instance type is to be downgraded.</p>
+     * <p>Valid values: UPGRADE and DOWNGRADE. UPGRADE indicates to upgrade the instance specifications. DOWNGRADE indicates to downgrade the instance specifications.</p>
      */
     @NameInMap("orderType")
     public String orderType;
@@ -53,14 +53,11 @@ public class UpdateInstanceRequest extends TeaModel {
 
     public static class UpdateInstanceRequestComponents extends TeaModel {
         /**
-         * <p>The name of the specification. The value must be the same as the name of a parameter on the buy page.</p>
+         * <p>The specification code, which must be consistent with the values of the corresponding module parameters.</p>
          */
         @NameInMap("code")
         public String code;
 
-        /**
-         * <p>The value of the specification.</p>
-         */
         @NameInMap("value")
         public String value;
 

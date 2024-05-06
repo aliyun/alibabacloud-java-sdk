@@ -10,6 +10,9 @@ public class GetIndexVersionResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of cluster details</p>
+     */
     @NameInMap("result")
     public GetIndexVersionResponseBodyResult result;
 
@@ -35,15 +38,24 @@ public class GetIndexVersionResponseBody extends TeaModel {
     }
 
     public static class GetIndexVersionResponseBodyResultIndexVersions extends TeaModel {
+        /**
+         * <p>The ID of the index deployed in offline mode</p>
+         */
         @NameInMap("buildDeployId")
         public String buildDeployId;
 
         @NameInMap("currentVersion")
         public Long currentVersion;
 
+        /**
+         * <p>The name of the index table</p>
+         */
         @NameInMap("indexName")
         public String indexName;
 
+        /**
+         * <p>The version of the index</p>
+         */
         @NameInMap("versions")
         public java.util.List<Long> versions;
 
@@ -87,9 +99,15 @@ public class GetIndexVersionResponseBody extends TeaModel {
     }
 
     public static class GetIndexVersionResponseBodyResult extends TeaModel {
+        /**
+         * <p>The name of the cluster</p>
+         */
         @NameInMap("cluster")
         public String cluster;
 
+        /**
+         * <p>The time when the cluster was updated</p>
+         */
         @NameInMap("indexVersions")
         public java.util.List<GetIndexVersionResponseBodyResultIndexVersions> indexVersions;
 

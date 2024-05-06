@@ -5,41 +5,44 @@ import com.aliyun.tea.*;
 
 public class ListInstancesShrinkRequest extends TeaModel {
     /**
-     * <p>The description of the instance</p>
+     * <p>The description of the instance. You can use this description to filter instances. Fuzzy match is supported.</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>实例类型，vector(向量索引版)，engine(召回引擎版)</p>
+     * <p>The Instance type, vector (vector index version),engine (recall engine version)</p>
      */
     @NameInMap("edition")
     public String edition;
 
     /**
-     * <p>The time when the instance was created</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
     /**
-     * <p>The status of the instance</p>
+     * <p>The number of the page to return. Default value: 1.</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The description of the instance. You can use this description to filter instances. Fuzzy match is supported.</p>
+     * <p>The number of entries to return on each page. Valid values: 1 to 50. Default value: 10.</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The ID of the resource group to which the instance belongs.</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tag dictionary.</p>
+     */
     @NameInMap("tags")
     public String tagsShrink;
 

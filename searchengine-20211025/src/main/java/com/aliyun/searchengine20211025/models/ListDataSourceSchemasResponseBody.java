@@ -4,9 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListDataSourceSchemasResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result returned.</p>
+     */
     @NameInMap("result")
     public java.util.List<ListDataSourceSchemasResponseBodyResult> result;
 
@@ -32,12 +38,21 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
     }
 
     public static class ListDataSourceSchemasResponseBodyResultPrimaryKey extends TeaModel {
+        /**
+         * <p>Indicates whether it has the primary key property. **true** indicates that it has the primary key property, and **false** indicates that it does not have the primary key property.</p>
+         */
         @NameInMap("hasPrimaryKeyAttribute")
         public Boolean hasPrimaryKeyAttribute;
 
+        /**
+         * <p>Indicates whether it is the primary key. Valid values: true and false. **true** indicates that it is the primary key, and **false** indicates that it is not the primary key.</p>
+         */
         @NameInMap("isPrimaryKey")
         public Boolean isPrimaryKey;
 
+        /**
+         * <p>Indicates whether data is sorted based on the primary key. Valid values: true and false. **true** indicates that data is sorted based on the primary key, and **false** indicates that data is not sorted based on the primary key.</p>
+         */
         @NameInMap("isPrimaryKeySorted")
         public Boolean isPrimaryKeySorted;
 
@@ -73,24 +88,45 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
     }
 
     public static class ListDataSourceSchemasResponseBodyResult extends TeaModel {
+        /**
+         * <p>Indicates whether the index properties are added. Valid values: true and false. **true** indicates that the index properties are added, and **false** indicates that the index properties are not added.</p>
+         */
         @NameInMap("addIndex")
         public Boolean addIndex;
 
+        /**
+         * <p>Indicates whether it is an attribute field. Valid values: true and false. **true** indicates that it is an attribute field, and **false** indicates that it is not an attribute field.</p>
+         */
         @NameInMap("attribute")
         public Boolean attribute;
 
+        /**
+         * <p>Indicates whether it is a custom field. Valid values: true and false. **true** indicates that it is a custom field, and **false** indicates that it is not a custom field.</p>
+         */
         @NameInMap("custom")
         public Boolean custom;
 
+        /**
+         * <p>The name of the field.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The primary key.</p>
+         */
         @NameInMap("primaryKey")
         public ListDataSourceSchemasResponseBodyResultPrimaryKey primaryKey;
 
+        /**
+         * <p>Indicates whether the information can be displayed. Valid values: true and false. **true** indicates that the information can be displayed, and **false** indicates that the information cannot be displayed.</p>
+         */
         @NameInMap("summary")
         public Boolean summary;
 
+        /**
+         * <p>The type of the field.</p>
+         */
         @NameInMap("type")
         public String type;
 

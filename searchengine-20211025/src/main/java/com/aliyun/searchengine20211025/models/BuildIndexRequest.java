@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BuildIndexRequest extends TeaModel {
     /**
-     * <p>The mode in which reindexing is performed.</p>
+     * <p>The reindexing mode.</p>
      */
     @NameInMap("buildMode")
     public String buildMode;
@@ -23,25 +23,25 @@ public class BuildIndexRequest extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>The timestamp in seconds. This parameter is required if you import data from the data source by calling API operations.</p>
+     * <p>The timestamp in seconds. It is of the INT type. This parameter is required for the API-pushed data source.</p>
      */
     @NameInMap("dataTimeSec")
     public Integer dataTimeSec;
 
     /**
-     * <p>The data center in which the data source resides.</p>
+     * <p>The data center where the data source is deployed.</p>
      */
     @NameInMap("domain")
     public String domain;
 
     /**
-     * <p>The ID of the generation.</p>
+     * <p>The data restoration version.</p>
      */
     @NameInMap("generation")
     public Long generation;
 
     /**
-     * <p>The data partition. This parameter is required if the dataSourceType parameter is set to odps.</p>
+     * <p>This parameter is required for the odps data source.</p>
      */
     @NameInMap("partition")
     public String partition;

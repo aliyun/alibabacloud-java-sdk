@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class RecoverIndexResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>Map</p>
+     * <p>The result returned by data search.</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

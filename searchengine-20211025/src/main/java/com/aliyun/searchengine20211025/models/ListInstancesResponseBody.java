@@ -4,6 +4,9 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -13,6 +16,9 @@ public class ListInstancesResponseBody extends TeaModel {
     @NameInMap("result")
     public java.util.List<ListInstancesResponseBodyResult> result;
 
+    /**
+     * <p>The total number of entries returned</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -47,93 +53,19 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyResultNetwork extends TeaModel {
         /**
-         * <p>353490</p>
+         * <p>The access point of the gateway</p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
         /**
-         * <p>### Sample responses</p>
-         * <br>
-         * <p>**Sample success responses**</p>
-         * <br>
-         * <p>    {</p>
-         * <p>        "requestId": "90D6B8F5-FE97-4509-9AAB-367836C51818",</p>
-         * <p>        "result": [</p>
-         * <p>            {</p>
-         * <p>                "instanceId": "igraph-cn-xxxxxx1",</p>
-         * <p>                "spec": {</p>
-         * <p>                    "password": "passwd",</p>
-         * <p>                    "searchResource": {</p>
-         * <p>                        "disk": 50,</p>
-         * <p>                        "mem": 8,</p>
-         * <p>                        "cpu": 2,</p>
-         * <p>                        "nodeCount": 2</p>
-         * <p>                    },</p>
-         * <p>                    "instanceName": "testInstance",</p>
-         * <p>                    "vSwitchId": "vswitch_id_xxx",</p>
-         * <p>                    "vpcId": "vpc_id_xxx",</p>
-         * <p>                    "qrsResource": {</p>
-         * <p>                        "disk": 50,</p>
-         * <p>                        "mem": 8,</p>
-         * <p>                        "cpu": 2,</p>
-         * <p>                        "nodeCount": 2</p>
-         * <p>                    },</p>
-         * <p>                    "region": "cn-hangzhou",</p>
-         * <p>                    "userName": "user"</p>
-         * <p>                },</p>
-         * <p>                "status": {</p>
-         * <p>                    "phase": "PENDING",</p>
-         * <p>                    "instancePhase": "INIT",</p>
-         * <p>                    "createSuccess": false</p>
-         * <p>                }</p>
-         * <p>            },</p>
-         * <p>            {</p>
-         * <p>                "instanceId": "igraph-cn-xxxxxx2",</p>
-         * <p>                "spec": {</p>
-         * <p>                    "password": "passwd",</p>
-         * <p>                    "searchResource": {</p>
-         * <p>                        "disk": 50,</p>
-         * <p>                        "mem": 8,</p>
-         * <p>                        "cpu": 2,</p>
-         * <p>                        "nodeCount": 2</p>
-         * <p>                    },</p>
-         * <p>                    "instanceName": "testInstance",</p>
-         * <p>                    "vSwitchId": "vswitch_id_xxx",</p>
-         * <p>                    "vpcId": "vpc_id_xxx",</p>
-         * <p>                    "qrsResource": {</p>
-         * <p>                        "disk": 50,</p>
-         * <p>                        "mem": 8,</p>
-         * <p>                        "cpu": 2,</p>
-         * <p>                        "nodeCount": 2</p>
-         * <p>                    },</p>
-         * <p>                    "region": "cn-hangzhou",</p>
-         * <p>                    "userName": "user"</p>
-         * <p>                },</p>
-         * <p>                "status": {</p>
-         * <p>                    "phase": "PENDING",</p>
-         * <p>                    "instancePhase": "INIT",</p>
-         * <p>                    "createSuccess": false</p>
-         * <p>                }</p>
-         * <p>            }</p>
-         * <p>        ],</p>
-         * <p>        "totalCount": 20</p>
-         * <p>    }</p>
-         * <br>
-         * <p>**Sample error responses**</p>
-         * <br>
-         * <p>    {</p>
-         * <p>      "requestId": "BD1EA715-DF6F-06C2-004C-C1FA0D3A9820",</p>
-         * <p>      "httpCode": 404,</p>
-         * <p>      "code": "App.NotFound",</p>
-         * <p>      "message": "App not found"</p>
-         * <p>    }</p>
+         * <p>The ID of the virtual switch</p>
          */
         @NameInMap("vSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>Queries instances.</p>
+         * <p>The ID of the Virtual Private Cloud (VPC) network</p>
          */
         @NameInMap("vpcId")
         public String vpcId;
@@ -170,9 +102,15 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyResultTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -201,71 +139,74 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of the resource group to which the instance belongs.</p>
+         * <p>The billing method</p>
          */
         @NameInMap("chargeType")
         public String chargeType;
 
         /**
-         * <p>The total number of entries returned</p>
+         * <p>The product code</p>
          */
         @NameInMap("commodityCode")
         public String commodityCode;
 
         /**
-         * <p>Havenask instance</p>
+         * <p>The time when the instance was created</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
         /**
-         * <p>The ID of the virtual switch</p>
+         * <p>The description of the instance</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The ID of the Virtual Private Cloud (VPC) network</p>
+         * <p>The expiration time</p>
          */
         @NameInMap("expiredTime")
         public String expiredTime;
 
         /**
-         * <p>The ID of the request</p>
+         * <p>Indicates whether an overdue payment is involved</p>
          */
         @NameInMap("inDebt")
         public Boolean inDebt;
 
         /**
-         * <p>The access point of the gateway</p>
+         * <p>The ID of the resource</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
-         * <p>Emergency test</p>
+         * <p>The lock status</p>
          */
         @NameInMap("lockMode")
         public String lockMode;
 
         /**
-         * <p>The lock status</p>
+         * <p>Information about the instance of the network search engine</p>
          */
         @NameInMap("network")
         public ListInstancesResponseBodyResultNetwork network;
 
         /**
-         * <p>The number of entries to return on each page. Valid values: 1 to 50. Default value: 10.</p>
+         * <p>The ID of the resource group</p>
          */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The expiration time</p>
+         * <p>The status of the instance</p>
          */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The result returned.</p>
+         */
         @NameInMap("tags")
         public java.util.List<ListInstancesResponseBodyResultTags> tags;
 

@@ -4,6 +4,9 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListOnlineConfigsRequest extends TeaModel {
+    /**
+     * <p>The name of the domain</p>
+     */
     @NameInMap("domain")
     public String domain;
 

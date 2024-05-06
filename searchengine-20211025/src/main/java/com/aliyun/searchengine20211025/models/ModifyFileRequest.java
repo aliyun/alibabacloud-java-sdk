@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyFileRequest extends TeaModel {
     /**
-     * <p>The parameters in the request body</p>
+     * <p>The content of the file.</p>
      */
     @NameInMap("content")
     public String content;
 
     /**
-     * <p>auditing</p>
+     * <p>The data partition. This parameter is required if the dataSourceType parameter is set to odps.</p>
      */
     @NameInMap("partition")
     public Integer partition;
 
     /**
-     * <p>ha-cn-tl32m2c4u01@ha-cn-tl32m2c4u01_00@bj_vpc_domain_1@automobile_vector@index_config_edit</p>
+     * <p>The name of the file in the full path</p>
      */
     @NameInMap("fileName")
     public String fileName;
