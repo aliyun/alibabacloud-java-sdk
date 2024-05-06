@@ -77,6 +77,9 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
+    @NameInMap("EniInstanceIds")
+    public DescribeVpnGatewayResponseBodyEniInstanceIds eniInstanceIds;
+
     /**
      * <p>*   If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection.</p>
      * <br>
@@ -313,6 +316,14 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeVpnGatewayResponseBody setEniInstanceIds(DescribeVpnGatewayResponseBodyEniInstanceIds eniInstanceIds) {
+        this.eniInstanceIds = eniInstanceIds;
+        return this;
+    }
+    public DescribeVpnGatewayResponseBodyEniInstanceIds getEniInstanceIds() {
+        return this.eniInstanceIds;
+    }
+
     public DescribeVpnGatewayResponseBody setInternetIp(String internetIp) {
         this.internetIp = internetIp;
         return this;
@@ -455,6 +466,25 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     }
     public String getVpnType() {
         return this.vpnType;
+    }
+
+    public static class DescribeVpnGatewayResponseBodyEniInstanceIds extends TeaModel {
+        @NameInMap("EniInstanceId")
+        public java.util.List<String> eniInstanceId;
+
+        public static DescribeVpnGatewayResponseBodyEniInstanceIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpnGatewayResponseBodyEniInstanceIds self = new DescribeVpnGatewayResponseBodyEniInstanceIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpnGatewayResponseBodyEniInstanceIds setEniInstanceId(java.util.List<String> eniInstanceId) {
+            this.eniInstanceId = eniInstanceId;
+            return this;
+        }
+        public java.util.List<String> getEniInstanceId() {
+            return this.eniInstanceId;
+        }
+
     }
 
     public static class DescribeVpnGatewayResponseBodyReservationData extends TeaModel {
