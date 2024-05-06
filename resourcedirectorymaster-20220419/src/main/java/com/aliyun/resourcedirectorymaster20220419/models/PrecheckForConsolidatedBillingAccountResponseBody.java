@@ -4,12 +4,24 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel {
+    /**
+     * <p>The cause of the check failure.</p>
+     */
     @NameInMap("Reasons")
     public java.util.List<PrecheckForConsolidatedBillingAccountResponseBodyReasons> reasons;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the check was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 
@@ -43,9 +55,15 @@ public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel 
     }
 
     public static class PrecheckForConsolidatedBillingAccountResponseBodyReasons extends TeaModel {
+        /**
+         * <p>The error code.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("Message")
         public String message;
 

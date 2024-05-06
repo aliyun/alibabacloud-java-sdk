@@ -31,6 +31,15 @@ public class CreateResourceAccountRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <br>
+     * <p>*   true: performs only a dry run. The system checks whether an identity type can be specified for the member. If the request does not pass the dry run, an error code is returned.</p>
+     * <p>*   false (default): performs a dry run and performs the actual request.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The ID of the parent folder.</p>
      */
     @NameInMap("ParentFolderId")
@@ -78,6 +87,14 @@ public class CreateResourceAccountRequest extends TeaModel {
     }
     public String getDisplayName() {
         return this.displayName;
+    }
+
+    public CreateResourceAccountRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateResourceAccountRequest setParentFolderId(String parentFolderId) {

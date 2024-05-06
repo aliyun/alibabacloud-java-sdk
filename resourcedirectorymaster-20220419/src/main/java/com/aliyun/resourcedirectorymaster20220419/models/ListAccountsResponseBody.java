@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAccountsResponseBody extends TeaModel {
     /**
-     * <p>The members returned.</p>
+     * <p>The information about the members.</p>
      */
     @NameInMap("Accounts")
     public ListAccountsResponseBodyAccounts accounts;
@@ -81,13 +81,13 @@ public class ListAccountsResponseBody extends TeaModel {
 
     public static class ListAccountsResponseBodyAccountsAccountTagsTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -148,6 +148,19 @@ public class ListAccountsResponseBody extends TeaModel {
         public String accountName;
 
         /**
+         * <p>The deletion status of the member. Valid values:</p>
+         * <br>
+         * <p>*   Checking: A deletion check is being performed for the member.</p>
+         * <p>*   Deleting: The member is being deleted.</p>
+         * <p>*   CheckFailed: The deletion check for the member fails.</p>
+         * <p>*   DeleteFailed: The member fails to be deleted.</p>
+         * <br>
+         * <p>>  If deletion is not performed for the member, the value of this parameter is empty.</p>
+         */
+        @NameInMap("DeletionStatus")
+        public String deletionStatus;
+
+        /**
          * <p>The display name of the member.</p>
          */
         @NameInMap("DisplayName")
@@ -187,7 +200,7 @@ public class ListAccountsResponseBody extends TeaModel {
         public String resourceDirectoryId;
 
         /**
-         * <p>The path of the member in the resource directory.</p>
+         * <p>The RDPath of the member.</p>
          */
         @NameInMap("ResourceDirectoryPath")
         public String resourceDirectoryPath;
@@ -196,7 +209,7 @@ public class ListAccountsResponseBody extends TeaModel {
          * <p>The status of the member. Valid values:</p>
          * <br>
          * <p>*   CreateSuccess: The member is created.</p>
-         * <p>*   PromoteVerifying: The upgrade of the member is being confirmed.</p>
+         * <p>*   PromoteVerifying: The upgrade of the member is under confirmation.</p>
          * <p>*   PromoteFailed: The upgrade of the member fails.</p>
          * <p>*   PromoteExpired: The upgrade of the member expires.</p>
          * <p>*   PromoteCancelled: The upgrade of the member is canceled.</p>
@@ -240,6 +253,14 @@ public class ListAccountsResponseBody extends TeaModel {
         }
         public String getAccountName() {
             return this.accountName;
+        }
+
+        public ListAccountsResponseBodyAccountsAccount setDeletionStatus(String deletionStatus) {
+            this.deletionStatus = deletionStatus;
+            return this;
+        }
+        public String getDeletionStatus() {
+            return this.deletionStatus;
         }
 
         public ListAccountsResponseBodyAccountsAccount setDisplayName(String displayName) {
