@@ -65,6 +65,9 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     @NameInMap("IsNewSSLMode")
     public String isNewSSLMode;
 
+    @NameInMap("IsOpenNGLB")
+    public String isOpenNGLB;
+
     /**
      * <p>Indicates whether the instance supports the new SSL encryption feature.</p>
      */
@@ -184,6 +187,14 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     }
     public String getIsNewSSLMode() {
         return this.isNewSSLMode;
+    }
+
+    public DescribeEngineVersionResponseBody setIsOpenNGLB(String isOpenNGLB) {
+        this.isOpenNGLB = isOpenNGLB;
+        return this;
+    }
+    public String getIsOpenNGLB() {
+        return this.isOpenNGLB;
     }
 
     public DescribeEngineVersionResponseBody setIsRedisCompatibleVersion(String isRedisCompatibleVersion) {

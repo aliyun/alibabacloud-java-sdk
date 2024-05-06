@@ -37,9 +37,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String autoUseCoupon;
 
     /**
-     * <p>The ID of the backup set of the source instance. You can call the [DescribeBackups](~~61081~~) operation to query the ID of the backup set.</p>
+     * <p>The ID of the backup set of the source instance. If you want to create an instance based on a backup set of a specified instance, you can specify this parameter after you specify the **SrcDBInstanceId** parameter. Then, the system creates an instance based on the backup set that is specified by this parameter. You can call the [DescribeBackups](~~61081~~) operation to query the IDs of backup sets.</p>
      * <br>
-     * <p>> If you want to create an instance based on the backup set of an existing instance, you must specify this parameter after you specify the **SrcDBInstanceId** parameter. The system creates an instance based on the backup set that is specified by this parameter.</p>
+     * <p>>  If you want to create an instance based on a backup set of a specified instance, you must specify this parameter after you use the **SrcDBInstanceId** parameter to specify the ID of the source instance. Then, the system creates an instance based on the backup set that is specified by this parameter.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -66,7 +66,13 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The backup set ID.</p>
+     * <p>This parameter is supported for specific new cluster instances. You can query the backup set ID by using the [DescribeClusterBackupList](~~2679158~~) operation.</p>
+     * <br>
+     * <p>*   If this parameter is supported, you can specify the backup set ID. In this case, you do not need to specify the **BackupId** parameter.</p>
+     * <br>
+     * <p><!----></p>
+     * <br>
+     * <p>*   If this parameter is not supported, set the BackupId parameter to the IDs of backup sets in all shards of the source instance, separated by commas (,). Example: "11101,11102".</p>
      */
     @NameInMap("ClusterBackupId")
     public String clusterBackupId;
@@ -210,6 +216,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("RestoreTime")
+    public String restoreTime;
+
     /**
      * <p>The ID of the secondary zone. You can call the [DescribeRegions](~~61012~~) operation to query the ID of the secondary zone.</p>
      * <br>
@@ -241,6 +250,11 @@ public class CreateTairInstanceRequest extends TeaModel {
     @NameInMap("ShardType")
     public String shardType;
 
+    /**
+     * <p>The number of read replicas in the secondary zone. This parameter is used to create a read/write splitting instance that is deployed across multiple zones.</p>
+     * <br>
+     * <p>> To create a read/write splitting instance that is deployed across multiple zones, you must specify both SlaveReadOnlyCount and SecondaryZoneId.</p>
+     */
     @NameInMap("SlaveReadOnlyCount")
     public Integer slaveReadOnlyCount;
 
@@ -529,6 +543,14 @@ public class CreateTairInstanceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateTairInstanceRequest setRestoreTime(String restoreTime) {
+        this.restoreTime = restoreTime;
+        return this;
+    }
+    public String getRestoreTime() {
+        return this.restoreTime;
     }
 
     public CreateTairInstanceRequest setSecondaryZoneId(String secondaryZoneId) {

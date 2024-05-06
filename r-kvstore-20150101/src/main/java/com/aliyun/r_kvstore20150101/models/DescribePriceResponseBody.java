@@ -880,6 +880,124 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
 
+    public static class DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo extends TeaModel {
+        @NameInMap("CheapRate")
+        public Double cheapRate;
+
+        @NameInMap("CheapStandAmount")
+        public Double cheapStandAmount;
+
+        @NameInMap("Differential")
+        public Double differential;
+
+        @NameInMap("DifferentialName")
+        public String differentialName;
+
+        @NameInMap("IsContractActivity")
+        public Boolean isContractActivity;
+
+        @NameInMap("IsShow")
+        public Boolean isShow;
+
+        @NameInMap("ListPrice")
+        public Double listPrice;
+
+        @NameInMap("MonthPrice")
+        public Double monthPrice;
+
+        @NameInMap("OriginalStandAmount")
+        public Double originalStandAmount;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        public static DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo self = new DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo setCheapRate(Double cheapRate) {
+            this.cheapRate = cheapRate;
+            return this;
+        }
+        public Double getCheapRate() {
+            return this.cheapRate;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo setCheapStandAmount(Double cheapStandAmount) {
+            this.cheapStandAmount = cheapStandAmount;
+            return this;
+        }
+        public Double getCheapStandAmount() {
+            return this.cheapStandAmount;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo setDifferential(Double differential) {
+            this.differential = differential;
+            return this;
+        }
+        public Double getDifferential() {
+            return this.differential;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo setDifferentialName(String differentialName) {
+            this.differentialName = differentialName;
+            return this;
+        }
+        public String getDifferentialName() {
+            return this.differentialName;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo setIsContractActivity(Boolean isContractActivity) {
+            this.isContractActivity = isContractActivity;
+            return this;
+        }
+        public Boolean getIsContractActivity() {
+            return this.isContractActivity;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo setIsShow(Boolean isShow) {
+            this.isShow = isShow;
+            return this;
+        }
+        public Boolean getIsShow() {
+            return this.isShow;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo setListPrice(Double listPrice) {
+            this.listPrice = listPrice;
+            return this;
+        }
+        public Double getListPrice() {
+            return this.listPrice;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo setMonthPrice(Double monthPrice) {
+            this.monthPrice = monthPrice;
+            return this;
+        }
+        public Double getMonthPrice() {
+            return this.monthPrice;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo setOriginalStandAmount(Double originalStandAmount) {
+            this.originalStandAmount = originalStandAmount;
+            return this;
+        }
+        public Double getOriginalStandAmount() {
+            return this.originalStandAmount;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
     public static class DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceModuleAttrsModuleAttr extends TeaModel {
         @NameInMap("Code")
         public String code;
@@ -955,6 +1073,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("ContractActivity")
         public Boolean contractActivity;
 
+        @NameInMap("DepreciateInfo")
+        public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo depreciateInfo;
+
         @NameInMap("DiscountFee")
         public Double discountFee;
 
@@ -996,6 +1117,14 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public Boolean getContractActivity() {
             return this.contractActivity;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance setDepreciateInfo(DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo depreciateInfo) {
+            this.depreciateInfo = depreciateInfo;
+            return this;
+        }
+        public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo getDepreciateInfo() {
+            return this.depreciateInfo;
         }
 
         public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance setDiscountFee(Double discountFee) {

@@ -4,6 +4,9 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
+    /**
+     * <p>The number of days for which data backup files are retained. Valid values: 7 to 730. Default value: 7.</p>
+     */
     @NameInMap("BackupRetentionPeriod")
     public Integer backupRetentionPeriod;
 

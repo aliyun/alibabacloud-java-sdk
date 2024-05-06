@@ -33,7 +33,7 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     public String editionType;
 
     /**
-     * <p>The database engine version of the instance. Valid values: **2.8**, **4.0**, and **5.0**.</p>
+     * <p>The database engine version of the instance.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;

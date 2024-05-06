@@ -4,6 +4,9 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
+    /**
+     * <p>The following parameters are no longer used. Ignore the parameters.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public DescribeBackupsResponseBodyAccessDeniedDetail accessDeniedDetail;
 
@@ -13,12 +16,25 @@ public class DescribeBackupsResponseBody extends TeaModel {
     @NameInMap("Backups")
     public DescribeBackupsResponseBodyBackups backups;
 
+    /**
+     * <p>This parameter does not take effect. Ignore this parameter.</p>
+     */
     @NameInMap("FreeSize")
     public Long freeSize;
 
+    /**
+     * <p>The size of the full backup file of the instance. Unit: bytes. Full backups originate from scheduled backups, manual backups, and backups generated during cache analysis.</p>
+     * <br>
+     * <p>>  The value of this parameter is independent of the number and size of the returned backup sets. Instead, it reflects the total size of all valid full backups of the instance.</p>
+     */
     @NameInMap("FullStorageSize")
     public Long fullStorageSize;
 
+    /**
+     * <p>The size of the log backup file of the instance. Unit: bytes. This value is valid only when flashback is enabled.</p>
+     * <br>
+     * <p>>  The value of this parameter is independent of the number and size of the returned backup sets. Instead, it reflects the total size of all valid log backups of the instance.</p>
+     */
     @NameInMap("LogStorageSize")
     public Long logStorageSize;
 
@@ -124,24 +140,45 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupsResponseBodyAccessDeniedDetail extends TeaModel {
+        /**
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         */
         @NameInMap("AuthAction")
         public String authAction;
 
+        /**
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
+        /**
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         */
         @NameInMap("AuthPrincipalOwnerId")
         public String authPrincipalOwnerId;
 
+        /**
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         */
         @NameInMap("AuthPrincipalType")
         public String authPrincipalType;
 
+        /**
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         */
         @NameInMap("EncodedDiagnosticMessage")
         public String encodedDiagnosticMessage;
 
+        /**
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         */
         @NameInMap("NoPermissionType")
         public String noPermissionType;
 
+        /**
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 
@@ -210,7 +247,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     public static class DescribeBackupsResponseBodyBackupsBackup extends TeaModel {
         /**
-         * <p>The databases that are backed up. Default value: **all**, which indicates that all databases are backed up.</p>
+         * <p>The names of the databases that are backed up. The default value is **all**, which indicates that all databases are backed up.</p>
          */
         @NameInMap("BackupDBNames")
         public String backupDBNames;
@@ -231,12 +268,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
          * <p>The ID of the backup file.</p>
          */
         @NameInMap("BackupId")
-        public Integer backupId;
+        public Long backupId;
 
         /**
          * <p>The internal download URL of the backup file.</p>
          * <br>
-         * <p>>  You can download the backup file by using this URL from the Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance and ApsaraDB for Redis instance must reside in the classic network or the same virtual private cloud (VPC) within the same region.</p>
+         * <p>>  You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance must belong to the same classic network or reside in the same virtual private cloud (VPC) as the ApsaraDB for Redis instance.</p>
          */
         @NameInMap("BackupIntranetDownloadURL")
         public String backupIntranetDownloadURL;
@@ -245,7 +282,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
          * <p>The ID of the backup task.</p>
          */
         @NameInMap("BackupJobID")
-        public Integer backupJobID;
+        public Long backupJobID;
 
         /**
          * <p>The backup method. Valid values:</p>
@@ -278,16 +315,16 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupStartTime;
 
         /**
-         * <p>The state of the backup task. Valid values:</p>
+         * <p>The status of the backup. Valid values:</p>
          * <br>
-         * <p>*   **Success**: The task is successful.</p>
-         * <p>*   **Failed**: The task failed.</p>
+         * <p>*   **Success**</p>
+         * <p>*   **Failed**</p>
          */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
         /**
-         * <p>The backup type of the backup file. Valid values:</p>
+         * <p>The backup type. Valid values:</p>
          * <br>
          * <p>*   **FullBackup**</p>
          * <p>*   **IncrementalBackup**</p>
@@ -296,7 +333,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupType;
 
         /**
-         * <p>The major engine version of the instance.</p>
+         * <p>The engine version (major version) of the instance.</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
@@ -304,7 +341,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * <p>The node ID.</p>
          * <br>
-         * <p>>  If a standard instance is used, the instance ID is returned.</p>
+         * <p>>  If the instance uses the standard architecture, this parameter returns the instance ID.</p>
          */
         @NameInMap("NodeInstanceId")
         public String nodeInstanceId;
@@ -338,11 +375,11 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.backupEndTime;
         }
 
-        public DescribeBackupsResponseBodyBackupsBackup setBackupId(Integer backupId) {
+        public DescribeBackupsResponseBodyBackupsBackup setBackupId(Long backupId) {
             this.backupId = backupId;
             return this;
         }
-        public Integer getBackupId() {
+        public Long getBackupId() {
             return this.backupId;
         }
 
@@ -354,11 +391,11 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.backupIntranetDownloadURL;
         }
 
-        public DescribeBackupsResponseBodyBackupsBackup setBackupJobID(Integer backupJobID) {
+        public DescribeBackupsResponseBodyBackupsBackup setBackupJobID(Long backupJobID) {
             this.backupJobID = backupJobID;
             return this;
         }
-        public Integer getBackupJobID() {
+        public Long getBackupJobID() {
             return this.backupJobID;
         }
 
