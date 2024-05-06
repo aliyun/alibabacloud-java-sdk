@@ -80,6 +80,9 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry extends TeaModel {
+        @NameInMap("EipAffinity")
+        public String eipAffinity;
+
         /**
          * <p>The ID of the NAT gateway to which the SNAT entry belongs.</p>
          */
@@ -137,6 +140,14 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         public static DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry build(java.util.Map<String, ?> map) throws Exception {
             DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry self = new DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry setEipAffinity(String eipAffinity) {
+            this.eipAffinity = eipAffinity;
+            return this;
+        }
+        public String getEipAffinity() {
+            return this.eipAffinity;
         }
 
         public DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry setNatGatewayId(String natGatewayId) {

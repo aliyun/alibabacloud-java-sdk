@@ -79,6 +79,25 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         return this.vpnGateways;
     }
 
+    public static class DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayEniInstanceIds extends TeaModel {
+        @NameInMap("EniInstanceId")
+        public java.util.List<String> eniInstanceId;
+
+        public static DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayEniInstanceIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayEniInstanceIds self = new DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayEniInstanceIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayEniInstanceIds setEniInstanceId(java.util.List<String> eniInstanceId) {
+            this.eniInstanceId = eniInstanceId;
+            return this;
+        }
+        public java.util.List<String> getEniInstanceId() {
+            return this.eniInstanceId;
+        }
+
+    }
+
     public static class DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData extends TeaModel {
         /**
          * <p>If the order type is **TEMP_UPGRADE** (temporary upgrade), this parameter specifies the time when the temporary upgrade expires.</p>
@@ -329,6 +348,9 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public Long endTime;
 
+        @NameInMap("EniInstanceIds")
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayEniInstanceIds eniInstanceIds;
+
         /**
          * <p>*   If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection.</p>
          * <br>
@@ -557,6 +579,14 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         }
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setEniInstanceIds(DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayEniInstanceIds eniInstanceIds) {
+            this.eniInstanceIds = eniInstanceIds;
+            return this;
+        }
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayEniInstanceIds getEniInstanceIds() {
+            return this.eniInstanceIds;
         }
 
         public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setInternetIp(String internetIp) {
