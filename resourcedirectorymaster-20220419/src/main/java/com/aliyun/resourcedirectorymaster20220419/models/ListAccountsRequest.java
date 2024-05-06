@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListAccountsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return the information of tags. Valid values:</p>
+     * <p>Specifies whether to return information about tags. Valid values:</p>
      * <br>
-     * <p>false (default value) true</p>
+     * <p>*   false (default value)</p>
+     * <p>*   true</p>
      */
     @NameInMap("IncludeTags")
     public Boolean includeTags;

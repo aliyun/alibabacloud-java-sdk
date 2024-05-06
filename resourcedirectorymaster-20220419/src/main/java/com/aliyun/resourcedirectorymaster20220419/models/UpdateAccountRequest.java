@@ -11,6 +11,15 @@ public class UpdateAccountRequest extends TeaModel {
     public String accountId;
 
     /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <br>
+     * <p>*   true: performs only a dry run. The system checks items such as whether the member status can be modified and whether security information is configured for the member. If the request does not pass the dry run, an error code is returned.</p>
+     * <p>*   false (default): performs a dry run and performs the actual request.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The new type of the member. Valid values:</p>
      * <br>
      * <p>*   ResourceAccount: resource account</p>
@@ -40,6 +49,14 @@ public class UpdateAccountRequest extends TeaModel {
     }
     public String getAccountId() {
         return this.accountId;
+    }
+
+    public UpdateAccountRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public UpdateAccountRequest setNewAccountType(String newAccountType) {

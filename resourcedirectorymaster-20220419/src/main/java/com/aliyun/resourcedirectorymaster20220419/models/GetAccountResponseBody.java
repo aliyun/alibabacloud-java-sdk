@@ -109,6 +109,9 @@ public class GetAccountResponseBody extends TeaModel {
         @NameInMap("FolderId")
         public String folderId;
 
+        @NameInMap("HasSecureMobilePhone")
+        public Boolean hasSecureMobilePhone;
+
         /**
          * <p>The real-name verification information.</p>
          */
@@ -226,6 +229,14 @@ public class GetAccountResponseBody extends TeaModel {
         }
         public String getFolderId() {
             return this.folderId;
+        }
+
+        public GetAccountResponseBodyAccount setHasSecureMobilePhone(Boolean hasSecureMobilePhone) {
+            this.hasSecureMobilePhone = hasSecureMobilePhone;
+            return this;
+        }
+        public Boolean getHasSecureMobilePhone() {
+            return this.hasSecureMobilePhone;
         }
 
         public GetAccountResponseBodyAccount setIdentityInformation(String identityInformation) {

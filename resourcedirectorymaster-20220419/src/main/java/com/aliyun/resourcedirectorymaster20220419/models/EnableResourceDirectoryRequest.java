@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class EnableResourceDirectoryRequest extends TeaModel {
     /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <br>
+     * <p>*   **true**: performs only a dry run.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The mode in which you enable a resource directory. Valid values:</p>
      * <br>
      * <p>*   CurrentAccount: The current account is used to enable a resource directory.</p>
@@ -44,6 +53,14 @@ public class EnableResourceDirectoryRequest extends TeaModel {
     public static EnableResourceDirectoryRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableResourceDirectoryRequest self = new EnableResourceDirectoryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public EnableResourceDirectoryRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public EnableResourceDirectoryRequest setEnableMode(String enableMode) {
