@@ -4,6 +4,9 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListAdvanceConfigDirRequest extends TeaModel {
+    /**
+     * <p>The name of the directory</p>
+     */
     @NameInMap("dirName")
     public String dirName;
 

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
     /**
-     * <p>The billing method of the instance. Valid values: PREPAY and POSTPAY. PREPAY: subscription. If you set this parameter to PREPAY, make sure that your Alibaba Cloud account supports balance payment or credit payment. Otherwise, the system returns the InvalidPayMethod error message. In addition, you must specify the paymentInfo parameter. POSTPAY: pay-as-you-go. This billing method is not supported.</p>
+     * <p>The billing method of the instance. Valid values: PREPAY and POSTPAY. PREPAY indicates the instance is a subscription instance. When you set this parameter to PREPAY, make sure that your Alibaba Cloud account supports balance payment or credit card payment. Otherwise, the system returns the InvalidPayMethod error message. If you set this parameter to PREPAY, you must also specify the paymentInfo parameter. POSTPAY indicates that the instance is a pay-as-you-go instance. This billing method is not supported.</p>
      */
     @NameInMap("chargeType")
     public String chargeType;
 
     /**
-     * <p>The specifications of the instance.</p>
+     * <p>A list of instance-related specifications.</p>
      */
     @NameInMap("components")
     public java.util.List<CreateInstanceRequestComponents> components;
 
     /**
-     * <p>The information about billing.</p>
+     * <p>The billing information.</p>
      */
     @NameInMap("order")
     public CreateInstanceRequestOrder order;
@@ -53,13 +53,13 @@ public class CreateInstanceRequest extends TeaModel {
 
     public static class CreateInstanceRequestComponents extends TeaModel {
         /**
-         * <p>The name of the specification. The value must be the same as the name of a parameter on the buy page.</p>
+         * <p>The specification code, which must be consistent with values of the corresponding module parameters.</p>
          */
         @NameInMap("code")
         public String code;
 
         /**
-         * <p>The value of the specification.</p>
+         * <p>Values that you specify for the corresponding module components on the buy page.</p>
          */
         @NameInMap("value")
         public String value;
@@ -95,13 +95,13 @@ public class CreateInstanceRequest extends TeaModel {
         public Boolean autoRenew;
 
         /**
-         * <p>The billing cycle. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, and 12.</p>
+         * <p>The billing duration. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, and 12.</p>
          */
         @NameInMap("duration")
         public Long duration;
 
         /**
-         * <p>The unit of the billing cycle. Valid values: Month and Year.</p>
+         * <p>The unit of the billing duration. Valid values: Month and Year.</p>
          */
         @NameInMap("pricingCycle")
         public String pricingCycle;

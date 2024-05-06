@@ -4,6 +4,9 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class GetAdvanceConfigFileRequest extends TeaModel {
+    /**
+     * <p>The name of the file</p>
+     */
     @NameInMap("fileName")
     public String fileName;
 

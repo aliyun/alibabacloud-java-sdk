@@ -13,6 +13,9 @@ public class ModifyNodeConfigRequest extends TeaModel {
     @NameInMap("dataFragmentNumber")
     public Integer dataFragmentNumber;
 
+    @NameInMap("flowRatio")
+    public Integer flowRatio;
+
     @NameInMap("minServicePercent")
     public Integer minServicePercent;
 
@@ -20,25 +23,31 @@ public class ModifyNodeConfigRequest extends TeaModel {
     public Boolean published;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The name of the cluster.</p>
      */
     @NameInMap("clusterName")
     public String clusterName;
 
     /**
-     * <p>The parameters in the request body.</p>
+     * <p>The name of the data source. Valid values: search and not_search. search indicates to search data. not_search indicates not to search data.</p>
      */
     @NameInMap("dataSourceName")
     public String dataSourceName;
 
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The original name of the node.</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The original name of the node.</p>
+     * <p>The type of the algorithm. Valid values: pop, cp, hot, hint, and suggest.</p>
+     * <br>
+     * <p>*   pop indicates the popularity model.</p>
+     * <p>*   cp indicates the category prediction model.</p>
+     * <p>*   hot indicates the top search model.</p>
+     * <p>*   hint indicates the hint model.</p>
+     * <p>*   suggest indicates the drop-down suggestion model.</p>
      */
     @NameInMap("type")
     public String type;
@@ -70,6 +79,14 @@ public class ModifyNodeConfigRequest extends TeaModel {
     }
     public Integer getDataFragmentNumber() {
         return this.dataFragmentNumber;
+    }
+
+    public ModifyNodeConfigRequest setFlowRatio(Integer flowRatio) {
+        this.flowRatio = flowRatio;
+        return this;
+    }
+    public Integer getFlowRatio() {
+        return this.flowRatio;
     }
 
     public ModifyNodeConfigRequest setMinServicePercent(Integer minServicePercent) {

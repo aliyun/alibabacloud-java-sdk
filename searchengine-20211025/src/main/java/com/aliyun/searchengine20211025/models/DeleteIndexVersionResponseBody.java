@@ -10,6 +10,9 @@ public class DeleteIndexVersionResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result</p>
+     */
     @NameInMap("result")
     public java.util.Map<String, ?> result;
 

@@ -4,12 +4,21 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class GetNodeConfigRequest extends TeaModel {
+    /**
+     * <p>The name of the cluster</p>
+     */
     @NameInMap("clusterName")
     public String clusterName;
 
+    /**
+     * <p>The name of the cluster.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The type of the node. Valid values: qrs, search, index, and cluster. qrs indicates a query node, search indicates a data node, index indicates an index node, and cluster indicates a cluster node.</p>
+     */
     @NameInMap("type")
     public String type;
 

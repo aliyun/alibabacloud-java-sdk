@@ -11,7 +11,7 @@ public class ModifyNodeConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>auditing</p>
+     * <p>The information about the index</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

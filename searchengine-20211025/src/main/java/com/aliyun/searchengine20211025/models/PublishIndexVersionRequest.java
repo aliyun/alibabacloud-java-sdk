@@ -4,6 +4,9 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class PublishIndexVersionRequest extends TeaModel {
+    /**
+     * <p>The query result</p>
+     */
     @NameInMap("body")
     public java.util.Map<String, ?> body;
 

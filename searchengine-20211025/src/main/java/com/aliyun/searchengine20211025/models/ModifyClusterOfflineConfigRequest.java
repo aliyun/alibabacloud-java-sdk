@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterOfflineConfigRequest extends TeaModel {
     /**
-     * <p>The reindexing method. Valid values: api: API data source. indexRecover: data recovery through indexing.</p>
+     * <p>The mode of reindexing. Valid values: api and indexRecover. api indicates to push incremental data to a data source by calling the API operations. indexRecover indicates that the data source is restored from the index.</p>
      */
     @NameInMap("buildMode")
     public String buildMode;
@@ -16,35 +16,38 @@ public class ModifyClusterOfflineConfigRequest extends TeaModel {
     @NameInMap("config")
     public java.util.Map<String, Integer> config;
 
+    /**
+     * <p>The name of the data source.</p>
+     */
     @NameInMap("dataSourceName")
     public String dataSourceName;
 
     /**
-     * <p>The type of the data source. Valid values: odps: MaxCompute. swift: Swift. unKnow: unknown type.</p>
+     * <p>The type of the data source. Valid values: odps, swift, saro, and unKnow.</p>
      */
     @NameInMap("dataSourceType")
     public String dataSourceType;
 
     /**
-     * <p>This parameter is required if the API data source experiences full indexing.</p>
+     * <p>This parameter is required when index building by using API data sources is triggered.</p>
      */
     @NameInMap("dataTimeSec")
     public Integer dataTimeSec;
 
     /**
-     * <p>The domain in which the data source is deployed.</p>
+     * <p>The domain where the data source is deployed.</p>
      */
     @NameInMap("domain")
     public String domain;
 
     /**
-     * <p>The ID of the backward data delivery.</p>
+     * <p>The data restoration version.</p>
      */
     @NameInMap("generation")
     public Long generation;
 
     /**
-     * <p>This parameter is required if the MaxCompute data source experiences full indexing.</p>
+     * <p>This parameter is required when index building for full data in a MaxCompute data source is triggered.</p>
      */
     @NameInMap("partition")
     public String partition;

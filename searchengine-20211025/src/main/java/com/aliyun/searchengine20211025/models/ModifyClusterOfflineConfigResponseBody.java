@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterOfflineConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the request</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The result of the request.</p>
+     * <p>The result</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

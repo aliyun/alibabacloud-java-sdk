@@ -16,6 +16,9 @@ public class CreateIndexRequest extends TeaModel {
     @NameInMap("dataSource")
     public String dataSource;
 
+    /**
+     * <p>The information about the data source, which is required for the new version of OpenSearch Vector Search Edition.</p>
+     */
     @NameInMap("dataSourceInfo")
     public CreateIndexRequestDataSourceInfo dataSourceInfo;
 
@@ -25,6 +28,9 @@ public class CreateIndexRequest extends TeaModel {
     @NameInMap("domain")
     public String domain;
 
+    /**
+     * <p>The extended configurations of the field. Keys such as vector and embedding are included. Vector indicates the vector field. Embedding indicates the field that requires embedding.</p>
+     */
     @NameInMap("extend")
     public java.util.Map<String, ?> extend;
 
@@ -113,21 +119,54 @@ public class CreateIndexRequest extends TeaModel {
     }
 
     public static class CreateIndexRequestDataSourceInfoConfig extends TeaModel {
+        /**
+         * <p>The AccessKey ID of the MaxCompute data source.</p>
+         */
         @NameInMap("accessKey")
         public String accessKey;
 
+        /**
+         * <p>The AccessKey secret of the MaxCompute data source.</p>
+         */
         @NameInMap("accessSecret")
         public String accessSecret;
 
+        /**
+         * <p>oss bucket</p>
+         */
+        @NameInMap("bucket")
+        public String bucket;
+
+        /**
+         * <p>The endpoint of the MaxCompute or Object Storage Service (OSS) data source.</p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        @NameInMap("namespace")
+        public String namespace;
+
+        @NameInMap("ossPath")
+        public String ossPath;
+
+        /**
+         * <p>The data partition. This parameter is required if type is set to odps.</p>
+         */
         @NameInMap("partition")
         public String partition;
 
+        @NameInMap("path")
+        public String path;
+
+        /**
+         * <p>The name of the MaxCompute project that is used as the data source.</p>
+         */
         @NameInMap("project")
         public String project;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("table")
         public String table;
 
@@ -152,6 +191,14 @@ public class CreateIndexRequest extends TeaModel {
             return this.accessSecret;
         }
 
+        public CreateIndexRequestDataSourceInfoConfig setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
         public CreateIndexRequestDataSourceInfoConfig setEndpoint(String endpoint) {
             this.endpoint = endpoint;
             return this;
@@ -160,12 +207,36 @@ public class CreateIndexRequest extends TeaModel {
             return this.endpoint;
         }
 
+        public CreateIndexRequestDataSourceInfoConfig setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public CreateIndexRequestDataSourceInfoConfig setOssPath(String ossPath) {
+            this.ossPath = ossPath;
+            return this;
+        }
+        public String getOssPath() {
+            return this.ossPath;
+        }
+
         public CreateIndexRequestDataSourceInfoConfig setPartition(String partition) {
             this.partition = partition;
             return this;
         }
         public String getPartition() {
             return this.partition;
+        }
+
+        public CreateIndexRequestDataSourceInfoConfig setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
         }
 
         public CreateIndexRequestDataSourceInfoConfig setProject(String project) {
@@ -186,16 +257,76 @@ public class CreateIndexRequest extends TeaModel {
 
     }
 
+    public static class CreateIndexRequestDataSourceInfoSaroConfig extends TeaModel {
+        @NameInMap("namespace")
+        public String namespace;
+
+        @NameInMap("tableName")
+        public String tableName;
+
+        public static CreateIndexRequestDataSourceInfoSaroConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateIndexRequestDataSourceInfoSaroConfig self = new CreateIndexRequestDataSourceInfoSaroConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateIndexRequestDataSourceInfoSaroConfig setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public CreateIndexRequestDataSourceInfoSaroConfig setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+    }
+
     public static class CreateIndexRequestDataSourceInfo extends TeaModel {
+        /**
+         * <p>Specifies whether to enable the automatic full indexing feature.</p>
+         */
         @NameInMap("autoBuildIndex")
         public Boolean autoBuildIndex;
 
+        /**
+         * <p>The information about the MaxCompute data source.</p>
+         */
         @NameInMap("config")
         public CreateIndexRequestDataSourceInfoConfig config;
 
+        @NameInMap("dataTimeSec")
+        public Integer dataTimeSec;
+
+        /**
+         * <p>The data center where the data source is deployed.</p>
+         */
+        @NameInMap("domain")
+        public String domain;
+
+        /**
+         * <p>The name of the index.</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <p>The number of resources used for data update.</p>
+         */
         @NameInMap("processPartitionCount")
         public Integer processPartitionCount;
 
+        @NameInMap("saroConfig")
+        public CreateIndexRequestDataSourceInfoSaroConfig saroConfig;
+
+        /**
+         * <p>The type of the data source. Valid values: odps, swift, saro, and oss.</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -220,12 +351,44 @@ public class CreateIndexRequest extends TeaModel {
             return this.config;
         }
 
+        public CreateIndexRequestDataSourceInfo setDataTimeSec(Integer dataTimeSec) {
+            this.dataTimeSec = dataTimeSec;
+            return this;
+        }
+        public Integer getDataTimeSec() {
+            return this.dataTimeSec;
+        }
+
+        public CreateIndexRequestDataSourceInfo setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
+        }
+
+        public CreateIndexRequestDataSourceInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public CreateIndexRequestDataSourceInfo setProcessPartitionCount(Integer processPartitionCount) {
             this.processPartitionCount = processPartitionCount;
             return this;
         }
         public Integer getProcessPartitionCount() {
             return this.processPartitionCount;
+        }
+
+        public CreateIndexRequestDataSourceInfo setSaroConfig(CreateIndexRequestDataSourceInfoSaroConfig saroConfig) {
+            this.saroConfig = saroConfig;
+            return this;
+        }
+        public CreateIndexRequestDataSourceInfoSaroConfig getSaroConfig() {
+            return this.saroConfig;
         }
 
         public CreateIndexRequestDataSourceInfo setType(String type) {

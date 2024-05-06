@@ -10,6 +10,9 @@ public class ListClusterNamesResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result set</p>
+     */
     @NameInMap("result")
     public ListClusterNamesResponseBodyResult result;
 
@@ -35,12 +38,21 @@ public class ListClusterNamesResponseBody extends TeaModel {
     }
 
     public static class ListClusterNamesResponseBodyResult extends TeaModel {
+        /**
+         * <p>The description of the cluster</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The ID of the cluster</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>The name of the cluster</p>
+         */
         @NameInMap("name")
         public String name;
 

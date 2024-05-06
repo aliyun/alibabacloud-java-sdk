@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListInstanceSpecsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>id of request</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The specifications of the instances.</p>
+     * <p>List</p>
      */
     @NameInMap("result")
     public java.util.List<ListInstanceSpecsResponseBodyResult> result;
@@ -39,25 +39,25 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
 
     public static class ListInstanceSpecsResponseBodyResult extends TeaModel {
         /**
-         * <p>The number of CPU cores.</p>
+         * <p>None</p>
          */
         @NameInMap("cpu")
         public Integer cpu;
 
         /**
-         * <p>The maximum storage space of a searcher worker.</p>
+         * <p>单数据节点存储空间最大值</p>
          */
         @NameInMap("maxDisk")
         public Integer maxDisk;
 
         /**
-         * <p>The memory size. Unit: GB.</p>
+         * <p>Unit: GB</p>
          */
         @NameInMap("mem")
         public Integer mem;
 
         /**
-         * <p>The minimum storage space of a searcher worker.</p>
+         * <p>单数据节点存储空间最小值</p>
          */
         @NameInMap("minDisk")
         public Integer minDisk;

@@ -4,9 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListAdvanceConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of advanced configurations.</p>
+     */
     @NameInMap("result")
     public java.util.List<ListAdvanceConfigsResponseBodyResult> result;
 
@@ -32,15 +38,27 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
     }
 
     public static class ListAdvanceConfigsResponseBodyResultFiles extends TeaModel {
+        /**
+         * <p>The name of the absolute path.</p>
+         */
         @NameInMap("fullPathName")
         public String fullPathName;
 
+        /**
+         * <p>Indicates whether it is a directory. Valid values: true and false. true indicates that it is a directory, and false indicates that it is not a directory.</p>
+         */
         @NameInMap("isDir")
         public Boolean isDir;
 
+        /**
+         * <p>Indicates whether it is a template. Valid values: true and false. true indicates that it is a directory, and false indicates that it is not a directory.</p>
+         */
         @NameInMap("isTemplate")
         public Boolean isTemplate;
 
+        /**
+         * <p>The name of the file.</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -84,30 +102,39 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
     }
 
     public static class ListAdvanceConfigsResponseBodyResult extends TeaModel {
-        /**
-         * <p>配置内容 http，git 请求时不为空</p>
-         */
         @NameInMap("content")
         public String content;
 
-        /**
-         * <p>配置内容的类型 (FILE, GIT, HTTP, ODPS)</p>
-         */
         @NameInMap("contentType")
         public String contentType;
 
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("desc")
         public String desc;
 
+        /**
+         * <p>The list of file names.</p>
+         */
         @NameInMap("files")
         public java.util.List<ListAdvanceConfigsResponseBodyResultFiles> files;
 
+        /**
+         * <p>The name of the advanced configuration.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The state of the advanced configuration. Valid values: drafting, used, unused, and trash. drafting indicates that the advanced configuration is a draft. used indicates that the advanced configuration is in use. unused indicates that the advanced configuration is unused. trash indicates that the advanced configuration is being deleted.</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The update time.</p>
+         */
         @NameInMap("updateTime")
         public Long updateTime;
 

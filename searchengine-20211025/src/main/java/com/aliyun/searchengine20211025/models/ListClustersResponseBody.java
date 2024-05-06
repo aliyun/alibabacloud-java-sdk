@@ -10,6 +10,9 @@ public class ListClustersResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of clusters.</p>
+     */
     @NameInMap("result")
     public java.util.List<ListClustersResponseBodyResult> result;
 
@@ -35,12 +38,21 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyResultDataNode extends TeaModel {
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The number of nodes.</p>
+         */
         @NameInMap("number")
         public Integer number;
 
+        /**
+         * <p>The partition ID of the node.</p>
+         */
         @NameInMap("partition")
         public Integer partition;
 
@@ -76,12 +88,21 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyResultQueryNode extends TeaModel {
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The number of nodes.</p>
+         */
         @NameInMap("number")
         public Integer number;
 
+        /**
+         * <p>The number o replicas.</p>
+         */
         @NameInMap("partition")
         public Integer partition;
 
@@ -117,9 +138,15 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyResult extends TeaModel {
+        /**
+         * <p>The time when the configuration was updated.</p>
+         */
         @NameInMap("configUpdateTime")
         public String configUpdateTime;
 
+        /**
+         * <p>The effective advanced version.</p>
+         */
         @NameInMap("currentAdvanceConfigVersion")
         public String currentAdvanceConfigVersion;
 
@@ -129,6 +156,9 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("currentOfflineDictConfigVersion")
         public String currentOfflineDictConfigVersion;
 
+        /**
+         * <p>The effective online configuration version.</p>
+         */
         @NameInMap("currentOnlineConfigVersion")
         public String currentOnlineConfigVersion;
 
@@ -138,12 +168,21 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("currentOnlineQueryConfigVersion")
         public String currentOnlineQueryConfigVersion;
 
+        /**
+         * <p>The information about the node in the cluster.</p>
+         */
         @NameInMap("dataNode")
         public ListClustersResponseBodyResultDataNode dataNode;
 
+        /**
+         * <p>The description of the cluster.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The latest advanced configuration version.</p>
+         */
         @NameInMap("latestAdvanceConfigVersion")
         public String latestAdvanceConfigVersion;
 
@@ -153,6 +192,9 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("latestOfflineDictConfigVersion")
         public String latestOfflineDictConfigVersion;
 
+        /**
+         * <p>The latest online configuration version.</p>
+         */
         @NameInMap("latestOnlineConfigVersion")
         public String latestOnlineConfigVersion;
 
@@ -162,12 +204,21 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("latestOnlineQueryConfigVersion")
         public String latestOnlineQueryConfigVersion;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The query node of the cluster.</p>
+         */
         @NameInMap("queryNode")
         public ListClustersResponseBodyResultQueryNode queryNode;
 
+        /**
+         * <p>The status of the cluster. Valid values: running, starting, stopping, and stopped. running indicates the cluster is running, starting indicates the cluster is starting, stopping indicates the cluster is stopping, and stopped indicates the cluster has stopped.</p>
+         */
         @NameInMap("status")
         public String status;
 

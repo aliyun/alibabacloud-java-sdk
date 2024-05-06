@@ -10,6 +10,9 @@ public class GetFileResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The information about the index.</p>
+     */
     @NameInMap("result")
     public GetFileResponseBodyResult result;
 
@@ -35,21 +38,39 @@ public class GetFileResponseBody extends TeaModel {
     }
 
     public static class GetFileResponseBodyResult extends TeaModel {
+        /**
+         * <p>The content of the file.</p>
+         */
         @NameInMap("content")
         public String content;
 
+        /**
+         * <p>The data source.</p>
+         */
         @NameInMap("dataSource")
         public String dataSource;
 
+        /**
+         * <p>The name of the full path.</p>
+         */
         @NameInMap("fullPathName")
         public String fullPathName;
 
+        /**
+         * <p>Indicates whether it is a directory.</p>
+         */
         @NameInMap("isDir")
         public Boolean isDir;
 
+        /**
+         * <p>The name of the file.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The number of shards.</p>
+         */
         @NameInMap("partition")
         public Long partition;
 

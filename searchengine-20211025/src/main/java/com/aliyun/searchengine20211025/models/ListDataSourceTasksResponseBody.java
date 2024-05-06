@@ -11,7 +11,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The date when the task was completed.</p>
+     * <p>The information about the index.</p>
      */
     @NameInMap("result")
     public java.util.List<ListDataSourceTasksResponseBodyResult> result;
@@ -38,9 +38,15 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
     }
 
     public static class ListDataSourceTasksResponseBodyResultTags extends TeaModel {
+        /**
+         * <p>The content of the tag.</p>
+         */
         @NameInMap("msg")
         public String msg;
 
+        /**
+         * <p>The level of the tag.</p>
+         */
         @NameInMap("tagLevel")
         public String tagLevel;
 
@@ -68,15 +74,27 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
     }
 
     public static class ListDataSourceTasksResponseBodyResultTaskNodes extends TeaModel {
+        /**
+         * <p>The date when the task was completed.</p>
+         */
         @NameInMap("finishDate")
         public String finishDate;
 
+        /**
+         * <p>The sequence number of the task.</p>
+         */
         @NameInMap("index")
         public Long index;
 
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The status of the task.</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -120,9 +138,15 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
     }
 
     public static class ListDataSourceTasksResponseBodyResult extends TeaModel {
+        /**
+         * <p>The additional attributes of the card.</p>
+         */
         @NameInMap("extraAttribute")
         public String extraAttribute;
 
+        /**
+         * <p>The field3 field that is passed through when you create a state machine.</p>
+         */
         @NameInMap("field3")
         public String field3;
 
@@ -133,42 +157,50 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
         public String fsmId;
 
         /**
-         * <p>### Method</p>
-         * <br>
-         * <p>```java</p>
-         * <p>GET</p>
-         * <p>```</p>
-         * <br>
-         * <p>### URI</p>
-         * <br>
-         * <p>```java</p>
-         * <p>/openapi/ha3/instances/{instanceId}/data-source-tasks</p>
-         * <p>```</p>
+         * <p>Indicates whether the change is a data source task change or a cluster task change.</p>
          */
         @NameInMap("groupType")
         public String groupType;
 
         /**
-         * <p>Displays data source tasks.</p>
+         * <p>The task name on the card.</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The overall status of FSM.</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The status tag of the progress bar chart.</p>
+         */
         @NameInMap("tags")
         public java.util.List<ListDataSourceTasksResponseBodyResultTags> tags;
 
+        /**
+         * <p>The information about the task.</p>
+         */
         @NameInMap("taskNodes")
         public java.util.List<ListDataSourceTasksResponseBodyResultTaskNodes> taskNodes;
 
+        /**
+         * <p>The timestamp of the task on the card.</p>
+         */
         @NameInMap("time")
         public String time;
 
+        /**
+         * <p>The type of the task on the card.</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The user who triggered the finite-state machine (FSM) process.</p>
+         */
         @NameInMap("user")
         public String user;
 

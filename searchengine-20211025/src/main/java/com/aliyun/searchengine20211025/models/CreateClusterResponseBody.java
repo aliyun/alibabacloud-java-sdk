@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateClusterResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>id of request</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The result returned.</p>
+     * <p>The result returned</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

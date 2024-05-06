@@ -10,6 +10,9 @@ public class GetAdvanceConfigFileResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result</p>
+     */
     @NameInMap("result")
     public GetAdvanceConfigFileResponseBodyResult result;
 
@@ -35,6 +38,9 @@ public class GetAdvanceConfigFileResponseBody extends TeaModel {
     }
 
     public static class GetAdvanceConfigFileResponseBodyResult extends TeaModel {
+        /**
+         * <p>The content of the file</p>
+         */
         @NameInMap("content")
         public String content;
 

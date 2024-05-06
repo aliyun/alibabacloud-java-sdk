@@ -11,7 +11,7 @@ public class GetDataSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the data source.</p>
+     * <p>The list of information about the data source</p>
      */
     @NameInMap("result")
     public GetDataSourceResponseBodyResult result;
@@ -38,23 +38,38 @@ public class GetDataSourceResponseBody extends TeaModel {
     }
 
     public static class GetDataSourceResponseBodyResult extends TeaModel {
+        /**
+         * <p>The data center where the data source is deployed in offline mode</p>
+         */
         @NameInMap("domain")
         public String domain;
 
+        /**
+         * <p>The list of index information</p>
+         */
         @NameInMap("indexes")
         public java.util.List<String> indexes;
 
+        /**
+         * <p>The time when an index for full data was last built</p>
+         */
         @NameInMap("lastFulTime")
         public Long lastFulTime;
 
+        /**
+         * <p>The name of the data source</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The state of the data source</p>
+         */
         @NameInMap("status")
         public String status;
 
         /**
-         * <p>The type of the data source.</p>
+         * <p>The type of the data source</p>
          */
         @NameInMap("type")
         public String type;

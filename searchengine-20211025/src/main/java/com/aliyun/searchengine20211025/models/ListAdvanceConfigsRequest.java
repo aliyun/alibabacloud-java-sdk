@@ -10,6 +10,9 @@ public class ListAdvanceConfigsRequest extends TeaModel {
     @NameInMap("indexName")
     public String indexName;
 
+    /**
+     * <p>The type of the advanced configurations. Valid values: online and offline. - online The default value is offline.</p>
+     */
     @NameInMap("type")
     public String type;
 

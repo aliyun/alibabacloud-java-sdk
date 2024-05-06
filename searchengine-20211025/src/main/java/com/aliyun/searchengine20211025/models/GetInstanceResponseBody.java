@@ -4,11 +4,14 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The description of the instance.</p>
+     * <p>The result returned.</p>
      */
     @NameInMap("result")
     public GetInstanceResponseBodyResult result;
@@ -35,9 +38,15 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyResultTags extends TeaModel {
+        /**
+         * <p>标签键</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>标签值</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -66,116 +75,78 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyResult extends TeaModel {
         /**
-         * <p>付费类型</p>
+         * <p>The billing method.</p>
          */
         @NameInMap("chargeType")
         public String chargeType;
 
         /**
-         * <p>商品code</p>
+         * <p>The product code.</p>
          */
         @NameInMap("commodityCode")
         public String commodityCode;
 
         /**
-         * <p>代表创建时间的资源属性字段</p>
+         * <p>The time when the instance was created.</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The description of the instance.</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>WB01240825</p>
+         * <p>The expiration time.</p>
          */
         @NameInMap("expiredTime")
         public String expiredTime;
 
         /**
-         * <p>是否欠费</p>
+         * <p>Indicates whether an overdue payment is involved.</p>
          */
         @NameInMap("inDebt")
         public Boolean inDebt;
 
         /**
-         * <p>代表资源一级ID的资源属性字段</p>
+         * <p>The ID of the resource.</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
-         * <p>锁定状态</p>
+         * <p>The lock status.</p>
          */
         @NameInMap("lockMode")
         public String lockMode;
 
         /**
-         * <p>### Sample responses</p>
-         * <br>
-         * <p>**Sample success responses**</p>
-         * <br>
-         * <p>    {</p>
-         * <p>      "requestId": "90D6B8F5-FE97-4509-9AAB-367836C51818",</p>
-         * <p>      "result": </p>
-         * <p>      {</p>
-         * <p>        "instanceId":"fadsfsafs",</p>
-         * <p>        "inDebt":true,</p>
-         * <p>        "lockMode":"Unlock",</p>
-         * <p>        "expiredTime":"asdfas",</p>
-         * <p>        "updateTime":"dfasf",</p>
-         * <p>        "createTime":"dfasf",</p>
-         * <p>        "resourceGroupId":"resourceGroupID",</p>
-         * <p>        "commodityCode":"commodityCode",</p>
-         * <p>        "chargeType":"POSYPAY",</p>
-         * <p>        "description":"this is description",</p>
-         * <p>        "apiVersion": "tisplus/v1",</p>
-         * <p>        "network": {</p>
-         * <p>          "vSwitchId": "vswitch_id_xxx",</p>
-         * <p>          "vpcId": "vpc_id_xxx",	  </p>
-         * <p>        },</p>
-         * <p>        "userName": "user",</p>
-         * <p>        "spec": {</p>
-         * <p>          "searchResource": {</p>
-         * <p>            "disk": 50,</p>
-         * <p>            "mem": 8,</p>
-         * <p>            "cpu": 2,</p>
-         * <p>            "nodeCount": 2</p>
-         * <p>          },</p>
-         * <p>          "qrsResource": {</p>
-         * <p>            "disk": 50,</p>
-         * <p>            "mem": 8,</p>
-         * <p>            "cpu": 2,</p>
-         * <p>            "nodeCount": 2</p>
-         * <p>          }</p>
-         * <p>        },</p>
-         * <p>       "status": "INIT",</p>
-         * <p>      }</p>
-         * <p>    }</p>
-         * <br>
-         * <p>**Sample error responses**</p>
-         * <br>
-         * <p>    {</p>
-         * <p>      "requestId": "BD1EA715-DF6F-06C2-004C-C1FA0D3A9820",</p>
-         * <p>      "httpCode": 404,</p>
-         * <p>      "code": "App.NotFound",</p>
-         * <p>      "message": "App not found"</p>
-         * <p>    }</p>
+         * <p>The ID of the resource group.</p>
          */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The status of the instance. Valid values:</p>
+         * <br>
+         * <p>*   INIT: being initialized</p>
+         * <p>*   WAIT_CONFIG: to be configured</p>
+         * <p>*   CONFIG_UPDATING: configuration taking effect</p>
+         * <p>*   READY: normal</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>标签。</p>
+         */
         @NameInMap("tags")
         public java.util.List<GetInstanceResponseBodyResultTags> tags;
 
         /**
-         * <p>更新时间</p>
+         * <p>The time when the instance was last updated.</p>
          */
         @NameInMap("updateTime")
         public String updateTime;

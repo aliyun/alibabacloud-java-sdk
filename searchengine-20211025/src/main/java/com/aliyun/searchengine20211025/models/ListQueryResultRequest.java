@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListQueryResultRequest extends TeaModel {
     /**
-     * <p>353490</p>
+     * <p>The query statement</p>
      */
     @NameInMap("query")
     public String query;
 
+    /**
+     * <p>The SQL statement that is executed in the query</p>
+     */
     @NameInMap("sql")
     public String sql;
 
