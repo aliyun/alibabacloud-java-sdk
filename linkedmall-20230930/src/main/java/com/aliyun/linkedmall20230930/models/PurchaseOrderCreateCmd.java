@@ -4,18 +4,30 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class PurchaseOrderCreateCmd extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("buyerId")
     public String buyerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("deliveryAddress")
     public AddressInfo deliveryAddress;
 
     @NameInMap("extInfo")
     public java.util.Map<String, ?> extInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("outerPurchaseOrderId")
     public String outerPurchaseOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("productList")
     public java.util.List<ProductDTO> productList;
 

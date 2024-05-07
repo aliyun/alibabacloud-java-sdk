@@ -4,9 +4,15 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class SkuQueryParam extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("productId")
     public String productId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("skuId")
     public String skuId;
 

@@ -4,12 +4,21 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ListSelectionProductsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("purchaserId")
     public String purchaserId;
 

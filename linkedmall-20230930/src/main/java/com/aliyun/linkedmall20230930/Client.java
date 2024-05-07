@@ -82,6 +82,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * @summary 取消逆向单
+     *
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelRefundOrderResponse
+     */
     public CancelRefundOrderResponse cancelRefundOrderWithOptions(String disputeId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -100,12 +107,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelRefundOrderResponse());
     }
 
+    /**
+     * @summary 取消逆向单
+     *
+     * @return CancelRefundOrderResponse
+     */
     public CancelRefundOrderResponse cancelRefundOrder(String disputeId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.cancelRefundOrderWithOptions(disputeId, headers, runtime);
     }
 
+    /**
+     * @summary 确认收货（订单）
+     *
+     * @param request ConfirmDisburseRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConfirmDisburseResponse
+     */
     public ConfirmDisburseResponse confirmDisburseWithOptions(ConfirmDisburseRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -126,12 +146,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ConfirmDisburseResponse());
     }
 
+    /**
+     * @summary 确认收货（订单）
+     *
+     * @param request ConfirmDisburseRequest
+     * @return ConfirmDisburseResponse
+     */
     public ConfirmDisburseResponse confirmDisburse(ConfirmDisburseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.confirmDisburseWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 提交运单信息
+     *
+     * @param request CreateGoodsShippingNoticeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateGoodsShippingNoticeResponse
+     */
     public CreateGoodsShippingNoticeResponse createGoodsShippingNoticeWithOptions(CreateGoodsShippingNoticeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -152,12 +186,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGoodsShippingNoticeResponse());
     }
 
+    /**
+     * @summary 提交运单信息
+     *
+     * @param request CreateGoodsShippingNoticeRequest
+     * @return CreateGoodsShippingNoticeResponse
+     */
     public CreateGoodsShippingNoticeResponse createGoodsShippingNotice(CreateGoodsShippingNoticeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createGoodsShippingNoticeWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 创建采购单
+     *
+     * @param request CreatePurchaseOrderRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePurchaseOrderResponse
+     */
     public CreatePurchaseOrderResponse createPurchaseOrderWithOptions(CreatePurchaseOrderRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -178,12 +226,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePurchaseOrderResponse());
     }
 
+    /**
+     * @summary 创建采购单
+     *
+     * @param request CreatePurchaseOrderRequest
+     * @return CreatePurchaseOrderResponse
+     */
     public CreatePurchaseOrderResponse createPurchaseOrder(CreatePurchaseOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createPurchaseOrderWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 创建逆向单
+     *
+     * @param request CreateRefundOrderRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRefundOrderResponse
+     */
     public CreateRefundOrderResponse createRefundOrderWithOptions(CreateRefundOrderRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -204,12 +266,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRefundOrderResponse());
     }
 
+    /**
+     * @summary 创建逆向单
+     *
+     * @param request CreateRefundOrderRequest
+     * @return CreateRefundOrderResponse
+     */
     public CreateRefundOrderResponse createRefundOrder(CreateRefundOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createRefundOrderWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 查询主单详情
+     *
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetOrderResponse
+     */
     public GetOrderResponse getOrderWithOptions(String orderId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -228,12 +303,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetOrderResponse());
     }
 
+    /**
+     * @summary 查询主单详情
+     *
+     * @return GetOrderResponse
+     */
     public GetOrderResponse getOrder(String orderId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getOrderWithOptions(orderId, headers, runtime);
     }
 
+    /**
+     * @summary 查询采购单状态
+     *
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPurchaseOrderStatusResponse
+     */
     public GetPurchaseOrderStatusResponse getPurchaseOrderStatusWithOptions(String purchaseOrderId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -252,12 +339,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetPurchaseOrderStatusResponse());
     }
 
+    /**
+     * @summary 查询采购单状态
+     *
+     * @return GetPurchaseOrderStatusResponse
+     */
     public GetPurchaseOrderStatusResponse getPurchaseOrderStatus(String purchaseOrderId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getPurchaseOrderStatusWithOptions(purchaseOrderId, headers, runtime);
     }
 
+    /**
+     * @summary 查询分销商店铺
+     *
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPurchaserShopResponse
+     */
     public GetPurchaserShopResponse getPurchaserShopWithOptions(String purchaserId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -276,12 +375,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetPurchaserShopResponse());
     }
 
+    /**
+     * @summary 查询分销商店铺
+     *
+     * @return GetPurchaserShopResponse
+     */
     public GetPurchaserShopResponse getPurchaserShop(String purchaserId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getPurchaserShopWithOptions(purchaserId, headers, runtime);
     }
 
+    /**
+     * @summary 查询逆向单详情
+     *
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRefundOrderResponse
+     */
     public GetRefundOrderResponse getRefundOrderWithOptions(String disputeId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -300,12 +411,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetRefundOrderResponse());
     }
 
+    /**
+     * @summary 查询逆向单详情
+     *
+     * @return GetRefundOrderResponse
+     */
     public GetRefundOrderResponse getRefundOrder(String disputeId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getRefundOrderWithOptions(disputeId, headers, runtime);
     }
 
+    /**
+     * @summary 查询选品池商品详情
+     *
+     * @param request GetSelectionProductRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSelectionProductResponse
+     */
     public GetSelectionProductResponse getSelectionProductWithOptions(String productId, GetSelectionProductRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -335,12 +459,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetSelectionProductResponse());
     }
 
+    /**
+     * @summary 查询选品池商品详情
+     *
+     * @param request GetSelectionProductRequest
+     * @return GetSelectionProductResponse
+     */
     public GetSelectionProductResponse getSelectionProduct(String productId, GetSelectionProductRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getSelectionProductWithOptions(productId, request, headers, runtime);
     }
 
+    /**
+     * @summary 查询选品池商品库存
+     *
+     * @param request GetSelectionProductSaleInfoRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSelectionProductSaleInfoResponse
+     */
     public GetSelectionProductSaleInfoResponse getSelectionProductSaleInfoWithOptions(String productId, GetSelectionProductSaleInfoRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -370,12 +508,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetSelectionProductSaleInfoResponse());
     }
 
+    /**
+     * @summary 查询选品池商品库存
+     *
+     * @param request GetSelectionProductSaleInfoRequest
+     * @return GetSelectionProductSaleInfoResponse
+     */
     public GetSelectionProductSaleInfoResponse getSelectionProductSaleInfo(String productId, GetSelectionProductSaleInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getSelectionProductSaleInfoWithOptions(productId, request, headers, runtime);
     }
 
+    /**
+     * @summary 查询类目
+     *
+     * @param request ListCategoriesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCategoriesResponse
+     */
     public ListCategoriesResponse listCategoriesWithOptions(ListCategoriesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -396,12 +548,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListCategoriesResponse());
     }
 
+    /**
+     * @summary 查询类目
+     *
+     * @param request ListCategoriesRequest
+     * @return ListCategoriesResponse
+     */
     public ListCategoriesResponse listCategories(ListCategoriesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listCategoriesWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 查询物流信息（订单）
+     *
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListLogisticsOrdersResponse
+     */
     public ListLogisticsOrdersResponse listLogisticsOrdersWithOptions(String orderId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -420,12 +585,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListLogisticsOrdersResponse());
     }
 
+    /**
+     * @summary 查询物流信息（订单）
+     *
+     * @return ListLogisticsOrdersResponse
+     */
     public ListLogisticsOrdersResponse listLogisticsOrders(String orderId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listLogisticsOrdersWithOptions(orderId, headers, runtime);
     }
 
+    /**
+     * @summary 采购方店铺列表查询
+     *
+     * @param request ListPurchaserShopsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPurchaserShopsResponse
+     */
     public ListPurchaserShopsResponse listPurchaserShopsWithOptions(ListPurchaserShopsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -455,12 +633,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListPurchaserShopsResponse());
     }
 
+    /**
+     * @summary 采购方店铺列表查询
+     *
+     * @param request ListPurchaserShopsRequest
+     * @return ListPurchaserShopsResponse
+     */
     public ListPurchaserShopsResponse listPurchaserShops(ListPurchaserShopsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listPurchaserShopsWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 批量查询选品池商品库存
+     *
+     * @param request ListSelectionProductSaleInfosRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSelectionProductSaleInfosResponse
+     */
     public ListSelectionProductSaleInfosResponse listSelectionProductSaleInfosWithOptions(ListSelectionProductSaleInfosRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -481,12 +673,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSelectionProductSaleInfosResponse());
     }
 
+    /**
+     * @summary 批量查询选品池商品库存
+     *
+     * @param request ListSelectionProductSaleInfosRequest
+     * @return ListSelectionProductSaleInfosResponse
+     */
     public ListSelectionProductSaleInfosResponse listSelectionProductSaleInfos(ListSelectionProductSaleInfosRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listSelectionProductSaleInfosWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 查询商品列表
+     *
+     * @param request ListSelectionProductsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSelectionProductsResponse
+     */
     public ListSelectionProductsResponse listSelectionProductsWithOptions(ListSelectionProductsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -520,12 +726,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSelectionProductsResponse());
     }
 
+    /**
+     * @summary 查询商品列表
+     *
+     * @param request ListSelectionProductsRequest
+     * @return ListSelectionProductsResponse
+     */
     public ListSelectionProductsResponse listSelectionProducts(ListSelectionProductsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listSelectionProductsWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 批量查询选品池商品SKU库存
+     *
+     * @param request ListSelectionSkuSaleInfosRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSelectionSkuSaleInfosResponse
+     */
     public ListSelectionSkuSaleInfosResponse listSelectionSkuSaleInfosWithOptions(ListSelectionSkuSaleInfosRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -546,12 +766,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSelectionSkuSaleInfosResponse());
     }
 
+    /**
+     * @summary 批量查询选品池商品SKU库存
+     *
+     * @param request ListSelectionSkuSaleInfosRequest
+     * @return ListSelectionSkuSaleInfosResponse
+     */
     public ListSelectionSkuSaleInfosResponse listSelectionSkuSaleInfos(ListSelectionSkuSaleInfosRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listSelectionSkuSaleInfosWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 查询地址divisionCode
+     *
+     * @param request QueryChildDivisionCodeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryChildDivisionCodeResponse
+     */
     public QueryChildDivisionCodeResponse queryChildDivisionCodeWithOptions(QueryChildDivisionCodeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -572,12 +806,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryChildDivisionCodeResponse());
     }
 
+    /**
+     * @summary 查询地址divisionCode
+     *
+     * @param request QueryChildDivisionCodeRequest
+     * @return QueryChildDivisionCodeResponse
+     */
     public QueryChildDivisionCodeResponse queryChildDivisionCode(QueryChildDivisionCodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.queryChildDivisionCodeWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 查询主单列表
+     *
+     * @param request QueryOrdersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryOrdersResponse
+     */
     public QueryOrdersResponse queryOrdersWithOptions(QueryOrdersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -598,12 +846,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryOrdersResponse());
     }
 
+    /**
+     * @summary 查询主单列表
+     *
+     * @param request QueryOrdersRequest
+     * @return QueryOrdersResponse
+     */
     public QueryOrdersResponse queryOrders(QueryOrdersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.queryOrdersWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 渲染采购单
+     *
+     * @param request RenderPurchaseOrderRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RenderPurchaseOrderResponse
+     */
     public RenderPurchaseOrderResponse renderPurchaseOrderWithOptions(RenderPurchaseOrderRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -624,12 +886,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RenderPurchaseOrderResponse());
     }
 
+    /**
+     * @summary 渲染采购单
+     *
+     * @param request RenderPurchaseOrderRequest
+     * @return RenderPurchaseOrderResponse
+     */
     public RenderPurchaseOrderResponse renderPurchaseOrder(RenderPurchaseOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.renderPurchaseOrderWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 逆向单渲染
+     *
+     * @param request RenderRefundOrderRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RenderRefundOrderResponse
+     */
     public RenderRefundOrderResponse renderRefundOrderWithOptions(RenderRefundOrderRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -650,12 +926,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RenderRefundOrderResponse());
     }
 
+    /**
+     * @summary 逆向单渲染
+     *
+     * @param request RenderRefundOrderRequest
+     * @return RenderRefundOrderResponse
+     */
     public RenderRefundOrderResponse renderRefundOrder(RenderRefundOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.renderRefundOrderWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 渲染拆分采购单
+     *
+     * @param request SplitPurchaseOrderRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SplitPurchaseOrderResponse
+     */
     public SplitPurchaseOrderResponse splitPurchaseOrderWithOptions(SplitPurchaseOrderRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -676,6 +966,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SplitPurchaseOrderResponse());
     }
 
+    /**
+     * @summary 渲染拆分采购单
+     *
+     * @param request SplitPurchaseOrderRequest
+     * @return SplitPurchaseOrderResponse
+     */
     public SplitPurchaseOrderResponse splitPurchaseOrder(SplitPurchaseOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();

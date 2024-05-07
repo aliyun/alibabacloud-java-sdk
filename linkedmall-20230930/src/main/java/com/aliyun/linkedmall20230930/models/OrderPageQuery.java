@@ -7,9 +7,15 @@ public class OrderPageQuery extends TeaModel {
     @NameInMap("orderIdList")
     public java.util.List<String> orderIdList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 

@@ -4,12 +4,21 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class GoodsShippingNoticeCreateCmd extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("cpCode")
     public String cpCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("disputeId")
     public String disputeId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("logisticsNo")
     public String logisticsNo;
 

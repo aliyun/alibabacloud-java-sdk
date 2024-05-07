@@ -7,9 +7,15 @@ public class ProductSaleInfoListQuery extends TeaModel {
     @NameInMap("divisionCode")
     public String divisionCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("productIds")
     public java.util.List<String> productIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("purchaserId")
     public String purchaserId;
 
