@@ -4,21 +4,36 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class RefundOrderCmd extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("applyReasonTextId")
     public Long applyReasonTextId;
 
     @NameInMap("applyReasonTips")
     public String applyReasonTips;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("applyRefundCount")
     public Integer applyRefundCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("applyRefundFee")
     public Long applyRefundFee;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("bizClaimType")
     public Integer bizClaimType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("goodsStatus")
     public Integer goodsStatus;
 
@@ -28,6 +43,9 @@ public class RefundOrderCmd extends TeaModel {
     @NameInMap("leavePictureLists")
     public java.util.List<LeavePictureList> leavePictureLists;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("orderLineId")
     public String orderLineId;
 

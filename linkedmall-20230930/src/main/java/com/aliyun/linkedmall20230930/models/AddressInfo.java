@@ -4,6 +4,9 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class AddressInfo extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("addressDetail")
     public String addressDetail;
 
@@ -13,9 +16,15 @@ public class AddressInfo extends TeaModel {
     @NameInMap("divisionCode")
     public String divisionCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("receiver")
     public String receiver;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("receiverPhone")
     public String receiverPhone;
 

@@ -4,6 +4,9 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ProductSaleInfoQuery extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("distributorShopId")
     public String distributorShopId;
 

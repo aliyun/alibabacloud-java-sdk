@@ -7,6 +7,9 @@ public class GetSelectionProductRequest extends TeaModel {
     @NameInMap("divisionCode")
     public String divisionCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("purchaserId")
     public String purchaserId;
 

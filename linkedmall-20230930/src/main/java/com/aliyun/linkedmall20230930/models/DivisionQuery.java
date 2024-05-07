@@ -4,6 +4,9 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class DivisionQuery extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("divisionCode")
     public String divisionCode;
 

@@ -7,9 +7,15 @@ public class SkuSaleInfoListQuery extends TeaModel {
     @NameInMap("divisionCode")
     public String divisionCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("purchaserId")
     public String purchaserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("skuQueryParams")
     public java.util.List<SkuQueryParam> skuQueryParams;
 
