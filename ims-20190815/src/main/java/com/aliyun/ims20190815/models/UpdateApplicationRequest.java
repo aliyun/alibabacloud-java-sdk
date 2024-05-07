@@ -11,7 +11,7 @@ public class UpdateApplicationRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The validity period of the new access token.</p>
+     * <p>The validity period of the access token.</p>
      * <br>
      * <p>Valid values: 900 to 10800. Unit: seconds.</p>
      */
@@ -19,7 +19,7 @@ public class UpdateApplicationRequest extends TeaModel {
     public Integer newAccessTokenValidity;
 
     /**
-     * <p>The new display name of the application.</p>
+     * <p>The display name.</p>
      */
     @NameInMap("NewDisplayName")
     public String newDisplayName;
@@ -34,33 +34,46 @@ public class UpdateApplicationRequest extends TeaModel {
     public Boolean newIsMultiTenant;
 
     /**
-     * <p>The new scope of application permissions.</p>
+     * <p>The permission that is granted on the application.</p>
      * <br>
-     * <p>For more information about the application permission scope, see [Open authorization scope](~~93693~~). You can also call the [ListPredefinedScopes](~~187206~~) operation to obtain the permission scopes supported by different types of applications.</p>
+     * <p>For more information about the application permission scope, see [OAuth scopes](~~93693~~). You can also call the [ListPredefinedScopes](~~187206~~) operation to query the permissions that are supported by different types of applications.</p>
      * <br>
-     * <p>Separate multiple permission scopes with semicolons (;).</p>
+     * <p>If you enter multiple permissions, separate them with semicolons (;).</p>
      * <br>
-     * <p>If you specify a new permission scope, the new permission scope takes effect. For example, if the original permission scope is `/acs/ccc`, and the new permission scope is `/acs/alidns`, `/acs/alidns` takes effect. If you want to retain the original permission scope, set the new permission scope to `/acs/ccc;/acs/alidns`.</p>
+     * <p>The new value of this parameter overwrites the original value, and the permission specified by the new value takes effect. For example, if the original value is `/acs/ccc`, and the new value is `/acs/alidns`, `/acs/alidns` takes effect. If you want to retain the original permission and the `/acs/alidns` permission, set the value to `/acs/ccc;/acs/alidns`.</p>
      */
     @NameInMap("NewPredefinedScopes")
     public String newPredefinedScopes;
 
     /**
-     * <p>The new callback URL.</p>
+     * <p>The callback URL.</p>
      * <br>
-     * <p>Separate multiple callback URLs with semicolons (;).</p>
+     * <p>If you enter multiple callback URLs, separate them with semicolons (;).</p>
      */
     @NameInMap("NewRedirectUris")
     public String newRedirectUris;
 
     /**
-     * <p>The validity period of the refreshed token.</p>
+     * <p>The validity period of the refresh token.</p>
      * <br>
      * <p>Valid values: 7200 to 31536000. Unit: seconds.</p>
      */
     @NameInMap("NewRefreshTokenValidity")
     public Integer newRefreshTokenValidity;
 
+    /**
+     * <p>The required permission.</p>
+     * <br>
+     * <p>You can specify one or more permissions for the `RequiredScopes` parameter. After you specify this parameter, the required permissions are automatically selected and cannot be revoked when a user grants permissions on the application.</p>
+     * <br>
+     * <p>If you also specify the `NewPredefinedScopes` parameter, the `NewPredefinedScopes` parameter specifies the permissions that can be granted on the application, and this parameter specifies the required permissions.</p>
+     * <br>
+     * <p>If you enter multiple permissions, separate them with semicolons (;).</p>
+     * <br>
+     * <p>The new value of this parameter overwrites the original value, and the required permission specified by the new value takes effect.</p>
+     * <br>
+     * <p>>  If the permission that you specify for the `RequiredScopes` parameter is not included in value of the `PredefinedScopes` parameter, the permission does not take effect.</p>
+     */
     @NameInMap("NewRequiredScopes")
     public String newRequiredScopes;
 

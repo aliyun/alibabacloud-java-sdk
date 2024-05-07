@@ -3,7 +3,7 @@ package com.aliyun.ims20190815.models;
 
 import com.aliyun.tea.*;
 
-public class RemoveClientIdFromOIDCProviderResponse extends TeaModel {
+public class GetVerificationInfoResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class RemoveClientIdFromOIDCProviderResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public RemoveClientIdFromOIDCProviderResponseBody body;
+    public GetVerificationInfoResponseBody body;
 
-    public static RemoveClientIdFromOIDCProviderResponse build(java.util.Map<String, ?> map) throws Exception {
-        RemoveClientIdFromOIDCProviderResponse self = new RemoveClientIdFromOIDCProviderResponse();
+    public static GetVerificationInfoResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetVerificationInfoResponse self = new GetVerificationInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public RemoveClientIdFromOIDCProviderResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetVerificationInfoResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class RemoveClientIdFromOIDCProviderResponse extends TeaModel {
         return this.headers;
     }
 
-    public RemoveClientIdFromOIDCProviderResponse setStatusCode(Integer statusCode) {
+    public GetVerificationInfoResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class RemoveClientIdFromOIDCProviderResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public RemoveClientIdFromOIDCProviderResponse setBody(RemoveClientIdFromOIDCProviderResponseBody body) {
+    public GetVerificationInfoResponse setBody(GetVerificationInfoResponseBody body) {
         this.body = body;
         return this;
     }
-    public RemoveClientIdFromOIDCProviderResponseBody getBody() {
+    public GetVerificationInfoResponseBody getBody() {
         return this.body;
     }
 

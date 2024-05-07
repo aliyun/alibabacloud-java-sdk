@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationResponseBody extends TeaModel {
     /**
-     * <p>The information of the application.</p>
+     * <p>The information about the application.</p>
      */
     @NameInMap("Application")
     public UpdateApplicationResponseBodyApplication application;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,17 +39,25 @@ public class UpdateApplicationResponseBody extends TeaModel {
 
     public static class UpdateApplicationResponseBodyApplicationDelegatedScopePredefinedScopesPredefinedScope extends TeaModel {
         /**
-         * <p>The description of the permission scope.</p>
+         * <p>The description of the permission.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The name of the scope.</p>
+         * <p>The name of the permission.</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether the permission is automatically selected by default when you install the application. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         * <br>
+         * <p>`openid` is required by default.</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 
@@ -105,7 +113,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
 
     public static class UpdateApplicationResponseBodyApplicationDelegatedScope extends TeaModel {
         /**
-         * <p>The information of application permissions.</p>
+         * <p>The information about the permissions that are granted on the application.</p>
          */
         @NameInMap("PredefinedScopes")
         public UpdateApplicationResponseBodyApplicationDelegatedScopePredefinedScopes predefinedScopes;
@@ -164,13 +172,13 @@ public class UpdateApplicationResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>The type of the application.</p>
+         * <p>The application type.</p>
          */
         @NameInMap("AppType")
         public String appType;
@@ -182,7 +190,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The information of application permissions.</p>
+         * <p>The information about the permissions that are granted on the application.</p>
          */
         @NameInMap("DelegatedScope")
         public UpdateApplicationResponseBodyApplicationDelegatedScope delegatedScope;
@@ -200,13 +208,13 @@ public class UpdateApplicationResponseBody extends TeaModel {
         public Boolean isMultiTenant;
 
         /**
-         * <p>The callback URL.</p>
+         * <p>The callback URLs.</p>
          */
         @NameInMap("RedirectUris")
         public UpdateApplicationResponseBodyApplicationRedirectUris redirectUris;
 
         /**
-         * <p>The validity period of the refreshed token. Unit: seconds.</p>
+         * <p>The validity period of the refresh token. Unit: seconds.</p>
          */
         @NameInMap("RefreshTokenValidity")
         public Integer refreshTokenValidity;

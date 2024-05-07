@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApplicationResponseBody extends TeaModel {
     /**
-     * <p>The configuration information about the application.</p>
+     * <p>The information about the application.</p>
      */
     @NameInMap("Application")
     public GetApplicationResponseBodyApplication application;
@@ -50,6 +50,14 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether the permission is automatically selected by default when you install the application. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         * <br>
+         * <p>`openid` is required by default.</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 

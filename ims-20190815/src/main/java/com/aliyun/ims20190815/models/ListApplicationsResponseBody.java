@@ -50,6 +50,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether the permission is automatically selected by default when you install the application. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         * <br>
+         * <p>`openid` is required by default.</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 
@@ -105,7 +113,7 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     public static class ListApplicationsResponseBodyApplicationsApplicationDelegatedScope extends TeaModel {
         /**
-         * <p>An array consisting of the information about the permissions that are granted on the application.</p>
+         * <p>The information about the permissions that are granted on the application.</p>
          */
         @NameInMap("PredefinedScopes")
         public ListApplicationsResponseBodyApplicationsApplicationDelegatedScopePredefinedScopes predefinedScopes;
@@ -164,13 +172,13 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>The type of the application. Valid values:</p>
+         * <p>The application type. Valid values:</p>
          * <br>
          * <p>*   WebApp: a web application.</p>
          * <p>*   NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</p>
@@ -204,7 +212,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Boolean isMultiTenant;
 
         /**
-         * <p>The callback URL.</p>
+         * <p>The callback URLs.</p>
          */
         @NameInMap("RedirectUris")
         public ListApplicationsResponseBodyApplicationsApplicationRedirectUris redirectUris;

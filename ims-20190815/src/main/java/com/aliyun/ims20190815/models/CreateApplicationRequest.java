@@ -15,7 +15,7 @@ public class CreateApplicationRequest extends TeaModel {
     public Integer accessTokenValidity;
 
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * <br>
      * <p>The name can be up to 64 characters in length. The name can contain letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
      */
@@ -80,6 +80,15 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("RefreshTokenValidity")
     public Integer refreshTokenValidity;
 
+    /**
+     * <p>The required permission.</p>
+     * <br>
+     * <p>You can specify one or more permissions for the `RequiredScopes` parameter. After you specify this parameter, the required permissions are automatically selected and cannot be revoked when a user grants permissions on the application.</p>
+     * <br>
+     * <p>If you enter multiple permissions, separate them with semicolons (;).</p>
+     * <br>
+     * <p>>  If the permission that you specify for the `RequiredScopes` parameter is not included in value of the `PredefinedScopes` parameter, the permission does not take effect.</p>
+     */
     @NameInMap("RequiredScopes")
     public String requiredScopes;
 
