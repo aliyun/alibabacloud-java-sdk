@@ -479,6 +479,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("EipBindMode")
         public String eipBindMode;
 
+        @NameInMap("EnableSessionLog")
+        public String enableSessionLog;
+
         /**
          * <p>The time when the NAT gateway expires.</p>
          */
@@ -698,6 +701,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
         public String getEipBindMode() {
             return this.eipBindMode;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setEnableSessionLog(String enableSessionLog) {
+            this.enableSessionLog = enableSessionLog;
+            return this;
+        }
+        public String getEnableSessionLog() {
+            return this.enableSessionLog;
         }
 
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setExpiredTime(String expiredTime) {

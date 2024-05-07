@@ -3,7 +3,7 @@ package com.aliyun.vpc20160428.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyNatGatewayAttributeRequest extends TeaModel {
+public class ModifyNatGatewayAttributeShrinkRequest extends TeaModel {
     /**
      * <p>The description of the NAT gateway.</p>
      * <br>
@@ -40,7 +40,7 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
     public Boolean icmpReplyEnabled;
 
     @NameInMap("LogDelivery")
-    public ModifyNatGatewayAttributeRequestLogDelivery logDelivery;
+    public String logDeliveryShrink;
 
     /**
      * <p>The name of the NAT gateway.</p>
@@ -76,12 +76,12 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static ModifyNatGatewayAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
-        ModifyNatGatewayAttributeRequest self = new ModifyNatGatewayAttributeRequest();
+    public static ModifyNatGatewayAttributeShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyNatGatewayAttributeShrinkRequest self = new ModifyNatGatewayAttributeShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyNatGatewayAttributeRequest setDescription(String description) {
+    public ModifyNatGatewayAttributeShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -89,7 +89,7 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
         return this.description;
     }
 
-    public ModifyNatGatewayAttributeRequest setEipBindMode(String eipBindMode) {
+    public ModifyNatGatewayAttributeShrinkRequest setEipBindMode(String eipBindMode) {
         this.eipBindMode = eipBindMode;
         return this;
     }
@@ -97,7 +97,7 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
         return this.eipBindMode;
     }
 
-    public ModifyNatGatewayAttributeRequest setEnableSessionLog(Boolean enableSessionLog) {
+    public ModifyNatGatewayAttributeShrinkRequest setEnableSessionLog(Boolean enableSessionLog) {
         this.enableSessionLog = enableSessionLog;
         return this;
     }
@@ -105,7 +105,7 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
         return this.enableSessionLog;
     }
 
-    public ModifyNatGatewayAttributeRequest setIcmpReplyEnabled(Boolean icmpReplyEnabled) {
+    public ModifyNatGatewayAttributeShrinkRequest setIcmpReplyEnabled(Boolean icmpReplyEnabled) {
         this.icmpReplyEnabled = icmpReplyEnabled;
         return this;
     }
@@ -113,15 +113,15 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
         return this.icmpReplyEnabled;
     }
 
-    public ModifyNatGatewayAttributeRequest setLogDelivery(ModifyNatGatewayAttributeRequestLogDelivery logDelivery) {
-        this.logDelivery = logDelivery;
+    public ModifyNatGatewayAttributeShrinkRequest setLogDeliveryShrink(String logDeliveryShrink) {
+        this.logDeliveryShrink = logDeliveryShrink;
         return this;
     }
-    public ModifyNatGatewayAttributeRequestLogDelivery getLogDelivery() {
-        return this.logDelivery;
+    public String getLogDeliveryShrink() {
+        return this.logDeliveryShrink;
     }
 
-    public ModifyNatGatewayAttributeRequest setName(String name) {
+    public ModifyNatGatewayAttributeShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -129,7 +129,7 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
         return this.name;
     }
 
-    public ModifyNatGatewayAttributeRequest setNatGatewayId(String natGatewayId) {
+    public ModifyNatGatewayAttributeShrinkRequest setNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
     }
@@ -137,7 +137,7 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
         return this.natGatewayId;
     }
 
-    public ModifyNatGatewayAttributeRequest setOwnerAccount(String ownerAccount) {
+    public ModifyNatGatewayAttributeShrinkRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -145,7 +145,7 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public ModifyNatGatewayAttributeRequest setOwnerId(Long ownerId) {
+    public ModifyNatGatewayAttributeShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -153,7 +153,7 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public ModifyNatGatewayAttributeRequest setRegionId(String regionId) {
+    public ModifyNatGatewayAttributeShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -161,7 +161,7 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ModifyNatGatewayAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public ModifyNatGatewayAttributeShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -169,42 +169,12 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public ModifyNatGatewayAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ModifyNatGatewayAttributeShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public static class ModifyNatGatewayAttributeRequestLogDelivery extends TeaModel {
-        @NameInMap("LogDeliveryType")
-        public String logDeliveryType;
-
-        @NameInMap("LogDestination")
-        public String logDestination;
-
-        public static ModifyNatGatewayAttributeRequestLogDelivery build(java.util.Map<String, ?> map) throws Exception {
-            ModifyNatGatewayAttributeRequestLogDelivery self = new ModifyNatGatewayAttributeRequestLogDelivery();
-            return TeaModel.build(map, self);
-        }
-
-        public ModifyNatGatewayAttributeRequestLogDelivery setLogDeliveryType(String logDeliveryType) {
-            this.logDeliveryType = logDeliveryType;
-            return this;
-        }
-        public String getLogDeliveryType() {
-            return this.logDeliveryType;
-        }
-
-        public ModifyNatGatewayAttributeRequestLogDelivery setLogDestination(String logDestination) {
-            this.logDestination = logDestination;
-            return this;
-        }
-        public String getLogDestination() {
-            return this.logDestination;
-        }
-
     }
 
 }

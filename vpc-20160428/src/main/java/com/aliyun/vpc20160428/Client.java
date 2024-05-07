@@ -22988,12 +22988,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * ## [](#)Description
       * You can call this operation to query an Internet NAT gateway or a virtual private cloud (VPC) NAT gateway. The term NAT gateway in this topic refers to both NAT gateway types.
       *
-      * @param request ModifyNatGatewayAttributeRequest
+      * @param tmpReq ModifyNatGatewayAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
       * @return ModifyNatGatewayAttributeResponse
      */
-    public ModifyNatGatewayAttributeResponse modifyNatGatewayAttributeWithOptions(ModifyNatGatewayAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ModifyNatGatewayAttributeResponse modifyNatGatewayAttributeWithOptions(ModifyNatGatewayAttributeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyNatGatewayAttributeShrinkRequest request = new ModifyNatGatewayAttributeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.logDelivery)) {
+            request.logDeliveryShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.logDelivery, "LogDelivery", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
@@ -23003,8 +23009,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EipBindMode", request.eipBindMode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSessionLog)) {
+            query.put("EnableSessionLog", request.enableSessionLog);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.icmpReplyEnabled)) {
             query.put("IcmpReplyEnabled", request.icmpReplyEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logDeliveryShrink)) {
+            query.put("LogDelivery", request.logDeliveryShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
