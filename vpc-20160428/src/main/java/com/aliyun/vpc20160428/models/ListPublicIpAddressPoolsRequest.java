@@ -92,6 +92,12 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Specifies whether to enable Anti-DDoS Pro/Premium. Valid values:</p>
+     * <br>
+     * <p>*   **false**</p>
+     * <p>*   **true**</p>
+     */
     @NameInMap("SecurityProtectionEnabled")
     public Boolean securityProtectionEnabled;
 

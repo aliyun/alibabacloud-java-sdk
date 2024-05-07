@@ -46,6 +46,9 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("EcsMetricEnabled")
     public Boolean ecsMetricEnabled;
 
+    @NameInMap("EnableSessionLog")
+    public Boolean enableSessionLog;
+
     /**
      * <p>The time when the NAT gateway expires.</p>
      */
@@ -69,6 +72,9 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
      */
     @NameInMap("IpList")
     public java.util.List<GetNatGatewayAttributeResponseBodyIpList> ipList;
+
+    @NameInMap("LogDelivery")
+    public GetNatGatewayAttributeResponseBodyLogDelivery logDelivery;
 
     /**
      * <p>The name of the NAT gateway.</p>
@@ -216,6 +222,14 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         return this.ecsMetricEnabled;
     }
 
+    public GetNatGatewayAttributeResponseBody setEnableSessionLog(Boolean enableSessionLog) {
+        this.enableSessionLog = enableSessionLog;
+        return this;
+    }
+    public Boolean getEnableSessionLog() {
+        return this.enableSessionLog;
+    }
+
     public GetNatGatewayAttributeResponseBody setExpiredTime(String expiredTime) {
         this.expiredTime = expiredTime;
         return this;
@@ -246,6 +260,14 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     }
     public java.util.List<GetNatGatewayAttributeResponseBodyIpList> getIpList() {
         return this.ipList;
+    }
+
+    public GetNatGatewayAttributeResponseBody setLogDelivery(GetNatGatewayAttributeResponseBodyLogDelivery logDelivery) {
+        this.logDelivery = logDelivery;
+        return this;
+    }
+    public GetNatGatewayAttributeResponseBodyLogDelivery getLogDelivery() {
+        return this.logDelivery;
     }
 
     public GetNatGatewayAttributeResponseBody setName(String name) {
@@ -579,6 +601,58 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         }
         public String getUsingStatus() {
             return this.usingStatus;
+        }
+
+    }
+
+    public static class GetNatGatewayAttributeResponseBodyLogDelivery extends TeaModel {
+        @NameInMap("DeliverLogsErrorMessage")
+        public String deliverLogsErrorMessage;
+
+        @NameInMap("DeliveryStatus")
+        public String deliveryStatus;
+
+        @NameInMap("LogDeliveryType")
+        public String logDeliveryType;
+
+        @NameInMap("LogDestination")
+        public String logDestination;
+
+        public static GetNatGatewayAttributeResponseBodyLogDelivery build(java.util.Map<String, ?> map) throws Exception {
+            GetNatGatewayAttributeResponseBodyLogDelivery self = new GetNatGatewayAttributeResponseBodyLogDelivery();
+            return TeaModel.build(map, self);
+        }
+
+        public GetNatGatewayAttributeResponseBodyLogDelivery setDeliverLogsErrorMessage(String deliverLogsErrorMessage) {
+            this.deliverLogsErrorMessage = deliverLogsErrorMessage;
+            return this;
+        }
+        public String getDeliverLogsErrorMessage() {
+            return this.deliverLogsErrorMessage;
+        }
+
+        public GetNatGatewayAttributeResponseBodyLogDelivery setDeliveryStatus(String deliveryStatus) {
+            this.deliveryStatus = deliveryStatus;
+            return this;
+        }
+        public String getDeliveryStatus() {
+            return this.deliveryStatus;
+        }
+
+        public GetNatGatewayAttributeResponseBodyLogDelivery setLogDeliveryType(String logDeliveryType) {
+            this.logDeliveryType = logDeliveryType;
+            return this;
+        }
+        public String getLogDeliveryType() {
+            return this.logDeliveryType;
+        }
+
+        public GetNatGatewayAttributeResponseBodyLogDelivery setLogDestination(String logDestination) {
+            this.logDestination = logDestination;
+            return this;
+        }
+        public String getLogDestination() {
+            return this.logDestination;
         }
 
     }

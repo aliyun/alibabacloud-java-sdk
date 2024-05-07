@@ -70,13 +70,13 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
 
     public static class ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -106,10 +106,10 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
 
     public static class ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList extends TeaModel {
         /**
-         * <p>The service type of the IP address pool. Valid values:</p>
+         * <p>The service type of the IP address pool.</p>
          * <br>
-         * <p>*   **CloudBox**: the cloud box service type. Only cloud box users can select this type.</p>
-         * <p>*   **Default** (default): the general service type.</p>
+         * <p>*   **CloudBox** Only cloud box users can select this type.</p>
+         * <p>*   **Default** (default)</p>
          */
         @NameInMap("BizType")
         public String bizType;
@@ -121,13 +121,13 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The information about the IP address pool.</p>
+         * <p>The description of the IP address pool.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Indicates whether the IP address pool has idle IP addresses. Valid values:</p>
+         * <p>Indicates whether idle IP addresses exist.</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>
@@ -136,12 +136,12 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         public Boolean ipAddressRemaining;
 
         /**
-         * <p>The line type. Valid values:</p>
+         * <p>The line type.</p>
          * <br>
-         * <p>*   **BGP**: BGP (Multi-ISP) line</p>
-         * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro line</p>
+         * <p>*   **BGP**: BGP (Multi-ISP)</p>
+         * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro</p>
          * <br>
-         * <p>For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see the "Line types" section of [What is EIP?](~~32321~~)</p>
+         * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](~~32321~~).</p>
          * <br>
          * <p>If you are allowed to use single-ISP bandwidth, one of the following values may be returned:</p>
          * <br>
@@ -176,7 +176,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         public String publicIpAddressPoolId;
 
         /**
-         * <p>The ID of the region in which the IP address pool that you want to query resides.</p>
+         * <p>The region ID of the IP address pool.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -187,20 +187,26 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The edition of Anti-DDoS.</p>
+         * <br>
+         * <p>*   If you do not set this parameter, Anti-DDoS Origin Basic is used.</p>
+         * <p>*   If the value is set to **AntiDDoS_Enhanced**, Anti-DDoS Pro/Premium is used.</p>
+         */
         @NameInMap("SecurityProtectionTypes")
         public java.util.List<String> securityProtectionTypes;
 
         /**
-         * <p>Indicates whether the IP address pool is shared.</p>
+         * <p>The sharing type of the IP address pool.</p>
          * <br>
-         * <p>*   Only **Shared** may be returned.</p>
-         * <p>*   An empty value indicates that the IP address pool is not shared.</p>
+         * <p>*   If **Shared** is returned, the IP address pool is shared.</p>
+         * <p>*   If an empty value is returned, the IP address pool is not shared.</p>
          */
         @NameInMap("ShareType")
         public String shareType;
 
         /**
-         * <p>The status of the IP address pool. Valid values:</p>
+         * <p>The status of the IP address pool.</p>
          * <br>
          * <p>*   **Created**</p>
          * <p>*   **Deleting**</p>
@@ -210,19 +216,19 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tag list.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListTags> tags;
 
         /**
-         * <p>The total number of IP addresses in the public IP address pool.</p>
+         * <p>The total number of available IP addresses in the public IP address pool.</p>
          */
         @NameInMap("TotalIpNum")
         public Integer totalIpNum;
 
         /**
-         * <p>The number of occupied IP addresses in the public IP address pool.</p>
+         * <p>The number of used IP addresses in the public IP address pool.</p>
          */
         @NameInMap("UsedIpNum")
         public Integer usedIpNum;
@@ -230,14 +236,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         /**
          * <p>The user type. Valid values:</p>
          * <br>
-         * <p>*   **admin**: administrator. An administrator can delete, modify, and query IP address pools and allocate elastic IP addresses (EIPs) to IP address pools.</p>
-         * <p>*   **user**: regular user. A regular user can only allocate EIPs to IP address pools and query IP address pools. A regular user cannot modify or delete IP address pools.</p>
+         * <p>*   **admin**: An administrator can delete, modify, and query IP address pools, and can assign elastic IP addresses (EIPs) to the pool.</p>
+         * <p>*   **user**: A user can only assign EIPs to the IP address pool and query the IP address pool, but cannot modify or delete the IP address pool.</p>
          */
         @NameInMap("UserType")
         public Boolean userType;
 
         /**
-         * <p>The zones of the IP address pool. This parameter is returned only when BizType is set to CloudBox.</p>
+         * <p>The zone of the IP address pool. This parameter is returned only when the service type of the IP address pool is CloudBox.</p>
          */
         @NameInMap("Zones")
         public java.util.List<String> zones;
