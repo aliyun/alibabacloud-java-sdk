@@ -22,7 +22,31 @@ public class ResizeDiskRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>32768</p>
+     * <p>The new disk capacity. Unit: GiB. Valid values:</p>
+     * <br>
+     * <p>*   For a system disk:</p>
+     * <br>
+     * <p>    *   Basic disk (cloud): 20 to 500.</p>
+     * <p>    *   Other disk categories: 20 to 2048.</p>
+     * <br>
+     * <p>*   For a data disk:</p>
+     * <br>
+     * <p>    *   Ultra disk (cloud_efficiency): 20 to 32768.</p>
+     * <br>
+     * <p>    *   Standard SSD (cloud_ssd): 20 to 32768.</p>
+     * <br>
+     * <p>    *   ESSD (cloud_essd): Valid values depend on the `PerformanceLevel` value. You can call the [DescribeDisks](~~25514~~) operation to query disk information and check the `PerformanceLevel` value in the response.</p>
+     * <br>
+     * <p>        *   Valid values when the PerformanceLevel value is PL0: 1 to 32768.</p>
+     * <p>        *   Valid values when the PerformanceLevel value is PL1: 20 to 32768.</p>
+     * <p>        *   Valid values when the PerformanceLevel value is PL2: 461 to 32768.</p>
+     * <p>        *   Valid values when the PerformanceLevel value is PL3: 1261 to 32768.</p>
+     * <br>
+     * <p>    *   Basic disk (cloud): 5 to 2000.</p>
+     * <br>
+     * <p>    *   ESSD AutoPL disk (cloud_auto): 1 to 32768.</p>
+     * <br>
+     * <p>The new disk capacity must be larger than the original disk capacity.</p>
      */
     @NameInMap("NewSize")
     public Integer newSize;
@@ -40,26 +64,10 @@ public class ResizeDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The new disk capacity. Unit: GiB. Valid values:</p>
+     * <p>The method that you want to use to resize the disk. Valid values:</p>
      * <br>
-     * <p>*   System disk: 20 to 500.</p>
-     * <br>
-     * <p>*   Data disk:</p>
-     * <br>
-     * <p>    *   Ultra disk (cloud_efficiency): 20 to 32768.</p>
-     * <br>
-     * <p>    *   Standard SSD (cloud_ssd): 20 to 32768.</p>
-     * <br>
-     * <p>    *   ESSD (cloud_essd): Valid values when the NewSize parameter is set to cloud_essd depend on the `PerformanceLevel` value. You can call the [DescribeDisks](~~25514~~) operation to query disk information and check the `PerformanceLevel` value in the response.</p>
-     * <br>
-     * <p>        *   Valid values when PerformanceLevel is set to PL0: 40 to 32768.</p>
-     * <p>        *   Valid values when PerformanceLevel is set to PL1: 20 to 32768.</p>
-     * <p>        *   Valid values when PerformanceLevel is set to PL2: 461 to 32768.</p>
-     * <p>        *   Valid values when PerformanceLevel is set to PL3: 1261 to 32768.</p>
-     * <br>
-     * <p>    *   Basic disk (cloud): 5 to 2000.</p>
-     * <br>
-     * <p>The new disk capacity must be greater than the original disk capacity.</p>
+     * <p>*   offline (default): resizes the disk offline. After you resize a disk offline, you must restart its associated instance by using the ECS console or by calling the [RebootInstance](~~25502~~) operation to make the resizing operation take effect. For information about how to restart an ECS instance in the ECS console, see [Restart an instance](~~25440~~).</p>
+     * <p>*   online: resizes the disk online. After you resize a disk online, the resizing operation takes effect immediately and you do not need to restart the instance. You can resize ultra disks, standard SSDs, and ESSDs online.</p>
      */
     @NameInMap("Type")
     public String type;

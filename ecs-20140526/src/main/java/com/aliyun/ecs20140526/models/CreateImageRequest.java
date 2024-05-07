@@ -40,45 +40,27 @@ public class CreateImageRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The mode that you want to use to check the source image. If you do not specify this parameter, the source image is not checked. Only Linux images can be checked. Set the value to Standard, which indicates standard check mode.</p>
+     * <p>The mode in which to check the custom image. If you do not specify this parameter, the image is not checked. Only the standard check mode is supported.</p>
      * <br>
-     * <p>The following items are checked in standard check mode:</p>
-     * <br>
-     * <p>*   Virtio: whether the virtio driver is installed.</p>
-     * <p>*   Fstab: whether mounting configurations in the fstab file are correct.</p>
-     * <p>*   Grub: whether GRand Unified Bootloader (GRUB) configurations are correct.</p>
-     * <p>*   SystemImage: whether the image is valid. Do not import images that are in the ISO format or empty.</p>
-     * <p>*   CloudInit: whether cloud-init is installed.</p>
-     * <p>*   NVMe: whether the Non-Volatile Memory Express (NVMe) driver is installed.</p>
-     * <p>*   Selinux: whether SElinux is enabled.</p>
-     * <p>*   OnlineResizeFS: whether the root partition can be automatically resized.</p>
-     * <p>*   Dhcp: whether Dynamic Host Configuration Protocol (DHCP) is enabled for network interface controllers (NICs).</p>
-     * <p>*   RtcTimeMode: the RTC time mode.</p>
-     * <p>*   Platform: the platform. Examples: Linux and Windows.</p>
-     * <p>*   OSVersion: the operating system version. Example: Centos 7.9.</p>
-     * <p>*   Architecture: the architecture. Examples: ARM and x86\_64.</p>
-     * <p>*   BootMode: the boot mode. Examples: UEFI and Legacy.</p>
-     * <p>*   KernelVersion: the kernel version.</p>
-     * <p>*   CloudAssistant: whether the Cloud Assistant client is installed.</p>
-     * <p>*   SecurityCenterAgent: whether the Security Center agent is installed.</p>
+     * <p>>  This parameter is supported for most Linux and Windows operating system versions. For information about image check items and operating system limits for image check, see [Overview of image check](~~439819~~) and [Operating system limits for image check](~~475800~~).</p>
      */
     @NameInMap("DetectionStrategy")
     public String detectionStrategy;
 
     /**
-     * <p>The custom images.</p>
+     * <p>The information about the custom image.</p>
      */
     @NameInMap("DiskDeviceMapping")
     public java.util.List<CreateImageRequestDiskDeviceMapping> diskDeviceMapping;
 
     /**
-     * <p>The name of the image family. The name must be 2 to 128 characters in length and can contain digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter and cannot start with acs: or aliyun. It cannot contain [http:// or https://.](http://https://。、（:）、（\_）（-）。)</p>
+     * <p>The name of the image family. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with acs: or aliyun. The name cannot contain http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("ImageFamily")
     public String imageFamily;
 
     /**
-     * <p>The image name. The name must be 2 to 128 characters in length and can contain digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with [http:// or https://.](http://https://。、（:）、（\_）（-）。)</p>
+     * <p>The name of the custom image. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("ImageName")
     public String imageName;
@@ -104,20 +86,34 @@ public class CreateImageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The distribution of the operating system for the system disk in the custom image. If you specify a data disk snapshot to create the system disk of the custom image, you must use Platform to specify the distribution of the operating system for the system disk. Valid values:</p>
+     * <p>The operating system distribution for the system disk in the custom image. If you specify a data disk snapshot to create the system disk of the custom image, use Platform to specify the operating system distribution for the system disk. Valid values:</p>
      * <br>
+     * <p>*   Aliyun</p>
+     * <p>*   Anolis</p>
      * <p>*   CentOS</p>
      * <p>*   Ubuntu</p>
-     * <p>*   SUSE</p>
-     * <p>*   OpenSUSE</p>
-     * <p>*   RedHat</p>
-     * <p>*   Debian</p>
      * <p>*   CoreOS</p>
-     * <p>*   Aliyun</p>
-     * <p>*   Windows Server 2012</p>
-     * <p>*   Windows 7</p>
+     * <p>*   SUSE</p>
+     * <p>*   Debian</p>
+     * <p>*   OpenSUSE</p>
+     * <p>*   FreeBSD</p>
+     * <p>*   RedHat</p>
+     * <p>*   Kylin</p>
+     * <p>*   UOS</p>
+     * <p>*   Fedora</p>
+     * <p>*   Fedora CoreOS</p>
+     * <p>*   CentOS Stream</p>
+     * <p>*   AlmaLinux</p>
+     * <p>*   Rocky Linux</p>
+     * <p>*   Gentoo</p>
      * <p>*   Customized Linux</p>
      * <p>*   Others Linux</p>
+     * <p>*   Windows Server 2022</p>
+     * <p>*   Windows Server 2019</p>
+     * <p>*   Windows Server 2016</p>
+     * <p>*   Windows Server 2012</p>
+     * <p>*   Windows Server 2008</p>
+     * <p>*   Windows Server 2003</p>
      * <br>
      * <p>Default value: Others Linux.</p>
      */
@@ -131,9 +127,9 @@ public class CreateImageRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which you want to assign the custom image. If you leave this parameter empty, the image is assigned to the default resource group.</p>
+     * <p>The ID of the resource group to which to assign the custom image. If you do not specify this parameter, the image is assigned to the default resource group.</p>
      * <br>
-     * <p>> If you call the CreateImage operation as a RAM user who is not authorized to manage the default resource group and leave `ResourceGroupId` empty, the `Forbidden: User not authorized to operate on the specified resource` error message is returned. Before you call the CreateImage operation again, you must specify the ID of a resource group that the RAM user is authorized to manage or authorize the RAM user to manage the default resource group.</p>
+     * <p>>  If you call the CreateImage operation as a Resource Access Management (RAM) user who does not have the permissions to manage the default resource group and do not specify `ResourceGroupId`, the `Forbbiden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user has the permissions to manage or grant the RAM user the permissions to manage the default resource group before you call the CreateImage operation again.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -145,7 +141,7 @@ public class CreateImageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the snapshot that is used to create the custom image.</p>
+     * <p>The ID of the snapshot that you want to use to create the custom image.</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;
@@ -317,8 +313,8 @@ public class CreateImageRequest extends TeaModel {
         /**
          * <p>The device name of disk N in the custom image. Valid values:</p>
          * <br>
-         * <p>*   For disks other than basic disks, such as standard SSDs, ultra disks, and enhanced SSDs (ESSDs), the valid values range from /dev/vda to /dev/vdz in ascending alphabetical order.</p>
-         * <p>*   For basic disks, the valid values are in alphabetical order from /dev/xvda to /dev/xvdz.</p>
+         * <p>*   For disks other than basic disks, such as standard SSDs, ultra disks, and enhanced SSDs (ESSDs), the valid values range from /dev/vda to /dev/vdz in alphabetical order.</p>
+         * <p>*   For basic disks, the valid values range from /dev/xvda to /dev/xvdz in alphabetical order.</p>
          */
         @NameInMap("Device")
         public String device;
@@ -326,27 +322,27 @@ public class CreateImageRequest extends TeaModel {
         /**
          * <p>The type of disk N in the custom image. You can specify this parameter to create the system disk of the custom image from a data disk snapshot. If you do not specify this parameter, the disk type is determined by the corresponding snapshot. Valid values:</p>
          * <br>
-         * <p>*   system: system disk</p>
-         * <p>*   data: data disk</p>
+         * <p>*   system: system disk. You can specify only one snapshot to use to create the system disk in the custom image.</p>
+         * <p>*   data: data disk. You can specify up to 16 snapshots to use to create data disks in the custom image.</p>
          */
         @NameInMap("DiskType")
         public String diskType;
 
         /**
-         * <p>The size of disk N in the custom image. Unit: GiB. The valid values and default value of DiskDeviceMapping.N.Size depend on the value of DiskDeviceMapping.N.SnapshotId.</p>
+         * <p>The size of disk N in the custom image. Unit: GiB. The valid values and default value of DiskDeviceMapping.N.Size vary based on the value of DiskDeviceMapping.N.SnapshotId.</p>
          * <br>
-         * <p>*   If no corresponding snapshot IDs are specified in the DiskDeviceMapping.N.SnapshotId value, the following valid values and default values are available for DiskDeviceMapping.N.Size:</p>
+         * <p>*   If no corresponding snapshot IDs are specified in the value of DiskDeviceMapping.N.SnapshotId, DiskDeviceMapping.N.Size has the following valid values and default values:</p>
          * <br>
-         * <p>    *   For basic disks, the valid values are 5 to 2000, and the default value is 5.</p>
-         * <p>    *   For other types of disk, the valid values are 20 to 32768, and the default value is 20.</p>
+         * <p>    *   For basic disks, the valid values range from 5 to 2000, and the default value is 5.</p>
+         * <p>    *   For other disks, the valid values range from 20 to 32768, and the default value is 20.</p>
          * <br>
-         * <p>*   If a corresponding snapshot ID is specified in the DiskDeviceMapping.N.SnapshotId value, the value of DiskDeviceMapping.N.Size must be greater than or equal to the size of the specified snapshot. The default value of DiskDeviceMapping.N.Size is the size of the specified snapshot.</p>
+         * <p>*   If a corresponding snapshot ID is specified in the value of DiskDeviceMapping.N.SnapshotId, the value of DiskDeviceMapping.N.Size must be greater than or equal to the size of the specified snapshot. The default value of DiskDeviceMapping.N.Size is the size of the specified snapshot.</p>
          */
         @NameInMap("Size")
         public Integer size;
 
         /**
-         * <p>The ID of the snapshot that is used to create the custom image.</p>
+         * <p>The ID of snapshot N to use to create the custom image.</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;

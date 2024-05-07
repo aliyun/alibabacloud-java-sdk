@@ -16,6 +16,9 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("ConnectionTrackingConfiguration")
+    public CreateNetworkInterfaceRequestConnectionTrackingConfiguration connectionTrackingConfiguration;
+
     /**
      * <p>Specifies whether to release the ENI when the associated instance is released. Valid values:</p>
      * <br>
@@ -256,6 +259,14 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateNetworkInterfaceRequest setConnectionTrackingConfiguration(CreateNetworkInterfaceRequestConnectionTrackingConfiguration connectionTrackingConfiguration) {
+        this.connectionTrackingConfiguration = connectionTrackingConfiguration;
+        return this;
+    }
+    public CreateNetworkInterfaceRequestConnectionTrackingConfiguration getConnectionTrackingConfiguration() {
+        return this.connectionTrackingConfiguration;
+    }
+
     public CreateNetworkInterfaceRequest setDeleteOnRelease(Boolean deleteOnRelease) {
         this.deleteOnRelease = deleteOnRelease;
         return this;
@@ -486,6 +497,47 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     }
     public Boolean getVisible() {
         return this.visible;
+    }
+
+    public static class CreateNetworkInterfaceRequestConnectionTrackingConfiguration extends TeaModel {
+        @NameInMap("TcpClosedAndTimeWaitTimeout")
+        public Integer tcpClosedAndTimeWaitTimeout;
+
+        @NameInMap("TcpEstablishedTimeout")
+        public Integer tcpEstablishedTimeout;
+
+        @NameInMap("UdpTimeout")
+        public Integer udpTimeout;
+
+        public static CreateNetworkInterfaceRequestConnectionTrackingConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            CreateNetworkInterfaceRequestConnectionTrackingConfiguration self = new CreateNetworkInterfaceRequestConnectionTrackingConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNetworkInterfaceRequestConnectionTrackingConfiguration setTcpClosedAndTimeWaitTimeout(Integer tcpClosedAndTimeWaitTimeout) {
+            this.tcpClosedAndTimeWaitTimeout = tcpClosedAndTimeWaitTimeout;
+            return this;
+        }
+        public Integer getTcpClosedAndTimeWaitTimeout() {
+            return this.tcpClosedAndTimeWaitTimeout;
+        }
+
+        public CreateNetworkInterfaceRequestConnectionTrackingConfiguration setTcpEstablishedTimeout(Integer tcpEstablishedTimeout) {
+            this.tcpEstablishedTimeout = tcpEstablishedTimeout;
+            return this;
+        }
+        public Integer getTcpEstablishedTimeout() {
+            return this.tcpEstablishedTimeout;
+        }
+
+        public CreateNetworkInterfaceRequestConnectionTrackingConfiguration setUdpTimeout(Integer udpTimeout) {
+            this.udpTimeout = udpTimeout;
+            return this;
+        }
+        public Integer getUdpTimeout() {
+            return this.udpTimeout;
+        }
+
     }
 
     public static class CreateNetworkInterfaceRequestTag extends TeaModel {

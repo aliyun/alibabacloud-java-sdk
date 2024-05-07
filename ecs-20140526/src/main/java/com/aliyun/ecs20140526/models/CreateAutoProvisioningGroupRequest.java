@@ -569,6 +569,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk extends TeaModel {
+        @NameInMap("BurstingEnabled")
+        public Boolean burstingEnabled;
+
         /**
          * <p>The category of data disk N. Valid values of N: 1 to 16. Valid values:</p>
          * <br>
@@ -619,6 +622,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("DiskName")
         public String diskName;
 
+        @NameInMap("EncryptAlgorithm")
+        public String encryptAlgorithm;
+
         /**
          * <p>Specifies whether to encrypt data disk N. Valid values:</p>
          * <br>
@@ -652,6 +658,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
+
+        @NameInMap("ProvisionedIops")
+        public Long provisionedIops;
 
         /**
          * <p>The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
@@ -689,6 +698,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public static CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk build(java.util.Map<String, ?> map) throws Exception {
             CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk self = new CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk();
             return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setBurstingEnabled(Boolean burstingEnabled) {
+            this.burstingEnabled = burstingEnabled;
+            return this;
+        }
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setCategory(String category) {
@@ -731,6 +748,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.diskName;
         }
 
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setEncryptAlgorithm(String encryptAlgorithm) {
+            this.encryptAlgorithm = encryptAlgorithm;
+            return this;
+        }
+        public String getEncryptAlgorithm() {
+            return this.encryptAlgorithm;
+        }
+
         public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setEncrypted(Boolean encrypted) {
             this.encrypted = encrypted;
             return this;
@@ -755,6 +780,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.performanceLevel;
         }
 
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setProvisionedIops(Long provisionedIops) {
+            this.provisionedIops = provisionedIops;
+            return this;
+        }
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
+        }
+
         public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setSize(Integer size) {
             this.size = size;
             return this;
@@ -774,6 +807,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk extends TeaModel {
+        @NameInMap("BurstingEnabled")
+        public Boolean burstingEnabled;
+
         /**
          * <p>The algorithm to use to encrypt the system disk. Valid values:</p>
          * <br>
@@ -808,9 +844,20 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
 
+        @NameInMap("ProvisionedIops")
+        public Long provisionedIops;
+
         public static CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk build(java.util.Map<String, ?> map) throws Exception {
             CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk self = new CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk();
             return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk setBurstingEnabled(Boolean burstingEnabled) {
+            this.burstingEnabled = burstingEnabled;
+            return this;
+        }
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk setEncryptAlgorithm(String encryptAlgorithm) {
@@ -835,6 +882,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         }
         public String getKMSKeyId() {
             return this.KMSKeyId;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk setProvisionedIops(Long provisionedIops) {
+            this.provisionedIops = provisionedIops;
+            return this;
+        }
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
         }
 
     }

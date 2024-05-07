@@ -22,6 +22,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("BondInterfaceSpecification")
     public DescribeNetworkInterfaceAttributeResponseBodyBondInterfaceSpecification bondInterfaceSpecification;
 
+    @NameInMap("ConnectionTrackingConfiguration")
+    public DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration connectionTrackingConfiguration;
+
     /**
      * <p>The time when the ENI was created.</p>
      */
@@ -260,6 +263,14 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     }
     public DescribeNetworkInterfaceAttributeResponseBodyBondInterfaceSpecification getBondInterfaceSpecification() {
         return this.bondInterfaceSpecification;
+    }
+
+    public DescribeNetworkInterfaceAttributeResponseBody setConnectionTrackingConfiguration(DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration connectionTrackingConfiguration) {
+        this.connectionTrackingConfiguration = connectionTrackingConfiguration;
+        return this;
+    }
+    public DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration getConnectionTrackingConfiguration() {
+        return this.connectionTrackingConfiguration;
     }
 
     public DescribeNetworkInterfaceAttributeResponseBody setCreationTime(String creationTime) {
@@ -731,6 +742,47 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
         public DescribeNetworkInterfaceAttributeResponseBodyBondInterfaceSpecificationSlaveInterfaceSpecification getSlaveInterfaceSpecification() {
             return this.slaveInterfaceSpecification;
+        }
+
+    }
+
+    public static class DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration extends TeaModel {
+        @NameInMap("TcpClosedAndTimeWaitTimeout")
+        public Integer tcpClosedAndTimeWaitTimeout;
+
+        @NameInMap("TcpEstablishedTimeout")
+        public Integer tcpEstablishedTimeout;
+
+        @NameInMap("UdpTimeout")
+        public Integer udpTimeout;
+
+        public static DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration self = new DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration setTcpClosedAndTimeWaitTimeout(Integer tcpClosedAndTimeWaitTimeout) {
+            this.tcpClosedAndTimeWaitTimeout = tcpClosedAndTimeWaitTimeout;
+            return this;
+        }
+        public Integer getTcpClosedAndTimeWaitTimeout() {
+            return this.tcpClosedAndTimeWaitTimeout;
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration setTcpEstablishedTimeout(Integer tcpEstablishedTimeout) {
+            this.tcpEstablishedTimeout = tcpEstablishedTimeout;
+            return this;
+        }
+        public Integer getTcpEstablishedTimeout() {
+            return this.tcpEstablishedTimeout;
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration setUdpTimeout(Integer udpTimeout) {
+            this.udpTimeout = udpTimeout;
+            return this;
+        }
+        public Integer getUdpTimeout() {
+            return this.udpTimeout;
         }
 
     }

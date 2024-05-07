@@ -7,12 +7,20 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     /**
      * <p>The CPU architecture. Valid values:</p>
      * <br>
-     * <p>*   X86: x86</p>
-     * <p>*   ARM: ARM</p>
+     * <p>*   X86</p>
+     * <p>*   ARM</p>
      */
     @NameInMap("CpuArchitecture")
     public String cpuArchitecture;
 
+    /**
+     * <p>The CPU architectures of instance types. Valid values:</p>
+     * <br>
+     * <p>>  Valid values of N: 1 and 2.</p>
+     * <br>
+     * <p>*   X86</p>
+     * <p>*   ARM</p>
+     */
     @NameInMap("CpuArchitectures")
     public java.util.List<String> cpuArchitectures;
 
@@ -24,9 +32,34 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     @NameInMap("GPUSpec")
     public String GPUSpec;
 
+    /**
+     * <p>The GPU models of instance types. Valid values of N: 1 to 10.</p>
+     */
     @NameInMap("GpuSpecs")
     public java.util.List<String> gpuSpecs;
 
+    /**
+     * <p>The categories of instance types. Valid values:</p>
+     * <br>
+     * <p>>  Valid values of N: 1 to 10.</p>
+     * <br>
+     * <p>*   General-purpose: general-purpose instance type</p>
+     * <p>*   Compute-optimized: compute-optimized instance type</p>
+     * <p>*   Memory-optimized: memory-optimized instance type</p>
+     * <p>*   Big data: big data instance type</p>
+     * <p>*   Local SSDs: instance type with local SSDs</p>
+     * <p>*   High Clock Speed: instance type with high clock speeds</p>
+     * <p>*   Enhanced: enhanced instance type</p>
+     * <p>*   Shared: shared instance type</p>
+     * <p>*   Compute-optimized with GPU: GPU-accelerated compute-optimized instance type</p>
+     * <p>*   Visual Compute-optimized: visual compute-optimized instance type</p>
+     * <p>*   Heterogeneous Service: heterogeneous service instance type</p>
+     * <p>*   Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type</p>
+     * <p>*   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type</p>
+     * <p>*   ECS Bare Metal: ECS Bare Metal Instance type</p>
+     * <p>*   Super Computing Cluster: SCC instance type</p>
+     * <p>*   High Performance Compute: high-performance computing instance type</p>
+     */
     @NameInMap("InstanceCategories")
     public java.util.List<String> instanceCategories;
 
@@ -48,8 +81,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
      * <p>*   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type</p>
      * <p>*   ECS Bare Metal: ECS Bare Metal Instance type</p>
      * <p>*   Super Computing Cluster: Super Computing Cluster (SCC) instance type</p>
-     * <p>- High Performance Compute.</p>
-     * <p>- Cloud Physical Server.</p>
+     * <p>*   High Performance Compute: high-performance computing instance type</p>
      */
     @NameInMap("InstanceCategory")
     public String instanceCategory;
@@ -64,6 +96,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     @NameInMap("InstanceFamilyLevel")
     public String instanceFamilyLevel;
 
+    /**
+     * <p>The instance families of instance types that you want to query. Valid values of N: 1 to 10.</p>
+     */
     @NameInMap("InstanceTypeFamilies")
     public java.util.List<String> instanceTypeFamilies;
 
@@ -81,20 +116,31 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
 
+    /**
+     * <p>The categories of local disks. Valid values of N: 1 and 2. For more information, see [Local disks](~~63138#section_n2w\_8yc\_5u1~~). Valid values:</p>
+     * <br>
+     * <p>*   local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances</p>
+     * <p>*   local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances</p>
+     */
     @NameInMap("LocalStorageCategories")
     public java.util.List<String> localStorageCategories;
 
     /**
      * <p>The category of local disks. For more information, see [Local disks](~~63138#section_n2w\_8yc\_5u1~~). Valid values:</p>
      * <br>
-     * <p>*   local_hdd_pro: local Serial Advanced Technology Attachment (SATA) HDDs, which are used by d1ne or d1 instances</p>
-     * <p>*   local_ssd_pro: local Non-Volatile Memory Express (NVMe) SSDs, which are used by i2, i2g, i1, ga1, or gn5 instances</p>
+     * <p>*   local_hdd_pro: local Serial Advanced Technology Attachment (SATA) HDDs, which are attached to d1ne or d1 instances.</p>
+     * <p>*   local_ssd_pro: local Non-Volatile Memory Express (NVMe) SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances.</p>
+     * <br>
+     * <p>Enumerated values:</p>
+     * <br>
+     * <p>*   local_hdd_pro</p>
+     * <p>*   local_ssd_pro</p>
      */
     @NameInMap("LocalStorageCategory")
     public String localStorageCategory;
 
     /**
-     * <p>The maximum number of entries to return on each page. Maximum value: 1600.</p>
+     * <p>The maximum number of entries per page. Maximum value: 1600.</p>
      * <br>
      * <p>Default value: 1600.</p>
      */
@@ -316,8 +362,8 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     /**
      * <p>Specifies whether cloud disks can be attached by using the NVMe protocol. Valid values:</p>
      * <br>
-     * <p>*   required: The cloud disk can be attached by using the NVMe protocol.</p>
-     * <p>*   unsupported: The cloud disk cannot be attached by using the NVMe protocol.</p>
+     * <p>*   required: Cloud disks can be attached by using the NVMe protocol.</p>
+     * <p>*   unsupported: Cloud disks cannot be attached by using the NVMe protocol.</p>
      */
     @NameInMap("NvmeSupport")
     public String nvmeSupport;
@@ -336,6 +382,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     @NameInMap("PhysicalProcessorModel")
     public String physicalProcessorModel;
 
+    /**
+     * <p>The CPU models of instance types. Valid values of N: 1 to 10.</p>
+     */
     @NameInMap("PhysicalProcessorModels")
     public java.util.List<String> physicalProcessorModels;
 
