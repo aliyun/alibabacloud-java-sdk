@@ -115,7 +115,7 @@ public class RunInstancesRequest extends TeaModel {
     public String creditSpecification;
 
     /**
-     * <p>Details of the data disks.</p>
+     * <p>The data disks.</p>
      */
     @NameInMap("DataDisk")
     public java.util.List<RunInstancesRequestDataDisk> dataDisk;
@@ -275,7 +275,7 @@ public class RunInstancesRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). The default value of this parameter is the `InstanceId` value.</p>
+     * <p>The instance name. The name must be 2 to 128 characters in length and support Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can contain colons (:), underscores (\_), periods (.), and hyphens (-). The default value of this parameter is the `InstanceId` value.</p>
      * <br>
      * <p>When you batch create instances, you can batch configure sequential names for the instances. For more information, see [Batch configure sequential names or hostnames for multiple instances](~~196048~~).</p>
      */
@@ -600,7 +600,7 @@ public class RunInstancesRequest extends TeaModel {
     public Integer storageSetPartitionNumber;
 
     /**
-     * <p>The tags to add to the instance, disks, and primary ENI. You can specify up to 20 tags.</p>
+     * <p>The tags to add to the instance, disks, and primary ENI.</p>
      */
     @NameInMap("Tag")
     public java.util.List<RunInstancesRequestTag> tag;
@@ -1540,7 +1540,7 @@ public class RunInstancesRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length and support Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can contain colons (:), underscores (\_), periods (.), and hyphens (-).</p>
          */
         @NameInMap("DiskName")
         public String diskName;
@@ -1789,7 +1789,7 @@ public class RunInstancesRequest extends TeaModel {
          * <p>*   true</p>
          * <p>*   false</p>
          * <br>
-         * <p>>  This parameter is available only if you set the DataDisk.N.Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).</p>
+         * <p>>  This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).</p>
          */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
@@ -1797,7 +1797,7 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>The category of data disk N. Valid values:</p>
          * <br>
-         * <p>*   cloud_efficiency: ultra disk</p>
+         * <p>*   cloud_efficiency: utra disk</p>
          * <p>*   cloud_ssd: standard SSD</p>
          * <p>*   cloud_essd: ESSD</p>
          * <p>*   cloud: basic disk</p>
@@ -1834,13 +1834,13 @@ public class RunInstancesRequest extends TeaModel {
          * <p>*   1st to 25th data disks: /dev/xvd`[b-z]`.</p>
          * <p>*   From the 26th data disk on: /dev/xvd`[aa-zz]`. For example, the 26th data disk is named /dev/xvdaa, the 27th data disk is named /dev/xvdab, and so on.</p>
          * <br>
-         * <p>>  This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify the `DataDisk.N.Size` and `DataDisk.N.Category` parameters to change the category and size of data disk N created based on the image.</p>
+         * <p>>  This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify `DataDisk.N.Size` and `DataDisk.N.Category` to change the category and size of data disk N created based on the image.</p>
          */
         @NameInMap("Device")
         public String device;
 
         /**
-         * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
+         * <p>The name of data disk N. The name must be 2 to 128 characters in length and support Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can contain colons (:), underscores (\_), periods (.), and hyphens (-).</p>
          */
         @NameInMap("DiskName")
         public String diskName;
@@ -1871,10 +1871,10 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>The performance level of the ESSD to use as data disk N. The value of N must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Valid values:</p>
          * <br>
-         * <p>*   PL0: A single ESSD can deliver up to 10000 random read/write IOPS.</p>
-         * <p>*   PL1 (default): A single ESSD can deliver up to 50000 random read/write IOPS.</p>
-         * <p>*   PL2: A single ESSD can deliver up to 100000 random read/write IOPS.</p>
-         * <p>*   PL3: A single ESSD can deliver up to 1000000 random read/write IOPS.</p>
+         * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
+         * <p>*   PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
+         * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
+         * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
          * <br>
          * <p>For information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
          */
@@ -1886,7 +1886,7 @@ public class RunInstancesRequest extends TeaModel {
          * <br>
          * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
          * <br>
-         * <p>>  This parameter is available only if you set the DataDisk.N.Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).</p>
+         * <p>>  This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).</p>
          */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
@@ -1900,18 +1900,18 @@ public class RunInstancesRequest extends TeaModel {
          * <br>
          * <p>*   Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the `DataDisk.N.PerformanceLevel` value.</p>
          * <br>
-         * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.</p>
+         * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.</p>
          * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</p>
          * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</p>
          * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</p>
          * <br>
          * <p>*   Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.</p>
          * <br>
-         * <p>*   Valid values when DataDisk.N.Category is set to cloud_auto: 40 to 32768.</p>
+         * <p>*   Valid values when DataDisk.N.Category is set to cloud_auto: 1 to 32768.</p>
          * <br>
          * <p>*   Valid values when DataDisk.N.Category is set to cloud_essd_entry: 10 to 32768.</p>
          * <br>
-         * <p>The value of this parameter must be greater than or equal to the size of the snapshot specified by the `DataDisk.N.SnapshotId` parameter.</p>
+         * <p>>  The value of this parameter must be greater than or equal to the size of the snapshot specified by `SnapshotId`.</p>
          */
         @NameInMap("Size")
         public Integer size;
@@ -1919,7 +1919,7 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.</p>
          * <br>
-         * <p>When the `DataDisk.N.SnapshotId` parameter is specified, the `DataDisk.N.Size` parameter is ignored. The data disk is created with the size of the specified snapshot. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
+         * <p>When `DataDisk.N.SnapshotId` is specified, `DataDisk.N.Size` is ignored. The data disk is created with the size of the specified snapshot. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
@@ -2152,7 +2152,7 @@ public class RunInstancesRequest extends TeaModel {
          * <br>
          * <p>*   You can specify network card indexes only for instances of specific instance types.</p>
          * <p>*   When NetworkInterface.N.InstanceType is set to Primary, you can set NetworkInterface.N.NetworkCardIndex only to 0 for instance types that support network cards.</p>
-         * <p>*   When NetworkInterface.N.InstanceType is set to Secondary or left empty, you can set NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see [Overview of instance families](~~25378~~).</p>
+         * <p>*   When NetworkInterface.N.InstanceType is set to Secondary or left empty, you can set NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see the [Overview of instance families](~~25378~~) topic.</p>
          */
         @NameInMap("NetworkCardIndex")
         public Integer networkCardIndex;
@@ -2166,7 +2166,7 @@ public class RunInstancesRequest extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>The name of ENI N.</p>
+         * <p>The name of ENI N. The name must be 2 to 128 characters in length and support Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can contain colons (:), underscores (\_), periods (.), and hyphens (-).</p>
          * <br>
          * <p>Take note of the following items:</p>
          * <br>
@@ -2179,8 +2179,8 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>The communication mode of ENI N. Valid values:</p>
          * <br>
-         * <p>*   Standard: uses the TCP communication mode.</p>
-         * <p>*   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</p>
+         * <p>*   Standard: The TCP communication mode is used.</p>
+         * <p>*   HighPerformance: The Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.</p>
          * <br>
          * <p>Default value: Standard.</p>
          * <br>
@@ -2205,7 +2205,7 @@ public class RunInstancesRequest extends TeaModel {
          * <br>
          * <p>> </p>
          * <br>
-         * <p>*   You can attach only a single secondary ENI when you create an instance. After the instance is created, you can call the [CreateNetworkInterface](~~58504~~) and [AttachNetworkInterface](~~58515~~) operations to attach more secondary ENIs.</p>
+         * <p>*   You can attach only a single secondary ENI when you create an ECS instance. After the instance is created, you can call the [CreateNetworkInterface](~~58504~~) and [AttachNetworkInterface](~~58515~~) operations to attach more secondary ENIs.</p>
          * <br>
          * <p>*   The first IP address and last three IP addresses of each vSwitch CIDR block are reserved. You cannot specify the IP addresses. For example, if a vSwitch CIDR block is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.</p>
          */
@@ -2465,17 +2465,13 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag of the instance, disks, and primary ENI.</p>
-         * <br>
-         * <p>The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The key of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag of the instance, disks, and primary ENI.</p>
-         * <br>
-         * <p>The tag value can be an empty string. It can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The value of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
          */
         @NameInMap("Value")
         public String value;

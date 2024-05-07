@@ -113,7 +113,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceType extends TeaModel {
         /**
-         * <p>The baseline vCPU computing performance (overall computing performance of all vCPUs) of the t5 or t6 burstable instance.</p>
+         * <p>The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</p>
          */
         @NameInMap("BaselineCredit")
         public Integer baselineCredit;
@@ -121,8 +121,8 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         /**
          * <p>The CPU architecture. Valid values:</p>
          * <br>
-         * <p>*   X86: x86</p>
-         * <p>*   ARM: ARM</p>
+         * <p>*   X86</p>
+         * <p>*   ARM</p>
          */
         @NameInMap("CpuArchitecture")
         public String cpuArchitecture;
@@ -164,23 +164,23 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer eniPrivateIpAddressQuantity;
 
         /**
-         * <p>The maximum number of ENIs.</p>
+         * <p>The maximum number of ENIs per instance.</p>
          */
         @NameInMap("EniQuantity")
         public Integer eniQuantity;
 
         /**
-         * <p>The maximum number of NICs, including the primary NIC, ENIs, and trunk NICs.</p>
+         * <p>The maximum number of ENIs, including primary, secondary, and trunk ENIs.</p>
          * <br>
-         * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("EniTotalQuantity")
         public Integer eniTotalQuantity;
 
         /**
-         * <p>Indicates whether NICs on instances of the instance type support trunking.</p>
+         * <p>Indicates whether trunk ENIs are supported.</p>
          * <br>
-         * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("EniTrunkSupported")
         public Boolean eniTrunkSupported;
@@ -188,7 +188,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         /**
          * <p>The number of ERIs.</p>
          * <br>
-         * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("EriQuantity")
         public Integer eriQuantity;
@@ -200,7 +200,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer GPUAmount;
 
         /**
-         * <p>The amount of GPU memory per GPU. Unit: GiB.</p>
+         * <p>The amount of GPU memory per GPU. Unit: GiB</p>
          */
         @NameInMap("GPUMemorySize")
         public Float GPUMemorySize;
@@ -212,7 +212,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public String GPUSpec;
 
         /**
-         * <p>The initial vCPU credits of a t5 or t6 burstable instance.</p>
+         * <p>The initial vCPU credits per t5 or t6 burstable instance.</p>
          */
         @NameInMap("InitialCredit")
         public Integer initialCredit;
@@ -247,8 +247,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
          * <p>*   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type</p>
          * <p>*   ECS Bare Metal: ECS Bare Metal Instance type</p>
          * <p>*   Super Computing Cluster: SCC instance type</p>
-         * <p>- High Performance Compute.</p>
-         * <p>- Cloud Physical Server.</p>
+         * <p>*   High Performance Compute: high-performance computing instance type</p>
          */
         @NameInMap("InstanceCategory")
         public String instanceCategory;
@@ -257,14 +256,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
          * <p>The level of the instance family. Valid values:</p>
          * <br>
          * <p>*   EntryLevel: entry level (shared).</p>
-         * <p>*   EnterpriseLevel: enterprise level.</p>
-         * <p>*   CreditEntryLevel: credit-based entry level. For more information about instance families of this level, see [Overview](~~59977~~).</p>
+         * <p>*   EnterpriseLevel: enterprise level</p>
+         * <p>*   CreditEntryLevel: credit-based entry level For more information, see [Overview](~~59977~~).</p>
          */
         @NameInMap("InstanceFamilyLevel")
         public String instanceFamilyLevel;
 
         /**
-         * <p>The inbound packet forwarding rate of the internal network. Unit: pps.</p>
+         * <p>The inbound packet forwarding rate over the internal network. Unit: pps.</p>
          */
         @NameInMap("InstancePpsRx")
         public Long instancePpsRx;
@@ -294,7 +293,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer localStorageAmount;
 
         /**
-         * <p>The capacity of each local disk. Unit: GiB.</p>
+         * <p>The capacity of each local disk. Unit: GiB</p>
          */
         @NameInMap("LocalStorageCapacity")
         public Long localStorageCapacity;
@@ -302,20 +301,20 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         /**
          * <p>The category of local disks. For more information, see [Local disks](~~63138~~). Valid values:</p>
          * <br>
-         * <p>*   local_hdd_pro: local SATA HDDs, which are used by d1ne or d1 instances</p>
-         * <p>*   local_ssd_pro: local NVMe SSDs, which are used by i2, i2g, i1, ga1, or gn5 instances</p>
+         * <p>*   local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances</p>
+         * <p>*   local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances</p>
          */
         @NameInMap("LocalStorageCategory")
         public String localStorageCategory;
 
         /**
-         * <p>The maximum number of queues per ENI (including primary and secondary ENIs).</p>
+         * <p>The maximum number of queues per ENI, including primary and secondary ENIs.</p>
          */
         @NameInMap("MaximumQueueNumberPerEni")
         public Integer maximumQueueNumberPerEni;
 
         /**
-         * <p>The memory size. Unit: GiB.</p>
+         * <p>The memory size. Unit: GiB</p>
          */
         @NameInMap("MemorySize")
         public Float memorySize;
@@ -327,7 +326,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer networkCardQuantity;
 
         /**
-         * <p>Details about the network cards.</p>
+         * <p>The information of the network cards.</p>
          */
         @NameInMap("NetworkCards")
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkCards networkCards;
@@ -335,17 +334,17 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether to allow network traffic transmitted over virtual private clouds (VPCs) to be encrypted. Valid values:</p>
          * <br>
-         * <p>*   true: allows network traffic transmitted over VPCs to be encrypted.</p>
-         * <p>*   false: does not allow network traffic transmitted over VPCs to be encrypted.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("NetworkEncryptionSupport")
         public Boolean networkEncryptionSupport;
 
         /**
-         * <p>Indicates whether the cloud disk can be attached by using the NVMe protocol. Valid values:</p>
+         * <p>Indicates whether cloud disks can be attached by using the NVMe protocol. Valid values:</p>
          * <br>
-         * <p>*   required: The cloud disk can be attached by using the NVMe protocol.</p>
-         * <p>*   unsupported: The cloud disk cannot be attached by using the NVMe protocol.</p>
+         * <p>*   required: Cloud disks can be attached by using the NVMe protocol.</p>
+         * <p>*   unsupported: Cloud disks cannot be attached by using the NVMe protocol.</p>
          */
         @NameInMap("NvmeSupport")
         public String nvmeSupport;
@@ -357,19 +356,19 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public String physicalProcessorModel;
 
         /**
-         * <p>The default number of queues per primary NIC.</p>
+         * <p>The default number of queues per primary ENI.</p>
          */
         @NameInMap("PrimaryEniQueueNumber")
         public Integer primaryEniQueueNumber;
 
         /**
-         * <p>The maximum number of QP queues per ERI.</p>
+         * <p>The maximum number of QPs per ERI.</p>
          */
         @NameInMap("QueuePairNumber")
         public Integer queuePairNumber;
 
         /**
-         * <p>The default number of queues supported by the secondary ENI.</p>
+         * <p>The default number of queues per secondary ENI.</p>
          */
         @NameInMap("SecondaryEniQueueNumber")
         public Integer secondaryEniQueueNumber;

@@ -87,7 +87,9 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public String frequency;
 
     /**
-     * <p>The IDs of the instances on which you want to run the command. You can specify up to 50 instance IDs in each request. Valid values of N: 1 to 50.</p>
+     * <p>The IDs of instances on which you want to run the command. You can specify up to 100 instance IDs in each request. Valid values of N: 1 to 100.</p>
+     * <br>
+     * <p>You can apply for a quota increase in the Quota Center console. The quota name is Maximum number of instances supported for command execution.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;

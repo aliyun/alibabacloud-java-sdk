@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
+    @NameInMap("ConnectionTrackingConfiguration")
+    public ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration connectionTrackingConfiguration;
+
     /**
      * <p>Specifies whether to release the ENI when the associated instance is released. Valid values:</p>
      * <br>
@@ -97,6 +100,14 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public static ModifyNetworkInterfaceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNetworkInterfaceAttributeRequest self = new ModifyNetworkInterfaceAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyNetworkInterfaceAttributeRequest setConnectionTrackingConfiguration(ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration connectionTrackingConfiguration) {
+        this.connectionTrackingConfiguration = connectionTrackingConfiguration;
+        return this;
+    }
+    public ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration getConnectionTrackingConfiguration() {
+        return this.connectionTrackingConfiguration;
     }
 
     public ModifyNetworkInterfaceAttributeRequest setDeleteOnRelease(Boolean deleteOnRelease) {
@@ -201,6 +212,47 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     }
     public Integer getTxQueueSize() {
         return this.txQueueSize;
+    }
+
+    public static class ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration extends TeaModel {
+        @NameInMap("TcpClosedAndTimeWaitTimeout")
+        public Integer tcpClosedAndTimeWaitTimeout;
+
+        @NameInMap("TcpEstablishedTimeout")
+        public Integer tcpEstablishedTimeout;
+
+        @NameInMap("UdpTimeout")
+        public Integer udpTimeout;
+
+        public static ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration self = new ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration setTcpClosedAndTimeWaitTimeout(Integer tcpClosedAndTimeWaitTimeout) {
+            this.tcpClosedAndTimeWaitTimeout = tcpClosedAndTimeWaitTimeout;
+            return this;
+        }
+        public Integer getTcpClosedAndTimeWaitTimeout() {
+            return this.tcpClosedAndTimeWaitTimeout;
+        }
+
+        public ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration setTcpEstablishedTimeout(Integer tcpEstablishedTimeout) {
+            this.tcpEstablishedTimeout = tcpEstablishedTimeout;
+            return this;
+        }
+        public Integer getTcpEstablishedTimeout() {
+            return this.tcpEstablishedTimeout;
+        }
+
+        public ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration setUdpTimeout(Integer udpTimeout) {
+            this.udpTimeout = udpTimeout;
+            return this;
+        }
+        public Integer getUdpTimeout() {
+            return this.udpTimeout;
+        }
+
     }
 
 }

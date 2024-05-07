@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
     /**
-     * <p>The unit of the auto-renewal period. Valid values:</p>
-     * <br>
-     * <p>*   Week</p>
-     * <p>*   Month</p>
+     * <p>The array that consists of dedicated host auto-renewal attributes.</p>
      */
     @NameInMap("DedicatedHostRenewAttributes")
     public DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes dedicatedHostRenewAttributes;
 
     /**
-     * <p>Details about the auto-renewal attributes of the dedicated hosts.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,35 +39,40 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributesDedicatedHostRenewAttribute extends TeaModel {
         /**
-         * <p>Indicates whether the subscription dedicated host is automatically renewed along with the subscription Elastic Compute Service (ECS) instances hosted on it if the new expiration time of the renewed instances is later than the expiration time of the dedicated host. Valid values:</p>
+         * <p>Indicates whether auto-renewal is enabled. Valid values:</p>
          * <br>
-         * <p>*   AutoRenewWithEcs: The subscription dedicated host is automatically renewed along with the subscription ECS instances hosted on it.</p>
-         * <p>*   StopRenewWithEcs: The subscription dedicated host is not automatically renewed along with the subscription ECS instances hosted on it.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("AutoRenewEnabled")
         public Boolean autoRenewEnabled;
 
+        /**
+         * <p>Indicates whether the dedicated host is automatically renewed if a subscription ECS instance it hosts, after being automatically renewed, has a new expiration time that is later than that of the dedicated host. Valid values:</p>
+         * <br>
+         * <p>*   AutoRenewWithEcs: The dedicated host is automatically renewed along with the ECS instance.</p>
+         * <p>*   StopRenewWithEcs: The dedicated host is not automatically renewed along with the ECS instance.</p>
+         */
         @NameInMap("AutoRenewWithEcs")
         public String autoRenewWithEcs;
 
         /**
-         * <p>Indicates whether the subscription dedicated host is automatically renewed. Valid values:</p>
-         * <br>
-         * <p>*   AutoRenewal: The dedicated host is automatically renewed.</p>
-         * <p>*   Normal: The dedicated host is not automatically renewed, and you will receive notifications for renewal.</p>
-         * <p>*   NotRenewal: The dedicated host is not renewed, and no expiration notification is sent. Notifications for renewal are automatically sent three days before the dedicated host expires. You can change the value of this parameter from NotRenewal to Normal for the dedicated host and manually renew it by calling the [RenewDedicatedHosts](~~93287~~) operation. Alternatively, you can set this parameter to AutoRenewal to configure the dedicated host to be automatically renewed.</p>
+         * <p>The ID of the dedicated host.</p>
          */
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
         /**
-         * <p>The ID of the dedicated host.</p>
+         * <p>The auto-renewal period.</p>
          */
         @NameInMap("Duration")
         public Integer duration;
 
         /**
-         * <p>The auto-renewal period.</p>
+         * <p>The unit of the auto-renewal duration. Valid values:</p>
+         * <br>
+         * <p>*   Week</p>
+         * <p>*   Month</p>
          */
         @NameInMap("PeriodUnit")
         public String periodUnit;
@@ -78,8 +80,9 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the subscription dedicated host is automatically renewed. Valid values:</p>
          * <br>
-         * <p>*   true: The dedicated host is automatically renewed.</p>
-         * <p>*   false: The dedicated host is not automatically renewed.</p>
+         * <p>*   AutoRenewal: The dedicated host is automatically renewed.</p>
+         * <p>*   Normal: The dedicated host is not automatically renewed, but renewal notifications are sent.</p>
+         * <p>*   NotRenewal: The dedicated host is not automatically renewed, and no expiration notification is sent. Alibaba Cloud sends only a non-renewal notice three days before the host expires. If the renewal status of a dedicated host is NotRenewal, you can change the value to Normal and then call [RenewDedicatedHosts](~~93287~~) to manually renew the dedicated host, or directly change the value to AutoRenewal.</p>
          */
         @NameInMap("RenewalStatus")
         public String renewalStatus;
