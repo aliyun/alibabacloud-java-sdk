@@ -1,3 +1,6 @@
+2024-05-07 Version: 5.3.1
+- Generated java 2020-05-18 for dataworks-public.
+
 2024-04-24 Version: 5.3.0
 - Support API AddRecognizeRule.
 - Support API DeleteRecognizeRule.
