@@ -215,6 +215,55 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstancesResponseBodyInstancesInstanceAttributeTagsTagInfo extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceAttributeTagsTagInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceAttributeTagsTagInfo self = new DescribeInstancesResponseBodyInstancesInstanceAttributeTagsTagInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttributeTagsTagInfo setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttributeTagsTagInfo setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceAttributeTags extends TeaModel {
+        @NameInMap("TagInfo")
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceAttributeTagsTagInfo> tagInfo;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceAttributeTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceAttributeTags self = new DescribeInstancesResponseBodyInstancesInstanceAttributeTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttributeTags setTagInfo(java.util.List<DescribeInstancesResponseBodyInstancesInstanceAttributeTagsTagInfo> tagInfo) {
+            this.tagInfo = tagInfo;
+            return this;
+        }
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceAttributeTagsTagInfo> getTagInfo() {
+            return this.tagInfo;
+        }
+
+    }
+
     public static class DescribeInstancesResponseBodyInstancesInstanceAttribute extends TeaModel {
         @NameInMap("AclId")
         public String aclId;
@@ -333,6 +382,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @NameInMap("SupportIpv6")
         public Boolean supportIpv6;
+
+        @NameInMap("Tags")
+        public DescribeInstancesResponseBodyInstancesInstanceAttributeTags tags;
 
         @NameInMap("UserVpcId")
         public String userVpcId;
@@ -633,6 +685,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Boolean getSupportIpv6() {
             return this.supportIpv6;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setTags(DescribeInstancesResponseBodyInstancesInstanceAttributeTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesInstanceAttributeTags getTags() {
+            return this.tags;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceAttribute setUserVpcId(String userVpcId) {
