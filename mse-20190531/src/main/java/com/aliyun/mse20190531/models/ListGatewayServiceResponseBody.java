@@ -664,6 +664,9 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         @NameInMap("Ports")
         public java.util.List<Integer> ports;
 
+        @NameInMap("ServiceFQDN")
+        public String serviceFQDN;
+
         /**
          * <p>The name of the service that is registered with the service registry.</p>
          */
@@ -837,6 +840,14 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         }
         public java.util.List<Integer> getPorts() {
             return this.ports;
+        }
+
+        public ListGatewayServiceResponseBodyDataResult setServiceFQDN(String serviceFQDN) {
+            this.serviceFQDN = serviceFQDN;
+            return this;
+        }
+        public String getServiceFQDN() {
+            return this.serviceFQDN;
         }
 
         public ListGatewayServiceResponseBodyDataResult setServiceNameInRegistry(String serviceNameInRegistry) {

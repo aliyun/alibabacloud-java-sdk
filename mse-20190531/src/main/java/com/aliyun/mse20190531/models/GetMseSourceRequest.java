@@ -28,6 +28,9 @@ public class GetMseSourceRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
+    @NameInMap("VpcId")
+    public String vpcId;
+
     public static GetMseSourceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMseSourceRequest self = new GetMseSourceRequest();
         return TeaModel.build(map, self);
@@ -55,6 +58,14 @@ public class GetMseSourceRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public GetMseSourceRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }
