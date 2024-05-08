@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
     /**
-     * <p>Details about instance families.</p>
+     * <p>The instance families.</p>
      */
     @NameInMap("InstanceTypeFamilies")
     public DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies instanceTypeFamilies;

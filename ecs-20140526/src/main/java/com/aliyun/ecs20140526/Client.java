@@ -1138,6 +1138,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DiskId", request.diskId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -5120,7 +5124,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you want to modify the parameters of a launch template version, you can create another version with different parameter settings for the launch template. A maximum of 30 versions can be created for each launch template.
+      * ## [](#)Usage notes
+      * If you want to modify the parameters of a launch template version, you can create another version with different parameter settings for the launch template. You can create up to 30 versions for each launch template.
       *
       * @param request CreateLaunchTemplateVersionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5335,7 +5340,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you want to modify the parameters of a launch template version, you can create another version with different parameter settings for the launch template. A maximum of 30 versions can be created for each launch template.
+      * ## [](#)Usage notes
+      * If you want to modify the parameters of a launch template version, you can create another version with different parameter settings for the launch template. You can create up to 30 versions for each launch template.
       *
       * @param request CreateLaunchTemplateVersionRequest
       * @return CreateLaunchTemplateVersionResponse

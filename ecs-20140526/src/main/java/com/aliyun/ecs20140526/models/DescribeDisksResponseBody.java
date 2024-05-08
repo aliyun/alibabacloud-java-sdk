@@ -272,6 +272,25 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDisksResponseBodyDisksDiskPlacement extends TeaModel {
+        @NameInMap("ZoneIds")
+        public String zoneIds;
+
+        public static DescribeDisksResponseBodyDisksDiskPlacement build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksResponseBodyDisksDiskPlacement self = new DescribeDisksResponseBodyDisksDiskPlacement();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDisksResponseBodyDisksDiskPlacement setZoneIds(String zoneIds) {
+            this.zoneIds = zoneIds;
+            return this;
+        }
+        public String getZoneIds() {
+            return this.zoneIds;
+        }
+
+    }
+
     public static class DescribeDisksResponseBodyDisksDiskTagsTag extends TeaModel {
         /**
          * <p>The tag key of the disk.</p>
@@ -547,6 +566,9 @@ public class DescribeDisksResponseBody extends TeaModel {
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
+
+        @NameInMap("Placement")
+        public DescribeDisksResponseBodyDisksDiskPlacement placement;
 
         /**
          * <p>Indicates whether the disk is removable.</p>
@@ -913,6 +935,14 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
         public String getPerformanceLevel() {
             return this.performanceLevel;
+        }
+
+        public DescribeDisksResponseBodyDisksDisk setPlacement(DescribeDisksResponseBodyDisksDiskPlacement placement) {
+            this.placement = placement;
+            return this;
+        }
+        public DescribeDisksResponseBodyDisksDiskPlacement getPlacement() {
+            return this.placement;
         }
 
         public DescribeDisksResponseBodyDisksDisk setPortable(Boolean portable) {

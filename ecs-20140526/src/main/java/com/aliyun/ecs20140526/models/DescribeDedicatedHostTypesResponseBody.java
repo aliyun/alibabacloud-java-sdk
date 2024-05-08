@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
     /**
-     * <p>The information about the dedicated host type.</p>
+     * <p>Details about the dedicated host types.</p>
      */
     @NameInMap("DedicatedHostTypes")
     public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes dedicatedHostTypes;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -77,7 +77,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType extends TeaModel {
         /**
-         * <p>The number of cores in a single physical CPU.</p>
+         * <p>The number of cores per physical CPU.</p>
          */
         @NameInMap("Cores")
         public Integer cores;
@@ -89,7 +89,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         public String cpuOverCommitRatioRange;
 
         /**
-         * <p>The type of the dedicated host. You can submit a ticket to request more dedicated host types.</p>
+         * <p>The dedicated host type.</p>
          */
         @NameInMap("DedicatedHostType")
         public String dedicatedHostType;
@@ -113,13 +113,13 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         public Long localStorageCapacity;
 
         /**
-         * <p>The category of the local disks.</p>
+         * <p>The category of local disks.</p>
          */
         @NameInMap("LocalStorageCategory")
         public String localStorageCategory;
 
         /**
-         * <p>The size of the memory. Unit: GiB.</p>
+         * <p>The memory size. Unit: GiB.</p>
          */
         @NameInMap("MemorySize")
         public Float memorySize;
@@ -137,19 +137,19 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         public Integer sockets;
 
         /**
-         * <p>Indicates whether the CPU overcommit ratio setting is supported.</p>
+         * <p>Indicates whether the CPU overcommit ratio settings are supported.</p>
          */
         @NameInMap("SupportCpuOverCommitRatio")
         public Boolean supportCpuOverCommitRatio;
 
         /**
-         * <p>The ECS instance families supported by the dedicated host.</p>
+         * <p>The ECS instance families supported by the dedicated host type.</p>
          */
         @NameInMap("SupportedInstanceTypeFamilies")
         public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypeFamilies supportedInstanceTypeFamilies;
 
         /**
-         * <p>The ECS instance types supported by the dedicated host.</p>
+         * <p>The ECS instance types supported by the dedicated host type.</p>
          */
         @NameInMap("SupportedInstanceTypesList")
         public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypesList supportedInstanceTypesList;
