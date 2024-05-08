@@ -7,6 +7,9 @@ public class SyncDingTypeRequest extends TeaModel {
     @NameInMap("DingType")
     public String dingType;
 
+    @NameInMap("IsDimission")
+    public String isDimission;
+
     @NameInMap("Source")
     public String source;
 
@@ -27,6 +30,14 @@ public class SyncDingTypeRequest extends TeaModel {
     }
     public String getDingType() {
         return this.dingType;
+    }
+
+    public SyncDingTypeRequest setIsDimission(String isDimission) {
+        this.isDimission = isDimission;
+        return this;
+    }
+    public String getIsDimission() {
+        return this.isDimission;
     }
 
     public SyncDingTypeRequest setSource(String source) {
