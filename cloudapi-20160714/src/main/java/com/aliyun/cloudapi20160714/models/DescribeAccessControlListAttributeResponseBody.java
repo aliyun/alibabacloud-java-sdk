@@ -22,11 +22,8 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     @NameInMap("AclName")
     public String aclName;
 
-    /**
-     * <p>Indicates whether the policy was used.</p>
-     */
-    @NameInMap("IsUsed")
-    public String isUsed;
+    @NameInMap("AddressIPVersion")
+    public String addressIPVersion;
 
     /**
      * <p>The ID of the request.</p>
@@ -63,12 +60,12 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         return this.aclName;
     }
 
-    public DescribeAccessControlListAttributeResponseBody setIsUsed(String isUsed) {
-        this.isUsed = isUsed;
+    public DescribeAccessControlListAttributeResponseBody setAddressIPVersion(String addressIPVersion) {
+        this.addressIPVersion = addressIPVersion;
         return this;
     }
-    public String getIsUsed() {
-        return this.isUsed;
+    public String getAddressIPVersion() {
+        return this.addressIPVersion;
     }
 
     public DescribeAccessControlListAttributeResponseBody setRequestId(String requestId) {

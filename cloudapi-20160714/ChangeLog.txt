@@ -1,3 +1,12 @@
+2024-05-08 Version: 3.6.0
+- Support API DescribeApisByVpcAccess.
+- Update API CreateAccessControlList: update response param.
+- Update API DeleteBackendModel: update param BackendModelId.
+- Update API DescribeAccessControlListAttribute: update response param.
+- Update API DescribeAuthorizedApps: update response param.
+- Update API DescribeInstances: update response param.
+
+
 2024-03-21 Version: 3.5.1
 - Update API CreateInstance: update param HttpsPolicy.
 - Update API DescribeApi: update response param.
