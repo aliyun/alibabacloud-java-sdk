@@ -119,6 +119,9 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("EnableRisks")
+        public java.util.List<String> enableRisks;
+
         /**
          * <p>The type of the baseline.</p>
          */
@@ -223,6 +226,14 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListCheckItemWarningSummaryResponseBodyList setEnableRisks(java.util.List<String> enableRisks) {
+            this.enableRisks = enableRisks;
+            return this;
+        }
+        public java.util.List<String> getEnableRisks() {
+            return this.enableRisks;
         }
 
         public ListCheckItemWarningSummaryResponseBodyList setRiskType(String riskType) {
