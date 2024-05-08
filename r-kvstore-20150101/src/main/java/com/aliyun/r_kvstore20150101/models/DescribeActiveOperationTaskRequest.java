@@ -49,12 +49,11 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The type of the O&M task. Valid values:</p>
+     * <p>The type of the O\&M task. Valid values:</p>
      * <br>
      * <p>*   **rds_apsaradb_ha**: master-replica switchover</p>
      * <p>*   **rds_apsaradb_transfer**: instance migration</p>
      * <p>*   **rds_apsaradb_upgrade**: minor version update</p>
-     * <p>*   **all**: all types</p>
      */
     @NameInMap("TaskType")
     public String taskType;

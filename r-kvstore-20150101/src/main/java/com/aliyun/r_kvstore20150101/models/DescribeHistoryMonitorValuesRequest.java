@@ -44,6 +44,9 @@ public class DescribeHistoryMonitorValuesRequest extends TeaModel {
     @NameInMap("NodeId")
     public String nodeId;
 
+    @NameInMap("NodeRole")
+    public String nodeRole;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -108,6 +111,14 @@ public class DescribeHistoryMonitorValuesRequest extends TeaModel {
     }
     public String getNodeId() {
         return this.nodeId;
+    }
+
+    public DescribeHistoryMonitorValuesRequest setNodeRole(String nodeRole) {
+        this.nodeRole = nodeRole;
+        return this;
+    }
+    public String getNodeRole() {
+        return this.nodeRole;
     }
 
     public DescribeHistoryMonitorValuesRequest setOwnerAccount(String ownerAccount) {

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateGlobalSecurityIPGroupRequest extends TeaModel {
     /**
-     * <p>The IP address in the whitelist template.</p>
+     * <p>The IP addresses in the IP whitelist template.</p>
      * <br>
-     * <p>>  Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP whitelists.</p>
+     * <p>>  Separate multiple IP addresses with commas (,). The maximum number of IP addresses is 1,000.</p>
      */
     @NameInMap("GIpList")
     public String GIpList;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupTasksResponseBody extends TeaModel {
     /**
-     * <p>The following parameters are internal parameters. Ignore the parameters.</p>
+     * <p>The following parameters are no longer used. Ignore the parameters.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DescribeBackupTasksResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -74,43 +74,43 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
 
     public static class DescribeBackupTasksResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>An internal parameter. Ignore this parameter.</p>
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>An internal parameter. Ignore this parameter.</p>
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
         /**
-         * <p>An internal parameter. Ignore this parameter.</p>
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
          */
         @NameInMap("AuthPrincipalOwnerId")
         public String authPrincipalOwnerId;
 
         /**
-         * <p>An internal parameter. Ignore this parameter.</p>
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
          */
         @NameInMap("AuthPrincipalType")
         public String authPrincipalType;
 
         /**
-         * <p>An internal parameter. Ignore this parameter.</p>
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
          */
         @NameInMap("EncodedDiagnosticMessage")
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>An internal parameter. Ignore this parameter.</p>
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
          */
         @NameInMap("NoPermissionType")
         public String noPermissionType;
 
         /**
-         * <p>An internal parameter. Ignore this parameter.</p>
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
          */
         @NameInMap("PolicyType")
         public String policyType;
