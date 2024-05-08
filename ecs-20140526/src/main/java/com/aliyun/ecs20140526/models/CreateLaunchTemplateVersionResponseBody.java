@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
     /**
-     * <p>启动模板ID。更多信息，请参见[DescribeLaunchTemplates](~~73759~~)。</p>
+     * <p>The ID of the launch template. For more information, see [DescribeLaunchTemplates](~~73759~~).</p>
      * <br>
-     * <p>使用启动模板创建实例时，您必须指定`LaunchTemplateId`或`LaunchTemplateName`以确定启动模板。</p>
+     * <p>You must specify `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template.</p>
      */
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
@@ -19,7 +19,7 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
     public Long launchTemplateVersionNumber;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

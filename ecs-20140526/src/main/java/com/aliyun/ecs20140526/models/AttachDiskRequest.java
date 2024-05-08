@@ -46,6 +46,9 @@ public class AttachDiskRequest extends TeaModel {
     @NameInMap("DiskId")
     public String diskId;
 
+    @NameInMap("Force")
+    public Boolean force;
+
     /**
      * <p>The ID of the instance to which you want to attach the disk.</p>
      */
@@ -120,6 +123,14 @@ public class AttachDiskRequest extends TeaModel {
     }
     public String getDiskId() {
         return this.diskId;
+    }
+
+    public AttachDiskRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
     public AttachDiskRequest setInstanceId(String instanceId) {

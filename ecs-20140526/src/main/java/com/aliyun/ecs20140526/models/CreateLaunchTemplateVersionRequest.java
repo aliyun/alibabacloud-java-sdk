@@ -8,11 +8,11 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public CreateLaunchTemplateVersionRequestSystemDisk systemDisk;
 
     /**
-     * <p>The automatic release time of the instance. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The automatic release time of the instance. Specify the time in the [ISO 8601 standard](~~25696~~) in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>*   If the value of `ss` is not `00`, the time is automatically rounded to the nearest minute based on the value of `mm`.</p>
+     * <p>*   If the value of `ss` is not `00`, the time is automatically rounded down to the nearest minute based on the value of `mm`.</p>
      * <p>*   The specified time must be at least 30 minutes later than the current time.</p>
-     * <p>*   The specified time can be at most three years from the current time.</p>
+     * <p>*   The specified time can be at most three years later than the current time.</p>
      */
     @NameInMap("AutoReleaseTime")
     public String autoReleaseTime;
@@ -20,8 +20,8 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     /**
      * <p>The performance mode of the burstable instance. Valid values:</p>
      * <br>
-     * <p>*   Standard: the standard mode. For more information, see the "Standard mode" section in [Burstable instances](~~59977~~).</p>
-     * <p>*   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Burstable instances](~~59977~~).</p>
+     * <p>*   Standard: the standard mode. For more information, see the "Standard mode" section in [Overview of burstable instances](~~59977~~).</p>
+     * <p>*   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Overview of burstable instances](~~59977~~).</p>
      */
     @NameInMap("CreditSpecification")
     public String creditSpecification;
@@ -33,14 +33,14 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public java.util.List<CreateLaunchTemplateVersionRequestDataDisk> dataDisk;
 
     /**
-     * <p>Specifies whether to enable release protection for the instance. This parameter determines whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance. Valid values:</p>
+     * <p>Specifies whether to enable release protection for the instance. This parameter specifies whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance. Valid values:</p>
      * <br>
-     * <p>- true</p>
-     * <p>- false</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      * <br>
      * <p>Default value: false.</p>
      * <br>
-     * <p>>This parameter is applicable only to pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.</p>
+     * <p>>  This parameter is applicable only to pay-as-you-go instances. The release protection feature can protect instances against manual releases, but not against automatic releases.</p>
      */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
@@ -97,7 +97,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The instance name. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
@@ -159,19 +159,19 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public String keyPairName;
 
     /**
-     * <p>The ID of the launch template. For more information, see [DescribeLaunchTemplates](~~73759~~). You must specify `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template.</p>
+     * <p>The ID of the launch template. For more information, call the [DescribeLaunchTemplates](~~73759~~) operation. You must specify `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template.</p>
      */
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
     /**
-     * <p>The name of the launch template. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the launch template. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("LaunchTemplateName")
     public String launchTemplateName;
 
     /**
-     * <p>The information of the ENI.</p>
+     * <p>The information of the elastic network interfaces (ENIs).</p>
      */
     @NameInMap("NetworkInterface")
     public java.util.List<CreateLaunchTemplateVersionRequestNetworkInterface> networkInterface;
@@ -194,12 +194,12 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     /**
      * <p>Specifies whether to use the password that is preconfigured in the image. Valid values:</p>
      * <br>
-     * <p>*   true: uses the password that is preconfigured in the mage.</p>
-     * <p>*   false: does not use the password that is preconfigured in the image.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      * <br>
      * <p>Default value: false.</p>
      * <br>
-     * <p>> If the PasswordInherit parameter is specified, you must leave the Password parameter empty. Before you use this parameter, make sure that a password is preset for the image.</p>
+     * <p>>  If you specify PasswordInherit, you must leave Password empty and make sure that a password is preconfigured for the image.</p>
      */
     @NameInMap("PasswordInherit")
     public Boolean passwordInherit;
@@ -268,12 +268,14 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public java.util.List<String> securityGroupIds;
 
     /**
-     * <p>The retention period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6</p>
+     * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
      * <br>
-     * <p>*   The following protection periods are available in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to set this parameter to one of these values, submit a ticket.</p>
-     * <p>*   A value of 0 indicates that no protection period is configured for the preemptible instance.</p>
+     * <p>*   1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</p>
+     * <p>*   0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</p>
      * <br>
-     * <p>Default value: 1.</p>
+     * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
+     * <br>
+     * <p>>  This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo.</p>
      */
     @NameInMap("SpotDuration")
     public Integer spotDuration;
@@ -722,13 +724,14 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         /**
          * <p>The category of the system disk. Valid values:</p>
          * <br>
-         * <p>*   cloud: basic disk</p>
-         * <p>*   cloud_efficiency: ultra disk</p>
-         * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   cloud_auto: ESSD AutoPL disk</p>
-         * <p>*   cloud_essd: enhanced SSD (ESSD). You can use the `SystemDisk.PerformanceLevel` parameter to set the performance level of the ESSD to use as the system disk.</p>
+         * <p>*   cloud: basic disk.</p>
+         * <p>*   cloud_efficiency: ultra disk.</p>
+         * <p>*   cloud_ssd: standard SSD.</p>
+         * <p>*   cloud_auto: enhanced SSD (ESSD) AutoPL disk.</p>
+         * <p>*   cloud_essd: ESSD. You can use `SystemDisk.PerformanceLevel` to set the performance level of the ESSD to use as the system disk.</p>
+         * <p>*   cloud_essd_entry: ESSD Entry disk.</p>
          * <br>
-         * <p>For non-I/O optimized instances of a retired instance type, the default value is cloud. For other types of instances, the default value is cloud_efficiency.</p>
+         * <p>For non-I/O optimized instances of retired instance types, the default value is cloud. For other types of instances, the default value is cloud_efficiency.</p>
          */
         @NameInMap("Category")
         public String category;
@@ -736,8 +739,8 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         /**
          * <p>Specifies whether to release the system disk when the instance is released. Valid values:</p>
          * <br>
-         * <p>*   true: releases data disk N when the instance is released.</p>
-         * <p>*   false: does not release data disk N when the instance is released.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          * <br>
          * <p>Default value: true.</p>
          */
@@ -751,7 +754,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the system disk. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
          */
         @NameInMap("DiskName")
         public String diskName;
@@ -770,7 +773,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         public String encrypted;
 
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <p>>  This parameter is not publicly available.</p>
          */
         @NameInMap("Iops")
         public Integer iops;
@@ -799,9 +802,12 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         public Long provisionedIops;
 
         /**
-         * <p>The size of the system disk. Unit: GiB. Valid values: 20 to 500.</p>
+         * <p>The size of the system disk. Unit: GiB. Valid values:</p>
          * <br>
-         * <p>The value of this parameter must be at least 20 and greater than or equal to the size of the specified image.</p>
+         * <p>*   Valid values if you set SystemDisk.Category to cloud: 20 to 500.</p>
+         * <p>*   Valid values if you set SystemDisk.Category to other disk categories: 20 to 2048.</p>
+         * <br>
+         * <p>The value of this parameter must be at least 20 and greater than or equal to the size of the image.</p>
          */
         @NameInMap("Size")
         public Integer size;
@@ -909,10 +915,10 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         public String autoSnapshotPolicyId;
 
         /**
-         * <p>Specifies whether to enable the performance burst feature. Valid values:</p>
+         * <p>Specifies whether to enable the performance burst feature for data disk N. Valid values:</p>
          * <br>
-         * <p>*   true: encrypts the disk.</p>
-         * <p>*   false: does not enable the performance burst feature.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
@@ -925,6 +931,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
          * <p>*   cloud_ssd: standard SSD</p>
          * <p>*   cloud_auto: ESSD AutoPL disk</p>
          * <p>*   cloud_essd: ESSD</p>
+         * <p>*   cloud_essd_entry: ESSD Entry disk</p>
          * <br>
          * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>
          */
@@ -934,8 +941,8 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         /**
          * <p>Specifies whether to release data disk N when the instance is released. Valid values:</p>
          * <br>
-         * <p>*   true: releases data disk N when the instance is released.</p>
-         * <p>*   false: does not release data disk N when the instance is released.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          * <br>
          * <p>Default value: true.</p>
          */
@@ -949,13 +956,13 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
          */
         @NameInMap("Device")
         public String device;
 
         /**
-         * <p>The name of data disk N. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+         * <p>The name of data disk N. The name must be 2 to 128 characters in length The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
          */
         @NameInMap("DiskName")
         public String diskName;
@@ -967,24 +974,24 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         public String encrypted;
 
         /**
-         * <p>The performance level of the ESSD to use as data disk N. The value of N must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Default value: PL1. Valid values:</p>
+         * <p>The performance level of the ESSD to use as data disk N. The value of N must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Valid values:</p>
          * <br>
-         * <p>*   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</p>
-         * <p>*   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
+         * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
+         * <p>*   PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
          * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
          * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
          * <br>
-         * <p>For more information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
+         * <p>For information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
         /**
-         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}</p>
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}</p>
          * <br>
-         * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
+         * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
          * <br>
-         * <p>> This parameter is available only if you set the Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).</p>
+         * <p>>  This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).</p>
          */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
@@ -992,28 +999,32 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         /**
          * <p>The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
          * <br>
-         * <p>*   Valid values if you set the Category parameter to cloud: 5 to 2000.</p>
+         * <p>*   Valid values if you set DataDisk.N.Category to cloud: 5 to 2000.</p>
          * <br>
-         * <p>*   Valid values if you set the Category parameter to cloud_efficiency: 20 to 32768.</p>
+         * <p>*   Valid values if you set DataDisk.N.Category to cloud_efficiency: 20 to 32768.</p>
          * <br>
-         * <p>*   Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</p>
+         * <p>*   Valid values if you set DataDisk.N.Category to cloud_ssd: 20 to 32768.</p>
          * <br>
-         * <p>*   Valid values when DataDisk.N.Category is set to cloud_essd: depend on the `DataDisk.N.PerformanceLevel` value.</p>
+         * <p>*   Valid values if you set DataDisk.N.Category to cloud_essd: vary based on the `DataDisk.N.PerformanceLevel` value.</p>
          * <br>
-         * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.</p>
-         * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</p>
-         * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</p>
-         * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</p>
+         * <p>    *   Valid values if you set DataDisk.N.PerformanceLevel to PL0: 1 to 32768.</p>
+         * <p>    *   Valid values if you set DataDisk.N.PerformanceLevel to PL1: 20 to 32768.</p>
+         * <p>    *   Valid values if you set DataDisk.N.PerformanceLevel to PL2: 461 to 32768.</p>
+         * <p>    *   Valid values if you set DataDisk.N.PerformanceLevel to PL3: 1261 to 32768.</p>
          * <br>
-         * <p>The value of this parameter must be greater than or equal to the size of the snapshot specified by the `SnapshotId` parameter.</p>
+         * <p>*   Valid values if you set DataDisk.N.Category to cloud_auto: 1 to 32768.</p>
+         * <br>
+         * <p>*   Valid values if you set DataDisk.N.Category to cloud_essd_entry: 10 to 32768.</p>
+         * <br>
+         * <p>The value of this parameter must be greater than or equal to the size of the snapshot specified by `DataDisk.N.SnapshotId`.</p>
          */
         @NameInMap("Size")
         public Integer size;
 
         /**
-         * <p>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16. If the `DataDisk.N.SnapshotId` parameter is specified, the `DataDisk.N.Size` parameter is ignored. The data disk is created with the size of the specified snapshot.</p>
+         * <p>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16. If you specify `DataDisk.N.SnapshotId`, `DataDisk.N.Size` is ignored. The data disk is created with the size of the specified snapshot.</p>
          * <br>
-         * <p>Use snapshots that were created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
+         * <p>Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
@@ -1129,7 +1140,14 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The instance type.</p>
+         * <p>The type of ENI N. Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Primary</p>
+         * <p>*   Secondary</p>
+         * <br>
+         * <p>Default value: Secondary.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -1144,7 +1162,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
          * <p>The communication mode of the primary ENI. Valid values:</p>
          * <br>
          * <p>*   Standard: uses the TCP communication mode.</p>
-         * <p>*   HighPerformance: enables Elastic RDMA Interface (ERI) and uses the remote direct memory access (RDMA) communication mode.</p>
+         * <p>*   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</p>
          */
         @NameInMap("NetworkInterfaceTrafficMode")
         public String networkInterfaceTrafficMode;
@@ -1158,21 +1176,21 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         /**
          * <p>The ID of the security group to which to assign the secondary ENI. The security groups of the secondary ENI and of the instance must belong to the same VPC. The value of N in `NetworkInterface.N` cannot be greater than 1.</p>
          * <br>
-         * <p>> The `NetworkInterface.N.SecurityGroupId` parameter and the `NetworkInterface.N.SecurityGroupIds.N` parameter are mutually exclusive.</p>
+         * <p>>  You cannot specify both `NetworkInterface.N.SecurityGroupId` and `NetworkInterface.N.SecurityGroupIds.N`.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
-         * <p>The ID of security group N to which to assign the secondary ENI. The security group and the secondary ENI must belong to the same VPC. The valid values of N in `SecurityGroupIds.N` depend on the maximum number of security groups to which the secondary ENI can belong. For more information, see the "Security group limits" section in [Limits](~~25412~~). The value of N in `NetworkInterface.N` cannot be greater than 1.</p>
+         * <p>The IDs of the security groups to which to assign the secondary ENI. The security group and the secondary ENI must belong to the same VPC. The valid values of N in `SecurityGroupIds.N` vary based on the maximum number of security groups to which a secondary ENI can belong. For more information, see the "Security group limits" section in [Limits](~~25412~~). The value of N in `NetworkInterface.N` cannot be greater than 1.</p>
          * <br>
-         * <p>> The `NetworkInterface.N.SecurityGroupId` parameter and the `NetworkInterface.N.SecurityGroupIds.N` parameter are mutually exclusive.</p>
+         * <p>>  You cannot specify both `NetworkInterface.N.SecurityGroupId` and `NetworkInterface.N.SecurityGroupIds.N`.</p>
          */
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
 
         /**
-         * <p>The ID of the vSwitch to which to connect the secondary ENI. The instance and the ENI must be located within the same zone of the same VPC, but they can be connected to different vSwitches. The value of N in `NetworkInterface.N` cannot be greater than 1.</p>
+         * <p>The ID of the vSwitch to which to connect the secondary ENI. The instance and the secondary ENI must reside in the same zone of the same VPC, but they can be connected to different vSwitches. The value of N in `NetworkInterface.N` cannot be greater than 1.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
