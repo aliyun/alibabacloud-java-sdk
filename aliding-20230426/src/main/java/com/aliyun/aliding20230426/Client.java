@@ -10609,6 +10609,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DingType", request.dingType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isDimission)) {
+            body.put("IsDimission", request.isDimission);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             body.put("Source", request.source);
         }
