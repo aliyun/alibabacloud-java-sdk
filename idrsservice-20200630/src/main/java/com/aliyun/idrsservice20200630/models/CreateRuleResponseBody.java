@@ -57,6 +57,9 @@ public class CreateRuleResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("Id")
         public String id;
 

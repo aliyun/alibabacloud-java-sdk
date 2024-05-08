@@ -93,6 +93,9 @@ public class ListDepartmentsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("Id")
         public String id;
 

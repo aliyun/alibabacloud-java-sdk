@@ -7,6 +7,9 @@ public class GetDetectionResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>-</p>
+     */
     @NameInMap("Data")
     public GetDetectionResponseBodyData data;
 
@@ -126,6 +129,9 @@ public class GetDetectionResponseBody extends TeaModel {
         @NameInMap("DepartmentName")
         public String departmentName;
 
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("Id")
         public String id;
 

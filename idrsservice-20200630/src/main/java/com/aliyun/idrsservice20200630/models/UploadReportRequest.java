@@ -37,6 +37,9 @@ public class UploadReportRequest extends TeaModel {
     @NameInMap("ResultUrl")
     public String resultUrl;
 
+    @NameInMap("Role")
+    public String role;
+
     @NameInMap("RoomId")
     public String roomId;
 
@@ -48,6 +51,9 @@ public class UploadReportRequest extends TeaModel {
 
     @NameInMap("UserId")
     public String userId;
+
+    @NameInMap("VideoType")
+    public String videoType;
 
     @NameInMap("VideoUrl")
     public String videoUrl;
@@ -145,6 +151,14 @@ public class UploadReportRequest extends TeaModel {
         return this.resultUrl;
     }
 
+    public UploadReportRequest setRole(String role) {
+        this.role = role;
+        return this;
+    }
+    public String getRole() {
+        return this.role;
+    }
+
     public UploadReportRequest setRoomId(String roomId) {
         this.roomId = roomId;
         return this;
@@ -175,6 +189,14 @@ public class UploadReportRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public UploadReportRequest setVideoType(String videoType) {
+        this.videoType = videoType;
+        return this;
+    }
+    public String getVideoType() {
+        return this.videoType;
     }
 
     public UploadReportRequest setVideoUrl(String videoUrl) {

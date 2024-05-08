@@ -72,6 +72,9 @@ public class ListDetectProcessesResponseBody extends TeaModel {
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("Id")
         public String id;
 

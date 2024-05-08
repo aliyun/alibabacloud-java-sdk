@@ -4,6 +4,9 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateSignatureResponseBody extends TeaModel {
+    /**
+     * <p>code</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -19,6 +22,9 @@ public class CreateSignatureResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>requestId</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

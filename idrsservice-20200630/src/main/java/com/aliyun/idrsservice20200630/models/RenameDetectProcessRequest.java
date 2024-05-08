@@ -4,6 +4,9 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class RenameDetectProcessRequest extends TeaModel {
+    /**
+     * <p>ID</p>
+     */
     @NameInMap("Id")
     public String id;
 

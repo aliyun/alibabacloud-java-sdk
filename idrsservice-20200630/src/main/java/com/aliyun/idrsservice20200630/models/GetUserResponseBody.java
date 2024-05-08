@@ -126,6 +126,9 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("Id")
         public String id;
 

@@ -7,6 +7,9 @@ public class UpdateRuleRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>ID</p>
+     */
     @NameInMap("Id")
     public String id;
 
