@@ -45,6 +45,9 @@ public class CreateSecretShrinkRequest extends TeaModel {
     @NameInMap("ExtendedConfig")
     public String extendedConfigShrink;
 
+    @NameInMap("Policy")
+    public String policy;
+
     /**
      * <p>The name of the secret.</p>
      */
@@ -186,6 +189,14 @@ public class CreateSecretShrinkRequest extends TeaModel {
     }
     public String getExtendedConfigShrink() {
         return this.extendedConfigShrink;
+    }
+
+    public CreateSecretShrinkRequest setPolicy(String policy) {
+        this.policy = policy;
+        return this;
+    }
+    public String getPolicy() {
+        return this.policy;
     }
 
     public CreateSecretShrinkRequest setRotationInterval(String rotationInterval) {
