@@ -79,7 +79,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
      * <p>*   **Local**: classic ApsaraDB for Redis Community Edition instance or classic ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</p>
      * <p>*   **Tair_rdb**: cloud-native ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</p>
      * <p>*   **Tair_scm**: ApsaraDB for Redis Enhanced Edition (Tair) persistent memory-optimized instance</p>
-     * <p>*   **Tair_essd**: ApsaraDB for Redis Enhanced Edition (Tair) ESSD-based instance</p>
+     * <p>*   **Tair_essd**: ESSD-based instance</p>
      * <p>*   **OnECS**: cloud-native ApsaraDB for Redis Community Edition instance</p>
      */
     @NameInMap("ProductType")

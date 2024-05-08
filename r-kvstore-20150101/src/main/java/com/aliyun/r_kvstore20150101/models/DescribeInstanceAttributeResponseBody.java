@@ -220,7 +220,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String instanceClass;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -341,7 +341,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String packageType;
 
         /**
-         * <p>The service port of the ApsaraDB for Redis instance.</p>
+         * <p>The service port of the instance.</p>
          */
         @NameInMap("Port")
         public Long port;
@@ -421,6 +421,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ShardCount")
         public Integer shardCount;
 
+        /**
+         * <p>The number of read replicas in the secondary zone. This parameter is returned only after read/write splitting is enabled for the instance across multiple zones.</p>
+         */
         @NameInMap("SlaveReadOnlyCount")
         public Long slaveReadOnlyCount;
 
@@ -443,7 +446,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttributeTags tags;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

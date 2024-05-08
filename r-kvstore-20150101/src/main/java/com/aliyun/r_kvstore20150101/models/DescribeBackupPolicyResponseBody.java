@@ -4,6 +4,9 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The following parameters are no longer used. Ignore the parameters.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public DescribeBackupPolicyResponseBodyAccessDeniedDetail accessDeniedDetail;
 
@@ -13,6 +16,12 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("BackupRetentionPeriod")
     public String backupRetentionPeriod;
 
+    /**
+     * <p>Indicates whether the backup-as-a-service feature is enabled for the instance. Valid values:</p>
+     * <br>
+     * <p>*   **1**: The backup-as-a-service feature is enabled for the instance.</p>
+     * <p>*   **0**: The backup-as-a-service feature is disabled for the instance.</p>
+     */
     @NameInMap("DbsInstance")
     public String dbsInstance;
 
@@ -127,24 +136,45 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupPolicyResponseBodyAccessDeniedDetail extends TeaModel {
+        /**
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         */
         @NameInMap("AuthAction")
         public String authAction;
 
+        /**
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
+        /**
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         */
         @NameInMap("AuthPrincipalOwnerId")
         public String authPrincipalOwnerId;
 
+        /**
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         */
         @NameInMap("AuthPrincipalType")
         public String authPrincipalType;
 
+        /**
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         */
         @NameInMap("EncodedDiagnosticMessage")
         public String encodedDiagnosticMessage;
 
+        /**
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         */
         @NameInMap("NoPermissionType")
         public String noPermissionType;
 
+        /**
+         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 

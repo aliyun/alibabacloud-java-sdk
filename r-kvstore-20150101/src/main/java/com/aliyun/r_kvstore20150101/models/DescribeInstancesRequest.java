@@ -135,7 +135,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: **50**. Default value: **30**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
