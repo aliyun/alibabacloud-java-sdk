@@ -7,6 +7,9 @@ public class ListTasksResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>-</p>
+     */
     @NameInMap("Data")
     public ListTasksResponseBodyData data;
 
@@ -57,6 +60,9 @@ public class ListTasksResponseBody extends TeaModel {
         @NameInMap("CreatedAt")
         public String createdAt;
 
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("Id")
         public String id;
 

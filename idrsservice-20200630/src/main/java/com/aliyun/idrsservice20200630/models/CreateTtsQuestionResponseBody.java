@@ -76,6 +76,9 @@ public class CreateTtsQuestionResponseBody extends TeaModel {
     }
 
     public static class CreateTtsQuestionResponseBodyData extends TeaModel {
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("Id")
         public String id;
 

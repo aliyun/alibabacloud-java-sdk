@@ -79,6 +79,9 @@ public class FaceCompareResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("Id")
         public String id;
 

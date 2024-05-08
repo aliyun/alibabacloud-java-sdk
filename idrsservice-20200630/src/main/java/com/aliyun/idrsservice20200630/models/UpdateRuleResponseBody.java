@@ -60,6 +60,9 @@ public class UpdateRuleResponseBody extends TeaModel {
         @NameInMap("CreatedAt")
         public String createdAt;
 
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("Id")
         public String id;
 

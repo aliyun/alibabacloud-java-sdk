@@ -7,6 +7,9 @@ public class GetTaskGroupResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>-</p>
+     */
     @NameInMap("Data")
     public GetTaskGroupResponseBodyData data;
 
@@ -60,6 +63,9 @@ public class GetTaskGroupResponseBody extends TeaModel {
         @NameInMap("CreatedAt")
         public String createdAt;
 
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("Id")
         public String id;
 
@@ -75,6 +81,9 @@ public class GetTaskGroupResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>-</p>
+         */
         @NameInMap("TaskIds")
         public java.util.List<String> taskIds;
 

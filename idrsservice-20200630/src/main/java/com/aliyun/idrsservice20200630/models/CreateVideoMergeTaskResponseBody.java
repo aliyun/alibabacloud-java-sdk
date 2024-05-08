@@ -4,6 +4,9 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateVideoMergeTaskResponseBody extends TeaModel {
+    /**
+     * <p>code</p>
+     */
     @NameInMap("Code")
     public Integer code;
 

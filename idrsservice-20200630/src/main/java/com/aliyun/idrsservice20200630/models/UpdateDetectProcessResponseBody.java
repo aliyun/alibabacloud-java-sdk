@@ -63,6 +63,9 @@ public class UpdateDetectProcessResponseBody extends TeaModel {
         @NameInMap("Draft")
         public String draft;
 
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("Id")
         public String id;
 

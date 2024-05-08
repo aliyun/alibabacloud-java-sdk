@@ -21,6 +21,9 @@ public class TtsCommonRequest extends TeaModel {
     }
 
     public static class TtsCommonRequestTtsRequest extends TeaModel {
+        /**
+         * <p>appid</p>
+         */
         @NameInMap("AppId")
         public String appId;
 

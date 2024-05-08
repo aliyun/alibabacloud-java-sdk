@@ -7,9 +7,15 @@ public class ListDetectionsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>-</p>
+     */
     @NameInMap("Data")
     public ListDetectionsResponseBodyData data;
 
+    /**
+     * <p>-</p>
+     */
     @NameInMap("Errors")
     public java.util.List<ListDetectionsResponseBodyErrors> errors;
 
@@ -137,6 +143,9 @@ public class ListDetectionsResponseBody extends TeaModel {
         @NameInMap("DepartmentName")
         public String departmentName;
 
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("Id")
         public String id;
 

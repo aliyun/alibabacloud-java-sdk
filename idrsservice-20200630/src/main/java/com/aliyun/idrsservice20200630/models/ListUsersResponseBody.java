@@ -60,6 +60,9 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("Id")
         public String id;
 
@@ -126,6 +129,9 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("Id")
         public String id;
 

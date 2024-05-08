@@ -7,6 +7,9 @@ public class GetUserRequest extends TeaModel {
     @NameInMap("ClientBaseParam")
     public String clientBaseParam;
 
+    /**
+     * <p>ID</p>
+     */
     @NameInMap("Id")
     public String id;
 

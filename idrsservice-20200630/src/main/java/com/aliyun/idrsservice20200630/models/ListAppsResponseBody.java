@@ -66,6 +66,9 @@ public class ListAppsResponseBody extends TeaModel {
         @NameInMap("Disabled")
         public Boolean disabled;
 
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("Id")
         public String id;
 
