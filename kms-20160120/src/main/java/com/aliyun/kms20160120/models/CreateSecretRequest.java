@@ -45,6 +45,9 @@ public class CreateSecretRequest extends TeaModel {
     @NameInMap("ExtendedConfig")
     public java.util.Map<String, ?> extendedConfig;
 
+    @NameInMap("Policy")
+    public String policy;
+
     /**
      * <p>The name of the secret.</p>
      */
@@ -186,6 +189,14 @@ public class CreateSecretRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getExtendedConfig() {
         return this.extendedConfig;
+    }
+
+    public CreateSecretRequest setPolicy(String policy) {
+        this.policy = policy;
+        return this;
+    }
+    public String getPolicy() {
+        return this.policy;
     }
 
     public CreateSecretRequest setRotationInterval(String rotationInterval) {

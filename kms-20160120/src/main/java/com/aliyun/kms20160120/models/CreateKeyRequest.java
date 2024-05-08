@@ -64,6 +64,9 @@ public class CreateKeyRequest extends TeaModel {
     @NameInMap("Origin")
     public String origin;
 
+    @NameInMap("Policy")
+    public String policy;
+
     /**
      * <p>You do not need to specify this parameter. KMS sets a protection level for your key.</p>
      * <br>
@@ -154,6 +157,14 @@ public class CreateKeyRequest extends TeaModel {
     }
     public String getOrigin() {
         return this.origin;
+    }
+
+    public CreateKeyRequest setPolicy(String policy) {
+        this.policy = policy;
+        return this;
+    }
+    public String getPolicy() {
+        return this.policy;
     }
 
     public CreateKeyRequest setProtectionLevel(String protectionLevel) {
