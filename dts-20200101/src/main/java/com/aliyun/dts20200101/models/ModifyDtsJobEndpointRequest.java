@@ -37,6 +37,9 @@ public class ModifyDtsJobEndpointRequest extends TeaModel {
     @NameInMap("EndpointRegionId")
     public String endpointRegionId;
 
+    @NameInMap("ModifyAccount")
+    public Boolean modifyAccount;
+
     @NameInMap("Password")
     public String password;
 
@@ -152,6 +155,14 @@ public class ModifyDtsJobEndpointRequest extends TeaModel {
     }
     public String getEndpointRegionId() {
         return this.endpointRegionId;
+    }
+
+    public ModifyDtsJobEndpointRequest setModifyAccount(Boolean modifyAccount) {
+        this.modifyAccount = modifyAccount;
+        return this;
+    }
+    public Boolean getModifyAccount() {
+        return this.modifyAccount;
     }
 
     public ModifyDtsJobEndpointRequest setPassword(String password) {
