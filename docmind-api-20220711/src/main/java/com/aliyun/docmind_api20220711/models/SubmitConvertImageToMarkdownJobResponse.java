@@ -3,7 +3,7 @@ package com.aliyun.docmind_api20220711.models;
 
 import com.aliyun.tea.*;
 
-public class GetDocumentConvertResultResponse extends TeaModel {
+public class SubmitConvertImageToMarkdownJobResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetDocumentConvertResultResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetDocumentConvertResultResponseBody body;
+    public SubmitConvertImageToMarkdownJobResponseBody body;
 
-    public static GetDocumentConvertResultResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetDocumentConvertResultResponse self = new GetDocumentConvertResultResponse();
+    public static SubmitConvertImageToMarkdownJobResponse build(java.util.Map<String, ?> map) throws Exception {
+        SubmitConvertImageToMarkdownJobResponse self = new SubmitConvertImageToMarkdownJobResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetDocumentConvertResultResponse setHeaders(java.util.Map<String, String> headers) {
+    public SubmitConvertImageToMarkdownJobResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetDocumentConvertResultResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetDocumentConvertResultResponse setStatusCode(Integer statusCode) {
+    public SubmitConvertImageToMarkdownJobResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetDocumentConvertResultResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetDocumentConvertResultResponse setBody(GetDocumentConvertResultResponseBody body) {
+    public SubmitConvertImageToMarkdownJobResponse setBody(SubmitConvertImageToMarkdownJobResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetDocumentConvertResultResponseBody getBody() {
+    public SubmitConvertImageToMarkdownJobResponseBody getBody() {
         return this.body;
     }
 
