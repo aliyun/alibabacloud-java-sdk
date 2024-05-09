@@ -13,6 +13,9 @@ public class SubmitDocStructureJobAdvanceRequest extends TeaModel {
     @NameInMap("FileUrl")
     public java.io.InputStream fileUrlObject;
 
+    @NameInMap("FormulaEnhancement")
+    public Boolean formulaEnhancement;
+
     @NameInMap("StructureType")
     public String structureType;
 
@@ -43,6 +46,14 @@ public class SubmitDocStructureJobAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getFileUrlObject() {
         return this.fileUrlObject;
+    }
+
+    public SubmitDocStructureJobAdvanceRequest setFormulaEnhancement(Boolean formulaEnhancement) {
+        this.formulaEnhancement = formulaEnhancement;
+        return this;
+    }
+    public Boolean getFormulaEnhancement() {
+        return this.formulaEnhancement;
     }
 
     public SubmitDocStructureJobAdvanceRequest setStructureType(String structureType) {
