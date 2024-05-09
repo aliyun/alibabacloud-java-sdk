@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DeleteClusterRequest extends TeaModel {
+    @NameInMap("delete_options")
+    public java.util.List<DeleteClusterRequestDeleteOptions> deleteOptions;
+
     /**
      * <p>Specifies whether to retain the Server Load Balancer (SLB) resources that are created by the cluster.</p>
      * <br>
@@ -38,6 +41,14 @@ public class DeleteClusterRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteClusterRequest setDeleteOptions(java.util.List<DeleteClusterRequestDeleteOptions> deleteOptions) {
+        this.deleteOptions = deleteOptions;
+        return this;
+    }
+    public java.util.List<DeleteClusterRequestDeleteOptions> getDeleteOptions() {
+        return this.deleteOptions;
+    }
+
     public DeleteClusterRequest setKeepSlb(Boolean keepSlb) {
         this.keepSlb = keepSlb;
         return this;
@@ -60,6 +71,36 @@ public class DeleteClusterRequest extends TeaModel {
     }
     public java.util.List<String> getRetainResources() {
         return this.retainResources;
+    }
+
+    public static class DeleteClusterRequestDeleteOptions extends TeaModel {
+        @NameInMap("delete_mode")
+        public String deleteMode;
+
+        @NameInMap("resource_type")
+        public String resourceType;
+
+        public static DeleteClusterRequestDeleteOptions build(java.util.Map<String, ?> map) throws Exception {
+            DeleteClusterRequestDeleteOptions self = new DeleteClusterRequestDeleteOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DeleteClusterRequestDeleteOptions setDeleteMode(String deleteMode) {
+            this.deleteMode = deleteMode;
+            return this;
+        }
+        public String getDeleteMode() {
+            return this.deleteMode;
+        }
+
+        public DeleteClusterRequestDeleteOptions setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
     }
 
 }

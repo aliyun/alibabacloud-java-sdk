@@ -10,6 +10,9 @@ public class ModifyClusterRequest extends TeaModel {
     @NameInMap("access_control_list")
     public java.util.List<String> accessControlList;
 
+    @NameInMap("api_server_custom_cert_sans")
+    public ModifyClusterRequestApiServerCustomCertSans apiServerCustomCertSans;
+
     /**
      * <p>Specifies whether to associate an elastic IP address (EIP) with the cluster API server. This enables Internet access for the cluster. Valid values:</p>
      * <br>
@@ -115,6 +118,14 @@ public class ModifyClusterRequest extends TeaModel {
         return this.accessControlList;
     }
 
+    public ModifyClusterRequest setApiServerCustomCertSans(ModifyClusterRequestApiServerCustomCertSans apiServerCustomCertSans) {
+        this.apiServerCustomCertSans = apiServerCustomCertSans;
+        return this;
+    }
+    public ModifyClusterRequestApiServerCustomCertSans getApiServerCustomCertSans() {
+        return this.apiServerCustomCertSans;
+    }
+
     public ModifyClusterRequest setApiServerEip(Boolean apiServerEip) {
         this.apiServerEip = apiServerEip;
         return this;
@@ -209,6 +220,36 @@ public class ModifyClusterRequest extends TeaModel {
     }
     public ModifyClusterRequestSystemEventsLogging getSystemEventsLogging() {
         return this.systemEventsLogging;
+    }
+
+    public static class ModifyClusterRequestApiServerCustomCertSans extends TeaModel {
+        @NameInMap("action")
+        public String action;
+
+        @NameInMap("subject_alternative_names")
+        public java.util.List<String> subjectAlternativeNames;
+
+        public static ModifyClusterRequestApiServerCustomCertSans build(java.util.Map<String, ?> map) throws Exception {
+            ModifyClusterRequestApiServerCustomCertSans self = new ModifyClusterRequestApiServerCustomCertSans();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyClusterRequestApiServerCustomCertSans setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public ModifyClusterRequestApiServerCustomCertSans setSubjectAlternativeNames(java.util.List<String> subjectAlternativeNames) {
+            this.subjectAlternativeNames = subjectAlternativeNames;
+            return this;
+        }
+        public java.util.List<String> getSubjectAlternativeNames() {
+            return this.subjectAlternativeNames;
+        }
+
     }
 
     public static class ModifyClusterRequestOperationPolicyClusterAutoUpgrade extends TeaModel {

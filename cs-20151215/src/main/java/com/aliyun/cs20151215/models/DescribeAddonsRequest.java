@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAddonsRequest extends TeaModel {
     /**
-     * <p>The type of cluster. Valid values:</p>
+     * <p>The cluster type. Valid values:</p>
      * <br>
      * <p>*   `Default`: ACK managed cluster</p>
      * <p>*   `Serverless`: ACK Serverless cluster</p>
