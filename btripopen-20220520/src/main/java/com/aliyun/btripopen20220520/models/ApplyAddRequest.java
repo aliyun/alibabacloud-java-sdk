@@ -58,6 +58,12 @@ public class ApplyAddRequest extends TeaModel {
     @NameInMap("limit_traveler")
     public Integer limitTraveler;
 
+    @NameInMap("payment_department_id")
+    public String paymentDepartmentId;
+
+    @NameInMap("payment_department_name")
+    public String paymentDepartmentName;
+
     @NameInMap("status")
     public Integer status;
 
@@ -250,6 +256,22 @@ public class ApplyAddRequest extends TeaModel {
         return this.limitTraveler;
     }
 
+    public ApplyAddRequest setPaymentDepartmentId(String paymentDepartmentId) {
+        this.paymentDepartmentId = paymentDepartmentId;
+        return this;
+    }
+    public String getPaymentDepartmentId() {
+        return this.paymentDepartmentId;
+    }
+
+    public ApplyAddRequest setPaymentDepartmentName(String paymentDepartmentName) {
+        this.paymentDepartmentName = paymentDepartmentName;
+        return this;
+    }
+    public String getPaymentDepartmentName() {
+        return this.paymentDepartmentName;
+    }
+
     public ApplyAddRequest setStatus(Integer status) {
         this.status = status;
         return this;
@@ -417,6 +439,36 @@ public class ApplyAddRequest extends TeaModel {
     }
 
     public static class ApplyAddRequestExternalTravelerList extends TeaModel {
+        @NameInMap("attribute")
+        public String attribute;
+
+        @NameInMap("cost_center_id")
+        public Long costCenterId;
+
+        @NameInMap("invoice_id")
+        public Long invoiceId;
+
+        @NameInMap("payment_department_id")
+        public String paymentDepartmentId;
+
+        @NameInMap("payment_department_name")
+        public String paymentDepartmentName;
+
+        @NameInMap("project_code")
+        public String projectCode;
+
+        @NameInMap("project_title")
+        public String projectTitle;
+
+        @NameInMap("third_part_invoice_id")
+        public String thirdPartInvoiceId;
+
+        @NameInMap("thirdpart_cost_center_id")
+        public String thirdpartCostCenterId;
+
+        @NameInMap("thirdpart_depart_id")
+        public String thirdpartDepartId;
+
         @NameInMap("user_name")
         public String userName;
 
@@ -426,6 +478,86 @@ public class ApplyAddRequest extends TeaModel {
         public static ApplyAddRequestExternalTravelerList build(java.util.Map<String, ?> map) throws Exception {
             ApplyAddRequestExternalTravelerList self = new ApplyAddRequestExternalTravelerList();
             return TeaModel.build(map, self);
+        }
+
+        public ApplyAddRequestExternalTravelerList setAttribute(String attribute) {
+            this.attribute = attribute;
+            return this;
+        }
+        public String getAttribute() {
+            return this.attribute;
+        }
+
+        public ApplyAddRequestExternalTravelerList setCostCenterId(Long costCenterId) {
+            this.costCenterId = costCenterId;
+            return this;
+        }
+        public Long getCostCenterId() {
+            return this.costCenterId;
+        }
+
+        public ApplyAddRequestExternalTravelerList setInvoiceId(Long invoiceId) {
+            this.invoiceId = invoiceId;
+            return this;
+        }
+        public Long getInvoiceId() {
+            return this.invoiceId;
+        }
+
+        public ApplyAddRequestExternalTravelerList setPaymentDepartmentId(String paymentDepartmentId) {
+            this.paymentDepartmentId = paymentDepartmentId;
+            return this;
+        }
+        public String getPaymentDepartmentId() {
+            return this.paymentDepartmentId;
+        }
+
+        public ApplyAddRequestExternalTravelerList setPaymentDepartmentName(String paymentDepartmentName) {
+            this.paymentDepartmentName = paymentDepartmentName;
+            return this;
+        }
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
+        }
+
+        public ApplyAddRequestExternalTravelerList setProjectCode(String projectCode) {
+            this.projectCode = projectCode;
+            return this;
+        }
+        public String getProjectCode() {
+            return this.projectCode;
+        }
+
+        public ApplyAddRequestExternalTravelerList setProjectTitle(String projectTitle) {
+            this.projectTitle = projectTitle;
+            return this;
+        }
+        public String getProjectTitle() {
+            return this.projectTitle;
+        }
+
+        public ApplyAddRequestExternalTravelerList setThirdPartInvoiceId(String thirdPartInvoiceId) {
+            this.thirdPartInvoiceId = thirdPartInvoiceId;
+            return this;
+        }
+        public String getThirdPartInvoiceId() {
+            return this.thirdPartInvoiceId;
+        }
+
+        public ApplyAddRequestExternalTravelerList setThirdpartCostCenterId(String thirdpartCostCenterId) {
+            this.thirdpartCostCenterId = thirdpartCostCenterId;
+            return this;
+        }
+        public String getThirdpartCostCenterId() {
+            return this.thirdpartCostCenterId;
+        }
+
+        public ApplyAddRequestExternalTravelerList setThirdpartDepartId(String thirdpartDepartId) {
+            this.thirdpartDepartId = thirdpartDepartId;
+            return this;
+        }
+        public String getThirdpartDepartId() {
+            return this.thirdpartDepartId;
         }
 
         public ApplyAddRequestExternalTravelerList setUserName(String userName) {
@@ -760,6 +892,9 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("arr_date")
         public String arrDate;
 
+        @NameInMap("attribute")
+        public String attribute;
+
         @NameInMap("cost_center_id")
         public Long costCenterId;
 
@@ -832,6 +967,14 @@ public class ApplyAddRequest extends TeaModel {
         }
         public String getArrDate() {
             return this.arrDate;
+        }
+
+        public ApplyAddRequestItineraryList setAttribute(String attribute) {
+            this.attribute = attribute;
+            return this;
+        }
+        public String getAttribute() {
+            return this.attribute;
         }
 
         public ApplyAddRequestItineraryList setCostCenterId(Long costCenterId) {
@@ -979,6 +1122,9 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("arr_date")
         public String arrDate;
 
+        @NameInMap("attribute")
+        public String attribute;
+
         @NameInMap("city_code_set")
         public String cityCodeSet;
 
@@ -1026,6 +1172,14 @@ public class ApplyAddRequest extends TeaModel {
         }
         public String getArrDate() {
             return this.arrDate;
+        }
+
+        public ApplyAddRequestItinerarySetList setAttribute(String attribute) {
+            this.attribute = attribute;
+            return this;
+        }
+        public String getAttribute() {
+            return this.attribute;
         }
 
         public ApplyAddRequestItinerarySetList setCityCodeSet(String cityCodeSet) {
@@ -1127,6 +1281,36 @@ public class ApplyAddRequest extends TeaModel {
     }
 
     public static class ApplyAddRequestTravelerList extends TeaModel {
+        @NameInMap("attribute")
+        public String attribute;
+
+        @NameInMap("cost_center_id")
+        public Long costCenterId;
+
+        @NameInMap("invoice_id")
+        public Long invoiceId;
+
+        @NameInMap("payment_department_id")
+        public String paymentDepartmentId;
+
+        @NameInMap("payment_department_name")
+        public String paymentDepartmentName;
+
+        @NameInMap("project_code")
+        public String projectCode;
+
+        @NameInMap("project_title")
+        public String projectTitle;
+
+        @NameInMap("third_part_invoice_id")
+        public String thirdPartInvoiceId;
+
+        @NameInMap("thirdpart_cost_center_id")
+        public String thirdpartCostCenterId;
+
+        @NameInMap("thirdpart_depart_id")
+        public String thirdpartDepartId;
+
         @NameInMap("user_id")
         public String userId;
 
@@ -1136,6 +1320,86 @@ public class ApplyAddRequest extends TeaModel {
         public static ApplyAddRequestTravelerList build(java.util.Map<String, ?> map) throws Exception {
             ApplyAddRequestTravelerList self = new ApplyAddRequestTravelerList();
             return TeaModel.build(map, self);
+        }
+
+        public ApplyAddRequestTravelerList setAttribute(String attribute) {
+            this.attribute = attribute;
+            return this;
+        }
+        public String getAttribute() {
+            return this.attribute;
+        }
+
+        public ApplyAddRequestTravelerList setCostCenterId(Long costCenterId) {
+            this.costCenterId = costCenterId;
+            return this;
+        }
+        public Long getCostCenterId() {
+            return this.costCenterId;
+        }
+
+        public ApplyAddRequestTravelerList setInvoiceId(Long invoiceId) {
+            this.invoiceId = invoiceId;
+            return this;
+        }
+        public Long getInvoiceId() {
+            return this.invoiceId;
+        }
+
+        public ApplyAddRequestTravelerList setPaymentDepartmentId(String paymentDepartmentId) {
+            this.paymentDepartmentId = paymentDepartmentId;
+            return this;
+        }
+        public String getPaymentDepartmentId() {
+            return this.paymentDepartmentId;
+        }
+
+        public ApplyAddRequestTravelerList setPaymentDepartmentName(String paymentDepartmentName) {
+            this.paymentDepartmentName = paymentDepartmentName;
+            return this;
+        }
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
+        }
+
+        public ApplyAddRequestTravelerList setProjectCode(String projectCode) {
+            this.projectCode = projectCode;
+            return this;
+        }
+        public String getProjectCode() {
+            return this.projectCode;
+        }
+
+        public ApplyAddRequestTravelerList setProjectTitle(String projectTitle) {
+            this.projectTitle = projectTitle;
+            return this;
+        }
+        public String getProjectTitle() {
+            return this.projectTitle;
+        }
+
+        public ApplyAddRequestTravelerList setThirdPartInvoiceId(String thirdPartInvoiceId) {
+            this.thirdPartInvoiceId = thirdPartInvoiceId;
+            return this;
+        }
+        public String getThirdPartInvoiceId() {
+            return this.thirdPartInvoiceId;
+        }
+
+        public ApplyAddRequestTravelerList setThirdpartCostCenterId(String thirdpartCostCenterId) {
+            this.thirdpartCostCenterId = thirdpartCostCenterId;
+            return this;
+        }
+        public String getThirdpartCostCenterId() {
+            return this.thirdpartCostCenterId;
+        }
+
+        public ApplyAddRequestTravelerList setThirdpartDepartId(String thirdpartDepartId) {
+            this.thirdpartDepartId = thirdpartDepartId;
+            return this;
+        }
+        public String getThirdpartDepartId() {
+            return this.thirdpartDepartId;
         }
 
         public ApplyAddRequestTravelerList setUserId(String userId) {

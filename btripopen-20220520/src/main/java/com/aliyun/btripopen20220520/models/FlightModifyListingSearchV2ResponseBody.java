@@ -2222,6 +2222,15 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("direct_flight_list")
         public java.util.List<FlightModifyListingSearchV2ResponseBodyModuleDirectFlightList> directFlightList;
 
+        @NameInMap("next_req_wait_time")
+        public Long nextReqWaitTime;
+
+        @NameInMap("retry")
+        public Boolean retry;
+
+        @NameInMap("search_retry_token")
+        public String searchRetryToken;
+
         @NameInMap("session_id")
         public String sessionId;
 
@@ -2242,6 +2251,30 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         }
         public java.util.List<FlightModifyListingSearchV2ResponseBodyModuleDirectFlightList> getDirectFlightList() {
             return this.directFlightList;
+        }
+
+        public FlightModifyListingSearchV2ResponseBodyModule setNextReqWaitTime(Long nextReqWaitTime) {
+            this.nextReqWaitTime = nextReqWaitTime;
+            return this;
+        }
+        public Long getNextReqWaitTime() {
+            return this.nextReqWaitTime;
+        }
+
+        public FlightModifyListingSearchV2ResponseBodyModule setRetry(Boolean retry) {
+            this.retry = retry;
+            return this;
+        }
+        public Boolean getRetry() {
+            return this.retry;
+        }
+
+        public FlightModifyListingSearchV2ResponseBodyModule setSearchRetryToken(String searchRetryToken) {
+            this.searchRetryToken = searchRetryToken;
+            return this;
+        }
+        public String getSearchRetryToken() {
+            return this.searchRetryToken;
         }
 
         public FlightModifyListingSearchV2ResponseBodyModule setSessionId(String sessionId) {

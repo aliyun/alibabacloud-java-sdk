@@ -191,12 +191,100 @@ public class ApplyListQueryResponseBody extends TeaModel {
     }
 
     public static class ApplyListQueryResponseBodyModuleListExternalTravelerList extends TeaModel {
+        @NameInMap("attribute")
+        public String attribute;
+
+        @NameInMap("cost_center_name")
+        public String costCenterName;
+
+        @NameInMap("depart_id")
+        public String departId;
+
+        @NameInMap("invoice_name")
+        public String invoiceName;
+
+        @NameInMap("payment_department_name")
+        public String paymentDepartmentName;
+
+        @NameInMap("project_code")
+        public String projectCode;
+
+        @NameInMap("project_title")
+        public String projectTitle;
+
+        @NameInMap("thirdpart_depart_id")
+        public String thirdpartDepartId;
+
         @NameInMap("user_name")
         public String userName;
 
         public static ApplyListQueryResponseBodyModuleListExternalTravelerList build(java.util.Map<String, ?> map) throws Exception {
             ApplyListQueryResponseBodyModuleListExternalTravelerList self = new ApplyListQueryResponseBodyModuleListExternalTravelerList();
             return TeaModel.build(map, self);
+        }
+
+        public ApplyListQueryResponseBodyModuleListExternalTravelerList setAttribute(String attribute) {
+            this.attribute = attribute;
+            return this;
+        }
+        public String getAttribute() {
+            return this.attribute;
+        }
+
+        public ApplyListQueryResponseBodyModuleListExternalTravelerList setCostCenterName(String costCenterName) {
+            this.costCenterName = costCenterName;
+            return this;
+        }
+        public String getCostCenterName() {
+            return this.costCenterName;
+        }
+
+        public ApplyListQueryResponseBodyModuleListExternalTravelerList setDepartId(String departId) {
+            this.departId = departId;
+            return this;
+        }
+        public String getDepartId() {
+            return this.departId;
+        }
+
+        public ApplyListQueryResponseBodyModuleListExternalTravelerList setInvoiceName(String invoiceName) {
+            this.invoiceName = invoiceName;
+            return this;
+        }
+        public String getInvoiceName() {
+            return this.invoiceName;
+        }
+
+        public ApplyListQueryResponseBodyModuleListExternalTravelerList setPaymentDepartmentName(String paymentDepartmentName) {
+            this.paymentDepartmentName = paymentDepartmentName;
+            return this;
+        }
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
+        }
+
+        public ApplyListQueryResponseBodyModuleListExternalTravelerList setProjectCode(String projectCode) {
+            this.projectCode = projectCode;
+            return this;
+        }
+        public String getProjectCode() {
+            return this.projectCode;
+        }
+
+        public ApplyListQueryResponseBodyModuleListExternalTravelerList setProjectTitle(String projectTitle) {
+            this.projectTitle = projectTitle;
+            return this;
+        }
+        public String getProjectTitle() {
+            return this.projectTitle;
+        }
+
+        public ApplyListQueryResponseBodyModuleListExternalTravelerList setThirdpartDepartId(String thirdpartDepartId) {
+            this.thirdpartDepartId = thirdpartDepartId;
+            return this;
+        }
+        public String getThirdpartDepartId() {
+            return this.thirdpartDepartId;
         }
 
         public ApplyListQueryResponseBodyModuleListExternalTravelerList setUserName(String userName) {
@@ -509,11 +597,35 @@ public class ApplyListQueryResponseBody extends TeaModel {
     }
 
     public static class ApplyListQueryResponseBodyModuleListTravelerList extends TeaModel {
+        @NameInMap("attribute")
+        public String attribute;
+
         @NameInMap("car_city_set")
         public java.util.List<ApplyListQueryResponseBodyModuleListTravelerListCarCitySet> carCitySet;
 
+        @NameInMap("cost_center_name")
+        public String costCenterName;
+
+        @NameInMap("depart_id")
+        public String departId;
+
+        @NameInMap("invoice_name")
+        public String invoiceName;
+
         @NameInMap("job_no")
         public String jobNo;
+
+        @NameInMap("payment_department_name")
+        public String paymentDepartmentName;
+
+        @NameInMap("project_code")
+        public String projectCode;
+
+        @NameInMap("project_title")
+        public String projectTitle;
+
+        @NameInMap("thirdpart_depart_id")
+        public String thirdpartDepartId;
 
         @NameInMap("user_id")
         public String userId;
@@ -526,6 +638,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ApplyListQueryResponseBodyModuleListTravelerList setAttribute(String attribute) {
+            this.attribute = attribute;
+            return this;
+        }
+        public String getAttribute() {
+            return this.attribute;
+        }
+
         public ApplyListQueryResponseBodyModuleListTravelerList setCarCitySet(java.util.List<ApplyListQueryResponseBodyModuleListTravelerListCarCitySet> carCitySet) {
             this.carCitySet = carCitySet;
             return this;
@@ -534,12 +654,68 @@ public class ApplyListQueryResponseBody extends TeaModel {
             return this.carCitySet;
         }
 
+        public ApplyListQueryResponseBodyModuleListTravelerList setCostCenterName(String costCenterName) {
+            this.costCenterName = costCenterName;
+            return this;
+        }
+        public String getCostCenterName() {
+            return this.costCenterName;
+        }
+
+        public ApplyListQueryResponseBodyModuleListTravelerList setDepartId(String departId) {
+            this.departId = departId;
+            return this;
+        }
+        public String getDepartId() {
+            return this.departId;
+        }
+
+        public ApplyListQueryResponseBodyModuleListTravelerList setInvoiceName(String invoiceName) {
+            this.invoiceName = invoiceName;
+            return this;
+        }
+        public String getInvoiceName() {
+            return this.invoiceName;
+        }
+
         public ApplyListQueryResponseBodyModuleListTravelerList setJobNo(String jobNo) {
             this.jobNo = jobNo;
             return this;
         }
         public String getJobNo() {
             return this.jobNo;
+        }
+
+        public ApplyListQueryResponseBodyModuleListTravelerList setPaymentDepartmentName(String paymentDepartmentName) {
+            this.paymentDepartmentName = paymentDepartmentName;
+            return this;
+        }
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
+        }
+
+        public ApplyListQueryResponseBodyModuleListTravelerList setProjectCode(String projectCode) {
+            this.projectCode = projectCode;
+            return this;
+        }
+        public String getProjectCode() {
+            return this.projectCode;
+        }
+
+        public ApplyListQueryResponseBodyModuleListTravelerList setProjectTitle(String projectTitle) {
+            this.projectTitle = projectTitle;
+            return this;
+        }
+        public String getProjectTitle() {
+            return this.projectTitle;
+        }
+
+        public ApplyListQueryResponseBodyModuleListTravelerList setThirdpartDepartId(String thirdpartDepartId) {
+            this.thirdpartDepartId = thirdpartDepartId;
+            return this;
+        }
+        public String getThirdpartDepartId() {
+            return this.thirdpartDepartId;
         }
 
         public ApplyListQueryResponseBodyModuleListTravelerList setUserId(String userId) {
@@ -608,6 +784,12 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
         @NameInMap("job_no")
         public String jobNo;
+
+        @NameInMap("payment_department_id")
+        public String paymentDepartmentId;
+
+        @NameInMap("payment_department_name")
+        public String paymentDepartmentName;
 
         @NameInMap("status")
         public Integer status;
@@ -776,6 +958,22 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
         public String getJobNo() {
             return this.jobNo;
+        }
+
+        public ApplyListQueryResponseBodyModuleList setPaymentDepartmentId(String paymentDepartmentId) {
+            this.paymentDepartmentId = paymentDepartmentId;
+            return this;
+        }
+        public String getPaymentDepartmentId() {
+            return this.paymentDepartmentId;
+        }
+
+        public ApplyListQueryResponseBodyModuleList setPaymentDepartmentName(String paymentDepartmentName) {
+            this.paymentDepartmentName = paymentDepartmentName;
+            return this;
+        }
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
         }
 
         public ApplyListQueryResponseBodyModuleList setStatus(Integer status) {

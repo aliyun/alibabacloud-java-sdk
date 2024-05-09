@@ -58,6 +58,12 @@ public class ApplyAddShrinkRequest extends TeaModel {
     @NameInMap("limit_traveler")
     public Integer limitTraveler;
 
+    @NameInMap("payment_department_id")
+    public String paymentDepartmentId;
+
+    @NameInMap("payment_department_name")
+    public String paymentDepartmentName;
+
     @NameInMap("status")
     public Integer status;
 
@@ -248,6 +254,22 @@ public class ApplyAddShrinkRequest extends TeaModel {
     }
     public Integer getLimitTraveler() {
         return this.limitTraveler;
+    }
+
+    public ApplyAddShrinkRequest setPaymentDepartmentId(String paymentDepartmentId) {
+        this.paymentDepartmentId = paymentDepartmentId;
+        return this;
+    }
+    public String getPaymentDepartmentId() {
+        return this.paymentDepartmentId;
+    }
+
+    public ApplyAddShrinkRequest setPaymentDepartmentName(String paymentDepartmentName) {
+        this.paymentDepartmentName = paymentDepartmentName;
+        return this;
+    }
+    public String getPaymentDepartmentName() {
+        return this.paymentDepartmentName;
     }
 
     public ApplyAddShrinkRequest setStatus(Integer status) {

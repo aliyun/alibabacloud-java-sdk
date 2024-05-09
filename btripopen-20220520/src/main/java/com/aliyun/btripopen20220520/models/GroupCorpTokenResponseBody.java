@@ -19,6 +19,9 @@ public class GroupCorpTokenResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("success")
+    public String success;
+
     /**
      * <p>traceId</p>
      */
@@ -60,6 +63,14 @@ public class GroupCorpTokenResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GroupCorpTokenResponseBody setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
     }
 
     public GroupCorpTokenResponseBody setTraceId(String traceId) {
