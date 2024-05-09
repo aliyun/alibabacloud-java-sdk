@@ -1167,11 +1167,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DeleteClusterShrinkRequest request = new DeleteClusterShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deleteOptions)) {
+            request.deleteOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deleteOptions, "delete_options", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.retainResources)) {
             request.retainResourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.retainResources, "retain_resources", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteOptionsShrink)) {
+            query.put("delete_options", request.deleteOptionsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.keepSlb)) {
             query.put("keep_slb", request.keepSlb);
         }
@@ -1985,9 +1993,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeClusterNodePoolDetailWithOptions(ClusterId, NodepoolId, headers, runtime);
     }
 
-    public DescribeClusterNodePoolsResponse describeClusterNodePoolsWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeClusterNodePoolsResponse describeClusterNodePoolsWithOptions(String ClusterId, DescribeClusterNodePoolsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nodepoolName)) {
+            query.put("NodepoolName", request.nodepoolName);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeClusterNodePools"),
@@ -2003,10 +2018,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterNodePoolsResponse());
     }
 
-    public DescribeClusterNodePoolsResponse describeClusterNodePools(String ClusterId) throws Exception {
+    public DescribeClusterNodePoolsResponse describeClusterNodePools(String ClusterId, DescribeClusterNodePoolsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeClusterNodePoolsWithOptions(ClusterId, headers, runtime);
+        return this.describeClusterNodePoolsWithOptions(ClusterId, request, headers, runtime);
     }
 
     public DescribeClusterNodesResponse describeClusterNodesWithOptions(String ClusterId, DescribeClusterNodesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3597,6 +3612,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.accessControlList)) {
             body.put("access_control_list", request.accessControlList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.apiServerCustomCertSans)) {
+            body.put("api_server_custom_cert_sans", request.apiServerCustomCertSans);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.apiServerEip)) {

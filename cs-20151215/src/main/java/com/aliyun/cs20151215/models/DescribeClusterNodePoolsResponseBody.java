@@ -289,7 +289,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public java.util.List<Taint> taints;
 
         /**
-         * <p>扩容后的节点是否可调度。</p>
+         * <p>Specifies whether the nodes are schedulable after a scale-out activity is performed.</p>
          */
         @NameInMap("unschedulable")
         public Boolean unschedulable;
@@ -381,7 +381,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoRepairPolicy extends TeaModel {
         /**
-         * <p>是否允许重启节点。</p>
+         * <p>Specifies whether ACK is allowed to automatically restart nodes after repairing the nodes. Valid values:</p>
+         * <p>- `true`: yes </p>
+         * <p>- `false`: no</p>
          */
         @NameInMap("restart_node")
         public Boolean restartNode;
@@ -403,7 +405,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoUpgradePolicy extends TeaModel {
         /**
-         * <p>是否允许自动升级kubelet。</p>
+         * <p>Specifies whether ACK is allowed to automatically update the kubelet. Valid values:</p>
+         * <p>- `true`: yes </p>
+         * <p>- `false`: no</p>
          */
         @NameInMap("auto_upgrade_kubelet")
         public Boolean autoUpgradeKubelet;
@@ -425,13 +429,15 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoVulFixPolicy extends TeaModel {
         /**
-         * <p>是否允许重启节点。</p>
+         * <p>Specifies whether ACK is allowed to automatically restart nodes after patching CVE vulnerabilities. Valid values:</p>
+         * <p>- `true`: yes</p>
+         * <p>- `false`: no</p>
          */
         @NameInMap("restart_node")
         public Boolean restartNode;
 
         /**
-         * <p>允许自动修复的漏洞级别，以逗号分隔。</p>
+         * <p>The severity levels of vulnerabilities that ACK is allowed to automatically patch. Multiple severity levels are separated by commas (,).</p>
          */
         @NameInMap("vul_level")
         public String vulLevel;
@@ -541,31 +547,35 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public Boolean autoRepair;
 
         /**
-         * <p>自动修复节点策略。</p>
+         * <p>The auto node repair policy.</p>
          */
         @NameInMap("auto_repair_policy")
         public DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoRepairPolicy autoRepairPolicy;
 
         /**
-         * <p>是否自动升级。</p>
+         * <p>Specifies whether to enable auto update. Valid values:</p>
+         * <p>- `true`: enables auto update. </p>
+         * <p>- `false`: disables auto update.</p>
          */
         @NameInMap("auto_upgrade")
         public Boolean autoUpgrade;
 
         /**
-         * <p>自动升级策略。</p>
+         * <p>The auto update policy.</p>
          */
         @NameInMap("auto_upgrade_policy")
         public DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoUpgradePolicy autoUpgradePolicy;
 
         /**
-         * <p>是否自动修复CVE。</p>
+         * <p>Specifies whether ACK is allowed to automatically patch CVE vulnerabilities. Valid values:</p>
+         * <p>- `true`: yes </p>
+         * <p>- `false`: no</p>
          */
         @NameInMap("auto_vul_fix")
         public Boolean autoVulFix;
 
         /**
-         * <p>自动修复CVE策略。</p>
+         * <p>The auto CVE patching policy.</p>
          */
         @NameInMap("auto_vul_fix_policy")
         public DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoVulFixPolicy autoVulFixPolicy;
@@ -903,7 +913,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public Long autoRenewPeriod;
 
         /**
-         * <p>是否开启CIS加固，仅当系统镜像选择Alibaba Cloud Linux 2或Alibaba Cloud Linux 3时，可为节点开启CIS加固。</p>
+         * <p>[This parameter is deprecated]</p>
+         * <br>
+         * <p>Please replace this parameter with security_hardening_os.</p>
          */
         @NameInMap("cis_enabled")
         @Deprecated
@@ -943,7 +955,15 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>操作系统镜像类型。</p>
+         * <p>The type of OS image. You must set this parameter or platform. Valid values:</p>
+         * <p>- AliyunLinux: Alinux2 </p>
+         * <p>- AliyunLinux3: Alinux3 </p>
+         * <p>- AliyunLinux3Arm64: Alinux3 ARM </p>
+         * <p>- AliyunLinuxUEFI: Alinux2 UEFI </p>
+         * <p>- CentOS: CentOS </p>
+         * <p>- Windows: Windows </p>
+         * <p>- WindowsCore: Windows Core </p>
+         * <p>- ContainerOS: ContainerOS</p>
          */
         @NameInMap("image_type")
         public String imageType;
@@ -984,7 +1004,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public String keyPair;
 
         /**
-         * <p>弹出的ECS实例是否使用以非root用户登陆。</p>
+         * <p>Specifies whether a non-root user can log on to the ECS instance added to the node pool.</p>
          */
         @NameInMap("login_as_non_root")
         public Boolean loginAsNonRoot;
@@ -1097,11 +1117,24 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("security_group_ids")
         public java.util.List<String> securityGroupIds;
 
+        /**
+         * <p>Specifies whether to enable Alibaba Cloud Linux Security Hardening.</p>
+         * <p>Valid values:</p>
+         * <p>- `true`: enables Alibaba Cloud Linux Security Hardening.</p>
+         * <p>- `false`: disables Alibaba Cloud Linux Security Hardening.</p>
+         * <br>
+         * <p>Default value: false</p>
+         */
         @NameInMap("security_hardening_os")
         public Boolean securityHardeningOs;
 
         /**
-         * <p>是否开启等保加固，仅当系统镜像选择Alibaba Cloud Linux 2或Alibaba Cloud Linux 3时，可为节点开启等保加固。阿里云为Alibaba Cloud Linux 2和Alibaba Cloud Linux 3等保2.0三级版镜像提供等保合规的基线检查标准和扫描程序。</p>
+         * <p>Specifies whether to enable reinforcement based on Multi-Level Protection Scheme (MLPS). For more information, see ACK reinforcement based on classified protection.</p>
+         * <p>Valid values:</p>
+         * <p>- `true`: enables reinforcement based on MLPS.</p>
+         * <p>- `false`: disables reinforcement based on MLPS.</p>
+         * <br>
+         * <p>Default value: false.</p>
          */
         @NameInMap("soc_enabled")
         public Boolean socEnabled;
@@ -1140,13 +1173,21 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public String spotStrategy;
 
         /**
-         * <p>节点系统盘是否开启Burst（性能突发），磁盘类型为cloud_auto时配置。</p>
+         * <p>Specifies whether to enable the burst feature for system disks. Valid values:</p>
+         * <p>- `true`: enables the burst feature. </p>
+         * <p>- `false`: disables the burst feature. </p>
+         * <br>
+         * <p>This parameter is supported only when SystemDiskCategory is set to cloud_auto. For more information, see [ESSD AutoPL disks. ](~~368372~~)</p>
          */
         @NameInMap("system_disk_bursting_enabled")
         public Boolean systemDiskBurstingEnabled;
 
         /**
-         * <p>系统盘的多磁盘类型。当无法使用高优先级的磁盘类型时，自动尝试下一优先级的磁盘类型创建系统盘。取值范围：cloud：普通云盘。cloud_efficiency：高效云盘。cloud_ssd：SSD云盘。cloud_essd：ESSD云盘。</p>
+         * <p>The type of system disk. When a high -priority disk type cannot be used, automatically try the next priority disk type creation system disk. Valid values: </p>
+         * <p>- cloud: basic disk</p>
+         * <p>- cloud_efficiency: ultra disk</p>
+         * <p>- cloud_ssd: standard SSD</p>
+         * <p>- cloud_essd: ESSD</p>
          */
         @NameInMap("system_disk_categories")
         public java.util.List<String> systemDiskCategories;
@@ -1161,19 +1202,21 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>系统盘采用的加密算法。取值范围：aes-256。</p>
+         * <p>The algorithm that you want to use to encrypt the system disk. Set the value to aes-256.</p>
          */
         @NameInMap("system_disk_encrypt_algorithm")
         public String systemDiskEncryptAlgorithm;
 
         /**
-         * <p>是否加密系统盘。取值范围：true：加密。false：不加密。</p>
+         * <p>Specifies whether to encrypt the system disk. Valid values: </p>
+         * <p>- `true`: encrypts the system disk. </p>
+         * <p>- `false`: does not encrypt the system disk.</p>
          */
         @NameInMap("system_disk_encrypted")
         public Boolean systemDiskEncrypted;
 
         /**
-         * <p>系统盘使用的KMS密钥ID。</p>
+         * <p>The ID of the KMS key that you want to use to encrypt the system disk.</p>
          */
         @NameInMap("system_disk_kms_key_id")
         public String systemDiskKmsKeyId;
@@ -1185,7 +1228,8 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public String systemDiskPerformanceLevel;
 
         /**
-         * <p>节点系统盘预配置的读写IOPS，磁盘类型为cloud_auto时配置。</p>
+         * <p>The predefined IOPS of a system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS} Baseline IOPS = min{1,800 + 50 × Capacity, 50,000} </p>
+         * <p>This parameter is supported only when SystemDiskCategory is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).</p>
          */
         @NameInMap("system_disk_provisioned_iops")
         public Long systemDiskProvisionedIops;

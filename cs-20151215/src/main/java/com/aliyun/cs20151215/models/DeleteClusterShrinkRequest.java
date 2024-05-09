@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DeleteClusterShrinkRequest extends TeaModel {
+    @NameInMap("delete_options")
+    public String deleteOptionsShrink;
+
     /**
      * <p>Specifies whether to retain the Server Load Balancer (SLB) resources that are created by the cluster.</p>
      * <br>
@@ -36,6 +39,14 @@ public class DeleteClusterShrinkRequest extends TeaModel {
     public static DeleteClusterShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteClusterShrinkRequest self = new DeleteClusterShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteClusterShrinkRequest setDeleteOptionsShrink(String deleteOptionsShrink) {
+        this.deleteOptionsShrink = deleteOptionsShrink;
+        return this;
+    }
+    public String getDeleteOptionsShrink() {
+        return this.deleteOptionsShrink;
     }
 
     public DeleteClusterShrinkRequest setKeepSlb(Boolean keepSlb) {
