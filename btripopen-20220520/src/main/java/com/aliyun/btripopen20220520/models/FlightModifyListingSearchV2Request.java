@@ -10,6 +10,9 @@ public class FlightModifyListingSearchV2Request extends TeaModel {
     @NameInMap("dep_date")
     public java.util.List<String> depDate;
 
+    @NameInMap("interface_caller_is_support_retry")
+    public Boolean interfaceCallerIsSupportRetry;
+
     @NameInMap("isv_name")
     public String isvName;
 
@@ -24,6 +27,9 @@ public class FlightModifyListingSearchV2Request extends TeaModel {
 
     @NameInMap("search_mode")
     public Integer searchMode;
+
+    @NameInMap("search_retry_token")
+    public String searchRetryToken;
 
     @NameInMap("selected_segments")
     public java.util.List<FlightModifyListingSearchV2RequestSelectedSegments> selectedSegments;
@@ -53,6 +59,14 @@ public class FlightModifyListingSearchV2Request extends TeaModel {
     }
     public java.util.List<String> getDepDate() {
         return this.depDate;
+    }
+
+    public FlightModifyListingSearchV2Request setInterfaceCallerIsSupportRetry(Boolean interfaceCallerIsSupportRetry) {
+        this.interfaceCallerIsSupportRetry = interfaceCallerIsSupportRetry;
+        return this;
+    }
+    public Boolean getInterfaceCallerIsSupportRetry() {
+        return this.interfaceCallerIsSupportRetry;
     }
 
     public FlightModifyListingSearchV2Request setIsvName(String isvName) {
@@ -93,6 +107,14 @@ public class FlightModifyListingSearchV2Request extends TeaModel {
     }
     public Integer getSearchMode() {
         return this.searchMode;
+    }
+
+    public FlightModifyListingSearchV2Request setSearchRetryToken(String searchRetryToken) {
+        this.searchRetryToken = searchRetryToken;
+        return this;
+    }
+    public String getSearchRetryToken() {
+        return this.searchRetryToken;
     }
 
     public FlightModifyListingSearchV2Request setSelectedSegments(java.util.List<FlightModifyListingSearchV2RequestSelectedSegments> selectedSegments) {

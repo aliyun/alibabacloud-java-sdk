@@ -228,6 +228,124 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
 
     }
 
+    public static class HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos extends TeaModel {
+        @NameInMap("checkin_date")
+        public String checkinDate;
+
+        @NameInMap("checkout_date")
+        public String checkoutDate;
+
+        @NameInMap("penal_sum")
+        public Long penalSum;
+
+        @NameInMap("real_checkout_date")
+        public String realCheckoutDate;
+
+        @NameInMap("refund_status")
+        public Integer refundStatus;
+
+        @NameInMap("room_no")
+        public Integer roomNo;
+
+        @NameInMap("room_price")
+        public Long roomPrice;
+
+        @NameInMap("room_refund_price")
+        public Long roomRefundPrice;
+
+        @NameInMap("traveler_id")
+        public String travelerId;
+
+        @NameInMap("traveler_name")
+        public String travelerName;
+
+        public static HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos build(java.util.Map<String, ?> map) throws Exception {
+            HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos self = new HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos setCheckinDate(String checkinDate) {
+            this.checkinDate = checkinDate;
+            return this;
+        }
+        public String getCheckinDate() {
+            return this.checkinDate;
+        }
+
+        public HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos setCheckoutDate(String checkoutDate) {
+            this.checkoutDate = checkoutDate;
+            return this;
+        }
+        public String getCheckoutDate() {
+            return this.checkoutDate;
+        }
+
+        public HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos setPenalSum(Long penalSum) {
+            this.penalSum = penalSum;
+            return this;
+        }
+        public Long getPenalSum() {
+            return this.penalSum;
+        }
+
+        public HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos setRealCheckoutDate(String realCheckoutDate) {
+            this.realCheckoutDate = realCheckoutDate;
+            return this;
+        }
+        public String getRealCheckoutDate() {
+            return this.realCheckoutDate;
+        }
+
+        public HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos setRefundStatus(Integer refundStatus) {
+            this.refundStatus = refundStatus;
+            return this;
+        }
+        public Integer getRefundStatus() {
+            return this.refundStatus;
+        }
+
+        public HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos setRoomNo(Integer roomNo) {
+            this.roomNo = roomNo;
+            return this;
+        }
+        public Integer getRoomNo() {
+            return this.roomNo;
+        }
+
+        public HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos setRoomPrice(Long roomPrice) {
+            this.roomPrice = roomPrice;
+            return this;
+        }
+        public Long getRoomPrice() {
+            return this.roomPrice;
+        }
+
+        public HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos setRoomRefundPrice(Long roomRefundPrice) {
+            this.roomRefundPrice = roomRefundPrice;
+            return this;
+        }
+        public Long getRoomRefundPrice() {
+            return this.roomRefundPrice;
+        }
+
+        public HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos setTravelerId(String travelerId) {
+            this.travelerId = travelerId;
+            return this;
+        }
+        public String getTravelerId() {
+            return this.travelerId;
+        }
+
+        public HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos setTravelerName(String travelerName) {
+            this.travelerName = travelerName;
+            return this;
+        }
+        public String getTravelerName() {
+            return this.travelerName;
+        }
+
+    }
+
     public static class HotelOrderDetailInfoResponseBodyModuleInvoiceInfo extends TeaModel {
         @NameInMap("billing_money")
         public Long billingMoney;
@@ -903,6 +1021,9 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         @NameInMap("hotel_detail_info")
         public HotelOrderDetailInfoResponseBodyModuleHotelDetailInfo hotelDetailInfo;
 
+        @NameInMap("hotel_sale_order_room_infos")
+        public java.util.List<HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos> hotelSaleOrderRoomInfos;
+
         @NameInMap("invoice_info")
         public HotelOrderDetailInfoResponseBodyModuleInvoiceInfo invoiceInfo;
 
@@ -1097,6 +1218,14 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         }
         public HotelOrderDetailInfoResponseBodyModuleHotelDetailInfo getHotelDetailInfo() {
             return this.hotelDetailInfo;
+        }
+
+        public HotelOrderDetailInfoResponseBodyModule setHotelSaleOrderRoomInfos(java.util.List<HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos> hotelSaleOrderRoomInfos) {
+            this.hotelSaleOrderRoomInfos = hotelSaleOrderRoomInfos;
+            return this;
+        }
+        public java.util.List<HotelOrderDetailInfoResponseBodyModuleHotelSaleOrderRoomInfos> getHotelSaleOrderRoomInfos() {
+            return this.hotelSaleOrderRoomInfos;
         }
 
         public HotelOrderDetailInfoResponseBodyModule setInvoiceInfo(HotelOrderDetailInfoResponseBodyModuleInvoiceInfo invoiceInfo) {

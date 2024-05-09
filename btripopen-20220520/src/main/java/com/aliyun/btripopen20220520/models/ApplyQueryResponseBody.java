@@ -273,8 +273,17 @@ public class ApplyQueryResponseBody extends TeaModel {
     }
 
     public static class ApplyQueryResponseBodyModuleExternalTravelerList extends TeaModel {
+        @NameInMap("attribute")
+        public String attribute;
+
         @NameInMap("business_discount")
         public Integer businessDiscount;
+
+        @NameInMap("cost_center_name")
+        public String costCenterName;
+
+        @NameInMap("depart_id")
+        public String departId;
 
         @NameInMap("economy_discount")
         public Integer economyDiscount;
@@ -303,11 +312,35 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("hotel_rule_code")
         public Long hotelRuleCode;
 
+        @NameInMap("invoice_name")
+        public String invoiceName;
+
+        @NameInMap("payment_department_id")
+        public String paymentDepartmentId;
+
+        @NameInMap("payment_department_name")
+        public String paymentDepartmentName;
+
         @NameInMap("premium_economy_discount")
         public Integer premiumEconomyDiscount;
 
+        @NameInMap("project_code")
+        public String projectCode;
+
+        @NameInMap("project_title")
+        public String projectTitle;
+
         @NameInMap("reserve_type")
         public Integer reserveType;
+
+        @NameInMap("third_part_invoice_id")
+        public String thirdPartInvoiceId;
+
+        @NameInMap("thirdpart_cost_center_id")
+        public String thirdpartCostCenterId;
+
+        @NameInMap("thirdpart_depart_id")
+        public String thirdpartDepartId;
 
         @NameInMap("train_rule_code")
         public Long trainRuleCode;
@@ -323,12 +356,36 @@ public class ApplyQueryResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ApplyQueryResponseBodyModuleExternalTravelerList setAttribute(String attribute) {
+            this.attribute = attribute;
+            return this;
+        }
+        public String getAttribute() {
+            return this.attribute;
+        }
+
         public ApplyQueryResponseBodyModuleExternalTravelerList setBusinessDiscount(Integer businessDiscount) {
             this.businessDiscount = businessDiscount;
             return this;
         }
         public Integer getBusinessDiscount() {
             return this.businessDiscount;
+        }
+
+        public ApplyQueryResponseBodyModuleExternalTravelerList setCostCenterName(String costCenterName) {
+            this.costCenterName = costCenterName;
+            return this;
+        }
+        public String getCostCenterName() {
+            return this.costCenterName;
+        }
+
+        public ApplyQueryResponseBodyModuleExternalTravelerList setDepartId(String departId) {
+            this.departId = departId;
+            return this;
+        }
+        public String getDepartId() {
+            return this.departId;
         }
 
         public ApplyQueryResponseBodyModuleExternalTravelerList setEconomyDiscount(Integer economyDiscount) {
@@ -403,6 +460,30 @@ public class ApplyQueryResponseBody extends TeaModel {
             return this.hotelRuleCode;
         }
 
+        public ApplyQueryResponseBodyModuleExternalTravelerList setInvoiceName(String invoiceName) {
+            this.invoiceName = invoiceName;
+            return this;
+        }
+        public String getInvoiceName() {
+            return this.invoiceName;
+        }
+
+        public ApplyQueryResponseBodyModuleExternalTravelerList setPaymentDepartmentId(String paymentDepartmentId) {
+            this.paymentDepartmentId = paymentDepartmentId;
+            return this;
+        }
+        public String getPaymentDepartmentId() {
+            return this.paymentDepartmentId;
+        }
+
+        public ApplyQueryResponseBodyModuleExternalTravelerList setPaymentDepartmentName(String paymentDepartmentName) {
+            this.paymentDepartmentName = paymentDepartmentName;
+            return this;
+        }
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
+        }
+
         public ApplyQueryResponseBodyModuleExternalTravelerList setPremiumEconomyDiscount(Integer premiumEconomyDiscount) {
             this.premiumEconomyDiscount = premiumEconomyDiscount;
             return this;
@@ -411,12 +492,52 @@ public class ApplyQueryResponseBody extends TeaModel {
             return this.premiumEconomyDiscount;
         }
 
+        public ApplyQueryResponseBodyModuleExternalTravelerList setProjectCode(String projectCode) {
+            this.projectCode = projectCode;
+            return this;
+        }
+        public String getProjectCode() {
+            return this.projectCode;
+        }
+
+        public ApplyQueryResponseBodyModuleExternalTravelerList setProjectTitle(String projectTitle) {
+            this.projectTitle = projectTitle;
+            return this;
+        }
+        public String getProjectTitle() {
+            return this.projectTitle;
+        }
+
         public ApplyQueryResponseBodyModuleExternalTravelerList setReserveType(Integer reserveType) {
             this.reserveType = reserveType;
             return this;
         }
         public Integer getReserveType() {
             return this.reserveType;
+        }
+
+        public ApplyQueryResponseBodyModuleExternalTravelerList setThirdPartInvoiceId(String thirdPartInvoiceId) {
+            this.thirdPartInvoiceId = thirdPartInvoiceId;
+            return this;
+        }
+        public String getThirdPartInvoiceId() {
+            return this.thirdPartInvoiceId;
+        }
+
+        public ApplyQueryResponseBodyModuleExternalTravelerList setThirdpartCostCenterId(String thirdpartCostCenterId) {
+            this.thirdpartCostCenterId = thirdpartCostCenterId;
+            return this;
+        }
+        public String getThirdpartCostCenterId() {
+            return this.thirdpartCostCenterId;
+        }
+
+        public ApplyQueryResponseBodyModuleExternalTravelerList setThirdpartDepartId(String thirdpartDepartId) {
+            this.thirdpartDepartId = thirdpartDepartId;
+            return this;
+        }
+        public String getThirdpartDepartId() {
+            return this.thirdpartDepartId;
         }
 
         public ApplyQueryResponseBodyModuleExternalTravelerList setTrainRuleCode(Long trainRuleCode) {
@@ -504,6 +625,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("arr_date")
         public String arrDate;
 
+        @NameInMap("attribute")
+        public String attribute;
+
         @NameInMap("cost_center_name")
         public String costCenterName;
 
@@ -567,6 +691,14 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
         public String getArrDate() {
             return this.arrDate;
+        }
+
+        public ApplyQueryResponseBodyModuleItineraryList setAttribute(String attribute) {
+            this.attribute = attribute;
+            return this;
+        }
+        public String getAttribute() {
+            return this.attribute;
         }
 
         public ApplyQueryResponseBodyModuleItineraryList setCostCenterName(String costCenterName) {
@@ -690,6 +822,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("arr_date")
         public String arrDate;
 
+        @NameInMap("attribute")
+        public String attribute;
+
         @NameInMap("city_code_set")
         public String cityCodeSet;
 
@@ -734,6 +869,14 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
         public String getArrDate() {
             return this.arrDate;
+        }
+
+        public ApplyQueryResponseBodyModuleItinerarySetList setAttribute(String attribute) {
+            this.attribute = attribute;
+            return this;
+        }
+        public String getAttribute() {
+            return this.attribute;
         }
 
         public ApplyQueryResponseBodyModuleItinerarySetList setCityCodeSet(String cityCodeSet) {
@@ -939,11 +1082,20 @@ public class ApplyQueryResponseBody extends TeaModel {
     }
 
     public static class ApplyQueryResponseBodyModuleTravelerList extends TeaModel {
+        @NameInMap("attribute")
+        public String attribute;
+
         @NameInMap("business_discount")
         public Integer businessDiscount;
 
         @NameInMap("car_city_set")
         public java.util.List<ApplyQueryResponseBodyModuleTravelerListCarCitySet> carCitySet;
+
+        @NameInMap("cost_center_name")
+        public String costCenterName;
+
+        @NameInMap("depart_id")
+        public String departId;
 
         @NameInMap("economy_discount")
         public Integer economyDiscount;
@@ -972,11 +1124,35 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("hotel_rule_code")
         public Long hotelRuleCode;
 
+        @NameInMap("invoice_name")
+        public String invoiceName;
+
+        @NameInMap("payment_department_id")
+        public String paymentDepartmentId;
+
+        @NameInMap("payment_department_name")
+        public String paymentDepartmentName;
+
         @NameInMap("premium_economy_discount")
         public Integer premiumEconomyDiscount;
 
+        @NameInMap("project_code")
+        public String projectCode;
+
+        @NameInMap("project_title")
+        public String projectTitle;
+
         @NameInMap("reserve_type")
         public Integer reserveType;
+
+        @NameInMap("third_part_invoice_id")
+        public String thirdPartInvoiceId;
+
+        @NameInMap("thirdpart_cost_center_id")
+        public String thirdpartCostCenterId;
+
+        @NameInMap("thirdpart_depart_id")
+        public String thirdpartDepartId;
 
         @NameInMap("train_rule_code")
         public Long trainRuleCode;
@@ -995,6 +1171,14 @@ public class ApplyQueryResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ApplyQueryResponseBodyModuleTravelerList setAttribute(String attribute) {
+            this.attribute = attribute;
+            return this;
+        }
+        public String getAttribute() {
+            return this.attribute;
+        }
+
         public ApplyQueryResponseBodyModuleTravelerList setBusinessDiscount(Integer businessDiscount) {
             this.businessDiscount = businessDiscount;
             return this;
@@ -1009,6 +1193,22 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
         public java.util.List<ApplyQueryResponseBodyModuleTravelerListCarCitySet> getCarCitySet() {
             return this.carCitySet;
+        }
+
+        public ApplyQueryResponseBodyModuleTravelerList setCostCenterName(String costCenterName) {
+            this.costCenterName = costCenterName;
+            return this;
+        }
+        public String getCostCenterName() {
+            return this.costCenterName;
+        }
+
+        public ApplyQueryResponseBodyModuleTravelerList setDepartId(String departId) {
+            this.departId = departId;
+            return this;
+        }
+        public String getDepartId() {
+            return this.departId;
         }
 
         public ApplyQueryResponseBodyModuleTravelerList setEconomyDiscount(Integer economyDiscount) {
@@ -1083,6 +1283,30 @@ public class ApplyQueryResponseBody extends TeaModel {
             return this.hotelRuleCode;
         }
 
+        public ApplyQueryResponseBodyModuleTravelerList setInvoiceName(String invoiceName) {
+            this.invoiceName = invoiceName;
+            return this;
+        }
+        public String getInvoiceName() {
+            return this.invoiceName;
+        }
+
+        public ApplyQueryResponseBodyModuleTravelerList setPaymentDepartmentId(String paymentDepartmentId) {
+            this.paymentDepartmentId = paymentDepartmentId;
+            return this;
+        }
+        public String getPaymentDepartmentId() {
+            return this.paymentDepartmentId;
+        }
+
+        public ApplyQueryResponseBodyModuleTravelerList setPaymentDepartmentName(String paymentDepartmentName) {
+            this.paymentDepartmentName = paymentDepartmentName;
+            return this;
+        }
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
+        }
+
         public ApplyQueryResponseBodyModuleTravelerList setPremiumEconomyDiscount(Integer premiumEconomyDiscount) {
             this.premiumEconomyDiscount = premiumEconomyDiscount;
             return this;
@@ -1091,12 +1315,52 @@ public class ApplyQueryResponseBody extends TeaModel {
             return this.premiumEconomyDiscount;
         }
 
+        public ApplyQueryResponseBodyModuleTravelerList setProjectCode(String projectCode) {
+            this.projectCode = projectCode;
+            return this;
+        }
+        public String getProjectCode() {
+            return this.projectCode;
+        }
+
+        public ApplyQueryResponseBodyModuleTravelerList setProjectTitle(String projectTitle) {
+            this.projectTitle = projectTitle;
+            return this;
+        }
+        public String getProjectTitle() {
+            return this.projectTitle;
+        }
+
         public ApplyQueryResponseBodyModuleTravelerList setReserveType(Integer reserveType) {
             this.reserveType = reserveType;
             return this;
         }
         public Integer getReserveType() {
             return this.reserveType;
+        }
+
+        public ApplyQueryResponseBodyModuleTravelerList setThirdPartInvoiceId(String thirdPartInvoiceId) {
+            this.thirdPartInvoiceId = thirdPartInvoiceId;
+            return this;
+        }
+        public String getThirdPartInvoiceId() {
+            return this.thirdPartInvoiceId;
+        }
+
+        public ApplyQueryResponseBodyModuleTravelerList setThirdpartCostCenterId(String thirdpartCostCenterId) {
+            this.thirdpartCostCenterId = thirdpartCostCenterId;
+            return this;
+        }
+        public String getThirdpartCostCenterId() {
+            return this.thirdpartCostCenterId;
+        }
+
+        public ApplyQueryResponseBodyModuleTravelerList setThirdpartDepartId(String thirdpartDepartId) {
+            this.thirdpartDepartId = thirdpartDepartId;
+            return this;
+        }
+        public String getThirdpartDepartId() {
+            return this.thirdpartDepartId;
         }
 
         public ApplyQueryResponseBodyModuleTravelerList setTrainRuleCode(Long trainRuleCode) {
@@ -1199,6 +1463,12 @@ public class ApplyQueryResponseBody extends TeaModel {
 
         @NameInMap("limit_traveler")
         public Integer limitTraveler;
+
+        @NameInMap("payment_department_id")
+        public String paymentDepartmentId;
+
+        @NameInMap("payment_department_name")
+        public String paymentDepartmentName;
 
         @NameInMap("status")
         public Integer status;
@@ -1416,6 +1686,22 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
         public Integer getLimitTraveler() {
             return this.limitTraveler;
+        }
+
+        public ApplyQueryResponseBodyModule setPaymentDepartmentId(String paymentDepartmentId) {
+            this.paymentDepartmentId = paymentDepartmentId;
+            return this;
+        }
+        public String getPaymentDepartmentId() {
+            return this.paymentDepartmentId;
+        }
+
+        public ApplyQueryResponseBodyModule setPaymentDepartmentName(String paymentDepartmentName) {
+            this.paymentDepartmentName = paymentDepartmentName;
+            return this;
+        }
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
         }
 
         public ApplyQueryResponseBodyModule setStatus(Integer status) {

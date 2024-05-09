@@ -10,6 +10,9 @@ public class FlightModifyListingSearchV2ShrinkRequest extends TeaModel {
     @NameInMap("dep_date")
     public String depDateShrink;
 
+    @NameInMap("interface_caller_is_support_retry")
+    public Boolean interfaceCallerIsSupportRetry;
+
     @NameInMap("isv_name")
     public String isvName;
 
@@ -24,6 +27,9 @@ public class FlightModifyListingSearchV2ShrinkRequest extends TeaModel {
 
     @NameInMap("search_mode")
     public Integer searchMode;
+
+    @NameInMap("search_retry_token")
+    public String searchRetryToken;
 
     @NameInMap("selected_segments")
     public String selectedSegmentsShrink;
@@ -53,6 +59,14 @@ public class FlightModifyListingSearchV2ShrinkRequest extends TeaModel {
     }
     public String getDepDateShrink() {
         return this.depDateShrink;
+    }
+
+    public FlightModifyListingSearchV2ShrinkRequest setInterfaceCallerIsSupportRetry(Boolean interfaceCallerIsSupportRetry) {
+        this.interfaceCallerIsSupportRetry = interfaceCallerIsSupportRetry;
+        return this;
+    }
+    public Boolean getInterfaceCallerIsSupportRetry() {
+        return this.interfaceCallerIsSupportRetry;
     }
 
     public FlightModifyListingSearchV2ShrinkRequest setIsvName(String isvName) {
@@ -93,6 +107,14 @@ public class FlightModifyListingSearchV2ShrinkRequest extends TeaModel {
     }
     public Integer getSearchMode() {
         return this.searchMode;
+    }
+
+    public FlightModifyListingSearchV2ShrinkRequest setSearchRetryToken(String searchRetryToken) {
+        this.searchRetryToken = searchRetryToken;
+        return this;
+    }
+    public String getSearchRetryToken() {
+        return this.searchRetryToken;
     }
 
     public FlightModifyListingSearchV2ShrinkRequest setSelectedSegmentsShrink(String selectedSegmentsShrink) {

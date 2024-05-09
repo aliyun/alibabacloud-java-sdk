@@ -188,6 +188,80 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
 
     }
 
+    public static class QueryReimbursementOrderResponseBodyModuleExpensesInvoiceInfos extends TeaModel {
+        @NameInMap("amount")
+        public String amount;
+
+        @NameInMap("invoice_code")
+        public String invoiceCode;
+
+        @NameInMap("invoice_data")
+        public String invoiceData;
+
+        @NameInMap("invoice_date")
+        public String invoiceDate;
+
+        @NameInMap("invoice_number")
+        public String invoiceNumber;
+
+        @NameInMap("invoice_type")
+        public String invoiceType;
+
+        public static QueryReimbursementOrderResponseBodyModuleExpensesInvoiceInfos build(java.util.Map<String, ?> map) throws Exception {
+            QueryReimbursementOrderResponseBodyModuleExpensesInvoiceInfos self = new QueryReimbursementOrderResponseBodyModuleExpensesInvoiceInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryReimbursementOrderResponseBodyModuleExpensesInvoiceInfos setAmount(String amount) {
+            this.amount = amount;
+            return this;
+        }
+        public String getAmount() {
+            return this.amount;
+        }
+
+        public QueryReimbursementOrderResponseBodyModuleExpensesInvoiceInfos setInvoiceCode(String invoiceCode) {
+            this.invoiceCode = invoiceCode;
+            return this;
+        }
+        public String getInvoiceCode() {
+            return this.invoiceCode;
+        }
+
+        public QueryReimbursementOrderResponseBodyModuleExpensesInvoiceInfos setInvoiceData(String invoiceData) {
+            this.invoiceData = invoiceData;
+            return this;
+        }
+        public String getInvoiceData() {
+            return this.invoiceData;
+        }
+
+        public QueryReimbursementOrderResponseBodyModuleExpensesInvoiceInfos setInvoiceDate(String invoiceDate) {
+            this.invoiceDate = invoiceDate;
+            return this;
+        }
+        public String getInvoiceDate() {
+            return this.invoiceDate;
+        }
+
+        public QueryReimbursementOrderResponseBodyModuleExpensesInvoiceInfos setInvoiceNumber(String invoiceNumber) {
+            this.invoiceNumber = invoiceNumber;
+            return this;
+        }
+        public String getInvoiceNumber() {
+            return this.invoiceNumber;
+        }
+
+        public QueryReimbursementOrderResponseBodyModuleExpensesInvoiceInfos setInvoiceType(String invoiceType) {
+            this.invoiceType = invoiceType;
+            return this;
+        }
+        public String getInvoiceType() {
+            return this.invoiceType;
+        }
+
+    }
+
     public static class QueryReimbursementOrderResponseBodyModuleExpenses extends TeaModel {
         @NameInMap("amount")
         public String amount;
@@ -209,6 +283,9 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
 
         @NameInMap("expense_type_code")
         public String expenseTypeCode;
+
+        @NameInMap("invoice_infos")
+        public java.util.List<QueryReimbursementOrderResponseBodyModuleExpensesInvoiceInfos> invoiceInfos;
 
         @NameInMap("reimb_expense_id")
         public Long reimbExpenseId;
@@ -278,6 +355,14 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         }
         public String getExpenseTypeCode() {
             return this.expenseTypeCode;
+        }
+
+        public QueryReimbursementOrderResponseBodyModuleExpenses setInvoiceInfos(java.util.List<QueryReimbursementOrderResponseBodyModuleExpensesInvoiceInfos> invoiceInfos) {
+            this.invoiceInfos = invoiceInfos;
+            return this;
+        }
+        public java.util.List<QueryReimbursementOrderResponseBodyModuleExpensesInvoiceInfos> getInvoiceInfos() {
+            return this.invoiceInfos;
         }
 
         public QueryReimbursementOrderResponseBodyModuleExpenses setReimbExpenseId(Long reimbExpenseId) {

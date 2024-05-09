@@ -4,6 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InvoiceSearchRequest extends TeaModel {
+    @NameInMap("third_part_id")
+    public String thirdPartId;
+
     @NameInMap("title")
     public String title;
 
@@ -13,6 +16,14 @@ public class InvoiceSearchRequest extends TeaModel {
     public static InvoiceSearchRequest build(java.util.Map<String, ?> map) throws Exception {
         InvoiceSearchRequest self = new InvoiceSearchRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InvoiceSearchRequest setThirdPartId(String thirdPartId) {
+        this.thirdPartId = thirdPartId;
+        return this;
+    }
+    public String getThirdPartId() {
+        return this.thirdPartId;
     }
 
     public InvoiceSearchRequest setTitle(String title) {
