@@ -40,6 +40,9 @@ public class ConfigL7RsPolicyRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("UpstreamRetry")
+    public Integer upstreamRetry;
+
     public static ConfigL7RsPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigL7RsPolicyRequest self = new ConfigL7RsPolicyRequest();
         return TeaModel.build(map, self);
@@ -67,6 +70,14 @@ public class ConfigL7RsPolicyRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public ConfigL7RsPolicyRequest setUpstreamRetry(Integer upstreamRetry) {
+        this.upstreamRetry = upstreamRetry;
+        return this;
+    }
+    public Integer getUpstreamRetry() {
+        return this.upstreamRetry;
     }
 
 }

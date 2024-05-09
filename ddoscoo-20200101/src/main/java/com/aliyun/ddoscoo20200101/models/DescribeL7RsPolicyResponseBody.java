@@ -26,6 +26,9 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("UpstreamRetry")
+    public Integer upstreamRetry;
+
     public static DescribeL7RsPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeL7RsPolicyResponseBody self = new DescribeL7RsPolicyResponseBody();
         return TeaModel.build(map, self);
@@ -55,7 +58,33 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeL7RsPolicyResponseBody setUpstreamRetry(Integer upstreamRetry) {
+        this.upstreamRetry = upstreamRetry;
+        return this;
+    }
+    public Integer getUpstreamRetry() {
+        return this.upstreamRetry;
+    }
+
     public static class DescribeL7RsPolicyResponseBodyAttributesAttribute extends TeaModel {
+        @NameInMap("ConnectTimeout")
+        public Integer connectTimeout;
+
+        @NameInMap("FailTimeout")
+        public Integer failTimeout;
+
+        @NameInMap("MaxFails")
+        public Integer maxFails;
+
+        @NameInMap("Mode")
+        public String mode;
+
+        @NameInMap("ReadTimeout")
+        public Integer readTimeout;
+
+        @NameInMap("SendTimeout")
+        public Integer sendTimeout;
+
         /**
          * <p>The weight of the origin server. This parameter takes effect only when **ProxyMode** is set to **rr**.</p>
          * <br>
@@ -67,6 +96,54 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         public static DescribeL7RsPolicyResponseBodyAttributesAttribute build(java.util.Map<String, ?> map) throws Exception {
             DescribeL7RsPolicyResponseBodyAttributesAttribute self = new DescribeL7RsPolicyResponseBodyAttributesAttribute();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeL7RsPolicyResponseBodyAttributesAttribute setConnectTimeout(Integer connectTimeout) {
+            this.connectTimeout = connectTimeout;
+            return this;
+        }
+        public Integer getConnectTimeout() {
+            return this.connectTimeout;
+        }
+
+        public DescribeL7RsPolicyResponseBodyAttributesAttribute setFailTimeout(Integer failTimeout) {
+            this.failTimeout = failTimeout;
+            return this;
+        }
+        public Integer getFailTimeout() {
+            return this.failTimeout;
+        }
+
+        public DescribeL7RsPolicyResponseBodyAttributesAttribute setMaxFails(Integer maxFails) {
+            this.maxFails = maxFails;
+            return this;
+        }
+        public Integer getMaxFails() {
+            return this.maxFails;
+        }
+
+        public DescribeL7RsPolicyResponseBodyAttributesAttribute setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+        public DescribeL7RsPolicyResponseBodyAttributesAttribute setReadTimeout(Integer readTimeout) {
+            this.readTimeout = readTimeout;
+            return this;
+        }
+        public Integer getReadTimeout() {
+            return this.readTimeout;
+        }
+
+        public DescribeL7RsPolicyResponseBodyAttributesAttribute setSendTimeout(Integer sendTimeout) {
+            this.sendTimeout = sendTimeout;
+            return this;
+        }
+        public Integer getSendTimeout() {
+            return this.sendTimeout;
         }
 
         public DescribeL7RsPolicyResponseBodyAttributesAttribute setWeight(Integer weight) {
