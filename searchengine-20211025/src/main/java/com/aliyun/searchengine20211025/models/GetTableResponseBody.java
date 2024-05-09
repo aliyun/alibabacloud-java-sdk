@@ -531,6 +531,9 @@ public class GetTableResponseBody extends TeaModel {
         @NameInMap("rawSchema")
         public String rawSchema;
 
+        @NameInMap("status")
+        public String status;
+
         @NameInMap("vectorIndex")
         public java.util.List<GetTableResponseBodyResultVectorIndex> vectorIndex;
 
@@ -601,6 +604,14 @@ public class GetTableResponseBody extends TeaModel {
         }
         public String getRawSchema() {
             return this.rawSchema;
+        }
+
+        public GetTableResponseBodyResult setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public GetTableResponseBodyResult setVectorIndex(java.util.List<GetTableResponseBodyResultVectorIndex> vectorIndex) {

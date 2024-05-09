@@ -44,6 +44,9 @@ public class ListTablesResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("status")
+        public String status;
+
         public static ListTablesResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListTablesResponseBodyResult self = new ListTablesResponseBodyResult();
             return TeaModel.build(map, self);
@@ -63,6 +66,14 @@ public class ListTablesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListTablesResponseBodyResult setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
