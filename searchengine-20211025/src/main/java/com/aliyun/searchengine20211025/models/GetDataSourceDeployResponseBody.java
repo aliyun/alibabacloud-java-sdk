@@ -4,9 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class GetDataSourceDeployResponseBody extends TeaModel {
+    /**
+     * <p>requestId</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Deploy</p>
+     */
     @NameInMap("result")
     public GetDataSourceDeployResponseBodyResult result;
 
@@ -201,15 +207,27 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
     }
 
     public static class GetDataSourceDeployResponseBodyResultStorage extends TeaModel {
+        /**
+         * <p>AK</p>
+         */
         @NameInMap("accessKey")
         public String accessKey;
 
+        /**
+         * <p>AS</p>
+         */
         @NameInMap("accessSecret")
         public String accessSecret;
 
+        /**
+         * <p>oss bucket</p>
+         */
         @NameInMap("bucket")
         public String bucket;
 
+        /**
+         * <p>odps endpoint</p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
@@ -319,9 +337,15 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
     }
 
     public static class GetDataSourceDeployResponseBodyResultSwift extends TeaModel {
+        /**
+         * <p>topic</p>
+         */
         @NameInMap("topic")
         public String topic;
 
+        /**
+         * <p>zk</p>
+         */
         @NameInMap("zk")
         public String zk;
 
