@@ -113,6 +113,9 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("spec")
         public String spec;
 
+        @NameInMap("specInfo")
+        public String specInfo;
+
         public static ListInstanceResponseBodyResultClientNodeConfiguration build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceResponseBodyResultClientNodeConfiguration self = new ListInstanceResponseBodyResultClientNodeConfiguration();
             return TeaModel.build(map, self);
@@ -150,6 +153,14 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.spec;
         }
 
+        public ListInstanceResponseBodyResultClientNodeConfiguration setSpecInfo(String specInfo) {
+            this.specInfo = specInfo;
+            return this;
+        }
+        public String getSpecInfo() {
+            return this.specInfo;
+        }
+
     }
 
     public static class ListInstanceResponseBodyResultElasticDataNodeConfiguration extends TeaModel {
@@ -182,6 +193,9 @@ public class ListInstanceResponseBody extends TeaModel {
          */
         @NameInMap("spec")
         public String spec;
+
+        @NameInMap("specInfo")
+        public String specInfo;
 
         public static ListInstanceResponseBodyResultElasticDataNodeConfiguration build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceResponseBodyResultElasticDataNodeConfiguration self = new ListInstanceResponseBodyResultElasticDataNodeConfiguration();
@@ -228,6 +242,14 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.spec;
         }
 
+        public ListInstanceResponseBodyResultElasticDataNodeConfiguration setSpecInfo(String specInfo) {
+            this.specInfo = specInfo;
+            return this;
+        }
+        public String getSpecInfo() {
+            return this.specInfo;
+        }
+
     }
 
     public static class ListInstanceResponseBodyResultKibanaConfiguration extends TeaModel {
@@ -254,6 +276,9 @@ public class ListInstanceResponseBody extends TeaModel {
          */
         @NameInMap("spec")
         public String spec;
+
+        @NameInMap("specInfo")
+        public String specInfo;
 
         public static ListInstanceResponseBodyResultKibanaConfiguration build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceResponseBodyResultKibanaConfiguration self = new ListInstanceResponseBodyResultKibanaConfiguration();
@@ -292,6 +317,14 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.spec;
         }
 
+        public ListInstanceResponseBodyResultKibanaConfiguration setSpecInfo(String specInfo) {
+            this.specInfo = specInfo;
+            return this;
+        }
+        public String getSpecInfo() {
+            return this.specInfo;
+        }
+
     }
 
     public static class ListInstanceResponseBodyResultMasterConfiguration extends TeaModel {
@@ -318,6 +351,9 @@ public class ListInstanceResponseBody extends TeaModel {
          */
         @NameInMap("spec")
         public String spec;
+
+        @NameInMap("specInfo")
+        public String specInfo;
 
         public static ListInstanceResponseBodyResultMasterConfiguration build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceResponseBodyResultMasterConfiguration self = new ListInstanceResponseBodyResultMasterConfiguration();
@@ -354,6 +390,14 @@ public class ListInstanceResponseBody extends TeaModel {
         }
         public String getSpec() {
             return this.spec;
+        }
+
+        public ListInstanceResponseBodyResultMasterConfiguration setSpecInfo(String specInfo) {
+            this.specInfo = specInfo;
+            return this;
+        }
+        public String getSpecInfo() {
+            return this.specInfo;
         }
 
     }
@@ -496,6 +540,9 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("spec")
         public String spec;
 
+        @NameInMap("specInfo")
+        public String specInfo;
+
         public static ListInstanceResponseBodyResultNodeSpec build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceResponseBodyResultNodeSpec self = new ListInstanceResponseBodyResultNodeSpec();
             return TeaModel.build(map, self);
@@ -539,6 +586,14 @@ public class ListInstanceResponseBody extends TeaModel {
         }
         public String getSpec() {
             return this.spec;
+        }
+
+        public ListInstanceResponseBodyResultNodeSpec setSpecInfo(String specInfo) {
+            this.specInfo = specInfo;
+            return this;
+        }
+        public String getSpecInfo() {
+            return this.specInfo;
         }
 
     }
@@ -622,6 +677,9 @@ public class ListInstanceResponseBody extends TeaModel {
          */
         @NameInMap("elasticDataNodeConfiguration")
         public ListInstanceResponseBodyResultElasticDataNodeConfiguration elasticDataNodeConfiguration;
+
+        @NameInMap("endTime")
+        public Long endTime;
 
         /**
          * <p>The value of the tag.</p>
@@ -785,6 +843,14 @@ public class ListInstanceResponseBody extends TeaModel {
         }
         public ListInstanceResponseBodyResultElasticDataNodeConfiguration getElasticDataNodeConfiguration() {
             return this.elasticDataNodeConfiguration;
+        }
+
+        public ListInstanceResponseBodyResult setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
         }
 
         public ListInstanceResponseBodyResult setEsVersion(String esVersion) {

@@ -115,6 +115,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("spec")
         public String spec;
 
+        @NameInMap("specInfo")
+        public String specInfo;
+
         public static DescribeInstanceResponseBodyResultClientNodeConfiguration build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceResponseBodyResultClientNodeConfiguration self = new DescribeInstanceResponseBodyResultClientNodeConfiguration();
             return TeaModel.build(map, self);
@@ -150,6 +153,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public String getSpec() {
             return this.spec;
+        }
+
+        public DescribeInstanceResponseBodyResultClientNodeConfiguration setSpecInfo(String specInfo) {
+            this.specInfo = specInfo;
+            return this;
+        }
+        public String getSpecInfo() {
+            return this.specInfo;
         }
 
     }
@@ -222,6 +233,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("spec")
         public String spec;
 
+        @NameInMap("specInfo")
+        public String specInfo;
+
         public static DescribeInstanceResponseBodyResultElasticDataNodeConfiguration build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceResponseBodyResultElasticDataNodeConfiguration self = new DescribeInstanceResponseBodyResultElasticDataNodeConfiguration();
             return TeaModel.build(map, self);
@@ -265,6 +279,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public String getSpec() {
             return this.spec;
+        }
+
+        public DescribeInstanceResponseBodyResultElasticDataNodeConfiguration setSpecInfo(String specInfo) {
+            this.specInfo = specInfo;
+            return this;
+        }
+        public String getSpecInfo() {
+            return this.specInfo;
         }
 
     }
@@ -331,6 +353,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("spec")
         public String spec;
 
+        @NameInMap("specInfo")
+        public String specInfo;
+
         public static DescribeInstanceResponseBodyResultKibanaConfiguration build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceResponseBodyResultKibanaConfiguration self = new DescribeInstanceResponseBodyResultKibanaConfiguration();
             return TeaModel.build(map, self);
@@ -360,6 +385,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return this.spec;
         }
 
+        public DescribeInstanceResponseBodyResultKibanaConfiguration setSpecInfo(String specInfo) {
+            this.specInfo = specInfo;
+            return this;
+        }
+        public String getSpecInfo() {
+            return this.specInfo;
+        }
+
     }
 
     public static class DescribeInstanceResponseBodyResultMasterConfiguration extends TeaModel {
@@ -374,6 +407,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         @NameInMap("spec")
         public String spec;
+
+        @NameInMap("specInfo")
+        public String specInfo;
 
         public static DescribeInstanceResponseBodyResultMasterConfiguration build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceResponseBodyResultMasterConfiguration self = new DescribeInstanceResponseBodyResultMasterConfiguration();
@@ -410,6 +446,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public String getSpec() {
             return this.spec;
+        }
+
+        public DescribeInstanceResponseBodyResultMasterConfiguration setSpecInfo(String specInfo) {
+            this.specInfo = specInfo;
+            return this;
+        }
+        public String getSpecInfo() {
+            return this.specInfo;
         }
 
     }
@@ -534,6 +578,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("spec")
         public String spec;
 
+        @NameInMap("specInfo")
+        public String specInfo;
+
         public static DescribeInstanceResponseBodyResultNodeSpec build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceResponseBodyResultNodeSpec self = new DescribeInstanceResponseBodyResultNodeSpec();
             return TeaModel.build(map, self);
@@ -577,6 +624,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public String getSpec() {
             return this.spec;
+        }
+
+        public DescribeInstanceResponseBodyResultNodeSpec setSpecInfo(String specInfo) {
+            this.specInfo = specInfo;
+            return this;
+        }
+        public String getSpecInfo() {
+            return this.specInfo;
         }
 
     }
@@ -679,6 +734,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("spec")
         public String spec;
 
+        @NameInMap("specInfo")
+        public String specInfo;
+
         public static DescribeInstanceResponseBodyResultWarmNodeConfiguration build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceResponseBodyResultWarmNodeConfiguration self = new DescribeInstanceResponseBodyResultWarmNodeConfiguration();
             return TeaModel.build(map, self);
@@ -722,6 +780,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public String getSpec() {
             return this.spec;
+        }
+
+        public DescribeInstanceResponseBodyResultWarmNodeConfiguration setSpecInfo(String specInfo) {
+            this.specInfo = specInfo;
+            return this;
+        }
+        public String getSpecInfo() {
+            return this.specInfo;
         }
 
     }
@@ -795,6 +861,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         @NameInMap("enablePublic")
         public Boolean enablePublic;
+
+        @NameInMap("endtime")
+        public Long endtime;
 
         @NameInMap("esConfig")
         public java.util.Map<String, ?> esConfig;
@@ -1020,6 +1089,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public Boolean getEnablePublic() {
             return this.enablePublic;
+        }
+
+        public DescribeInstanceResponseBodyResult setEndtime(Long endtime) {
+            this.endtime = endtime;
+            return this;
+        }
+        public Long getEndtime() {
+            return this.endtime;
         }
 
         public DescribeInstanceResponseBodyResult setEsConfig(java.util.Map<String, ?> esConfig) {
