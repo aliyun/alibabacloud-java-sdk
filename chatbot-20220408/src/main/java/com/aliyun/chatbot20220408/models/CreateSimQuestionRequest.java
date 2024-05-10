@@ -7,9 +7,15 @@ public class CreateSimQuestionRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Title")
     public String title;
 

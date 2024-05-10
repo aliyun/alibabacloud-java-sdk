@@ -13,6 +13,9 @@ public class CreateCategoryRequest extends TeaModel {
     @NameInMap("KnowledgeType")
     public Integer knowledgeType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 

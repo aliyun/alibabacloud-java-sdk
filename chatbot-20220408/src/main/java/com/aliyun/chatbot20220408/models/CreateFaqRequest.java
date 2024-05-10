@@ -7,6 +7,9 @@ public class CreateFaqRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CategoryId")
     public Long categoryId;
 
@@ -22,6 +25,9 @@ public class CreateFaqRequest extends TeaModel {
     @NameInMap("StartDate")
     public String startDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Title")
     public String title;
 

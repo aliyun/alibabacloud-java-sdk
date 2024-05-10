@@ -7,6 +7,9 @@ public class DeleteSolutionRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SolutionId")
     public Long solutionId;
 

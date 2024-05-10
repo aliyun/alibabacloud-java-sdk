@@ -10,9 +10,15 @@ public class UpdateCategoryRequest extends TeaModel {
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CategoryId")
     public Long categoryId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 

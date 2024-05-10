@@ -7,12 +7,21 @@ public class DeleteUserSayRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IntentId")
     public Long intentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserSayId")
     public Long userSayId;
 

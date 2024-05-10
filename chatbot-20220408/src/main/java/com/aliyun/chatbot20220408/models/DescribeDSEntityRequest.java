@@ -7,9 +7,15 @@ public class DescribeDSEntityRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EntityId")
     public Long entityId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -7,6 +7,9 @@ public class ListSolutionRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
 

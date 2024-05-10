@@ -7,6 +7,9 @@ public class CreateIntentRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -52,12 +55,21 @@ public class CreateIntentRequest extends TeaModel {
         @NameInMap("Interactive")
         public Boolean interactive;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("SlotId")
         public String slotId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -120,6 +132,9 @@ public class CreateIntentRequest extends TeaModel {
         @NameInMap("AliasName")
         public String aliasName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("IntentName")
         public String intentName;
 

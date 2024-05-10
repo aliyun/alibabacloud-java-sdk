@@ -7,12 +7,18 @@ public class UpdateIntentShrinkRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("IntentDefinition")
     public String intentDefinitionShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IntentId")
     public Long intentId;
 

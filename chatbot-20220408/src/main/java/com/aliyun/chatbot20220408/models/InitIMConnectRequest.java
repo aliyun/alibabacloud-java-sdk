@@ -7,6 +7,9 @@ public class InitIMConnectRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("From")
     public String from;
 

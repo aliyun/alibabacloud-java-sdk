@@ -10,9 +10,15 @@ public class ListUserSayRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IntentId")
     public Long intentId;
 

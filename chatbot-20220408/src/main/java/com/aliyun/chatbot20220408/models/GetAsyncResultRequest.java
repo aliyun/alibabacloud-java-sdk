@@ -7,6 +7,9 @@ public class GetAsyncResultRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

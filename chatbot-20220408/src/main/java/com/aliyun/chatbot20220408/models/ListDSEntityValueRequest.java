@@ -7,12 +7,18 @@ public class ListDSEntityValueRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EntityId")
     public Long entityId;
 
     @NameInMap("EntityValueId")
     public Long entityValueId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

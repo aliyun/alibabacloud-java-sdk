@@ -7,18 +7,27 @@ public class UpdateFaqRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CategoryId")
     public Long categoryId;
 
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
 
     @NameInMap("StartDate")
     public String startDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Title")
     public String title;
 
