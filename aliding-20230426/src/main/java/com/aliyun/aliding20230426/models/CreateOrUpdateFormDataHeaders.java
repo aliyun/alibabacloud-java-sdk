@@ -32,6 +32,9 @@ public class CreateOrUpdateFormDataHeaders extends TeaModel {
     }
 
     public static class CreateOrUpdateFormDataHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

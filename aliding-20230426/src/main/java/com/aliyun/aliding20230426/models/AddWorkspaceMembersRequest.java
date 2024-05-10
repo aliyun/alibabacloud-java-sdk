@@ -10,6 +10,9 @@ public class AddWorkspaceMembersRequest extends TeaModel {
     @NameInMap("TenantContext")
     public AddWorkspaceMembersRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

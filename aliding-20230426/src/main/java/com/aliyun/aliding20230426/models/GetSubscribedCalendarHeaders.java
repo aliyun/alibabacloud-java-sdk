@@ -32,6 +32,9 @@ public class GetSubscribedCalendarHeaders extends TeaModel {
     }
 
     public static class GetSubscribedCalendarHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

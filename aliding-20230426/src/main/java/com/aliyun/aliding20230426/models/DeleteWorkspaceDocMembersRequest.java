@@ -4,15 +4,24 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class DeleteWorkspaceDocMembersRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Members")
     public java.util.List<DeleteWorkspaceDocMembersRequestMembers> members;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
     @NameInMap("TenantContext")
     public DeleteWorkspaceDocMembersRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -54,9 +63,15 @@ public class DeleteWorkspaceDocMembersRequest extends TeaModel {
     }
 
     public static class DeleteWorkspaceDocMembersRequestMembers extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("MemberId")
         public String memberId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("MemberType")
         public String memberType;
 

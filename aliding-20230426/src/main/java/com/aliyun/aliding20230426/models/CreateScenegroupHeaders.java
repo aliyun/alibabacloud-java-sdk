@@ -32,6 +32,9 @@ public class CreateScenegroupHeaders extends TeaModel {
     }
 
     public static class CreateScenegroupHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

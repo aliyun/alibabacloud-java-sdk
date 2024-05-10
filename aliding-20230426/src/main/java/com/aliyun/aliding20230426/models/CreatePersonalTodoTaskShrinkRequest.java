@@ -10,6 +10,9 @@ public class CreatePersonalTodoTaskShrinkRequest extends TeaModel {
     @NameInMap("DueTime")
     public Long dueTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ExecutorIds")
     public String executorIdsShrink;
 
@@ -19,6 +22,9 @@ public class CreatePersonalTodoTaskShrinkRequest extends TeaModel {
     @NameInMap("ParticipantIds")
     public String participantIdsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Subject")
     public String subject;
 

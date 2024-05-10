@@ -32,6 +32,9 @@ public class StopCloudRecordHeaders extends TeaModel {
     }
 
     public static class StopCloudRecordHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

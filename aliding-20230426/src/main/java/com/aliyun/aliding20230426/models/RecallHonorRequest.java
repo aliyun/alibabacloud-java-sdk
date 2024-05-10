@@ -7,12 +7,21 @@ public class RecallHonorRequest extends TeaModel {
     @NameInMap("TenantContext")
     public RecallHonorRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("honorId")
     public String honorId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("orgId")
     public Long orgId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("userId")
     public String userId;
 

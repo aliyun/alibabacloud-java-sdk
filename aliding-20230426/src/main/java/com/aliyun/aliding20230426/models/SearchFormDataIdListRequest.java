@@ -4,6 +4,9 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class SearchFormDataIdListRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
@@ -13,6 +16,9 @@ public class SearchFormDataIdListRequest extends TeaModel {
     @NameInMap("CreateToTimeGMT")
     public String createToTimeGMT;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FormUuid")
     public String formUuid;
 
@@ -37,6 +43,9 @@ public class SearchFormDataIdListRequest extends TeaModel {
     @NameInMap("SearchFieldJson")
     public String searchFieldJson;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SystemToken")
     public String systemToken;
 

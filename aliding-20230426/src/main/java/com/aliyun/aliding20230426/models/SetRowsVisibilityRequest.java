@@ -4,21 +4,36 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class SetRowsVisibilityRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Row")
     public Long row;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RowCount")
     public Long rowCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SheetId")
     public String sheetId;
 
     @NameInMap("TenantContext")
     public SetRowsVisibilityRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Visibility")
     public String visibility;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkbookId")
     public String workbookId;
 

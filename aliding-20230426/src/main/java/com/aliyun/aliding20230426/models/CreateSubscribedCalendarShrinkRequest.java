@@ -10,9 +10,15 @@ public class CreateSubscribedCalendarShrinkRequest extends TeaModel {
     @NameInMap("Managers")
     public String managersShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SubscribeScope")
     public String subscribeScopeShrink;
 

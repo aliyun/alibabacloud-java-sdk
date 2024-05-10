@@ -4,12 +4,21 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class ListTableDataByFormInstanceIdTableIdRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FormInstanceId")
     public String formInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FormUuid")
     public String formUuid;
 
@@ -19,9 +28,15 @@ public class ListTableDataByFormInstanceIdTableIdRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SystemToken")
     public String systemToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TableFieldId")
     public String tableFieldId;
 

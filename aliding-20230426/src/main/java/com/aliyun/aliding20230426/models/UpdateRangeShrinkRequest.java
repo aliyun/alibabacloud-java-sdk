@@ -13,9 +13,15 @@ public class UpdateRangeShrinkRequest extends TeaModel {
     @NameInMap("NumberFormat")
     public String numberFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RangeAddress")
     public String rangeAddress;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SheetId")
     public String sheetId;
 
@@ -25,6 +31,9 @@ public class UpdateRangeShrinkRequest extends TeaModel {
     @NameInMap("Values")
     public String valuesShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkbookId")
     public String workbookId;
 

@@ -32,6 +32,9 @@ public class DeleteMeetingRoomGroupHeaders extends TeaModel {
     }
 
     public static class DeleteMeetingRoomGroupHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

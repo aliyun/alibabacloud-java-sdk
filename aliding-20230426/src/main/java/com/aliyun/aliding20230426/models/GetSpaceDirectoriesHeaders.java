@@ -32,6 +32,9 @@ public class GetSpaceDirectoriesHeaders extends TeaModel {
     }
 
     public static class GetSpaceDirectoriesHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

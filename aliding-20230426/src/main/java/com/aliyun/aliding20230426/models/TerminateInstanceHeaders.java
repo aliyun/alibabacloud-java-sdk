@@ -32,6 +32,9 @@ public class TerminateInstanceHeaders extends TeaModel {
     }
 
     public static class TerminateInstanceHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

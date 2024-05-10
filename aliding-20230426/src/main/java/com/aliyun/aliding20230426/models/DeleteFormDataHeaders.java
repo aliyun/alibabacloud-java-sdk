@@ -32,6 +32,9 @@ public class DeleteFormDataHeaders extends TeaModel {
     }
 
     public static class DeleteFormDataHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

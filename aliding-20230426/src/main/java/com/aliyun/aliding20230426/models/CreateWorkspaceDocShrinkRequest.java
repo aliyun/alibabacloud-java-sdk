@@ -4,9 +4,15 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkspaceDocShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DocType")
     public String docType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -22,6 +28,9 @@ public class CreateWorkspaceDocShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

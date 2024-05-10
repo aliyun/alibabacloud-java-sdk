@@ -4,12 +4,21 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class SaveContentRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Contents")
     public java.util.List<SaveContentRequestContents> contents;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DdFrom")
     public String ddFrom;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
@@ -54,18 +63,33 @@ public class SaveContentRequest extends TeaModel {
     }
 
     public static class SaveContentRequestContents extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ContentType")
         public String contentType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Sort")
         public Long sort;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public Long type;
 

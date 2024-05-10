@@ -32,6 +32,9 @@ public class RemoveAttendeeHeaders extends TeaModel {
     }
 
     public static class RemoveAttendeeHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

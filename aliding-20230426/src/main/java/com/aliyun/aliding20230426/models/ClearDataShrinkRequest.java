@@ -4,15 +4,24 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class ClearDataShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RangeAddress")
     public String rangeAddress;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SheetId")
     public String sheetId;
 
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkbookId")
     public String workbookId;
 

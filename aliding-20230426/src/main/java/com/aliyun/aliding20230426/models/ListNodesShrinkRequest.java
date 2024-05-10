@@ -10,6 +10,9 @@ public class ListNodesShrinkRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ParentNodeId")
     public String parentNodeId;
 

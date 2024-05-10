@@ -10,9 +10,15 @@ public class BatchUpdateFormDataByInstanceIdRequest extends TeaModel {
     @NameInMap("AsynchronousExecution")
     public Boolean asynchronousExecution;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FormInstanceIdList")
     public java.util.List<String> formInstanceIdList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FormUuid")
     public String formUuid;
 
@@ -22,9 +28,15 @@ public class BatchUpdateFormDataByInstanceIdRequest extends TeaModel {
     @NameInMap("NoExecuteExpression")
     public Boolean noExecuteExpression;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SystemToken")
     public String systemToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UpdateFormDataJson")
     public String updateFormDataJson;
 

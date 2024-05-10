@@ -32,6 +32,9 @@ public class DeleteScenegroupMemberHeaders extends TeaModel {
     }
 
     public static class DeleteScenegroupMemberHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

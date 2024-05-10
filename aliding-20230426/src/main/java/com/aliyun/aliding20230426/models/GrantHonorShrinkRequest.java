@@ -10,12 +10,21 @@ public class GrantHonorShrinkRequest extends TeaModel {
     @NameInMap("expirationTime")
     public Long expirationTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("grantReason")
     public String grantReason;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("granterName")
     public String granterName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("honorId")
     public String honorId;
 
@@ -28,12 +37,21 @@ public class GrantHonorShrinkRequest extends TeaModel {
     @NameInMap("openConversationIds")
     public String openConversationIdsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("orgId")
     public Long orgId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("receiverUserIds")
     public String receiverUserIdsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("senderUserId")
     public String senderUserId;
 

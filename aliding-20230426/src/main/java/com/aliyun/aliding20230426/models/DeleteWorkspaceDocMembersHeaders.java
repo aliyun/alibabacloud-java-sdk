@@ -32,6 +32,9 @@ public class DeleteWorkspaceDocMembersHeaders extends TeaModel {
     }
 
     public static class DeleteWorkspaceDocMembersHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

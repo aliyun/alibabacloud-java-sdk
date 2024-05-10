@@ -4,12 +4,21 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class QueryCloudRecordVideoPlayInfoRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ConferenceId")
     public String conferenceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

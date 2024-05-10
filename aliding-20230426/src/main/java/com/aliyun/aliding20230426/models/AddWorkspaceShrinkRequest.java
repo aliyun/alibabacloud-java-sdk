@@ -4,6 +4,9 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class AddWorkspaceShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 

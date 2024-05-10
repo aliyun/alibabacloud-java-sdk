@@ -4,6 +4,9 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetDocContentShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DentryUuid")
     public String dentryUuid;
 
@@ -13,6 +16,9 @@ public class GetDocContentShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("userToken")
     public String userToken;
 

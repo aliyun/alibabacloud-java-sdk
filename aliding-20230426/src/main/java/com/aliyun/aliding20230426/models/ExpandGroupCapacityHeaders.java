@@ -32,6 +32,9 @@ public class ExpandGroupCapacityHeaders extends TeaModel {
     }
 
     public static class ExpandGroupCapacityHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

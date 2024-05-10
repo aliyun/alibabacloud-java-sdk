@@ -13,6 +13,9 @@ public class QueryConferenceMembersRequest extends TeaModel {
     @NameInMap("TenantContext")
     public QueryConferenceMembersRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("conferenceId")
     public String conferenceId;
 

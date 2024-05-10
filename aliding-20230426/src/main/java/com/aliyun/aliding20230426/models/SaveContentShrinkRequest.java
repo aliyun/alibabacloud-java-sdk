@@ -4,12 +4,21 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class SaveContentShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Contents")
     public String contentsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DdFrom")
     public String ddFrom;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

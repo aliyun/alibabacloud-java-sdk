@@ -4,6 +4,9 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class BatchRemovalByFormInstanceIdListShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
@@ -13,12 +16,21 @@ public class BatchRemovalByFormInstanceIdListShrinkRequest extends TeaModel {
     @NameInMap("ExecuteExpression")
     public Boolean executeExpression;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FormInstanceIdList")
     public String formInstanceIdListShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FormUuid")
     public String formUuid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SystemToken")
     public String systemToken;
 

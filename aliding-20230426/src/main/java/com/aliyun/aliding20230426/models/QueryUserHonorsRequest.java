@@ -10,12 +10,21 @@ public class QueryUserHonorsRequest extends TeaModel {
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("orgId")
     public Long orgId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("userId")
     public String userId;
 

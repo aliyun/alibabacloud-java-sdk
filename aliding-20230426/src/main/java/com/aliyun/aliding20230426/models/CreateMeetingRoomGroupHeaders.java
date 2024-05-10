@@ -32,6 +32,9 @@ public class CreateMeetingRoomGroupHeaders extends TeaModel {
     }
 
     public static class CreateMeetingRoomGroupHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

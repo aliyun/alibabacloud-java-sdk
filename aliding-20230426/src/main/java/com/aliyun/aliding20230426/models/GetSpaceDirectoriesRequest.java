@@ -7,12 +7,18 @@ public class GetSpaceDirectoriesRequest extends TeaModel {
     @NameInMap("DentryId")
     public String dentryId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SpaceId")
     public String spaceId;
 

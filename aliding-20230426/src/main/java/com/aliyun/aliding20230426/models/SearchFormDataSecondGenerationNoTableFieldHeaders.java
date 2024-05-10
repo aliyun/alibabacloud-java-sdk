@@ -32,6 +32,9 @@ public class SearchFormDataSecondGenerationNoTableFieldHeaders extends TeaModel 
     }
 
     public static class SearchFormDataSecondGenerationNoTableFieldHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

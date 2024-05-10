@@ -13,6 +13,9 @@ public class UpdateTodoTaskExecutorStatusRequest extends TeaModel {
     @NameInMap("operatorId")
     public String operatorId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("taskId")
     public String taskId;
 

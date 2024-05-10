@@ -34,15 +34,24 @@ public class CreateEventRequest extends TeaModel {
     @NameInMap("RichTextDescription")
     public CreateEventRequestRichTextDescription richTextDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Summary")
     public String summary;
 
     @NameInMap("UiConfigs")
     public java.util.List<CreateEventRequestUiConfigs> uiConfigs;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("calendarId")
     public String calendarId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("start")
     public CreateEventRequestStart start;
 

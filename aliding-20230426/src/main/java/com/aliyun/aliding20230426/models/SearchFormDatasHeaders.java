@@ -32,6 +32,9 @@ public class SearchFormDatasHeaders extends TeaModel {
     }
 
     public static class SearchFormDatasHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

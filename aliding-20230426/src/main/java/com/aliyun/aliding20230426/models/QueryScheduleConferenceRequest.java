@@ -7,6 +7,9 @@ public class QueryScheduleConferenceRequest extends TeaModel {
     @NameInMap("TenantContext")
     public QueryScheduleConferenceRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("scheduleConferenceId")
     public String scheduleConferenceId;
 

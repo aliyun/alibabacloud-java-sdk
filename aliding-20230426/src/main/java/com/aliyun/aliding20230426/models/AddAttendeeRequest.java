@@ -4,12 +4,21 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class AddAttendeeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AttendeesToAdd")
     public java.util.List<AddAttendeeRequestAttendeesToAdd> attendeesToAdd;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CalendarId")
     public String calendarId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 

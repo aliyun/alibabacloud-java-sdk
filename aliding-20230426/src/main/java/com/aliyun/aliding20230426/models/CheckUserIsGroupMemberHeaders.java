@@ -32,6 +32,9 @@ public class CheckUserIsGroupMemberHeaders extends TeaModel {
     }
 
     public static class CheckUserIsGroupMemberHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

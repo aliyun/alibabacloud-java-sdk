@@ -32,6 +32,9 @@ public class SendSearchShadeHeaders extends TeaModel {
     }
 
     public static class SendSearchShadeHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

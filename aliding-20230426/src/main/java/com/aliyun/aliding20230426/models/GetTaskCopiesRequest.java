@@ -28,6 +28,9 @@ public class GetTaskCopiesRequest extends TeaModel {
     @NameInMap("ProcessCodes")
     public String processCodes;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SystemToken")
     public String systemToken;
 

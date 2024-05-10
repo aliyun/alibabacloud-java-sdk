@@ -32,6 +32,9 @@ public class GetEventHeaders extends TeaModel {
     }
 
     public static class GetEventHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

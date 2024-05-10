@@ -32,6 +32,9 @@ public class BatchUpdateFormDataByInstanceMapHeaders extends TeaModel {
     }
 
     public static class BatchUpdateFormDataByInstanceMapHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

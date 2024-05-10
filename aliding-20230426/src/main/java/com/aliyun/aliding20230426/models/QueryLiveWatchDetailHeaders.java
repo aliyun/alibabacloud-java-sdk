@@ -32,6 +32,9 @@ public class QueryLiveWatchDetailHeaders extends TeaModel {
     }
 
     public static class QueryLiveWatchDetailHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

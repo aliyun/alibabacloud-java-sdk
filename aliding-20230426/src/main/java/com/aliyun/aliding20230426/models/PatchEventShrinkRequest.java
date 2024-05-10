@@ -7,6 +7,9 @@ public class PatchEventShrinkRequest extends TeaModel {
     @NameInMap("Attendees")
     public String attendeesShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CalendarId")
     public String calendarId;
 
@@ -16,6 +19,9 @@ public class PatchEventShrinkRequest extends TeaModel {
     @NameInMap("End")
     public String endShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 

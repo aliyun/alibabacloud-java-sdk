@@ -32,6 +32,9 @@ public class ExecuteTaskHeaders extends TeaModel {
     }
 
     public static class ExecuteTaskHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

@@ -4,18 +4,30 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CreateReportRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Contents")
     public java.util.List<CreateReportRequestContents> contents;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DdFrom")
     public String ddFrom;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
     @NameInMap("TenantContext")
     public CreateReportRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ToChat")
     public Boolean toChat;
 
@@ -87,18 +99,33 @@ public class CreateReportRequest extends TeaModel {
     }
 
     public static class CreateReportRequestContents extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ContentType")
         public String contentType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Sort")
         public Long sort;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public Long type;
 
