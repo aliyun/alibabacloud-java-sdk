@@ -13,9 +13,9 @@ public class UpdateStackInstancesRequest extends TeaModel {
     public java.util.List<String> accountIds;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\</p>
-     * <p>The token can contain letters, digits, hyphens (-), and underscores (\_), and cannot exceed 64 characters in length.\</p>
-     * <p>For more information, see [How to ensure idempotence](~~134212~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\\</p>
+     * <p>The token can contain letters, digits, hyphens (-), and underscores (_), and cannot exceed 64 characters in length.\\</p>
+     * <p>For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -94,20 +94,26 @@ public class UpdateStackInstancesRequest extends TeaModel {
     public java.util.List<UpdateStackInstancesRequestParameterOverrides> parameterOverrides;
 
     /**
-     * <p>The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the regions where you want to update the stacks. You can specify up to 20 region IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionIds")
     public java.util.List<String> regionIds;
 
     /**
-     * <p>The name of the stack group. The name must be unique within a region.\</p>
-     * <p>The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or a letter.</p>
+     * <p>The name of the stack group. The name must be unique within a region.\\</p>
+     * <p>The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StackGroupName")
     public String stackGroupName;
@@ -210,7 +216,7 @@ public class UpdateStackInstancesRequest extends TeaModel {
         /**
          * <p>The IDs of the member accounts in the resource directory. You can specify up to 20 member account IDs.</p>
          * <br>
-         * <p>> To view the member account IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the details of a member](~~111624~~).</p>
+         * <p>> To view the member account IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the details of a member](https://help.aliyun.com/document_detail/111624.html).</p>
          */
         @NameInMap("AccountIds")
         public java.util.List<String> accountIds;
@@ -252,6 +258,8 @@ public class UpdateStackInstancesRequest extends TeaModel {
          * <br>
          * <p>> -  ParameterOverrides is optional.</p>
          * <p>> - If you specify ParameterOverrides, you must specify ParameterOverrides.N.ParameterKey and ParameterOverrides.N.ParameterValue.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -263,6 +271,8 @@ public class UpdateStackInstancesRequest extends TeaModel {
          * <br>
          * <p>> -  ParameterOverrides is optional.</p>
          * <p>> - If you specify ParameterOverrides, you must specify ParameterOverrides.N.ParameterKey and ParameterOverrides.N.ParameterValue.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;

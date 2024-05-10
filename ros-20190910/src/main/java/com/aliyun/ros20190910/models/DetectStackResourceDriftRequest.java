@@ -7,27 +7,33 @@ public class DetectStackResourceDriftRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.</p>
      * <br>
-     * <p>The value can be up to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>The value can be up to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
      * <br>
-     * <p>For more information, see [How to ensure idempotence](~~134212~~).</p>
+     * <p>For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The name of the resource.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LogicalResourceId")
     public String logicalResourceId;
 
     /**
-     * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the stack.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StackId")
     public String stackId;

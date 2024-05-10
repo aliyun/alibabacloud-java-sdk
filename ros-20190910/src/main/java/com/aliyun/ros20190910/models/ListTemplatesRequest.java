@@ -14,24 +14,24 @@ public class ListTemplatesRequest extends TeaModel {
     public String includeTags;
 
     /**
-     * <p>The page number.\</p>
-     * <p>Pages start from page 1.\</p>
+     * <p>The page number.\\</p>
+     * <p>Pages start from page 1.\\</p>
      * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.\</p>
-     * <p>Valid values: 1 to 50.\</p>
+     * <p>The number of entries per page.\\</p>
+     * <p>Valid values: 1 to 50.\\</p>
      * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the resource group.\</p>
-     * <p>For more information about resource groups, see the "Resource Group" section of [What is Resource Management?](~~94475~~)</p>
+     * <p>The ID of the resource group.\\</p>
+     * <p>For more information about resource groups, see the "Resource Group" section of [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -55,7 +55,7 @@ public class ListTemplatesRequest extends TeaModel {
     public java.util.List<ListTemplatesRequestTag> tag;
 
     /**
-     * <p>The template name. This parameter takes effect only when ShareType is set to Private. The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.</p>
+     * <p>The template name. This parameter takes effect only when ShareType is set to Private. The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). The name must start with a digit or letter.</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

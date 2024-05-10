@@ -14,7 +14,9 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>The region ID of the tag. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the tag. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -23,6 +25,8 @@ public class UntagResourcesRequest extends TeaModel {
      * <p>The IDs of the resource.</p>
      * <br>
      * <p>> If you set ResourceType to stackgroup, you must set ResourceId to the name of the stack group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -34,6 +38,8 @@ public class UntagResourcesRequest extends TeaModel {
      * <p>*   stackgroup: stack group</p>
      * <p>*   template: template</p>
      * <p>*   templatescratch: scenario</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

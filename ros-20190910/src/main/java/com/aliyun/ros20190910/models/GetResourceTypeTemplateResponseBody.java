@@ -11,7 +11,7 @@ public class GetResourceTypeTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The structure that contains the template body. The template body must be 1 to 51,200 bytes in length. For more information, see [Template syntax](~~28857~~).</p>
+     * <p>The structure that contains the template body. The template body must be 1 to 51,200 bytes in length. For more information, see [Template syntax](https://help.aliyun.com/document_detail/28857.html).</p>
      * <br>
      * <p>> We recommend that use TemplateContent instead of TemplateBody.</p>
      */
@@ -19,7 +19,7 @@ public class GetResourceTypeTemplateResponseBody extends TeaModel {
     public java.util.Map<String, ?> templateBody;
 
     /**
-     * <p>The JSON-formatted structure of the template body. For more information, see [Template syntax](~~28857~~).</p>
+     * <p>The JSON-formatted structure of the template body. For more information, see [Template syntax](https://help.aliyun.com/document_detail/28857.html).</p>
      */
     @NameInMap("TemplateContent")
     public String templateContent;

@@ -18,6 +18,8 @@ public class ListStackResourceDriftsRequest extends TeaModel {
 
     /**
      * <p>The physical ID of the resource.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -30,6 +32,8 @@ public class ListStackResourceDriftsRequest extends TeaModel {
 
     /**
      * <p>The ID of the stack.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StackId")
     public String stackId;

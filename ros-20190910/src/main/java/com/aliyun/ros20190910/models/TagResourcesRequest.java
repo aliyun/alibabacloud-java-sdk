@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The region ID of the tag that you want to create. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the tag that you want to create. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the resources.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -23,12 +27,16 @@ public class TagResourcesRequest extends TeaModel {
      * <p>*   stackgroup: stack group</p>
      * <p>*   template: template</p>
      * <p>*   templatescratch: scenario</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tags of the resource. You can specify up to 20 tags.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -75,6 +83,8 @@ public class TagResourcesRequest extends TeaModel {
          * <p>The tag key of the resource. You can specify up to 20 tag keys.</p>
          * <br>
          * <p>The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -83,6 +93,8 @@ public class TagResourcesRequest extends TeaModel {
          * <p>The tag value of the resource. You can specify up to 20 tag values.</p>
          * <br>
          * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Value")
         public String value;

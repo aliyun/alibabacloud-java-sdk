@@ -123,7 +123,7 @@ public class GetTemplateResponseBody extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The version of the template. This parameter is returned only if you specify TemplateId.\</p>
+     * <p>The version of the template. This parameter is returned only if you specify TemplateId.\\</p>
      * <p>If TemplateVersion is not specified or does not take effect, the default version is used.</p>
      * <br>
      * <p>If the template is a shared template, this parameter is returned only if you set VersionOption to AllVersions.</p>

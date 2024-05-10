@@ -15,6 +15,8 @@ public class UpdateTemplateRequest extends TeaModel {
 
     /**
      * <p>The ID of the template. This parameter applies to shared and private templates.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
@@ -22,7 +24,7 @@ public class UpdateTemplateRequest extends TeaModel {
     /**
      * <p>The name of the template.</p>
      * <br>
-     * <p>The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or letter.</p>
+     * <p>The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

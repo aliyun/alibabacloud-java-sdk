@@ -39,13 +39,13 @@ public class GetTemplateScratchResponseBody extends TeaModel {
 
     public static class GetTemplateScratchResponseBodyTemplateScratchPreferenceParameters extends TeaModel {
         /**
-         * <p>The parameter name.</p>
+         * <p>The name of the parameter.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
-         * <p>The parameter value.</p>
+         * <p>The value of the parameter.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -194,7 +194,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
 
     public static class GetTemplateScratchResponseBodyTemplateScratchStackProvision extends TeaModel {
         /**
-         * <p>Indicates whether the resource is replicated by calling the [CreateStack](~~132086~~) operation. Valid values:</p>
+         * <p>Indicates whether the resource is replicated by calling the [CreateStack](https://help.aliyun.com/document_detail/132086.html) operation. Valid values:</p>
          * <br>
          * <p>*   true</p>
          * <p>*   false</p>
@@ -203,7 +203,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         public Boolean creatable;
 
         /**
-         * <p>Indicates whether the resource is managed by calling the [CreateChangeSet](~~131051~~) operation. Valid values:</p>
+         * <p>Indicates whether the resource is managed by calling the [CreateChangeSet](https://help.aliyun.com/document_detail/131051.html) operation. Valid values:</p>
          * <br>
          * <p>*   true</p>
          * <p>*   false</p>

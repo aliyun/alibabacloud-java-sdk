@@ -7,9 +7,9 @@ public class UpdateStackRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.</p>
      * <br>
-     * <p>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
      * <br>
-     * <p>For more information, see [Ensure idempotence](~~134212~~).</p>
+     * <p>For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -77,7 +77,9 @@ public class UpdateStackRequest extends TeaModel {
     public String ramRoleName;
 
     /**
-     * <p>The ID of the region in which the stack is deployed. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region in which the stack is deployed. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -103,6 +105,8 @@ public class UpdateStackRequest extends TeaModel {
 
     /**
      * <p>The ID of the stack.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StackId")
     public String stackId;
@@ -396,6 +400,8 @@ public class UpdateStackRequest extends TeaModel {
          * <p>Maximum value of N: 200.</p>
          * <br>
          * <p>>  The Parameters parameter is optional. If you specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -404,6 +410,8 @@ public class UpdateStackRequest extends TeaModel {
          * <p>The value of parameter N. Maximum value of N: 200.</p>
          * <br>
          * <p>>  The Parameters parameter is optional. If you specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -438,7 +446,9 @@ public class UpdateStackRequest extends TeaModel {
          * <p>Valid values of N: 1 to 20.</p>
          * <br>
          * <p>> - The Tags parameter is optional. If you specify Tags, you must specify Tags.N.Key.</p>
-         * <p>> - The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](~~201421~~).</p>
+         * <p>> - The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](https://help.aliyun.com/document_detail/201421.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -448,7 +458,7 @@ public class UpdateStackRequest extends TeaModel {
          * <br>
          * <p>Valid values of N: 1 to 20.</p>
          * <br>
-         * <p>>  The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](~~201421~~).</p>
+         * <p>>  The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](https://help.aliyun.com/document_detail/201421.html).</p>
          */
         @NameInMap("Value")
         public String value;

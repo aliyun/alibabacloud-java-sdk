@@ -106,7 +106,7 @@ public class GetStackResourceResponseBody extends TeaModel {
     /**
      * <p>The name of the stack.</p>
      * <br>
-     * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.</p>
+     * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). The name must start with a digit or letter.</p>
      */
     @NameInMap("UpdateTime")
     public String updateTime;

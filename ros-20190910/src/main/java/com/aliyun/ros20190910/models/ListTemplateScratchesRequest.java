@@ -27,7 +27,9 @@ public class ListTemplateScratchesRequest extends TeaModel {
     /**
      * <p>The region ID of the scenario.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -145,6 +147,8 @@ public class ListTemplateScratchesRequest extends TeaModel {
          * <p>The tag key of the scenario.</p>
          * <br>
          * <p>> Tags is optional. If you want to specify Tags, you must specify Key.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;

@@ -7,13 +7,17 @@ public class StopStackGroupOperationRequest extends TeaModel {
     /**
      * <p>The ID of the operation.</p>
      * <br>
-     * <p>You can call the [ListStackGroupOperations](~~151342~~) operation to obtain the operation ID.</p>
+     * <p>You can call the [ListStackGroupOperations](https://help.aliyun.com/document_detail/151342.html) operation to obtain the operation ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OperationId")
     public String operationId;
 
     /**
-     * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

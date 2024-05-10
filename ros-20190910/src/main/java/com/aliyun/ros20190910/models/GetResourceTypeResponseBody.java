@@ -33,8 +33,8 @@ public class GetResourceTypeResponseBody extends TeaModel {
     /**
      * <p>The entity type. Valid values:</p>
      * <br>
-     * <p>*   Resource: regular resource. For more information, see [Resources](~~28863~~).</p>
-     * <p>*   DataSource: DataSource resource. For more information, see [DataSource resources](~~404753~~).</p>
+     * <p>*   Resource: regular resource. For more information, see [Resources](https://help.aliyun.com/document_detail/28863.html).</p>
+     * <p>*   DataSource: DataSource resource. For more information, see [DataSource resources](https://help.aliyun.com/document_detail/404753.html).</p>
      * <p>*   module: module.</p>
      */
     @NameInMap("EntityType")
@@ -101,7 +101,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
     /**
      * <p>The entity type. Valid values:</p>
      * <br>
-     * <p>*   Resource: resources other than DataSource resources. For more information, see [Resources](~~28863~~).</p>
+     * <p>*   Resource: resources other than DataSource resources. For more information, see [Resources](https://help.aliyun.com/document_detail/28863.html).</p>
      * <p>*   DataSource: DataSource resources.</p>
      */
     @NameInMap("SupportScratchDetection")

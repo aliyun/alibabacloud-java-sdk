@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetStackRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\</p>
-     * <p>The token can be up to 64 characters in length.\</p>
-     * <p>For more information, see [Ensure idempotence](~~134212~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\\</p>
+     * <p>The token can be up to 64 characters in length.\\</p>
+     * <p>For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -35,7 +35,9 @@ public class GetStackRequest extends TeaModel {
     public String outputOption;
 
     /**
-     * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -48,7 +50,7 @@ public class GetStackRequest extends TeaModel {
      * <br>
      * <p>>  ROS and Terraform stacks are supported. Creation, resumed creation, update, deletion, import, and rollback operations on stacks are supported.</p>
      * <br>
-     * <p>*   EnabledIfCreateStack (not recommend): returns \*Count and InProgressResourceDetails of ResourceProgress only during a stack creation operation.</p>
+     * <p>*   EnabledIfCreateStack (not recommend): returns \\*Count and InProgressResourceDetails of ResourceProgress only during a stack creation operation.</p>
      * <br>
      * <p>>  During a creation operation, a stack is in one of the following states: CREATE_IN_PROGRESS, CREATE_COMPLETE, CREATE_FAILED, CREATE_ROLLBACK_IN_PROGRESS, CREATE_ROLLBACK_COMPLETE, and CREATE_ROLLBACK_FAILED.</p>
      */
@@ -57,6 +59,8 @@ public class GetStackRequest extends TeaModel {
 
     /**
      * <p>The stack ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StackId")
     public String stackId;

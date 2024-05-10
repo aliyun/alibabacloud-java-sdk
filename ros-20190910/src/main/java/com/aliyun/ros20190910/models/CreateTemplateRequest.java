@@ -11,8 +11,8 @@ public class CreateTemplateRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the resource group.\</p>
-     * <p>For more information about resource groups, see [Resource groups](~~94475~~).</p>
+     * <p>The ID of the resource group.\\</p>
+     * <p>For more information about resource groups, see [Resource groups](https://help.aliyun.com/document_detail/94475.html).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -27,8 +27,10 @@ public class CreateTemplateRequest extends TeaModel {
     public String templateBody;
 
     /**
-     * <p>The name of the template.\</p>
-     * <p>The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or a letter.</p>
+     * <p>The name of the template.\\</p>
+     * <p>The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
@@ -99,6 +101,8 @@ public class CreateTemplateRequest extends TeaModel {
          * <p>The tag key of the template.</p>
          * <br>
          * <p>> Tags is optional. If you need to specify Tags, you must also specify Key.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;

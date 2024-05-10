@@ -136,8 +136,8 @@ public class ListStackResourcesResponseBody extends TeaModel {
         public String stackId;
 
         /**
-         * <p>The stack name.\</p>
-         * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or letter.</p>
+         * <p>The stack name.\\</p>
+         * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.</p>
          */
         @NameInMap("StackName")
         public String stackName;

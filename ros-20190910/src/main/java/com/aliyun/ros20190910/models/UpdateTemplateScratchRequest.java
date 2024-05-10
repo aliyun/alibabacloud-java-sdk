@@ -7,7 +7,7 @@ public class UpdateTemplateScratchRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <br>
-     * <p>For more information, see [How to ensure idempotence](~~134212~~).</p>
+     * <p>For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -50,7 +50,9 @@ public class UpdateTemplateScratchRequest extends TeaModel {
     /**
      * <p>The region ID of the scenario.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -85,6 +87,8 @@ public class UpdateTemplateScratchRequest extends TeaModel {
 
     /**
      * <p>The ID of the scenario.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateScratchId")
     public String templateScratchId;
@@ -190,6 +194,8 @@ public class UpdateTemplateScratchRequest extends TeaModel {
          * <br>
          * <p>>- PreferenceParameters is optional. If you specify PreferenceParameters, you must specify both ParameterKey and ParameterValue.</p>
          * <p>> - If you set TemplateScratchType to ResourceImport, you must set ParameterKey to DeletionPolicy.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -200,6 +206,8 @@ public class UpdateTemplateScratchRequest extends TeaModel {
          * <p>For more information about the valid values of ParameterKey, see the "**Additional information about request parameters**" section of this topic.</p>
          * <br>
          * <p>>  PreferenceParameters is optional. If you specify PreferenceParameters, you must specify both ParameterKey and ParameterValue.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -230,6 +238,8 @@ public class UpdateTemplateScratchRequest extends TeaModel {
     public static class UpdateTemplateScratchRequestSourceResourceGroup extends TeaModel {
         /**
          * <p>The ID of the source resource group.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -266,12 +276,16 @@ public class UpdateTemplateScratchRequest extends TeaModel {
     public static class UpdateTemplateScratchRequestSourceResources extends TeaModel {
         /**
          * <p>The resource ID.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The resource type.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -306,6 +320,8 @@ public class UpdateTemplateScratchRequest extends TeaModel {
          * <p>If you want to specify only the tag key, you must set the tag value to an empty string. Example: {"TagKey": ""}.</p>
          * <br>
          * <p>If you set TemplateScratchType to ArchitectureDetection, you can add up to five source tags. In other cases, you can add up to 10 source tags.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceTags")
         public java.util.Map<String, ?> resourceTags;

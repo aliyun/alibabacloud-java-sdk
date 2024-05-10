@@ -13,9 +13,9 @@ public class GetTemplateSummaryRequest extends TeaModel {
     public String changeSetId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\</p>
-     * <p>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).\</p>
-     * <p>For more information, see [Ensure idempotence](~~134212~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\\</p>
+     * <p>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).\\</p>
+     * <p>For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -27,7 +27,7 @@ public class GetTemplateSummaryRequest extends TeaModel {
     public java.util.List<GetTemplateSummaryRequestParameters> parameters;
 
     /**
-     * <p>The region ID of the stack or stack group that uses the template. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack or stack group that uses the template. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
      * <br>
      * <p>This parameter takes effect only when one of the following parameters are specified: StackId, ChangeSetId, and StackGroupName.</p>
      */
@@ -51,8 +51,8 @@ public class GetTemplateSummaryRequest extends TeaModel {
     public String stackId;
 
     /**
-     * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.\</p>
-     * <p>If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.\</p>
+     * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.\\</p>
+     * <p>If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.\\</p>
      * <p>You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.</p>
      */
     @NameInMap("TemplateBody")

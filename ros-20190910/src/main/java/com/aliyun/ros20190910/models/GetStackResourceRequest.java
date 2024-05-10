@@ -17,12 +17,16 @@ public class GetStackResourceRequest extends TeaModel {
      * <p>The name of resource property N that you want to query.</p>
      * <br>
      * <p>>  Maximum value of N: 20.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LogicalResourceId")
     public String logicalResourceId;
 
     /**
      * <p>The logical ID of the resource defined in the template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -55,7 +59,9 @@ public class GetStackResourceRequest extends TeaModel {
     public Boolean showResourceAttributes;
 
     /**
-     * <p>The ID of the region to which the stack belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region to which the stack belongs. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StackId")
     public String stackId;

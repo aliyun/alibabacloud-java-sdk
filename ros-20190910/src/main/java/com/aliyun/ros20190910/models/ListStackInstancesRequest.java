@@ -23,14 +23,18 @@ public class ListStackInstancesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the stack group. The name must be unique within a region.\</p>
-     * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or letter.</p>
+     * <p>The name of the stack group. The name must be unique within a region.\\</p>
+     * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StackGroupName")
     public String stackGroupName;
@@ -41,7 +45,7 @@ public class ListStackInstancesRequest extends TeaModel {
      * <p>*   If the stack group is granted self-managed permissions, the stack belongs to an Alibaba Cloud account.</p>
      * <p>*   If the stack group is granted service-managed permissions, the stack belongs to a member in a resource directory.</p>
      * <br>
-     * <p>> For more information about the destination account, see [Overview](~~154578~~).</p>
+     * <p>> For more information about the destination account, see [Overview](https://help.aliyun.com/document_detail/154578.html).</p>
      */
     @NameInMap("StackInstanceAccountId")
     public String stackInstanceAccountId;

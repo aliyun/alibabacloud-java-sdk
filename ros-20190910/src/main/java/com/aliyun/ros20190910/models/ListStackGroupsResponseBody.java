@@ -170,6 +170,9 @@ public class ListStackGroupsResponseBody extends TeaModel {
         @NameInMap("AutoDeployment")
         public ListStackGroupsResponseBodyStackGroupsAutoDeployment autoDeployment;
 
+        @NameInMap("CreateTime")
+        public String createTime;
+
         /**
          * <p>The description of the stack group.</p>
          */
@@ -190,7 +193,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
          * <p>*   SELF_MANAGED</p>
          * <p>*   SERVICE_MANAGED</p>
          * <br>
-         * <p>> For more information about the permission models of stack groups, see [Overview](~~154578~~).</p>
+         * <p>> For more information about the permission models of stack groups, see [Overview](https://help.aliyun.com/document_detail/154578.html).</p>
          */
         @NameInMap("PermissionModel")
         public String permissionModel;
@@ -242,6 +245,9 @@ public class ListStackGroupsResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<ListStackGroupsResponseBodyStackGroupsTags> tags;
 
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
         public static ListStackGroupsResponseBodyStackGroups build(java.util.Map<String, ?> map) throws Exception {
             ListStackGroupsResponseBodyStackGroups self = new ListStackGroupsResponseBodyStackGroups();
             return TeaModel.build(map, self);
@@ -253,6 +259,14 @@ public class ListStackGroupsResponseBody extends TeaModel {
         }
         public ListStackGroupsResponseBodyStackGroupsAutoDeployment getAutoDeployment() {
             return this.autoDeployment;
+        }
+
+        public ListStackGroupsResponseBodyStackGroups setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListStackGroupsResponseBodyStackGroups setDescription(String description) {
@@ -325,6 +339,14 @@ public class ListStackGroupsResponseBody extends TeaModel {
         }
         public java.util.List<ListStackGroupsResponseBodyStackGroupsTags> getTags() {
             return this.tags;
+        }
+
+        public ListStackGroupsResponseBodyStackGroups setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }

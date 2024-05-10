@@ -27,7 +27,7 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
      * <br>
      * <p>You can create stacks within all members in the specified folders. If you create stacks in the Root folder, the stacks are created within all members in the resource directory.</p>
      * <br>
-     * <p>>  To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information of a folder](~~111223~~).</p>
+     * <p>>  To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information of a folder](https://help.aliyun.com/document_detail/111223.html).</p>
      */
     @NameInMap("AutoDeployment")
     public String autoDeploymentShrink;
@@ -104,13 +104,15 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
      * <p>*   If you set only the AccountIds parameter, stacks are deployed within the specified members.</p>
      * <p>*   If you set both parameters, the accounts specified by AccountIds must be contained in the folders specified by RdFolderIds.</p>
      * <br>
-     * <p>>  To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information of a folder](~~111223~~).</p>
+     * <p>>  To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information of a folder](https://help.aliyun.com/document_detail/111223.html).</p>
      */
     @NameInMap("PermissionModel")
     public String permissionModel;
 
     /**
      * <p>The region IDs of stack instances. You can specify a maximum of 20 region IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -123,6 +125,8 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
 
     /**
      * <p>The region IDs of stack instances. You can specify a maximum of 20 region IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StackGroupName")
     public String stackGroupName;
@@ -139,7 +143,7 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
      * <p>*   SERVICE_MANAGED: the service-managed permission model. If you use the service-managed model for the stack group, ROS creates service-linked roles for the administrator and execution accounts, and the administrator account uses its role to deploy stacks within the execution account.</p>
      * <br>
      * <p>>- If stack instances have been created in the stack group, you cannot switch the permission mode of the stack group.</p>
-     * <p>>- If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see [Step 1: (Optional) Create a delegated administrator account](~~308253~~) and [Step 2: Enable trusted access](~~298229~~).</p>
+     * <p>>- If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see [Step 1: (Optional) Create a delegated administrator account](https://help.aliyun.com/document_detail/308253.html) and [Step 2: Enable trusted access](https://help.aliyun.com/document_detail/298229.html).</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
@@ -327,12 +331,16 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
          * <p>*   false: deletes the stacks.</p>
          * <br>
          * <p>>  This parameter is required if the Enabled parameter is set to true.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
          * <p>The folders in which you want to use service-managed permissions to update stacks.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
