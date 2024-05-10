@@ -55,6 +55,8 @@ public class AddSasContainerWebDefenseRuleRequest extends TeaModel {
 
         /**
          * <p>The path that you want to protect.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DefensePath")
         public String defensePath;
@@ -82,6 +84,8 @@ public class AddSasContainerWebDefenseRuleRequest extends TeaModel {
          * <br>
          * <p>*   **0**: basic mode (whitelist)</p>
          * <p>*   **1**: complex mode (blacklist)</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("GuardType")
         public Integer guardType;
@@ -100,6 +104,8 @@ public class AddSasContainerWebDefenseRuleRequest extends TeaModel {
 
         /**
          * <p>The processes that you want to add to the whitelist.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ProcessPathList")
         public java.util.List<String> processPathList;

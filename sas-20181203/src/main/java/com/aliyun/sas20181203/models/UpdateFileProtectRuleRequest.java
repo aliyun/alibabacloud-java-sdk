@@ -17,12 +17,16 @@ public class UpdateFileProtectRuleRequest extends TeaModel {
 
     /**
      * <p>The operations performed on the files.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileOps")
     public java.util.List<String> fileOps;
 
     /**
      * <p>The paths to the monitored files. Wildcard characters are supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FilePaths")
     public java.util.List<String> filePaths;
@@ -35,6 +39,8 @@ public class UpdateFileProtectRuleRequest extends TeaModel {
 
     /**
      * <p>The paths to the monitored processes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProcPaths")
     public java.util.List<String> procPaths;
@@ -50,6 +56,8 @@ public class UpdateFileProtectRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;

@@ -106,8 +106,8 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         /**
          * <p>The handling method. Valid values:</p>
          * <br>
-         * <p>*   **auto\_add_white**: Automatically Added to Whitelist</p>
-         * <p>*   **defense\_not_notification**: Defense Without Notification</p>
+         * <p>*   **auto_add_white**: Automatically Added to Whitelist</p>
+         * <p>*   **defense_not_notification**: Defense Without Notification</p>
          */
         @NameInMap("DisposalWay")
         public String disposalWay;

@@ -19,9 +19,9 @@ public class DescribeCycleTaskListRequest extends TeaModel {
     /**
      * <p>The name of the task. Valid values:</p>
      * <br>
-     * <p>*   **VIRUS\_VUL\_SCHEDULE_SCAN**: virus scan task</p>
+     * <p>*   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task</p>
      * <p>*   **IMAGE_SCAN**: image scan task</p>
-     * <p>*   **EMG\_VUL\_SCHEDULE_SCAN**: urgent vulnerability scan task</p>
+     * <p>*   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task</p>
      */
     @NameInMap("TaskName")
     public String taskName;
@@ -29,9 +29,11 @@ public class DescribeCycleTaskListRequest extends TeaModel {
     /**
      * <p>The type of the task. Valid values:</p>
      * <br>
-     * <p>*   **VIRUS\_VUL\_SCHEDULE_SCAN**: virus scan task</p>
+     * <p>*   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task</p>
      * <p>*   **IMAGE_SCAN**: image scan task</p>
-     * <p>*   **EMG\_VUL\_SCHEDULE_SCAN**: urgent vulnerability scan task</p>
+     * <p>*   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

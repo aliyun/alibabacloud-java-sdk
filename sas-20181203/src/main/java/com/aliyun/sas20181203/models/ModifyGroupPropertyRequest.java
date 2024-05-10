@@ -13,6 +13,8 @@ public class ModifyGroupPropertyRequest extends TeaModel {
      * <p>*   **groupName**: the name of the server group. The value is the new name of the server group. The new name cannot be the same as the original name of the server group.</p>
      * <br>
      * <p>>  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to obtain the values of the groupFlag and groupId parameters. You cannot change the value of the groupFlag or groupId parameter. You can change only the value of the groupName parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Data")
     public String data;

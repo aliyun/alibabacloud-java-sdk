@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateBackupPolicyShrinkRequest extends TeaModel {
     /**
      * <p>The name of the anti-ransomware policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -16,13 +18,13 @@ public class CreateBackupPolicyShrinkRequest extends TeaModel {
      * <p>    *   **1**: recommended policy</p>
      * <p>    *   **0**: custom policy</p>
      * <br>
-     * <p>*   **Include**: the format of the files that you want to protect. If you want to protect the files in all formats, set this field to \[].</p>
+     * <p>*   **Include**: the format of the files that you want to protect. If you want to protect the files in all formats, set this field to [].</p>
      * <br>
-     * <p>*   **Source**: the directory that you want to protect. If you want to protect all directories, set this field to \[].</p>
+     * <p>*   **Source**: the directory that you want to protect. If you want to protect all directories, set this field to [].</p>
      * <br>
      * <p>*   **ExcludeSystemPath**: specifies whether to exclude a specific directory from the anti-ransomware policy. If you want to exclude a directory, set this field to **true**. If you do not want to exclude a directory, leave this field empty.</p>
      * <br>
-     * <p>*   **Exclude**: the directory that you want to exclude from the anti-ransomware policy. If you do not want to exclude a directory, set this field to \[].</p>
+     * <p>*   **Exclude**: the directory that you want to exclude from the anti-ransomware policy. If you do not want to exclude a directory, set this field to [].</p>
      * <br>
      * <p>*   **Schedule**: the start time and interval of a data backup task. We recommend that you specify a start time that begins during off-peak hours but does not start on the hour. Examples:</p>
      * <br>
@@ -39,6 +41,8 @@ public class CreateBackupPolicyShrinkRequest extends TeaModel {
      * <p>    *   **false**: no</p>
      * <br>
      * <p>>  The VSS feature is available only if you create the anti-ransomware policy for Windows servers. After you enable the feature, the number of backup failures due to running processes is significantly reduced. We recommend that you enable the VSS feature. After you enable the feature, the data of disks that are in the exFAT and FAT32 formats cannot be backed up.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Policy")
     public String policyShrink;
@@ -53,12 +57,16 @@ public class CreateBackupPolicyShrinkRequest extends TeaModel {
 
     /**
      * <p>The version of the anti-ransomware policy. Set the value to **2.0.0**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyVersion")
     public String policyVersion;
 
     /**
      * <p>The UUIDs of the servers that you want to protect.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;

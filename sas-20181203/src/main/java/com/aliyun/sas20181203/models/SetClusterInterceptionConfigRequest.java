@@ -8,6 +8,8 @@ public class SetClusterInterceptionConfigRequest extends TeaModel {
      * <p>The ID of the cluster. Separate multiple cluster IDs with commas (,).</p>
      * <br>
      * <p>> You can call the [ListClusterInterceptionConfig](~~ListClusterInterceptionConfig~~) operation to query the IDs of clusters.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterIds")
     public String clusterIds;
@@ -17,6 +19,8 @@ public class SetClusterInterceptionConfigRequest extends TeaModel {
      * <br>
      * <p>*   **1**: yes</p>
      * <p>*   **0**: no</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SwitchOn")
     public Integer switchOn;
@@ -27,6 +31,8 @@ public class SetClusterInterceptionConfigRequest extends TeaModel {
      * <p>*   **0**: the interception switch</p>
      * <p>*   **1**: the interception type switch</p>
      * <p>*   **2**: the interception history switch</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SwitchType")
     public Integer switchType;

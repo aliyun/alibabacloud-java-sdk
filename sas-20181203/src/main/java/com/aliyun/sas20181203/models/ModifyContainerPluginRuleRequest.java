@@ -24,6 +24,8 @@ public class ModifyContainerPluginRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleId")
     public Integer ruleId;

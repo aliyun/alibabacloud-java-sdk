@@ -9,6 +9,8 @@ public class RefreshContainerAssetsRequest extends TeaModel {
      * <br>
      * <p>*   **IMAGE**</p>
      * <p>*   **CONTAINER**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AssetType")
     public String assetType;

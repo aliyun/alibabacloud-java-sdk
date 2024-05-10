@@ -7,7 +7,7 @@ public class ModifyInterceptionRuleShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the container cluster.</p>
      * <br>
-     * <p>> You can call the [DescribeGroupedContainerInstances](~~182997~~) operation to query the IDs of container clusters.</p>
+     * <p>> You can call the [DescribeGroupedContainerInstances](https://help.aliyun.com/document_detail/182997.html) operation to query the IDs of container clusters.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -39,6 +39,8 @@ public class ModifyInterceptionRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;

@@ -8,6 +8,8 @@ public class GetOpaPluginStatusRequest extends TeaModel {
      * <p>The cluster IDs.</p>
      * <br>
      * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterIds")
     public java.util.List<String> clusterIds;

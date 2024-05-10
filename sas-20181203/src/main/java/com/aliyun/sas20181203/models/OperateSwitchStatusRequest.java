@@ -7,7 +7,9 @@ public class OperateSwitchStatusRequest extends TeaModel {
     /**
      * <p>The rule ID.</p>
      * <br>
-     * <p>>  You can call the [ListContainerDefenseRule](~~2590599~~) operation to query the rule ID.</p>
+     * <p>>  You can call the [ListContainerDefenseRule](https://help.aliyun.com/document_detail/2590599.html) operation to query the rule ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;
@@ -16,6 +18,8 @@ public class OperateSwitchStatusRequest extends TeaModel {
      * <p>The rule status for container tamper-proofing. Valid values:</p>
      * <p>- **on**</p>
      * <p>- **off**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public String status;

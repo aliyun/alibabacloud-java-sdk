@@ -26,6 +26,8 @@ public class QueryIncidentVertexNodesRequest extends TeaModel {
      * <p>The ID of the node that you want to query.</p>
      * <br>
      * <p>>  You can call the [QueryIncidentTracingDetail](~~QueryIncidentTracingDetail~~) operation to query the node ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VertexId")
     public String vertexId;
@@ -38,6 +40,8 @@ public class QueryIncidentVertexNodesRequest extends TeaModel {
      * <p>*   **alert**</p>
      * <p>*   **ip**</p>
      * <p>*   **domain**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VertexLabel")
     public String vertexLabel;

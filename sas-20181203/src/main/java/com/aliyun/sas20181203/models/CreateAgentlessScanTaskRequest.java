@@ -40,6 +40,8 @@ public class CreateAgentlessScanTaskRequest extends TeaModel {
      * <p>The UUIDs of the assets on which you want to run the detection task.</p>
      * <br>
      * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;

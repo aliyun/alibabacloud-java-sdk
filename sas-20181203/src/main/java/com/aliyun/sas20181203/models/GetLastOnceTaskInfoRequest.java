@@ -13,9 +13,11 @@ public class GetLastOnceTaskInfoRequest extends TeaModel {
     /**
      * <p>The name of the task. Valid values:</p>
      * <br>
-     * <p>*   **CLIENT\_PROBLEM_CHECK**: client diagnosis task</p>
-     * <p>*   **CLIENT\_DEV_OPS**: O\&M task of Cloud Assistant</p>
+     * <p>*   **CLIENT_PROBLEM_CHECK**: client diagnosis task</p>
+     * <p>*   **CLIENT_DEV_OPS**: O\\&M task of Cloud Assistant</p>
      * <p>*   **ASSETS_COLLECTION**: asset collection task</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskName")
     public String taskName;
@@ -23,9 +25,11 @@ public class GetLastOnceTaskInfoRequest extends TeaModel {
     /**
      * <p>The type of the task. Valid values:</p>
      * <br>
-     * <p>*   **CLIENT\_PROBLEM_CHECK**: client diagnosis task</p>
-     * <p>*   **CLIENT\_DEV_OPS**: O\&M task of Cloud Assistant</p>
-     * <p>*   **ASSETS\_COLLECTION**: asset collection task</p>
+     * <p>*   **CLIENT_PROBLEM_CHECK**: client diagnosis task</p>
+     * <p>*   **CLIENT_DEV_OPS**: O\\&M task of Cloud Assistant</p>
+     * <p>*   **ASSETS_COLLECTION**: asset collection task</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

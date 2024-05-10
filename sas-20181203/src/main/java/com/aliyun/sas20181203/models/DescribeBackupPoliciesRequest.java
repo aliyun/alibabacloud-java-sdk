@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeBackupPoliciesRequest extends TeaModel {
     /**
      * <p>The number of the page to return. Default value: 1.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -24,6 +26,8 @@ public class DescribeBackupPoliciesRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page. Default value: 10.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

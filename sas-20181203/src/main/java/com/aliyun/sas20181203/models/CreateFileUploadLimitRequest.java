@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateFileUploadLimitRequest extends TeaModel {
     /**
      * <p>The QPS limit on the files uploaded from the client. Valid values: 100 to 10000.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Limit")
     public Long limit;

@@ -7,7 +7,7 @@ public class IgnoreHcCheckWarningsRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
      * <br>
-     * <p>>  You can call the [DescribeCheckWarnings](~~116182~~) operation to query the IDs of check items.</p>
+     * <p>>  You can call the [DescribeCheckWarnings](https://help.aliyun.com/document_detail/116182.html) operation to query the IDs of check items.</p>
      */
     @NameInMap("CheckIds")
     public String checkIds;
@@ -15,7 +15,7 @@ public class IgnoreHcCheckWarningsRequest extends TeaModel {
     /**
      * <p>The ID of the alert that is triggered by the check item. Separate multiple IDs with commas (,).</p>
      * <br>
-     * <p>>  You can call the [DescribeCheckWarnings](~~116182~~) operation to query the IDs of alerts that are triggered by check items.</p>
+     * <p>>  You can call the [DescribeCheckWarnings](https://help.aliyun.com/document_detail/116182.html) operation to query the IDs of alerts that are triggered by check items.</p>
      */
     @NameInMap("CheckWarningIds")
     public String checkWarningIds;
@@ -29,7 +29,7 @@ public class IgnoreHcCheckWarningsRequest extends TeaModel {
     /**
      * <p>The ID of the risk item that you want to ignore or cancel ignoring.</p>
      * <br>
-     * <p>>  You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of risk items.</p>
+     * <p>>  You can call the [DescribeCheckWarningSummary](https://help.aliyun.com/document_detail/116179.html) operation to query the IDs of risk items.</p>
      */
     @NameInMap("RiskId")
     public String riskId;
@@ -53,6 +53,8 @@ public class IgnoreHcCheckWarningsRequest extends TeaModel {
      * <br>
      * <p>*   **1**: ignores a risk item</p>
      * <p>*   **2**: cancels ignoring a risk item</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public Long type;

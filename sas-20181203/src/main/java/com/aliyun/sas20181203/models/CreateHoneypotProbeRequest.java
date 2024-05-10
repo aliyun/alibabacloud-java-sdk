@@ -23,12 +23,16 @@ public class CreateHoneypotProbeRequest extends TeaModel {
      * <p>The ID of the management node.</p>
      * <br>
      * <p>> You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ControlNodeId")
     public String controlNodeId;
 
     /**
      * <p>The name of the probe.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
@@ -53,6 +57,8 @@ public class CreateHoneypotProbeRequest extends TeaModel {
      * <br>
      * <p>*   **host_probe**: host probe</p>
      * <p>*   **vpc_black_hole_probe**: virtual private cloud (VPC) probe</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProbeType")
     public String probeType;

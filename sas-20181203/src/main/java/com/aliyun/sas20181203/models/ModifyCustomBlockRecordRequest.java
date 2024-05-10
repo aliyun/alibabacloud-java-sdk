@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyCustomBlockRecordRequest extends TeaModel {
     /**
      * <p>The IP address that you want to specify in the policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BlockIp")
     public String blockIp;
@@ -15,12 +17,16 @@ public class ModifyCustomBlockRecordRequest extends TeaModel {
      * <br>
      * <p>*   **in**: inbound</p>
      * <p>*   **out**: outbound</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Bound")
     public String bound;
 
     /**
      * <p>The expiration time of the policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExpireTime")
     public Long expireTime;
@@ -30,6 +36,8 @@ public class ModifyCustomBlockRecordRequest extends TeaModel {
 
     /**
      * <p>The UUIDs of servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuids")
     public String uuids;

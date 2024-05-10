@@ -156,6 +156,9 @@ public class ListCheckResultResponseBody extends TeaModel {
         @NameInMap("CheckPolicies")
         public java.util.List<ListCheckResultResponseBodyChecksCheckPolicies> checkPolicies;
 
+        @NameInMap("CheckSaleType")
+        public Integer checkSaleType;
+
         /**
          * <p>The name of the check item.</p>
          */
@@ -300,6 +303,14 @@ public class ListCheckResultResponseBody extends TeaModel {
         }
         public java.util.List<ListCheckResultResponseBodyChecksCheckPolicies> getCheckPolicies() {
             return this.checkPolicies;
+        }
+
+        public ListCheckResultResponseBodyChecks setCheckSaleType(Integer checkSaleType) {
+            this.checkSaleType = checkSaleType;
+            return this;
+        }
+        public Integer getCheckSaleType() {
+            return this.checkSaleType;
         }
 
         public ListCheckResultResponseBodyChecks setCheckShowName(String checkShowName) {

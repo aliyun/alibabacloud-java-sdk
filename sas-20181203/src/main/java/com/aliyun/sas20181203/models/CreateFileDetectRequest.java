@@ -21,6 +21,8 @@ public class CreateFileDetectRequest extends TeaModel {
 
     /**
      * <p>The identifier of the file. Only MD5 hash values are supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HashKey")
     public String hashKey;
@@ -46,6 +48,8 @@ public class CreateFileDetectRequest extends TeaModel {
      * <p>*   **4**: script files</p>
      * <br>
      * <p>>  If you do not know the type of the file, set this parameter to 0.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public Integer type;

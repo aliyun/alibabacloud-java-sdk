@@ -31,6 +31,8 @@ public class ModifyOperateVulRequest extends TeaModel {
      * <p>    *   **1**: yes</p>
      * <br>
      * <p>>  You can fix multiple vulnerabilities at a time. Separate the details of multiple vulnerabilities with commas (,). You can call the [DescribeVulLIst](~~DescribeVulList~~) operation to query the details of vulnerabilities.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Info")
     public String info;
@@ -41,8 +43,10 @@ public class ModifyOperateVulRequest extends TeaModel {
      * <p>*   **vul_fix**: fixes the vulnerability.</p>
      * <p>*   **vul_verify**: verifies the vulnerability fix.</p>
      * <p>*   **vul_ignore**: ignores the vulnerability.</p>
-     * <p>*   **vul\_undo_ignore**: cancels ignoring the vulnerability.</p>
+     * <p>*   **vul_undo_ignore**: cancels ignoring the vulnerability.</p>
      * <p>*   **vul_delete**: deletes the vulnerability.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OperateType")
     public String operateType;
@@ -66,6 +70,8 @@ public class ModifyOperateVulRequest extends TeaModel {
      * <p>*   **sca**: vulnerability that is detected based on software component analysis</p>
      * <br>
      * <p>>  You cannot fix the urgent vulnerabilities, application vulnerabilities, or vulnerabilities that are detected based on software component analysis.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

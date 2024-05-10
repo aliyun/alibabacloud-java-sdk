@@ -8,6 +8,8 @@ public class DeleteInterceptionRuleRequest extends TeaModel {
      * <p>The ID of the cluster that you want to query.</p>
      * <br>
      * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

@@ -39,6 +39,8 @@ public class GetHoneypotAttackStatisticsRequest extends TeaModel {
 
     /**
      * <p>The source IP address of the attack.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SrcIp")
     public String srcIp;
@@ -56,6 +58,8 @@ public class GetHoneypotAttackStatisticsRequest extends TeaModel {
      * <p>*   **TOP_ATTACKED_IP**: the top 5 IP addresses that are attacked the most frequently</p>
      * <p>*   **ATTACK_EVENT_TYPE**: the type of the intrusion event</p>
      * <p>*   **ATTACK_HONEYPOT_TYPE**: the type of the attacked honeypot</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StatisticsType")
     public String statisticsType;

@@ -12,6 +12,8 @@ public class CreateOssBucketScanTaskRequest extends TeaModel {
 
     /**
      * <p>The names of the buckets.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BucketNameList")
     public java.util.List<String> bucketNameList;
@@ -45,6 +47,8 @@ public class CreateOssBucketScanTaskRequest extends TeaModel {
      * <br>
      * <p>*   **1**: checks all objects in the bucket.</p>
      * <p>*   **2**: checks only new objects in the bucket.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScanMode")
     public Integer scanMode;

@@ -16,6 +16,8 @@ public class QueryIncidentVertexExtendInfoRequest extends TeaModel {
      * <p>*   **process_exec_file:** A process executes a file.</p>
      * <p>*   **process_connect_ip:** A process connects to an IP address.</p>
      * <p>*   **domain_trgger_alert:** A domain name triggers an alert.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RelationType")
     public String relationType;
@@ -30,6 +32,8 @@ public class QueryIncidentVertexExtendInfoRequest extends TeaModel {
      * <p>The ID of the node that you want to query.</p>
      * <br>
      * <p>>  You can call the [QueryIncidentTracingDetail](~~QueryIncidentTracingDetail~~) operation to query the node ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VertexId")
     public String vertexId;
@@ -42,6 +46,8 @@ public class QueryIncidentVertexExtendInfoRequest extends TeaModel {
      * <p>*   **alert**</p>
      * <p>*   **ip**</p>
      * <p>*   **domain**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VertexLabel")
     public String vertexLabel;

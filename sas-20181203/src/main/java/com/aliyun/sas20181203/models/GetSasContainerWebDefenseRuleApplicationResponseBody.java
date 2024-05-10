@@ -47,7 +47,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
         /**
          * <p>The ID of the container cluster.</p>
          * <br>
-         * <p>>  The IDs of clusters can be obtained by using the [DescribeGroupedContainerInstances](~~182997~~) operation.</p>
+         * <p>>  The IDs of clusters can be obtained by using the [DescribeGroupedContainerInstances](https://help.aliyun.com/document_detail/182997.html) operation.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;

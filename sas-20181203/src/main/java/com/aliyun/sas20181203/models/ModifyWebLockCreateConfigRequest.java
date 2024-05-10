@@ -9,12 +9,16 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
      * <br>
      * <p>*   **block**: Interception Mode</p>
      * <p>*   **audit**: Alert Mode</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DefenceMode")
     public String defenceMode;
 
     /**
      * <p>The directory that you want to protect.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Dir")
     public String dir;
@@ -100,6 +104,8 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
 
     /**
      * <p>The local path to the backup files of the protected directory.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LocalBackupDir")
     public String localBackupDir;
@@ -123,6 +129,8 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
      * <p>The UUID of the server for which you want to add a directory to protect.</p>
      * <br>
      * <p>> You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

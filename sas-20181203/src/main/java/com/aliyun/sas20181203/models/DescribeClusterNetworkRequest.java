@@ -8,6 +8,8 @@ public class DescribeClusterNetworkRequest extends TeaModel {
      * <p>The end timestamp of the query. Unit: milliseconds.</p>
      * <br>
      * <p>> The days between the start timestamp and the end timestamp cannot exceed **seven** days.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -16,6 +18,8 @@ public class DescribeClusterNetworkRequest extends TeaModel {
      * <p>The start timestamp of the query. Unit: milliseconds.</p>
      * <br>
      * <p>> The days between the start timestamp and the end timestamp cannot exceed **seven** days.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

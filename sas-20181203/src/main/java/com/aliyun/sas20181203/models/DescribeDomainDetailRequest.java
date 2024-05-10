@@ -8,6 +8,8 @@ public class DescribeDomainDetailRequest extends TeaModel {
      * <p>The domain name or the name of website that you want to query.</p>
      * <br>
      * <p>>  Fuzzy match is not supported. You must enter a complete domain name or a website.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

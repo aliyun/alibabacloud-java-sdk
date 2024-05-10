@@ -17,6 +17,8 @@ public class GetHoneypotProbeRequest extends TeaModel {
      * <p>The probe ID.</p>
      * <br>
      * <p>> You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProbeId")
     public String probeId;

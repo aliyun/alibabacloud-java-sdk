@@ -9,6 +9,8 @@ public class ModifyVulTargetConfigRequest extends TeaModel {
      * <br>
      * <p>*   **on**: yes</p>
      * <p>*   **off**: no</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Config")
     public String config;
@@ -26,12 +28,16 @@ public class ModifyVulTargetConfigRequest extends TeaModel {
      * <p>*   **sys**: Windows system vulnerability</p>
      * <p>*   **cms**: Web-CMS vulnerability</p>
      * <p>*   **emg**: urgent vulnerability</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The UUID of the server.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

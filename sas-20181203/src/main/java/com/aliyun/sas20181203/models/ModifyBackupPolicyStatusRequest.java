@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ModifyBackupPolicyStatusRequest extends TeaModel {
     /**
      * <p>The ID of the anti-ransomware policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The version of the anti-ransomware policy. Set the value to **2.0.0**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyVersion")
     public String policyVersion;
@@ -23,6 +27,8 @@ public class ModifyBackupPolicyStatusRequest extends TeaModel {
      * <p>*   **disabled**: disables the anti-ransomware policy. After you disable the anti-ransomware policy, the data backup task that is running based on the policy stops.</p>
      * <br>
      * <p>>  When the system runs data backup tasks, your network bandwidth is consumed. We recommend that you enable the anti-ransomware policy during peak-off hours to back up data.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public String status;

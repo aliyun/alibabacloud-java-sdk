@@ -12,6 +12,8 @@ public class DescribeContainerAppsRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -26,6 +28,8 @@ public class DescribeContainerAppsRequest extends TeaModel {
      * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
      * <br>
      * <p>>  We recommend that you do not leave this parameter empty.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

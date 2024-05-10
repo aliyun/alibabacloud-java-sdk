@@ -7,25 +7,33 @@ public class UploadedHoneyPotFileRequest extends TeaModel {
     /**
      * <p>The file key that you use to upload the file.</p>
      * <br>
-     * <p>>  The key is in the format of HONEYPOT_FILE/{Timestamp}\_{Custom file name}.</p>
+     * <p>>  The key is in the format of HONEYPOT_FILE/{Timestamp}_{Custom file name}.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileKey")
     public String fileKey;
 
     /**
      * <p>The name of the file that you want to upload.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileName")
     public String fileName;
 
     /**
      * <p>The file type.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileType")
     public String fileType;
 
     /**
      * <p>The name of the honeypot image.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HoneypotImageName")
     public String honeypotImageName;
@@ -49,6 +57,8 @@ public class UploadedHoneyPotFileRequest extends TeaModel {
 
     /**
      * <p>The prompt template that corresponds to the file.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateExtra")
     public String templateExtra;

@@ -22,6 +22,8 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
      * <p>*   **groupId**: the group to which the assets belong</p>
      * <p>*   **regionId**: the region in which the assets reside</p>
      * <p>*   **vpcInstanceId**: the virtual private cloud (VPC) in which the assets reside</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupField")
     public String groupField;

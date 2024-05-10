@@ -7,7 +7,7 @@ public class GetInterceptionSummaryRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
      * <br>
-     * <p>> You can call the [DescribeGroupedContainerInstances](~~421736~~) operation to query the IDs of clusters.</p>
+     * <p>> You can call the [DescribeGroupedContainerInstances](https://help.aliyun.com/document_detail/421736.html) operation to query the IDs of clusters.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

@@ -9,6 +9,8 @@ public class ModifyVpcHoneyPotRequest extends TeaModel {
      * <br>
      * <p>*   **disable**</p>
      * <p>*   **enable**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HoneyPotAction")
     public String honeyPotAction;
@@ -17,6 +19,8 @@ public class ModifyVpcHoneyPotRequest extends TeaModel {
      * <p>The ID of the virtual private cloud (VPC) on which the honeypot is deployed.</p>
      * <br>
      * <p>>  You can call the [DescribeVpcHoneyPotList](~~DescribeVpcHoneyPotList~~) operation to query the IDs of VPCs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

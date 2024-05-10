@@ -8,6 +8,8 @@ public class DeleteSuspEventNodeRequest extends TeaModel {
      * <p>The ID of the description.</p>
      * <br>
      * <p>> You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the ID of the description by using the EventNotes field.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NoteId")
     public Long noteId;

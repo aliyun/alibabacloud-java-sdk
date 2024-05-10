@@ -10,6 +10,8 @@ public class DescribeFrontVulPatchListRequest extends TeaModel {
      * <p>*   **name**: the name of the vulnerability.</p>
      * <p>*   **uuid**: the UUID of the server on which the vulnerability is detected.</p>
      * <p>*   **tag**: the tag that is added to the vulnerability. Set this field to **system**, which indicates Windows system vulnerabilities.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Info")
     public String info;
@@ -25,12 +27,16 @@ public class DescribeFrontVulPatchListRequest extends TeaModel {
 
     /**
      * <p>The operation that you want to perform on the vulnerability. Set the value to **vul_fix**, which indicates vulnerability fixing.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OperateType")
     public String operateType;
 
     /**
      * <p>The type of the vulnerability. Set the value to **sys**, which indicates Windows system vulnerabilities.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

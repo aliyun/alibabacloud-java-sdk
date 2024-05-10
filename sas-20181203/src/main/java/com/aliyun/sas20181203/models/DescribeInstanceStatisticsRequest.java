@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeInstanceStatisticsRequest extends TeaModel {
     /**
      * <p>The source of the request. Set the value to **sas**, which indicates that the request is sent from Security Center.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("From")
     public String from;
@@ -26,7 +28,9 @@ public class DescribeInstanceStatisticsRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The UUIDs of the assets to query. Separate multiple UUIDs with commas (,). You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of assets.</p>
+     * <p>The UUIDs of the assets to query. Separate multiple UUIDs with commas (,). You can call the [DescribeCloudCenterInstances](https://help.aliyun.com/document_detail/141932.html) operation to query the UUIDs of assets.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

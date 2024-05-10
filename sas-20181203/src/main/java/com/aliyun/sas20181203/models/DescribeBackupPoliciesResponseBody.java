@@ -169,13 +169,13 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
          * <p>    *   **1**: recommended policy</p>
          * <p>    *   **0**: custom policy</p>
          * <br>
-         * <p>*   **Include**: the format of the files that are protected. If the value of this field is \[], all formats of files are protected.</p>
+         * <p>*   **Include**: the format of the files that are protected. If the value of this field is [], all formats of files are protected.</p>
          * <br>
-         * <p>*   **Source**: the directory that is protected. If the value of this field is \[], all directories are protected.</p>
+         * <p>*   **Source**: the directory that is protected. If the value of this field is [], all directories are protected.</p>
          * <br>
          * <p>*   **ExcludeSystemPath**: indicates whether a specified directory is excluded from the anti-ransomware policy. If the value of this field is **true**, the directory is excluded. If this field is left empty, no directories are excluded.</p>
          * <br>
-         * <p>*   **Exclude**: the directory that is excluded from the anti-ransomware policy. If no directory is specified, the value of this field is \[].</p>
+         * <p>*   **Exclude**: the directory that is excluded from the anti-ransomware policy. If no directory is specified, the value of this field is [].</p>
          * <br>
          * <p>*   **Schedule**: the start time and interval of a data backup task. A start time that begins during off-peak hours but does not start on the hour is recommended. Examples:</p>
          * <br>

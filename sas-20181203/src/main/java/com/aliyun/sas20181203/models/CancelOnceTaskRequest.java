@@ -8,6 +8,8 @@ public class CancelOnceTaskRequest extends TeaModel {
      * <p>The ID of the task.</p>
      * <br>
      * <p>>  You can call the [GenerateOnceTask](~~GenerateOnceTask~~) operation to query the IDs of tasks.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

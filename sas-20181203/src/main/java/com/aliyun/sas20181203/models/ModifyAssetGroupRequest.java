@@ -8,6 +8,8 @@ public class ModifyAssetGroupRequest extends TeaModel {
      * <p>The ID of the new server group to which the servers belong.</p>
      * <br>
      * <p>> You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
@@ -22,6 +24,8 @@ public class ModifyAssetGroupRequest extends TeaModel {
      * <p>The UUIDs of the servers for which you want to change the server group. Separate multiple UUIDs with commas (,).</p>
      * <br>
      * <p>> You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuids")
     public String uuids;

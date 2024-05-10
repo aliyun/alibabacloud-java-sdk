@@ -9,12 +9,16 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
      * <br>
      * <p>*   **block**: Interception Mode</p>
      * <p>*   **audit**: Alert Mode</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DefenceMode")
     public String defenceMode;
 
     /**
      * <p>The directory for which you want to enable web tamper proofing.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Dir")
     public String dir;
@@ -62,6 +66,8 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
      * <p>The ID of the protected directory for which you want to change the status of web tamper proofing.</p>
      * <br>
      * <p>> You can call the [DescribeWebLockConfigList](~~DescribeWebLockConfigList~~) operation to query the IDs of protected directories.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Integer id;
@@ -107,11 +113,13 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The local path to the backup files of the protected directory.\</p>
+     * <p>The local path to the backup files of the protected directory.\\</p>
      * <p>The directory format of a Linux server is different from that of a Windows server. You must enter the directory in the required format based on your operating system. Examples:</p>
      * <br>
      * <p>*   Linux server: /usr/local/aegis/bak</p>
-     * <p>*   Windows server: C:\Program Files (x86)\Alibaba\Aegis\bak</p>
+     * <p>*   Windows server: C:\\Program Files (x86)\\Alibaba\\Aegis\\bak</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LocalBackupDir")
     public String localBackupDir;
@@ -135,6 +143,8 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
      * <p>The UUID of the server on which the protected directory is located.</p>
      * <br>
      * <p>> You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

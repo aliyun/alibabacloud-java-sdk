@@ -8,6 +8,8 @@ public class SaveImageBaselineStrategyRequest extends TeaModel {
      * <p>The baseline check items.</p>
      * <br>
      * <p>> You can call the [DescribeImageBaselineStrategy](~~DescribeImageBaselineStrategy~~) operation to query baseline check items.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BaselineItemList")
     public String baselineItemList;

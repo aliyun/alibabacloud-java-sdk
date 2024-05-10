@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeLogstoreStorageRequest extends TeaModel {
     /**
      * <p>The ID of the request source. Set the value to **sas**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("From")
     public String from;

@@ -328,7 +328,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         /**
          * <p>The name of the sensitive files.</p>
          * <br>
-         * <p>>  You can call the [GetSensitiveDefineRuleConfig](~~4576877~~) operation to query the ID of the malicious sample.</p>
+         * <p>>  You can call the [GetSensitiveDefineRuleConfig](https://help.aliyun.com/document_detail/4576877.html) operation to query the ID of the malicious sample.</p>
          */
         @NameInMap("Name")
         public String name;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     /**
      * <p>The name of the image baseline.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BaselineNameKey")
     public String baselineNameKey;

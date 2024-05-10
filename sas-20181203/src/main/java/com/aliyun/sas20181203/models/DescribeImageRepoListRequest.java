@@ -62,6 +62,8 @@ public class DescribeImageRepoListRequest extends TeaModel {
      * <p>The condition by which the feature is applied. Valid values:</p>
      * <br>
      * <p>*   **image_repo**: the ID of the image repository</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetType")
     public String targetType;
@@ -70,6 +72,8 @@ public class DescribeImageRepoListRequest extends TeaModel {
      * <p>The type of the feature. Valid values:</p>
      * <br>
      * <p>*   **image_repo**: image repository protection</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

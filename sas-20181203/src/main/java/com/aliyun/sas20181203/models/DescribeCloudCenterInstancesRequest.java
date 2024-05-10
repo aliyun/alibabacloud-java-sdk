@@ -7,7 +7,7 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     /**
      * <p>The search conditions. The value of this parameter is in the JSON format and is case-sensitive.</p>
      * <br>
-     * <p>>  You can search for an asset by using the search conditions, such as the instance ID, instance name, VPC ID, region, or public IP address. You can call the [DescribeCriteria](~~149773~~) operation to query the supported search conditions.</p>
+     * <p>>  You can search for an asset by using the search conditions, such as the instance ID, instance name, VPC ID, region, or public IP address. You can call the [DescribeCriteria](https://help.aliyun.com/document_detail/149773.html) operation to query the supported search conditions.</p>
      */
     @NameInMap("Criteria")
     public String criteria;

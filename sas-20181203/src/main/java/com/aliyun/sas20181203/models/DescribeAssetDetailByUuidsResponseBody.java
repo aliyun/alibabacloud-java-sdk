@@ -120,7 +120,7 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
         /**
          * <p>The region in which the ECS instance resides.</p>
          * <br>
-         * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+         * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).</p>
          */
         @NameInMap("RegionId")
         public String regionId;

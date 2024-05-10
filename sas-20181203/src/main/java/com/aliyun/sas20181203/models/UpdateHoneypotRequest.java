@@ -8,6 +8,8 @@ public class UpdateHoneypotRequest extends TeaModel {
      * <p>The ID of the honeypot.</p>
      * <br>
      * <p>>  You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HoneypotId")
     public String honeypotId;

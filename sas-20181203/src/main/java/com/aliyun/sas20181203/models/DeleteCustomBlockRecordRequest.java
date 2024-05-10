@@ -8,6 +8,8 @@ public class DeleteCustomBlockRecordRequest extends TeaModel {
      * <p>The ID of the IP address blocking policy.</p>
      * <br>
      * <p>> You can call the [DescribeCustomBlockRecords](~~DescribeCustomBlockRecords~~) operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;

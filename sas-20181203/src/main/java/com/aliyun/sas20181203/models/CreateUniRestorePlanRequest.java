@@ -22,6 +22,8 @@ public class CreateUniRestorePlanRequest extends TeaModel {
      * <p>The ID of the anti-ransomware policy.</p>
      * <br>
      * <p>>  You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyId")
     public Long policyId;
@@ -57,6 +59,8 @@ public class CreateUniRestorePlanRequest extends TeaModel {
      * <p>The point in time to which you want to restore data.</p>
      * <br>
      * <p>>  You can call the [DescribeRestorePlans](~~DescribeRestorePlans~~) operation to query the point in time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TimePoint")
     public Long timePoint;

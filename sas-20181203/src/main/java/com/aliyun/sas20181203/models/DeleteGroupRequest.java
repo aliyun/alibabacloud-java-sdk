@@ -8,6 +8,8 @@ public class DeleteGroupRequest extends TeaModel {
      * <p>The ID of the server group that you want to delete.</p>
      * <br>
      * <p>>  To delete a server group, you must provide the ID of the server group. You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;

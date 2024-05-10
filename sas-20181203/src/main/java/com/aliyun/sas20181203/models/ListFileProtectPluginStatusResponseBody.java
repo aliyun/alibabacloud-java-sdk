@@ -62,7 +62,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
          * <p>The returned code after you install the Security Center agent. Valid values:</p>
          * <br>
          * <p>1.  0: The installation is successful.</p>
-         * <p>2.  \-2: The kernel does not support the installation.</p>
+         * <p>2.  \\-2: The kernel does not support the installation.</p>
          */
         @NameInMap("InstallCode")
         public String installCode;

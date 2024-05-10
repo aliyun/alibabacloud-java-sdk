@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class OperateImageBaselineWhitelistRequest extends TeaModel {
     /**
      * <p>The keys of baseline check items.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BaselineItemKeyList")
     public String baselineItemKeyList;
@@ -30,6 +32,8 @@ public class OperateImageBaselineWhitelistRequest extends TeaModel {
      * <br>
      * <p>*   **add**: adds the check items to the whitelist</p>
      * <p>*   **del**: removes the check items from the whitelist</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Operation")
     public String operation;

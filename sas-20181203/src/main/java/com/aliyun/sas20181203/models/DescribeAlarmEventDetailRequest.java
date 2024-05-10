@@ -8,12 +8,16 @@ public class DescribeAlarmEventDetailRequest extends TeaModel {
      * <p>The unique identifier of the alert event.</p>
      * <br>
      * <p>> To query the details of an alert event, you must provide the unique identifier of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the identifier.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AlarmUniqueInfo")
     public String alarmUniqueInfo;
 
     /**
      * <p>The ID of the request source. Set the value to **sas**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("From")
     public String from;

@@ -75,6 +75,8 @@ public class DescribeAttackAnalysisDataRequest extends TeaModel {
 
     /**
      * <p>The timestamp when the attack stops. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -100,6 +102,8 @@ public class DescribeAttackAnalysisDataRequest extends TeaModel {
      * <p>The timestamp at which the attack starts. By default, the statistics of the previous seven days are queried. Unit: seconds.</p>
      * <br>
      * <p>>  The start time that you specify must be within the previous 40 days.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
@@ -115,6 +119,8 @@ public class DescribeAttackAnalysisDataRequest extends TeaModel {
      * <p>*   **DETAILS**: attack details</p>
      * <br>
      * <p>>  If the Type parameter is set to **DETAILS**, you must specify the CurrentPage and PageSize parameters.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

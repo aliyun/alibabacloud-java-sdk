@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyRiskSingleResultStatusRequest extends TeaModel {
     /**
      * <p>The IDs of the affected assets.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ids")
     public java.util.List<String> ids;
@@ -33,12 +35,16 @@ public class ModifyRiskSingleResultStatusRequest extends TeaModel {
      * <br>
      * <p>*   **ignored**: ignores the risk item.</p>
      * <p>*   **failed**: cancels ignoring the risk item.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The ID of the check task to which the affected assets belong.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

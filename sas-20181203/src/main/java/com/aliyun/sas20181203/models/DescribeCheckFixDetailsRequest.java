@@ -24,7 +24,7 @@ public class DescribeCheckFixDetailsRequest extends TeaModel {
     /**
      * <p>The ID of the baseline.</p>
      * <br>
-     * <p>>  You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of baselines.</p>
+     * <p>>  You can call the [DescribeCheckWarningSummary](https://help.aliyun.com/document_detail/116179.html) operation to query the IDs of baselines.</p>
      */
     @NameInMap("RiskId")
     public Long riskId;

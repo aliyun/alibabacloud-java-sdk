@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeTraceInfoDetailRequest extends TeaModel {
     /**
      * <p>The ID of the request source. Set the value to **sas**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("From")
     public String from;
@@ -33,18 +35,24 @@ public class DescribeTraceInfoDetailRequest extends TeaModel {
 
     /**
      * <p>The type of the vertex. Set the value to **SAS_INCIDENT**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The UUID of the server.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;
 
     /**
      * <p>The ID of the vertex. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VertexId")
     public String vertexId;

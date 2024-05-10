@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListCheckItemWarningMachineRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CheckId")
     public Long checkId;
@@ -31,7 +33,7 @@ public class ListCheckItemWarningMachineRequest extends TeaModel {
     /**
      * <p>The ID of the asset group.</p>
      * <br>
-     * <p>> You can call the [DescribeAllGroups](~~130972~~) operation to query the ID of the asset group.</p>
+     * <p>> You can call the [DescribeAllGroups](https://help.aliyun.com/document_detail/130972.html) operation to query the ID of the asset group.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;

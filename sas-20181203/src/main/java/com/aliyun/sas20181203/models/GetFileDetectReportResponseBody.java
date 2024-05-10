@@ -115,7 +115,7 @@ public class GetFileDetectReportResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   The threat type. The value is an array. The elements in the array can be DDoS trojans, mining programs, network layer intrusions, network service scans, network sharing and discovery, mining pools, exploits, dark webs, malicious logons, malicious download sources, C\&C servers, webshells, and web attacks.</p>
+         * <p>*   The threat type. The value is an array. The elements in the array can be DDoS trojans, mining programs, network layer intrusions, network service scans, network sharing and discovery, mining pools, exploits, dark webs, malicious logons, malicious download sources, C\\&C servers, webshells, and web attacks.</p>
          */
         @NameInMap("Intelligences")
         public String intelligences;

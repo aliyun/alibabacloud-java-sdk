@@ -8,6 +8,8 @@ public class DeleteBackupPolicyRequest extends TeaModel {
      * <p>The ID of the anti-ransomware policy that you want to delete.</p>
      * <br>
      * <p>>  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the IDs of anti-ransomware policies.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;

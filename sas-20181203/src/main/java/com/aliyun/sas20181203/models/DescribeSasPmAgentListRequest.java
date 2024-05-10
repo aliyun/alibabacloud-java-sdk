@@ -15,6 +15,8 @@ public class DescribeSasPmAgentListRequest extends TeaModel {
 
     /**
      * <p>The UUID of the server. Separate multiple UUIDs with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuids")
     public String uuids;

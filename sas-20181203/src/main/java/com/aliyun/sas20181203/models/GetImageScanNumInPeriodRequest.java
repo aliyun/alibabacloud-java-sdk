@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetImageScanNumInPeriodRequest extends TeaModel {
     /**
      * <p>The number of days.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PastDay")
     public String pastDay;

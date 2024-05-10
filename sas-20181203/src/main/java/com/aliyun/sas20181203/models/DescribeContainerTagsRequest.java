@@ -20,6 +20,8 @@ public class DescribeContainerTagsRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return. Default value: **1**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -31,6 +33,8 @@ public class DescribeContainerTagsRequest extends TeaModel {
      * <p>*   **appName**: the application name</p>
      * <p>*   **image**: the image</p>
      * <p>*   **tag**: the tag</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FieldName")
     public String fieldName;
@@ -49,6 +53,8 @@ public class DescribeContainerTagsRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page. Default value: 200.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

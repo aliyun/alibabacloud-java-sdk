@@ -14,6 +14,8 @@ public class ModifyLogMetaStatusRequest extends TeaModel {
      * <p>The name of the dedicated Logstore in which logs are stored.</p>
      * <br>
      * <p>>  You can call the [DescribeLogMeta](~~DescribeLogMeta~~) operation to query the names of Logstores.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LogStore")
     public String logStore;
@@ -31,6 +33,8 @@ public class ModifyLogMetaStatusRequest extends TeaModel {
      * <br>
      * <p>*   **enabled**</p>
      * <p>*   **disabled**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public String status;

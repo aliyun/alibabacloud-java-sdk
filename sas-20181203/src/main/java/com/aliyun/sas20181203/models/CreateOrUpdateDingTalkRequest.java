@@ -56,12 +56,16 @@ public class CreateOrUpdateDingTalkRequest extends TeaModel {
      * <p>The name of the chatbot.</p>
      * <br>
      * <p>> The name of a chatbot must be 2 to 64 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleActionName")
     public String ruleActionName;
 
     /**
      * <p>The webhook URL.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SendUrl")
     public String sendUrl;

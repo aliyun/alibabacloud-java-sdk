@@ -9,6 +9,8 @@ public class ModifyStrategyRequest extends TeaModel {
      * <br>
      * <p>*   **custom**: a custom baseline check policy</p>
      * <p>*   **common**: a standard baseline check policy</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CustomType")
     public String customType;
@@ -20,6 +22,8 @@ public class ModifyStrategyRequest extends TeaModel {
      * <p>*   **3**: every 4 days</p>
      * <p>*   **7**: every 8 days</p>
      * <p>*   **30**: every 31 days</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CycleDays")
     public String cycleDays;
@@ -39,6 +43,8 @@ public class ModifyStrategyRequest extends TeaModel {
 
     /**
      * <p>The time when the baseline check based on the baseline check policy ends. Specify the time in the hh:mm:ss format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -51,6 +57,8 @@ public class ModifyStrategyRequest extends TeaModel {
 
     /**
      * <p>The new name of the baseline check policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -78,6 +86,8 @@ public class ModifyStrategyRequest extends TeaModel {
 
     /**
      * <p>The subtype of the baselines. You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to query the subtypes of baselines.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RiskSubTypeName")
     public String riskSubTypeName;
@@ -90,6 +100,8 @@ public class ModifyStrategyRequest extends TeaModel {
 
     /**
      * <p>The time when the baseline check based on the baseline check policy starts. Specify the time in the hh:mm:ss format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -99,6 +111,8 @@ public class ModifyStrategyRequest extends TeaModel {
      * <br>
      * <p>*   **groupId**: asset groups</p>
      * <p>*   **uuid**: assets</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetType")
     public String targetType;

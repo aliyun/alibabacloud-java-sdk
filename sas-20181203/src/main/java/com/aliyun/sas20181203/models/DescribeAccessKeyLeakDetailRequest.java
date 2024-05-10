@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeAccessKeyLeakDetailRequest extends TeaModel {
     /**
      * <p>The ID of the AccessKey pair leak.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;

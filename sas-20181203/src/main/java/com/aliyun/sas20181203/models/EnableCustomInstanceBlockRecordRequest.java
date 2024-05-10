@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class EnableCustomInstanceBlockRecordRequest extends TeaModel {
     /**
      * <p>The IP address that you want to block.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BlockIp")
     public String blockIp;
@@ -24,6 +26,8 @@ public class EnableCustomInstanceBlockRecordRequest extends TeaModel {
 
     /**
      * <p>The UUID of the server.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

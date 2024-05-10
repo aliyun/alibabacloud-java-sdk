@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateRestoreJobRequest extends TeaModel {
     /**
      * <p>The directory in which the files included in the restoration task are located. This parameter is specified when you create the anti-ransomware policy. The value is a directory that requires protection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Includes")
     public String includes;
@@ -14,6 +16,8 @@ public class CreateRestoreJobRequest extends TeaModel {
      * <p>The hash value of the snapshot.</p>
      * <br>
      * <p>> You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to obtain the value of this parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SnapshotHash")
     public String snapshotHash;
@@ -22,6 +26,8 @@ public class CreateRestoreJobRequest extends TeaModel {
      * <p>The ID of the snapshot that you want to use for restoration.</p>
      * <br>
      * <p>> You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to obtain the value of this parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;
@@ -30,6 +36,8 @@ public class CreateRestoreJobRequest extends TeaModel {
      * <p>The version of the backup data.</p>
      * <br>
      * <p>> You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to obtain the value of this parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SnapshotVersion")
     public String snapshotVersion;
@@ -45,12 +53,16 @@ public class CreateRestoreJobRequest extends TeaModel {
 
     /**
      * <p>The path to which you want to restore data.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Target")
     public String target;
 
     /**
      * <p>The UUID of the server whose data you want to restore.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;
@@ -59,6 +71,8 @@ public class CreateRestoreJobRequest extends TeaModel {
      * <p>The ID of the backup vault that is used in the restoration task.</p>
      * <br>
      * <p>> You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to obtain the value of this parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VaultId")
     public String vaultId;

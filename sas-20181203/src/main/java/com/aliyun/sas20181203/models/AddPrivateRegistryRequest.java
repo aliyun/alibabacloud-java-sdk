@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AddPrivateRegistryRequest extends TeaModel {
     /**
      * <p>The domain name of the image repository.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -24,12 +26,16 @@ public class AddPrivateRegistryRequest extends TeaModel {
      * <br>
      * <p>*   **1**: Internet</p>
      * <p>*   **2**: virtual private cloud (VPC)</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetType")
     public Long netType;
 
     /**
      * <p>The password that is used to log on to the image repository.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Password")
     public String password;
@@ -45,12 +51,16 @@ public class AddPrivateRegistryRequest extends TeaModel {
      * <br>
      * <p>*   **1**: HTTP</p>
      * <p>*   **2**: HTTPS</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProtocolType")
     public Long protocolType;
 
     /**
      * <p>The IP address of the image repository.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegistryHostIp")
     public String registryHostIp;
@@ -59,6 +69,8 @@ public class AddPrivateRegistryRequest extends TeaModel {
      * <p>The region ID.</p>
      * <br>
      * <p>>  You can call the [ListImageRegistryRegion](~~ListImageRegistryRegion~~) operation to query the IDs of supported regions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegistryRegionId")
     public String registryRegionId;
@@ -68,6 +80,8 @@ public class AddPrivateRegistryRequest extends TeaModel {
      * <br>
      * <p>*   **harbor**</p>
      * <p>*   **quay**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegistryType")
     public String registryType;
@@ -77,6 +91,8 @@ public class AddPrivateRegistryRequest extends TeaModel {
      * <br>
      * <p>*   **V1**</p>
      * <p>*   **V2**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegistryVersion")
     public String registryVersion;
@@ -89,6 +105,8 @@ public class AddPrivateRegistryRequest extends TeaModel {
 
     /**
      * <p>The username that is used to log on to the image repository.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserName")
     public String userName;

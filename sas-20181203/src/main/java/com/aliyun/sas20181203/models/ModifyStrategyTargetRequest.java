@@ -4,15 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyStrategyTargetRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Config")
     public String config;
 
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Target")
     public String target;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 

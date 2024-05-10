@@ -15,7 +15,7 @@ public class ModifyInterceptionRuleSwitchRequest extends TeaModel {
     /**
      * <p>The IDs of the rules whose status you want to change. Separate multiple IDs with commas (,).</p>
      * <br>
-     * <p>> You can call the [ListInterceptionRulePage](~~182997~~) operation to query the IDs of rules.</p>
+     * <p>> You can call the [ListInterceptionRulePage](https://help.aliyun.com/document_detail/182997.html) operation to query the IDs of rules.</p>
      */
     @NameInMap("RuleIds")
     public String ruleIds;

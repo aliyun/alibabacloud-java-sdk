@@ -54,7 +54,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
          * <p>*   **UNINSTALLING**: The agent is being uninstalled.</p>
          * <p>*   **NOT_INSTALLED**: The agent is not installed.</p>
          * <p>*   **ACTIVATED**: The agent is enabled.</p>
-         * <p>*   **CLIENT\_CONNECTION_ERROR**: A connection error occurs on the agent.</p>
+         * <p>*   **CLIENT_CONNECTION_ERROR**: A connection error occurs on the agent.</p>
          */
         @NameInMap("ClientStatus")
         public String clientStatus;

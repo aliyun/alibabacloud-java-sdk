@@ -12,6 +12,8 @@ public class ModifySasContainerWebDefenseRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;
@@ -63,12 +65,16 @@ public class ModifySasContainerWebDefenseRuleRequest extends TeaModel {
          * <br>
          * <p>*   **block**</p>
          * <p>*   **audit**</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DefenseMode")
         public String defenseMode;
 
         /**
          * <p>The path that is protected.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DefensePath")
         public String defensePath;
@@ -96,6 +102,8 @@ public class ModifySasContainerWebDefenseRuleRequest extends TeaModel {
          * <br>
          * <p>*   **0**: basic mode (whitelist)</p>
          * <p>*   **1**: complex mode (blacklist)</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("GuardType")
         public Integer guardType;

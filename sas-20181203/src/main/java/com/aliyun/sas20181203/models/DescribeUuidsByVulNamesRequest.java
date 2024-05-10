@@ -101,6 +101,8 @@ public class DescribeUuidsByVulNamesRequest extends TeaModel {
      * <br>
      * <p>*   **cve**: Linux software vulnerability</p>
      * <p>*   **sys**: Windows system vulnerability</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;
@@ -115,6 +117,8 @@ public class DescribeUuidsByVulNamesRequest extends TeaModel {
      * <p>An array that consists of the names of vulnerabilities.</p>
      * <br>
      * <p>>  You can call the [DescribeGroupedVul](~~DescribeGroupedVul~~) operation to obtain the names of vulnerabilities.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VulNames")
     public java.util.List<String> vulNames;

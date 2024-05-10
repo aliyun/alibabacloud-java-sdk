@@ -24,6 +24,8 @@ public class DeleteK8sAccessInfoRequest extends TeaModel {
 
     /**
      * <p>The ID generated when Kubernetes is connected. You can call the GenerateK8sAccessInfo operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;

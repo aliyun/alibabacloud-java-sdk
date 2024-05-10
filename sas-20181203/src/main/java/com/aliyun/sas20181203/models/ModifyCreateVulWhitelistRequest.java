@@ -63,6 +63,8 @@ public class ModifyCreateVulWhitelistRequest extends TeaModel {
      * <p>*   **Tags**: the tag that is added to the vulnerability.</p>
      * <br>
      * <p>>  You can call the [DescribeGroupedVul](~~DescribeGroupedVul~~) operation to query the information about the vulnerability that you want to add to the whitelist.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Whitelist")
     public String whitelist;

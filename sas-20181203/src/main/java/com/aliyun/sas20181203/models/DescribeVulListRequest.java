@@ -124,6 +124,8 @@ public class DescribeVulListRequest extends TeaModel {
      * <p>*   **app**: application vulnerability that is detected by using web scanner</p>
      * <p>*   **emg**: urgent vulnerability.</p>
      * <p>*   **sca**: application vulnerability that is detected by using software component analysis</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

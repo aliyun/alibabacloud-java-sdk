@@ -9,6 +9,8 @@ public class AddClientUserDefineRuleRequest extends TeaModel {
      * <br>
      * <p>*   **0**: allow</p>
      * <p>*   **1**: block</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ActionType")
     public Integer actionType;
@@ -45,6 +47,8 @@ public class AddClientUserDefineRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the custom defense rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -117,6 +121,8 @@ public class AddClientUserDefineRuleRequest extends TeaModel {
      * <p>*   **5**: Operation on Registry</p>
      * <p>*   **6**: Dynamic-link Library Loading</p>
      * <p>*   **7**: File Renaming</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public Integer type;

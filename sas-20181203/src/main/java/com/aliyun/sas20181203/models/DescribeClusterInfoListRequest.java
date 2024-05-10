@@ -14,6 +14,8 @@ public class DescribeClusterInfoListRequest extends TeaModel {
      * <p>The dimension based on which you want to configure the feature. Valid values:</p>
      * <br>
      * <p>*   **Cluster**: the ID of the cluster</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetType")
     public String targetType;
@@ -23,6 +25,8 @@ public class DescribeClusterInfoListRequest extends TeaModel {
      * <br>
      * <p>*   **containerNetwork**: container network</p>
      * <p>*   **interceptionSwitch**: cluster microsegmentation</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

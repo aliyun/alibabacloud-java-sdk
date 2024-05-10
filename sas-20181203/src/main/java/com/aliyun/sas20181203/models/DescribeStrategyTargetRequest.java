@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeStrategyTargetRequest extends TeaModel {
     /**
      * <p>The ID of the baseline check policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Config")
     public String config;
@@ -18,6 +20,8 @@ public class DescribeStrategyTargetRequest extends TeaModel {
 
     /**
      * <p>The type of the policy. Set the value to hc_strategy, which indicates baseline check policies.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

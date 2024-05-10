@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeInstanceRebootStatusRequest extends TeaModel {
     /**
      * <p>The UUIDs of the servers that you restart. Separate multiple UUIDs with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuids")
     public String uuids;

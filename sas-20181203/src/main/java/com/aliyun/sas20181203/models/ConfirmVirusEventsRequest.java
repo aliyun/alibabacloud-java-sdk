@@ -9,6 +9,8 @@ public class ConfirmVirusEventsRequest extends TeaModel {
      * <br>
      * <p>*   **1**: yes</p>
      * <p>*   **0**: no</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OperationAll")
     public Integer operationAll;
@@ -18,8 +20,10 @@ public class ConfirmVirusEventsRequest extends TeaModel {
      * <br>
      * <p>*   **default**: performs in-depth detection and removal</p>
      * <p>*   **ignore**: ignores the alert event</p>
-     * <p>*   **advance\_mark\_mis_info**: adds the alert events to the whitelist</p>
+     * <p>*   **advance_mark_mis_info**: adds the alert events to the whitelist</p>
      * <p>*   **manual_handled**: marks the alert events as manually handled</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OperationCode")
     public String operationCode;

@@ -22,6 +22,8 @@ public class DescribeAssetDetailByUuidsRequest extends TeaModel {
 
     /**
      * <p>The UUIDs of the ECS instances. Separate multiple UUIDs with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuids")
     public String uuids;

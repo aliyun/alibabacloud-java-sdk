@@ -7,7 +7,9 @@ public class QueryIncidentTracingDetailRequest extends TeaModel {
     /**
      * <p>The ID of the event.</p>
      * <br>
-     * <p>>  You can call the [DescribeCloudSiemEvents](~~2621307~~) operation to query the IDs of events.</p>
+     * <p>>  You can call the [DescribeCloudSiemEvents](https://help.aliyun.com/document_detail/2621307.html) operation to query the IDs of events.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IncidentId")
     public String incidentId;

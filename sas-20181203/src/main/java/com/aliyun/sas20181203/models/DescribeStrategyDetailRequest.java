@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeStrategyDetailRequest extends TeaModel {
     /**
      * <p>The ID of the baseline check policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public String id;

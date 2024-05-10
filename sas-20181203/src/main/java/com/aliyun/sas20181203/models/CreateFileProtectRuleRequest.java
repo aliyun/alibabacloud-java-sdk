@@ -17,18 +17,24 @@ public class CreateFileProtectRuleRequest extends TeaModel {
 
     /**
      * <p>The operations that you want to perform on the files.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileOps")
     public java.util.List<String> fileOps;
 
     /**
      * <p>The paths to the files that you want to monitor. Wildcard characters are supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FilePaths")
     public java.util.List<String> filePaths;
 
     /**
      * <p>The paths to the processes that you want to monitor. Wildcard characters are supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProcPaths")
     public java.util.List<String> procPaths;
@@ -38,12 +44,16 @@ public class CreateFileProtectRuleRequest extends TeaModel {
      * <br>
      * <p>*   pass: allow</p>
      * <p>*   alert</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleAction")
     public String ruleAction;
 
     /**
      * <p>The name of the rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;

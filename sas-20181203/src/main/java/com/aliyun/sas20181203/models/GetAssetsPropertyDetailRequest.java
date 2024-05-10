@@ -10,6 +10,8 @@ public class GetAssetsPropertyDetailRequest extends TeaModel {
      * <p>*   **lkm**: kernel module</p>
      * <p>*   **autorun**: startup item</p>
      * <p>*   **web_server**: website</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Biz")
     public String biz;

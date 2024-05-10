@@ -17,6 +17,8 @@ public class CreateAntiBruteForceRuleRequest extends TeaModel {
 
     /**
      * <p>The maximum number of failed logon attempts from an account. Valid values: 2, 3, 4, 5, 10, 50, 80, and 100.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FailCount")
     public Integer failCount;
@@ -34,12 +36,16 @@ public class CreateAntiBruteForceRuleRequest extends TeaModel {
      * <p>*   **1440**: 24 hours</p>
      * <p>*   **10080**: 7 days</p>
      * <p>*   **52560000**: permanent</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ForbiddenTime")
     public Integer forbiddenTime;
 
     /**
      * <p>The name of the defense rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -63,12 +69,16 @@ public class CreateAntiBruteForceRuleRequest extends TeaModel {
      * <p>*   **15**</p>
      * <br>
      * <p>>  To configure a defense rule, you must specify the Span, FailCount, and ForbiddenTime parameters. If the number of failed logon attempts from an account within the minutes specified by Span exceeds the value specified by FailCount, the account cannot be used for logons within the minutes specified by ForbiddenTime.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Span")
     public Integer span;
 
     /**
      * <p>The UUIDs of the servers to which you want to apply the defense rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;

@@ -104,8 +104,8 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
          * <p>The result of the scan task. Valid values:</p>
          * <br>
          * <p>*   **SUCCESS**: The task is successful.</p>
-         * <p>*   **TASK\_NOT\_SUPPORT_REGION**: The images are deployed in a region that is not supported by container image scan.</p>
-         * <p>*   **TASK\_NOT_EXISTS**: The task does not exist.</p>
+         * <p>*   **TASK_NOT_SUPPORT_REGION**: The images are deployed in a region that is not supported by container image scan.</p>
+         * <p>*   **TASK_NOT_EXISTS**: The task does not exist.</p>
          */
         @NameInMap("Result")
         public String result;

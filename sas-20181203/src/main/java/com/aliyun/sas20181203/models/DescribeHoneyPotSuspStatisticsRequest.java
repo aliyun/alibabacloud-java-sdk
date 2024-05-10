@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeHoneyPotSuspStatisticsRequest extends TeaModel {
     /**
      * <p>The source of the request. Set the value to **honeypot**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("From")
     public String from;
@@ -21,6 +23,8 @@ public class DescribeHoneyPotSuspStatisticsRequest extends TeaModel {
 
     /**
      * <p>The time range of the data to query. Unit: days.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StatisticsDays")
     public Integer statisticsDays;
@@ -30,6 +34,8 @@ public class DescribeHoneyPotSuspStatisticsRequest extends TeaModel {
      * <br>
      * <p>*   **vpcInstanceId**: VPC</p>
      * <p>*   **uuid**: server</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StatisticsKeyType")
     public String statisticsKeyType;

@@ -8,6 +8,8 @@ public class DescribeUniBackupPolicyDetailRequest extends TeaModel {
      * <p>The ID of the anti-ransomware policy.</p>
      * <br>
      * <p>> You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyId")
     public String policyId;

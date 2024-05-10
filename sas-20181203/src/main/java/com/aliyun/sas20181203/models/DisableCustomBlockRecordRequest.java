@@ -8,6 +8,8 @@ public class DisableCustomBlockRecordRequest extends TeaModel {
      * <p>The IP address that is specified in the policy.</p>
      * <br>
      * <p>> You can call the [DescribeCustomBlockRecords](~~DescribeCustomBlockRecords~~) operation to query the IP address.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BlockIp")
     public String blockIp;
@@ -17,6 +19,8 @@ public class DisableCustomBlockRecordRequest extends TeaModel {
      * <br>
      * <p>*   **in**: inbound</p>
      * <p>*   **out**: outbound</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Bound")
     public String bound;

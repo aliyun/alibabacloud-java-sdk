@@ -9,6 +9,8 @@ public class UninstallBackupClientRequest extends TeaModel {
      * <br>
      * <p>*   **1.0.0**</p>
      * <p>*   **2.0.0**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyVersion")
     public String policyVersion;

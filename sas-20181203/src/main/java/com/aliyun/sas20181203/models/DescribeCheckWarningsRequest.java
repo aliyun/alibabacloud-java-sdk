@@ -90,6 +90,8 @@ public class DescribeCheckWarningsRequest extends TeaModel {
      * <p>The UUID of the server on which the baseline check is performed.</p>
      * <br>
      * <p>> To query specified risk items and the check items of a specified server, you must provide the ID of the server on which the baseline check is performed. You can call the [DescribeWarningMachines](~~DescribeWarningMachines~~) operation to query the IDs of servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

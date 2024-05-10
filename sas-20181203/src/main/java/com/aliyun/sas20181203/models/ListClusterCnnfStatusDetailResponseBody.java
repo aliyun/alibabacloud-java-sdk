@@ -72,8 +72,8 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
          * <p>The cause why the plug-in is invalid. Valid values:</p>
          * <br>
          * <p>*   **PLUGIN_OFFLINE**: The plug-in is offline.</p>
-         * <p>*   **PLUGIN\_NOT_INSTALLED**: The plug-in is not installed.</p>
-         * <p>*   **PLUGIN\_INVALID_VERSION**: The version of the plug-in is invalid.</p>
+         * <p>*   **PLUGIN_NOT_INSTALLED**: The plug-in is not installed.</p>
+         * <p>*   **PLUGIN_INVALID_VERSION**: The version of the plug-in is invalid.</p>
          */
         @NameInMap("InvalidType")
         public String invalidType;

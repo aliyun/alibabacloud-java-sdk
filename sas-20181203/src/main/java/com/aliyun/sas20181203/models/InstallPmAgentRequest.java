@@ -24,12 +24,16 @@ public class InstallPmAgentRequest extends TeaModel {
      * <br>
      * <p>*   **aliyun_assist**: Cloud Assistant client</p>
      * <p>*   **aliyun_monitor**: CloudMonitor client</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The UUID of the server. If you specify multiple UUIDs, separate the UUIDs with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuids")
     public String uuids;

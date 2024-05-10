@@ -37,7 +37,7 @@ public class AdvanceSecurityEventOperationsRequest extends TeaModel {
      * <p>*   Trusted exception</p>
      * <p>*   Others</p>
      * <br>
-     * <p>For more information about alert types, see [Alerts](~~68388~~).</p>
+     * <p>For more information about alert types, see [Alerts](https://help.aliyun.com/document_detail/68388.html).</p>
      */
     @NameInMap("EventType")
     public String eventType;

@@ -11,6 +11,8 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends TeaModel {
      * <p>The ID of the alert event.</p>
      * <br>
      * <p>>  You must specify at least one of the SecurityEventId and SimilarEventScenarioCode parameters.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityEventId")
     public Long securityEventId;

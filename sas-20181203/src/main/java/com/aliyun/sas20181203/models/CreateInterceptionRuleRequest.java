@@ -8,12 +8,16 @@ public class CreateInterceptionRuleRequest extends TeaModel {
      * <p>The ID of the container cluster.</p>
      * <br>
      * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
@@ -33,18 +37,24 @@ public class CreateInterceptionRuleRequest extends TeaModel {
      * <p>*   **1**: blocks traffic.</p>
      * <p>*   **2**: allows traffic and generates alerts.</p>
      * <p>*   **3**: allows traffic and does not generate alerts.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InterceptType")
     public Long interceptType;
 
     /**
      * <p>The priority of the defense rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OrderIndex")
     public Long orderIndex;
 
     /**
      * <p>The name of the defense rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
@@ -54,6 +64,8 @@ public class CreateInterceptionRuleRequest extends TeaModel {
      * <br>
      * <p>*   **0**: disables the rule.</p>
      * <p>*   **1**: enables the rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleSwitch")
     public Integer ruleSwitch;
