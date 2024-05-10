@@ -7,6 +7,9 @@ public class DeleteConnQuestionRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OutlineId")
     public Long outlineId;
 

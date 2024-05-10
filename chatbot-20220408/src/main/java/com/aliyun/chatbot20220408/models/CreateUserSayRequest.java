@@ -7,6 +7,9 @@ public class CreateUserSayRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -84,9 +87,15 @@ public class CreateUserSayRequest extends TeaModel {
     }
 
     public static class CreateUserSayRequestUserSayDefinition extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("IntentId")
         public Long intentId;
 

@@ -7,12 +7,18 @@ public class UpdateUserSayRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("UserSayDefinition")
     public UpdateUserSayRequestUserSayDefinition userSayDefinition;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserSayId")
     public Long userSayId;
 
@@ -95,9 +101,15 @@ public class UpdateUserSayRequest extends TeaModel {
     }
 
     public static class UpdateUserSayRequestUserSayDefinition extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("IntentId")
         public Long intentId;
 

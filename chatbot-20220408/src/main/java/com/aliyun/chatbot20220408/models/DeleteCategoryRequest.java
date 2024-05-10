@@ -7,6 +7,9 @@ public class DeleteCategoryRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CategoryId")
     public Long categoryId;
 

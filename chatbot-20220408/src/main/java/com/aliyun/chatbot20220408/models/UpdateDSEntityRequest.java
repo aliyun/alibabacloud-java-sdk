@@ -7,15 +7,24 @@ public class UpdateDSEntityRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EntityId")
     public Long entityId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EntityName")
     public String entityName;
 
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

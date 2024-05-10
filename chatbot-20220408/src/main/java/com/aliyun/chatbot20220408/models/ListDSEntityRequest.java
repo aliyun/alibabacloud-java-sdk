@@ -10,6 +10,9 @@ public class ListDSEntityRequest extends TeaModel {
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

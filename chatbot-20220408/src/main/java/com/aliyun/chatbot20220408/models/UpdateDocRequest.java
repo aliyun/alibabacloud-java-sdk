@@ -22,6 +22,9 @@ public class UpdateDocRequest extends TeaModel {
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
 

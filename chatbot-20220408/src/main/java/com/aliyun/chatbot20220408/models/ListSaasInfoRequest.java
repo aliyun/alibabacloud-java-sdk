@@ -10,6 +10,9 @@ public class ListSaasInfoRequest extends TeaModel {
     @NameInMap("SaasGroupCodes")
     public String saasGroupCodes;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SaasName")
     public String saasName;
 

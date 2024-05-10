@@ -7,6 +7,9 @@ public class CreateLgfRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -43,9 +46,15 @@ public class CreateLgfRequest extends TeaModel {
     }
 
     public static class CreateLgfRequestLgfDefinition extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("IntentId")
         public Long intentId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("RuleText")
         public String ruleText;
 

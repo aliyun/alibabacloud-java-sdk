@@ -7,6 +7,9 @@ public class DeleteSimQuestionRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SimQuestionId")
     public Long simQuestionId;
 

@@ -7,15 +7,24 @@ public class UpdateSolutionRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Content")
     public String content;
 
     @NameInMap("ContentType")
     public Integer contentType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PerspectiveCodes")
     public java.util.List<String> perspectiveCodes;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SolutionId")
     public Long solutionId;
 
