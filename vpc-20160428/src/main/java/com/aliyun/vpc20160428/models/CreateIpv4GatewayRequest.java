@@ -48,7 +48,9 @@ public class CreateIpv4GatewayRequest extends TeaModel {
     /**
      * <p>The ID of the region where you want to create the IPv4 gateway.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -75,6 +77,8 @@ public class CreateIpv4GatewayRequest extends TeaModel {
      * <p>The ID of the VPC where you want to create the IPv4 gateway.</p>
      * <br>
      * <p>You can create only one IPv4 gateway in a VPC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

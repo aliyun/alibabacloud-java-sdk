@@ -24,6 +24,8 @@ public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the ECC instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EccId")
     public String eccId;
@@ -48,6 +50,8 @@ public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the ECC instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

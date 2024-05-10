@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class RemoveIPv6TranslatorAclListEntryRequest extends TeaModel {
     /**
      * <p>The ID of the ACL entry to be deleted.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclEntryId")
     public String aclEntryId;
 
     /**
      * <p>The ID of the ACL to which the ACL entry belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclId")
     public String aclId;
@@ -32,6 +36,8 @@ public class RemoveIPv6TranslatorAclListEntryRequest extends TeaModel {
 
     /**
      * <p>The region of the ACL.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

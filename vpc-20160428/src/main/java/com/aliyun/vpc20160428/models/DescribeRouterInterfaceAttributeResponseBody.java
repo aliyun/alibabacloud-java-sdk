@@ -282,7 +282,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>The resource group ID.</p>
      * <br>
-     * <p>For more information about resource groups, see [What is a resource group?](~~94475~~)</p>
+     * <p>For more information about resource groups, see [What is a resource group?](https://help.aliyun.com/document_detail/94475.html)</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -744,7 +744,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         /**
          * <p>The key of tag N added to the resource. You must enter at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -752,7 +752,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         /**
          * <p>The value of tag N added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
          * <br>
-         * <p>It can be up to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>It can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

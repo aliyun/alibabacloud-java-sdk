@@ -27,6 +27,8 @@ public class AssociateRouteTableWithGatewayRequest extends TeaModel {
      * <p>The ID of the IPv4 gateway.</p>
      * <br>
      * <p>The IPv4 gateway must be in the **Activated** state.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GatewayId")
     public String gatewayId;
@@ -46,7 +48,9 @@ public class AssociateRouteTableWithGatewayRequest extends TeaModel {
     /**
      * <p>The region ID of the IPv4 gateway with which you want to associate the gateway route table.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -59,6 +63,8 @@ public class AssociateRouteTableWithGatewayRequest extends TeaModel {
 
     /**
      * <p>The ID of the gateway route table.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;

@@ -13,7 +13,9 @@ public class GetVpcRouteEntrySummaryRequest extends TeaModel {
     /**
      * <p>The region ID of the route table.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -32,6 +34,8 @@ public class GetVpcRouteEntrySummaryRequest extends TeaModel {
      * <p>*   **System**: a system route</p>
      * <p>*   **BGP**: a BGP route</p>
      * <p>*   **CEN**: a Cloud Enterprise Network (CEN) route</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteEntryType")
     public String routeEntryType;
@@ -44,6 +48,8 @@ public class GetVpcRouteEntrySummaryRequest extends TeaModel {
 
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the route table belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

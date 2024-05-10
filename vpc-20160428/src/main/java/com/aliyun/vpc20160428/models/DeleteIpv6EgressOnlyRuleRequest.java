@@ -16,6 +16,8 @@ public class DeleteIpv6EgressOnlyRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the egress-only rule that you want to delete.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ipv6EgressOnlyRuleId")
     public String ipv6EgressOnlyRuleId;
@@ -27,7 +29,9 @@ public class DeleteIpv6EgressOnlyRuleRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the IPv6 gateway. You can call the [DescribeRegions](~~448570~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the IPv6 gateway. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/448570.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

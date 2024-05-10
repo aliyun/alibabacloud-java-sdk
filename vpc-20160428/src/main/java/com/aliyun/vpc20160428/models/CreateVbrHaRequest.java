@@ -45,12 +45,16 @@ public class CreateVbrHaRequest extends TeaModel {
 
     /**
      * <p>The ID of the other VBR in the VBR failover group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PeerVbrId")
     public String peerVbrId;
 
     /**
      * <p>The ID of the region in which the VBR is deployed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -63,6 +67,8 @@ public class CreateVbrHaRequest extends TeaModel {
 
     /**
      * <p>The ID of the VBR.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VbrId")
     public String vbrId;

@@ -13,7 +13,7 @@ public class CreateRouteEntriesRequest extends TeaModel {
     /**
      * <p>The region ID of the route table.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -26,6 +26,8 @@ public class CreateRouteEntriesRequest extends TeaModel {
 
     /**
      * <p>The route entries.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteEntries")
     public java.util.List<CreateRouteEntriesRequestRouteEntries> routeEntries;
@@ -97,6 +99,8 @@ public class CreateRouteEntriesRequest extends TeaModel {
          * <br>
          * <p>*   The destination CIDR block is not 100.64.0.0/10 or a subset of 100.64.0.0/10.</p>
          * <p>*   The destination CIDR block of the custom route entry is different from the destination CIDR blocks of other route entries in the same route table.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DstCidrBlock")
         public String dstCidrBlock;
@@ -120,6 +124,8 @@ public class CreateRouteEntriesRequest extends TeaModel {
 
         /**
          * <p>The next hop ID of the custom route entry. You can specify up to 50 next hop IDs.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("NextHop")
         public String nextHop;
@@ -136,12 +142,16 @@ public class CreateRouteEntriesRequest extends TeaModel {
          * <p>*   **NatGateway**: a NAT gateway.</p>
          * <p>*   **Attachment**: a transit router.</p>
          * <p>*   **VpcPeer**: a VPC peering connection.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("NextHopType")
         public String nextHopType;
 
         /**
          * <p>The ID of the route table to which you want to add a custom route entry. You can specify up to 50 route table IDs.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("RouteTableId")
         public String routeTableId;

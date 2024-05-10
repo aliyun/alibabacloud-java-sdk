@@ -23,6 +23,8 @@ public class ModifyNatGatewaySpecRequest extends TeaModel {
 
     /**
      * <p>The ID of the Internet NAT gateway that you want to upgrade.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
@@ -36,7 +38,9 @@ public class ModifyNatGatewaySpecRequest extends TeaModel {
     /**
      * <p>The ID of the region where the Internet NAT gateway is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -53,6 +57,8 @@ public class ModifyNatGatewaySpecRequest extends TeaModel {
      * <p>*   **Small**: small</p>
      * <p>*   **Middle**: medium</p>
      * <p>*   **Large**: large</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Spec")
     public String spec;

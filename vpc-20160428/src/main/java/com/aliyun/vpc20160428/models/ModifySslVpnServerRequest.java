@@ -52,6 +52,9 @@ public class ModifySslVpnServerRequest extends TeaModel {
     @NameInMap("EnableMultiFactorAuth")
     public Boolean enableMultiFactorAuth;
 
+    @NameInMap("IDaaSApplicationId")
+    public String IDaaSApplicationId;
+
     /**
      * <p>The ID of the Identity as a Service (IDaaS) instance.</p>
      */
@@ -104,7 +107,9 @@ public class ModifySslVpnServerRequest extends TeaModel {
     /**
      * <p>The region ID of the VPN gateway.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -117,6 +122,8 @@ public class ModifySslVpnServerRequest extends TeaModel {
 
     /**
      * <p>The ID of the SSL server.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SslVpnServerId")
     public String sslVpnServerId;
@@ -164,6 +171,14 @@ public class ModifySslVpnServerRequest extends TeaModel {
     }
     public Boolean getEnableMultiFactorAuth() {
         return this.enableMultiFactorAuth;
+    }
+
+    public ModifySslVpnServerRequest setIDaaSApplicationId(String IDaaSApplicationId) {
+        this.IDaaSApplicationId = IDaaSApplicationId;
+        return this;
+    }
+    public String getIDaaSApplicationId() {
+        return this.IDaaSApplicationId;
     }
 
     public ModifySslVpnServerRequest setIDaaSInstanceId(String IDaaSInstanceId) {

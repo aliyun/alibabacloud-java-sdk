@@ -14,6 +14,8 @@ public class DeleteIPv6TranslatorRequest extends TeaModel {
 
     /**
      * <p>The ID of the IPv6 Translation Service instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ipv6TranslatorId")
     public String ipv6TranslatorId;
@@ -26,6 +28,8 @@ public class DeleteIPv6TranslatorRequest extends TeaModel {
 
     /**
      * <p>The region ID of the IPv6 Translation Service instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

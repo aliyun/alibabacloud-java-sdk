@@ -85,6 +85,8 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Tea
 
     /**
      * <p>The ID of the Express Connect circuit.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
@@ -92,7 +94,9 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Tea
     /**
      * <p>The region ID of the Express Connect circuit.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -105,6 +109,8 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Tea
 
     /**
      * <p>The ID of the VBR.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VbrId")
     public String vbrId;
@@ -113,6 +119,8 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Tea
      * <p>The VLAN ID of the VBR. Valid values: **0 to 2999**.</p>
      * <br>
      * <p>>  Only the Express Connect circuit owner can specify this parameter. Two VBRs associated with the same Express Connect circuit cannot use the same VLAN ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VlanId")
     public String vlanId;

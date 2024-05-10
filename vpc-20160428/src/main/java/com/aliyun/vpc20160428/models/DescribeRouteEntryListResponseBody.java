@@ -256,6 +256,8 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
 
         /**
          * <p>The time when the route was modified. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.</p>
+         * <br>
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;

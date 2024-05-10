@@ -13,18 +13,30 @@ public class DeleteExpressConnectTrafficQosRuleRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QosId")
     public String qosId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QueueId")
     public String queueId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 

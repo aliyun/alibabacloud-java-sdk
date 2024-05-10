@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyCommonBandwidthPackageAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the EIP bandwidth plan.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
@@ -17,7 +19,7 @@ public class ModifyCommonBandwidthPackageAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the EIP bandwidth plan. The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with `http://` or `https://`.</p>
+     * <p>The name of the EIP bandwidth plan. The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -31,7 +33,9 @@ public class ModifyCommonBandwidthPackageAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the region where the EIP bandwidth plan is created.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -7,6 +7,9 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApList")
     public java.util.List<CreateHighReliablePhysicalConnectionRequestApList> apList;
 
@@ -19,6 +22,9 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
     @NameInMap("DryRun")
     public String dryRun;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HighReliableType")
     public String highReliableType;
 
@@ -28,6 +34,9 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PortType")
     public String portType;
 
@@ -164,6 +173,9 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
     }
 
     public static class CreateHighReliablePhysicalConnectionRequestApList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("AccessPointId")
         public String accessPointId;
 
@@ -176,6 +188,9 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("LineOperator")
         public String lineOperator;
 
@@ -188,6 +203,9 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
         @NameInMap("PortNum")
         public Integer portNum;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

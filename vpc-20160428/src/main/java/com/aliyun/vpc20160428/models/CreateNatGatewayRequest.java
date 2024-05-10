@@ -62,7 +62,7 @@ public class CreateNatGatewayRequest extends TeaModel {
      * <br>
      * <p>Set the value to **PostPaid** (pay-as-you-go), which is the default value.</p>
      * <br>
-     * <p>For more information, see [Internet NAT gateway billing](~~48126~~) and [VPC NAT gateway billing](~~270913~~).</p>
+     * <p>For more information, see [Internet NAT gateway billing](https://help.aliyun.com/document_detail/48126.html) and [VPC NAT gateway billing](https://help.aliyun.com/document_detail/270913.html).</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
@@ -76,7 +76,7 @@ public class CreateNatGatewayRequest extends TeaModel {
     /**
      * <p>The name of the NAT gateway.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
      * <br>
      * <p>If this parameter is not set, the system assigns a default name to the NAT gateway.</p>
      */
@@ -113,7 +113,9 @@ public class CreateNatGatewayRequest extends TeaModel {
     /**
      * <p>The region ID of the NAT gateway.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -127,7 +129,7 @@ public class CreateNatGatewayRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the firewall feature. Valid values:</p>
      * <br>
-     * <p>*   **false** (default)><notice>This parameter is deprecated.></notice></p>
+     * <p>*   **false** (default)>Notice: This parameter is deprecated.</p>
      */
     @NameInMap("SecurityProtectionEnabled")
     @Deprecated
@@ -153,13 +155,15 @@ public class CreateNatGatewayRequest extends TeaModel {
      * <p>*   To attach the NAT gateway to an existing vSwitch, make sure that the zone to which the vSwitch belongs supports NAT gateways. In addition, the vSwitch must have idle IP addresses.</p>
      * <p>*   If no vSwitch exists in the VPC, create a vSwitch in a zone that supports NAT gateways. Then, specify the vSwitch for the NAT gateway.</p>
      * <br>
-     * <p>>  You can call the [ListEnhanhcedNatGatewayAvailableZones](~~182292~~) operation to query zones that support NAT gateways. You can call the [DescribeVSwitches](~~35748~~) operation to query idle IP addresses in a vSwitch.</p>
+     * <p>>  You can call the [ListEnhanhcedNatGatewayAvailableZones](https://help.aliyun.com/document_detail/182292.html) operation to query zones that support NAT gateways. You can call the [DescribeVSwitches](https://help.aliyun.com/document_detail/35748.html) operation to query idle IP addresses in a vSwitch.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the VPC where you want to create the NAT gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

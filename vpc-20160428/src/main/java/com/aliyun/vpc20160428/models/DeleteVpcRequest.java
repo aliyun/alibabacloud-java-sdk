@@ -36,7 +36,7 @@ public class DeleteVpcRequest extends TeaModel {
     /**
      * <p>The ID of the region where the VPC is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -49,6 +49,8 @@ public class DeleteVpcRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC that you want to delete.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

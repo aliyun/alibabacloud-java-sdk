@@ -19,6 +19,9 @@ public class DescribeExpressConnectTrafficQosRuleRequest extends TeaModel {
     @NameInMap("QueueId")
     public String queueId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

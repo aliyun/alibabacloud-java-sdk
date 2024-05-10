@@ -47,6 +47,8 @@ public class AllocateIpv6AddressRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -71,6 +73,8 @@ public class AllocateIpv6AddressRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch to which the IPv6 address belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

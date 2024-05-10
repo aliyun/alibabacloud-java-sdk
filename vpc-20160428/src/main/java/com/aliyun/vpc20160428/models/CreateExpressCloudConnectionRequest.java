@@ -8,6 +8,8 @@ public class CreateExpressCloudConnectionRequest extends TeaModel {
      * <p>The bandwidth for ECC, which corresponds to the bandwidth for the underlying circuit.</p>
      * <br>
      * <p>Unit: Mbit/s.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
@@ -40,6 +42,8 @@ public class CreateExpressCloudConnectionRequest extends TeaModel {
 
     /**
      * <p>The Internet service provider (ISP) for the data center.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IdcSP")
     public String idcSP;
@@ -47,7 +51,7 @@ public class CreateExpressCloudConnectionRequest extends TeaModel {
     /**
      * <p>The name of the ECC instance.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -68,6 +72,8 @@ public class CreateExpressCloudConnectionRequest extends TeaModel {
      * <p>The geographical location of the data center.</p>
      * <br>
      * <p>> It must be accurate to house number-floor-room number-server rack number.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PeerLocation")
     public String peerLocation;
@@ -92,6 +98,8 @@ public class CreateExpressCloudConnectionRequest extends TeaModel {
 
     /**
      * <p>The region ID of the ECC instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

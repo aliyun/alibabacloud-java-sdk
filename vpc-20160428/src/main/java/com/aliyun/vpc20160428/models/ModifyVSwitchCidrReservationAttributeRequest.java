@@ -13,7 +13,9 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the region where the vSwitch is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -34,6 +36,8 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the reserved CIDR block.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchCidrReservationId")
     public String vSwitchCidrReservationId;
@@ -41,7 +45,7 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends TeaModel {
     /**
      * <p>The new name of the reserved CIDR block.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
      */
     @NameInMap("VSwitchCidrReservationName")
     public String vSwitchCidrReservationName;

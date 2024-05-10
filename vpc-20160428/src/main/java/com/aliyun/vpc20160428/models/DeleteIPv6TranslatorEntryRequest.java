@@ -34,6 +34,8 @@ public class DeleteIPv6TranslatorEntryRequest extends TeaModel {
 
     /**
      * <p>The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

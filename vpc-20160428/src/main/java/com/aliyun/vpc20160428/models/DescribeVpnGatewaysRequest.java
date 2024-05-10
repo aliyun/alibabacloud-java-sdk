@@ -43,7 +43,9 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     /**
      * <p>The region ID of the VPN gateway.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -51,7 +53,7 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the VPN gateway belongs.</p>
      * <br>
-     * <p> You can call the [ListResourceGroups](~~158855~~) operation to query the resource group list.</p>
+     * <p> You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group list.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

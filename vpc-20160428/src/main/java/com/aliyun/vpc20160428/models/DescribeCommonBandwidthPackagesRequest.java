@@ -55,7 +55,9 @@ public class DescribeCommonBandwidthPackagesRequest extends TeaModel {
     /**
      * <p>The ID of the region where the Internet Shared Bandwidth instance resides.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the region ID.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

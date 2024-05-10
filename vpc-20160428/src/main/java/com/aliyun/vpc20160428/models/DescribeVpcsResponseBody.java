@@ -423,7 +423,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
         /**
          * <p>The vSwitches in the VPC.</p>
          * <br>
-         * <p>You can query up to 300 vSwitches in the VPC. The information about the latest vSwitches is returned. If you want to query the information about all vSwitches in a VPC, call the [DescribeVSwitches](~~35748~~) operation.</p>
+         * <p>You can query up to 300 vSwitches in the VPC. The information about the latest vSwitches is returned. If you want to query the information about all vSwitches in a VPC, call the [DescribeVSwitches](https://help.aliyun.com/document_detail/35748.html) operation.</p>
          */
         @NameInMap("VSwitchIds")
         public DescribeVpcsResponseBodyVpcsVpcVSwitchIds vSwitchIds;

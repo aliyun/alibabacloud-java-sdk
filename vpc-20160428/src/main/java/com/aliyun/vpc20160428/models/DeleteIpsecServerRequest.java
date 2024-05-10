@@ -25,12 +25,16 @@ public class DeleteIpsecServerRequest extends TeaModel {
 
     /**
      * <p>The ID of the IPsec server.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IpsecServerId")
     public String ipsecServerId;
 
     /**
      * <p>The ID of the region where the IPsec server is created.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

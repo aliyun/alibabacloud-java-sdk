@@ -25,7 +25,7 @@ public class DescribeRouteTablesRequest extends TeaModel {
     /**
      * <p>The region ID of the VPC to which the route table belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -51,7 +51,7 @@ public class DescribeRouteTablesRequest extends TeaModel {
     /**
      * <p>The name of the route table that you want to query.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      */
     @NameInMap("RouteTableName")
     public String routeTableName;

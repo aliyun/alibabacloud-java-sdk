@@ -35,7 +35,9 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region in which the VBR is deployed. You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     * <p>The ID of the region in which the VBR is deployed. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -43,7 +45,7 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     /**
      * <p>The resource group ID.</p>
      * <br>
-     * <p>For more information about resource groups, see [What is a resource group?](~~94475~~)</p>
+     * <p>For more information about resource groups, see [What is a resource group?](https://help.aliyun.com/document_detail/94475.html)</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

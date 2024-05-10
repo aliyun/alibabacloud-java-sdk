@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UnassociateEipAddressRequest extends TeaModel {
     /**
      * <p>The ID of the EIP that you want to disassociate.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;
@@ -60,7 +62,7 @@ public class UnassociateEipAddressRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The ID of the region to which the EIP belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region to which the EIP belongs. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

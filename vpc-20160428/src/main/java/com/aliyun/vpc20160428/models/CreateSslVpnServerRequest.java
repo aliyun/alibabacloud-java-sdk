@@ -59,8 +59,10 @@ public class CreateSslVpnServerRequest extends TeaModel {
      * <br>
      * <p>> - The subnet mask of the client CIDR block must be 16 to 29 bits in length.</p>
      * <p>> - Make sure that the local CIDR block and the client CIDR block do not overlap with each other.</p>
-     * <p>> - We recommend that you use 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, or one of their subnets as the client CIDR block. If you want to specify a public CIDR block as the client CIDR block, you must specify the public CIDR block as the user CIDR block of the virtual private cloud (VPC). This way, the VPC can access the public CIDR block. For more information, see [VPC FAQ](~~185311~~).</p>
+     * <p>> - We recommend that you use 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, or one of their subnets as the client CIDR block. If you want to specify a public CIDR block as the client CIDR block, you must specify the public CIDR block as the user CIDR block of the virtual private cloud (VPC). This way, the VPC can access the public CIDR block. For more information, see [VPC FAQ](https://help.aliyun.com/document_detail/185311.html).</p>
      * <p>> - After you create an SSL server, the system automatically adds routes that point to the client CIDR block to the VPC route table, which is not displayed in the console by default. Do not add routes that point to the client CIDR block to the VPC route table again. Otherwise, SSL-VPN connections cannot work as expected.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClientIpPool")
     public String clientIpPool;
@@ -96,6 +98,9 @@ public class CreateSslVpnServerRequest extends TeaModel {
     @NameInMap("EnableMultiFactorAuth")
     public Boolean enableMultiFactorAuth;
 
+    @NameInMap("IDaaSApplicationId")
+    public String IDaaSApplicationId;
+
     /**
      * <p>The Identity as a Service (IDaaS) instance ID.</p>
      */
@@ -122,6 +127,8 @@ public class CreateSslVpnServerRequest extends TeaModel {
      * <p>*   169.254.0.0~169.254.255.255</p>
      * <p>*   224.0.0.0~239.255.255.255</p>
      * <p>*   255.0.0.0~255.255.255.255</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LocalSubnet")
     public String localSubnet;
@@ -160,7 +167,9 @@ public class CreateSslVpnServerRequest extends TeaModel {
     /**
      * <p>The region ID of the VPN gateway.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -173,6 +182,8 @@ public class CreateSslVpnServerRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPN gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
@@ -220,6 +231,14 @@ public class CreateSslVpnServerRequest extends TeaModel {
     }
     public Boolean getEnableMultiFactorAuth() {
         return this.enableMultiFactorAuth;
+    }
+
+    public CreateSslVpnServerRequest setIDaaSApplicationId(String IDaaSApplicationId) {
+        this.IDaaSApplicationId = IDaaSApplicationId;
+        return this;
+    }
+    public String getIDaaSApplicationId() {
+        return this.IDaaSApplicationId;
     }
 
     public CreateSslVpnServerRequest setIDaaSInstanceId(String IDaaSInstanceId) {

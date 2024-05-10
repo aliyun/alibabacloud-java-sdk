@@ -14,6 +14,8 @@ public class ModifyGlobalAccelerationInstanceAttributesRequest extends TeaModel 
 
     /**
      * <p>The ID of the GA instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GlobalAccelerationInstanceId")
     public String globalAccelerationInstanceId;
@@ -21,7 +23,7 @@ public class ModifyGlobalAccelerationInstanceAttributesRequest extends TeaModel 
     /**
      * <p>The name of the GA instance.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -35,7 +37,9 @@ public class ModifyGlobalAccelerationInstanceAttributesRequest extends TeaModel 
     /**
      * <p>The region ID of the GA instance.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

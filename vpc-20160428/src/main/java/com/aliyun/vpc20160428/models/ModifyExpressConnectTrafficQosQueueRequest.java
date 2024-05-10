@@ -16,18 +16,27 @@ public class ModifyExpressConnectTrafficQosQueueRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QosId")
     public String qosId;
 
     @NameInMap("QueueDescription")
     public String queueDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QueueId")
     public String queueId;
 
     @NameInMap("QueueName")
     public String queueName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

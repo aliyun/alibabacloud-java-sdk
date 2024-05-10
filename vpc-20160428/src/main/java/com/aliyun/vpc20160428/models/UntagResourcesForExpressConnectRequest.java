@@ -22,13 +22,17 @@ public class UntagResourcesForExpressConnectRequest extends TeaModel {
     /**
      * <p>The ID of the region in which the resource is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the resources from which you want to remove tags.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -45,6 +49,8 @@ public class UntagResourcesForExpressConnectRequest extends TeaModel {
      * <p>*   **PHYSICALCONNECTION**: Express Connect circuit.</p>
      * <p>*   **VIRTUALBORDERROUTER**: virtual border router (VBR).</p>
      * <p>*   **ROUTERINTERFACE**: router interface.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

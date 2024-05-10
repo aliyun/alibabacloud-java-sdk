@@ -160,7 +160,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         /**
          * <p>The name of the route entry.</p>
          * <br>
-         * <p>The name must be 2 to 128 characters in length and can contain letter, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name must be 2 to 128 characters in length and can contain letter, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
          */
         @NameInMap("Name")
         public String name;

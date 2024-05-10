@@ -22,6 +22,9 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends TeaModel {
     @NameInMap("QueueNameList")
     public java.util.List<String> queueNameList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

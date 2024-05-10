@@ -10,6 +10,8 @@ public class CreateVSwitchRequest extends TeaModel {
      * <p>*   The subnet mask of the CIDR block must be 16 to 29 bits in length.</p>
      * <p>*   The CIDR block of the vSwitch must fall within the CIDR block of the VPC to which the vSwitch belongs.</p>
      * <p>*   The CIDR block of a vSwitch cannot be the same as the destination CIDR block in a route entry of the VPC. However, it can be a subset of the destination CIDR block.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
@@ -47,7 +49,7 @@ public class CreateVSwitchRequest extends TeaModel {
     /**
      * <p>The region ID of the vSwitch.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -74,6 +76,8 @@ public class CreateVSwitchRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC where you want to create the vSwitch.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -87,7 +91,9 @@ public class CreateVSwitchRequest extends TeaModel {
     /**
      * <p>The zone ID of the vSwitch.</p>
      * <br>
-     * <p>You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.</p>
+     * <p>You can call the [DescribeZones](https://help.aliyun.com/document_detail/36064.html) operation to query the most recent zone list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

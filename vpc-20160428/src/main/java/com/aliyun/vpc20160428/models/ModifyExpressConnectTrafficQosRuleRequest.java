@@ -31,12 +31,21 @@ public class ModifyExpressConnectTrafficQosRuleRequest extends TeaModel {
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QosId")
     public String qosId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QueueId")
     public String queueId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -49,6 +58,9 @@ public class ModifyExpressConnectTrafficQosRuleRequest extends TeaModel {
     @NameInMap("RuleDescription")
     public String ruleDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 

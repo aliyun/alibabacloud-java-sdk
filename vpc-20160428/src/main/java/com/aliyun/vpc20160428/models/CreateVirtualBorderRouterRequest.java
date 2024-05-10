@@ -67,7 +67,7 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
     /**
      * <p>The name of the VBR.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -114,6 +114,8 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
      * <p>The ID of the Express Connect circuit.</p>
      * <br>
      * <p>You can create a VBR for a dedicated connection or a hosted connection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
@@ -121,7 +123,9 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
     /**
      * <p>The region ID of the Express Connect circuit.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -129,7 +133,7 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
     /**
      * <p>The resource group ID.</p>
      * <br>
-     * <p>For more information about resource group, see [What is Resource Management?](~~94475~~)</p>
+     * <p>For more information about resource group, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -158,6 +162,8 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
      * <p>The VLAN ID of the VBR. Valid values: **0 to 2999**.</p>
      * <br>
      * <p>>  Only the owner of the Express Connect circuit can set this parameter. The VLAN IDs of two VBRs of the same the Express Connect circuit must be different.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VlanId")
     public Integer vlanId;

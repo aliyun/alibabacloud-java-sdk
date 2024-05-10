@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CreateFullNatEntryRequest extends TeaModel {
     /**
      * <p>The backend IP address to be modified in FULLNAT address translation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccessIp")
     public String accessIp;
 
     /**
      * <p>The backend port to be modified in the mapping of FULLNAT port. Valid values: **1** to **65535**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccessPort")
     public String accessPort;
@@ -51,6 +55,8 @@ public class CreateFullNatEntryRequest extends TeaModel {
 
     /**
      * <p>The ID of the FULLNAT table to which the FULLNAT entry belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FullNatTableId")
     public String fullNatTableId;
@@ -60,24 +66,32 @@ public class CreateFullNatEntryRequest extends TeaModel {
      * <br>
      * <p>*   **TCP**</p>
      * <p>*   **UDP**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
     /**
      * <p>The NAT IP address that provides address translation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatIp")
     public String natIp;
 
     /**
      * <p>The frontend port to be modified in the mapping of FULLNAT port. Valid values: **1** to **65535**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatIpPort")
     public String natIpPort;
 
     /**
      * <p>The elastic network interface (ENI) ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -91,7 +105,9 @@ public class CreateFullNatEntryRequest extends TeaModel {
     /**
      * <p>The region ID of the Virtual Private Cloud (VPC) NAT gateway to which the FULLNAT entry to be added belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

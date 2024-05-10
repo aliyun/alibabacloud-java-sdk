@@ -50,7 +50,7 @@ public class CreateVpcGatewayEndpointRequest extends TeaModel {
     /**
      * <p>The access policy for the cloud service.</p>
      * <br>
-     * <p>For more information about the syntax and structure of the access policy, see [Policy syntax and structure](~~93739~~).</p>
+     * <p>For more information about the syntax and structure of the access policy, see [Policy syntax and structure](https://help.aliyun.com/document_detail/93739.html).</p>
      */
     @NameInMap("PolicyDocument")
     public String policyDocument;
@@ -58,7 +58,9 @@ public class CreateVpcGatewayEndpointRequest extends TeaModel {
     /**
      * <p>The region ID of the gateway endpoint.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -77,6 +79,8 @@ public class CreateVpcGatewayEndpointRequest extends TeaModel {
 
     /**
      * <p>The name of the endpoint service.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
@@ -91,6 +95,8 @@ public class CreateVpcGatewayEndpointRequest extends TeaModel {
      * <p>The ID of the virtual private cloud (VPC) where you want to create the gateway endpoint.</p>
      * <br>
      * <p>The VPC and gateway endpoint must be deployed in the same region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

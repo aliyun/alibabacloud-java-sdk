@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeletePublicIpAddressPoolCidrBlockRequest extends TeaModel {
     /**
      * <p>The CIDR block.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
@@ -35,12 +37,16 @@ public class DeletePublicIpAddressPoolCidrBlockRequest extends TeaModel {
 
     /**
      * <p>The ID of the IP address pool.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PublicIpAddressPoolId")
     public String publicIpAddressPoolId;
 
     /**
      * <p>The region ID of the IP address pool from which you want to delete a CIDR block.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

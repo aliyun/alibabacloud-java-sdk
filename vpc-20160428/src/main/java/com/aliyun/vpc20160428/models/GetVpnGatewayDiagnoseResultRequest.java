@@ -19,7 +19,7 @@ public class GetVpnGatewayDiagnoseResultRequest extends TeaModel {
     /**
      * <p>The ID of the diagnostic operation.</p>
      * <br>
-     * <p>When you call the [DiagnoseVpnGateway](~~469751~~) operation, the system returns a corresponding ID.</p>
+     * <p>When you call the [DiagnoseVpnGateway](https://help.aliyun.com/document_detail/469751.html) operation, the system returns a corresponding ID.</p>
      */
     @NameInMap("DiagnoseId")
     public String diagnoseId;
@@ -27,7 +27,9 @@ public class GetVpnGatewayDiagnoseResultRequest extends TeaModel {
     /**
      * <p>The region ID of the VPN gateway.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

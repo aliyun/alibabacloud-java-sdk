@@ -38,7 +38,7 @@ public class CreateSnatEntryRequest extends TeaModel {
     /**
      * <p>The region ID of the NAT gateway.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
@@ -55,6 +55,8 @@ public class CreateSnatEntryRequest extends TeaModel {
      * <p>    <!-- --></p>
      * <br>
      * <p>    .</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -79,12 +81,16 @@ public class CreateSnatEntryRequest extends TeaModel {
      * <p>>  If you specify multiple EIPs in the SNAT IP address pool, the service connection is allocated to multiple EIPs by using the hashing algorithm. The traffic of each EIP may be different. Therefore, we recommend that you associate the EIPs with an Internet Shared Bandwidth instance to prevent service interruptions caused by bandwidth exhaustion.</p>
      * <br>
      * <p>*   When you add SNAT entries for a VPC NAT gateway, this parameter specifies the NAT IP addresses in the SNAT entry. Separate multiple NAT IP addresses with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SnatIp")
     public String snatIp;
 
     /**
      * <p>The ID of the SNAT table.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SnatTableId")
     public String snatTableId;

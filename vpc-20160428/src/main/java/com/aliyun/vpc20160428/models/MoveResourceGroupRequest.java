@@ -7,7 +7,9 @@ public class MoveResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which you want to move the resource.</p>
      * <br>
-     * <p>>  You can use resource groups to facilitate resource grouping and permission management for an Alibaba Cloud. For more information, see [What is resource management?](~~94475~~)</p>
+     * <p>>  You can use resource groups to facilitate resource grouping and permission management for an Alibaba Cloud. For more information, see [What is resource management?](https://help.aliyun.com/document_detail/94475.html)</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
@@ -21,13 +23,17 @@ public class MoveResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the region to which the cloud resource belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -54,6 +60,8 @@ public class MoveResourceGroupRequest extends TeaModel {
      * <p>*   **IPv6Gateway**</p>
      * <p>*   **DhcpOptionsSet**</p>
      * <p>*   **GatewayEndpoint**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

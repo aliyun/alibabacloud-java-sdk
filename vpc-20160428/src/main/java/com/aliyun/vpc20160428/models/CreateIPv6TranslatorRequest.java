@@ -34,7 +34,7 @@ public class CreateIPv6TranslatorRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length and must start with a letter. It can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `http://` or `https://`.</p>
+     * <p>The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length and must start with a letter. It can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -64,7 +64,9 @@ public class CreateIPv6TranslatorRequest extends TeaModel {
     public String pricingCycle;
 
     /**
-     * <p>The region of the IPv6 Translation Service instance. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The region of the IPv6 Translation Service instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -23,6 +23,8 @@ public class DeleteVpcGatewayEndpointRequest extends TeaModel {
 
     /**
      * <p>The ID of the gateway endpoint.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
@@ -36,7 +38,9 @@ public class DeleteVpcGatewayEndpointRequest extends TeaModel {
     /**
      * <p>The region ID of the gateway endpoint.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

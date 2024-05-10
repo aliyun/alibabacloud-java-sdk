@@ -41,6 +41,8 @@ public class ModifyVpnPbrRouteEntryAttributeRequest extends TeaModel {
 
     /**
      * <p>The next hop of the policy-based route.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NextHop")
     public String nextHop;
@@ -55,6 +57,8 @@ public class ModifyVpnPbrRouteEntryAttributeRequest extends TeaModel {
      * <p>The original priority of the policy-based route. Valid values: **1** to **100**.</p>
      * <br>
      * <p>A smaller value indicates a higher priority.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Priority")
     public Integer priority;
@@ -62,7 +66,9 @@ public class ModifyVpnPbrRouteEntryAttributeRequest extends TeaModel {
     /**
      * <p>The region ID of the VPN gateway.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -75,18 +81,24 @@ public class ModifyVpnPbrRouteEntryAttributeRequest extends TeaModel {
 
     /**
      * <p>The destination CIDR block of the policy-based route.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteDest")
     public String routeDest;
 
     /**
      * <p>The source CIDR block of the policy-based route.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteSource")
     public String routeSource;
 
     /**
      * <p>The ID of the VPN gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
@@ -96,6 +108,8 @@ public class ModifyVpnPbrRouteEntryAttributeRequest extends TeaModel {
      * <br>
      * <p>*   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</p>
      * <p>*   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Weight")
     public Integer weight;

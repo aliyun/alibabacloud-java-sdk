@@ -25,6 +25,8 @@ public class DeleteNatIpCidrRequest extends TeaModel {
 
     /**
      * <p>The ID of the NAT gateway to which the NAT CIDR block to be deleted belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
@@ -34,6 +36,8 @@ public class DeleteNatIpCidrRequest extends TeaModel {
      * <br>
      * <p>*   Before you delete a NAT CIDR block, you must delete all NAT IP addresses from the CIDR block.</p>
      * <p>*   The default NAT CIDR block cannot be deleted.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatIpCidr")
     public String natIpCidr;
@@ -47,7 +51,9 @@ public class DeleteNatIpCidrRequest extends TeaModel {
     /**
      * <p>The region ID of the NAT gateway to which the NAT CIDR block to be deleted belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

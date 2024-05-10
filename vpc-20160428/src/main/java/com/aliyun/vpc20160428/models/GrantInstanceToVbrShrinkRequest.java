@@ -9,12 +9,16 @@ public class GrantInstanceToVbrShrinkRequest extends TeaModel {
      * <br>
      * <p>*   **All**: Permissions on the VPC are granted to all VBRs that belong to the specified region and Alibaba Cloud account. In this case, you can leave **VbrInstanceIds** empty.</p>
      * <p>*   **Specify**: Permissions on the VPC are granted to the specified VBRs. **VbrInstanceIds** must be assigned a value.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GrantType")
     public String grantType;
 
     /**
      * <p>The ID of the VPC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -22,7 +26,9 @@ public class GrantInstanceToVbrShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the region where the VPC is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -35,12 +41,16 @@ public class GrantInstanceToVbrShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VbrOwnerUid")
     public Long vbrOwnerUid;
 
     /**
      * <p>The ID of the region where the VBR is deployed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VbrRegionNo")
     public String vbrRegionNo;

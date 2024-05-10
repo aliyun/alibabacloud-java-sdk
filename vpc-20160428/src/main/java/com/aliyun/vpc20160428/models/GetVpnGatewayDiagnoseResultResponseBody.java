@@ -167,7 +167,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
          * <p>*   **VcoUserInternetIpConnectivity**: Internet connectivity of the customer gateway.</p>
          * <p>*   **VcoPrivateConnectivity**: private network connectivity.</p>
          * <br>
-         * <p>For more information about the diagnostic items, see [Background information about quick diagnostics](~~190330~~).</p>
+         * <p>For more information about the diagnostic items, see [Background information about quick diagnostics](https://help.aliyun.com/document_detail/190330.html).</p>
          */
         @NameInMap("DiagnoseName")
         public String diagnoseName;
@@ -227,7 +227,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
          * <p>*   **warning**</p>
          * <p>*   **error**</p>
          * <br>
-         * <p>For more information, see [Background information about quick diagnostics](~~190330~~).</p>
+         * <p>For more information, see [Background information about quick diagnostics](https://help.aliyun.com/document_detail/190330.html).</p>
          */
         @NameInMap("DiagnoseResultLevel")
         public String diagnoseResultLevel;

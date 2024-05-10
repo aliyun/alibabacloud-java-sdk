@@ -13,7 +13,7 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
     /**
      * <p>The name of the DHCP options set.</p>
      * <br>
-     * <p>The name must be 1 to 128 characters in length and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 1 to 128 characters in length and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
@@ -66,7 +66,9 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
     /**
      * <p>The region ID of the DHCP options sets that you want to query.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -194,7 +196,7 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
         /**
          * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The tag key must start with a letter but cannot start with `aliyun` or `acs:`. The tag key cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The tag key must start with a letter but cannot start with `aliyun` or `acs:`. The tag key cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -202,7 +204,7 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
         /**
          * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
          * <br>
-         * <p>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The tag value must start with a letter but cannot start with `aliyun` or `acs:`. The tag value cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The tag value must start with a letter but cannot start with `aliyun` or `acs:`. The tag value cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

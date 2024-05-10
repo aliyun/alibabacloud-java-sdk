@@ -16,7 +16,9 @@ public class AttachVbrToVpconnRequest extends TeaModel {
     /**
      * <p>The region ID of the hosted connection.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -31,12 +33,16 @@ public class AttachVbrToVpconnRequest extends TeaModel {
 
     /**
      * <p>The ID of the VBR.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VbrId")
     public String vbrId;
 
     /**
      * <p>The ID of the hosted connection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpconnId")
     public String vpconnId;

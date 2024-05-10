@@ -13,13 +13,17 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The region ID of the resource.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource ID. You can specify at most 20 IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -40,12 +44,16 @@ public class TagResourcesRequest extends TeaModel {
      * <p>*   **VpnGateway**: a VPN gateway</p>
      * <p>*   **NATGATEWAY**: a NAT gateway</p>
      * <p>*   **COMMONBANDWIDTHPACKAGE**: an EIP bandwidth plan</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tag information.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;

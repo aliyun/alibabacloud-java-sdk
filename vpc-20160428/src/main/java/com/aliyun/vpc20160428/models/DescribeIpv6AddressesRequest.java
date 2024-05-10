@@ -49,7 +49,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     /**
      * <p>The name of the IPv6 address that you want to query.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -82,7 +82,9 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region in which you want to query IPv6 addresses. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region in which you want to query IPv6 addresses. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

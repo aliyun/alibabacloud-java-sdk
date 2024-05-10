@@ -25,6 +25,8 @@ public class ReleaseIpv6AddressRequest extends TeaModel {
 
     /**
      * <p>The ID of the IPv6 address.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ipv6AddressId")
     public String ipv6AddressId;
@@ -37,6 +39,8 @@ public class ReleaseIpv6AddressRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

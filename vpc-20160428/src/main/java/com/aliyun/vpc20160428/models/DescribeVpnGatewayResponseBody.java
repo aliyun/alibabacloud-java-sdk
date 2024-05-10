@@ -131,7 +131,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     /**
      * <p>The ID of the resource group to which the VPN gateway belongs.</p>
      * <br>
-     * <p>You can call the [ListResourceGroups](~~158855~~) operation to query resource groups.</p>
+     * <p>You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource groups.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

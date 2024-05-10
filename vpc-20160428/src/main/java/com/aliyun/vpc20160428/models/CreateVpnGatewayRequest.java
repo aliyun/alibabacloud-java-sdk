@@ -21,7 +21,9 @@ public class CreateVpnGatewayRequest extends TeaModel {
      * <p>*   If you want to create a public VPN gateway, valid values are **10**, **100**, **200**, **500**, and **1000**.</p>
      * <p>*   If you want to create a private VPN gateway, valid values are **200** and **1000**.</p>
      * <br>
-     * <p>>  The maximum bandwidth supported by VPN gateways in some regions is 200 Mbit/s. For more information, see [VPN gateway limits](~~65290~~).</p>
+     * <p>>  The maximum bandwidth supported by VPN gateways in some regions is 200 Mbit/s. For more information, see [VPN gateway limits](https://help.aliyun.com/document_detail/65290.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
@@ -43,7 +45,7 @@ public class CreateVpnGatewayRequest extends TeaModel {
      * <p>*   You need to specify two vSwitches in different zones in the virtual private cloud (VPC) that is associated with the VPN gateway to implement disaster recovery across zones.</p>
      * <p>*   For a region that supports only one zone, disaster recovery across zones is not supported. We recommend that you specify two vSwitches in the zone to implement high availability. You can specify the same vSwitch.</p>
      * <br>
-     * <p>For more information about the regions and zones that support the IPsec-VPN connections in dual-tunnel mode, see [IPsec-VPN connections support the dual-tunnel mode](~~2358946~~).</p>
+     * <p>For more information about the regions and zones that support the IPsec-VPN connections in dual-tunnel mode, see [IPsec-VPN connections support the dual-tunnel mode](https://help.aliyun.com/document_detail/2358946.html).</p>
      */
     @NameInMap("DisasterRecoveryVSwitchId")
     public String disasterRecoveryVSwitchId;
@@ -75,7 +77,7 @@ public class CreateVpnGatewayRequest extends TeaModel {
     /**
      * <p>The name of the VPN gateway. The default value is the ID of the VPN gateway.</p>
      * <br>
-     * <p>The name must be 2 to 100 characters in length and cannot start with `http://` or `https://`. It must start with a letter and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). Other special characters are not supported.</p>
+     * <p>The name must be 2 to 100 characters in length and cannot start with `http://` or `https://`. It must start with a letter and can contain letters, digits, underscores (_), hyphens (-), and periods (.). Other special characters are not supported.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -102,7 +104,9 @@ public class CreateVpnGatewayRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The region ID of the VPN gateway. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the VPN gateway. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -110,7 +114,7 @@ public class CreateVpnGatewayRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the VPN gateway belongs.</p>
      * <br>
-     * <p>*   You can call the [ListResourceGroups](~~158855~~) operation to query resource group IDs.</p>
+     * <p>*   You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource group IDs.</p>
      * <br>
      * <p>*   If you do not specify a resource group ID, the VPN gateway belongs to the default resource group.</p>
      * <br>
@@ -144,6 +148,8 @@ public class CreateVpnGatewayRequest extends TeaModel {
 
     /**
      * <p>The ID of the virtual private cloud (VPC) where you want to create the VPN gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

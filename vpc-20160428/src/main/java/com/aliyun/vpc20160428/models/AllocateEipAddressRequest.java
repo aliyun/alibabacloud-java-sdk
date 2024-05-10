@@ -59,7 +59,7 @@ public class AllocateEipAddressRequest extends TeaModel {
      * <p>*   **BGP** (default): BGP (Multi-ISP) All regions support BGP (Multi-ISP) EIPs.</p>
      * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</p>
      * <br>
-     * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the "Line types" section of [What is EIP?](~~32321~~)</p>
+     * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the "Line types" section of [What is EIP?](https://help.aliyun.com/document_detail/32321.html)</p>
      * <br>
      * <p>*   If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:</p>
      * <br>
@@ -118,7 +118,7 @@ public class AllocateEipAddressRequest extends TeaModel {
     /**
      * <p>The EIP name.</p>
      * <br>
-     * <p>The name must be 1 to 128 characters in length and start with a letter, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
+     * <p>The name must be 1 to 128 characters in length and start with a letter, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * <br>
      * <p>>  You cannot specify this parameter if you create a subscription EIP.</p>
      */
@@ -165,7 +165,7 @@ public class AllocateEipAddressRequest extends TeaModel {
      * <br>
      * <p>The EIP is allocated from the IP address pool.</p>
      * <br>
-     * <p>By default, the IP address pool feature is unavailable. To use the IP address pool, apply for the privilege in the Quota Center console. For more information, see the "Request a quota increase in the Quota Center console" section in [Manage EIP quotas](~~108213~~).</p>
+     * <p>By default, the IP address pool feature is unavailable. To use the IP address pool, apply for the privilege in the Quota Center console. For more information, see the "Request a quota increase in the Quota Center console" section in [Manage EIP quotas](https://help.aliyun.com/document_detail/108213.html).</p>
      */
     @NameInMap("PublicIpAddressPoolId")
     public String publicIpAddressPoolId;
@@ -173,7 +173,9 @@ public class AllocateEipAddressRequest extends TeaModel {
     /**
      * <p>The ID of the region to which the EIP belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the region ID.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -206,7 +208,7 @@ public class AllocateEipAddressRequest extends TeaModel {
      * <br>
      * <p>When the service type of the IP address pool specified by **PublicIpAddressPoolId** is CloudBox, the default value is the zone of the IP address pool.</p>
      * <br>
-     * <p>For more information, see [ListPublicIpAddressPools](~~429433~~).</p>
+     * <p>For more information, see [ListPublicIpAddressPools](https://help.aliyun.com/document_detail/429433.html).</p>
      */
     @NameInMap("Zone")
     public String zone;

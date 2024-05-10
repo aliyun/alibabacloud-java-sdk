@@ -6,14 +6,18 @@ import com.aliyun.tea.*;
 public class AddGlobalAccelerationInstanceIpRequest extends TeaModel {
     /**
      * <p>The ID of the shared-bandwidth GA instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GlobalAccelerationInstanceId")
     public String globalAccelerationInstanceId;
 
     /**
-     * <p>The EIP ID. You can call the [DescribeEipAddresses](~~36018~~) operation to query EIP IDs.</p>
+     * <p>The EIP ID. You can call the [DescribeEipAddresses](https://help.aliyun.com/document_detail/36018.html) operation to query EIP IDs.</p>
      * <br>
      * <p>>  Make sure that the billing method of the EIP is pay-as-you-go, and the EIP and the shared-bandwidth GA instance belong to the same region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IpInstanceId")
     public String ipInstanceId;
@@ -28,6 +32,8 @@ public class AddGlobalAccelerationInstanceIpRequest extends TeaModel {
      * <p>The region of the shared-bandwidth GA instance.</p>
      * <br>
      * <p>You can call the **DescribeRegions** operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

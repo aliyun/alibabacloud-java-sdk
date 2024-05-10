@@ -22,13 +22,17 @@ public class UnTagResourcesRequest extends TeaModel {
     /**
      * <p>The region ID of the resource.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource ID. You can specify up to 20 resource IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -49,6 +53,8 @@ public class UnTagResourcesRequest extends TeaModel {
      * <p>*   **VpnGateway**</p>
      * <p>*   **NATGATEWAY**</p>
      * <p>*   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -56,7 +62,7 @@ public class UnTagResourcesRequest extends TeaModel {
     /**
      * <p>The key of the tag that you want to remove. You can specify at most 20 tag keys. It can be an empty string.</p>
      * <br>
-     * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+     * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

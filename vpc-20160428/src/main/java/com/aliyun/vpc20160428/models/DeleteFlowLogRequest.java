@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteFlowLogRequest extends TeaModel {
     /**
      * <p>The ID of the flow log.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FlowLogId")
     public String flowLogId;
@@ -17,7 +19,9 @@ public class DeleteFlowLogRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the flow log. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the flow log. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

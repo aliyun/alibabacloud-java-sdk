@@ -27,12 +27,16 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
 
     /**
      * <p>The ID of the Express Connect circuit.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
     /**
-     * <p>The region in which the Express Connect circuit is deployed. You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     * <p>The region in which the Express Connect circuit is deployed. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

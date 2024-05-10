@@ -26,13 +26,17 @@ public class DiagnoseVpnGatewayRequest extends TeaModel {
     /**
      * <p>The region ID of the VPN gateway.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource to be diagnosed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -41,12 +45,16 @@ public class DiagnoseVpnGatewayRequest extends TeaModel {
      * <p>The type of the resource.</p>
      * <br>
      * <p>Set the value to **Ipsec**, which specifies an IPsec-VPN connection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The ID of the VPN gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;

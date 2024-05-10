@@ -36,6 +36,8 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
      * <p>*   **24**: applies for 256 contiguous EIPs in each call.</p>
      * <br>
      * <p>>  Some IP address are reserved for specific purposes. Therefore, the actual number of the contiguous EIPs may be one, three, or four less than the expected number.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EipMask")
     public String eipMask;
@@ -55,7 +57,7 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
      * <p>*   **BGP** (default): BGP (Multi-ISP) line The BGP (Multi-ISP) line is supported in all regions.</p>
      * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro line BGP (Multi-ISP) Pro line is supported only in the China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.</p>
      * <br>
-     * <p>For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see [EIP line types](~~32321~~).</p>
+     * <p>For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see [EIP line types](https://help.aliyun.com/document_detail/32321.html).</p>
      * <br>
      * <p>If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</p>
      * <br>
@@ -86,7 +88,9 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
     /**
      * <p>The ID of the region in which the contiguous EIP group resides.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the region ID.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

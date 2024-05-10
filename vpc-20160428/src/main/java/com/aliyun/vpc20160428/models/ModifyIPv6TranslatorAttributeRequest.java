@@ -13,19 +13,21 @@ public class ModifyIPv6TranslatorAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of IPv6 Translation Service. This parameter is empty by default. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It cannot start with http:// or [https://](https://。).</p>
+     * <p>The description of IPv6 Translation Service. This parameter is empty by default. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with http:// or [https://](https://。).</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the IPv6 Translation Service instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ipv6TranslatorId")
     public String ipv6TranslatorId;
 
     /**
-     * <p>The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It cannot start with http:// or [https://](https://。).</p>
+     * <p>The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with http:// or [https://](https://。).</p>
      */
     @NameInMap("Name")
     public String name;
@@ -38,6 +40,8 @@ public class ModifyIPv6TranslatorAttributeRequest extends TeaModel {
 
     /**
      * <p>The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

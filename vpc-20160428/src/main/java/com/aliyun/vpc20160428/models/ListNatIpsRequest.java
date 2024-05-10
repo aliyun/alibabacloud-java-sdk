@@ -31,6 +31,8 @@ public class ListNatIpsRequest extends TeaModel {
 
     /**
      * <p>The ID of the NAT gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
@@ -81,7 +83,9 @@ public class ListNatIpsRequest extends TeaModel {
     /**
      * <p>The ID of the region where the NAT gateway is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -24,18 +24,24 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
 
     /**
      * <p>The name of the customer company that requires the Express Connect circuit.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CompanyName")
     public String companyName;
 
     /**
      * <p>The time when construction started. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConstructionTime")
     public String constructionTime;
 
     /**
      * <p>The ID of the Express Connect circuit.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -47,6 +53,8 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
      * <p>*   **MPLSVPN**: MPLSVPN line</p>
      * <p>*   **FIBRE**: fiber line</p>
      * <p>*   **Other**: other types</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LineType")
     public String lineType;
@@ -72,7 +80,9 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
     /**
      * <p>The region ID of the Express Connect circuit.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -85,6 +95,8 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
 
     /**
      * <p>The construction company.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Si")
     public String si;

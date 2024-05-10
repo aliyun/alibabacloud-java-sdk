@@ -13,6 +13,9 @@ public class DescribeVpnGatewayAvailableZonesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,6 +25,9 @@ public class DescribeVpnGatewayAvailableZonesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Spec")
     public String spec;
 

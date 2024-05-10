@@ -10,9 +10,15 @@ public class CreateFailoverTestJobRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobDuration")
     public Integer jobDuration;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 
@@ -28,12 +34,18 @@ public class CreateFailoverTestJobRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

@@ -21,7 +21,9 @@ public class ReleaseEipSegmentAddressRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the contiguous EIPs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the contiguous EIPs. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -36,6 +38,8 @@ public class ReleaseEipSegmentAddressRequest extends TeaModel {
      * <p>The ID of the contiguous EIP group to be released.</p>
      * <br>
      * <p>The system releases all EIPs in the group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SegmentInstanceId")
     public String segmentInstanceId;

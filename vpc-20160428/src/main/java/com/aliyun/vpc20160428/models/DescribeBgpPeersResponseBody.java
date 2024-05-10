@@ -139,6 +139,8 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
 
         /**
          * <p>The time when the BGP peer is modified.</p>
+         * <br>
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;

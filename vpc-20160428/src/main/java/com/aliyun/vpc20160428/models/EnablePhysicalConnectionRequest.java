@@ -31,6 +31,8 @@ public class EnablePhysicalConnectionRequest extends TeaModel {
 
     /**
      * <p>The ID of the Express Connect circuit.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
@@ -39,6 +41,8 @@ public class EnablePhysicalConnectionRequest extends TeaModel {
      * <p>The region where the Express Connect circuit is deployed.</p>
      * <br>
      * <p>You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

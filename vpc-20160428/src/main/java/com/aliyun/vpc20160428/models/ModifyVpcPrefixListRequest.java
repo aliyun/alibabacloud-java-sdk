@@ -51,6 +51,8 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
 
     /**
      * <p>The ID of the prefix list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PrefixListId")
     public String prefixListId;
@@ -65,6 +67,8 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
 
     /**
      * <p>The region ID of the prefix list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

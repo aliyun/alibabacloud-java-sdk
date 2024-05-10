@@ -25,18 +25,33 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QosId")
     public String qosId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QueueId")
     public String queueId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class GrantInstanceToCenRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance to which you want to grant permissions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The user ID (UID) of the Apsara Stack tenant account to which the CEN instance belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenOwnerId")
     public Long cenOwnerId;
@@ -28,6 +32,8 @@ public class GrantInstanceToCenRequest extends TeaModel {
 
     /**
      * <p>The ID of the network instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -37,6 +43,8 @@ public class GrantInstanceToCenRequest extends TeaModel {
      * <br>
      * <p>*   **VPC**</p>
      * <p>*   **VBR**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -50,7 +58,9 @@ public class GrantInstanceToCenRequest extends TeaModel {
     /**
      * <p>The ID of the region where the network instance is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

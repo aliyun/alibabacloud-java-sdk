@@ -50,12 +50,16 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
      * <p>The priority of the traffic mirror session. Valid values: **1** to **32766**.</p>
      * <br>
      * <p>A smaller value indicates a higher priority. You cannot specify identical priorities for traffic mirror sessions that are created in the same region by using the same account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Priority")
     public Integer priority;
 
     /**
-     * <p>The ID of the region to which the traffic mirror session belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).</p>
+     * <p>The ID of the region to which the traffic mirror session belongs. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](https://help.aliyun.com/document_detail/207513.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -80,6 +84,8 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
 
     /**
      * <p>The ID of the filter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficMirrorFilterId")
     public String trafficMirrorFilterId;
@@ -102,12 +108,16 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
 
     /**
      * <p>The ID of the traffic mirror source. You can specify only an elastic network interface (ENI) as the traffic mirror source. The default value of **N** is **1**, which indicates that you can add only one traffic mirror source to a traffic mirror session.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficMirrorSourceIds")
     public java.util.List<String> trafficMirrorSourceIds;
 
     /**
      * <p>The ID of the traffic mirror destination. You can specify only an elastic network interface (ENI) or a Server Load Balancer (SLB) instance as a traffic mirror destination.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficMirrorTargetId")
     public String trafficMirrorTargetId;
@@ -117,6 +127,8 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
      * <br>
      * <p>*   **NetworkInterface**: an ENI</p>
      * <p>*   **SLB**: an SLB instance</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficMirrorTargetType")
     public String trafficMirrorTargetType;
