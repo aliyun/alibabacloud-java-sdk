@@ -25,7 +25,7 @@ public class CreateIpv6GatewayRequest extends TeaModel {
     /**
      * <p>The name of the IPv6 gateway.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -37,7 +37,9 @@ public class CreateIpv6GatewayRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the IPv6 gateway. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the IPv6 gateway. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -62,6 +64,8 @@ public class CreateIpv6GatewayRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC in which you want to create the IPv6 gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

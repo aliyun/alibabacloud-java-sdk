@@ -29,7 +29,9 @@ public class CreateDefaultVSwitchRequest extends TeaModel {
     /**
      * <p>The region ID of the default vSwitch.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -43,7 +45,9 @@ public class CreateDefaultVSwitchRequest extends TeaModel {
     /**
      * <p>The zone ID of the default vSwitch.</p>
      * <br>
-     * <p>You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.</p>
+     * <p>You can call the [DescribeZones](https://help.aliyun.com/document_detail/36064.html) operation to query the most recent zone list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

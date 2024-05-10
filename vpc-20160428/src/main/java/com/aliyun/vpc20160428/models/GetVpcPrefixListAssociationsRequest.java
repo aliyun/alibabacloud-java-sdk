@@ -27,6 +27,8 @@ public class GetVpcPrefixListAssociationsRequest extends TeaModel {
 
     /**
      * <p>The ID of the prefix list that you want to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PrefixListId")
     public String prefixListId;
@@ -34,7 +36,9 @@ public class GetVpcPrefixListAssociationsRequest extends TeaModel {
     /**
      * <p>The region ID of the prefix list.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

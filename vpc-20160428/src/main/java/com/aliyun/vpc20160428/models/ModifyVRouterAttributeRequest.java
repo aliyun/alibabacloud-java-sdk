@@ -21,7 +21,7 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
     /**
      * <p>The region ID of the vRouter.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -34,6 +34,8 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
 
     /**
      * <p>The vRouter ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VRouterId")
     public String VRouterId;

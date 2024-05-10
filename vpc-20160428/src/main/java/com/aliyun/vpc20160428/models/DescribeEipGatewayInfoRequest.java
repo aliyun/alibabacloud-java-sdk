@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeEipGatewayInfoRequest extends TeaModel {
     /**
      * <p>The ID of the secondary ENI that is associated with the EIP.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -17,7 +19,9 @@ public class DescribeEipGatewayInfoRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region to which the EIP that you want to query belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The region to which the EIP that you want to query belongs. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

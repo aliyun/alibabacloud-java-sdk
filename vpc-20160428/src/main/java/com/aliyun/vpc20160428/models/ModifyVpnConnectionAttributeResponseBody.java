@@ -111,7 +111,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
     /**
      * <p>The ID of the resource group to which the IPsec-VPN connection belongs.</p>
      * <br>
-     * <p>The IPsec-VPN connection and the VPN gateway associated with the IPsec-VPN connection belong to the same resource group. You can call the [ListResourceGroups](~~158855~~) operation to query resource groups.</p>
+     * <p>The IPsec-VPN connection and the VPN gateway associated with the IPsec-VPN connection belong to the same resource group. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource groups.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

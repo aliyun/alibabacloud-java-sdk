@@ -7,7 +7,9 @@ public class DissociateVpnGatewayWithCertificateRequest extends TeaModel {
     /**
      * <p>The certificate ID.</p>
      * <br>
-     * <p>>  The certificate ID refers to the ID generated after the SSL certificate is associated with a VPN gateway. It is not the ID of the certificate itself. You can call [ListVpnCertificateAssociations](~~448813~~) to query certificate IDs.</p>
+     * <p>>  The certificate ID refers to the ID generated after the SSL certificate is associated with a VPN gateway. It is not the ID of the certificate itself. You can call [ListVpnCertificateAssociations](https://help.aliyun.com/document_detail/448813.html) to query certificate IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CertificateId")
     public String certificateId;
@@ -17,6 +19,8 @@ public class DissociateVpnGatewayWithCertificateRequest extends TeaModel {
      * <br>
      * <p>*   **Encryption**</p>
      * <p>*   **Signature**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CertificateType")
     public String certificateType;
@@ -43,13 +47,17 @@ public class DissociateVpnGatewayWithCertificateRequest extends TeaModel {
     /**
      * <p>The region ID of the VPN gateway.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the VPN gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;

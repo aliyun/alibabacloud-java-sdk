@@ -16,6 +16,8 @@ public class PublishVpnRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The next hop of the VPN gateway route.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NextHop")
     public String nextHop;
@@ -31,6 +33,8 @@ public class PublishVpnRouteEntryRequest extends TeaModel {
      * <br>
      * <p>*   **true**</p>
      * <p>*   **false**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PublishVpc")
     public Boolean publishVpc;
@@ -38,7 +42,9 @@ public class PublishVpnRouteEntryRequest extends TeaModel {
     /**
      * <p>The ID of the region where the VPN gateway is created.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -51,6 +57,8 @@ public class PublishVpnRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The destination CIDR block of the VPN gateway route.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteDest")
     public String routeDest;
@@ -60,12 +68,16 @@ public class PublishVpnRouteEntryRequest extends TeaModel {
      * <br>
      * <p>*   **pbr**: policy-based route</p>
      * <p>*   **dbr**: destination-based route</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteType")
     public String routeType;
 
     /**
      * <p>The ID of the VPN gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;

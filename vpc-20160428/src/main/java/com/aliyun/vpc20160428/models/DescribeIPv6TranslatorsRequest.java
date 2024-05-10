@@ -65,7 +65,9 @@ public class DescribeIPv6TranslatorsRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The region of the IPv6 Translation Service instance. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The region of the IPv6 Translation Service instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

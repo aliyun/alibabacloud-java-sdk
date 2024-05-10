@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ModifyIPv6TranslatorAclAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the ACL that you want to modify.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
      * <p>The name of the ACL.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclName")
     public String aclName;
@@ -32,6 +36,8 @@ public class ModifyIPv6TranslatorAclAttributeRequest extends TeaModel {
 
     /**
      * <p>The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

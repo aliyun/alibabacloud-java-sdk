@@ -33,7 +33,9 @@ public class DescribeSslVpnServersRequest extends TeaModel {
     /**
      * <p>The region ID of the SSL server.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -43,7 +45,7 @@ public class DescribeSslVpnServersRequest extends TeaModel {
      * <br>
      * <p>The SSL server has the same resource group as its associated VPN gateway instance.</p>
      * <br>
-     * <p>You can call the [DescribeVpnGateway](~~2526915~~) operation to query the ID of the resource group to which the VPN gateway instance belongs.</p>
+     * <p>You can call the [DescribeVpnGateway](https://help.aliyun.com/document_detail/2526915.html) operation to query the ID of the resource group to which the VPN gateway instance belongs.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -30,7 +30,9 @@ public class RemoveSourcesFromTrafficMirrorSessionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the traffic mirror session belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).</p>
+     * <p>The ID of the region to which the traffic mirror session belongs. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](https://help.aliyun.com/document_detail/207513.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -43,12 +45,16 @@ public class RemoveSourcesFromTrafficMirrorSessionRequest extends TeaModel {
 
     /**
      * <p>The ID of the traffic mirror session from which you want to delete a traffic mirror source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficMirrorSessionId")
     public String trafficMirrorSessionId;
 
     /**
      * <p>The ID of the traffic mirror source to be deleted. Maximum value of N: 10.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficMirrorSourceIds")
     public java.util.List<String> trafficMirrorSourceIds;

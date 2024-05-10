@@ -9,6 +9,8 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
      * <br>
      * <p>*   If the billing method is pay-by-data-transfer, valid values are **1** to **1000**.</p>
      * <p>*   If the billing method is pay-by-bandwidth, valid values are **1** to **2000**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Bandwidth")
     public Long bandwidth;
@@ -44,7 +46,9 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

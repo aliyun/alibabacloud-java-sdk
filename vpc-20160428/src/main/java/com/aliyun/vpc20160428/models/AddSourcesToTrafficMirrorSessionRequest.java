@@ -32,9 +32,11 @@ public class AddSourcesToTrafficMirrorSessionRequest extends TeaModel {
     /**
      * <p>The ID of the region to which the traffic mirror session belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
      * <br>
-     * <p>For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).</p>
+     * <p>For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](https://help.aliyun.com/document_detail/207513.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -47,12 +49,16 @@ public class AddSourcesToTrafficMirrorSessionRequest extends TeaModel {
 
     /**
      * <p>The ID of the traffic mirror session.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficMirrorSessionId")
     public String trafficMirrorSessionId;
 
     /**
      * <p>The ID of the traffic mirror source. You can specify only an elastic network interface (ENI) as the traffic mirror source. The default value of **N** is **1**, which indicates that you can add only one traffic mirror source to a traffic mirror session.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficMirrorSourceIds")
     public java.util.List<String> trafficMirrorSourceIds;

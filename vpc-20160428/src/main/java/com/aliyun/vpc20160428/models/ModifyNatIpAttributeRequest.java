@@ -33,6 +33,8 @@ public class ModifyNatIpAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the NAT IP address that you want to modify.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatIpId")
     public String natIpId;
@@ -40,7 +42,7 @@ public class ModifyNatIpAttributeRequest extends TeaModel {
     /**
      * <p>The name of the NAT IP address that you want to modify.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. The name must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. The name must start with a letter and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("NatIpName")
     public String natIpName;
@@ -54,7 +56,9 @@ public class ModifyNatIpAttributeRequest extends TeaModel {
     /**
      * <p>The region ID of the NAT gateway to which the NAT IP address that you want to modify belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

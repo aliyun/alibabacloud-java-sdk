@@ -30,18 +30,24 @@ public class CreateIPv6TranslatorEntryRequest extends TeaModel {
 
     /**
      * <p>The port that is used by the IPv6 address allocated to the IPv6 Translation Service instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AllocateIpv6Port")
     public Integer allocateIpv6Port;
 
     /**
      * <p>The public IPv4 address that needs to provide IPv6 services.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BackendIpv4Addr")
     public String backendIpv4Addr;
 
     /**
      * <p>The port of the public IPv4 address that needs to provide IPv6 services.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BackendIpv4Port")
     public Integer backendIpv4Port;
@@ -49,7 +55,7 @@ public class CreateIPv6TranslatorEntryRequest extends TeaModel {
     /**
      * <p>The maximum bandwidth specified in the IPv6 mapping entry. Valid values:</p>
      * <br>
-     * <p>*   \-1 (default): does not limit the maximum bandwidth specified in the IPv6 mapping entry.</p>
+     * <p>*   \\-1 (default): does not limit the maximum bandwidth specified in the IPv6 mapping entry.</p>
      * <p>*   1 to 200: the bandwidth value specified in the IPv6 mapping entry. Unit: Mbit/s.</p>
      * <br>
      * <p>> The sum of the maximum bandwidth values specified in all IPv6 entries cannot exceed the maximum bandwidth supported by the instance.</p>
@@ -64,13 +70,15 @@ public class CreateIPv6TranslatorEntryRequest extends TeaModel {
     public String entryDescription;
 
     /**
-     * <p>The name of the IPv6 mapping entry. It must be 2 to 100 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with `http://` or `https://`.</p>
+     * <p>The name of the IPv6 mapping entry. It must be 2 to 100 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("EntryName")
     public String entryName;
 
     /**
      * <p>The ID of the IPv6 Translation Service instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ipv6TranslatorId")
     public String ipv6TranslatorId;
@@ -83,6 +91,8 @@ public class CreateIPv6TranslatorEntryRequest extends TeaModel {
 
     /**
      * <p>The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -98,6 +108,8 @@ public class CreateIPv6TranslatorEntryRequest extends TeaModel {
      * <br>
      * <p>*   **tcp**</p>
      * <p>*   **udp**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransProtocol")
     public String transProtocol;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteGlobalAccelerationInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the GA instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GlobalAccelerationInstanceId")
     public String globalAccelerationInstanceId;
@@ -19,7 +21,9 @@ public class DeleteGlobalAccelerationInstanceRequest extends TeaModel {
     /**
      * <p>The region ID of the GA instance.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

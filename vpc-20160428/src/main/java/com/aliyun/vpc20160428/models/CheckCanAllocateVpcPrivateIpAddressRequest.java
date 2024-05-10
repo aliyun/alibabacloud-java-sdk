@@ -21,6 +21,8 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
 
     /**
      * <p>To query whether a private IP address is available, the private IP address must belong to the vSwitch specified by the **VSwitchId** parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -28,7 +30,9 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
     /**
      * <p>The region ID of the vSwitch to which the private IP address that you want to query belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -41,6 +45,8 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch to which the private IP address to be queried belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

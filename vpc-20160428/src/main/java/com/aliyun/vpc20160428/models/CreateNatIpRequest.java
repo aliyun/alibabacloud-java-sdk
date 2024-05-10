@@ -25,6 +25,8 @@ public class CreateNatIpRequest extends TeaModel {
 
     /**
      * <p>The ID of the Virtual Private Cloud (VPC) NAT gateway for which you want to create the NAT IP address.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
@@ -39,6 +41,8 @@ public class CreateNatIpRequest extends TeaModel {
 
     /**
      * <p>The CIDR block to which the NAT IP address belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatIpCidr")
     public String natIpCidr;
@@ -54,7 +58,7 @@ public class CreateNatIpRequest extends TeaModel {
     /**
      * <p>The name of the NAT IP address.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. The name must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. The name must start with a letter and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("NatIpName")
     public String natIpName;
@@ -68,7 +72,9 @@ public class CreateNatIpRequest extends TeaModel {
     /**
      * <p>The region ID of the NAT gateway to which the NAT IP address that you want to create belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent list of regions.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent list of regions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

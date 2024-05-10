@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ModifyGlobalAccelerationInstanceSpecRequest extends TeaModel {
     /**
      * <p>The maximum bandwidth of the GA instance. Unit: Mbit/s. Set the value to **10**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Bandwidth")
     public String bandwidth;
 
     /**
      * <p>The ID of the GA instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GlobalAccelerationInstanceId")
     public String globalAccelerationInstanceId;
@@ -25,7 +29,9 @@ public class ModifyGlobalAccelerationInstanceSpecRequest extends TeaModel {
     /**
      * <p>The region ID of the GA instance.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

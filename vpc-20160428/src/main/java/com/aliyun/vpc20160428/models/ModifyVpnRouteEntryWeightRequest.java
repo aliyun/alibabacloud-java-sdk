@@ -19,12 +19,16 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
      * <br>
      * <p>*   **0**: a low priority</p>
      * <p>*   **100**: a high priority</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NewWeight")
     public Integer newWeight;
 
     /**
      * <p>The next hop of the destination-based route.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NextHop")
     public String nextHop;
@@ -42,7 +46,9 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the VPN gateway is created. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region where the VPN gateway is created. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -55,12 +61,16 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
 
     /**
      * <p>The destination CIDR block of the destination-based route.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteDest")
     public String routeDest;
 
     /**
      * <p>The ID of the VPN gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
@@ -70,6 +80,8 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
      * <br>
      * <p>*   **0**: a low priority</p>
      * <p>*   **100**: a high priority</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Weight")
     public Integer weight;

@@ -42,12 +42,16 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends TeaModel {
 
     /**
      * <p>The ID of the IP address pool.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PublicIpAddressPoolId")
     public String publicIpAddressPoolId;
 
     /**
      * <p>The region ID of the CIDR blocks.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -58,19 +58,21 @@ public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
     public Integer entryBandwidth;
 
     /**
-     * <p>The description of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with http:// or [https://](https://。).</p>
+     * <p>The description of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with http:// or [https://](https://。).</p>
      */
     @NameInMap("EntryDescription")
     public String entryDescription;
 
     /**
-     * <p>The name of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with http:// or [https://](https://。).</p>
+     * <p>The name of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with http:// or [https://](https://。).</p>
      */
     @NameInMap("EntryName")
     public String entryName;
 
     /**
      * <p>The ID of the IPv6 mapping entry.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ipv6TranslatorEntryId")
     public String ipv6TranslatorEntryId;
@@ -83,6 +85,8 @@ public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
 
     /**
      * <p>The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

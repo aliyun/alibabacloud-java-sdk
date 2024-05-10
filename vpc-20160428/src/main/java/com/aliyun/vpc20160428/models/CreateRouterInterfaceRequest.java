@@ -7,7 +7,7 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     /**
      * <p>The ID of the access point to which the VBR belongs.</p>
      * <br>
-     * <p>You can call the [DescribeAccessPoints](~~36062~~) operation to obtain the IDs of access points.</p>
+     * <p>You can call the [DescribeAccessPoints](https://help.aliyun.com/document_detail/36062.html) operation to obtain the IDs of access points.</p>
      * <br>
      * <p>>  This parameter is required if the VBR is connected to an Express Connect circuit.</p>
      */
@@ -95,7 +95,7 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     /**
      * <p>The name of the router interface.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      */
     @NameInMap("Name")
     public String name;
@@ -122,6 +122,8 @@ public class CreateRouterInterfaceRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which the acceptor is deployed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OppositeRegionId")
     public String oppositeRegionId;
@@ -172,7 +174,9 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     /**
      * <p>The ID of the region to which the router interface belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -180,7 +184,7 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     /**
      * <p>The ID of the resource group.</p>
      * <br>
-     * <p>For more information about resource group, see [What is Resource Management?](~~94475~~)</p>
+     * <p>For more information about resource group, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -196,12 +200,16 @@ public class CreateRouterInterfaceRequest extends TeaModel {
      * <br>
      * <p>*   **InitiatingSide**: requester</p>
      * <p>*   **AcceptingSide**: acceptor</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Role")
     public String role;
 
     /**
      * <p>The ID of the router that is associated with the router interface.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouterId")
     public String routerId;
@@ -211,6 +219,8 @@ public class CreateRouterInterfaceRequest extends TeaModel {
      * <br>
      * <p>*   **VRouter**</p>
      * <p>*   **VBR**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouterType")
     public String routerType;
@@ -232,6 +242,8 @@ public class CreateRouterInterfaceRequest extends TeaModel {
      * <p>*   **Xlarge.1**: 10,000 Mbit/s</p>
      * <br>
      * <p>>  If **Role** is set to **AcceptingSide**, set **Spec** to **Negative**. This indicates that you do not need to specify the specification when you create an acceptor router interface.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Spec")
     public String spec;

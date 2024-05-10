@@ -7,13 +7,15 @@ public class ModifyIpv6AddressAttributeRequest extends TeaModel {
     /**
      * <p>The description of the IPv6 address.</p>
      * <br>
-     * <p>It must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. The name must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>It must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. The name must start with a letter and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the IPv6 address.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ipv6AddressId")
     public String ipv6AddressId;
@@ -21,7 +23,7 @@ public class ModifyIpv6AddressAttributeRequest extends TeaModel {
     /**
      * <p>The name of the IPv6 address.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter. The name must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter. The name must start with a letter and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -33,7 +35,9 @@ public class ModifyIpv6AddressAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the IPv6 address. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the IPv6 address. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

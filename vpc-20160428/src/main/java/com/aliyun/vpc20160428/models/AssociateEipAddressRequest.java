@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AssociateEipAddressRequest extends TeaModel {
     /**
      * <p>The ID of the EIP that you want to associate with an instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;
@@ -24,6 +26,8 @@ public class AssociateEipAddressRequest extends TeaModel {
      * <p>The ID of the instance with which you want to associate the EIP.</p>
      * <br>
      * <p>You can enter the ID of a NAT gateway, CLB instance, ECS instance, secondary ENI, HAVIP, or IP address.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -80,7 +84,7 @@ public class AssociateEipAddressRequest extends TeaModel {
     /**
      * <p>The ID of the region to which the EIP belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the region ID.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

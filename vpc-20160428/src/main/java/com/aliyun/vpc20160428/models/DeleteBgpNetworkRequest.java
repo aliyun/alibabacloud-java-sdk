@@ -16,6 +16,8 @@ public class DeleteBgpNetworkRequest extends TeaModel {
 
     /**
      * <p>The CIDR block of the virtual private cloud (VPC) or vSwitch that you want to connect to a data center.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DstCidrBlock")
     public String dstCidrBlock;
@@ -29,7 +31,9 @@ public class DeleteBgpNetworkRequest extends TeaModel {
     /**
      * <p>The region ID of the BGP group.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -42,6 +46,8 @@ public class DeleteBgpNetworkRequest extends TeaModel {
 
     /**
      * <p>The ID of the VBR.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouterId")
     public String routerId;

@@ -102,7 +102,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     /**
      * <p>VPN网关实例所属的资源组ID。</p>
      * <br>
-     * <p>您可以调用[ListResourceGroups](~~158855~~)接口查询资源组信息。</p>
+     * <p>您可以调用[ListResourceGroups](https://help.aliyun.com/document_detail/158855.html)接口查询资源组信息。</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

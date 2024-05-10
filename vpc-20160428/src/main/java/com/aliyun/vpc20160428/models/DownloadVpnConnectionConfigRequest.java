@@ -13,7 +13,9 @@ public class DownloadVpnConnectionConfigRequest extends TeaModel {
     /**
      * <p>The ID of the region where the IPsec-VPN connection is created.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -26,6 +28,8 @@ public class DownloadVpnConnectionConfigRequest extends TeaModel {
 
     /**
      * <p>The ID of the IPsec-VPN connection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpnConnectionId")
     public String vpnConnectionId;

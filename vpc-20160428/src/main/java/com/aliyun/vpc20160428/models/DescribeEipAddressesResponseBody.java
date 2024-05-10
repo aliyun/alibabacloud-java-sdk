@@ -312,7 +312,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
          * <p>*   **BGP**: BGP (Multi-ISP). The BGP (Multi-ISP) line is supported in all regions.</p>
          * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines. BGP (Multi-ISP) Pro line is supported only in the China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.</p>
          * <br>
-         * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the [Line types](~~32321~~) section of the "What is EIP?" topic.</p>
+         * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the [Line types](https://help.aliyun.com/document_detail/32321.html) section of the "What is EIP?" topic.</p>
          * <br>
          * <p>If you are allowed to use single-ISP bandwidth, one of the following values may be returned:</p>
          * <br>

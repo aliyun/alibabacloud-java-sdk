@@ -8,7 +8,7 @@ public class GetFlowLogServiceStatusResponseBody extends TeaModel {
      * <p>Indicates whether the flow log feature is enabled. Valid values:</p>
      * <br>
      * <p>*   **true**: yes</p>
-     * <p>*   **false**: no You can call the [OpenFlowLogService](~~449637~~) operation to enable the flow log feature.</p>
+     * <p>*   **false**: no You can call the [OpenFlowLogService](https://help.aliyun.com/document_detail/449637.html) operation to enable the flow log feature.</p>
      */
     @NameInMap("Enabled")
     public Boolean enabled;

@@ -26,12 +26,16 @@ public class UpdateNatGatewayNatTypeRequest extends TeaModel {
 
     /**
      * <p>The ID of the standard NAT gateway to be upgraded.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
      * <p>The type of Internet NAT gateway. Set the value to **Enhanced**, which specifies an enhanced Internet NAT gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatType")
     public String natType;
@@ -45,7 +49,9 @@ public class UpdateNatGatewayNatTypeRequest extends TeaModel {
     /**
      * <p>The ID of the region where the NAT gateway that you want to upgrade is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -60,6 +66,8 @@ public class UpdateNatGatewayNatTypeRequest extends TeaModel {
      * <p>The vSwitch to which the enhanced Internet NAT gateway belongs.</p>
      * <br>
      * <p>>  If you do not set this parameter, the system generates an Internet NAT gateway in a random vSwitch of a virtual private cloud (VPC).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

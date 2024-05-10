@@ -147,7 +147,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     /**
      * <p>The ID of the resource group to which the IPsec-VPN connection belongs.</p>
      * <br>
-     * <p>You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.</p>
+     * <p>You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group information.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -239,7 +239,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     /**
      * <p>The ID of the zone where the IPsec-VPN connection is deployed.</p>
      * <br>
-     * <p>You can call [DescribeZones](~~36064~~) to query zone IDs and mapping between zone IDs and zone names.</p>
+     * <p>You can call [DescribeZones](https://help.aliyun.com/document_detail/36064.html) to query zone IDs and mapping between zone IDs and zone names.</p>
      */
     @NameInMap("ZoneNo")
     public String zoneNo;
@@ -1150,7 +1150,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         /**
          * <p>The zone where the tunnel is deployed.</p>
          * <br>
-         * <p>You can call [DescribeZones](~~36064~~) to query zone IDs.</p>
+         * <p>You can call [DescribeZones](https://help.aliyun.com/document_detail/36064.html) to query zone IDs.</p>
          */
         @NameInMap("ZoneNo")
         public String zoneNo;

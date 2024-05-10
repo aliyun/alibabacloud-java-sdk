@@ -45,6 +45,8 @@ public class ModifyFullNatEntryAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the FULLNAT entry to be modified.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FullNatEntryId")
     public String fullNatEntryId;
@@ -59,6 +61,8 @@ public class ModifyFullNatEntryAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the FULLNAT table to be modified.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FullNatTableId")
     public String fullNatTableId;
@@ -99,7 +103,9 @@ public class ModifyFullNatEntryAttributeRequest extends TeaModel {
     /**
      * <p>The region ID of the Virtual Private Cloud (VPC) NAT gateway to which the FULLNAT entry to be modified belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class MoveVpnResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the resource.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the new resource group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
@@ -25,7 +29,9 @@ public class MoveVpnResourceGroupRequest extends TeaModel {
     /**
      * <p>The region ID of the resource.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -48,6 +54,8 @@ public class MoveVpnResourceGroupRequest extends TeaModel {
      * <p>*   **VpnAttachment**: IPsec-VPN connection</p>
      * <br>
      * <p>    An IPsec-VPN connection associated with a transit router or not associate with a resource.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

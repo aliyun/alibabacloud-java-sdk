@@ -83,7 +83,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         /**
          * <p>The key of tag N added to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>It can be up to 64 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>It can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -91,7 +91,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         /**
          * <p>The value of tag N added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
          * <br>
-         * <p>It can be up to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>It can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

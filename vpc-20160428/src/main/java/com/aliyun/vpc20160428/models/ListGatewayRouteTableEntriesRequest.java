@@ -12,6 +12,8 @@ public class ListGatewayRouteTableEntriesRequest extends TeaModel {
 
     /**
      * <p>The ID of the gateway route table that you want to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GatewayRouteTableId")
     public String gatewayRouteTableId;
@@ -40,7 +42,9 @@ public class ListGatewayRouteTableEntriesRequest extends TeaModel {
     /**
      * <p>The region ID of the gateway route table.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent list of regions.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent list of regions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

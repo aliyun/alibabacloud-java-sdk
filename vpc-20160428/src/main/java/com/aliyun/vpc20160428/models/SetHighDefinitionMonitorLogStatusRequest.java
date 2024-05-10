@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
     /**
      * <p>The ID of the instance for which you want to configure fine-grained monitoring.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -18,12 +20,16 @@ public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
 
     /**
      * <p>The name of the Simple Log Service (SLS) project.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LogProject")
     public String logProject;
 
     /**
      * <p>The name of the Logstore.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LogStore")
     public String logStore;
@@ -37,7 +43,9 @@ public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
     /**
      * <p>The region ID of the instance.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -53,6 +61,8 @@ public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
      * <br>
      * <p>*   **ON**</p>
      * <p>*   **OFF**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public String status;

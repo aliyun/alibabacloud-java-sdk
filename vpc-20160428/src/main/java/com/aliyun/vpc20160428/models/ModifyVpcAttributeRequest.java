@@ -59,7 +59,7 @@ public class ModifyVpcAttributeRequest extends TeaModel {
     /**
      * <p>The region ID of the VPC.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -72,6 +72,8 @@ public class ModifyVpcAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC that you want to modify.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

@@ -24,6 +24,8 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
 
     /**
      * <p>The destination CIDR block of the route entry in the gateway route table.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
@@ -52,7 +54,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
     /**
      * <p>The name of the gateway route table.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length and can contain letter, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length and can contain letter, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -75,6 +77,8 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
      * <p>*   **Instance**: Elastic Compute Service (ECS) instance</p>
      * <p>*   **NetworkInterface**: elastic network interface (ENI)</p>
      * <p>*   **Local**: local next hop</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NextHopType")
     public String nextHopType;
@@ -88,7 +92,9 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the region to which the gateway route table that you want to modify belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

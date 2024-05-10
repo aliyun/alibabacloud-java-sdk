@@ -16,6 +16,8 @@ public class DeleteVpnPbrRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The next hop of the policy-based route.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NextHop")
     public String nextHop;
@@ -45,7 +47,9 @@ public class DeleteVpnPbrRouteEntryRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The ID of the region where the VPN gateway is created. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region where the VPN gateway is created. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -58,24 +62,32 @@ public class DeleteVpnPbrRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The destination CIDR block of the policy-based route.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteDest")
     public String routeDest;
 
     /**
      * <p>The source CIDR block of the policy-based route.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteSource")
     public String routeSource;
 
     /**
      * <p>The ID of the VPN gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 
     /**
      * <p>The weight of the policy-based route.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Weight")
     public Integer weight;

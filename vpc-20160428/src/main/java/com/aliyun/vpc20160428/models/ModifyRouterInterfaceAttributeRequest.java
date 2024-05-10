@@ -54,7 +54,7 @@ public class ModifyRouterInterfaceAttributeRequest extends TeaModel {
     /**
      * <p>The name of the router interface.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -92,7 +92,9 @@ public class ModifyRouterInterfaceAttributeRequest extends TeaModel {
     /**
      * <p>The region ID of the router interface.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -105,6 +107,8 @@ public class ModifyRouterInterfaceAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the router interface.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouterInterfaceId")
     public String routerInterfaceId;

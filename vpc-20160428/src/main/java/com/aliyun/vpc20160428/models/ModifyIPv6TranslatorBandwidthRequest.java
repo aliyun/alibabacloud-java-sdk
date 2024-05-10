@@ -15,6 +15,8 @@ public class ModifyIPv6TranslatorBandwidthRequest extends TeaModel {
 
     /**
      * <p>The maximum bandwidth of the IPv6 Translation Service instance. Valid values: **1** to **200**. Unit: Mbit/s.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
@@ -29,6 +31,8 @@ public class ModifyIPv6TranslatorBandwidthRequest extends TeaModel {
 
     /**
      * <p>The ID of the IPv6 Translation Service instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ipv6TranslatorId")
     public String ipv6TranslatorId;
@@ -41,6 +45,8 @@ public class ModifyIPv6TranslatorBandwidthRequest extends TeaModel {
 
     /**
      * <p>The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

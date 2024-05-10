@@ -226,7 +226,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         /**
          * <p>The route name.</p>
          * <br>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          */
         @NameInMap("RouteEntryName")
         public String routeEntryName;

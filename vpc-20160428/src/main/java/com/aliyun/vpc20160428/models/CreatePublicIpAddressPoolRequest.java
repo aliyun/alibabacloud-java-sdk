@@ -46,7 +46,7 @@ public class CreatePublicIpAddressPoolRequest extends TeaModel {
      * <p>*   **BGP** (default)</p>
      * <p>*   **BGP_PRO**</p>
      * <br>
-     * <p>For more information about BGP (Multi-ISP) lines and BGP (Multi-ISP) Pro lines, see the "Line types" section in the [What is EIP?](~~32321~~) topic.</p>
+     * <p>For more information about BGP (Multi-ISP) lines and BGP (Multi-ISP) Pro lines, see the "Line types" section in the [What is EIP?](https://help.aliyun.com/document_detail/32321.html) topic.</p>
      * <br>
      * <p>*   If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</p>
      * <br>
@@ -65,7 +65,7 @@ public class CreatePublicIpAddressPoolRequest extends TeaModel {
     /**
      * <p>The name of the IP address pool.</p>
      * <br>
-     * <p>This parameter is optional. The name must be 1 to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>This parameter is optional. The name must be 1 to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -78,6 +78,8 @@ public class CreatePublicIpAddressPoolRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where you want to create the IP address pool.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

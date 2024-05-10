@@ -7,19 +7,25 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends TeaModel {
     /**
      * <p>The remarks of the ACL rule.</p>
      * <br>
-     * <p>It must be 2 to 100 characters in length, and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>It must be 2 to 100 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclEntryComment")
     public String aclEntryComment;
 
     /**
      * <p>The ID of the ACL rule to which the IP entry belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclEntryId")
     public String aclEntryId;
 
     /**
      * <p>The ID of the ACL to which the IP entry belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclId")
     public String aclId;
@@ -32,6 +38,8 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends TeaModel {
 
     /**
      * <p>The region of the ACL.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

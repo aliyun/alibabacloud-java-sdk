@@ -8,6 +8,8 @@ public class AssociateEipAddressBatchRequest extends TeaModel {
      * <p>The ID of the instance with which you want to associate the EIPs.</p>
      * <br>
      * <p>The instance can be a NAT gateway or a secondary ENI.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BindedInstanceId")
     public String bindedInstanceId;
@@ -17,6 +19,8 @@ public class AssociateEipAddressBatchRequest extends TeaModel {
      * <br>
      * <p>*   **Nat**: NAT gateway</p>
      * <p>*   **NetworkInterface**: secondary ENI</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BindedInstanceType")
     public String bindedInstanceType;
@@ -35,6 +39,8 @@ public class AssociateEipAddressBatchRequest extends TeaModel {
      * <p>The EIPs to be associated with the instance.</p>
      * <br>
      * <p>You must enter at least one EIP. You can enter up to 50 EIPs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
@@ -51,7 +57,9 @@ public class AssociateEipAddressBatchRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the EIPs belong. You can call the [DescribeRegions](~~36063~~) operation to query the region ID.</p>
+     * <p>The ID of the region to which the EIPs belong. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

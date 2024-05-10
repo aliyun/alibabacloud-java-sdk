@@ -36,6 +36,8 @@ public class DescribeIPv6TranslatorAclListsRequest extends TeaModel {
 
     /**
      * <p>The region of the ACL.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

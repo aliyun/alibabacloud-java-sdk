@@ -35,6 +35,8 @@ public class ModifyForwardEntryRequest extends TeaModel {
 
     /**
      * <p>The ID of the DNAT entry.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ForwardEntryId")
     public String forwardEntryId;
@@ -49,6 +51,8 @@ public class ModifyForwardEntryRequest extends TeaModel {
 
     /**
      * <p>The ID of the DNAT table to which the DNAT entry belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ForwardTableId")
     public String forwardTableId;
@@ -95,7 +99,9 @@ public class ModifyForwardEntryRequest extends TeaModel {
     /**
      * <p>The region ID of the NAT gateway.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

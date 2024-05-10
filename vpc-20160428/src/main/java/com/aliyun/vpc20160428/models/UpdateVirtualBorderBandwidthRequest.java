@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateVirtualBorderBandwidthRequest extends TeaModel {
     /**
      * <p>The new maximum bandwidth value for the VBR. Unit: Mbit/s.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
@@ -29,7 +31,9 @@ public class UpdateVirtualBorderBandwidthRequest extends TeaModel {
     /**
      * <p>The region ID of the VBR.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -42,6 +46,8 @@ public class UpdateVirtualBorderBandwidthRequest extends TeaModel {
 
     /**
      * <p>The ID of the VBR.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VirtualBorderRouterId")
     public String virtualBorderRouterId;

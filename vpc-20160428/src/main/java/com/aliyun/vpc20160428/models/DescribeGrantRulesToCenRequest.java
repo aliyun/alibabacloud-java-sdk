@@ -16,6 +16,8 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
 
     /**
      * <p>The ID of the network instance that you want to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -26,6 +28,8 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
      * <p>*   **VPC**</p>
      * <p>*   **VBR**</p>
      * <p>*   **CCN**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -50,6 +54,8 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
 
     /**
      * <p>The region ID of the network instance that you want to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -49,12 +49,16 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends TeaModel {
 
     /**
      * <p>The ID of the IP address pool.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PublicIpAddressPoolId")
     public String publicIpAddressPoolId;
 
     /**
      * <p>The region ID of the IP address pool to which you want to add the CIDR block.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

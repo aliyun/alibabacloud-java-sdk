@@ -13,6 +13,9 @@ public class UpdateFailoverTestJobRequest extends TeaModel {
     @NameInMap("JobDuration")
     public Integer jobDuration;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 

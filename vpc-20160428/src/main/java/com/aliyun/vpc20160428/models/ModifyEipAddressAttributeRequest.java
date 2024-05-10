@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyEipAddressAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the pay-as-you-go EIP.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;
@@ -30,7 +32,7 @@ public class ModifyEipAddressAttributeRequest extends TeaModel {
     /**
      * <p>The new name of the EIP.</p>
      * <br>
-     * <p>The name must be 1 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-).</p>
+     * <p>The name must be 1 to 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-).</p>
      */
     @NameInMap("Name")
     public String name;
@@ -44,7 +46,7 @@ public class ModifyEipAddressAttributeRequest extends TeaModel {
     /**
      * <p>The region ID of the EIP.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

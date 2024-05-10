@@ -25,6 +25,8 @@ public class DeleteNatIpRequest extends TeaModel {
 
     /**
      * <p>The ID of the NAT IP address that you want to delete.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatIpId")
     public String natIpId;
@@ -38,7 +40,9 @@ public class DeleteNatIpRequest extends TeaModel {
     /**
      * <p>The region ID of the NAT gateway to which the NAT IP address that you want to delete belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

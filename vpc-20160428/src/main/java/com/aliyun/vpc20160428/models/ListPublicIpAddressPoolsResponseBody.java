@@ -141,7 +141,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
          * <p>*   **BGP**: BGP (Multi-ISP)</p>
          * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro</p>
          * <br>
-         * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](~~32321~~).</p>
+         * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](https://help.aliyun.com/document_detail/32321.html).</p>
          * <br>
          * <p>If you are allowed to use single-ISP bandwidth, one of the following values may be returned:</p>
          * <br>

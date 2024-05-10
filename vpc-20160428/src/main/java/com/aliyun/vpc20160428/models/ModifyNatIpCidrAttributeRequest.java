@@ -25,12 +25,16 @@ public class ModifyNatIpCidrAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the Virtual Private Cloud (VPC) NAT gateway to which the NAT CIDR block belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
      * <p>The NAT CIDR block whose name and description you want to modify.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatIpCidr")
     public String natIpCidr;
@@ -46,7 +50,7 @@ public class ModifyNatIpCidrAttributeRequest extends TeaModel {
     /**
      * <p>The new name of the NAT CIDR block.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
      */
     @NameInMap("NatIpCidrName")
     public String natIpCidrName;
@@ -60,7 +64,9 @@ public class ModifyNatIpCidrAttributeRequest extends TeaModel {
     /**
      * <p>The region ID of the NAT gateway to which the NAT CIDR block belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

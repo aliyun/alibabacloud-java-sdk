@@ -28,7 +28,9 @@ public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The region ID of the resource.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -55,6 +57,8 @@ public class ListTagResourcesRequest extends TeaModel {
      * <p>*   **VpnGateway**</p>
      * <p>*   **NATGATEWAY**</p>
      * <p>*   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -62,7 +66,7 @@ public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The tag value. You can specify up to 20 tag values. It can be an empty string.</p>
      * <br>
-     * <p>The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.</p>
+     * <p>The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.</p>
      * <br>
      * <p>>  You must specify at least one of **ResourceId.N** and **Tag.N** (**Tag.N.Key** and **Tag.N.Value**).</p>
      */
@@ -158,7 +162,7 @@ public class ListTagResourcesRequest extends TeaModel {
         /**
          * <p>The key of the tag that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         * <p>The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
          * <br>
          * <p>>  Specify at least one of the **ResourceId.N** and **Tag.N** parameters (**Tag.N.Key** and **Tag.N.Value**).</p>
          */
@@ -168,7 +172,7 @@ public class ListTagResourcesRequest extends TeaModel {
         /**
          * <p>The value of the tag that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
          * <br>
-         * <p>The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.</p>
+         * <p>The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.</p>
          * <br>
          * <p>>  Specify at least one of the **ResourceId.N** and **Tag.N** parameters (**Tag.N.Key** and **Tag.N.Value**).</p>
          */

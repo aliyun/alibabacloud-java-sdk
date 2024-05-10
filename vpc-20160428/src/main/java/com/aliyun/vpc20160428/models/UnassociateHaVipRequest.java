@@ -23,12 +23,16 @@ public class UnassociateHaVipRequest extends TeaModel {
 
     /**
      * <p>The ID of the HAVIP that you want to disassociate.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HaVipId")
     public String haVipId;
 
     /**
      * <p>The ID of the ECS instance or ENI from which you want to disassociate the HAVIP.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -53,7 +57,9 @@ public class UnassociateHaVipRequest extends TeaModel {
     /**
      * <p>The region ID of the HAVIP.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

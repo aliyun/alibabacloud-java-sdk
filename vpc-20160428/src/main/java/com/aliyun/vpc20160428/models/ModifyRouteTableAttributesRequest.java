@@ -21,7 +21,9 @@ public class ModifyRouteTableAttributesRequest extends TeaModel {
     /**
      * <p>The region ID of the virtual private cloud (VPC) to which the custom route table belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -34,6 +36,8 @@ public class ModifyRouteTableAttributesRequest extends TeaModel {
 
     /**
      * <p>The ID of the route table.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;

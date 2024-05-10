@@ -86,7 +86,9 @@ public class CreateVpcRequest extends TeaModel {
     /**
      * <p>The ID of the region to which the VPC belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -94,7 +96,7 @@ public class CreateVpcRequest extends TeaModel {
     /**
      * <p>The ID of the resource group.</p>
      * <br>
-     * <p>For more information about resource groups, see [What is a resource group?](~~94475~~)</p>
+     * <p>For more information about resource groups, see [What is a resource group?](https://help.aliyun.com/document_detail/94475.html)</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -114,7 +116,7 @@ public class CreateVpcRequest extends TeaModel {
     /**
      * <p>The user CIDR block. Separate user CIDR blocks with commas (,). You can specify up to three user CIDR blocks.</p>
      * <br>
-     * <p>For more information about user CIDR blocks, see the `What is a user CIDR block?` section in [VPC FAQ](~~185311~~).</p>
+     * <p>For more information about user CIDR blocks, see the `What is a user CIDR block?` section in [VPC FAQ](https://help.aliyun.com/document_detail/185311.html).</p>
      */
     @NameInMap("UserCidr")
     public String userCidr;

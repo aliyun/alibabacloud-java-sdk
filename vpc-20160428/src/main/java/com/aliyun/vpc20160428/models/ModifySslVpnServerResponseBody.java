@@ -43,11 +43,17 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     @NameInMap("EnableMultiFactorAuth")
     public Boolean enableMultiFactorAuth;
 
+    @NameInMap("IDaaSApplicationId")
+    public String IDaaSApplicationId;
+
     /**
      * <p>The ID of the IDaaS instance.</p>
      */
     @NameInMap("IDaaSInstanceId")
     public String IDaaSInstanceId;
+
+    @NameInMap("IDaaSInstanceVersion")
+    public String IDaaSInstanceVersion;
 
     /**
      * <p>The public IP address.</p>
@@ -100,7 +106,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     /**
      * <p>The ID of the resource group to which the SSL server belongs.</p>
      * <br>
-     * <p>The SSL server and the VPN gateway associated with the SSL server belong to the same resource group. You can call the [ListResourceGroups](~~158855~~) operation to query resource groups.</p>
+     * <p>The SSL server and the VPN gateway associated with the SSL server belong to the same resource group. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource groups.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -170,12 +176,28 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         return this.enableMultiFactorAuth;
     }
 
+    public ModifySslVpnServerResponseBody setIDaaSApplicationId(String IDaaSApplicationId) {
+        this.IDaaSApplicationId = IDaaSApplicationId;
+        return this;
+    }
+    public String getIDaaSApplicationId() {
+        return this.IDaaSApplicationId;
+    }
+
     public ModifySslVpnServerResponseBody setIDaaSInstanceId(String IDaaSInstanceId) {
         this.IDaaSInstanceId = IDaaSInstanceId;
         return this;
     }
     public String getIDaaSInstanceId() {
         return this.IDaaSInstanceId;
+    }
+
+    public ModifySslVpnServerResponseBody setIDaaSInstanceVersion(String IDaaSInstanceVersion) {
+        this.IDaaSInstanceVersion = IDaaSInstanceVersion;
+        return this;
+    }
+    public String getIDaaSInstanceVersion() {
+        return this.IDaaSInstanceVersion;
     }
 
     public ModifySslVpnServerResponseBody setInternetIp(String internetIp) {

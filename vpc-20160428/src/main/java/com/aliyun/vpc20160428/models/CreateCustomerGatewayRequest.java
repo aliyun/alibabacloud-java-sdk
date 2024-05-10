@@ -42,6 +42,8 @@ public class CreateCustomerGatewayRequest extends TeaModel {
 
     /**
      * <p>The public IP address of the gateway device in the data center.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IpAddress")
     public String ipAddress;
@@ -63,7 +65,9 @@ public class CreateCustomerGatewayRequest extends TeaModel {
     /**
      * <p>The region ID of the customer gateway.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -71,7 +75,7 @@ public class CreateCustomerGatewayRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the customer gateway belongs.</p>
      * <br>
-     * <p>- You can call the [ListResourceGroups](~~158855~~) operation to query the resource group list.</p>
+     * <p>- You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group list.</p>
      * <br>
      * <p>- If you do not specify a resource group, the customer gateway will belong to the default resource group after being created.</p>
      */

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeIPv6TranslatorAclListAttributesRequest extends TeaModel {
     /**
      * <p>The ACL ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclId")
     public String aclId;
@@ -30,6 +32,8 @@ public class DescribeIPv6TranslatorAclListAttributesRequest extends TeaModel {
 
     /**
      * <p>The region of the ACL.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

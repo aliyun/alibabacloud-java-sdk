@@ -12,6 +12,8 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
 
     /**
      * <p>The BGP group ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BgpGroupId")
     public String bgpGroupId;
@@ -69,7 +71,7 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
     /**
      * <p>The BGP group name.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -89,7 +91,9 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
     /**
      * <p>The region ID of the BGP group.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

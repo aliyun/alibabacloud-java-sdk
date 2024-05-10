@@ -6,12 +6,14 @@ import com.aliyun.tea.*;
 public class ConvertBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The ID of the NAT service plan.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
     /**
-     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~36569~~).</p>
+     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/36569.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -20,7 +22,9 @@ public class ConvertBandwidthPackageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the NAT gateway resides. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The region where the NAT gateway resides. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

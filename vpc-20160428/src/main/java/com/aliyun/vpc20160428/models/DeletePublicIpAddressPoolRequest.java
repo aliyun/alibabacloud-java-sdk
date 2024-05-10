@@ -29,12 +29,16 @@ public class DeletePublicIpAddressPoolRequest extends TeaModel {
 
     /**
      * <p>The ID of the IP address pool.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PublicIpAddressPoolId")
     public String publicIpAddressPoolId;
 
     /**
      * <p>The ID of the region where you want to create the IP address pool.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

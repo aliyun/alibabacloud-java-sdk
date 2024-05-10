@@ -31,6 +31,8 @@ public class DescribeVbrHaRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which the VBR is deployed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

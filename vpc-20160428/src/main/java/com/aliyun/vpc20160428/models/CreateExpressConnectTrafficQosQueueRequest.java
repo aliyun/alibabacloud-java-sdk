@@ -16,6 +16,9 @@ public class CreateExpressConnectTrafficQosQueueRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QosId")
     public String qosId;
 
@@ -25,9 +28,15 @@ public class CreateExpressConnectTrafficQosQueueRequest extends TeaModel {
     @NameInMap("QueueName")
     public String queueName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QueueType")
     public String queueType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

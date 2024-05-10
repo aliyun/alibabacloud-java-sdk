@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AddCommonBandwidthPackageIpRequest extends TeaModel {
     /**
      * <p>The ID of the Internet Shared Bandwidth instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
@@ -23,7 +25,9 @@ public class AddCommonBandwidthPackageIpRequest extends TeaModel {
     /**
      * <p>The EIP ID.</p>
      * <br>
-     * <p>You can call the [DescribeEipAddresses](~~36018~~) operation to query EIP IDs.</p>
+     * <p>You can call the [DescribeEipAddresses](https://help.aliyun.com/document_detail/36018.html) operation to query EIP IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IpInstanceId")
     public String ipInstanceId;
@@ -43,7 +47,9 @@ public class AddCommonBandwidthPackageIpRequest extends TeaModel {
     /**
      * <p>The region ID of the Internet Shared Bandwidth instance.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

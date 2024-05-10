@@ -19,6 +19,9 @@ public class CreateExpressConnectTrafficQosRequest extends TeaModel {
     @NameInMap("QosName")
     public String qosName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -34,7 +34,7 @@ public class UpdatePublicIpAddressPoolAttributeRequest extends TeaModel {
     /**
      * <p>The name of the IP address pool.</p>
      * <br>
-     * <p>This parameter is optional. The name must be 1 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>This parameter is optional. The name must be 1 to 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -47,12 +47,16 @@ public class UpdatePublicIpAddressPoolAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the IP address pool.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PublicIpAddressPoolId")
     public String publicIpAddressPoolId;
 
     /**
      * <p>The region ID of the IP address pool that you want to modify.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

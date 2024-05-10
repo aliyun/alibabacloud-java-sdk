@@ -26,6 +26,8 @@ public class UnassociateNetworkAclRequest extends TeaModel {
 
     /**
      * <p>The ID of the network ACL that you want to disassociate from a resource.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkAclId")
     public String networkAclId;
@@ -39,7 +41,9 @@ public class UnassociateNetworkAclRequest extends TeaModel {
     /**
      * <p>The region ID of the network ACL.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

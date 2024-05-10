@@ -27,6 +27,8 @@ public class UpdateVirtualPhysicalConnectionRequest extends TeaModel {
 
     /**
      * <p>The ID of the hosted connection over Express Connect circuit.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -34,7 +36,9 @@ public class UpdateVirtualPhysicalConnectionRequest extends TeaModel {
     /**
      * <p>The region ID of the hosted connection.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -54,6 +58,8 @@ public class UpdateVirtualPhysicalConnectionRequest extends TeaModel {
      * <br>
      * <p>*   If the VLAN ID is set to **0**, it indicates that the switch port of the virtual border router (VBR) is a Layer 3 router interface instead of a VLAN interface. When a Layer 3 router interface is used, each Express Connect circuit corresponds to a VBR.</p>
      * <p>*   If the VLAN ID is set to a value from **1** to **2999**, the switch port of the VBR is a Layer 3 VLAN subinterface. When a Layer 3 VLAN subinterface is used, each VLAN ID corresponds to one VBR. In this case, the Express Connect circuit with which the VBR is associated can be used to connect to virtual private clouds (VPCs) that belong to different Alibaba Cloud accounts. VBRs in different VLANs are isolated from each other at Layer 2.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VlanId")
     public Long vlanId;

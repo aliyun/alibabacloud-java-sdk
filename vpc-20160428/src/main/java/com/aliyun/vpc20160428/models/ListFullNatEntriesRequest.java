@@ -23,7 +23,7 @@ public class ListFullNatEntriesRequest extends TeaModel {
     /**
      * <p>The name of the FULLNAT entry that you want to query. You can specify at most 20 names.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("FullNatEntryNames")
     public java.util.List<String> fullNatEntryNames;
@@ -95,7 +95,9 @@ public class ListFullNatEntriesRequest extends TeaModel {
     /**
      * <p>The region ID of the virtual private cloud (VPC) NAT gateway to which the FULLNAT entries to be queried belong.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

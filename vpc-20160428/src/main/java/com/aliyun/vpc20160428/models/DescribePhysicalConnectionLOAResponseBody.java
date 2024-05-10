@@ -179,7 +179,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         public String lineLabel;
 
         /**
-         * <p>The contact information about line O\&M.</p>
+         * <p>The contact information about line O\\&M.</p>
          */
         @NameInMap("LineSPContactInfo")
         public String lineSPContactInfo;

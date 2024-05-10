@@ -23,6 +23,8 @@ public class DissociateRouteTablesFromVpcGatewayEndpointRequest extends TeaModel
 
     /**
      * <p>The ID of the gateway endpoint to be disassociated from the route table.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
@@ -36,7 +38,9 @@ public class DissociateRouteTablesFromVpcGatewayEndpointRequest extends TeaModel
     /**
      * <p>The region ID of the gateway endpoint.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -49,6 +53,8 @@ public class DissociateRouteTablesFromVpcGatewayEndpointRequest extends TeaModel
 
     /**
      * <p>The ID of the route table. Valid values of **N** are **1** to **20**, which specifies that you can disassociate a gateway endpoint from at most 20 route tables at a time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteTableIds")
     public java.util.List<String> routeTableIds;

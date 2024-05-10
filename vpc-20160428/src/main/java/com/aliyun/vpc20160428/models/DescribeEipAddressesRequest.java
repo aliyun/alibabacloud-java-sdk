@@ -33,7 +33,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
      * <p>*   **NetworkInterface**: a secondary ENI.</p>
      * <p>*   **IpAddress**: an IP address.</p>
      * <br>
-     * <p>>  Each ECS instance, CLB instance, HAVIP, and IP address can be associated with only one EIP. A NAT gateway can be associated with multiple EIPs. The number of EIPs that you can associate with a secondary ENI depends on the association mode. For more information, see [Associate EIPs with and disassociate EIPs from cloud resources](~~72125~~).</p>
+     * <p>>  Each ECS instance, CLB instance, HAVIP, and IP address can be associated with only one EIP. A NAT gateway can be associated with multiple EIPs. The number of EIPs that you can associate with a secondary ENI depends on the association mode. For more information, see [Associate EIPs with and disassociate EIPs from cloud resources](https://help.aliyun.com/document_detail/72125.html).</p>
      */
     @NameInMap("AssociatedInstanceType")
     public String associatedInstanceType;
@@ -69,7 +69,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
     /**
      * <p>The name of the EIP.</p>
      * <br>
-     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("EipName")
     public String eipName;
@@ -80,7 +80,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
      * <p>*   **BGP** (default): Border Gateway Protocol (BGP) (Multi-ISP) lines. All regions support BGP (Multi-ISP) EIPs.</p>
      * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines. Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</p>
      * <br>
-     * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the [Line types](~~32321~~) section of the "What is EIP?" topic.</p>
+     * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the [Line types](https://help.aliyun.com/document_detail/32321.html) section of the "What is EIP?" topic.</p>
      * <br>
      * <p>If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</p>
      * <br>
@@ -141,7 +141,9 @@ public class DescribeEipAddressesRequest extends TeaModel {
     /**
      * <p>The region ID of the EIP.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the region ID.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

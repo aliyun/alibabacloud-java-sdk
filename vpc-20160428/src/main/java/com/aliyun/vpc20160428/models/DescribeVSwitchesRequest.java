@@ -43,7 +43,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the vSwitch. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the vSwitch. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
      * <br>
      * <p>>  You must set at least one of **RegionId** and **VpcId**.</p>
      */
@@ -103,7 +103,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the zone to which the vSwitches belong. You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.</p>
+     * <p>The ID of the zone to which the vSwitches belong. You can call the [DescribeZones](https://help.aliyun.com/document_detail/36064.html) operation to query the most recent zone list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

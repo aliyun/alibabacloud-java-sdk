@@ -9,6 +9,8 @@ public class DescribeEcGrantRelationRequest extends TeaModel {
      * <br>
      * <p>*   If you set **InstanceType** to **VBR**, specify a VBR ID.</p>
      * <p>*   If you set **InstanceType** to **VPC**, specify a VPC ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -18,6 +20,8 @@ public class DescribeEcGrantRelationRequest extends TeaModel {
      * <br>
      * <p>*   **VBR**: queries the permissions that are granted to a VBR.</p>
      * <p>*   **VPC**: queries the permissions that are granted from a VPC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;

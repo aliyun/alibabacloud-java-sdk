@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
     /**
      * <p>The ID of the access point.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccessPointId")
     public String accessPointId;
@@ -38,6 +40,8 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
      * <p>*   **CO**: other connectivity providers in the Chinese mainland</p>
      * <p>*   **Equinix**: Equinix</p>
      * <p>*   **Other**: other connectivity providers outside the Chinese mainland</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LineOperator")
     public String lineOperator;
@@ -73,7 +77,9 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
     /**
      * <p>The region ID of the Express Connect circuit.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

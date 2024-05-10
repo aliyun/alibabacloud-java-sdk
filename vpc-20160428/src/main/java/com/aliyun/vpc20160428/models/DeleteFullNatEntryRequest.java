@@ -25,12 +25,16 @@ public class DeleteFullNatEntryRequest extends TeaModel {
 
     /**
      * <p>The ID of the FULLNAT entry that you want to delete.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FullNatEntryId")
     public String fullNatEntryId;
 
     /**
      * <p>The ID of the FULLNAT table to which the FULLNAT entry to be deleted belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FullNatTableId")
     public String fullNatTableId;
@@ -44,7 +48,9 @@ public class DeleteFullNatEntryRequest extends TeaModel {
     /**
      * <p>The region ID of the VPC NAT gateway to which the FULLNAT entry to be deleted belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent list of regions.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent list of regions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

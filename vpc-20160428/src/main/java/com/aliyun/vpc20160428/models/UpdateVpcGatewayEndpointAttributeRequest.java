@@ -33,6 +33,8 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the gateway endpoint that you want to modify.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
@@ -54,7 +56,7 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends TeaModel {
     /**
      * <p>The access policy for the cloud service.</p>
      * <br>
-     * <p>For more information about the syntax and structure of the access policy, see [Policy syntax and structure](~~93739~~).</p>
+     * <p>For more information about the syntax and structure of the access policy, see [Policy syntax and structure](https://help.aliyun.com/document_detail/93739.html).</p>
      */
     @NameInMap("PolicyDocument")
     public String policyDocument;
@@ -62,7 +64,9 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends TeaModel {
     /**
      * <p>The region ID of the gateway endpoint.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

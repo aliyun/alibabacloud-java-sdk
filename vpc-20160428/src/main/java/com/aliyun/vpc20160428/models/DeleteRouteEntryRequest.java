@@ -34,7 +34,7 @@ public class DeleteRouteEntryRequest extends TeaModel {
     /**
      * <p>The region ID of the route table.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -16,6 +16,8 @@ public class DetachDhcpOptionsSetFromVpcRequest extends TeaModel {
 
     /**
      * <p>The ID of the DHCP options set to be disassociated from a VPC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DhcpOptionsSetId")
     public String dhcpOptionsSetId;
@@ -37,7 +39,9 @@ public class DetachDhcpOptionsSetFromVpcRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region to which the DHCP options set belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The region to which the DHCP options set belongs. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -50,6 +54,8 @@ public class DetachDhcpOptionsSetFromVpcRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

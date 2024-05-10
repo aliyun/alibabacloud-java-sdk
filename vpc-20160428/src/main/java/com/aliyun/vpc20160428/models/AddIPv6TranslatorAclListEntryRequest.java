@@ -7,19 +7,23 @@ public class AddIPv6TranslatorAclListEntryRequest extends TeaModel {
     /**
      * <p>The remarks of the ACL entry.</p>
      * <br>
-     * <p>It must be 2 to 100 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>It must be 2 to 100 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
      */
     @NameInMap("AclEntryComment")
     public String aclEntryComment;
 
     /**
      * <p>The IPv6 address or IPv6 CIDR block that you want to add to the ACL entry, for example, 12XX:0:0:XXXX::0102 or 12XX:0:0:XXXX::/60.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclEntryIp")
     public String aclEntryIp;
 
     /**
      * <p>The ID of the ACL to which you want to add the IP entry.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclId")
     public String aclId;
@@ -32,6 +36,8 @@ public class AddIPv6TranslatorAclListEntryRequest extends TeaModel {
 
     /**
      * <p>The region ID of the ACL.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AllocateIpv6InternetBandwidthRequest extends TeaModel {
     /**
      * <p>The Internet bandwidth of the IPv6 gateway. Unit: Mbit/s. Valid values: **1 to 5000**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
@@ -31,12 +33,16 @@ public class AllocateIpv6InternetBandwidthRequest extends TeaModel {
 
     /**
      * <p>The ID of the IPv6 address.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ipv6AddressId")
     public String ipv6AddressId;
 
     /**
      * <p>The ID of the IPv6 gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ipv6GatewayId")
     public String ipv6GatewayId;
@@ -48,7 +54,9 @@ public class AllocateIpv6InternetBandwidthRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

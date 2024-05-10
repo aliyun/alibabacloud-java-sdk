@@ -34,7 +34,9 @@ public class DescribeTagKeysForExpressConnectRequest extends TeaModel {
     /**
      * <p>The ID of the region to which the resource resides.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
