@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AddTagWithUuidRequest extends TeaModel {
     /**
      * <p>The name of the tag.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TagName")
     public String tagName;

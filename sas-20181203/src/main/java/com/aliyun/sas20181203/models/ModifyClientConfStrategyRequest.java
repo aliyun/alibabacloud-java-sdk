@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyClientConfStrategyRequest extends TeaModel {
     /**
      * <p>The key of the tag that is added to the agent configuration policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public String tag;
@@ -22,6 +24,8 @@ public class ModifyClientConfStrategyRequest extends TeaModel {
      * <p>*   major</p>
      * <p>*   advanced</p>
      * <p>*   basic</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TagValue")
     public String tagValue;

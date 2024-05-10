@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DisableBruteForceRecordRequest extends TeaModel {
     /**
      * <p>The IP address that you want to specify in the policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BlockIp")
     public String blockIp;
@@ -38,6 +40,8 @@ public class DisableBruteForceRecordRequest extends TeaModel {
 
     /**
      * <p>The UUID of the server.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

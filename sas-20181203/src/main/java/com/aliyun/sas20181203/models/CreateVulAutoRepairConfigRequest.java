@@ -12,12 +12,16 @@ public class CreateVulAutoRepairConfigRequest extends TeaModel {
 
     /**
      * <p>The type of the vulnerability. Valid values: -**cve**: Linux software vulnerability -**sys**: Windows system vulnerability</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The vulnerabilities that can be automatically fixed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VulAutoRepairConfigList")
     public java.util.List<CreateVulAutoRepairConfigRequestVulAutoRepairConfigList> vulAutoRepairConfigList;
@@ -54,12 +58,16 @@ public class CreateVulAutoRepairConfigRequest extends TeaModel {
     public static class CreateVulAutoRepairConfigRequestVulAutoRepairConfigList extends TeaModel {
         /**
          * <p>The alias of the vulnerability.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
          * <p>The name of the vulnerability.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Name")
         public String name;

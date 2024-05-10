@@ -17,6 +17,8 @@ public class DescribeCommonTargetResultListRequest extends TeaModel {
      * <p>*   **aliscriptengine**: in-depth detection engine</p>
      * <p>*   **alidetect**: installation scope of local file detection</p>
      * <p>*   **alidetect-scan-enable**: detection scope of local file detection</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

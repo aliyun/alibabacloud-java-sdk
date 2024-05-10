@@ -14,6 +14,8 @@ public class ModifySecurityCheckScheduleConfigRequest extends TeaModel {
      * <p>*   **5**: Friday</p>
      * <p>*   **6**: Saturday</p>
      * <p>*   **7**: Sunday</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DaysOfWeek")
     public String daysOfWeek;
@@ -25,6 +27,8 @@ public class ModifySecurityCheckScheduleConfigRequest extends TeaModel {
      * <p>*   **6**: 06:00 to 12:00</p>
      * <p>*   **12**: 12:00 to 18:00</p>
      * <p>*   **18**: 18:00 to 24:00</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public Integer endTime;
@@ -54,6 +58,8 @@ public class ModifySecurityCheckScheduleConfigRequest extends TeaModel {
      * <p>*   **6**: 06:00 to 12:00</p>
      * <p>*   **12**: 12:00 to 18:00</p>
      * <p>*   **18**: 18:00 to 24:00</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Integer startTime;

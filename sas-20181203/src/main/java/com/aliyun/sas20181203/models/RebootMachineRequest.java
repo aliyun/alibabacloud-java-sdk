@@ -8,6 +8,8 @@ public class RebootMachineRequest extends TeaModel {
      * <p>The UUID of the server that you want to restart.</p>
      * <br>
      * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

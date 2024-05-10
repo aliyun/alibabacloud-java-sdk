@@ -8,6 +8,8 @@ public class CheckQuaraFileIdRequest extends TeaModel {
      * <p>The IDs of quarantined files that you want to check.</p>
      * <br>
      * <p>>  You can call the [DescribeSuspEventQuaraFiles](~~DescribeSuspEventQuaraFiles~~) operation to query the IDs of quarantined files.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("QuaraFileIds")
     public java.util.List<String> quaraFileIds;
@@ -16,6 +18,8 @@ public class CheckQuaraFileIdRequest extends TeaModel {
      * <p>The UUID of the server on which you want to check quarantined files.</p>
      * <br>
      * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

@@ -8,6 +8,8 @@ public class GetInterceptionRuleDetailRequest extends TeaModel {
      * <p>The ID of the container cluster.</p>
      * <br>
      * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -16,6 +18,8 @@ public class GetInterceptionRuleDetailRequest extends TeaModel {
      * <p>The ID of the rule.</p>
      * <br>
      * <p>> You can call the [ListInterceptionRulePage](~~ListInterceptionRulePage~~) operation to query the IDs of rules.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

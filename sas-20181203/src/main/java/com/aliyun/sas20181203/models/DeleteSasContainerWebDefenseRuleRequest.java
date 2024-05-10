@@ -8,6 +8,8 @@ public class DeleteSasContainerWebDefenseRuleRequest extends TeaModel {
      * <p>The rule ID.</p>
      * <br>
      * <p>>  You can call the ListContainerWebDefenseRule operation to query the rule ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;

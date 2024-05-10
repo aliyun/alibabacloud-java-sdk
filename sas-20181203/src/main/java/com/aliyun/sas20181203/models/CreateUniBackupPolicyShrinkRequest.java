@@ -31,6 +31,8 @@ public class CreateUniBackupPolicyShrinkRequest extends TeaModel {
      * <p>*   **MYSQL**</p>
      * <p>*   **ORACLE**</p>
      * <p>*   **MSSQL**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatabaseType")
     public String databaseType;
@@ -42,6 +44,8 @@ public class CreateUniBackupPolicyShrinkRequest extends TeaModel {
      * <p>*   **interval**: the interval of backup tasks.</p>
      * <p>*   **type**: the unit of the interval.</p>
      * <p>*   **days**: the days of a week on which a backup task is performed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FullPlan")
     public String fullPlanShrink;
@@ -53,6 +57,8 @@ public class CreateUniBackupPolicyShrinkRequest extends TeaModel {
      * <p>*   **interval**: the interval of backup tasks.</p>
      * <p>*   **type**: the unit of the interval.</p>
      * <p>*   **days**: the days of a week on which a backup task is performed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IncPlan")
     public String incPlanShrink;
@@ -61,30 +67,40 @@ public class CreateUniBackupPolicyShrinkRequest extends TeaModel {
      * <p>The ID of the Elastic Compute Service (ECS) instance.</p>
      * <br>
      * <p>>  You can call the [DescribeUniBackupDatabase](~~DescribeUniBackupDatabase~~) operation to query the IDs of ECS instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the anti-ransomware policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
      * <p>The retention period of backup data.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Retention")
     public Integer retention;
 
     /**
      * <p>The maximum network bandwidth that is allowed during data backup. Unit: bytes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SpeedLimiter")
     public Long speedLimiter;
 
     /**
      * <p>The region in which the server resides.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UniRegionId")
     public String uniRegionId;
@@ -92,7 +108,7 @@ public class CreateUniBackupPolicyShrinkRequest extends TeaModel {
     /**
      * <p>The UUID of the server whose data is backed up based on the anti-ransomware policy.</p>
      * <br>
-     * <p>>  You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.</p>
+     * <p>>  You can call the [DescribeCloudCenterInstances](https://help.aliyun.com/document_detail/141932.html) operation to query the UUIDs of servers.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

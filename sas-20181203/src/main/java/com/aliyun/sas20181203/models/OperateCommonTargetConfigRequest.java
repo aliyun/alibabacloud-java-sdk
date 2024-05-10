@@ -31,6 +31,8 @@ public class OperateCommonTargetConfigRequest extends TeaModel {
      * <p>*   **targetType**: specifies the dimension from which you manage proactive defense. UUIDs are supported. Set the value to **uuid**.</p>
      * <p>*   **target**: specifies the UUID of the server for which you want to configure proactive defense.</p>
      * <p>*   **flag**: specifies whether to enable or disable proactive defense for your server. Valid values are **add** and **del**. The value add indicates that proactive defense will be enabled for your server. The value del indicates that proactive defense will be disabled for your server.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetOperations")
     public String targetOperations;
@@ -59,6 +61,8 @@ public class OperateCommonTargetConfigRequest extends TeaModel {
      * <p>*   **sensitiveFile**: sensitive file detection</p>
      * <p>*   **aliscriptengine**: in-depth detection engine</p>
      * <p>*   **containerNetwork**: container network visualization</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

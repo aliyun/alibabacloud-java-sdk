@@ -9,18 +9,24 @@ public class CreateCycleTaskRequest extends TeaModel {
      * <br>
      * <p>*   **1**: yes</p>
      * <p>*   **0**: no</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Enable")
     public Integer enable;
 
     /**
      * <p>The first time when the task is performed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FirstDateStr")
     public Long firstDateStr;
 
     /**
      * <p>The interval of the task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IntervalPeriod")
     public Integer intervalPeriod;
@@ -36,6 +42,8 @@ public class CreateCycleTaskRequest extends TeaModel {
      * <br>
      * <p>*   **day**: days</p>
      * <p>*   **hour**: hours</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
@@ -48,12 +56,16 @@ public class CreateCycleTaskRequest extends TeaModel {
 
     /**
      * <p>The time when the task ends. Unit: hours.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetEndTime")
     public Integer targetEndTime;
 
     /**
      * <p>The time when the task is started. Unit: hours.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetStartTime")
     public Integer targetStartTime;
@@ -64,6 +76,8 @@ public class CreateCycleTaskRequest extends TeaModel {
      * <p>*   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task</p>
      * <p>*   **IMAGE_SCAN**: image scan task</p>
      * <p>*   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskName")
     public String taskName;
@@ -74,6 +88,8 @@ public class CreateCycleTaskRequest extends TeaModel {
      * <p>*   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task</p>
      * <p>*   **IMAGE_SCAN**: image scan task</p>
      * <p>*   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

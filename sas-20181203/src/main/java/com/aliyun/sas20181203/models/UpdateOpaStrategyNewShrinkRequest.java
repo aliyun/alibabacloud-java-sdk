@@ -72,7 +72,7 @@ public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
     /**
      * <p>The rule ID.</p>
      * <br>
-     * <p>>  You can call the [ListOpaClusterStrategyNew](~~2623574~~) operation to query the rule ID.</p>
+     * <p>>  You can call the [ListOpaClusterStrategyNew](https://help.aliyun.com/document_detail/2623574.html) operation to query the rule ID.</p>
      */
     @NameInMap("StrategyId")
     public Long strategyId;
@@ -86,7 +86,7 @@ public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the rule template.</p>
      * <br>
-     * <p>>  You can call the [GetOpaStrategyTemplateSummary](~~2539952~~) operation to query the ID of the rule template.</p>
+     * <p>>  You can call the [GetOpaStrategyTemplateSummary](https://help.aliyun.com/document_detail/2539952.html) operation to query the ID of the rule template.</p>
      */
     @NameInMap("StrategyTemplateId")
     public Long strategyTemplateId;

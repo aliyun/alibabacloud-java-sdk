@@ -14,6 +14,8 @@ public class DescribeRiskCheckItemResultRequest extends TeaModel {
      * <p>The ID of the check item.</p>
      * <br>
      * <p>> For more information about the IDs and details of the check items that can be used in configuration assessment, see [DescribeRiskCheckResult](~~DescribeRiskCheckResult~~).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ItemId")
     public Long itemId;

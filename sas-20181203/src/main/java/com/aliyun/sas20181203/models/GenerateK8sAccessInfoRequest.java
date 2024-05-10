@@ -42,18 +42,24 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
 
     /**
      * <p>The name of the Kubernetes cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>The time at which the container ends to be added.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExpireDate")
     public Long expireDate;
 
     /**
      * <p>The group ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
@@ -66,6 +72,8 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
      * <p>*   **Azure**</p>
      * <p>*   **AWS**</p>
      * <p>*   **Others**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Vendor")
     public String vendor;

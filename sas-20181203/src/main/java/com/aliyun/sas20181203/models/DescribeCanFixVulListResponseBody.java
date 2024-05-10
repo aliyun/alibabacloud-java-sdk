@@ -277,7 +277,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         /**
          * <p>The name of the instance.</p>
          * <br>
-         * <p>The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+         * <p>The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;

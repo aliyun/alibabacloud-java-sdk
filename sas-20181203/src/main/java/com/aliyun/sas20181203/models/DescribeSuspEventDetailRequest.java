@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeSuspEventDetailRequest extends TeaModel {
     /**
      * <p>The data source of the exception. Set the value to sas.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("From")
     public String from;
@@ -35,6 +37,8 @@ public class DescribeSuspEventDetailRequest extends TeaModel {
 
     /**
      * <p>The ID of the exception.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SuspiciousEventId")
     public Integer suspiciousEventId;

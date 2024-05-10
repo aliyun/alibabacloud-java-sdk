@@ -7,7 +7,7 @@ public class ValidateHcWarningsRequest extends TeaModel {
     /**
      * <p>The IDs of the check items. Separate multiple IDs with commas (,).</p>
      * <br>
-     * <p>> You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of check items.</p>
+     * <p>> You can call the [DescribeCheckWarningSummary](https://help.aliyun.com/document_detail/116179.html) operation to query the IDs of check items.</p>
      */
     @NameInMap("CheckIds")
     public String checkIds;
@@ -24,6 +24,8 @@ public class ValidateHcWarningsRequest extends TeaModel {
      * <p>The UUIDs of the servers on which you want to verify the risk items. Separate multiple UUIDs with commas (,).</p>
      * <br>
      * <p>> You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuids")
     public String uuids;

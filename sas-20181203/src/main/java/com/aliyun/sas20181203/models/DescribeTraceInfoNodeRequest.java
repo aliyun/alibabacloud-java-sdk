@@ -14,6 +14,8 @@ public class DescribeTraceInfoNodeRequest extends TeaModel {
 
     /**
      * <p>The ID of the request source. Set the value to sas.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("From")
     public String from;
@@ -41,18 +43,24 @@ public class DescribeTraceInfoNodeRequest extends TeaModel {
 
     /**
      * <p>The type of the vertex. You can call the [DescribeTraceInfoDetail](~~DescribeTraceInfoDetail~~) operation to query the types of vertexes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The UUID of the server. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the UUIDs of servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;
 
     /**
      * <p>The ID of the vertex.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VertexId")
     public String vertexId;

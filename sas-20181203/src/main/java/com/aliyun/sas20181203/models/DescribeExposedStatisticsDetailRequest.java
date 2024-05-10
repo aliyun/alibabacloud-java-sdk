@@ -33,6 +33,8 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
      * <p>*   **exposurePort**: ports</p>
      * <p>*   **exposureComponent**: system components</p>
      * <p>*   **exposureIp**: IP addresses</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StatisticsType")
     public String statisticsType;

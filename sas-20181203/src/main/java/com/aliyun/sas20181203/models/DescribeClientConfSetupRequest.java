@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeClientConfSetupRequest extends TeaModel {
     /**
      * <p>The tag that is added to the server.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StrategyTag")
     public String strategyTag;
@@ -16,6 +18,8 @@ public class DescribeClientConfSetupRequest extends TeaModel {
      * <p>*   major</p>
      * <p>*   advanced</p>
      * <p>*   basic</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StrategyTagValue")
     public String strategyTagValue;

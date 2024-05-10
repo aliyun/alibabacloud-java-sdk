@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListClusterPluginInfoRequest extends TeaModel {
     /**
      * <p>The IDs of the clusters.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterIds")
     public java.util.List<String> clusterIds;

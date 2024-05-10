@@ -72,7 +72,7 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host to query.</p>
      * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

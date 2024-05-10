@@ -77,7 +77,7 @@ public class PublicSyncAndCreateImageScanTaskResponseBody extends TeaModel {
          * <p>The result of the image scan task. Valid values:</p>
          * <br>
          * <p>*   **SUCCESS**: The task is successful.</p>
-         * <p>*   **TASK\_NOT\_SUPPORT_REGION**: The image is deployed in a region that is not supported by container image scan.</p>
+         * <p>*   **TASK_NOT_SUPPORT_REGION**: The image is deployed in a region that is not supported by container image scan.</p>
          */
         @NameInMap("Result")
         public String result;

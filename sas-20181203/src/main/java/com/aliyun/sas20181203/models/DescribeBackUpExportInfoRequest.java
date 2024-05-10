@@ -14,6 +14,8 @@ public class DescribeBackUpExportInfoRequest extends TeaModel {
      * <p>The type of archived information. Valid values:</p>
      * <br>
      * <p>*   **suspiciousExport**: alert event</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExportType")
     public String exportType;

@@ -44,6 +44,8 @@ public class IgnoreCheckItemsRequest extends TeaModel {
      * <p>The operation that you want to perform on the risk item.Valid values:</p>
      * <p>*  **1**: adds the risk item to the whitelist</p>
      * <p>*  **2**: removes the risk item from the whitelist</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public Integer type;

@@ -13,9 +13,11 @@ public class FixCheckWarningsRequest extends TeaModel {
      * <br>
      * <p>    *   **value**: specifies whether a fix method is selected. Valid values: **0** and **1**. The value 0 indicates that no fix method is selected and the value 1 indicates that a fix method is selected.</p>
      * <p>    *   **ruleId**: the ID of the fix method.</p>
-     * <p>    *   **paramList**: an array that consists of the details about the fix method.\</p>
-     * <p>        • **paramName**: the name of the fix method.\</p>
+     * <p>    *   **paramList**: an array that consists of the details about the fix method.\\</p>
+     * <p>        • **paramName**: the name of the fix method.\\</p>
      * <p>        • **value**: the value of the fix method.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CheckParams")
     public String checkParams;
@@ -45,6 +47,8 @@ public class FixCheckWarningsRequest extends TeaModel {
 
     /**
      * <p>The UUID of the asset for which you want to fix the baseline risk item. You can call the [DescribeWarningMachines](~~DescribeWarningMachines~~) operation to query the UUIDs of assets.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuids")
     public String uuids;

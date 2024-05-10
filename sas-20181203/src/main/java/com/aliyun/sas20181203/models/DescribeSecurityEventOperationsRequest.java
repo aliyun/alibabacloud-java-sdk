@@ -18,6 +18,8 @@ public class DescribeSecurityEventOperationsRequest extends TeaModel {
 
     /**
      * <p>The ID of the alert event that you want to handle.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityEventId")
     public Long securityEventId;

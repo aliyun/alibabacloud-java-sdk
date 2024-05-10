@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyRiskCheckStatusRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ItemId")
     public Long itemId;
@@ -33,12 +35,16 @@ public class ModifyRiskCheckStatusRequest extends TeaModel {
      * <br>
      * <p>*   **ignored**: ignores the check item</p>
      * <p>*   **reset**: cancels ignoring the check item</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The ID of the check task to which the check item belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

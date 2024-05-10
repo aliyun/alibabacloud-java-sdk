@@ -115,6 +115,8 @@ public class ExportVulRequest extends TeaModel {
      * <p>*   **cms**: Web-CMS vulnerability</p>
      * <p>*   **app**: application vulnerability</p>
      * <p>*   **emg**: urgent vulnerability</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

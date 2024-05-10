@@ -8,6 +8,8 @@ public class DescribeBackupMachineStatusRequest extends TeaModel {
      * <p>The ID of the anti-ransomware policy.</p>
      * <br>
      * <p>>  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the IDs of anti-ransomware policies.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyId")
     public Long policyId;
@@ -25,6 +27,8 @@ public class DescribeBackupMachineStatusRequest extends TeaModel {
      * <p>The UUID of the server.</p>
      * <br>
      * <p>>  You can call the [DescribeBackupPolicy](~~DescribeBackupPolicy~~) operation to query the UUIDs of servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

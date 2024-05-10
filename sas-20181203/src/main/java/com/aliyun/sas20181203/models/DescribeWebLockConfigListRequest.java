@@ -21,6 +21,8 @@ public class DescribeWebLockConfigListRequest extends TeaModel {
 
     /**
      * <p>The UUID of the server.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

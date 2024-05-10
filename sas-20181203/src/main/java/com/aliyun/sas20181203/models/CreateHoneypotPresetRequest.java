@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateHoneypotPresetRequest extends TeaModel {
     /**
      * <p>The name of the honeypot image.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HoneypotImageName")
     public String honeypotImageName;
@@ -25,6 +27,8 @@ public class CreateHoneypotPresetRequest extends TeaModel {
      * <p>*   **portrait_option**: Social Source Tracing</p>
      * <p>*   **burp**: Burp-specific Defense</p>
      * <p>*   **trojan_git**: Git-specific Defense</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Meta")
     public String meta;
@@ -33,12 +37,16 @@ public class CreateHoneypotPresetRequest extends TeaModel {
      * <p>The ID of the management node to which you want to deploy honeypots.</p>
      * <br>
      * <p>> You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
      * <p>The custom name of the honeypot template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PresetName")
     public String presetName;

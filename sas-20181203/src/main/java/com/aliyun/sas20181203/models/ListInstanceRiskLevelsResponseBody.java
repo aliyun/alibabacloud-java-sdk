@@ -56,7 +56,7 @@ public class ListInstanceRiskLevelsResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The UUID of the server for which you want to modify the defense rule. You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.</p>
+         * <p>The UUID of the server for which you want to modify the defense rule. You can call the [DescribeCloudCenterInstances](https://help.aliyun.com/document_detail/141932.html) operation to query the UUIDs of servers.</p>
          */
         @NameInMap("Uuid")
         public String uuid;

@@ -30,6 +30,8 @@ public class PublicSyncAndCreateImageScanTaskRequest extends TeaModel {
      * <p>*   **CreateTime**: the timestamp when the image was created. Unit: milliseconds.</p>
      * <br>
      * <p>*   **UpdateTime**: the timestamp when the image was updated. Unit: milliseconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Images")
     public String images;

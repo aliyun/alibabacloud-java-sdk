@@ -8,6 +8,8 @@ public class DescribeAlarmEventStackInfoRequest extends TeaModel {
      * <p>The name of the event.</p>
      * <br>
      * <p>>  You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the names of events.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventName")
     public String eventName;
@@ -37,6 +39,8 @@ public class DescribeAlarmEventStackInfoRequest extends TeaModel {
 
     /**
      * <p>The ID of the alert event.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UniqueInfo")
     public String uniqueInfo;
@@ -45,6 +49,8 @@ public class DescribeAlarmEventStackInfoRequest extends TeaModel {
      * <p>The UUID of the server to query.</p>
      * <br>
      * <p>>  You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the UUIDs of servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

@@ -253,7 +253,7 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
         public String assetList;
 
         /**
-         * <p>ATT\&CK</p>
+         * <p>ATT\\&CK</p>
          */
         @NameInMap("AttCk")
         public String attCk;

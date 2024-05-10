@@ -27,6 +27,8 @@ public class GetHoneypotEventTrendRequest extends TeaModel {
 
     /**
      * <p>The source IP address of the attack.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SrcIp")
     public String srcIp;

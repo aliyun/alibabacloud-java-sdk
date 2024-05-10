@@ -30,6 +30,8 @@ public class ModifyAccessKeyLeakDealRequest extends TeaModel {
      * <p>*   **manual**: manually handle</p>
      * <p>*   **disable**: disable</p>
      * <p>*   **add-whitelist**: add to the whitelist</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

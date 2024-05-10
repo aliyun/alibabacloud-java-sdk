@@ -14,6 +14,8 @@ public class HandleSimilarSecurityEventsRequest extends TeaModel {
      * <p>The operation that you want to perform to handle the alert events.</p>
      * <br>
      * <p>>  You can call the [DescribeSecurityEventOperations](~~DescribeSecurityEventOperations~~) operation to query the operations.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OperationCode")
     public String operationCode;
@@ -21,11 +23,11 @@ public class HandleSimilarSecurityEventsRequest extends TeaModel {
     /**
      * <p>The configuration of the operation that you want to perform to handle the alert events. The value of this parameter is in the JSON format.</p>
      * <br>
-     * <p>>  If you set **OperationCode** to **kill\_and\_quara**, **block\_ip**, or **virus\_quara**, you must specify OperationParams. If you set **OperationCode** to other values, you can leave OperationParams empty. If you set **OperationCode** to **block_ip**, the value of OperationParams must consist of the following fields:</p>
+     * <p>>  If you set **OperationCode** to **kill_and_quara**, **block_ip**, or **virus_quara**, you must specify OperationParams. If you set **OperationCode** to other values, you can leave OperationParams empty. If you set **OperationCode** to **block_ip**, the value of OperationParams must consist of the following fields:</p>
      * <br>
      * <p>> *   **expireTime**: the end time of locking. Unit: milliseconds.</p>
      * <br>
-     * <p>>  If you set **OperationCode** to **kill\_and_quara**, the value of OperationParams must consist of the following fields:</p>
+     * <p>>  If you set **OperationCode** to **kill_and_quara**, the value of OperationParams must consist of the following fields:</p>
      * <br>
      * <p>> *   **subOperation**: the method of detection and removal. Valid values:</p>
      * <br>
@@ -60,6 +62,8 @@ public class HandleSimilarSecurityEventsRequest extends TeaModel {
      * <p>The ID of the task that handles the alert events at a time.</p>
      * <br>
      * <p>>  You can call the [CreateSimilarSecurityEventsQueryTask](~~CreateSimilarSecurityEventsQueryTask~~) operation to query the IDs of tasks.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

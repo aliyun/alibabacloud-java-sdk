@@ -12,6 +12,8 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -69,6 +71,8 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
@@ -76,7 +80,7 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     /**
      * <p>The ID of the image repository.</p>
      * <br>
-     * <p>>  You can call the [ListRepository](~~145293~~) operation to query the IDs of image repositories from the value of the **RepoId** response parameter.</p>
+     * <p>>  You can call the [ListRepository](https://help.aliyun.com/document_detail/145293.html) operation to query the IDs of image repositories from the value of the **RepoId** response parameter.</p>
      */
     @NameInMap("RepoId")
     public String repoId;
@@ -84,7 +88,7 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     /**
      * <p>The ID of the container image.</p>
      * <br>
-     * <p>>  You can call the [ListRepository](~~145293~~) operation to query the IDs of container images from the value of the **InstanceId** response parameter.</p>
+     * <p>>  You can call the [ListRepository](https://help.aliyun.com/document_detail/145293.html) operation to query the IDs of container images from the value of the **InstanceId** response parameter.</p>
      */
     @NameInMap("RepoInstanceId")
     public String repoInstanceId;

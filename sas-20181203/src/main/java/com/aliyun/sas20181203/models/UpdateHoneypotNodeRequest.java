@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateHoneypotNodeRequest extends TeaModel {
     /**
      * <p>The number of available probes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AvailableProbeNum")
     public Integer availableProbeNum;
@@ -14,12 +16,16 @@ public class UpdateHoneypotNodeRequest extends TeaModel {
      * <p>The ID of the management node.</p>
      * <br>
      * <p>> You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
      * <p>The name of the management node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeName")
     public String nodeName;

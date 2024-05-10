@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeBackupFilesRequest extends TeaModel {
     /**
      * <p>The number of the page to return. Default value: **1**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
      * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
@@ -24,12 +28,16 @@ public class DescribeBackupFilesRequest extends TeaModel {
 
     /**
      * <p>The hash value of the backup file.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SnapshotHash")
     public String snapshotHash;
 
     /**
      * <p>The UUID of the server to which an anti-ransomware policy is applied.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

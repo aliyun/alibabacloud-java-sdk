@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteClientUserDefineRuleRequest extends TeaModel {
     /**
      * <p>The IDs of the custom defense rules.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IdList")
     public java.util.List<Long> idList;

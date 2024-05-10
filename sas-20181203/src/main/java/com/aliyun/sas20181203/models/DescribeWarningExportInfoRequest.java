@@ -8,6 +8,8 @@ public class DescribeWarningExportInfoRequest extends TeaModel {
      * <p>The ID of the export task.</p>
      * <br>
      * <p>>  You can can call the [ExportWarning](~~ExportWarning~~) operation to query the IDs of export tasks.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExportId")
     public Long exportId;

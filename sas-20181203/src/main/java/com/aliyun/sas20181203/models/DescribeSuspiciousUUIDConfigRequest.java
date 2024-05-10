@@ -9,9 +9,11 @@ public class DescribeSuspiciousUUIDConfigRequest extends TeaModel {
      * <br>
      * <p>*   **auto_breaking**: virus defense</p>
      * <p>*   **ransomware_breaking**: ransomware capture</p>
-     * <p>*   **webshell\_cloud_breaking**: webshell defense</p>
+     * <p>*   **webshell_cloud_breaking**: webshell defense</p>
      * <p>*   **alinet**: malicious behavior defense</p>
      * <p>*   **alisecguard**: client protection</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallCloudMonitorRequest extends TeaModel {
     /**
-     * <p>The AccessKey ID that is required to install the CloudMonitor agent. You can call the [DescribeMonitoringAgentAccessKey](~~114948~~) operation to query the AccessKey ID.</p>
+     * <p>The AccessKey ID that is required to install the CloudMonitor agent. You can call the [DescribeMonitoringAgentAccessKey](https://help.aliyun.com/document_detail/114948.html) operation to query the AccessKey ID.</p>
      * <br>
      * <p>> This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.</p>
      */
@@ -13,7 +13,7 @@ public class InstallCloudMonitorRequest extends TeaModel {
     public String agentAccessKey;
 
     /**
-     * <p>The AccessKey secret that is required to install the CloudMonitor agent. You can call the [DescribeMonitoringAgentAccessKey](~~114948~~) operation to query the AccessKey secret.</p>
+     * <p>The AccessKey secret that is required to install the CloudMonitor agent. You can call the [DescribeMonitoringAgentAccessKey](https://help.aliyun.com/document_detail/114948.html) operation to query the AccessKey secret.</p>
      * <br>
      * <p>> This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.</p>
      */
@@ -21,7 +21,9 @@ public class InstallCloudMonitorRequest extends TeaModel {
     public String agentSecretKey;
 
     /**
-     * <p>The version of the CloudMonitor agent that you want to install on the servers. For more information about the latest version of the CloudMonitor agent, see [Overview](~~183431~~).</p>
+     * <p>The version of the CloudMonitor agent that you want to install on the servers. For more information about the latest version of the CloudMonitor agent, see [Overview](https://help.aliyun.com/document_detail/183431.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ArgusVersion")
     public String argusVersion;

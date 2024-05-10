@@ -25,6 +25,8 @@ public class ModifyTagWithUuidRequest extends TeaModel {
      * <p>The names of the tags that you want to manage. Separate multiple tag names with commas (,).</p>
      * <br>
      * <p>>  You can call the [DescribeGroupedTags](~~DescribeGroupedTags~~) operation to query the names of tags.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TagList")
     public String tagList;

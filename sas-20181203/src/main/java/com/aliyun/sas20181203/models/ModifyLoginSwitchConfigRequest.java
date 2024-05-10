@@ -7,9 +7,11 @@ public class ModifyLoginSwitchConfigRequest extends TeaModel {
     /**
      * <p>The type of the logon security settings that you want to enable or disable. Valid values:</p>
      * <br>
-     * <p>*   **login\_common_ip**: unapproved logon IP addresses</p>
-     * <p>*   **login\_common_time**: unapproved logon time ranges</p>
-     * <p>*   **login\_common_account**: unapproved logon accounts</p>
+     * <p>*   **login_common_ip**: unapproved logon IP addresses</p>
+     * <p>*   **login_common_time**: unapproved logon time ranges</p>
+     * <p>*   **login_common_account**: unapproved logon accounts</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Item")
     public String item;
@@ -19,6 +21,8 @@ public class ModifyLoginSwitchConfigRequest extends TeaModel {
      * <br>
      * <p>*   **0**: no</p>
      * <p>*   **1**: yes</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public Integer status;

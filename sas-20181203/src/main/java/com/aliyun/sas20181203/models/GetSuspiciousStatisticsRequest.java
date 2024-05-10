@@ -8,6 +8,8 @@ public class GetSuspiciousStatisticsRequest extends TeaModel {
      * <p>The ID of the asset group. Separate multiple IDs with commas (,).</p>
      * <br>
      * <p>> You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupIdList")
     public String groupIdList;

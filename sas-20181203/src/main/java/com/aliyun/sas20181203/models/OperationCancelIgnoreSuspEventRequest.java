@@ -12,6 +12,8 @@ public class OperationCancelIgnoreSuspEventRequest extends TeaModel {
 
     /**
      * <p>The IDs of alert events.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityEventIds")
     public java.util.List<Long> securityEventIds;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeOnceTaskLeafRecordPageRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -18,12 +20,16 @@ public class DescribeOnceTaskLeafRecordPageRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page. Default value: 20</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>Specifies whether extension information is associated.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RelateInfo")
     public Boolean relateInfo;
@@ -57,6 +63,8 @@ public class DescribeOnceTaskLeafRecordPageRequest extends TeaModel {
      * <br>
      * <p>*   **IMAGE_SCAN**: image scan task</p>
      * <p>*   **IMAGE_REGISTRY_PULL**: image asset synchronization task</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetFileDetectResultRequest extends TeaModel {
     /**
      * <p>The identifiers of files. Only MD5 hash values are supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HashKeyList")
     public java.util.List<String> hashKeyList;
@@ -25,6 +27,8 @@ public class GetFileDetectResultRequest extends TeaModel {
      * <p>*   **4**: script file</p>
      * <br>
      * <p>> If you do not know the type of the file, set this parameter to 0.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public Integer type;

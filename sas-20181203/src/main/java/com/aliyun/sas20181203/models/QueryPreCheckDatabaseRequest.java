@@ -22,6 +22,8 @@ public class QueryPreCheckDatabaseRequest extends TeaModel {
 
     /**
      * <p>The region ID of the server that hosts the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UniRegionId")
     public String uniRegionId;

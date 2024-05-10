@@ -18,18 +18,24 @@ public class AddContainerPluginRuleRequest extends TeaModel {
      * <br>
      * <p>*   **1**: triggers alerts.</p>
      * <p>*   **2**: blocks escapes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Mode")
     public Integer mode;
 
     /**
-     * <p>The name of the rule. The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_). The names of rules that are created for the same user must be unique.</p>
+     * <p>The name of the rule. The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_). The names of rules that are created for the same user must be unique.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>The ID of the rule template. You can call the ListSystemClientRules operation to query the ID of the rule template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleTemplateId")
     public Integer ruleTemplateId;
@@ -45,6 +51,8 @@ public class AddContainerPluginRuleRequest extends TeaModel {
 
     /**
      * <p>The check items that are enabled for the rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SelectedPolicy")
     public java.util.List<String> selectedPolicy;

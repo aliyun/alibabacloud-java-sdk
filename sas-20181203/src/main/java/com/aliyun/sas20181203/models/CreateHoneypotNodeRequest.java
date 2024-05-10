@@ -21,6 +21,8 @@ public class CreateHoneypotNodeRequest extends TeaModel {
 
     /**
      * <p>The name of the management node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeName")
     public String nodeName;

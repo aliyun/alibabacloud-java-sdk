@@ -47,6 +47,8 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the defense rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;

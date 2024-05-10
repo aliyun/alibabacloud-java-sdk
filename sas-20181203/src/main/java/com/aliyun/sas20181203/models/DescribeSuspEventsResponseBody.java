@@ -209,13 +209,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
 
     public static class DescribeSuspEventsResponseBodySuspEventsTacticItems extends TeaModel {
         /**
-         * <p>The ATT\&CK tactic name.</p>
+         * <p>The ATT\\&CK tactic name.</p>
          */
         @NameInMap("TacticDisplayName")
         public String tacticDisplayName;
 
         /**
-         * <p>The ATT\&CK stage information.</p>
+         * <p>The ATT\\&CK stage information.</p>
          */
         @NameInMap("TacticId")
         public String tacticId;

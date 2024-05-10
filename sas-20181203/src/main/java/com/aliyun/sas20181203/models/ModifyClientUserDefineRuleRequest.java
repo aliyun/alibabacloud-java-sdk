@@ -9,6 +9,8 @@ public class ModifyClientUserDefineRuleRequest extends TeaModel {
      * <br>
      * <p>*   **0**: allow</p>
      * <p>*   **1**: block</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ActionType")
     public Integer actionType;
@@ -41,6 +43,8 @@ public class ModifyClientUserDefineRuleRequest extends TeaModel {
      * <p>The ID of the rule.</p>
      * <br>
      * <p>>  You can call the [ListClientUserDefineRules](~~ListClientUserDefineRules~~) operation to query the IDs of rules.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;

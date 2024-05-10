@@ -30,6 +30,8 @@ public class CreateInterceptionTargetRequest extends TeaModel {
 
     /**
      * <p>The namespace to which the network object belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -42,6 +44,8 @@ public class CreateInterceptionTargetRequest extends TeaModel {
 
     /**
      * <p>The name of the object to be blocked.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetName")
     public String targetName;
@@ -50,6 +54,8 @@ public class CreateInterceptionTargetRequest extends TeaModel {
      * <p>The object type. Valid value:</p>
      * <br>
      * <p>*   **IMAGE**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetType")
     public String targetType;

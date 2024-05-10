@@ -15,6 +15,8 @@ public class ModifyClientConfSetupRequest extends TeaModel {
 
     /**
      * <p>The type of the tag.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StrategyTag")
     public String strategyTag;
@@ -25,6 +27,8 @@ public class ModifyClientConfSetupRequest extends TeaModel {
      * <p>*   major</p>
      * <p>*   advanced</p>
      * <p>*   basic</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StrategyTagValue")
     public String strategyTagValue;

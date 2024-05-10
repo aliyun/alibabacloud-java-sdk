@@ -8,6 +8,8 @@ public class DeleteInstallCodeRequest extends TeaModel {
      * <p>The installation command.</p>
      * <br>
      * <p>>  You can call the [DescribeInstallCodes](~~DescribeInstallCodes~~) operation to query installation commands.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CaptchaCode")
     public String captchaCode;

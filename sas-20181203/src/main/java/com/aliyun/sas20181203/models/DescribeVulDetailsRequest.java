@@ -15,6 +15,8 @@ public class DescribeVulDetailsRequest extends TeaModel {
      * <br>
      * <p>*   **zh**: Chinese</p>
      * <p>*   **en**: English</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Lang")
     public String lang;
@@ -23,6 +25,8 @@ public class DescribeVulDetailsRequest extends TeaModel {
      * <p>The name of the vulnerability.</p>
      * <br>
      * <p>> You can call the [DescribeGroupedVul](~~DescribeGroupedVul~~) or [DescribeVulList](~~DescribeVulList~~) operation to query the names of vulnerabilities.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -44,6 +48,8 @@ public class DescribeVulDetailsRequest extends TeaModel {
      * <p>*   **app**: application vulnerabilitiy</p>
      * <p>*   **emg**: urgent vulnerability</p>
      * <p>*   **sca**: vulnerability that is detected based on software component analysis</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

@@ -9,12 +9,16 @@ public class OperateWebLockFileEventsRequest extends TeaModel {
      * <br>
      * <p>*   **1**: yes</p>
      * <p>*   **0**: no</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DealAll")
     public Integer dealAll;
 
     /**
      * <p>The IDs of alert events.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventIds")
     public java.util.List<Long> eventIds;
@@ -27,6 +31,8 @@ public class OperateWebLockFileEventsRequest extends TeaModel {
      * <p>*   **offline_handled**: marks the alert events as handled offline</p>
      * <p>*   **whitelist**: adds the alert events to the whitelist</p>
      * <p>*   **rm_whitelist**: cancels adding the alert events to the whitelist</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OperationCode")
     public String operationCode;

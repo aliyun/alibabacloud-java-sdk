@@ -13,6 +13,9 @@ public class DescribeStrategyExecDetailRequest extends TeaModel {
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StrategyId")
     public Integer strategyId;
 

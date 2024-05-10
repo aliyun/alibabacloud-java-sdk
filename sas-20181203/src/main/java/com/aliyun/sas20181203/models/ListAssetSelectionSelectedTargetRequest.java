@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListAssetSelectionSelectedTargetRequest extends TeaModel {
     /**
      * <p>The unique ID of the asset.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SelectionKey")
     public String selectionKey;

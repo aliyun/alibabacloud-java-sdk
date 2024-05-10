@@ -16,6 +16,8 @@ public class DescribePropertyScheduleConfigRequest extends TeaModel {
      * <p>*   **scheduler_autorun_period**: startup item</p>
      * <p>*   **scheduler_lkm_period**: kernel module</p>
      * <p>*   **scheduler_sca_proxy_period**: website</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

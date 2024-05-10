@@ -8,6 +8,8 @@ public class DeleteCycleTaskRequest extends TeaModel {
      * <p>The ID of the task configuration.</p>
      * <br>
      * <p>>  You can call the [DescribeCycleTaskList](~~DescribeCycleTaskList~~) operation to query the IDs of task configurations.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigId")
     public String configId;

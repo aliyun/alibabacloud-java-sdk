@@ -24,6 +24,8 @@ public class ModifyInterceptionTargetRequest extends TeaModel {
      * <p>The namespace.</p>
      * <br>
      * <p>> You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -40,12 +42,16 @@ public class ModifyInterceptionTargetRequest extends TeaModel {
      * <p>The ID of the network object.</p>
      * <br>
      * <p>> You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to obtain the value of this parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetId")
     public Long targetId;
 
     /**
      * <p>The name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetName")
     public String targetName;
@@ -54,6 +60,8 @@ public class ModifyInterceptionTargetRequest extends TeaModel {
      * <p>The object type. Valid values:</p>
      * <br>
      * <p>*   **IMAGE**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetType")
     public String targetType;

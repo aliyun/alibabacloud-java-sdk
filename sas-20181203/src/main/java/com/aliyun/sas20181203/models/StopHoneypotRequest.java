@@ -8,6 +8,8 @@ public class StopHoneypotRequest extends TeaModel {
      * <p>The honeypot ID.</p>
      * <br>
      * <p>>  You can call the [ListHoneypot](~~ListHoneypot~~) operation to obtain IDs of honeypots.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HoneypotId")
     public String honeypotId;

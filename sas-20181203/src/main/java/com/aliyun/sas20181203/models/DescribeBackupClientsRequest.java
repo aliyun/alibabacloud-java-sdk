@@ -7,6 +7,8 @@ public class DescribeBackupClientsRequest extends TeaModel {
     /**
      * <p>The region in which the anti-ransomware feature is supported.</p>
      * <p>> You can call the [DescribeSupportRegion](~~DescribeSupportRegion~~) operation to query the regions in which the anti-ransomware feature is supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SupportRegionId")
     public String supportRegionId;

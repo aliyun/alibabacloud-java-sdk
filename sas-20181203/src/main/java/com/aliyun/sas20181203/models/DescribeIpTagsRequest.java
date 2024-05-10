@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeIpTagsRequest extends TeaModel {
     /**
      * <p>The IP address in the alert event.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ip")
     public String ip;
 
     /**
      * <p>The ID of the alert event.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityEventId")
     public String securityEventId;

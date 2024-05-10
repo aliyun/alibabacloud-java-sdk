@@ -38,6 +38,8 @@ public class DescribeGroupedContainerInstancesRequest extends TeaModel {
      * <p>*   **appName**</p>
      * <p>*   **namespace**</p>
      * <p>*   **clusterId**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupField")
     public String groupField;

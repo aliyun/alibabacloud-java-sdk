@@ -15,6 +15,8 @@ public class ModifyEmgVulSubmitRequest extends TeaModel {
 
     /**
      * <p>The name of the vulnerability.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -24,6 +26,8 @@ public class ModifyEmgVulSubmitRequest extends TeaModel {
      * <br>
      * <p>*   **yes**</p>
      * <p>*   **no**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserAgreement")
     public String userAgreement;

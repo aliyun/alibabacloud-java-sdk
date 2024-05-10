@@ -23,6 +23,8 @@ public class DescribeAgentInstallStatusRequest extends TeaModel {
      * <p>The UUIDs of servers. Separate multiple UUIDs with commas (,).</p>
      * <br>
      * <p>> You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuids")
     public String uuids;

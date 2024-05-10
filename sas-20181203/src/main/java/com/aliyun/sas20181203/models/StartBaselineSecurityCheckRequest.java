@@ -35,6 +35,8 @@ public class StartBaselineSecurityCheckRequest extends TeaModel {
      * <br>
      * <p>*   **check**</p>
      * <p>*   **verify**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

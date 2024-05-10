@@ -16,7 +16,7 @@ public class DescribeTotalStatisticsRequest extends TeaModel {
     /**
      * <p>The ID of the asset group.</p>
      * <br>
-     * <p>> You can call the [DescribeAllGroups](~~130972~~) operation to query the IDs of asset groups.</p>
+     * <p>> You can call the [DescribeAllGroups](https://help.aliyun.com/document_detail/130972.html) operation to query the IDs of asset groups.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;

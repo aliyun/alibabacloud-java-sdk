@@ -20,6 +20,8 @@ public class OperationSuspEventsRequest extends TeaModel {
      * <p>*   **mark_mis_info**: marks the alerts as false positives by adding the alerts to the whitelist.</p>
      * <p>*   **rm_mark_mis_info**: cancels false positives by removing the alerts from the whitelist.</p>
      * <p>*   **offline_handled**: marks the alerts as handled.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Operation")
     public String operation;
@@ -44,6 +46,8 @@ public class OperationSuspEventsRequest extends TeaModel {
      * <p>The IDs of alert events.</p>
      * <br>
      * <p>> You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the IDs of alert events from the SecurityEventIds response parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SuspiciousEventIds")
     public String suspiciousEventIds;

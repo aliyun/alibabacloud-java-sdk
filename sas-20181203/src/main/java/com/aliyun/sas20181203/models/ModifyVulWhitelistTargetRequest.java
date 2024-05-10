@@ -8,6 +8,8 @@ public class ModifyVulWhitelistTargetRequest extends TeaModel {
      * <p>The ID of the whitelist.</p>
      * <br>
      * <p>>  You can call the [DescribeVulWhitelist](~~DescribeVulWhitelist~~) operation to query the IDs of whitelists.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;

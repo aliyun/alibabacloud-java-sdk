@@ -236,7 +236,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tactic ID of ATT\&CK.</p>
+     * <p>The tactic ID of ATT\\&CK.</p>
      */
     @NameInMap("TacticId")
     public String tacticId;

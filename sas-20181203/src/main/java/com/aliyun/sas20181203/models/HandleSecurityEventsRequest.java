@@ -42,15 +42,17 @@ public class HandleSecurityEventsRequest extends TeaModel {
      * <p>The operation that you want to perform to handle the alert events. Valid values:</p>
      * <br>
      * <p>*   **block_ip**: blocks the source IP address.</p>
-     * <p>*   **advance\_mark\_mis_info**: adds the alert events to the whitelist.</p>
+     * <p>*   **advance_mark_mis_info**: adds the alert events to the whitelist.</p>
      * <p>*   **ignore**: ignores the alert events.</p>
      * <p>*   **manual_handled**: marks the alert events as manually handled.</p>
      * <p>*   **kill_process**: terminates the malicious process.</p>
      * <p>*   **cleanup**: performs in-depth virus detection and removal.</p>
-     * <p>*   **kill\_and_quara**: kills the malicious processes and quarantines the source file.</p>
-     * <p>*   **disable\_malicious_defense**: stops the container on which the alerting files or processes exist.</p>
-     * <p>*   **client\_problem_check**: performs troubleshooting.</p>
+     * <p>*   **kill_and_quara**: kills the malicious processes and quarantines the source file.</p>
+     * <p>*   **disable_malicious_defense**: stops the container on which the alerting files or processes exist.</p>
+     * <p>*   **client_problem_check**: performs troubleshooting.</p>
      * <p>*   **quara**: quarantines the source file of the malicious process.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OperationCode")
     public String operationCode;
@@ -71,6 +73,8 @@ public class HandleSecurityEventsRequest extends TeaModel {
 
     /**
      * <p>The IDs of the alert events.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityEventIds")
     public java.util.List<String> securityEventIds;

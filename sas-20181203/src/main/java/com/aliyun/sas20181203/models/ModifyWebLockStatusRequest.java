@@ -26,12 +26,16 @@ public class ModifyWebLockStatusRequest extends TeaModel {
      * <p>*   **off**: disables web tamper proofing</p>
      * <br>
      * <p>> After you disable web tamper proofing for the specified server, one quota is released.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The UUID of the server for which you want to enable or disable web tamper proofing. You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

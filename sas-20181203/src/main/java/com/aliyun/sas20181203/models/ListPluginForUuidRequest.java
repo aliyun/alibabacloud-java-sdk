@@ -14,6 +14,8 @@ public class ListPluginForUuidRequest extends TeaModel {
      * <p>The UUID of the server.</p>
      * <br>
      * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

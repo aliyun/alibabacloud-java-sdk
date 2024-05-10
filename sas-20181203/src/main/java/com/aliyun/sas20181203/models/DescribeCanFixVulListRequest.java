@@ -59,7 +59,7 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     /**
      * <p>The ID of the container image.</p>
      * <br>
-     * <p>>  You can call the [ListRepository](~~451339~~) operation of Container Registry and obtain the ID of the container image from **InstanceId** in the response.</p>
+     * <p>>  You can call the [ListRepository](https://help.aliyun.com/document_detail/451339.html) operation of Container Registry and obtain the ID of the container image from **InstanceId** in the response.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -123,7 +123,7 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     /**
      * <p>The ID of the image repository.</p>
      * <br>
-     * <p>>  You can call the [ListRepository](~~145293~~) operation of Container Registry and obtain the ID of the image repository from **RepoId** in the response.</p>
+     * <p>>  You can call the [ListRepository](https://help.aliyun.com/document_detail/145293.html) operation of Container Registry and obtain the ID of the image repository from **RepoId** in the response.</p>
      */
     @NameInMap("RepoId")
     public String repoId;
@@ -131,7 +131,7 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     /**
      * <p>The ID of the container image.</p>
      * <br>
-     * <p>>  You can call the [ListRepository](~~451339~~) operation of Container Registry and obtain the ID of the container image from **InstanceId** in the response.</p>
+     * <p>>  You can call the [ListRepository](https://help.aliyun.com/document_detail/451339.html) operation of Container Registry and obtain the ID of the container image from **InstanceId** in the response.</p>
      */
     @NameInMap("RepoInstanceId")
     public String repoInstanceId;
@@ -202,6 +202,8 @@ public class DescribeCanFixVulListRequest extends TeaModel {
      * <br>
      * <p>*   **cve**: system vulnerability</p>
      * <p>*   **sca**: application vulnerability</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

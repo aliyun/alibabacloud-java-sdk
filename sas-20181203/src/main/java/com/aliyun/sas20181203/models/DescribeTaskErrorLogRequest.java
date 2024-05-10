@@ -8,6 +8,8 @@ public class DescribeTaskErrorLogRequest extends TeaModel {
      * <p>The ID of the task.</p>
      * <br>
      * <p>>  You can call the DescribeImageFixTask operation to query the IDs of tasks.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BuildTaskId")
     public String buildTaskId;

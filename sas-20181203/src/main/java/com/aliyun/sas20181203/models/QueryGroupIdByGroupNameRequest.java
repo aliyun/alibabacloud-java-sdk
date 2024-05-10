@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class QueryGroupIdByGroupNameRequest extends TeaModel {
     /**
      * <p>The name of the asset group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupName")
     public String groupName;

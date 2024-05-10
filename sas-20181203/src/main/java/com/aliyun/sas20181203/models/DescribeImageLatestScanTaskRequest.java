@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeImageLatestScanTaskRequest extends TeaModel {
     /**
      * <p>The digest value of the image.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Digest")
     public String digest;

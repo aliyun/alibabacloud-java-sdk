@@ -29,6 +29,8 @@ public class ModifyLoginBaseConfigRequest extends TeaModel {
      * <p>*   **account**: the common logon account.</p>
      * <br>
      * <p>> You must specify this field if the Type parameter is set to login_common_account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Config")
     public String config;
@@ -47,6 +49,8 @@ public class ModifyLoginBaseConfigRequest extends TeaModel {
      * <br>
      * <p>    *   **del**: removes the server from the configuration.</p>
      * <p>    *   **add**: adds the server to the configuration.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Target")
     public String target;
@@ -54,10 +58,12 @@ public class ModifyLoginBaseConfigRequest extends TeaModel {
     /**
      * <p>The logon type of the configuration to modify. Valid values:</p>
      * <br>
-     * <p>*   **login\_common_location**: common logon location</p>
-     * <p>*   **login\_common_ip**: common logon IP address</p>
-     * <p>*   **login\_common_time**: common logon time range</p>
-     * <p>*   **login\_common_account**: common logon account</p>
+     * <p>*   **login_common_location**: common logon location</p>
+     * <p>*   **login_common_ip**: common logon IP address</p>
+     * <p>*   **login_common_time**: common logon time range</p>
+     * <p>*   **login_common_account**: common logon account</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

@@ -6,24 +6,32 @@ import com.aliyun.tea.*;
 public class OperateVulsRequest extends TeaModel {
     /**
      * <p>The operation on the vulnerabilities. Set the value to **vul_fix**, which indicates vulnerability fixing.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OperateType")
     public String operateType;
 
     /**
      * <p>The type of the vulnerabilities that you want to fix. Set the value to **cve**, which indicates Linux software vulnerabilities.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The UUIDs of servers for which you want to fix vulnerabilities.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuids")
     public java.util.List<String> uuids;
 
     /**
      * <p>The names of the vulnerabilities that you want to fix.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VulNames")
     public java.util.List<String> vulNames;

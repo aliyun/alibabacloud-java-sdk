@@ -24,6 +24,8 @@ public class DescribeImageBaselineItemListRequest extends TeaModel {
 
     /**
      * <p>The UUID of the image.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageUuid")
     public String imageUuid;

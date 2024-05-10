@@ -8,6 +8,8 @@ public class DescribeClusterBasicInfoRequest extends TeaModel {
      * <p>The ID of the cluster that you want to query.</p>
      * <br>
      * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -16,6 +18,8 @@ public class DescribeClusterBasicInfoRequest extends TeaModel {
      * <p>The dimension from which you want to configure the feature. Valid values:</p>
      * <br>
      * <p>*   **Cluster**: the ID of the cluster</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetType")
     public String targetType;
@@ -25,6 +29,8 @@ public class DescribeClusterBasicInfoRequest extends TeaModel {
      * <br>
      * <p>*   **containerNetwork**: container network topology</p>
      * <p>*   **interceptionSwitch**: cluster microsegmentation</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

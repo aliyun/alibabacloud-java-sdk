@@ -7,6 +7,9 @@ public class DescribeSimilarEventScenariosRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SecurityEventId")
     public Long securityEventId;
 

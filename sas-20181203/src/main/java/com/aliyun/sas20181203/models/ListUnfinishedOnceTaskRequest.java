@@ -15,6 +15,8 @@ public class ListUnfinishedOnceTaskRequest extends TeaModel {
      * <br>
      * <p>*   **ASSETS_COLLECTION**: asset information collection task</p>
      * <p>*   **IMAGE_SCAN**: image scan task</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

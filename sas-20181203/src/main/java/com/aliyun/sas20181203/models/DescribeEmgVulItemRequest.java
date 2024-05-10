@@ -35,7 +35,7 @@ public class DescribeEmgVulItemRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Specifies whether the vulnerability poses risks.\</p>
+     * <p>Specifies whether the vulnerability poses risks.\\</p>
      * <p>If you do not specify this parameter, all vulnerabilities are queried regardless of whether the vulnerabilities pose risks. Valid values:</p>
      * <br>
      * <p>*   **y**: yes</p>
@@ -45,7 +45,7 @@ public class DescribeEmgVulItemRequest extends TeaModel {
     public String riskStatus;
 
     /**
-     * <p>The method that is used to detect the vulnerability.\</p>
+     * <p>The method that is used to detect the vulnerability.\\</p>
      * <p>If you do not specify this parameter, all vulnerabilities are queried regardless of which method is used. Valid values:</p>
      * <br>
      * <p>*   **python**: The Version method is used. Security Center checks the software versions of your server to check whether disclosed vulnerabilities exist on your server.</p>

@@ -19,12 +19,16 @@ public class GetClientRatioStatisticRequest extends TeaModel {
 
     /**
      * <p>The timestamp that specifies the end of the time range to collect statistics. Unit: milliseconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TimeEnd")
     public Long timeEnd;
 
     /**
      * <p>The timestamp that specifies the beginning of the time range to collect statistics. Unit: milliseconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TimeStart")
     public Long timeStart;

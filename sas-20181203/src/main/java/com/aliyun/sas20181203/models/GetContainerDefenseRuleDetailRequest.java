@@ -7,7 +7,7 @@ public class GetContainerDefenseRuleDetailRequest extends TeaModel {
     /**
      * <p>The rule ID.</p>
      * <br>
-     * <p>>  You can call the [ListContainerDefenseRule](~~2590599~~) operation to query the rule ID.</p>
+     * <p>>  You can call the [ListContainerDefenseRule](https://help.aliyun.com/document_detail/2590599.html) operation to query the rule ID.</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;

@@ -7,7 +7,7 @@ public class CreateContainerScanTaskRequest extends TeaModel {
     /**
      * <p>The ID of the cluster to which the container belongs.</p>
      * <br>
-     * <p>> You can call the [DescribeGroupedContainerInstances](~~182997~~) operation to query the IDs of clusters.</p>
+     * <p>> You can call the [DescribeGroupedContainerInstances](https://help.aliyun.com/document_detail/182997.html) operation to query the IDs of clusters.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

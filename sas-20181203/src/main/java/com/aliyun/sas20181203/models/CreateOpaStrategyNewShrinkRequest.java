@@ -72,7 +72,7 @@ public class CreateOpaStrategyNewShrinkRequest extends TeaModel {
     /**
      * <p>The rule ID.</p>
      * <br>
-     * <p>>  You can call the [ListOpaClusterStrategyNew](~~2623574~~) operation to query the rule ID.</p>
+     * <p>>  You can call the [ListOpaClusterStrategyNew](https://help.aliyun.com/document_detail/2623574.html) operation to query the rule ID.</p>
      * <br>
      * <p>> This parameter is invalid when you create a rule.</p>
      */
@@ -88,7 +88,7 @@ public class CreateOpaStrategyNewShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the rule template.</p>
      * <br>
-     * <p>>  You can call the [GetOpaStrategyTemplateSummary](~~2539952~~) operation to query the ID of the rule template.</p>
+     * <p>>  You can call the [GetOpaStrategyTemplateSummary](https://help.aliyun.com/document_detail/2539952.html) operation to query the ID of the rule template.</p>
      */
     @NameInMap("StrategyTemplateId")
     public Long strategyTemplateId;
@@ -246,7 +246,7 @@ public class CreateOpaStrategyNewShrinkRequest extends TeaModel {
         /**
          * <p>The ID of the cluster that is specified in the rule.</p>
          * <br>
-         * <p>>  You can call the [DescribeGroupedContainerInstances](~~421736~~) operation to query the cluster ID.</p>
+         * <p>>  You can call the [DescribeGroupedContainerInstances](https://help.aliyun.com/document_detail/421736.html) operation to query the cluster ID.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;

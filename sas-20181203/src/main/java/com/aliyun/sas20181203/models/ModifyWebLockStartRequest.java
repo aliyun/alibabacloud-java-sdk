@@ -9,12 +9,16 @@ public class ModifyWebLockStartRequest extends TeaModel {
      * <br>
      * <p>*   **block**: Interception Mode</p>
      * <p>*   **audit**: Alert Mode</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DefenceMode")
     public String defenceMode;
 
     /**
      * <p>The directory for which you want to enable web tamper proofing. Separate multiple directories with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Dir")
     public String dir;
@@ -82,11 +86,13 @@ public class ModifyWebLockStartRequest extends TeaModel {
     public String inclusiveFileType;
 
     /**
-     * <p>The local path to the backup files of the protected directory.\</p>
+     * <p>The local path to the backup files of the protected directory.\\</p>
      * <p>The directory format of a Linux server is different from that of a Windows server. You must enter the directory in the required format based on your operating system. Examples:</p>
      * <br>
      * <p>*   Linux server: /usr/local/aegis/bak</p>
-     * <p>*   Windows server: C:\Program Files (x86)\Alibaba\Aegis\bak</p>
+     * <p>*   Windows server: C:\\Program Files (x86)\\Alibaba\\Aegis\\bak</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LocalBackupDir")
     public String localBackupDir;
@@ -96,12 +102,16 @@ public class ModifyWebLockStartRequest extends TeaModel {
      * <br>
      * <p>*   **whitelist**: In this mode, web tamper proofing is enabled for the specified directories and file types.</p>
      * <p>*   **blacklist**: In this mode, web tamper proofing is enabled for the unspecified subdirectories, file types, and files in the protected directory.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Mode")
     public String mode;
 
     /**
      * <p>The UUID of the server for which you want to enable web tamper proofing.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

@@ -164,6 +164,8 @@ public class DescribeImageVulListRequest extends TeaModel {
 
     /**
      * <p>The type of the vulnerability. Set the value to **cve**, which indicates image vulnerabilities.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

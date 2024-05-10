@@ -7,7 +7,7 @@ public class DescribeVersionConfigRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account that uses Security Center.</p>
      * <br>
-     * <p>>  You can call the [GetUser](~~28681~~) operation to query the IDs of Alibaba Cloud accounts.</p>
+     * <p>>  You can call the [GetUser](https://help.aliyun.com/document_detail/28681.html) operation to query the IDs of Alibaba Cloud accounts.</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public String resourceDirectoryAccountId;

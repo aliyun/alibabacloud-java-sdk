@@ -8,6 +8,8 @@ public class DescribeImageRequest extends TeaModel {
      * <p>The instance ID of the image.</p>
      * <br>
      * <p>>  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query the IDs of instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageInstanceId")
     public String imageInstanceId;
@@ -16,6 +18,8 @@ public class DescribeImageRequest extends TeaModel {
      * <p>The region ID of the image.</p>
      * <br>
      * <p>>  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query the IDs of regions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageRegionId")
     public String imageRegionId;
@@ -24,6 +28,8 @@ public class DescribeImageRequest extends TeaModel {
      * <p>The ID of the image repository.</p>
      * <br>
      * <p>>  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query the IDs of image repositories.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageRepoId")
     public String imageRepoId;
@@ -32,6 +38,8 @@ public class DescribeImageRequest extends TeaModel {
      * <p>The tag that is added to the image.</p>
      * <br>
      * <p>>  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query tags.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageTag")
     public String imageTag;

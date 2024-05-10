@@ -7,7 +7,7 @@ public class GetOpaStrategyDetailNewRequest extends TeaModel {
     /**
      * <p>The rule ID.</p>
      * <br>
-     * <p>>  You can call the [ListOpaClusterStrategyNew](~~2623574~~) operation to query the rule ID.</p>
+     * <p>>  You can call the [ListOpaClusterStrategyNew](https://help.aliyun.com/document_detail/2623574.html) operation to query the rule ID.</p>
      */
     @NameInMap("StrategyId")
     public Long strategyId;

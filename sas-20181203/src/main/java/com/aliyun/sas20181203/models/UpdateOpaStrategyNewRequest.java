@@ -72,7 +72,7 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     /**
      * <p>The rule ID.</p>
      * <br>
-     * <p>>  You can call the [ListOpaClusterStrategyNew](~~2623574~~) operation to query the rule ID.</p>
+     * <p>>  You can call the [ListOpaClusterStrategyNew](https://help.aliyun.com/document_detail/2623574.html) operation to query the rule ID.</p>
      */
     @NameInMap("StrategyId")
     public Long strategyId;
@@ -86,7 +86,7 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     /**
      * <p>The ID of the rule template.</p>
      * <br>
-     * <p>>  You can call the [GetOpaStrategyTemplateSummary](~~2539952~~) operation to query the ID of the rule template.</p>
+     * <p>>  You can call the [GetOpaStrategyTemplateSummary](https://help.aliyun.com/document_detail/2539952.html) operation to query the ID of the rule template.</p>
      */
     @NameInMap("StrategyTemplateId")
     public Long strategyTemplateId;
@@ -227,7 +227,7 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The ID of the baseline check item.</p>
          * <br>
-         * <p>>  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the ID of the baseline check item.</p>
+         * <p>>  You can call the [GetOpaClusterBaseLineList](https://help.aliyun.com/document_detail/2539883.html) operation to query the ID of the baseline check item.</p>
          */
         @NameInMap("Id")
         public String id;
@@ -235,7 +235,7 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The name of the baseline check item.</p>
          * <br>
-         * <p>>  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the name of the baseline check item.</p>
+         * <p>>  You can call the [GetOpaClusterBaseLineList](https://help.aliyun.com/document_detail/2539883.html) operation to query the name of the baseline check item.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -531,7 +531,7 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The vulnerability ID.</p>
          * <br>
-         * <p>>  You can call the [DescribeVulListPage](~~471928~~) operation to query the vulnerability ID.</p>
+         * <p>>  You can call the [DescribeVulListPage](https://help.aliyun.com/document_detail/471928.html) operation to query the vulnerability ID.</p>
          */
         @NameInMap("Id")
         public String id;
@@ -539,7 +539,7 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The vulnerability name.</p>
          * <br>
-         * <p>>  You can call the [DescribeVulListPage](~~471928~~) operation to query the vulnerability name.</p>
+         * <p>>  You can call the [DescribeVulListPage](https://help.aliyun.com/document_detail/471928.html) operation to query the vulnerability name.</p>
          */
         @NameInMap("Name")
         public String name;

@@ -8,6 +8,8 @@ public class UnbindAegisRequest extends TeaModel {
      * <p>The UUID of the server that you want to unbind. Separate multiple UUIDs with commas (,).</p>
      * <br>
      * <p>> You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuids")
     public String uuids;

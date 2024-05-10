@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListCheckInstanceResultRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CheckId")
     public Long checkId;

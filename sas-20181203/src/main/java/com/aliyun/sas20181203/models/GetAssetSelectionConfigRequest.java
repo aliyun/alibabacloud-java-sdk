@@ -9,9 +9,11 @@ public class GetAssetSelectionConfigRequest extends TeaModel {
      * <br>
      * <p>*   **VIRUS_SCAN_CYCLE_CONFIG**: virus detection and removal</p>
      * <p>*   **VIRUS_SCAN_ONCE_TASK**: one-time scan for viruses</p>
-     * <p>*   **AGENTLESS_MALICIOUS_WHITE_LIST_\[ID]**: a whitelist rule for alerts that are detected by using the agentless detection feature</p>
-     * <p>*   **AGENTLESS_VUL_WHITE_LIST_\[ID]**: a whitelist rule for vulnerabilities that are detected by using the agentless detection feature</p>
-     * <p>*   **FILE_PROTECT_RULE_SWITCH_TYPE_\[ID]**: core file protectioion</p>
+     * <p>*   **AGENTLESS_MALICIOUS_WHITE_LIST_[ID]**: a whitelist rule for alerts that are detected by using the agentless detection feature</p>
+     * <p>*   **AGENTLESS_VUL_WHITE_LIST_[ID]**: a whitelist rule for vulnerabilities that are detected by using the agentless detection feature</p>
+     * <p>*   **FILE_PROTECT_RULE_SWITCH_TYPE_[ID]**: core file protectioion</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BusinessType")
     public String businessType;

@@ -8,6 +8,8 @@ public class GetVulStatisticsRequest extends TeaModel {
      * <p>The ID of the asset group. Separate multiple IDs with commas (,).</p>
      * <br>
      * <p>>  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupIdList")
     public String groupIdList;
@@ -27,6 +29,8 @@ public class GetVulStatisticsRequest extends TeaModel {
      * <p>*   **emg**: urgent vulnerability</p>
      * <p>*   **app**: vulnerability detected by using a web scanner</p>
      * <p>*   **sca**: vulnerability detected based on software component analysis</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TypeList")
     public String typeList;

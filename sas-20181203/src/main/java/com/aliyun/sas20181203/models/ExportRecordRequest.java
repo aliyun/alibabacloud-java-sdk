@@ -34,6 +34,8 @@ public class ExportRecordRequest extends TeaModel {
      * <p>*   **baselineCspm**: the list of check results for configuration assessment</p>
      * <p>*   **attack**: the list of alert events for attack analysis</p>
      * <p>*   **accessKey**: the list of alerts that are generated for AccessKey pair leaks</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExportType")
     public String exportType;

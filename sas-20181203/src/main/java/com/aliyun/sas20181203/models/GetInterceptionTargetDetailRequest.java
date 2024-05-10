@@ -8,6 +8,8 @@ public class GetInterceptionTargetDetailRequest extends TeaModel {
      * <p>The ID of the network object.</p>
      * <br>
      * <p>> You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the IDs of network objects.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetId")
     public Long targetId;

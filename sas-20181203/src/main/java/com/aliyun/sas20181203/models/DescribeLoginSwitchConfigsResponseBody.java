@@ -55,9 +55,9 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
         /**
          * <p>The type of the alert that you enabled or disabled. Valid values:</p>
          * <br>
-         * <p>*   **login\_common_ip**: alerts for unapproved logon IP addresses</p>
-         * <p>*   **login\_common_time**: alerts for unapproved logon time ranges</p>
-         * <p>*   **login\_common_account**: alerts for unapproved logon accounts</p>
+         * <p>*   **login_common_ip**: alerts for unapproved logon IP addresses</p>
+         * <p>*   **login_common_time**: alerts for unapproved logon time ranges</p>
+         * <p>*   **login_common_account**: alerts for unapproved logon accounts</p>
          */
         @NameInMap("Item")
         public String item;

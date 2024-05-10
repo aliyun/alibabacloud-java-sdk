@@ -146,7 +146,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
          * <p>*   Image Scan</p>
          * <p>*   Trusted exception</p>
          * <br>
-         * <p>For more information about alert types, see [Overview](~~68388~~).</p>
+         * <p>For more information about alert types, see [Overview](https://help.aliyun.com/document_detail/68388.html).</p>
          */
         @NameInMap("EventType")
         public String eventType;

@@ -9,6 +9,8 @@ public class DescribeSnapshotsRequest extends TeaModel {
      * <br>
      * <p>*   **1.0.0**</p>
      * <p>*   **2.0.0**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiVersion")
     public String apiVersion;
@@ -50,6 +52,8 @@ public class DescribeSnapshotsRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

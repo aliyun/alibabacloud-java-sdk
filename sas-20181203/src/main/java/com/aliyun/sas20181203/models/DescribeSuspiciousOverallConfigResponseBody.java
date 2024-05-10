@@ -52,9 +52,9 @@ public class DescribeSuspiciousOverallConfigResponseBody extends TeaModel {
          * <br>
          * <p>*   **auto_breaking**: Anti-Virus</p>
          * <p>*   **ransomware_breaking**: Anti-ransomware (Bait Capture)</p>
-         * <p>*   **webshell\_cloud_breaking**: Webshell Protection</p>
+         * <p>*   **webshell_cloud_breaking**: Webshell Protection</p>
          * <p>*   **alinet**: Behavior prevention</p>
-         * <p>*   **k8s\_log_analysis**: K8s Threat Detection</p>
+         * <p>*   **k8s_log_analysis**: K8s Threat Detection</p>
          * <p>*   **alisecguard**: Defense mode for Client Protection</p>
          */
         @NameInMap("Type")

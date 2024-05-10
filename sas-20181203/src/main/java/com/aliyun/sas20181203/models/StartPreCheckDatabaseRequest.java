@@ -10,6 +10,8 @@ public class StartPreCheckDatabaseRequest extends TeaModel {
      * <p>*   **MYSQL**</p>
      * <p>*   **MSSQL**</p>
      * <p>*   **Oracle**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatabaseType")
     public String databaseType;
@@ -18,12 +20,16 @@ public class StartPreCheckDatabaseRequest extends TeaModel {
      * <p>The UUID of the agent that is used to back up the data of the database.</p>
      * <br>
      * <p>> You can call the [DescribeUniBackupDatabase](~~DescribeUniBackupDatabase~~) operation to query the UUID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceUuid")
     public String instanceUuid;
 
     /**
      * <p>The region ID of the server that hosts the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UniRegionId")
     public String uniRegionId;

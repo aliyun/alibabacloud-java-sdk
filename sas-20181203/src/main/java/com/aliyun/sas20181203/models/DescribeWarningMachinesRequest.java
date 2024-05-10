@@ -41,7 +41,7 @@ public class DescribeWarningMachinesRequest extends TeaModel {
     /**
      * <p>The ID of the asset group.</p>
      * <br>
-     * <p>> You can call the [DescribeAllGroups](~~130972~~) operation to query the IDs of asset groups.</p>
+     * <p>> You can call the [DescribeAllGroups](https://help.aliyun.com/document_detail/130972.html) operation to query the IDs of asset groups.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
@@ -80,6 +80,8 @@ public class DescribeWarningMachinesRequest extends TeaModel {
      * <p>The ID of the risk item.</p>
      * <br>
      * <p>> You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of risk items.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RiskId")
     public Long riskId;

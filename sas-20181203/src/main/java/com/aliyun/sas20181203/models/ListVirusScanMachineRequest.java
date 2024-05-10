@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ListVirusScanMachineRequest extends TeaModel {
     /**
      * <p>The page number.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The number of entries per page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

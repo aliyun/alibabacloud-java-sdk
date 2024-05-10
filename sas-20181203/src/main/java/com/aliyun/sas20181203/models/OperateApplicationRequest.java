@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class OperateApplicationRequest extends TeaModel {
     /**
      * <p>The container application that is protected from being tampered with.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ContainerWebDefenseApplicationDTOS")
     public java.util.List<OperateApplicationRequestContainerWebDefenseApplicationDTOS> containerWebDefenseApplicationDTOS;
 
     /**
      * <p>The ID of the rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;
@@ -42,6 +46,8 @@ public class OperateApplicationRequest extends TeaModel {
          * <p>The ID of the cluster to which the container belongs.</p>
          * <br>
          * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the cluster ID.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -51,6 +57,8 @@ public class OperateApplicationRequest extends TeaModel {
          * <br>
          * <p>*   **add**: applied</p>
          * <p>*   **del**: not applied</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Flag")
         public String flag;
@@ -63,6 +71,8 @@ public class OperateApplicationRequest extends TeaModel {
 
         /**
          * <p>The value of the application tag.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Tag")
         public String tag;
