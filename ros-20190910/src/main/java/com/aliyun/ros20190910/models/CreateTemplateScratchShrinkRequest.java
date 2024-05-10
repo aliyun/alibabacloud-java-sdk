@@ -7,7 +7,7 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <br>
-     * <p>For more information, see [How to ensure idempotence](~~134212~~).</p>
+     * <p>For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -48,7 +48,9 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
     /**
      * <p>The region ID of the scenario.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -89,6 +91,8 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
      * <p>*   ResourceImport: resource management</p>
      * <p>*   ArchitectureReplication: resource replication</p>
      * <p>*   ResourceMigration: resource migration</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateScratchType")
     public String templateScratchType;
@@ -199,6 +203,8 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
          * <p>The tag key of the scenario.</p>
          * <br>
          * <p>> Tags is optional. If you want to specify Tags, you must specify Key.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;

@@ -5,11 +5,13 @@ import com.aliyun.tea.*;
 
 public class SetTemplatePermissionRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud accounts with or from which you want to share or unshare the template.\</p>
+     * <p>The Alibaba Cloud accounts with or from which you want to share or unshare the template.\\</p>
      * <p>Valid values of N: 1, 2, 3, 4, and 5.</p>
      * <br>
      * <p>> - This parameter cannot be set to the ID of the Alibaba Cloud account that owns the template, or the RAM users of this Alibaba Cloud account.</p>
-     * <p>> - When ShareOption is set to CancelSharing, you can unshare the template from all the specified Alibaba Cloud accounts by using an asterisk (\*).</p>
+     * <p>> - When ShareOption is set to CancelSharing, you can unshare the template from all the specified Alibaba Cloud accounts by using an asterisk (\\*).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountIds")
     public java.util.List<String> accountIds;
@@ -21,12 +23,16 @@ public class SetTemplatePermissionRequest extends TeaModel {
      * <br>
      * <p>*   ShareToAccounts: shares the template with other Alibaba Cloud accounts.</p>
      * <p>*   CancelSharing: unshares the template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ShareOption")
     public String shareOption;
 
     /**
      * <p>The ID of the template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

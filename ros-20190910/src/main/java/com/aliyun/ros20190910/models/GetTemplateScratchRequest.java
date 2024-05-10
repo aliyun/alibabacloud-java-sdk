@@ -7,7 +7,9 @@ public class GetTemplateScratchRequest extends TeaModel {
     /**
      * <p>The region ID of the scenario.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -20,7 +22,7 @@ public class GetTemplateScratchRequest extends TeaModel {
      * <p>*   Provisions: displays only the data of new nodes. This setting takes effect only when TemplateScratchType is not set to ArchitectureDetection.</p>
      * <p>*   All: displays all data.</p>
      * <br>
-     * <p>For more information about source nodes and new nodes, see [Overview](~~352074~~).</p>
+     * <p>For more information about source nodes and new nodes, see [Overview](https://help.aliyun.com/document_detail/352074.html).</p>
      * <br>
      * <p>>  If you do not specify this parameter, the node data is not displayed.</p>
      */

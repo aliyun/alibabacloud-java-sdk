@@ -284,6 +284,9 @@ public class GetStackGroupResponseBody extends TeaModel {
         @NameInMap("AutoDeployment")
         public GetStackGroupResponseBodyStackGroupAutoDeployment autoDeployment;
 
+        @NameInMap("CreateTime")
+        public String createTime;
+
         /**
          * <p>The name of the stack group.</p>
          */
@@ -326,7 +329,7 @@ public class GetStackGroupResponseBody extends TeaModel {
          * <p>*   SELF_MANAGED: the self-managed permission model</p>
          * <p>*   SERVICE_MANAGED: the service-managed permission model</p>
          * <br>
-         * <p>>  For more information about the permission models of stack groups, see [Overview](~~154578~~).</p>
+         * <p>>  For more information about the permission models of stack groups, see [Overview](https://help.aliyun.com/document_detail/154578.html).</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -369,10 +372,13 @@ public class GetStackGroupResponseBody extends TeaModel {
         public String templateBody;
 
         /**
-         * <p>The JSON-formatted structure that contains the template body. For more information, see [Template syntax](~~28857~~).</p>
+         * <p>The JSON-formatted structure that contains the template body. For more information, see [Template syntax](https://help.aliyun.com/document_detail/28857.html).</p>
          */
         @NameInMap("TemplateContent")
         public String templateContent;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
 
         public static GetStackGroupResponseBodyStackGroup build(java.util.Map<String, ?> map) throws Exception {
             GetStackGroupResponseBodyStackGroup self = new GetStackGroupResponseBodyStackGroup();
@@ -393,6 +399,14 @@ public class GetStackGroupResponseBody extends TeaModel {
         }
         public GetStackGroupResponseBodyStackGroupAutoDeployment getAutoDeployment() {
             return this.autoDeployment;
+        }
+
+        public GetStackGroupResponseBodyStackGroup setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public GetStackGroupResponseBodyStackGroup setDescription(String description) {
@@ -489,6 +503,14 @@ public class GetStackGroupResponseBody extends TeaModel {
         }
         public String getTemplateContent() {
             return this.templateContent;
+        }
+
+        public GetStackGroupResponseBodyStackGroup setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }

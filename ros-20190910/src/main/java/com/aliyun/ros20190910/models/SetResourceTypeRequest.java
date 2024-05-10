@@ -20,6 +20,8 @@ public class SetResourceTypeRequest extends TeaModel {
 
     /**
      * <p>The resource type.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

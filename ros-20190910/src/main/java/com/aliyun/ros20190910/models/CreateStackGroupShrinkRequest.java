@@ -27,15 +27,15 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
     public java.util.List<String> capabilities;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\</p>
-     * <p>The token can contain letters, digits, underscores (\_), and hyphens (-) and cannot exceed 64 characters in length.\</p>
-     * <p>For more information, see [How to ensure idempotence](~~134212~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\\</p>
+     * <p>The token can contain letters, digits, underscores (_), and hyphens (-) and cannot exceed 64 characters in length.\\</p>
+     * <p>For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the stack group.\</p>
+     * <p>The description of the stack group.\\</p>
      * <p>The description must be 1 to 256 characters in length.</p>
      */
     @NameInMap("Description")
@@ -63,27 +63,31 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
      * <p>*   SELF_MANAGED (default): the self-managed permission model. If you create a self-managed stack group, you must create RAM roles within the administrator and execution accounts and establish a trust relationship between the accounts. Then, you can deploy stacks within the execution account.</p>
      * <p>*   SERVICE_MANAGED: the service-managed permission model. If you create a service-managed stack group, ROS creates service-linked roles for the administrator and execution accounts, and the administrator account uses its role to deploy stacks within the execution account.</p>
      * <br>
-     * <p>> If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see [Manage a delegated administrator account](~~308253~~) and [Enable trusted access](~~298229~~).</p>
+     * <p>> If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see [Manage a delegated administrator account](https://help.aliyun.com/document_detail/308253.html) and [Enable trusted access](https://help.aliyun.com/document_detail/298229.html).</p>
      */
     @NameInMap("PermissionModel")
     public String permissionModel;
 
     /**
-     * <p>The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. If you do not specify this parameter, the stack group is added to the default resource group.\</p>
-     * <p>For more information about resource groups, see [Resource groups](~~94475~~).</p>
+     * <p>The ID of the resource group. If you do not specify this parameter, the stack group is added to the default resource group.\\</p>
+     * <p>For more information about resource groups, see [Resource groups](https://help.aliyun.com/document_detail/94475.html).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The name of the stack group. The name must be unique within a region.\</p>
-     * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or a letter.</p>
+     * <p>The name of the stack group. The name must be unique within a region.\\</p>
+     * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StackGroupName")
     public String stackGroupName;
@@ -261,6 +265,8 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
          * <p>Maximum value of N: 200.</p>
          * <br>
          * <p>> Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterKey.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -271,6 +277,8 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
          * <p>Maximum value of N: 200.</p>
          * <br>
          * <p>> Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterValue.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -303,6 +311,8 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
          * <p>The tag key of the stack group.</p>
          * <br>
          * <p>> Tags is optional. If you want to specify Tags, you must also specify Tags.N.Key.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;

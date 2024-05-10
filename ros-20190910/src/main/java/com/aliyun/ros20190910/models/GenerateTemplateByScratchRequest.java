@@ -13,7 +13,9 @@ public class GenerateTemplateByScratchRequest extends TeaModel {
     /**
      * <p>The region ID of the scenario.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -21,7 +23,9 @@ public class GenerateTemplateByScratchRequest extends TeaModel {
     /**
      * <p>The ID of the scenario.</p>
      * <br>
-     * <p>For more information about how to query the IDs of scenarios, see [ListTemplateScratches](~~363050~~).</p>
+     * <p>For more information about how to query the IDs of scenarios, see [ListTemplateScratches](https://help.aliyun.com/document_detail/363050.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateScratchId")
     public String templateScratchId;

@@ -11,7 +11,9 @@ public class GetServiceProvisionsRequest extends TeaModel {
     public java.util.List<GetServiceProvisionsRequestParameters> parameters;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -115,6 +117,8 @@ public class GetServiceProvisionsRequest extends TeaModel {
          * <p>The name of the parameter. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template.</p>
          * <br>
          * <p>> The Parameters parameter is optional. If you specify Parameters, you must specify ParameterKey.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -123,6 +127,8 @@ public class GetServiceProvisionsRequest extends TeaModel {
          * <p>The value of the parameter.</p>
          * <br>
          * <p>> The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -189,6 +195,8 @@ public class GetServiceProvisionsRequest extends TeaModel {
          * <p>*   TrafficMirror: the traffic mirroring feature</p>
          * <p>*   VS: Video Surveillance System</p>
          * <p>*   Xtrace: Managed Service for OpenTelemetry</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;

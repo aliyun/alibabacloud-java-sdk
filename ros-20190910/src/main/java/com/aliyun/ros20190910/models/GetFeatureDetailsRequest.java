@@ -11,12 +11,16 @@ public class GetFeatureDetailsRequest extends TeaModel {
      * <p>*   ResourceCleaner: the resource cleaner feature. You can use ALIYUN::ROS::ResourceCleaner to create a resource cleaner.</p>
      * <p>*   TemplateScratch: the scenario feature.</p>
      * <p>*   All: all features that are supported by ROS.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Feature")
     public String feature;
 
     /**
-     * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

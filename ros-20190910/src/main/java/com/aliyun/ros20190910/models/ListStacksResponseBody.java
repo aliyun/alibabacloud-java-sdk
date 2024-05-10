@@ -222,7 +222,7 @@ public class ListStacksResponseBody extends TeaModel {
          * <p>Indicates whether deletion protection is enabled for the stack. Valid values:</p>
          * <br>
          * <p>*   Enabled: Deletion protection is enabled for the stack.</p>
-         * <p>*   Disabled: Deletion protection is disabled for the stack. In this case, you can delete the stack by using the console or calling the [DeleteStack](~~610812~~) operation.</p>
+         * <p>*   Disabled: Deletion protection is disabled for the stack. In this case, you can delete the stack by using the console or calling the [DeleteStack](https://help.aliyun.com/document_detail/610812.html) operation.</p>
          * <br>
          * <p>>  Deletion protection of a nested stack is the same as that of its root stack.</p>
          */
@@ -259,7 +259,7 @@ public class ListStacksResponseBody extends TeaModel {
         public String parentStackId;
 
         /**
-         * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+         * <p>The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

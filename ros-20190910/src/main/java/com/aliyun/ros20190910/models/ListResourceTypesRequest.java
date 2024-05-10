@@ -8,8 +8,8 @@ public class ListResourceTypesRequest extends TeaModel {
      * <p>The entity type. Valid values:</p>
      * <br>
      * <p>*   All: all types of resources.</p>
-     * <p>*   Resource (default): regular resources. For more information, see [Resources](~~28863~~).</p>
-     * <p>*   DataSource: DataSource resources. For more information, see [DataSource resources](~~404753~~).</p>
+     * <p>*   Resource (default): regular resources. For more information, see [Resources](https://help.aliyun.com/document_detail/28863.html).</p>
+     * <p>*   DataSource: DataSource resources. For more information, see [DataSource resources](https://help.aliyun.com/document_detail/404753.html).</p>
      * <p>*   Module: modules.</p>
      */
     @NameInMap("EntityType")
@@ -25,7 +25,7 @@ public class ListResourceTypesRequest extends TeaModel {
     public String provider;
 
     /**
-     * <p>The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\*). You can use an asterisk (\*) to perform a fuzzy match.</p>
+     * <p>The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\\*). You can use an asterisk (\\*) to perform a fuzzy match.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

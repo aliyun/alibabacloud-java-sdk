@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateStackRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
      * <br>
-     * <p>For more information, see [Ensure idempotence](~~134212~~).</p>
+     * <p>For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -66,7 +66,7 @@ public class CreateStackRequest extends TeaModel {
      * <br>
      * <p>> This feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Hong Kong), and China (Zhangjiakou) regions.</p>
      * <br>
-     * <p>Maximum value of N: 5. When the status of a stack changes, ROS sends a notification to the specified URL. When rollback is enabled for the stack, notifications are sent if the stack is in the CREATE_ROLLBACK or ROLLBACK state, but are not sent if the stack is in the CREATE_FAILED, UPDATE_FAILED, or IN_PROGRESS state.\</p>
+     * <p>Maximum value of N: 5. When the status of a stack changes, ROS sends a notification to the specified URL. When rollback is enabled for the stack, notifications are sent if the stack is in the CREATE_ROLLBACK or ROLLBACK state, but are not sent if the stack is in the CREATE_FAILED, UPDATE_FAILED, or IN_PROGRESS state.\\</p>
      * <p>ROS sends notifications regardless of whether you specify the Outputs section. The following sample code provides an example on the content of a notification:</p>
      * <br>
      * <p>    {</p>
@@ -105,7 +105,7 @@ public class CreateStackRequest extends TeaModel {
     public java.util.List<CreateStackRequestParameters> parameters;
 
     /**
-     * <p>The name of the RAM role. ROS assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.\</p>
+     * <p>The name of the RAM role. ROS assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.\\</p>
      * <p>ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the RAM role.</p>
      * <br>
      * <p>If you do not specify this parameter, ROS assumes the existing role that is associated with the stack. If no roles are available, ROS uses a temporary credential that is generated from the credentials of your account.</p>
@@ -116,7 +116,9 @@ public class CreateStackRequest extends TeaModel {
     public String ramRoleName;
 
     /**
-     * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -124,14 +126,16 @@ public class CreateStackRequest extends TeaModel {
     /**
      * <p>The ID of the resource group. If you leave this parameter empty, the stack is added to the default resource group.</p>
      * <br>
-     * <p>For more information about resource groups, see the "Resource group" section of the [What is Resource Management?](~~94475~~) topic.</p>
+     * <p>For more information about resource groups, see the "Resource group" section of the [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html) topic.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The name of the stack.\</p>
-     * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a letter.</p>
+     * <p>The name of the stack.\\</p>
+     * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a letter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StackName")
     public String stackName;
@@ -174,7 +178,7 @@ public class CreateStackRequest extends TeaModel {
     /**
      * <p>The scenario ID.</p>
      * <br>
-     * <p>For more information about how to query the scenario ID, see [ListTemplateScratches](~~363050~~).</p>
+     * <p>For more information about how to query the scenario ID, see [ListTemplateScratches](https://help.aliyun.com/document_detail/363050.html).</p>
      * <br>
      * <p>> You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
      */
@@ -184,7 +188,7 @@ public class CreateStackRequest extends TeaModel {
     /**
      * <p>The region ID of the scenario. The default value is the same as the value of RegionId.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
      */
     @NameInMap("TemplateScratchRegionId")
     public String templateScratchRegionId;
@@ -398,10 +402,12 @@ public class CreateStackRequest extends TeaModel {
         /**
          * <p>The key of parameter N that is defined in the template. If you do not specify the name and value of a parameter, ROS uses the default name and value that are specified in the template.</p>
          * <br>
-         * <p>Maximum value of N: 200.\</p>
+         * <p>Maximum value of N: 200.\\</p>
          * <p>The name must be 1 to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
          * <br>
          * <p>> The Parameters parameter is optional. If you specify Parameters, you must specify Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -409,10 +415,12 @@ public class CreateStackRequest extends TeaModel {
         /**
          * <p>The value of parameter N that is defined in the template.</p>
          * <br>
-         * <p>Maximum value of N: 200.\</p>
+         * <p>Maximum value of N: 200.\\</p>
          * <p>The value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
          * <br>
          * <p>> The Parameters parameter is optional. If you specify Parameters, you must specify Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -447,7 +455,9 @@ public class CreateStackRequest extends TeaModel {
          * <p>Valid values of N: 1 to 20.</p>
          * <br>
          * <p>> - The Tags parameter is optional. If you specify Tags, you must specify Tags.N.Key.</p>
-         * <p>> -  The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](~~201421~~).</p>
+         * <p>> -  The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](https://help.aliyun.com/document_detail/201421.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -457,7 +467,7 @@ public class CreateStackRequest extends TeaModel {
          * <br>
          * <p>Valid values of N: 1 to 20.</p>
          * <br>
-         * <p>> The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](~~201421~~).</p>
+         * <p>> The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](https://help.aliyun.com/document_detail/201421.html).</p>
          */
         @NameInMap("Value")
         public String value;

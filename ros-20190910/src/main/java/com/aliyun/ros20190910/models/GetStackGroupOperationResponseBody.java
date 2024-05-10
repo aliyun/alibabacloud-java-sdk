@@ -41,7 +41,7 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         /**
          * <p>The IDs of the members in the resource directory.</p>
          * <br>
-         * <p>> This parameter is returned only if AccountIds is specified when the [UpdateStackInstances](~~151716~~) operation is called to update stack instances.</p>
+         * <p>> This parameter is returned only if AccountIds is specified when the [UpdateStackInstances](https://help.aliyun.com/document_detail/151716.html) operation is called to update stack instances.</p>
          */
         @NameInMap("AccountIds")
         public java.util.List<String> accountIds;
@@ -364,7 +364,7 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         /**
          * <p>The description of the operation.</p>
          * <br>
-         * <p>> This parameter is returned only if OperationDescription is specified when the [CreateStackInstances](~~151338~~) operation is called to create stack instances.</p>
+         * <p>> This parameter is returned only if OperationDescription is specified when the [CreateStackInstances](https://help.aliyun.com/document_detail/151338.html) operation is called to create stack instances.</p>
          */
         @NameInMap("OperationDescription")
         public String operationDescription;

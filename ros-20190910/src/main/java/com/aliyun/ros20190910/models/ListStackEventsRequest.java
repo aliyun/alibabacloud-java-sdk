@@ -11,23 +11,25 @@ public class ListStackEventsRequest extends TeaModel {
     public java.util.List<String> logicalResourceId;
 
     /**
-     * <p>The number of the page to return.\</p>
-     * <p>Pages start from page 1.\</p>
+     * <p>The number of the page to return.\\</p>
+     * <p>Pages start from page 1.\\</p>
      * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.\</p>
-     * <p>Maximum value: 50.\</p>
+     * <p>The number of entries to return on each page.\\</p>
+     * <p>Maximum value: 50.\\</p>
      * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -40,6 +42,8 @@ public class ListStackEventsRequest extends TeaModel {
 
     /**
      * <p>The stack ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StackId")
     public String stackId;

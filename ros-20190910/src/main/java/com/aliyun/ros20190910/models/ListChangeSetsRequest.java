@@ -11,7 +11,7 @@ public class ListChangeSetsRequest extends TeaModel {
     public String changeSetId;
 
     /**
-     * <p>The name of change set N. Maximum value of N: 5. You can use an asterisk (\*) as a wildcard for fuzzy search.</p>
+     * <p>The name of change set N. Maximum value of N: 5. You can use an asterisk (\\*) as a wildcard for fuzzy search.</p>
      */
     @NameInMap("ChangeSetName")
     public java.util.List<String> changeSetName;
@@ -30,29 +30,33 @@ public class ListChangeSetsRequest extends TeaModel {
     public java.util.List<String> executionStatus;
 
     /**
-     * <p>The page number.\</p>
-     * <p>Pages start from page 1.\</p>
+     * <p>The page number.\\</p>
+     * <p>Pages start from page 1.\\</p>
      * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.\</p>
-     * <p>Valid values: 1 to 50.\</p>
+     * <p>The number of entries per page.\\</p>
+     * <p>Valid values: 1 to 50.\\</p>
      * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The region ID of the change set. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the change set. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the stack.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StackId")
     public String stackId;

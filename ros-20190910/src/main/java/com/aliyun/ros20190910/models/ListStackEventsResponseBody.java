@@ -11,16 +11,16 @@ public class ListStackEventsResponseBody extends TeaModel {
     public java.util.List<ListStackEventsResponseBodyEvents> events;
 
     /**
-     * <p>The page number of the returned page.\</p>
-     * <p>Pages start from page 1.\</p>
+     * <p>The page number of the returned page.\\</p>
+     * <p>Pages start from page 1.\\</p>
      * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.\</p>
-     * <p>Maximum value: 50.\</p>
+     * <p>The number of entries returned per page.\\</p>
+     * <p>Maximum value: 50.\\</p>
      * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class RegisterResourceTypeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\</p>
-     * <p>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).\</p>
-     * <p>For more information, see [Ensure idempotence](~~134212~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\\</p>
+     * <p>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).\\</p>
+     * <p>For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -20,12 +20,16 @@ public class RegisterResourceTypeRequest extends TeaModel {
 
     /**
      * <p>The entity type. Set the value to Module.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EntityType")
     public String entityType;
 
     /**
      * <p>The resource type.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

@@ -11,9 +11,9 @@ public class DeleteStackInstancesRequest extends TeaModel {
     public java.util.List<String> accountIds;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\</p>
-     * <p>The token can contain letters, digits, hyphens (-), and underscores (\_), and cannot exceed 64 characters in length.\</p>
-     * <p>For more information, see [How to ensure idempotence](~~134212~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\\</p>
+     * <p>The token can contain letters, digits, hyphens (-), and underscores (_), and cannot exceed 64 characters in length.\\</p>
+     * <p>For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -85,13 +85,17 @@ public class DeleteStackInstancesRequest extends TeaModel {
     public java.util.Map<String, ?> operationPreferences;
 
     /**
-     * <p>The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the regions where you want to delete the stacks. You can specify up to 20 region IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionIds")
     public java.util.List<String> regionIds;
@@ -103,13 +107,17 @@ public class DeleteStackInstancesRequest extends TeaModel {
      * <br>
      * <p>*   true: retains the stacks.</p>
      * <p>*   false: deletes the stacks.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RetainStacks")
     public Boolean retainStacks;
 
     /**
-     * <p>The name of the stack group. The name must be unique within a region.\</p>
-     * <p>The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or a letter.</p>
+     * <p>The name of the stack group. The name must be unique within a region.\\</p>
+     * <p>The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StackGroupName")
     public String stackGroupName;
@@ -195,7 +203,7 @@ public class DeleteStackInstancesRequest extends TeaModel {
         /**
          * <p>The IDs of the execution accounts within which you want to deploy stacks in self-managed mode. You can specify up to 20 execution account IDs.</p>
          * <br>
-         * <p>> To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information about a folder](~~111223~~).</p>
+         * <p>> To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information about a folder](https://help.aliyun.com/document_detail/111223.html).</p>
          */
         @NameInMap("AccountIds")
         public java.util.List<String> accountIds;
@@ -205,7 +213,7 @@ public class DeleteStackInstancesRequest extends TeaModel {
          * <br>
          * <p>You can create stacks within all the member accounts in the specified folders. If you create stacks in the Root folder, the stacks are created within all member accounts in the resource directory.</p>
          * <br>
-         * <p>> To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information about a folder](~~111223~~).</p>
+         * <p>> To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information about a folder](https://help.aliyun.com/document_detail/111223.html).</p>
          */
         @NameInMap("RdFolderIds")
         public java.util.List<String> rdFolderIds;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The page number.\</p>
+     * <p>The page number.\\</p>
      * <p>Pages start from page 1.</p>
      */
     @NameInMap("PageNumber")

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListTagValuesRequest extends TeaModel {
     /**
      * <p>The key of the tag.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Key")
     public String key;
@@ -17,7 +19,9 @@ public class ListTagValuesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID of the tag value. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the tag value. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -29,6 +33,8 @@ public class ListTagValuesRequest extends TeaModel {
      * <p>*   stackgroup: stack group</p>
      * <p>*   template: template</p>
      * <p>*   templatescratch: scenario</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

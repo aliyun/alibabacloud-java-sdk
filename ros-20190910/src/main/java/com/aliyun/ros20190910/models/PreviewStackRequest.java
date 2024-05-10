@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class PreviewStackRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\</p>
-     * <p>The token can be up to 64 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-).\</p>
-     * <p>For more information, see [Ensure idempotence](~~134212~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\\</p>
+     * <p>The token can be up to 64 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).\\</p>
+     * <p>For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -49,7 +49,9 @@ public class PreviewStackRequest extends TeaModel {
     public java.util.List<PreviewStackRequestParameters> parameters;
 
     /**
-     * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -66,7 +68,7 @@ public class PreviewStackRequest extends TeaModel {
     public String stackId;
 
     /**
-     * <p>The stack name. You can use this parameter to preview the stack that you want to create. The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or letter.</p>
+     * <p>The stack name. You can use this parameter to preview the stack that you want to create. The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.</p>
      * <br>
      * <p>> You must and can specify only one of StackName and StackId.</p>
      */
@@ -105,7 +107,7 @@ public class PreviewStackRequest extends TeaModel {
     /**
      * <p>The scenario ID.</p>
      * <br>
-     * <p>For more information about how to query the scenario ID, see [ListTemplateScratches](~~363050~~).</p>
+     * <p>For more information about how to query the scenario ID, see [ListTemplateScratches](https://help.aliyun.com/document_detail/363050.html).</p>
      * <br>
      * <p>> You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
      */
@@ -115,7 +117,7 @@ public class PreviewStackRequest extends TeaModel {
     /**
      * <p>The region ID of the scenario. The default value is the same as the value of RegionId.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
      */
     @NameInMap("TemplateScratchRegionId")
     public String templateScratchRegionId;
@@ -290,6 +292,8 @@ public class PreviewStackRequest extends TeaModel {
          * <p>The name of the parameter N. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template. Maximum value of N: 200.</p>
          * <br>
          * <p>> If you specify Parameters, you must specify Parameters.N.ParameterKey.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -298,6 +302,8 @@ public class PreviewStackRequest extends TeaModel {
          * <p>The value of parameter N. Maximum value of N: 200.</p>
          * <br>
          * <p>> If you specify Parameters, you must specify Parameters.N.ParameterValue.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;

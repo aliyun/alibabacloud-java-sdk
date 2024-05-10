@@ -22,6 +22,8 @@ public class ListTemplateVersionsRequest extends TeaModel {
 
     /**
      * <p>The template ID. This parameter applies to shared and private templates.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

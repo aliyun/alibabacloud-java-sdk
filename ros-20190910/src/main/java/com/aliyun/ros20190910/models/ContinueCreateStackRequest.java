@@ -57,9 +57,9 @@ public class ContinueCreateStackRequest extends TeaModel {
     public java.util.List<ContinueCreateStackRequestParameters> parameters;
 
     /**
-     * <p>The name of the RAM role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.\</p>
-     * <p>ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the RAM role.\</p>
-     * <p>If you do not specify this parameter, ROS assumes the existing role that is associated with the stack. If no roles are available, ROS uses a temporary credential that is generated from the credentials of your account.\</p>
+     * <p>The name of the RAM role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.\\</p>
+     * <p>ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the RAM role.\\</p>
+     * <p>If you do not specify this parameter, ROS assumes the existing role that is associated with the stack. If no roles are available, ROS uses a temporary credential that is generated from the credentials of your account.\\</p>
      * <p>The name of the RAM role can be up to 64 bytes in length.</p>
      */
     @NameInMap("RamRoleName")
@@ -80,19 +80,23 @@ public class ContinueCreateStackRequest extends TeaModel {
     public java.util.List<String> recreatingResources;
 
     /**
-     * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The stack ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StackId")
     public String stackId;
 
     /**
-     * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.\</p>
+     * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.\\</p>
      * <p>If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</p>
      * <br>
      * <p>A ROS template is subject to the following limits:</p>
@@ -255,6 +259,8 @@ public class ContinueCreateStackRequest extends TeaModel {
          * <p>The name of template parameter N that you want to use to override a specific parameter. If you do not specify the name and value of a template parameter, ROS uses the name and value specified in the previous operation that was performed to create the stack. Maximum value of N: 200.</p>
          * <br>
          * <p>> This parameter takes effect only when Mode is set to Recreate.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -268,6 +274,8 @@ public class ContinueCreateStackRequest extends TeaModel {
          * <p>*   The template parameters can be referenced only by resources that ROS continues to create.</p>
          * <br>
          * <p>> This parameter takes effect only when Mode is set to Recreate.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;

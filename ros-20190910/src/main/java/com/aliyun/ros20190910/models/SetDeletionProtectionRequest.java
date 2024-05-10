@@ -11,12 +11,16 @@ public class SetDeletionProtectionRequest extends TeaModel {
      * <p>*   Disabled (default): Resource stack deletion protection is Disabled. You can use the console or API(DeleteStack) to release the stack resources.</p>
      * <br>
      * <p>>  The deletion of nested stacks is the same as the root stack.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DeletionProtection")
     public String deletionProtection;
 
     /**
-     * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -25,6 +29,8 @@ public class SetDeletionProtectionRequest extends TeaModel {
      * <p>The ID of the stack.</p>
      * <br>
      * <p>The delete protection attribute of a nested stack is determined by the root stack and remains unchanged from the root stack.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StackId")
     public String stackId;

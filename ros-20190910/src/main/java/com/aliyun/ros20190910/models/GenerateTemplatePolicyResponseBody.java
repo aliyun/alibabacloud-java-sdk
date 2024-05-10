@@ -60,7 +60,7 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
         public String effect;
 
         /**
-         * <p>The objects that the statement covers. An asterisk (\*) indicates all resources.</p>
+         * <p>The objects that the statement covers. An asterisk (\\*) indicates all resources.</p>
          */
         @NameInMap("Resource")
         public String resource;

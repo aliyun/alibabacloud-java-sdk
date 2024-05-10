@@ -29,7 +29,7 @@ public class ListResourceTypeRegistrationsRequest extends TeaModel {
     public String registrationId;
 
     /**
-     * <p>The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\*). You can use an asterisk (\*) to perform a fuzzy match.</p>
+     * <p>The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\\*). You can use an asterisk (\\*) to perform a fuzzy match.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

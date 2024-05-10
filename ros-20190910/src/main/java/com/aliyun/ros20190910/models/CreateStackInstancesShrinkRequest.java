@@ -13,9 +13,9 @@ public class CreateStackInstancesShrinkRequest extends TeaModel {
     public String accountIdsShrink;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\</p>
-     * <p>The token can contain letters, digits, hyphens (-), and underscores (\_), and cannot exceed 64 characters in length.\</p>
-     * <p>For more information, see [How to ensure idempotence](~~134212~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\\</p>
+     * <p>The token can contain letters, digits, hyphens (-), and underscores (_), and cannot exceed 64 characters in length.\\</p>
+     * <p>For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -84,7 +84,7 @@ public class CreateStackInstancesShrinkRequest extends TeaModel {
      * <br>
      * <p>    If you do not specify MaxConcurrentPercentage, 1 is used as the default value.</p>
      * <br>
-     * <p>-  {"RegionConcurrencyType": N}\</p>
+     * <p>-  {"RegionConcurrencyType": N}\\</p>
      * <p>    The mode that you want to use to deploy stacks across regions. Valid values: </p>
      * <p>   - SEQUENTIAL (default): deploys stacks in each specified region based on the specified sequence of regions. ROS deploys stacks in one region at a time. </p>
      * <p>   - PARALLEL: deploys stacks in parallel across all specified regions.</p>
@@ -104,20 +104,26 @@ public class CreateStackInstancesShrinkRequest extends TeaModel {
     public java.util.List<CreateStackInstancesShrinkRequestParameterOverrides> parameterOverrides;
 
     /**
-     * <p>The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the regions where you want to create the stacks. You can specify up to 20 region IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionIds")
     public String regionIdsShrink;
 
     /**
-     * <p>The name of the stack group. The name must be unique within a region.\</p>
-     * <p>The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or a letter.</p>
+     * <p>The name of the stack group. The name must be unique within a region.\\</p>
+     * <p>The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StackGroupName")
     public String stackGroupName;
@@ -232,6 +238,8 @@ public class CreateStackInstancesShrinkRequest extends TeaModel {
          * <br>
          * <p>>-   ParameterOverrides is optional.</p>
          * <p>>-   If you specify ParameterOverrides, you must specify ParameterOverrides.N.ParameterKey and ParameterOverrides.N.ParameterValue.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -243,6 +251,8 @@ public class CreateStackInstancesShrinkRequest extends TeaModel {
          * <br>
          * <p>>-  ParameterOverrides is optional.</p>
          * <p>>-  If you specify ParameterOverrides, you must specify ParameterOverrides.N.ParameterKey and ParameterOverrides.N.ParameterValue.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;

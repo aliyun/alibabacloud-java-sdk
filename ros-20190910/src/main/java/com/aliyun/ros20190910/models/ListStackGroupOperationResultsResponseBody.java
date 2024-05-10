@@ -86,7 +86,7 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
          * <p>*   If the stack group has self-managed permissions, the stack instance belongs to an Alibaba Cloud account.</p>
          * <p>*   If the stack group has service-managed permissions, the stack instance belongs to a member account in the resource directory.</p>
          * <br>
-         * <p>>  For more information about the account, see [Overview](~~154578~~).</p>
+         * <p>>  For more information about the account, see [Overview](https://help.aliyun.com/document_detail/154578.html).</p>
          */
         @NameInMap("AccountId")
         public String accountId;

@@ -37,14 +37,16 @@ public class ListStacksRequest extends TeaModel {
     public String parentStackId;
 
     /**
-     * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.\</p>
-     * <p>For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](~~94475~~) topic.</p>
+     * <p>The ID of the resource group.\\</p>
+     * <p>For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html) topic.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -207,14 +209,14 @@ public class ListStacksRequest extends TeaModel {
 
     public static class ListStacksRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N.\</p>
+         * <p>The key of tag N.\\</p>
          * <p>Valid values of N: 1 to 20.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N.\</p>
+         * <p>The value of tag N.\\</p>
          * <p>Valid values of N: 1 to 20.</p>
          */
         @NameInMap("Value")

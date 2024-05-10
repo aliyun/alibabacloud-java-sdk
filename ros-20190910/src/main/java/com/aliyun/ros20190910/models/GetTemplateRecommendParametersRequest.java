@@ -10,6 +10,9 @@ public class GetTemplateRecommendParametersRequest extends TeaModel {
     @NameInMap("Parameters")
     public java.util.List<GetTemplateRecommendParametersRequestParameters> parameters;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

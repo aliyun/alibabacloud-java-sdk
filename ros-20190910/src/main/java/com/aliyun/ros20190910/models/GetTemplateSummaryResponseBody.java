@@ -29,7 +29,7 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource identifier summaries.\</p>
+     * <p>The resource identifier summaries.\\</p>
      * <p>A summary describes the resource that you want to import and the properties that are used to identify the resource during the import. For example, VpcId is an identifier property of ALIYUN::ECS::VPC.</p>
      */
     @NameInMap("ResourceIdentifierSummaries")

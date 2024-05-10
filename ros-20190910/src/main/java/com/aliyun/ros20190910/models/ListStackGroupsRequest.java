@@ -23,7 +23,9 @@ public class ListStackGroupsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -31,7 +33,7 @@ public class ListStackGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the resource group. If you do not specify this parameter, the stack groups in all the resource groups are queried.</p>
      * <br>
-     * <p>> To obtain the resource group ID, go to the **Resource Group** page in the **Resource Management** console. For more information, see [View the basic information about a resource group](~~151181~~).</p>
+     * <p>> To obtain the resource group ID, go to the **Resource Group** page in the **Resource Management** console. For more information, see [View the basic information about a resource group](https://help.aliyun.com/document_detail/151181.html).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -111,6 +113,8 @@ public class ListStackGroupsRequest extends TeaModel {
          * <p>The key of the tag that is added to the stack group.</p>
          * <br>
          * <p>> Tags is optional. If you specify Tags, you must specify Tags.N.Key.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;

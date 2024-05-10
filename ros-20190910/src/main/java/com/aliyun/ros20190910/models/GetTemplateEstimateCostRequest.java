@@ -22,7 +22,7 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
     /**
      * <p>The region ID of the scenario. The default value is the same as the value of the RegionId parameter.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<GetTemplateEstimateCostRequestParameters> parameters;
@@ -31,6 +31,8 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
      * <p>The ID of the template. This parameter applies to shared and private templates.</p>
      * <br>
      * <p>>  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -72,7 +74,7 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
     /**
      * <p>The region ID of the scenario. The default value is the same as the value of the RegionId parameter.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
      */
     @NameInMap("TemplateScratchRegionId")
     public String templateScratchRegionId;
@@ -80,9 +82,9 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.</p>
      * <br>
-     * <p>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
      * <br>
-     * <p>For more information, see [Ensure idempotence](~~134212~~).</p>
+     * <p>For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
      */
     @NameInMap("TemplateURL")
     public String templateURL;
@@ -90,7 +92,7 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
     /**
      * <p>The ID of the scenario.</p>
      * <br>
-     * <p>For more information about how to query the IDs of scenarios, see [ListTemplateScratches](~~363050~~).</p>
+     * <p>For more information about how to query the IDs of scenarios, see [ListTemplateScratches](https://help.aliyun.com/document_detail/363050.html).</p>
      * <br>
      * <p>>  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
      */
@@ -185,12 +187,16 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
     public static class GetTemplateEstimateCostRequestParameters extends TeaModel {
         /**
          * <p>The ID of the request.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
          * <p>Details of the resource.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
