@@ -25,6 +25,9 @@ public class Index extends TeaModel {
     @NameInMap("max_text_len")
     public Integer maxTextLen;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ttl")
     public Integer ttl;
 
@@ -110,6 +113,9 @@ public class Index extends TeaModel {
         @NameInMap("include_keys")
         public java.util.List<String> includeKeys;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("token")
         public java.util.List<String> token;
 

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateDomainRequest extends TeaModel {
     /**
      * <p>The domain name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("domainName")
     public String domainName;

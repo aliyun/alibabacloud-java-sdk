@@ -4,15 +4,24 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class LogtailConfig extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("configName")
     public String configName;
 
     @NameInMap("createTime")
     public Long createTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("inputDetail")
     public java.util.Map<String, ?> inputDetail;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("inputType")
     public String inputType;
 
@@ -22,9 +31,15 @@ public class LogtailConfig extends TeaModel {
     @NameInMap("logSample")
     public String logSample;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("outputDetail")
     public LogtailConfigOutputDetail outputDetail;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("outputType")
     public String outputType;
 
@@ -98,9 +113,15 @@ public class LogtailConfig extends TeaModel {
     }
 
     public static class LogtailConfigOutputDetail extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("logstoreName")
         public String logstoreName;
 

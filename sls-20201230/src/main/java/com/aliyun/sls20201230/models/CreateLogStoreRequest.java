@@ -40,7 +40,7 @@ public class CreateLogStoreRequest extends TeaModel {
     /**
      * <p>The retention period of data in the hot storage tier of the Logstore. Unit: days. You can specify a value that ranges from 30 to the value of ttl.</p>
      * <br>
-     * <p>Hot data that is stored for longer than the period specified by hot_ttl is converted to cold data. For more information, see [Enable hot and cold-tiered storage for a Logstore](~~308645~~).</p>
+     * <p>Hot data that is stored for longer than the period specified by hot_ttl is converted to cold data. For more information, see [Enable hot and cold-tiered storage for a Logstore](https://help.aliyun.com/document_detail/308645.html).</p>
      */
     @NameInMap("hot_ttl")
     public Integer hotTtl;
@@ -52,9 +52,11 @@ public class CreateLogStoreRequest extends TeaModel {
      * <p>The name of the Logstore. The name must meet the following requirements:</p>
      * <br>
      * <p>*   The name must be unique in a project.</p>
-     * <p>*   The name can contain only lowercase letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>*   The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
      * <p>*   The name must start and end with a lowercase letter or a digit.</p>
      * <p>*   The name must be 3 to 63 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("logstoreName")
     public String logstoreName;
@@ -80,6 +82,8 @@ public class CreateLogStoreRequest extends TeaModel {
      * <p>The number of shards.</p>
      * <br>
      * <p>> You cannot call the CreateLogStore operation to change the number of shards. You can call the SplitShard or MergeShards operation to change the number of shards.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("shardCount")
     public Integer shardCount;
@@ -95,6 +99,8 @@ public class CreateLogStoreRequest extends TeaModel {
 
     /**
      * <p>The retention period of data. Unit: days. Valid values: 1 to 3000. If you set this parameter to 3650, data is permanently stored.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ttl")
     public Integer ttl;

@@ -65,6 +65,9 @@ public class OSSExportConfiguration extends TeaModel {
     }
 
     public static class OSSExportConfigurationSink extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("bucket")
         public String bucket;
 
@@ -84,20 +87,36 @@ public class OSSExportConfiguration extends TeaModel {
         public String contentType;
 
         @NameInMap("delaySec")
+        @Deprecated
         public Long delaySec;
 
+        @NameInMap("delaySeconds")
+        public Long delaySeconds;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("pathFormat")
         public String pathFormat;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("pathFormatType")
         public String pathFormatType;
 
         @NameInMap("prefix")
         public String prefix;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("roleArn")
         public String roleArn;
 
@@ -166,6 +185,14 @@ public class OSSExportConfiguration extends TeaModel {
         }
         public Long getDelaySec() {
             return this.delaySec;
+        }
+
+        public OSSExportConfigurationSink setDelaySeconds(Long delaySeconds) {
+            this.delaySeconds = delaySeconds;
+            return this;
+        }
+        public Long getDelaySeconds() {
+            return this.delaySeconds;
         }
 
         public OSSExportConfigurationSink setEndpoint(String endpoint) {

@@ -4,9 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class LogContent extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Value")
     public String value;
 

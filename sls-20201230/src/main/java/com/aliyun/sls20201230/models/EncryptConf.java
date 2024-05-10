@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class EncryptConf extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("enable")
     public Boolean enable;
 

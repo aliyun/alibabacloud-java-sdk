@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class CreateOssExternalStoreRequest extends TeaModel {
     /**
      * <p>The name of the external store.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("externalStoreName")
     public String externalStoreName;
 
     /**
      * <p>The parameters that are configured for the external store.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("parameter")
     public CreateOssExternalStoreRequestParameter parameter;
 
     /**
      * <p>The type of the external store. Set the value to oss.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("storeType")
     public String storeType;
@@ -54,12 +60,16 @@ public class CreateOssExternalStoreRequest extends TeaModel {
     public static class CreateOssExternalStoreRequestParameterColumns extends TeaModel {
         /**
          * <p>The name of the field.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The type of the field.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("type")
         public String type;
@@ -90,36 +100,48 @@ public class CreateOssExternalStoreRequest extends TeaModel {
     public static class CreateOssExternalStoreRequestParameter extends TeaModel {
         /**
          * <p>The AccessKey ID of your account.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("accessid")
         public String accessid;
 
         /**
          * <p>The AccessKey secret of your account.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("accesskey")
         public String accesskey;
 
         /**
          * <p>The name of the OSS bucket.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("bucket")
         public String bucket;
 
         /**
          * <p>The fields that are associated to the external store.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("columns")
         public java.util.List<CreateOssExternalStoreRequestParameterColumns> columns;
 
         /**
          * <p>The Object Storage Service (OSS) endpoint.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
         /**
          * <p>The names of the OSS objects that are associated to the external store.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("objects")
         public java.util.List<String> objects;

@@ -12,6 +12,8 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Set the value to project.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("resourceType")
     public String resourceType;

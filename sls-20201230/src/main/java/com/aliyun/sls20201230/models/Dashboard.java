@@ -7,15 +7,24 @@ public class Dashboard extends TeaModel {
     @NameInMap("attribute")
     public java.util.Map<String, String> attribute;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("charts")
     public java.util.List<Chart> charts;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dashboardName")
     public String dashboardName;
 
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 

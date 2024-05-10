@@ -42,6 +42,8 @@ public class UpdateIndexRequest extends TeaModel {
 
     /**
      * <p>The retention period of data. Unit: days. Valid values: 7, 30, and 90.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ttl")
     public Integer ttl;
@@ -113,6 +115,8 @@ public class UpdateIndexRequest extends TeaModel {
          * <br>
          * <p>*   true</p>
          * <p>*   false</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("caseSensitive")
         public Boolean caseSensitive;
@@ -122,6 +126,8 @@ public class UpdateIndexRequest extends TeaModel {
          * <br>
          * <p>*   true</p>
          * <p>*   false</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("chn")
         public Boolean chn;
@@ -140,6 +146,8 @@ public class UpdateIndexRequest extends TeaModel {
 
         /**
          * <p>The delimiters that are used to split text.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("token")
         public java.util.List<String> token;

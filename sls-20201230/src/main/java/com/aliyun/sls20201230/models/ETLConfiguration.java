@@ -12,24 +12,42 @@ public class ETLConfiguration extends TeaModel {
     @Deprecated
     public String accessKeySecret;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("fromTime")
     public Long fromTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("logstore")
     public String logstore;
 
     @NameInMap("parameters")
     public java.util.Map<String, ?> parameters;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("roleArn")
     public String roleArn;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("script")
     public String script;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sinks")
     public java.util.List<ETLConfigurationSink> sinks;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("toTime")
     public Long toTime;
 

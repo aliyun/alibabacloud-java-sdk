@@ -4,54 +4,105 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ScheduledSQLConfiguration extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dataFormat")
     public String dataFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("destEndpoint")
     public String destEndpoint;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("destLogstore")
     public String destLogstore;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("destProject")
     public String destProject;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("destRoleArn")
     public String destRoleArn;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("fromTime")
     public Long fromTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("fromTimeExpr")
     public String fromTimeExpr;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("maxRetries")
     public Long maxRetries;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("maxRunTimeInSeconds")
     public Long maxRunTimeInSeconds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("parameters")
     public java.util.Map<String, ?> parameters;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("resourcePool")
     public String resourcePool;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("roleArn")
     public String roleArn;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("script")
     public String script;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sourceLogstore")
     public String sourceLogstore;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sqlType")
     public String sqlType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("toTime")
     public Long toTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("toTimeExpr")
     public String toTimeExpr;
 

@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ExternalStore extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("externalStoreName")
     public String externalStoreName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("parameter")
     public java.util.Map<String, ?> parameter;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("storeType")
     public String storeType;
 

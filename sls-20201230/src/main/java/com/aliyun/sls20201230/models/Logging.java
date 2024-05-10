@@ -4,9 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class Logging extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("loggingDetails")
     public java.util.List<LoggingLoggingDetails> loggingDetails;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("loggingProject")
     public String loggingProject;
 
@@ -32,9 +38,15 @@ public class Logging extends TeaModel {
     }
 
     public static class LoggingLoggingDetails extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("logstore")
         public String logstore;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("type")
         public String type;
 

@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class UpdateLoggingRequest extends TeaModel {
     /**
      * <p>The configurations of service logs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("loggingDetails")
     public java.util.List<UpdateLoggingRequestLoggingDetails> loggingDetails;
 
     /**
      * <p>The name of the project to which you want to save service logs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("loggingProject")
     public String loggingProject;
@@ -40,6 +44,8 @@ public class UpdateLoggingRequest extends TeaModel {
     public static class UpdateLoggingRequestLoggingDetails extends TeaModel {
         /**
          * <p>The name of the Logstore to which you want to save service logs.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("logstore")
         public String logstore;
@@ -55,6 +61,8 @@ public class UpdateLoggingRequest extends TeaModel {
          * <p>*   logtail_status: the status logs of Logtail.</p>
          * <p>*   scheduledsqlalert: the operational logs of Scheduled SQL jobs.</p>
          * <p>*   etl_alert: the operational logs of data transformation jobs.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("type")
         public String type;

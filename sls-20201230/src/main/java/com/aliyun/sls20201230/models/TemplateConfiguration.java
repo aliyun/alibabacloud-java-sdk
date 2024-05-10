@@ -7,6 +7,9 @@ public class TemplateConfiguration extends TeaModel {
     @NameInMap("aonotations")
     public java.util.Map<String, ?> aonotations;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("id")
     public String id;
 
@@ -16,6 +19,9 @@ public class TemplateConfiguration extends TeaModel {
     @NameInMap("tokens")
     public java.util.Map<String, ?> tokens;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("type")
     public String type;
 

@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ScheduledSQL extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("configuration")
     public ScheduledSQLConfiguration configuration;
 
@@ -13,20 +16,32 @@ public class ScheduledSQL extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
     @NameInMap("lastModifiedTime")
     public Long lastModifiedTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("schedule")
     public Schedule schedule;
 
     @NameInMap("scheduleId")
     public String scheduleId;
+
+    @NameInMap("status")
+    public String status;
 
     public static ScheduledSQL build(java.util.Map<String, ?> map) throws Exception {
         ScheduledSQL self = new ScheduledSQL();
@@ -95,6 +110,14 @@ public class ScheduledSQL extends TeaModel {
     }
     public String getScheduleId() {
         return this.scheduleId;
+    }
+
+    public ScheduledSQL setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

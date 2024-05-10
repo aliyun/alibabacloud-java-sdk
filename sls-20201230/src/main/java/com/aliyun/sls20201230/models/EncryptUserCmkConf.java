@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class EncryptUserCmkConf extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("arn")
     public String arn;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("cmk_key_id")
     public String cmkKeyId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("region_id")
     public String regionId;
 

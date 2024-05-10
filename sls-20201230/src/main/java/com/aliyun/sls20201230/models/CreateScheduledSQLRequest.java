@@ -4,18 +4,30 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class CreateScheduledSQLRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("configuration")
     public ScheduledSQLConfiguration configuration;
 
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("schedule")
     public Schedule schedule;
 

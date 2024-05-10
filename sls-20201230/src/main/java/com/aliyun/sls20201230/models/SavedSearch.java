@@ -4,15 +4,27 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class SavedSearch extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("savedsearchName")
     public String savedsearchName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("searchQuery")
     public String searchQuery;
 

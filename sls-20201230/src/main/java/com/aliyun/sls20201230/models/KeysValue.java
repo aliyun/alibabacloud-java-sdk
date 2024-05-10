@@ -24,6 +24,8 @@ public class KeysValue extends TeaModel {
 
     /**
      * <p>The data type of the field value. Valid values: text, json, double, and long.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("type")
     public String type;

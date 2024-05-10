@@ -16,6 +16,9 @@ public class IndexKeysValue extends TeaModel {
     @NameInMap("alias")
     public String alias;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("type")
     public String type;
 

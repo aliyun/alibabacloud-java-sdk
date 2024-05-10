@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ConsumerGroupHeartBeatRequest extends TeaModel {
     /**
      * <p>The IDs of shards whose data is being consumed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("body")
     public java.util.List<Integer> body;
 
     /**
      * <p>The consumer.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("consumer")
     public String consumer;

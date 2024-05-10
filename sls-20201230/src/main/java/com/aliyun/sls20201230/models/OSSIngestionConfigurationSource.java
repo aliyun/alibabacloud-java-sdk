@@ -4,24 +4,42 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class OSSIngestionConfigurationSource extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("bucket")
     public String bucket;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("compressionCodec")
     public String compressionCodec;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("encoding")
     public String encoding;
 
     @NameInMap("endTime")
     public Long endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("endpoint")
     public String endpoint;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("format")
     public java.util.Map<String, ?> format;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("interval")
     public String interval;
 
@@ -52,6 +70,9 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     @NameInMap("timeZone")
     public String timeZone;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("useMetaIndex")
     public Boolean useMetaIndex;
 

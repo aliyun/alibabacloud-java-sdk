@@ -10,33 +10,57 @@ public class AlertQuery extends TeaModel {
     @NameInMap("dashboardId")
     public String dashboardId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("end")
     public String end;
 
     @NameInMap("powerSqlMode")
     public String powerSqlMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("project")
     public String project;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("query")
     public String query;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("region")
     public String region;
 
     @NameInMap("roleArn")
     public String roleArn;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("start")
     public String start;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("store")
     public String store;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("storeType")
     public String storeType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("timeSpanType")
     public String timeSpanType;
 

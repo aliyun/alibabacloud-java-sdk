@@ -12,6 +12,8 @@ public class CreateProjectRequest extends TeaModel {
 
     /**
      * <p>The description of the project.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("description")
     public String description;
@@ -23,6 +25,8 @@ public class CreateProjectRequest extends TeaModel {
      * <p>*   It can contain only lowercase letters, digits, and hyphens (-).</p>
      * <p>*   It must start and end with a lowercase letter or a digit.</p>
      * <p>*   It must be 3 to 63 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("projectName")
     public String projectName;
