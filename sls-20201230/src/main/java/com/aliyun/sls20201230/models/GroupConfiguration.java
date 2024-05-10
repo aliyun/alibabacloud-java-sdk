@@ -7,6 +7,9 @@ public class GroupConfiguration extends TeaModel {
     @NameInMap("fields")
     public java.util.List<String> fields;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("type")
     public String type;
 

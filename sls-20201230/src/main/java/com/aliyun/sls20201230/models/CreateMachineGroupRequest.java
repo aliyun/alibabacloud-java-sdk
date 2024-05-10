@@ -14,9 +14,11 @@ public class CreateMachineGroupRequest extends TeaModel {
      * <p>The name of the machine group. The name must meet the following requirements:</p>
      * <br>
      * <p>*   The name of each machine group in a project must be unique.</p>
-     * <p>*   It can contain only lowercase letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>*   It can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
      * <p>*   It must start and end with a lowercase letter or a digit.</p>
      * <p>*   It must be 3 to 128 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("groupName")
     public String groupName;
@@ -32,6 +34,8 @@ public class CreateMachineGroupRequest extends TeaModel {
      * <br>
      * <p>*   ip: The machine group uses IP addresses as identifiers.</p>
      * <p>*   userdefined: The machine group uses custom identifiers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("machineIdentifyType")
     public String machineIdentifyType;
@@ -41,6 +45,8 @@ public class CreateMachineGroupRequest extends TeaModel {
      * <br>
      * <p>*   If you set machineIdentifyType to ip, enter the IP address of the machine.</p>
      * <p>*   If you set machineIdentifyType to userdefined, enter a custom identifier.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("machineList")
     public java.util.List<String> machineList;

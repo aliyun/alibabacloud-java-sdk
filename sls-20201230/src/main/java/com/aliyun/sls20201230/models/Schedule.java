@@ -19,6 +19,9 @@ public class Schedule extends TeaModel {
     @NameInMap("timeZone")
     public String timeZone;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("type")
     public String type;
 

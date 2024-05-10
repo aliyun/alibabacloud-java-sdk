@@ -12,12 +12,16 @@ public class UpdateLogtailPipelineConfigRequest extends TeaModel {
 
     /**
      * <p>The name of the configuration.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("configName")
     public String configName;
 
     /**
      * <p>The data output plug-ins.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("flushers")
     public java.util.List<java.util.Map<String, ?>> flushers;
@@ -30,6 +34,8 @@ public class UpdateLogtailPipelineConfigRequest extends TeaModel {
 
     /**
      * <p>The data source plug-ins.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("inputs")
     public java.util.List<java.util.Map<String, ?>> inputs;

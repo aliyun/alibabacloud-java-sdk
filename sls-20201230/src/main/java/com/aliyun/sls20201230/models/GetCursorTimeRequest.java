@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetCursorTimeRequest extends TeaModel {
     /**
      * <p>The cursor.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("cursor")
     public String cursor;

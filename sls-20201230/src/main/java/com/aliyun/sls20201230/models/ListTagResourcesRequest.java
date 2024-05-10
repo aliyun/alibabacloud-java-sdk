@@ -12,6 +12,8 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Set the value to project.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("resourceType")
     public String resourceType;
@@ -56,6 +58,8 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTags extends TeaModel {
         /**
          * <p>The key of the tag that you want to use to filter resources. For example, if you set the key to `"test-key"`, only resources to which the key is added are returned.``</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("key")
         public String key;

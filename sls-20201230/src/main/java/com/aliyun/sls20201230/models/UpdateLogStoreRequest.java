@@ -38,7 +38,7 @@ public class UpdateLogStoreRequest extends TeaModel {
     public EncryptConf encryptConf;
 
     /**
-     * <p>The retention period of data in the hot storage tier of the Logstore. Minimum value: 30. Unit: day. You can specify a value that ranges from 30 to the value of ttl. Hot data that is stored for longer than the period specified by hot_ttl is converted to cold data. For more information, see [Enable hot and cold-tiered storage for a Logstore](~~308645~~).</p>
+     * <p>The retention period of data in the hot storage tier of the Logstore. Minimum value: 30. Unit: day. You can specify a value that ranges from 30 to the value of ttl. Hot data that is stored for longer than the period specified by hot_ttl is converted to cold data. For more information, see [Enable hot and cold-tiered storage for a Logstore](https://help.aliyun.com/document_detail/308645.html).</p>
      */
     @NameInMap("hot_ttl")
     public Integer hotTtl;
@@ -48,6 +48,8 @@ public class UpdateLogStoreRequest extends TeaModel {
 
     /**
      * <p>The name of the Logstore.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("logstoreName")
     public String logstoreName;
@@ -90,6 +92,8 @@ public class UpdateLogStoreRequest extends TeaModel {
 
     /**
      * <p>The retention period of data. Unit: day. Valid values: 1 to 3650. If you set ttl to 3650, data is permanently stored.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ttl")
     public Integer ttl;

@@ -12,12 +12,16 @@ public class UpdateDashboardRequest extends TeaModel {
 
     /**
      * <p>The charts on the dashboard.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("charts")
     public java.util.List<Chart> charts;
 
     /**
      * <p>The name of the dashboard.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("dashboardName")
     public String dashboardName;
@@ -30,6 +34,8 @@ public class UpdateDashboardRequest extends TeaModel {
 
     /**
      * <p>The display name of the dashboard.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("displayName")
     public String displayName;

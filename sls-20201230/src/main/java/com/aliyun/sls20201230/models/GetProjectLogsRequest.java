@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProjectLogsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the Dedicated SQL feature. For more information, see [Enable Dedicated SQL](~~223777~~). Valid values:</p>
+     * <p>Specifies whether to enable the Dedicated SQL feature. For more information, see [Enable Dedicated SQL](https://help.aliyun.com/document_detail/223777.html). Valid values:</p>
      * <br>
      * <p>*   true</p>
      * <p>*   false (default): enables the Standard SQL feature.</p>
@@ -17,6 +17,8 @@ public class GetProjectLogsRequest extends TeaModel {
 
     /**
      * <p>The standard SQL statement. In this example, the SQL statement queries the number of page views (PVs) from 2022-03-01 10:41:40 to 2022-03-01 10:56:40 in a Logstore whose name is nginx-moni.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("query")
     public String query;

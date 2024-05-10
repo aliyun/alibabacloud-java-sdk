@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetShipperStatusRequest extends TeaModel {
     /**
      * <p>The start time of the log shipping job. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("from")
     public Long from;
@@ -30,6 +32,8 @@ public class GetShipperStatusRequest extends TeaModel {
 
     /**
      * <p>The end time of the log shipping job. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("to")
     public Long to;

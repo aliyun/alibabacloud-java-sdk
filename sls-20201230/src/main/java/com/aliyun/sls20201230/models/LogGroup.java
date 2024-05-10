@@ -4,15 +4,24 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class LogGroup extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LogTags")
     public java.util.List<LogTag> logTags;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Logs")
     public java.util.List<LogItem> logs;
 
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Topic")
     public String topic;
 

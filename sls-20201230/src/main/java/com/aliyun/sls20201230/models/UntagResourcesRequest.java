@@ -7,6 +7,9 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("all")
     public Boolean all;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("resourceId")
     public java.util.List<String> resourceId;
 

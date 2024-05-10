@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class MaxComputeExportConfigurationSink extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("fields")
     public java.util.List<String> fields;
 
@@ -15,27 +18,48 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     @Deprecated
     public String odpsAccessSecret;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("odpsEndpoint")
     public String odpsEndpoint;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("odpsProject")
     public String odpsProject;
 
     @NameInMap("odpsRolearn")
     public String odpsRolearn;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("odpsTable")
     public String odpsTable;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("odpsTunnelEndpoint")
     public String odpsTunnelEndpoint;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("partitionColumn")
     public java.util.List<String> partitionColumn;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("partitionTimeFormat")
     public String partitionTimeFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("timeZone")
     public String timeZone;
 

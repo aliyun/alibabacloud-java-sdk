@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class Alert extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("configuration")
     public AlertConfiguration configuration;
 
@@ -13,15 +16,24 @@ public class Alert extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
     @NameInMap("lastModifiedTime")
     public Long lastModifiedTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("schedule")
     public Schedule schedule;
 

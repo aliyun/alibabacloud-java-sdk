@@ -7,6 +7,9 @@ public class AlertConfiguration extends TeaModel {
     @NameInMap("annotations")
     public java.util.List<AlertTag> annotations;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("autoAnnotation")
     public Boolean autoAnnotation;
 
@@ -16,6 +19,9 @@ public class AlertConfiguration extends TeaModel {
     @NameInMap("dashboard")
     public String dashboard;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("groupConfiguration")
     public GroupConfiguration groupConfiguration;
 
@@ -28,6 +34,9 @@ public class AlertConfiguration extends TeaModel {
     @NameInMap("muteUntil")
     public Long muteUntil;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("noDataFire")
     public Boolean noDataFire;
 
@@ -37,12 +46,21 @@ public class AlertConfiguration extends TeaModel {
     @NameInMap("policyConfiguration")
     public PolicyConfiguration policyConfiguration;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("queryList")
     public java.util.List<AlertQuery> queryList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sendResolved")
     public Boolean sendResolved;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("severityConfigurations")
     public java.util.List<SeverityConfiguration> severityConfigurations;
 
@@ -61,12 +79,18 @@ public class AlertConfiguration extends TeaModel {
     @NameInMap("templateConfiguration")
     public TemplateConfiguration templateConfiguration;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("threshold")
     public Integer threshold;
 
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("version")
     public String version;
 

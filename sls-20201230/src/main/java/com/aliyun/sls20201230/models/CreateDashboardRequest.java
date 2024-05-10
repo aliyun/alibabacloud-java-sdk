@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateDashboardRequest extends TeaModel {
     /**
      * <p>The data structure of the dashboard.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("body")
     public Dashboard body;

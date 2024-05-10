@@ -28,6 +28,9 @@ public class Logstore extends TeaModel {
     @NameInMap("lastModifyTime")
     public Integer lastModifyTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("logstoreName")
     public String logstoreName;
 
@@ -40,12 +43,18 @@ public class Logstore extends TeaModel {
     @NameInMap("productType")
     public String productType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("shardCount")
     public Integer shardCount;
 
     @NameInMap("telemetryType")
     public String telemetryType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ttl")
     public Integer ttl;
 

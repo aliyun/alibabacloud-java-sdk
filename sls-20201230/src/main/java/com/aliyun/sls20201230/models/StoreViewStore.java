@@ -4,12 +4,18 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class StoreViewStore extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("project")
     public String project;
 
     @NameInMap("query")
     public String query;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("storeName")
     public String storeName;
 

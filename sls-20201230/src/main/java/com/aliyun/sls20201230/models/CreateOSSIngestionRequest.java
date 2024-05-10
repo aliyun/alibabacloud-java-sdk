@@ -4,15 +4,24 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class CreateOSSIngestionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("configuration")
     public OSSIngestionConfiguration configuration;
 
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 

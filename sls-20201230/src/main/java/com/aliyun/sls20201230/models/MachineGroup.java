@@ -7,15 +7,24 @@ public class MachineGroup extends TeaModel {
     @NameInMap("groupAttribute")
     public MachineGroupGroupAttribute groupAttribute;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("groupName")
     public String groupName;
 
     @NameInMap("groupType")
     public String groupType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("machineIdentifyType")
     public String machineIdentifyType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("machineList")
     public java.util.List<String> machineList;
 

@@ -7,6 +7,9 @@ public class Project extends TeaModel {
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("description")
     public String description;
 
@@ -16,6 +19,9 @@ public class Project extends TeaModel {
     @NameInMap("owner")
     public String owner;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("projectName")
     public String projectName;
 

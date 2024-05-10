@@ -4,9 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class OSSIngestionConfiguration extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("source")
     public OSSIngestionConfigurationSource source;
 

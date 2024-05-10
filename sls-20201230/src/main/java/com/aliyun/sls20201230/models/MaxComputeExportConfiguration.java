@@ -4,18 +4,33 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class MaxComputeExportConfiguration extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("fromTime")
     public Long fromTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("roleArn")
     public String roleArn;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sink")
     public MaxComputeExportConfigurationSink sink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("toTime")
     public Long toTime;
 

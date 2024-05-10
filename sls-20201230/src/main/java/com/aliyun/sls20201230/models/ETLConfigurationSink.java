@@ -15,15 +15,27 @@ public class ETLConfigurationSink extends TeaModel {
     @NameInMap("endpoint")
     public String endpoint;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("project")
     public String project;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("roleArn")
     public String roleArn;
 

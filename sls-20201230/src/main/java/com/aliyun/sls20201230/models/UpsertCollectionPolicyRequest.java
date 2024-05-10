@@ -13,18 +13,33 @@ public class UpsertCollectionPolicyRequest extends TeaModel {
     @NameInMap("centralizeEnabled")
     public Boolean centralizeEnabled;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dataCode")
     public String dataCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("enabled")
     public Boolean enabled;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("policyConfig")
     public UpsertCollectionPolicyRequestPolicyConfig policyConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("policyName")
     public String policyName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("productCode")
     public String productCode;
 
@@ -186,6 +201,9 @@ public class UpsertCollectionPolicyRequest extends TeaModel {
         @NameInMap("regions")
         public java.util.List<String> regions;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("resourceMode")
         public String resourceMode;
 

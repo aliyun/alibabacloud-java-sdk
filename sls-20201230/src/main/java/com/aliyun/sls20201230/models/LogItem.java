@@ -4,9 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class LogItem extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Contents")
     public java.util.List<LogContent> contents;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Time")
     public Integer time;
 

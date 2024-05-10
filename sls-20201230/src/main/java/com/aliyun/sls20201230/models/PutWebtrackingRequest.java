@@ -7,13 +7,17 @@ public class PutWebtrackingRequest extends TeaModel {
     /**
      * <p>The logs. Each element is a JSON object that indicates a log.</p>
      * <br>
-     * <p>>  **Note**: The time in a log that is collected by using the web tracking feature is the time at which Simple Log Service receives the log. You do not need to configure the \__time\_\_ field for each log. If this field exists, it is overwritten by the time at which Simple Log Service receives the log.</p>
+     * <p>>  **Note**: The time in a log that is collected by using the web tracking feature is the time at which Simple Log Service receives the log. You do not need to configure the __time__ field for each log. If this field exists, it is overwritten by the time at which Simple Log Service receives the log.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("__logs__")
     public java.util.List<java.util.Map<String, String>> logs;
 
     /**
      * <p>The source of the logs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("__source__")
     public String source;

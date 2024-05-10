@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the resource group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the resource.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("resourceId")
     public String resourceId;

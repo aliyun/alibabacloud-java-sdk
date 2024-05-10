@@ -7,18 +7,27 @@ public class LogtailPipelineConfig extends TeaModel {
     @NameInMap("aggregators")
     public java.util.List<java.util.Map<String, ?>> aggregators;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("configName")
     public String configName;
 
     @NameInMap("createTime")
     public Long createTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("flushers")
     public java.util.List<java.util.Map<String, ?>> flushers;
 
     @NameInMap("global")
     public java.util.Map<String, ?> global;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("inputs")
     public java.util.List<java.util.Map<String, ?>> inputs;
 

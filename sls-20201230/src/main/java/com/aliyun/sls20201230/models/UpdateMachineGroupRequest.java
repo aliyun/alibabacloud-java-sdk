@@ -12,6 +12,8 @@ public class UpdateMachineGroupRequest extends TeaModel {
 
     /**
      * <p>The name of the machine group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("groupName")
     public String groupName;
@@ -27,6 +29,8 @@ public class UpdateMachineGroupRequest extends TeaModel {
      * <br>
      * <p>*   ip: The machine group uses IP addresses as identifiers.</p>
      * <p>*   userdefined: The machine group uses custom identifiers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("machineIdentifyType")
     public String machineIdentifyType;
@@ -36,6 +40,8 @@ public class UpdateMachineGroupRequest extends TeaModel {
      * <br>
      * <p>*   If you set machineIdentifyType to ip, enter the IP addresses of the machines.</p>
      * <p>*   If you set machineIdentifyType to userdefined, enter a custom identifier.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("machineList")
     public java.util.List<String> machineList;

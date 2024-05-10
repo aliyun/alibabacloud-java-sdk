@@ -4,18 +4,33 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class Chart extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("action")
     public java.util.Map<String, ?> action;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("display")
     public java.util.Map<String, ?> display;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("search")
     public java.util.Map<String, ?> search;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("title")
     public String title;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("type")
     public String type;
 

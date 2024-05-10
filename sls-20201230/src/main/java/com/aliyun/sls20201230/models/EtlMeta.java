@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class EtlMeta extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("enable")
     public Boolean enable;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("etlMetaKey")
     public String etlMetaKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("etlMetaName")
     public String etlMetaName;
 

@@ -14,6 +14,8 @@ public class GetLogsV2Request extends TeaModel {
      * <p>The beginning of the time range to query. The value is the log time that is specified when log data is written.</p>
      * <br>
      * <p>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("from")
     public Integer from;
@@ -42,7 +44,7 @@ public class GetLogsV2Request extends TeaModel {
     /**
      * <p>The search statement or the query statement. For more information, see the "Log search overview" and "Log analysis overview" topics.</p>
      * <br>
-     * <p>If you add set session parallel_sql=true; to the analytic statement in the query parameter, Dedicated SQL is used. For example, you can set the query parameter to \* | set session parallel_sql=true; select count(\*) as pv.</p>
+     * <p>If you add set session parallel_sql=true; to the analytic statement in the query parameter, Dedicated SQL is used. For example, you can set the query parameter to \\* | set session parallel_sql=true; select count(\\*) as pv.</p>
      * <br>
      * <p>Note: If you specify an analytic statement in the query parameter, the line and offset parameters do not take effect in this operation. In this case, we recommend that you set the line and offset parameters to 0 and use the LIMIT clause to limit the number of logs to return on each page. For more information, see the "Perform paged queries" topic.</p>
      */
@@ -67,6 +69,8 @@ public class GetLogsV2Request extends TeaModel {
      * <p>The end of the time range to query. The value is the log time that is specified when log data is written.</p>
      * <br>
      * <p>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("to")
     public Integer to;

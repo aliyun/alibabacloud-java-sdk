@@ -9,6 +9,8 @@ public class GetLogsV2Headers extends TeaModel {
 
     /**
      * <p>The compression method.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Accept-Encoding")
     public String acceptEncoding;

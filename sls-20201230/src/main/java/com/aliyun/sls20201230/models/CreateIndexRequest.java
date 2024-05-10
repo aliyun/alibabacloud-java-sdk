@@ -140,6 +140,8 @@ public class CreateIndexRequest extends TeaModel {
 
         /**
          * <p>The delimiters. You can specify a delimiter to delimit the content of a field value. For more information about delimiters, see Example.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("token")
         public java.util.List<String> token;

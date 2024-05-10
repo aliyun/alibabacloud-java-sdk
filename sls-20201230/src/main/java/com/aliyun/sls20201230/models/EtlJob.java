@@ -4,24 +4,45 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class EtlJob extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("enable")
     public Boolean enable;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("etlJobName")
     public String etlJobName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("functionConfig")
     public EtlJobFunctionConfig functionConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("functionParameter")
     public java.util.Map<String, ?> functionParameter;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("logConfig")
     public EtlJobLogConfig logConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sourceConfig")
     public EtlJobSourceConfig sourceConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("triggerConfig")
     public EtlJobTriggerConfig triggerConfig;
 
@@ -96,6 +117,9 @@ public class EtlJob extends TeaModel {
         @NameInMap("functionName")
         public String functionName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("functionProvider")
         public String functionProvider;
 
@@ -172,12 +196,21 @@ public class EtlJob extends TeaModel {
     }
 
     public static class EtlJobLogConfig extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("logstoreName")
         public String logstoreName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("projectName")
         public String projectName;
 
@@ -213,6 +246,9 @@ public class EtlJob extends TeaModel {
     }
 
     public static class EtlJobSourceConfig extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("logstoreName")
         public String logstoreName;
 
@@ -232,9 +268,15 @@ public class EtlJob extends TeaModel {
     }
 
     public static class EtlJobTriggerConfig extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("maxRetryTime")
         public Integer maxRetryTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("roleArn")
         public String roleArn;
 
@@ -244,6 +286,9 @@ public class EtlJob extends TeaModel {
         @NameInMap("startingUnixtime")
         public Long startingUnixtime;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("triggerInterval")
         public Integer triggerInterval;
 

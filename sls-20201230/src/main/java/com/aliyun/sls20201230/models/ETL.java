@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ETL extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("configuration")
     public ETLConfiguration configuration;
 
@@ -13,12 +16,18 @@ public class ETL extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
     @NameInMap("lastModifiedTime")
     public Long lastModifiedTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 

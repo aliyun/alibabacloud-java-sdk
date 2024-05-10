@@ -12,6 +12,8 @@ public class UpdateMachineGroupMachineRequest extends TeaModel {
 
     /**
      * <p>The machines to be added or removed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("body")
     public java.util.List<String> body;
