@@ -4,6 +4,9 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetDocContentRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DentryUuid")
     public String dentryUuid;
 
@@ -13,6 +16,9 @@ public class GetDocContentRequest extends TeaModel {
     @NameInMap("TenantContext")
     public GetDocContentRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("userToken")
     public String userToken;
 

@@ -4,18 +4,30 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class InsertColumnsBeforeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Column")
     public Long column;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ColumnCount")
     public Long columnCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SheetId")
     public String sheetId;
 
     @NameInMap("TenantContext")
     public InsertColumnsBeforeRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkbookId")
     public String workbookId;
 

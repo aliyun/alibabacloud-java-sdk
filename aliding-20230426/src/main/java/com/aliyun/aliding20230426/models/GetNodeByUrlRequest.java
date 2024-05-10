@@ -10,6 +10,9 @@ public class GetNodeByUrlRequest extends TeaModel {
     @NameInMap("TenantContext")
     public GetNodeByUrlRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Url")
     public String url;
 

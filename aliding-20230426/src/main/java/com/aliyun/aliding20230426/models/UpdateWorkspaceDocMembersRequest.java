@@ -7,12 +7,18 @@ public class UpdateWorkspaceDocMembersRequest extends TeaModel {
     @NameInMap("Members")
     public java.util.List<UpdateWorkspaceDocMembersRequestMembers> members;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
     @NameInMap("TenantContext")
     public UpdateWorkspaceDocMembersRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

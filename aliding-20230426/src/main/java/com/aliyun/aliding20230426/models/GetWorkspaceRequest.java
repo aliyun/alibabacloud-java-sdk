@@ -10,6 +10,9 @@ public class GetWorkspaceRequest extends TeaModel {
     @NameInMap("WithPermissionRole")
     public Boolean withPermissionRole;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

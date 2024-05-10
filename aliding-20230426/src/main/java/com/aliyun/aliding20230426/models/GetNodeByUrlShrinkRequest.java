@@ -10,6 +10,9 @@ public class GetNodeByUrlShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Url")
     public String url;
 

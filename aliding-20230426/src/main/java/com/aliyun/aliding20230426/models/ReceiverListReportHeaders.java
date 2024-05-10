@@ -32,6 +32,9 @@ public class ReceiverListReportHeaders extends TeaModel {
     }
 
     public static class ReceiverListReportHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

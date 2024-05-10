@@ -7,6 +7,9 @@ public class GetAllSheetsRequest extends TeaModel {
     @NameInMap("TenantContext")
     public GetAllSheetsRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkbookId")
     public String workbookId;
 

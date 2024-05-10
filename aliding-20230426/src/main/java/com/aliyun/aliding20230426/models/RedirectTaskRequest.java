@@ -4,6 +4,9 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class RedirectTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
@@ -13,18 +16,30 @@ public class RedirectTaskRequest extends TeaModel {
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NowActionExecutorId")
     public String nowActionExecutorId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProcessInstanceId")
     public String processInstanceId;
 
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SystemToken")
     public String systemToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 

@@ -10,6 +10,9 @@ public class GetWorkspacesRequest extends TeaModel {
     @NameInMap("TenantContext")
     public GetWorkspacesRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceIds")
     public java.util.List<String> workspaceIds;
 

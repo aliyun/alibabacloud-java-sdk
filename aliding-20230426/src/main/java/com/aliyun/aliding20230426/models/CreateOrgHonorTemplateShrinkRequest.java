@@ -7,24 +7,45 @@ public class CreateOrgHonorTemplateShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("avatarFrameMediaId")
     public String avatarFrameMediaId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("defaultBgColor")
     public String defaultBgColor;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("medalDesc")
     public String medalDesc;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("medalMediaId")
     public String medalMediaId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("medalName")
     public String medalName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("orgId")
     public Long orgId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("userId")
     public String userId;
 

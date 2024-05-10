@@ -4,15 +4,24 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class SaveFormRemarkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
     @NameInMap("AtUserId")
     public String atUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FormInstanceId")
     public String formInstanceId;
 
@@ -22,6 +31,9 @@ public class SaveFormRemarkRequest extends TeaModel {
     @NameInMap("ReplyId")
     public Long replyId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SystemToken")
     public String systemToken;
 

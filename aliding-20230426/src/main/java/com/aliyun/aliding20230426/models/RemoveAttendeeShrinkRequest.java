@@ -7,9 +7,15 @@ public class RemoveAttendeeShrinkRequest extends TeaModel {
     @NameInMap("AttendeesToRemove")
     public String attendeesToRemoveShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CalendarId")
     public String calendarId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 

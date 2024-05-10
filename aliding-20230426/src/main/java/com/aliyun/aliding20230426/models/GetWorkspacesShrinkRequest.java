@@ -10,6 +10,9 @@ public class GetWorkspacesShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceIds")
     public String workspaceIdsShrink;
 

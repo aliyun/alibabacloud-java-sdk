@@ -32,6 +32,9 @@ public class UpdateStatusHeaders extends TeaModel {
     }
 
     public static class UpdateStatusHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

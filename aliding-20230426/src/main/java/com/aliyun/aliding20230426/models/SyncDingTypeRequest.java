@@ -4,18 +4,27 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class SyncDingTypeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DingType")
     public String dingType;
 
     @NameInMap("IsDimission")
     public String isDimission;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Source")
     public String source;
 
     @NameInMap("TenantContext")
     public SyncDingTypeRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkNo")
     public String workNo;
 

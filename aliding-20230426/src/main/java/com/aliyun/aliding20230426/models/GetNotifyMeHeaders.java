@@ -32,6 +32,9 @@ public class GetNotifyMeHeaders extends TeaModel {
     }
 
     public static class GetNotifyMeHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

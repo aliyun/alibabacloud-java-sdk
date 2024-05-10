@@ -10,6 +10,9 @@ public class InviteUsersRequest extends TeaModel {
     @NameInMap("TenantContext")
     public InviteUsersRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("conferenceId")
     public String conferenceId;
 
@@ -54,6 +57,9 @@ public class InviteUsersRequest extends TeaModel {
     }
 
     public static class InviteUsersRequestInviteeList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Nick")
         public String nick;
 

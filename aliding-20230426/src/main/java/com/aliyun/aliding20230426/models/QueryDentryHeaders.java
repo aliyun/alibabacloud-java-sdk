@@ -32,6 +32,9 @@ public class QueryDentryHeaders extends TeaModel {
     }
 
     public static class QueryDentryHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

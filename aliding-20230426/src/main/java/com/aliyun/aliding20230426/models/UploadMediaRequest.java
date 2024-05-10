@@ -10,12 +10,21 @@ public class UploadMediaRequest extends TeaModel {
     @NameInMap("mediaName")
     public String mediaName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("mediaType")
     public String mediaType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("orgId")
     public Long orgId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("url")
     public String url;
 

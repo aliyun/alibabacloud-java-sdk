@@ -7,9 +7,15 @@ public class RemoveAttendeeRequest extends TeaModel {
     @NameInMap("AttendeesToRemove")
     public java.util.List<String> attendeesToRemove;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CalendarId")
     public String calendarId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 

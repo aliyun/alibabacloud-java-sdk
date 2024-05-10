@@ -4,9 +4,15 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateListByUserIdShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Offset")
     public Long offset;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Size")
     public Long size;
 

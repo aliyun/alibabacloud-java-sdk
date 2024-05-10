@@ -34,15 +34,24 @@ public class CreateEventShrinkRequest extends TeaModel {
     @NameInMap("RichTextDescription")
     public String richTextDescriptionShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Summary")
     public String summary;
 
     @NameInMap("UiConfigs")
     public String uiConfigsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("calendarId")
     public String calendarId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("start")
     public String startShrink;
 

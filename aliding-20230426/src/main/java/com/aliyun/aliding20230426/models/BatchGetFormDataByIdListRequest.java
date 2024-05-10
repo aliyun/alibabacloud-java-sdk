@@ -4,18 +4,30 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class BatchGetFormDataByIdListRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FormInstanceIdList")
     public java.util.List<String> formInstanceIdList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FormUuid")
     public String formUuid;
 
     @NameInMap("NeedFormInstanceValue")
     public Boolean needFormInstanceValue;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SystemToken")
     public String systemToken;
 

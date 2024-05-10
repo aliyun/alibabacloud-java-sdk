@@ -7,12 +7,18 @@ public class UpdateWorkspaceDocMembersShrinkRequest extends TeaModel {
     @NameInMap("Members")
     public String membersShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

@@ -49,9 +49,15 @@ public class CreateScenegroupRequest extends TeaModel {
     @NameInMap("SubadminIds")
     public String subadminIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Title")
     public String title;
 

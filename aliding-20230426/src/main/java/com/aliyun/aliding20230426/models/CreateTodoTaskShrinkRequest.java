@@ -43,6 +43,9 @@ public class CreateTodoTaskShrinkRequest extends TeaModel {
     @NameInMap("sourceId")
     public String sourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("subject")
     public String subject;
 

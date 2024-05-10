@@ -32,6 +32,9 @@ public class GetUserLatestPlanHeaders extends TeaModel {
     }
 
     public static class GetUserLatestPlanHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

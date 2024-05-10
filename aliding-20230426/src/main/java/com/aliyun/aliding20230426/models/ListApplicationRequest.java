@@ -10,6 +10,9 @@ public class ListApplicationRequest extends TeaModel {
     @NameInMap("AppNameSearchKeyword")
     public String appNameSearchKeyword;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CorpId")
     public String corpId;
 
@@ -19,6 +22,9 @@ public class ListApplicationRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Token")
     public String token;
 

@@ -32,6 +32,9 @@ public class InviteUsersHeaders extends TeaModel {
     }
 
     public static class InviteUsersHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

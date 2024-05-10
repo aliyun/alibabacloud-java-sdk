@@ -4,12 +4,18 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class QueryDentryRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DentryId")
     public String dentryId;
 
     @NameInMap("IncludeSpace")
     public Boolean includeSpace;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SpaceId")
     public String spaceId;
 

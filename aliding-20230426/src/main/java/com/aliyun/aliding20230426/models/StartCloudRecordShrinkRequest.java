@@ -13,6 +13,9 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("conferenceId")
     public String conferenceId;
 

@@ -19,6 +19,9 @@ public class QueryCloudRecordTextRequest extends TeaModel {
     @NameInMap("TenantContext")
     public QueryCloudRecordTextRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("conferenceId")
     public String conferenceId;
 

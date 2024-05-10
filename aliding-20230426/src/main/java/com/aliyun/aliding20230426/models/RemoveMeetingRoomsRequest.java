@@ -4,9 +4,15 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class RemoveMeetingRoomsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CalendarId")
     public String calendarId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 
@@ -43,6 +49,9 @@ public class RemoveMeetingRoomsRequest extends TeaModel {
     }
 
     public static class RemoveMeetingRoomsRequestMeetingRoomsToRemove extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("RoomId")
         public String roomId;
 

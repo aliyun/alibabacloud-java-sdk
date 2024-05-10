@@ -7,6 +7,9 @@ public class QueryCloudRecordVideoRequest extends TeaModel {
     @NameInMap("TenantContext")
     public QueryCloudRecordVideoRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("conferenceId")
     public String conferenceId;
 

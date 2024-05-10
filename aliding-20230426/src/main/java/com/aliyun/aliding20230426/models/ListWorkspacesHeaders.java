@@ -32,6 +32,9 @@ public class ListWorkspacesHeaders extends TeaModel {
     }
 
     public static class ListWorkspacesHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

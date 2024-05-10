@@ -13,6 +13,9 @@ public class StartCloudRecordRequest extends TeaModel {
     @NameInMap("TenantContext")
     public StartCloudRecordRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("conferenceId")
     public String conferenceId;
 

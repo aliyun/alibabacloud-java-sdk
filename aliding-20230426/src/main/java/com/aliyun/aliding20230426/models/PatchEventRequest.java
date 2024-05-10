@@ -7,6 +7,9 @@ public class PatchEventRequest extends TeaModel {
     @NameInMap("Attendees")
     public java.util.List<PatchEventRequestAttendees> attendees;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CalendarId")
     public String calendarId;
 
@@ -16,6 +19,9 @@ public class PatchEventRequest extends TeaModel {
     @NameInMap("End")
     public PatchEventRequestEnd end;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 

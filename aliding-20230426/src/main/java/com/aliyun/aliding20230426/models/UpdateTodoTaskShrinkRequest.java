@@ -25,6 +25,9 @@ public class UpdateTodoTaskShrinkRequest extends TeaModel {
     @NameInMap("subject")
     public String subject;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("taskId")
     public String taskId;
 

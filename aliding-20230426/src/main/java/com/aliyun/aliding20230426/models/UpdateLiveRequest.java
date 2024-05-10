@@ -10,18 +10,30 @@ public class UpdateLiveRequest extends TeaModel {
     @NameInMap("Introduction")
     public String introduction;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LiveId")
     public String liveId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PreEndTime")
     public Long preEndTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PreStartTime")
     public Long preStartTime;
 
     @NameInMap("TenantContext")
     public UpdateLiveRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Title")
     public String title;
 

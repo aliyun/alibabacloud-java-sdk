@@ -32,6 +32,9 @@ public class UpdateScheduleConfSettingsHeaders extends TeaModel {
     }
 
     public static class UpdateScheduleConfSettingsHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

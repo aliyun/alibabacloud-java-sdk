@@ -10,6 +10,9 @@ public class CreatePersonalTodoTaskRequest extends TeaModel {
     @NameInMap("DueTime")
     public Long dueTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ExecutorIds")
     public java.util.List<String> executorIds;
 
@@ -19,6 +22,9 @@ public class CreatePersonalTodoTaskRequest extends TeaModel {
     @NameInMap("ParticipantIds")
     public java.util.List<String> participantIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Subject")
     public String subject;
 

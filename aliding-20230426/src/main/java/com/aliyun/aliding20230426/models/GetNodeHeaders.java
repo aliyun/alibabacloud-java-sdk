@@ -32,6 +32,9 @@ public class GetNodeHeaders extends TeaModel {
     }
 
     public static class GetNodeHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

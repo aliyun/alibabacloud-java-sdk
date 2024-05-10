@@ -7,6 +7,9 @@ public class StopCloudRecordRequest extends TeaModel {
     @NameInMap("TenantContext")
     public StopCloudRecordRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("conferenceId")
     public String conferenceId;
 

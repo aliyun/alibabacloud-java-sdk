@@ -4,9 +4,15 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetCorpTasksRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppTypes")
     public String appTypes;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CorpId")
     public String corpId;
 
@@ -31,6 +37,9 @@ public class GetCorpTasksRequest extends TeaModel {
     @NameInMap("ProcessCodes")
     public String processCodes;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Token")
     public String token;
 

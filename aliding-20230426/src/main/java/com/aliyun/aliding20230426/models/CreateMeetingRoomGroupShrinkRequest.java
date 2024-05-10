@@ -7,6 +7,9 @@ public class CreateMeetingRoomGroupShrinkRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ParentGroupId")
     public Long parentGroupId;
 

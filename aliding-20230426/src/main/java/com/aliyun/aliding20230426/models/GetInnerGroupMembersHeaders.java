@@ -32,6 +32,9 @@ public class GetInnerGroupMembersHeaders extends TeaModel {
     }
 
     public static class GetInnerGroupMembersHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

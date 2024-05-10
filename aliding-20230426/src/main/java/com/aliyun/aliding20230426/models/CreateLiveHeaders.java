@@ -32,6 +32,9 @@ public class CreateLiveHeaders extends TeaModel {
     }
 
     public static class CreateLiveHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

@@ -32,6 +32,9 @@ public class SaveContentHeaders extends TeaModel {
     }
 
     public static class SaveContentHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

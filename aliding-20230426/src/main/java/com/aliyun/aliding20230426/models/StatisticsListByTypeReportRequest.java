@@ -4,18 +4,30 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class StatisticsListByTypeReportRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Offset")
     public Long offset;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ReportId")
     public String reportId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Size")
     public Long size;
 
     @NameInMap("TenantContext")
     public StatisticsListByTypeReportRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public Long type;
 

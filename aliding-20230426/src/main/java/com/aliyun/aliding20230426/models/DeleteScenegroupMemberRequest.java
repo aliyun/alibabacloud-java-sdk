@@ -4,9 +4,15 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class DeleteScenegroupMemberRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OpenConversationId")
     public String openConversationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserIds")
     public String userIds;
 

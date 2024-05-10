@@ -32,6 +32,9 @@ public class GetRunningTasksHeaders extends TeaModel {
     }
 
     public static class GetRunningTasksHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

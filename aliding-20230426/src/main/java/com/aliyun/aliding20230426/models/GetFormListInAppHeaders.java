@@ -32,6 +32,9 @@ public class GetFormListInAppHeaders extends TeaModel {
     }
 
     public static class GetFormListInAppHeadersAccountContext extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

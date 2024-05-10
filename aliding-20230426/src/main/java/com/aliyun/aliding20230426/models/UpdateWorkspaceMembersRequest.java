@@ -4,12 +4,18 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkspaceMembersRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Members")
     public java.util.List<UpdateWorkspaceMembersRequestMembers> members;
 
     @NameInMap("TenantContext")
     public UpdateWorkspaceMembersRequestTenantContext tenantContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -43,12 +49,21 @@ public class UpdateWorkspaceMembersRequest extends TeaModel {
     }
 
     public static class UpdateWorkspaceMembersRequestMembers extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("MemberId")
         public String memberId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("MemberType")
         public String memberType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("RoleType")
         public String roleType;
 
