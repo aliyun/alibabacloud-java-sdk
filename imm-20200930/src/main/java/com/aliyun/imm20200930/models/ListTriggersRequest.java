@@ -13,6 +13,9 @@ public class ListTriggersRequest extends TeaModel {
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

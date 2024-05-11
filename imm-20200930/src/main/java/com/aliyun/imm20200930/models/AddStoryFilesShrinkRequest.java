@@ -4,15 +4,27 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class AddStoryFilesShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Files")
     public String filesShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ObjectId")
     public String objectId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

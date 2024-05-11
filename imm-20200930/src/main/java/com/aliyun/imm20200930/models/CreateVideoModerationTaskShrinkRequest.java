@@ -19,12 +19,18 @@ public class CreateVideoModerationTaskShrinkRequest extends TeaModel {
     @NameInMap("Notification")
     public String notificationShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
     @NameInMap("Scenes")
     public String scenesShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceURI")
     public String sourceURI;
 

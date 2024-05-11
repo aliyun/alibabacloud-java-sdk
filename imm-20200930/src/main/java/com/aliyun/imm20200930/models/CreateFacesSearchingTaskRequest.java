@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateFacesSearchingTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
@@ -13,6 +16,9 @@ public class CreateFacesSearchingTaskRequest extends TeaModel {
     @NameInMap("Notification")
     public Notification notification;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

@@ -7,6 +7,9 @@ public class CompareImageFacesShrinkRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

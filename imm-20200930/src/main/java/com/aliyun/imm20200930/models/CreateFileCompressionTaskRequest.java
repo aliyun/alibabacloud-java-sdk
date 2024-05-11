@@ -13,6 +13,9 @@ public class CreateFileCompressionTaskRequest extends TeaModel {
     @NameInMap("Notification")
     public Notification notification;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -22,6 +25,9 @@ public class CreateFileCompressionTaskRequest extends TeaModel {
     @NameInMap("Sources")
     public java.util.List<CreateFileCompressionTaskRequestSources> sources;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetURI")
     public String targetURI;
 

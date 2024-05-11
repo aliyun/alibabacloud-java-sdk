@@ -13,6 +13,9 @@ public class CreateStoryRequest extends TeaModel {
     @NameInMap("CustomLabels")
     public java.util.Map<String, ?> customLabels;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
@@ -34,6 +37,9 @@ public class CreateStoryRequest extends TeaModel {
     @NameInMap("ObjectId")
     public String objectId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -49,6 +55,9 @@ public class CreateStoryRequest extends TeaModel {
     @NameInMap("StorySubType")
     public String storySubType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StoryType")
     public String storyType;
 

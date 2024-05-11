@@ -10,15 +10,24 @@ public class CreateImageToPDFTaskShrinkRequest extends TeaModel {
     @NameInMap("Notification")
     public String notificationShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Sources")
     public String sourcesShrink;
 
     @NameInMap("Tags")
     public String tagsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetURI")
     public String targetURI;
 

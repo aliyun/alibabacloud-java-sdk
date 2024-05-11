@@ -28,9 +28,6 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
     @NameInMap("Token")
     public String token;
 
-    @NameInMap("URI")
-    public String URI;
-
     /**
      * <p>转码文件列表。</p>
      */
@@ -88,14 +85,6 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
     }
     public String getToken() {
         return this.token;
-    }
-
-    public GenerateVideoPlaylistResponseBody setURI(String URI) {
-        this.URI = URI;
-        return this;
-    }
-    public String getURI() {
-        return this.URI;
     }
 
     public GenerateVideoPlaylistResponseBody setVideoPlaylist(java.util.List<GenerateVideoPlaylistResponseBodyVideoPlaylist> videoPlaylist) {

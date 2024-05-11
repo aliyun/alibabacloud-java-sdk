@@ -7,12 +7,18 @@ public class ExtractDocumentTextRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceURI")
     public String sourceURI;
 

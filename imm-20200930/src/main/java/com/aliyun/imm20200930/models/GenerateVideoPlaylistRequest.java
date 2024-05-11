@@ -16,6 +16,9 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
     @NameInMap("OverwritePolicy")
     public String overwritePolicy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -28,12 +31,18 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
     @NameInMap("SourceSubtitles")
     public java.util.List<GenerateVideoPlaylistRequestSourceSubtitles> sourceSubtitles;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceURI")
     public String sourceURI;
 
     @NameInMap("Tags")
     public java.util.Map<String, String> tags;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Targets")
     public java.util.List<GenerateVideoPlaylistRequestTargets> targets;
 
@@ -145,6 +154,9 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("URI")
         public String URI;
 

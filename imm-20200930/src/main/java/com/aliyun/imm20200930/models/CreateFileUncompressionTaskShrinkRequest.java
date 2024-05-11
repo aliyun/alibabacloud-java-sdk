@@ -13,12 +13,18 @@ public class CreateFileUncompressionTaskShrinkRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
     @NameInMap("SelectedFiles")
     public String selectedFilesShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceURI")
     public String sourceURI;
 

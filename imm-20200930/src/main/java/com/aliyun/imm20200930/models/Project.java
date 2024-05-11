@@ -46,6 +46,9 @@ public class Project extends TeaModel {
     @NameInMap("ServiceRole")
     public String serviceRole;
 
+    @NameInMap("Tags")
+    public java.util.List<ProjectTags> tags;
+
     @NameInMap("TemplateId")
     public String templateId;
 
@@ -172,6 +175,14 @@ public class Project extends TeaModel {
         return this.serviceRole;
     }
 
+    public Project setTags(java.util.List<ProjectTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ProjectTags> getTags() {
+        return this.tags;
+    }
+
     public Project setTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
@@ -194,6 +205,36 @@ public class Project extends TeaModel {
     }
     public String getUpdateTime() {
         return this.updateTime;
+    }
+
+    public static class ProjectTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ProjectTags build(java.util.Map<String, ?> map) throws Exception {
+            ProjectTags self = new ProjectTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ProjectTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ProjectTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
     }
 
 }

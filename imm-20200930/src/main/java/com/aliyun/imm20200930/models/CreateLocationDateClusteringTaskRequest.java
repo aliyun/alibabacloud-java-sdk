@@ -4,18 +4,30 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateLocationDateClusteringTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DateOptions")
     public CreateLocationDateClusteringTaskRequestDateOptions dateOptions;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LocationOptions")
     public CreateLocationDateClusteringTaskRequestLocationOptions locationOptions;
 
     @NameInMap("Notification")
     public Notification notification;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -87,12 +99,21 @@ public class CreateLocationDateClusteringTaskRequest extends TeaModel {
     }
 
     public static class CreateLocationDateClusteringTaskRequestDateOptions extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("GapDays")
         public Long gapDays;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("MaxDays")
         public Long maxDays;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("MinDays")
         public Long minDays;
 
@@ -128,6 +149,9 @@ public class CreateLocationDateClusteringTaskRequest extends TeaModel {
     }
 
     public static class CreateLocationDateClusteringTaskRequestLocationOptions extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("LocationDateClusterLevels")
         public java.util.List<String> locationDateClusterLevels;
 

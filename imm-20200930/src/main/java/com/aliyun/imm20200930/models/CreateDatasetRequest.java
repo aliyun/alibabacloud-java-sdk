@@ -19,12 +19,18 @@ public class CreateDatasetRequest extends TeaModel {
     @NameInMap("DatasetMaxTotalFileSize")
     public Long datasetMaxTotalFileSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

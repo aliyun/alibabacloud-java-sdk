@@ -13,12 +13,18 @@ public class CreateFileUncompressionTaskRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
     @NameInMap("SelectedFiles")
     public java.util.List<String> selectedFiles;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceURI")
     public String sourceURI;
 

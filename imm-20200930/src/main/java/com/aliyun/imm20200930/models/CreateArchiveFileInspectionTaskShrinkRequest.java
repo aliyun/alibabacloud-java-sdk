@@ -13,6 +13,9 @@ public class CreateArchiveFileInspectionTaskShrinkRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

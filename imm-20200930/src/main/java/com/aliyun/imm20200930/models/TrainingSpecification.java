@@ -7,18 +7,33 @@ public class TrainingSpecification extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Endpoint")
     public String endpoint;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ModelSpecification")
     public ModelSpecification modelSpecification;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Runtime")
     public Runtime runtime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceURI")
     public String sourceURI;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetURI")
     public String targetURI;
 

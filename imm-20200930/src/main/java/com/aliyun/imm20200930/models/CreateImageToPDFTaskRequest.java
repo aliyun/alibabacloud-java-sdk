@@ -10,15 +10,24 @@ public class CreateImageToPDFTaskRequest extends TeaModel {
     @NameInMap("Notification")
     public Notification notification;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Sources")
     public java.util.List<CreateImageToPDFTaskRequestSources> sources;
 
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetURI")
     public String targetURI;
 
@@ -90,6 +99,9 @@ public class CreateImageToPDFTaskRequest extends TeaModel {
         @NameInMap("Rotate")
         public Long rotate;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("URI")
         public String URI;
 

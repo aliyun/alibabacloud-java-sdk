@@ -7,12 +7,18 @@ public class UpdateTriggerRequest extends TeaModel {
     @NameInMap("Actions")
     public java.util.List<UpdateTriggerRequestActions> actions;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Id")
     public String id;
 
     @NameInMap("Input")
     public Input input;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

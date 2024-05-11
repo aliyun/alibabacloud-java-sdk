@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DetectImageCarsResponseBody extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Cars")
     public java.util.List<Car> cars;
 

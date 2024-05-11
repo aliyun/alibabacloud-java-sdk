@@ -4,9 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ModelSpecification extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MetaData")
     public MetaData metaData;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Spec")
     public Spec spec;
 

@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DetectImageCodesResponseBody extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Codes")
     public java.util.List<Codes> codes;
 

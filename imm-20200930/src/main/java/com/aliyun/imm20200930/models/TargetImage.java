@@ -43,6 +43,9 @@ public class TargetImage extends TeaModel {
     }
 
     public static class TargetImageAnimations extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Format")
         public String format;
 
@@ -64,6 +67,9 @@ public class TargetImage extends TeaModel {
         @NameInMap("StartTime")
         public Double startTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("URI")
         public String URI;
 
@@ -150,6 +156,9 @@ public class TargetImage extends TeaModel {
     }
 
     public static class TargetImageSnapshots extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Format")
         public String format;
 
@@ -168,6 +177,9 @@ public class TargetImage extends TeaModel {
         @NameInMap("StartTime")
         public Double startTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("URI")
         public String URI;
 
@@ -246,6 +258,9 @@ public class TargetImage extends TeaModel {
     }
 
     public static class TargetImageSprites extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Format")
         public String format;
 
@@ -279,6 +294,9 @@ public class TargetImage extends TeaModel {
         @NameInMap("TileWidth")
         public Integer tileWidth;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("URI")
         public String URI;
 

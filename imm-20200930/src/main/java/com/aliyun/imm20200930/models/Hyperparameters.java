@@ -13,9 +13,15 @@ public class Hyperparameters extends TeaModel {
     @NameInMap("DataLoaderWorkers")
     public Long dataLoaderWorkers;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Evaluator")
     public CustomParams evaluator;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InputSize")
     public java.util.List<Long> inputSize;
 

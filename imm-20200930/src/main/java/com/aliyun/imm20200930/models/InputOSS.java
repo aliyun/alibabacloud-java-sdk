@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class InputOSS extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Bucket")
     public String bucket;
 

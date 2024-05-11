@@ -7,9 +7,15 @@ public class SearchImageFigureClusterShrinkRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
