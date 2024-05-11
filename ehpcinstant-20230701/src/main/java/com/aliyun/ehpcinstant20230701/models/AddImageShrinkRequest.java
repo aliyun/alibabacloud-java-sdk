@@ -13,6 +13,9 @@ public class AddImageShrinkRequest extends TeaModel {
     @NameInMap("ImageVersion")
     public String imageVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 

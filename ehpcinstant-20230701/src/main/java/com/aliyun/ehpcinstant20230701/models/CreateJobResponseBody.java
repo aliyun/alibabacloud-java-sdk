@@ -10,6 +10,9 @@ public class CreateJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Tasks")
+    public java.util.List<CreateJobResponseBodyTasks> tasks;
+
     public static CreateJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateJobResponseBody self = new CreateJobResponseBody();
         return TeaModel.build(map, self);
@@ -29,6 +32,44 @@ public class CreateJobResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateJobResponseBody setTasks(java.util.List<CreateJobResponseBodyTasks> tasks) {
+        this.tasks = tasks;
+        return this;
+    }
+    public java.util.List<CreateJobResponseBodyTasks> getTasks() {
+        return this.tasks;
+    }
+
+    public static class CreateJobResponseBodyTasks extends TeaModel {
+        @NameInMap("ExecutorIds")
+        public java.util.List<String> executorIds;
+
+        @NameInMap("TaskName")
+        public String taskName;
+
+        public static CreateJobResponseBodyTasks build(java.util.Map<String, ?> map) throws Exception {
+            CreateJobResponseBodyTasks self = new CreateJobResponseBodyTasks();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateJobResponseBodyTasks setExecutorIds(java.util.List<String> executorIds) {
+            this.executorIds = executorIds;
+            return this;
+        }
+        public java.util.List<String> getExecutorIds() {
+            return this.executorIds;
+        }
+
+        public CreateJobResponseBodyTasks setTaskName(String taskName) {
+            this.taskName = taskName;
+            return this;
+        }
+        public String getTaskName() {
+            return this.taskName;
+        }
+
     }
 
 }

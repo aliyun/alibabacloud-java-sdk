@@ -219,6 +219,9 @@ public class GetImageResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ImageType")
         public String imageType;
 

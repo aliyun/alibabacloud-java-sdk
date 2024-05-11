@@ -26,6 +26,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * @summary 添加托管侧用户自定义镜像
+     *
+     * @param tmpReq AddImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddImageResponse
+     */
     public AddImageResponse addImageWithOptions(AddImageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         AddImageShrinkRequest request = new AddImageShrinkRequest();
@@ -76,11 +83,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddImageResponse());
     }
 
+    /**
+     * @summary 添加托管侧用户自定义镜像
+     *
+     * @param request AddImageRequest
+     * @return AddImageResponse
+     */
     public AddImageResponse addImage(AddImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addImageWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 提交任务
+     *
+     * @param tmpReq CreateJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateJobResponse
+     */
     public CreateJobResponse createJobWithOptions(CreateJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateJobShrinkRequest request = new CreateJobShrinkRequest();
@@ -127,11 +147,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateJobResponse());
     }
 
+    /**
+     * @summary 提交任务
+     *
+     * @param request CreateJobRequest
+     * @return CreateJobResponse
+     */
     public CreateJobResponse createJob(CreateJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createJobWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 删除作业
+     *
+     * @param tmpReq DeleteJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteJobsResponse
+     */
     public DeleteJobsResponse deleteJobsWithOptions(DeleteJobsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DeleteJobsShrinkRequest request = new DeleteJobsShrinkRequest();
@@ -170,11 +203,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteJobsResponse());
     }
 
+    /**
+     * @summary 删除作业
+     *
+     * @param request DeleteJobsRequest
+     * @return DeleteJobsResponse
+     */
     public DeleteJobsResponse deleteJobs(DeleteJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteJobsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查询作业性能数据
+     *
+     * @param tmpReq DescribeJobMetricDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeJobMetricDataResponse
+     */
     public DescribeJobMetricDataResponse describeJobMetricDataWithOptions(DescribeJobMetricDataRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DescribeJobMetricDataShrinkRequest request = new DescribeJobMetricDataShrinkRequest();
@@ -217,11 +263,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeJobMetricDataResponse());
     }
 
+    /**
+     * @summary 查询作业性能数据
+     *
+     * @param request DescribeJobMetricDataRequest
+     * @return DescribeJobMetricDataResponse
+     */
     public DescribeJobMetricDataResponse describeJobMetricData(DescribeJobMetricDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeJobMetricDataWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查询作业即时监控项
+     *
+     * @param tmpReq DescribeJobMetricLastRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeJobMetricLastResponse
+     */
     public DescribeJobMetricLastResponse describeJobMetricLastWithOptions(DescribeJobMetricLastRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DescribeJobMetricLastShrinkRequest request = new DescribeJobMetricLastShrinkRequest();
@@ -260,11 +319,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeJobMetricLastResponse());
     }
 
+    /**
+     * @summary 查询作业即时监控项
+     *
+     * @param request DescribeJobMetricLastRequest
+     * @return DescribeJobMetricLastResponse
+     */
     public DescribeJobMetricLastResponse describeJobMetricLast(DescribeJobMetricLastRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeJobMetricLastWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查询托管侧镜像详情。
+     *
+     * @param request GetImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetImageResponse
+     */
     public GetImageResponse getImageWithOptions(GetImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -289,11 +361,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetImageResponse());
     }
 
+    /**
+     * @summary 查询托管侧镜像详情。
+     *
+     * @param request GetImageRequest
+     * @return GetImageResponse
+     */
     public GetImageResponse getImage(GetImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getImageWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查询作业详情
+     *
+     * @param request GetJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetJobResponse
+     */
     public GetJobResponse getJobWithOptions(GetJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -318,11 +403,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobResponse());
     }
 
+    /**
+     * @summary 查询作业详情
+     *
+     * @param request GetJobRequest
+     * @return GetJobResponse
+     */
     public GetJobResponse getJob(GetJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getJobWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查询全局Executor信息
+     *
+     * @param tmpReq ListExecutorsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListExecutorsResponse
+     */
     public ListExecutorsResponse listExecutorsWithOptions(ListExecutorsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListExecutorsShrinkRequest request = new ListExecutorsShrinkRequest();
@@ -361,11 +459,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListExecutorsResponse());
     }
 
+    /**
+     * @summary 查询全局Executor信息
+     *
+     * @param request ListExecutorsRequest
+     * @return ListExecutorsResponse
+     */
     public ListExecutorsResponse listExecutors(ListExecutorsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listExecutorsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查看托管侧镜像列表
+     *
+     * @param tmpReq ListImagesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListImagesResponse
+     */
     public ListImagesResponse listImagesWithOptions(ListImagesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListImagesShrinkRequest request = new ListImagesShrinkRequest();
@@ -412,11 +523,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListImagesResponse());
     }
 
+    /**
+     * @summary 查看托管侧镜像列表
+     *
+     * @param request ListImagesRequest
+     * @return ListImagesResponse
+     */
     public ListImagesResponse listImages(ListImagesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listImagesWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查询作业Executor信息
+     *
+     * @param request ListJobExecutorsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListJobExecutorsResponse
+     */
     public ListJobExecutorsResponse listJobExecutorsWithOptions(ListJobExecutorsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -453,11 +577,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListJobExecutorsResponse());
     }
 
+    /**
+     * @summary 查询作业Executor信息
+     *
+     * @param request ListJobExecutorsRequest
+     * @return ListJobExecutorsResponse
+     */
     public ListJobExecutorsResponse listJobExecutors(ListJobExecutorsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listJobExecutorsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查询作业列表
+     *
+     * @param tmpReq ListJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListJobsResponse
+     */
     public ListJobsResponse listJobsWithOptions(ListJobsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListJobsShrinkRequest request = new ListJobsShrinkRequest();
@@ -504,11 +641,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListJobsResponse());
     }
 
+    /**
+     * @summary 查询作业列表
+     *
+     * @param request ListJobsRequest
+     * @return ListJobsResponse
+     */
     public ListJobsResponse listJobs(ListJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listJobsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 移除托管侧镜像信息。
+     *
+     * @param request RemoveImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveImageResponse
+     */
     public RemoveImageResponse removeImageWithOptions(RemoveImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -533,6 +683,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveImageResponse());
     }
 
+    /**
+     * @summary 移除托管侧镜像信息。
+     *
+     * @param request RemoveImageRequest
+     * @return RemoveImageResponse
+     */
     public RemoveImageResponse removeImage(RemoveImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeImageWithOptions(request, runtime);
