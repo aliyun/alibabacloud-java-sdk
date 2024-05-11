@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeSignaturesByApiRequest extends TeaModel {
     /**
      * <p>The ID of the API.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
      * <p>The ID of the group to which the API belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -24,6 +28,8 @@ public class DescribeSignaturesByApiRequest extends TeaModel {
      * <br>
      * <p>*   **RELEASE**</p>
      * <p>*   **TEST**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StageName")
     public String stageName;

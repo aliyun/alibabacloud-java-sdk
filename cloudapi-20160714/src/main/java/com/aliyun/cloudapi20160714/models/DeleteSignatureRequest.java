@@ -12,6 +12,8 @@ public class DeleteSignatureRequest extends TeaModel {
 
     /**
      * <p>The ID of the key to be deleted.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SignatureId")
     public String signatureId;

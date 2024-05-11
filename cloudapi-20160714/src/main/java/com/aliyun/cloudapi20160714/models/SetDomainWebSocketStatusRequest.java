@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class SetDomainWebSocketStatusRequest extends TeaModel {
     /**
      * <p>The action.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ActionValue")
     public String actionValue;
 
     /**
      * <p>The custom domain name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The ID of the API group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;

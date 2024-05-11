@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeApiHistoryRequest extends TeaModel {
     /**
      * <p>The ID of the API.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
@@ -18,6 +20,8 @@ public class DescribeApiHistoryRequest extends TeaModel {
 
     /**
      * <p>Specifies the version number that you want to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HistoryVersion")
     public String historyVersion;
@@ -31,6 +35,8 @@ public class DescribeApiHistoryRequest extends TeaModel {
      * <p>*   **RELEASE**</p>
      * <p>*   **TEST**: the test environment</p>
      * <p>*   **PRE**: the pre-release environment</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StageName")
     public String stageName;

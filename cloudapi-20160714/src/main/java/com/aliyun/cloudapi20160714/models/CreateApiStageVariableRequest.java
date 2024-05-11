@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateApiStageVariableRequest extends TeaModel {
     /**
      * <p>The ID of the API group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -15,6 +17,8 @@ public class CreateApiStageVariableRequest extends TeaModel {
 
     /**
      * <p>The ID of the runtime environment.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StageId")
     public String stageId;
@@ -31,6 +35,8 @@ public class CreateApiStageVariableRequest extends TeaModel {
 
     /**
      * <p>The name of the variable to be added. This parameter is case-sensitive.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VariableName")
     public String variableName;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ResetAppCodeRequest extends TeaModel {
     /**
      * <p>The AppCode of the app.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppCode")
     public String appCode;

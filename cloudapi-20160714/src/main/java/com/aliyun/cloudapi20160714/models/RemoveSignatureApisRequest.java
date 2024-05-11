@@ -15,6 +15,8 @@ public class RemoveSignatureApisRequest extends TeaModel {
 
     /**
      * <p>The ID of the API group to which the API that you want to manage belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -24,6 +26,8 @@ public class RemoveSignatureApisRequest extends TeaModel {
 
     /**
      * <p>The ID of the signature key.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SignatureId")
     public String signatureId;
@@ -33,6 +37,8 @@ public class RemoveSignatureApisRequest extends TeaModel {
      * <br>
      * <p>*   **RELEASE**</p>
      * <p>*   **TEST**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StageName")
     public String stageName;

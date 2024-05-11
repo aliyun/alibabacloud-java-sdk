@@ -24,6 +24,8 @@ public class AttachPluginRequest extends TeaModel {
 
     /**
      * <p>The ID of the plug-in to be bound.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PluginId")
     public String pluginId;
@@ -37,6 +39,8 @@ public class AttachPluginRequest extends TeaModel {
      * <p>*   **RELEASE**</p>
      * <p>*   **PRE: the pre-release environment**</p>
      * <p>*   **TEST**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StageName")
     public String stageName;

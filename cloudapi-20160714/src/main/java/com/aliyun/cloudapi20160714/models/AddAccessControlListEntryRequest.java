@@ -17,6 +17,8 @@ public class AddAccessControlListEntryRequest extends TeaModel {
 
     /**
      * <p>The ID of the access control list (ACL).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclId")
     public String aclId;

@@ -4,15 +4,24 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class EnableInstanceAccessControlRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AclType")
     public String aclType;
 
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -4,18 +4,27 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class RemoveVpcAccessAndAbolishApisRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("NeedBatchWork")
     public Boolean needBatchWork;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

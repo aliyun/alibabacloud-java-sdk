@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class SwitchApiRequest extends TeaModel {
     /**
      * <p>The ID of the API.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
      * <p>The description of the switch operation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -24,6 +28,8 @@ public class SwitchApiRequest extends TeaModel {
 
     /**
      * <p>The historical version that you want to switch to.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HistoryVersion")
     public String historyVersion;
@@ -36,6 +42,8 @@ public class SwitchApiRequest extends TeaModel {
      * <br>
      * <p>*   **RELEASE**</p>
      * <p>*   **TEST**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StageName")
     public String stageName;

@@ -11,7 +11,9 @@ public class CreateIpControlRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the ACL. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (\_). The name cannot start with an underscore (\_).``</p>
+     * <p>The name of the ACL. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (_). The name cannot start with an underscore (_).``</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IpControlName")
     public String ipControlName;
@@ -27,6 +29,8 @@ public class CreateIpControlRequest extends TeaModel {
      * <br>
      * <p>*   **ALLOW**: an IP address whitelist</p>
      * <p>*   **REFUSE**: an IP address blacklist</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IpControlType")
     public String ipControlType;

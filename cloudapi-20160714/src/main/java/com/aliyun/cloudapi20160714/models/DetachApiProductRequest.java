@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DetachApiProductRequest extends TeaModel {
     /**
      * <p>The ID of the API product.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiProductId")
     public String apiProductId;
 
     /**
      * <p>The APIs that you want to detach from the API product.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Apis")
     public java.util.List<DetachApiProductRequestApis> apis;
@@ -51,6 +55,8 @@ public class DetachApiProductRequest extends TeaModel {
     public static class DetachApiProductRequestApis extends TeaModel {
         /**
          * <p>The API ID.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ApiId")
         public String apiId;
@@ -61,6 +67,8 @@ public class DetachApiProductRequest extends TeaModel {
          * <p>*   **RELEASE**: the production environment</p>
          * <p>*   **PRE**: the pre-release environment</p>
          * <p>*   **TEST**: the test environment</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("StageName")
         public String stageName;

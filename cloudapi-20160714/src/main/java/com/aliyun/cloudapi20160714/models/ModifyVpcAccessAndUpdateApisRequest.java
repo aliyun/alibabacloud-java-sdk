@@ -18,6 +18,8 @@ public class ModifyVpcAccessAndUpdateApisRequest extends TeaModel {
      * <p>*   The name of a VPC authorization cannot be changed. You cannot use this parameter to change the name of a VPC authorization.</p>
      * <br>
      * <p>*   You must set this parameter to the name of the current VPC authorization.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;

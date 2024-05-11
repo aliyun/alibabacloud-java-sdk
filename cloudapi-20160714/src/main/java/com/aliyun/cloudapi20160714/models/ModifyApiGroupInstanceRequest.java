@@ -4,6 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifyApiGroupInstanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
@@ -16,6 +19,9 @@ public class ModifyApiGroupInstanceRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<ModifyApiGroupInstanceRequestTag> tag;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetInstanceId")
     public String targetInstanceId;
 
@@ -65,9 +71,15 @@ public class ModifyApiGroupInstanceRequest extends TeaModel {
     }
 
     public static class ModifyApiGroupInstanceRequestTag extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Value")
         public String value;
 

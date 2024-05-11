@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AbolishApiRequest extends TeaModel {
     /**
      * <p>The ID of the specified API.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
@@ -24,6 +26,8 @@ public class AbolishApiRequest extends TeaModel {
      * <br>
      * <p>*   **RELEASE**</p>
      * <p>*   **TEST**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StageName")
     public String stageName;

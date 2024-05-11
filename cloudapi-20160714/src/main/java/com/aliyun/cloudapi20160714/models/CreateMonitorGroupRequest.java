@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CreateMonitorGroupRequest extends TeaModel {
     /**
      * <p>The caller authentication status of the API. Valid values: **ok**: The authentication is successful. **mismatch**: The request is redirected. **servicenotfound**: A request error occurred. **Unknown**: An unknown error occurred.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Auth")
     public String auth;
 
     /**
      * <p>The ID of the API group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;

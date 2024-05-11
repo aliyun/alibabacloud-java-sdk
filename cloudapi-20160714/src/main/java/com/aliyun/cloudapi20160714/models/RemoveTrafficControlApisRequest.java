@@ -15,6 +15,8 @@ public class RemoveTrafficControlApisRequest extends TeaModel {
 
     /**
      * <p>The ID of the API group containing the APIs from which you want to unbind a specified throttling policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -30,12 +32,16 @@ public class RemoveTrafficControlApisRequest extends TeaModel {
      * <br>
      * <p>*   **RELEASE**</p>
      * <p>*   **TEST**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StageName")
     public String stageName;
 
     /**
      * <p>The ID of the throttling policy that you want to unbind from APIs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficControlId")
     public String trafficControlId;

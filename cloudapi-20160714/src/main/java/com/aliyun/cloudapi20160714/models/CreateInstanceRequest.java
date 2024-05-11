@@ -7,6 +7,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
@@ -19,9 +22,15 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("InstanceCidr")
     public String instanceCidr;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceSpec")
     public String instanceSpec;
 
@@ -34,6 +43,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateInstanceRequestTag> tag;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Token")
     public String token;
 

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateDatasetRequest extends TeaModel {
     /**
      * <p>The name of the dataset.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
@@ -16,6 +18,8 @@ public class CreateDatasetRequest extends TeaModel {
      * <p>* JWT_BLOCKING: a JSON Web Token (JWT) blacklist</p>
      * <p>* IP_WHITELIST_CIDR : an IP address whitelist</p>
      * <p>* PARAMETER_ACCESS : parameter-based access control</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatasetType")
     public String datasetType;

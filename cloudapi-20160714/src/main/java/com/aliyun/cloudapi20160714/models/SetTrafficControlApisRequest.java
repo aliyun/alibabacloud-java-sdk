@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class SetTrafficControlApisRequest extends TeaModel {
     /**
      * <p>The API ID for the specified operation. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiIds")
     public String apiIds;
 
     /**
      * <p>The ID of the API group containing the APIs to which you want to bind a specified throttling policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -27,12 +31,16 @@ public class SetTrafficControlApisRequest extends TeaModel {
      * <br>
      * <p>*   **RELEASE**</p>
      * <p>*   **TEST**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StageName")
     public String stageName;
 
     /**
      * <p>The ID of the throttling policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficControlId")
     public String trafficControlId;

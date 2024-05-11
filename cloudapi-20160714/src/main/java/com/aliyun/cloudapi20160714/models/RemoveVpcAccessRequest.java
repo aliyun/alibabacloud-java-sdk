@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class RemoveVpcAccessRequest extends TeaModel {
     /**
      * <p>The ID of an ECS or SLB instance in the VPC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -18,6 +20,8 @@ public class RemoveVpcAccessRequest extends TeaModel {
 
     /**
      * <p>The port number that corresponds to the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Port")
     public Integer port;
@@ -27,6 +31,8 @@ public class RemoveVpcAccessRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

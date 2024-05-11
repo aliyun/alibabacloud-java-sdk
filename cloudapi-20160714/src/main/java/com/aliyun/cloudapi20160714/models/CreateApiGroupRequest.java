@@ -10,6 +10,9 @@ public class CreateApiGroupRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 

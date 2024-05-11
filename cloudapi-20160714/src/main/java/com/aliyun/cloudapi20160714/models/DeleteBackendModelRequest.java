@@ -7,6 +7,9 @@ public class DeleteBackendModelRequest extends TeaModel {
     @NameInMap("BackendId")
     public String backendId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BackendModelId")
     public String backendModelId;
 

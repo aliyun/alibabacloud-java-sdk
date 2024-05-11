@@ -6,12 +6,14 @@ import com.aliyun.tea.*;
 public class ModifyAppRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public Long appId;
 
     /**
-     * <p>The ID must be 4 to 26 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.</p>
+     * <p>The ID must be 4 to 26 characters in length and can contain letters, digits, and underscores (_). It must start with a letter.</p>
      * <br>
      * <p>If you do not want to modify the existing value, do not specify this parameter.</p>
      */
@@ -96,6 +98,8 @@ public class ModifyAppRequest extends TeaModel {
          * <p>The key of the tag.</p>
          * <br>
          * <p>Valid values of n: `[1, 20]`.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;

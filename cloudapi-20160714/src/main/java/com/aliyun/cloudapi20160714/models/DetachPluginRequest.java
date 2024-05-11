@@ -10,12 +10,18 @@ public class DetachPluginRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PluginId")
     public String pluginId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StageName")
     public String stageName;
 

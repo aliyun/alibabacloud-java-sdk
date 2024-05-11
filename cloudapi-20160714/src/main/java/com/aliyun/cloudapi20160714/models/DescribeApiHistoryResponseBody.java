@@ -94,7 +94,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
     /**
      * <p>The sample error codes returned by the backend service.</p>
      * <br>
-     * <p>For more information, see [ErrorCodeSample](~~44392~~).</p>
+     * <p>For more information, see [ErrorCodeSample](https://help.aliyun.com/document_detail/44392.html).</p>
      */
     @NameInMap("ErrorCodeSamples")
     public DescribeApiHistoryResponseBodyErrorCodeSamples errorCodeSamples;
@@ -145,7 +145,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
     /**
      * <p>Configuration items of API requests sent by the consumer to API Gateway.</p>
      * <br>
-     * <p>For more information, see [RequestConfig](~~43985~~).</p>
+     * <p>For more information, see [RequestConfig](https://help.aliyun.com/document_detail/43985.html).</p>
      */
     @NameInMap("RequestConfig")
     public DescribeApiHistoryResponseBodyRequestConfig requestConfig;
@@ -159,7 +159,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
     /**
      * <p>The parameters of API requests sent by the consumer to API Gateway.</p>
      * <br>
-     * <p>For more information, see [RequestParameter](~~43986~~).</p>
+     * <p>For more information, see [RequestParameter](https://help.aliyun.com/document_detail/43986.html).</p>
      */
     @NameInMap("RequestParameters")
     public DescribeApiHistoryResponseBodyRequestParameters requestParameters;
@@ -197,7 +197,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
     /**
      * <p>The parameters of API requests sent by API Gateway to the backend service.</p>
      * <br>
-     * <p>For more information, see [ServiceParameter](~~43988~~).</p>
+     * <p>For more information, see [ServiceParameter](https://help.aliyun.com/document_detail/43988.html).</p>
      */
     @NameInMap("ServiceParameters")
     public DescribeApiHistoryResponseBodyServiceParameters serviceParameters;
@@ -205,7 +205,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
     /**
      * <p>The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.</p>
      * <br>
-     * <p>For more information, see [ServiceParameterMap](~~43989~~).</p>
+     * <p>For more information, see [ServiceParameterMap](https://help.aliyun.com/document_detail/43989.html).</p>
      */
     @NameInMap("ServiceParametersMap")
     public DescribeApiHistoryResponseBodyServiceParametersMap serviceParametersMap;

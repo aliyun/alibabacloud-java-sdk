@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeApiTrafficDataRequest extends TeaModel {
     /**
      * <p>The ID of the API.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
      * <p>The end time in UTC. Format: YYYY-MM-DDThh:mm:ssZ</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -37,6 +41,8 @@ public class DescribeApiTrafficDataRequest extends TeaModel {
 
     /**
      * <p>The start time in UTC. Format: YYYY-MM-DDThh:mm:ssZ</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

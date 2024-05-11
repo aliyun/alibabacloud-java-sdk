@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DeployApiRequest extends TeaModel {
     /**
      * <p>The ID of the API.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
      * <p>The publishing remarks.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -31,6 +35,8 @@ public class DeployApiRequest extends TeaModel {
      * <p>*   **RELEASE**</p>
      * <p>*   **PRE**: the pre-release environment</p>
      * <p>*   **TEST**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StageName")
     public String stageName;

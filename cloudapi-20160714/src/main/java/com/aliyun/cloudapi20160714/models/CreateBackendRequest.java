@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateBackendRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BackendName")
     public String backendName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BackendType")
     public String backendType;
 

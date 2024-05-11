@@ -17,7 +17,9 @@ public class CreateAppRequest extends TeaModel {
     public String appKey;
 
     /**
-     * <p>The name of the application. The name must be 4 to 26 characters in length. The name can contain letters, digits, and underscores (\_), and must start with a letter.</p>
+     * <p>The name of the application. The name must be 4 to 26 characters in length. The name can contain letters, digits, and underscores (_), and must start with a letter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppName")
     public String appName;

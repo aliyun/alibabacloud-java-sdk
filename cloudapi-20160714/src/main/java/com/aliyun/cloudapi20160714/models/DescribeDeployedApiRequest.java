@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeDeployedApiRequest extends TeaModel {
     /**
      * <p>The ID of the API.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
@@ -25,6 +27,8 @@ public class DescribeDeployedApiRequest extends TeaModel {
      * <p>*   **RELEASE**</p>
      * <p>*   **PRE: the pre-release environment**</p>
      * <p>*   **TEST**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StageName")
     public String stageName;

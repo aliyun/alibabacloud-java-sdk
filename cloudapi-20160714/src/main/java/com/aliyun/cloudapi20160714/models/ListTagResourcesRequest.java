@@ -27,6 +27,8 @@ public class ListTagResourcesRequest extends TeaModel {
      * <p>*   **plugin**</p>
      * <p>*   **app**</p>
      * <p>*   **api**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

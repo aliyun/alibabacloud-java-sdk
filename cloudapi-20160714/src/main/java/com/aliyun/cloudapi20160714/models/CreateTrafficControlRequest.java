@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateTrafficControlRequest extends TeaModel {
     /**
      * <p>The default throttling value for each API.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiDefault")
     public Integer apiDefault;
@@ -29,7 +31,9 @@ public class CreateTrafficControlRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The name of the throttling policy. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). It cannot start with an underscore.</p>
+     * <p>The name of the throttling policy. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (_). It cannot start with an underscore.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficControlName")
     public String trafficControlName;
@@ -41,6 +45,8 @@ public class CreateTrafficControlRequest extends TeaModel {
      * <p>*   **MINUTE**</p>
      * <p>*   **HOUR**</p>
      * <p>*   **DAY**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficControlUnit")
     public String trafficControlUnit;

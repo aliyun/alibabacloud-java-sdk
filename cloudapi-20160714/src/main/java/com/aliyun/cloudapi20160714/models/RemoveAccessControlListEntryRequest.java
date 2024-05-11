@@ -7,6 +7,9 @@ public class RemoveAccessControlListEntryRequest extends TeaModel {
     @NameInMap("AclEntrys")
     public String aclEntrys;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 

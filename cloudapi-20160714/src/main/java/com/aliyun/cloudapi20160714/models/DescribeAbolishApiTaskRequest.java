@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeAbolishApiTaskRequest extends TeaModel {
     /**
      * <p>The ID of the unpublishing operation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OperationUid")
     public String operationUid;

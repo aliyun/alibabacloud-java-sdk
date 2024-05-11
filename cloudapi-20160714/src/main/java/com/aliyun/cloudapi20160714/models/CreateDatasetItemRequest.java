@@ -4,6 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateDatasetItemRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DatasetId")
     public String datasetId;
 
@@ -16,6 +19,9 @@ public class CreateDatasetItemRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Value")
     public String value;
 

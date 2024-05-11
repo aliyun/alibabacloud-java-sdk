@@ -24,6 +24,8 @@ public class DescribeApisByTrafficControlRequest extends TeaModel {
 
     /**
      * <p>The ID of the throttling policy that you want to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficControlId")
     public String trafficControlId;
