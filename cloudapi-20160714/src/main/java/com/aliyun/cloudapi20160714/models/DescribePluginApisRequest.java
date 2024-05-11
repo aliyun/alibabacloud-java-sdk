@@ -28,6 +28,9 @@ public class DescribePluginApisRequest extends TeaModel {
     @NameInMap("Path")
     public String path;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PluginId")
     public String pluginId;
 

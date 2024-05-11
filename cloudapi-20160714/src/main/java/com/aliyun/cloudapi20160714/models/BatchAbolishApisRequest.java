@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class BatchAbolishApisRequest extends TeaModel {
     /**
      * <p>The APIs that you want to operate.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Api")
     public java.util.List<BatchAbolishApisRequestApi> api;
@@ -37,12 +39,16 @@ public class BatchAbolishApisRequest extends TeaModel {
     public static class BatchAbolishApisRequestApi extends TeaModel {
         /**
          * <p>The ID of the API.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ApiUid")
         public String apiUid;
 
         /**
          * <p>The ID of the API group.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("GroupId")
         public String groupId;

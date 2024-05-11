@@ -4,6 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcAccessesRequest extends TeaModel {
+    @NameInMap("AccurateQuery")
+    public Boolean accurateQuery;
+
     /**
      * <p>The ID of the instance.</p>
      */
@@ -58,6 +61,14 @@ public class DescribeVpcAccessesRequest extends TeaModel {
     public static DescribeVpcAccessesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVpcAccessesRequest self = new DescribeVpcAccessesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVpcAccessesRequest setAccurateQuery(Boolean accurateQuery) {
+        this.accurateQuery = accurateQuery;
+        return this;
+    }
+    public Boolean getAccurateQuery() {
+        return this.accurateQuery;
     }
 
     public DescribeVpcAccessesRequest setInstanceId(String instanceId) {

@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribePluginsByApiRequest extends TeaModel {
     /**
      * <p>The ID of the API.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
      * <p>The ID of the group to which the API belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -37,6 +41,8 @@ public class DescribePluginsByApiRequest extends TeaModel {
      * <p>*   **RELEASE**: production</p>
      * <p>*   **PRE**: staging</p>
      * <p>*   **TEST**: test</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StageName")
     public String stageName;

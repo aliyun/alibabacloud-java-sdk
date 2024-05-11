@@ -24,12 +24,16 @@ public class ImportOASRequest extends TeaModel {
 
     /**
      * <p>The OAS-compliant text file or OSS object URL.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The ID of the API group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -50,6 +54,8 @@ public class ImportOASRequest extends TeaModel {
      * <p>Specifies whether to overwrite an existing API.</p>
      * <br>
      * <p>If an existing API has the same HTTP request type and backend request path as the API to be imported, the existing API is overwritten.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Overwrite")
     public Boolean overwrite;

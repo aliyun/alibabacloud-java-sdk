@@ -18,6 +18,8 @@ public class DescribeApiHistoriesRequest extends TeaModel {
 
     /**
      * <p>The ID of the API group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;

@@ -12,6 +12,8 @@ public class BatchDeployApisRequest extends TeaModel {
 
     /**
      * <p>The description.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -25,6 +27,8 @@ public class BatchDeployApisRequest extends TeaModel {
      * <p>*   **RELEASE**</p>
      * <p>*   **TEST**</p>
      * <p>*   PRE: the pre-release environment</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StageName")
     public String stageName;
@@ -69,12 +73,16 @@ public class BatchDeployApisRequest extends TeaModel {
     public static class BatchDeployApisRequestApi extends TeaModel {
         /**
          * <p>The API ID.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ApiUid")
         public String apiUid;
 
         /**
          * <p>The API group ID.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("GroupId")
         public String groupId;

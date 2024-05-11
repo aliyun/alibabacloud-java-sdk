@@ -12,12 +12,16 @@ public class ModifyModelRequest extends TeaModel {
 
     /**
      * <p>The ID of the API group to which the model belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The name of the model.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ModelName")
     public String modelName;

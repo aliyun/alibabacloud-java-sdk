@@ -12,6 +12,8 @@ public class DeleteTrafficSpecialControlRequest extends TeaModel {
 
     /**
      * <p>The ID of the app or Alibaba Cloud account. You can view your account ID on the [Account Management](https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.343130a8sDi8cO#/secure) page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SpecialKey")
     public String specialKey;
@@ -21,12 +23,16 @@ public class DeleteTrafficSpecialControlRequest extends TeaModel {
      * <br>
      * <p>*   **APP**</p>
      * <p>*   **USER**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SpecialType")
     public String specialType;
 
     /**
      * <p>The ID of the throttling policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficControlId")
     public String trafficControlId;

@@ -16,6 +16,9 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     @NameInMap("IPV6Enabled")
     public String IPV6Enabled;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

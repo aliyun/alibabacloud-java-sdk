@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class QueryRequestLogsRequest extends TeaModel {
     /**
      * <p>The ID of the request log.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RequestLogId")
     public String requestLogId;

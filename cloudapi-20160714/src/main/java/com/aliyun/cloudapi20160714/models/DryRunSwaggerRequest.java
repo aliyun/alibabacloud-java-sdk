@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DryRunSwaggerRequest extends TeaModel {
     /**
      * <p>The Swagger text content.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Data")
     public String data;
@@ -15,6 +17,8 @@ public class DryRunSwaggerRequest extends TeaModel {
      * <br>
      * <p>*   json</p>
      * <p>*   yaml</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DataFormat")
     public String dataFormat;
@@ -27,6 +31,8 @@ public class DryRunSwaggerRequest extends TeaModel {
 
     /**
      * <p>The ID of the API group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -35,6 +41,8 @@ public class DryRunSwaggerRequest extends TeaModel {
      * <p>Specifies whether to overwrite the existing API.</p>
      * <br>
      * <p>APIs with the same HTTP request type and backend request path are considered the same.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Overwrite")
     public Boolean overwrite;

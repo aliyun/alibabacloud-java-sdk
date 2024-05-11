@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeletePluginRequest extends TeaModel {
     /**
      * <p>The ID of the plug-in to be deleted.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PluginId")
     public String pluginId;
@@ -53,6 +55,8 @@ public class DeletePluginRequest extends TeaModel {
          * <p>The key of the tag.</p>
          * <br>
          * <p>N can be an integer from 1 to 20.``</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -61,6 +65,8 @@ public class DeletePluginRequest extends TeaModel {
          * <p>The value of the tag.</p>
          * <br>
          * <p>N can be an integer from 1 to 20.``</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Value")
         public String value;

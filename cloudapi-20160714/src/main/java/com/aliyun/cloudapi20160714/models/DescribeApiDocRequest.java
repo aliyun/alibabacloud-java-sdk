@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeApiDocRequest extends TeaModel {
     /**
      * <p>The ID of the API.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiId")
     public String apiId;

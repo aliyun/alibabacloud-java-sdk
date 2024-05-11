@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ModifyDatasetRequest extends TeaModel {
     /**
      * <p>The ID of the dataset.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatasetId")
     public String datasetId;
 
     /**
      * <p>The name of the dataset.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;

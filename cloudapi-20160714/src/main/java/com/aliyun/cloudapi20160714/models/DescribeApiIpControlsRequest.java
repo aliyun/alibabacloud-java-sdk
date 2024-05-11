@@ -12,6 +12,8 @@ public class DescribeApiIpControlsRequest extends TeaModel {
 
     /**
      * <p>The ID of the API group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -36,6 +38,8 @@ public class DescribeApiIpControlsRequest extends TeaModel {
      * <br>
      * <p>*   **RELEASE**</p>
      * <p>*   **TEST**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StageName")
     public String stageName;

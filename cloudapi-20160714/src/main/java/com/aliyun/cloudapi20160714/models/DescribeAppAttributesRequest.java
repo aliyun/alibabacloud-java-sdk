@@ -168,6 +168,8 @@ public class DescribeAppAttributesRequest extends TeaModel {
          * <p>The value of tag N.</p>
          * <br>
          * <p>Valid values of n: `[1, 20]`.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;

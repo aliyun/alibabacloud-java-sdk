@@ -18,18 +18,24 @@ public class ModifyIpControlPolicyItemRequest extends TeaModel {
 
     /**
      * <p>The IP address or CIDR block that is defined in a policy. Separate multiple IP addresses or CIDR blocks with semicolons (;). You can add a maximum of 10 IP addresses or CIDR blocks.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CidrIp")
     public String cidrIp;
 
     /**
      * <p>The ID of the ACL. The ID is unique.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IpControlId")
     public String ipControlId;
 
     /**
      * <p>The ID of the policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyItemId")
     public String policyItemId;

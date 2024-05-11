@@ -12,6 +12,8 @@ public class DescribeApiTrafficControlsRequest extends TeaModel {
 
     /**
      * <p>The ID of the API group that you want to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -36,6 +38,8 @@ public class DescribeApiTrafficControlsRequest extends TeaModel {
      * <br>
      * <p>*   **RELEASE**</p>
      * <p>*   **TEST**: the test environment</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StageName")
     public String stageName;

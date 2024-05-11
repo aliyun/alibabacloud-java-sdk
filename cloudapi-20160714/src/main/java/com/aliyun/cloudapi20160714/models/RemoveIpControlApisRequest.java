@@ -15,12 +15,16 @@ public class RemoveIpControlApisRequest extends TeaModel {
 
     /**
      * <p>The ID of the API group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the ACL.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IpControlId")
     public String ipControlId;
@@ -33,6 +37,8 @@ public class RemoveIpControlApisRequest extends TeaModel {
      * <br>
      * <p>*   **RELEASE**</p>
      * <p>*   **TEST**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StageName")
     public String stageName;

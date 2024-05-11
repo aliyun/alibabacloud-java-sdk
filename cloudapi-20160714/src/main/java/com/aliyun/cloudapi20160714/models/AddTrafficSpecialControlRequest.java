@@ -12,6 +12,8 @@ public class AddTrafficSpecialControlRequest extends TeaModel {
 
     /**
      * <p>The ID of the app or Alibaba Cloud account. Specify this parameter based on the value of the **SpecialType** parameter. You can view your account ID on the [Account Management](https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.3f053654YpMPwo#/secure) page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SpecialKey")
     public String specialKey;
@@ -21,18 +23,24 @@ public class AddTrafficSpecialControlRequest extends TeaModel {
      * <br>
      * <p>*   **APP**</p>
      * <p>*   **USER**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SpecialType")
     public String specialType;
 
     /**
      * <p>The ID of the specified throttling policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficControlId")
     public String trafficControlId;
 
     /**
      * <p>The special throttling value.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficValue")
     public Integer trafficValue;

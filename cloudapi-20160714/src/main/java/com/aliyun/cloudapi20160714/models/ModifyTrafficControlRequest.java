@@ -30,12 +30,14 @@ public class ModifyTrafficControlRequest extends TeaModel {
 
     /**
      * <p>The ID of the throttling policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficControlId")
     public String trafficControlId;
 
     /**
-     * <p>The throttling policy name. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). It cannot start with an underscore.</p>
+     * <p>The throttling policy name. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (_). It cannot start with an underscore.</p>
      */
     @NameInMap("TrafficControlName")
     public String trafficControlName;

@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class SetApiProductsAuthoritiesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApiProductIds")
     public java.util.List<String> apiProductIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public Long appId;
 

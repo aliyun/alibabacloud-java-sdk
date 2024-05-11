@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeImportOASTaskRequest extends TeaModel {
     /**
      * <p>The ID of the asynchronous API import task that was generated during the import operation. This ID is used to query the execution status of the API import task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OperationId")
     public String operationId;

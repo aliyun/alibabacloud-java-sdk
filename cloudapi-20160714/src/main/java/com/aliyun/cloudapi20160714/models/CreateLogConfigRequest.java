@@ -12,10 +12,15 @@ public class CreateLogConfigRequest extends TeaModel {
 
     /**
      * <p>slslogstore</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SlsLogStore")
     public String slsLogStore;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SlsProject")
     public String slsProject;
 

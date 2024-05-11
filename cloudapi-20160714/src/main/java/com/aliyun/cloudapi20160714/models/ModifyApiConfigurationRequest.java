@@ -15,6 +15,8 @@ public class ModifyApiConfigurationRequest extends TeaModel {
 
     /**
      * <p>The ID of the API.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
@@ -98,7 +100,7 @@ public class ModifyApiConfigurationRequest extends TeaModel {
     /**
      * <p>The sample error codes returned by the backend service.</p>
      * <br>
-     * <p>For more information, see [ErrorCodeSample](~~44392~~).</p>
+     * <p>For more information, see [ErrorCodeSample](https://help.aliyun.com/document_detail/44392.html).</p>
      */
     @NameInMap("ErrorCodeSamples")
     public String errorCodeSamples;
@@ -171,7 +173,7 @@ public class ModifyApiConfigurationRequest extends TeaModel {
     /**
      * <p>The parameters of API requests sent by the consumer to API Gateway.</p>
      * <br>
-     * <p>For more information, see [RequestParameter](~~43986~~).</p>
+     * <p>For more information, see [RequestParameter](https://help.aliyun.com/document_detail/43986.html).</p>
      */
     @NameInMap("RequestParameters")
     public String requestParameters;
@@ -206,7 +208,7 @@ public class ModifyApiConfigurationRequest extends TeaModel {
     /**
      * <p>The parameters of API requests sent by API Gateway to the backend service.</p>
      * <br>
-     * <p>For more information, see [ServiceParameter](~~43988~~).</p>
+     * <p>For more information, see [ServiceParameter](https://help.aliyun.com/document_detail/43988.html).</p>
      */
     @NameInMap("ServiceParameters")
     public String serviceParameters;
@@ -214,7 +216,7 @@ public class ModifyApiConfigurationRequest extends TeaModel {
     /**
      * <p>The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.</p>
      * <br>
-     * <p>For more information, see [ServiceParameterMap](~~43989~~).</p>
+     * <p>For more information, see [ServiceParameterMap](https://help.aliyun.com/document_detail/43989.html).</p>
      */
     @NameInMap("ServiceParametersMap")
     public String serviceParametersMap;

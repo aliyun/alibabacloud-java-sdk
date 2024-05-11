@@ -12,18 +12,24 @@ public class SetVpcAccessRequest extends TeaModel {
 
     /**
      * <p>The ID of an ECS or SLB instance in the VPC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the authorization. The name must be unique.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The port number that corresponds to the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Port")
     public Integer port;
@@ -39,6 +45,8 @@ public class SetVpcAccessRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC. The VPC must be an available one that belongs to the same account as the API.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

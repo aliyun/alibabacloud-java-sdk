@@ -10,6 +10,9 @@ public class DescribeHistoryApisRequest extends TeaModel {
     @NameInMap("ApiName")
     public String apiName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 

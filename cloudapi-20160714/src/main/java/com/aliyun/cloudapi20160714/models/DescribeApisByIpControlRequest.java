@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeApisByIpControlRequest extends TeaModel {
     /**
      * <p>The ID of the ACL.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IpControlId")
     public String ipControlId;

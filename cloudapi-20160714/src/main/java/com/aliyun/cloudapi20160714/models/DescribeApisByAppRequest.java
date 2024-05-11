@@ -10,6 +10,9 @@ public class DescribeApisByAppRequest extends TeaModel {
     @NameInMap("ApiUid")
     public String apiUid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public Long appId;
 

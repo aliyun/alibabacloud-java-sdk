@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class SetSignatureApisRequest extends TeaModel {
     /**
      * <p>The API ID for the specified operation. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiIds")
     public String apiIds;
 
     /**
      * <p>The ID of the API group to which the API that you want to manage belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -21,6 +25,8 @@ public class SetSignatureApisRequest extends TeaModel {
 
     /**
      * <p>The ID of the signature key.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SignatureId")
     public String signatureId;
@@ -31,6 +37,8 @@ public class SetSignatureApisRequest extends TeaModel {
      * <p>*   **RELEASE**</p>
      * <p>*   **PRE**</p>
      * <p>*   **TEST**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StageName")
     public String stageName;

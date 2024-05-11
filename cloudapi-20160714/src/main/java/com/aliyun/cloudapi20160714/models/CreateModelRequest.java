@@ -12,18 +12,24 @@ public class CreateModelRequest extends TeaModel {
 
     /**
      * <p>The ID of the API group to which the model belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The name of the model. The name must be unique within the group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ModelName")
     public String modelName;
 
     /**
      * <p>The definition of the model in JSON Schema.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Schema")
     public String schema;

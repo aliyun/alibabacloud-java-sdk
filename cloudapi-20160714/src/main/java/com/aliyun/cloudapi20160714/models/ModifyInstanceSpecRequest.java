@@ -17,12 +17,16 @@ public class ModifyInstanceSpecRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The specifications of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceSpec")
     public String instanceSpec;
@@ -46,6 +50,8 @@ public class ModifyInstanceSpecRequest extends TeaModel {
 
     /**
      * <p>The password.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Token")
     public String token;

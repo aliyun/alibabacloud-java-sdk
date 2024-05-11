@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeInstanceLatencyRequest extends TeaModel {
     /**
      * <p>The end time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -25,12 +29,16 @@ public class DescribeInstanceLatencyRequest extends TeaModel {
      * <p>*   **RELEASE**: the production environment</p>
      * <p>*   **PRE**: the pre-release environment</p>
      * <p>*   **TEST**: the test environment</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StageName")
     public String stageName;
 
     /**
      * <p>The start time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

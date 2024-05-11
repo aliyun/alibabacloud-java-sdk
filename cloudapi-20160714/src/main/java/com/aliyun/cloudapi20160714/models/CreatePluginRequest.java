@@ -12,12 +12,16 @@ public class CreatePluginRequest extends TeaModel {
 
     /**
      * <p>The plug-in definition. Supported formats: JSON and YAML.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PluginData")
     public String pluginData;
 
     /**
-     * <p>The name of the plug-in. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). However, it cannot start with an underscore.</p>
+     * <p>The name of the plug-in. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (_). However, it cannot start with an underscore.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PluginName")
     public String pluginName;
@@ -31,6 +35,8 @@ public class CreatePluginRequest extends TeaModel {
      * <p>*   **jwtAuth** :JWT (OpenId Connect) authentication</p>
      * <p>*   **cors** :cross-origin resource sharing (CORS)</p>
      * <p>*   **caching**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PluginType")
     public String pluginType;
@@ -102,6 +108,8 @@ public class CreatePluginRequest extends TeaModel {
          * <p>The key of the tag.</p>
          * <br>
          * <p>N can be an integer from 1 to 20.``</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -110,6 +118,8 @@ public class CreatePluginRequest extends TeaModel {
          * <p>The value of the tag.</p>
          * <br>
          * <p>N can be an integer from 1 to 20.``</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Value")
         public String value;

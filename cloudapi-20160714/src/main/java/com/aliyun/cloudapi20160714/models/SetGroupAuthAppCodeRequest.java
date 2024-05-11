@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class SetGroupAuthAppCodeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AuthAppCode")
     public String authAppCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 

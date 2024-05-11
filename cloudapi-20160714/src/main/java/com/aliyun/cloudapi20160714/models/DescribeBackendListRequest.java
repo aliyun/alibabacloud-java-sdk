@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackendListRequest extends TeaModel {
     /**
-     * <p>The name of the backend service. You can use \* to perform fuzzy queries.</p>
+     * <p>The name of the backend service. You can use \\* to perform fuzzy queries.</p>
      */
     @NameInMap("BackendName")
     public String backendName;

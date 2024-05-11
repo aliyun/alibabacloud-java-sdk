@@ -10,9 +10,15 @@ public class ModifyLogConfigRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SlsLogStore")
     public String slsLogStore;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SlsProject")
     public String slsProject;
 

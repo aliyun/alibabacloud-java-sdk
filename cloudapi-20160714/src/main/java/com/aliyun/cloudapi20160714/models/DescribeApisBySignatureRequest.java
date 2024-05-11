@@ -21,6 +21,8 @@ public class DescribeApisBySignatureRequest extends TeaModel {
 
     /**
      * <p>The ID of the signature key.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SignatureId")
     public String signatureId;

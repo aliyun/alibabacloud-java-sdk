@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The ID of the resource.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -16,6 +18,8 @@ public class TagResourcesRequest extends TeaModel {
      * <p>*   **apiGroup**</p>
      * <p>*   **plugin**</p>
      * <p>*   **app**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -25,6 +29,8 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The tag of objects that match the lifecycle rule. You can specify multiple tags.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -69,12 +75,16 @@ public class TagResourcesRequest extends TeaModel {
     public static class TagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of tag N.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Value")
         public String value;

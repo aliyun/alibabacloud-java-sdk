@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class AttachApiProductRequest extends TeaModel {
     /**
      * <p>The ID of the API product.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiProductId")
     public String apiProductId;
 
     /**
      * <p>The APIs to be attached.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Apis")
     public java.util.List<AttachApiProductRequestApis> apis;
@@ -51,6 +55,8 @@ public class AttachApiProductRequest extends TeaModel {
     public static class AttachApiProductRequestApis extends TeaModel {
         /**
          * <p>The API ID.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ApiId")
         public String apiId;
@@ -61,6 +67,8 @@ public class AttachApiProductRequest extends TeaModel {
          * <p>*   **RELEASE**: the production environment</p>
          * <p>*   **PRE**: the staging environment</p>
          * <p>*   **TEST**: the test environment</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("StageName")
         public String stageName;

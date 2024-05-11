@@ -17,12 +17,16 @@ public class ModifyApiRequest extends TeaModel {
 
     /**
      * <p>The ID of the API.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
-     * <p>The name of the API. The name must be unique within the API group. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (\_).</p>
+     * <p>The name of the API. The name must be unique within the API group. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (_).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiName")
     public String apiName;
@@ -103,6 +107,8 @@ public class ModifyApiRequest extends TeaModel {
 
     /**
      * <p>The configuration items of API requests sent by API Gateway to the backend service.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RequestConfig")
     public String requestConfig;
@@ -134,6 +140,8 @@ public class ModifyApiRequest extends TeaModel {
 
     /**
      * <p>The parameters of API requests sent by the consumer to API Gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServiceConfig")
     public String serviceConfig;
@@ -152,6 +160,8 @@ public class ModifyApiRequest extends TeaModel {
      * <br>
      * <p>*   **PUBLIC**: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.</p>
      * <p>*   **PRIVATE**: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Visibility")
     public String visibility;

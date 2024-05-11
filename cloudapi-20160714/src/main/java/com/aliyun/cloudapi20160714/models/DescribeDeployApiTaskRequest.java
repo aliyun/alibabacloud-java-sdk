@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeDeployApiTaskRequest extends TeaModel {
     /**
      * <p>The task ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OperationUid")
     public String operationUid;
