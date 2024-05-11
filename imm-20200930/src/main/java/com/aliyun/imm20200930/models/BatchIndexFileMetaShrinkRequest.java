@@ -4,17 +4,29 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class BatchIndexFileMetaShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Files")
     public String filesShrink;
 
     @NameInMap("Notification")
     public String notificationShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
+
+    @NameInMap("UserData")
+    public String userData;
 
     public static BatchIndexFileMetaShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchIndexFileMetaShrinkRequest self = new BatchIndexFileMetaShrinkRequest();
@@ -51,6 +63,14 @@ public class BatchIndexFileMetaShrinkRequest extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
+    }
+
+    public BatchIndexFileMetaShrinkRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
 }

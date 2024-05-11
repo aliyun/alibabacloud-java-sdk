@@ -19,6 +19,9 @@ public class Spec extends TeaModel {
     @NameInMap("Loss")
     public CustomParams loss;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 

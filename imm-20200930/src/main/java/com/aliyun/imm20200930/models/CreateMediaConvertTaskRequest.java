@@ -16,15 +16,24 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
     @NameInMap("Notification")
     public Notification notification;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Sources")
     public java.util.List<CreateMediaConvertTaskRequestSources> sources;
 
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Targets")
     public java.util.List<CreateMediaConvertTaskRequestTargets> targets;
 

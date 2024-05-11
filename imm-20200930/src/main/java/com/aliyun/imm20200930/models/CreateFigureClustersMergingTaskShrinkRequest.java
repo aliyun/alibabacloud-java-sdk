@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateFigureClustersMergingTaskShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
@@ -16,12 +19,18 @@ public class CreateFigureClustersMergingTaskShrinkRequest extends TeaModel {
     @NameInMap("Notification")
     public String notificationShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
     @NameInMap("Tags")
     public String tagsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("To")
     public String to;
 

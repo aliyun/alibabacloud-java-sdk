@@ -28,6 +28,9 @@ public class CreateImageSplicingTaskShrinkRequest extends TeaModel {
     @NameInMap("Padding")
     public Long padding;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -37,12 +40,18 @@ public class CreateImageSplicingTaskShrinkRequest extends TeaModel {
     @NameInMap("ScaleType")
     public String scaleType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Sources")
     public String sourcesShrink;
 
     @NameInMap("Tags")
     public String tagsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetURI")
     public String targetURI;
 

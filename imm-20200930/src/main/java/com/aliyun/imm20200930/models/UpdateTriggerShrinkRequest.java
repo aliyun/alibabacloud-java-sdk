@@ -7,12 +7,18 @@ public class UpdateTriggerShrinkRequest extends TeaModel {
     @NameInMap("Actions")
     public String actionsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Id")
     public String id;
 
     @NameInMap("Input")
     public String inputShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

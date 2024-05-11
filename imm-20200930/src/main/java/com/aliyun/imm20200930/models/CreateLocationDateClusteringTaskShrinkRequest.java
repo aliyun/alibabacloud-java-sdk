@@ -4,18 +4,30 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateLocationDateClusteringTaskShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DateOptions")
     public String dateOptionsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LocationOptions")
     public String locationOptionsShrink;
 
     @NameInMap("Notification")
     public String notificationShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

@@ -37,12 +37,18 @@ public class GenerateWebofficeTokenRequest extends TeaModel {
     @NameInMap("PreviewPages")
     public Long previewPages;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
     @NameInMap("Referer")
     public String referer;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceURI")
     public String sourceURI;
 

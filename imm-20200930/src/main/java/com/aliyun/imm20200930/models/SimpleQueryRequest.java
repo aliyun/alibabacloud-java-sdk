@@ -7,6 +7,9 @@ public class SimpleQueryRequest extends TeaModel {
     @NameInMap("Aggregations")
     public java.util.List<SimpleQueryRequestAggregations> aggregations;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
@@ -19,6 +22,9 @@ public class SimpleQueryRequest extends TeaModel {
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

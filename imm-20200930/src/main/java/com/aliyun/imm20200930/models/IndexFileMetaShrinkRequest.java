@@ -4,17 +4,29 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class IndexFileMetaShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("File")
     public String fileShrink;
 
     @NameInMap("Notification")
     public String notificationShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
+
+    @NameInMap("UserData")
+    public String userData;
 
     public static IndexFileMetaShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         IndexFileMetaShrinkRequest self = new IndexFileMetaShrinkRequest();
@@ -51,6 +63,14 @@ public class IndexFileMetaShrinkRequest extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
+    }
+
+    public IndexFileMetaShrinkRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
 }

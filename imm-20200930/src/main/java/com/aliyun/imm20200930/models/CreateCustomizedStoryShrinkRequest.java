@@ -4,27 +4,48 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomizedStoryShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Cover")
     public String coverShrink;
 
     @NameInMap("CustomLabels")
     public String customLabelsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Files")
     public String filesShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StoryName")
     public String storyName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StorySubType")
     public String storySubType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StoryType")
     public String storyType;
 

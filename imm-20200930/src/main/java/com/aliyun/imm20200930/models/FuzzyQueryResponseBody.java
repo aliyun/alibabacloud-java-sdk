@@ -7,6 +7,9 @@ public class FuzzyQueryResponseBody extends TeaModel {
     @NameInMap("Files")
     public java.util.List<File> files;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

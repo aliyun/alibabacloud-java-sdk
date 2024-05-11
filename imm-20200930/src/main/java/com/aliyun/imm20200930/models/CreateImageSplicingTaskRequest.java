@@ -28,6 +28,9 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
     @NameInMap("Padding")
     public Long padding;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -37,12 +40,18 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
     @NameInMap("ScaleType")
     public String scaleType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Sources")
     public java.util.List<CreateImageSplicingTaskRequestSources> sources;
 
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetURI")
     public String targetURI;
 
@@ -178,6 +187,9 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
         @NameInMap("Rotate")
         public Long rotate;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("URI")
         public String URI;
 

@@ -16,6 +16,9 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     @NameInMap("OverwritePolicy")
     public String overwritePolicy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -28,12 +31,18 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     @NameInMap("SourceSubtitles")
     public String sourceSubtitlesShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceURI")
     public String sourceURI;
 
     @NameInMap("Tags")
     public String tagsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Targets")
     public String targetsShrink;
 

@@ -4,9 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Runtime extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Hyperparameters")
     public Hyperparameters hyperparameters;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Resource")
     public Resource resource;
 

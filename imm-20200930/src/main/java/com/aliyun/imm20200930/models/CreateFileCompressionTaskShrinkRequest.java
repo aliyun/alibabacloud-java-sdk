@@ -13,6 +13,9 @@ public class CreateFileCompressionTaskShrinkRequest extends TeaModel {
     @NameInMap("Notification")
     public String notificationShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -22,6 +25,9 @@ public class CreateFileCompressionTaskShrinkRequest extends TeaModel {
     @NameInMap("Sources")
     public String sourcesShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetURI")
     public String targetURI;
 

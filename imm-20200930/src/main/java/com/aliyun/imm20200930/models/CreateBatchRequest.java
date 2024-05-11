@@ -4,18 +4,30 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateBatchRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Actions")
     public java.util.List<CreateBatchRequestActions> actions;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Input")
     public Input input;
 
     @NameInMap("Notification")
     public CreateBatchRequestNotification notification;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceRole")
     public String serviceRole;
 
@@ -79,6 +91,9 @@ public class CreateBatchRequest extends TeaModel {
         @NameInMap("FastFailPolicy")
         public FastFailPolicy fastFailPolicy;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Name")
         public String name;
 

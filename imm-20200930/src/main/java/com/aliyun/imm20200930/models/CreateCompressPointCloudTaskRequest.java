@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateCompressPointCloudTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CompressMethod")
     public String compressMethod;
 
@@ -19,21 +22,33 @@ public class CreateCompressPointCloudTaskRequest extends TeaModel {
     @NameInMap("OctreeOption")
     public OctreeOption octreeOption;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PointCloudFields")
     public java.util.List<String> pointCloudFields;
 
     @NameInMap("PointCloudFileFormat")
     public String pointCloudFileFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceURI")
     public String sourceURI;
 
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetURI")
     public String targetURI;
 

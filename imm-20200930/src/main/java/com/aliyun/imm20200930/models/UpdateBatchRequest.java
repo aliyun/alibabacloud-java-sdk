@@ -7,12 +7,18 @@ public class UpdateBatchRequest extends TeaModel {
     @NameInMap("Actions")
     public java.util.List<UpdateBatchRequestActions> actions;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Id")
     public String id;
 
     @NameInMap("Input")
     public Input input;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

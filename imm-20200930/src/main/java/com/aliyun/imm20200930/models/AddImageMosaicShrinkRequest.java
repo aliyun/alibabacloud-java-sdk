@@ -10,18 +10,30 @@ public class AddImageMosaicShrinkRequest extends TeaModel {
     @NameInMap("ImageFormat")
     public String imageFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
     @NameInMap("Quality")
     public Integer quality;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceURI")
     public String sourceURI;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetURI")
     public String targetURI;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Targets")
     public String targetsShrink;
 

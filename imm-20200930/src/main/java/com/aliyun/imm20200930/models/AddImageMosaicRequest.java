@@ -10,18 +10,30 @@ public class AddImageMosaicRequest extends TeaModel {
     @NameInMap("ImageFormat")
     public String imageFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
     @NameInMap("Quality")
     public Integer quality;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceURI")
     public String sourceURI;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetURI")
     public String targetURI;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Targets")
     public java.util.List<AddImageMosaicRequestTargets> targets;
 
@@ -87,18 +99,30 @@ public class AddImageMosaicRequest extends TeaModel {
     }
 
     public static class AddImageMosaicRequestTargetsBoundary extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Height")
         public Float height;
 
         @NameInMap("ReferPos")
         public String referPos;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Width")
         public Float width;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Y")
         public Float y;
 
@@ -153,6 +177,9 @@ public class AddImageMosaicRequest extends TeaModel {
         @NameInMap("BlurRadius")
         public Integer blurRadius;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Boundary")
         public AddImageMosaicRequestTargetsBoundary boundary;
 
@@ -165,6 +192,9 @@ public class AddImageMosaicRequest extends TeaModel {
         @NameInMap("Sigma")
         public Integer sigma;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 

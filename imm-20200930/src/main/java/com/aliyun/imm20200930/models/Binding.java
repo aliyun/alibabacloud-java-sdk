@@ -10,14 +10,14 @@ public class Binding extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
-    @NameInMap("Detail")
-    public String detail;
-
     @NameInMap("Phase")
     public String phase;
 
     @NameInMap("ProjectName")
     public String projectName;
+
+    @NameInMap("Reason")
+    public String reason;
 
     @NameInMap("State")
     public String state;
@@ -49,14 +49,6 @@ public class Binding extends TeaModel {
         return this.datasetName;
     }
 
-    public Binding setDetail(String detail) {
-        this.detail = detail;
-        return this;
-    }
-    public String getDetail() {
-        return this.detail;
-    }
-
     public Binding setPhase(String phase) {
         this.phase = phase;
         return this;
@@ -71,6 +63,14 @@ public class Binding extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
+    }
+
+    public Binding setReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    public String getReason() {
+        return this.reason;
     }
 
     public Binding setState(String state) {

@@ -4,18 +4,30 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateTriggerShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Actions")
     public String actionsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Input")
     public String inputShrink;
 
     @NameInMap("Notification")
     public String notificationShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceRole")
     public String serviceRole;
 

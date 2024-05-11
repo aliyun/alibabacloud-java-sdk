@@ -52,6 +52,9 @@ public class CreateOfficeConversionTaskRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -73,6 +76,9 @@ public class CreateOfficeConversionTaskRequest extends TeaModel {
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceURI")
     public String sourceURI;
 
@@ -82,6 +88,9 @@ public class CreateOfficeConversionTaskRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetType")
     public String targetType;
 

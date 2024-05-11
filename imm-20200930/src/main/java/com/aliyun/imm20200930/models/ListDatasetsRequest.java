@@ -13,6 +13,9 @@ public class ListDatasetsRequest extends TeaModel {
     @NameInMap("Prefix")
     public String prefix;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
