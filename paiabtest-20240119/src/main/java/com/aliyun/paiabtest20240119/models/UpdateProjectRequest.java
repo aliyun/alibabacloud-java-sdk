@@ -1,0 +1,37 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.paiabtest20240119.models;
+
+import com.aliyun.tea.*;
+
+public class UpdateProjectRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("Name")
+    public String name;
+
+    public static UpdateProjectRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateProjectRequest self = new UpdateProjectRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public UpdateProjectRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public UpdateProjectRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+}
