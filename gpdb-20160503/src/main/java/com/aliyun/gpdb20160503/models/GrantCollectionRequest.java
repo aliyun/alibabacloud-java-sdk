@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GrantCollectionRequest extends TeaModel {
     /**
      * <p>The name of the collection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Collection")
     public String collection;
@@ -13,13 +15,17 @@ public class GrantCollectionRequest extends TeaModel {
     /**
      * <p>The ID of the instance in reserved storage mode.</p>
      * <br>
-     * <p>> You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the namespace to which you want to grant the vector collection permissions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GrantToNamespace")
     public String grantToNamespace;
@@ -30,18 +36,24 @@ public class GrantCollectionRequest extends TeaModel {
      * <p>*   rw: the read and write permissions.</p>
      * <p>*   ro: the read-only permission.</p>
      * <p>*   none: the delete permission.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GrantType")
     public String grantType;
 
     /**
      * <p>The name of the manager account that has the rds_superuser permission.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ManagerAccount")
     public String managerAccount;
 
     /**
      * <p>The password of the manager account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ManagerAccountPassword")
     public String managerAccountPassword;
@@ -58,7 +70,9 @@ public class GrantCollectionRequest extends TeaModel {
     /**
      * <p>The region ID of the instance.</p>
      * <br>
-     * <p>> You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

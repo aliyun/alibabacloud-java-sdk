@@ -12,6 +12,8 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -22,6 +24,8 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
      * <p>*   0: disables SSL encryption.</p>
      * <p>*   1: enables SSL encryption.</p>
      * <p>*   2: updates SSL encryption.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SSLEnabled")
     public Integer SSLEnabled;

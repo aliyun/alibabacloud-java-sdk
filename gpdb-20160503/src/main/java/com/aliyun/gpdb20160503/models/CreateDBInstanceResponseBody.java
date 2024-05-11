@@ -7,7 +7,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     /**
      * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
      * <br>
-     * <p>You can call the [DescribeDBInstanceAttribute](~~86910~~) operation to query the endpoint that is used to connect to the instance.</p>
+     * <p>You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/86910.html) operation to query the endpoint that is used to connect to the instance.</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
@@ -27,7 +27,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     /**
      * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
      * <br>
-     * <p>You can call the [DescribeDBInstanceAttribute](~~86910~~) operation to query the port number that is used to connect to the instance.</p>
+     * <p>You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/86910.html) operation to query the port number that is used to connect to the instance.</p>
      */
     @NameInMap("Port")
     public String port;

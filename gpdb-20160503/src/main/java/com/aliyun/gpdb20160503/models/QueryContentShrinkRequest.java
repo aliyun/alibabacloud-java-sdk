@@ -4,12 +4,18 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class QueryContentShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Collection")
     public String collection;
 
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -40,6 +46,9 @@ public class QueryContentShrinkRequest extends TeaModel {
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NamespacePassword")
     public String namespacePassword;
 
@@ -49,6 +58,9 @@ public class QueryContentShrinkRequest extends TeaModel {
     @NameInMap("RecallWindow")
     public String recallWindowShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

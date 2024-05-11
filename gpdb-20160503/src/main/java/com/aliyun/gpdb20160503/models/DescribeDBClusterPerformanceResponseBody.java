@@ -17,7 +17,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The name of the performance metric. For more information, see [Performance parameters](~~86943~~).</p>
+     * <p>The name of the performance metric. For more information, see [Performance parameters](https://help.aliyun.com/document_detail/86943.html).</p>
      */
     @NameInMap("PerformanceKeys")
     public java.util.List<DescribeDBClusterPerformanceResponseBodyPerformanceKeys> performanceKeys;
@@ -157,7 +157,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
 
     public static class DescribeDBClusterPerformanceResponseBodyPerformanceKeys extends TeaModel {
         /**
-         * <p>The name of the performance metric. For more information, see [Performance parameters](~~86943~~).</p>
+         * <p>The name of the performance metric. For more information, see [Performance parameters](https://help.aliyun.com/document_detail/86943.html).</p>
          */
         @NameInMap("Name")
         public String name;

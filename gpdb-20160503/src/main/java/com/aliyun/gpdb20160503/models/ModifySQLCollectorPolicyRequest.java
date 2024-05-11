@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifySQLCollectorPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -15,6 +17,8 @@ public class ModifySQLCollectorPolicyRequest extends TeaModel {
      * <br>
      * <p>*   Enable: enables SQL collection.</p>
      * <p>*   Disabled: disables SQL collection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SQLCollectorStatus")
     public String SQLCollectorStatus;

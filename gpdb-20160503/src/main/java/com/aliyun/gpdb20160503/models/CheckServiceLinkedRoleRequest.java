@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckServiceLinkedRoleRequest extends TeaModel {
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

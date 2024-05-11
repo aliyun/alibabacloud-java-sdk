@@ -19,7 +19,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     /**
      * <p>The queried performance metrics. Each performance metric consists of the parameter name, status, and metric value. The metric information is returned only for the performance parameters specified by **Key**. For example, if you set **Key** to **adbpg_status**, only the metric information of **adbpg_status** is returned.</p>
      * <br>
-     * <p>For more information about performance parameters, see [Performance parameters](~~86943~~).</p>
+     * <p>For more information about performance parameters, see [Performance parameters](https://help.aliyun.com/document_detail/86943.html).</p>
      */
     @NameInMap("Status")
     public DescribeHealthStatusResponseBodyStatus status;

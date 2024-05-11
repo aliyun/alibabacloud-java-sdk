@@ -15,6 +15,8 @@ public class DescribeDataSharePerformanceRequest extends TeaModel {
      * <br>
      * <p>*   **adbpg_datashare_topic_count**: the number of shared topics.</p>
      * <p>*   **adbpg_datashare_data_size_mb**: the amount of data shared.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Key")
     public String key;
@@ -22,7 +24,9 @@ public class DescribeDataSharePerformanceRequest extends TeaModel {
     /**
      * <p>The region ID of the instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

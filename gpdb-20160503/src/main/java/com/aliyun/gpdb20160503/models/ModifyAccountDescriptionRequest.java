@@ -9,14 +9,18 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
      * <br>
      * <p>*   The description must start with a letter.</p>
      * <p>*   The description cannot start with `http://` or `https://`.</p>
-     * <p>*   The description can contain letters, underscores (\_), hyphens (-), and digits.</p>
+     * <p>*   The description can contain letters, underscores (_), hyphens (-), and digits.</p>
      * <p>*   The description must be 2 to 256 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountDescription")
     public String accountDescription;
 
     /**
      * <p>The name of the database account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
@@ -24,7 +28,9 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <br>
-     * <p>> You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

@@ -7,7 +7,9 @@ public class UpdateDBInstancePlanRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     * <p>>  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -38,7 +40,9 @@ public class UpdateDBInstancePlanRequest extends TeaModel {
     /**
      * <p>The ID of the plan.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBInstancePlans](~~449398~~) operation to query the details of plans, including plan IDs.</p>
+     * <p>>  You can call the [DescribeDBInstancePlans](https://help.aliyun.com/document_detail/449398.html) operation to query the details of plans, including plan IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PlanId")
     public String planId;

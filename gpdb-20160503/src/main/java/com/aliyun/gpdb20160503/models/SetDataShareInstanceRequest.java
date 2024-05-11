@@ -7,7 +7,9 @@ public class SetDataShareInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for PostgreSQL instance in Serverless mode.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     * <p>>  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceList")
     public java.util.List<String> instanceList;
@@ -17,6 +19,8 @@ public class SetDataShareInstanceRequest extends TeaModel {
      * <br>
      * <p>*   **add**: enables data sharing.</p>
      * <p>*   **remove**: disables data sharing.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OperationType")
     public String operationType;
@@ -27,7 +31,9 @@ public class SetDataShareInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

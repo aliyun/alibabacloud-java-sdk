@@ -19,8 +19,8 @@ public class DescribeSupportFeaturesResponseBody extends TeaModel {
     /**
      * <p>The features supported by the instance. Valid values:</p>
      * <br>
-     * <p>*   sample_data: sample dataset. For more information, see [Sample dataset](~~452278~~).</p>
-     * <p>*   diagnose_and_optimize: diagnostics and optimization. For more information, see [Diagnostics and optimization](~~323453~~).</p>
+     * <p>*   sample_data: sample dataset. For more information, see [Sample dataset](https://help.aliyun.com/document_detail/452278.html).</p>
+     * <p>*   diagnose_and_optimize: diagnostics and optimization. For more information, see [Diagnostics and optimization](https://help.aliyun.com/document_detail/323453.html).</p>
      */
     @NameInMap("SupportFeatureList")
     public String supportFeatureList;

@@ -7,13 +7,17 @@ public class DescribeWaitingSQLInfoRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
+     * <p>>  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Database")
     public String database;
@@ -21,7 +25,9 @@ public class DescribeWaitingSQLInfoRequest extends TeaModel {
     /**
      * <p>The ID of the process that uniquely identifies the query.</p>
      * <br>
-     * <p>>  You can call the [DescribeWaitingSQLRecords](~~461735~~) operation to obtain the process IDs of lock-waiting queries.</p>
+     * <p>>  You can call the [DescribeWaitingSQLRecords](https://help.aliyun.com/document_detail/461735.html) operation to obtain the process IDs of lock-waiting queries.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PID")
     public String PID;

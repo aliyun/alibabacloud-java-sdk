@@ -7,13 +7,17 @@ public class DescribeDiagnosisSQLInfoRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <br>
-     * <p>> You can call the [DescribeDBInstances](~~86911~~) operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Database")
     public String database;
@@ -21,7 +25,9 @@ public class DescribeDiagnosisSQLInfoRequest extends TeaModel {
     /**
      * <p>The query ID. It is a unique identifier of the query.</p>
      * <br>
-     * <p>> You can call the [DescribeDiagnosisRecords](~~450511~~) operation to obtain query IDs.</p>
+     * <p>> You can call the [DescribeDiagnosisRecords](https://help.aliyun.com/document_detail/450511.html) operation to obtain query IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("QueryID")
     public String queryID;
