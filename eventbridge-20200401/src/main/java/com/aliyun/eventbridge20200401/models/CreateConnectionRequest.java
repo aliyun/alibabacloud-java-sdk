@@ -12,6 +12,8 @@ public class CreateConnectionRequest extends TeaModel {
 
     /**
      * <p>The name of the connection. The name must be 2 to 127 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConnectionName")
     public String connectionName;
@@ -24,6 +26,8 @@ public class CreateConnectionRequest extends TeaModel {
 
     /**
      * <p>The parameters that are configured for the network.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkParameters")
     public CreateConnectionRequestNetworkParameters networkParameters;
@@ -533,6 +537,8 @@ public class CreateConnectionRequest extends TeaModel {
          * <p>PublicNetwork and PrivateNetwork.</p>
          * <br>
          * <p>*   Note: If you set this parameter to PrivateNetwork, you must configure VpcId, VswitcheId, and SecurityGroupId.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("NetworkType")
         public String networkType;

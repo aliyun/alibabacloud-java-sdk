@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class GetRuleRequest extends TeaModel {
     /**
      * <p>The name of the event bus.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventBusName")
     public String eventBusName;
 
     /**
      * <p>The name of the event rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;

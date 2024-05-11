@@ -132,7 +132,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
          * <br>
          * <p>*   HTTP</p>
          * <p>*   HTTPS</p>
-         * <p>*   HTTP\&HTTPS</p>
+         * <p>*   HTTP\\&HTTPS</p>
          */
         @NameInMap("Type")
         public String type;
@@ -406,13 +406,13 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
 
     public static class ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceRabbitMQParameters extends TeaModel {
         /**
-         * <p>The ID of the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).</p>
+         * <p>The ID of the Message Queue for RabbitMQ instance. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The name of the queue on the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).</p>
+         * <p>The name of the queue on the Message Queue for RabbitMQ instance. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).</p>
          */
         @NameInMap("QueueName")
         public String queueName;
@@ -424,7 +424,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the vhost of the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).</p>
+         * <p>The name of the vhost of the Message Queue for RabbitMQ instance. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).</p>
          */
         @NameInMap("VirtualHostName")
         public String virtualHostName;
@@ -488,7 +488,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public String instanceEndpoint;
 
         /**
-         * <p>The ID of the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).</p>
+         * <p>The ID of the Message Queue for Apache RocketMQ instance. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -512,7 +512,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public String instanceSecurityGroupId;
 
         /**
-         * <p>The instance type. Valid values: CLOUD\_4, CLOUD\_5, and SELF_BUILT. The value CLOUD\_4 indicates that the instance is a Message Queue for Apache RocketMQ 4.0 instance. The value CLOUD\_5 indicates that the instance is a Message Queue for Apache RocketMQ 5.0 instance. The value SELF_BUILT indicates that the instance is a self-managed RocketMQ instance.</p>
+         * <p>The instance type. Valid values: CLOUD_4, CLOUD_5, and SELF_BUILT. The value CLOUD_4 indicates that the instance is a Message Queue for Apache RocketMQ 4.0 instance. The value CLOUD_5 indicates that the instance is a Message Queue for Apache RocketMQ 5.0 instance. The value SELF_BUILT indicates that the instance is a self-managed RocketMQ instance.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -566,7 +566,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public Float timestamp;
 
         /**
-         * <p>The name of the topic on the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).</p>
+         * <p>The name of the topic on the Message Queue for Apache RocketMQ instance. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).</p>
          */
         @NameInMap("Topic")
         public String topic;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateApiDestinationRequest extends TeaModel {
     /**
      * <p>The name of the API destination. The name must be 2 to 127 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiDestinationName")
     public String apiDestinationName;
@@ -15,6 +17,8 @@ public class CreateApiDestinationRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <p>>  Before you configure this parameter, you must call the CreateConnection operation to create a connection. Then, set this parameter to the name of the connection that you created.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConnectionName")
     public String connectionName;
@@ -27,6 +31,8 @@ public class CreateApiDestinationRequest extends TeaModel {
 
     /**
      * <p>The parameters that are configured for the API destination.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HttpApiParameters")
     public CreateApiDestinationRequestHttpApiParameters httpApiParameters;
@@ -71,6 +77,8 @@ public class CreateApiDestinationRequest extends TeaModel {
     public static class CreateApiDestinationRequestHttpApiParameters extends TeaModel {
         /**
          * <p>The endpoint of the API destination. The endpoint can be up to 127 characters in length.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
@@ -84,6 +92,8 @@ public class CreateApiDestinationRequest extends TeaModel {
          * <p>*   DELETE</p>
          * <p>*   PUT</p>
          * <p>*   PATCH</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Method")
         public String method;

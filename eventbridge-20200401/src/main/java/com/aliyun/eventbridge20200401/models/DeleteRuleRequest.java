@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DeleteRuleRequest extends TeaModel {
     /**
      * <p>The name of the event bus.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventBusName")
     public String eventBusName;
 
     /**
      * <p>The name of the event rule that you want to delete.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;

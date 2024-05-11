@@ -27,11 +27,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to create an API destination.
-      *
-      * @param tmpReq CreateApiDestinationRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateApiDestinationResponse
+     * @summary Creates an API destination.
+     *
+     * @description You can call this API operation to create an API destination.
+     *
+     * @param tmpReq CreateApiDestinationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateApiDestinationResponse
      */
     public CreateApiDestinationResponse createApiDestinationWithOptions(CreateApiDestinationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -76,10 +78,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to create an API destination.
-      *
-      * @param request CreateApiDestinationRequest
-      * @return CreateApiDestinationResponse
+     * @summary Creates an API destination.
+     *
+     * @description You can call this API operation to create an API destination.
+     *
+     * @param request CreateApiDestinationRequest
+     * @return CreateApiDestinationResponse
      */
     public CreateApiDestinationResponse createApiDestination(CreateApiDestinationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -87,11 +91,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to create a connection.
-      *
-      * @param tmpReq CreateConnectionRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateConnectionResponse
+     * @summary Creates a connection.
+     *
+     * @description You can call this API operation to create a connection.
+     *
+     * @param tmpReq CreateConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateConnectionResponse
      */
     public CreateConnectionResponse createConnectionWithOptions(CreateConnectionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -140,10 +146,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to create a connection.
-      *
-      * @param request CreateConnectionRequest
-      * @return CreateConnectionResponse
+     * @summary Creates a connection.
+     *
+     * @description You can call this API operation to create a connection.
+     *
+     * @param request CreateConnectionRequest
+     * @return CreateConnectionResponse
      */
     public CreateConnectionResponse createConnection(CreateConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -151,11 +159,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to create an event bus.
-      *
-      * @param request CreateEventBusRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateEventBusResponse
+     * @summary Creates an event bus.
+     *
+     * @description You can call this API operation to create an event bus.
+     *
+     * @param request CreateEventBusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateEventBusResponse
      */
     public CreateEventBusResponse createEventBusWithOptions(CreateEventBusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -186,10 +196,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to create an event bus.
-      *
-      * @param request CreateEventBusRequest
-      * @return CreateEventBusResponse
+     * @summary Creates an event bus.
+     *
+     * @description You can call this API operation to create an event bus.
+     *
+     * @param request CreateEventBusRequest
+     * @return CreateEventBusResponse
      */
     public CreateEventBusResponse createEventBus(CreateEventBusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -197,11 +209,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to create an event source.
-      *
-      * @param tmpReq CreateEventSourceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateEventSourceResponse
+     * @summary Creates an event source.
+     *
+     * @description You can call this operation to create an event source.
+     *
+     * @param tmpReq CreateEventSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateEventSourceResponse
      */
     public CreateEventSourceResponse createEventSourceWithOptions(CreateEventSourceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -294,10 +308,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to create an event source.
-      *
-      * @param request CreateEventSourceRequest
-      * @return CreateEventSourceResponse
+     * @summary Creates an event source.
+     *
+     * @description You can call this operation to create an event source.
+     *
+     * @param request CreateEventSourceRequest
+     * @return CreateEventSourceResponse
      */
     public CreateEventSourceResponse createEventSource(CreateEventSourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -305,11 +321,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to create an event stream.
-      *
-      * @param tmpReq CreateEventStreamingRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateEventStreamingResponse
+     * @summary Creates an event stream.
+     *
+     * @description You can call this API operation to create an event stream.
+     *
+     * @param tmpReq CreateEventStreamingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateEventStreamingResponse
      */
     public CreateEventStreamingResponse createEventStreamingWithOptions(CreateEventStreamingRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -378,10 +396,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to create an event stream.
-      *
-      * @param request CreateEventStreamingRequest
-      * @return CreateEventStreamingResponse
+     * @summary Creates an event stream.
+     *
+     * @description You can call this API operation to create an event stream.
+     *
+     * @param request CreateEventStreamingRequest
+     * @return CreateEventStreamingResponse
      */
     public CreateEventStreamingResponse createEventStreaming(CreateEventStreamingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -389,11 +409,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to create an event rule.
-      *
-      * @param tmpReq CreateRuleRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateRuleResponse
+     * @summary Creates an event rule.
+     *
+     * @description You can call this API operation to create an event rule.
+     *
+     * @param tmpReq CreateRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRuleResponse
      */
     public CreateRuleResponse createRuleWithOptions(CreateRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -446,10 +468,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to create an event rule.
-      *
-      * @param request CreateRuleRequest
-      * @return CreateRuleResponse
+     * @summary Creates an event rule.
+     *
+     * @description You can call this API operation to create an event rule.
+     *
+     * @param request CreateRuleRequest
+     * @return CreateRuleResponse
      */
     public CreateRuleResponse createRule(CreateRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -457,11 +481,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to create a service-linked role for your cloud service.
-      *
-      * @param request CreateServiceLinkedRoleForProductRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateServiceLinkedRoleForProductResponse
+     * @summary Creates a service-linked role for your cloud service.
+     *
+     * @description You can call this API operation to create a service-linked role for your cloud service.
+     *
+     * @param request CreateServiceLinkedRoleForProductRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateServiceLinkedRoleForProductResponse
      */
     public CreateServiceLinkedRoleForProductResponse createServiceLinkedRoleForProductWithOptions(CreateServiceLinkedRoleForProductRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -488,10 +514,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to create a service-linked role for your cloud service.
-      *
-      * @param request CreateServiceLinkedRoleForProductRequest
-      * @return CreateServiceLinkedRoleForProductResponse
+     * @summary Creates a service-linked role for your cloud service.
+     *
+     * @description You can call this API operation to create a service-linked role for your cloud service.
+     *
+     * @param request CreateServiceLinkedRoleForProductRequest
+     * @return CreateServiceLinkedRoleForProductResponse
      */
     public CreateServiceLinkedRoleForProductResponse createServiceLinkedRoleForProduct(CreateServiceLinkedRoleForProductRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -499,11 +527,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to delete an API destination.
-      *
-      * @param request DeleteApiDestinationRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteApiDestinationResponse
+     * @summary Deletes an API destination.
+     *
+     * @description You can call this API operation to delete an API destination.
+     *
+     * @param request DeleteApiDestinationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteApiDestinationResponse
      */
     public DeleteApiDestinationResponse deleteApiDestinationWithOptions(DeleteApiDestinationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -530,10 +560,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to delete an API destination.
-      *
-      * @param request DeleteApiDestinationRequest
-      * @return DeleteApiDestinationResponse
+     * @summary Deletes an API destination.
+     *
+     * @description You can call this API operation to delete an API destination.
+     *
+     * @param request DeleteApiDestinationRequest
+     * @return DeleteApiDestinationResponse
      */
     public DeleteApiDestinationResponse deleteApiDestination(DeleteApiDestinationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -541,11 +573,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to delete a connection.
-      *
-      * @param request DeleteConnectionRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteConnectionResponse
+     * @summary Deletes a connection.
+     *
+     * @description You can call this API operation to delete a connection.
+     *
+     * @param request DeleteConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteConnectionResponse
      */
     public DeleteConnectionResponse deleteConnectionWithOptions(DeleteConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -572,10 +606,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to delete a connection.
-      *
-      * @param request DeleteConnectionRequest
-      * @return DeleteConnectionResponse
+     * @summary Deletes a connection.
+     *
+     * @description You can call this API operation to delete a connection.
+     *
+     * @param request DeleteConnectionRequest
+     * @return DeleteConnectionResponse
      */
     public DeleteConnectionResponse deleteConnection(DeleteConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -583,11 +619,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to delete an event bus.
-      *
-      * @param request DeleteEventBusRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteEventBusResponse
+     * @summary Deletes an event bus.
+     *
+     * @description You can call this API operation to delete an event bus.
+     *
+     * @param request DeleteEventBusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEventBusResponse
      */
     public DeleteEventBusResponse deleteEventBusWithOptions(DeleteEventBusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -614,10 +652,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to delete an event bus.
-      *
-      * @param request DeleteEventBusRequest
-      * @return DeleteEventBusResponse
+     * @summary Deletes an event bus.
+     *
+     * @description You can call this API operation to delete an event bus.
+     *
+     * @param request DeleteEventBusRequest
+     * @return DeleteEventBusResponse
      */
     public DeleteEventBusResponse deleteEventBus(DeleteEventBusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -625,11 +665,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to delete an event source.
-      *
-      * @param request DeleteEventSourceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteEventSourceResponse
+     * @summary Deletes an event source.
+     *
+     * @description You can call this API operation to delete an event source.
+     *
+     * @param request DeleteEventSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEventSourceResponse
      */
     public DeleteEventSourceResponse deleteEventSourceWithOptions(DeleteEventSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -660,10 +702,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to delete an event source.
-      *
-      * @param request DeleteEventSourceRequest
-      * @return DeleteEventSourceResponse
+     * @summary Deletes an event source.
+     *
+     * @description You can call this API operation to delete an event source.
+     *
+     * @param request DeleteEventSourceRequest
+     * @return DeleteEventSourceResponse
      */
     public DeleteEventSourceResponse deleteEventSource(DeleteEventSourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -671,11 +715,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to delete an event stream.
-      *
-      * @param request DeleteEventStreamingRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteEventStreamingResponse
+     * @summary Deletes an event stream.
+     *
+     * @description You can call this API operation to delete an event stream.
+     *
+     * @param request DeleteEventStreamingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEventStreamingResponse
      */
     public DeleteEventStreamingResponse deleteEventStreamingWithOptions(DeleteEventStreamingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -702,10 +748,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to delete an event stream.
-      *
-      * @param request DeleteEventStreamingRequest
-      * @return DeleteEventStreamingResponse
+     * @summary Deletes an event stream.
+     *
+     * @description You can call this API operation to delete an event stream.
+     *
+     * @param request DeleteEventStreamingRequest
+     * @return DeleteEventStreamingResponse
      */
     public DeleteEventStreamingResponse deleteEventStreaming(DeleteEventStreamingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -713,11 +761,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to delete an event rule.
-      *
-      * @param request DeleteRuleRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteRuleResponse
+     * @summary Deletes an event rule.
+     *
+     * @description You can call this API operation to delete an event rule.
+     *
+     * @param request DeleteRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRuleResponse
      */
     public DeleteRuleResponse deleteRuleWithOptions(DeleteRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -748,10 +798,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to delete an event rule.
-      *
-      * @param request DeleteRuleRequest
-      * @return DeleteRuleResponse
+     * @summary Deletes an event rule.
+     *
+     * @description You can call this API operation to delete an event rule.
+     *
+     * @param request DeleteRuleRequest
+     * @return DeleteRuleResponse
      */
     public DeleteRuleResponse deleteRule(DeleteRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -759,11 +811,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to delete one or more event targets of an event rule.
-      *
-      * @param tmpReq DeleteTargetsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteTargetsResponse
+     * @summary Deletes one or more event targets of an event rule.
+     *
+     * @description You can call this API operation to delete one or more event targets of an event rule.
+     *
+     * @param tmpReq DeleteTargetsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteTargetsResponse
      */
     public DeleteTargetsResponse deleteTargetsWithOptions(DeleteTargetsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -804,10 +858,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to delete one or more event targets of an event rule.
-      *
-      * @param request DeleteTargetsRequest
-      * @return DeleteTargetsResponse
+     * @summary Deletes one or more event targets of an event rule.
+     *
+     * @description You can call this API operation to delete one or more event targets of an event rule.
+     *
+     * @param request DeleteTargetsRequest
+     * @return DeleteTargetsResponse
      */
     public DeleteTargetsResponse deleteTargets(DeleteTargetsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -815,11 +871,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to disable an event rule.
-      *
-      * @param request DisableRuleRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DisableRuleResponse
+     * @summary Disables an event rule.
+     *
+     * @description You can call this API operation to disable an event rule.
+     *
+     * @param request DisableRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableRuleResponse
      */
     public DisableRuleResponse disableRuleWithOptions(DisableRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -850,10 +908,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to disable an event rule.
-      *
-      * @param request DisableRuleRequest
-      * @return DisableRuleResponse
+     * @summary Disables an event rule.
+     *
+     * @description You can call this API operation to disable an event rule.
+     *
+     * @param request DisableRuleRequest
+     * @return DisableRuleResponse
      */
     public DisableRuleResponse disableRule(DisableRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -861,11 +921,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to enable an event rule.
-      *
-      * @param request EnableRuleRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return EnableRuleResponse
+     * @summary Enables an event rule.
+     *
+     * @description You can call this API operation to enable an event rule.
+     *
+     * @param request EnableRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableRuleResponse
      */
     public EnableRuleResponse enableRuleWithOptions(EnableRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -896,10 +958,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to enable an event rule.
-      *
-      * @param request EnableRuleRequest
-      * @return EnableRuleResponse
+     * @summary Enables an event rule.
+     *
+     * @description You can call this API operation to enable an event rule.
+     *
+     * @param request EnableRuleRequest
+     * @return EnableRuleResponse
      */
     public EnableRuleResponse enableRule(EnableRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -907,11 +971,174 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query the information about an API destination.
-      *
-      * @param request GetApiDestinationRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetApiDestinationResponse
+     * @summary EventCenterCheckEnabledOnDefaultBus
+     *
+     * @param request EventCenterCheckEnabledOnDefaultBusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EventCenterCheckEnabledOnDefaultBusResponse
+     */
+    public EventCenterCheckEnabledOnDefaultBusResponse eventCenterCheckEnabledOnDefaultBusWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EventCenterCheckEnabledOnDefaultBus"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EventCenterCheckEnabledOnDefaultBusResponse());
+    }
+
+    /**
+     * @summary EventCenterCheckEnabledOnDefaultBus
+     *
+     * @return EventCenterCheckEnabledOnDefaultBusResponse
+     */
+    public EventCenterCheckEnabledOnDefaultBusResponse eventCenterCheckEnabledOnDefaultBus() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.eventCenterCheckEnabledOnDefaultBusWithOptions(runtime);
+    }
+
+    /**
+     * @summary EventCenterDisableOnDefaultBus
+     *
+     * @param request EventCenterDisableOnDefaultBusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EventCenterDisableOnDefaultBusResponse
+     */
+    public EventCenterDisableOnDefaultBusResponse eventCenterDisableOnDefaultBusWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EventCenterDisableOnDefaultBus"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EventCenterDisableOnDefaultBusResponse());
+    }
+
+    /**
+     * @summary EventCenterDisableOnDefaultBus
+     *
+     * @return EventCenterDisableOnDefaultBusResponse
+     */
+    public EventCenterDisableOnDefaultBusResponse eventCenterDisableOnDefaultBus() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.eventCenterDisableOnDefaultBusWithOptions(runtime);
+    }
+
+    /**
+     * @summary EventCenterEnableOnDefaultBus
+     *
+     * @param request EventCenterEnableOnDefaultBusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EventCenterEnableOnDefaultBusResponse
+     */
+    public EventCenterEnableOnDefaultBusResponse eventCenterEnableOnDefaultBusWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EventCenterEnableOnDefaultBus"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EventCenterEnableOnDefaultBusResponse());
+    }
+
+    /**
+     * @summary EventCenterEnableOnDefaultBus
+     *
+     * @return EventCenterEnableOnDefaultBusResponse
+     */
+    public EventCenterEnableOnDefaultBusResponse eventCenterEnableOnDefaultBus() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.eventCenterEnableOnDefaultBusWithOptions(runtime);
+    }
+
+    /**
+     * @summary EventCenterQueryEvents
+     *
+     * @param tmpReq EventCenterQueryEventsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EventCenterQueryEventsResponse
+     */
+    public EventCenterQueryEventsResponse eventCenterQueryEventsWithOptions(EventCenterQueryEventsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        EventCenterQueryEventsShrinkRequest request = new EventCenterQueryEventsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "Body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.busName)) {
+            query.put("BusName", request.busName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("Body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EventCenterQueryEvents"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EventCenterQueryEventsResponse());
+    }
+
+    /**
+     * @summary EventCenterQueryEvents
+     *
+     * @param request EventCenterQueryEventsRequest
+     * @return EventCenterQueryEventsResponse
+     */
+    public EventCenterQueryEventsResponse eventCenterQueryEvents(EventCenterQueryEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.eventCenterQueryEventsWithOptions(request, runtime);
+    }
+
+    /**
+     * @summary Queries the information about an API destination.
+     *
+     * @description You can call this API operation to query the information about an API destination.
+     *
+     * @param request GetApiDestinationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetApiDestinationResponse
      */
     public GetApiDestinationResponse getApiDestinationWithOptions(GetApiDestinationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -938,10 +1165,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query the information about an API destination.
-      *
-      * @param request GetApiDestinationRequest
-      * @return GetApiDestinationResponse
+     * @summary Queries the information about an API destination.
+     *
+     * @description You can call this API operation to query the information about an API destination.
+     *
+     * @param request GetApiDestinationRequest
+     * @return GetApiDestinationResponse
      */
     public GetApiDestinationResponse getApiDestination(GetApiDestinationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -949,11 +1178,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query the configurations of a connection.
-      *
-      * @param request GetConnectionRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetConnectionResponse
+     * @summary Queries the configurations of a connection.
+     *
+     * @description You can call this API operation to query the configurations of a connection.
+     *
+     * @param request GetConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetConnectionResponse
      */
     public GetConnectionResponse getConnectionWithOptions(GetConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -980,10 +1211,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query the configurations of a connection.
-      *
-      * @param request GetConnectionRequest
-      * @return GetConnectionResponse
+     * @summary Queries the configurations of a connection.
+     *
+     * @description You can call this API operation to query the configurations of a connection.
+     *
+     * @param request GetConnectionRequest
+     * @return GetConnectionResponse
      */
     public GetConnectionResponse getConnection(GetConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -991,11 +1224,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query the detailed information about an event bus.
-      *
-      * @param request GetEventBusRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetEventBusResponse
+     * @summary Queries the detailed information about an event bus.
+     *
+     * @description You can call this API operation to query the detailed information about an event bus.
+     *
+     * @param request GetEventBusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEventBusResponse
      */
     public GetEventBusResponse getEventBusWithOptions(GetEventBusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1022,10 +1257,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query the detailed information about an event bus.
-      *
-      * @param request GetEventBusRequest
-      * @return GetEventBusResponse
+     * @summary Queries the detailed information about an event bus.
+     *
+     * @description You can call this API operation to query the detailed information about an event bus.
+     *
+     * @param request GetEventBusRequest
+     * @return GetEventBusResponse
      */
     public GetEventBusResponse getEventBus(GetEventBusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1033,11 +1270,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query the details of an event stream.
-      *
-      * @param request GetEventStreamingRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetEventStreamingResponse
+     * @summary Queries the details of an event stream.
+     *
+     * @description You can call this API operation to query the details of an event stream.
+     *
+     * @param request GetEventStreamingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEventStreamingResponse
      */
     public GetEventStreamingResponse getEventStreamingWithOptions(GetEventStreamingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1064,10 +1303,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query the details of an event stream.
-      *
-      * @param request GetEventStreamingRequest
-      * @return GetEventStreamingResponse
+     * @summary Queries the details of an event stream.
+     *
+     * @description You can call this API operation to query the details of an event stream.
+     *
+     * @param request GetEventStreamingRequest
+     * @return GetEventStreamingResponse
      */
     public GetEventStreamingResponse getEventStreaming(GetEventStreamingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1075,11 +1316,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query the details of an event rule.
-      *
-      * @param request GetRuleRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetRuleResponse
+     * @summary Queries the details of an event rule.
+     *
+     * @description You can call this API operation to query the details of an event rule.
+     *
+     * @param request GetRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRuleResponse
      */
     public GetRuleResponse getRuleWithOptions(GetRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1110,10 +1353,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query the details of an event rule.
-      *
-      * @param request GetRuleRequest
-      * @return GetRuleResponse
+     * @summary Queries the details of an event rule.
+     *
+     * @description You can call this API operation to query the details of an event rule.
+     *
+     * @param request GetRuleRequest
+     * @return GetRuleResponse
      */
     public GetRuleResponse getRule(GetRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1121,11 +1366,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query all Alibaba Cloud service event sources.
-      *
-      * @param request ListAliyunOfficialEventSourcesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListAliyunOfficialEventSourcesResponse
+     * @summary Queries all Alibaba Cloud service event sources.
+     *
+     * @description You can call this API operation to query all Alibaba Cloud service event sources.
+     *
+     * @param request ListAliyunOfficialEventSourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAliyunOfficialEventSourcesResponse
      */
     public ListAliyunOfficialEventSourcesResponse listAliyunOfficialEventSourcesWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
@@ -1144,9 +1391,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query all Alibaba Cloud service event sources.
-      *
-      * @return ListAliyunOfficialEventSourcesResponse
+     * @summary Queries all Alibaba Cloud service event sources.
+     *
+     * @description You can call this API operation to query all Alibaba Cloud service event sources.
+     *
+     * @return ListAliyunOfficialEventSourcesResponse
      */
     public ListAliyunOfficialEventSourcesResponse listAliyunOfficialEventSources() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1154,11 +1403,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can use this API operation to query a list of API destinations.
-      *
-      * @param request ListApiDestinationsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListApiDestinationsResponse
+     * @summary Queries a list of API destinations.
+     *
+     * @description You can use this API operation to query a list of API destinations.
+     *
+     * @param request ListApiDestinationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListApiDestinationsResponse
      */
     public ListApiDestinationsResponse listApiDestinationsWithOptions(ListApiDestinationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1197,10 +1448,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can use this API operation to query a list of API destinations.
-      *
-      * @param request ListApiDestinationsRequest
-      * @return ListApiDestinationsResponse
+     * @summary Queries a list of API destinations.
+     *
+     * @description You can use this API operation to query a list of API destinations.
+     *
+     * @param request ListApiDestinationsRequest
+     * @return ListApiDestinationsResponse
      */
     public ListApiDestinationsResponse listApiDestinations(ListApiDestinationsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1208,11 +1461,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query connections.
-      *
-      * @param request ListConnectionsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListConnectionsResponse
+     * @summary Queries connections.
+     *
+     * @description You can call this API operation to query connections.
+     *
+     * @param request ListConnectionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListConnectionsResponse
      */
     public ListConnectionsResponse listConnectionsWithOptions(ListConnectionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1247,10 +1502,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query connections.
-      *
-      * @param request ListConnectionsRequest
-      * @return ListConnectionsResponse
+     * @summary Queries connections.
+     *
+     * @description You can call this API operation to query connections.
+     *
+     * @param request ListConnectionsRequest
+     * @return ListConnectionsResponse
      */
     public ListConnectionsResponse listConnections(ListConnectionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1258,11 +1515,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query all event buses.
-      *
-      * @param request ListEventBusesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListEventBusesResponse
+     * @summary Queries all event buses.
+     *
+     * @description You can call this API operation to query all event buses.
+     *
+     * @param request ListEventBusesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEventBusesResponse
      */
     public ListEventBusesResponse listEventBusesWithOptions(ListEventBusesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1297,10 +1556,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query all event buses.
-      *
-      * @param request ListEventBusesRequest
-      * @return ListEventBusesResponse
+     * @summary Queries all event buses.
+     *
+     * @description You can call this API operation to query all event buses.
+     *
+     * @param request ListEventBusesRequest
+     * @return ListEventBusesResponse
      */
     public ListEventBusesResponse listEventBuses(ListEventBusesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1308,11 +1569,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query event streams.
-      *
-      * @param request ListEventStreamingsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListEventStreamingsResponse
+     * @summary Queries event streams.
+     *
+     * @description You can call this API operation to query event streams.
+     *
+     * @param request ListEventStreamingsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEventStreamingsResponse
      */
     public ListEventStreamingsResponse listEventStreamingsWithOptions(ListEventStreamingsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1355,10 +1618,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query event streams.
-      *
-      * @param request ListEventStreamingsRequest
-      * @return ListEventStreamingsResponse
+     * @summary Queries event streams.
+     *
+     * @description You can call this API operation to query event streams.
+     *
+     * @param request ListEventStreamingsRequest
+     * @return ListEventStreamingsResponse
      */
     public ListEventStreamingsResponse listEventStreamings(ListEventStreamingsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1366,11 +1631,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query all rules of an event bus.
-      *
-      * @param request ListRulesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListRulesResponse
+     * @summary Queries all rules of an event bus.
+     *
+     * @description You can call this API operation to query all rules of an event bus.
+     *
+     * @param request ListRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRulesResponse
      */
     public ListRulesResponse listRulesWithOptions(ListRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1409,16 +1676,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query all rules of an event bus.
-      *
-      * @param request ListRulesRequest
-      * @return ListRulesResponse
+     * @summary Queries all rules of an event bus.
+     *
+     * @description You can call this API operation to query all rules of an event bus.
+     *
+     * @param request ListRulesRequest
+     * @return ListRulesResponse
      */
     public ListRulesResponse listRules(ListRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listRulesWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries all event targets of an event rule.
+     *
+     * @param request ListTargetsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTargetsResponse
+     */
     public ListTargetsResponse listTargetsWithOptions(ListTargetsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1459,17 +1735,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTargetsResponse());
     }
 
+    /**
+     * @summary Queries all event targets of an event rule.
+     *
+     * @param request ListTargetsRequest
+     * @return ListTargetsResponse
+     */
     public ListTargetsResponse listTargets(ListTargetsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTargetsWithOptions(request, runtime);
     }
 
     /**
-      * You can call this API operation to query custom event sources.
-      *
-      * @param request ListUserDefinedEventSourcesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListUserDefinedEventSourcesResponse
+     * @summary Queries all custom event sources.
+     *
+     * @description You can call this API operation to query custom event sources.
+     *
+     * @param request ListUserDefinedEventSourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserDefinedEventSourcesResponse
      */
     public ListUserDefinedEventSourcesResponse listUserDefinedEventSourcesWithOptions(ListUserDefinedEventSourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1508,10 +1792,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query custom event sources.
-      *
-      * @param request ListUserDefinedEventSourcesRequest
-      * @return ListUserDefinedEventSourcesResponse
+     * @summary Queries all custom event sources.
+     *
+     * @description You can call this API operation to query custom event sources.
+     *
+     * @param request ListUserDefinedEventSourcesRequest
+     * @return ListUserDefinedEventSourcesResponse
      */
     public ListUserDefinedEventSourcesResponse listUserDefinedEventSources(ListUserDefinedEventSourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1519,11 +1805,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to stop an event stream that is running.
-      *
-      * @param request PauseEventStreamingRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return PauseEventStreamingResponse
+     * @summary Stops an event stream that is running.
+     *
+     * @description You can call this API operation to stop an event stream that is running.
+     *
+     * @param request PauseEventStreamingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PauseEventStreamingResponse
      */
     public PauseEventStreamingResponse pauseEventStreamingWithOptions(PauseEventStreamingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1550,10 +1838,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to stop an event stream that is running.
-      *
-      * @param request PauseEventStreamingRequest
-      * @return PauseEventStreamingResponse
+     * @summary Stops an event stream that is running.
+     *
+     * @description You can call this API operation to stop an event stream that is running.
+     *
+     * @param request PauseEventStreamingRequest
+     * @return PauseEventStreamingResponse
      */
     public PauseEventStreamingResponse pauseEventStreaming(PauseEventStreamingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1561,11 +1851,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to create or update event targets under a rule.
-      *
-      * @param tmpReq PutTargetsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return PutTargetsResponse
+     * @summary Creates or updates event targets under a rule.
+     *
+     * @description You can call this API operation to create or update event targets under a rule.
+     *
+     * @param tmpReq PutTargetsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PutTargetsResponse
      */
     public PutTargetsResponse putTargetsWithOptions(PutTargetsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -1606,10 +1898,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to create or update event targets under a rule.
-      *
-      * @param request PutTargetsRequest
-      * @return PutTargetsResponse
+     * @summary Creates or updates event targets under a rule.
+     *
+     * @description You can call this API operation to create or update event targets under a rule.
+     *
+     * @param request PutTargetsRequest
+     * @return PutTargetsResponse
      */
     public PutTargetsResponse putTargets(PutTargetsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1617,11 +1911,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query the content of an event.
-      *
-      * @param request QueryEventRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return QueryEventResponse
+     * @summary Queries the content of an event.
+     *
+     * @description You can call this API operation to query the content of an event.
+     *
+     * @param request QueryEventRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryEventResponse
      */
     public QueryEventResponse queryEventWithOptions(QueryEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1656,10 +1952,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query the content of an event.
-      *
-      * @param request QueryEventRequest
-      * @return QueryEventResponse
+     * @summary Queries the content of an event.
+     *
+     * @description You can call this API operation to query the content of an event.
+     *
+     * @param request QueryEventRequest
+     * @return QueryEventResponse
      */
     public QueryEventResponse queryEvent(QueryEventRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1667,11 +1965,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query event traces.
-      *
-      * @param request QueryEventTracesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return QueryEventTracesResponse
+     * @summary Queries event traces.
+     *
+     * @description You can call this API operation to query event traces.
+     *
+     * @param request QueryEventTracesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryEventTracesResponse
      */
     public QueryEventTracesResponse queryEventTracesWithOptions(QueryEventTracesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1702,10 +2002,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query event traces.
-      *
-      * @param request QueryEventTracesRequest
-      * @return QueryEventTracesResponse
+     * @summary Queries event traces.
+     *
+     * @description You can call this API operation to query event traces.
+     *
+     * @param request QueryEventTracesRequest
+     * @return QueryEventTracesResponse
      */
     public QueryEventTracesResponse queryEventTraces(QueryEventTracesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1713,11 +2015,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query event traces by event ID.
-      *
-      * @param request QueryTracedEventByEventIdRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return QueryTracedEventByEventIdResponse
+     * @summary Queries event traces by event ID.
+     *
+     * @description You can call this API operation to query event traces by event ID.
+     *
+     * @param request QueryTracedEventByEventIdRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryTracedEventByEventIdResponse
      */
     public QueryTracedEventByEventIdResponse queryTracedEventByEventIdWithOptions(QueryTracedEventByEventIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1752,10 +2056,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query event traces by event ID.
-      *
-      * @param request QueryTracedEventByEventIdRequest
-      * @return QueryTracedEventByEventIdResponse
+     * @summary Queries event traces by event ID.
+     *
+     * @description You can call this API operation to query event traces by event ID.
+     *
+     * @param request QueryTracedEventByEventIdRequest
+     * @return QueryTracedEventByEventIdResponse
      */
     public QueryTracedEventByEventIdResponse queryTracedEventByEventId(QueryTracedEventByEventIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1763,11 +2069,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query event traces by time range.
-      *
-      * @param request QueryTracedEventsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return QueryTracedEventsResponse
+     * @summary Queries event traces by time range.
+     *
+     * @description You can call this API operation to query event traces by time range.
+     *
+     * @param request QueryTracedEventsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryTracedEventsResponse
      */
     public QueryTracedEventsResponse queryTracedEventsWithOptions(QueryTracedEventsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1822,10 +2130,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to query event traces by time range.
-      *
-      * @param request QueryTracedEventsRequest
-      * @return QueryTracedEventsResponse
+     * @summary Queries event traces by time range.
+     *
+     * @description You can call this API operation to query event traces by time range.
+     *
+     * @param request QueryTracedEventsRequest
+     * @return QueryTracedEventsResponse
      */
     public QueryTracedEventsResponse queryTracedEvents(QueryTracedEventsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1833,11 +2143,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to enable a created or deactivated event stream.
-      *
-      * @param request StartEventStreamingRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StartEventStreamingResponse
+     * @summary Enables a created or deactivated event stream.
+     *
+     * @description You can call this API operation to enable a created or deactivated event stream.
+     *
+     * @param request StartEventStreamingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartEventStreamingResponse
      */
     public StartEventStreamingResponse startEventStreamingWithOptions(StartEventStreamingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1864,10 +2176,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to enable a created or deactivated event stream.
-      *
-      * @param request StartEventStreamingRequest
-      * @return StartEventStreamingResponse
+     * @summary Enables a created or deactivated event stream.
+     *
+     * @description You can call this API operation to enable a created or deactivated event stream.
+     *
+     * @param request StartEventStreamingRequest
+     * @return StartEventStreamingResponse
      */
     public StartEventStreamingResponse startEventStreaming(StartEventStreamingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1875,11 +2189,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to check whether the event pattern matches the provided JSON format.
-      *
-      * @param request TestEventPatternRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return TestEventPatternResponse
+     * @summary Checks whether the event pattern matches the provided JSON format.
+     *
+     * @description You can call this API operation to check whether the event pattern matches the provided JSON format.
+     *
+     * @param request TestEventPatternRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TestEventPatternResponse
      */
     public TestEventPatternResponse testEventPatternWithOptions(TestEventPatternRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1910,10 +2226,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to check whether the event pattern matches the provided JSON format.
-      *
-      * @param request TestEventPatternRequest
-      * @return TestEventPatternResponse
+     * @summary Checks whether the event pattern matches the provided JSON format.
+     *
+     * @description You can call this API operation to check whether the event pattern matches the provided JSON format.
+     *
+     * @param request TestEventPatternRequest
+     * @return TestEventPatternResponse
      */
     public TestEventPatternResponse testEventPattern(TestEventPatternRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1921,11 +2239,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to update an API destination.
-      *
-      * @param tmpReq UpdateApiDestinationRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateApiDestinationResponse
+     * @summary Updates an API destination.
+     *
+     * @description You can call this API operation to update an API destination.
+     *
+     * @param tmpReq UpdateApiDestinationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateApiDestinationResponse
      */
     public UpdateApiDestinationResponse updateApiDestinationWithOptions(UpdateApiDestinationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -1970,10 +2290,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to update an API destination.
-      *
-      * @param request UpdateApiDestinationRequest
-      * @return UpdateApiDestinationResponse
+     * @summary Updates an API destination.
+     *
+     * @description You can call this API operation to update an API destination.
+     *
+     * @param request UpdateApiDestinationRequest
+     * @return UpdateApiDestinationResponse
      */
     public UpdateApiDestinationResponse updateApiDestination(UpdateApiDestinationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1981,11 +2303,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to update a connection.
-      *
-      * @param tmpReq UpdateConnectionRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateConnectionResponse
+     * @summary Updates a connection.
+     *
+     * @description You can call this API operation to update a connection.
+     *
+     * @param tmpReq UpdateConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateConnectionResponse
      */
     public UpdateConnectionResponse updateConnectionWithOptions(UpdateConnectionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -2034,10 +2358,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to update a connection.
-      *
-      * @param request UpdateConnectionRequest
-      * @return UpdateConnectionResponse
+     * @summary Updates a connection.
+     *
+     * @description You can call this API operation to update a connection.
+     *
+     * @param request UpdateConnectionRequest
+     * @return UpdateConnectionResponse
      */
     public UpdateConnectionResponse updateConnection(UpdateConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2045,11 +2371,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to modify an event bus.
-      *
-      * @param request UpdateEventBusRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateEventBusResponse
+     * @summary Modifies an event bus.
+     *
+     * @description You can call this API operation to modify an event bus.
+     *
+     * @param request UpdateEventBusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateEventBusResponse
      */
     public UpdateEventBusResponse updateEventBusWithOptions(UpdateEventBusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2080,10 +2408,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to modify an event bus.
-      *
-      * @param request UpdateEventBusRequest
-      * @return UpdateEventBusResponse
+     * @summary Modifies an event bus.
+     *
+     * @description You can call this API operation to modify an event bus.
+     *
+     * @param request UpdateEventBusRequest
+     * @return UpdateEventBusResponse
      */
     public UpdateEventBusResponse updateEventBus(UpdateEventBusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2091,11 +2421,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to update an event source.
-      *
-      * @param tmpReq UpdateEventSourceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateEventSourceResponse
+     * @summary Updates an event source.
+     *
+     * @description You can call this API operation to update an event source.
+     *
+     * @param tmpReq UpdateEventSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateEventSourceResponse
      */
     public UpdateEventSourceResponse updateEventSourceWithOptions(UpdateEventSourceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -2188,10 +2520,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to update an event source.
-      *
-      * @param request UpdateEventSourceRequest
-      * @return UpdateEventSourceResponse
+     * @summary Updates an event source.
+     *
+     * @description You can call this API operation to update an event source.
+     *
+     * @param request UpdateEventSourceRequest
+     * @return UpdateEventSourceResponse
      */
     public UpdateEventSourceResponse updateEventSource(UpdateEventSourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2199,11 +2533,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-      *
-      * @param tmpReq UpdateEventStreamingRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateEventStreamingResponse
+     * @summary Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
+     *
+     * @description You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
+     *
+     * @param tmpReq UpdateEventStreamingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateEventStreamingResponse
      */
     public UpdateEventStreamingResponse updateEventStreamingWithOptions(UpdateEventStreamingRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -2272,10 +2608,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-      *
-      * @param request UpdateEventStreamingRequest
-      * @return UpdateEventStreamingResponse
+     * @summary Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
+     *
+     * @description You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
+     *
+     * @param request UpdateEventStreamingRequest
+     * @return UpdateEventStreamingResponse
      */
     public UpdateEventStreamingResponse updateEventStreaming(UpdateEventStreamingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2283,11 +2621,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to update the configurations of an event rule.
-      *
-      * @param request UpdateRuleRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateRuleResponse
+     * @summary Updates the configurations of an event rule.
+     *
+     * @description You can call this API operation to update the configurations of an event rule.
+     *
+     * @param request UpdateRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRuleResponse
      */
     public UpdateRuleResponse updateRuleWithOptions(UpdateRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2330,10 +2670,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation to update the configurations of an event rule.
-      *
-      * @param request UpdateRuleRequest
-      * @return UpdateRuleResponse
+     * @summary Updates the configurations of an event rule.
+     *
+     * @description You can call this API operation to update the configurations of an event rule.
+     *
+     * @param request UpdateRuleRequest
+     * @return UpdateRuleResponse
      */
     public UpdateRuleResponse updateRule(UpdateRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
