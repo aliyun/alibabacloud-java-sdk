@@ -10,9 +10,15 @@ public class CreateJobShrinkRequest extends TeaModel {
     @NameInMap("JobDescription")
     public String jobDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobName")
     public String jobName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Tasks")
     public String tasksShrink;
 
