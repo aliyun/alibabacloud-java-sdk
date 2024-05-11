@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBResourceManagementModeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

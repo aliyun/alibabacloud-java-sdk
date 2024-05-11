@@ -12,6 +12,8 @@ public class ModifyBackupPolicyRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -37,12 +39,16 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <p>*   Friday</p>
      * <p>*   Saturday</p>
      * <p>*   Sunday</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
     /**
      * <p>The backup window. Specify the backup window in the HH:mmZ-HH:mmZ format. The backup window must be in UTC. Default value: 00:00-01:00.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;

@@ -7,7 +7,7 @@ public class DescribeDataBackupsRequest extends TeaModel {
     /**
      * <p>The ID of the backup set. If you specify BackupId, the details of the backup set are returned.</p>
      * <br>
-     * <p>> You can call the [DescribeDataBackups](~~210093~~) operation to query the information about all backup sets of an instance, including backup set IDs.</p>
+     * <p>> You can call the [DescribeDataBackups](https://help.aliyun.com/document_detail/210093.html) operation to query the information about all backup sets of an instance, including backup set IDs.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -37,7 +37,9 @@ public class DescribeDataBackupsRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <br>
-     * <p>> You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -55,6 +57,8 @@ public class DescribeDataBackupsRequest extends TeaModel {
 
     /**
      * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -79,6 +83,8 @@ public class DescribeDataBackupsRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

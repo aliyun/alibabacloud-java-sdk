@@ -16,7 +16,9 @@ public class DescribeAvailableResourcesRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <br>
-     * <p>> You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public String region;
@@ -24,7 +26,9 @@ public class DescribeAvailableResourcesRequest extends TeaModel {
     /**
      * <p>The zone ID.</p>
      * <br>
-     * <p>> You can call the [DescribeRegions](~~86912~~) operation to query the most recent zone list.</p>
+     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent zone list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

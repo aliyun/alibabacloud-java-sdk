@@ -7,7 +7,9 @@ public class DescribeSQLLogsRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <br>
-     * <p>> You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -22,6 +24,8 @@ public class DescribeSQLLogsRequest extends TeaModel {
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.</p>
      * <br>
      * <p>> The end time must be later than the start time. The maximum time range that can be specified is seven days.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -110,6 +114,8 @@ public class DescribeSQLLogsRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDBInstanceRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. For more information, see [How to ensure idempotence](~~327176~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/327176.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -13,7 +13,9 @@ public class DeleteDBInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     * <p>>  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

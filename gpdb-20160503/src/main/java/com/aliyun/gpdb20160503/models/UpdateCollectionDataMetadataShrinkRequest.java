@@ -4,9 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class UpdateCollectionDataMetadataShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Collection")
     public String collection;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -21,6 +27,8 @@ public class UpdateCollectionDataMetadataShrinkRequest extends TeaModel {
 
     /**
      * <p>The data that you want to update, which is a JSON string in the MAP format. In the JSON string, key specifies the field name and value specifies the new data value.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Metadata")
     public String metadataShrink;
@@ -28,6 +36,9 @@ public class UpdateCollectionDataMetadataShrinkRequest extends TeaModel {
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NamespacePassword")
     public String namespacePassword;
 
@@ -36,6 +47,8 @@ public class UpdateCollectionDataMetadataShrinkRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

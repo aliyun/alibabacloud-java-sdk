@@ -7,13 +7,13 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the backup set.</p>
      * <br>
-     * <p>>  You can call the [DescribeDataBackups](~~210093~~) operation to query the IDs of all backup sets in the instance.</p>
+     * <p>>  You can call the [DescribeDataBackups](https://help.aliyun.com/document_detail/210093.html) operation to query the IDs of all backup sets in the instance.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. For more information, see [Ensure idempotence](~~327176~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/327176.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -41,7 +41,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String DBInstanceCategory;
 
     /**
-     * <p>The instance type of the instance. For information, see [Instance types](~~86942~~).</p>
+     * <p>The instance type of the instance. For information, see [Instance types](https://help.aliyun.com/document_detail/86942.html).</p>
      * <br>
      * <p>> This parameter must be specified when you create an instance in reserved storage mode.</p>
      */
@@ -70,6 +70,8 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>- **Classic**: reserved storage mode.</p>
      * <br>
      * <p>> This parameter must be specified.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceMode")
     public String DBInstanceMode;
@@ -98,6 +100,8 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The database engine of the instance. Set the value to gpdb.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -107,6 +111,8 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <br>
      * <p>- 6.0</p>
      * <p>- 7.0</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -215,7 +221,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String prodType;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -229,7 +237,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The IP address whitelist of the instance.</p>
      * <br>
-     * <p>A value of 127.0.0.1 specifies that no IP address is allowed for external access. You can call the [ModifySecurityIps](~~86928~~) operation to modify the IP address whitelist after you create an instance.</p>
+     * <p>A value of 127.0.0.1 specifies that no IP address is allowed for external access. You can call the [ModifySecurityIps](https://help.aliyun.com/document_detail/86928.html) operation to modify the IP address whitelist after you create an instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityIPList")
     public String securityIPList;
@@ -292,7 +302,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the source instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <p>>  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
      */
     @NameInMap("SrcDbInstanceName")
     public String srcDbInstanceName;
@@ -367,7 +377,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String vectorConfigurationStatus;
 
     /**
-     * <p>The zone ID of the read-only instance. You can call the [DescribeRegions](~~86912~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the read-only instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent zone list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

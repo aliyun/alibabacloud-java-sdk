@@ -7,6 +7,9 @@ public class ModifyMasterSpecRequest extends TeaModel {
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

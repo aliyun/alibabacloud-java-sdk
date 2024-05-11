@@ -13,7 +13,7 @@ public class DescribeRdsVpcsRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

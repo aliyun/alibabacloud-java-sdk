@@ -7,7 +7,9 @@ public class ModifyParametersRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     * <p>>  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -24,7 +26,9 @@ public class ModifyParametersRequest extends TeaModel {
     /**
      * <p>The name and value of the parameter to be modified. Specify the parameter in the `<Parameter name>:<Parameter value>` format.</p>
      * <br>
-     * <p>You can call the [DescribeParameters](~~208310~~) operation to query the parameters that can be modified.</p>
+     * <p>You can call the [DescribeParameters](https://help.aliyun.com/document_detail/208310.html) operation to query the parameters that can be modified.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Parameters")
     public String parameters;

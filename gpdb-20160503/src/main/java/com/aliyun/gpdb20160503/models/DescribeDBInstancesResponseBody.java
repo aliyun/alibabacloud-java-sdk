@@ -138,7 +138,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
          * <br>
-         * <p>You can call the [DescribeDBInstanceAttribute](~~86910~~) operation to query the access mode of an instance.</p>
+         * <p>You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/86910.html) operation to query the access mode of an instance.</p>
          */
         @NameInMap("ConnectionMode")
         public String connectionMode;
@@ -192,7 +192,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBInstanceNetType;
 
         /**
-         * <p>The state of the instance. For more information, see [Instance statuses](~~86944~~).</p>
+         * <p>The state of the instance. For more information, see [Instance statuses](https://help.aliyun.com/document_detail/86944.html).</p>
          */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;

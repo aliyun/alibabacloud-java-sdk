@@ -7,19 +7,25 @@ public class CreateNamespaceRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <br>
-     * <p>> You can call the [DescribeDBInstances](~~196830~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/196830.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the manager account that has the rds_superuser permission.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ManagerAccount")
     public String managerAccount;
 
     /**
      * <p>The password of the manager account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ManagerAccountPassword")
     public String managerAccountPassword;
@@ -32,6 +38,8 @@ public class CreateNamespaceRequest extends TeaModel {
 
     /**
      * <p>The password of the namespace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NamespacePassword")
     public String namespacePassword;
@@ -42,7 +50,9 @@ public class CreateNamespaceRequest extends TeaModel {
     /**
      * <p>The region ID of the instance.</p>
      * <br>
-     * <p>> You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

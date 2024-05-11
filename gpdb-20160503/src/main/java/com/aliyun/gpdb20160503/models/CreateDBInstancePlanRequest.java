@@ -7,7 +7,9 @@ public class CreateDBInstancePlanRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <br>
-     * <p>> You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -17,6 +19,8 @@ public class CreateDBInstancePlanRequest extends TeaModel {
 
     /**
      * <p>The execution information of the plan. Specify the parameter in the JSON format. The parameter value varies based on the values of **PlanType** and **PlanScheduleType**. The following section describes the PlanConfig parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PlanConfig")
     public String planConfig;
@@ -41,6 +45,8 @@ public class CreateDBInstancePlanRequest extends TeaModel {
 
     /**
      * <p>The name of the plan.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PlanName")
     public String planName;
@@ -50,6 +56,8 @@ public class CreateDBInstancePlanRequest extends TeaModel {
      * <br>
      * <p>*   **Postpone**: The plan is executed later.</p>
      * <p>*   **Regular**: The plan is executed periodically.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PlanScheduleType")
     public String planScheduleType;
@@ -78,6 +86,8 @@ public class CreateDBInstancePlanRequest extends TeaModel {
      * <p>*   You can specify the value to Resize only for instances in Serverless mode.</p>
      * <br>
      * <p>*   You can specify the value to ModifySpec only for instances in elastic storage mode.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PlanType")
     public String planType;

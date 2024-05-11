@@ -13,7 +13,9 @@ public class ModifyDBInstanceConfigRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
+     * <p>>  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -25,7 +27,7 @@ public class ModifyDBInstanceConfigRequest extends TeaModel {
     public Integer idleTime;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).</p>
+     * <p>The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see [View basic information of a resource group](https://help.aliyun.com/document_detail/151181.html).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

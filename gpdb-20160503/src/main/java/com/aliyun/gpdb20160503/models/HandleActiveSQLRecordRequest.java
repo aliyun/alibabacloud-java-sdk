@@ -4,12 +4,18 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class HandleActiveSQLRecordRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     @NameInMap("OperateType")
     public Integer operateType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Pids")
     public String pids;
 

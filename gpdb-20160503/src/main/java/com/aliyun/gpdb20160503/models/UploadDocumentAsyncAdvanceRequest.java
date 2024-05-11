@@ -10,9 +10,15 @@ public class UploadDocumentAsyncAdvanceRequest extends TeaModel {
     @NameInMap("ChunkSize")
     public Integer chunkSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Collection")
     public String collection;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -22,9 +28,15 @@ public class UploadDocumentAsyncAdvanceRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FileUrl")
     public java.io.InputStream fileUrlObject;
 
@@ -34,12 +46,18 @@ public class UploadDocumentAsyncAdvanceRequest extends TeaModel {
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NamespacePassword")
     public String namespacePassword;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

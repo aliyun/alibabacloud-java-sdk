@@ -9,6 +9,8 @@ public class SwitchDBInstanceNetTypeRequest extends TeaModel {
      * <br>
      * <p>*   The prefix can contain lowercase letters, digits, and hyphens (-) and must start with a lowercase letter.</p>
      * <p>*   The prefix can be up to 30 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
@@ -16,13 +18,17 @@ public class SwitchDBInstanceNetTypeRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <br>
-     * <p>> You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The port number.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Port")
     public String port;

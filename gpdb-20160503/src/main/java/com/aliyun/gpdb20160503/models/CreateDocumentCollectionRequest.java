@@ -4,9 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class CreateDocumentCollectionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Collection")
     public String collection;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -22,9 +28,15 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     @NameInMap("HnswM")
     public Integer hnswM;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ManagerAccount")
     public String managerAccount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ManagerAccountPassword")
     public String managerAccountPassword;
 
@@ -46,6 +58,9 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     @NameInMap("PqEnable")
     public Integer pqEnable;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

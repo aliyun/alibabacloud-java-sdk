@@ -25,13 +25,15 @@ public class DescribeDBVersionInfosRequest extends TeaModel {
     /**
      * <p>The region ID of the instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).</p>
+     * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see [View basic information of a resource group](https://help.aliyun.com/document_detail/151181.html).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

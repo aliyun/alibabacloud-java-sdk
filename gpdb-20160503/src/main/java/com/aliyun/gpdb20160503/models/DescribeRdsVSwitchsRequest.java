@@ -13,7 +13,7 @@ public class DescribeRdsVSwitchsRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list and zone list.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list and zone list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -38,7 +38,7 @@ public class DescribeRdsVSwitchsRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <br>
-     * <p>*   You can call the [DescribeRdsVpcs](~~208327~~) operation to query the available VPC IDs.</p>
+     * <p>*   You can call the [DescribeRdsVpcs](https://help.aliyun.com/document_detail/208327.html) operation to query the available VPC IDs.</p>
      * <br>
      * <p>*   This parameter must be specified.</p>
      */
@@ -48,7 +48,7 @@ public class DescribeRdsVSwitchsRequest extends TeaModel {
     /**
      * <p>The ID of the zone.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list and zone list.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list and zone list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
