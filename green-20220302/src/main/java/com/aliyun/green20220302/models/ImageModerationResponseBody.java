@@ -53,6 +53,88 @@ public class ImageModerationResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ImageModerationResponseBodyDataExtOcrResultLocation extends TeaModel {
+        @NameInMap("H")
+        public Integer h;
+
+        @NameInMap("W")
+        public Integer w;
+
+        @NameInMap("X")
+        public Integer x;
+
+        @NameInMap("Y")
+        public Integer y;
+
+        public static ImageModerationResponseBodyDataExtOcrResultLocation build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtOcrResultLocation self = new ImageModerationResponseBodyDataExtOcrResultLocation();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtOcrResultLocation setH(Integer h) {
+            this.h = h;
+            return this;
+        }
+        public Integer getH() {
+            return this.h;
+        }
+
+        public ImageModerationResponseBodyDataExtOcrResultLocation setW(Integer w) {
+            this.w = w;
+            return this;
+        }
+        public Integer getW() {
+            return this.w;
+        }
+
+        public ImageModerationResponseBodyDataExtOcrResultLocation setX(Integer x) {
+            this.x = x;
+            return this;
+        }
+        public Integer getX() {
+            return this.x;
+        }
+
+        public ImageModerationResponseBodyDataExtOcrResultLocation setY(Integer y) {
+            this.y = y;
+            return this;
+        }
+        public Integer getY() {
+            return this.y;
+        }
+
+    }
+
+    public static class ImageModerationResponseBodyDataExtOcrResult extends TeaModel {
+        @NameInMap("Location")
+        public ImageModerationResponseBodyDataExtOcrResultLocation location;
+
+        @NameInMap("Text")
+        public String text;
+
+        public static ImageModerationResponseBodyDataExtOcrResult build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtOcrResult self = new ImageModerationResponseBodyDataExtOcrResult();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtOcrResult setLocation(ImageModerationResponseBodyDataExtOcrResultLocation location) {
+            this.location = location;
+            return this;
+        }
+        public ImageModerationResponseBodyDataExtOcrResultLocation getLocation() {
+            return this.location;
+        }
+
+        public ImageModerationResponseBodyDataExtOcrResult setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
     public static class ImageModerationResponseBodyDataExtRecognition extends TeaModel {
         @NameInMap("Classification")
         public String classification;
@@ -84,12 +166,23 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExt extends TeaModel {
+        @NameInMap("OcrResult")
+        public java.util.List<ImageModerationResponseBodyDataExtOcrResult> ocrResult;
+
         @NameInMap("Recognition")
         public java.util.List<ImageModerationResponseBodyDataExtRecognition> recognition;
 
         public static ImageModerationResponseBodyDataExt build(java.util.Map<String, ?> map) throws Exception {
             ImageModerationResponseBodyDataExt self = new ImageModerationResponseBodyDataExt();
             return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExt setOcrResult(java.util.List<ImageModerationResponseBodyDataExtOcrResult> ocrResult) {
+            this.ocrResult = ocrResult;
+            return this;
+        }
+        public java.util.List<ImageModerationResponseBodyDataExtOcrResult> getOcrResult() {
+            return this.ocrResult;
         }
 
         public ImageModerationResponseBodyDataExt setRecognition(java.util.List<ImageModerationResponseBodyDataExtRecognition> recognition) {
