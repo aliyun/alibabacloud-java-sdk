@@ -12,6 +12,8 @@ public class UpdateConnectionShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the connection that you want to update. The name must be 2 to 127 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConnectionName")
     public String connectionName;
@@ -24,6 +26,8 @@ public class UpdateConnectionShrinkRequest extends TeaModel {
 
     /**
      * <p>The parameters that are configured for the network.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkParameters")
     public String networkParametersShrink;

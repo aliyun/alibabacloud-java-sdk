@@ -12,6 +12,8 @@ public class CreateRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the event bus.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventBusName")
     public String eventBusName;
@@ -26,12 +28,16 @@ public class CreateRuleRequest extends TeaModel {
      * <p>The event pattern, in JSON format. Valid values: stringEqual and stringExpression. You can specify up to five expressions in the map data structure in each field.</p>
      * <br>
      * <p>You can specify up to five expressions in the map data structure in each field.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FilterPattern")
     public String filterPattern;
 
     /**
      * <p>The name of the event rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
@@ -202,6 +208,8 @@ public class CreateRuleRequest extends TeaModel {
 
         /**
          * <p>The ID of the custom event target.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Id")
         public String id;
@@ -220,6 +228,8 @@ public class CreateRuleRequest extends TeaModel {
 
         /**
          * <p>The type of the event target. For more information, see [Event target parameters.](https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters)</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Type")
         public String type;

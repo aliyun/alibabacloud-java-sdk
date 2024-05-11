@@ -12,12 +12,16 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     /**
      * <p>The name of the event stream.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventStreamingName")
     public String eventStreamingName;
 
     /**
      * <p>The rule that is used to filter events. If you leave this parameter empty, all events are matched.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FilterPattern")
     public String filterPattern;
@@ -30,12 +34,16 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     /**
      * <p>The event target. You must and can specify only one event target.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Sink")
     public CreateEventStreamingRequestSink sink;
 
     /**
      * <p>The event provider, which is also known as the event source. You must and can specify only one event source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Source")
     public CreateEventStreamingRequestSource source;
@@ -298,7 +306,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkDataHubParametersBody extends TeaModel {
         /**
-         * <p>The format into which you want to transform events.</p>
+         * <p>The method that you want to use to transform events.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -348,7 +356,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkDataHubParametersProject extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -398,7 +406,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkDataHubParametersRoleName extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -448,7 +456,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkDataHubParametersTopic extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -498,7 +506,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkDataHubParametersTopicSchema extends TeaModel {
         /**
-         * <p>The format into which you want to transform events.</p>
+         * <p>The method that you want to use to transform events.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -548,7 +556,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkDataHubParametersTopicType extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -696,7 +704,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkFcParametersBody extends TeaModel {
         /**
-         * <p>The format into which you want to transform events.</p>
+         * <p>The method that you want to use to transform events.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -746,7 +754,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkFcParametersConcurrency extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -796,7 +804,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkFcParametersFunctionName extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -846,7 +854,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkFcParametersInvocationType extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -858,7 +866,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The invocation method. Valid values: Sync and Async.</p>
+         * <p>The invocation mode. Valid values: Sync and Async.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -896,7 +904,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkFcParametersQualifier extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -946,7 +954,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkFcParametersServiceName extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -1014,7 +1022,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkFcParametersFunctionName functionName;
 
         /**
-         * <p>The invocation method. Valid values: Sync and Async.</p>
+         * <p>The invocation mode. Valid values: Sync and Async.</p>
          */
         @NameInMap("InvocationType")
         public CreateEventStreamingRequestSinkSinkFcParametersInvocationType invocationType;
@@ -1088,7 +1096,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkFnfParametersExecutionName extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -1138,7 +1146,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkFnfParametersFlowName extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -1188,7 +1196,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkFnfParametersInput extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -1238,7 +1246,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkFnfParametersRoleName extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -1352,7 +1360,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkKafkaParametersAcks extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -1406,7 +1414,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkKafkaParametersInstanceId extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -1418,7 +1426,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the ApsaraMQ for Kafka instance.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -1456,7 +1464,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkKafkaParametersKey extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -1506,7 +1514,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkKafkaParametersTopic extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -1518,7 +1526,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The topic name.</p>
+         * <p>The name of the topic on the ApsaraMQ for Kafka instance.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -1556,7 +1564,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkKafkaParametersValue extends TeaModel {
         /**
-         * <p>The format into which you want to transform events.</p>
+         * <p>The method that you want to use to transform events.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -1606,7 +1614,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkKafkaParameters extends TeaModel {
         /**
-         * <p>The acknowledgement (ACK) mode.</p>
+         * <p>The acknowledgment (ACK) mode.</p>
          * <br>
          * <p>*   If you set this parameter to 0, no response is returned from the broker. In this mode, the performance is high, but the risk of data loss is also high.</p>
          * <p>*   If you set this parameter to 1, a response is returned when data is written to the leader. In this mode, the performance and the risk of data loss are moderate. Data loss may occur if a failure occurs on the leader.</p>
@@ -1616,7 +1624,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkKafkaParametersAcks acks;
 
         /**
-         * <p>The ID of the Message Queue for Apache Kafka instance.</p>
+         * <p>The ID of the ApsaraMQ for Kafka instance.</p>
          */
         @NameInMap("InstanceId")
         public CreateEventStreamingRequestSinkSinkKafkaParametersInstanceId instanceId;
@@ -1628,7 +1636,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkKafkaParametersKey key;
 
         /**
-         * <p>The topic name.</p>
+         * <p>The name of the topic on the ApsaraMQ for Kafka instance.</p>
          */
         @NameInMap("Topic")
         public CreateEventStreamingRequestSinkSinkKafkaParametersTopic topic;
@@ -1688,7 +1696,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkMNSParametersBody extends TeaModel {
         /**
-         * <p>The format into which you want to transform events.</p>
+         * <p>The method that you want to use to transform events.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -1738,7 +1746,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkMNSParametersIsBase64Encode extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -1750,7 +1758,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>Specifies that Base64 encoding is enabled.</p>
+         * <p>Specifies whether to enable Base64 encoding.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -1788,7 +1796,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkMNSParametersQueueName extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -1838,7 +1846,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkMNSParameters extends TeaModel {
         /**
-         * <p>The message body.</p>
+         * <p>The message content.</p>
          */
         @NameInMap("Body")
         public CreateEventStreamingRequestSinkSinkMNSParametersBody body;
@@ -1887,12 +1895,21 @@ public class CreateEventStreamingRequest extends TeaModel {
     }
 
     public static class CreateEventStreamingRequestSinkSinkPrometheusParametersAuthorizationType extends TeaModel {
+        /**
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>None.</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The authentication method.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -1928,12 +1945,21 @@ public class CreateEventStreamingRequest extends TeaModel {
     }
 
     public static class CreateEventStreamingRequestSinkSinkPrometheusParametersData extends TeaModel {
+        /**
+         * <p>The method that you want to use to transform events. Default value: JSAONPATH.</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The template based on which you want to transform events.</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The metric data.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -1969,12 +1995,21 @@ public class CreateEventStreamingRequest extends TeaModel {
     }
 
     public static class CreateEventStreamingRequestSinkSinkPrometheusParametersNetworkType extends TeaModel {
+        /**
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>None.</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The network type.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -2010,12 +2045,21 @@ public class CreateEventStreamingRequest extends TeaModel {
     }
 
     public static class CreateEventStreamingRequestSinkSinkPrometheusParametersPassword extends TeaModel {
+        /**
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>None.</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The password.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -2051,12 +2095,21 @@ public class CreateEventStreamingRequest extends TeaModel {
     }
 
     public static class CreateEventStreamingRequestSinkSinkPrometheusParametersSecurityGroupId extends TeaModel {
+        /**
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>None.</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The ID of the security group to which the Managed Service for Prometheus instance belongs.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -2092,12 +2145,21 @@ public class CreateEventStreamingRequest extends TeaModel {
     }
 
     public static class CreateEventStreamingRequestSinkSinkPrometheusParametersURL extends TeaModel {
+        /**
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>None.</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The URL for the remote write configuration item of the Managed Service for Prometheus instance.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -2133,12 +2195,21 @@ public class CreateEventStreamingRequest extends TeaModel {
     }
 
     public static class CreateEventStreamingRequestSinkSinkPrometheusParametersUsername extends TeaModel {
+        /**
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>None.</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The username.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -2174,12 +2245,21 @@ public class CreateEventStreamingRequest extends TeaModel {
     }
 
     public static class CreateEventStreamingRequestSinkSinkPrometheusParametersVSwitchId extends TeaModel {
+        /**
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>None.</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The ID of the vSwitch with which the Managed Service for Prometheus instance is associated.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -2215,12 +2295,21 @@ public class CreateEventStreamingRequest extends TeaModel {
     }
 
     public static class CreateEventStreamingRequestSinkSinkPrometheusParametersVpcId extends TeaModel {
+        /**
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>None.</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The ID of the VPC to which the Managed Service for Prometheus instance belongs.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -2256,30 +2345,57 @@ public class CreateEventStreamingRequest extends TeaModel {
     }
 
     public static class CreateEventStreamingRequestSinkSinkPrometheusParameters extends TeaModel {
+        /**
+         * <p>The authentication method.</p>
+         */
         @NameInMap("AuthorizationType")
         public CreateEventStreamingRequestSinkSinkPrometheusParametersAuthorizationType authorizationType;
 
+        /**
+         * <p>The metric data.</p>
+         */
         @NameInMap("Data")
         public CreateEventStreamingRequestSinkSinkPrometheusParametersData data;
 
+        /**
+         * <p>The network type.</p>
+         */
         @NameInMap("NetworkType")
         public CreateEventStreamingRequestSinkSinkPrometheusParametersNetworkType networkType;
 
+        /**
+         * <p>The password.</p>
+         */
         @NameInMap("Password")
         public CreateEventStreamingRequestSinkSinkPrometheusParametersPassword password;
 
+        /**
+         * <p>The ID of the security group to which the Managed Service for Prometheus instance belongs.</p>
+         */
         @NameInMap("SecurityGroupId")
         public CreateEventStreamingRequestSinkSinkPrometheusParametersSecurityGroupId securityGroupId;
 
+        /**
+         * <p>The URL for the remote write configuration item of the Managed Service for Prometheus instance.</p>
+         */
         @NameInMap("URL")
         public CreateEventStreamingRequestSinkSinkPrometheusParametersURL URL;
 
+        /**
+         * <p>The username.</p>
+         */
         @NameInMap("Username")
         public CreateEventStreamingRequestSinkSinkPrometheusParametersUsername username;
 
+        /**
+         * <p>The ID of the vSwitch with which the Managed Service for Prometheus instance is associated.</p>
+         */
         @NameInMap("VSwitchId")
         public CreateEventStreamingRequestSinkSinkPrometheusParametersVSwitchId vSwitchId;
 
+        /**
+         * <p>The ID of the VPC to which the Managed Service for Prometheus instance belongs.</p>
+         */
         @NameInMap("VpcId")
         public CreateEventStreamingRequestSinkSinkPrometheusParametersVpcId vpcId;
 
@@ -2364,7 +2480,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRabbitMQParametersBody extends TeaModel {
         /**
-         * <p>The format into which you want to transform events.</p>
+         * <p>The method that you want to use to transform events.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -2414,7 +2530,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRabbitMQParametersExchange extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -2426,7 +2542,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The name of the exchange on the Message Queue for RabbitMQ instance.</p>
+         * <p>The name of the exchange on the ApsaraMQ for RabbitMQ instance.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -2464,7 +2580,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRabbitMQParametersInstanceId extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -2476,7 +2592,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The ID of the Message Queue for RabbitMQ instance.</p>
+         * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -2514,7 +2630,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRabbitMQParametersMessageId extends TeaModel {
         /**
-         * <p>The format into which you want to transform events.</p>
+         * <p>The method that you want to use to transform events.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -2564,7 +2680,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRabbitMQParametersProperties extends TeaModel {
         /**
-         * <p>The format into which you want to transform events.</p>
+         * <p>The method that you want to use to transform events.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -2614,7 +2730,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRabbitMQParametersQueueName extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -2626,7 +2742,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The name of the queue on the Message Queue for RabbitMQ instance.</p>
+         * <p>The name of the queue on the ApsaraMQ for RabbitMQ instance.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -2664,7 +2780,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRabbitMQParametersRoutingKey extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -2714,7 +2830,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRabbitMQParametersTargetType extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -2767,7 +2883,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRabbitMQParametersVirtualHostName extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -2779,7 +2895,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The name of the vhost of the Message Queue for RabbitMQ instance.</p>
+         * <p>The name of the vhost to which the ApsaraMQ for RabbitMQ instance belongs.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -2817,19 +2933,19 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRabbitMQParameters extends TeaModel {
         /**
-         * <p>The message body.</p>
+         * <p>The message content.</p>
          */
         @NameInMap("Body")
         public CreateEventStreamingRequestSinkSinkRabbitMQParametersBody body;
 
         /**
-         * <p>The exchange to which you want to deliver events. This parameter is available only if you set TargetType to Exchange.</p>
+         * <p>The exchange mode. This parameter is required only if you set TargetType to Exchange.</p>
          */
         @NameInMap("Exchange")
         public CreateEventStreamingRequestSinkSinkRabbitMQParametersExchange exchange;
 
         /**
-         * <p>The information about the Message Queue for RabbitMQ instance.</p>
+         * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
          */
         @NameInMap("InstanceId")
         public CreateEventStreamingRequestSinkSinkRabbitMQParametersInstanceId instanceId;
@@ -2847,13 +2963,13 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkRabbitMQParametersProperties properties;
 
         /**
-         * <p>The queue to which you want to deliver events. This parameter is available only if you set TargetType to Queue.</p>
+         * <p>The queue mode. This parameter is required only if you set TargetType to Queue.</p>
          */
         @NameInMap("QueueName")
         public CreateEventStreamingRequestSinkSinkRabbitMQParametersQueueName queueName;
 
         /**
-         * <p>The rule that you want to use to route messages. This parameter is available only if you set TargetType to Exchange.</p>
+         * <p>The rule that you want to use to route messages. This parameter is required only if you set TargetType to Exchange.</p>
          */
         @NameInMap("RoutingKey")
         public CreateEventStreamingRequestSinkSinkRabbitMQParametersRoutingKey routingKey;
@@ -2865,7 +2981,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkRabbitMQParametersTargetType targetType;
 
         /**
-         * <p>The name of the vhost of the Message Queue for RabbitMQ instance.</p>
+         * <p>The name of the vhost to which the ApsaraMQ for RabbitMQ instance belongs.</p>
          */
         @NameInMap("VirtualHostName")
         public CreateEventStreamingRequestSinkSinkRabbitMQParametersVirtualHostName virtualHostName;
@@ -2951,7 +3067,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRocketMQParametersBody extends TeaModel {
         /**
-         * <p>The format into which you want to transform events.</p>
+         * <p>The method that you want to use to transform events.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -3001,7 +3117,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRocketMQParametersInstanceEndpoint extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -3013,7 +3129,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The instance endpoint.</p>
+         * <p>The endpoint that is used to access the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -3051,7 +3167,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRocketMQParametersInstanceId extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -3063,7 +3179,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The ID of the Message Queue for Apache RocketMQ instance.</p>
+         * <p>The ID of the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -3101,7 +3217,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRocketMQParametersInstancePassword extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -3113,7 +3229,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The instance password.</p>
+         * <p>The password that is used to access the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -3151,7 +3267,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRocketMQParametersInstanceType extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -3163,7 +3279,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The instance type.</p>
+         * <p>The type of the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -3201,7 +3317,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRocketMQParametersInstanceUsername extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -3213,7 +3329,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The instance username.</p>
+         * <p>The username that is used to access the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -3251,7 +3367,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRocketMQParametersKeys extends TeaModel {
         /**
-         * <p>The format into which you want to transform events.</p>
+         * <p>The method that you want to use to transform events.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -3301,7 +3417,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRocketMQParametersNetwork extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -3315,8 +3431,8 @@ public class CreateEventStreamingRequest extends TeaModel {
         /**
          * <p>The network type. Valid values:</p>
          * <br>
-         * <p>*   PublicNetwork</p>
-         * <p>*   PrivateNetwork</p>
+         * <p>*   PublicNetwork and</p>
+         * <p>*   PrivateNetwork.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -3354,7 +3470,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRocketMQParametersProperties extends TeaModel {
         /**
-         * <p>The format into which you want to transform events.</p>
+         * <p>The method that you want to use to transform events.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -3404,7 +3520,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRocketMQParametersSecurityGroupId extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -3416,7 +3532,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The security group ID.</p>
+         * <p>The ID of the security group to which the ApsaraMQ for RocketMQ instance belongs.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -3454,7 +3570,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRocketMQParametersTags extends TeaModel {
         /**
-         * <p>The format into which you want to transform events.</p>
+         * <p>The method that you want to use to transform events.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -3504,7 +3620,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRocketMQParametersTopic extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -3516,7 +3632,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The name of the topic on the Message Queue for Apache RocketMQ instance.</p>
+         * <p>The name of the topic on the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -3554,7 +3670,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRocketMQParametersVSwitchIds extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -3566,7 +3682,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch with which the ApsaraMQ for RocketMQ instance is associated.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -3604,7 +3720,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRocketMQParametersVpcId extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -3616,7 +3732,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC to which the ApsaraMQ for RocketMQ instance belongs.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -3654,37 +3770,37 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkRocketMQParameters extends TeaModel {
         /**
-         * <p>The message body.</p>
+         * <p>The message content.</p>
          */
         @NameInMap("Body")
         public CreateEventStreamingRequestSinkSinkRocketMQParametersBody body;
 
         /**
-         * <p>The instance endpoint.</p>
+         * <p>The endpoint that is used to access the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("InstanceEndpoint")
         public CreateEventStreamingRequestSinkSinkRocketMQParametersInstanceEndpoint instanceEndpoint;
 
         /**
-         * <p>The parameters that are configured if you specify the event target as Message Queue for Apache RocketMQ.</p>
+         * <p>The ID of the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("InstanceId")
         public CreateEventStreamingRequestSinkSinkRocketMQParametersInstanceId instanceId;
 
         /**
-         * <p>The instance password.</p>
+         * <p>The password that is used to access the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("InstancePassword")
         public CreateEventStreamingRequestSinkSinkRocketMQParametersInstancePassword instancePassword;
 
         /**
-         * <p>The instance type.</p>
+         * <p>The type of the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("InstanceType")
         public CreateEventStreamingRequestSinkSinkRocketMQParametersInstanceType instanceType;
 
         /**
-         * <p>The instance username.</p>
+         * <p>The username that is used to access the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("InstanceUsername")
         public CreateEventStreamingRequestSinkSinkRocketMQParametersInstanceUsername instanceUsername;
@@ -3698,8 +3814,8 @@ public class CreateEventStreamingRequest extends TeaModel {
         /**
          * <p>The network type. Valid values:</p>
          * <br>
-         * <p>*   PublicNetwork</p>
-         * <p>*   PrivateNetwork</p>
+         * <p>*   PublicNetwork and</p>
+         * <p>*   PrivateNetwork.</p>
          */
         @NameInMap("Network")
         public CreateEventStreamingRequestSinkSinkRocketMQParametersNetwork network;
@@ -3711,7 +3827,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkRocketMQParametersProperties properties;
 
         /**
-         * <p>The security group ID.</p>
+         * <p>The ID of the security group to which the ApsaraMQ for RocketMQ instance belongs.</p>
          */
         @NameInMap("SecurityGroupId")
         public CreateEventStreamingRequestSinkSinkRocketMQParametersSecurityGroupId securityGroupId;
@@ -3723,19 +3839,19 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkRocketMQParametersTags tags;
 
         /**
-         * <p>The topic on the Message Queue for Apache RocketMQ instance.</p>
+         * <p>The name of the topic on the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("Topic")
         public CreateEventStreamingRequestSinkSinkRocketMQParametersTopic topic;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch with which the ApsaraMQ for RocketMQ instance is associated.</p>
          */
         @NameInMap("VSwitchIds")
         public CreateEventStreamingRequestSinkSinkRocketMQParametersVSwitchIds vSwitchIds;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC to which the ApsaraMQ for RocketMQ instance belongs.</p>
          */
         @NameInMap("VpcId")
         public CreateEventStreamingRequestSinkSinkRocketMQParametersVpcId vpcId;
@@ -3861,7 +3977,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkSLSParametersBody extends TeaModel {
         /**
-         * <p>The format into which you want to transform events.</p>
+         * <p>The method that you want to use to transform events.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -3911,7 +4027,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkSLSParametersLogStore extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -3961,7 +4077,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkSLSParametersProject extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -4011,7 +4127,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkSLSParametersRoleName extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -4023,7 +4139,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The role name. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the RAM console.</p>
+         * <p>The role name. If you want to authorize EventBridge to use this role to read logs in Simple Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the RAM console.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -4061,7 +4177,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSinkSinkSLSParametersTopic extends TeaModel {
         /**
-         * <p>The format into which you want to transform events. Default value: CONSTANT.</p>
+         * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
          */
         @NameInMap("Form")
         public String form;
@@ -4073,7 +4189,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The topic that you want to use to store logs. This parameter corresponds to the **topic** reserved field in Simple Log Service.</p>
+         * <p>The topic that you want to use to store logs. This parameter corresponds to the reserved field **topic** in Simple Log Service.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -4129,13 +4245,13 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkSLSParametersProject project;
 
         /**
-         * <p>The role name. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console.</p>
+         * <p>The role name. If you want to authorize EventBridge to use this role to read logs in Simple Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the RAM console.</p>
          */
         @NameInMap("RoleName")
         public CreateEventStreamingRequestSinkSinkSLSParametersRoleName roleName;
 
         /**
-         * <p>The topic that you want to use to store logs. This parameter corresponds to the **topic** reserved field in Simple Log Service.</p>
+         * <p>The topic that you want to use to store logs. This parameter corresponds to the reserved field **topic** in Simple Log Service.</p>
          */
         @NameInMap("Topic")
         public CreateEventStreamingRequestSinkSinkSLSParametersTopic topic;
@@ -4189,52 +4305,55 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSink extends TeaModel {
         /**
-         * <p>The parameters that are configured if you specify the event target as DataHub.</p>
+         * <p>The parameters that are configured if you specify DataHub as the event target.</p>
          */
         @NameInMap("SinkDataHubParameters")
         public CreateEventStreamingRequestSinkSinkDataHubParameters sinkDataHubParameters;
 
         /**
-         * <p>The parameters that are configured if you specify the event target as Function Compute.</p>
+         * <p>The parameters that are configured if you specify Function Compute as the event target.</p>
          */
         @NameInMap("SinkFcParameters")
         public CreateEventStreamingRequestSinkSinkFcParameters sinkFcParameters;
 
         /**
-         * <p>The parameters that are configured if you specify the event target as Serverless Workflow.</p>
+         * <p>The parameters that are configured if you specify CloudFlow as the event target.</p>
          */
         @NameInMap("SinkFnfParameters")
         public CreateEventStreamingRequestSinkSinkFnfParameters sinkFnfParameters;
 
         /**
-         * <p>The parameters that are configured if you specify the event target as Message Queue for Apache Kafka.</p>
+         * <p>The parameters that are configured if you specify ApsaraMQ for Kafka as the event target.</p>
          */
         @NameInMap("SinkKafkaParameters")
         public CreateEventStreamingRequestSinkSinkKafkaParameters sinkKafkaParameters;
 
         /**
-         * <p>The parameters that are configured if you specify the event target as MNS.</p>
+         * <p>The parameters that are configured if you specify MNS as the event target.</p>
          */
         @NameInMap("SinkMNSParameters")
         public CreateEventStreamingRequestSinkSinkMNSParameters sinkMNSParameters;
 
+        /**
+         * <p>The parameters that are configured if you specify Managed Service for Prometheus as the event target.</p>
+         */
         @NameInMap("SinkPrometheusParameters")
         public CreateEventStreamingRequestSinkSinkPrometheusParameters sinkPrometheusParameters;
 
         /**
-         * <p>The parameters that are configured if you specify the event target as Message Queue for RabbitMQ.</p>
+         * <p>The parameters that are configured if you specify ApsaraMQ for RabbitMQ as the event target.</p>
          */
         @NameInMap("SinkRabbitMQParameters")
         public CreateEventStreamingRequestSinkSinkRabbitMQParameters sinkRabbitMQParameters;
 
         /**
-         * <p>The parameters that are configured if you specify the event target as Message Queue for Apache RocketMQ.</p>
+         * <p>The parameters that are configured if you specify ApsaraMQ for RocketMQ as the event target.</p>
          */
         @NameInMap("SinkRocketMQParameters")
         public CreateEventStreamingRequestSinkSinkRocketMQParameters sinkRocketMQParameters;
 
         /**
-         * <p>The parameters that are configured if you specify the event target as Simple Log Service.</p>
+         * <p>The parameters that are configured if you specify Simple Log Service as the event target.</p>
          */
         @NameInMap("SinkSLSParameters")
         public CreateEventStreamingRequestSinkSinkSLSParameters sinkSLSParameters;
@@ -4432,43 +4551,43 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String consumerGroup;
 
         /**
-         * <p>The ID of the Message Queue for Apache Kafka instance.</p>
+         * <p>The ID of the ApsaraMQ for Kafka instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The network setting. Default value: Default. The value PublicNetwork specifies a virtual private cloud (VPC).</p>
+         * <p>The network type. Default value: Default. The value PublicNetwork specifies a virtual private cloud (VPC).</p>
          */
         @NameInMap("Network")
         public String network;
 
         /**
-         * <p>The offset.</p>
+         * <p>The offset from which messages are consumed.</p>
          */
         @NameInMap("OffsetReset")
         public String offsetReset;
 
         /**
-         * <p>The ID of the region where the Message Queue for Apache Kafka instance resides.</p>
+         * <p>The ID of the region where the ApsaraMQ for Kafka instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The security group ID.</p>
+         * <p>The ID of the security group to which the ApsaraMQ for Kafka instance belongs.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
-         * <p>The topic name.</p>
+         * <p>The name of the topic on the ApsaraMQ for Kafka instance.</p>
          */
         @NameInMap("Topic")
         public String topic;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch with which the ApsaraMQ for Kafka instance is associated.</p>
          */
         @NameInMap("VSwitchIds")
         public String vSwitchIds;
@@ -4477,7 +4596,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String valueDataType;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC to which the ApsaraMQ for Kafka instance belongs.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -4624,13 +4743,13 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String bodyDataType;
 
         /**
-         * <p>The ID of the Message Queue for MQTT instance.</p>
+         * <p>The ID of the ApsaraMQ for MQTT instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The ID of the region where the Message Queue for MQTT instance resides.</p>
+         * <p>The ID of the region where the ApsaraMQ for MQTT instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -4681,12 +4800,21 @@ public class CreateEventStreamingRequest extends TeaModel {
     }
 
     public static class CreateEventStreamingRequestSourceSourcePrometheusParameters extends TeaModel {
+        /**
+         * <p>The cluster ID.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The data type.</p>
+         */
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <p>The labels.</p>
+         */
         @NameInMap("Labels")
         public String labels;
 
@@ -4734,25 +4862,25 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSourceSourceRabbitMQParameters extends TeaModel {
         /**
-         * <p>The ID of the Message Queue for RabbitMQ instance.</p>
+         * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The queue name of the Message Queue for RabbitMQ instance.</p>
+         * <p>The name of the queue on the ApsaraMQ for RabbitMQ instance.</p>
          */
         @NameInMap("QueueName")
         public String queueName;
 
         /**
-         * <p>The ID of the region where the Message Queue for RabbitMQ instance resides. You can call the [DescribeRegions](~~62010~~) operation to query the most recent region list.</p>
+         * <p>The ID of the region where the ApsaraMQ for RabbitMQ instance resides. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/62010.html) operation to query the most recent region list.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The vhost name of the Message Queue for RabbitMQ instance.</p>
+         * <p>The name of the vhost to which the ApsaraMQ for RabbitMQ instance belongs.</p>
          */
         @NameInMap("VirtualHostName")
         public String virtualHostName;
@@ -4816,64 +4944,64 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String filterType;
 
         /**
-         * <p>The ID of the consumer group on the Message Queue for Apache RocketMQ instance.</p>
+         * <p>The ID of the consumer group on the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("GroupID")
         public String groupID;
 
         /**
-         * <p>The instance endpoint.</p>
+         * <p>The endpoint that is used to access the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("InstanceEndpoint")
         public String instanceEndpoint;
 
         /**
-         * <p>The ID of the Message Queue for Apache RocketMQ instance.</p>
+         * <p>The ID of the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The network type of the Message Queue for Apache RocketMQ instance. Valid values:</p>
+         * <p>The network type. Valid values:</p>
          * <br>
-         * <p>*   PublicNetwork</p>
-         * <p>*   PrivateNetwork</p>
+         * <p>*   PublicNetwork and</p>
+         * <p>*   PrivateNetwork.</p>
          */
         @NameInMap("InstanceNetwork")
         public String instanceNetwork;
 
         /**
-         * <p>The instance password.</p>
+         * <p>The password that is used to access the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("InstancePassword")
         public String instancePassword;
 
         /**
-         * <p>The security group ID of the Message Queue for Apache RocketMQ instance.</p>
+         * <p>The ID of the security group to which the ApsaraMQ for RocketMQ instance belongs.</p>
          */
         @NameInMap("InstanceSecurityGroupId")
         public String instanceSecurityGroupId;
 
         /**
-         * <p>The instance type.</p>
+         * <p>The type of the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The instance username.</p>
+         * <p>The username that is used to access the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("InstanceUsername")
         public String instanceUsername;
 
         /**
-         * <p>The vSwitch ID of the Message Queue for Apache RocketMQ instance.</p>
+         * <p>The ID of the vSwitch with which the ApsaraMQ for RocketMQ instance is associated.</p>
          */
         @NameInMap("InstanceVSwitchIds")
         public String instanceVSwitchIds;
 
         /**
-         * <p>The VPC ID of the Message Queue for Apache RocketMQ instance.</p>
+         * <p>The ID of the VPC to which the ApsaraMQ for RocketMQ instance belongs.</p>
          */
         @NameInMap("InstanceVpcId")
         public String instanceVpcId;
@@ -4897,7 +5025,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String offset;
 
         /**
-         * <p>The ID of the region where the Message Queue for Apache RocketMQ instance resides.</p>
+         * <p>The ID of the region where the ApsaraMQ for RocketMQ instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -4921,7 +5049,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public Long timestamp;
 
         /**
-         * <p>The name of the topic on the Message Queue for Apache RocketMQ instance.</p>
+         * <p>The name of the topic on the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("Topic")
         public String topic;
@@ -5123,25 +5251,25 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestSourceSourceSLSParameters extends TeaModel {
         /**
-         * <p>The consumer offset. The value begin specifies the earliest offset, and the value end specifies the latest offset. You can also specify a time in seconds to start consumption.</p>
+         * <p>The consumer offset. The value begin specifies the earliest offset. The value end specifies the latest offset. You can also specify a time in seconds to start consumption.</p>
          */
         @NameInMap("ConsumePosition")
         public String consumePosition;
 
         /**
-         * <p>The Log Service Logstore.</p>
+         * <p>The Simple Log Service Logstore.</p>
          */
         @NameInMap("LogStore")
         public String logStore;
 
         /**
-         * <p>The Log Service project.</p>
+         * <p>The Simple Log Service project.</p>
          */
         @NameInMap("Project")
         public String project;
 
         /**
-         * <p>The role name. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console.</p>
+         * <p>The role name. If you want to authorize EventBridge to use this role to read logs in Simple Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console.</p>
          */
         @NameInMap("RoleName")
         public String roleName;
@@ -5193,7 +5321,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSourceSourceDTSParameters sourceDTSParameters;
 
         /**
-         * <p>The parameters that are configured if you specify Message Queue for Apache Kafka as the event source.</p>
+         * <p>The parameters that are configured if you specify ApsaraMQ for Kafka as the event source.</p>
          */
         @NameInMap("SourceKafkaParameters")
         public CreateEventStreamingRequestSourceSourceKafkaParameters sourceKafkaParameters;
@@ -5205,28 +5333,31 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSourceSourceMNSParameters sourceMNSParameters;
 
         /**
-         * <p>The parameters that are configured if you specify Message Queue for MQTT as the event source.</p>
+         * <p>The parameters that are configured if you specify ApsaraMQ for MQTT as the event source.</p>
          */
         @NameInMap("SourceMQTTParameters")
         public CreateEventStreamingRequestSourceSourceMQTTParameters sourceMQTTParameters;
 
+        /**
+         * <p>Parameters that are configured if you specify Managed Service for Prometheus as the event source.</p>
+         */
         @NameInMap("SourcePrometheusParameters")
         public CreateEventStreamingRequestSourceSourcePrometheusParameters sourcePrometheusParameters;
 
         /**
-         * <p>The parameters that are configured if you specify Message Queue for RabbitMQ as the event source.</p>
+         * <p>The parameters that are configured if you specify ApsaraMQ for RabbitMQ as the event source.</p>
          */
         @NameInMap("SourceRabbitMQParameters")
         public CreateEventStreamingRequestSourceSourceRabbitMQParameters sourceRabbitMQParameters;
 
         /**
-         * <p>The parameters that are configured if you specify Message Queue for Apache RocketMQ as the event source.</p>
+         * <p>The parameters that are configured if you specify ApsaraMQ for RocketMQ as the event source.</p>
          */
         @NameInMap("SourceRocketMQParameters")
         public CreateEventStreamingRequestSourceSourceRocketMQParameters sourceRocketMQParameters;
 
         /**
-         * <p>The parameters that are configured if you specify Log Service as the event source.</p>
+         * <p>The parameters that are configured if you specify Simple Log Service as the event source.</p>
          */
         @NameInMap("SourceSLSParameters")
         public CreateEventStreamingRequestSourceSourceSLSParameters sourceSLSParameters;

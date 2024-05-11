@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class PutTargetsRequest extends TeaModel {
     /**
      * <p>The name of the event bus.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventBusName")
     public String eventBusName;
 
     /**
      * <p>The name of the event rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>The event targets to be created or updated. For more information, see [Limits.](https://www.alibabacloud.com/help/en/eventbridge/latest/limits)</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Targets")
     public java.util.List<PutTargetsRequestTargets> targets;
@@ -162,6 +168,8 @@ public class PutTargetsRequest extends TeaModel {
 
         /**
          * <p>The ID of the custom event target.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Id")
         public String id;
@@ -184,6 +192,8 @@ public class PutTargetsRequest extends TeaModel {
 
         /**
          * <p>The type of the event target. For more information, see [Event target parameters.](https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters)</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Type")
         public String type;

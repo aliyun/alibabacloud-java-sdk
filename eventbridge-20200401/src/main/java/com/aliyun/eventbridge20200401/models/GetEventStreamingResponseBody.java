@@ -3014,6 +3014,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("VSwitchIds")
         public String vSwitchIds;
 
+        /**
+         * <p>The encoding or decoding format. Valid values: Json, Text, and Binary. The value Json indicates that bytes are decoded into UTF-8 strings and then parsed into JSON format. The value Text indicates that bytes are decoded into UTF-8 strings and then put into the payload. The value Binary indicates that bytes are encoded into Base64 strings and put into the payload.</p>
+         */
         @NameInMap("ValueDataType")
         public String valueDataType;
 
@@ -3617,7 +3620,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSourceSourceDTSParameters sourceDTSParameters;
 
         /**
-         * <p>Source Kafka Parameters</p>
+         * <p>The parameters that are returned if ApsaraMQ for Kafka is specified as the event source.</p>
          */
         @NameInMap("SourceKafkaParameters")
         public GetEventStreamingResponseBodyDataSourceSourceKafkaParameters sourceKafkaParameters;
@@ -3727,6 +3730,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataTransforms extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the cloud service, such as the ARN of a Function Compute function.</p>
+         */
         @NameInMap("Arn")
         public String arn;
 

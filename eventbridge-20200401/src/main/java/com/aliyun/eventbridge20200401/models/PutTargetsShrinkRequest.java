@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class PutTargetsShrinkRequest extends TeaModel {
     /**
      * <p>The name of the event bus.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventBusName")
     public String eventBusName;
 
     /**
      * <p>The name of the event rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>The event targets to be created or updated. For more information, see [Limits.](https://www.alibabacloud.com/help/en/eventbridge/latest/limits)</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Targets")
     public String targetsShrink;

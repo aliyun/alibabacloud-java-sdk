@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class StartEventStreamingRequest extends TeaModel {
     /**
      * <p>The name of the event stream that you want to enable.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventStreamingName")
     public String eventStreamingName;

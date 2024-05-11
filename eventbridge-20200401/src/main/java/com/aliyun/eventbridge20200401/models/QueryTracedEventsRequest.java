@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class QueryTracedEventsRequest extends TeaModel {
     /**
      * <p>The end of the time range when event traces are queried. Unit: milliseconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The name of the event bus.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventBusName")
     public String eventBusName;
@@ -48,6 +52,8 @@ public class QueryTracedEventsRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query event traces. Unit: milliseconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

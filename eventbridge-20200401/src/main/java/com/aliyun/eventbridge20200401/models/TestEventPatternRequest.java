@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class TestEventPatternRequest extends TeaModel {
     /**
      * <p>The event.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Event")
     public String event;
 
     /**
      * <p>The event pattern.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventPattern")
     public String eventPattern;

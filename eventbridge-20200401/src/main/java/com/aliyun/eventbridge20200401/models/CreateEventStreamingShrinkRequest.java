@@ -12,12 +12,16 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the event stream.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventStreamingName")
     public String eventStreamingName;
 
     /**
      * <p>The rule that is used to filter events. If you leave this parameter empty, all events are matched.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FilterPattern")
     public String filterPattern;
@@ -30,12 +34,16 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
 
     /**
      * <p>The event target. You must and can specify only one event target.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Sink")
     public String sinkShrink;
 
     /**
      * <p>The event provider, which is also known as the event source. You must and can specify only one event source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Source")
     public String sourceShrink;

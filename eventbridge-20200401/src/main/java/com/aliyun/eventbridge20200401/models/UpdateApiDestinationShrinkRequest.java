@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateApiDestinationShrinkRequest extends TeaModel {
     /**
      * <p>The name of the API destination. The name must be 2 to 127 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiDestinationName")
     public String apiDestinationName;

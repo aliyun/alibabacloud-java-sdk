@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteConnectionRequest extends TeaModel {
     /**
      * <p>The name of the connection that you want to delete.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConnectionName")
     public String connectionName;

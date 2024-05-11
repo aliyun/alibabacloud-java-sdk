@@ -103,13 +103,13 @@ public class GetRuleResponseBody extends TeaModel {
 
     public static class GetRuleResponseBodyDataTargetsParamList extends TeaModel {
         /**
-         * <p>The method that is used to deliver events to the event target. For more information, see [Limits](~~163289~~).</p>
+         * <p>The method that is used to deliver events to the event target. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).</p>
          */
         @NameInMap("Form")
         public String form;
 
         /**
-         * <p>The resource key of the event target. For more information, see [Limits](~~163289~~).</p>
+         * <p>The resource key of the event target. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).</p>
          */
         @NameInMap("ResourceKey")
         public String resourceKey;
@@ -215,7 +215,7 @@ public class GetRuleResponseBody extends TeaModel {
         public String pushSelector;
 
         /**
-         * <p>The type of the event target. For more information, see [Event target parameters](~~185887~~).</p>
+         * <p>The type of the event target. For more information, see [Event target parameters](https://help.aliyun.com/document_detail/185887.html).</p>
          */
         @NameInMap("Type")
         public String type;

@@ -12,12 +12,16 @@ public class CreateEventSourceRequest extends TeaModel {
 
     /**
      * <p>The name of the event bus with which the event source is associated.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventBusName")
     public String eventBusName;
 
     /**
      * <p>The name of the event source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventSourceName")
     public String eventSourceName;
@@ -193,7 +197,7 @@ public class CreateEventSourceRequest extends TeaModel {
          * <br>
          * <p>*   HTTP</p>
          * <p>*   HTTPS</p>
-         * <p>*   HTTP\&HTTPS</p>
+         * <p>*   HTTP\\&HTTPS</p>
          */
         @NameInMap("Type")
         public String type;
@@ -451,7 +455,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the queue on the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).</p>
+         * <p>The name of the queue on the Message Queue for RabbitMQ instance. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).</p>
          */
         @NameInMap("QueueName")
         public String queueName;
@@ -463,7 +467,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the vhost of the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).</p>
+         * <p>The name of the vhost of the Message Queue for RabbitMQ instance. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).</p>
          */
         @NameInMap("VirtualHostName")
         public String virtualHostName;
@@ -527,7 +531,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String instanceEndpoint;
 
         /**
-         * <p>The ID of the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).</p>
+         * <p>The ID of the Message Queue for Apache RocketMQ instance. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -553,8 +557,8 @@ public class CreateEventSourceRequest extends TeaModel {
         /**
          * <p>The type of the Message Queue for Apache RocketMQ instance. Valid values:</p>
          * <br>
-         * <p>*   Cloud\_4: Message Queue for Apache RocketMQ 4.0 instance.</p>
-         * <p>*   Cloud\_5: Message Queue for Apache RocketMQ 5.0 instance.</p>
+         * <p>*   Cloud_4: Message Queue for Apache RocketMQ 4.0 instance.</p>
+         * <p>*   Cloud_5: Message Queue for Apache RocketMQ 5.0 instance.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -602,7 +606,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public Long timestamp;
 
         /**
-         * <p>The name of the topic on the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).</p>
+         * <p>The name of the topic on the Message Queue for Apache RocketMQ instance. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).</p>
          */
         @NameInMap("Topic")
         public String topic;

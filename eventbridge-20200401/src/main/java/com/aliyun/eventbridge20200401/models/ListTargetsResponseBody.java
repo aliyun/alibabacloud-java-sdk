@@ -184,7 +184,7 @@ public class ListTargetsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The type of the event target. For more information, see [Event target parameters](~~183698~~).</p>
+         * <p>The type of the event target. For more information, see [Event target parameters](https://help.aliyun.com/document_detail/183698.html).</p>
          */
         @NameInMap("Type")
         public String type;
