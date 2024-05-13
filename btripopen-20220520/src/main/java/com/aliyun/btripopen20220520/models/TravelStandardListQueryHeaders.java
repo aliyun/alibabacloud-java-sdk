@@ -7,6 +7,9 @@ public class TravelStandardListQueryHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("x-acs-btrip-corp-token")
     public String xAcsBtripCorpToken;
 

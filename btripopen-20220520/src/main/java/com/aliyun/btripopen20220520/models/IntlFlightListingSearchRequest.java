@@ -10,12 +10,18 @@ public class IntlFlightListingSearchRequest extends TeaModel {
     @NameInMap("buyer_name")
     public String buyerName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("cabin_type")
     public Integer cabinType;
 
     @NameInMap("direct_only")
     public Boolean directOnly;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
@@ -25,15 +31,24 @@ public class IntlFlightListingSearchRequest extends TeaModel {
     @NameInMap("need_share_flight")
     public Boolean needShareFlight;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("out_wheel_search")
     public Boolean outWheelSearch;
 
     @NameInMap("query_record_id")
     public String queryRecordId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("search_journeys")
     public java.util.List<IntlFlightListingSearchRequestSearchJourneys> searchJourneys;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("search_mode")
     public Integer searchMode;
 
@@ -46,6 +61,9 @@ public class IntlFlightListingSearchRequest extends TeaModel {
     @NameInMap("token")
     public String token;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("trip_type")
     public Integer tripType;
 
@@ -178,6 +196,9 @@ public class IntlFlightListingSearchRequest extends TeaModel {
         @NameInMap("arr_airport_code")
         public String arrAirportCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
@@ -187,12 +208,21 @@ public class IntlFlightListingSearchRequest extends TeaModel {
         @NameInMap("dep_airport_code")
         public String depAirportCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("flight_time")
         public String flightTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("market_flight_no")
         public String marketFlightNo;
 
@@ -271,12 +301,21 @@ public class IntlFlightListingSearchRequest extends TeaModel {
     }
 
     public static class IntlFlightListingSearchRequestSearchJourneys extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_date")
         public String depDate;
 
@@ -323,15 +362,27 @@ public class IntlFlightListingSearchRequest extends TeaModel {
     }
 
     public static class IntlFlightListingSearchRequestSearchPassengerList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cert_no")
         public String certNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cert_type")
         public Integer certType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("full_name")
         public String fullName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("type")
         public Integer type;
 

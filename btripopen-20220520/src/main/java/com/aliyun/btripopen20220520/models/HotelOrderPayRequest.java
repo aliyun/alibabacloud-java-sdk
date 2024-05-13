@@ -6,16 +6,27 @@ import com.aliyun.tea.*;
 public class HotelOrderPayRequest extends TeaModel {
     /**
      * <p>供应商订单号（取自创单返回的订单号）</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("btrip_order_id")
     public Long btripOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("company_pay_fee")
     public Long companyPayFee;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("person_pay_fee")
     public Long personPayFee;
 
@@ -25,6 +36,9 @@ public class HotelOrderPayRequest extends TeaModel {
     @NameInMap("third_trade_no")
     public String thirdTradeNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("total_price")
     public Long totalPrice;
 

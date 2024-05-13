@@ -7,6 +7,9 @@ public class FlightCreateOrderShrinkRequest extends TeaModel {
     @NameInMap("arr_airport_code")
     public String arrAirportCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("arr_city_code")
     public String arrCityCode;
 
@@ -16,33 +19,57 @@ public class FlightCreateOrderShrinkRequest extends TeaModel {
     @NameInMap("buyer_name")
     public String buyerName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("buyer_unique_key")
     public String buyerUniqueKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("contact_info")
     public String contactInfoShrink;
 
     @NameInMap("dep_airport_code")
     public String depAirportCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dep_city_code")
     public String depCityCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dep_date")
     public String depDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
     @NameInMap("order_attr")
     public String orderAttrShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("order_params")
     public String orderParams;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ota_item_id")
     public String otaItemId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("price")
     public Long price;
 
@@ -55,9 +82,15 @@ public class FlightCreateOrderShrinkRequest extends TeaModel {
     @NameInMap("receipt_title")
     public String receiptTitle;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("traveler_info_list")
     public String travelerInfoListShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("trip_type")
     public Integer tripType;
 

@@ -4,24 +4,45 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TicketChangingEnquiryRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("arr_city")
     public String arrCity;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dep_city")
     public String depCity;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("is_voluntary")
     public Integer isVoluntary;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("modify_depart_date")
     public String modifyDepartDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("modify_flight_no")
     public String modifyFlightNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("session_id")
     public String sessionId;
 

@@ -10,6 +10,9 @@ public class InvoiceRuleDeleteShrinkRequest extends TeaModel {
     @NameInMap("entities")
     public String entitiesShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("third_part_id")
     public String thirdPartId;
 

@@ -19,12 +19,21 @@ public class InvoiceModifyRequest extends TeaModel {
     @NameInMap("tel")
     public String tel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("third_part_id")
     public String thirdPartId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("title")
     public String title;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("type")
     public Integer type;
 

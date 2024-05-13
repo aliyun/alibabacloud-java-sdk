@@ -13,6 +13,9 @@ public class InvoiceRuleSaveRequest extends TeaModel {
     @NameInMap("scope")
     public Integer scope;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("third_part_id")
     public String thirdPartId;
 

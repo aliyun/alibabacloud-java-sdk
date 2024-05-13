@@ -10,21 +10,33 @@ public class HotelGoodsQueryRequest extends TeaModel {
     @NameInMap("agreement_price")
     public Boolean agreementPrice;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("begin_date")
     public String beginDate;
 
     @NameInMap("breakfast_included")
     public Boolean breakfastIncluded;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
     @NameInMap("city_code")
     public String cityCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("end_date")
     public String endDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("hotel_id")
     public String hotelId;
 

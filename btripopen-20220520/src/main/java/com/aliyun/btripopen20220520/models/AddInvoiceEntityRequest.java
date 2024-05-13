@@ -4,9 +4,15 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class AddInvoiceEntityRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("entities")
     public java.util.List<AddInvoiceEntityRequestEntities> entities;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("third_part_id")
     public String thirdPartId;
 
@@ -32,12 +38,21 @@ public class AddInvoiceEntityRequest extends TeaModel {
     }
 
     public static class AddInvoiceEntityRequestEntities extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("entity_id")
         public String entityId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("entity_name")
         public String entityName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("entity_type")
         public String entityType;
 

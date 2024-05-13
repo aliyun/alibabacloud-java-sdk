@@ -4,18 +4,33 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelOrderPreValidateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("check_in")
     public String checkIn;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("check_out")
     public String checkOut;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("daily_list")
     public java.util.List<HotelOrderPreValidateRequestDailyList> dailyList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("item_id")
     public Long itemId;
 
@@ -25,21 +40,39 @@ public class HotelOrderPreValidateRequest extends TeaModel {
     @NameInMap("occupant_info_list")
     public java.util.List<HotelOrderPreValidateRequestOccupantInfoList> occupantInfoList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("rate_plan_id")
     public Long ratePlanId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("room_id")
     public Long roomId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("room_num")
     public Integer roomNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("search_room_price")
     public Long searchRoomPrice;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("seller_id")
     public Long sellerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("shid")
     public Long shid;
 

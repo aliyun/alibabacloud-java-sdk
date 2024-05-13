@@ -7,6 +7,9 @@ public class IsvRuleSaveShrinkRequest extends TeaModel {
     @NameInMap("apply_need")
     public Boolean applyNeed;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("book_type")
     public String bookType;
 
@@ -16,9 +19,15 @@ public class IsvRuleSaveShrinkRequest extends TeaModel {
     @NameInMap("rule_need")
     public Boolean ruleNeed;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("status")
     public Integer status;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

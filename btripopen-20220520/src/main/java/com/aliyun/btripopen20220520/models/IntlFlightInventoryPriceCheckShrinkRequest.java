@@ -13,9 +13,15 @@ public class IntlFlightInventoryPriceCheckShrinkRequest extends TeaModel {
     @NameInMap("order_price")
     public Long orderPrice;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ota_item_id")
     public String otaItemId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("passenger_list")
     public String passengerListShrink;
 

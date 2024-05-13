@@ -7,6 +7,9 @@ public class FlightOtaSearchRequest extends TeaModel {
     @NameInMap("airline_code")
     public String airlineCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("arr_city_code")
     public String arrCityCode;
 
@@ -16,12 +19,21 @@ public class FlightOtaSearchRequest extends TeaModel {
     @NameInMap("carrier_flight_no")
     public String carrierFlightNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dep_city_code")
     public String depCityCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dep_date")
     public String depDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("flight_no")
     public String flightNo;
 

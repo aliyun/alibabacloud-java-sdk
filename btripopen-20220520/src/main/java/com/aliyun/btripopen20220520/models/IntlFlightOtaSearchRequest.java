@@ -10,6 +10,9 @@ public class IntlFlightOtaSearchRequest extends TeaModel {
     @NameInMap("buyer_name")
     public String buyerName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("cabin_type")
     public Integer cabinType;
 
@@ -25,6 +28,9 @@ public class IntlFlightOtaSearchRequest extends TeaModel {
     @NameInMap("need_share_flight")
     public Boolean needShareFlight;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("search_journeys")
     public java.util.List<IntlFlightOtaSearchRequestSearchJourneys> searchJourneys;
 
@@ -34,6 +40,9 @@ public class IntlFlightOtaSearchRequest extends TeaModel {
     @NameInMap("supplier_code")
     public String supplierCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("trip_type")
     public Integer tripType;
 
@@ -134,6 +143,9 @@ public class IntlFlightOtaSearchRequest extends TeaModel {
         @NameInMap("arr_airport_code")
         public String arrAirportCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
@@ -143,12 +155,21 @@ public class IntlFlightOtaSearchRequest extends TeaModel {
         @NameInMap("dep_airport_code")
         public String depAirportCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("flight_time")
         public String flightTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("market_flight_no")
         public String marketFlightNo;
 
@@ -227,15 +248,27 @@ public class IntlFlightOtaSearchRequest extends TeaModel {
     }
 
     public static class IntlFlightOtaSearchRequestSearchJourneys extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_date")
         public String depDate;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("selected_flights")
         public java.util.List<IntlFlightOtaSearchRequestSearchJourneysSelectedFlights> selectedFlights;
 
@@ -279,15 +312,27 @@ public class IntlFlightOtaSearchRequest extends TeaModel {
     }
 
     public static class IntlFlightOtaSearchRequestSearchPassengerList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cert_no")
         public String certNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cert_type")
         public Integer certType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("full_name")
         public String fullName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("type")
         public Integer type;
 

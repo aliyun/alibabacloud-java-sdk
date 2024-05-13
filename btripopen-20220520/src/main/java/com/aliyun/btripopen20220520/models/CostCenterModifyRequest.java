@@ -13,12 +13,21 @@ public class CostCenterModifyRequest extends TeaModel {
     @NameInMap("number")
     public String number;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("scope")
     public Long scope;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("thirdpart_id")
     public String thirdpartId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("title")
     public String title;
 

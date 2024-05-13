@@ -25,12 +25,21 @@ public class GroupUserSaveShrinkRequest extends TeaModel {
     @NameInMap("real_name_en")
     public String realNameEn;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sub_corp_id_list")
     public String subCorpIdListShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("user_id")
     public String userId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("user_name")
     public String userName;
 

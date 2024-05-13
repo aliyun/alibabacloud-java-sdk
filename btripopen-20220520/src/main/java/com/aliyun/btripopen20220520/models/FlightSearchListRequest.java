@@ -7,6 +7,9 @@ public class FlightSearchListRequest extends TeaModel {
     @NameInMap("airline_code")
     public String airlineCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("arr_city_code")
     public String arrCityCode;
 
@@ -19,12 +22,18 @@ public class FlightSearchListRequest extends TeaModel {
     @NameInMap("cabin_class")
     public String cabinClass;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dep_city_code")
     public String depCityCode;
 
     @NameInMap("dep_city_name")
     public String depCityName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dep_date")
     public String depDate;
 
@@ -43,6 +52,9 @@ public class FlightSearchListRequest extends TeaModel {
     @NameInMap("transfer_leave_date")
     public String transferLeaveDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("trip_type")
     public String tripType;
 

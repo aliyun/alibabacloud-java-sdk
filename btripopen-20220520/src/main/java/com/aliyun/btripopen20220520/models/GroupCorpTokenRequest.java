@@ -4,12 +4,21 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class GroupCorpTokenRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("app_secret")
     public String appSecret;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("corp_id")
     public String corpId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sub_corp_id")
     public String subCorpId;
 

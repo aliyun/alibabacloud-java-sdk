@@ -4,12 +4,21 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelOrderCreateShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("check_in")
     public String checkIn;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("check_out")
     public String checkOut;
 
@@ -19,12 +28,21 @@ public class HotelOrderCreateShrinkRequest extends TeaModel {
     @NameInMap("contract_name")
     public String contractName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("contract_phone")
     public String contractPhone;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("corp_pay_price")
     public Long corpPayPrice;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
@@ -34,39 +52,72 @@ public class HotelOrderCreateShrinkRequest extends TeaModel {
     @NameInMap("invoice_info")
     public String invoiceInfoShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("item_id")
     public Long itemId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("itinerary_no")
     public String itineraryNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("occupant_info_list")
     public String occupantInfoListShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("person_pay_price")
     public Long personPayPrice;
 
     @NameInMap("promotion_info")
     public String promotionInfoShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("rate_plan_id")
     public Long ratePlanId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("room_id")
     public Long roomId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("room_num")
     public Integer roomNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("seller_id")
     public Long sellerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("shid")
     public Long shid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("total_order_price")
     public Long totalOrderPrice;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("validate_res_key")
     public String validateResKey;
 

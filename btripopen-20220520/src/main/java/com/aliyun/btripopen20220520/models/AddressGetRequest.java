@@ -4,6 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class AddressGetRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("action_type")
     public Integer actionType;
 
@@ -49,6 +52,9 @@ public class AddressGetRequest extends TeaModel {
     @NameInMap("use_booking_proxy")
     public Integer useBookingProxy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

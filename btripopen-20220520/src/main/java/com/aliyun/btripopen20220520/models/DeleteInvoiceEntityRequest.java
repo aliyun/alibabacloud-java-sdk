@@ -10,6 +10,9 @@ public class DeleteInvoiceEntityRequest extends TeaModel {
     @NameInMap("entities")
     public java.util.List<DeleteInvoiceEntityRequestEntities> entities;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("third_part_id")
     public String thirdPartId;
 

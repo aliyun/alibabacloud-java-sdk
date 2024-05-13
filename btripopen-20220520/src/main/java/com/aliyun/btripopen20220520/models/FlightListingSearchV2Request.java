@@ -13,6 +13,9 @@ public class FlightListingSearchV2Request extends TeaModel {
     @NameInMap("direct_only")
     public Boolean directOnly;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
@@ -28,12 +31,21 @@ public class FlightListingSearchV2Request extends TeaModel {
     @NameInMap("need_y_c_best_price")
     public Boolean needYCBestPrice;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("search_journeys")
     public java.util.List<FlightListingSearchV2RequestSearchJourneys> searchJourneys;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("search_mode")
     public Integer searchMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("trip_type")
     public Integer tripType;
 
@@ -216,12 +228,21 @@ public class FlightListingSearchV2Request extends TeaModel {
     }
 
     public static class FlightListingSearchV2RequestSearchJourneys extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_date")
         public String depDate;
 

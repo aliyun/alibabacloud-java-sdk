@@ -132,9 +132,15 @@ public class IsvUserSaveRequest extends TeaModel {
         @NameInMap("third_depart_id_list")
         public java.util.List<String> thirdDepartIdList;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("user_id")
         public String userId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("user_name")
         public String userName;
 

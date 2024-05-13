@@ -4,6 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ExceedApplySyncRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("apply_id")
     public Long applyId;
 
@@ -13,12 +16,18 @@ public class ExceedApplySyncRequest extends TeaModel {
     @NameInMap("remark")
     public String remark;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("status")
     public Integer status;
 
     @NameInMap("thirdparty_flow_id")
     public String thirdpartyFlowId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

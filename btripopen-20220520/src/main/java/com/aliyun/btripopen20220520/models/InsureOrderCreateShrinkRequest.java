@@ -4,6 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InsureOrderCreateShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("applicant")
     public String applicantShrink;
 
@@ -13,15 +16,24 @@ public class InsureOrderCreateShrinkRequest extends TeaModel {
     @NameInMap("buyer_name")
     public String buyerName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ins_person_and_segment_list")
     public String insPersonAndSegmentListShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
     @NameInMap("out_ins_order_id")
     public String outInsOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 

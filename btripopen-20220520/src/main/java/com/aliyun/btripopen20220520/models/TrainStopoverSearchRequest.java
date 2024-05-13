@@ -4,15 +4,27 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainStopoverSearchRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("arr_station")
     public String arrStation;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dep_station")
     public String depStation;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("train_date")
     public String trainDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("train_no")
     public String trainNo;
 

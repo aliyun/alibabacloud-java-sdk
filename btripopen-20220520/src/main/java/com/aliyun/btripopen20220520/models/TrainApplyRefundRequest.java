@@ -4,15 +4,27 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainApplyRefundRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("order_id")
     public String orderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("out_refund_id")
     public String outRefundId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("refund_train_infos")
     public java.util.List<TrainApplyRefundRequestRefundTrainInfos> refundTrainInfos;
 
@@ -54,15 +66,27 @@ public class TrainApplyRefundRequest extends TeaModel {
     }
 
     public static class TrainApplyRefundRequestRefundTrainInfosRefundPassengerInfos extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_cert_no")
         public String passengerCertNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_cert_type")
         public String passengerCertType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_name")
         public String passengerName;
 
@@ -106,12 +130,21 @@ public class TrainApplyRefundRequest extends TeaModel {
     }
 
     public static class TrainApplyRefundRequestRefundTrainInfos extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("refund_passenger_infos")
         public java.util.List<TrainApplyRefundRequestRefundTrainInfosRefundPassengerInfos> refundPassengerInfos;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("train_no")
         public String trainNo;
 

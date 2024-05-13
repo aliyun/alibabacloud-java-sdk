@@ -7,9 +7,15 @@ public class TravelStandardListQueryRequest extends TeaModel {
     @NameInMap("from_group")
     public Boolean fromGroup;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("page_no")
     public Integer pageNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 

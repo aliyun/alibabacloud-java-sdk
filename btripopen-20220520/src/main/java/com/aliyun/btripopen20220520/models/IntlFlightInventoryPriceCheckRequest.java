@@ -13,9 +13,15 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
     @NameInMap("order_price")
     public Long orderPrice;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ota_item_id")
     public String otaItemId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("passenger_list")
     public java.util.List<IntlFlightInventoryPriceCheckRequestPassengerList> passengerList;
 
@@ -90,15 +96,24 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
         @NameInMap("cert_nation")
         public String certNation;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cert_no")
         public String certNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cert_type")
         public Integer certType;
 
         @NameInMap("cert_valid_date")
         public String certValidDate;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -213,6 +228,9 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
     }
 
     public static class IntlFlightInventoryPriceCheckRequestPassengerList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("birthday")
         public String birthday;
 
@@ -222,6 +240,9 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
         @NameInMap("cascade_dept_name")
         public String cascadeDeptName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cert_info")
         public IntlFlightInventoryPriceCheckRequestPassengerListCertInfo certInfo;
 
@@ -258,9 +279,15 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
         @NameInMap("nationality_code")
         public String nationalityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_type")
         public Integer passengerType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("phone")
         public String phone;
 
@@ -273,6 +300,9 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
         @NameInMap("subsidiary_cert_info_list")
         public java.util.List<IntlFlightInventoryPriceCheckRequestPassengerListSubsidiaryCertInfoList> subsidiaryCertInfoList;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("user_id")
         public String userId;
 

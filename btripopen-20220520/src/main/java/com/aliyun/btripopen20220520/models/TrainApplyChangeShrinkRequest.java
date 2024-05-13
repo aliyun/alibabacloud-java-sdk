@@ -7,6 +7,9 @@ public class TrainApplyChangeShrinkRequest extends TeaModel {
     @NameInMap("accept_no_seat")
     public String acceptNoSeat;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("change_train_info_s")
     public String changeTrainInfoSShrink;
 
@@ -16,12 +19,21 @@ public class TrainApplyChangeShrinkRequest extends TeaModel {
     @NameInMap("is_pay_now")
     public Boolean isPayNow;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("order_id")
     public String orderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("out_change_apply_id")
     public String outChangeApplyId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 

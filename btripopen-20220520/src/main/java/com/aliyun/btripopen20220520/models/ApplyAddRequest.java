@@ -70,6 +70,9 @@ public class ApplyAddRequest extends TeaModel {
     @NameInMap("sub_corp_id")
     public String subCorpId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("thirdpart_apply_id")
     public String thirdpartApplyId;
 
@@ -91,12 +94,18 @@ public class ApplyAddRequest extends TeaModel {
     @NameInMap("traveler_standard")
     public java.util.List<ApplyAddRequestTravelerStandard> travelerStandard;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("trip_cause")
     public String tripCause;
 
     @NameInMap("trip_day")
     public Integer tripDay;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("trip_title")
     public String tripTitle;
 
@@ -106,6 +115,9 @@ public class ApplyAddRequest extends TeaModel {
     @NameInMap("union_no")
     public String unionNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("user_id")
     public String userId;
 
@@ -883,12 +895,18 @@ public class ApplyAddRequest extends TeaModel {
     }
 
     public static class ApplyAddRequestItineraryList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("arr_city")
         public String arrCity;
 
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("arr_date")
         public String arrDate;
 
@@ -898,18 +916,27 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("cost_center_id")
         public Long costCenterId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_city")
         public String depCity;
 
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_date")
         public String depDate;
 
         @NameInMap("invoice_id")
         public Long invoiceId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("itinerary_id")
         public String itineraryId;
 
@@ -934,9 +961,15 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("thirdpart_cost_center_id")
         public String thirdpartCostCenterId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("traffic_type")
         public Integer trafficType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("trip_way")
         public Integer tripWay;
 
@@ -1119,27 +1152,42 @@ public class ApplyAddRequest extends TeaModel {
     }
 
     public static class ApplyAddRequestItinerarySetList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("arr_date")
         public String arrDate;
 
         @NameInMap("attribute")
         public String attribute;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("city_code_set")
         public String cityCodeSet;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("city_set")
         public String citySet;
 
         @NameInMap("cost_center_id")
         public Long costCenterId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_date")
         public String depDate;
 
         @NameInMap("invoice_id")
         public Long invoiceId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("itinerary_id")
         public String itineraryId;
 
@@ -1158,6 +1206,9 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("thirdpart_cost_center_id")
         public String thirdpartCostCenterId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("traffic_type")
         public Integer trafficType;
 
@@ -1421,9 +1472,15 @@ public class ApplyAddRequest extends TeaModel {
     }
 
     public static class ApplyAddRequestTravelerStandardCarCitySet extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("city_code")
         public String cityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("city_name")
         public String cityName;
 

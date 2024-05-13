@@ -24,6 +24,9 @@ public class DepartmentSaveRequest extends TeaModel {
         @NameInMap("depart_id")
         public Long departId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("depart_name")
         public String departName;
 

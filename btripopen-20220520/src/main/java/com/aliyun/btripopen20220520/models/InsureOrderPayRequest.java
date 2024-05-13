@@ -4,6 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InsureOrderPayRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
@@ -19,6 +22,9 @@ public class InsureOrderPayRequest extends TeaModel {
     @NameInMap("out_sub_order_id")
     public String outSubOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("payment_amount")
     public Long paymentAmount;
 

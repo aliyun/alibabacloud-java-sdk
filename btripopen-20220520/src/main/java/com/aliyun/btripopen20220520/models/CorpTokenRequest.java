@@ -7,9 +7,15 @@ public class CorpTokenRequest extends TeaModel {
     @NameInMap("app_secret")
     public String appSecret;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("corp_id")
     public String corpId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("type")
     public Integer type;
 

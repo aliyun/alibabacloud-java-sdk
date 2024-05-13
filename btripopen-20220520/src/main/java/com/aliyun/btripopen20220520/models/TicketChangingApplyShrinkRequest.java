@@ -4,24 +4,39 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TicketChangingApplyShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_sub_order_id")
     public String disSubOrderId;
 
     @NameInMap("is_voluntary")
     public Integer isVoluntary;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("modify_flight_info_list")
     public String modifyFlightInfoListShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ota_item_id")
     public String otaItemId;
 
     @NameInMap("reason")
     public String reason;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("session_id")
     public String sessionId;
 

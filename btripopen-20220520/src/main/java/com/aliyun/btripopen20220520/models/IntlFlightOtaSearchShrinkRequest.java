@@ -10,6 +10,9 @@ public class IntlFlightOtaSearchShrinkRequest extends TeaModel {
     @NameInMap("buyer_name")
     public String buyerName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("cabin_type")
     public Integer cabinType;
 
@@ -25,6 +28,9 @@ public class IntlFlightOtaSearchShrinkRequest extends TeaModel {
     @NameInMap("need_share_flight")
     public Boolean needShareFlight;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("search_journeys")
     public String searchJourneysShrink;
 
@@ -34,6 +40,9 @@ public class IntlFlightOtaSearchShrinkRequest extends TeaModel {
     @NameInMap("supplier_code")
     public String supplierCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("trip_type")
     public Integer tripType;
 

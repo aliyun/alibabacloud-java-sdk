@@ -4,24 +4,39 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TicketChangingApplyRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_sub_order_id")
     public String disSubOrderId;
 
     @NameInMap("is_voluntary")
     public Integer isVoluntary;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("modify_flight_info_list")
     public java.util.List<TicketChangingApplyRequestModifyFlightInfoList> modifyFlightInfoList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ota_item_id")
     public String otaItemId;
 
     @NameInMap("reason")
     public String reason;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("session_id")
     public String sessionId;
 
@@ -98,12 +113,21 @@ public class TicketChangingApplyRequest extends TeaModel {
     }
 
     public static class TicketChangingApplyRequestModifyFlightInfoListPassengerInfoList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("origin_flight_no")
         public String originFlightNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("out_user_id")
         public String outUserId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_name")
         public String passengerName;
 
@@ -139,21 +163,36 @@ public class TicketChangingApplyRequest extends TeaModel {
     }
 
     public static class TicketChangingApplyRequestModifyFlightInfoList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("arr_city")
         public String arrCity;
 
         @NameInMap("cabin")
         public String cabin;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_city")
         public String depCity;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_date")
         public String depDate;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("flight_no")
         public String flightNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_info_list")
         public java.util.List<TicketChangingApplyRequestModifyFlightInfoListPassengerInfoList> passengerInfoList;
 

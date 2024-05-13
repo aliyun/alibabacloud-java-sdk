@@ -7,6 +7,9 @@ public class EntityAddShrinkRequest extends TeaModel {
     @NameInMap("entity_d_o_list")
     public String entityDOListShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("thirdpart_id")
     public String thirdpartId;
 

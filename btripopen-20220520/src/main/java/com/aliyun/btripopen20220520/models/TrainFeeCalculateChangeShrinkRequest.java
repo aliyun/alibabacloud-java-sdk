@@ -4,12 +4,21 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainFeeCalculateChangeShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("change_train_details")
     public String changeTrainDetailsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("distribute_order_id")
     public String distributeOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("order_id")
     public String orderId;
 

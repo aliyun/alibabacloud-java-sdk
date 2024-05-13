@@ -4,12 +4,18 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightRefundPreCalShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
     @NameInMap("is_voluntary")
     public String isVoluntary;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("passenger_segment_info_list")
     public String passengerSegmentInfoListShrink;
 

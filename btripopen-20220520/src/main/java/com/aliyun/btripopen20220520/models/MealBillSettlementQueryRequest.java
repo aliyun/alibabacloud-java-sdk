@@ -4,15 +4,27 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class MealBillSettlementQueryRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("page_no")
     public Integer pageNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("period_end")
     public String periodEnd;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("period_start")
     public String periodStart;
 

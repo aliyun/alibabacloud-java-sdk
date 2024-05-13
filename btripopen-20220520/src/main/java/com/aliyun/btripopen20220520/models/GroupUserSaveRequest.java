@@ -25,12 +25,21 @@ public class GroupUserSaveRequest extends TeaModel {
     @NameInMap("real_name_en")
     public String realNameEn;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sub_corp_id_list")
     public java.util.List<GroupUserSaveRequestSubCorpIdList> subCorpIdList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("user_id")
     public String userId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("user_name")
     public String userName;
 
@@ -189,6 +198,9 @@ public class GroupUserSaveRequest extends TeaModel {
         @NameInMap("email")
         public String email;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("leave_status")
         public Integer leaveStatus;
 
@@ -198,6 +210,9 @@ public class GroupUserSaveRequest extends TeaModel {
         @NameInMap("position_level")
         public String positionLevel;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("sub_corp_id")
         public String subCorpId;
 

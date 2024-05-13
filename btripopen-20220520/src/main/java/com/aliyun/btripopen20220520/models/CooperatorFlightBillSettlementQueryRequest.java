@@ -7,15 +7,27 @@ public class CooperatorFlightBillSettlementQueryRequest extends TeaModel {
     @NameInMap("cooperator_id")
     public String cooperatorId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("page_no")
     public Integer pageNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("period_end")
     public String periodEnd;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("period_start")
     public String periodStart;
 

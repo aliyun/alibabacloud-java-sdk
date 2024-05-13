@@ -10,9 +10,15 @@ public class TicketChangingFlightListShrinkRequest extends TeaModel {
     @NameInMap("dep_city")
     public String depCity;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dep_date")
     public String depDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
