@@ -22,6 +22,9 @@ public class Product extends TeaModel {
     @NameInMap("divisionCode")
     public String divisionCode;
 
+    @NameInMap("extendProperties")
+    public java.util.List<ProductExtendProperty> extendProperties;
+
     @NameInMap("fuzzyQuantity")
     public String fuzzyQuantity;
 
@@ -121,6 +124,14 @@ public class Product extends TeaModel {
     }
     public String getDivisionCode() {
         return this.divisionCode;
+    }
+
+    public Product setExtendProperties(java.util.List<ProductExtendProperty> extendProperties) {
+        this.extendProperties = extendProperties;
+        return this;
+    }
+    public java.util.List<ProductExtendProperty> getExtendProperties() {
+        return this.extendProperties;
     }
 
     public Product setFuzzyQuantity(String fuzzyQuantity) {
