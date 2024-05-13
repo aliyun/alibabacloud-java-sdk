@@ -3,7 +3,7 @@ package com.aliyun.adcp20220101.models;
 
 import com.aliyun.tea.*;
 
-public class CreateHubClusterRequest extends TeaModel {
+public class CreateHubClusterShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to expose the API server to the Internet. Valid values:</p>
      * <br>
@@ -75,7 +75,7 @@ public class CreateHubClusterRequest extends TeaModel {
     public String resourceGroupID;
 
     @NameInMap("Tag")
-    public java.util.List<Tag> tag;
+    public String tagShrink;
 
     /**
      * <p>The ID of the vSwitch.</p>
@@ -102,12 +102,12 @@ public class CreateHubClusterRequest extends TeaModel {
     @NameInMap("WorkflowScheduleMode")
     public String workflowScheduleMode;
 
-    public static CreateHubClusterRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateHubClusterRequest self = new CreateHubClusterRequest();
+    public static CreateHubClusterShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateHubClusterShrinkRequest self = new CreateHubClusterShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateHubClusterRequest setApiServerPublicEip(Boolean apiServerPublicEip) {
+    public CreateHubClusterShrinkRequest setApiServerPublicEip(Boolean apiServerPublicEip) {
         this.apiServerPublicEip = apiServerPublicEip;
         return this;
     }
@@ -115,7 +115,7 @@ public class CreateHubClusterRequest extends TeaModel {
         return this.apiServerPublicEip;
     }
 
-    public CreateHubClusterRequest setArgoServerEnabled(Boolean argoServerEnabled) {
+    public CreateHubClusterShrinkRequest setArgoServerEnabled(Boolean argoServerEnabled) {
         this.argoServerEnabled = argoServerEnabled;
         return this;
     }
@@ -123,7 +123,7 @@ public class CreateHubClusterRequest extends TeaModel {
         return this.argoServerEnabled;
     }
 
-    public CreateHubClusterRequest setAuditLogEnabled(Boolean auditLogEnabled) {
+    public CreateHubClusterShrinkRequest setAuditLogEnabled(Boolean auditLogEnabled) {
         this.auditLogEnabled = auditLogEnabled;
         return this;
     }
@@ -131,7 +131,7 @@ public class CreateHubClusterRequest extends TeaModel {
         return this.auditLogEnabled;
     }
 
-    public CreateHubClusterRequest setIsEnterpriseSecurityGroup(Boolean isEnterpriseSecurityGroup) {
+    public CreateHubClusterShrinkRequest setIsEnterpriseSecurityGroup(Boolean isEnterpriseSecurityGroup) {
         this.isEnterpriseSecurityGroup = isEnterpriseSecurityGroup;
         return this;
     }
@@ -139,7 +139,7 @@ public class CreateHubClusterRequest extends TeaModel {
         return this.isEnterpriseSecurityGroup;
     }
 
-    public CreateHubClusterRequest setName(String name) {
+    public CreateHubClusterShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -147,7 +147,7 @@ public class CreateHubClusterRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateHubClusterRequest setPriceLimit(String priceLimit) {
+    public CreateHubClusterShrinkRequest setPriceLimit(String priceLimit) {
         this.priceLimit = priceLimit;
         return this;
     }
@@ -155,7 +155,7 @@ public class CreateHubClusterRequest extends TeaModel {
         return this.priceLimit;
     }
 
-    public CreateHubClusterRequest setProfile(String profile) {
+    public CreateHubClusterShrinkRequest setProfile(String profile) {
         this.profile = profile;
         return this;
     }
@@ -163,7 +163,7 @@ public class CreateHubClusterRequest extends TeaModel {
         return this.profile;
     }
 
-    public CreateHubClusterRequest setRegionId(String regionId) {
+    public CreateHubClusterShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -171,7 +171,7 @@ public class CreateHubClusterRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateHubClusterRequest setResourceGroupID(String resourceGroupID) {
+    public CreateHubClusterShrinkRequest setResourceGroupID(String resourceGroupID) {
         this.resourceGroupID = resourceGroupID;
         return this;
     }
@@ -179,15 +179,15 @@ public class CreateHubClusterRequest extends TeaModel {
         return this.resourceGroupID;
     }
 
-    public CreateHubClusterRequest setTag(java.util.List<Tag> tag) {
-        this.tag = tag;
+    public CreateHubClusterShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
         return this;
     }
-    public java.util.List<Tag> getTag() {
-        return this.tag;
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
-    public CreateHubClusterRequest setVSwitches(String vSwitches) {
+    public CreateHubClusterShrinkRequest setVSwitches(String vSwitches) {
         this.vSwitches = vSwitches;
         return this;
     }
@@ -195,7 +195,7 @@ public class CreateHubClusterRequest extends TeaModel {
         return this.vSwitches;
     }
 
-    public CreateHubClusterRequest setVpcId(String vpcId) {
+    public CreateHubClusterShrinkRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
@@ -203,7 +203,7 @@ public class CreateHubClusterRequest extends TeaModel {
         return this.vpcId;
     }
 
-    public CreateHubClusterRequest setWorkflowScheduleMode(String workflowScheduleMode) {
+    public CreateHubClusterShrinkRequest setWorkflowScheduleMode(String workflowScheduleMode) {
         this.workflowScheduleMode = workflowScheduleMode;
         return this;
     }

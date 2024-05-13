@@ -86,7 +86,7 @@ public class DescribePolicyInstancesResponseBody extends TeaModel {
         /**
          * <p>The applicable scope of the policy instance.</p>
          * <br>
-         * <p>A value of \* indicates all namespaces. This is the default value.</p>
+         * <p>A value of \\* indicates all namespaces. This is the default value.</p>
          * <br>
          * <p>Multiple namespaces are separated by commas (,).</p>
          */

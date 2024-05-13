@@ -316,6 +316,36 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeHubClusterDetailsResponseBodyClusterClusterInfoTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeHubClusterDetailsResponseBodyClusterClusterInfoTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHubClusterDetailsResponseBodyClusterClusterInfoTags self = new DescribeHubClusterDetailsResponseBodyClusterClusterInfoTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfoTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeHubClusterDetailsResponseBodyClusterClusterInfo extends TeaModel {
         /**
          * <p>The ID of the master instance.</p>
@@ -386,6 +416,9 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
          */
         @NameInMap("State")
         public String state;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeHubClusterDetailsResponseBodyClusterClusterInfoTags> tags;
 
         /**
          * <p>The time when the master instance was updated.</p>
@@ -482,6 +515,14 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterClusterInfo setTags(java.util.List<DescribeHubClusterDetailsResponseBodyClusterClusterInfoTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeHubClusterDetailsResponseBodyClusterClusterInfoTags> getTags() {
+            return this.tags;
         }
 
         public DescribeHubClusterDetailsResponseBodyClusterClusterInfo setUpdateTime(String updateTime) {
@@ -790,7 +831,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         /**
          * <p>The zone ID of the cluster.</p>
          * <br>
-         * <p>> You can call the [DescribeRegions](~~143074~~) operation to query the most recent zone list.</p>
+         * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/143074.html) operation to query the most recent zone list.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -822,7 +863,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         /**
          * <p>The region ID of the cluster.</p>
          * <br>
-         * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+         * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/143074.html) operation to query the most recent region list.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

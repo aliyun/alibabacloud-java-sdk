@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeManagedClustersRequest extends TeaModel {
     /**
      * <p>The status of the association between the clusters and Service Mesh (ASM).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

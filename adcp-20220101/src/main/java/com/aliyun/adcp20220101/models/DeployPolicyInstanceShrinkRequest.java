@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DeployPolicyInstanceShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the master instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>An array of JSON strings. The JSON strings in the array indicate the IDs of the associated clusters in which the policy instance is deployed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterIds")
     public String clusterIdsShrink;
@@ -27,12 +31,16 @@ public class DeployPolicyInstanceShrinkRequest extends TeaModel {
      * <br>
      * <p>*   deny: blocks deployments that match the policy.</p>
      * <p>*   warn: generates alerts for deployments that match the policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyAction")
     public String policyAction;
 
     /**
      * <p>The name of the policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyName")
     public String policyName;

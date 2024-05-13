@@ -63,6 +63,8 @@ public class UpdateHubClusterFeatureShrinkRequest extends TeaModel {
 
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -105,7 +107,7 @@ public class UpdateHubClusterFeatureShrinkRequest extends TeaModel {
     public Boolean monitorEnabled;
 
     /**
-     * <p>The name of the master instance. The name must be 1 to 63 characters in length. It must start with a letter, and can contain letters, digits, underscores (\_), and hyphens (-).</p>
+     * <p>The name of the master instance. The name must be 1 to 63 characters in length. It must start with a letter, and can contain letters, digits, underscores (_), and hyphens (-).</p>
      */
     @NameInMap("Name")
     public String name;
