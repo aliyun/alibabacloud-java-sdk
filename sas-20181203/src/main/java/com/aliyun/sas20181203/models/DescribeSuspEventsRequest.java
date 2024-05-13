@@ -235,6 +235,9 @@ public class DescribeSuspEventsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("StrictMode")
+    public String strictMode;
+
     /**
      * <p>The tactic ID of ATT\\&CK.</p>
      */
@@ -486,6 +489,14 @@ public class DescribeSuspEventsRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeSuspEventsRequest setStrictMode(String strictMode) {
+        this.strictMode = strictMode;
+        return this;
+    }
+    public String getStrictMode() {
+        return this.strictMode;
     }
 
     public DescribeSuspEventsRequest setTacticId(String tacticId) {

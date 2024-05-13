@@ -1,3 +1,7 @@
+2024-05-13 Version: 2.24.3
+- Update API DescribeSuspEvents: add param StrictMode.
+
+
 2024-05-10 Version: 2.24.2
 - Update API ListCheckResult: update response param.
 
