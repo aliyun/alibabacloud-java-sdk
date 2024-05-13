@@ -4,27 +4,64 @@ package com.aliyun.antiddos_public20170518.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceIpAddressRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The region ID of the asset.</p>
+     * <br>
+     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/353250.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DdosRegionId")
     public String ddosRegionId;
 
+    /**
+     * <p>The DDoS mitigation status of the asset. Valid values:</p>
+     * <br>
+     * <p>*   **defense**: queries assets for which traffic scrubbing is performed.</p>
+     * <p>*   **blackhole**: queries assets for which blackhole filtering is triggered.</p>
+     */
     @NameInMap("DdosStatus")
     public String ddosStatus;
 
+    /**
+     * <p>The ID of the instance to which the asset is added.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The IP address of the asset.</p>
+     */
     @NameInMap("InstanceIp")
     public String instanceIp;
 
+    /**
+     * <p>The name of the asset.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The type of the asset. Valid values:</p>
+     * <br>
+     * <p>*   **ecs**: ECS instance</p>
+     * <p>*   **slb**: SLB instance</p>
+     * <p>*   **eip**: EIP</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

@@ -4,9 +4,15 @@ package com.aliyun.antiddos_public20170518.models;
 import com.aliyun.tea.*;
 
 public class DescribeDdosCountResponseBody extends TeaModel {
+    /**
+     * <p>The number of assets that are under DDoS attacks.</p>
+     */
     @NameInMap("DdosCount")
     public DescribeDdosCountResponseBodyDdosCount ddosCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeDdosCountResponseBody extends TeaModel {
     }
 
     public static class DescribeDdosCountResponseBodyDdosCount extends TeaModel {
+        /**
+         * <p>The number of assets for which blackhole filtering is triggered.</p>
+         */
         @NameInMap("BlackholeCount")
         public Integer blackholeCount;
 
+        /**
+         * <p>The number of assets for which traffic scrubbing is triggered.</p>
+         */
         @NameInMap("DefenseCount")
         public Integer defenseCount;
 
+        /**
+         * <p>The total number of assets.</p>
+         */
         @NameInMap("InstacenCount")
         public Integer instacenCount;
 

@@ -4,9 +4,15 @@ package com.aliyun.antiddos_public20170518.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>An array consisting of regions in which Anti-DDoS Origin Basic is available.</p>
+     */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,27 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
+        /**
+         * <p>The English name of the region.</p>
+         */
         @NameInMap("RegionEnName")
         public String regionEnName;
 
+        /**
+         * <p>The Chinese name of the region.</p>
+         */
         @NameInMap("RegionName")
         public String regionName;
 
+        /**
+         * <p>The code of the region.</p>
+         */
         @NameInMap("RegionNo")
         public String regionNo;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionNoAlias")
         public String regionNoAlias;
 

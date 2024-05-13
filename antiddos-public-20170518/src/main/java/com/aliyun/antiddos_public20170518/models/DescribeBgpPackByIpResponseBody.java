@@ -4,15 +4,32 @@ package com.aliyun.antiddos_public20170518.models;
 import com.aliyun.tea.*;
 
 public class DescribeBgpPackByIpResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code of the request.</p>
+     * <br>
+     * <p>For more information about status codes, see [Common parameters](https://help.aliyun.com/document_detail/118841.html).</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The configurations of the instance that is associated with the asset.</p>
+     */
     @NameInMap("DdosbgpInfo")
     public DescribeBgpPackByIpResponseBodyDdosbgpInfo ddosbgpInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,18 +71,33 @@ public class DescribeBgpPackByIpResponseBody extends TeaModel {
     }
 
     public static class DescribeBgpPackByIpResponseBodyDdosbgpInfo extends TeaModel {
+        /**
+         * <p>The basic protection threshold of the instance. Unit: Gbit/s.</p>
+         */
         @NameInMap("BaseThreshold")
         public Integer baseThreshold;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DdosbgpInstanceId")
         public String ddosbgpInstanceId;
 
+        /**
+         * <p>The burstable protection threshold of the instance. Unit: Gbit/s.</p>
+         */
         @NameInMap("ElasticThreshold")
         public Integer elasticThreshold;
 
+        /**
+         * <p>The expiration time of the instance. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <p>The IP address of the asset.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 

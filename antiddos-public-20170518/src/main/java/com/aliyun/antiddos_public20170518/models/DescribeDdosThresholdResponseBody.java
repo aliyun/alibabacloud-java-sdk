@@ -4,9 +4,15 @@ package com.aliyun.antiddos_public20170518.models;
 import com.aliyun.tea.*;
 
 public class DescribeDdosThresholdResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the details of the threshold.</p>
+     */
     @NameInMap("Thresholds")
     public DescribeDdosThresholdResponseBodyThresholds thresholds;
 
@@ -32,30 +38,69 @@ public class DescribeDdosThresholdResponseBody extends TeaModel {
     }
 
     public static class DescribeDdosThresholdResponseBodyThresholdsThreshold extends TeaModel {
+        /**
+         * <p>If the value of the **DdosType** parameter is **defense**, the Bps parameter indicates the current traffic scrubbing threshold. Unit: Mbit/s.</p>
+         * <br>
+         * <p>If the value of the **DdosType** parameter is **blackhole**, the Bps parameter indicates the basic protection threshold. Unit: Mbit/s.</p>
+         */
         @NameInMap("Bps")
         public Integer bps;
 
+        /**
+         * <p>The type of the threshold. Valid values:</p>
+         * <br>
+         * <p>*   **defense**: traffic scrubbing threshold</p>
+         * <p>*   **blackhole**: DDoS mitigation threshold</p>
+         */
         @NameInMap("DdosType")
         public String ddosType;
 
+        /**
+         * <p>The burstable protection threshold (the maximum DDoS mitigation threshold). Unit: Mbit/s.</p>
+         * <br>
+         * <p>> This parameter is returned only when the value of the **DdosType** parameter is **blackhole**.</p>
+         */
         @NameInMap("ElasticBps")
         public Integer elasticBps;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The IP address of the asset.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>Indicates whether the threshold is automatically adjusted. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The scrubbing thresholds are automatically adjusted based on the traffic load on the asset.</p>
+         * <p>*   **false**: The scrubbing thresholds are not automatically adjusted. You must manually specify the scrubbing thresholds.</p>
+         */
         @NameInMap("IsAuto")
         public Boolean isAuto;
 
+        /**
+         * <p>The maximum traffic scrubbing threshold. Unit: Mbit/s.</p>
+         */
         @NameInMap("MaxBps")
         public Integer maxBps;
 
+        /**
+         * <p>The maximum packet scrubbing threshold. Unit: pps.</p>
+         */
         @NameInMap("MaxPps")
         public Integer maxPps;
 
+        /**
+         * <p>The packet scrubbing threshold. Unit: pps.</p>
+         * <br>
+         * <p>> This parameter is returned only when the value of the **DdosType** parameter is **defense**.</p>
+         */
         @NameInMap("Pps")
         public Integer pps;
 

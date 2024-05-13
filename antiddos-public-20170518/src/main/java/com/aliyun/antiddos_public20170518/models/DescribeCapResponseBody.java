@@ -4,9 +4,15 @@ package com.aliyun.antiddos_public20170518.models;
 import com.aliyun.tea.*;
 
 public class DescribeCapResponseBody extends TeaModel {
+    /**
+     * <p>The download link to the traffic data that is captured when a DDoS attack event occurs.</p>
+     */
     @NameInMap("CapUrl")
     public DescribeCapResponseBodyCapUrl capUrl;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class DescribeCapResponseBody extends TeaModel {
     }
 
     public static class DescribeCapResponseBodyCapUrl extends TeaModel {
+        /**
+         * <p>The download link to the traffic data.</p>
+         */
         @NameInMap("Url")
         public String url;
 

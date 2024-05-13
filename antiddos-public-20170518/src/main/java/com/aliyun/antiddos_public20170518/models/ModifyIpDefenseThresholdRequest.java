@@ -3,7 +3,7 @@ package com.aliyun.antiddos_public20170518.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyDefenseThresholdRequest extends TeaModel {
+public class ModifyIpDefenseThresholdRequest extends TeaModel {
     /**
      * <p>Specifies the traffic scrubbing threshold. Unit: Mbit/s. The traffic scrubbing threshold cannot exceed the peak inbound or outbound Internet traffic, whichever is larger, of the asset.</p>
      * <br>
@@ -16,7 +16,7 @@ public class ModifyDefenseThresholdRequest extends TeaModel {
     public Integer bps;
 
     /**
-     * <p>The region ID of the asset for which you want to change the scrubbing thresholds.</p>
+     * <p>The region ID of the asset.</p>
      * <br>
      * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/353250.html) operation to query the most recent region list.</p>
      * <br>
@@ -49,6 +49,8 @@ public class ModifyDefenseThresholdRequest extends TeaModel {
 
     /**
      * <p>The IP address of the asset.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InternetIp")
     public String internetIp;
@@ -56,10 +58,8 @@ public class ModifyDefenseThresholdRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically adjust the scrubbing threshold based on the traffic load on the asset. Valid values:</p>
      * <br>
-     * <p>*   **true**: automatically adjusts the scrubbing thresholds. You do not need to configure the **Bps** and **Pps** parameters.</p>
-     * <p>*   **false**: The scrubbing threshold is not automatically adjusted. You must configure the **Bps** and **Pps** parameters.</p>
-     * <br>
-     * <p>Default value: false.</p>
+     * <p>*   **true**: automatically adjusts the scrubbing threshold. You do not need to configure the **Bps** and **Pps** parameters.</p>
+     * <p>*   **false**: The scrubbing threshold is not automatically adjusted. You must configure the **Bps** and **Pps** parameters. This is the default value.</p>
      */
     @NameInMap("IsAuto")
     public Boolean isAuto;
@@ -75,12 +75,12 @@ public class ModifyDefenseThresholdRequest extends TeaModel {
     @NameInMap("Pps")
     public Integer pps;
 
-    public static ModifyDefenseThresholdRequest build(java.util.Map<String, ?> map) throws Exception {
-        ModifyDefenseThresholdRequest self = new ModifyDefenseThresholdRequest();
+    public static ModifyIpDefenseThresholdRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyIpDefenseThresholdRequest self = new ModifyIpDefenseThresholdRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDefenseThresholdRequest setBps(Integer bps) {
+    public ModifyIpDefenseThresholdRequest setBps(Integer bps) {
         this.bps = bps;
         return this;
     }
@@ -88,7 +88,7 @@ public class ModifyDefenseThresholdRequest extends TeaModel {
         return this.bps;
     }
 
-    public ModifyDefenseThresholdRequest setDdosRegionId(String ddosRegionId) {
+    public ModifyIpDefenseThresholdRequest setDdosRegionId(String ddosRegionId) {
         this.ddosRegionId = ddosRegionId;
         return this;
     }
@@ -96,7 +96,7 @@ public class ModifyDefenseThresholdRequest extends TeaModel {
         return this.ddosRegionId;
     }
 
-    public ModifyDefenseThresholdRequest setInstanceId(String instanceId) {
+    public ModifyIpDefenseThresholdRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -104,7 +104,7 @@ public class ModifyDefenseThresholdRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ModifyDefenseThresholdRequest setInstanceType(String instanceType) {
+    public ModifyIpDefenseThresholdRequest setInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
     }
@@ -112,7 +112,7 @@ public class ModifyDefenseThresholdRequest extends TeaModel {
         return this.instanceType;
     }
 
-    public ModifyDefenseThresholdRequest setInternetIp(String internetIp) {
+    public ModifyIpDefenseThresholdRequest setInternetIp(String internetIp) {
         this.internetIp = internetIp;
         return this;
     }
@@ -120,7 +120,7 @@ public class ModifyDefenseThresholdRequest extends TeaModel {
         return this.internetIp;
     }
 
-    public ModifyDefenseThresholdRequest setIsAuto(Boolean isAuto) {
+    public ModifyIpDefenseThresholdRequest setIsAuto(Boolean isAuto) {
         this.isAuto = isAuto;
         return this;
     }
@@ -128,7 +128,7 @@ public class ModifyDefenseThresholdRequest extends TeaModel {
         return this.isAuto;
     }
 
-    public ModifyDefenseThresholdRequest setPps(Integer pps) {
+    public ModifyIpDefenseThresholdRequest setPps(Integer pps) {
         this.pps = pps;
         return this;
     }

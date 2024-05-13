@@ -4,12 +4,21 @@ package com.aliyun.antiddos_public20170518.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceIpAddressResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of details of the instance.</p>
+     */
     @NameInMap("InstanceList")
     public java.util.List<DescribeInstanceIpAddressResponseBodyInstanceList> instanceList;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of the assets.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -43,30 +52,70 @@ public class DescribeInstanceIpAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceIpAddressResponseBodyInstanceListIpAddressConfig extends TeaModel {
+        /**
+         * <p>The basic protection threshold for the asset. Unit: Mbit/s.</p>
+         */
         @NameInMap("BlackholeThreshold")
         public Integer blackholeThreshold;
 
+        /**
+         * <p>The traffic scrubbing threshold for the asset. Unit: Mbit/s.</p>
+         */
         @NameInMap("DefenseBpsThreshold")
         public Integer defenseBpsThreshold;
 
+        /**
+         * <p>The packet scrubbing threshold for the asset. Unit: packets per second (pps).</p>
+         */
         @NameInMap("DefensePpsThreshold")
         public Integer defensePpsThreshold;
 
+        /**
+         * <p>The burstable protection threshold for the asset. Unit: Mbit/s.</p>
+         */
         @NameInMap("ElasticThreshold")
         public Integer elasticThreshold;
 
+        /**
+         * <p>The IP address of the asset.</p>
+         */
         @NameInMap("InstanceIp")
         public String instanceIp;
 
+        /**
+         * <p>The DDoS mitigation status of the asset. Valid values:</p>
+         * <br>
+         * <p>*   **defense**: indicates that traffic scrubbing is performed on the asset.</p>
+         * <p>*   **blackhole**: indicates that blackhole filtering is triggered for the asset.</p>
+         * <p>*   **normal**: indicates that no DDoS attacks are launched against the asset.</p>
+         */
         @NameInMap("IpStatus")
         public String ipStatus;
 
+        /**
+         * <p>The IP protocol that is supported by the asset. Valid values:</p>
+         * <br>
+         * <p>*   **v4**: IPv4</p>
+         * <p>*   **v6**: IPv6</p>
+         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
+        /**
+         * <p>Indicates whether the asset is added to the instance. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("IsBgppack")
         public Boolean isBgppack;
 
+        @NameInMap("IsFullProtection")
+        public Integer isFullProtection;
+
+        /**
+         * <p>The region code of the asset.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -139,6 +188,14 @@ public class DescribeInstanceIpAddressResponseBody extends TeaModel {
             return this.isBgppack;
         }
 
+        public DescribeInstanceIpAddressResponseBodyInstanceListIpAddressConfig setIsFullProtection(Integer isFullProtection) {
+            this.isFullProtection = isFullProtection;
+            return this;
+        }
+        public Integer getIsFullProtection() {
+            return this.isFullProtection;
+        }
+
         public DescribeInstanceIpAddressResponseBodyInstanceListIpAddressConfig setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -150,18 +207,40 @@ public class DescribeInstanceIpAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceIpAddressResponseBodyInstanceList extends TeaModel {
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The DDoS mitigation status of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **normal**: normal</p>
+         * <p>*   **abnormal**: under DDoS attacks</p>
+         */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
+        /**
+         * <p>The type of the asset. Valid values:</p>
+         * <br>
+         * <p>*   **ecs**: ECS instance</p>
+         * <p>*   **slb**: SLB instance</p>
+         * <p>*   **eip**: EIP</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>An array that consists of the details of the asset.</p>
+         */
         @NameInMap("IpAddressConfig")
         public java.util.List<DescribeInstanceIpAddressResponseBodyInstanceListIpAddressConfig> ipAddressConfig;
 
