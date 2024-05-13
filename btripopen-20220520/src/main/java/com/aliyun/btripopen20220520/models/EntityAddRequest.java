@@ -7,6 +7,9 @@ public class EntityAddRequest extends TeaModel {
     @NameInMap("entity_d_o_list")
     public java.util.List<EntityAddRequestEntityDOList> entityDOList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("thirdpart_id")
     public String thirdpartId;
 

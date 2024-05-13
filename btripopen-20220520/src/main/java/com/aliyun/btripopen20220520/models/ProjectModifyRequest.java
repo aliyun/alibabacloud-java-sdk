@@ -7,12 +7,18 @@ public class ProjectModifyRequest extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("project_name")
     public String projectName;
 
     @NameInMap("third_part_cost_center_id")
     public String thirdPartCostCenterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("third_part_id")
     public String thirdPartId;
 

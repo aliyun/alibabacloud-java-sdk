@@ -10,18 +10,30 @@ public class FlightOtaSearchV2ShrinkRequest extends TeaModel {
     @NameInMap("direct_only")
     public Boolean directOnly;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
     @NameInMap("need_share_flight")
     public Boolean needShareFlight;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("search_journeys")
     public String searchJourneysShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("search_mode")
     public Integer searchMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("trip_type")
     public Integer tripType;
 

@@ -7,6 +7,9 @@ public class EntitySetRequest extends TeaModel {
     @NameInMap("entity_d_o_list")
     public java.util.List<EntitySetRequestEntityDOList> entityDOList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("thirdpart_id")
     public String thirdpartId;
 
@@ -32,9 +35,15 @@ public class EntitySetRequest extends TeaModel {
     }
 
     public static class EntitySetRequestEntityDOList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("entity_id")
         public String entityId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("entity_type")
         public String entityType;
 

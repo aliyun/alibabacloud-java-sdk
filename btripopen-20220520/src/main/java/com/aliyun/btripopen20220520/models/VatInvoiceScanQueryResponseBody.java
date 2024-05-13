@@ -294,6 +294,9 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("total_amount_in_words")
         public String totalAmountInWords;
 
+        @NameInMap("xml_oss_url")
+        public String xmlOssUrl;
+
         public static VatInvoiceScanQueryResponseBodyModuleItems build(java.util.Map<String, ?> map) throws Exception {
             VatInvoiceScanQueryResponseBodyModuleItems self = new VatInvoiceScanQueryResponseBodyModuleItems();
             return TeaModel.build(map, self);
@@ -561,6 +564,14 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         }
         public String getTotalAmountInWords() {
             return this.totalAmountInWords;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItems setXmlOssUrl(String xmlOssUrl) {
+            this.xmlOssUrl = xmlOssUrl;
+            return this;
+        }
+        public String getXmlOssUrl() {
+            return this.xmlOssUrl;
         }
 
     }

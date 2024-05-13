@@ -4,12 +4,18 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class EntityDeleteShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("del_all")
     public Boolean delAll;
 
     @NameInMap("entity_d_o_list")
     public String entityDOListShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("thirdpart_id")
     public String thirdpartId;
 

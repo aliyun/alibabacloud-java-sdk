@@ -7,15 +7,24 @@ public class IeHotelBillSettlementQueryRequest extends TeaModel {
     @NameInMap("category")
     public Integer category;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("page_no")
     public Integer pageNo;
 
     @NameInMap("page_size")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("period_end")
     public String periodEnd;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("period_start")
     public String periodStart;
 

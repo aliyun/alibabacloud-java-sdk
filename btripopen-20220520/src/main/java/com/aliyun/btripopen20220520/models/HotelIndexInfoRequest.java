@@ -10,6 +10,9 @@ public class HotelIndexInfoRequest extends TeaModel {
     @NameInMap("hotel_status")
     public Integer hotelStatus;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 

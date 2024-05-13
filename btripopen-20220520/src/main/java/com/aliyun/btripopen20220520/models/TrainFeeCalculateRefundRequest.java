@@ -4,12 +4,21 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainFeeCalculateRefundRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("distribute_order_id")
     public String distributeOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("order_id")
     public String orderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("refund_train_infos")
     public java.util.List<TrainFeeCalculateRefundRequestRefundTrainInfos> refundTrainInfos;
 
@@ -43,15 +52,27 @@ public class TrainFeeCalculateRefundRequest extends TeaModel {
     }
 
     public static class TrainFeeCalculateRefundRequestRefundTrainInfosRefundPassengerInfos extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_cert_no")
         public String passengerCertNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_cert_type")
         public String passengerCertType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_name")
         public String passengerName;
 
@@ -95,18 +116,33 @@ public class TrainFeeCalculateRefundRequest extends TeaModel {
     }
 
     public static class TrainFeeCalculateRefundRequestRefundTrainInfos extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("arr_station_code")
         public String arrStationCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_station_code")
         public String depStationCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("refund_passenger_infos")
         public java.util.List<TrainFeeCalculateRefundRequestRefundTrainInfosRefundPassengerInfos> refundPassengerInfos;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("train_no")
         public String trainNo;
 

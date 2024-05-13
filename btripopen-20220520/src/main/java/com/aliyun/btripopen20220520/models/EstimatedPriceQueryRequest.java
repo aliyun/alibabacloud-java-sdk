@@ -4,27 +4,45 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class EstimatedPriceQueryRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("arr_city")
     public String arrCity;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("category")
     public String category;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dep_city")
     public String depCity;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("end_time")
     public Long endTime;
 
     @NameInMap("itinerary_id")
     public String itineraryId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("start_time")
     public Long startTime;
 
     @NameInMap("sub_corp_id")
     public String subCorpId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

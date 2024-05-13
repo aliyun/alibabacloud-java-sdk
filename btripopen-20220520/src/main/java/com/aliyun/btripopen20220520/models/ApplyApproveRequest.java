@@ -4,21 +4,33 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ApplyApproveRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("apply_id")
     public String applyId;
 
     @NameInMap("note")
     public String note;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("operate_time")
     public String operateTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("status")
     public Integer status;
 
     @NameInMap("sub_corp_id")
     public String subCorpId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

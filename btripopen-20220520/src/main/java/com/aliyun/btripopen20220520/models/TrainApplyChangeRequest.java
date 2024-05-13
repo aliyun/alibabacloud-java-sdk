@@ -7,6 +7,9 @@ public class TrainApplyChangeRequest extends TeaModel {
     @NameInMap("accept_no_seat")
     public String acceptNoSeat;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("change_train_info_s")
     public java.util.List<TrainApplyChangeRequestChangeTrainInfoS> changeTrainInfoS;
 
@@ -16,12 +19,21 @@ public class TrainApplyChangeRequest extends TeaModel {
     @NameInMap("is_pay_now")
     public Boolean isPayNow;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("order_id")
     public String orderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("out_change_apply_id")
     public String outChangeApplyId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
@@ -87,15 +99,27 @@ public class TrainApplyChangeRequest extends TeaModel {
     }
 
     public static class TrainApplyChangeRequestChangeTrainInfoSChangeTicketInfoSPassengerInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_cert_no")
         public String passengerCertNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_cert_type")
         public String passengerCertType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_name")
         public String passengerName;
 
@@ -139,15 +163,27 @@ public class TrainApplyChangeRequest extends TeaModel {
     }
 
     public static class TrainApplyChangeRequestChangeTrainInfoSChangeTicketInfoS extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_info")
         public TrainApplyChangeRequestChangeTrainInfoSChangeTicketInfoSPassengerInfo passengerInfo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("seat_type")
         public String seatType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ticket_price")
         public String ticketPrice;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ticket_type")
         public String ticketType;
 
@@ -191,9 +227,15 @@ public class TrainApplyChangeRequest extends TeaModel {
     }
 
     public static class TrainApplyChangeRequestChangeTrainInfoS extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("arr_station_code")
         public String arrStationCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("change_ticket_info_s")
         public java.util.List<TrainApplyChangeRequestChangeTrainInfoSChangeTicketInfoS> changeTicketInfoS;
 
@@ -203,18 +245,33 @@ public class TrainApplyChangeRequest extends TeaModel {
         @NameInMap("choose_seat_s")
         public String chooseSeatS;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_station_code")
         public String depStationCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("original_dep_time")
         public String originalDepTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("original_train_no")
         public String originalTrainNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("train_no")
         public String trainNo;
 

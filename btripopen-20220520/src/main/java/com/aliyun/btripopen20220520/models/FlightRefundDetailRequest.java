@@ -4,9 +4,15 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightRefundDetailRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_sub_order_id")
     public String disSubOrderId;
 

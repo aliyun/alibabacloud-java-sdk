@@ -7,18 +7,30 @@ public class TrainOrderCreateRequest extends TeaModel {
     @NameInMap("accept_no_seat")
     public String acceptNoSeat;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("book_train_infos")
     public java.util.List<TrainOrderCreateRequestBookTrainInfos> bookTrainInfos;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("btrip_user_name")
     public String btripUserName;
 
     @NameInMap("business_info")
     public TrainOrderCreateRequestBusinessInfo businessInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("contact_info")
     public TrainOrderCreateRequestContactInfo contactInfo;
 
@@ -28,9 +40,15 @@ public class TrainOrderCreateRequest extends TeaModel {
     @NameInMap("is_pay_now")
     public Boolean isPayNow;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("passenger_open_info_s")
     public java.util.List<TrainOrderCreateRequestPassengerOpenInfoS> passengerOpenInfoS;
 
@@ -120,15 +138,27 @@ public class TrainOrderCreateRequest extends TeaModel {
     }
 
     public static class TrainOrderCreateRequestBookTrainInfosBookTicketInfos extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("seat_type")
         public String seatType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ticket_price")
         public Long ticketPrice;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ticket_type")
         public String ticketType;
 
@@ -172,9 +202,15 @@ public class TrainOrderCreateRequest extends TeaModel {
     }
 
     public static class TrainOrderCreateRequestBookTrainInfos extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("arr_station_code")
         public String arrStationCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("book_ticket_infos")
         public java.util.List<TrainOrderCreateRequestBookTrainInfosBookTicketInfos> bookTicketInfos;
 
@@ -184,12 +220,21 @@ public class TrainOrderCreateRequest extends TeaModel {
         @NameInMap("choose_seats")
         public String chooseSeats;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_station_code")
         public String depStationCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("train_no")
         public String trainNo;
 
@@ -287,12 +332,21 @@ public class TrainOrderCreateRequest extends TeaModel {
     }
 
     public static class TrainOrderCreateRequestContactInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_mobile")
         public String passengerMobile;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_name")
         public String passengerName;
 
@@ -355,8 +409,8 @@ public class TrainOrderCreateRequest extends TeaModel {
         @NameInMap("project_code")
         public String projectCode;
 
-        @NameInMap("project_name")
-        public String projectName;
+        @NameInMap("project_title")
+        public String projectTitle;
 
         public static TrainOrderCreateRequestPassengerOpenInfoSCostCenterInfo build(java.util.Map<String, ?> map) throws Exception {
             TrainOrderCreateRequestPassengerOpenInfoSCostCenterInfo self = new TrainOrderCreateRequestPassengerOpenInfoSCostCenterInfo();
@@ -435,12 +489,12 @@ public class TrainOrderCreateRequest extends TeaModel {
             return this.projectCode;
         }
 
-        public TrainOrderCreateRequestPassengerOpenInfoSCostCenterInfo setProjectName(String projectName) {
-            this.projectName = projectName;
+        public TrainOrderCreateRequestPassengerOpenInfoSCostCenterInfo setProjectTitle(String projectTitle) {
+            this.projectTitle = projectTitle;
             return this;
         }
-        public String getProjectName() {
-            return this.projectName;
+        public String getProjectTitle() {
+            return this.projectTitle;
         }
 
     }
@@ -452,18 +506,30 @@ public class TrainOrderCreateRequest extends TeaModel {
         @NameInMap("country_code")
         public String countryCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_cert_no")
         public String passengerCertNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_cert_type")
         public String passengerCertType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 
         @NameInMap("passenger_mobile")
         public String passengerMobile;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_name")
         public String passengerName;
 

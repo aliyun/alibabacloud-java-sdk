@@ -7,21 +7,36 @@ public class FlightRefundApplyShrinkRequest extends TeaModel {
     @NameInMap("corp_refund_price")
     public Long corpRefundPrice;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_sub_order_id")
     public String disSubOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("display_refund_money")
     public String displayRefundMoney;
 
     @NameInMap("extra")
     public String extraShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("is_voluntary")
     public Integer isVoluntary;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("item_unit_ids")
     public String itemUnitIds;
 
@@ -34,12 +49,18 @@ public class FlightRefundApplyShrinkRequest extends TeaModel {
     @NameInMap("reason_detail")
     public String reasonDetail;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("reason_type")
     public Integer reasonType;
 
     @NameInMap("refund_voucher_info")
     public String refundVoucherInfoShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("session_id")
     public String sessionId;
 

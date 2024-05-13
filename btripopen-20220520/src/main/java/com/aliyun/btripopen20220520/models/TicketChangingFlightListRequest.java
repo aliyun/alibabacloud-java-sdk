@@ -10,9 +10,15 @@ public class TicketChangingFlightListRequest extends TeaModel {
     @NameInMap("dep_city")
     public String depCity;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dep_date")
     public String depDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
@@ -76,9 +82,15 @@ public class TicketChangingFlightListRequest extends TeaModel {
     }
 
     public static class TicketChangingFlightListRequestTravelerInfoList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("arr_city")
         public String arrCity;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_city")
         public String depCity;
 
@@ -88,6 +100,9 @@ public class TicketChangingFlightListRequest extends TeaModel {
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("user_id")
         public String userId;
 

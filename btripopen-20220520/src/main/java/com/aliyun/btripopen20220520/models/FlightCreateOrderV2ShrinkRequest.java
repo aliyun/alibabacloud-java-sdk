@@ -16,21 +16,36 @@ public class FlightCreateOrderV2ShrinkRequest extends TeaModel {
     @NameInMap("buyer_name")
     public String buyerName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("contact_info")
     public String contactInfoShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ota_item_id")
     public String otaItemId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
     @NameInMap("total_price_cent")
     public Long totalPriceCent;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("travelers")
     public String travelersShrink;
 

@@ -4,12 +4,21 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainFeeCalculateChangeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("change_train_details")
     public java.util.List<TrainFeeCalculateChangeRequestChangeTrainDetails> changeTrainDetails;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("distribute_order_id")
     public String distributeOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("order_id")
     public String orderId;
 
@@ -43,12 +52,21 @@ public class TrainFeeCalculateChangeRequest extends TeaModel {
     }
 
     public static class TrainFeeCalculateChangeRequestChangeTrainDetailsPassengerInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_cert_no")
         public String passengerCertNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_cert_type")
         public String passengerCertType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_name")
         public String passengerName;
 
@@ -84,27 +102,51 @@ public class TrainFeeCalculateChangeRequest extends TeaModel {
     }
 
     public static class TrainFeeCalculateChangeRequestChangeTrainDetails extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("arr_station_code")
         public String arrStationCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_station_code")
         public String depStationCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("original_dep_time")
         public String originalDepTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("original_train_no")
         public String originalTrainNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_info")
         public TrainFeeCalculateChangeRequestChangeTrainDetailsPassengerInfo passengerInfo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("seat_type")
         public String seatType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("train_no")
         public String trainNo;
 

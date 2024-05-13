@@ -4,9 +4,15 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ApplyInvoiceTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("bill_date")
     public String billDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("invoice_task_list")
     public java.util.List<ApplyInvoiceTaskRequestInvoiceTaskList> invoiceTaskList;
 
@@ -56,6 +62,9 @@ public class ApplyInvoiceTaskRequest extends TeaModel {
         @NameInMap("international_hotel_invoice_fee")
         public String internationalHotelInvoiceFee;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("invoice_third_part_id")
         public String invoiceThirdPartId;
 

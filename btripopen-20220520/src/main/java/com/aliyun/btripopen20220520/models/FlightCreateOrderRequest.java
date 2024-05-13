@@ -7,6 +7,9 @@ public class FlightCreateOrderRequest extends TeaModel {
     @NameInMap("arr_airport_code")
     public String arrAirportCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("arr_city_code")
     public String arrCityCode;
 
@@ -16,33 +19,57 @@ public class FlightCreateOrderRequest extends TeaModel {
     @NameInMap("buyer_name")
     public String buyerName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("buyer_unique_key")
     public String buyerUniqueKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("contact_info")
     public FlightCreateOrderRequestContactInfo contactInfo;
 
     @NameInMap("dep_airport_code")
     public String depAirportCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dep_city_code")
     public String depCityCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dep_date")
     public String depDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
     @NameInMap("order_attr")
     public java.util.Map<String, ?> orderAttr;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("order_params")
     public String orderParams;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ota_item_id")
     public String otaItemId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("price")
     public Long price;
 
@@ -55,9 +82,15 @@ public class FlightCreateOrderRequest extends TeaModel {
     @NameInMap("receipt_title")
     public String receiptTitle;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("traveler_info_list")
     public java.util.List<FlightCreateOrderRequestTravelerInfoList> travelerInfoList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("trip_type")
     public Integer tripType;
 
@@ -222,9 +255,15 @@ public class FlightCreateOrderRequest extends TeaModel {
         @NameInMap("contact_email")
         public String contactEmail;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("contact_name")
         public String contactName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("contact_phone")
         public String contactPhone;
 
@@ -266,15 +305,24 @@ public class FlightCreateOrderRequest extends TeaModel {
         @NameInMap("cert_nation")
         public String certNation;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cert_no")
         public String certNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cert_type")
         public String certType;
 
         @NameInMap("cert_valid_date")
         public String certValidDate;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -290,15 +338,24 @@ public class FlightCreateOrderRequest extends TeaModel {
         @NameInMap("nationality_code")
         public String nationalityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("out_user_id")
         public String outUserId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("phone")
         public String phone;
 
         @NameInMap("sex")
         public Integer sex;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("type")
         public String type;
 

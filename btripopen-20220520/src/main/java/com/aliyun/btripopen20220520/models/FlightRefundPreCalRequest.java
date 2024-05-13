@@ -4,12 +4,18 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightRefundPreCalRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
     @NameInMap("is_voluntary")
     public String isVoluntary;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("passenger_segment_info_list")
     public java.util.List<FlightRefundPreCalRequestPassengerSegmentInfoList> passengerSegmentInfoList;
 
@@ -43,12 +49,21 @@ public class FlightRefundPreCalRequest extends TeaModel {
     }
 
     public static class FlightRefundPreCalRequestPassengerSegmentInfoList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("flight_no")
         public String flightNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_name")
         public String passengerName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("user_id")
         public String userId;
 

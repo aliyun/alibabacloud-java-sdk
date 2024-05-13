@@ -4,12 +4,18 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class EntityDeleteRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("del_all")
     public Boolean delAll;
 
     @NameInMap("entity_d_o_list")
     public java.util.List<EntityDeleteRequestEntityDOList> entityDOList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("thirdpart_id")
     public String thirdpartId;
 
@@ -43,9 +49,15 @@ public class EntityDeleteRequest extends TeaModel {
     }
 
     public static class EntityDeleteRequestEntityDOList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("entity_id")
         public String entityId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("entity_type")
         public String entityType;
 

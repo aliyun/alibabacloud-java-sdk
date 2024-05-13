@@ -13,6 +13,9 @@ public class FlightListingSearchV2ShrinkRequest extends TeaModel {
     @NameInMap("direct_only")
     public Boolean directOnly;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
@@ -28,12 +31,21 @@ public class FlightListingSearchV2ShrinkRequest extends TeaModel {
     @NameInMap("need_y_c_best_price")
     public Boolean needYCBestPrice;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("search_journeys")
     public String searchJourneysShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("search_mode")
     public Integer searchMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("trip_type")
     public Integer tripType;
 

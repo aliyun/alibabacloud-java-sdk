@@ -10,18 +10,30 @@ public class FlightOtaSearchV2Request extends TeaModel {
     @NameInMap("direct_only")
     public Boolean directOnly;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
     @NameInMap("need_share_flight")
     public Boolean needShareFlight;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("search_journeys")
     public java.util.List<FlightOtaSearchV2RequestSearchJourneys> searchJourneys;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("search_mode")
     public Integer searchMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("trip_type")
     public Integer tripType;
 
@@ -102,6 +114,9 @@ public class FlightOtaSearchV2Request extends TeaModel {
         @NameInMap("flight_time")
         public String flightTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("market_flight_no")
         public String marketFlightNo;
 
@@ -172,15 +187,27 @@ public class FlightOtaSearchV2Request extends TeaModel {
     }
 
     public static class FlightOtaSearchV2RequestSearchJourneys extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("dep_date")
         public String depDate;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("selected_flights")
         public java.util.List<FlightOtaSearchV2RequestSearchJourneysSelectedFlights> selectedFlights;
 

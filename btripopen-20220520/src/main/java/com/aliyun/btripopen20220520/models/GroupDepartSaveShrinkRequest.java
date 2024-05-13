@@ -4,18 +4,27 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class GroupDepartSaveShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dept_name")
     public String deptName;
 
     @NameInMap("manager_ids")
     public String managerIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("outer_dept_id")
     public String outerDeptId;
 
     @NameInMap("outer_dept_pid")
     public String outerDeptPid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("status")
     public Integer status;
 

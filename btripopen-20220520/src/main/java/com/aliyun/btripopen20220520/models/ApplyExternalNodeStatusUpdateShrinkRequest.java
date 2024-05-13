@@ -4,12 +4,18 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ApplyExternalNodeStatusUpdateShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("node_id")
     public String nodeId;
 
     @NameInMap("operation_records")
     public String operationRecordsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("process_action_result")
     public String processActionResult;
 

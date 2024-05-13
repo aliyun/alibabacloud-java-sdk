@@ -10,12 +10,18 @@ public class IntlFlightListingSearchShrinkRequest extends TeaModel {
     @NameInMap("buyer_name")
     public String buyerName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("cabin_type")
     public Integer cabinType;
 
     @NameInMap("direct_only")
     public Boolean directOnly;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
@@ -25,15 +31,24 @@ public class IntlFlightListingSearchShrinkRequest extends TeaModel {
     @NameInMap("need_share_flight")
     public Boolean needShareFlight;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("out_wheel_search")
     public Boolean outWheelSearch;
 
     @NameInMap("query_record_id")
     public String queryRecordId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("search_journeys")
     public String searchJourneysShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("search_mode")
     public Integer searchMode;
 
@@ -46,6 +61,9 @@ public class IntlFlightListingSearchShrinkRequest extends TeaModel {
     @NameInMap("token")
     public String token;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("trip_type")
     public Integer tripType;
 

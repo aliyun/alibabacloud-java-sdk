@@ -7,9 +7,15 @@ public class TicketChangingPayShrinkRequest extends TeaModel {
     @NameInMap("corp_pay_price")
     public Long corpPayPrice;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_sub_order_id")
     public String disSubOrderId;
 
@@ -19,6 +25,9 @@ public class TicketChangingPayShrinkRequest extends TeaModel {
     @NameInMap("personal_pay_price")
     public Long personalPayPrice;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("total_pay_price")
     public Long totalPayPrice;
 

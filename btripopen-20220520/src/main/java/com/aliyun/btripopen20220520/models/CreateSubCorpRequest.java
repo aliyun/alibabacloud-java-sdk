@@ -4,12 +4,21 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CreateSubCorpRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("outer_corp_id")
     public String outerCorpId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("outer_corp_name")
     public String outerCorpName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

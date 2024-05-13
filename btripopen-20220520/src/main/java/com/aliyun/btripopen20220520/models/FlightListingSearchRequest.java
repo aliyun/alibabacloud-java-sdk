@@ -7,15 +7,24 @@ public class FlightListingSearchRequest extends TeaModel {
     @NameInMap("airline_code")
     public String airlineCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("arr_city_code")
     public String arrCityCode;
 
     @NameInMap("cabin_class")
     public String cabinClass;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dep_city_code")
     public String depCityCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dep_date")
     public String depDate;
 

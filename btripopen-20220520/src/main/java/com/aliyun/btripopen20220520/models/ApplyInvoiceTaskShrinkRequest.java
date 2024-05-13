@@ -4,9 +4,15 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ApplyInvoiceTaskShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("bill_date")
     public String billDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("invoice_task_list")
     public String invoiceTaskListShrink;
 

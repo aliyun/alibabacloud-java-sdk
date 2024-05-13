@@ -70,6 +70,9 @@ public class ApplyAddShrinkRequest extends TeaModel {
     @NameInMap("sub_corp_id")
     public String subCorpId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("thirdpart_apply_id")
     public String thirdpartApplyId;
 
@@ -91,12 +94,18 @@ public class ApplyAddShrinkRequest extends TeaModel {
     @NameInMap("traveler_standard")
     public String travelerStandardShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("trip_cause")
     public String tripCause;
 
     @NameInMap("trip_day")
     public Integer tripDay;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("trip_title")
     public String tripTitle;
 
@@ -106,6 +115,9 @@ public class ApplyAddShrinkRequest extends TeaModel {
     @NameInMap("union_no")
     public String unionNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

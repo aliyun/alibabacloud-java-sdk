@@ -4,18 +4,30 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightPayOrderShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("corp_pay_price")
     public Long corpPayPrice;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
     @NameInMap("extra")
     public String extraShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("personal_pay_price")
     public Long personalPayPrice;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("total_pay_price")
     public Long totalPayPrice;
 

@@ -7,6 +7,9 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
     @NameInMap("async_create_order_key")
     public String asyncCreateOrderKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("async_create_order_mode")
     public Boolean asyncCreateOrderMode;
 
@@ -164,15 +167,27 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
     }
 
     public static class IntlFlightCreateOrderRequestContactInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("contact_email")
         public String contactEmail;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("contact_name")
         public String contactName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("contact_phone")
         public String contactPhone;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("send_msg_to_passenger")
         public Boolean sendMsgToPassenger;
 
@@ -216,9 +231,15 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
     }
 
     public static class IntlFlightCreateOrderRequestCostCenter extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cost_center_name")
         public String costCenterName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
@@ -249,15 +270,24 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
         @NameInMap("cert_nation")
         public String certNation;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cert_no")
         public String certNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cert_type")
         public Integer certType;
 
         @NameInMap("cert_valid_date")
         public String certValidDate;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -312,15 +342,24 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
         @NameInMap("cert_nation")
         public String certNation;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cert_no")
         public String certNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cert_type")
         public Integer certType;
 
         @NameInMap("cert_valid_date")
         public String certValidDate;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -372,6 +411,9 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
     }
 
     public static class IntlFlightCreateOrderRequestPassengerList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("birthday")
         public String birthday;
 
@@ -381,6 +423,9 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
         @NameInMap("cascade_dept_name")
         public String cascadeDeptName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cert_info")
         public IntlFlightCreateOrderRequestPassengerListCertInfo certInfo;
 
@@ -417,9 +462,15 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
         @NameInMap("nationality_code")
         public String nationalityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_type")
         public Integer passengerType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("phone")
         public String phone;
 
@@ -432,6 +483,9 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
         @NameInMap("subsidiary_cert_info_list")
         public java.util.List<IntlFlightCreateOrderRequestPassengerListSubsidiaryCertInfoList> subsidiaryCertInfoList;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("user_id")
         public String userId;
 

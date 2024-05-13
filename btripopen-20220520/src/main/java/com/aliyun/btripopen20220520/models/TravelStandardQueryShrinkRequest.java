@@ -4,12 +4,21 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TravelStandardQueryShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("from_group")
     public Boolean fromGroup;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("rule_code")
     public Long ruleCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("service_type_list")
     public String serviceTypeListShrink;
 

@@ -10,9 +10,15 @@ public class HotelAskingPriceShrinkRequest extends TeaModel {
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("check_in_date")
     public String checkInDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("check_out_date")
     public String checkOutDate;
 
@@ -34,6 +40,9 @@ public class HotelAskingPriceShrinkRequest extends TeaModel {
     @NameInMap("payment_type")
     public Integer paymentType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("shids")
     public String shidsShrink;
 

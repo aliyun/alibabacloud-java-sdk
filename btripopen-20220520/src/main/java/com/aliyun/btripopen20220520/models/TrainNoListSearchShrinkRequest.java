@@ -4,15 +4,27 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainNoListSearchShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("arr_location")
     public String arrLocation;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dep_date")
     public String depDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dep_location")
     public String depLocation;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("option")
     public String optionShrink;
 

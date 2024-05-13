@@ -7,12 +7,18 @@ public class TrainOrderCancelRequest extends TeaModel {
     @NameInMap("change_order_id")
     public String changeOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("order_id")
     public String orderId;
 
     @NameInMap("out_change_order_id")
     public String outChangeOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 

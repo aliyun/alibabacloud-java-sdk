@@ -7,18 +7,30 @@ public class TrainOrderCreateShrinkRequest extends TeaModel {
     @NameInMap("accept_no_seat")
     public String acceptNoSeat;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("book_train_infos")
     public String bookTrainInfosShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("btrip_user_name")
     public String btripUserName;
 
     @NameInMap("business_info")
     public String businessInfoShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("contact_info")
     public String contactInfoShrink;
 
@@ -28,9 +40,15 @@ public class TrainOrderCreateShrinkRequest extends TeaModel {
     @NameInMap("is_pay_now")
     public Boolean isPayNow;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("passenger_open_info_s")
     public String passengerOpenInfoSShrink;
 

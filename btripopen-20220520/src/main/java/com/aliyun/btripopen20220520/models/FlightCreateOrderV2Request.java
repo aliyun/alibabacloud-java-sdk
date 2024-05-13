@@ -16,21 +16,36 @@ public class FlightCreateOrderV2Request extends TeaModel {
     @NameInMap("buyer_name")
     public String buyerName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("contact_info")
     public FlightCreateOrderV2RequestContactInfo contactInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ota_item_id")
     public String otaItemId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
     @NameInMap("total_price_cent")
     public Long totalPriceCent;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("travelers")
     public java.util.List<FlightCreateOrderV2RequestTravelers> travelers;
 
@@ -172,15 +187,24 @@ public class FlightCreateOrderV2Request extends TeaModel {
     }
 
     public static class FlightCreateOrderV2RequestTravelers extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("birthday")
         public String birthday;
 
         @NameInMap("cert_nation")
         public String certNation;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cert_no")
         public String certNo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("cert_type")
         public Integer certType;
 
@@ -199,6 +223,9 @@ public class FlightCreateOrderV2Request extends TeaModel {
         @NameInMap("dept_name")
         public String deptName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("gender")
         public Integer gender;
 
@@ -211,12 +238,21 @@ public class FlightCreateOrderV2Request extends TeaModel {
         @NameInMap("nationality_code")
         public String nationalityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_name")
         public String passengerName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("passenger_type")
         public Integer passengerType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("phone")
         public String phone;
 
@@ -226,6 +262,9 @@ public class FlightCreateOrderV2Request extends TeaModel {
         @NameInMap("project_title")
         public String projectTitle;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("user_id")
         public String userId;
 

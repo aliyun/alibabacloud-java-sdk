@@ -7,6 +7,9 @@ public class IntlFlightCreateOrderShrinkRequest extends TeaModel {
     @NameInMap("async_create_order_key")
     public String asyncCreateOrderKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("async_create_order_mode")
     public Boolean asyncCreateOrderMode;
 

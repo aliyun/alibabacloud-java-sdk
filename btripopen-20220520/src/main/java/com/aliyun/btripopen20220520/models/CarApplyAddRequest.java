@@ -4,15 +4,24 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CarApplyAddRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("cause")
     public String cause;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("city")
     public String city;
 
     @NameInMap("city_code_set")
     public String cityCodeSet;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("date")
     public String date;
 
@@ -25,9 +34,15 @@ public class CarApplyAddRequest extends TeaModel {
     @NameInMap("project_name")
     public String projectName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("status")
     public Integer status;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("third_part_apply_id")
     public String thirdPartApplyId;
 
@@ -37,21 +52,36 @@ public class CarApplyAddRequest extends TeaModel {
     @NameInMap("third_part_invoice_id")
     public String thirdPartInvoiceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("times_total")
     public Integer timesTotal;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("times_type")
     public Integer timesType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("times_used")
     public Integer timesUsed;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("title")
     public String title;
 
     @NameInMap("traveler_standard")
     public java.util.List<CarApplyAddRequestTravelerStandard> travelerStandard;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("user_id")
     public String userId;
 
@@ -197,9 +227,15 @@ public class CarApplyAddRequest extends TeaModel {
     }
 
     public static class CarApplyAddRequestTravelerStandardCarCitySet extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("city_code")
         public String cityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("city_name")
         public String cityName;
 
@@ -230,6 +266,9 @@ public class CarApplyAddRequest extends TeaModel {
         @NameInMap("car_city_set")
         public java.util.List<CarApplyAddRequestTravelerStandardCarCitySet> carCitySet;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("user_id")
         public String userId;
 

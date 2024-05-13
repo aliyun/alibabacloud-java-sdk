@@ -13,9 +13,15 @@ public class HotelSearchRequest extends TeaModel {
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("check_in_date")
     public String checkInDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("check_out_date")
     public String checkOutDate;
 
@@ -49,9 +55,15 @@ public class HotelSearchRequest extends TeaModel {
     @NameInMap("min_price")
     public Double minPrice;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("page_no")
     public Integer pageNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 
@@ -64,6 +76,9 @@ public class HotelSearchRequest extends TeaModel {
     @NameInMap("shids")
     public java.util.List<Long> shids;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sort_code")
     public Integer sortCode;
 
