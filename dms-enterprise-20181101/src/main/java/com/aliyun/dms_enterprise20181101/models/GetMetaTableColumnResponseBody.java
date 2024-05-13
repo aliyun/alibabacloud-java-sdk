@@ -167,7 +167,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
          * <p>*   **SENSITIVE**: The column is sensitive.</p>
          * <p>*   **CONFIDENTIAL**: The column is confidential.</p>
          * <br>
-         * <p>> For more information, see [Sensitivity levels of columns](~~66091~~).</p>
+         * <p>> For more information, see [Sensitivity levels of columns](https://help.aliyun.com/document_detail/66091.html).</p>
          */
         @NameInMap("SecurityLevel")
         public String securityLevel;

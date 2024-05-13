@@ -13,7 +13,7 @@ public class ListWorkFlowNodesRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>> : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).</p>
+     * <p>> : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -8,6 +8,8 @@ public class CreateUploadFileJobRequest extends TeaModel {
      * <p>The name of the attachment file.</p>
      * <br>
      * <p>>  The file name must end with .txt or .sql. For example, the file name can be test.txt or test.sql.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileName")
     public String fileName;
@@ -19,6 +21,8 @@ public class CreateUploadFileJobRequest extends TeaModel {
      * <p>*   **order_info_attachment**: The file is uploaded as an attachment in a ticket.</p>
      * <p>*   **big-file**: The file is uploaded to import multiple data records at a time.</p>
      * <p>*   **sqlreview**: The file is uploaded for SQL review.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSource")
     public String fileSource;
@@ -26,7 +30,7 @@ public class CreateUploadFileJobRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>>  You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+     * <p>>  You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -34,7 +38,9 @@ public class CreateUploadFileJobRequest extends TeaModel {
     /**
      * <p>The URL of the attachment file. The URL must be an HTTP URL or an HTTPS URL.</p>
      * <br>
-     * <p>>  You can upload the attachment file to an Object Storage Service (OSS) bucket and obtain the URL of the file in the OSS console. For more information, see [Share objects](~~195674~~).</p>
+     * <p>>  You can upload the attachment file to an Object Storage Service (OSS) bucket and obtain the URL of the file in the OSS console. For more information, see [Share objects](https://help.aliyun.com/document_detail/195674.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UploadURL")
     public String uploadURL;

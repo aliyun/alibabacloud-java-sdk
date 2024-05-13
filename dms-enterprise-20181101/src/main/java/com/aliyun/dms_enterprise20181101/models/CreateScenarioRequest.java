@@ -12,6 +12,8 @@ public class CreateScenarioRequest extends TeaModel {
 
     /**
      * <p>The name of the business scenario.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScenarioName")
     public String scenarioName;
@@ -19,7 +21,7 @@ public class CreateScenarioRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.</p>
+     * <p>> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html) topic.</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class GetDatabaseRequest extends TeaModel {
     /**
      * <p>The endpoint that is used to connect to the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Host")
     public String host;
 
     /**
      * <p>The port that is used to connect to the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Port")
     public Integer port;
 
     /**
      * <p>The name of the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SchemaName")
     public String schemaName;
@@ -31,7 +37,7 @@ public class GetDatabaseRequest extends TeaModel {
     public String sid;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the ID of the tenant.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the ID of the tenant.</p>
      */
     @NameInMap("Tid")
     public Long tid;

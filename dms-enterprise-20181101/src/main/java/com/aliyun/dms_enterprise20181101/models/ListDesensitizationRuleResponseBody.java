@@ -12,6 +12,8 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

@@ -45,7 +45,7 @@ public class ListOrdersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the tickets that you want to query. For more information, see [PluginType parameter](~~429109~~).</p>
+     * <p>The type of the tickets that you want to query. For more information, see [PluginType parameter](https://help.aliyun.com/document_detail/429109.html).</p>
      */
     @NameInMap("PluginType")
     public String pluginType;
@@ -72,7 +72,7 @@ public class ListOrdersRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

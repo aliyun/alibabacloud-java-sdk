@@ -11,13 +11,15 @@ public class ListSQLReviewOriginSQLShrinkRequest extends TeaModel {
     public String orderActionDetailShrink;
 
     /**
-     * <p>The ID of the ticket for the SQL review. You can call the [CreateSQLReviewOrder](~~257777~~) operation to query the ID of the ticket.</p>
+     * <p>The ID of the ticket for the SQL review. You can call the [CreateSQLReviewOrder](https://help.aliyun.com/document_detail/257777.html) operation to query the ID of the ticket.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~465818~~) operation to query the ID of the tenant.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/465818.html) operation to query the ID of the tenant.</p>
      */
     @NameInMap("Tid")
     public Long tid;

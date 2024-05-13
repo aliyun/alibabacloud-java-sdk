@@ -157,7 +157,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         public String encoding;
 
         /**
-         * <p>The type of the environment to which the database belongs. For more information, see [Change the environment type of an instance](~~163309~~).</p>
+         * <p>The type of the environment to which the database belongs. For more information, see [Change the environment type of an instance](https://help.aliyun.com/document_detail/163309.html).</p>
          */
         @NameInMap("EnvType")
         public String envType;

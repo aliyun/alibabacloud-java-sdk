@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class UpdateStandardGroupRequest extends TeaModel {
     /**
      * <p>The description of the security rule set.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The security rule set ID. You can call the [ListStandardGroups](~~465940~~) operation to obtain the ID of the security rule set.</p>
+     * <p>The security rule set ID. You can call the [ListStandardGroups](https://help.aliyun.com/document_detail/465940.html) operation to obtain the ID of the security rule set.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>The name of the security rule set.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
@@ -25,7 +31,7 @@ public class UpdateStandardGroupRequest extends TeaModel {
     /**
      * <p>The tenant ID.</p>
      * <br>
-     * <p>>  To view the tenant ID, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.</p>
+     * <p>>  To view the tenant ID, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html) section of the "Manage DMS tenants" topic.</p>
      */
     @NameInMap("Tid")
     public Long tid;

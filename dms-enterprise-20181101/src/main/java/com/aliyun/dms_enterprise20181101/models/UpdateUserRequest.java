@@ -23,7 +23,7 @@ public class UpdateUserRequest extends TeaModel {
     public String mobile;
 
     /**
-     * <p>The roles that the user assumes. For more information about the valid values, see the Request parameters section in the [UpdateUser](~~465812~~) topic.</p>
+     * <p>The roles that the user assumes. For more information about the valid values, see the Request parameters section in the [UpdateUser](https://help.aliyun.com/document_detail/465812.html) topic.</p>
      */
     @NameInMap("RoleNames")
     public String roleNames;
@@ -31,13 +31,15 @@ public class UpdateUserRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>> : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).</p>
+     * <p>> : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
      * <p>The Alibaba Cloud unique ID (UID) of the user to update.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uid")
     public Long uid;

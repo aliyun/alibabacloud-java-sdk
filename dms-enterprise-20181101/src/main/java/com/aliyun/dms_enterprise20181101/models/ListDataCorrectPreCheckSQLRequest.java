@@ -7,14 +7,16 @@ public class ListDataCorrectPreCheckSQLRequest extends TeaModel {
     /**
      * <p>The ID of the database. The database can be a physical database or a logical database.</p>
      * <br>
-     * <p>*   To query the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.</p>
-     * <p>*   To query the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.</p>
+     * <p>*   To query the ID of a physical database, call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation.</p>
+     * <p>*   To query the ID of a logical database, call the [ListLogicDatabases](https://help.aliyun.com/document_detail/141874.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation.</p>
      */
     @NameInMap("DbId")
     public Long dbId;
 
     /**
-     * <p>The ID of the data change ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the data change ticket.</p>
+     * <p>The ID of the data change ticket. You can call the [ListOrders](https://help.aliyun.com/document_detail/144643.html) operation to query the ID of the data change ticket.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
@@ -32,7 +34,7 @@ public class ListDataCorrectPreCheckSQLRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

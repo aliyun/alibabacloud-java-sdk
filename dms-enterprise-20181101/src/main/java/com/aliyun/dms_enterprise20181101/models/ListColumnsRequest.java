@@ -14,13 +14,15 @@ public class ListColumnsRequest extends TeaModel {
     public Boolean logic;
 
     /**
-     * <p>The ID of the table. You can call the [ListTables](~~141878~~) operation to obtain the table ID.</p>
+     * <p>The ID of the table. You can call the [ListTables](https://help.aliyun.com/document_detail/141878.html) operation to obtain the table ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableId")
     public String tableId;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

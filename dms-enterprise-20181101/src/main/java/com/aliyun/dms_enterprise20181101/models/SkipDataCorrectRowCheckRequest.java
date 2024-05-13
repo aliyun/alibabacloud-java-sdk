@@ -5,19 +5,23 @@ import com.aliyun.tea.*;
 
 public class SkipDataCorrectRowCheckRequest extends TeaModel {
     /**
-     * <p>The ticket ID. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.</p>
+     * <p>The ticket ID. You can call the [ListOrders](https://help.aliyun.com/document_detail/144643.html) operation to obtain the ticket ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
      * <p>The reason for skipping the verification on the number of rows in the precheck for data change.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Reason")
     public String reason;
 
     /**
-     * <p>The tenant ID. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The tenant ID. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListDataCorrectPreCheckDBRequest extends TeaModel {
     /**
      * <p>The ID of the ticket for the data change.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
@@ -27,7 +29,7 @@ public class ListDataCorrectPreCheckDBRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the ID of the tenant.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the ID of the tenant.</p>
      */
     @NameInMap("Tid")
     public Long tid;

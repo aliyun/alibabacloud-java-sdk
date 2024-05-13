@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CreateLogicDatabaseShrinkRequest extends TeaModel {
     /**
      * <p>The alias of the logical database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Alias")
     public String alias;
 
     /**
      * <p>The IDs of the physical databases that compose the logical database. You can specify one or more database IDs. You can call the [ListDatabases](https://www.alibabacloud.com/help/en/data-management-service/latest/listdatabases) or [SearchDatabase](https://www.alibabacloud.com/help/en/data-management-service/latest/searchdatabase) operation to query the IDs of the physical databases.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatabaseIds")
     public String databaseIdsShrink;

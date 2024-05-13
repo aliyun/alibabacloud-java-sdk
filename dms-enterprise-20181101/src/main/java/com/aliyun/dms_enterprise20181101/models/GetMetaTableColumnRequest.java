@@ -7,14 +7,16 @@ public class GetMetaTableColumnRequest extends TeaModel {
     /**
      * <p>The globally unique identifier (GUID) of the table in Data Management (DMS).</p>
      * <br>
-     * <p>*   If the database to which the table belongs is a logical database, you can call the [ListLogicTables](~~141875~~) operation to obtain the value of this parameter.</p>
-     * <p>*   If the database to which the table belongs is a physical database, you can call the [ListTables](~~141878~~) operation to obtain the value of this parameter.</p>
+     * <p>*   If the database to which the table belongs is a logical database, you can call the [ListLogicTables](https://help.aliyun.com/document_detail/141875.html) operation to obtain the value of this parameter.</p>
+     * <p>*   If the database to which the table belongs is a physical database, you can call the [ListTables](https://help.aliyun.com/document_detail/141878.html) operation to obtain the value of this parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -102,7 +102,7 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
         public Long dbId;
 
         /**
-         * <p>The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](~~265977~~) operation to query the details of optimization suggestions based on the key.</p>
+         * <p>The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](https://help.aliyun.com/document_detail/265977.html) operation to query the details of optimization suggestions based on the key.</p>
          */
         @NameInMap("SQLReviewQueryKey")
         public String SQLReviewQueryKey;

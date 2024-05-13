@@ -8,6 +8,8 @@ public class ListProxyAccessesRequest extends TeaModel {
      * <p>The ID of the secure access proxy. </p>
      * <br>
      * <p>>  You can call the [ListProxies](https://www.alibabacloud.com/help/en/data-management-service/latest/listproxies) operation to query the ID of the secure access proxy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProxyId")
     public Long proxyId;

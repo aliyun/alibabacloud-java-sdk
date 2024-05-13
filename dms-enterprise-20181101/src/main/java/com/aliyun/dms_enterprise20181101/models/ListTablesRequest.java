@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListTablesRequest extends TeaModel {
     /**
-     * <p>The ID of the physical database. You can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the ID of the physical database.</p>
+     * <p>The ID of the physical database. You can call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the ID of the physical database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatabaseId")
     public String databaseId;
@@ -38,7 +40,7 @@ public class ListTablesRequest extends TeaModel {
     public String searchName;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

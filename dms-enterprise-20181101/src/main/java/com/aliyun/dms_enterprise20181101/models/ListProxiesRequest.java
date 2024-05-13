@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProxiesRequest extends TeaModel {
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

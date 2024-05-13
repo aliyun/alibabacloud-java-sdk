@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AddLogicTableRouteConfigRequest extends TeaModel {
     /**
      * <p>The routing algorithm expression. For more information about how to configure a routing algorithm expression, see [Configure a routing algorithm](https://www.alibabacloud.com/help/en/data-management-service/latest/configure-a-routing-algorithm).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteExpr")
     public String routeExpr;
@@ -15,12 +17,16 @@ public class AddLogicTableRouteConfigRequest extends TeaModel {
      * <br>
      * <p>> - You can create a custom unique key for the routing algorithm. No requirements are imposed on custom unique keys.</p>
      * <p>> - The unique key of the routing algorithm in the same logical table must be unique.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteKey")
     public String routeKey;
 
     /**
      * <p>The ID of the logical table. You can call the [ListLogicTables](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogictables) operation to query the ID of the logical table.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableId")
     public Long tableId;

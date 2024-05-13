@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListSensitiveColumnsDetailRequest extends TeaModel {
     /**
-     * <p>The name of the field. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the field.</p>
+     * <p>The name of the field. You can call the [ListSensitiveColumns](https://help.aliyun.com/document_detail/188103.html) operation to obtain the name of the field.</p>
      * <br>
-     * <p>>  You can also call the [ListColumns](~~141870~~) operation to obtain the name of the field.</p>
+     * <p>>  You can also call the [ListColumns](https://help.aliyun.com/document_detail/141870.html) operation to obtain the name of the field.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ColumnName")
     public String columnName;
@@ -15,8 +17,8 @@ public class ListSensitiveColumnsDetailRequest extends TeaModel {
     /**
      * <p>The ID of the database. The database can be a physical database or a logical database.</p>
      * <br>
-     * <p>*   To obtain the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.</p>
-     * <p>*   To obtain the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.</p>
+     * <p>*   To obtain the ID of a physical database, call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation.</p>
+     * <p>*   To obtain the ID of a logical database, call the [ListLogicDatabases](https://help.aliyun.com/document_detail/141874.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation.</p>
      */
     @NameInMap("DbId")
     public Long dbId;
@@ -31,24 +33,28 @@ public class ListSensitiveColumnsDetailRequest extends TeaModel {
     public Boolean logic;
 
     /**
-     * <p>The name of the database. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the database.</p>
+     * <p>The name of the database. You can call the [ListSensitiveColumns](https://help.aliyun.com/document_detail/188103.html) operation to obtain the name of the database.</p>
      * <br>
-     * <p>> * You can also call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the name of a physical database.</p>
-     * <p>> * You can also call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation to obtain the name of a logical database.</p>
+     * <p>> * You can also call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the name of a physical database.</p>
+     * <p>> * You can also call the [ListLogicDatabases](https://help.aliyun.com/document_detail/141874.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the name of a logical database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SchemaName")
     public String schemaName;
 
     /**
-     * <p>The name of the table. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the table.</p>
+     * <p>The name of the table. You can call the [ListSensitiveColumns](https://help.aliyun.com/document_detail/188103.html) operation to obtain the name of the table.</p>
      * <br>
-     * <p>>  You can also call the [ListTables](~~141878~~) operation to obtain the name of the table.</p>
+     * <p>>  You can also call the [ListTables](https://help.aliyun.com/document_detail/141878.html) operation to obtain the name of the table.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

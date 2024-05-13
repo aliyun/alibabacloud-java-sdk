@@ -8,6 +8,8 @@ public class ListInstanceLoginAuditLogRequest extends TeaModel {
      * <p>The end of the time range to query.</p>
      * <br>
      * <p>>  The end time supports fuzzy match. Specify the time in the YYYY-MM-DD hh:mm:ss format. We recommend that you use the StartTime and EndTime parameters to specify a time range that does not exceed one day. This way, the returned entries can be displayed by page to increase query efficiency.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -42,12 +44,14 @@ public class ListInstanceLoginAuditLogRequest extends TeaModel {
      * <p>The beginning of the time range to query.</p>
      * <br>
      * <p>>  The start time supports fuzzy match. Specify the time in the YYYY-MM-DD hh:mm:ss format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

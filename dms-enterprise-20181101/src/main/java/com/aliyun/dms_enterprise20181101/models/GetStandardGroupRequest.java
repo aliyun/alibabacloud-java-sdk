@@ -4,6 +4,9 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetStandardGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 

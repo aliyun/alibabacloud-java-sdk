@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetProxyRequest extends TeaModel {
     /**
-     * <p>The ID of the secure access proxy. You can call the [ListProxies](~~295371~~) operation to query the ID of the secure access proxy.</p>
+     * <p>The ID of the secure access proxy. You can call the [ListProxies](https://help.aliyun.com/document_detail/295371.html) operation to query the ID of the secure access proxy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProxyId")
     public Long proxyId;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

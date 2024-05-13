@@ -7,9 +7,15 @@ public class CreateProcCorrectOrderShrinkRequest extends TeaModel {
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Param")
     public String paramShrink;
 

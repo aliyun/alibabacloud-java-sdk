@@ -5,19 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateStructSyncOrderRequest extends TeaModel {
     /**
-     * <p>The key of an attachment that is returned after the attachment is uploaded. You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.</p>
+     * <p>The key of an attachment that is returned after the attachment is uploaded. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to query the key of the attachment.</p>
      */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
      * <p>The remarks of the ticket.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The parameters of the ticket.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Param")
     public CreateStructSyncOrderRequestParam param;
@@ -31,7 +35,7 @@ public class CreateStructSyncOrderRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>>  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see [Manage DMS tenants](~~181330~~).</p>
+     * <p>>  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -83,13 +87,17 @@ public class CreateStructSyncOrderRequest extends TeaModel {
 
     public static class CreateStructSyncOrderRequestParamSource extends TeaModel {
         /**
-         * <p>The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.</p>
+         * <p>The ID of the database. You can call the [SearchDatabases](https://help.aliyun.com/document_detail/141876.html) operation to query the ID of the database.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
-         * <p>The name that is used to search for the database. You can call the [SearchDatabases](~~141876~~) operation to query the name of the database.</p>
+         * <p>The name that is used to search for the database. You can call the [SearchDatabases](https://help.aliyun.com/document_detail/141876.html) operation to query the name of the database.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DbSearchName")
         public String dbSearchName;
@@ -104,7 +112,7 @@ public class CreateStructSyncOrderRequest extends TeaModel {
         public Boolean logic;
 
         /**
-         * <p>The version number of the schema. The default value is the latest schema version number. For more information, see [Manage schema versions](~~202275~~).</p>
+         * <p>The version number of the schema. The default value is the latest schema version number. For more information, see [Manage schema versions](https://help.aliyun.com/document_detail/202275.html).</p>
          */
         @NameInMap("VersionId")
         public String versionId;
@@ -186,13 +194,17 @@ public class CreateStructSyncOrderRequest extends TeaModel {
 
     public static class CreateStructSyncOrderRequestParamTarget extends TeaModel {
         /**
-         * <p>The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.</p>
+         * <p>The ID of the database. You can call the [SearchDatabases](https://help.aliyun.com/document_detail/141876.html) operation to query the ID of the database.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
-         * <p>The name that is used to search for the database. You can call the [SearchDatabases](~~141876~~) operation to query the name of the database.</p>
+         * <p>The name that is used to search for the database. You can call the [SearchDatabases](https://help.aliyun.com/document_detail/141876.html) operation to query the name of the database.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DbSearchName")
         public String dbSearchName;
@@ -265,6 +277,8 @@ public class CreateStructSyncOrderRequest extends TeaModel {
 
         /**
          * <p>The information about the base database.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Source")
         public CreateStructSyncOrderRequestParamSource source;
@@ -277,6 +291,8 @@ public class CreateStructSyncOrderRequest extends TeaModel {
 
         /**
          * <p>The information about the database to which you want to synchronize the schema of a table.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Target")
         public CreateStructSyncOrderRequestParamTarget target;

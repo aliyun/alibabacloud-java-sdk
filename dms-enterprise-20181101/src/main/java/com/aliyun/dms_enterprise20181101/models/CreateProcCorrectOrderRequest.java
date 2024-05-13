@@ -7,9 +7,15 @@ public class CreateProcCorrectOrderRequest extends TeaModel {
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Param")
     public CreateProcCorrectOrderRequestParam param;
 
@@ -65,9 +71,15 @@ public class CreateProcCorrectOrderRequest extends TeaModel {
     }
 
     public static class CreateProcCorrectOrderRequestParamDbItemList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("DbId")
         public Long dbId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Logic")
         public Boolean logic;
 
@@ -98,12 +110,18 @@ public class CreateProcCorrectOrderRequest extends TeaModel {
         @NameInMap("Classify")
         public String classify;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("DbItemList")
         public java.util.List<CreateProcCorrectOrderRequestParamDbItemList> dbItemList;
 
         @NameInMap("ExecMode")
         public String execMode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ExecSQL")
         public String execSQL;
 

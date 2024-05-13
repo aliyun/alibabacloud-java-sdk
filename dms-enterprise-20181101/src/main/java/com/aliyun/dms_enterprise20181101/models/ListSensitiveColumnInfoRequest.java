@@ -7,6 +7,9 @@ public class ListSensitiveColumnInfoRequest extends TeaModel {
     @NameInMap("ColumnName")
     public String columnName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public Integer instanceId;
 

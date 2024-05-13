@@ -5,25 +5,29 @@ import com.aliyun.tea.*;
 
 public class ResumeTaskFlowInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.</p>
+     * <p>The ID of the task flow. You can call the [ListTaskFlow](https://help.aliyun.com/document_detail/424565.html) or [ListLhTaskFlowAndScenario](https://help.aliyun.com/document_detail/426672.html) operation to query the task flow ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DagId")
     public Long dagId;
 
     /**
-     * <p>The ID of the execution record of the task flow. You can call the [ListTaskFlowInstance](~~424689~~) operation to query the execution record ID.</p>
+     * <p>The ID of the execution record of the task flow. You can call the [ListTaskFlowInstance](https://help.aliyun.com/document_detail/424689.html) operation to query the execution record ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DagInstanceId")
     public Long dagInstanceId;
 
     /**
-     * <p>The version number of the task flow. You can call the [ListDAGVersions](~~424682~~) operation to query the version number.</p>
+     * <p>The version number of the task flow. You can call the [ListDAGVersions](https://help.aliyun.com/document_detail/424682.html) operation to query the version number.</p>
      */
     @NameInMap("DagVersion")
     public String dagVersion;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CreateDataTrackOrderShrinkRequest extends TeaModel {
     /**
      * <p>The purpose or objective of the data tracking ticket. This parameter is used to help reduce unnecessary communication.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The parameters of the ticket.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Param")
     public String paramShrink;
@@ -23,7 +27,7 @@ public class CreateDataTrackOrderShrinkRequest extends TeaModel {
     public String relatedUserListShrink;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

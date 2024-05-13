@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class DeleteLakeHouseSpaceRequest extends TeaModel {
     /**
-     * <p>The ID of the workspace. You can call the [GetLhSpaceByName](~~424379~~) operation to obtain the workspace ID.</p>
+     * <p>The ID of the workspace. You can call the [GetLhSpaceByName](https://help.aliyun.com/document_detail/424379.html) operation to obtain the workspace ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SpaceId")
     public Long spaceId;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

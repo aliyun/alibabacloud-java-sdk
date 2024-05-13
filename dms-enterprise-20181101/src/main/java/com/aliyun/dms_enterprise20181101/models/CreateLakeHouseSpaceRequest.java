@@ -11,7 +11,9 @@ public class CreateLakeHouseSpaceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the development database. You can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the ID.</p>
+     * <p>The ID of the development database. You can call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DevDbId")
     public String devDbId;
@@ -21,6 +23,8 @@ public class CreateLakeHouseSpaceRequest extends TeaModel {
      * <br>
      * <p>*   **14**: AnalyticDB for MySQL</p>
      * <p>*   **18**: AnalyticDB for PostgreSQL</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DwDbType")
     public String dwDbType;
@@ -30,12 +34,14 @@ public class CreateLakeHouseSpaceRequest extends TeaModel {
      * <br>
      * <p>*   **0**: basic mode. This mode is unavailable.</p>
      * <p>*   **1**: standard mode.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Mode")
     public String mode;
 
     /**
-     * <p>The ID of the production database. You can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the ID.</p>
+     * <p>The ID of the production database. You can call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the ID.</p>
      */
     @NameInMap("ProdDbId")
     public String prodDbId;
@@ -44,19 +50,23 @@ public class CreateLakeHouseSpaceRequest extends TeaModel {
      * <p>The configuration of the workspace. Valid values:</p>
      * <br>
      * <p>*   **skipManualRunCheck**: No security rule check is required in the trial run phase.</p>
-     * <p>*   **skipPublishApprove**: No approval is required for publishing and O\&M.</p>
+     * <p>*   **skipPublishApprove**: No approval is required for publishing and O\\&M.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SpaceConfig")
     public String spaceConfig;
 
     /**
      * <p>The name of the workspace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SpaceName")
     public String spaceName;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -14,6 +14,8 @@ public class DeleteUserRequest extends TeaModel {
 
     /**
      * <p>The unique ID (UID) of Alibaba Cloud account to delete.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uid")
     public String uid;

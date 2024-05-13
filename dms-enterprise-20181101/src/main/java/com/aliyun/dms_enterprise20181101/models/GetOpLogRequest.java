@@ -12,6 +12,8 @@ public class GetOpLogRequest extends TeaModel {
 
     /**
      * <p>The end of the time range to query. Specify the time in the yyyy-MM-DD HH:mm:ss format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -49,6 +51,8 @@ public class GetOpLogRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return. Pages start from page 1.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -59,18 +63,22 @@ public class GetOpLogRequest extends TeaModel {
      * <p>*   30</p>
      * <p>*   50</p>
      * <p>*   100</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-DD HH:mm:ss format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

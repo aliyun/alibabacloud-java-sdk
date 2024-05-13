@@ -84,7 +84,7 @@ public class ListStandardGroupsResponseBody extends TeaModel {
 
     public static class ListStandardGroupsResponseBodyStandardGroupList extends TeaModel {
         /**
-         * <p>The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
+         * <p>The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).</p>
          */
         @NameInMap("DbType")
         public String dbType;

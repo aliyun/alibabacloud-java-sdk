@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyDesensitizationStrategyRequest extends TeaModel {
     /**
-     * <p>The name of the field. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the field name.</p>
+     * <p>The name of the field. You can call the [ListSensitiveColumns](https://help.aliyun.com/document_detail/188103.html) operation to obtain the field name.</p>
      * <br>
-     * <p>>  You can also call the [ListColumns](~~141870~~) operation to obtain the field name.</p>
+     * <p>>  You can also call the [ListColumns](https://help.aliyun.com/document_detail/141870.html) operation to obtain the field name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ColumnName")
     public String columnName;
 
     /**
-     * <p>The ID of the database. You can call the [ListDatabases](~~141873~~) operation to obtain the ID.</p>
+     * <p>The ID of the database. You can call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) operation to obtain the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbId")
     public Integer dbId;
@@ -33,6 +37,8 @@ public class ModifyDesensitizationStrategyRequest extends TeaModel {
      * <br>
      * <p>*   **true**: The database is a physical database.</p>
      * <p>*   **false**: The database is a logical database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IsLogic")
     public Boolean isLogic;
@@ -53,21 +59,25 @@ public class ModifyDesensitizationStrategyRequest extends TeaModel {
     public Integer ruleId;
 
     /**
-     * <p>The name of the database. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the database name.</p>
+     * <p>The name of the database. You can call the [ListSensitiveColumns](https://help.aliyun.com/document_detail/188103.html) operation to obtain the database name.</p>
      * <br>
      * <p>> </p>
      * <br>
-     * <p>*   If the database is a physical database, you can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the database name.</p>
+     * <p>*   If the database is a physical database, you can call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the database name.</p>
      * <br>
-     * <p>*   If the database is a logical database, you can call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation to obtain the name of the database.</p>
+     * <p>*   If the database is a logical database, you can call the [ListLogicDatabases](https://help.aliyun.com/document_detail/141874.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the name of the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SchemaName")
     public String schemaName;
 
     /**
-     * <p>The name of the table. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the table name.</p>
+     * <p>The name of the table. You can call the [ListSensitiveColumns](https://help.aliyun.com/document_detail/188103.html) operation to obtain the table name.</p>
      * <br>
-     * <p>>  You can also call the [ListTables](~~141878~~) operation to obtain the table name.</p>
+     * <p>>  You can also call the [ListTables](https://help.aliyun.com/document_detail/141878.html) operation to obtain the table name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableName")
     public String tableName;
@@ -75,7 +85,7 @@ public class ModifyDesensitizationStrategyRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~) in the topic "Manage DMS tenants."</p>
+     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html) in the topic "Manage DMS tenants."</p>
      */
     @NameInMap("Tid")
     public Long tid;

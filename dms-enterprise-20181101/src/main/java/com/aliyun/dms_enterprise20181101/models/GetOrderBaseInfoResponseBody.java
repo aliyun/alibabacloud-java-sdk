@@ -167,7 +167,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         public String originAttachmentName;
 
         /**
-         * <p>The type of the ticket. For more information about the value of this parameter, see the request parameters of the [CreateOrder](~~465865~~) operation.</p>
+         * <p>The type of the ticket. For more information about the value of this parameter, see the request parameters of the [CreateOrder](https://help.aliyun.com/document_detail/465865.html) operation.</p>
          */
         @NameInMap("PluginType")
         public String pluginType;

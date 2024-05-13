@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AddLhMembersRequest extends TeaModel {
     /**
      * <p>The information about the users to be added.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Members")
     public java.util.List<AddLhMembersRequestMembers> members;
@@ -13,8 +15,10 @@ public class AddLhMembersRequest extends TeaModel {
     /**
      * <p>The ID of the object.</p>
      * <br>
-     * <p>*   If the object is a workspace, you can call the [GetLhSpaceByName](~~424379~~) operation to obtain the workspace ID.</p>
-     * <p>*   If the object is a task flow, you can call the [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the task flow ID.</p>
+     * <p>*   If the object is a workspace, you can call the [GetLhSpaceByName](https://help.aliyun.com/document_detail/424379.html) operation to obtain the workspace ID.</p>
+     * <p>*   If the object is a task flow, you can call the [ListLhTaskFlowAndScenario](https://help.aliyun.com/document_detail/426672.html) operation to obtain the task flow ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ObjectId")
     public Long objectId;
@@ -24,12 +28,14 @@ public class AddLhMembersRequest extends TeaModel {
      * <br>
      * <p>*   **0**: workspace</p>
      * <p>*   **1**: task flow</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ObjectType")
     public Integer objectType;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -78,12 +84,16 @@ public class AddLhMembersRequest extends TeaModel {
          * <p>*   **ADMIN**: workspace administrator. You can add a workspace administrator only as a DMS administrator or a DBA.</p>
          * <p>*   **MEMBER**: workspace member.</p>
          * <p>*   **DEVELOPER**: task flow developer. Only a workspace member can be added as a task flow developer.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
         /**
-         * <p>The ID of the user to be added. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain the user ID.</p>
+         * <p>The ID of the user to be added. You can call the [ListUsers](https://help.aliyun.com/document_detail/141938.html) or [GetUser](https://help.aliyun.com/document_detail/147098.html) operation to obtain the user ID.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("UserId")
         public Long userId;

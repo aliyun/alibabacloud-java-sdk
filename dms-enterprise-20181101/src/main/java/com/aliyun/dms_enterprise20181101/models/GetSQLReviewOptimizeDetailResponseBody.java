@@ -131,7 +131,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
 
     public static class GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults extends TeaModel {
         /**
-         * <p>The comment that is specified when you create the SQL review rule. For more information, see [SQL review optimization](~~194114~~).</p>
+         * <p>The comment that is specified when you create the SQL review rule. For more information, see [SQL review optimization](https://help.aliyun.com/document_detail/194114.html).</p>
          */
         @NameInMap("Comments")
         public String comments;
@@ -156,7 +156,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         public java.util.List<String> messages;
 
         /**
-         * <p>The name of the rule. For more information, see [SQL review optimization](~~194114~~).</p>
+         * <p>The name of the rule. For more information, see [SQL review optimization](https://help.aliyun.com/document_detail/194114.html).</p>
          */
         @NameInMap("RuleName")
         public String ruleName;

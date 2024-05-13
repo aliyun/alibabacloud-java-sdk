@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSensitivityLevelRequest extends TeaModel {
     /**
-     * <p>The ID of the classification template. You can call the [ListClassificationTemplates](~~460613~~) operation to query the ID of the classification template.</p>
+     * <p>The ID of the classification template. You can call the [ListClassificationTemplates](https://help.aliyun.com/document_detail/460613.html) operation to query the ID of the classification template.</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;
 
     /**
-     * <p>The type of the classification template. You can call the [ListClassificationTemplates](~~460613~~) operation to query the type of the classification template.</p>
+     * <p>The type of the classification template. You can call the [ListClassificationTemplates](https://help.aliyun.com/document_detail/460613.html) operation to query the type of the classification template.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
@@ -24,7 +24,7 @@ public class ListSensitivityLevelRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~) in the topic "Manage DMS tenants."</p>
+     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html) in the topic "Manage DMS tenants."</p>
      */
     @NameInMap("Tid")
     public Long tid;

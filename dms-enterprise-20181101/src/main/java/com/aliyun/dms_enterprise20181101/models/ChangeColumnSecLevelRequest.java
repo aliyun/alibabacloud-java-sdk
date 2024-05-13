@@ -5,17 +5,21 @@ import com.aliyun.tea.*;
 
 public class ChangeColumnSecLevelRequest extends TeaModel {
     /**
-     * <p>The name of the field. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the field.</p>
+     * <p>The name of the field. You can call the [ListSensitiveColumns](https://help.aliyun.com/document_detail/188103.html) operation to obtain the name of the field.</p>
      * <br>
-     * <p>> You can also call the [ListColumns](~~141870~~) operation to obtain the name of the field.</p>
+     * <p>> You can also call the [ListColumns](https://help.aliyun.com/document_detail/141870.html) operation to obtain the name of the field.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ColumnName")
     public String columnName;
 
     /**
-     * <p>The ID of the database. You can call the [SearchDatabase](~~141876~~) operation to obtain the ID of the database.</p>
+     * <p>The ID of the database. You can call the [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the ID of the database.</p>
      * <br>
-     * <p>> You can also call the [ListDatabases](~~141873~~) operation to obtain the ID of a physical database and the [ListLogicDatabases](~~141874~~) operation to obtain the ID of a logical database.</p>
+     * <p>> You can also call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) operation to obtain the ID of a physical database and the [ListLogicDatabases](https://help.aliyun.com/document_detail/141874.html) operation to obtain the ID of a logical database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbId")
     public Long dbId;
@@ -25,6 +29,8 @@ public class ChangeColumnSecLevelRequest extends TeaModel {
      * <br>
      * <p>*   true: The database is a physical database.</p>
      * <p>*   false: The database is a logical database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IsLogic")
     public Boolean isLogic;
@@ -35,23 +41,29 @@ public class ChangeColumnSecLevelRequest extends TeaModel {
      * <p>*   INNER: low sensitivity level</p>
      * <p>*   SENSITIVE: medium sensitivity level</p>
      * <p>*   CONFIDENTIAL: high sensitivity level</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NewLevel")
     public String newLevel;
 
     /**
-     * <p>The name of the database. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the database.</p>
+     * <p>The name of the database. You can call the [ListSensitiveColumns](https://help.aliyun.com/document_detail/188103.html) operation to obtain the name of the database.</p>
      * <br>
-     * <p>*   You can also call the [SearchDatabase](~~141876~~) operation to obtain the name of the database.</p>
-     * <p>*   You can also call the [ListDatabases](~~141873~~) operation to obtain the name of a physical database and the [ListLogicDatabases](~~141874~~) operation to obtain the name of a logical database.</p>
+     * <p>*   You can also call the [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the name of the database.</p>
+     * <p>*   You can also call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) operation to obtain the name of a physical database and the [ListLogicDatabases](https://help.aliyun.com/document_detail/141874.html) operation to obtain the name of a logical database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SchemaName")
     public String schemaName;
 
     /**
-     * <p>The name of the table. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the table.</p>
+     * <p>The name of the table. You can call the [ListSensitiveColumns](https://help.aliyun.com/document_detail/188103.html) operation to obtain the name of the table.</p>
      * <br>
-     * <p>> You can also call the [ListTables](~~141878~~) operation to obtain the name of the table.</p>
+     * <p>> You can also call the [ListTables](https://help.aliyun.com/document_detail/141878.html) operation to obtain the name of the table.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableName")
     public String tableName;
@@ -59,7 +71,7 @@ public class ChangeColumnSecLevelRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
+     * <p>> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html).</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -159,7 +159,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         public GetLogicDatabaseResponseBodyLogicDatabaseDatabaseIds databaseIds;
 
         /**
-         * <p>The database engine. For more information about the valid values of the DbType parameter, see [DbType parameter](~~198106~~).</p>
+         * <p>The database engine. For more information about the valid values of the DbType parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).</p>
          */
         @NameInMap("DbType")
         public String dbType;

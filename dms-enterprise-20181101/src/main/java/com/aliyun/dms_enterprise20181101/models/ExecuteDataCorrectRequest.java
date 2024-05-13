@@ -22,13 +22,15 @@ public class ExecuteDataCorrectRequest extends TeaModel {
     public java.util.Map<String, ?> actionDetail;
 
     /**
-     * <p>The ID of the ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the ticket.</p>
+     * <p>The ID of the ticket. You can call the [ListOrders](https://help.aliyun.com/document_detail/144643.html) operation to query the ID of the ticket.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public String tid;

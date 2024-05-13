@@ -5,19 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateFreeLockCorrectOrderShrinkRequest extends TeaModel {
     /**
-     * <p>The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
+     * <p>The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
      */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
      * <p>The purpose or objective of the data change. This parameter is used to help reduce unnecessary communication.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The parameters of the ticket.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Param")
     public String paramShrink;
@@ -29,7 +33,7 @@ public class CreateFreeLockCorrectOrderShrinkRequest extends TeaModel {
     public String relatedUserListShrink;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

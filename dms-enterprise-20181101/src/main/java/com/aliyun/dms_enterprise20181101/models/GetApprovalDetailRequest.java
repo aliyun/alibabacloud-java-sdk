@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetApprovalDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
-     * <p>The ID of the approval process. You can call the [GetOrderBaseInfo](~~144642~~) operation to obtain the ID of the approval process.</p>
+     * <p>The ID of the approval process. You can call the [GetOrderBaseInfo](https://help.aliyun.com/document_detail/144642.html) operation to obtain the ID of the approval process.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WorkflowInstanceId")
     public Long workflowInstanceId;

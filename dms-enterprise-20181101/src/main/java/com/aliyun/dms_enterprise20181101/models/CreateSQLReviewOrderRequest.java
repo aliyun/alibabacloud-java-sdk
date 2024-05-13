@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CreateSQLReviewOrderRequest extends TeaModel {
     /**
      * <p>The purpose or objective of the SQL review. This reduces unnecessary communication.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The parameters of the ticket.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Param")
     public CreateSQLReviewOrderRequestParam param;
@@ -23,7 +27,7 @@ public class CreateSQLReviewOrderRequest extends TeaModel {
     public java.util.List<Long> relatedUserList;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -68,20 +72,26 @@ public class CreateSQLReviewOrderRequest extends TeaModel {
     public static class CreateSQLReviewOrderRequestParam extends TeaModel {
         /**
          * <p>The files to be reviewed. Multiple files can be reviewed at a time.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("AttachmentKeyList")
         public java.util.List<String> attachmentKeyList;
 
         /**
-         * <p>The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.</p>
+         * <p>The ID of the database. You can call the [SearchDatabases](https://help.aliyun.com/document_detail/141876.html) operation to query the ID of the database.</p>
          * <br>
          * <p>>  You can call this operation to query only physical databases. This operation is unavailable to query logical databases.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
          * <p>The name of the project.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
