@@ -4,12 +4,24 @@ package com.aliyun.antiddos_public20170518.models;
 import com.aliyun.tea.*;
 
 public class DescribeDdosCreditResponseBody extends TeaModel {
+    /**
+     * <p>The details of the security credit score of the current Alibaba Cloud account in the specified region.</p>
+     */
     @NameInMap("DdosCredit")
     public DescribeDdosCreditResponseBodyDdosCredit ddosCredit;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,12 +55,28 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
     }
 
     public static class DescribeDdosCreditResponseBodyDdosCredit extends TeaModel {
+        /**
+         * <p>The time period after which blackhole filtering is automatically deactivated in the specified region. Unit: minutes.</p>
+         */
         @NameInMap("BlackholeTime")
         public Integer blackholeTime;
 
+        /**
+         * <p>The security credit score. The full score is **1000**.</p>
+         */
         @NameInMap("Score")
         public Integer score;
 
+        /**
+         * <p>The security credit level. Valid values:</p>
+         * <br>
+         * <p>*   **A**: outstanding</p>
+         * <p>*   **B**: excellent</p>
+         * <p>*   **C**: good</p>
+         * <p>*   **D**: average</p>
+         * <p>*   **E**: poor</p>
+         * <p>*   **F**: poorer</p>
+         */
         @NameInMap("ScoreLevel")
         public String scoreLevel;
 

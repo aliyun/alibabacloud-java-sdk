@@ -4,11 +4,15 @@ package com.aliyun.antiddos_public20170518.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpLocationServiceResponseBody extends TeaModel {
-    // instance model
+    /**
+     * <p>The details of the asset.</p>
+     */
     @NameInMap("Instance")
     public DescribeIpLocationServiceResponseBodyInstance instance;
 
-    // Id of the request
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,18 +38,37 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
     }
 
     public static class DescribeIpLocationServiceResponseBodyInstance extends TeaModel {
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The type of the asset. Valid values:</p>
+         * <br>
+         * <p>*   ecs: ECS instance</p>
+         * <p>*   slb: SLB instance</p>
+         * <p>*   EIP: EIP</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The IP address of the asset.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The region to which the public IP address of the asset belongs.</p>
+         */
         @NameInMap("Region")
         public String region;
 

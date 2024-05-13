@@ -3,25 +3,22 @@ package com.aliyun.antiddos_public20170518.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyDdosStatusResponse extends TeaModel {
+public class ModifyIpDefenseThresholdResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
-    public ModifyDdosStatusResponseBody body;
+    public ModifyIpDefenseThresholdResponseBody body;
 
-    public static ModifyDdosStatusResponse build(java.util.Map<String, ?> map) throws Exception {
-        ModifyDdosStatusResponse self = new ModifyDdosStatusResponse();
+    public static ModifyIpDefenseThresholdResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyIpDefenseThresholdResponse self = new ModifyIpDefenseThresholdResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDdosStatusResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifyIpDefenseThresholdResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +26,7 @@ public class ModifyDdosStatusResponse extends TeaModel {
         return this.headers;
     }
 
-    public ModifyDdosStatusResponse setStatusCode(Integer statusCode) {
+    public ModifyIpDefenseThresholdResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +34,11 @@ public class ModifyDdosStatusResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ModifyDdosStatusResponse setBody(ModifyDdosStatusResponseBody body) {
+    public ModifyIpDefenseThresholdResponse setBody(ModifyIpDefenseThresholdResponseBody body) {
         this.body = body;
         return this;
     }
-    public ModifyDdosStatusResponseBody getBody() {
+    public ModifyIpDefenseThresholdResponseBody getBody() {
         return this.body;
     }
 

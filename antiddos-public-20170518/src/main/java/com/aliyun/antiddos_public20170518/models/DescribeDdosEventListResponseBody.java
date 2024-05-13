@@ -4,12 +4,21 @@ package com.aliyun.antiddos_public20170518.models;
 import com.aliyun.tea.*;
 
 public class DescribeDdosEventListResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the details of a DDoS attack event.</p>
+     */
     @NameInMap("DdosEventList")
     public DescribeDdosEventListResponseBodyDdosEventList ddosEventList;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of DDoS attack events.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -43,21 +52,50 @@ public class DescribeDdosEventListResponseBody extends TeaModel {
     }
 
     public static class DescribeDdosEventListResponseBodyDdosEventListDdosEvent extends TeaModel {
+        /**
+         * <p>The status of the DDoS attack event. Valid values:</p>
+         * <br>
+         * <p>*   **mitigating**: indicates that traffic scrubbing is in progress.</p>
+         * <p>*   **blackholed**: indicates that blackhole filtering is triggered for the asset.</p>
+         * <p>*   **normal**: indicates that the DDoS attack event ends.</p>
+         */
         @NameInMap("DdosStatus")
         public String ddosStatus;
 
+        /**
+         * <p>The type of the DDoS attack event. Valid values:</p>
+         * <br>
+         * <p>*   **defense**: an attack event that triggers traffic scrubbing</p>
+         * <p>*   **blackhole**: an attack event that triggers blackhole filtering</p>
+         */
         @NameInMap("DdosType")
         public String ddosType;
 
+        /**
+         * <p>The time of the last attack. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <br>
+         * <p>> This parameter is returned only when the asset is attacked multiple times within a DDoS attack event.</p>
+         */
         @NameInMap("DelayTime")
         public Long delayTime;
 
+        /**
+         * <p>The end time of the DDoS attack event. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The start time of the DDoS attack event. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The time when blackhole filtering is deactivated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <br>
+         * <p>> This parameter is returned only when the value of the **DdosType** parameter is **blackhole**.</p>
+         */
         @NameInMap("UnBlackholeTime")
         public Long unBlackholeTime;
 

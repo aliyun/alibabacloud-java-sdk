@@ -4,6 +4,11 @@ package com.aliyun.antiddos_public20170518.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpLocationServiceRequest extends TeaModel {
+    /**
+     * <p>The IP address of the asset to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InternetIp")
     public String internetIp;
 

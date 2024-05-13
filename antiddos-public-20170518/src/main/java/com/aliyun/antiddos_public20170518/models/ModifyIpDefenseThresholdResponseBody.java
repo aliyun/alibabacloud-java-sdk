@@ -3,19 +3,19 @@ package com.aliyun.antiddos_public20170518.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyDefenseThresholdResponseBody extends TeaModel {
+public class ModifyIpDefenseThresholdResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ModifyDefenseThresholdResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ModifyDefenseThresholdResponseBody self = new ModifyDefenseThresholdResponseBody();
+    public static ModifyIpDefenseThresholdResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ModifyIpDefenseThresholdResponseBody self = new ModifyIpDefenseThresholdResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDefenseThresholdResponseBody setRequestId(String requestId) {
+    public ModifyIpDefenseThresholdResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
