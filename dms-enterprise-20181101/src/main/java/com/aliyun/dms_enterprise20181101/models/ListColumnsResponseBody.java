@@ -167,7 +167,7 @@ public class ListColumnsResponseBody extends TeaModel {
          * <p>*   SENSITIVE: The column is a sensitive column.</p>
          * <p>*   CONFIDENTIAL: The column is a confidential column.</p>
          * <br>
-         * <p>> For more information, see [Sensitivity levels of fields](~~66091~~).</p>
+         * <p>> For more information, see [Sensitivity levels of fields](https://help.aliyun.com/document_detail/66091.html).</p>
          */
         @NameInMap("SecurityLevel")
         public String securityLevel;

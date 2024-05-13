@@ -19,7 +19,7 @@ public class CreateUploadFileJobResponseBody extends TeaModel {
     /**
      * <p>The key of the task.</p>
      * <br>
-     * <p>>  You can call the [GetUserUploadFileJob](~~206069~~) operation to query the progress and details of the task.</p>
+     * <p>>  You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to query the progress and details of the task.</p>
      */
     @NameInMap("JobKey")
     public String jobKey;

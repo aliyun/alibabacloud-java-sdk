@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListProxySQLExecAuditLogRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. The value of this parameter must be a timestamp that follows the UNIX time format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -59,12 +61,14 @@ public class ListProxySQLExecAuditLogRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. The value of this parameter must be a timestamp that follows the UNIX time format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

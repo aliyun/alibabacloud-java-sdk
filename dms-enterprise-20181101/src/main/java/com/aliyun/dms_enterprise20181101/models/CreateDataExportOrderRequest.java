@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateDataExportOrderRequest extends TeaModel {
     /**
-     * <p>The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key.</p>
+     * <p>The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to obtain the attachment key.</p>
      */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
      * <p>The purpose or objective of the ticket. This parameter helps reduce unnecessary communication.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -24,6 +26,8 @@ public class CreateDataExportOrderRequest extends TeaModel {
 
     /**
      * <p>The parameters of the ticket.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PluginParam")
     public CreateDataExportOrderRequestPluginParam pluginParam;
@@ -37,7 +41,7 @@ public class CreateDataExportOrderRequest extends TeaModel {
     /**
      * <p>The tenant ID.</p>
      * <br>
-     * <p>> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.</p>
+     * <p>> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html) section of the "Manage DMS tenants" topic.</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -176,24 +180,32 @@ public class CreateDataExportOrderRequest extends TeaModel {
     public static class CreateDataExportOrderRequestPluginParam extends TeaModel {
         /**
          * <p>The estimated number of data rows to be affected.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("AffectRows")
         public Long affectRows;
 
         /**
          * <p>The reason for the export ticket.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Classify")
         public String classify;
 
         /**
          * <p>The database ID.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
          * <p>The SQL statements that can be executed.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ExeSQL")
         public String exeSQL;
@@ -203,6 +215,8 @@ public class CreateDataExportOrderRequest extends TeaModel {
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("IgnoreAffectRows")
         public Boolean ignoreAffectRows;
@@ -215,6 +229,8 @@ public class CreateDataExportOrderRequest extends TeaModel {
 
         /**
          * <p>The instance ID.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
@@ -226,6 +242,8 @@ public class CreateDataExportOrderRequest extends TeaModel {
          * <p>*   **false**</p>
          * <br>
          * <p>> If you set this parameter to **true**, the database that you specify must be a logical database.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Logic")
         public Boolean logic;

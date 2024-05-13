@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetDataCorrectTaskDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the ticket. You can call the [CreateDataCorrectOrder](~~208388~~), [CreateDataImportOrder](~~208387~~), or [CreateFreeLockCorrectOrder](~~208386~~) operation to obtain the ticket ID.</p>
+     * <p>The ID of the ticket. You can call the [CreateDataCorrectOrder](https://help.aliyun.com/document_detail/208388.html), [CreateDataImportOrder](https://help.aliyun.com/document_detail/208387.html), or [CreateFreeLockCorrectOrder](https://help.aliyun.com/document_detail/208386.html) operation to obtain the ticket ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
@@ -13,7 +15,7 @@ public class GetDataCorrectTaskDetailRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>> : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.</p>
+     * <p>> : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html) topic.</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -313,7 +313,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The ID of the user who creates the ticket. You can obtain the user ID by calling the [GetUser](~~147098~~) operation and querying the value of the UserId parameter. The value is not the unique ID (UID) of the Alibaba Cloud account.</p>
+         * <p>The ID of the user who creates the ticket. You can obtain the user ID by calling the [GetUser](https://help.aliyun.com/document_detail/147098.html) operation and querying the value of the UserId parameter. The value is not the unique ID (UID) of the Alibaba Cloud account.</p>
          */
         @NameInMap("CreatorId")
         public Long creatorId;

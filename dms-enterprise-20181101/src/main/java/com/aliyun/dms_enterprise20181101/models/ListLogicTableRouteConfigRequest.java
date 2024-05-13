@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListLogicTableRouteConfigRequest extends TeaModel {
     /**
      * <p>The ID of the logical table. You can call the [ListLogicTables](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogictables) operation to query the ID of the logical table.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableId")
     public Long tableId;

@@ -9,6 +9,8 @@ public class BuyPayAsYouGoOrderRequest extends TeaModel {
      * <br>
      * <p>*   **VersionType**: DMS that supports control modes</p>
      * <p>*   **SensitiveDataProtection**: DMS that supports sensitive data protection</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CommodityType")
     public String commodityType;
@@ -17,6 +19,8 @@ public class BuyPayAsYouGoOrderRequest extends TeaModel {
      * <p>The number of database instances that you want to use DMS to manage.</p>
      * <br>
      * <p>> A quota can be used for only one database instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InsNum")
     public Integer insNum;
@@ -24,7 +28,7 @@ public class BuyPayAsYouGoOrderRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
+     * <p>> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html).</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -30,6 +30,8 @@ public class AddDesensitizationRuleRequest extends TeaModel {
      * <p>*   DEFAULT: masks all characters.</p>
      * <p>*   RANDOM_REPLACE: randomly replaces characters.</p>
      * <p>*   MD5: masks characters by using the MD5 algorithm.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FunctionType")
     public String functionType;
@@ -42,6 +44,8 @@ public class AddDesensitizationRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
@@ -98,6 +102,8 @@ public class AddDesensitizationRuleRequest extends TeaModel {
      * <p>    <!-- --></p>
      * <br>
      * <p>    <!-- --></p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleType")
     public String ruleType;
@@ -105,7 +111,7 @@ public class AddDesensitizationRuleRequest extends TeaModel {
     /**
      * <p>The tenant ID.</p>
      * <br>
-     * <p>>  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.</p>
+     * <p>>  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html) section of the "Manage DMS tenants" topic.</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -7,9 +7,15 @@ public class AddInstanceRequest extends TeaModel {
     @NameInMap("DataLinkName")
     public String dataLinkName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DatabasePassword")
     public String databasePassword;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DatabaseUser")
     public String databaseUser;
 
@@ -34,33 +40,63 @@ public class AddInstanceRequest extends TeaModel {
     @NameInMap("EnableSellStable")
     public String enableSellStable;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EnableSellTrust")
     public String enableSellTrust;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EnvType")
     public String envType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ExportTimeout")
     public Integer exportTimeout;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Host")
     public String host;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceAlias")
     public String instanceAlias;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceSource")
     public String instanceSource;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QueryTimeout")
     public Integer queryTimeout;
 

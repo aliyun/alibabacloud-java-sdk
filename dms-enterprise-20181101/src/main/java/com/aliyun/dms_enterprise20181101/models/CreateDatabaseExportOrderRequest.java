@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateDatabaseExportOrderRequest extends TeaModel {
     /**
-     * <p>The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key.</p>
+     * <p>The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to obtain the attachment key.</p>
      */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
      * <p>The purpose or objective of the ticket. This parameter helps reduce unnecessary communication.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -24,6 +26,8 @@ public class CreateDatabaseExportOrderRequest extends TeaModel {
 
     /**
      * <p>The parameters of the ticket.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PluginParam")
     public CreateDatabaseExportOrderRequestPluginParam pluginParam;
@@ -37,7 +41,7 @@ public class CreateDatabaseExportOrderRequest extends TeaModel {
     /**
      * <p>The tenant ID.</p>
      * <br>
-     * <p>> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.</p>
+     * <p>> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html) section of the "Manage DMS tenants" topic.</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -98,6 +102,8 @@ public class CreateDatabaseExportOrderRequest extends TeaModel {
     public static class CreateDatabaseExportOrderRequestPluginParamConfig extends TeaModel {
         /**
          * <p>The export options for big data. The options are used to filter the big data to be exported. You can leave this parameter empty.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DataOption")
         public java.util.List<String> dataOption;
@@ -108,6 +114,8 @@ public class CreateDatabaseExportOrderRequest extends TeaModel {
          * <p>*   **DATA**: The data of the database is exported.</p>
          * <p>*   **STRUCT**: The schema of the database is exported.</p>
          * <p>*   **DATA_STRUCT**: The data and schema of the database are exported.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ExportContent")
         public String exportContent;
@@ -120,6 +128,8 @@ public class CreateDatabaseExportOrderRequest extends TeaModel {
 
         /**
          * <p>The extension options of the SQL script. You can leave this parameter empty.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("SQLExtOption")
         public java.util.List<String> SQLExtOption;
@@ -142,6 +152,8 @@ public class CreateDatabaseExportOrderRequest extends TeaModel {
          * <p>*   **SQL**</p>
          * <p>*   **CSV**</p>
          * <p>*   **XLSX**</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("TargetOption")
         public String targetOption;
@@ -212,24 +224,32 @@ public class CreateDatabaseExportOrderRequest extends TeaModel {
     public static class CreateDatabaseExportOrderRequestPluginParam extends TeaModel {
         /**
          * <p>The reason for the database export.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Classify")
         public String classify;
 
         /**
          * <p>The configurations for database export.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Config")
         public CreateDatabaseExportOrderRequestPluginParamConfig config;
 
         /**
          * <p>The database ID.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
          * <p>The instance ID.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
@@ -239,12 +259,16 @@ public class CreateDatabaseExportOrderRequest extends TeaModel {
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
 
         /**
          * <p>The name that is used to search for the database.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("SearchName")
         public String searchName;

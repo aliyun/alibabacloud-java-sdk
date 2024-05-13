@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListDatabaseUserPermssionsRequest extends TeaModel {
     /**
      * <p>The ID of the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbId")
     public String dbId;
@@ -34,6 +36,8 @@ public class ListDatabaseUserPermssionsRequest extends TeaModel {
      * <p>*   DATABASE: permissions on databases</p>
      * <p>*   TABLE: permissions on tables</p>
      * <p>*   COLUMN: permissions on fields</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PermType")
     public String permType;
@@ -41,7 +45,7 @@ public class ListDatabaseUserPermssionsRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>> : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).</p>
+     * <p>> : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).</p>
      */
     @NameInMap("Tid")
     public Long tid;

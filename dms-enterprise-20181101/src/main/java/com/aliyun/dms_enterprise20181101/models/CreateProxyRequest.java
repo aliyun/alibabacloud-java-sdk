@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CreateProxyRequest extends TeaModel {
     /**
      * <p>The ID of the database instance. You can call the [ListInstances](https://www.alibabacloud.com/help/en/data-management-service/latest/listinstances) or [GetInstance](https://www.alibabacloud.com/help/en/data-management-service/latest/getinstance) operation to query the database instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public Long instanceId;
 
     /**
      * <p>The password of the database account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Password")
     public String password;
@@ -24,6 +28,8 @@ public class CreateProxyRequest extends TeaModel {
 
     /**
      * <p>The username of the database account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Username")
     public String username;

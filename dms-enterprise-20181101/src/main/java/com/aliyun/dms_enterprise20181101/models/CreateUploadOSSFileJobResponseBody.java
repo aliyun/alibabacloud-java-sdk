@@ -17,7 +17,7 @@ public class CreateUploadOSSFileJobResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The key of the file upload task. You can query the upload progress and task details. For more information, see [GetUserUploadFileJob](~~206069~~).</p>
+     * <p>The key of the file upload task. You can query the upload progress and task details. For more information, see [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html).</p>
      */
     @NameInMap("JobKey")
     public String jobKey;

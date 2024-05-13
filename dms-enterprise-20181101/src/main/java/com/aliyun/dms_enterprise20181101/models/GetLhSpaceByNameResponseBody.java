@@ -144,7 +144,7 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
          * <p>The configuration of the workspace. Valid values:</p>
          * <br>
          * <p>*   **skipManualRunCheck**: No security rule check is required in the trial run phase.</p>
-         * <p>*   **skipPublishApprove**: No approval is required for publishing and O\&M.</p>
+         * <p>*   **skipPublishApprove**: No approval is required for publishing and O\\&M.</p>
          */
         @NameInMap("SpaceConfig")
         public String spaceConfig;

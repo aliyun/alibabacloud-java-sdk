@@ -12,6 +12,8 @@ public class ListIndexesRequest extends TeaModel {
 
     /**
      * <p>The ID of the table.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableId")
     public String tableId;
@@ -19,7 +21,7 @@ public class ListIndexesRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).</p>
+     * <p>> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).</p>
      */
     @NameInMap("Tid")
     public Long tid;

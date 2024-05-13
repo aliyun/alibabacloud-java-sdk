@@ -7,13 +7,17 @@ public class AnalyzeSQLLineageRequest extends TeaModel {
     /**
      * <p>The database ID.</p>
      * <br>
-     * <p>>  You can call one of the [SearchDatabase](~~141876~~), [ListDatabases](~~141873~~), and [GetDatabase](~~141869~~) operations to obtain the database ID provided in the DatabaseId response parameter.</p>
+     * <p>>  You can call one of the [SearchDatabase](https://help.aliyun.com/document_detail/141876.html), [ListDatabases](https://help.aliyun.com/document_detail/141873.html), and [GetDatabase](https://help.aliyun.com/document_detail/141869.html) operations to obtain the database ID provided in the DatabaseId response parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbId")
     public Long dbId;
 
     /**
      * <p>The SQL statement.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SqlContent")
     public String sqlContent;
@@ -21,7 +25,7 @@ public class AnalyzeSQLLineageRequest extends TeaModel {
     /**
      * <p>The tenant ID.</p>
      * <br>
-     * <p>>  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).</p>
+     * <p>>  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).</p>
      */
     @NameInMap("Tid")
     public Long tid;

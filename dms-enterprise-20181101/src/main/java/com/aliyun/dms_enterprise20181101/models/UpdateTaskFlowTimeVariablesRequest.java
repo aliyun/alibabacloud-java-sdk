@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskFlowTimeVariablesRequest extends TeaModel {
     /**
-     * <p>The ID of the task node. You can call the [GetTaskInstanceRelation](~~424711~~) operation to query the node ID.</p>
+     * <p>The ID of the task node. You can call the [GetTaskInstanceRelation](https://help.aliyun.com/document_detail/424711.html) operation to query the node ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DagId")
     public Long dagId;
@@ -13,13 +15,15 @@ public class UpdateTaskFlowTimeVariablesRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>> :To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
+     * <p>> :To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html).</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
      * <p>The time variables for the task flow.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TimeVariables")
     public String timeVariables;

@@ -7,13 +7,15 @@ public class EnableUserRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>>  To obtain the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Tenant information](~~181330~~).</p>
+     * <p>>  To obtain the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Tenant information](https://help.aliyun.com/document_detail/181330.html).</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
      * <p>The UID of the Alibaba Cloud account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uid")
     public String uid;

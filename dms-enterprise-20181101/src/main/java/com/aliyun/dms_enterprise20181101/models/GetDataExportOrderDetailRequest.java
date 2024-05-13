@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetDataExportOrderDetailRequest extends TeaModel {
     /**
-     * <p>The ticket ID. You can call the [ListOrders](~~465867~~) operation to query the ticket ID.</p>
+     * <p>The ticket ID. You can call the [ListOrders](https://help.aliyun.com/document_detail/465867.html) operation to query the ticket ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
@@ -13,7 +15,7 @@ public class GetDataExportOrderDetailRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).</p>
+     * <p>> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).</p>
      */
     @NameInMap("Tid")
     public Long tid;

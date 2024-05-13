@@ -5,19 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateFreeLockCorrectOrderRequest extends TeaModel {
     /**
-     * <p>The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
+     * <p>The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
      */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
      * <p>The purpose or objective of the data change. This parameter is used to help reduce unnecessary communication.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The parameters of the ticket.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Param")
     public CreateFreeLockCorrectOrderRequestParam param;
@@ -29,7 +33,7 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
     public java.util.List<Long> relatedUserList;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -83,8 +87,10 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
         /**
          * <p>The ID of the database. The database can be a physical database or a logical database.</p>
          * <br>
-         * <p>*   To obtain the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.</p>
-         * <p>*   To obtain the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.</p>
+         * <p>*   To obtain the ID of a physical database, call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation.</p>
+         * <p>*   To obtain the ID of a logical database, call the [ListLogicDatabases](https://help.aliyun.com/document_detail/141874.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DbId")
         public Long dbId;
@@ -94,6 +100,8 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
          * <br>
          * <p>*   **true**: The database is a logical database.</p>
          * <p>*   **false**: The database is a physical database.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
@@ -136,6 +144,8 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
 
         /**
          * <p>The databases in which you want to change data.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DbItemList")
         public java.util.List<CreateFreeLockCorrectOrderRequestParamDbItemList> dbItemList;
@@ -152,6 +162,8 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
 
         /**
          * <p>The SQL statements that you want to execute to change data.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ExecSQL")
         public String execSQL;
@@ -182,6 +194,8 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
          * <br>
          * <p>*   **TEXT**: text</p>
          * <p>*   **ATTACHMENT**: attachment. This value is not supported.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("SqlType")
         public String sqlType;

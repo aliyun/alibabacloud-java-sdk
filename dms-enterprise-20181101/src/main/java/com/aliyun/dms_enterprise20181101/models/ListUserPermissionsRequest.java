@@ -11,7 +11,7 @@ public class ListUserPermissionsRequest extends TeaModel {
     public String databaseName;
 
     /**
-     * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
+     * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).</p>
      */
     @NameInMap("DbType")
     public String dbType;
@@ -59,6 +59,8 @@ public class ListUserPermissionsRequest extends TeaModel {
      * <p>*   TABLE: permissions on tables</p>
      * <p>*   COLUMN: permissions on fields</p>
      * <p>*   INSTANCE: permissions on instances</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PermType")
     public String permType;
@@ -72,15 +74,17 @@ public class ListUserPermissionsRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>>  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.</p>
+     * <p>>  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html) topic.</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
-     * <p>The ID of the user. You can call the [GetUser](~~147098~~) or [ListUsers](~~141938~~) operation to query the ID of the user.</p>
+     * <p>The ID of the user. You can call the [GetUser](https://help.aliyun.com/document_detail/147098.html) or [ListUsers](https://help.aliyun.com/document_detail/141938.html) operation to query the ID of the user.</p>
      * <br>
      * <p>>  The user ID is different from the ID of your Alibaba Cloud account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;

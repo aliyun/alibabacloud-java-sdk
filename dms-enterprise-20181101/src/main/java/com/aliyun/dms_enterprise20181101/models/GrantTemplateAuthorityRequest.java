@@ -12,24 +12,30 @@ public class GrantTemplateAuthorityRequest extends TeaModel {
 
     /**
      * <p>The time when the permission expires. Specify the time in the yyyy-MM-DD HH:mm:ss format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExpireDate")
     public String expireDate;
 
     /**
      * <p>The ID of the permission template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
      * <p>The IDs of users to which you want to grant permissions on resources by using the permission template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserIds")
     public String userIds;

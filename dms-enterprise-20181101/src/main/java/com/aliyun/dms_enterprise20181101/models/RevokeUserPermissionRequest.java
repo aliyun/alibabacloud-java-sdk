@@ -7,8 +7,8 @@ public class RevokeUserPermissionRequest extends TeaModel {
     /**
      * <p>The ID of the database. The database can be a physical database or a logical database.</p>
      * <br>
-     * <p>*   To query the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.</p>
-     * <p>*   To query the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.</p>
+     * <p>*   To query the ID of a physical database, call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation.</p>
+     * <p>*   To query the ID of a logical database, call the [ListLogicDatabases](https://help.aliyun.com/document_detail/141874.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation.</p>
      */
     @NameInMap("DbId")
     public String dbId;
@@ -21,12 +21,14 @@ public class RevokeUserPermissionRequest extends TeaModel {
      * <p>*   **LOGIC_DATABASE**: logical databases</p>
      * <p>*   **TABLE**: physical tables</p>
      * <p>*   **LOGIC_TABLE**: logical tables</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DsType")
     public String dsType;
 
     /**
-     * <p>The ID of the database instance. You must specify this parameter when you revoke a permission from the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to query the database instance ID.</p>
+     * <p>The ID of the database instance. You must specify this parameter when you revoke a permission from the database instance. You can call the [ListInstances](https://help.aliyun.com/document_detail/141936.html) or [GetInstance](https://help.aliyun.com/document_detail/141567.html) operation to query the database instance ID.</p>
      */
     @NameInMap("InstanceId")
     public Long instanceId;
@@ -49,36 +51,42 @@ public class RevokeUserPermissionRequest extends TeaModel {
      * <p>*   **QUERY**: the data query permission</p>
      * <p>*   **EXPORT**: the data export permission</p>
      * <p>*   **CORRECT**: the data change permission</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PermTypes")
     public String permTypes;
 
     /**
-     * <p>The ID of the table. You must specify this parameter when you revoke a permission from the table. You can call the [ListTables](~~141878~~) operation to query the table ID.</p>
+     * <p>The ID of the table. You must specify this parameter when you revoke a permission from the table. You can call the [ListTables](https://help.aliyun.com/document_detail/141878.html) operation to query the table ID.</p>
      */
     @NameInMap("TableId")
     public String tableId;
 
     /**
-     * <p>The name of the table. You can call the [ListTables](~~141878~~) operation to query the table name.</p>
+     * <p>The name of the table. You can call the [ListTables](https://help.aliyun.com/document_detail/141878.html) operation to query the table name.</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
-     * <p>The ID of the permission. You can call the [ListUserPermission](~~146957~~) operation to query the permission ID.</p>
+     * <p>The ID of the permission. You can call the [ListUserPermission](https://help.aliyun.com/document_detail/146957.html) operation to query the permission ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserAccessId")
     public String userAccessId;
 
     /**
-     * <p>The ID of the user. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to query the user ID.</p>
+     * <p>The ID of the user. You can call the [ListUsers](https://help.aliyun.com/document_detail/141938.html) or [GetUser](https://help.aliyun.com/document_detail/147098.html) operation to query the user ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;

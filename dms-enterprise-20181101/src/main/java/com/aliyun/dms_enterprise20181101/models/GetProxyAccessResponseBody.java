@@ -117,7 +117,7 @@ public class GetProxyAccessResponseBody extends TeaModel {
         public String originInfo;
 
         /**
-         * <p>The ID that DMS generates after the user is authorized to enable the secure access proxy feature for an instance. The ID is unique in DMS. You can call the [ListProxyAccesses](~~295386~~) operation to query the ID.</p>
+         * <p>The ID that DMS generates after the user is authorized to enable the secure access proxy feature for an instance. The ID is unique in DMS. You can call the [ListProxyAccesses](https://help.aliyun.com/document_detail/295386.html) operation to query the ID.</p>
          */
         @NameInMap("ProxyAccessId")
         public Long proxyAccessId;
@@ -125,7 +125,7 @@ public class GetProxyAccessResponseBody extends TeaModel {
         /**
          * <p>The ID of the secure access proxy.</p>
          * <br>
-         * <p>>  You can call the [ListProxies](~~295371~~) operation to query the ID of the secure access proxy.</p>
+         * <p>>  You can call the [ListProxies](https://help.aliyun.com/document_detail/295371.html) operation to query the ID of the secure access proxy.</p>
          */
         @NameInMap("ProxyId")
         public Long proxyId;

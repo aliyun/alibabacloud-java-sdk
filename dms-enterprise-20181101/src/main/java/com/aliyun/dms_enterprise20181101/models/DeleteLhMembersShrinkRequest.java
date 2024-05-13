@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteLhMembersShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the user to be removed. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to obtain the user ID.</p>
+     * <p>The ID of the user to be removed. You can call the [ListUsers](https://help.aliyun.com/document_detail/141938.html) or [GetUser](https://help.aliyun.com/document_detail/147098.html) operation to obtain the user ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MemberIds")
     public String memberIdsShrink;
@@ -13,8 +15,10 @@ public class DeleteLhMembersShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the object.</p>
      * <br>
-     * <p>*   If the object is a workspace, you can call the [GetLhSpaceByName](~~424379~~) operation to obtain the workspace ID.</p>
-     * <p>*   If the object is a task flow, you can call the [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the task flow ID.</p>
+     * <p>*   If the object is a workspace, you can call the [GetLhSpaceByName](https://help.aliyun.com/document_detail/424379.html) operation to obtain the workspace ID.</p>
+     * <p>*   If the object is a task flow, you can call the [ListLhTaskFlowAndScenario](https://help.aliyun.com/document_detail/426672.html) operation to obtain the task flow ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ObjectId")
     public Long objectId;
@@ -24,12 +28,14 @@ public class DeleteLhMembersShrinkRequest extends TeaModel {
      * <br>
      * <p>*   **0**: workspace</p>
      * <p>*   **1**: task flow</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ObjectType")
     public Integer objectType;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

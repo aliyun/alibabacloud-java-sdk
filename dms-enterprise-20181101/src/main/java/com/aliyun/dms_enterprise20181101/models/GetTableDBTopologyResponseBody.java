@@ -143,7 +143,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         public String dbName;
 
         /**
-         * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
+         * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).</p>
          */
         @NameInMap("DbType")
         public String dbType;
@@ -160,7 +160,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
          * <p>*   **pet**: stress testing environment</p>
          * <p>*   **stag**: staging environment</p>
          * <br>
-         * <p>> For more information, see [Change the environment type of an instance](~~163309~~).</p>
+         * <p>> For more information, see [Change the environment type of an instance](https://help.aliyun.com/document_detail/163309.html).</p>
          */
         @NameInMap("EnvType")
         public String envType;
@@ -226,7 +226,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         public java.util.List<GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseList> databaseList;
 
         /**
-         * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
+         * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).</p>
          */
         @NameInMap("DbType")
         public String dbType;

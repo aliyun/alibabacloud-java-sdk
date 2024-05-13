@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.</p>
+     * <p>The ID of the task flow. You can call the [ListTaskFlow](https://help.aliyun.com/document_detail/424565.html) or [ListLhTaskFlowAndScenario](https://help.aliyun.com/document_detail/426672.html) operation to query the task flow ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DagId")
     public Long dagId;
@@ -24,6 +26,8 @@ public class CreateTaskRequest extends TeaModel {
 
     /**
      * <p>The name of the node that you want to create.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeName")
     public String nodeName;
@@ -35,7 +39,9 @@ public class CreateTaskRequest extends TeaModel {
     public String nodeOutput;
 
     /**
-     * <p>The type of the node that you want to create. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).</p>
+     * <p>The type of the node that you want to create. For more information about the valid values for this parameter, see [NodeType parameter](https://help.aliyun.com/document_detail/424705.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeType")
     public String nodeType;
@@ -43,7 +49,7 @@ public class CreateTaskRequest extends TeaModel {
     /**
      * <p>The tenant ID.</p>
      * <br>
-     * <p>>  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.</p>
+     * <p>>  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html) topic.</p>
      */
     @NameInMap("Tid")
     public Long tid;

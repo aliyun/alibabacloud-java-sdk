@@ -87,7 +87,7 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
         public String dbType;
 
         /**
-         * <p>The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).</p>
+         * <p>The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](https://help.aliyun.com/document_detail/163309.html).</p>
          */
         @NameInMap("EnvType")
         public String envType;

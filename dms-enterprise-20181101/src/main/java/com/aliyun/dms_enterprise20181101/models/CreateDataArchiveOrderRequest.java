@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CreateDataArchiveOrderRequest extends TeaModel {
     /**
      * <p>The description of the task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The parameters for archiving data.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Param")
     public CreateDataArchiveOrderRequestParam param;
@@ -35,7 +39,7 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
     public java.util.List<String> relatedUserList;
 
     /**
-     * <p>The tenant ID. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The tenant ID. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -96,12 +100,14 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
     public static class CreateDataArchiveOrderRequestParamTableIncludes extends TeaModel {
         /**
          * <p>The name of the table.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
-         * <p>The filter condition specified by the WHERE clause of the archiving configuration. If a time variable is used in the filter condition, the filter condition is specified in the following format: field name <=\"${variable name}\". The variable name in the filter condition must be the same as the Name value of Variables.</p>
+         * <p>The filter condition specified by the WHERE clause of the archiving configuration. If a time variable is used in the filter condition, the filter condition is specified in the following format: field name <=\\"${variable name}\\". The variable name in the filter condition must be the same as the Name value of Variables.</p>
          */
         @NameInMap("TableWhere")
         public String tableWhere;
@@ -171,15 +177,20 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
          * <p>*   **polardb**: PolarDB for MySQL cluster.</p>
          * <p>*   **adb_mysql**: AnalyticDB for MySQL V3.0 cluster.</p>
          * <p>*   **lindorm**: ApsaraDB for Lindorm instance.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ArchiveMethod")
         public String archiveMethod;
 
         /**
-         * <p>A crontab expression that specifies the scheduling cycle to run the task. For more information, see the [Crontab expressions](~~206581~~) section of the "Create shadow tables for synchronization" topic. This parameter is required if RunMethod is set to schedule.</p>
+         * <p>A crontab expression that specifies the scheduling cycle to run the task. For more information, see the [Crontab expressions](https://help.aliyun.com/document_detail/206581.html) section of the "Create shadow tables for synchronization" topic. This parameter is required if RunMethod is set to schedule.</p>
          */
         @NameInMap("CronStr")
         public String cronStr;
+
+        @NameInMap("DatabaseId")
+        public String databaseId;
 
         /**
          * <p>Specifies whether the database is a logical database.</p>
@@ -198,6 +209,8 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
          * <br>
          * <p>*   **schedule**: The data archiving task is periodically scheduled.</p>
          * <p>*   **now**: The data archiving task is immediately run.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("RunMethod")
         public String runMethod;
@@ -208,24 +221,32 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
          * <p>*   **def**: Set this parameter to def if the source database is of the two-layer logical schema, such as a MySQL database, a PolarDB for MySQL cluster, or an AnalyticDB for MySQL instance.</p>
          * <p>*   **An empty string**: Set this parameter to an empty string if the source database is an ApsaraDB for Lindorm or ApsaraDB for MongoDB instance.</p>
          * <p>*   **Catalog name**: Set this parameter to the catalog name of the source database if the source database is of the three-layer logical schema, such as a PostgreSQL database.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("SourceCatalogName")
         public String sourceCatalogName;
 
         /**
          * <p>The name of the source instance.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("SourceInstanceName")
         public String sourceInstanceName;
 
         /**
          * <p>The schema name of the source database. The schema name of the source database is the same as that of the destination database. If the source database is a MySQL database, this parameter specifies the name of the source database. If the source database is a PostgreSQL database, this parameter specifies the schema name of the source database.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("SourceSchemaName")
         public String sourceSchemaName;
 
         /**
          * <p>The collection of tables to be archived.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("TableIncludes")
         public java.util.List<CreateDataArchiveOrderRequestParamTableIncludes> tableIncludes;
@@ -241,6 +262,8 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
          * <br>
          * <p>*   If the data is archived in an OSS bucket, set the value to the name of the bucket.</p>
          * <p>*   If the data is archived in the dedicated storage space, set the value to inner_oss.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("TargetInstanceHost")
         public String targetInstanceHost;
@@ -270,6 +293,14 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
         }
         public String getCronStr() {
             return this.cronStr;
+        }
+
+        public CreateDataArchiveOrderRequestParam setDatabaseId(String databaseId) {
+            this.databaseId = databaseId;
+            return this;
+        }
+        public String getDatabaseId() {
+            return this.databaseId;
         }
 
         public CreateDataArchiveOrderRequestParam setLogic(Boolean logic) {

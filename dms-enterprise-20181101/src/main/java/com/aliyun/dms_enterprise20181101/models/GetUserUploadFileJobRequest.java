@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetUserUploadFileJobRequest extends TeaModel {
     /**
-     * <p>The key of the file upload task. The key is returned when you call the [CreateUploadFileJob](~~206059~~) or [CreateUploadOSSFileJob](~~206060~~) operation.</p>
+     * <p>The key of the file upload task. The key is returned when you call the [CreateUploadFileJob](https://help.aliyun.com/document_detail/206059.html) or [CreateUploadOSSFileJob](https://help.aliyun.com/document_detail/206060.html) operation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("JobKey")
     public String jobKey;
@@ -13,7 +15,7 @@ public class GetUserUploadFileJobRequest extends TeaModel {
     /**
      * <p>The tenant ID.</p>
      * <br>
-     * <p>> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).</p>
+     * <p>> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).</p>
      */
     @NameInMap("Tid")
     public Long tid;

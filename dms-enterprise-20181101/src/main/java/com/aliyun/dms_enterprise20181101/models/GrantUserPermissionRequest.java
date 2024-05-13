@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GrantUserPermissionRequest extends TeaModel {
     /**
-     * <p>The ID of the database. You can call the [ListDatabases](~~141873~~) operation to query the ID of a physical database and the [ListLogicDatabases](~~141874~~) operation to query the ID of a logical database.</p>
+     * <p>The ID of the database. You can call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) operation to query the ID of a physical database and the [ListLogicDatabases](https://help.aliyun.com/document_detail/141874.html) operation to query the ID of a logical database.</p>
      * <br>
      * <p>>  The value of the DatabaseId parameter is that of the DbId parameter.</p>
      */
@@ -20,18 +20,22 @@ public class GrantUserPermissionRequest extends TeaModel {
      * <p>*   LOGIC_DATABASE: permissions on logical databases</p>
      * <p>*   TABLE: permissions on physical tables</p>
      * <p>*   LOGIC_TABLE: permissions on logical tables</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DsType")
     public String dsType;
 
     /**
      * <p>The time when the permissions expire.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExpireDate")
     public String expireDate;
 
     /**
-     * <p>The ID of the instance. You must specify this parameter if you grant permissions on an instance to the user. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to query the ID of the instance.</p>
+     * <p>The ID of the instance. You must specify this parameter if you grant permissions on an instance to the user. You can call the [ListInstances](https://help.aliyun.com/document_detail/141936.html) or [GetInstance](https://help.aliyun.com/document_detail/141567.html) operation to query the ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public Long instanceId;
@@ -53,12 +57,14 @@ public class GrantUserPermissionRequest extends TeaModel {
      * <p>*   **CORRECT**: the change permissions</p>
      * <p>*   **LOGIN**: the logon permissions</p>
      * <p>*   **PERF**: the query permissions on the performance details of the instance</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PermTypes")
     public String permTypes;
 
     /**
-     * <p>The ID of the table. You must specify this parameter if you grant permissions on a table to the user. You can call the [ListTables](~~141878~~) operation to query the table ID.</p>
+     * <p>The ID of the table. You must specify this parameter if you grant permissions on a table to the user. You can call the [ListTables](https://help.aliyun.com/document_detail/141878.html) operation to query the table ID.</p>
      */
     @NameInMap("TableId")
     public String tableId;
@@ -72,15 +78,17 @@ public class GrantUserPermissionRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>>  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.</p>
+     * <p>>  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html) topic.</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
-     * <p>The ID of the user. You can call the [GetUser](~~147098~~) or [ListUsers](~~141938~~) operation to query the ID of the user.</p>
+     * <p>The ID of the user. You can call the [GetUser](https://help.aliyun.com/document_detail/147098.html) or [ListUsers](https://help.aliyun.com/document_detail/141938.html) operation to query the ID of the user.</p>
      * <br>
      * <p>>  The user ID is different from the ID of your Alibaba Cloud account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;

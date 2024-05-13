@@ -118,7 +118,7 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
          * <p>The type of security rule. Valid values:</p>
          * <br>
          * <p>*   **CANNOT_SYNC**: Synchronization cannot be performed.</p>
-         * <p>*   **WITH_APPROVE**: The schema synchronization can be performed after the ticket is approved. You can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.</p>
+         * <p>*   **WITH_APPROVE**: The schema synchronization can be performed after the ticket is approved. You can call the [SubmitStructSyncOrderApproval](https://help.aliyun.com/document_detail/206166.html) operation to submit the ticket for approval.</p>
          * <p>*   **WITHOUT_APPROVE**: The schema synchronization can be performed without approval.</p>
          */
         @NameInMap("SecurityRule")

@@ -20,7 +20,7 @@ public class SearchTableRequest extends TeaModel {
     public String dbType;
 
     /**
-     * <p>The type of the environment to which databases belong. For more information, see [Change the environment type of an instance](~~163309~~).</p>
+     * <p>The type of the environment to which databases belong. For more information, see [Change the environment type of an instance](https://help.aliyun.com/document_detail/163309.html).</p>
      */
     @NameInMap("EnvType")
     public String envType;
@@ -73,7 +73,7 @@ public class SearchTableRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.</p>
+     * <p>> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html) section of the "Manage DMS tenants" topic.</p>
      */
     @NameInMap("Tid")
     public Long tid;

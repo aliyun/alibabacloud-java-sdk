@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CloseOrderRequest extends TeaModel {
     /**
      * <p>The reason why the ticket is closed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CloseReason")
     public String closeReason;
 
     /**
      * <p>The ID of the ticket.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
@@ -19,7 +23,7 @@ public class CloseOrderRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).</p>
+     * <p>> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).</p>
      */
     @NameInMap("Tid")
     public Long tid;

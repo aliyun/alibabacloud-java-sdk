@@ -11,7 +11,7 @@ public class RegisterInstanceRequest extends TeaModel {
      * <br>
      * <p>*   This parameter is required if UseDsql is set to 1.</p>
      * <br>
-     * <p>*   The name can contain only lowercase letters and underscores (\_).</p>
+     * <p>*   The name can contain only lowercase letters and underscores (_).</p>
      * <br>
      * <p>*   The name must be unique within a tenant.</p>
      */
@@ -20,18 +20,24 @@ public class RegisterInstanceRequest extends TeaModel {
 
     /**
      * <p>The password that is used to log on to the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatabasePassword")
     public String databasePassword;
 
     /**
      * <p>The account that is used to log on to the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatabaseUser")
     public String databaseUser;
 
     /**
-     * <p>The ID of the user who assumes the DBA role of the database instance. You can call the [ListUsers](~~141938~~) or [GetInstance](~~141567~~) operation to query the user ID.</p>
+     * <p>The ID of the user who assumes the DBA role of the database instance. You can call the [ListUsers](https://help.aliyun.com/document_detail/141938.html) or [GetInstance](https://help.aliyun.com/document_detail/141567.html) operation to query the user ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbaUid")
     public Long dbaUid;
@@ -88,24 +94,32 @@ public class RegisterInstanceRequest extends TeaModel {
      * <p>*   uat: user acceptance testing (UAT) environment</p>
      * <p>*   pet: stress testing environment</p>
      * <p>*   stag: staging environment</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnvType")
     public String envType;
 
     /**
      * <p>The timeout period for exporting data from the database instance. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExportTimeout")
     public Integer exportTimeout;
 
     /**
      * <p>The host address that is used to connect to the database instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Host")
     public String host;
 
     /**
      * <p>The alias of the database instance. Specify an alias that can help you identify the database instance in DMS.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceAlias")
     public String instanceAlias;
@@ -117,12 +131,16 @@ public class RegisterInstanceRequest extends TeaModel {
      * <p>*   **RDS:** an ApsaraDB RDS instance</p>
      * <p>*   **ECS_OWN:** a self-managed database that is deployed on an Elastic Compute Service (ECS) instance</p>
      * <p>*   **VPC_IDC:** a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceSource")
     public String instanceSource;
 
     /**
-     * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
+     * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -132,24 +150,32 @@ public class RegisterInstanceRequest extends TeaModel {
      * <br>
      * <p>*   **CLASSIC:** classic network</p>
      * <p>*   **VPC:** VPC</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
 
     /**
      * <p>The port that is used to connect to the database instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Port")
     public Integer port;
 
     /**
      * <p>The timeout period for querying data in the database instance. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("QueryTimeout")
     public Integer queryTimeout;
 
     /**
-     * <p>The name of the security rule set (GroupName) for the database instance. You can call the [ListStandardGroups](~~417891~~) or [GetInstance](~~141567~~) operation to query the name of the security rule set.</p>
+     * <p>The name of the security rule set (GroupName) for the database instance. You can call the [ListStandardGroups](https://help.aliyun.com/document_detail/417891.html) or [GetInstance](https://help.aliyun.com/document_detail/141567.html) operation to query the name of the security rule set.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SafeRule")
     public String safeRule;
@@ -172,19 +198,19 @@ public class RegisterInstanceRequest extends TeaModel {
     public Boolean skipTest;
 
     /**
-     * <p>The ID of the classification template. You can call the [ListClassificationTemplates](~~460613~~) operation to query the template ID.</p>
+     * <p>The ID of the classification template. You can call the [ListClassificationTemplates](https://help.aliyun.com/document_detail/460613.html) operation to query the template ID.</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;
 
     /**
-     * <p>The type of the classification template. You can call the [ListClassificationTemplates](~~460613~~) operation to query the template type.</p>
+     * <p>The type of the classification template. You can call the [ListClassificationTemplates](https://help.aliyun.com/document_detail/460613.html) operation to query the template type.</p>
      */
     @NameInMap("TemplateType")
     public String templateType;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;
