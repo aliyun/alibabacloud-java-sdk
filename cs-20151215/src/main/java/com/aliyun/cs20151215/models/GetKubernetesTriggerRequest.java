@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class GetKubernetesTriggerRequest extends TeaModel {
     /**
      * <p>The application name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The namespace name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;

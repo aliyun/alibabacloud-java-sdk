@@ -32,6 +32,8 @@ public class InstallClusterAddonsRequest extends TeaModel {
 
         /**
          * <p>The component name.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("name")
         public String name;
@@ -39,7 +41,9 @@ public class InstallClusterAddonsRequest extends TeaModel {
         /**
          * <p>The component version.</p>
          * <br>
-         * <p>>  You can call the [DescribeClusterAddonsVersion](~~197434~~) operation to query the version of a component.</p>
+         * <p>>  You can call the [DescribeClusterAddonsVersion](https://help.aliyun.com/document_detail/197434.html) operation to query the version of a component.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("version")
         public String version;

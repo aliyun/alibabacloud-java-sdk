@@ -174,7 +174,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The information about the resource. For more information about how to query the source information about a resource, see [ListStackResources](~~133836~~).</p>
+         * <p>The information about the resource. For more information about how to query the source information about a resource, see [ListStackResources](https://help.aliyun.com/document_detail/133836.html).</p>
          */
         @NameInMap("resource_info")
         public String resourceInfo;

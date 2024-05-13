@@ -102,7 +102,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         /**
          * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the versions of open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not specify this parameter, the latest Kubernetes version is used.</p>
          * <br>
-         * <p>You can create clusters of the latest two Kubernetes versions in the ACK console. You can call the corresponding ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).</p>
+         * <p>You can create clusters of the latest two Kubernetes versions in the ACK console. You can call the corresponding ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).</p>
          */
         @NameInMap("init_version")
         public String initVersion;
@@ -218,7 +218,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          * <br>
          * <p>The CIDR block of pods cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after the cluster is created.</p>
          * <br>
-         * <p>For more information, see [Plan CIDR blocks for an ACK cluster](~~86500~~).</p>
+         * <p>For more information, see [Plan CIDR blocks for an ACK cluster](https://help.aliyun.com/document_detail/86500.html).</p>
          */
         @NameInMap("subnet_cidr")
         public String subnetCidr;

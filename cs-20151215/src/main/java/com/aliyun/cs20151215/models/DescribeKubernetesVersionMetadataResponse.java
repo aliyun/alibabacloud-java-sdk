@@ -211,7 +211,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public java.util.List<Runtime> runtimes;
 
         /**
-         * <p>The Kubernetes version that is supported by ACK. For more information, see [Release notes for Kubernetes versions](~~185269~~).</p>
+         * <p>The Kubernetes version that is supported by ACK. For more information, see [Release notes for Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).</p>
          */
         @NameInMap("version")
         public String version;

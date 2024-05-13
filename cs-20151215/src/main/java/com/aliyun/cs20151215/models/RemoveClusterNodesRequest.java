@@ -12,6 +12,8 @@ public class RemoveClusterNodesRequest extends TeaModel {
 
     /**
      * <p>The list of nodes to be removed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("nodes")
     public java.util.List<String> nodes;

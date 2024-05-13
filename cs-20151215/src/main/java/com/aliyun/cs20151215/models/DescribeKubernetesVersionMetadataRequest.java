@@ -10,6 +10,8 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
      * <p>*   `Kubernetes`: ACK dedicated cluster.</p>
      * <p>*   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.</p>
      * <p>*   `ExternalKubernetes`: registered cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
@@ -17,7 +19,7 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     /**
      * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not set this parameter, the latest Kubernetes version is used.</p>
      * <br>
-     * <p>You can create ACK clusters of the latest two Kubernetes versions in the ACK console. You can call the specific ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).</p>
+     * <p>You can create ACK clusters of the latest two Kubernetes versions in the ACK console. You can call the specific ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).</p>
      */
     @NameInMap("KubernetesVersion")
     public String kubernetesVersion;
@@ -49,6 +51,8 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
 
     /**
      * <p>The region ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public String region;

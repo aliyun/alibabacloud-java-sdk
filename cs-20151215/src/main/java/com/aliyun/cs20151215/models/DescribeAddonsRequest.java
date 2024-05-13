@@ -43,6 +43,8 @@ public class DescribeAddonsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("region")
     public String region;

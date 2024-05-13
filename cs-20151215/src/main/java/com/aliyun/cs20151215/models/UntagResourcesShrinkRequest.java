@@ -15,24 +15,32 @@ public class UntagResourcesShrinkRequest extends TeaModel {
 
     /**
      * <p>The region ID of the resources.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("region_id")
     public String regionId;
 
     /**
      * <p>The list of resource IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("resource_ids")
     public String resourceIdsShrink;
 
     /**
      * <p>The type of resource. Set the value to `CLUSTER`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("resource_type")
     public String resourceType;
 
     /**
      * <p>The list of keys of the labels that you want to remove.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("tag_keys")
     public String tagKeysShrink;

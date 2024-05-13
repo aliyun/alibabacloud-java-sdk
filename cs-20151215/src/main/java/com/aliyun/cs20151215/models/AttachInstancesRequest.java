@@ -49,6 +49,8 @@ public class AttachInstancesRequest extends TeaModel {
 
     /**
      * <p>The ECS instances to be added.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("instances")
     public java.util.List<String> instances;
@@ -92,7 +94,7 @@ public class AttachInstancesRequest extends TeaModel {
     public String nodepoolId;
 
     /**
-     * <p>The SSH logon password that is used to log on to the ECS instances. You must set login_password or `key_pair`. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. It cannot contain backslashes (\\) or double quotation marks (").</p>
+     * <p>The SSH logon password that is used to log on to the ECS instances. You must set login_password or `key_pair`. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. It cannot contain backslashes (\\\\) or double quotation marks (").</p>
      * <br>
      * <p>For security considerations, the password is encrypted during data transfer.</p>
      */
@@ -125,7 +127,7 @@ public class AttachInstancesRequest extends TeaModel {
     public java.util.List<Tag> tags;
 
     /**
-     * <p>User-defined data. For more information, see [Generate user data](~~49121~~).</p>
+     * <p>User-defined data. For more information, see [Generate user data](https://help.aliyun.com/document_detail/49121.html).</p>
      * <br>
      * <p>>  This parameter is not supported if you specify the `nodepool_id` parameter.</p>
      */

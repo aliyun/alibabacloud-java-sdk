@@ -28,6 +28,8 @@ public class GrantPermissionsRequest extends TeaModel {
          * <p>The ID of the cluster that you want to manage.</p>
          * <br>
          * <p>*   When the `role_type` parameter is set to `all-clusters`, this parameter is set to an empty string.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("cluster")
         public String cluster;
@@ -54,10 +56,12 @@ public class GrantPermissionsRequest extends TeaModel {
          * <p>The predefined role name. Valid values:</p>
          * <br>
          * <p>*   `admin`: administrator</p>
-         * <p>*   `ops`: O\&M engineer</p>
+         * <p>*   `ops`: O\\&M engineer</p>
          * <p>*   `dev`: developer</p>
          * <p>*   `restricted`: restricted user</p>
          * <p>*   The custom cluster role.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("role_name")
         public String roleName;
@@ -68,6 +72,8 @@ public class GrantPermissionsRequest extends TeaModel {
          * <p>*   `cluster`: indicates that the permissions are scoped to a cluster.</p>
          * <p>*   `namespace`: specifies that the permissions are scoped to a namespace of a cluster.</p>
          * <p>*   `all-clusters`: specifies that the permissions are scoped to all clusters.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("role_type")
         public String roleType;

@@ -12,6 +12,8 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
 
     /**
      * <p>The control plane components for which log collection is enabled.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("components")
     public java.util.List<String> components;

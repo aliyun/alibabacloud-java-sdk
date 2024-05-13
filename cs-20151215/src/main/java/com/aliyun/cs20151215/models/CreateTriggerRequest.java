@@ -8,12 +8,16 @@ public class CreateTriggerRequest extends TeaModel {
      * <p>The action that the trigger performs. Set the value to redeploy.</p>
      * <br>
      * <p>`redeploy`: redeploys the resources specified by `project_id`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("action")
     public String action;
 
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("cluster_id")
     public String clusterId;
@@ -24,6 +28,8 @@ public class CreateTriggerRequest extends TeaModel {
      * <p>The name consists of the namespace where the application is deployed and the name of the application. The format is `${namespace}/${name}`.</p>
      * <br>
      * <p>Example: `default/test-app`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("project_id")
     public String projectId;

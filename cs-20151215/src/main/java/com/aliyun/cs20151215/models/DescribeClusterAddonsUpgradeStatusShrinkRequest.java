@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeClusterAddonsUpgradeStatusShrinkRequest extends TeaModel {
     /**
      * <p>The list of component names.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("componentIds")
     public String componentIdsShrink;

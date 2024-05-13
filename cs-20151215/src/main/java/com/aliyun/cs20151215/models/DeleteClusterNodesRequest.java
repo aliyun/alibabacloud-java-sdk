@@ -17,6 +17,8 @@ public class DeleteClusterNodesRequest extends TeaModel {
 
     /**
      * <p>The list of nodes to be removed. You need to specify the name of the nodes used in the cluster, for example, `cn-hangzhou.192.168.0.70`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("nodes")
     public java.util.List<String> nodes;

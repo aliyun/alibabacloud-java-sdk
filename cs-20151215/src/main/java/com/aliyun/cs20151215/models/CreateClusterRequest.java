@@ -15,28 +15,28 @@ public class CreateClusterRequest extends TeaModel {
      * <br>
      * <p>**Network plug-in**: required. The Flannel and Terway plug-ins are supported. Select one of the plug-ins for the cluster.</p>
      * <br>
-     * <p>*   Specify the Flannel plug-in in the following format: \[{"name":"flannel","config":""}].</p>
-     * <p>*   Specify the Flannel plug-in in the following format: \[{"name": "terway-eniip","config": ""}].</p>
+     * <p>*   Specify the Flannel plug-in in the following format: [{"name":"flannel","config":""}].</p>
+     * <p>*   Specify the Flannel plug-in in the following format: [{"name": "terway-eniip","config": ""}].</p>
      * <br>
      * <p>**Volume plug-in**: optional. Only the `CSI` plug-in is supported.</p>
      * <br>
-     * <p>Specify the `CSI` plug-in in the following format: \[{"name":"csi-plugin","config": ""},{"name": "csi-provisioner","config": ""}].</p>
+     * <p>Specify the `CSI` plug-in in the following format: [{"name":"csi-plugin","config": ""},{"name": "csi-provisioner","config": ""}].</p>
      * <br>
      * <p>**Simple Log Service component**: optional. We recommend that you enable Simple Log Service. If Simple Log Service is disabled, you cannot use the cluster auditing feature.</p>
      * <br>
-     * <p>*   To use an existing `Simple Log Service project`, specify the value in the following format: \[{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true","sls_project_name":"your_sls_project_name"}"}].</p>
-     * <p>*   To create a `Simple Log Service project`, specify the value in the following format: \[{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true"}"}].</p>
+     * <p>*   To use an existing `Simple Log Service project`, specify the value in the following format: [{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true","sls_project_name":"your_sls_project_name"}"}].</p>
+     * <p>*   To create a `Simple Log Service project`, specify the value in the following format: [{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true"}"}].</p>
      * <br>
      * <p>**Ingress controller**: optional. By default, the `nginx-ingress-controller` component is installed in ACK dedicated clusters.</p>
      * <br>
-     * <p>*   To install nginx-ingress-controller and enable Internet access, specify the value in the following format: \[{"name":"nginx-ingress-controller","config":"{"IngressSlbNetworkType":"internet"}"}].</p>
-     * <p>*   To disable the system to automatically install nginx-ingress-controller, specify the value in the following format: \[{"name": "nginx-ingress-controller","config": "","disabled": true}].</p>
+     * <p>*   To install nginx-ingress-controller and enable Internet access, specify the value in the following format: [{"name":"nginx-ingress-controller","config":"{"IngressSlbNetworkType":"internet"}"}].</p>
+     * <p>*   To disable the system to automatically install nginx-ingress-controller, specify the value in the following format: [{"name": "nginx-ingress-controller","config": "","disabled": true}].</p>
      * <br>
      * <p>**Event center**: optional. By default, the event center feature is enabled.</p>
      * <br>
-     * <p>You can use Kubernetes event centers to store and query events and configure alerts. You can use the Logstores that are associated with Kubernetes event centers free of charge within 90 days. For more information, see [Create and use a Kubernetes event center](~~150476~~).</p>
+     * <p>You can use Kubernetes event centers to store and query events and configure alerts. You can use the Logstores that are associated with Kubernetes event centers free of charge within 90 days. For more information, see [Create and use a Kubernetes event center](https://help.aliyun.com/document_detail/150476.html).</p>
      * <br>
-     * <p>To enable the ack-node-problem-detector component, specify the value in the following format: \[{"name":"ack-node-problem-detector","config":"{"sls_project_name":"your_sls_project_name"}"}].</p>
+     * <p>To enable the ack-node-problem-detector component, specify the value in the following format: [{"name":"ack-node-problem-detector","config":"{"sls_project_name":"your_sls_project_name"}"}].</p>
      */
     @NameInMap("addons")
     public java.util.List<Addon> addons;
@@ -44,7 +44,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>Service accounts provide identities for pods when pods communicate with the `API server` of the cluster. `api-audiences` are used by the `API server` to check whether the `tokens` of requests are legitimate.`` Separate multiple `audiences` with commas (,).</p>
      * <br>
-     * <p>For more information about `ServiceAccount`, see [Enable service account token volume projection](~~160384~~).</p>
+     * <p>For more information about `ServiceAccount`, see [Enable service account token volume projection](https://help.aliyun.com/document_detail/160384.html).</p>
      */
     @NameInMap("api_audiences")
     public String apiAudiences;
@@ -108,6 +108,8 @@ public class CreateClusterRequest extends TeaModel {
      * <p>*   `Kubernetes`: ACK dedicated cluster.</p>
      * <p>*   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic and Pro), ACK Edge clusters (Basic and Pro), and ACK Lingjun clusters (Pro).</p>
      * <p>*   `ExternalKubernetes`: registered cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("cluster_type")
     public String clusterType;
@@ -115,7 +117,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The CIDR block of pods. You can specify 10.0.0.0/8, 172.16-31.0.0/12-16, 192.168.0.0/16, or their subnets as the CIDR block of pods. The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</p>
      * <br>
-     * <p>For more information about subnetting for ACK clusters, see [Plan CIDR blocks for an ACK cluster that is deployed in a VPC](~~86500~~).</p>
+     * <p>For more information about subnetting for ACK clusters, see [Plan CIDR blocks for an ACK cluster that is deployed in a VPC](https://help.aliyun.com/document_detail/86500.html).</p>
      * <br>
      * <p>>  This parameter is required if the cluster uses Flannel as the network plug-in.</p>
      */
@@ -189,7 +191,7 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean enableRrsa;
 
     /**
-     * <p>The ID of a key that is managed by Key Management Service (KMS). The key is used to encrypt data disks. For more information, see [KMS](~~28935~~).</p>
+     * <p>The ID of a key that is managed by Key Management Service (KMS). The key is used to encrypt data disks. For more information, see [KMS](https://help.aliyun.com/document_detail/28935.html).</p>
      * <br>
      * <p>>  The key can be used only in ACK Pro clusters.</p>
      */
@@ -224,7 +226,7 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean formatDisk;
 
     /**
-     * <p>Specifies a custom image for nodes. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see [Custom images](~~146647~~).</p>
+     * <p>Specifies a custom image for nodes. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see [Custom images](https://help.aliyun.com/document_detail/146647.html).</p>
      */
     @NameInMap("image_id")
     public String imageId;
@@ -294,7 +296,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not configure this parameter, the latest Kubernetes version is used.</p>
      * <br>
-     * <p>You can create clusters of the latest two Kubernetes versions in the ACK console. If you want to create clusters that run earlier Kubernetes versions, use the API. For more information about the Kubernetes versions supported by ACK, see [Release notes on Kubernetes versions](~~185269~~).</p>
+     * <p>You can create clusters of the latest two Kubernetes versions in the ACK console. If you want to create clusters that run earlier Kubernetes versions, use the API. For more information about the Kubernetes versions supported by ACK, see [Release notes on Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).</p>
      */
     @NameInMap("kubernetes_version")
     public String kubernetesVersion;
@@ -367,7 +369,7 @@ public class CreateClusterRequest extends TeaModel {
     public String masterInstanceChargeType;
 
     /**
-     * <p>The instance types of master nodes. For more information, see [Overview of instance families](~~25378~~).</p>
+     * <p>The instance types of master nodes. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).</p>
      */
     @NameInMap("master_instance_types")
     public java.util.List<String> masterInstanceTypes;
@@ -403,7 +405,7 @@ public class CreateClusterRequest extends TeaModel {
     public String masterSystemDiskCategory;
 
     /**
-     * <p>The performance level (PL) of the system disk that you want to use for master nodes. This parameter takes effect only for ESSDs. For more information about the relationship between disk PLs and disk sizes, see [ESSDs](~~122389~~).</p>
+     * <p>The performance level (PL) of the system disk that you want to use for master nodes. This parameter takes effect only for ESSDs. For more information about the relationship between disk PLs and disk sizes, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).</p>
      */
     @NameInMap("master_system_disk_performance_level")
     public String masterSystemDiskPerformanceLevel;
@@ -434,6 +436,8 @@ public class CreateClusterRequest extends TeaModel {
      * <p>The name of the cluster.</p>
      * <br>
      * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("name")
     public String name;
@@ -573,6 +577,8 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which you want to deploy the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("region_id")
     public String regionId;
@@ -586,7 +592,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The container runtime. The default container runtime is Docker. containerd and Sandboxed-Container are also supported.</p>
      * <br>
-     * <p>For more information about how to select a proper container runtime, see [How to select between Docker and Sandboxed-Container](~~160313~~).</p>
+     * <p>For more information about how to select a proper container runtime, see [How to select between Docker and Sandboxed-Container](https://help.aliyun.com/document_detail/160313.html).</p>
      */
     @NameInMap("runtime")
     public Runtime runtime;
@@ -613,7 +619,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>Service accounts provide identities for pods when pods communicate with the `API server` of the cluster. `service-account-issuer` is the issuer of the `serviceaccount token`, which corresponds to the `iss` field in the `token payload`.</p>
      * <br>
-     * <p>For more information about `ServiceAccount`, see [Enable service account token volume projection](~~160384~~).</p>
+     * <p>For more information about `ServiceAccount`, see [Enable service account token volume projection](https://help.aliyun.com/document_detail/160384.html).</p>
      */
     @NameInMap("service_account_issuer")
     public String serviceAccountIssuer;
@@ -622,6 +628,8 @@ public class CreateClusterRequest extends TeaModel {
      * <p>The CIDR block of Services. Valid values: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The CIDR block of Services cannot overlap with the CIDR block of the VPC (10.1.0.0/21) or the CIDR blocks of existing clusters in the VPC. You cannot modify the CIDR block of Services after the cluster is created.</p>
      * <br>
      * <p>By default, the CIDR block of Services is set to 172.19.0.0/20.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("service_cidr")
     public String serviceCidr;
@@ -643,7 +651,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>*   `true`: automatically creates a NAT gateway and configures SNAT rules. Set this parameter to `true` if nodes and applications in the cluster need to access the Internet.</p>
      * <p>*   `false`: does not create a NAT gateway or configure SNAT rules. In this case, nodes and applications in the cluster cannot access the Internet.</p>
      * <br>
-     * <p>>  If this feature is disabled when you create the cluster, you can manually enable this feature after you create the cluster. For more information, see [Manually create a NAT gateway and configure SNAT rules](~~178480~~).</p>
+     * <p>>  If this feature is disabled when you create the cluster, you can manually enable this feature after you create the cluster. For more information, see [Manually create a NAT gateway and configure SNAT rules](https://help.aliyun.com/document_detail/178480.html).</p>
      * <br>
      * <p>Default value: `true`.</p>
      */
@@ -651,7 +659,7 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean snatEntry;
 
     /**
-     * <p>Specifies whether to enable reinforcement based on Multi-Level Protection Scheme (MLPS). For more information, see [ACK reinforcement based on classified protection](~~196148~~).</p>
+     * <p>Specifies whether to enable reinforcement based on Multi-Level Protection Scheme (MLPS). For more information, see [ACK reinforcement based on classified protection](https://help.aliyun.com/document_detail/196148.html).</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
@@ -717,12 +725,16 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The ID of the virtual private cloud (VPC) in which you want to deploy the cluster. This parameter is required.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("vpcid")
     public String vpcid;
 
     /**
      * <p>The vSwitches that are specified for nodes in the cluster. This parameter is required when you create an ACK managed cluster that does not contain nodes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("vswitch_ids")
     public java.util.List<String> vswitchIds;
@@ -795,7 +807,7 @@ public class CreateClusterRequest extends TeaModel {
     public String workerPeriodUnit;
 
     /**
-     * <p>The category of the system disks for worker nodes. For more information, see [Elastic Block Storage devices](~~63136~~).</p>
+     * <p>The category of the system disks for worker nodes. For more information, see [Elastic Block Storage devices](https://help.aliyun.com/document_detail/63136.html).</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
@@ -809,7 +821,7 @@ public class CreateClusterRequest extends TeaModel {
     public String workerSystemDiskCategory;
 
     /**
-     * <p>If the system disk is an ESSD, you can set the PL of the ESSD. For more information, see [ESSDs](~~122389~~).</p>
+     * <p>If the system disk is an ESSD, you can set the PL of the ESSD. For more information, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
@@ -1595,6 +1607,8 @@ public class CreateClusterRequest extends TeaModel {
     public static class CreateClusterRequestWorkerDataDisks extends TeaModel {
         /**
          * <p>The type of a data disk.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("category")
         public String category;
@@ -1611,13 +1625,15 @@ public class CreateClusterRequest extends TeaModel {
         public String encrypted;
 
         /**
-         * <p>The PL of the data disk. This parameter takes effect only for ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see [ESSDs](~~122389~~).</p>
+         * <p>The PL of the data disk. This parameter takes effect only for ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).</p>
          */
         @NameInMap("performance_level")
         public String performanceLevel;
 
         /**
          * <p>The size of the data disk. Valid values: 40 to 32767. Unit: GiB.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("size")
         public String size;
