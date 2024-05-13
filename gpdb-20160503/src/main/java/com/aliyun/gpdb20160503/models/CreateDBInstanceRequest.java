@@ -238,8 +238,6 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>The IP address whitelist of the instance.</p>
      * <br>
      * <p>A value of 127.0.0.1 specifies that no IP address is allowed for external access. You can call the [ModifySecurityIps](https://help.aliyun.com/document_detail/86928.html) operation to modify the IP address whitelist after you create an instance.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityIPList")
     public String securityIPList;
