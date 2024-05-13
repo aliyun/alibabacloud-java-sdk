@@ -26,7 +26,7 @@ public class ModifyPolicyInstanceRequest extends TeaModel {
     public java.util.List<String> namespaces;
 
     /**
-     * <p>The parameters of the policy instance. For more information, see [Predefined security policies of ACK](~~359819~~).</p>
+     * <p>The parameters of the policy instance. For more information, see [Predefined security policies of ACK](https://help.aliyun.com/document_detail/359819.html).</p>
      */
     @NameInMap("parameters")
     public java.util.Map<String, ?> parameters;

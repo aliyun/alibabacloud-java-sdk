@@ -118,6 +118,8 @@ public class StartWorkflowRequest extends TeaModel {
 
     /**
      * <p>The type of workflow. Valid values: wgs and mapping.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("workflow_type")
     public String workflowType;

@@ -17,6 +17,8 @@ public class ScaleOutClusterRequest extends TeaModel {
 
     /**
      * <p>The number of worker nodes that you want to add.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("count")
     public Long count;
@@ -33,19 +35,23 @@ public class ScaleOutClusterRequest extends TeaModel {
     public String cpuPolicy;
 
     /**
-     * <p>Specifies a custom image for nodes. By default, the image provided by Container Service for Kubernetes (ACK) is used. You can select a custom image to replace the default image. For more information, see [Custom images](~~146647~~).</p>
+     * <p>Specifies a custom image for nodes. By default, the image provided by Container Service for Kubernetes (ACK) is used. You can select a custom image to replace the default image. For more information, see [Custom images](https://help.aliyun.com/document_detail/146647.html).</p>
      */
     @NameInMap("image_id")
     public String imageId;
 
     /**
      * <p>The name of the key pair. You must set this parameter or the `login_password` parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("key_pair")
     public String keyPair;
 
     /**
      * <p>The password for SSH logon. You must set this parameter or the `key_pair` parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("login_password")
     public String loginPassword;
@@ -78,13 +84,15 @@ public class ScaleOutClusterRequest extends TeaModel {
     public java.util.List<Taint> taints;
 
     /**
-     * <p>The user data of the node pool. For more information, see [Generate user-defined data](~~49121~~).</p>
+     * <p>The user data of the node pool. For more information, see [Generate user-defined data](https://help.aliyun.com/document_detail/49121.html).</p>
      */
     @NameInMap("user_data")
     public String userData;
 
     /**
      * <p>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. We recommend that you select vSwitches in different zones to ensure high availability.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("vswitch_ids")
     public java.util.List<String> vswitchIds;
@@ -129,6 +137,8 @@ public class ScaleOutClusterRequest extends TeaModel {
 
     /**
      * <p>The instance configurations of worker nodes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("worker_instance_types")
     public java.util.List<String> workerInstanceTypes;
@@ -159,6 +169,8 @@ public class ScaleOutClusterRequest extends TeaModel {
      * <p>*   `cloud_essd`: enhanced SSD (ESSD).</p>
      * <br>
      * <p>Default value: `cloud_ssd`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("worker_system_disk_category")
     public String workerSystemDiskCategory;
@@ -169,6 +181,8 @@ public class ScaleOutClusterRequest extends TeaModel {
      * <p>Valid values: 40 to 500.</p>
      * <br>
      * <p>Default value: `120`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("worker_system_disk_size")
     public Long workerSystemDiskSize;

@@ -12,6 +12,8 @@ public class EdgeClusterAddEdgeMachineRequest extends TeaModel {
 
     /**
      * <p>The node pool ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("nodepool_id")
     public String nodepoolId;

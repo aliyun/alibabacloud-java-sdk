@@ -26,6 +26,8 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
     public static class UpgradeClusterAddonsRequestBody extends TeaModel {
         /**
          * <p>The name of the component.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("component_name")
         public String componentName;
@@ -38,6 +40,8 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
 
         /**
          * <p>The version to which the component can be updated. You can call the `DescribeClusterAddonsVersion` operation to query the version to which the component can be updated.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("next_version")
         public String nextVersion;

@@ -14,6 +14,8 @@ public class CreateTemplateRequest extends TeaModel {
      * <p>The name of the orchestration template.</p>
      * <br>
      * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). It cannot start with a hyphen (-).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("name")
     public String name;
@@ -26,6 +28,8 @@ public class CreateTemplateRequest extends TeaModel {
 
     /**
      * <p>The template content in the YAML format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("template")
     public String template;

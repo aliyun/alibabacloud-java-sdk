@@ -27,7 +27,7 @@ public class UpgradeClusterRequest extends TeaModel {
     public String nextVersion;
 
     /**
-     * <p>The current Kubernetes version of the cluster. For more information, see [Kubernetes versions](~~185269~~).</p>
+     * <p>The current Kubernetes version of the cluster. For more information, see [Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).</p>
      */
     @NameInMap("version")
     @Deprecated

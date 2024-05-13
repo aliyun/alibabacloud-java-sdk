@@ -73,7 +73,7 @@ public class DescribeUserPermissionResponse extends TeaModel {
          * <p>The type of predefined role. Valid values:</p>
          * <br>
          * <p>*   `admin`: administrator</p>
-         * <p>*   `ops`: O\&M engineer</p>
+         * <p>*   `ops`: O\\&M engineer</p>
          * <p>*   `dev`: developer</p>
          * <p>*   `restricted`: restricted user</p>
          * <p>*   `custom`: custom role</p>

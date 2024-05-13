@@ -295,7 +295,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public Boolean unschedulable;
 
         /**
-         * <p>The user data of the node pool. For more information, see [Generate user-defined data](~~49121~~).</p>
+         * <p>The user data of the node pool. For more information, see [Generate user-defined data](https://help.aliyun.com/document_detail/49121.html).</p>
          */
         @NameInMap("user_data")
         public String userData;
@@ -1028,7 +1028,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
          * <br>
          * <p>    **Note** `COST_OPTIMIZED` takes effect only when multiple instance types or preemptible instances are specified in the auto scaling conflagrations.</p>
          * <br>
-         * <p>*   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call the `RebalanceInstances` operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](~~71516~~).</p>
+         * <p>*   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call the `RebalanceInstances` operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](https://help.aliyun.com/document_detail/71516.html).</p>
          */
         @NameInMap("multi_az_policy")
         public String multiAzPolicy;
@@ -1167,7 +1167,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
          * <p>*   SpotWithPriceLimit: a preemptible instance that is configured with the highest bid price.</p>
          * <p>*   SpotAsPriceGo: a preemptible instance for which the system automatically bids based on the current market price.</p>
          * <br>
-         * <p>For more information, see [Preemptible instances](~~157759~~).</p>
+         * <p>For more information, see [Preemptible instances](https://help.aliyun.com/document_detail/157759.html).</p>
          */
         @NameInMap("spot_strategy")
         public String spotStrategy;
@@ -1177,7 +1177,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
          * <p>- `true`: enables the burst feature. </p>
          * <p>- `false`: disables the burst feature. </p>
          * <br>
-         * <p>This parameter is supported only when SystemDiskCategory is set to cloud_auto. For more information, see [ESSD AutoPL disks. ](~~368372~~)</p>
+         * <p>This parameter is supported only when SystemDiskCategory is set to cloud_auto. For more information, see [ESSD AutoPL disks. ](https://help.aliyun.com/document_detail/368372.html)</p>
          */
         @NameInMap("system_disk_bursting_enabled")
         public Boolean systemDiskBurstingEnabled;
@@ -1229,7 +1229,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         /**
          * <p>The predefined IOPS of a system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS} Baseline IOPS = min{1,800 + 50 × Capacity, 50,000} </p>
-         * <p>This parameter is supported only when SystemDiskCategory is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).</p>
+         * <p>This parameter is supported only when SystemDiskCategory is set to cloud_auto. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).</p>
          */
         @NameInMap("system_disk_provisioned_iops")
         public Long systemDiskProvisionedIops;

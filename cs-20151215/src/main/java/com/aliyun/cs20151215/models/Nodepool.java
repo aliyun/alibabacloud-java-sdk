@@ -141,6 +141,9 @@ public class Nodepool extends TeaModel {
         @Deprecated
         public String eipInternetChargeType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
@@ -148,9 +151,15 @@ public class Nodepool extends TeaModel {
         @Deprecated
         public Boolean isBondEip;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("max_instances")
         public Long maxInstances;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("min_instances")
         public Long minInstances;
 
@@ -301,9 +310,15 @@ public class Nodepool extends TeaModel {
         @NameInMap("node_name_mode")
         public String nodeNameMode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("runtime")
         public String runtime;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("runtime_version")
         public String runtimeVersion;
 
@@ -621,6 +636,9 @@ public class Nodepool extends TeaModel {
     }
 
     public static class NodepoolNodepoolInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -776,9 +794,15 @@ public class Nodepool extends TeaModel {
         @NameInMap("image_type")
         public String imageType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("instance_charge_type")
         public String instanceChargeType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
 
@@ -873,6 +897,9 @@ public class Nodepool extends TeaModel {
         @NameInMap("tags")
         public java.util.List<NodepoolScalingGroupTags> tags;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("vswitch_ids")
         public java.util.List<String> vswitchIds;
 
@@ -1212,6 +1239,9 @@ public class Nodepool extends TeaModel {
     }
 
     public static class NodepoolTeeConfig extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("tee_enable")
         public Boolean teeEnable;
 

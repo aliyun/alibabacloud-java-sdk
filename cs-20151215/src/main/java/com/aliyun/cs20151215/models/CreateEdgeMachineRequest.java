@@ -8,18 +8,24 @@ public class CreateEdgeMachineRequest extends TeaModel {
      * <p>The `hostname` of the cloud-native box.</p>
      * <br>
      * <p>>  After the cloud-native box is activated, the `hostname` is automatically modified. The `hostname` is prefixed with the model and the prefix is followed by a random string.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("hostname")
     public String hostname;
 
     /**
      * <p>The model of the cloud-native box.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("model")
     public String model;
 
     /**
      * <p>The serial number of the cloud-native box.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("sn")
     public String sn;

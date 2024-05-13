@@ -15,6 +15,8 @@ public class RunClusterCheckRequest extends TeaModel {
 
     /**
      * <p>The check method.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("type")
     public String type;

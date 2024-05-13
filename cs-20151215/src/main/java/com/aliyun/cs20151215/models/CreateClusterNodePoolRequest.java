@@ -836,6 +836,8 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     public static class CreateClusterNodePoolRequestNodepoolInfo extends TeaModel {
         /**
          * <p>The name of the node pool.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("name")
         public String name;
@@ -1077,12 +1079,16 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>*   `PostPaid`: the pay-as-you-go billing method.</p>
          * <br>
          * <p>Default value: `PostPaid`.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("instance_charge_type")
         public String instanceChargeType;
 
         /**
          * <p>The instance type of the nodes in the node pool.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
@@ -1130,7 +1136,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <br>
          * <p>    **Note** `COST_OPTIMIZED` is valid only when multiple instance types are specified or at least one preemptible instance type is specified.</p>
          * <br>
-         * <p>*   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call [RebalanceInstances](~~71516~~) of Auto Scaling to balance the instance distribution among zones.</p>
+         * <p>*   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call [RebalanceInstances](https://help.aliyun.com/document_detail/71516.html) of Auto Scaling to balance the instance distribution among zones.</p>
          * <br>
          * <p>Default value: `PRIORITY`.</p>
          */
@@ -1247,7 +1253,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>*   `SpotWithPriceLimit`: specifies the highest bid.</p>
          * <p>*   `SpotAsPriceGo`: automatically submits bids based on the up-to-date market price.</p>
          * <br>
-         * <p>For more information, see [Preemptible instances](~~165053~~).</p>
+         * <p>For more information, see [Preemptible instances](https://help.aliyun.com/document_detail/165053.html).</p>
          */
         @NameInMap("spot_strategy")
         public String spotStrategy;
@@ -1258,7 +1264,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>*   true: enables the burst feature.</p>
          * <p>*   false: disables the burst feature.</p>
          * <br>
-         * <p>This parameter is supported only when `SystemDiskCategory` is set to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).</p>
+         * <p>This parameter is supported only when `SystemDiskCategory` is set to `cloud_auto`. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).</p>
          */
         @NameInMap("system_disk_bursting_enabled")
         public Boolean systemDiskBurstingEnabled;
@@ -1301,7 +1307,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         /**
          * <p>The predefined IOPS of a system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
          * <br>
-         * <p>This parameter is supported only when `SystemDiskCategory` is set to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).</p>
+         * <p>This parameter is supported only when `SystemDiskCategory` is set to `cloud_auto`. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).</p>
          */
         @NameInMap("system_disk_provisioned_iops")
         public Long systemDiskProvisionedIops;
@@ -1326,6 +1332,8 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>The vSwitch IDs. Valid values: 1 to 8.</p>
          * <br>
          * <p>>  To ensure high availability, we recommend that you select vSwitches that reside in different zones.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("vswitch_ids")
         public java.util.List<String> vswitchIds;

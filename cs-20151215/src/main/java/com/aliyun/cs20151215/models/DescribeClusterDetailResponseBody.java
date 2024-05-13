@@ -37,7 +37,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String created;
 
     /**
-     * <p>The current Kubernetes version of the cluster. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).</p>
+     * <p>The current Kubernetes version of the cluster. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).</p>
      */
     @NameInMap("current_version")
     public String currentVersion;
@@ -168,7 +168,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
      * <br>
      * <p>The pod CIDR block cannot overlap with the CIDR block of the VPC or the CIDR blocks of the clusters in the VPC.</p>
      * <br>
-     * <p>For more information, see [Plan CIDR blocks for an ACK cluster](~~186964~~).</p>
+     * <p>For more information, see [Plan CIDR blocks for an ACK cluster](https://help.aliyun.com/document_detail/186964.html).</p>
      */
     @NameInMap("subnet_cidr")
     public String subnetCidr;

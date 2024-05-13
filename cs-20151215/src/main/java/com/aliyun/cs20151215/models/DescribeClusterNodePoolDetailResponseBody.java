@@ -422,7 +422,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean unschedulable;
 
         /**
-         * <p>The user data of the node pool. For more information, see [Generate user data](~~49121~~).</p>
+         * <p>The user data of the node pool. For more information, see [Generate user data](https://help.aliyun.com/document_detail/49121.html).</p>
          */
         @NameInMap("user_data")
         public String userData;
@@ -1116,7 +1116,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
          * <br>
          * <p>    **Note**The `COST_OPTIMIZED` setting takes effect only when multiple instance types are specified or at least one instance type is specified for preemptible instances.</p>
          * <br>
-         * <p>*   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call the RebalanceInstances operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](~~71516~~).</p>
+         * <p>*   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call the RebalanceInstances operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](https://help.aliyun.com/document_detail/71516.html).</p>
          * <br>
          * <p>Default value: `PRIORITY`.</p>
          */
@@ -1241,7 +1241,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
          * <p>*   SpotWithPriceLimit: a preemptible instance that is configured with the highest bid price.</p>
          * <p>*   SpotAsPriceGo: a preemptible instance for which the system automatically bids based on the current market price.</p>
          * <br>
-         * <p>For more information, see [Preemptible instances](~~157759~~).</p>
+         * <p>For more information, see [Preemptible instances](https://help.aliyun.com/document_detail/157759.html).</p>
          */
         @NameInMap("spot_strategy")
         public String spotStrategy;

@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSubaccountK8sClusterUserConfigResponseBody extends TeaModel {
     /**
-     * <p>The cluster kubeconfig file. For more information about the content of the kubeconfig file, see [Configure cluster credentials](~~86494~~).</p>
+     * <p>The cluster kubeconfig file. For more information about the content of the kubeconfig file, see [Configure cluster credentials](https://help.aliyun.com/document_detail/86494.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("config")
     public String config;

@@ -307,7 +307,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public Boolean unschedulable;
 
         /**
-         * <p>The user-defined data of the node pool. For more information, see [Prepare user data](~~49121~~).</p>
+         * <p>The user-defined data of the node pool. For more information, see [Prepare user data](https://help.aliyun.com/document_detail/49121.html).</p>
          */
         @NameInMap("user_data")
         public String userData;
@@ -931,7 +931,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
          * <br>
          * <p>    **Note** `COST_OPTIMIZED` is valid only when multiple instance types are specified or at least one preemptible instance type is specified.</p>
          * <br>
-         * <p>*   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to the insufficient inventory, you can call the `RebalanceInstances` operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](~~71516~~).</p>
+         * <p>*   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to the insufficient inventory, you can call the `RebalanceInstances` operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](https://help.aliyun.com/document_detail/71516.html).</p>
          * <br>
          * <p>Default value: `PRIORITY`.</p>
          */
@@ -1029,7 +1029,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
          * <p>*   `SpotWithPriceLimit`: specifies the highest bid for the preemptible instance.</p>
          * <p>*   `SpotAsPriceGo`: automatically submits bids based on the up-to-date market price.</p>
          * <br>
-         * <p>For more information, see [Preemptible instances](~~157759~~).</p>
+         * <p>For more information, see [Preemptible instances](https://help.aliyun.com/document_detail/157759.html).</p>
          */
         @NameInMap("spot_strategy")
         public String spotStrategy;
@@ -1076,7 +1076,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String systemDiskKmsKeyId;
 
         /**
-         * <p>The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for enhanced SSDs. You can specify a higher PL if you increase the size of the system disk. For more information, see [ESSDs](~~122389~~).</p>
+         * <p>The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for enhanced SSDs. You can specify a higher PL if you increase the size of the system disk. For more information, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).</p>
          */
         @NameInMap("system_disk_performance_level")
         public String systemDiskPerformanceLevel;

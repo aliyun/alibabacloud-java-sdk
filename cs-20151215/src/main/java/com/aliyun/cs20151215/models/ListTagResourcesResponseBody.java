@@ -59,7 +59,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the resource. For more information, see [Labels](~~110425~~).</p>
+         * <p>The type of the resource. For more information, see [Labels](https://help.aliyun.com/document_detail/110425.html).</p>
          */
         @NameInMap("resource_type")
         public String resourceType;

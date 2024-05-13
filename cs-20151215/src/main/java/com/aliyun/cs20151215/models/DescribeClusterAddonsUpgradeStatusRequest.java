@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeClusterAddonsUpgradeStatusRequest extends TeaModel {
     /**
      * <p>The list of component names.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("componentIds")
     public java.util.List<String> componentIds;
