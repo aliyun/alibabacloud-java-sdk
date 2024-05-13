@@ -13,9 +13,15 @@ public class BlindTransferRequest extends TeaModel {
     @NameInMap("DeviceId")
     public String deviceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
@@ -40,6 +46,9 @@ public class BlindTransferRequest extends TeaModel {
     @NameInMap("TimeoutSeconds")
     public Integer timeoutSeconds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Transferee")
     public String transferee;
 

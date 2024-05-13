@@ -7,6 +7,9 @@ public class ChangeWorkModeRequest extends TeaModel {
     @NameInMap("DeviceId")
     public String deviceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -19,6 +22,9 @@ public class ChangeWorkModeRequest extends TeaModel {
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkMode")
     public String workMode;
 

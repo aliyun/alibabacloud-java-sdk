@@ -4,12 +4,21 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class AddSkillGroupsToUserRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SkillLevelList")
     public String skillLevelList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

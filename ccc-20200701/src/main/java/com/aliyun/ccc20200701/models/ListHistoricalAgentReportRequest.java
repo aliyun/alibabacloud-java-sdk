@@ -7,15 +7,24 @@ public class ListHistoricalAgentReportRequest extends TeaModel {
     @NameInMap("AgentIdList")
     public String agentIdList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("MediaType")
     public String mediaType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

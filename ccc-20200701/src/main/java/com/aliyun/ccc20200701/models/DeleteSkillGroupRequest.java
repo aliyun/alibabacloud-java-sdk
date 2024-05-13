@@ -7,9 +7,15 @@ public class DeleteSkillGroupRequest extends TeaModel {
     @NameInMap("Force")
     public Boolean force;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 

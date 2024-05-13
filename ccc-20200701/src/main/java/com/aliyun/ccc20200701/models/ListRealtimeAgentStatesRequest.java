@@ -13,15 +13,24 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     @NameInMap("CallTypeList")
     public String callTypeList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("OutboundScenario")
     public Boolean outboundScenario;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

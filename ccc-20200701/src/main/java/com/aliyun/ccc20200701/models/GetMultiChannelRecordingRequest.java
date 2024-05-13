@@ -4,9 +4,15 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetMultiChannelRecordingRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContactId")
     public String contactId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -7,6 +7,9 @@ public class GetLoginDetailsRequest extends TeaModel {
     @NameInMap("ChatDeviceId")
     public String chatDeviceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

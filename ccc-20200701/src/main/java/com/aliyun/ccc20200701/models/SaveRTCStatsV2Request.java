@@ -4,21 +4,39 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class SaveRTCStatsV2Request extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CallId")
     public String callId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GeneralInfo")
     public String generalInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GoogAddress")
     public String googAddress;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ReceiverReport")
     public String receiverReport;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SenderReport")
     public String senderReport;
 

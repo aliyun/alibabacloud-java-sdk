@@ -10,15 +10,24 @@ public class ListCampaignsRequest extends TeaModel {
     @NameInMap("ActualStartTimeTo")
     public String actualStartTimeTo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

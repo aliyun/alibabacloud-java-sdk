@@ -10,15 +10,27 @@ public class CreateUserRequest extends TeaModel {
     @NameInMap("DisplayId")
     public String displayId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LoginName")
     public String loginName;
 
@@ -31,6 +43,9 @@ public class CreateUserRequest extends TeaModel {
     @NameInMap("ResetPassword")
     public Boolean resetPassword;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RoleId")
     public String roleId;
 

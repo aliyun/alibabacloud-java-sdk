@@ -7,12 +7,21 @@ public class ModifyPhoneNumberRequest extends TeaModel {
     @NameInMap("ContactFlowId")
     public String contactFlowId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Number")
     public String number;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Usage")
     public String usage;
 

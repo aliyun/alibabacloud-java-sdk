@@ -16,6 +16,9 @@ public class ModifyUserRequest extends TeaModel {
     @NameInMap("Force")
     public Boolean force;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -28,9 +31,15 @@ public class ModifyUserRequest extends TeaModel {
     @NameInMap("RoleId")
     public String roleId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkMode")
     public String workMode;
 

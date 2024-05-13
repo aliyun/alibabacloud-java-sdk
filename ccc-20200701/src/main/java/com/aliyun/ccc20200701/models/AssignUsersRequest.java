@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class AssignUsersRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RamIdList")
     public String ramIdList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RoleId")
     public String roleId;
 
     @NameInMap("SkillLevelList")
     public String skillLevelList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkMode")
     public String workMode;
 

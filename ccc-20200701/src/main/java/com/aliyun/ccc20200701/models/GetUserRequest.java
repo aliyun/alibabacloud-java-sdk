@@ -7,6 +7,9 @@ public class GetUserRequest extends TeaModel {
     @NameInMap("Extension")
     public String extension;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
