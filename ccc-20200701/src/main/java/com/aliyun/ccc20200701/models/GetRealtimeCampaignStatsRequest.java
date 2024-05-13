@@ -4,9 +4,15 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetRealtimeCampaignStatsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QueueId")
     public String queueId;
 

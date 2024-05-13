@@ -4,12 +4,21 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class DiscardEditingContactFlowRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContactFlowId")
     public String contactFlowId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DraftId")
     public String draftId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

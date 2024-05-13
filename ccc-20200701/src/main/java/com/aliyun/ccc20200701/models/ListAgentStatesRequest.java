@@ -10,6 +10,9 @@ public class ListAgentStatesRequest extends TeaModel {
     @NameInMap("ExcludeOfflineUsers")
     public Boolean excludeOfflineUsers;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

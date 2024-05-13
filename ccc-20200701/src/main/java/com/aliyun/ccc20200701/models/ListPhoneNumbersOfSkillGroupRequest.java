@@ -7,21 +7,36 @@ public class ListPhoneNumbersOfSkillGroupRequest extends TeaModel {
     @NameInMap("Active")
     public Boolean active;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IsMember")
     public Boolean isMember;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("SearchPattern")
     public String searchPattern;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 

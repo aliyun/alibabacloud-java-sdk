@@ -7,15 +7,27 @@ public class StartBack2BackCallRequest extends TeaModel {
     @NameInMap("AdditionalBroker")
     public String additionalBroker;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Broker")
     public String broker;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Callee")
     public String callee;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Caller")
     public String caller;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

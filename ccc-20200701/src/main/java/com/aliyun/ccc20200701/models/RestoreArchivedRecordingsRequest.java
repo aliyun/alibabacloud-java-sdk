@@ -7,6 +7,9 @@ public class RestoreArchivedRecordingsRequest extends TeaModel {
     @NameInMap("ContactIds")
     public String contactIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -7,6 +7,9 @@ public class ImportDoNotCallNumbersRequest extends TeaModel {
     @NameInMap("FilePath")
     public String filePath;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

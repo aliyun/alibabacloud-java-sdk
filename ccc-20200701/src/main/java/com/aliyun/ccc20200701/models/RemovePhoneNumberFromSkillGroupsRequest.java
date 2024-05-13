@@ -4,12 +4,21 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class RemovePhoneNumberFromSkillGroupsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Number")
     public String number;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SkillGroupIdList")
     public String skillGroupIdList;
 

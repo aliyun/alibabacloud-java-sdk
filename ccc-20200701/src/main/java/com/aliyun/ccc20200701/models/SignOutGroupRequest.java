@@ -7,6 +7,9 @@ public class SignOutGroupRequest extends TeaModel {
     @NameInMap("DeviceId")
     public String deviceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

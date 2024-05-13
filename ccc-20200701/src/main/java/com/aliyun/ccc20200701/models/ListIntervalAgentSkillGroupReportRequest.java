@@ -4,18 +4,27 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListIntervalAgentSkillGroupReportRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AgentId")
     public String agentId;
 
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("Interval")
     public String interval;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 

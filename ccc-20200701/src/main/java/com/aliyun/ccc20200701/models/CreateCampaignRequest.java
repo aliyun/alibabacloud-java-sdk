@@ -4,6 +4,9 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class CreateCampaignRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CallableTime")
     public String callableTime;
 
@@ -13,27 +16,48 @@ public class CreateCampaignRequest extends TeaModel {
     @NameInMap("CaseList")
     public java.util.List<CreateCampaignRequestCaseList> caseList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContactFlowId")
     public String contactFlowId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("ExecutingUntilTimeout")
     public Boolean executingUntilTimeout;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MaxAttemptCount")
     public Long maxAttemptCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MinAttemptInterval")
     public Long minAttemptInterval;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QueueId")
     public String queueId;
 
@@ -43,12 +67,21 @@ public class CreateCampaignRequest extends TeaModel {
     @NameInMap("SimulationParameters")
     public String simulationParameters;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StrategyParameters")
     public String strategyParameters;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StrategyType")
     public String strategyType;
 

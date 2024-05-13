@@ -7,6 +7,9 @@ public class UpdateCampaignRequest extends TeaModel {
     @NameInMap("CallableTime")
     public String callableTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CampaignId")
     public String campaignId;
 
@@ -16,6 +19,9 @@ public class UpdateCampaignRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

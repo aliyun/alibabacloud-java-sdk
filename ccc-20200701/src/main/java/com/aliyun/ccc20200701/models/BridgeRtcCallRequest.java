@@ -4,15 +4,24 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class BridgeRtcCallRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Callee")
     public String callee;
 
     @NameInMap("Caller")
     public String caller;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

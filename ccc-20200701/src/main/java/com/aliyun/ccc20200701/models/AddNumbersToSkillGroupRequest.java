@@ -7,12 +7,18 @@ public class AddNumbersToSkillGroupRequest extends TeaModel {
     @NameInMap("InstNumberGroupIdList")
     public String instNumberGroupIdList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("NumberList")
     public String numberList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 

@@ -7,6 +7,9 @@ public class ListAgentSummaryReportsSinceMidnightRequest extends TeaModel {
     @NameInMap("AgentIds")
     public String agentIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
