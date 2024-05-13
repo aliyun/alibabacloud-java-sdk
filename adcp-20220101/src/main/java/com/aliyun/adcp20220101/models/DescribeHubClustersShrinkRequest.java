@@ -3,7 +3,7 @@ package com.aliyun.adcp20220101.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeHubClustersRequest extends TeaModel {
+public class DescribeHubClustersShrinkRequest extends TeaModel {
     /**
      * <p>The configurations of the cluster.</p>
      */
@@ -17,14 +17,14 @@ public class DescribeHubClustersRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("Tag")
-    public java.util.List<Tag> tag;
+    public String tagShrink;
 
-    public static DescribeHubClustersRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeHubClustersRequest self = new DescribeHubClustersRequest();
+    public static DescribeHubClustersShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeHubClustersShrinkRequest self = new DescribeHubClustersShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeHubClustersRequest setProfile(String profile) {
+    public DescribeHubClustersShrinkRequest setProfile(String profile) {
         this.profile = profile;
         return this;
     }
@@ -32,7 +32,7 @@ public class DescribeHubClustersRequest extends TeaModel {
         return this.profile;
     }
 
-    public DescribeHubClustersRequest setResourceGroupId(String resourceGroupId) {
+    public DescribeHubClustersShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -40,12 +40,12 @@ public class DescribeHubClustersRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public DescribeHubClustersRequest setTag(java.util.List<Tag> tag) {
-        this.tag = tag;
+    public DescribeHubClustersShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
         return this;
     }
-    public java.util.List<Tag> getTag() {
-        return this.tag;
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
 }

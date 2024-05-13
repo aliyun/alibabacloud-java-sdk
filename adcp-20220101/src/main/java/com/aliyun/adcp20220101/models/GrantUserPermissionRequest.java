@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GrantUserPermissionRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -27,6 +29,8 @@ public class GrantUserPermissionRequest extends TeaModel {
      * <br>
      * <p>*   admin: the administrator role.</p>
      * <p>*   dev: the developer role.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RoleName")
     public String roleName;
@@ -36,12 +40,16 @@ public class GrantUserPermissionRequest extends TeaModel {
      * <br>
      * <p>*   cluster: specifies that the permissions are scoped to a master instance.</p>
      * <p>*   namespace: specifies that the permissions are scoped to a namespace of a cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RoleType")
     public String roleType;
 
     /**
      * <p>The ID of the RAM user or RAM role.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;

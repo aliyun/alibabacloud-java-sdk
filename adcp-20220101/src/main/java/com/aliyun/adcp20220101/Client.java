@@ -51,6 +51,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * @summary You can search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
+     *
+     * @param request AttachClusterToHubRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachClusterToHubResponse
+     */
     public AttachClusterToHubResponse attachClusterToHubWithOptions(AttachClusterToHubRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -85,13 +92,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachClusterToHubResponse());
     }
 
+    /**
+     * @summary You can search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
+     *
+     * @param request AttachClusterToHubRequest
+     * @return AttachClusterToHubResponse
+     */
     public AttachClusterToHubResponse attachClusterToHub(AttachClusterToHubRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachClusterToHubWithOptions(request, runtime);
     }
 
-    public CreateHubClusterResponse createHubClusterWithOptions(CreateHubClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    /**
+     * @summary 更新资源组
+     *
+     * @param request ChangeResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChangeResourceGroupResponse
+     */
+    public ChangeResourceGroupResponse changeResourceGroupWithOptions(ChangeResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.newResourceGroupId)) {
+            query.put("NewResourceGroupId", request.newResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChangeResourceGroup"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
+    }
+
+    /**
+     * @summary 更新资源组
+     *
+     * @param request ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
+    public ChangeResourceGroupResponse changeResourceGroup(ChangeResourceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.changeResourceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * @summary Creates a master instance in Alibaba Cloud Distributed Cloud Container Platform (ACK One).
+     *
+     * @param tmpReq CreateHubClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateHubClusterResponse
+     */
+    public CreateHubClusterResponse createHubClusterWithOptions(CreateHubClusterRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateHubClusterShrinkRequest request = new CreateHubClusterShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.apiServerPublicEip)) {
             body.put("ApiServerPublicEip", request.apiServerPublicEip);
@@ -142,6 +223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -158,11 +240,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateHubClusterResponse());
     }
 
+    /**
+     * @summary Creates a master instance in Alibaba Cloud Distributed Cloud Container Platform (ACK One).
+     *
+     * @param request CreateHubClusterRequest
+     * @return CreateHubClusterResponse
+     */
     public CreateHubClusterResponse createHubCluster(CreateHubClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createHubClusterWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Deletes a master cluster in Alibaba Cloud Distributed Cloud Container Platform (ACK One).
+     *
+     * @param tmpReq DeleteHubClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteHubClusterResponse
+     */
     public DeleteHubClusterResponse deleteHubClusterWithOptions(DeleteHubClusterRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DeleteHubClusterShrinkRequest request = new DeleteHubClusterShrinkRequest();
@@ -201,11 +296,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteHubClusterResponse());
     }
 
+    /**
+     * @summary Deletes a master cluster in Alibaba Cloud Distributed Cloud Container Platform (ACK One).
+     *
+     * @param request DeleteHubClusterRequest
+     * @return DeleteHubClusterResponse
+     */
     public DeleteHubClusterResponse deleteHubCluster(DeleteHubClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteHubClusterWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Deletes a policy for associated clusters.
+     *
+     * @param tmpReq DeletePolicyInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePolicyInstanceResponse
+     */
     public DeletePolicyInstanceResponse deletePolicyInstanceWithOptions(DeletePolicyInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DeletePolicyInstanceShrinkRequest request = new DeletePolicyInstanceShrinkRequest();
@@ -244,11 +352,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePolicyInstanceResponse());
     }
 
+    /**
+     * @summary Deletes a policy for associated clusters.
+     *
+     * @param request DeletePolicyInstanceRequest
+     * @return DeletePolicyInstanceResponse
+     */
     public DeletePolicyInstanceResponse deletePolicyInstance(DeletePolicyInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletePolicyInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Deletes the role-based access control (RBAC) permissions of a RAM user.
+     *
+     * @param request DeleteUserPermissionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteUserPermissionResponse
+     */
     public DeleteUserPermissionResponse deleteUserPermissionWithOptions(DeleteUserPermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -277,11 +398,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteUserPermissionResponse());
     }
 
+    /**
+     * @summary Deletes the role-based access control (RBAC) permissions of a RAM user.
+     *
+     * @param request DeleteUserPermissionRequest
+     * @return DeleteUserPermissionResponse
+     */
     public DeleteUserPermissionResponse deleteUserPermission(DeleteUserPermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteUserPermissionWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Deploys a policy instance in the clusters that are associated with a master instance.
+     *
+     * @param tmpReq DeployPolicyInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeployPolicyInstanceResponse
+     */
     public DeployPolicyInstanceResponse deployPolicyInstanceWithOptions(DeployPolicyInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DeployPolicyInstanceShrinkRequest request = new DeployPolicyInstanceShrinkRequest();
@@ -332,11 +466,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeployPolicyInstanceResponse());
     }
 
+    /**
+     * @summary Deploys a policy instance in the clusters that are associated with a master instance.
+     *
+     * @param request DeployPolicyInstanceRequest
+     * @return DeployPolicyInstanceResponse
+     */
     public DeployPolicyInstanceResponse deployPolicyInstance(DeployPolicyInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deployPolicyInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the details of a master instance in Alibaba Cloud Distributed Cloud Container Platform (ACK One).
+     *
+     * @param request DescribeHubClusterDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHubClusterDetailsResponse
+     */
     public DescribeHubClusterDetailsResponse describeHubClusterDetailsWithOptions(DescribeHubClusterDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -361,11 +508,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHubClusterDetailsResponse());
     }
 
+    /**
+     * @summary Queries the details of a master instance in Alibaba Cloud Distributed Cloud Container Platform (ACK One).
+     *
+     * @param request DescribeHubClusterDetailsRequest
+     * @return DescribeHubClusterDetailsResponse
+     */
     public DescribeHubClusterDetailsResponse describeHubClusterDetails(DescribeHubClusterDetailsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeHubClusterDetailsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the kubeconfig file of a master instance.
+     *
+     * @param request DescribeHubClusterKubeconfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHubClusterKubeconfigResponse
+     */
     public DescribeHubClusterKubeconfigResponse describeHubClusterKubeconfigWithOptions(DescribeHubClusterKubeconfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -394,11 +554,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHubClusterKubeconfigResponse());
     }
 
+    /**
+     * @summary Queries the kubeconfig file of a master instance.
+     *
+     * @param request DescribeHubClusterKubeconfigRequest
+     * @return DescribeHubClusterKubeconfigResponse
+     */
     public DescribeHubClusterKubeconfigResponse describeHubClusterKubeconfig(DescribeHubClusterKubeconfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeHubClusterKubeconfigWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查查HUB集群日志
+     *
+     * @param request DescribeHubClusterLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHubClusterLogsResponse
+     */
     public DescribeHubClusterLogsResponse describeHubClusterLogsWithOptions(DescribeHubClusterLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -423,13 +596,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHubClusterLogsResponse());
     }
 
+    /**
+     * @summary 查查HUB集群日志
+     *
+     * @param request DescribeHubClusterLogsRequest
+     * @return DescribeHubClusterLogsResponse
+     */
     public DescribeHubClusterLogsResponse describeHubClusterLogs(DescribeHubClusterLogsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeHubClusterLogsWithOptions(request, runtime);
     }
 
-    public DescribeHubClustersResponse describeHubClustersWithOptions(DescribeHubClustersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    /**
+     * @summary Queries the Distributed Cloud Container Platform for Kubernetes (ACK One) clusters that are created by the current user.
+     *
+     * @param tmpReq DescribeHubClustersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHubClustersResponse
+     */
+    public DescribeHubClustersResponse describeHubClustersWithOptions(DescribeHubClustersRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeHubClustersShrinkRequest request = new DescribeHubClustersShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.profile)) {
             query.put("Profile", request.profile);
@@ -437,6 +629,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -456,11 +652,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHubClustersResponse());
     }
 
+    /**
+     * @summary Queries the Distributed Cloud Container Platform for Kubernetes (ACK One) clusters that are created by the current user.
+     *
+     * @param request DescribeHubClustersRequest
+     * @return DescribeHubClustersResponse
+     */
     public DescribeHubClustersResponse describeHubClusters(DescribeHubClustersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeHubClustersWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Alibaba Cloud CLI allows you to search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
+     *
+     * @param request DescribeManagedClustersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeManagedClustersResponse
+     */
     public DescribeManagedClustersResponse describeManagedClustersWithOptions(DescribeManagedClustersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -485,11 +694,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeManagedClustersResponse());
     }
 
+    /**
+     * @summary Alibaba Cloud CLI allows you to search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
+     *
+     * @param request DescribeManagedClustersRequest
+     * @return DescribeManagedClustersResponse
+     */
     public DescribeManagedClustersResponse describeManagedClusters(DescribeManagedClustersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeManagedClustersWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries a list of policies.
+     *
+     * @param request DescribePoliciesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePoliciesResponse
+     */
     public DescribePoliciesResponse describePoliciesWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -506,11 +728,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePoliciesResponse());
     }
 
+    /**
+     * @summary Queries a list of policies.
+     *
+     * @return DescribePoliciesResponse
+     */
     public DescribePoliciesResponse describePolicies() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePoliciesWithOptions(runtime);
     }
 
+    /**
+     * @summary Queries detailed information about a policy.
+     *
+     * @param request DescribePolicyDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolicyDetailsResponse
+     */
     public DescribePolicyDetailsResponse describePolicyDetailsWithOptions(DescribePolicyDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -535,11 +769,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolicyDetailsResponse());
     }
 
+    /**
+     * @summary Queries detailed information about a policy.
+     *
+     * @param request DescribePolicyDetailsRequest
+     * @return DescribePolicyDetailsResponse
+     */
     public DescribePolicyDetailsResponse describePolicyDetails(DescribePolicyDetailsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePolicyDetailsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries detailed information about the policies used by the clusters that are associated with a master instance.
+     *
+     * @param request DescribePolicyGovernanceInClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolicyGovernanceInClusterResponse
+     */
     public DescribePolicyGovernanceInClusterResponse describePolicyGovernanceInClusterWithOptions(DescribePolicyGovernanceInClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -564,11 +811,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolicyGovernanceInClusterResponse());
     }
 
+    /**
+     * @summary Queries detailed information about the policies used by the clusters that are associated with a master instance.
+     *
+     * @param request DescribePolicyGovernanceInClusterRequest
+     * @return DescribePolicyGovernanceInClusterResponse
+     */
     public DescribePolicyGovernanceInClusterResponse describePolicyGovernanceInCluster(DescribePolicyGovernanceInClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePolicyGovernanceInClusterWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries policy instances that are deployed in the clusters associated with a master instance.
+     *
+     * @param request DescribePolicyInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolicyInstancesResponse
+     */
     public DescribePolicyInstancesResponse describePolicyInstancesWithOptions(DescribePolicyInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -597,11 +857,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolicyInstancesResponse());
     }
 
+    /**
+     * @summary Queries policy instances that are deployed in the clusters associated with a master instance.
+     *
+     * @param request DescribePolicyInstancesRequest
+     * @return DescribePolicyInstancesResponse
+     */
     public DescribePolicyInstancesResponse describePolicyInstances(DescribePolicyInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePolicyInstancesWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries detailed information about policy instances that are deployed in the clusters associated with a master instance.
+     *
+     * @param request DescribePolicyInstancesStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolicyInstancesStatusResponse
+     */
     public DescribePolicyInstancesStatusResponse describePolicyInstancesStatusWithOptions(DescribePolicyInstancesStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -626,11 +899,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolicyInstancesStatusResponse());
     }
 
+    /**
+     * @summary Queries detailed information about policy instances that are deployed in the clusters associated with a master instance.
+     *
+     * @param request DescribePolicyInstancesStatusRequest
+     * @return DescribePolicyInstancesStatusResponse
+     */
     public DescribePolicyInstancesStatusResponse describePolicyInstancesStatus(DescribePolicyInstancesStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePolicyInstancesStatusWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查询地域列表
+     *
+     * @param request DescribeRegionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRegionsResponse
+     */
     public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -651,11 +937,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
     }
 
+    /**
+     * @summary 查询地域列表
+     *
+     * @param request DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRegionsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Query the permissions of a Resource Access Management (RAM) user.
+     *
+     * @param request DescribeUserPermissionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeUserPermissionsResponse
+     */
     public DescribeUserPermissionsResponse describeUserPermissionsWithOptions(DescribeUserPermissionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -680,11 +979,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserPermissionsResponse());
     }
 
+    /**
+     * @summary Query the permissions of a Resource Access Management (RAM) user.
+     *
+     * @param request DescribeUserPermissionsRequest
+     * @return DescribeUserPermissionsResponse
+     */
     public DescribeUserPermissionsResponse describeUserPermissions(DescribeUserPermissionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeUserPermissionsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Alibaba Cloud CLI allows you to search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
+     *
+     * @param request DetachClusterFromHubRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetachClusterFromHubResponse
+     */
     public DetachClusterFromHubResponse detachClusterFromHubWithOptions(DetachClusterFromHubRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -719,11 +1031,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetachClusterFromHubResponse());
     }
 
+    /**
+     * @summary Alibaba Cloud CLI allows you to search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.
+     *
+     * @param request DetachClusterFromHubRequest
+     * @return DetachClusterFromHubResponse
+     */
     public DetachClusterFromHubResponse detachClusterFromHub(DetachClusterFromHubRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachClusterFromHubWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Schema of Response
+     *
+     * @param request GrantUserPermissionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GrantUserPermissionResponse
+     */
     public GrantUserPermissionResponse grantUserPermissionWithOptions(GrantUserPermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -768,17 +1093,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GrantUserPermissionResponse());
     }
 
+    /**
+     * @summary Schema of Response
+     *
+     * @param request GrantUserPermissionRequest
+     * @return GrantUserPermissionResponse
+     */
     public GrantUserPermissionResponse grantUserPermission(GrantUserPermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.grantUserPermissionWithOptions(request, runtime);
     }
 
     /**
-      * @deprecated : GrantUserPermissions is deprecated, please use adcp::2022-01-01::GrantUserPermission instead.
-      *
-      * @param tmpReq GrantUserPermissionsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GrantUserPermissionsResponse
+     * @deprecated OpenAPI GrantUserPermissions is deprecated, please use adcp::2022-01-01::GrantUserPermission instead.
+     *
+     * @summary Grant permissions to a Resource Access Management (RAM) user.
+     *
+     * @param tmpReq GrantUserPermissionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GrantUserPermissionsResponse
      */
     // Deprecated
     public GrantUserPermissionsResponse grantUserPermissionsWithOptions(GrantUserPermissionsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -816,10 +1149,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated : GrantUserPermissions is deprecated, please use adcp::2022-01-01::GrantUserPermission instead.
-      *
-      * @param request GrantUserPermissionsRequest
-      * @return GrantUserPermissionsResponse
+     * @deprecated OpenAPI GrantUserPermissions is deprecated, please use adcp::2022-01-01::GrantUserPermission instead.
+     *
+     * @summary Grant permissions to a Resource Access Management (RAM) user.
+     *
+     * @param request GrantUserPermissionsRequest
+     * @return GrantUserPermissionsResponse
      */
     // Deprecated
     public GrantUserPermissionsResponse grantUserPermissions(GrantUserPermissionsRequest request) throws Exception {
@@ -827,6 +1162,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.grantUserPermissionsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Updates the configurations of a Container Service for Kubernetes (ACK) cluster that serves as a master instance.
+     *
+     * @param tmpReq UpdateHubClusterFeatureRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateHubClusterFeatureResponse
+     */
     public UpdateHubClusterFeatureResponse updateHubClusterFeatureWithOptions(UpdateHubClusterFeatureRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateHubClusterFeatureShrinkRequest request = new UpdateHubClusterFeatureShrinkRequest();
@@ -929,11 +1271,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateHubClusterFeatureResponse());
     }
 
+    /**
+     * @summary Updates the configurations of a Container Service for Kubernetes (ACK) cluster that serves as a master instance.
+     *
+     * @param request UpdateHubClusterFeatureRequest
+     * @return UpdateHubClusterFeatureResponse
+     */
     public UpdateHubClusterFeatureResponse updateHubClusterFeature(UpdateHubClusterFeatureRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateHubClusterFeatureWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Updates the role-based access control (RBAC) permissions of a RAM user.
+     *
+     * @param request UpdateUserPermissionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateUserPermissionResponse
+     */
     public UpdateUserPermissionResponse updateUserPermissionWithOptions(UpdateUserPermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -974,6 +1329,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateUserPermissionResponse());
     }
 
+    /**
+     * @summary Updates the role-based access control (RBAC) permissions of a RAM user.
+     *
+     * @param request UpdateUserPermissionRequest
+     * @return UpdateUserPermissionResponse
+     */
     public UpdateUserPermissionResponse updateUserPermission(UpdateUserPermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateUserPermissionWithOptions(request, runtime);

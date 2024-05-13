@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteHubClusterRequest extends TeaModel {
     /**
      * <p>The ID of the master instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

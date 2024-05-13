@@ -12,6 +12,8 @@ public class GrantUserPermissionsShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the RAM user.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;

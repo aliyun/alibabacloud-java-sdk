@@ -90,6 +90,36 @@ public class DescribeHubClustersResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeHubClustersResponseBodyClustersClusterInfoTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeHubClustersResponseBodyClustersClusterInfoTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHubClustersResponseBodyClustersClusterInfoTags self = new DescribeHubClustersResponseBodyClustersClusterInfoTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHubClustersResponseBodyClustersClusterInfoTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeHubClustersResponseBodyClustersClusterInfoTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeHubClustersResponseBodyClustersClusterInfo extends TeaModel {
         /**
          * <p>The cluster ID.</p>
@@ -154,6 +184,9 @@ public class DescribeHubClustersResponseBody extends TeaModel {
          */
         @NameInMap("State")
         public String state;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeHubClustersResponseBodyClustersClusterInfoTags> tags;
 
         /**
          * <p>The time when the cluster was last updated.</p>
@@ -242,6 +275,14 @@ public class DescribeHubClustersResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public DescribeHubClustersResponseBodyClustersClusterInfo setTags(java.util.List<DescribeHubClustersResponseBodyClustersClusterInfoTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeHubClustersResponseBodyClustersClusterInfoTags> getTags() {
+            return this.tags;
         }
 
         public DescribeHubClustersResponseBodyClustersClusterInfo setUpdateTime(String updateTime) {
