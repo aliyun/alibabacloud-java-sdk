@@ -4,6 +4,9 @@ package com.aliyun.eduembed20240101.models;
 import com.aliyun.tea.*;
 
 public class PageListLabReservationsRequest extends TeaModel {
+    @NameInMap("AccountId")
+    public Long accountId;
+
     @NameInMap("Page")
     public Long page;
 
@@ -13,6 +16,14 @@ public class PageListLabReservationsRequest extends TeaModel {
     public static PageListLabReservationsRequest build(java.util.Map<String, ?> map) throws Exception {
         PageListLabReservationsRequest self = new PageListLabReservationsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PageListLabReservationsRequest setAccountId(Long accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    public Long getAccountId() {
+        return this.accountId;
     }
 
     public PageListLabReservationsRequest setPage(Long page) {

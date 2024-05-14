@@ -65,12 +65,40 @@ public class DescribeLabReservationResponseBody extends TeaModel {
     }
 
     public static class DescribeLabReservationResponseBodyLabReservation extends TeaModel {
+        @NameInMap("AccountId")
+        public Long accountId;
+
+        @NameInMap("EndTime")
+        public String endTime;
+
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("MemberCount")
+        public Long memberCount;
+
+        @NameInMap("StartTime")
+        public String startTime;
 
         public static DescribeLabReservationResponseBodyLabReservation build(java.util.Map<String, ?> map) throws Exception {
             DescribeLabReservationResponseBodyLabReservation self = new DescribeLabReservationResponseBodyLabReservation();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLabReservationResponseBodyLabReservation setAccountId(Long accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public Long getAccountId() {
+            return this.accountId;
+        }
+
+        public DescribeLabReservationResponseBodyLabReservation setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public DescribeLabReservationResponseBodyLabReservation setId(String id) {
@@ -79,6 +107,22 @@ public class DescribeLabReservationResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public DescribeLabReservationResponseBodyLabReservation setMemberCount(Long memberCount) {
+            this.memberCount = memberCount;
+            return this;
+        }
+        public Long getMemberCount() {
+            return this.memberCount;
+        }
+
+        public DescribeLabReservationResponseBodyLabReservation setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
     }

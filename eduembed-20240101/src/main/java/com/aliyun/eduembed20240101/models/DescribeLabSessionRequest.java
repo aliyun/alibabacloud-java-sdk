@@ -4,12 +4,21 @@ package com.aliyun.eduembed20240101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLabSessionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountId")
     public Long accountId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LabSessionId")
     public String labSessionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RamAccountId")
     public Long ramAccountId;
 

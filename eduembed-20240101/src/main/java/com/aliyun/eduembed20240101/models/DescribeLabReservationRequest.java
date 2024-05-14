@@ -4,12 +4,26 @@ package com.aliyun.eduembed20240101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLabReservationRequest extends TeaModel {
+    @NameInMap("AccountId")
+    public Long accountId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LabReservationId")
     public String labReservationId;
 
     public static DescribeLabReservationRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLabReservationRequest self = new DescribeLabReservationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLabReservationRequest setAccountId(Long accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    public Long getAccountId() {
+        return this.accountId;
     }
 
     public DescribeLabReservationRequest setLabReservationId(String labReservationId) {
