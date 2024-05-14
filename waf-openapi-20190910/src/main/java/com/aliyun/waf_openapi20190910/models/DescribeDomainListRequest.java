@@ -10,6 +10,9 @@ public class DescribeDomainListRequest extends TeaModel {
     @NameInMap("DomainNames")
     public java.util.List<String> domainNames;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -21,6 +24,9 @@ public class DescribeDomainListRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -76,6 +82,14 @@ public class DescribeDomainListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeDomainListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeDomainListRequest setResourceGroupId(String resourceGroupId) {

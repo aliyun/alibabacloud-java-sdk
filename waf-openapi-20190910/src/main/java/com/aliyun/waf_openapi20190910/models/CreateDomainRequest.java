@@ -22,6 +22,9 @@ public class CreateDomainRequest extends TeaModel {
     @NameInMap("ConnectionTime")
     public Integer connectionTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
@@ -40,14 +43,29 @@ public class CreateDomainRequest extends TeaModel {
     @NameInMap("HttpsRedirect")
     public Integer httpsRedirect;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("IpFollowStatus")
     public Integer ipFollowStatus;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IsAccessProduct")
     public Integer isAccessProduct;
+
+    @NameInMap("Keepalive")
+    public Boolean keepalive;
+
+    @NameInMap("KeepaliveRequests")
+    public Integer keepaliveRequests;
+
+    @NameInMap("KeepaliveTimeout")
+    public Integer keepaliveTimeout;
 
     @NameInMap("LoadBalancing")
     public Integer loadBalancing;
@@ -58,8 +76,14 @@ public class CreateDomainRequest extends TeaModel {
     @NameInMap("ReadTime")
     public Integer readTime;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("Retry")
+    public Boolean retry;
 
     @NameInMap("SniHost")
     public String sniHost;
@@ -198,6 +222,30 @@ public class CreateDomainRequest extends TeaModel {
         return this.isAccessProduct;
     }
 
+    public CreateDomainRequest setKeepalive(Boolean keepalive) {
+        this.keepalive = keepalive;
+        return this;
+    }
+    public Boolean getKeepalive() {
+        return this.keepalive;
+    }
+
+    public CreateDomainRequest setKeepaliveRequests(Integer keepaliveRequests) {
+        this.keepaliveRequests = keepaliveRequests;
+        return this;
+    }
+    public Integer getKeepaliveRequests() {
+        return this.keepaliveRequests;
+    }
+
+    public CreateDomainRequest setKeepaliveTimeout(Integer keepaliveTimeout) {
+        this.keepaliveTimeout = keepaliveTimeout;
+        return this;
+    }
+    public Integer getKeepaliveTimeout() {
+        return this.keepaliveTimeout;
+    }
+
     public CreateDomainRequest setLoadBalancing(Integer loadBalancing) {
         this.loadBalancing = loadBalancing;
         return this;
@@ -222,12 +270,28 @@ public class CreateDomainRequest extends TeaModel {
         return this.readTime;
     }
 
+    public CreateDomainRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public CreateDomainRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateDomainRequest setRetry(Boolean retry) {
+        this.retry = retry;
+        return this;
+    }
+    public Boolean getRetry() {
+        return this.retry;
     }
 
     public CreateDomainRequest setSniHost(String sniHost) {

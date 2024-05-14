@@ -7,17 +7,32 @@ public class CreateCertificateRequest extends TeaModel {
     @NameInMap("Certificate")
     public String certificate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CertificateName")
     public String certificateName;
 
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PrivateKey")
     public String privateKey;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     public static CreateCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCertificateRequest self = new CreateCertificateRequest();
@@ -62,6 +77,22 @@ public class CreateCertificateRequest extends TeaModel {
     }
     public String getPrivateKey() {
         return this.privateKey;
+    }
+
+    public CreateCertificateRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateCertificateRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

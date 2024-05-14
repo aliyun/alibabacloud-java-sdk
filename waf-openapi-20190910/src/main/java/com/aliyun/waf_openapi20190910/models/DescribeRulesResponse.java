@@ -3,7 +3,7 @@ package com.aliyun.waf_openapi20190910.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeWafSourceIpSegmentResponse extends TeaModel {
+public class DescribeRulesResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeWafSourceIpSegmentResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeWafSourceIpSegmentResponseBody body;
+    public DescribeRulesResponseBody body;
 
-    public static DescribeWafSourceIpSegmentResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeWafSourceIpSegmentResponse self = new DescribeWafSourceIpSegmentResponse();
+    public static DescribeRulesResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeRulesResponse self = new DescribeRulesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeWafSourceIpSegmentResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeRulesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeWafSourceIpSegmentResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeWafSourceIpSegmentResponse setStatusCode(Integer statusCode) {
+    public DescribeRulesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeWafSourceIpSegmentResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeWafSourceIpSegmentResponse setBody(DescribeWafSourceIpSegmentResponseBody body) {
+    public DescribeRulesResponse setBody(DescribeRulesResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeWafSourceIpSegmentResponseBody getBody() {
+    public DescribeRulesResponseBody getBody() {
         return this.body;
     }
 

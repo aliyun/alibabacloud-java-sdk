@@ -4,21 +4,45 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class ModifyProtectionRuleStatusRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DefenseType")
     public String defenseType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LockVersion")
     public Long lockVersion;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RuleStatus")
     public Integer ruleStatus;
 
@@ -57,6 +81,22 @@ public class ModifyProtectionRuleStatusRequest extends TeaModel {
     }
     public Long getLockVersion() {
         return this.lockVersion;
+    }
+
+    public ModifyProtectionRuleStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyProtectionRuleStatusRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ModifyProtectionRuleStatusRequest setRuleId(Long ruleId) {

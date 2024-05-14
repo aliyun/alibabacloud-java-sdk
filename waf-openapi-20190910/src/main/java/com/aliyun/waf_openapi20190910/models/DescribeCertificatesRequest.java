@@ -7,8 +7,17 @@ public class DescribeCertificatesRequest extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     public static DescribeCertificatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCertificatesRequest self = new DescribeCertificatesRequest();
@@ -29,6 +38,22 @@ public class DescribeCertificatesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeCertificatesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeCertificatesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyDomainIpv6StatusResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     public ModifyDomainIpv6StatusResponseBody body;
 
     public static ModifyDomainIpv6StatusResponse build(java.util.Map<String, ?> map) throws Exception {
@@ -23,6 +24,14 @@ public class ModifyDomainIpv6StatusResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public ModifyDomainIpv6StatusResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public ModifyDomainIpv6StatusResponse setBody(ModifyDomainIpv6StatusResponseBody body) {
