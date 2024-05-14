@@ -13,6 +13,9 @@ public class DescribeDomainBasicConfigsRequest extends TeaModel {
     @NameInMap("DomainKey")
     public String domainKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -21,6 +24,9 @@ public class DescribeDomainBasicConfigsRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -76,6 +82,14 @@ public class DescribeDomainBasicConfigsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeDomainBasicConfigsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeDomainBasicConfigsRequest setResourceGroupId(String resourceGroupId) {

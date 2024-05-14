@@ -4,14 +4,23 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class DescribeProtectionModuleCodeConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CodeType")
     public Integer codeType;
 
     @NameInMap("CodeValue")
     public Integer codeValue;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -43,6 +52,14 @@ public class DescribeProtectionModuleCodeConfigRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeProtectionModuleCodeConfigRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeProtectionModuleCodeConfigRequest setResourceGroupId(String resourceGroupId) {

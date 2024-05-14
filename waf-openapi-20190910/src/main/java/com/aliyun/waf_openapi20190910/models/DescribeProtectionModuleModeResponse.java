@@ -3,7 +3,7 @@ package com.aliyun.waf_openapi20190910.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeWafSourceIpSegmentResponse extends TeaModel {
+public class DescribeProtectionModuleModeResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeWafSourceIpSegmentResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeWafSourceIpSegmentResponseBody body;
+    public DescribeProtectionModuleModeResponseBody body;
 
-    public static DescribeWafSourceIpSegmentResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeWafSourceIpSegmentResponse self = new DescribeWafSourceIpSegmentResponse();
+    public static DescribeProtectionModuleModeResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeProtectionModuleModeResponse self = new DescribeProtectionModuleModeResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeWafSourceIpSegmentResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeProtectionModuleModeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeWafSourceIpSegmentResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeWafSourceIpSegmentResponse setStatusCode(Integer statusCode) {
+    public DescribeProtectionModuleModeResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeWafSourceIpSegmentResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeWafSourceIpSegmentResponse setBody(DescribeWafSourceIpSegmentResponseBody body) {
+    public DescribeProtectionModuleModeResponse setBody(DescribeProtectionModuleModeResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeWafSourceIpSegmentResponseBody getBody() {
+    public DescribeProtectionModuleModeResponseBody getBody() {
         return this.body;
     }
 

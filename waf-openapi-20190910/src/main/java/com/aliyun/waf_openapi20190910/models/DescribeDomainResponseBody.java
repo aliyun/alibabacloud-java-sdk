@@ -33,7 +33,7 @@ public class DescribeDomainResponseBody extends TeaModel {
 
     public static class DescribeDomainResponseBodyDomainCloudNativeInstancesProtocolPortConfigs extends TeaModel {
         @NameInMap("Ports")
-        public String ports;
+        public java.util.List<Integer> ports;
 
         @NameInMap("Protocol")
         public String protocol;
@@ -43,11 +43,11 @@ public class DescribeDomainResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDomainResponseBodyDomainCloudNativeInstancesProtocolPortConfigs setPorts(String ports) {
+        public DescribeDomainResponseBodyDomainCloudNativeInstancesProtocolPortConfigs setPorts(java.util.List<Integer> ports) {
             this.ports = ports;
             return this;
         }
-        public String getPorts() {
+        public java.util.List<Integer> getPorts() {
             return this.ports;
         }
 
@@ -66,7 +66,7 @@ public class DescribeDomainResponseBody extends TeaModel {
         public String cloudNativeProductName;
 
         @NameInMap("IPAddressList")
-        public String IPAddressList;
+        public java.util.List<String> IPAddressList;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -90,11 +90,11 @@ public class DescribeDomainResponseBody extends TeaModel {
             return this.cloudNativeProductName;
         }
 
-        public DescribeDomainResponseBodyDomainCloudNativeInstances setIPAddressList(String IPAddressList) {
+        public DescribeDomainResponseBodyDomainCloudNativeInstances setIPAddressList(java.util.List<String> IPAddressList) {
             this.IPAddressList = IPAddressList;
             return this;
         }
-        public String getIPAddressList() {
+        public java.util.List<String> getIPAddressList() {
             return this.IPAddressList;
         }
 
@@ -177,16 +177,16 @@ public class DescribeDomainResponseBody extends TeaModel {
         public Integer connectionTime;
 
         @NameInMap("Http2Port")
-        public java.util.List<String> http2Port;
+        public java.util.List<Integer> http2Port;
 
         @NameInMap("HttpPort")
-        public java.util.List<String> httpPort;
+        public java.util.List<Integer> httpPort;
 
         @NameInMap("HttpToUserIp")
         public Integer httpToUserIp;
 
         @NameInMap("HttpsPort")
-        public java.util.List<String> httpsPort;
+        public java.util.List<Integer> httpsPort;
 
         @NameInMap("HttpsRedirect")
         public Integer httpsRedirect;
@@ -196,6 +196,15 @@ public class DescribeDomainResponseBody extends TeaModel {
 
         @NameInMap("IsAccessProduct")
         public Integer isAccessProduct;
+
+        @NameInMap("Keepalive")
+        public Boolean keepalive;
+
+        @NameInMap("KeepaliveRequests")
+        public Integer keepaliveRequests;
+
+        @NameInMap("KeepaliveTimeout")
+        public Integer keepaliveTimeout;
 
         @NameInMap("LoadBalancing")
         public Integer loadBalancing;
@@ -208,6 +217,9 @@ public class DescribeDomainResponseBody extends TeaModel {
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("Retry")
+        public Boolean retry;
 
         @NameInMap("SniHost")
         public String sniHost;
@@ -285,19 +297,19 @@ public class DescribeDomainResponseBody extends TeaModel {
             return this.connectionTime;
         }
 
-        public DescribeDomainResponseBodyDomain setHttp2Port(java.util.List<String> http2Port) {
+        public DescribeDomainResponseBodyDomain setHttp2Port(java.util.List<Integer> http2Port) {
             this.http2Port = http2Port;
             return this;
         }
-        public java.util.List<String> getHttp2Port() {
+        public java.util.List<Integer> getHttp2Port() {
             return this.http2Port;
         }
 
-        public DescribeDomainResponseBodyDomain setHttpPort(java.util.List<String> httpPort) {
+        public DescribeDomainResponseBodyDomain setHttpPort(java.util.List<Integer> httpPort) {
             this.httpPort = httpPort;
             return this;
         }
-        public java.util.List<String> getHttpPort() {
+        public java.util.List<Integer> getHttpPort() {
             return this.httpPort;
         }
 
@@ -309,11 +321,11 @@ public class DescribeDomainResponseBody extends TeaModel {
             return this.httpToUserIp;
         }
 
-        public DescribeDomainResponseBodyDomain setHttpsPort(java.util.List<String> httpsPort) {
+        public DescribeDomainResponseBodyDomain setHttpsPort(java.util.List<Integer> httpsPort) {
             this.httpsPort = httpsPort;
             return this;
         }
-        public java.util.List<String> getHttpsPort() {
+        public java.util.List<Integer> getHttpsPort() {
             return this.httpsPort;
         }
 
@@ -339,6 +351,30 @@ public class DescribeDomainResponseBody extends TeaModel {
         }
         public Integer getIsAccessProduct() {
             return this.isAccessProduct;
+        }
+
+        public DescribeDomainResponseBodyDomain setKeepalive(Boolean keepalive) {
+            this.keepalive = keepalive;
+            return this;
+        }
+        public Boolean getKeepalive() {
+            return this.keepalive;
+        }
+
+        public DescribeDomainResponseBodyDomain setKeepaliveRequests(Integer keepaliveRequests) {
+            this.keepaliveRequests = keepaliveRequests;
+            return this;
+        }
+        public Integer getKeepaliveRequests() {
+            return this.keepaliveRequests;
+        }
+
+        public DescribeDomainResponseBodyDomain setKeepaliveTimeout(Integer keepaliveTimeout) {
+            this.keepaliveTimeout = keepaliveTimeout;
+            return this;
+        }
+        public Integer getKeepaliveTimeout() {
+            return this.keepaliveTimeout;
         }
 
         public DescribeDomainResponseBodyDomain setLoadBalancing(Integer loadBalancing) {
@@ -371,6 +407,14 @@ public class DescribeDomainResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeDomainResponseBodyDomain setRetry(Boolean retry) {
+            this.retry = retry;
+            return this;
+        }
+        public Boolean getRetry() {
+            return this.retry;
         }
 
         public DescribeDomainResponseBodyDomain setSniHost(String sniHost) {

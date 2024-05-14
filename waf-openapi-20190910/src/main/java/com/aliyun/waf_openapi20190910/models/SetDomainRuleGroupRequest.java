@@ -4,15 +4,27 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class SetDomainRuleGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Domains")
     public String domains;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RuleGroupId")
     public Long ruleGroupId;
 
@@ -41,6 +53,14 @@ public class SetDomainRuleGroupRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public SetDomainRuleGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SetDomainRuleGroupRequest setResourceGroupId(String resourceGroupId) {

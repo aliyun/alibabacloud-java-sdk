@@ -4,11 +4,20 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainAdvanceConfigsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainList")
     public String domainList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -32,6 +41,14 @@ public class DescribeDomainAdvanceConfigsRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeDomainAdvanceConfigsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeDomainAdvanceConfigsRequest setResourceGroupId(String resourceGroupId) {

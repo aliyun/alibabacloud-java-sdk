@@ -7,6 +7,9 @@ public class DescribeInstanceSpecInfoRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -21,6 +24,14 @@ public class DescribeInstanceSpecInfoRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeInstanceSpecInfoRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeInstanceSpecInfoRequest setResourceGroupId(String resourceGroupId) {

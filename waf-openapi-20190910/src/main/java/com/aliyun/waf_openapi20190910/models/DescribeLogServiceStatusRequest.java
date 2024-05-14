@@ -7,6 +7,9 @@ public class DescribeLogServiceStatusRequest extends TeaModel {
     @NameInMap("DomainNames")
     public java.util.List<String> domainNames;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -18,6 +21,9 @@ public class DescribeLogServiceStatusRequest extends TeaModel {
 
     @NameInMap("Region")
     public String region;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -65,6 +71,14 @@ public class DescribeLogServiceStatusRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public DescribeLogServiceStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeLogServiceStatusRequest setResourceGroupId(String resourceGroupId) {

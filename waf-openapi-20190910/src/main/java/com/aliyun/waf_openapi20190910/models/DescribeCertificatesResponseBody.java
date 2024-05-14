@@ -41,6 +41,9 @@ public class DescribeCertificatesResponseBody extends TeaModel {
         @NameInMap("CommonName")
         public String commonName;
 
+        @NameInMap("EndTime")
+        public Long endTime;
+
         @NameInMap("IsUsing")
         public Boolean isUsing;
 
@@ -74,6 +77,14 @@ public class DescribeCertificatesResponseBody extends TeaModel {
         }
         public String getCommonName() {
             return this.commonName;
+        }
+
+        public DescribeCertificatesResponseBodyCertificates setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
         }
 
         public DescribeCertificatesResponseBodyCertificates setIsUsing(Boolean isUsing) {
