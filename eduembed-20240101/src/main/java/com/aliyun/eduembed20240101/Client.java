@@ -26,6 +26,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * @summary 创建实验预约
+     *
+     * @param request CreateLabReservationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateLabReservationResponse
+     */
     public CreateLabReservationResponse createLabReservationWithOptions(CreateLabReservationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -66,11 +73,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLabReservationResponse());
     }
 
+    /**
+     * @summary 创建实验预约
+     *
+     * @param request CreateLabReservationRequest
+     * @return CreateLabReservationResponse
+     */
     public CreateLabReservationResponse createLabReservation(CreateLabReservationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createLabReservationWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 创建实验会话
+     *
+     * @param request CreateLabSessionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateLabSessionResponse
+     */
     public CreateLabSessionResponse createLabSessionWithOptions(CreateLabSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -103,11 +123,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLabSessionResponse());
     }
 
+    /**
+     * @summary 创建实验会话
+     *
+     * @param request CreateLabSessionRequest
+     * @return CreateLabSessionResponse
+     */
     public CreateLabSessionResponse createLabSession(CreateLabSessionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createLabSessionWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查看实验详情
+     *
+     * @param request DescribeLabRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLabResponse
+     */
     public DescribeLabResponse describeLabWithOptions(DescribeLabRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -128,11 +161,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLabResponse());
     }
 
+    /**
+     * @summary 查看实验详情
+     *
+     * @param request DescribeLabRequest
+     * @return DescribeLabResponse
+     */
     public DescribeLabResponse describeLab(DescribeLabRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeLabWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查询实验预约
+     *
+     * @param request DescribeLabReservationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLabReservationResponse
+     */
     public DescribeLabReservationResponse describeLabReservationWithOptions(DescribeLabReservationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -153,11 +199,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLabReservationResponse());
     }
 
+    /**
+     * @summary 查询实验预约
+     *
+     * @param request DescribeLabReservationRequest
+     * @return DescribeLabReservationResponse
+     */
     public DescribeLabReservationResponse describeLabReservation(DescribeLabReservationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeLabReservationWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查看实验会话信息
+     *
+     * @param request DescribeLabSessionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLabSessionResponse
+     */
     public DescribeLabSessionResponse describeLabSessionWithOptions(DescribeLabSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -178,11 +237,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLabSessionResponse());
     }
 
+    /**
+     * @summary 查看实验会话信息
+     *
+     * @param request DescribeLabSessionRequest
+     * @return DescribeLabSessionResponse
+     */
     public DescribeLabSessionResponse describeLabSession(DescribeLabSessionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeLabSessionWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 分页查询实验预约
+     *
+     * @param request PageListLabReservationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PageListLabReservationsResponse
+     */
     public PageListLabReservationsResponse pageListLabReservationsWithOptions(PageListLabReservationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -203,11 +275,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PageListLabReservationsResponse());
     }
 
+    /**
+     * @summary 分页查询实验预约
+     *
+     * @param request PageListLabReservationsRequest
+     * @return PageListLabReservationsResponse
+     */
     public PageListLabReservationsResponse pageListLabReservations(PageListLabReservationsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.pageListLabReservationsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 分页查询实验会话
+     *
+     * @param request PageListLabSessionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PageListLabSessionsResponse
+     */
     public PageListLabSessionsResponse pageListLabSessionsWithOptions(PageListLabSessionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -228,11 +313,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PageListLabSessionsResponse());
     }
 
+    /**
+     * @summary 分页查询实验会话
+     *
+     * @param request PageListLabSessionsRequest
+     * @return PageListLabSessionsResponse
+     */
     public PageListLabSessionsResponse pageListLabSessions(PageListLabSessionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.pageListLabSessionsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 分页查询实验
+     *
+     * @param request PageListLabsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PageListLabsResponse
+     */
     public PageListLabsResponse pageListLabsWithOptions(PageListLabsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -253,14 +351,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PageListLabsResponse());
     }
 
+    /**
+     * @summary 分页查询实验
+     *
+     * @param request PageListLabsRequest
+     * @return PageListLabsResponse
+     */
     public PageListLabsResponse pageListLabs(PageListLabsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.pageListLabsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 移除实验预约
+     *
+     * @param request RemoveLabReservationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveLabReservationResponse
+     */
     public RemoveLabReservationResponse removeLabReservationWithOptions(RemoveLabReservationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            body.put("AccountId", request.accountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.labReservationId)) {
             body.put("LabReservationId", request.labReservationId);
         }
@@ -282,6 +397,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveLabReservationResponse());
     }
 
+    /**
+     * @summary 移除实验预约
+     *
+     * @param request RemoveLabReservationRequest
+     * @return RemoveLabReservationResponse
+     */
     public RemoveLabReservationResponse removeLabReservation(RemoveLabReservationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeLabReservationWithOptions(request, runtime);

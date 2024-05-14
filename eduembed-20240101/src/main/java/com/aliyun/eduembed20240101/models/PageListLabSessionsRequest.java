@@ -4,6 +4,9 @@ package com.aliyun.eduembed20240101.models;
 import com.aliyun.tea.*;
 
 public class PageListLabSessionsRequest extends TeaModel {
+    @NameInMap("Finished")
+    public Boolean finished;
+
     @NameInMap("LabId")
     public Long labId;
 
@@ -19,6 +22,14 @@ public class PageListLabSessionsRequest extends TeaModel {
     public static PageListLabSessionsRequest build(java.util.Map<String, ?> map) throws Exception {
         PageListLabSessionsRequest self = new PageListLabSessionsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PageListLabSessionsRequest setFinished(Boolean finished) {
+        this.finished = finished;
+        return this;
+    }
+    public Boolean getFinished() {
+        return this.finished;
     }
 
     public PageListLabSessionsRequest setLabId(Long labId) {

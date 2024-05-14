@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>eduembed20240101</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>eduembed20240101</name>
   <description>Alibaba Cloud EduEmbed (20240101) SDK for Java
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.21</version>
+      <version>0.2.22</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
