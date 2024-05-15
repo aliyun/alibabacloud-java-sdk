@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ResetVpcFirewallRuleHitCountRequest extends TeaModel {
     /**
      * <p>The ID of the access control policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;

@@ -10,6 +10,8 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
      * <p>*   **accept**: allows the traffic.</p>
      * <p>*   **drop**: denies the traffic.</p>
      * <p>*   **log**: monitors the traffic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclAction")
     public String aclAction;
@@ -18,6 +20,8 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
      * <p>The UUID of the access control policy.</p>
      * <br>
      * <p>To modify the configurations of an access control policy, you must provide the UUID of the policy. You can call the DescribeNatFirewallControlPolicy operation to query the UUIDs of access control policies.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;
@@ -32,6 +36,8 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
      * <p>The description of the access control policy. Fuzzy match is supported.</p>
      * <br>
      * <p>> If you do not specify this parameter, the descriptions of all policies are queried.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -64,8 +70,10 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
      * <br>
      * <p>*   If **DestinationType** is set to net, the value of **Destination** is a CIDR block. Example: 1.2.3.4/24</p>
      * <p>*   If **DestinationType** is set to group, the value of **Destination** is an address book. Example: db_group</p>
-     * <p>*   If **DestinationType** is set to domain, the value of **Destination** is a domain name. Example: \*.aliyuncs.com</p>
-     * <p>*   If **DestinationType** is set to location, the value of **Destination** is a location. For more information about the location codes, see the "AddControlPolicy" topic. Example: \["BJ11", "ZB"]</p>
+     * <p>*   If **DestinationType** is set to domain, the value of **Destination** is a domain name. Example: \\*.aliyuncs.com</p>
+     * <p>*   If **DestinationType** is set to location, the value of **Destination** is a location. For more information about the location codes, see the "AddControlPolicy" topic. Example: ["BJ11", "ZB"]</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Destination")
     public String destination;
@@ -76,7 +84,9 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
      * <p>*   **net**: CIDR block</p>
      * <p>*   **group**: address book</p>
      * <p>*   **domain**: domain name</p>
-     * <p>*   **location**</p>
+     * <p>*   **location**: destination location</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationType")
     public String destinationType;
@@ -90,7 +100,7 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The domain name resolution method of the access control policy. By default, an access control policy is enabled after it is created. Valid values:</p>
+     * <p>The domain name resolution method of the access control policy. Valid values:</p>
      * <br>
      * <p>*   **0**: Fully qualified domain name (FQDN)-based resolution</p>
      * <p>*   **1**: Domain Name System (DNS)-based dynamic resolution</p>
@@ -118,6 +128,8 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The ID of the NAT gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
@@ -131,6 +143,8 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
      * <p>*   **ICMP**</p>
      * <br>
      * <p>> The value **ANY** indicates all types of protocols.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Proto")
     public String proto;
@@ -147,12 +161,12 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The days of a week or of a month on which the access control policy takes effect.</p>
      * <br>
-     * <p>*   If RepeatType is set to `Permanent`, `None`, or `Daily`, RepeatDays is left empty. Example: \[].</p>
-     * <p>*   If RepeatType is set to Weekly, RepeatDays must be specified. Example: \[0, 6].</p>
+     * <p>*   If RepeatType is set to `Permanent`, `None`, or `Daily`, RepeatDays is left empty. Example: [].</p>
+     * <p>*   If RepeatType is set to Weekly, RepeatDays must be specified. Example: [0, 6].</p>
      * <br>
      * <p>>  If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.</p>
      * <br>
-     * <p>*   If RepeatType is set to `Monthly`, RepeatDays must be specified. Example: \[1, 31].</p>
+     * <p>*   If RepeatType is set to `Monthly`, RepeatDays must be specified. Example: [1, 31].</p>
      * <br>
      * <p>>  If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.</p>
      */
@@ -192,6 +206,8 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
      * <br>
      * <p>*   If **SourceType** is set to `net`, the value of this parameter is a CIDR block. Example: 10.2.XX.XX/24.</p>
      * <p>*   If **SourceType** is set to `group`, the value of this parameter is an address book name. Example: db_group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Source")
     public String source;
@@ -201,6 +217,8 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
      * <br>
      * <p>*   **net**: CIDR block</p>
      * <p>*   **group**: address book</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceType")
     public String sourceType;

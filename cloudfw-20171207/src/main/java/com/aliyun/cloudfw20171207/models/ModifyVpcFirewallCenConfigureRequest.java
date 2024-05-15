@@ -22,13 +22,17 @@ public class ModifyVpcFirewallCenConfigureRequest extends TeaModel {
     /**
      * <p>The instance ID of the VPC firewall.</p>
      * <br>
-     * <p>> You can call the [DescribeVpcFirewallCenList](~~345777~~) operation to query the instance IDs of VPC firewalls.</p>
+     * <p>> You can call the [DescribeVpcFirewallCenList](https://help.aliyun.com/document_detail/345777.html) operation to query the instance IDs of VPC firewalls.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 
     /**
      * <p>The instance name of the VPC firewall.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcFirewallName")
     public String vpcFirewallName;

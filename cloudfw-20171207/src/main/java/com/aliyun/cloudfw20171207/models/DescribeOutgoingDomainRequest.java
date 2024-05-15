@@ -32,6 +32,8 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
 
     /**
      * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -79,6 +81,8 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -115,7 +119,7 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
      * <p>*   **Rogue**: rogue software</p>
      * <p>*   **Botnet**: botnet</p>
      * <p>*   **Suspicious**: suspicious website</p>
-     * <p>*   **C\&C**: command and control (C\&C)</p>
+     * <p>*   **C\\&C**: command and control (C\\&C)</p>
      * <p>*   **Gang**: gang</p>
      * <p>*   **CVE**: Common Vulnerabilities and Exposures (CVE)</p>
      * <p>*   **Backdoor**: webshell</p>

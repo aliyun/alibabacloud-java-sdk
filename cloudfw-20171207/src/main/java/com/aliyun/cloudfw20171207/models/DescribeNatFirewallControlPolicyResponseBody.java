@@ -119,7 +119,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
          * <p>*   If the value of **DestinationType** is **net**, the value of this parameter is a CIDR block. Example: 192.0.XX.XX/24.</p>
          * <p>*   If the value of **DestinationType** is **domain**, the value of this parameter is a domain name. Example: aliyuncs.com.</p>
          * <p>*   If the value of **DestinationType** is **group**, the value of this parameter is the name of an address book. Example: db_group.</p>
-         * <p>*   If the value of **DestinationType** is **location**, the value of this parameter is a location. For more information about location codes, see [AddControlPolicy](~~138867~~). Example: \["BJ11", "ZB"].</p>
+         * <p>*   If the value of **DestinationType** is **location**, the value of this parameter is a location. For more information about location codes, see [AddControlPolicy](https://help.aliyun.com/document_detail/138867.html). Example: ["BJ11", "ZB"].</p>
          */
         @NameInMap("Destination")
         public String destination;
@@ -235,12 +235,12 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         /**
          * <p>The days of a week or of a month on which the access control policy takes effect.</p>
          * <br>
-         * <p>*   If RepeatType is set to `Permanent`, `None`, or `Daily`, the value of this parameter is an empty array. Example: \[].</p>
-         * <p>*   If RepeatType is set to Weekly, this parameter must be specified. Example: \[0, 6].</p>
+         * <p>*   If RepeatType is set to `Permanent`, `None`, or `Daily`, the value of this parameter is an empty array. Example: [].</p>
+         * <p>*   If RepeatType is set to Weekly, this parameter must be specified. Example: [0, 6].</p>
          * <br>
          * <p>>  If RepeatType is set to Weekly, the fields in the value of this parameter cannot be repeated.</p>
          * <br>
-         * <p>*   If RepeatType is set to `Monthly`, this parameter must be specified. Example: \[1, 31].</p>
+         * <p>*   If RepeatType is set to `Monthly`, this parameter must be specified. Example: [1, 31].</p>
          * <br>
          * <p>>  If RepeatType is set to Monthly, the fields in the value of this parameter cannot be repeated.</p>
          */
@@ -280,7 +280,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
          * <br>
          * <p>*   If the value of **SourceType** is `net`, the value of this parameter is a CIDR block. Example: 192.0.XX.XX/24.</p>
          * <p>*   If the value of **SourceType** is `group`, the value of this parameter is the name of an address book. Example: db_group.</p>
-         * <p>*   If the value of **SourceType** is `location`, the value of this parameter is a location. For more information about location codes, see [AddControlPolicy](~~138867~~). Example: \["BJ11", "ZB"].</p>
+         * <p>*   If the value of **SourceType** is `location`, the value of this parameter is a location. For more information about location codes, see [AddControlPolicy](https://help.aliyun.com/document_detail/138867.html). Example: ["BJ11", "ZB"].</p>
          */
         @NameInMap("Source")
         public String source;

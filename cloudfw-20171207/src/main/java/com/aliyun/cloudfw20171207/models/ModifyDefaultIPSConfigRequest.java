@@ -7,9 +7,15 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
     @NameInMap("AiRules")
     public String aiRules;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BasicRules")
     public String basicRules;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CtiRules")
     public String ctiRules;
 
@@ -28,6 +34,9 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
     @NameInMap("RuleClass")
     public String ruleClass;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RunMode")
     public String runMode;
 

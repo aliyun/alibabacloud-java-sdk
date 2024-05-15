@@ -9,6 +9,8 @@ public class ModifyPolicyAdvancedConfigRequest extends TeaModel {
      * <br>
      * <p>*   **on**: enables the strict mode.</p>
      * <p>*   **off**: disables the strict mode.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InternetSwitch")
     public String internetSwitch;

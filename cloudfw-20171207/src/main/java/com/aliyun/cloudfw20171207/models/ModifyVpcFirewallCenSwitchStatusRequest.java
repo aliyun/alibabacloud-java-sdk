@@ -9,6 +9,8 @@ public class ModifyVpcFirewallCenSwitchStatusRequest extends TeaModel {
      * <br>
      * <p>*   **open**: yes</p>
      * <p>*   **close**: no</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FirewallSwitch")
     public String firewallSwitch;
@@ -31,7 +33,9 @@ public class ModifyVpcFirewallCenSwitchStatusRequest extends TeaModel {
     /**
      * <p>The instance ID of the VPC firewall.</p>
      * <br>
-     * <p>> You can call the [DescribeVpcFirewallCenList](~~345777~~) operation to query the instance IDs of VPC firewalls.</p>
+     * <p>> You can call the [DescribeVpcFirewallCenList](https://help.aliyun.com/document_detail/345777.html) operation to query the instance IDs of VPC firewalls.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;

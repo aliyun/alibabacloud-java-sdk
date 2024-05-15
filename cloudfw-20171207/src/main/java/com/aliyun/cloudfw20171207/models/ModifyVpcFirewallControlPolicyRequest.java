@@ -12,6 +12,8 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>*   **accept**: allows the traffic.</p>
      * <p>*   **drop**: blocks the traffic.</p>
      * <p>*   **log**: monitors the traffic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclAction")
     public String aclAction;
@@ -19,7 +21,9 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The unique ID of the access control policy.</p>
      * <br>
-     * <p>If you want to modify the configurations of an access control policy, you must provide the unique ID of the policy. You can call the [DescribeVpcFirewallControlPolicy](~~159758~~) operation to query the ID.</p>
+     * <p>If you want to modify the configurations of an access control policy, you must provide the unique ID of the policy. You can call the [DescribeVpcFirewallControlPolicy](https://help.aliyun.com/document_detail/159758.html) operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;
@@ -56,6 +60,8 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The description of the access control policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -94,7 +100,9 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
      * <br>
      * <p>*   If **DestinationType** is set to `domain`, the value of this parameter must be a domain name.</p>
      * <br>
-     * <p>    Example: \*.aliyuncs.com</p>
+     * <p>    Example: \\*.aliyuncs.com</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Destination")
     public String destination;
@@ -107,6 +115,8 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>*   **net**: CIDR block</p>
      * <p>*   **group**: address book</p>
      * <p>*   **domain**: domain name</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationType")
     public String destinationType;
@@ -139,6 +149,8 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>*   TCP</p>
      * <p>*   UDP</p>
      * <p>*   ICMP</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Proto")
     public String proto;
@@ -155,12 +167,12 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The days of a week or of a month on which the access control policy takes effect.</p>
      * <br>
-     * <p>*   If you set RepeatType to `Permanent`, `None`, or `Daily`, the value of this parameter is an empty array. Example: \[].</p>
-     * <p>*   If you set RepeatType to Weekly, you must specify this parameter. Example: \[0, 6].</p>
+     * <p>*   If you set RepeatType to `Permanent`, `None`, or `Daily`, the value of this parameter is an empty array. Example: [].</p>
+     * <p>*   If you set RepeatType to Weekly, you must specify this parameter. Example: [0, 6].</p>
      * <br>
      * <p>>  If you set RepeatType to Weekly, the fields in the value of this parameter cannot be repeated.</p>
      * <br>
-     * <p>*   If you set RepeatType to `Monthly`, you must specify this parameter. Example: \[1, 31].</p>
+     * <p>*   If you set RepeatType to `Monthly`, you must specify this parameter. Example: [1, 31].</p>
      * <br>
      * <p>>  If you set RepeatType to Monthly, the fields in the value of this parameter cannot be repeated.</p>
      */
@@ -207,6 +219,8 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>*   If **SourceType** is set to `group`, the value of this parameter must be an address book name.</p>
      * <br>
      * <p>    Example: db_group</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Source")
     public String source;
@@ -218,6 +232,8 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
      * <br>
      * <p>*   **net**: CIDR block</p>
      * <p>*   **group**: address book</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
@@ -231,15 +247,17 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The instance ID of the VPC firewall. You can call the [DescribeVpcFirewallAclGroupList](~~159760~~) operation to query the ID.</p>
+     * <p>The instance ID of the VPC firewall. You can call the [DescribeVpcFirewallAclGroupList](https://help.aliyun.com/document_detail/159760.html) operation to query the ID.</p>
      * <br>
      * <p>*   If the VPC firewall is used to protect a CEN instance, the value of this parameter must be the ID of the CEN instance.</p>
      * <br>
-     * <p>    Example: cen-ervw0g12b5jbw\*\*\*\*</p>
+     * <p>    Example: cen-ervw0g12b5jbw\\*\\*\\*\\*</p>
      * <br>
      * <p>*   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.</p>
      * <br>
-     * <p>    Example: vfw-a42bbb7b887148c9\*\*\*\*</p>
+     * <p>    Example: vfw-a42bbb7b887148c9\\*\\*\\*\\*</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;

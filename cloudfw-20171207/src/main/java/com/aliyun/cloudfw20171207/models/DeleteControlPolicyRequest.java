@@ -7,7 +7,9 @@ public class DeleteControlPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the access control policy.</p>
      * <br>
-     * <p>To delete an access control policy, you must provide the ID of the policy. You can call the [DescribeControlPolicy](~~138866~~) operation to query the ID.</p>
+     * <p>To delete an access control policy, you must provide the ID of the policy. You can call the [DescribeControlPolicy](https://help.aliyun.com/document_detail/138866.html) operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;
@@ -19,6 +21,8 @@ public class DeleteControlPolicyRequest extends TeaModel {
      * <br>
      * <p>*   **in**: inbound traffic</p>
      * <p>*   **out**: outbound traffic</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Direction")
     public String direction;

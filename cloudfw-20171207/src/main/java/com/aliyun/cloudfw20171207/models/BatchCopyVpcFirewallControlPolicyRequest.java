@@ -26,7 +26,9 @@ public class BatchCopyVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>*   If the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.</p>
      * <p>*   If the VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall.</p>
      * <br>
-     * <p>>  You can call the [DescribeVpcFirewallAclGroupList](~~159760~~) operation to query the IDs of policy groups.</p>
+     * <p>>  You can call the [DescribeVpcFirewallAclGroupList](https://help.aliyun.com/document_detail/159760.html) operation to query the IDs of policy groups.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceVpcFirewallId")
     public String sourceVpcFirewallId;
@@ -37,7 +39,9 @@ public class BatchCopyVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>*   If the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a CEN instance, the value of this parameter is the ID of the CEN instance. The network instance can be a VPC, a VBR, or a CCN instance.</p>
      * <p>*   If the VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall.</p>
      * <br>
-     * <p>>  You can call the [DescribeVpcFirewallAclGroupList](~~159760~~) operation to query the IDs of policy groups.</p>
+     * <p>>  You can call the [DescribeVpcFirewallAclGroupList](https://help.aliyun.com/document_detail/159760.html) operation to query the IDs of policy groups.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetVpcFirewallId")
     public String targetVpcFirewallId;

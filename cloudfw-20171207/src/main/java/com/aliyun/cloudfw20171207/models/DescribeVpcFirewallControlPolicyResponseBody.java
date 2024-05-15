@@ -238,12 +238,12 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         /**
          * <p>The days of a week or of a month on which the access control policy takes effect.</p>
          * <br>
-         * <p>*   If RepeatType is set to `Permanent`, `None`, or `Daily`, RepeatDays is left empty. Example: \[].</p>
-         * <p>*   If RepeatType is set to Weekly, RepeatDays must be specified. Example: \[0, 6].</p>
+         * <p>*   If RepeatType is set to `Permanent`, `None`, or `Daily`, RepeatDays is left empty. Example: [].</p>
+         * <p>*   If RepeatType is set to Weekly, RepeatDays must be specified. Example: [0, 6].</p>
          * <br>
          * <p>>  If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.</p>
          * <br>
-         * <p>*   If RepeatType is set to `Monthly`, RepeatDays must be specified. Example: \[1, 31].</p>
+         * <p>*   If RepeatType is set to `Monthly`, RepeatDays must be specified. Example: [1, 31].</p>
          * <br>
          * <p>>  If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.</p>
          */

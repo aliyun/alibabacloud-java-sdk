@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AddInstanceMembersRequest extends TeaModel {
     /**
      * <p>The members that you want to add to Cloud Firewall.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Members")
     public java.util.List<AddInstanceMembersRequestMembers> members;
@@ -32,6 +34,8 @@ public class AddInstanceMembersRequest extends TeaModel {
 
         /**
          * <p>The UID of member that you want to add to Cloud Firewall.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("MemberUid")
         public Long memberUid;

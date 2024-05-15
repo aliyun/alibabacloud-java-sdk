@@ -8,6 +8,8 @@ public class DeleteAddressBookRequest extends TeaModel {
      * <p>The ID of the address book.</p>
      * <br>
      * <p>To delete the address book, you must provide the ID of the address book. You can call the DescribeAddressBook operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupUuid")
     public String groupUuid;

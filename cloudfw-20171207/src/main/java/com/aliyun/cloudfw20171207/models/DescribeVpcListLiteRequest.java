@@ -16,7 +16,7 @@ public class DescribeVpcListLiteRequest extends TeaModel {
     /**
      * <p>The region ID of the VPC.</p>
      * <br>
-     * <p>>  For more information about Cloud Firewall supported regions, see [Supported regions](~~195657~~).</p>
+     * <p>>  For more information about Cloud Firewall supported regions, see [Supported regions](https://help.aliyun.com/document_detail/195657.html).</p>
      */
     @NameInMap("RegionNo")
     public String regionNo;

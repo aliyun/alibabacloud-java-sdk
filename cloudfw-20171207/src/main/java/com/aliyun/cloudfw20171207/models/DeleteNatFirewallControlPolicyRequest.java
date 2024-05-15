@@ -8,6 +8,8 @@ public class DeleteNatFirewallControlPolicyRequest extends TeaModel {
      * <p>The UUID of the access control policy.</p>
      * <br>
      * <p>To delete an access control policy, you must provide the ID of the policy. You can call the DescribeNatFirewallControlPolicy operation to query the UUIDs of access control policies.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;
@@ -18,6 +20,8 @@ public class DeleteNatFirewallControlPolicyRequest extends TeaModel {
      * <p>Valid values:</p>
      * <br>
      * <p>*   **out**: outbound traffic</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Direction")
     public String direction;
@@ -33,6 +37,8 @@ public class DeleteNatFirewallControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The ID of the NAT gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;

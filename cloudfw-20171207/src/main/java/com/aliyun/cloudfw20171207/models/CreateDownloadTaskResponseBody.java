@@ -13,11 +13,11 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
     /**
      * <p>The status of the task. Valid values:</p>
      * <br>
-     * <p>finish: You can query the task to obtain the download link of the file.</p>
+     * <p>finish: The task finished. You can query the task to obtain the download link of the file.</p>
      * <br>
-     * <p>start</p>
+     * <p>start: The task start.</p>
      * <br>
-     * <p>error</p>
+     * <p>error: An error occurred.</p>
      * <br>
      * <p>expire: The task file is invalid and cannot be downloaded.</p>
      */

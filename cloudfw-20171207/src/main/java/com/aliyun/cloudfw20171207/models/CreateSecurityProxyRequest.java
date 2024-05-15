@@ -10,21 +10,36 @@ public class CreateSecurityProxyRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NatRouteEntryList")
     public java.util.List<CreateSecurityProxyRequestNatRouteEntryList> natRouteEntryList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProxyName")
     public String proxyName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionNo")
     public String regionNo;
 
     @NameInMap("StrictMode")
     public Integer strictMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -131,15 +146,27 @@ public class CreateSecurityProxyRequest extends TeaModel {
     }
 
     public static class CreateSecurityProxyRequestNatRouteEntryList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("DestinationCidr")
         public String destinationCidr;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("NextHopId")
         public String nextHopId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("NextHopType")
         public String nextHopType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("RouteTableId")
         public String routeTableId;
 

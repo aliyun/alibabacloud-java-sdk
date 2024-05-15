@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -14,7 +16,9 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
      * <p>Specifies whether to enable the VPC firewall. Valid values:</p>
      * <br>
      * <p>*   **open**: After you create the VPC firewall, the VPC firewall is automatically enabled. This is the default value.</p>
-     * <p>*   **close**: After you create the VPC firewall, the VPC firewall is disabled. You can call the [ModifyVpcFirewallCenSwitchStatus](~~345780~~) operation to manually enable the VPC firewall.</p>
+     * <p>*   **close**: After you create the VPC firewall, the VPC firewall is disabled. You can call the [ModifyVpcFirewallCenSwitchStatus](https://help.aliyun.com/document_detail/345780.html) operation to manually enable the VPC firewall.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FirewallSwitch")
     public String firewallSwitch;
@@ -44,7 +48,7 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
      * <br>
      * <p>If you do not specify a value, a zone is automatically assigned for the vSwitch.</p>
      * <br>
-     * <p>>  This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region. For more information about zones that are supported by each region, see [Query zones](~~36064~~).</p>
+     * <p>>  This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region. For more information about zones that are supported by each region, see [Query zones](https://help.aliyun.com/document_detail/36064.html).</p>
      */
     @NameInMap("FirewallVpcZoneId")
     public String firewallVpcZoneId;
@@ -66,6 +70,8 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC for which you want to create the VPC firewall.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkInstanceId")
     public String networkInstanceId;
@@ -78,6 +84,8 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
 
     /**
      * <p>The instance name of the VPC firewall.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcFirewallName")
     public String vpcFirewallName;
@@ -85,7 +93,9 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     /**
      * <p>The ID of the region to which the VPC belongs.</p>
      * <br>
-     * <p>> For more information about the regions, see [Supported regions](~~195657~~).</p>
+     * <p>> For more information about the regions, see [Supported regions](https://help.aliyun.com/document_detail/195657.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcRegion")
     public String vpcRegion;

@@ -18,6 +18,8 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends TeaModel {
      * <br>
      * <p>*   **1**: user-defined</p>
      * <p>*   **2**: address book</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListType")
     public Long listType;
@@ -36,6 +38,8 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends TeaModel {
 
     /**
      * <p>The instance ID of the VPC firewall.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
@@ -45,6 +49,8 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends TeaModel {
      * <br>
      * <p>*   **1**: destination</p>
      * <p>*   **2**: source</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WhiteType")
     public Long whiteType;

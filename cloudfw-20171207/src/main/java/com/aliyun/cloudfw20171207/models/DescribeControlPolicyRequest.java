@@ -26,6 +26,8 @@ public class DescribeControlPolicyRequest extends TeaModel {
      * <p>The number of the page to return.</p>
      * <br>
      * <p>Default value: 1.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
@@ -56,6 +58,8 @@ public class DescribeControlPolicyRequest extends TeaModel {
      * <br>
      * <p>*   **in**: inbound traffic</p>
      * <p>*   **out**: outbound traffic</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Direction")
     public String direction;
@@ -80,6 +84,8 @@ public class DescribeControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
