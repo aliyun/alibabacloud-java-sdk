@@ -4,9 +4,15 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CacheSize")
     public Integer cacheSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
@@ -16,6 +22,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("ConnectionString")
     public String connectionString;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
@@ -25,12 +34,18 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -49,15 +64,23 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("UsedTime")
     public Integer usedTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>VPC ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
