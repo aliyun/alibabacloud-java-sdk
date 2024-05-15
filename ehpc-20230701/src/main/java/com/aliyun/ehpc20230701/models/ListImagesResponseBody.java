@@ -82,9 +82,15 @@ public class ListImagesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ImageType")
         public String imageType;
 

@@ -40,6 +40,9 @@ public class QueueTemplate extends TeaModel {
     @NameInMap("MinCount")
     public Integer minCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 

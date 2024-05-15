@@ -10,14 +10,17 @@ public class AddImageRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("ImageVersion")
+    public String imageVersion;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("VMImageSpec")
     public AddImageRequestVMImageSpec VMImageSpec;
-
-    @NameInMap("Version")
-    public String version;
 
     public static AddImageRequest build(java.util.Map<String, ?> map) throws Exception {
         AddImageRequest self = new AddImageRequest();
@@ -40,6 +43,14 @@ public class AddImageRequest extends TeaModel {
         return this.description;
     }
 
+    public AddImageRequest setImageVersion(String imageVersion) {
+        this.imageVersion = imageVersion;
+        return this;
+    }
+    public String getImageVersion() {
+        return this.imageVersion;
+    }
+
     public AddImageRequest setName(String name) {
         this.name = name;
         return this;
@@ -54,14 +65,6 @@ public class AddImageRequest extends TeaModel {
     }
     public AddImageRequestVMImageSpec getVMImageSpec() {
         return this.VMImageSpec;
-    }
-
-    public AddImageRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
     public static class AddImageRequestContainerImageSpecRegistryCredential extends TeaModel {

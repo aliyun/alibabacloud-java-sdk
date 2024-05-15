@@ -19,18 +19,30 @@ public class AddonNodeTemplate extends TeaModel {
     @NameInMap("EnableHT")
     public Boolean enableHT;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OsName")
     public String osName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OsNameEN")
     public String osNameEN;
 

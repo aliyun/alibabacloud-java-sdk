@@ -10,14 +10,17 @@ public class AddImageShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("ImageVersion")
+    public String imageVersion;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("VMImageSpec")
     public String VMImageSpecShrink;
-
-    @NameInMap("Version")
-    public String version;
 
     public static AddImageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         AddImageShrinkRequest self = new AddImageShrinkRequest();
@@ -40,6 +43,14 @@ public class AddImageShrinkRequest extends TeaModel {
         return this.description;
     }
 
+    public AddImageShrinkRequest setImageVersion(String imageVersion) {
+        this.imageVersion = imageVersion;
+        return this;
+    }
+    public String getImageVersion() {
+        return this.imageVersion;
+    }
+
     public AddImageShrinkRequest setName(String name) {
         this.name = name;
         return this;
@@ -54,14 +65,6 @@ public class AddImageShrinkRequest extends TeaModel {
     }
     public String getVMImageSpecShrink() {
         return this.VMImageSpecShrink;
-    }
-
-    public AddImageShrinkRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }
