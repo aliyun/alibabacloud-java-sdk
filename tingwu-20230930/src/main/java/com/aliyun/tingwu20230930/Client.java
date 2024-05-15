@@ -26,6 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * @summary 创建听悟任务
+     *
+     * @param request CreateTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTaskResponse
+     */
     public CreateTaskResponse createTaskWithOptions(CreateTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -69,12 +77,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTaskResponse());
     }
 
+    /**
+     * @summary 创建听悟任务
+     *
+     * @param request CreateTaskRequest
+     * @return CreateTaskResponse
+     */
     public CreateTaskResponse createTask(CreateTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createTaskWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 创建热词词表
+     *
+     * @param request CreateTranscriptionPhrasesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTranscriptionPhrasesResponse
+     */
     public CreateTranscriptionPhrasesResponse createTranscriptionPhrasesWithOptions(CreateTranscriptionPhrasesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -108,12 +130,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTranscriptionPhrasesResponse());
     }
 
+    /**
+     * @summary 创建热词词表
+     *
+     * @param request CreateTranscriptionPhrasesRequest
+     * @return CreateTranscriptionPhrasesResponse
+     */
     public CreateTranscriptionPhrasesResponse createTranscriptionPhrases(CreateTranscriptionPhrasesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createTranscriptionPhrasesWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 删除词表
+     *
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteTranscriptionPhrasesResponse
+     */
     public DeleteTranscriptionPhrasesResponse deleteTranscriptionPhrasesWithOptions(String PhraseId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -132,12 +167,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTranscriptionPhrasesResponse());
     }
 
+    /**
+     * @summary 删除词表
+     *
+     * @return DeleteTranscriptionPhrasesResponse
+     */
     public DeleteTranscriptionPhrasesResponse deleteTranscriptionPhrases(String PhraseId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteTranscriptionPhrasesWithOptions(PhraseId, headers, runtime);
     }
 
+    /**
+     * @summary 查询听悟任务信息
+     *
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTaskInfoResponse
+     */
     public GetTaskInfoResponse getTaskInfoWithOptions(String TaskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -156,12 +203,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTaskInfoResponse());
     }
 
+    /**
+     * @summary 查询听悟任务信息
+     *
+     * @return GetTaskInfoResponse
+     */
     public GetTaskInfoResponse getTaskInfo(String TaskId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getTaskInfoWithOptions(TaskId, headers, runtime);
     }
 
+    /**
+     * @summary 查询热词词表信息
+     *
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTranscriptionPhrasesResponse
+     */
     public GetTranscriptionPhrasesResponse getTranscriptionPhrasesWithOptions(String PhraseId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -180,12 +239,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTranscriptionPhrasesResponse());
     }
 
+    /**
+     * @summary 查询热词词表信息
+     *
+     * @return GetTranscriptionPhrasesResponse
+     */
     public GetTranscriptionPhrasesResponse getTranscriptionPhrases(String PhraseId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getTranscriptionPhrasesWithOptions(PhraseId, headers, runtime);
     }
 
+    /**
+     * @summary 列举用户所有热词词表信息
+     *
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTranscriptionPhrasesResponse
+     */
     public ListTranscriptionPhrasesResponse listTranscriptionPhrasesWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -204,12 +275,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTranscriptionPhrasesResponse());
     }
 
+    /**
+     * @summary 列举用户所有热词词表信息
+     *
+     * @return ListTranscriptionPhrasesResponse
+     */
     public ListTranscriptionPhrasesResponse listTranscriptionPhrases() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listTranscriptionPhrasesWithOptions(headers, runtime);
     }
 
+    /**
+     * @summary 更新热词词表
+     *
+     * @param request UpdateTranscriptionPhrasesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateTranscriptionPhrasesResponse
+     */
     public UpdateTranscriptionPhrasesResponse updateTranscriptionPhrasesWithOptions(String PhraseId, UpdateTranscriptionPhrasesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -243,6 +327,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTranscriptionPhrasesResponse());
     }
 
+    /**
+     * @summary 更新热词词表
+     *
+     * @param request UpdateTranscriptionPhrasesRequest
+     * @return UpdateTranscriptionPhrasesResponse
+     */
     public UpdateTranscriptionPhrasesResponse updateTranscriptionPhrases(String PhraseId, UpdateTranscriptionPhrasesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();

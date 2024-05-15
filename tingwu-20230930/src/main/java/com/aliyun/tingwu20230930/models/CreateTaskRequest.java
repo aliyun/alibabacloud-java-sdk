@@ -16,6 +16,9 @@ public class CreateTaskRequest extends TeaModel {
     @NameInMap("operation")
     public String operation;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("type")
     public String type;
 
@@ -80,6 +83,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("SampleRate")
         public Integer sampleRate;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("SourceLanguage")
         public String sourceLanguage;
 
@@ -156,6 +162,83 @@ public class CreateTaskRequest extends TeaModel {
         }
         public String getTaskKey() {
             return this.taskKey;
+        }
+
+    }
+
+    public static class CreateTaskRequestParametersCustomPromptContents extends TeaModel {
+        @NameInMap("Model")
+        public String model;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("Prompt")
+        public String prompt;
+
+        @NameInMap("TransType")
+        public String transType;
+
+        public static CreateTaskRequestParametersCustomPromptContents build(java.util.Map<String, ?> map) throws Exception {
+            CreateTaskRequestParametersCustomPromptContents self = new CreateTaskRequestParametersCustomPromptContents();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestParametersCustomPromptContents setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
+        }
+
+        public CreateTaskRequestParametersCustomPromptContents setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public CreateTaskRequestParametersCustomPromptContents setPrompt(String prompt) {
+            this.prompt = prompt;
+            return this;
+        }
+        public String getPrompt() {
+            return this.prompt;
+        }
+
+        public CreateTaskRequestParametersCustomPromptContents setTransType(String transType) {
+            this.transType = transType;
+            return this;
+        }
+        public String getTransType() {
+            return this.transType;
+        }
+
+    }
+
+    public static class CreateTaskRequestParametersCustomPrompt extends TeaModel {
+        @NameInMap("Contents")
+        public java.util.List<CreateTaskRequestParametersCustomPromptContents> contents;
+
+        public static CreateTaskRequestParametersCustomPrompt build(java.util.Map<String, ?> map) throws Exception {
+            CreateTaskRequestParametersCustomPrompt self = new CreateTaskRequestParametersCustomPrompt();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestParametersCustomPrompt setContents(java.util.List<CreateTaskRequestParametersCustomPromptContents> contents) {
+            this.contents = contents;
+            return this;
+        }
+        public java.util.List<CreateTaskRequestParametersCustomPromptContents> getContents() {
+            return this.contents;
         }
 
     }
@@ -407,6 +490,12 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("AutoChaptersEnabled")
         public Boolean autoChaptersEnabled;
 
+        @NameInMap("CustomPrompt")
+        public CreateTaskRequestParametersCustomPrompt customPrompt;
+
+        @NameInMap("CustomPromptEnabled")
+        public Boolean customPromptEnabled;
+
         @NameInMap("ExtraParams")
         public CreateTaskRequestParametersExtraParams extraParams;
 
@@ -451,6 +540,22 @@ public class CreateTaskRequest extends TeaModel {
         }
         public Boolean getAutoChaptersEnabled() {
             return this.autoChaptersEnabled;
+        }
+
+        public CreateTaskRequestParameters setCustomPrompt(CreateTaskRequestParametersCustomPrompt customPrompt) {
+            this.customPrompt = customPrompt;
+            return this;
+        }
+        public CreateTaskRequestParametersCustomPrompt getCustomPrompt() {
+            return this.customPrompt;
+        }
+
+        public CreateTaskRequestParameters setCustomPromptEnabled(Boolean customPromptEnabled) {
+            this.customPromptEnabled = customPromptEnabled;
+            return this;
+        }
+        public Boolean getCustomPromptEnabled() {
+            return this.customPromptEnabled;
         }
 
         public CreateTaskRequestParameters setExtraParams(CreateTaskRequestParametersExtraParams extraParams) {
