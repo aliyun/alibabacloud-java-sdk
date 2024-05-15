@@ -210,6 +210,9 @@ public class GetImageResponseBody extends TeaModel {
     }
 
     public static class GetImageResponseBodyImage extends TeaModel {
+        @NameInMap("AppId")
+        public String appId;
+
         @NameInMap("ContainerImageSpec")
         public GetImageResponseBodyImageContainerImageSpec containerImageSpec;
 
@@ -231,6 +234,9 @@ public class GetImageResponseBody extends TeaModel {
         @NameInMap("Size")
         public String size;
 
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("VMImageSpec")
         public GetImageResponseBodyImageVMImageSpec VMImageSpec;
 
@@ -240,6 +246,14 @@ public class GetImageResponseBody extends TeaModel {
         public static GetImageResponseBodyImage build(java.util.Map<String, ?> map) throws Exception {
             GetImageResponseBodyImage self = new GetImageResponseBodyImage();
             return TeaModel.build(map, self);
+        }
+
+        public GetImageResponseBodyImage setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
         }
 
         public GetImageResponseBodyImage setContainerImageSpec(GetImageResponseBodyImageContainerImageSpec containerImageSpec) {
@@ -288,6 +302,14 @@ public class GetImageResponseBody extends TeaModel {
         }
         public String getSize() {
             return this.size;
+        }
+
+        public GetImageResponseBodyImage setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public GetImageResponseBodyImage setVMImageSpec(GetImageResponseBodyImageVMImageSpec VMImageSpec) {

@@ -281,6 +281,9 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestTasksTaskSpecTaskExecutorContainer extends TeaModel {
+        @NameInMap("AppId")
+        public String appId;
+
         @NameInMap("Command")
         public java.util.List<String> command;
 
@@ -299,6 +302,14 @@ public class CreateJobRequest extends TeaModel {
         public static CreateJobRequestTasksTaskSpecTaskExecutorContainer build(java.util.Map<String, ?> map) throws Exception {
             CreateJobRequestTasksTaskSpecTaskExecutorContainer self = new CreateJobRequestTasksTaskSpecTaskExecutorContainer();
             return TeaModel.build(map, self);
+        }
+
+        public CreateJobRequestTasksTaskSpecTaskExecutorContainer setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
         }
 
         public CreateJobRequestTasksTaskSpecTaskExecutorContainer setCommand(java.util.List<String> command) {
@@ -336,6 +347,9 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestTasksTaskSpecTaskExecutorVM extends TeaModel {
+        @NameInMap("AppId")
+        public String appId;
+
         /**
          * <p>This parameter is required.</p>
          */
@@ -351,6 +365,14 @@ public class CreateJobRequest extends TeaModel {
         public static CreateJobRequestTasksTaskSpecTaskExecutorVM build(java.util.Map<String, ?> map) throws Exception {
             CreateJobRequestTasksTaskSpecTaskExecutorVM self = new CreateJobRequestTasksTaskSpecTaskExecutorVM();
             return TeaModel.build(map, self);
+        }
+
+        public CreateJobRequestTasksTaskSpecTaskExecutorVM setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
         }
 
         public CreateJobRequestTasksTaskSpecTaskExecutorVM setImage(String image) {

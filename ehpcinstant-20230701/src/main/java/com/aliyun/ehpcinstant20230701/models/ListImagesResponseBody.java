@@ -76,6 +76,12 @@ public class ListImagesResponseBody extends TeaModel {
     }
 
     public static class ListImagesResponseBodyImages extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("AppId")
+        public String appId;
+
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -103,6 +109,14 @@ public class ListImagesResponseBody extends TeaModel {
         public static ListImagesResponseBodyImages build(java.util.Map<String, ?> map) throws Exception {
             ListImagesResponseBodyImages self = new ListImagesResponseBodyImages();
             return TeaModel.build(map, self);
+        }
+
+        public ListImagesResponseBodyImages setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
         }
 
         public ListImagesResponseBodyImages setCreateTime(String createTime) {

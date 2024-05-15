@@ -340,8 +340,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetImageResponse getImageWithOptions(GetImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageCategory)) {
+            query.put("ImageCategory", request.imageCategory);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
             query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageType)) {
+            query.put("ImageType", request.imageType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -490,12 +498,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageCategory)) {
+            query.put("ImageCategory", request.imageCategory);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageIdsShrink)) {
             query.put("ImageIds", request.imageIdsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.imageNamesShrink)) {
             query.put("ImageNames", request.imageNamesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageType)) {
+            query.put("ImageType", request.imageType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {

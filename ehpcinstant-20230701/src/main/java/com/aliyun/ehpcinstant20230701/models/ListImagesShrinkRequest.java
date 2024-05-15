@@ -4,11 +4,17 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class ListImagesShrinkRequest extends TeaModel {
+    @NameInMap("ImageCategory")
+    public String imageCategory;
+
     @NameInMap("ImageIds")
     public String imageIdsShrink;
 
     @NameInMap("ImageNames")
     public String imageNamesShrink;
+
+    @NameInMap("ImageType")
+    public String imageType;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -19,6 +25,14 @@ public class ListImagesShrinkRequest extends TeaModel {
     public static ListImagesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListImagesShrinkRequest self = new ListImagesShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListImagesShrinkRequest setImageCategory(String imageCategory) {
+        this.imageCategory = imageCategory;
+        return this;
+    }
+    public String getImageCategory() {
+        return this.imageCategory;
     }
 
     public ListImagesShrinkRequest setImageIdsShrink(String imageIdsShrink) {
@@ -35,6 +49,14 @@ public class ListImagesShrinkRequest extends TeaModel {
     }
     public String getImageNamesShrink() {
         return this.imageNamesShrink;
+    }
+
+    public ListImagesShrinkRequest setImageType(String imageType) {
+        this.imageType = imageType;
+        return this;
+    }
+    public String getImageType() {
+        return this.imageType;
     }
 
     public ListImagesShrinkRequest setPageNumber(Long pageNumber) {
