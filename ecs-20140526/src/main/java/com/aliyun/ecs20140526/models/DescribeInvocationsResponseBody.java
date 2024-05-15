@@ -604,6 +604,15 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public DescribeInvocationsResponseBodyInvocationsInvocationTags tags;
 
         /**
+         * <p>Indicates how the task was stopped. Valid values:</p>
+         * <br>
+         * <p>*   Process: The process of the command was stopped.</p>
+         * <p>*   ProcessTree: The process tree was stopped. In this case, the process of the command and all subprocesses of the process were stopped.</p>
+         */
+        @NameInMap("TerminationMode")
+        public String terminationMode;
+
+        /**
          * <p>Indicates whether the command is to be automatically run.</p>
          */
         @NameInMap("Timed")
@@ -760,6 +769,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
         public DescribeInvocationsResponseBodyInvocationsInvocationTags getTags() {
             return this.tags;
+        }
+
+        public DescribeInvocationsResponseBodyInvocationsInvocation setTerminationMode(String terminationMode) {
+            this.terminationMode = terminationMode;
+            return this;
+        }
+        public String getTerminationMode() {
+            return this.terminationMode;
         }
 
         public DescribeInvocationsResponseBodyInvocationsInvocation setTimed(Boolean timed) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceRequest extends TeaModel {
     /**
-     * <p>The number of vCPUs of the instance type. For more information, see [Instance families](~~25378~~).</p>
+     * <p>The number of vCPUs of the instance type. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html).</p>
      * <br>
      * <p>The Cores parameter takes effect only when the DestinationResource parameter is set to InstanceType.</p>
      */
@@ -42,12 +42,14 @@ public class DescribeAvailableResourceRequest extends TeaModel {
      * <p>*   ddh: dedicated host.</p>
      * <br>
      * <p>For more information about how to configure the DestinationResource parameter, see the **Description** section of this topic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationResource")
     public String destinationResource;
 
     /**
-     * <p>The billing method of the resource. For more information, see [Billing overview](~~25398~~). Valid values:</p>
+     * <p>The billing method of the resource. For more information, see [Billing overview](https://help.aliyun.com/document_detail/25398.html). Valid values:</p>
      * <br>
      * <p>*   PrePaid: subscription.</p>
      * <p>*   PostPaid: pay-as-you-go.</p>
@@ -58,7 +60,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The instance types. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.</p>
+     * <p>The instance types. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html) or call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation to query the most recent instance type list.</p>
      * <br>
      * <p>For more information about how to configure the InstanceType parameter, see the **Description** section of this topic.</p>
      */
@@ -77,7 +79,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String ioOptimized;
 
     /**
-     * <p>The memory size of the instance type. Unit: GiB. For more information, see [Instance families](~~25378~~).</p>
+     * <p>The memory size of the instance type. Unit: GiB. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html).</p>
      * <br>
      * <p>The Memory parameter takes effect only when the DestinationResource parameter is set to InstanceType.</p>
      */
@@ -100,7 +102,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region for which to query resources. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region for which to query resources. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

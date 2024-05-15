@@ -37,6 +37,9 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     @NameInMap("OppositeInterfaceOwnerId")
     public String oppositeInterfaceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OppositeRegionId")
     public String oppositeRegionId;
 
@@ -58,6 +61,9 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -67,15 +73,27 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Role")
     public String role;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RouterId")
     public String routerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RouterType")
     public String routerType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Spec")
     public String spec;
 

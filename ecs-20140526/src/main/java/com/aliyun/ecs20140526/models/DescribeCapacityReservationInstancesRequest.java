@@ -31,6 +31,8 @@ public class DescribeCapacityReservationInstancesRequest extends TeaModel {
      * <p>Maximum value: 100.</p>
      * <br>
      * <p>Default value: 10.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -113,6 +115,8 @@ public class DescribeCapacityReservationInstancesRequest extends TeaModel {
     public static class DescribeCapacityReservationInstancesRequestPrivatePoolOptions extends TeaModel {
         /**
          * <p>The token used to start the next query.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Id")
         public String id;

@@ -12,6 +12,8 @@ public class CreateDiagnosticMetricSetRequest extends TeaModel {
 
     /**
      * <p>The ID of diagnostic metric.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MetricIds")
     public java.util.List<String> metricIds;
@@ -26,12 +28,16 @@ public class CreateDiagnosticMetricSetRequest extends TeaModel {
      * <p>The type of the resource.</p>
      * <br>
      * <p>Default value: instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The name of the diagnostic metric set.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

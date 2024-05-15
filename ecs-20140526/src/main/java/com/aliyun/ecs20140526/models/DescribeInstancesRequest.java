@@ -48,7 +48,7 @@ public class DescribeInstancesRequest extends TeaModel {
      * <br>
      * <p>Default value: enabled.</p>
      * <br>
-     * <p>>  For more information about instance metadata, see [Overview of ECS instance metadata](~~49122~~).</p>
+     * <p>>  For more information about instance metadata, see [Overview of ECS instance metadata](https://help.aliyun.com/document_detail/49122.html).</p>
      */
     @NameInMap("HttpEndpoint")
     public String httpEndpoint;
@@ -67,7 +67,7 @@ public class DescribeInstancesRequest extends TeaModel {
      * <br>
      * <p>Default value: optional.</p>
      * <br>
-     * <p>>  For more information about modes of accessing instance metadata, see [Access mode of instance metadata](~~150575~~).</p>
+     * <p>>  For more information about modes of accessing instance metadata, see [Access mode of instance metadata](https://help.aliyun.com/document_detail/150575.html).</p>
      */
     @NameInMap("HttpTokens")
     public String httpTokens;
@@ -100,7 +100,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceIds;
 
     /**
-     * <p>The name of the instance. Fuzzy search with the asterisk (\*) wildcard characters is supported.</p>
+     * <p>The name of the instance. Fuzzy search with the asterisk (\\*) wildcard characters is supported.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
@@ -235,7 +235,9 @@ public class DescribeInstancesRequest extends TeaModel {
     public String rdmaIpAddresses;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -677,7 +679,7 @@ public class DescribeInstancesRequest extends TeaModel {
         /**
          * <p>The key of tag N of the instance. Valid values of N: 1 to 20.</p>
          * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.</p>
          */
         @NameInMap("Key")
         public String key;

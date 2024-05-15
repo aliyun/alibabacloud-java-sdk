@@ -18,6 +18,8 @@ public class ReleasePublicIpAddressRequest extends TeaModel {
 
     /**
      * <p>The public IP address of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PublicIpAddress")
     public String publicIpAddress;

@@ -14,20 +14,26 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
      * <p>*   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</p>
      * <p>*   SystemFailure.Redeploy: The instance is redeployed due to a system error.</p>
      * <p>*   SystemFailure.Stop: The instance is stopped due to a system error.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventType")
     public String eventType;
 
     /**
      * <p>The IDs of the instances. You can specify up to 100 instance IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The scheduled start time of the event. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The scheduled start time of the event. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
      * <p>> For events that occur due to system errors or instance errors, the simulated events of such events enter the `Executing` state when the simulated events are created. The value of `NotBefore` is the time when the simulated events enter the `Executed` state.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NotBefore")
     public String notBefore;
@@ -39,7 +45,9 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

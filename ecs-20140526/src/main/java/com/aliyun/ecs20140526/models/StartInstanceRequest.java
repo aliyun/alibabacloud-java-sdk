@@ -20,6 +20,8 @@ public class StartInstanceRequest extends TeaModel {
      * <p>*   false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      * <br>
      * <p>Default value: false.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

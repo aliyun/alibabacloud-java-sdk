@@ -23,6 +23,8 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance. You can specify up to 100 subscription instance IDs. Separate the instance IDs with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -43,7 +45,9 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

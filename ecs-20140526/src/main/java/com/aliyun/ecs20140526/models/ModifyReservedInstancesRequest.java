@@ -18,12 +18,16 @@ public class ModifyReservedInstancesRequest extends TeaModel {
 
     /**
      * <p>The IDs of reserved instances. Valid values of N: 1 to 20.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of reserved instances. Valid values of N: 1 to 20.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ReservedInstanceId")
     public java.util.List<String> reservedInstanceId;
@@ -113,7 +117,7 @@ public class ModifyReservedInstancesRequest extends TeaModel {
          * <br>
          * <p>This parameter is required when `Scope` is set to `Zone`.</p>
          * <br>
-         * <p>You can call the [DescribeZones](~~25609~~) operation to query the most recent zone list.</p>
+         * <p>You can call the [DescribeZones](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent zone list.</p>
          */
         @NameInMap("ReservedInstanceName")
         public String reservedInstanceName;
@@ -121,7 +125,7 @@ public class ModifyReservedInstancesRequest extends TeaModel {
         /**
          * <p>The instance type that reserved instance N can match. Valid values of N: 1 to 100.</p>
          * <br>
-         * <p>> The supported instance types are regularly updated. For more information, see the "Attributes" section of [Overview](~~100370~~).</p>
+         * <p>> The supported instance types are regularly updated. For more information, see the "Attributes" section of [Overview](https://help.aliyun.com/document_detail/100370.html).</p>
          */
         @NameInMap("Scope")
         public String scope;

@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class ImportKeyPairRequest extends TeaModel {
     /**
-     * <p>The name of the key pair. The name must be unique. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the key pair. The name must be unique. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
@@ -15,12 +17,16 @@ public class ImportKeyPairRequest extends TeaModel {
 
     /**
      * <p>The public key of the key pair.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PublicKeyBody")
     public String publicKeyBody;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

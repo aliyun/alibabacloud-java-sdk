@@ -5,24 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifyCommandRequest extends TeaModel {
     /**
-     * <p>The command content. The command content can be plaintext or Base64-encoded. Take note of the following items:</p>
-     * <br>
-     * <p>*   The Base64-encoded command content can be up to 16 KB in size.</p>
-     * <br>
-     * <p>*   If the command content is Base64-encoded, set `ContentEncoding` to Base64.</p>
-     * <br>
-     * <p>*   If you set `EnableParameter` to true, the custom parameter feature is enabled and you can specify custom parameters based on the following rules:</p>
-     * <br>
-     * <p>    *   Specify custom parameters in the `{{}}` format. When parameter names are enclosed in `{{}}`, the spaces and line feeds before and after the parameter names are ignored.</p>
-     * <p>    *   You can specify up to 20 custom parameters.</p>
-     * <p>    *   A custom parameter name can contain only letters, digits, underscores (\_), and hyphens (-). The name is not case-sensitive.</p>
-     * <p>    *   Each custom parameter name cannot exceed 64 bytes in length.</p>
+     * <p>>  This parameter is no longer used and does not take effect.</p>
      */
     @NameInMap("CommandContent")
     public String commandContent;
 
     /**
-     * <p>The command ID. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.</p>
+     * <p>The command ID. You can call the [DescribeCommands](https://help.aliyun.com/document_detail/64843.html) operation to query all available command IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CommandId")
     public String commandId;
@@ -46,7 +37,9 @@ public class ModifyCommandRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the command. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -64,7 +57,7 @@ public class ModifyCommandRequest extends TeaModel {
     public Long timeout;
 
     /**
-     * <p>The working directory of the command.</p>
+     * <p>The working directory of the command. The value can be up to 200 characters in length.</p>
      */
     @NameInMap("WorkingDir")
     public String workingDir;

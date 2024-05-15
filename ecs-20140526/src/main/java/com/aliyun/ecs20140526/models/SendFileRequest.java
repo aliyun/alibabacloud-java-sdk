@@ -9,6 +9,8 @@ public class SendFileRequest extends TeaModel {
      * <br>
      * <p>*   If `ContentType` is set to `PlainText`, the Content value is in plaintext.</p>
      * <p>*   If `ContentType` is set to `Base64`, the Content value is Base64-encoded.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Content")
     public String content;
@@ -56,12 +58,16 @@ public class SendFileRequest extends TeaModel {
 
     /**
      * <p>The ID of instance N to which to send the file. Up to 50 instance IDs can be specified in each request. Valid values of N: 1 to 50.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
     /**
      * <p>The name of the file. The name supports all character sets and can be up to 255 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -84,7 +90,9 @@ public class SendFileRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance to which to send the file. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance to which to send the file. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -93,7 +101,7 @@ public class SendFileRequest extends TeaModel {
      * <p>The ID of the resource group. When you specify this parameter, take note of the following items:</p>
      * <br>
      * <p>*   The ECS instance specified by the InstanceId parameter must belong to this resource group.</p>
-     * <p>*   If you specify this parameter, you can call the [DescribeSendFileResults](~~184117~~) operation to query file sending results in the specified resource group.</p>
+     * <p>*   If you specify this parameter, you can call the [DescribeSendFileResults](https://help.aliyun.com/document_detail/184117.html) operation to query file sending results in the specified resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -112,6 +120,8 @@ public class SendFileRequest extends TeaModel {
 
     /**
      * <p>The destination directory on the instance to which to send the file. If the specified directory does not exist, the system creates the directory on the instance. The value supports all character sets and cannot exceed 255 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetDir")
     public String targetDir;
@@ -280,7 +290,7 @@ public class SendFileRequest extends TeaModel {
         /**
          * <p>The key of tag N to add to the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.</p>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.</p>
          * <br>
          * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          */

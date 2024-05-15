@@ -10,7 +10,7 @@ public class CreateSnapshotRequest extends TeaModel {
      * <p>*   Standard: normal snapshot</p>
      * <p>*   Flash: local snapshot</p>
      * <br>
-     * <p>>  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).</p>
+     * <p>>  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](https://help.aliyun.com/document_detail/193667.html).</p>
      */
     @NameInMap("Category")
     public String category;
@@ -31,6 +31,8 @@ public class CreateSnapshotRequest extends TeaModel {
 
     /**
      * <p>Creates a snapshot for a disk.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DiskId")
     public String diskId;
@@ -43,7 +45,7 @@ public class CreateSnapshotRequest extends TeaModel {
      * <br>
      * <p>Default value: false.</p>
      * <br>
-     * <p>>  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).</p>
+     * <p>>  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](https://help.aliyun.com/document_detail/193667.html).</p>
      */
     @NameInMap("InstantAccess")
     public Boolean instantAccess;
@@ -53,7 +55,7 @@ public class CreateSnapshotRequest extends TeaModel {
      * <br>
      * <p>By default, the value of this parameter is the same as that of `RetentionDays`.</p>
      * <br>
-     * <p>>  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).</p>
+     * <p>>  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](https://help.aliyun.com/document_detail/193667.html).</p>
      */
     @NameInMap("InstantAccessRetentionDays")
     public Integer instantAccessRetentionDays;
@@ -82,7 +84,7 @@ public class CreateSnapshotRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The snapshot name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The snapshot name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * <br>
      * <p>The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.</p>
      */
@@ -90,7 +92,7 @@ public class CreateSnapshotRequest extends TeaModel {
     public Integer retentionDays;
 
     /**
-     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * <br>
      * <p>It cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.</p>
      */
@@ -104,19 +106,7 @@ public class CreateSnapshotRequest extends TeaModel {
     public String storageLocationArn;
 
     /**
-     * <p>Specifies whether to enable the instant access feature. Valid values:</p>
-     * <br>
-     * <p>*   true: enables the instant access feature. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
-     * <br>
-     * <p>    **</p>
-     * <br>
-     * <p>    **Note**After the instant access feature is enabled, an instant access (IA) snapshot is created and can be used to roll back disks or create disks across zones even when the snapshot is being created. This feature ensures that a new ESSD snapshot is available for use as soon as possible regardless of its size.</p>
-     * <br>
-     * <p>*   false: does not enable the instant access feature. If InstantAccess is set to false, a normal snapshot is created.</p>
-     * <br>
-     * <p>Default value: false.</p>
-     * <br>
-     * <p>> This parameter and the `Category` parameter cannot be specified at the same time. For more information, see the "Description" section of this topic.</p>
+     * <p>The tags to add to the snapshot.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateSnapshotRequestTag> tag;
@@ -248,15 +238,13 @@ public class CreateSnapshotRequest extends TeaModel {
 
     public static class CreateSnapshotRequestTag extends TeaModel {
         /**
-         * <p>The tags to add to the snapshot.</p>
+         * <p>The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag key to add to the snapshot.</p>
-         * <br>
-         * <p>> This parameter will be deprecated in the future. We recommend that you use the Tag.N.key parameter to ensure future compatibility.</p>
+         * <p>The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
          */
         @NameInMap("Value")
         public String value;

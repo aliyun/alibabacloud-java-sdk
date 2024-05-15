@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityGroupRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -25,7 +25,9 @@ public class CreateSecurityGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the security group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -43,9 +45,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the security group.</p>
-     * <br>
-     * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-). Default value: null.</p>
+     * <p>The name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
      */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
@@ -54,7 +54,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
      * <p>The type of the security group. Valid values:</p>
      * <br>
      * <p>*   normal: basic security group.</p>
-     * <p>*   enterprise: advanced security group. For more information, see [Advanced security groups](~~120621~~).</p>
+     * <p>*   enterprise: advanced security group. For more information, see [Advanced security groups](https://help.aliyun.com/document_detail/120621.html).</p>
      */
     @NameInMap("SecurityGroupType")
     public String securityGroupType;
@@ -66,7 +66,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
     public Boolean serviceManaged;
 
     /**
-     * <p>The tags that you want to add to the security group.</p>
+     * <p>The tags to add to the security group.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateSecurityGroupRequestTag> tag;
@@ -190,17 +190,17 @@ public class CreateSecurityGroupRequest extends TeaModel {
 
     public static class CreateSecurityGroupRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N.</p>
+         * <p>The key of tag N to add to the security group.</p>
          * <br>
-         * <p>Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
+         * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N.</p>
+         * <p>The value of tag N to add to the security group.</p>
          * <br>
-         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain `http://` or `https://`.</p>
+         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -36,13 +36,13 @@ public class DescribePriceRequest extends TeaModel {
     public Integer capacity;
 
     /**
-     * <p>The type of the dedicated host. You can call the [DescribeDedicatedHostTypes](~~134240~~) operation to query the most recent list of dedicated host types.</p>
+     * <p>The type of the dedicated host. You can call the [DescribeDedicatedHostTypes](https://help.aliyun.com/document_detail/134240.html) operation to query the most recent list of dedicated host types.</p>
      */
     @NameInMap("DedicatedHostType")
     public String dedicatedHostType;
 
     /**
-     * <p>The image ID. An image contains the runtime environment to load when an instance is started. You can call the [DescribeImages](~~25534~~) operation to query the available images. If you do not specify this parameter, the system queries the prices of Linux images.</p>
+     * <p>The image ID. An image contains the runtime environment to load when an instance is started. You can call the [DescribeImages](https://help.aliyun.com/document_detail/25534.html) operation to query the available images. If you do not specify this parameter, the system queries the prices of Linux images.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
@@ -75,7 +75,7 @@ public class DescribePriceRequest extends TeaModel {
     public String instanceNetworkType;
 
     /**
-     * <p>The instance type. When `ResourceType` is set to `instance`, you must specify this parameter. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent list of instance types.</p>
+     * <p>The instance type. When `ResourceType` is set to `instance`, you must specify this parameter. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html) or call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation to query the most recent list of instance types.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -111,9 +111,9 @@ public class DescribePriceRequest extends TeaModel {
      * <p>*   none: The instance is not I/O optimized.</p>
      * <p>*   optimized: The instance is I/O optimized.</p>
      * <br>
-     * <p>When the instance type specified by the InstanceType parameter belongs to [Generation I instance families](~~55263~~), the default value of this parameter is none.</p>
+     * <p>When the instance type specified by the InstanceType parameter belongs to [Generation I instance families](https://help.aliyun.com/document_detail/55263.html), the default value of this parameter is none.</p>
      * <br>
-     * <p>When the instance type specified by the InstanceType parameter does not belong to [Generation I instance families](~~55263~~), the default value of this parameter is optimized.</p>
+     * <p>When the instance type specified by the InstanceType parameter does not belong to [Generation I instance families](https://help.aliyun.com/document_detail/55263.html), the default value of this parameter is optimized.</p>
      */
     @NameInMap("IoOptimized")
     public String ioOptimized;
@@ -177,7 +177,9 @@ public class DescribePriceRequest extends TeaModel {
     public String priceUnit;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent list of regions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -587,7 +589,7 @@ public class DescribePriceRequest extends TeaModel {
 
     public static class DescribePriceRequestSchedulerOptions extends TeaModel {
         /**
-         * <p>专有宿主机ID。您可以通过[DescribeDedicatedHosts ](~~134242~~)查询专有宿主机ID列表。</p>
+         * <p>专有宿主机ID。您可以通过[DescribeDedicatedHosts ](https://help.aliyun.com/document_detail/134242.html)查询专有宿主机ID列表。</p>
          */
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;

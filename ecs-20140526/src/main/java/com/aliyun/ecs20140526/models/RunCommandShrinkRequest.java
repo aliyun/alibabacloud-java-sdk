@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunCommandShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -21,7 +21,7 @@ public class RunCommandShrinkRequest extends TeaModel {
      * <br>
      * <p>    *   Specify custom parameters in the `{{}}` format. Within `{{}}`, the spaces and line feeds before and after the parameter names are ignored.</p>
      * <p>    *   You can specify up to 20 custom parameters.</p>
-     * <p>    *   A custom parameter name can contain only letters, digits, underscores (\_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</p>
+     * <p>    *   A custom parameter name can contain only letters, digits, underscores (_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</p>
      * <p>    *   Each custom parameter name cannot exceed 64 bytes in length.</p>
      * <br>
      * <p>*   You can specify built-in environment parameters as custom parameters. Then, when you run a command, the parameters are automatically specified by Cloud Assistant. You can specify the following built-in environment parameters:</p>
@@ -49,6 +49,8 @@ public class RunCommandShrinkRequest extends TeaModel {
      * <br>
      * <p>        *   Linux: 2.2.3.309</p>
      * <p>        *   Windows: 2.1.3.309</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CommandContent")
     public String commandContent;
@@ -60,8 +62,8 @@ public class RunCommandShrinkRequest extends TeaModel {
      * <br>
      * <p>*   If this parameter is specified, Cloud Assistant runs the command in the specified container of the instance.</p>
      * <p>*   If this parameter is specified, the command can run only on Linux instances on which Cloud Assistant Agent 2.2.3.344 or later is installed.</p>
-     * <p>*   If this parameter is specified, the specified `Username` and `WorkingDir` parameters do not take effect. You can run the command in the default working directory of the container only by using the default user of the container. For more information, see [Use Cloud Assistant to run commands in containers](~~456641~~).</p>
-     * <p>*   If this parameter is specified, only shell scripts can be run in Linux containers. You cannot add a command in the format similar to `#!/usr/bin/python` at the beginning of a script to specify a script interpreter. For more information, see [Use Cloud Assistant to run commands in containers](~~456641~~).</p>
+     * <p>*   If this parameter is specified, the specified `Username` and `WorkingDir` parameters do not take effect. You can run the command in the default working directory of the container only by using the default user of the container. For more information, see [Use Cloud Assistant to run commands in containers](https://help.aliyun.com/document_detail/456641.html).</p>
+     * <p>*   If this parameter is specified, only shell scripts can be run in Linux containers. You cannot add a command in the format similar to `#!/usr/bin/python` at the beginning of a script to specify a script interpreter. For more information, see [Use Cloud Assistant to run commands in containers](https://help.aliyun.com/document_detail/456641.html).</p>
      */
     @NameInMap("ContainerId")
     public String containerId;
@@ -73,8 +75,8 @@ public class RunCommandShrinkRequest extends TeaModel {
      * <br>
      * <p>*   If this parameter is specified, Cloud Assistant runs the command in the specified container of the instance.</p>
      * <p>*   If this parameter is specified, the command can run only on Linux instances on which Cloud Assistant Agent 2.2.3.344 or later is installed.</p>
-     * <p>*   If this parameter is specified, the specified `Username` and `WorkingDir` parameters do not take effect. You can run the command in the default working directory of the container only by using the default user of the container. For more information, see [Use Cloud Assistant to run commands in containers](~~456641~~).</p>
-     * <p>*   If this parameter is specified, only shell scripts can be run in Linux containers. You cannot add a command in the format similar to `#!/usr/bin/python` at the beginning of a script to specify a script interpreter. For more information, see [Use Cloud Assistant to run commands in containers](~~456641~~).</p>
+     * <p>*   If this parameter is specified, the specified `Username` and `WorkingDir` parameters do not take effect. You can run the command in the default working directory of the container only by using the default user of the container. For more information, see [Use Cloud Assistant to run commands in containers](https://help.aliyun.com/document_detail/456641.html).</p>
+     * <p>*   If this parameter is specified, only shell scripts can be run in Linux containers. You cannot add a command in the format similar to `#!/usr/bin/python` at the beginning of a script to specify a script interpreter. For more information, see [Use Cloud Assistant to run commands in containers](https://help.aliyun.com/document_detail/456641.html).</p>
      */
     @NameInMap("ContainerName")
     public String containerName;
@@ -121,7 +123,7 @@ public class RunCommandShrinkRequest extends TeaModel {
      * <br>
      * <p>    For example, to configure a command to run only once at 13:15:30 on June 6, 2022 (Shanghai time), set the time to `at(2022-06-06 13:15:30 Asia/Shanghai)`. To configure a command to run only once at 13:15:30 on June 6, 2022 (UTC-7), set the time to `at(2022-06-06 13:15:30 GMT-7:00)`.</p>
      * <br>
-     * <p>*   To run a command at specific times, use a cron expression to define the schedule. Specify a schedule in the `<Cron expression> <Time zone>` format. The cron expression is in the `<seconds> <minutes> <hours> <day of the month> <month> <day of the week> <year (optional)>` format. The system calculates the execution times of the command based on the specified cron expression and time zone and runs the command as scheduled. If you do not specify a time zone, the system time zone of the instance on which you want to run the command is used by default. For more information about cron expressions, see [Cron expressions](~~64769~~). You can specify the time zone in the following forms:</p>
+     * <p>*   To run a command at specific times, use a cron expression to define the schedule. Specify a schedule in the `<Cron expression> <Time zone>` format. The cron expression is in the `<seconds> <minutes> <hours> <day of the month> <month> <day of the week> <year (optional)>` format. The system calculates the execution times of the command based on the specified cron expression and time zone and runs the command as scheduled. If you do not specify a time zone, the system time zone of the instance on which you want to run the command is used by default. For more information about cron expressions, see [Cron expressions](https://help.aliyun.com/document_detail/64769.html). You can specify the time zone in the following forms:</p>
      * <br>
      * <p>    *   The time zone name. Examples: `Asia/Shanghai` and `America/Los_Angeles`.</p>
      * <p>    *   The time offset from GMT. Examples: `GMT+8:00` (UTC+8) and `GMT-7:00` (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.</p>
@@ -181,7 +183,9 @@ public class RunCommandShrinkRequest extends TeaModel {
     public String parametersShrink;
 
     /**
-     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the command. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -201,8 +205,8 @@ public class RunCommandShrinkRequest extends TeaModel {
      * <br>
      * <p>Take note of the following items:</p>
      * <br>
-     * <p>*   You can call the [StopInvocation](~~64838~~) operation to stop the pending or scheduled executions of the command.</p>
-     * <p>*   If you set this parameter to `Period` or `EveryReboot`, you can call the [DescribeInvocationResults](~~64845~~) operation with `IncludeHistory` set to true to query the results of historical scheduled executions.</p>
+     * <p>*   You can call the [StopInvocation](https://help.aliyun.com/document_detail/64838.html) operation to stop the pending or scheduled executions of the command.</p>
+     * <p>*   If you set this parameter to `Period` or `EveryReboot`, you can call the [DescribeInvocationResults](https://help.aliyun.com/document_detail/64845.html) operation with `IncludeHistory` set to true to query the results of historical scheduled executions.</p>
      */
     @NameInMap("RepeatMode")
     public String repeatMode;
@@ -211,7 +215,7 @@ public class RunCommandShrinkRequest extends TeaModel {
      * <p>The ID of the resource group to which to assign the command executions. When you set this parameter, take note of the following items:</p>
      * <br>
      * <p>*   The instances specified by InstanceId.N must belong to the specified resource group.</p>
-     * <p>*   After the command is run, you can set this parameter to call the [DescribeInvocations](~~64840~~) or [DescribeInvocationResults](~~64845~~) operation to query the execution results in the specified resource group.</p>
+     * <p>*   After the command is run, you can set this parameter to call the [DescribeInvocations](https://help.aliyun.com/document_detail/64840.html) or [DescribeInvocationResults](https://help.aliyun.com/document_detail/64845.html) operation to query the execution results in the specified resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -233,6 +237,9 @@ public class RunCommandShrinkRequest extends TeaModel {
      */
     @NameInMap("Tag")
     public java.util.List<RunCommandShrinkRequestTag> tag;
+
+    @NameInMap("TerminationMode")
+    public String terminationMode;
 
     /**
      * <p>>  This parameter is no longer used and does not take effect.</p>
@@ -256,6 +263,8 @@ public class RunCommandShrinkRequest extends TeaModel {
      * <p>*   RunBatScript: batch command, applicable to Windows instances.</p>
      * <p>*   RunPowerShellScript: PowerShell command, applicable to Windows instances.</p>
      * <p>*   RunShellScript: shell command, applicable to Linux instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;
@@ -266,7 +275,7 @@ public class RunCommandShrinkRequest extends TeaModel {
      * <p>*   For Linux instances, the root username is used by default.</p>
      * <p>*   For Windows instances, the System username is used by default.</p>
      * <br>
-     * <p>You can also specify other usernames that already exist in the instances to run the command. For security purposes, we recommend that you run Cloud Assistant commands as a regular user. For more information, see [Run Cloud Assistant commands as a regular user](~~203771~~).</p>
+     * <p>You can also specify other usernames that already exist in the instances to run the command. For security purposes, we recommend that you run Cloud Assistant commands as a regular user. For more information, see [Run Cloud Assistant commands as a regular user](https://help.aliyun.com/document_detail/203771.html).</p>
      */
     @NameInMap("Username")
     public String username;
@@ -274,7 +283,7 @@ public class RunCommandShrinkRequest extends TeaModel {
     /**
      * <p>The name of the password to use to run the command on a Windows instance. The name cannot exceed 255 characters in length.</p>
      * <br>
-     * <p>If you do not want to use the default System user to run the command on Windows instances, specify both WindowsPasswordName and `Username`. To mitigate the risk of password leaks, the password is stored in plaintext in CloudOps Orchestration Service (OOS) Parameter Store, and only the name of the password is passed in by using WindowsPasswordName. For more information, see [Manage encryption parameters](~~186828~~) and [Run Cloud Assistant commands as a regular user](~~203771~~).</p>
+     * <p>If you do not want to use the default System user to run the command on Windows instances, specify both WindowsPasswordName and `Username`. To mitigate the risk of password leaks, the password is stored in plaintext in CloudOps Orchestration Service (OOS) Parameter Store, and only the name of the password is passed in by using WindowsPasswordName. For more information, see [Manage encryption parameters](https://help.aliyun.com/document_detail/186828.html) and [Run Cloud Assistant commands as a regular user](https://help.aliyun.com/document_detail/203771.html).</p>
      * <br>
      * <p>>  If you use the root username for Linux instances or the System username for Windows instances to run the command, you do not need to specify WindowsPasswordName.</p>
      */
@@ -287,7 +296,7 @@ public class RunCommandShrinkRequest extends TeaModel {
      * <p>Default values:</p>
      * <br>
      * <p>*   For Linux instances, the default value is `/root`, which is the home directory of the administrator (the root user).</p>
-     * <p>*   For Windows instances, the default value is the directory where the Cloud Assistant Agent process resides, such as `C:\Windows\System32`.</p>
+     * <p>*   For Windows instances, the default value is the directory where the Cloud Assistant Agent process resides, such as `C:\\Windows\\System32`.</p>
      */
     @NameInMap("WorkingDir")
     public String workingDir;
@@ -465,6 +474,14 @@ public class RunCommandShrinkRequest extends TeaModel {
         return this.tag;
     }
 
+    public RunCommandShrinkRequest setTerminationMode(String terminationMode) {
+        this.terminationMode = terminationMode;
+        return this;
+    }
+    public String getTerminationMode() {
+        return this.terminationMode;
+    }
+
     public RunCommandShrinkRequest setTimed(Boolean timed) {
         this.timed = timed;
         return this;
@@ -566,7 +583,7 @@ public class RunCommandShrinkRequest extends TeaModel {
         /**
          * <p>The key of tag N to add to the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call [ListTagResources](~~110425~~).</p>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call [ListTagResources](https://help.aliyun.com/document_detail/110425.html).</p>
          * <br>
          * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          */

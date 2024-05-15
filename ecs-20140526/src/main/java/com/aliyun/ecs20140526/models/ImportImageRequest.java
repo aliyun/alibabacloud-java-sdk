@@ -8,10 +8,10 @@ public class ImportImageRequest extends TeaModel {
      * <p>The system architecture. Valid values:</p>
      * <br>
      * <p>*   i386</p>
-     * <p>*   x86\_64</p>
+     * <p>*   x86_64</p>
      * <p>*   arm64</p>
      * <br>
-     * <p>Default value: x86\_64.</p>
+     * <p>Default value: x86_64.</p>
      */
     @NameInMap("Architecture")
     public String architecture;
@@ -38,7 +38,7 @@ public class ImportImageRequest extends TeaModel {
     /**
      * <p>The mode in which to check the image. If you do not specify this parameter, the image is not checked. Only the standard check mode is supported.</p>
      * <br>
-     * <p>>  This parameter is supported for most Linux and Windows operating system versions. For more information about image check items and operating system limits for image check, see [Overview](~~439819~~) and [Operating system limits for image check](~~475800~~).</p>
+     * <p>>  This parameter is supported for most Linux and Windows operating system versions. For more information about image check items and operating system limits for image check, see [Overview](https://help.aliyun.com/document_detail/439819.html) and [Operating system limits for image check](https://help.aliyun.com/document_detail/475800.html).</p>
      */
     @NameInMap("DetectionStrategy")
     public String detectionStrategy;
@@ -50,7 +50,7 @@ public class ImportImageRequest extends TeaModel {
     public java.util.List<ImportImageRequestDiskDeviceMapping> diskDeviceMapping;
 
     /**
-     * <p>The image name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The image name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
      */
     @NameInMap("ImageName")
     public String imageName;
@@ -117,7 +117,9 @@ public class ImportImageRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The region ID of the source image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the source image. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

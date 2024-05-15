@@ -17,7 +17,7 @@ public class DescribeImagesRequest extends TeaModel {
      * <p>The architecture of the image. Valid values:</p>
      * <br>
      * <p>*   i386</p>
-     * <p>*   x86\_64</p>
+     * <p>*   x86_64</p>
      * <p>*   arm64</p>
      */
     @NameInMap("Architecture")
@@ -45,7 +45,7 @@ public class DescribeImagesRequest extends TeaModel {
      * <br>
      * <p>This parameter is empty by default.</p>
      * <br>
-     * <p>>  For information about image families that are associated with Alibaba Cloud official images, see [Overview of public images](~~108393~~).</p>
+     * <p>>  For information about image families that are associated with Alibaba Cloud official images, see [Overview of public images](https://help.aliyun.com/document_detail/108393.html).</p>
      */
     @NameInMap("ImageFamily")
     public String imageFamily;
@@ -154,7 +154,9 @@ public class DescribeImagesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the image. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -195,7 +197,7 @@ public class DescribeImagesRequest extends TeaModel {
      * <p>*   Available: The image is available.</p>
      * <p>*   UnAvailable: The image is unavailable.</p>
      * <p>*   CreateFailed: The image fails to be created.</p>
-     * <p>*   Deprecated: The image is no longer used.</p>
+     * <p>*   Deprecated: The image is deprecated.</p>
      * <br>
      * <p>Default value: Available. You can specify multiple values for this parameter. Separate the values with commas (,).</p>
      */
@@ -481,7 +483,7 @@ public class DescribeImagesRequest extends TeaModel {
         /**
          * <p>The tag N key of the image. Valid values of N: 1 to 20.</p>
          * <br>
-         * <p>Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](~~110425~~) operation.</p>
+         * <p>Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.</p>
          */
         @NameInMap("Key")
         public String key;

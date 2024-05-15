@@ -112,7 +112,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public String resource;
 
         /**
-         * <p>Details about the pricing rules.</p>
+         * <p>The pricing rules.</p>
          */
         @NameInMap("SubRules")
         public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules subRules;

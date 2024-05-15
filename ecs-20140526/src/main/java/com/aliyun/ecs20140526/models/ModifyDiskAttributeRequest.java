@@ -53,20 +53,20 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public java.util.List<String> diskIds;
 
     /**
-     * <p>The name of the disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
      */
     @NameInMap("DiskName")
     public String diskName;
 
     /**
-     * <p>Specifies whether to enable the automatic snapshot policy feature for the cloud disk.</p>
+     * <p>Specifies whether to enable the automatic snapshot policy feature for the cloud disk. Valid values:</p>
      * <br>
-     * <p>*   true: enables the automatic snapshot policy feature for the cloud disk.</p>
-     * <p>*   false: disables the automatic snapshot policy feature for the cloud disk.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      * <br>
      * <p>This parameter is empty by default, which indicates that the current value remains unchanged.</p>
      * <br>
-     * <p>> By default, the automatic snapshot policy feature is enabled for new disks. You need to only apply an automatic snapshot policy to a disk for the policy to take effect.</p>
+     * <p>>  By default, the automatic snapshot policy feature is enabled for cloud disks. You only need to associate an automatic snapshot policy with a cloud disk before you can use the policy.</p>
      */
     @NameInMap("EnableAutoSnapshot")
     public Boolean enableAutoSnapshot;
@@ -78,7 +78,7 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the command. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

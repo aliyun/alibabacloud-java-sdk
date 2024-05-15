@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTasksRequest extends TeaModel {
     /**
-     * <p>The end point of the time period for which to query created tasks. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The end point of the time period for which to query created tasks. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -37,7 +37,9 @@ public class DescribeTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the task. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -59,7 +61,7 @@ public class DescribeTasksRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start point of the time period for which to query created tasks. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The start point of the time period for which to query created tasks. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

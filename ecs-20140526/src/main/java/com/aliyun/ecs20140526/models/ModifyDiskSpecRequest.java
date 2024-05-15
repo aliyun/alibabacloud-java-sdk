@@ -23,6 +23,8 @@ public class ModifyDiskSpecRequest extends TeaModel {
 
     /**
      * <p>The disk ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DiskId")
     public String diskId;
@@ -45,7 +47,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>A collection of disk performance control parameters</p>
+     * <p>The disk performance specifications.</p>
      */
     @NameInMap("PerformanceControlOptions")
     public ModifyDiskSpecRequestPerformanceControlOptions performanceControlOptions;
@@ -68,7 +70,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
      * <br>
      * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
      * <br>
-     * <p>>  This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).</p>
+     * <p>>  This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html) and [Modify the performance configurations of an ESSD AutoPL disk](https://help.aliyun.com/document_detail/413275.html).</p>
      */
     @NameInMap("ProvisionedIops")
     public Long provisionedIops;
@@ -166,21 +168,21 @@ public class ModifyDiskSpecRequest extends TeaModel {
 
     public static class ModifyDiskSpecRequestPerformanceControlOptions extends TeaModel {
         /**
-         * <p>The new IOPS of the disk. You can modify the IOPS of only disks in dedicated block storage clusters.</p>
+         * <p>The new IOPS rate of the disk. You can modify the IOPS rate of only disks in dedicated block storage clusters.</p>
          * <br>
          * <p>Valid values: 900 to maximum IOPS per disk (with an increment of 100).</p>
          * <br>
-         * <p>For more information, see [EBS performance](~~25382~~).</p>
+         * <p>For more information, see [Block storage performance](https://help.aliyun.com/document_detail/25382.html).</p>
          */
         @NameInMap("IOPS")
         public Integer IOPS;
 
         /**
-         * <p>The new IOPS and throughput of the disk. This parameter is valid only when the disk is in a dedicated block storage cluster.</p>
+         * <p>Specifies whether to reset the IOPS rate and throughput of the disk. This parameter takes effect only when the disk belongs to a dedicated block storage cluster.</p>
          * <br>
          * <p>After you specify this parameter, PerformanceControlOptions.IOPS and PerformanceControlOptions.Throughput do not take effect.</p>
          * <br>
-         * <p>Set the value to All, which indicates that the IOPS and throughput of the disk is reset to the initial values.</p>
+         * <p>Set the value to All, which indicates that the IOPS rate and throughput of the disk are reset to the initial values.</p>
          */
         @NameInMap("Recover")
         public String recover;
@@ -190,7 +192,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
          * <br>
          * <p>Valid values: 60 to maximum throughput per disk.</p>
          * <br>
-         * <p>For more information, see [EBS performance](~~25382~~).</p>
+         * <p>For more information, see [Block storage performance](https://help.aliyun.com/document_detail/25382.html).</p>
          */
         @NameInMap("Throughput")
         public Integer throughput;

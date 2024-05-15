@@ -6,12 +6,14 @@ import com.aliyun.tea.*;
 public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
     /**
      * <p>The ID of the auto provisioning group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AutoProvisioningGroupId")
     public String autoProvisioningGroupId;
 
     /**
-     * <p>The end of the time range of the queried data. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The end of the time range of the queried data. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -40,6 +42,8 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
 
     /**
      * <p>The region ID of the auto provisioning group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -51,7 +55,7 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range of the queried data. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The beginning of the time range of the queried data. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

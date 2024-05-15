@@ -80,7 +80,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
      * <p>*   Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type</p>
      * <p>*   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type</p>
      * <p>*   ECS Bare Metal: ECS Bare Metal Instance type</p>
-     * <p>*   Super Computing Cluster: Super Computing Cluster (SCC) instance type</p>
+     * <p>*   Super Computing Cluster: SCC instance type</p>
      * <p>*   High Performance Compute: high-performance computing instance type</p>
      */
     @NameInMap("InstanceCategory")
@@ -103,9 +103,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public java.util.List<String> instanceTypeFamilies;
 
     /**
-     * <p>The instance family to which the instance type belongs. For information about the valid values of this parameter, see [DescribeInstanceTypeFamilies](~~25621~~).</p>
+     * <p>The instance family to which the instance type belongs. For information about the valid values of this parameter, see [DescribeInstanceTypeFamilies](https://help.aliyun.com/document_detail/25621.html).</p>
      * <br>
-     * <p>For more information about instance families, see [Instance families](~~25378~~).</p>
+     * <p>For more information about instance families, see [Instance families](https://help.aliyun.com/document_detail/25378.html).</p>
      */
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
@@ -117,7 +117,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public java.util.List<String> instanceTypes;
 
     /**
-     * <p>The categories of local disks. Valid values of N: 1 and 2. For more information, see [Local disks](~~63138#section_n2w\_8yc\_5u1~~). Valid values:</p>
+     * <p>The categories of local disks. Valid values of N: 1 and 2. For more information, see [Local disks](~~63138#section_n2w_8yc_5u1~~). Valid values:</p>
      * <br>
      * <p>*   local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances</p>
      * <p>*   local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances</p>
@@ -126,12 +126,12 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public java.util.List<String> localStorageCategories;
 
     /**
-     * <p>The category of local disks. For more information, see [Local disks](~~63138#section_n2w\_8yc\_5u1~~). Valid values:</p>
+     * <p>The category of local disks. For more information, see [Local disks](~~63138#section_n2w_8yc_5u1~~). Valid values:</p>
      * <br>
      * <p>*   local_hdd_pro: local Serial Advanced Technology Attachment (SATA) HDDs, which are attached to d1ne or d1 instances.</p>
      * <p>*   local_ssd_pro: local Non-Volatile Memory Express (NVMe) SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances.</p>
      * <br>
-     * <p>Enumerated values:</p>
+     * <p>Valid values:</p>
      * <br>
      * <p>*   local_hdd_pro</p>
      * <p>*   local_ssd_pro</p>

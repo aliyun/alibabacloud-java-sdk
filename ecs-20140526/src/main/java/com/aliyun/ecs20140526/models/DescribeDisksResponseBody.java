@@ -164,7 +164,7 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     public static class DescribeDisksResponseBodyDisksDiskMountInstancesMountInstance extends TeaModel {
         /**
-         * <p>The time when the disk was attached. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the disk was attached. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("AttachedTime")
         public String attachedTime;
@@ -377,7 +377,7 @@ public class DescribeDisksResponseBody extends TeaModel {
          * <p>*   true</p>
          * <p>*   false</p>
          * <br>
-         * <p>This parameter is available only if you set `DiskCategory` to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).</p>
+         * <p>This parameter is available only if you set `DiskCategory` to `cloud_auto`. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).</p>
          */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
@@ -411,7 +411,7 @@ public class DescribeDisksResponseBody extends TeaModel {
          * <p>*   true: The automatic snapshots of the cloud disk are deleted when the disk is released.</p>
          * <p>*   false: The automatic snapshots of the cloud disk are retained when the disk is released.</p>
          * <br>
-         * <p>Snapshots that were created in the Elastic Compute Service (ECS) console or by calling the [CreateSnapshot](~~25524~~) operation are retained and not affected by this parameter.</p>
+         * <p>Snapshots that were created in the Elastic Compute Service (ECS) console or by calling the [CreateSnapshot](https://help.aliyun.com/document_detail/25524.html) operation are retained and not affected by this parameter.</p>
          */
         @NameInMap("DeleteAutoSnapshot")
         public Boolean deleteAutoSnapshot;
@@ -585,7 +585,7 @@ public class DescribeDisksResponseBody extends TeaModel {
         /**
          * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × *Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × *Capacity, 50,000}</p>
          * <br>
-         * <p>This parameter is available only if you set `DiskCategory` to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).</p>
+         * <p>This parameter is available only if you set `DiskCategory` to `cloud_auto`. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).</p>
          */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;

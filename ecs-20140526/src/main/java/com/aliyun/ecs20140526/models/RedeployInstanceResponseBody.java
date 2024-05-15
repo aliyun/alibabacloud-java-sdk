@@ -13,7 +13,7 @@ public class RedeployInstanceResponseBody extends TeaModel {
     /**
      * <p>The ID of the redeployment task.</p>
      * <br>
-     * <p>You can call the [DescribeTasks](~~25622~~) operation to query the redeployment result.</p>
+     * <p>You can call the [DescribeTasks](https://help.aliyun.com/document_detail/25622.html) operation to query the redeployment result.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

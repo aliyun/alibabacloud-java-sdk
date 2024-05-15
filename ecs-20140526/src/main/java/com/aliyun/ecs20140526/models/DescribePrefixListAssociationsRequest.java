@@ -28,12 +28,16 @@ public class DescribePrefixListAssociationsRequest extends TeaModel {
 
     /**
      * <p>The query token. Set the value to the `NextToken` value returned in the previous call to the DescribePrefixListAssociations operation. Leave this parameter empty the first time you call this operation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
     /**
      * <p>The ID of the prefix list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

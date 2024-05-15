@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLaunchTemplateRequest extends TeaModel {
     /**
-     * <p>The ID of the launch template. For more information, see [DescribeLaunchTemplates](~~73759~~).</p>
+     * <p>The ID of the launch template. For more information, see [DescribeLaunchTemplates](https://help.aliyun.com/document_detail/73759.html).</p>
      * <br>
      * <p>You must specify `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template.</p>
      */
@@ -27,7 +27,9 @@ public class DeleteLaunchTemplateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the launch template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the launch template. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

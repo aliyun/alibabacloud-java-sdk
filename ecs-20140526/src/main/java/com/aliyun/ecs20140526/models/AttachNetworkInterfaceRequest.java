@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AttachNetworkInterfaceRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -13,13 +15,15 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     /**
      * <p>The index of the network interface controller (NIC).</p>
      * <br>
-     * <p>> The value of this parameter varies based on the instance family of the specified instance. If the instance type of the specified instance does not support NICs, leave this parameter empty. If the instance type of the specified instance supports NICs, set this parameter to a valid value. For information about the valid values of this parameter, see [Instance families](~~25378~~).</p>
+     * <p>> The value of this parameter varies based on the instance family of the specified instance. If the instance type of the specified instance does not support NICs, leave this parameter empty. If the instance type of the specified instance supports NICs, set this parameter to a valid value. For information about the valid values of this parameter, see [Instance families](https://help.aliyun.com/document_detail/25378.html).</p>
      */
     @NameInMap("NetworkCardIndex")
     public Integer networkCardIndex;
 
     /**
      * <p>The ID of the ENI.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -31,7 +35,9 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AllocatePublicIpAddressRequest extends TeaModel {
     /**
      * <p>The ID of the instance to which you want to assign a public IP address.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

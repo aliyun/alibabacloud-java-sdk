@@ -25,7 +25,7 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public Integer autoRenewPeriod;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -47,7 +47,9 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public Integer instanceAmount;
 
     /**
-     * <p>The type of the reserved instance. For more information, see [Instance family](~~25378~~).</p>
+     * <p>The type of the reserved instance. For more information, see [Instance family](https://help.aliyun.com/document_detail/25378.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -102,13 +104,15 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the reserved instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the reserved instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      */
     @NameInMap("ReservedInstanceName")
     public String reservedInstanceName;
@@ -143,7 +147,7 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public java.util.List<PurchaseReservedInstancesOfferingRequestTag> tag;
 
     /**
-     * <p>The zone ID of the instance. This parameter is required when `Scope` is set to `Zone`. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the instance. This parameter is required when `Scope` is set to `Zone`. You can call the [DescribeZones](https://help.aliyun.com/document_detail/25610.html) operation to query the most recent zone list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

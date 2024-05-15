@@ -9,12 +9,14 @@ public class CreatePrefixListRequest extends TeaModel {
      * <br>
      * <p>*   IPv4</p>
      * <p>*   IPv6</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AddressFamily")
     public String addressFamily;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -33,6 +35,8 @@ public class CreatePrefixListRequest extends TeaModel {
 
     /**
      * <p>The maximum number of entries that the prefix list can contain. Valid values: 1 to 200.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MaxEntries")
     public Integer maxEntries;
@@ -44,13 +48,17 @@ public class CreatePrefixListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the prefix list. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). It must start with a letter and cannot start with `http://`, `https://`, `com.aliyun`, or `com.alibabacloud`.</p>
+     * <p>The name of the prefix list. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). It must start with a letter and cannot start with `http://`, `https://`, `com.aliyun`, or `com.alibabacloud`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PrefixListName")
     public String prefixListName;
 
     /**
      * <p>The ID of the region in which to create the prefix list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -164,9 +172,11 @@ public class CreatePrefixListRequest extends TeaModel {
          * <p>*   IP addresses are supported. The system converts IP addresses into CIDR blocks. For example, if you specify 192.168.1.100, the system converts it into the 192.168.1.100/32 CIDR block.</p>
          * <p>*   If an IPv6 CIDR block is used, the system converts it into the zero compression format and changes uppercase letters into lowercase ones. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it into 2001:db8::/32.</p>
          * <br>
-         * <p>For more information about CIDR blocks, see the [What is CIDR?](~~40637~~#title-gu4-uzk-12r) section in the "Network FAQ" topic.</p>
+         * <p>For more information about CIDR blocks, see the [What is CIDR?](https://help.aliyun.com/document_detail/40637.html#title-gu4-uzk-12r) section in the "Network FAQ" topic.</p>
          * <br>
          * <p>This parameter is empty by default.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Cidr")
         public String cidr;

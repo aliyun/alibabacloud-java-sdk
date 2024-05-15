@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteImageRequest extends TeaModel {
     /**
-     * <p>Specifies whether to forcibly delete the custom image. Valid values:</p>
+     * <p>Specifies whether to forcefully delete the custom image. Valid values:</p>
      * <br>
-     * <p>*   true: forcibly deletes the custom image, regardless of whether the image is being used by instances.</p>
-     * <p>*   false: verifies that the image is not being used by instances, and deletes the image.</p>
+     * <p>*   true: forcefully deletes the custom image, regardless of whether the image is being used by other instances.</p>
+     * <p>*   false: verifies that the image is not being used by other instances and then deletes the image.</p>
      * <br>
      * <p>Default value: false.</p>
      */
@@ -17,6 +17,8 @@ public class DeleteImageRequest extends TeaModel {
 
     /**
      * <p>The ID of the image. If the specified custom image does not exist, the request is ignored.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
@@ -31,7 +33,9 @@ public class DeleteImageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the custom image. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

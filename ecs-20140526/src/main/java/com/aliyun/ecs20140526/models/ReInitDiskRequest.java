@@ -14,6 +14,8 @@ public class ReInitDiskRequest extends TeaModel {
 
     /**
      * <p>The ID of the disk.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DiskId")
     public String diskId;
@@ -35,7 +37,7 @@ public class ReInitDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to reset the password of the instance when you re-initialize its system disk. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
      * <br>
-     * <p>    ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/</p>
+     * <p>    ()`~!@#$%^&*-_+=|{}[]:;\\"<>,.?/</p>
      * <br>
      * <p>For Windows instances, passwords cannot start with a forward slash (/).</p>
      * <br>

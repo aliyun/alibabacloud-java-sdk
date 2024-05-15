@@ -11,7 +11,9 @@ public class DeleteSecurityGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the security group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -23,7 +25,9 @@ public class DeleteSecurityGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The security group ID. You can call the [DescribeSecurityGroups](~~25556~~) operation to query the security group ID.</p>
+     * <p>The security group ID. You can call the [DescribeSecurityGroups](https://help.aliyun.com/document_detail/25556.html) operation to query the security group ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

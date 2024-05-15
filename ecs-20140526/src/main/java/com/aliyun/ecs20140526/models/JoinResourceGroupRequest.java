@@ -11,7 +11,7 @@ public class JoinResourceGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the resource. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -47,8 +47,10 @@ public class JoinResourceGroupRequest extends TeaModel {
      * <p>*   eni: ENI</p>
      * <p>*   keypair: SSH key pair</p>
      * <p>*   launchtemplate: launch template</p>
+     * <p>*   command: Cloud Assistant command</p>
+     * <p>*   activation: activation code of the Cloud Assistant managed instance</p>
      * <br>
-     * <p>These values are case-sensitive.</p>
+     * <p>The values are case-sensitive.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

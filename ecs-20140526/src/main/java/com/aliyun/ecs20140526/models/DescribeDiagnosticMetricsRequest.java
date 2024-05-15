@@ -29,6 +29,8 @@ public class DescribeDiagnosticMetricsRequest extends TeaModel {
 
     /**
      * <p>The IDs of diagnostic metrics.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

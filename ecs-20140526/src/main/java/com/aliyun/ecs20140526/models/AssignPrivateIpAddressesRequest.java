@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssignPrivateIpAddressesRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -24,6 +24,8 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
 
     /**
      * <p>The ID of the ENI.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -38,7 +40,7 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
      * <p>Secondary private IP address N to be automatically assigned from the CIDR block of the vSwitch that is connected to the ENI. Valid values of N:</p>
      * <br>
      * <p>*   When the ENI is in the Available (`Available`) state, the valid values of N are 1 to 50.</p>
-     * <p>*   When the ENI is in the InUse (`InUse`) state, the valid values of N are subject to the instance type. For more information, see [Overview of instance families](~~25378~~).</p>
+     * <p>*   When the ENI is in the InUse (`InUse`) state, the valid values of N are subject to the instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).</p>
      * <br>
      * <p>To assign secondary private IP addresses to the ENI, you must specify `PrivateIpAddress.N` or `SecondaryPrivateIpAddressCount` but not both.</p>
      */
@@ -46,7 +48,9 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     public java.util.List<String> privateIpAddress;
 
     /**
-     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the ENI. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

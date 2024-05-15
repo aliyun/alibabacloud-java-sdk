@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostsResponseBody extends TeaModel {
     /**
-     * <p>The queried dedicated hosts.</p>
+     * <p>Information about the dedicated hosts.</p>
      */
     @NameInMap("DedicatedHosts")
     public DescribeDedicatedHostsResponseBodyDedicatedHosts dedicatedHosts;
@@ -111,31 +111,31 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity extends TeaModel {
         /**
-         * <p>Remaining memory capacity, unit: GiB.</p>
+         * <p>The amount of available memory. Unit: GiB.</p>
          */
         @NameInMap("AvailableMemory")
         public Float availableMemory;
 
         /**
-         * <p>The remaining number of vCPU cores.</p>
+         * <p>The total number of vCPUs.</p>
          */
         @NameInMap("AvailableVcpu")
         public Integer availableVcpu;
 
         /**
-         * <p>The ID of the socket.</p>
+         * <p>The socket ID.</p>
          */
         @NameInMap("SocketId")
         public Integer socketId;
 
         /**
-         * <p>Total memory capacity, unit: GiB.</p>
+         * <p>The total amount of memory. Unit: GiB.</p>
          */
         @NameInMap("TotalMemory")
         public Float totalMemory;
 
         /**
-         * <p>Total number of vCPU cores.</p>
+         * <p>The number of available vCPUs.</p>
          */
         @NameInMap("TotalVcpu")
         public Integer totalVcpu;
@@ -214,7 +214,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public Integer availableLocalStorage;
 
         /**
-         * <p>The amount of available memory space. Unit: GiB.</p>
+         * <p>The amount of available memory. Unit: GiB.</p>
          */
         @NameInMap("AvailableMemory")
         public Float availableMemory;
@@ -378,25 +378,25 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance extends TeaModel {
         /**
-         * <p>The ID of the ECS instance created on the dedicated host.</p>
+         * <p>The ID of the ECS instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>ECS实例所有者的用户ID。</p>
+         * <p>The ID of the ECS instance owner.</p>
          */
         @NameInMap("InstanceOwnerId")
         public Long instanceOwnerId;
 
         /**
-         * <p>The instance type of the ECS instance created on the dedicated host.</p>
+         * <p>The instance type of the ECS instance.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The ID of the socket to which the instance belongs.</p>
+         * <p>The ID of the socket to which the ECS instance belongs.</p>
          */
         @NameInMap("SocketId")
         public String socketId;
@@ -461,13 +461,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes extends TeaModel {
         /**
-         * <p>The timeout period of the UDP session that was established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Valid value: 60.</p>
+         * <p>The timeout period of the UDP session that was established between Server Load Balancer (SLB) and the dedicated host. Unit: Seconds. Valid value: 60.</p>
          */
         @NameInMap("SlbUdpTimeout")
         public Integer slbUdpTimeout;
 
         /**
-         * <p>The timeout period of the UDP session that was established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid value: 60.</p>
+         * <p>The timeout period of the UDP session that was established between a user and an Alibaba Cloud service on the dedicated host. Unit: Seconds. Valid value: 60.</p>
          */
         @NameInMap("UdpTimeout")
         public Integer udpTimeout;
@@ -499,8 +499,8 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         /**
          * <p>The reason why the dedicated host was locked. Valid values:</p>
          * <br>
-         * <p>*   financial</p>
-         * <p>*   security</p>
+         * <p>*   financial: The instance was locked due to overdue payments.</p>
+         * <p>*   security: The instance was locked due to security reasons.</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
@@ -659,7 +659,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
          * <p>The policy used to migrate the instances deployed on the dedicated host when the dedicated host fails. Valid values:</p>
          * <br>
          * <p>*   Migrate: The instances are migrated to another physical server. Instances that are not in the Stopped state when the dedicated host fails are restarted.</p>
-         * <p>*   Stop: The instances are stopped. If the dedicated host cannot be restored, the instances are migrated to another physical server and restarted.</p>
+         * <p>*   Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical server and restarted.</p>
          * <br>
          * <p>If the dedicated host has cloud disks attached, the default value is Migrate. If the dedicated host has local disks attached, the default value is Stop.</p>
          */
@@ -672,13 +672,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
          * <p>*   on: The dedicated host was added to the resource pool for automatic deployment.</p>
          * <p>*   off: The dedicated host was not added to the resource pool for automatic deployment.</p>
          * <br>
-         * <p>For more information about automatic deployment, see the "Automatic deployment" section in [Functions and features](~~118938~~).</p>
+         * <p>For more information about automatic deployment, see the "Automatic deployment" section in [Functions and features](https://help.aliyun.com/document_detail/118938.html).</p>
          */
         @NameInMap("AutoPlacement")
         public String autoPlacement;
 
         /**
-         * <p>The automatic release time of the instance. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
+         * <p>The automatic release time of the instances deployed on the dedicated host. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
          */
         @NameInMap("AutoReleaseTime")
         public String autoReleaseTime;
@@ -708,7 +708,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public Float cpuOverCommitRatio;
 
         /**
-         * <p>The time when the dedicated host was created. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
+         * <p>The time when the dedicated host was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -732,7 +732,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public String dedicatedHostName;
 
         /**
-         * <p>专有宿主机所有者的用户ID。</p>
+         * <p>The ID of the dedicated host owner.</p>
          */
         @NameInMap("DedicatedHostOwnerId")
         public Long dedicatedHostOwnerId;
@@ -750,7 +750,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The expiration time of the subscription dedicated host. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
+         * <p>The expiration time of the subscription dedicated host. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -825,7 +825,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public Integer sockets;
 
         /**
-         * <p>The state of the dedicated host. Valid values:</p>
+         * <p>The status of the dedicated host. Valid values:</p>
          * <br>
          * <p>*   Available: The dedicated host is running normally.</p>
          * <p>*   UnderAssessment: The dedicated host is available but has potential risks that may cause the ECS instances on the dedicated host to fail.</p>

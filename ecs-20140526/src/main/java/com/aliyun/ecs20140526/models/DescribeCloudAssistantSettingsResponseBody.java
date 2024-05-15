@@ -98,7 +98,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The time zone of the time window.</p>
+         * <p>The time zone of the time windows.</p>
          */
         @NameInMap("TimeZone")
         public String timeZone;
@@ -144,8 +144,8 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         /**
          * <p>The type of items to be delivered. Valid values:</p>
          * <br>
-         * <p>*   SessionManager: session records</p>
-         * <p>*   Invocation: task execution records</p>
+         * <p>*   SessionManager: session records.</p>
+         * <p>*   Invocation: task execution records.</p>
          */
         @NameInMap("DeliveryType")
         public String deliveryType;
@@ -166,7 +166,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public String encryptionAlgorithm;
 
         /**
-         * <p>The ID of the customer master key (CMK) when EncryptionType is KMS.</p>
+         * <p>The ID of the customer master key (CMK) when EncryptionType is set to KMS.</p>
          */
         @NameInMap("EncryptionKeyId")
         public String encryptionKeyId;
@@ -176,7 +176,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
          * <br>
          * <p>*   Inherit: the encryption method used by the specified bucket.</p>
          * <p>*   OssManaged: server-side encryption by using OSS-managed keys (SSE-OSS).</p>
-         * <p>*   KMS: server-side encryption by using Key Management Service managed keys (SSE-KMS).</p>
+         * <p>*   KMS: server-side encryption with Key Management Service (SSE-KMS).</p>
          */
         @NameInMap("EncryptionType")
         public String encryptionType;
@@ -273,8 +273,8 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         /**
          * <p>The type of items to be delivered. Valid values:</p>
          * <br>
-         * <p>*   SessionManager: session records</p>
-         * <p>*   Invocation: task execution records</p>
+         * <p>*   SessionManager: session records.</p>
+         * <p>*   Invocation: task execution records.</p>
          */
         @NameInMap("DeliveryType")
         public String deliveryType;
