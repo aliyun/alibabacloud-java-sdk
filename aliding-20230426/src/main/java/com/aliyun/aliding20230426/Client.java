@@ -10917,6 +10917,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 查询预约会议历史会议信息
+     *
+     * @param tmpReq QueryScheduleConferenceInfoRequest
+     * @param tmpHeader QueryScheduleConferenceInfoHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryScheduleConferenceInfoResponse
+     */
+    public QueryScheduleConferenceInfoResponse queryScheduleConferenceInfoWithOptions(QueryScheduleConferenceInfoRequest tmpReq, QueryScheduleConferenceInfoHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryScheduleConferenceInfoShrinkRequest request = new QueryScheduleConferenceInfoShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        QueryScheduleConferenceInfoShrinkHeaders headers = new QueryScheduleConferenceInfoShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleConferenceId)) {
+            body.put("ScheduleConferenceId", request.scheduleConferenceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryScheduleConferenceInfo"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/ysp/queryScheduleConferenceInfo"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryScheduleConferenceInfoResponse());
+    }
+
+    /**
+     * @summary 查询预约会议历史会议信息
+     *
+     * @param request QueryScheduleConferenceInfoRequest
+     * @return QueryScheduleConferenceInfoResponse
+     */
+    public QueryScheduleConferenceInfoResponse queryScheduleConferenceInfo(QueryScheduleConferenceInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        QueryScheduleConferenceInfoHeaders headers = new QueryScheduleConferenceInfoHeaders();
+        return this.queryScheduleConferenceInfoWithOptions(request, headers, runtime);
+    }
+
+    /**
      * @summary 查询员工勋章列表
      *
      * @param tmpReq QueryUserHonorsRequest
