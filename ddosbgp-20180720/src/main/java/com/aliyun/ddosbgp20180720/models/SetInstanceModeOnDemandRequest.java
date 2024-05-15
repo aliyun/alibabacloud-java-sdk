@@ -7,7 +7,9 @@ public class SetInstanceModeOnDemandRequest extends TeaModel {
     /**
      * <p>The IDs of on-demand instances.</p>
      * <br>
-     * <p>>  You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all on-demand instances.</p>
+     * <p>>  You can call the [DescribeOnDemandInstance](https://help.aliyun.com/document_detail/152120.html) operation to query the IDs of all on-demand instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIdList")
     public java.util.List<String> instanceIdList;
@@ -17,6 +19,8 @@ public class SetInstanceModeOnDemandRequest extends TeaModel {
      * <br>
      * <p>*   **manual**: manual scheduling</p>
      * <p>*   **netflow-auto**: automatic scheduling</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Mode")
     public String mode;
@@ -24,7 +28,7 @@ public class SetInstanceModeOnDemandRequest extends TeaModel {
     /**
      * <p>The region ID of the on-demand instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query all regions supported by Anti-DDoS Origin.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

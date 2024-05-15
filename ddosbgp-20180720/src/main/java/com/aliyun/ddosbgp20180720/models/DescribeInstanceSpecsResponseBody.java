@@ -197,7 +197,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         /**
          * <p>The region ID of the Anti-DDoS Origin Enterprise instance.</p>
          * <br>
-         * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query the name of the region.</p>
+         * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the name of the region.</p>
          */
         @NameInMap("Region")
         public String region;

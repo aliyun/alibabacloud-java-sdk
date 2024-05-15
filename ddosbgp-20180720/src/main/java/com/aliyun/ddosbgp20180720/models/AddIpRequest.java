@@ -7,7 +7,9 @@ public class AddIpRequest extends TeaModel {
     /**
      * <p>The ID of the Anti-DDoS Origin Enterprise instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin Enterprise instances.</p>
+     * <p>>  You can call the [DescribeInstanceList](https://help.aliyun.com/document_detail/118698.html) operation to query the IDs of all Anti-DDoS Origin Enterprise instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -18,6 +20,8 @@ public class AddIpRequest extends TeaModel {
      * <p>*   **ip**: required. The IP address that you want to add. Data type: string.</p>
      * <br>
      * <p>    > The IP address must be the IP address of an asset that belongs to the current Alibaba Cloud account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IpList")
     public String ipList;
@@ -25,7 +29,7 @@ public class AddIpRequest extends TeaModel {
     /**
      * <p>The region ID of the Anti-DDoS Origin Enterprise instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query all regions supported by Anti-DDoS Origin.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -33,7 +37,7 @@ public class AddIpRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the Anti-DDoS Origin Enterprise instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
      * <br>
-     * <p>For more information about resource groups, see [Create a resource group](~~94485~~).</p>
+     * <p>For more information about resource groups, see [Create a resource group](https://help.aliyun.com/document_detail/94485.html).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

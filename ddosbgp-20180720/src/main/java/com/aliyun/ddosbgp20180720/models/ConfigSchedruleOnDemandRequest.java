@@ -7,7 +7,9 @@ public class ConfigSchedruleOnDemandRequest extends TeaModel {
     /**
      * <p>The ID of the on-demand instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all on-demand instances.</p>
+     * <p>>  You can call the [DescribeOnDemandInstance](https://help.aliyun.com/document_detail/152120.html) operation to query the IDs of all on-demand instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -15,13 +17,15 @@ public class ConfigSchedruleOnDemandRequest extends TeaModel {
     /**
      * <p>The region ID of the on-demand instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query all regions supported by Anti-DDoS Origin.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The scheduling action. Set the value to **declare**, which indicates that the route is advertised.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleAction")
     public String ruleAction;
@@ -30,18 +34,24 @@ public class ConfigSchedruleOnDemandRequest extends TeaModel {
      * <p>If the inbound bandwidth or packets consecutively exceed the threshold for the specified number of times, the scheduling rule is triggered and traffic is rerouted to the on-demand instance. The specified number of times is the value of this parameter.</p>
      * <br>
      * <p>>  The threshold of inbound bandwidth is the value of **RuleConditionMbps**. The threshold of inbound packets is the value of **RuleConditionKpps**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleConditionCnt")
     public String ruleConditionCnt;
 
     /**
      * <p>The threshold of inbound packets. Unit: Kpps. Minimum value: **10**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleConditionKpps")
     public String ruleConditionKpps;
 
     /**
      * <p>The threshold of inbound bandwidth. Unit: Mbit/s. Minimum value: **100**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleConditionMbps")
     public String ruleConditionMbps;
@@ -49,7 +59,9 @@ public class ConfigSchedruleOnDemandRequest extends TeaModel {
     /**
      * <p>The name of the scheduling rule.</p>
      * <br>
-     * <p>The name can contain lowercase letters, digits, hyphens (-), and underscores (\_). The name can be up to 32 characters in length. We recommend that you use the ID of the on-demand instance as the name. Example: `ddosbgp-cn-z2q1qzxb****`.</p>
+     * <p>The name can contain lowercase letters, digits, hyphens (-), and underscores (_). The name can be up to 32 characters in length. We recommend that you use the ID of the on-demand instance as the name. Example: `ddosbgp-cn-z2q1qzxb****`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
@@ -59,6 +71,8 @@ public class ConfigSchedruleOnDemandRequest extends TeaModel {
      * <br>
      * <p>*   **on**: enabled</p>
      * <p>*   **off**: disabled</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleSwitch")
     public String ruleSwitch;
@@ -69,6 +83,8 @@ public class ConfigSchedruleOnDemandRequest extends TeaModel {
      * <p>If the system detects that DDoS attacks stop, the system no longer reroutes traffic to the on-demand instance from the time you specified. We recommend that you set this parameter to a value that is defined as off-peak hours.</p>
      * <br>
      * <p>>  This parameter takes effect only when the **RuleUndoMode** parameter is set to **auto**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleUndoBeginTime")
     public String ruleUndoBeginTime;
@@ -84,6 +100,8 @@ public class ConfigSchedruleOnDemandRequest extends TeaModel {
      * <br>
      * <p>*   **auto**: The scheduling rule automatically stops.</p>
      * <p>*   **manual**: The scheduling rule is manually stopped.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleUndoMode")
     public String ruleUndoMode;
@@ -94,6 +112,8 @@ public class ConfigSchedruleOnDemandRequest extends TeaModel {
      * <p>For example, the value `GMT-08:00` indicates that the time zone is UTC+8.</p>
      * <br>
      * <p>>  This parameter takes effect only when the **RuleUndoMode** parameter is set to **auto**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TimeZone")
     public String timeZone;

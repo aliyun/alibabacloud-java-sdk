@@ -7,7 +7,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code of the request.</p>
      * <br>
-     * <p>For more information about status codes, see [Common parameters](~~118841~~).</p>
+     * <p>For more information about status codes, see [Common parameters](https://help.aliyun.com/document_detail/118841.html).</p>
      */
     @NameInMap("Code")
     public String code;
@@ -97,6 +97,12 @@ public class DescribePackIpListResponseBody extends TeaModel {
         @NameInMap("MemberUid")
         public String memberUid;
 
+        @NameInMap("NsmExpireAt")
+        public Long nsmExpireAt;
+
+        @NameInMap("NsmStartAt")
+        public Long nsmStartAt;
+
         @NameInMap("NsmStatus")
         public Integer nsmStatus;
 
@@ -155,6 +161,22 @@ public class DescribePackIpListResponseBody extends TeaModel {
         }
         public String getMemberUid() {
             return this.memberUid;
+        }
+
+        public DescribePackIpListResponseBodyIpList setNsmExpireAt(Long nsmExpireAt) {
+            this.nsmExpireAt = nsmExpireAt;
+            return this;
+        }
+        public Long getNsmExpireAt() {
+            return this.nsmExpireAt;
+        }
+
+        public DescribePackIpListResponseBodyIpList setNsmStartAt(Long nsmStartAt) {
+            this.nsmStartAt = nsmStartAt;
+            return this;
+        }
+        public Long getNsmStartAt() {
+            return this.nsmStartAt;
         }
 
         public DescribePackIpListResponseBodyIpList setNsmStatus(Integer nsmStatus) {
