@@ -4,12 +4,21 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class CreateUserRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountNo")
     public String accountNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Role")
     public String role;
 

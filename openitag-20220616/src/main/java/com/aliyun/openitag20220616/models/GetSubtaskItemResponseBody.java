@@ -16,6 +16,9 @@ public class GetSubtaskItemResponseBody extends TeaModel {
     @NameInMap("Item")
     public SubtaskItemDetail item;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Message")
     public String message;
 

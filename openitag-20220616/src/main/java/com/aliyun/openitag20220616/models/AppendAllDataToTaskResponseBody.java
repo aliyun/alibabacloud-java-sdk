@@ -3,7 +3,7 @@ package com.aliyun.openitag20220616.models;
 
 import com.aliyun.tea.*;
 
-public class GetTaskStatusResponseBody extends TeaModel {
+public class AppendAllDataToTaskResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
@@ -19,21 +19,21 @@ public class GetTaskStatusResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("TaskStatus")
-    public String taskStatus;
-
-    public static GetTaskStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetTaskStatusResponseBody self = new GetTaskStatusResponseBody();
+    public static AppendAllDataToTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        AppendAllDataToTaskResponseBody self = new AppendAllDataToTaskResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetTaskStatusResponseBody setCode(Integer code) {
+    public AppendAllDataToTaskResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -41,7 +41,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetTaskStatusResponseBody setDetails(String details) {
+    public AppendAllDataToTaskResponseBody setDetails(String details) {
         this.details = details;
         return this;
     }
@@ -49,7 +49,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
         return this.details;
     }
 
-    public GetTaskStatusResponseBody setErrorCode(String errorCode) {
+    public AppendAllDataToTaskResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -57,7 +57,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public GetTaskStatusResponseBody setMessage(String message) {
+    public AppendAllDataToTaskResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -65,7 +65,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetTaskStatusResponseBody setRequestId(String requestId) {
+    public AppendAllDataToTaskResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -73,20 +73,12 @@ public class GetTaskStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetTaskStatusResponseBody setSuccess(Boolean success) {
+    public AppendAllDataToTaskResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public GetTaskStatusResponseBody setTaskStatus(String taskStatus) {
-        this.taskStatus = taskStatus;
-        return this;
-    }
-    public String getTaskStatus() {
-        return this.taskStatus;
     }
 
 }

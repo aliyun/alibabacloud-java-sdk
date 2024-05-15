@@ -4,6 +4,9 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("body")
     public CreateTaskDetail body;
 

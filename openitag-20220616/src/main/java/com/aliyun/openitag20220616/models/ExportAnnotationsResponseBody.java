@@ -16,6 +16,9 @@ public class ExportAnnotationsResponseBody extends TeaModel {
     @NameInMap("FlowJob")
     public FlowJobInfo flowJob;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Message")
     public String message;
 

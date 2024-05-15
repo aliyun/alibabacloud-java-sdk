@@ -4,15 +4,24 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class ViewPlugin extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BindField")
     public String bindField;
 
     @NameInMap("Convertor")
     public String convertor;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CorsProxy")
     public Boolean corsProxy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DisplayOriImg")
     public Boolean displayOriImg;
 
@@ -28,6 +37,9 @@ public class ViewPlugin extends TeaModel {
     @NameInMap("RelationQuestionIds")
     public java.util.List<String> relationQuestionIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 

@@ -16,6 +16,9 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("Job")
     public Job job;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Message")
     public String message;
 

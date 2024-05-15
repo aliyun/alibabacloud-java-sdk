@@ -10,9 +10,15 @@ public class CreateTaskDetail extends TeaModel {
     @NameInMap("AllowAppendData")
     public Boolean allowAppendData;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AssignConfig")
     public TaskAssginConfig assignConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DatasetProxyRelations")
     public java.util.List<DatasetProxyConfig> datasetProxyRelations;
 
@@ -22,18 +28,30 @@ public class CreateTaskDetail extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
     @NameInMap("TaskTemplateConfig")
     public TaskTemplateConfig taskTemplateConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskWorkflow")
     public java.util.List<CreateTaskDetailTaskWorkflow> taskWorkflow;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UUID")
     public String UUID;
 
