@@ -10,9 +10,15 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("JobDescription")
     public String jobDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobName")
     public String jobName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<CreateJobRequestTasks> tasks;
 
@@ -281,6 +287,9 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("EnvironmentVars")
         public java.util.List<CreateJobRequestTasksTaskSpecTaskExecutorContainerEnvironmentVars> environmentVars;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Image")
         public String image;
 
@@ -327,6 +336,9 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestTasksTaskSpecTaskExecutorVM extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Image")
         public String image;
 
@@ -442,6 +454,9 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("Resource")
         public CreateJobRequestTasksTaskSpecResource resource;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("TaskExecutor")
         public java.util.List<CreateJobRequestTasksTaskSpecTaskExecutor> taskExecutor;
 

@@ -4,6 +4,9 @@ package com.aliyun.ehpc20230701.models;
 import com.aliyun.tea.*;
 
 public class GetImageRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
