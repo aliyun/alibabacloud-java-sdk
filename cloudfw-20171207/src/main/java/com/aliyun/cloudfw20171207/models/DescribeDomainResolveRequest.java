@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeDomainResolveRequest extends TeaModel {
     /**
      * <p>The domain name whose DNS record you want to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domain")
     public String domain;

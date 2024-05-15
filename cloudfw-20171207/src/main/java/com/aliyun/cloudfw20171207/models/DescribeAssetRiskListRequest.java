@@ -11,7 +11,7 @@ public class DescribeAssetRiskListRequest extends TeaModel {
      * <br>
      * <p>*   Example of an IPv4 address: 47.97.221.164</p>
      * <br>
-     * <p>*   Example of an IPv6 address: 2001:db8:ffff:ffff:ffff:\*\*\*\*:ffff</p>
+     * <p>*   Example of an IPv6 address: 2001:db8:ffff:ffff:ffff:\\*\\*\\*\\*:ffff</p>
      */
     @NameInMap("IpAddrList")
     public java.util.List<String> ipAddrList;
@@ -23,6 +23,8 @@ public class DescribeAssetRiskListRequest extends TeaModel {
      * <br>
      * <p>*   **4** (default): IPv4</p>
      * <p>*   **6**: IPv6</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IpVersion")
     public Integer ipVersion;

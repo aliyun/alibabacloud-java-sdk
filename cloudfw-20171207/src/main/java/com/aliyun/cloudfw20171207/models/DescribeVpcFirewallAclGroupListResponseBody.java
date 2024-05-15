@@ -59,11 +59,11 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
          * <br>
          * <p>*   If the VPC firewall is used to protect a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance.</p>
          * <br>
-         * <p>    Example: cen-ervw0g12b5jbw\*\*\*\*</p>
+         * <p>    Example: cen-ervw0g12b5jbw\\*\\*\\*\\*</p>
          * <br>
          * <p>*   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall.</p>
          * <br>
-         * <p>    Example: vfw-a42bbb7b887148c9\*\*\*\*</p>
+         * <p>    Example: vfw-a42bbb7b887148c9\\*\\*\\*\\*</p>
          */
         @NameInMap("AclGroupId")
         public String aclGroupId;

@@ -21,6 +21,8 @@ public class DeleteControlPolicyTemplateRequest extends TeaModel {
 
     /**
      * <p>The ID of the access control policy template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

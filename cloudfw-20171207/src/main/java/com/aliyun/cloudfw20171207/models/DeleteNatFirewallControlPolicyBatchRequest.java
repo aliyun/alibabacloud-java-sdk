@@ -29,6 +29,8 @@ public class DeleteNatFirewallControlPolicyBatchRequest extends TeaModel {
 
     /**
      * <p>The ID of the NAT gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;

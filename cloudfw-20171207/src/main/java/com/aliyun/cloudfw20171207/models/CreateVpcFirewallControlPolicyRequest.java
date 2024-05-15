@@ -10,6 +10,8 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>- **accept**: allows the traffic.</p>
      * <p>- **drop**: blocks the traffic.</p>
      * <p>- **log**: monitors the traffic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclAction")
     public String aclAction;
@@ -44,6 +46,8 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The description of the access control policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -79,6 +83,8 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>- If **DestinationType** is set to `net`, the value of **Destination** must be a CIDR block.</p>
      * <p>- If **DestinationType** is set to `group`, the value of **Destination** must be an address book.</p>
      * <p>- If **DestinationType** is set to `domain`, the value of **Destination** must be a domain name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Destination")
     public String destination;
@@ -89,6 +95,8 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>- **net**: CIDR block</p>
      * <p>- **group**: address book</p>
      * <p>- **domain**: domain name</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationType")
     public String destinationType;
@@ -120,6 +128,8 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>The priority of the access control policy. </p>
      * <br>
      * <p>The priority value starts from 1. A smaller priority value indicates a higher priority.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NewOrder")
     public String newOrder;
@@ -131,6 +141,8 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>- **TCP**</p>
      * <p>- **UDP**</p>
      * <p>- **ICMP**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Proto")
     public String proto;
@@ -147,12 +159,12 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The days of a week or of a month on which the access control policy takes effect.</p>
      * <br>
-     * <p>*   If you set RepeatType to `Permanent`, `None`, or `Daily`, leave this parameter empty. Example: \[].</p>
-     * <p>*   If you set RepeatType to Weekly, you must specify this parameter. Example: \[0, 6].</p>
+     * <p>*   If you set RepeatType to `Permanent`, `None`, or `Daily`, leave this parameter empty. Example: [].</p>
+     * <p>*   If you set RepeatType to Weekly, you must specify this parameter. Example: [0, 6].</p>
      * <br>
      * <p>>  If you set RepeatType to Weekly, the fields in the value of this parameter cannot be repeated.</p>
      * <br>
-     * <p>*   If you set RepeatType to `Monthly`, you must specify this parameter. Example: \[1, 31].</p>
+     * <p>*   If you set RepeatType to `Monthly`, you must specify this parameter. Example: [1, 31].</p>
      * <br>
      * <p>>  If you set RepeatType to Monthly, the fields in the value of this parameter cannot be repeated.</p>
      */
@@ -192,6 +204,8 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
      * <br>
      * <p>- If SourceType is set to `net`, the value of Source must be a CIDR block.</p>
      * <p>- If SourceType is set to `group`, the value of Source must be an address book.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Source")
     public String source;
@@ -201,6 +215,8 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
      * <br>
      * <p>- **net**: CIDR block</p>
      * <p>- **group**: address book</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
@@ -220,6 +236,8 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>- If a VPC firewall protects the traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.</p>
      * <br>
      * <p>>  You can call the [DescribeVpcFirewallAclGroupList](https://www.alibabacloud.com/help/en/cloud-firewall/latest/describevpcfirewallaclgrouplist) operation to query the IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;

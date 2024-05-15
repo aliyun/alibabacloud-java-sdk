@@ -175,7 +175,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
          * <p>*   If **DestinationType** is set to **net**, the value of Destination is a CIDR block. Example: 192.0.XX.XX/24.</p>
          * <p>*   If **DestinationType** is set to **domain**, the value of Destination is a domain name. Example: aliyuncs.com.</p>
          * <p>*   If **DestinationType** is set to **group**, the value of Destination is the name of an address book. Example: db_group.</p>
-         * <p>*   If **DestinationType** is set to **location**, the value of Destination is a location. For more information about location codes, see [AddControlPolicy](~~138867~~). Example: \["BJ11", "ZB"].</p>
+         * <p>*   If **DestinationType** is set to **location**, the value of Destination is a location. For more information about location codes, see [AddControlPolicy](https://help.aliyun.com/document_detail/138867.html). Example: ["BJ11", "ZB"].</p>
          */
         @NameInMap("Destination")
         public String destination;
@@ -296,12 +296,12 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         /**
          * <p>The days of a week or of a month on which the access control policy takes effect.</p>
          * <br>
-         * <p>*   If RepeatType is set to `Permanent`, `None`, or `Daily`, this parameter is left empty. Example: \[].</p>
-         * <p>*   If RepeatType is set to Weekly, this parameter must be specified. Example: \[0, 6].</p>
+         * <p>*   If RepeatType is set to `Permanent`, `None`, or `Daily`, this parameter is left empty. Example: [].</p>
+         * <p>*   If RepeatType is set to Weekly, this parameter must be specified. Example: [0, 6].</p>
          * <br>
          * <p>>  If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.</p>
          * <br>
-         * <p>*   If RepeatType is set to `Monthly`, this parameter must be specified. Example: \[1, 31].</p>
+         * <p>*   If RepeatType is set to `Monthly`, this parameter must be specified. Example: [1, 31].</p>
          * <br>
          * <p>>  If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.</p>
          */
@@ -341,7 +341,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
          * <br>
          * <p>*   If **SourceType** is set to `net`, the value of Source is a CIDR block. Example: 192.0.XX.XX/24.</p>
          * <p>*   If **SourceType** is set to `group`, the value of Source is the name of an address book. Example: db_group.</p>
-         * <p>*   If **SourceType** is set to `location`, the value of Source is a location. For more information about location codes, see [AddControlPolicy](~~138867~~). Example: \["BJ11", "ZB"].</p>
+         * <p>*   If **SourceType** is set to `location`, the value of Source is a location. For more information about location codes, see [AddControlPolicy](https://help.aliyun.com/document_detail/138867.html). Example: ["BJ11", "ZB"].</p>
          */
         @NameInMap("Source")
         public String source;

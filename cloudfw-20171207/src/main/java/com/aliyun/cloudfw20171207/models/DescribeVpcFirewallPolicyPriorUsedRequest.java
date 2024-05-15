@@ -26,6 +26,8 @@ public class DescribeVpcFirewallPolicyPriorUsedRequest extends TeaModel {
      * <p>- If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the ID of the VPC firewall instance.  </p>
      * <br>
      * <p>Example: vfw-a42bbb7b887148c9****</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;

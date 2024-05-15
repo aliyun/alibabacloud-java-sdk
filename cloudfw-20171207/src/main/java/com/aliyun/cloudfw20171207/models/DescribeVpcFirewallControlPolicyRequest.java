@@ -24,6 +24,8 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
@@ -63,6 +65,8 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>The number of entries to return on each page.</p>
      * <br>
      * <p>Maximum value: 50.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
@@ -115,7 +119,9 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>*   If the VPC firewall protects the traffic between two VPCs that are connected by using a CEN instance, the value of this parameter must be the ID of the CEN instance.</p>
      * <p>*   If the VPC firewall protects the traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.</p>
      * <br>
-     * <p>> You can call the [DescribeVpcFirewallAclGroupList](~~159760~~) operation to query the ID.</p>
+     * <p>> You can call the [DescribeVpcFirewallAclGroupList](https://help.aliyun.com/document_detail/159760.html) operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;

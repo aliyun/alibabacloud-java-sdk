@@ -10,6 +10,8 @@ public class DescribeNatFirewallPolicyPriorUsedRequest extends TeaModel {
      * <p>Valid values:</p>
      * <br>
      * <p>*   **out**: outbound traffic</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Direction")
     public String direction;
@@ -33,6 +35,8 @@ public class DescribeNatFirewallPolicyPriorUsedRequest extends TeaModel {
 
     /**
      * <p>The ID of the NAT gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;

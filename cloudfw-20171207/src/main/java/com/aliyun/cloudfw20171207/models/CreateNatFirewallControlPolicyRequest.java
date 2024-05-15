@@ -12,18 +12,24 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
      * <p>*   **accept**: allows the traffic.</p>
      * <p>*   **drop**: denies the traffic.</p>
      * <p>*   **log**: monitors the traffic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclAction")
     public String aclAction;
 
     /**
      * <p>The application types supported by the access control policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApplicationNameList")
     public java.util.List<String> applicationNameList;
 
     /**
      * <p>The description of the access control policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -76,11 +82,13 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
      * <br>
      * <p>*   If DestinationType is set to domain, the value of this parameter is a domain name.</p>
      * <br>
-     * <p>    Example: \*.aliyuncs.com</p>
+     * <p>    Example: \\*.aliyuncs.com</p>
      * <br>
      * <p>*   If DestinationType is set to location, the value of this parameter is a location.</p>
      * <br>
-     * <p>    Example: \["BJ11", "ZB"]</p>
+     * <p>    Example: ["BJ11", "ZB"]</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Destination")
     public String destination;
@@ -93,6 +101,8 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
      * <p>*   **net**: CIDR block</p>
      * <p>*   **group**: address book</p>
      * <p>*   **domain**: domain name</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationType")
     public String destinationType;
@@ -101,6 +111,8 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
      * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
      * <br>
      * <p>*   **out**: outbound traffic</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Direction")
     public String direction;
@@ -144,12 +156,16 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The ID of the NAT gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
      * <p>The priority of the access control policy. The priority value starts from 1. A small priority value indicates a high priority.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NewOrder")
     public String newOrder;
@@ -163,6 +179,8 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
      * <p>*   TCP</p>
      * <p>*   UDP</p>
      * <p>*   ICMP</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Proto")
     public String proto;
@@ -179,12 +197,12 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The days of a week or of a month on which the access control policy takes effect.</p>
      * <br>
-     * <p>*   If RepeatType is set to `Permanent`, `None`, or `Daily`, RepeatDays is left empty. Example: \[].</p>
-     * <p>*   If RepeatType is set to Weekly, RepeatDays must be specified. Example: \[0, 6].</p>
+     * <p>*   If RepeatType is set to `Permanent`, `None`, or `Daily`, RepeatDays is left empty. Example: [].</p>
+     * <p>*   If RepeatType is set to Weekly, RepeatDays must be specified. Example: [0, 6].</p>
      * <br>
      * <p>>  If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.</p>
      * <br>
-     * <p>*   If RepeatType is set to `Monthly`, RepeatDays must be specified. Example: \[1, 31].</p>
+     * <p>*   If RepeatType is set to `Monthly`, RepeatDays must be specified. Example: [1, 31].</p>
      * <br>
      * <p>>  If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.</p>
      */
@@ -231,6 +249,8 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
      * <p>*   If **SourceType** is set to `group`, the value of this parameter must be an address book name.</p>
      * <br>
      * <p>    Example: db_group</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Source")
     public String source;
@@ -242,6 +262,8 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
      * <br>
      * <p>*   **net**: source CIDR block</p>
      * <p>*   **group**: source address book</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceType")
     public String sourceType;

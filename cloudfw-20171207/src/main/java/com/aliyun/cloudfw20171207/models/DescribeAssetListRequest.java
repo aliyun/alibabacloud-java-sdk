@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeAssetListRequest extends TeaModel {
     /**
      * <p>The page number. Valid values: 1 to 50.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
@@ -46,6 +48,8 @@ public class DescribeAssetListRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 50.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
@@ -53,7 +57,7 @@ public class DescribeAssetListRequest extends TeaModel {
     /**
      * <p>The region ID of your Cloud Firewall.</p>
      * <br>
-     * <p>> For more information about the regions, see [Supported regions](~~195657~~).</p>
+     * <p>> For more information about the regions, see [Supported regions](https://help.aliyun.com/document_detail/195657.html).</p>
      */
     @NameInMap("RegionNo")
     public String regionNo;

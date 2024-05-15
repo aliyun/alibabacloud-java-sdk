@@ -10,6 +10,8 @@ public class AddControlPolicyRequest extends TeaModel {
      * <p>*   **accept**: allows the traffic.</p>
      * <p>*   **drop**: denies the traffic.</p>
      * <p>*   **log**: monitors the traffic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclAction")
     public String aclAction;
@@ -47,6 +49,8 @@ public class AddControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The description of the access control policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -101,11 +105,13 @@ public class AddControlPolicyRequest extends TeaModel {
      * <br>
      * <p>*   If DestinationType is set to domain, the value of this parameter is a domain name.</p>
      * <br>
-     * <p>    Example: \*.aliyuncs.com</p>
+     * <p>    Example: \\*.aliyuncs.com</p>
      * <br>
      * <p>*   If DestinationType is set to location, the value of this parameter is a location.</p>
      * <br>
-     * <p>    Example: \["BJ11", "ZB"]</p>
+     * <p>    Example: ["BJ11", "ZB"]</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Destination")
     public String destination;
@@ -117,6 +123,8 @@ public class AddControlPolicyRequest extends TeaModel {
      * <p>*   **group**: address book</p>
      * <p>*   **domain**: domain name</p>
      * <p>*   **location**: location</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationType")
     public String destinationType;
@@ -126,6 +134,8 @@ public class AddControlPolicyRequest extends TeaModel {
      * <br>
      * <p>*   **in**: inbound traffic</p>
      * <p>*   **out**: outbound traffic</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Direction")
     public String direction;
@@ -160,6 +170,8 @@ public class AddControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The priority of the access control policy. The priority value starts from 1. A smaller priority value indicates a higher priority.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NewOrder")
     public String newOrder;
@@ -171,6 +183,8 @@ public class AddControlPolicyRequest extends TeaModel {
      * <p>*   **TCP**</p>
      * <p>*   **UDP**</p>
      * <p>*   **ICMP**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Proto")
     public String proto;
@@ -187,12 +201,12 @@ public class AddControlPolicyRequest extends TeaModel {
     /**
      * <p>The days of a week or of a month on which the access control policy takes effect.</p>
      * <br>
-     * <p>*   If you set RepeatType to `Permanent`, `None`, or `Daily`, leave this parameter empty. Example: \[].</p>
-     * <p>*   If you set RepeatType to Weekly, you must specify this parameter. Example: \[0, 6].</p>
+     * <p>*   If you set RepeatType to `Permanent`, `None`, or `Daily`, leave this parameter empty. Example: [].</p>
+     * <p>*   If you set RepeatType to Weekly, you must specify this parameter. Example: [0, 6].</p>
      * <br>
      * <p>>  If you set RepeatType to Weekly, the fields in the value of this parameter cannot be repeated.</p>
      * <br>
-     * <p>*   If you set RepeatType to `Monthly`, you must specify this parameter. Example: \[1, 31].</p>
+     * <p>*   If you set RepeatType to `Monthly`, you must specify this parameter. Example: [1, 31].</p>
      * <br>
      * <p>>  If you set RepeatType to Monthly, the fields in the value of this parameter cannot be repeated.</p>
      */
@@ -240,7 +254,9 @@ public class AddControlPolicyRequest extends TeaModel {
      * <br>
      * <p>*   If SourceType is set to location, the value of this parameter is a location.</p>
      * <br>
-     * <p>    Example: \["BJ11", "ZB"]</p>
+     * <p>    Example: ["BJ11", "ZB"]</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Source")
     public String source;
@@ -258,6 +274,8 @@ public class AddControlPolicyRequest extends TeaModel {
      * <p>*   **net**: CIDR block</p>
      * <p>*   **group**: address book</p>
      * <p>*   **location**: location</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceType")
     public String sourceType;

@@ -18,6 +18,8 @@ public class DescribeRiskEventPayloadRequest extends TeaModel {
 
     /**
      * <p>The end of the time range to query. The value is a timestamp. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -51,12 +53,16 @@ public class DescribeRiskEventPayloadRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. The value is a timestamp. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The UUID of the intrusion event.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UUID")
     public String UUID;

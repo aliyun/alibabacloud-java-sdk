@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyNatFirewallControlPolicyPositionRequest extends TeaModel {
     /**
      * <p>The UUID of the access control policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;
@@ -29,6 +31,8 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends TeaModel {
 
     /**
      * <p>The ID of the NAT gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
@@ -39,6 +43,8 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends TeaModel {
      * <p>> Make sure that the value of this parameter is within the priority range of existing IPv4 access control policies. Otherwise, an error occurs when you call this operation.</p>
      * <br>
      * <p>Before you call this operation, we recommend that you call the DescribeNatFirewallPolicyPriorUsed operation to query the priority range of the IPv4 access control policies in the specified traffic direction.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NewOrder")
     public Integer newOrder;

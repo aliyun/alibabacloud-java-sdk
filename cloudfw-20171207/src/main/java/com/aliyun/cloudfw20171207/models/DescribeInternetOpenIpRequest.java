@@ -24,6 +24,8 @@ public class DescribeInternetOpenIpRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
@@ -45,6 +47,8 @@ public class DescribeInternetOpenIpRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

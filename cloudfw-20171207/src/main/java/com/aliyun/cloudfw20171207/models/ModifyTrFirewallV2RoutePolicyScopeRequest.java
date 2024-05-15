@@ -7,6 +7,9 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends TeaModel {
     @NameInMap("DestCandidateList")
     public java.util.List<ModifyTrFirewallV2RoutePolicyScopeRequestDestCandidateList> destCandidateList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FirewallId")
     public String firewallId;
 
@@ -19,6 +22,9 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends TeaModel {
     @NameInMap("SrcCandidateList")
     public java.util.List<ModifyTrFirewallV2RoutePolicyScopeRequestSrcCandidateList> srcCandidateList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TrFirewallRoutePolicyId")
     public String trFirewallRoutePolicyId;
 

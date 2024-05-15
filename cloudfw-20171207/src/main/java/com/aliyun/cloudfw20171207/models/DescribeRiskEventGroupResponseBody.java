@@ -408,7 +408,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         public Integer firstEventTime;
 
         /**
-         * <p>The geographical information about the IP address. The value is a struct that contains the following parameters: **CityId**, **CityName**, **CountryId**, and **CountryName**.\</p>
+         * <p>The geographical information about the IP address. The value is a struct that contains the following parameters: **CityId**, **CityName**, **CountryId**, and **CountryName**.\\</p>
          * <p>****************</p>
          */
         @NameInMap("IPLocationInfo")
@@ -421,7 +421,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         public Integer lastEventTime;
 
         /**
-         * <p>The information about the private IP address in the intrusion event. The value is an array that contains the following parameters: **RegionNo**, **ResourceInstanceId**, **ResourceInstanceName**, and **ResourcePrivateIP**.\</p>
+         * <p>The information about the private IP address in the intrusion event. The value is an array that contains the following parameters: **RegionNo**, **ResourceInstanceId**, **ResourceInstanceName**, and **ResourcePrivateIP**.\\</p>
          * <p>****************</p>
          */
         @NameInMap("ResourcePrivateIPList")
@@ -489,14 +489,14 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         public String tag;
 
         /**
-         * <p>The information about the destination VPC of the intrusion event. The value is a struct that contains the following parameters: **EcsInstanceId**, **EcsInstanceName**, **NetworkInstanceId**, **NetworkInstanceName**, and **RegionNo**.\</p>
+         * <p>The information about the destination VPC of the intrusion event. The value is a struct that contains the following parameters: **EcsInstanceId**, **EcsInstanceName**, **NetworkInstanceId**, **NetworkInstanceName**, and **RegionNo**.\\</p>
          * <p>********************</p>
          */
         @NameInMap("VpcDstInfo")
         public DescribeRiskEventGroupResponseBodyDataListVpcDstInfo vpcDstInfo;
 
         /**
-         * <p>The information about the source VPC of the intrusion event. The value is a struct that contains the following parameters: **EcsInstanceId**, **EcsInstanceName**, **NetworkInstanceId**, **NetworkInstanceName**, and **RegionNo**.\</p>
+         * <p>The information about the source VPC of the intrusion event. The value is a struct that contains the following parameters: **EcsInstanceId**, **EcsInstanceName**, **NetworkInstanceId**, **NetworkInstanceName**, and **RegionNo**.\\</p>
          * <p>********************</p>
          */
         @NameInMap("VpcSrcInfo")

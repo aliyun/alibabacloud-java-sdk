@@ -25,12 +25,16 @@ public class ModifyAddressBookRequest extends TeaModel {
 
     /**
      * <p>The description of the address book.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the address book.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
@@ -38,7 +42,9 @@ public class ModifyAddressBookRequest extends TeaModel {
     /**
      * <p>The ID of the address book.</p>
      * <br>
-     * <p>>  To modify the address book, you must provide the ID of the address book. You can call the [DescribeAddressBook](~~138869~~) operation to query the ID.</p>
+     * <p>>  To modify the address book, you must provide the ID of the address book. You can call the [DescribeAddressBook](https://help.aliyun.com/document_detail/138869.html) operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupUuid")
     public String groupUuid;

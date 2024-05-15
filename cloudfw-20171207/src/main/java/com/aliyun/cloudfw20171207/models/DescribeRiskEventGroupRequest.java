@@ -50,8 +50,10 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The type of the risk events.\</p>
+     * <p>The type of the risk events.\\</p>
      * <p>Set the value to **session**, which indicates intrusion events.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DataType")
     public String dataType;
@@ -83,6 +85,8 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
 
     /**
      * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -185,6 +189,8 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

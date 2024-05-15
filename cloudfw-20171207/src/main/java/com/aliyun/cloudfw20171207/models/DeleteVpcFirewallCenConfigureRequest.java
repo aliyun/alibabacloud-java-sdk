@@ -21,6 +21,8 @@ public class DeleteVpcFirewallCenConfigureRequest extends TeaModel {
 
     /**
      * <p>The instance IDs of VPC firewalls.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcFirewallIdList")
     public java.util.List<String> vpcFirewallIdList;

@@ -42,7 +42,7 @@ public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
      * <p>*   If DestinationType is set to `net`, the value of Destination must be a CIDR block. Example: 10.0.3.0/24.</p>
      * <p>*   If DestinationType is set to `domain`, the value of Destination must be a domain name. Example: aliyun.</p>
      * <p>*   If DestinationType is set to `group`, the value of Destination must be the name of an address book. Example: db_group.</p>
-     * <p>*   If DestinationType is set to `location`, the value of Destination is a location. For more information about location codes, see [AddControlPolicy](~~474128~~). Example: \["BJ11", "ZB"].</p>
+     * <p>*   If DestinationType is set to `location`, the value of Destination is a location. For more information about location codes, see [AddControlPolicy](https://help.aliyun.com/document_detail/474128.html). Example: ["BJ11", "ZB"].</p>
      * <br>
      * <p>> If you do not specify this parameter, all types of destination addresses are queried.</p>
      */
@@ -53,6 +53,8 @@ public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
      * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
      * <br>
      * <p>*   **out**: outbound traffic</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Direction")
     public String direction;
@@ -68,6 +70,8 @@ public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The ID of the NAT gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeUserAssetIPTrafficInfoRequest extends TeaModel {
     /**
      * <p>The IP address of the asset.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AssetIP")
     public String assetIP;
@@ -21,6 +23,8 @@ public class DescribeUserAssetIPTrafficInfoRequest extends TeaModel {
 
     /**
      * <p>The time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficTime")
     public String trafficTime;

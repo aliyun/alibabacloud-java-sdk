@@ -11,6 +11,8 @@ public class DescribePolicyPriorUsedRequest extends TeaModel {
      * <br>
      * <p>*   **in**: inbound traffic</p>
      * <p>*   **out**: outbound traffic</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Direction")
     public String direction;

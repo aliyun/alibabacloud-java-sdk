@@ -23,6 +23,8 @@ public class DescribeVpcFirewallIPSWhitelistRequest extends TeaModel {
 
     /**
      * <p>The instance ID of the VPC firewall.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;

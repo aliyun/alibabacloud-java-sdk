@@ -7,6 +7,9 @@ public class ModifyTrFirewallV2RoutePolicyScopeShrinkRequest extends TeaModel {
     @NameInMap("DestCandidateList")
     public String destCandidateListShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FirewallId")
     public String firewallId;
 
@@ -19,6 +22,9 @@ public class ModifyTrFirewallV2RoutePolicyScopeShrinkRequest extends TeaModel {
     @NameInMap("SrcCandidateList")
     public String srcCandidateListShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TrFirewallRoutePolicyId")
     public String trFirewallRoutePolicyId;
 

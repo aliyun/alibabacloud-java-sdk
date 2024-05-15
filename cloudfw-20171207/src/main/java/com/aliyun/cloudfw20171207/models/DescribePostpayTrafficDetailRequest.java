@@ -12,6 +12,8 @@ public class DescribePostpayTrafficDetailRequest extends TeaModel {
 
     /**
      * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -48,6 +50,8 @@ public class DescribePostpayTrafficDetailRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -57,6 +61,8 @@ public class DescribePostpayTrafficDetailRequest extends TeaModel {
      * <br>
      * <p>*   **EIP_TRAFFIC**: traffic for the Internet firewall</p>
      * <p>*   **NatGateway_TRAFFIC**: traffic for the NAT firewall</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficType")
     public String trafficType;

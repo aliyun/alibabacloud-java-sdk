@@ -10,6 +10,8 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <p>*   **accept**: allows the traffic.</p>
      * <p>*   **drop**: denies the traffic.</p>
      * <p>*   **log**: monitors the traffic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclAction")
     public String aclAction;
@@ -17,7 +19,9 @@ public class ModifyControlPolicyRequest extends TeaModel {
     /**
      * <p>The UUID of the access control policy.</p>
      * <br>
-     * <p>>  To modify an access control policy, you must specify the UUID of the policy. You can call the [DescribeControlPolicy](~~138866~~) interface to query the UUID.</p>
+     * <p>>  To modify an access control policy, you must specify the UUID of the policy. You can call the [DescribeControlPolicy](https://help.aliyun.com/document_detail/138866.html) interface to query the UUID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;
@@ -53,6 +57,8 @@ public class ModifyControlPolicyRequest extends TeaModel {
 
     /**
      * <p>The description of the access control policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -83,8 +89,10 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <br>
      * <p>*   If **DestinationType** is set to net, the value of **Destination** is a CIDR block. Example: 1.2.XX.XX/24.</p>
      * <p>*   If **DestinationType** is set to group, the value of **Destination** is an address book. Example: db_group.</p>
-     * <p>*   If **DestinationType** is set to domain, the value of **Destination** is a domain name. Example: \*.aliyuncs.com.</p>
-     * <p>*   If **DestinationType** is set to location, the value of **Destination** is a location. For more information about the location codes, see the "AddControlPolicy" topic. Example: \["BJ11", "ZB"].</p>
+     * <p>*   If **DestinationType** is set to domain, the value of **Destination** is a domain name. Example: \\*.aliyuncs.com.</p>
+     * <p>*   If **DestinationType** is set to location, the value of **Destination** is a location. For more information about the location codes, see the "AddControlPolicy" topic. Example: ["BJ11", "ZB"].</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Destination")
     public String destination;
@@ -96,6 +104,8 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <p>*   **group**: address book</p>
      * <p>*   **domain**: domain name</p>
      * <p>*   **location**: location</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationType")
     public String destinationType;
@@ -105,6 +115,8 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <br>
      * <p>*   **in**: inbound traffic</p>
      * <p>*   **out**: outbound traffic</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Direction")
     public String direction;
@@ -135,6 +147,8 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <p>*   **ICMP**</p>
      * <br>
      * <p>>  The value *ANY* indicates all types of applications.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Proto")
     public String proto;
@@ -151,12 +165,12 @@ public class ModifyControlPolicyRequest extends TeaModel {
     /**
      * <p>The days of a week or of a month on which the access control policy takes effect.</p>
      * <br>
-     * <p>*   If you set RepeatType to `Permanent`, `None`, or `Daily`, the value of this parameter is an empty array. Example: \[]</p>
-     * <p>*   If you set RepeatType to Weekly, you must specify this parameter. Example: \[0, 6]</p>
+     * <p>*   If you set RepeatType to `Permanent`, `None`, or `Daily`, the value of this parameter is an empty array. Example: []</p>
+     * <p>*   If you set RepeatType to Weekly, you must specify this parameter. Example: [0, 6]</p>
      * <br>
      * <p>>  If you set RepeatType to Weekly, the fields in the value of this parameter cannot be repeated.</p>
      * <br>
-     * <p>*   If you set RepeatType to `Monthly`, you must specify this parameter. Example: \[1, 31]</p>
+     * <p>*   If you set RepeatType to `Monthly`, you must specify this parameter. Example: [1, 31]</p>
      * <br>
      * <p>>  If you set RepeatType to Monthly, the fields in the value of this parameter cannot be repeated.</p>
      */
@@ -196,7 +210,9 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <br>
      * <p>*   If **SourceType** is set to net, the value of **Source** is a CIDR block. Example: 1.2.XX.XX/24.</p>
      * <p>*   If **SourceType** is set to group, the value of **Source** is an address book. Example: db_group.</p>
-     * <p>*   If **SourceType** is set to location, the value of **Source** is a location. For more information about the location codes, see the "AddControlPolicy" topic. Example: \["BJ11", "ZB"]</p>
+     * <p>*   If **SourceType** is set to location, the value of **Source** is a location. For more information about the location codes, see the "AddControlPolicy" topic. Example: ["BJ11", "ZB"]</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Source")
     public String source;
@@ -207,6 +223,8 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <p>*   **net**: CIDR block</p>
      * <p>*   **group**: address book</p>
      * <p>*   **location**: location</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceType")
     public String sourceType;

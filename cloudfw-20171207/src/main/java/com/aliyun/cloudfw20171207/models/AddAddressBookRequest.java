@@ -27,12 +27,16 @@ public class AddAddressBookRequest extends TeaModel {
 
     /**
      * <p>The description of the address book.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the address book.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
@@ -44,6 +48,8 @@ public class AddAddressBookRequest extends TeaModel {
      * <p>*   **domain**: domain address book</p>
      * <p>*   **port**: port address book</p>
      * <p>*   **tag**: ECS tag-based address book</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupType")
     public String groupType;

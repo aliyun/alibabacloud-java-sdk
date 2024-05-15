@@ -9,6 +9,8 @@ public class ModifyControlPolicyPositionRequest extends TeaModel {
      * <br>
      * <p>*   in: inbound traffic</p>
      * <p>*   out: outbound traffic</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Direction")
     public String direction;
@@ -25,13 +27,17 @@ public class ModifyControlPolicyPositionRequest extends TeaModel {
     /**
      * <p>The new priority of the IPv4 access control policy. You must specify a numeric value for this parameter. The value 1 indicates the highest priority. A larger value indicates a lower priority.</p>
      * <br>
-     * <p>>  The new priority cannot exceed the priority range of the IPv4 access control policy. Otherwise, an error occurs when you call this operation. Before you call this operation, we recommend that you use the [DescribePolicyPriorUsed](~~138862~~) operation to query the priority range of the IPv4 access control policy in the specified direction.</p>
+     * <p>>  The new priority cannot exceed the priority range of the IPv4 access control policy. Otherwise, an error occurs when you call this operation. Before you call this operation, we recommend that you use the [DescribePolicyPriorUsed](https://help.aliyun.com/document_detail/138862.html) operation to query the priority range of the IPv4 access control policy in the specified direction.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NewOrder")
     public String newOrder;
 
     /**
      * <p>The original priority of the IPv4 access control policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OldOrder")
     public String oldOrder;
