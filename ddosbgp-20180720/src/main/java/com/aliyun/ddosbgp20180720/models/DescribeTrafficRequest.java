@@ -24,7 +24,7 @@ public class DescribeTrafficRequest extends TeaModel {
     /**
      * <p>The ID of the Anti-DDoS Origin instance to query.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.</p>
+     * <p>>  You can call the [DescribeInstanceList](https://help.aliyun.com/document_detail/118698.html) operation to query the IDs of all Anti-DDoS Origin instances.</p>
      * <br>
      * <p>If you specify an on-demand instance, you must configure the **Interval** parameter.</p>
      */
@@ -40,7 +40,7 @@ public class DescribeTrafficRequest extends TeaModel {
     /**
      * <p>The public IP address of the asset to query. If you do not specify this parameter, the traffic statistics of all public IP addresses that are protected by the Anti-DDoS Origin instance are queried.</p>
      * <br>
-     * <p>>  The public IP address must be a protected object of the Anti-DDoS Origin instance. You can call the [DescribePackIpList](~~118701~~) operation to query all protected objects of the Anti-DDoS Origin instance.</p>
+     * <p>>  The public IP address must be a protected object of the Anti-DDoS Origin instance. You can call the [DescribePackIpList](https://help.aliyun.com/document_detail/118701.html) operation to query all protected objects of the Anti-DDoS Origin instance.</p>
      */
     @NameInMap("Ip")
     public String ip;
@@ -54,7 +54,7 @@ public class DescribeTrafficRequest extends TeaModel {
     /**
      * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -69,6 +69,8 @@ public class DescribeTrafficRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Integer startTime;

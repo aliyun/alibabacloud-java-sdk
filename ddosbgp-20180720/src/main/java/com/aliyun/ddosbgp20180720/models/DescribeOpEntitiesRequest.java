@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeOpEntitiesRequest extends TeaModel {
     /**
      * <p>The operation that you want to perform. Set the value to **DescribeOpEntities**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The details of the operation log.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -34,13 +38,15 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     /**
      * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.</p>
      */
     @NameInMap("OrderDir")
     public String orderDir;
 
     /**
      * <p>The type of the operation object. The value is fixed as **1**, which indicates Anti-DDoS Origin instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -88,6 +94,8 @@ public class DescribeOpEntitiesRequest extends TeaModel {
 
     /**
      * <p>The sorting method of operation logs. Set the value to **opdate**, which indicates sorting based on the operation time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

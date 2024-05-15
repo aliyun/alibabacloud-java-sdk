@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeOnDemandDdosEventRequest extends TeaModel {
     /**
      * <p>The timestamp that specifies the end of the time range to query. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public Integer endTime;
 
     /**
      * <p>The ID of the on-demand instance to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -24,12 +28,16 @@ public class DescribeOnDemandDdosEventRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return. Default value: **1**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries to return on each page. The maximum value is **50**. The default value is **10**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -45,6 +53,8 @@ public class DescribeOnDemandDdosEventRequest extends TeaModel {
 
     /**
      * <p>The timestamp that specifies the beginning of the time range to query. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Integer startTime;

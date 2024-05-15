@@ -59,7 +59,7 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
         public String entityObject;
 
         /**
-         * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
+         * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](https://help.aliyun.com/document_detail/118841.html).</p>
          * <br>
          * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
          */

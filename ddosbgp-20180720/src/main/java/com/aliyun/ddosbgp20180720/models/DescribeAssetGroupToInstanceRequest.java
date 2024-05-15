@@ -7,7 +7,7 @@ public class DescribeAssetGroupToInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the instance to query.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
+     * <p>>  You can call the [DescribeInstanceList](https://help.aliyun.com/document_detail/118698.html) operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -33,7 +33,7 @@ public class DescribeAssetGroupToInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the region in which the instance resides.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

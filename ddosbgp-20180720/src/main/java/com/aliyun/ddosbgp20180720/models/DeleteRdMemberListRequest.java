@@ -4,6 +4,9 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DeleteRdMemberListRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MemberList")
     public java.util.List<DeleteRdMemberListRequestMemberList> memberList;
 

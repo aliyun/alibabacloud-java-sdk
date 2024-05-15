@@ -12,6 +12,8 @@ public class DescribeAssetGroupRequest extends TeaModel {
 
     /**
      * <p>The region ID of the asset.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public String region;
@@ -19,7 +21,7 @@ public class DescribeAssetGroupRequest extends TeaModel {
     /**
      * <p>The ID of the region in which the instance resides.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -35,6 +37,8 @@ public class DescribeAssetGroupRequest extends TeaModel {
      * <br>
      * <p>*   **waf**: WAF instance</p>
      * <p>*   **ga**: Global Accelerator (GA) instance</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

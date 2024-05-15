@@ -7,7 +7,9 @@ public class DescribeInstanceSpecsRequest extends TeaModel {
     /**
      * <p>The ID of the Anti-DDoS Origin Enterprise instance. This parameter value is a string consisting of JSON arrays. Each element in a JSON array indicates an instance ID. If you want to query more than one instance, separate instance IDs with commas (,).</p>
      * <br>
-     * <p>>  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin Enterprise instances in a specific region.</p>
+     * <p>>  You can call the [DescribeInstanceList](https://help.aliyun.com/document_detail/118698.html) operation to query the IDs of all Anti-DDoS Origin Enterprise instances in a specific region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIdList")
     public String instanceIdList;
@@ -15,7 +17,7 @@ public class DescribeInstanceSpecsRequest extends TeaModel {
     /**
      * <p>The region ID of the Anti-DDoS Origin Enterprise instance. Default value: **cn-hangzhou**, which indicates the China (Hangzhou) region.</p>
      * <br>
-     * <p>>  If your instance does not reside in the China (Hangzhou) region, you must specify this parameter to the region ID of your instance. You can call the [DescribeRegions](~~118703~~) operation to query the regions of cloud assets that are supported by an Anti-DDoS Origin instance.</p>
+     * <p>>  If your instance does not reside in the China (Hangzhou) region, you must specify this parameter to the region ID of your instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the regions of cloud assets that are supported by an Anti-DDoS Origin instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -23,7 +25,7 @@ public class DescribeInstanceSpecsRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the Anti-DDoS Origin Enterprise instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin Enterprise instance belongs to the default resource group.</p>
      * <br>
-     * <p>For more information about resource groups, see [Create a resource group](~~94485~~).</p>
+     * <p>For more information about resource groups, see [Create a resource group](https://help.aliyun.com/document_detail/94485.html).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

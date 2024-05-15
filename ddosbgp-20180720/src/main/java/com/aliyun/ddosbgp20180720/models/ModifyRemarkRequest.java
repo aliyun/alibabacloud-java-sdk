@@ -7,7 +7,9 @@ public class ModifyRemarkRequest extends TeaModel {
     /**
      * <p>The ID of the Anti-DDoS Origin instance for which you want to add remarks.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.</p>
+     * <p>>  You can call the [DescribeInstanceList](https://help.aliyun.com/document_detail/118698.html) operation to query the IDs of all Anti-DDoS Origin instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -15,13 +17,15 @@ public class ModifyRemarkRequest extends TeaModel {
     /**
      * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The remarks for the Anti-DDoS Origin instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Remark")
     public String remark;

@@ -12,6 +12,8 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the Anti-DDoS Origin Enterprise instances reside.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -22,11 +24,16 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the specified resource. Set the value to **INSTANCE**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

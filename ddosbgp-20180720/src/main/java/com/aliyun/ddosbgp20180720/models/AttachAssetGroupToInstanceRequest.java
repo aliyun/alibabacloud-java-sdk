@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AttachAssetGroupToInstanceRequest extends TeaModel {
     /**
      * <p>The information about the asset to be associated.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AssetGroupList")
     public java.util.List<AttachAssetGroupToInstanceRequestAssetGroupList> assetGroupList;
@@ -13,7 +15,9 @@ public class AttachAssetGroupToInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the instance to query.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
+     * <p>>  You can call the [DescribeInstanceList](https://help.aliyun.com/document_detail/118698.html) operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -21,7 +25,7 @@ public class AttachAssetGroupToInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the region in which the instance resides.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -78,18 +82,24 @@ public class AttachAssetGroupToInstanceRequest extends TeaModel {
 
         /**
          * <p>The ID of the asset that you want to add. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The region ID of the asset.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The type of the asset.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Type")
         public String type;

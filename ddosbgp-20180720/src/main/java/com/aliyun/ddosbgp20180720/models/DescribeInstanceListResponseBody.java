@@ -86,7 +86,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         /**
          * <p>The number of protected public IP addresses for which blackhole filtering is triggered.</p>
          * <br>
-         * <p>>  You can call the [DeleteBlackhole](~~118692~~) operation to deactivate blackhole filtering for a protected IP address.</p>
+         * <p>>  You can call the [DeleteBlackhole](https://help.aliyun.com/document_detail/118692.html) operation to deactivate blackhole filtering for a protected IP address.</p>
          */
         @NameInMap("BlackholdingCount")
         public String blackholdingCount;
