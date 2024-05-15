@@ -234,6 +234,9 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         @NameInMap("creatable")
         public Boolean creatable;
 
+        @NameInMap("upgradable_versions")
+        public java.util.List<String> upgradableVersions;
+
         public static DescribeKubernetesVersionMetadataResponseBody build(java.util.Map<String, ?> map) throws Exception {
             DescribeKubernetesVersionMetadataResponseBody self = new DescribeKubernetesVersionMetadataResponseBody();
             return TeaModel.build(map, self);
@@ -301,6 +304,14 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         }
         public Boolean getCreatable() {
             return this.creatable;
+        }
+
+        public DescribeKubernetesVersionMetadataResponseBody setUpgradableVersions(java.util.List<String> upgradableVersions) {
+            this.upgradableVersions = upgradableVersions;
+            return this;
+        }
+        public java.util.List<String> getUpgradableVersions() {
+            return this.upgradableVersions;
         }
 
     }
