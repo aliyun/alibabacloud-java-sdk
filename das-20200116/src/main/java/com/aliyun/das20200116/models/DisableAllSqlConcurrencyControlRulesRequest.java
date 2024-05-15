@@ -14,6 +14,8 @@ public class DisableAllSqlConcurrencyControlRulesRequest extends TeaModel {
      * <p>The instance ID.</p>
      * <br>
      * <p>>  You must specify this parameter only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

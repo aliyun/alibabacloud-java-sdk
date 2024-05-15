@@ -13,7 +13,7 @@ public class CreateKillInstanceSessionTaskResponseBody extends TeaModel {
     /**
      * <p>The ID of the task that terminated the sessions.</p>
      * <br>
-     * <p>>  If the sessions of a PolarDB for MySQL cluster were terminated, **NodeId** is left empty, and **KillAllSessions** is set to **true**, the task IDs are returned based on the number of nodes. Example: \["f77d535b45405bd462b21caa3ee8\*\*\*\*", "e93ab549abb081eb5dcd5396a29b\*\*\*\*"].</p>
+     * <p>>  If the sessions of a PolarDB for MySQL cluster were terminated, **NodeId** is left empty, and **KillAllSessions** is set to **true**, the task IDs are returned based on the number of nodes. Example: ["f77d535b45405bd462b21caa3ee8\\*\\*\\*\\*", "e93ab549abb081eb5dcd5396a29b\\*\\*\\*\\*"].</p>
      */
     @NameInMap("Data")
     public String data;

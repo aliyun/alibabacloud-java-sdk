@@ -205,6 +205,9 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         @NameInMap("Engine")
         public String engine;
 
+        @NameInMap("FragmentSize")
+        public Long fragmentSize;
+
         /**
          * <p>The size of storage occupied by indexes.</p>
          * <br>
@@ -298,6 +301,14 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         }
         public String getEngine() {
             return this.engine;
+        }
+
+        public GetStorageAnalysisResultResponseBodyDataStorageAnalysisResultTableStats setFragmentSize(Long fragmentSize) {
+            this.fragmentSize = fragmentSize;
+            return this;
+        }
+        public Long getFragmentSize() {
+            return this.fragmentSize;
         }
 
         public GetStorageAnalysisResultResponseBodyDataStorageAnalysisResultTableStats setIndexSize(Long indexSize) {

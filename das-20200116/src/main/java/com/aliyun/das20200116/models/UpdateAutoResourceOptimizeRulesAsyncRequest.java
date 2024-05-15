@@ -13,7 +13,9 @@ public class UpdateAutoResourceOptimizeRulesAsyncRequest extends TeaModel {
     /**
      * <p>The database instance IDs.</p>
      * <br>
-     * <p>>  Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: `[\"Instance ID1\", \"Instance ID2\"]`.</p>
+     * <p>>  Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: `[\\"Instance ID1\\", \\"Instance ID2\\"]`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
@@ -28,12 +30,16 @@ public class UpdateAutoResourceOptimizeRulesAsyncRequest extends TeaModel {
 
     /**
      * <p>The fragmentation rate that triggers automatic fragment recycling of a single physical table. Valid values: **0.10** to **0.99**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableFragmentationRatio")
     public Double tableFragmentationRatio;
 
     /**
      * <p>The minimum storage usage that triggers automatic fragment recycling of a single physical table. Valid values: **5** to **100**. Unit: GB.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableSpaceSize")
     public Double tableSpaceSize;

@@ -12,12 +12,16 @@ public class GetSqlConcurrencyControlKeywordsFromSqlTextRequest extends TeaModel
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The SQL statement based on which a throttling keyword string is to be generated.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SqlText")
     public String sqlText;

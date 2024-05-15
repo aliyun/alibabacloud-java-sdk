@@ -20,6 +20,8 @@ public class GetAsyncErrorRequestStatResultRequest extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -33,7 +35,7 @@ public class GetAsyncErrorRequestStatResultRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The ID of the SQL template. Separate multiple SQL IDs with commas (,). You can call the [GetAsyncErrorRequestListByCode](~~410746~~) operation to query the ID of the SQL query for which MySQL error code is returned.</p>
+     * <p>The ID of the SQL template. Separate multiple SQL IDs with commas (,). You can call the [GetAsyncErrorRequestListByCode](https://help.aliyun.com/document_detail/410746.html) operation to query the ID of the SQL query for which MySQL error code is returned.</p>
      */
     @NameInMap("SqlIdList")
     public String sqlIdList;

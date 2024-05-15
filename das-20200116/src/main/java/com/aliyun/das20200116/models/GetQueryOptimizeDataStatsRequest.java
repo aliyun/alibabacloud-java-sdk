@@ -25,6 +25,8 @@ public class GetQueryOptimizeDataStatsRequest extends TeaModel {
      * <p>*   **MySQL**</p>
      * <p>*   **PolarDBMySQL**</p>
      * <p>*   **PostgreSQL**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -102,13 +104,13 @@ public class GetQueryOptimizeDataStatsRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The tags that are used to filter SQL templates. Separate multiple tags with commas (,). For more information, see [Query governance](~~290038~~).</p>
+     * <p>The tags that are used to filter SQL templates. Separate multiple tags with commas (,). For more information, see [Query governance](https://help.aliyun.com/document_detail/290038.html).</p>
      */
     @NameInMap("Rules")
     public String rules;
 
     /**
-     * <p>The SQL template ID. You can query the ID of a template by calling the [GetQueryOptimizeExecErrorStats](~~405235~~) operation.</p>
+     * <p>The SQL template ID. You can query the ID of a template by calling the [GetQueryOptimizeExecErrorStats](https://help.aliyun.com/document_detail/405235.html) operation.</p>
      */
     @NameInMap("SqlIds")
     public String sqlIds;
@@ -121,6 +123,8 @@ public class GetQueryOptimizeDataStatsRequest extends TeaModel {
 
     /**
      * <p>The time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Time")
     public String time;

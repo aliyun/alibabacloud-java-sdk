@@ -4,6 +4,9 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class CreateSqlLogTaskResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,12 +16,26 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
     @NameInMap("Data")
     public CreateSqlLogTaskResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -68,24 +85,45 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
     }
 
     public static class CreateSqlLogTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the task was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The end of the time range to query.</p>
+         */
         @NameInMap("End")
         public Long end;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The task name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The beginning of the time range to query.</p>
+         */
         @NameInMap("Start")
         public Long start;
 
+        /**
+         * <p>The status of the task.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The task ID.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

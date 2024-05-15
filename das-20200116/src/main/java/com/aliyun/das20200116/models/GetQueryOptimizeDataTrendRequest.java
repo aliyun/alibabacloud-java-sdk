@@ -8,6 +8,8 @@ public class GetQueryOptimizeDataTrendRequest extends TeaModel {
      * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <br>
      * <p>>  The end time must be later than the start time, but not later than 00:00:00 (UTC+8) on the current day.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("End")
     public String end;
@@ -18,6 +20,8 @@ public class GetQueryOptimizeDataTrendRequest extends TeaModel {
      * <p>*   **MySQL**</p>
      * <p>*   **PolarDBMySQL**</p>
      * <p>*   **PostgreSQL**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -46,6 +50,8 @@ public class GetQueryOptimizeDataTrendRequest extends TeaModel {
      * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <br>
      * <p>>  You can specify a start time up to two months earlier than the current time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Start")
     public String start;

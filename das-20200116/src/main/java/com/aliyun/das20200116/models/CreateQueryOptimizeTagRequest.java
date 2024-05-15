@@ -18,18 +18,24 @@ public class CreateQueryOptimizeTagRequest extends TeaModel {
      * <p>*   **MySQL**: ApsaraDB RDS for MySQL</p>
      * <p>*   **PolarDBMySQL**: PolarDB for MySQL</p>
      * <p>*   **PostgreSQL**: ApsaraDB RDS for PostgreSQL</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The SQL template IDs. You can call the [GetQueryOptimizeExecErrorStats](~~405261~~) operation to obtain the SQL template ID. Separate multiple SQL template IDs with commas (,).</p>
+     * <p>The SQL template IDs. You can call the [GetQueryOptimizeExecErrorStats](https://help.aliyun.com/document_detail/405261.html) operation to obtain the SQL template ID. Separate multiple SQL template IDs with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SqlIds")
     public String sqlIds;
@@ -39,6 +45,8 @@ public class CreateQueryOptimizeTagRequest extends TeaModel {
      * <br>
      * <p>*   **0**: removes all tags added to the SQL templates that are specified by **SqlIds** and leaves **Tags** empty.</p>
      * <p>*   **1**: adds the tags specified by **Tags** to the SQL templates that are specified by **SqlIds**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public Integer status;
@@ -50,6 +58,8 @@ public class CreateQueryOptimizeTagRequest extends TeaModel {
      * <p>*   **DAS_NOT_IMPORTANT**: The SQL template is unimportant.</p>
      * <p>*   **USER_IGNORE**: The scheduling of the SQL template does not need to be optimized.</p>
      * <p>*   **DAS_IN_PLAN**: The scheduling of the SQL template needs to be optimized.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tags")
     public String tags;

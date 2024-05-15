@@ -8,6 +8,8 @@ public class GetMySQLAllSessionAsyncRequest extends TeaModel {
      * <p>The instance ID.</p>
      * <br>
      * <p>>  Only ApsaraDB RDS for MySQL, PolarDB for MySQL, and PolarDB-X 2.0 instances are supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

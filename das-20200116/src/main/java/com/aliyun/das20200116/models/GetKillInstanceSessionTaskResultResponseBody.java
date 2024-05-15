@@ -131,7 +131,7 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
          * <p>*   **SESSION_NO_PERMISSION**: The account used to terminate the session has insufficient permissions.</p>
          * <p>*   **SESSION_ACCOUNT_ERROR**: The account or password used to terminate the session is invalid.</p>
          * <p>*   **SESSION_IGNORED_USER**: The session of the account does not need to be terminated.</p>
-         * <p>*   **SESSION_INTERNAL_USER_OR_COMMAND**: The session is a session initiated by or a command run by an Alibaba Cloud O\&M account.</p>
+         * <p>*   **SESSION_INTERNAL_USER_OR_COMMAND**: The session is a session initiated by or a command run by an Alibaba Cloud O\\&M account.</p>
          * <p>*   **SESSION_KILL_TASK_TIMEOUT**: Timeout occurs when the session is terminated.</p>
          * <p>*   **SESSION_OTHER_ERROR**: Other errors occurred.</p>
          */
@@ -259,7 +259,7 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
 
     public static class GetKillInstanceSessionTaskResultResponseBodyData extends TeaModel {
         /**
-         * <p>The number of ignored sessions, including sessions of the accounts that are specified by IgnoredUsers, sessions of internal O\&M accounts of Alibaba Cloud, and **Binlog Dump** sessions.</p>
+         * <p>The number of ignored sessions, including sessions of the accounts that are specified by IgnoredUsers, sessions of internal O\\&M accounts of Alibaba Cloud, and **Binlog Dump** sessions.</p>
          */
         @NameInMap("IgnoredUserSessionCount")
         public Long ignoredUserSessionCount;

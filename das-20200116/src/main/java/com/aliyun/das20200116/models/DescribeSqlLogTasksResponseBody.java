@@ -4,21 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DescribeSqlLogTasksResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>ListResult<SqlLogTask></p>
+     * <p>ListResult</p>
      */
     @NameInMap("Data")
     public DescribeSqlLogTasksResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -68,9 +85,15 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeSqlLogTasksResponseBodyDataListFilters extends TeaModel {
+        /**
+         * <p>The name of the filter parameter.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the filter parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -98,51 +121,102 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeSqlLogTasksResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The time when the analysis task was complete.</p>
+         */
         @NameInMap("AnalysisTaskFinishTime")
         public Long analysisTaskFinishTime;
 
+        /**
+         * <p>The status of the analysis task.</p>
+         */
         @NameInMap("AnalysisTaskStatus")
         public String analysisTaskStatus;
 
+        /**
+         * <p>The time when the task was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The end of the time range to query.</p>
+         */
         @NameInMap("End")
         public Long end;
 
+        /**
+         * <p>Indicates whether the task expires.</p>
+         */
         @NameInMap("Expire")
         public Boolean expire;
 
+        /**
+         * <p>The filter conditions.</p>
+         */
         @NameInMap("Filters")
         public java.util.List<DescribeSqlLogTasksResponseBodyDataListFilters> filters;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The number of log records</p>
+         */
         @NameInMap("LogCount")
         public Long logCount;
 
+        /**
+         * <p>The task name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The task progress.</p>
+         */
         @NameInMap("Progress")
         public Integer progress;
 
+        /**
+         * <p>The Object Storage Service (OSS) URL or other information.</p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <p>The number of files scanned</p>
+         */
         @NameInMap("ScanFileSize")
         public Long scanFileSize;
 
+        /**
+         * <p>The beginning of the time range to query.</p>
+         */
         @NameInMap("Start")
         public Long start;
 
+        /**
+         * <p>The status of the task.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The task ID.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The type of the task. Valid values:</p>
+         * <br>
+         * <p>*   Export</p>
+         * <p>*   Query</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
@@ -282,15 +356,27 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeSqlLogTasksResponseBodyData extends TeaModel {
+        /**
+         * <p>The details of the data returned.</p>
+         */
         @NameInMap("List")
         public java.util.List<DescribeSqlLogTasksResponseBodyDataList> list;
 
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("PageNo")
         public Long pageNo;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

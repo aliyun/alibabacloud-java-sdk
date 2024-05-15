@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class StopCloudBenchTaskRequest extends TeaModel {
     /**
-     * <p>The stress testing task ID. You can call the [DescribeCloudBenchTasks](~~230670~~) operation to query the task ID.</p>
+     * <p>The stress testing task ID. You can call the [DescribeCloudBenchTasks](https://help.aliyun.com/document_detail/230670.html) operation to query the task ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

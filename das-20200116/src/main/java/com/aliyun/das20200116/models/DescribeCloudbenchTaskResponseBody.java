@@ -110,7 +110,7 @@ public class DescribeCloudbenchTaskResponseBody extends TeaModel {
         public Integer archiveState;
 
         /**
-         * <p>The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query the ID of the backup set.</p>
+         * <p>The ID of the backup set. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/26273.html) operation to query the ID of the backup set.</p>
          */
         @NameInMap("BackupId")
         public String backupId;
@@ -165,7 +165,7 @@ public class DescribeCloudbenchTaskResponseBody extends TeaModel {
         /**
          * <p>The type of the stress testing client. Valid values:</p>
          * <br>
-         * <p>*   **ECS**: indicates that you must create the [DBGateway](~~64905~~).</p>
+         * <p>*   **ECS**: indicates that you must create the [DBGateway](https://help.aliyun.com/document_detail/64905.html).</p>
          * <p>*   **DAS_ECS**: indicates that DAS automatically purchases and deploys an ECS instance for stress testing.</p>
          */
         @NameInMap("ClientType")

@@ -4,6 +4,9 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DescribeSqlLogConfigResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,12 +16,26 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeSqlLogConfigResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -68,54 +85,107 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeSqlLogConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>The cold storage duration.</p>
+         */
         @NameInMap("ColdEnable")
         public Boolean coldEnable;
 
+        /**
+         * <p>The cold storage duration.</p>
+         */
         @NameInMap("ColdRetention")
         public Integer coldRetention;
 
+        /**
+         * <p>The time when cold storage was enabled.</p>
+         */
         @NameInMap("ColdStartTime")
         public Long coldStartTime;
 
+        /**
+         * <p>The version of the collector.</p>
+         */
         @NameInMap("CollectorVersion")
         public String collectorVersion;
 
+        /**
+         * <p>Indicates whether hot storage was enabled.</p>
+         */
         @NameInMap("HotEnable")
         public Boolean hotEnable;
 
+        /**
+         * <p>The hot storage duration.</p>
+         */
         @NameInMap("HotRetention")
         public Integer hotRetention;
 
+        /**
+         * <p>The time when hot storage was enabled.</p>
+         */
         @NameInMap("HotStartTime")
         public Long hotStartTime;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("LogFilter")
         public String logFilter;
 
+        /**
+         * <p>Indicates whether SQL Explorer and Audit was enabled.</p>
+         */
         @NameInMap("RequestEnable")
         public Boolean requestEnable;
 
+        /**
+         * <p>The time when SQL Explorer and Audit was enabled.</p>
+         */
         @NameInMap("RequestStartTime")
         public Long requestStartTime;
 
+        /**
+         * <p>The time when SQL Explorer and Audit was disabled.</p>
+         * <br>
+         * <p>>  If DAS Enterprise Edition V1 was enabled, this parameter indicates the time when DAS Enterprise Edition expired.</p>
+         */
         @NameInMap("RequestStopTime")
         public Long requestStopTime;
 
+        /**
+         * <p>The storage duration of the SQL Explorer and Audit data.</p>
+         */
         @NameInMap("Retention")
         public Integer retention;
 
+        /**
+         * <p>Indicates whether DAS Enterprise Edition was enabled.</p>
+         */
         @NameInMap("SqlLogEnable")
         public Boolean sqlLogEnable;
 
+        /**
+         * <p>The status of data migration.</p>
+         */
         @NameInMap("SqlLogState")
         public String sqlLogState;
 
+        /**
+         * <p>The time when SQL Explorer and Audit was enabled.</p>
+         */
         @NameInMap("SqlLogVisibleTime")
         public Long sqlLogVisibleTime;
 
+        /**
+         * <p>The supported versions of Database Autonomy Service (DAS) Enterprise Edition.</p>
+         */
         @NameInMap("SupportVersion")
         public String supportVersion;
 
+        /**
+         * <p>The version of SQL Explorer and Audit.</p>
+         */
         @NameInMap("Version")
         public String version;
 

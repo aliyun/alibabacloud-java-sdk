@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CreateRequestDiagnosisRequest extends TeaModel {
     /**
      * <p>The name of the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Database")
     public String database;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -26,6 +30,8 @@ public class CreateRequestDiagnosisRequest extends TeaModel {
 
     /**
      * <p>The SQL statement that you want to diagnose.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Sql")
     public String sql;

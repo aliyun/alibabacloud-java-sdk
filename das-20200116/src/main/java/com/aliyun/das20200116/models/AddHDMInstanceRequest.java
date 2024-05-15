@@ -40,6 +40,8 @@ public class AddHDMInstanceRequest extends TeaModel {
      * <p>*   **IDC**: a self-managed database instance that is not deployed on Alibaba Cloud.</p>
      * <br>
      * <p>>  IDC refers to your data center.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceArea")
     public String instanceArea;

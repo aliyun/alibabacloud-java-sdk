@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetInstanceSqlOptimizeStatisticRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -25,6 +27,8 @@ public class GetInstanceSqlOptimizeStatisticRequest extends TeaModel {
      * <p>The database instance ID.</p>
      * <br>
      * <p>>  The database instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -39,6 +43,8 @@ public class GetInstanceSqlOptimizeStatisticRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

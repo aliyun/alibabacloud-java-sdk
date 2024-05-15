@@ -8,6 +8,8 @@ public class UpdateAutoSqlOptimizeStatusRequest extends TeaModel {
      * <p>The database instance IDs. Separate multiple IDs with commas (,).</p>
      * <br>
      * <p>>  You can specify up to 50 instance IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Instances")
     public String instances;
@@ -18,6 +20,8 @@ public class UpdateAutoSqlOptimizeStatusRequest extends TeaModel {
      * <p>*   **0**: The automatic SQL optimization feature is disabled.</p>
      * <p>*   **1**: **SQL diagnosis and automatic index creation** is specified.</p>
      * <p>*   **3**: **SQL diagnosis only** is specified.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public Integer status;

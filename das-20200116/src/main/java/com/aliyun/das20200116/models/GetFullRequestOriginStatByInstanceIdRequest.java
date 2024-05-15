@@ -14,12 +14,16 @@ public class GetFullRequestOriginStatByInstanceIdRequest extends TeaModel {
      * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <br>
      * <p>>  The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("End")
     public Long end;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -47,12 +51,16 @@ public class GetFullRequestOriginStatByInstanceIdRequest extends TeaModel {
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries per page. Default value: 20.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -78,6 +86,8 @@ public class GetFullRequestOriginStatByInstanceIdRequest extends TeaModel {
      * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <br>
      * <p>>  The start time must be within the storage duration of the SQL Explorer of the database instance, and can be up to 90 days earlier than the current time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Start")
     public Long start;

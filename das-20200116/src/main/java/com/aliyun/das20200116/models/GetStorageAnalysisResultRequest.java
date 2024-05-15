@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetStorageAnalysisResultRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -20,6 +22,8 @@ public class GetStorageAnalysisResultRequest extends TeaModel {
 
     /**
      * <p>The task ID, which is returned after you call the CreateStorageAnalysisTask operation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

@@ -8,12 +8,16 @@ public class GetFullRequestSampleByInstanceIdRequest extends TeaModel {
      * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <br>
      * <p>>  The end time must be later than the start time. The interval between the start time and the end time must be equal to or greater than 1 hour.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("End")
     public Long end;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -29,6 +33,8 @@ public class GetFullRequestSampleByInstanceIdRequest extends TeaModel {
 
     /**
      * <p>The SQL statement ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SqlId")
     public String sqlId;
@@ -37,6 +43,8 @@ public class GetFullRequestSampleByInstanceIdRequest extends TeaModel {
      * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <br>
      * <p>>  The start time must be within the storage duration of the SQL Explorer feature of the database instance, and can be up to 90 days earlier than the current time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Start")
     public Long start;

@@ -12,6 +12,8 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -536,8 +538,8 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         /**
          * <p>The maximum specifications to which the database instance can be scaled up. The database instance can be upgraded only to a database instance of the same edition with higher specifications. For information about the specifications of different database instances, see the following topics:</p>
          * <br>
-         * <p>*   PolarDB for MySQL Cluster Edition instances: [Specifications of compute nodes](~~102542~~)</p>
-         * <p>*   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: [Specifications](~~276974~~)</p>
+         * <p>*   PolarDB for MySQL Cluster Edition instances: [Specifications of compute nodes](https://help.aliyun.com/document_detail/102542.html)</p>
+         * <p>*   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: [Specifications](https://help.aliyun.com/document_detail/276974.html)</p>
          */
         @NameInMap("MaxSpec")
         public String maxSpec;
@@ -682,7 +684,7 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
          * <p>*   If the ApsaraDB for RDS instance uses ESSDs, the value of this parameter can be set to 32000, in GB.</p>
          * <p>*   If the ApsaraDB for RDS instance uses standard SSDs, the value of this parameter can be set to 6000, in GB.</p>
          * <br>
-         * <p>>  The ApsaraDB RDS for MySQL instances that use standard SSDs are discontinued. We recommend that you [upgrade the storage type of an ApsaraDB RDS for MySQL instance from standard SSDs to ESSDs](~~314678~~).</p>
+         * <p>>  The ApsaraDB RDS for MySQL instances that use standard SSDs are discontinued. We recommend that you [upgrade the storage type of an ApsaraDB RDS for MySQL instance from standard SSDs to ESSDs](https://help.aliyun.com/document_detail/314678.html).</p>
          */
         @NameInMap("MaxStorage")
         public Integer maxStorage;
