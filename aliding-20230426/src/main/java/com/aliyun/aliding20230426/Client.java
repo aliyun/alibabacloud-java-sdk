@@ -109,6 +109,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 新建钉盘空间
+     *
+     * @param tmpReq AddDriveSpaceRequest
+     * @param tmpHeader AddDriveSpaceHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddDriveSpaceResponse
+     */
+    public AddDriveSpaceResponse addDriveSpaceWithOptions(AddDriveSpaceRequest tmpReq, AddDriveSpaceHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddDriveSpaceShrinkRequest request = new AddDriveSpaceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        AddDriveSpaceShrinkHeaders headers = new AddDriveSpaceShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddDriveSpace"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/documents/addDriveSpace"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddDriveSpaceResponse());
+    }
+
+    /**
+     * @summary 新建钉盘空间
+     *
+     * @param request AddDriveSpaceRequest
+     * @return AddDriveSpaceResponse
+     */
+    public AddDriveSpaceResponse addDriveSpace(AddDriveSpaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        AddDriveSpaceHeaders headers = new AddDriveSpaceHeaders();
+        return this.addDriveSpaceWithOptions(request, headers, runtime);
+    }
+
+    /**
      * @summary 预定会议室
      *
      * @param tmpReq AddMeetingRoomsRequest
@@ -1390,6 +1460,112 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         CreateDeliveryPlanHeaders headers = new CreateDeliveryPlanHeaders();
         return this.createDeliveryPlanWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * @summary 委托权限创建钉钉个人待办
+     *
+     * @param tmpReq CreateDingtalkPersonalTodoTaskRequest
+     * @param tmpHeader CreateDingtalkPersonalTodoTaskHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDingtalkPersonalTodoTaskResponse
+     */
+    public CreateDingtalkPersonalTodoTaskResponse createDingtalkPersonalTodoTaskWithOptions(CreateDingtalkPersonalTodoTaskRequest tmpReq, CreateDingtalkPersonalTodoTaskHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDingtalkPersonalTodoTaskShrinkRequest request = new CreateDingtalkPersonalTodoTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        CreateDingtalkPersonalTodoTaskShrinkHeaders headers = new CreateDingtalkPersonalTodoTaskShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.executorIds)) {
+            request.executorIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.executorIds, "ExecutorIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notifyConfigs)) {
+            request.notifyConfigsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notifyConfigs, "NotifyConfigs", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.participantIds)) {
+            request.participantIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.participantIds, "ParticipantIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dueTime)) {
+            body.put("DueTime", request.dueTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executorIdsShrink)) {
+            body.put("ExecutorIds", request.executorIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyConfigsShrink)) {
+            body.put("NotifyConfigs", request.notifyConfigsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.participantIdsShrink)) {
+            body.put("ParticipantIds", request.participantIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subject)) {
+            body.put("Subject", request.subject);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userToken)) {
+            body.put("UserToken", request.userToken);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDingtalkPersonalTodoTask"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/task/createDingtalkPersonalTodoTask"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDingtalkPersonalTodoTaskResponse());
+    }
+
+    /**
+     * @summary 委托权限创建钉钉个人待办
+     *
+     * @param request CreateDingtalkPersonalTodoTaskRequest
+     * @return CreateDingtalkPersonalTodoTaskResponse
+     */
+    public CreateDingtalkPersonalTodoTaskResponse createDingtalkPersonalTodoTask(CreateDingtalkPersonalTodoTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CreateDingtalkPersonalTodoTaskHeaders headers = new CreateDingtalkPersonalTodoTaskHeaders();
+        return this.createDingtalkPersonalTodoTaskWithOptions(request, headers, runtime);
     }
 
     /**
@@ -3218,6 +3394,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         DeleteColumnsHeaders headers = new DeleteColumnsHeaders();
         return this.deleteColumnsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * @summary 删除钉盘空间
+     *
+     * @param tmpReq DeleteDriveSpaceRequest
+     * @param tmpHeader DeleteDriveSpaceHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDriveSpaceResponse
+     */
+    public DeleteDriveSpaceResponse deleteDriveSpaceWithOptions(DeleteDriveSpaceRequest tmpReq, DeleteDriveSpaceHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteDriveSpaceShrinkRequest request = new DeleteDriveSpaceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        DeleteDriveSpaceShrinkHeaders headers = new DeleteDriveSpaceShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.spaceId)) {
+            body.put("SpaceId", request.spaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDriveSpace"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/documents/deleteDriveSpace"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDriveSpaceResponse());
+    }
+
+    /**
+     * @summary 删除钉盘空间
+     *
+     * @param request DeleteDriveSpaceRequest
+     * @return DeleteDriveSpaceResponse
+     */
+    public DeleteDriveSpaceResponse deleteDriveSpace(DeleteDriveSpaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        DeleteDriveSpaceHeaders headers = new DeleteDriveSpaceHeaders();
+        return this.deleteDriveSpaceWithOptions(request, headers, runtime);
     }
 
     /**
@@ -8536,6 +8782,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         ListDentriesHeaders headers = new ListDentriesHeaders();
         return this.listDentriesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * @summary 获取钉盘空间列表
+     *
+     * @param tmpReq ListDriveSpacesRequest
+     * @param tmpHeader ListDriveSpacesHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDriveSpacesResponse
+     */
+    public ListDriveSpacesResponse listDriveSpacesWithOptions(ListDriveSpacesRequest tmpReq, ListDriveSpacesHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListDriveSpacesShrinkRequest request = new ListDriveSpacesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        ListDriveSpacesShrinkHeaders headers = new ListDriveSpacesShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spaceType)) {
+            body.put("SpaceType", request.spaceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDriveSpaces"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/documents/listDriveSpaces"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDriveSpacesResponse());
+    }
+
+    /**
+     * @summary 获取钉盘空间列表
+     *
+     * @param request ListDriveSpacesRequest
+     * @return ListDriveSpacesResponse
+     */
+    public ListDriveSpacesResponse listDriveSpaces(ListDriveSpacesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ListDriveSpacesHeaders headers = new ListDriveSpacesHeaders();
+        return this.listDriveSpacesWithOptions(request, headers, runtime);
     }
 
     /**
