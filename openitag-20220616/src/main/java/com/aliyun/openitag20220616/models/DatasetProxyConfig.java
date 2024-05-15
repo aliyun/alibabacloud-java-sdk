@@ -10,6 +10,9 @@ public class DatasetProxyConfig extends TeaModel {
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceDatasetId")
     public String sourceDatasetId;
 

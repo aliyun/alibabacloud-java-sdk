@@ -10,9 +10,15 @@ public class QuestionOption extends TeaModel {
     @NameInMap("Color")
     public String color;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Label")
     public String label;
 

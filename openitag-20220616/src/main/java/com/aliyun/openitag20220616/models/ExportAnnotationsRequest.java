@@ -4,6 +4,9 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class ExportAnnotationsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OssPath")
     public String ossPath;
 

@@ -13,6 +13,9 @@ public class QuestionPlugin extends TeaModel {
     @NameInMap("DefaultResult")
     public String defaultResult;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Display")
     public Boolean display;
 
@@ -22,21 +25,33 @@ public class QuestionPlugin extends TeaModel {
     @NameInMap("HotKeyMap")
     public String hotKeyMap;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MarkTitle")
     public String markTitle;
 
     @NameInMap("MarkTitleAlias")
     public String markTitleAlias;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MustFill")
     public Boolean mustFill;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Options")
     public java.util.List<QuestionOption> options;
 
     @NameInMap("PreOptions")
     public java.util.List<String> preOptions;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QuestionId")
     public String questionId;
 
@@ -49,6 +64,9 @@ public class QuestionPlugin extends TeaModel {
     @NameInMap("Selected")
     public Boolean selected;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 

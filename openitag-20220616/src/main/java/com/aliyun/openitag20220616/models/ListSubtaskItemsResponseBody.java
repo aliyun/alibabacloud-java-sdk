@@ -16,6 +16,9 @@ public class ListSubtaskItemsResponseBody extends TeaModel {
     @NameInMap("Items")
     public java.util.List<SubtaskItemDetail> items;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Message")
     public String message;
 

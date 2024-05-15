@@ -13,6 +13,9 @@ public class TemplateDTO extends TeaModel {
     @NameInMap("Exif")
     public java.util.Map<String, ?> exif;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QuestionConfigs")
     public java.util.List<QuestionPlugin> questionConfigs;
 
@@ -28,9 +31,15 @@ public class TemplateDTO extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ViewConfigs")
     public TemplateDTOViewConfigs viewConfigs;
 

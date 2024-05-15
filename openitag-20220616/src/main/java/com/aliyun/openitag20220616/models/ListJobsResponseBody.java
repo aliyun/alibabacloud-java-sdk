@@ -16,6 +16,9 @@ public class ListJobsResponseBody extends TeaModel {
     @NameInMap("Jobs")
     public java.util.List<Job> jobs;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Message")
     public String message;
 
