@@ -42,6 +42,8 @@ public class StopInstancesRequest extends TeaModel {
 
     /**
      * <p>The IDs of instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -53,7 +55,9 @@ public class StopInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -67,7 +71,7 @@ public class StopInstancesRequest extends TeaModel {
     /**
      * <p>The stop mode of the pay-as-you-go instance. Valid values:</p>
      * <br>
-     * <p>*   StopCharging: economical mode. For information about how `StopCharging` takes effect, see the "Prerequisites" section in [Economical mode](~~63353~~).</p>
+     * <p>*   StopCharging: economical mode. For information about how `StopCharging` takes effect, see the "Prerequisites" section in [Economical mode](https://help.aliyun.com/document_detail/63353.html).</p>
      * <p>*   KeepCharging: standard mode. After the instance is stopped in standard mode, you continue to be charged for it.</p>
      * <br>
      * <p>Default value: If the prerequisites required for enabling economical mode are met and you have enabled the mode in the ECS console, the default value is [StopCharging](~~63353#default~~). For more information, see the "Enable economical mode" section in `Economical mode`. Otherwise, the default value is `KeepCharging`.</p>

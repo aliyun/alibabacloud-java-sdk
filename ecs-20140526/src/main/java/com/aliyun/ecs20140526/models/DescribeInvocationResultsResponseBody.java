@@ -299,6 +299,15 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTags tags;
 
         /**
+         * <p>Indicates how the task was stopped. Valid values:</p>
+         * <br>
+         * <p>*   Process: The process of the command was stopped.</p>
+         * <p>*   ProcessTree: The process tree was stopped. In this case, the process of the command and all subprocesses of the process were stopped.</p>
+         */
+        @NameInMap("TerminationMode")
+        public String terminationMode;
+
+        /**
          * <p>The username used to run the command on the instance.</p>
          */
         @NameInMap("Username")
@@ -443,6 +452,14 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
         public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTags getTags() {
             return this.tags;
+        }
+
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setTerminationMode(String terminationMode) {
+            this.terminationMode = terminationMode;
+            return this;
+        }
+        public String getTerminationMode() {
+            return this.terminationMode;
         }
 
         public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setUsername(String username) {

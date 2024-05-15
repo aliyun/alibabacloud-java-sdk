@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifySnapshotGroupRequest extends TeaModel {
     /**
-     * <p>The new name of the snapshot-consistent group. The name must be 2 to 128 characters in length. It can contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:). It must start with a letter or a digit and cannot start with `http://` or `https://`.</p>
+     * <p>The new name of the snapshot-consistent group. The name must be 2 to 128 characters in length. It can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:). It must start with a letter or a digit and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the snapshot-consistent group. You can call the [DescribeSnapshotGroups](~~210940~~) operation to query the IDs of one or more snapshot-consistent groups.</p>
+     * <p>The ID of the snapshot-consistent group. You can call the [DescribeSnapshotGroups](https://help.aliyun.com/document_detail/210940.html) operation to query the IDs of one or more snapshot-consistent groups.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -24,6 +24,8 @@ public class ModifySnapshotGroupRequest extends TeaModel {
 
     /**
      * <p>The operation that you want to perform. Set the value to **ModifySnapshotGroup**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -35,7 +37,9 @@ public class ModifySnapshotGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The region ID of the snapshot-consistent group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the snapshot-consistent group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SnapshotGroupId")
     public String snapshotGroupId;

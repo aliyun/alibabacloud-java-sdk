@@ -39,6 +39,8 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends TeaModel {
 
     /**
      * <p>The IDs of dedicated hosts. You can specify up to 100 subscription dedicated host IDs. Separate the IDs with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DedicatedHostIds")
     public String dedicatedHostIds;
@@ -71,6 +73,8 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the dedicated host.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -80,7 +84,7 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends TeaModel {
      * <br>
      * <p>*   AutoRenewal: The dedicated hosts are automatically renewed.</p>
      * <p>*   Normal: The dedicated hosts are not automatically renewed, and renewal notifications are sent.</p>
-     * <p>*   NotRenewal: The dedicated hosts are not automatically renewed, and no expiration notification is sent. A notification of no renewal is automatically sent three days before the end of the current subscription cycle. You can change the value of this parameter from NotRenewal to Normal and manually renew the dedicated hosts by calling the [RenewDedicatedHosts](~~134250~~) operation. Alternatively, you can renew the dedicated hosts by setting this parameter to AutoRenewal.</p>
+     * <p>*   NotRenewal: The dedicated hosts are not automatically renewed, and no expiration notification is sent. A notification of no renewal is automatically sent three days before the end of the current subscription cycle. You can change the value of this parameter from NotRenewal to Normal and manually renew the dedicated hosts by calling the [RenewDedicatedHosts](https://help.aliyun.com/document_detail/134250.html) operation. Alternatively, you can renew the dedicated hosts by setting this parameter to AutoRenewal.</p>
      */
     @NameInMap("RenewalStatus")
     public String renewalStatus;

@@ -24,6 +24,8 @@ public class ModifyCloudAssistantSettingsShrinkRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -39,6 +41,8 @@ public class ModifyCloudAssistantSettingsShrinkRequest extends TeaModel {
      * <br>
      * <p>*   SessionManagerDelivery: the Session Record Delivery feature</p>
      * <p>*   InvocationDelivery: the Operation Content and Result Delivery feature</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SettingType")
     public String settingType;

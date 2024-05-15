@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBandwidthLimitationRequest extends TeaModel {
     /**
-     * <p>The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:</p>
+     * <p>The billing method of the instance. For more information, see [Billing overview](https://help.aliyun.com/document_detail/25398.html). Valid values:</p>
      * <br>
      * <p>*   PrePaid: subscription</p>
      * <p>*   PostPaid: pay-as-you-go</p>
@@ -16,7 +16,9 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The instance type. For information about the values, see [Overview of ECS instance families](~~25378~~).</p>
+     * <p>The instance type. For information about the values, see [Overview of ECS instance families](https://help.aliyun.com/document_detail/25378.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -40,7 +42,9 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImageComponentRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -31,7 +31,7 @@ public class CreateImageComponentRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The component name. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with http:// or https://.[ ](http://https://。、、、（:）、（\_）、（.）（-）。)The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
+     * <p>The component name. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with http:// or https://.[ ](http://https://。、、、（:）、（_）、（.）（-）。)The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * <br>
      * <p>> If you do not configure `Name`, the return value of `ImageComponentId` is used.</p>
      */
@@ -45,7 +45,9 @@ public class CreateImageComponentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

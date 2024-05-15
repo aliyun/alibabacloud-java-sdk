@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeImageFromFamilyRequest extends TeaModel {
     /**
-     * <p>The name of the image family. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with http://, https://, acs:, or aliyun.</p>
+     * <p>The name of the image family. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with http://, https://, acs:, or aliyun.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageFamily")
     public String imageFamily;
@@ -17,7 +19,9 @@ public class DescribeImageFromFamilyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the image. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

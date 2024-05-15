@@ -12,6 +12,8 @@ public class DescribeCloudAssistantSettingsRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -23,7 +25,9 @@ public class DescribeCloudAssistantSettingsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Cloud Assistant features.</p>
+     * <p>The Cloud Assistant configurations.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SettingType")
     public java.util.List<String> settingType;

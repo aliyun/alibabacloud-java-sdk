@@ -186,7 +186,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Boolean eniTrunkSupported;
 
         /**
-         * <p>The number of ERIs.</p>
+         * <p>The number of elastic RDMA interfaces (ERIs).</p>
          * <br>
          * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
@@ -200,7 +200,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer GPUAmount;
 
         /**
-         * <p>The amount of GPU memory per GPU. Unit: GiB</p>
+         * <p>The amount of GPU memory per GPU. Unit: GiB.</p>
          */
         @NameInMap("GPUMemorySize")
         public Float GPUMemorySize;
@@ -256,8 +256,8 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
          * <p>The level of the instance family. Valid values:</p>
          * <br>
          * <p>*   EntryLevel: entry level (shared).</p>
-         * <p>*   EnterpriseLevel: enterprise level</p>
-         * <p>*   CreditEntryLevel: credit-based entry level For more information, see [Overview](~~59977~~).</p>
+         * <p>*   EnterpriseLevel: enterprise level.</p>
+         * <p>*   CreditEntryLevel: credit-based entry level. For more information, see [Overview](https://help.aliyun.com/document_detail/59977.html).</p>
          */
         @NameInMap("InstanceFamilyLevel")
         public String instanceFamilyLevel;
@@ -293,16 +293,16 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer localStorageAmount;
 
         /**
-         * <p>The capacity of each local disk. Unit: GiB</p>
+         * <p>The capacity of each local disk attached per instance. Unit: GiB.</p>
          */
         @NameInMap("LocalStorageCapacity")
         public Long localStorageCapacity;
 
         /**
-         * <p>The category of local disks. For more information, see [Local disks](~~63138~~). Valid values:</p>
+         * <p>The category of local disks. For more information, see [Local disks](https://help.aliyun.com/document_detail/63138.html). Valid values:</p>
          * <br>
-         * <p>*   local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances</p>
-         * <p>*   local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances</p>
+         * <p>*   local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances.</p>
+         * <p>*   local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances.</p>
          */
         @NameInMap("LocalStorageCategory")
         public String localStorageCategory;
@@ -314,7 +314,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer maximumQueueNumberPerEni;
 
         /**
-         * <p>The memory size. Unit: GiB</p>
+         * <p>The memory size. Unit: GiB.</p>
          */
         @NameInMap("MemorySize")
         public Float memorySize;
@@ -326,7 +326,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer networkCardQuantity;
 
         /**
-         * <p>The information of the network cards.</p>
+         * <p>The information about the network cards.</p>
          */
         @NameInMap("NetworkCards")
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkCards networkCards;
@@ -362,7 +362,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer primaryEniQueueNumber;
 
         /**
-         * <p>The maximum number of QPs per ERI.</p>
+         * <p>The maximum number of QP queues per ERI.</p>
          */
         @NameInMap("QueuePairNumber")
         public Integer queuePairNumber;
@@ -373,6 +373,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("SecondaryEniQueueNumber")
         public Integer secondaryEniQueueNumber;
 
+        /**
+         * <p>规格支持的启动模式。</p>
+         */
         @NameInMap("SupportedBootModes")
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSupportedBootModes supportedBootModes;
 

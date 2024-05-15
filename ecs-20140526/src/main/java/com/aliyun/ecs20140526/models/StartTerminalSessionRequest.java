@@ -14,6 +14,8 @@ public class StartTerminalSessionRequest extends TeaModel {
 
     /**
      * <p>The instance IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -33,7 +35,9 @@ public class StartTerminalSessionRequest extends TeaModel {
     public Integer portNumber;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -53,7 +57,7 @@ public class StartTerminalSessionRequest extends TeaModel {
     public String targetServer;
 
     /**
-     * <p>指定连接时的用户名称。</p>
+     * <p>The username used for connection establishment.</p>
      */
     @NameInMap("Username")
     public String username;

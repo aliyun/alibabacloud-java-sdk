@@ -30,7 +30,9 @@ public class DescribeClassicLinkInstancesRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instances. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -42,7 +44,7 @@ public class DescribeClassicLinkInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The VPC ID. The ClassicLink feature must be enabled for the specified VPC. For more information, see [Establish a ClassicLink connection](~~65413~~).</p>
+     * <p>The VPC ID. The ClassicLink feature must be enabled for the specified VPC. For more information, see [Establish a ClassicLink connection](https://help.aliyun.com/document_detail/65413.html).</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

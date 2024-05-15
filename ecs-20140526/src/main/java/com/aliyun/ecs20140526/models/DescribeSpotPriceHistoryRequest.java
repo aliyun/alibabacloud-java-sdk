@@ -14,9 +14,11 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. The specified time can be up to 30 days earlier than the specified EndTime value.</p>
+     * <p>The beginning of the time range to query. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. The specified time can be up to 30 days earlier than the specified EndTime value.</p>
      * <br>
      * <p>This parameter is empty by default. If this parameter is empty, the time that is 3 hours earlier than the specified EndTime value is used.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -39,6 +41,8 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
      * <br>
      * <p>*   classic: classic network</p>
      * <p>*   vpc: Virtual Private Cloud (VPC)</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -68,6 +72,8 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
 
     /**
      * <p>The zone ID of the preemptible instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

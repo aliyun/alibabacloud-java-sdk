@@ -15,6 +15,8 @@ public class CreateImagePipelineRequest extends TeaModel {
      * <br>
      * <p>*   If you set `BaseImageType` to IMAGE, set the BaseImage parameter to the ID of a custom image.</p>
      * <p>*   If you set `BaseImageType` to IMAGE_FAMILY, set the BaseImage parameter to the name of an image family.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BaseImage")
     public String baseImage;
@@ -24,6 +26,8 @@ public class CreateImagePipelineRequest extends TeaModel {
      * <br>
      * <p>*   IMAGE: image</p>
      * <p>*   IMAGE_FAMILY: image family</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BaseImageType")
     public String baseImageType;
@@ -35,7 +39,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public String buildContent;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -60,7 +64,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The prefix of the image name. The prefix must be 2 to 64 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
+     * <p>The prefix of the image name. The prefix must be 2 to 64 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * <br>
      * <p>The system generates the final complete image name that consists of the specified prefix and the ID of the build task (`ExecutionId`) in the format of `{ImageName}_{ExecutionId}`.</p>
      */
@@ -68,7 +72,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public String imageName;
 
     /**
-     * <p>The instance type. You can call the [DescribeInstanceTypes](~~25620~~) to query instance types.</p>
+     * <p>The instance type. You can call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) to query instance types.</p>
      * <br>
      * <p>If you do not configure this parameter, an instance type that provides the fewest vCPUs and memory resources is automatically selected. This configuration is subject to resource availability of instance types. For example, the ecs.g6.large instance type is automatically selected. If available ecs.g6.large resources are insufficient, the ecs.g6.xlarge instance type is selected.</p>
      */
@@ -84,7 +88,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public Integer internetMaxBandwidthOut;
 
     /**
-     * <p>The name of the image template. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
+     * <p>The name of the image template. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * <br>
      * <p>> If you do not specify the `Name` parameter, the return value of `ImagePipelineId` is used.</p>
      */
@@ -98,7 +102,9 @@ public class CreateImagePipelineRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -140,7 +146,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     /**
      * <p>The ID of the vSwitch.</p>
      * <br>
-     * <p>If you do not specify this parameter, a new VPC and vSwitch are created. Make sure that the VPC quota in your account is sufficient. For more information, see [Limits and quotas](~~27750~~).</p>
+     * <p>If you do not specify this parameter, a new VPC and vSwitch are created. Make sure that the VPC quota in your account is sufficient. For more information, see [Limits and quotas](https://help.aliyun.com/document_detail/27750.html).</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

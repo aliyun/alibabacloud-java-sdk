@@ -22,14 +22,14 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public String dedicatedHostClusterId;
 
     /**
-     * <p>The ID of the destination dedicated host. You can call the [DescribeDedicatedHosts](~~134242~~) operation to query the most recent list of dedicated hosts.</p>
+     * <p>The ID of the destination dedicated host. You can call the [DescribeDedicatedHosts](https://help.aliyun.com/document_detail/134242.html) operation to query the most recent list of dedicated hosts.</p>
      * <br>
      * <p>When you migrate an instance from a shared host to a dedicated host or between dedicated hosts, take note of the following items:</p>
      * <br>
      * <p>*   To migrate the instance to a specific dedicated host, specify this parameter.</p>
      * <p>*   To migrate the instance to a system-selected dedicated host, leave this parameter empty and set `Tenancy` to host.</p>
      * <br>
-     * <p>For information about the automatic deployment feature, see [Functions and features](~~118938~~).</p>
+     * <p>For information about the automatic deployment feature, see [Functions and features](https://help.aliyun.com/document_detail/118938.html).</p>
      */
     @NameInMap("DedicatedHostId")
     public String dedicatedHostId;
@@ -70,14 +70,16 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The instance type to which the instance is changed. You can call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent list of instance types.</p>
+     * <p>The instance type to which the instance is changed. You can call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation to query the most recent list of instance types.</p>
      * <br>
-     * <p>You can change the instance type of an instance when you migrate the instance to a dedicated host. The new instance type must match the type of the specified dedicated host. For more information, see [Dedicated host types](~~68564~~).</p>
+     * <p>You can change the instance type of an instance when you migrate the instance to a dedicated host. The new instance type must match the type of the specified dedicated host. For more information, see [Dedicated host types](https://help.aliyun.com/document_detail/68564.html).</p>
      * <br>
      * <p>*   If you specify this parameter, you must also specify `DedicatedHostId`.</p>
      * <p>*   You cannot change the instance type of an instance if you use the automatic deployment feature to migrate the instance.</p>
@@ -103,7 +105,9 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

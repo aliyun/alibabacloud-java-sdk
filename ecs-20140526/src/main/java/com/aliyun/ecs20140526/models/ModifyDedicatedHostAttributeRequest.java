@@ -26,7 +26,7 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
      * <p>*   on: adds the dedicated host to the resource pool for automatic deployment.</p>
      * <p>*   off: does not add the dedicated host to the resource pool for automatic deployment.</p>
      * <br>
-     * <p>For information about automatic deployment, see [Features](~~118938~~).</p>
+     * <p>For information about automatic deployment, see [Features](https://help.aliyun.com/document_detail/118938.html).</p>
      */
     @NameInMap("AutoPlacement")
     public String autoPlacement;
@@ -47,12 +47,14 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the dedicated host.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DedicatedHostId")
     public String dedicatedHostId;
 
     /**
-     * <p>The name of the dedicated host. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. The name can contain digits, letters, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the dedicated host. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</p>
      */
     @NameInMap("DedicatedHostName")
     public String dedicatedHostName;
@@ -70,7 +72,9 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the dedicated host. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

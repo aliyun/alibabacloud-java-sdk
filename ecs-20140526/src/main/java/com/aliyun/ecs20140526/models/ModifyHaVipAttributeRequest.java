@@ -10,6 +10,9 @@ public class ModifyHaVipAttributeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HaVipId")
     public String haVipId;
 
@@ -19,6 +22,9 @@ public class ModifyHaVipAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

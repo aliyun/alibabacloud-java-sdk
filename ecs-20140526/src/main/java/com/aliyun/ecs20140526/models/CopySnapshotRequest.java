@@ -12,6 +12,8 @@ public class CopySnapshotRequest extends TeaModel {
 
     /**
      * <p>The ID of the destination region to which to copy the source snapshot.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationRegionId")
     public String destinationRegionId;
@@ -20,20 +22,24 @@ public class CopySnapshotRequest extends TeaModel {
      * <p>The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
      * <br>
      * <p>This parameter is empty by default.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationSnapshotDescription")
     public String destinationSnapshotDescription;
 
     /**
-     * <p>The name of the new snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start http:// or https://. The name can contain digits, letters, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the new snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start http:// or https://. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</p>
      * <br>
      * <p>This parameter is empty by default.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationSnapshotName")
     public String destinationSnapshotName;
 
     /**
-     * <p>> This parameter is not publicly available.</p>
+     * <p>>  This parameter is not publicly available.</p>
      */
     @NameInMap("DestinationStorageLocationArn")
     public String destinationStorageLocationArn;
@@ -59,7 +65,9 @@ public class CopySnapshotRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the source snapshot. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the source snapshot. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -86,6 +94,8 @@ public class CopySnapshotRequest extends TeaModel {
 
     /**
      * <p>The ID of the source snapshot.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;

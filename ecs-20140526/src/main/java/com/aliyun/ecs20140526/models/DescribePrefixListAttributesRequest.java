@@ -12,12 +12,16 @@ public class DescribePrefixListAttributesRequest extends TeaModel {
 
     /**
      * <p>The time when the prefix list was created.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
     /**
      * <p>The ID of the prefix list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

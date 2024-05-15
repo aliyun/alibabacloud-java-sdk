@@ -65,7 +65,9 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the EBS device. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the EBS device. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -83,7 +85,7 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The lifecycle status of the EBS device. For more information, see [Disk status](~~25689~~). Valid values:</p>
+     * <p>The lifecycle status of the EBS device. For more information, see [Disk status](https://help.aliyun.com/document_detail/25689.html). Valid values:</p>
      * <br>
      * <p>*   In_use: The EBS device is in use.</p>
      * <p>*   Available: The EBS device can be attached.</p>
@@ -230,7 +232,7 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
         /**
          * <p>The end of the time range to query occurred events.</p>
          * <br>
-         * <p>Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.</p>
+         * <p>Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.</p>
          */
         @NameInMap("End")
         public String end;
@@ -238,7 +240,7 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
         /**
          * <p>The beginning of the time range to query occurred events.</p>
          * <br>
-         * <p>Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.</p>
+         * <p>Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.</p>
          */
         @NameInMap("Start")
         public String start;

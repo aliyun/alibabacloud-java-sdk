@@ -20,12 +20,16 @@ public class ExportImageRequest extends TeaModel {
 
     /**
      * <p>The custom image ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The OSS bucket in which you want to store the exported custom image.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OSSBucket")
     public String OSSBucket;
@@ -40,7 +44,9 @@ public class ExportImageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the custom image. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

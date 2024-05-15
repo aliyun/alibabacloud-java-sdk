@@ -4,9 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyEipAddressAttributeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AllocationId")
     public String allocationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Bandwidth")
     public String bandwidth;
 

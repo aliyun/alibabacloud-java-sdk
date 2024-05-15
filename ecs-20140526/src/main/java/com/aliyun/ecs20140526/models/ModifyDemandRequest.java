@@ -11,7 +11,7 @@ public class ModifyDemandRequest extends TeaModel {
     public Integer amount;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -24,12 +24,14 @@ public class ModifyDemandRequest extends TeaModel {
 
     /**
      * <p>The ID of the demand that you want to modify.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DemandId")
     public String demandId;
 
     /**
-     * <p>The name of the demand. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with [http:// or https://](http://https://). It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
+     * <p>The name of the demand. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with [http:// or https://](http://https://). It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * <br>
      * <p>The default value is the instance type name.</p>
      */
@@ -37,7 +39,7 @@ public class ModifyDemandRequest extends TeaModel {
     public String demandName;
 
     /**
-     * <p>The end time of the subscription period. Specify the time in the [ISO 8601](~~25696~~)standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
+     * <p>The end time of the subscription period. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html)standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
      * <br>
      * <p>If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the minute (mm).</p>
      * <br>
@@ -58,7 +60,7 @@ public class ModifyDemandRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The instance type. For more information, see [Instance families](~~25378~~). You can also call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of the specified instance type. To learn how to select instance types, see [Select instance types](~~58291~~).</p>
+     * <p>The instance type. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html). You can also call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation to query the performance data of the specified instance type. To learn how to select instance types, see [Select instance types](https://help.aliyun.com/document_detail/58291.html).</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -89,7 +91,9 @@ public class ModifyDemandRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -101,7 +105,7 @@ public class ModifyDemandRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
+     * <p>The start time of the subscription period. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
      * <br>
      * <p>If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the minute (mm).</p>
      * <br>
@@ -113,7 +117,7 @@ public class ModifyDemandRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The zone ID of the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the instance. You can call the [DescribeZones](https://help.aliyun.com/document_detail/25610.html) operation to query the most recent zone list.</p>
      * <br>
      * <p>This parameter is empty by default. If you leave this parameter empty, the system randomly selects a zone.</p>
      */

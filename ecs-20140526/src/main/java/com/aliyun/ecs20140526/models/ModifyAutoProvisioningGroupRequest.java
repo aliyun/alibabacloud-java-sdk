@@ -11,7 +11,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public String autoProvisioningGroupId;
 
     /**
-     * <p>The name of the auto-provisioning group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://.[ It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)</p>
+     * <p>The name of the auto-provisioning group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://.[ It can contain letters, digits, colons (:), underscores (_), and hyphens (-).](http://https://。、（:）、（_）（-）。)</p>
      */
     @NameInMap("AutoProvisioningGroupName")
     public String autoProvisioningGroupName;
@@ -61,7 +61,9 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public String payAsYouGoTargetCapacity;
 
     /**
-     * <p>The region ID of the auto-provisioning group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the auto-provisioning group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -222,7 +224,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
 
     public static class ModifyAutoProvisioningGroupRequestLaunchTemplateConfig extends TeaModel {
         /**
-         * <p>The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see [Instance families](~~25378~~).</p>
+         * <p>The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see [Instance families](https://help.aliyun.com/document_detail/25378.html).</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;

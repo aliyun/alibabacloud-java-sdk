@@ -13,6 +13,9 @@ public class StartElasticityAssuranceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -76,6 +79,9 @@ public class StartElasticityAssuranceRequest extends TeaModel {
     }
 
     public static class StartElasticityAssuranceRequestPrivatePoolOptions extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Id")
         public String id;
 

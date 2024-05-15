@@ -11,7 +11,9 @@ public class DeleteSnapshotGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the snapshot-consistent group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the snapshot-consistent group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -23,7 +25,9 @@ public class DeleteSnapshotGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the snapshot-consistent group. You can call the [DescribeSnapshotGroups](~~210940~~) operation to query the IDs of one or more snapshot-consistent groups.</p>
+     * <p>The ID of the snapshot-consistent group. You can call the [DescribeSnapshotGroups](https://help.aliyun.com/document_detail/210940.html) operation to query the IDs of one or more snapshot-consistent groups.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SnapshotGroupId")
     public String snapshotGroupId;

@@ -20,7 +20,7 @@ public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
     public java.util.List<DescribeImageSupportInstanceTypesRequestFilter> filter;
 
     /**
-     * <p>The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the image. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
@@ -30,6 +30,8 @@ public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
 
     /**
      * <p>Details about the instance types that are supported by the image.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

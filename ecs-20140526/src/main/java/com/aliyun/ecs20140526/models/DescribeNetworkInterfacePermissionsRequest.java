@@ -43,7 +43,9 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the ENI permission. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the ENI permission. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

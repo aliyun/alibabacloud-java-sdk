@@ -34,7 +34,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     /**
      * <p>The retention period of the snapshot copy in the destination region. Unit: days. Valid values:</p>
      * <br>
-     * <p>*   \-1: The snapshot is permanently retained.</p>
+     * <p>*   \\-1: The snapshot is permanently retained.</p>
      * <p>*   1 to 65535: The automatic snapshot is retained for the specified number of days.</p>
      * <br>
      * <p>Default value: -1.</p>
@@ -44,6 +44,8 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
 
     /**
      * <p>The name of the automatic snapshot policy. If this parameter is not specified, the original name of the automatic snapshot policy is retained.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("autoSnapshotPolicyId")
     public String autoSnapshotPolicyId;
@@ -60,7 +62,9 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public String autoSnapshotPolicyName;
 
     /**
-     * <p>The ID of the automatic snapshot policy. You can call the [DescribeAutoSnapshotPolicyEx](~~25530~~) operation to query available automatic snapshot policies.</p>
+     * <p>The ID of the automatic snapshot policy. You can call the [DescribeAutoSnapshotPolicyEx](https://help.aliyun.com/document_detail/25530.html) operation to query available automatic snapshot policies.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("regionId")
     public String regionId;
@@ -68,7 +72,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     /**
      * <p>The retention period of the automatic snapshot. Unit: days. Valid values:</p>
      * <br>
-     * <p>*   \-1: The automatic snapshot is permanently retained.</p>
+     * <p>*   \\-1: The automatic snapshot is permanently retained.</p>
      * <p>*   1 to 65536: The auto snapshot is retained for the specified number of days.</p>
      * <br>
      * <p>Default value: -1.</p>

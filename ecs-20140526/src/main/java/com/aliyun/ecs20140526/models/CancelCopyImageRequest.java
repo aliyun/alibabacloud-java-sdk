@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CancelCopyImageRequest extends TeaModel {
     /**
      * <p>The ID of the image that is being copied.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
@@ -17,7 +19,9 @@ public class CancelCopyImageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the image copy. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the image copy. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

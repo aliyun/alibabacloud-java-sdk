@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthorizeSecurityGroupRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -86,7 +86,9 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
     public String priority;
 
     /**
-     * <p>The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the security group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -99,6 +101,8 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the security group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
@@ -346,7 +350,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         /**
          * <p>The destination IPv4 CIDR block for security group rule N. CIDR blocks and IPv4 addresses are supported.</p>
          * <br>
-         * <p>This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).</p>
+         * <p>This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](https://help.aliyun.com/document_detail/97439.html).</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          */
@@ -371,7 +375,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         /**
          * <p>The destination IPv6 CIDR block for security group rule N. CIDR blocks and IPv6 addresses are supported.</p>
          * <br>
-         * <p>This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).</p>
+         * <p>This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](https://help.aliyun.com/document_detail/97439.html).</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          * <br>
@@ -423,12 +427,12 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         /**
          * <p>The range of destination ports that correspond to the transport layer protocol for security group rule N. Valid values:</p>
          * <br>
-         * <p>*   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</p>
+         * <p>*   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \\<Start port number>/\\<End port number>. Example: 1/200.</p>
          * <p>*   If you set IpProtocol to ICMP, the port number range is -1/-1.</p>
          * <p>*   If you set IpProtocol to GRE, the port number range is -1/-1.</p>
          * <p>*   If you set IpProtocol to ALL, the port number range is -1/-1.</p>
          * <br>
-         * <p>For more information, see [Typical applications of commonly used ports](~~40724~~).</p>
+         * <p>For more information, see [Typical applications of commonly used ports](https://help.aliyun.com/document_detail/40724.html).</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          */
@@ -495,12 +499,12 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         /**
          * <p>The range of source ports that correspond to the transport layer protocol for security group rule N. Valid values:</p>
          * <br>
-         * <p>*   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</p>
+         * <p>*   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \\<Start port number>/\\<End port number>. Example: 1/200.</p>
          * <p>*   If you set IpProtocol to ICMP, the port number range is -1/-1.</p>
          * <p>*   If you set IpProtocol to GRE, the port number range is -1/-1.</p>
          * <p>*   If you set IpProtocol to ALL, the port number range is -1/-1.</p>
          * <br>
-         * <p>This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).</p>
+         * <p>This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](https://help.aliyun.com/document_detail/97439.html).</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          */
@@ -508,7 +512,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         public String sourcePortRange;
 
         /**
-         * <p>The ID of the source prefix list to which you want to control access. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.</p>
+         * <p>The ID of the source prefix list to which you want to control access. You can call the [DescribePrefixLists](https://help.aliyun.com/document_detail/205046.html) operation to query the IDs of available prefix lists.</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          * <br>

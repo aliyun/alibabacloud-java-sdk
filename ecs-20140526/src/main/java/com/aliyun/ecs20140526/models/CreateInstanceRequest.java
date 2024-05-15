@@ -48,7 +48,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer autoRenewPeriod;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -64,8 +64,8 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The performance mode of the burstable instance. Valid values:</p>
      * <br>
-     * <p>*   Standard: standard mode. For more information, see the "Standard mode" section in the [Overview of burstable instances](~~59977~~) topic.</p>
-     * <p>*   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in the [Burstable instances](~~59977~~) topic.</p>
+     * <p>*   Standard: standard mode. For more information, see the "Standard mode" section in the [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html) topic.</p>
+     * <p>*   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in the [Burstable instances](https://help.aliyun.com/document_detail/59977.html) topic.</p>
      */
     @NameInMap("CreditSpecification")
     public String creditSpecification;
@@ -79,7 +79,7 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the dedicated host on which to create the instance.</p>
      * <br>
-     * <p>You can call the [DescribeDedicatedHosts](~~134242~~) operation to query the list of dedicated host IDs</p>
+     * <p>You can call the [DescribeDedicatedHosts](https://help.aliyun.com/document_detail/134242.html) operation to query the list of dedicated host IDs</p>
      * <br>
      * <p>If you specify `DedicatedHostId`, the `SpotStrategy` and `SpotPriceLimit` parameters are ignored. This is because preemptible instances cannot be created on dedicated hosts.</p>
      */
@@ -87,7 +87,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String dedicatedHostId;
 
     /**
-     * <p>Specifies whether to enable release protection for the instance. This parameter indicates whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance.</p>
+     * <p>Specifies whether to enable release protection for the instance. This parameter indicates whether you can use the ECS console or call the [DeleteInstance](https://help.aliyun.com/document_detail/25507.html) operation to release the instance.</p>
      * <br>
      * <p>*   true: enables release protection.</p>
      * <p>*   false (default): disables release protection.</p>
@@ -150,7 +150,7 @@ public class CreateInstanceRequest extends TeaModel {
      * <br>
      * <p>Default value: enabled.</p>
      * <br>
-     * <p>>  For more information about instance metadata, see [Overview of instance metadata](~~49122~~).</p>
+     * <p>>  For more information about instance metadata, see [Overview of instance metadata](https://help.aliyun.com/document_detail/49122.html).</p>
      */
     @NameInMap("HttpEndpoint")
     public String httpEndpoint;
@@ -169,7 +169,7 @@ public class CreateInstanceRequest extends TeaModel {
      * <br>
      * <p>Default value: optional.</p>
      * <br>
-     * <p>>  For more information about the modes of accessing instance metadata, see [Access mode of instance metadata](~~150575~~).</p>
+     * <p>>  For more information about the modes of accessing instance metadata, see [Access mode of instance metadata](https://help.aliyun.com/document_detail/150575.html).</p>
      */
     @NameInMap("HttpTokens")
     public String httpTokens;
@@ -205,7 +205,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). If you do not specify this parameter, the instance ID is used as the instance name by default.</p>
+     * <p>The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). If you do not specify this parameter, the instance ID is used as the instance name by default.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
@@ -213,8 +213,10 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The instance type.</p>
      * <br>
-     * <p>*   Instance type selection: See [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of instance types, or see [Best practices for instance type selection](~~58291~~) to learn about how to select instance types.</p>
-     * <p>*   Query of available resources: Call the [DescribeAvailableResource](~~66186~~) operation to query resources available in a specific region or zone.</p>
+     * <p>*   Instance type selection: See [Instance families](https://help.aliyun.com/document_detail/25378.html) or call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation to query the performance data of instance types, or see [Best practices for instance type selection](https://help.aliyun.com/document_detail/58291.html) to learn about how to select instance types.</p>
+     * <p>*   Query of available resources: Call the [DescribeAvailableResource](https://help.aliyun.com/document_detail/66186.html) operation to query resources available in a specific region or zone.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -253,7 +255,7 @@ public class CreateInstanceRequest extends TeaModel {
      * <p>*   none: The instance is not I/O optimized.</p>
      * <p>*   optimized: The ECS instance is I/O optimized.</p>
      * <br>
-     * <p>For retired instance types, the default value is none. For more information, see [Retired instance types](~~55263~~).</p>
+     * <p>For retired instance types, the default value is none. For more information, see [Retired instance types](https://help.aliyun.com/document_detail/55263.html).</p>
      * <br>
      * <p>For other instance types, the default value is optimized.</p>
      */
@@ -283,7 +285,7 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
      * <br>
-     * <p>    ( ) ` ~ ! @ # $ % ^ & * - _ + = | { } [ ] : ; \" < > , . ? /</p>
+     * <p>    ( ) ` ~ ! @ # $ % ^ & * - _ + = | { } [ ] : ; \\" < > , . ? /</p>
      * <br>
      * <p>Take note of the following items:</p>
      * <br>
@@ -325,13 +327,15 @@ public class CreateInstanceRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The name of the instance Resource Access Management (RAM) role. You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you created.</p>
+     * <p>The name of the instance Resource Access Management (RAM) role. You can call the [ListRoles](https://help.aliyun.com/document_detail/28713.html) operation provided by RAM to query the instance RAM roles that you created.</p>
      */
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
     /**
-     * <p>The ID of the region in which to create the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region in which to create the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -440,7 +444,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String userData;
 
     /**
-     * <p>The ID of the vSwitch to which to connect the instance. This parameter is required when you create an instance in a VPC. You can call the [DescribeVSwitches](~~35748~~) operation to query available vSwitches.</p>
+     * <p>The ID of the vSwitch to which to connect the instance. This parameter is required when you create an instance in a VPC. You can call the [DescribeVSwitches](https://help.aliyun.com/document_detail/35748.html) operation to query available vSwitches.</p>
      * <br>
      * <p>>  If `VSwitchId` is specified, the zone specified by `ZoneId` must be the zone where the specified vSwitch resides. You can also leave `ZoneId` empty. Then, the system selects the zone where the specified vSwitch resides.</p>
      */
@@ -454,7 +458,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String vlanId;
 
     /**
-     * <p>The ID of the zone in which to create the instance. You can call the [DescribeZones](~~25610~~) operation to query the zones in a specific region.</p>
+     * <p>The ID of the zone in which to create the instance. You can call the [DescribeZones](https://help.aliyun.com/document_detail/25610.html) operation to query the zones in a specific region.</p>
      * <br>
      * <p>>  If `VSwitchId` is specified, the zone specified by `ZoneId` must be the zone where the specified vSwitch resides. You can also leave `ZoneId` empty. Then, the system selects the zone where the specified vSwitch resides.</p>
      * <br>
@@ -1049,7 +1053,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the system disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
          * <br>
          * <p>This parameter is empty by default.</p>
          */
@@ -1064,7 +1068,7 @@ public class CreateInstanceRequest extends TeaModel {
          * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
          * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
          * <br>
-         * <p>For information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
+         * <p>For information about ESSD performance levels, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
@@ -1233,7 +1237,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The name of data disk N. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+         * <p>The name of data disk N. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
          */
         @NameInMap("DiskName")
         public String diskName;
@@ -1269,7 +1273,7 @@ public class CreateInstanceRequest extends TeaModel {
          * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
          * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
          * <br>
-         * <p>For more information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
+         * <p>For more information about ESSD performance levels, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;

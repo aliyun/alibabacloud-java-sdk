@@ -7,6 +7,9 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     @NameInMap("ForwardEntryId")
     public String forwardEntryId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ForwardTableId")
     public String forwardTableId;
 
@@ -22,6 +25,9 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

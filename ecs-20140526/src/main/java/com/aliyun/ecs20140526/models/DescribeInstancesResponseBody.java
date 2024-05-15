@@ -1098,7 +1098,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public DescribeInstancesResponseBodyInstancesInstanceCpuOptions cpuOptions;
 
         /**
-         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).</p>
+         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -1106,8 +1106,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The performance mode of the burstable instance. Valid values:</p>
          * <br>
-         * <p>*   Standard: standard mode. For more information, see the "Standard mode" section in [Overview](~~59977~~).</p>
-         * <p>*   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in [Overview](~~59977~~).</p>
+         * <p>*   Standard: standard mode. For more information, see the "Standard mode" section in [Overview](https://help.aliyun.com/document_detail/59977.html).</p>
+         * <p>*   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in [Overview](https://help.aliyun.com/document_detail/59977.html).</p>
          */
         @NameInMap("CreditSpecification")
         public String creditSpecification;
@@ -1172,7 +1172,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public DescribeInstancesResponseBodyInstancesInstanceEipAddress eipAddress;
 
         /**
-         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).</p>
+         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -1449,7 +1449,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String spotStrategy;
 
         /**
-         * <p>The time when the instance was last started. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).</p>
+         * <p>The time when the instance was last started. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).</p>
          */
         @NameInMap("StartTime")
         public String startTime;

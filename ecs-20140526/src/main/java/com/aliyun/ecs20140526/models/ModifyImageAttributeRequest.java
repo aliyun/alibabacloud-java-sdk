@@ -30,7 +30,7 @@ public class ModifyImageAttributeRequest extends TeaModel {
     public ModifyImageAttributeRequestFeatures features;
 
     /**
-     * <p>The name of the image family. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with acs: or aliyun. [It cannot contain http:// or https://. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).](http://https://。、（.）、（:）、（\_）（-）。)</p>
+     * <p>The name of the image family. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with acs: or aliyun. [It cannot contain http:// or https://. It can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).](http://https://。、（.）、（:）、（_）（-）。)</p>
      * <br>
      * <p>By default, this parameter is empty.</p>
      */
@@ -39,12 +39,14 @@ public class ModifyImageAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the custom image.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
-     * <p>The name of the custom image. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with acs: or aliyun. [It cannot contain http:// or https://. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).](http://https://。、（.）、（:）、（\_）（-）。)</p>
+     * <p>The name of the custom image. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with acs: or aliyun. [It cannot contain http:// or https://. It can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).](http://https://。、（.）、（:）、（_）（-）。)</p>
      * <br>
      * <p>By default, this parameter is empty. In this case, the original name is retained.</p>
      */
@@ -52,13 +54,9 @@ public class ModifyImageAttributeRequest extends TeaModel {
     public String imageName;
 
     /**
-     * <p>The type of the license used to activate the operating system after the image is imported. Valid values:</p>
+     * <p>The type of the license that is used to activate the operating system after the image is imported. Set the value to BYOL.</p>
      * <br>
-     * <p>*   Auto: Elastic Compute Service (ECS) checks the OS of the source image and allocates a license to the OS. ECS first checks whether the operating system distribution specified by `Platform` has a license allocated through an official Alibaba Cloud channel. If yes, the allocated license is used. If no, the license that comes with the source operating system is used.</p>
-     * <p>*   Aliyun: The license allocated through an official Alibaba Cloud channel is used for the operating system distribution specified by `Platform`.</p>
-     * <p>*   BYOL: The license that comes with the source operating system is used. In this case, make sure that your license key can be used in Alibaba Cloud.</p>
-     * <br>
-     * <p>Default value: Auto.</p>
+     * <p>BYOL: The license that comes with the source operating system is used. When you use the BYOL license, make sure that your license key is supported by Alibaba Cloud.</p>
      */
     @NameInMap("LicenseType")
     public String licenseType;
@@ -70,7 +68,9 @@ public class ModifyImageAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the custom image. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

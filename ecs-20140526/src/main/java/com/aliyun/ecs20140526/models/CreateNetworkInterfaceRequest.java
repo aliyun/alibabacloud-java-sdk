@@ -11,7 +11,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String businessType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -66,7 +66,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     /**
      * <p>IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.</p>
      * <br>
-     * <p>Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*</p>
+     * <p>Example: Ipv6Address.1=2001:db8:1234:1a00::\\*\\*\\*\\*</p>
      * <br>
      * <p>>  To assign IPv6 addresses to the ENI, you must specify the `Ipv6Addresses.N` or `Ipv6AddressCount` parameter, but not both.</p>
      */
@@ -98,7 +98,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer ipv6PrefixCount;
 
     /**
-     * <p>The name of the ENI. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>The name of the ENI. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.</p>
      * <br>
      * <p>This parameter is empty by default.</p>
      */
@@ -111,7 +111,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
      * <p>*   Standard: uses the TCP communication mode.</p>
      * <p>*   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</p>
      * <br>
-     * <p>>  ENIs in RDMA mode can be attached only to instances of the instance types that support ERIs. The number of ENIs in RDMA mode that are attached to an instance cannot exceed the maximum number of ENIs that the instance type supports. For more information, see [Overview of ECS instance families](~~25378~~) and [Configure eRDMA on an enterprise-level instance](~~336853~~).</p>
+     * <p>>  ENIs in RDMA mode can be attached only to instances of the instance types that support ERIs. The number of ENIs in RDMA mode that are attached to an instance cannot exceed the maximum number of ENIs that the instance type supports. For more information, see [Overview of ECS instance families](https://help.aliyun.com/document_detail/25378.html) and [Configure eRDMA on an enterprise-level instance](https://help.aliyun.com/document_detail/336853.html).</p>
      * <br>
      * <p>Default value: Standard.</p>
      */
@@ -143,9 +143,9 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     /**
      * <p>The number of queues supported by the ENI. Valid values: 1 to 2048.</p>
      * <br>
-     * <p>When you attach the ENI to an instance, make sure that the value of this parameter is less than the maximum number of queues per ENI that is allowed for the instance type. To view the maximum number of queues per ENI allowed for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and then check the return value of `MaximumQueueNumberPerEni`.</p>
+     * <p>When you attach the ENI to an instance, make sure that the value of this parameter is less than the maximum number of queues per ENI that is allowed for the instance type. To view the maximum number of queues per ENI allowed for an instance type, you can call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation and then check the return value of `MaximumQueueNumberPerEni`.</p>
      * <br>
-     * <p>This parameter is left empty by default. If you do not specify this parameter, the default number of queues per ENI for the instance type of an instance is used when you attach the ENI to the instance. To view the default number of queues per ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and then check the return value of `SecondaryEniQueueNumber`.</p>
+     * <p>This parameter is left empty by default. If you do not specify this parameter, the default number of queues per ENI for the instance type of an instance is used when you attach the ENI to the instance. To view the default number of queues per ENI for an instance type, you can call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation and then check the return value of `SecondaryEniQueueNumber`.</p>
      */
     @NameInMap("QueueNumber")
     public Integer queueNumber;
@@ -157,13 +157,15 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer queuePairNumber;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which you want to assign the ENI. You can call the [ListResourceGroups](~~158855~~) operation to query the most recent resource group list.</p>
+     * <p>The ID of the resource group to which you want to assign the ENI. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the most recent resource group list.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -200,7 +202,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The ID of security group N to which to assign the ENI. The security group and the ENI must belong to the same VPC. The valid values of N are determined based on the maximum number of security groups to which an ENI can be assigned. For more information, see [Limits](~~25412~~).</p>
+     * <p>The ID of security group N to which to assign the ENI. The security group and the ENI must belong to the same VPC. The valid values of N are determined based on the maximum number of security groups to which an ENI can be assigned. For more information, see [Limits](https://help.aliyun.com/document_detail/25412.html).</p>
      * <br>
      * <p>**</p>
      * <br>
@@ -228,6 +230,8 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch with which to associate the ENI. Private IP addresses are assigned to the ENI from within the CIDR block of the vSwitch.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

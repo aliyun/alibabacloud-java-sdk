@@ -18,12 +18,16 @@ public class ModifyReservedInstanceAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the reserved instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The new name of the reserved instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The new name of the reserved instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ReservedInstanceId")
     public String reservedInstanceId;

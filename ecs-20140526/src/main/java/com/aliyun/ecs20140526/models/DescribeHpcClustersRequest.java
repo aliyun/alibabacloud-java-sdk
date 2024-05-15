@@ -44,6 +44,8 @@ public class DescribeHpcClustersRequest extends TeaModel {
 
     /**
      * <p>The IDs of HPC clusters. The value is a JSON array that consists of up to 100 HPC cluster IDs. Separate the HPC cluster IDs with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

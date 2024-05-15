@@ -13,6 +13,9 @@ public class TerminateVirtualBorderRouterRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,6 +28,9 @@ public class TerminateVirtualBorderRouterRequest extends TeaModel {
     @NameInMap("UserCidr")
     public String userCidr;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VbrId")
     public String vbrId;
 

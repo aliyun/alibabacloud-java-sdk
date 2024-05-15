@@ -82,7 +82,7 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
          * <br>
          * <p>*   AutoRenewal: The dedicated host is automatically renewed.</p>
          * <p>*   Normal: The dedicated host is not automatically renewed, but renewal notifications are sent.</p>
-         * <p>*   NotRenewal: The dedicated host is not automatically renewed, and no expiration notification is sent. Alibaba Cloud sends only a non-renewal notice three days before the host expires. If the renewal status of a dedicated host is NotRenewal, you can change the value to Normal and then call [RenewDedicatedHosts](~~93287~~) to manually renew the dedicated host, or directly change the value to AutoRenewal.</p>
+         * <p>*   NotRenewal: The dedicated host is not automatically renewed, and no expiration notification is sent. Alibaba Cloud sends only a non-renewal notice three days before the host expires. If the renewal status of a dedicated host is NotRenewal, you can change the value to Normal and then call [RenewDedicatedHosts](https://help.aliyun.com/document_detail/93287.html) to manually renew the dedicated host, or directly change the value to AutoRenewal.</p>
          */
         @NameInMap("RenewalStatus")
         public String renewalStatus;

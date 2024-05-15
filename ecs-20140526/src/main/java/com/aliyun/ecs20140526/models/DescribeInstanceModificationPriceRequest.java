@@ -8,19 +8,21 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public DescribeInstanceModificationPriceRequestSystemDisk systemDisk;
 
     /**
-     * <p>The information about the data disk.</p>
+     * <p>The information about data disks.</p>
      */
     @NameInMap("DataDisk")
     public java.util.List<DescribeInstanceModificationPriceRequestDataDisk> dataDisk;
 
     /**
      * <p>The ID of the instance for which you want to query pricing information for a configuration upgrade.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The new instance type. We recommend that you call the [DescribeResourcesModification](~~66187~~) operation to query the instance types available for configuration upgrades in a specified zone.</p>
+     * <p>The new instance type. We recommend that you call the [DescribeResourcesModification](https://help.aliyun.com/document_detail/66187.html) operation to query the instance types available for configuration upgrades in a specified zone.</p>
      * <br>
      * <p>> When you call the DescribeInstanceModificationPrice operation, you must specify at least one of the following parameters: `InstanceType` and `DataDisk.N.*`.</p>
      */
@@ -34,7 +36,9 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -124,7 +128,7 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
 
     public static class DescribeInstanceModificationPriceRequestSystemDisk extends TeaModel {
         /**
-         * <p>The category of the system disk. You must specify this parameter only when you upgrade a non-I/O optimized instance of a retired instance type to an I/O optimized instance of an available instance type. For more information about instance types, see [Instance families](~~25378~~) and [Retired instance types](~~55263~~).</p>
+         * <p>The category of the system disk. You must specify this parameter only when you upgrade a non-I/O optimized instance of a retired instance type to an I/O optimized instance of an available instance type. For more information about instance types, see [Instance families](https://help.aliyun.com/document_detail/25378.html) and [Retired instance types](https://help.aliyun.com/document_detail/55263.html).</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
@@ -155,14 +159,14 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
         /**
          * <p>The category of data disk N. You can specify this parameter if you want to query the pricing information about newly attached subscription data disks. Valid values of N: 1 to 16. Valid values:</p>
          * <br>
-         * <p>*   cloud_efficiency: ultra disk</p>
-         * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   cloud_essd: ESSD</p>
-         * <p>*   cloud: basic disk</p>
+         * <p>*   cloud_efficiency: utra disk.</p>
+         * <p>*   cloud_ssd: standard SSD.</p>
+         * <p>*   cloud_essd: ESSD.</p>
+         * <p>*   cloud: basic disk.</p>
          * <br>
          * <p>This parameter is empty by default.</p>
          * <br>
-         * <p>> When you call the DescribeInstanceModificationPrice operation, you must specify at least one of the following parameters: `InstanceType` and `DataDisk.N.*`.</p>
+         * <p>>  When you call the DescribeInstanceModificationPrice operation, you must specify at least one of the following parameters: `InstanceType` and `DataDisk.N.*`.</p>
          */
         @NameInMap("Category")
         public String category;
@@ -177,7 +181,7 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
          * <br>
          * <p>Default value: PL1.</p>
          * <br>
-         * <p>For more information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
+         * <p>For more information about ESSD performance levels, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
@@ -189,9 +193,9 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
          * <br>
          * <p>*   Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</p>
          * <br>
-         * <p>*   Valid values when DataDisk.N.Category is set to cloud_essd: depends on the value of `DataDisk.N.PerformanceLevel`.</p>
+         * <p>*   Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the `DataDisk.N.PerformanceLevel` value.</p>
          * <br>
-         * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.</p>
+         * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.</p>
          * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</p>
          * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</p>
          * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</p>
