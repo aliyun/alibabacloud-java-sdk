@@ -3,7 +3,13 @@ package com.aliyun.selectdb20230522.models;
 
 import com.aliyun.tea.*;
 
-public class StopBEClusterRequest extends TeaModel {
+public class DescribeDBClusterConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("ConfigKey")
+    public String configKey;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -16,21 +22,23 @@ public class StopBEClusterRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    public static StopBEClusterRequest build(java.util.Map<String, ?> map) throws Exception {
-        StopBEClusterRequest self = new StopBEClusterRequest();
+    public static DescribeDBClusterConfigRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDBClusterConfigRequest self = new DescribeDBClusterConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public StopBEClusterRequest setDBClusterId(String DBClusterId) {
+    public DescribeDBClusterConfigRequest setConfigKey(String configKey) {
+        this.configKey = configKey;
+        return this;
+    }
+    public String getConfigKey() {
+        return this.configKey;
+    }
+
+    public DescribeDBClusterConfigRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }
@@ -38,7 +46,7 @@ public class StopBEClusterRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public StopBEClusterRequest setDBInstanceId(String DBInstanceId) {
+    public DescribeDBClusterConfigRequest setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
@@ -46,20 +54,12 @@ public class StopBEClusterRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public StopBEClusterRequest setRegionId(String regionId) {
+    public DescribeDBClusterConfigRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public StopBEClusterRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
 }

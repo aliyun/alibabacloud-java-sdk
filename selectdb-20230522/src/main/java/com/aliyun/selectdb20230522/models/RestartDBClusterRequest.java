@@ -4,17 +4,24 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class RestartDBClusterRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>代表资源一级ID的资源属性字段</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>地域</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

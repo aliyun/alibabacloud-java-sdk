@@ -4,12 +4,21 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

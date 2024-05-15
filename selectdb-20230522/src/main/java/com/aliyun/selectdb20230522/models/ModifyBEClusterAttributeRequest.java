@@ -4,21 +4,36 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class ModifyBEClusterAttributeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceAttributeType")
     public String instanceAttributeType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Value")
     public String value;
 

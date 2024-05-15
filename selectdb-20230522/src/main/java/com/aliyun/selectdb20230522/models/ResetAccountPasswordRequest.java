@@ -4,15 +4,27 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class ResetAccountPasswordRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

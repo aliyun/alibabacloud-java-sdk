@@ -4,20 +4,34 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class CreateDBClusterRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CacheSize")
     public String cacheSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBClusterClass")
     public String DBClusterClass;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBClusterDescription")
     public String DBClusterDescription;
 
     /**
      * <p>代表资源一级ID的资源属性字段</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -25,12 +39,18 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -46,15 +66,23 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("UsedTime")
     public String usedTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>VPC ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
