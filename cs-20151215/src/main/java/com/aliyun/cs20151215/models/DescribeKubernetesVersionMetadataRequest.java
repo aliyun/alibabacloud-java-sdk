@@ -49,6 +49,9 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     @NameInMap("Profile")
     public String profile;
 
+    @NameInMap("QueryUpgradableVersion")
+    public Boolean queryUpgradableVersion;
+
     /**
      * <p>The region ID of the cluster.</p>
      * <br>
@@ -106,6 +109,14 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     }
     public String getProfile() {
         return this.profile;
+    }
+
+    public DescribeKubernetesVersionMetadataRequest setQueryUpgradableVersion(Boolean queryUpgradableVersion) {
+        this.queryUpgradableVersion = queryUpgradableVersion;
+        return this;
+    }
+    public Boolean getQueryUpgradableVersion() {
+        return this.queryUpgradableVersion;
     }
 
     public DescribeKubernetesVersionMetadataRequest setRegion(String region) {

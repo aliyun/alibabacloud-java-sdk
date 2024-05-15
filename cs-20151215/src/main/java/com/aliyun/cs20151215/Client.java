@@ -3199,6 +3199,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Profile", request.profile);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.queryUpgradableVersion)) {
+            query.put("QueryUpgradableVersion", request.queryUpgradableVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
             query.put("Region", request.region);
         }
