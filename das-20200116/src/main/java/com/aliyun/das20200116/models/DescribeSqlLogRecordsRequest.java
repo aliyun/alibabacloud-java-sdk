@@ -10,6 +10,9 @@ public class DescribeSqlLogRecordsRequest extends TeaModel {
     @NameInMap("Filters")
     public java.util.List<DescribeSqlLogRecordsRequestFilters> filters;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -98,6 +101,9 @@ public class DescribeSqlLogRecordsRequest extends TeaModel {
     }
 
     public static class DescribeSqlLogRecordsRequestFilters extends TeaModel {
+        /**
+         * <p>Parameter filtering</p>
+         */
         @NameInMap("Key")
         public String key;
 

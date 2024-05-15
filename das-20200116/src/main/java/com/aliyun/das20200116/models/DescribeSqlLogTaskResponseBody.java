@@ -111,7 +111,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         public String DBName;
 
         /**
-         * <p>yyyy-MM-dd\"T\"HH:mm:ss.SSS\"Z\"</p>
+         * <p>yyyy-MM-dd\\"T\\"HH:mm:ss.SSS\\"Z\\"</p>
          */
         @NameInMap("ExecuteTime")
         public String executeTime;

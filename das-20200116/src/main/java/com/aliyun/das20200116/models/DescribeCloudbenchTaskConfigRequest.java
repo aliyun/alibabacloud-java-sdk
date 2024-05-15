@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudbenchTaskConfigRequest extends TeaModel {
     /**
-     * <p>The task ID. You can call the [DescribeCloudBenchTasks](~~230670~~) operation to query the task ID.</p>
+     * <p>The task ID. You can call the [DescribeCloudBenchTasks](https://help.aliyun.com/document_detail/230670.html) operation to query the task ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

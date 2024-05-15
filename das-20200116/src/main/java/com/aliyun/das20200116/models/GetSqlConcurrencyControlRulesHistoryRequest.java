@@ -14,6 +14,8 @@ public class GetSqlConcurrencyControlRulesHistoryRequest extends TeaModel {
      * <p>The instance ID.</p>
      * <br>
      * <p>>  Only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters are supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

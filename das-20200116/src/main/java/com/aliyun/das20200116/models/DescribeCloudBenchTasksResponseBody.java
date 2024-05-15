@@ -110,7 +110,7 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
         public Integer archiveState;
 
         /**
-         * <p>The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query the ID of the backup set.</p>
+         * <p>The ID of the backup set. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/26273.html) operation to query the ID of the backup set.</p>
          */
         @NameInMap("BackupId")
         public String backupId;
@@ -207,7 +207,7 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
         /**
          * <p>The specification of the DTS instance.</p>
          * <br>
-         * <p>> For more information about the specifications of DTS instances and the test performance of each instance, see [Specifications of data migration instances](~~26606~~).</p>
+         * <p>> For more information about the specifications of DTS instances and the test performance of each instance, see [Specifications of data migration instances](https://help.aliyun.com/document_detail/26606.html).</p>
          */
         @NameInMap("DtsJobClass")
         public String dtsJobClass;

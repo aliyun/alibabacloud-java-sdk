@@ -7,9 +7,15 @@ public class CreateKillInstanceSessionTaskWithMaintainUserRequest extends TeaMod
     @NameInMap("IgnoredUsers")
     public String ignoredUsers;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("KillAllSessions")
     public Boolean killAllSessions;
 

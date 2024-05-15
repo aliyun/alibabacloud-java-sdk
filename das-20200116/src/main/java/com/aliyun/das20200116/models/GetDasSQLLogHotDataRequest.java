@@ -32,12 +32,14 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
      * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <br>
      * <p>>  The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("End")
     public Long end;
 
     /**
-     * <p>The error code of SQL execution. You can call the [GetAsyncErrorRequestStatByCode](~~409804~~) operation to query MySQL error codes in SQL Explorer data.</p>
+     * <p>The error code of SQL execution. You can call the [GetAsyncErrorRequestStatByCode](https://help.aliyun.com/document_detail/409804.html) operation to query MySQL error codes in SQL Explorer data.</p>
      */
     @NameInMap("Fail")
     public String fail;
@@ -52,6 +54,8 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
 
     /**
      * <p>The ID of the database instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -173,6 +177,8 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
      * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <br>
      * <p>>  You can query only the data that is generated after the new SQL Explorer and Audit feature is enabled. The start time can be up to seven days earlier than the current time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Start")
     public Long start;

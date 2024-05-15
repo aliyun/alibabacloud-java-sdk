@@ -10,24 +10,32 @@ public class GetQueryOptimizeExecErrorSampleRequest extends TeaModel {
      * <p>*   **MySQL**</p>
      * <p>*   **PolarDBMySQL**</p>
      * <p>*   **PostgreSQL**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The SQL template ID. You can call the [GetQueryOptimizeExecErrorStats](~~405235~~) operation to obtain the SQL template ID.</p>
+     * <p>The SQL template ID. You can call the [GetQueryOptimizeExecErrorStats](https://help.aliyun.com/document_detail/405235.html) operation to obtain the SQL template ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SqlId")
     public String sqlId;
 
     /**
      * <p>The date to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Time")
     public String time;

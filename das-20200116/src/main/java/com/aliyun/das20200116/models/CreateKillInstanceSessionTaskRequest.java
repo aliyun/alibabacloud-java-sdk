@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CreateKillInstanceSessionTaskRequest extends TeaModel {
     /**
      * <p>The database account that has the permissions to terminate sessions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbUser")
     public String dbUser;
 
     /**
      * <p>The password of the database account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbUserPassword")
     public String dbUserPassword;
@@ -19,13 +23,15 @@ public class CreateKillInstanceSessionTaskRequest extends TeaModel {
     /**
      * <p>The account whose sessions do not need to be terminated.</p>
      * <br>
-     * <p>>  Set this parameter to a JSON array. Separate database accounts with commas (,). Example: \[\"Database account 1\",\"Database account 2\"].</p>
+     * <p>>  Set this parameter to a JSON array. Separate database accounts with commas (,). Example: [\\"Database account 1\\",\\"Database account 2\\"].</p>
      */
     @NameInMap("IgnoredUsers")
     public String ignoredUsers;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -36,7 +42,9 @@ public class CreateKillInstanceSessionTaskRequest extends TeaModel {
      * <p>*   **true**</p>
      * <p>*   **false**</p>
      * <br>
-     * <p>>  If you set this parameter to **true**, sessions of the accounts that are specified by **IgnoredUsers**, sessions of internal O\&M accounts of Alibaba Cloud, and **Binlog Dump** sessions are not terminated.</p>
+     * <p>>  If you set this parameter to **true**, sessions of the accounts that are specified by **IgnoredUsers**, sessions of internal O\\&M accounts of Alibaba Cloud, and **Binlog Dump** sessions are not terminated.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("KillAllSessions")
     public Boolean killAllSessions;
@@ -52,7 +60,7 @@ public class CreateKillInstanceSessionTaskRequest extends TeaModel {
     /**
      * <p>The IDs of sessions that need to be terminated.</p>
      * <br>
-     * <p>>  Set this parameter to a JSON array. Separate session IDs with commas (,). Example: \[\"Session ID1\",\"Session ID2\"]. If **KillAllSessions** is set to **true**, this parameter does not take effect.</p>
+     * <p>>  Set this parameter to a JSON array. Separate session IDs with commas (,). Example: [\\"Session ID1\\",\\"Session ID2\\"]. If **KillAllSessions** is set to **true**, this parameter does not take effect.</p>
      */
     @NameInMap("SessionIds")
     public String sessionIds;

@@ -25,6 +25,8 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
      * <p>*   **MySQL**: ApsaraDB RDS for MySQL</p>
      * <p>*   **PolarDBMySQL**: PolarDB for MySQL</p>
      * <p>*   **PostgreSQL**: ApsaraDB RDS for PostgreSQL</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -102,13 +104,13 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The tags that are used to filter SQL templates. Separate multiple tags with commas (,). For more information, see [Query governance](~~290038~~).</p>
+     * <p>The tags that are used to filter SQL templates. Separate multiple tags with commas (,). For more information, see [Query governance](https://help.aliyun.com/document_detail/290038.html).</p>
      */
     @NameInMap("Rules")
     public String rules;
 
     /**
-     * <p>The SQL template IDs. You can call the [GetQueryOptimizeExecErrorStats](~~405261~~) operation to obtain the SQL template IDs.</p>
+     * <p>The SQL template IDs. You can call the [GetQueryOptimizeExecErrorStats](https://help.aliyun.com/document_detail/405261.html) operation to obtain the SQL template IDs.</p>
      */
     @NameInMap("SqlIds")
     public String sqlIds;
@@ -121,6 +123,8 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
 
     /**
      * <p>The date to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Time")
     public Long time;

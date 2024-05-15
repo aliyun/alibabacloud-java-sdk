@@ -10,6 +10,8 @@ public class GetQueryOptimizeDataTopRequest extends TeaModel {
      * <p>*   **MySQL**</p>
      * <p>*   **PolarDBMySQL**</p>
      * <p>*   **PostgreSQL**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -42,6 +44,8 @@ public class GetQueryOptimizeDataTopRequest extends TeaModel {
 
     /**
      * <p>The time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Time")
     public String time;
@@ -51,6 +55,8 @@ public class GetQueryOptimizeDataTopRequest extends TeaModel {
      * <br>
      * <p>*   **RED**: the best-performing instances</p>
      * <p>*   **BLACK**: the worst-performing instances</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

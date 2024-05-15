@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetKillInstanceSessionTaskResultRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -19,7 +21,9 @@ public class GetKillInstanceSessionTaskResultRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The task ID. You can obtain the task ID from the response parameters of the [CreateKillInstanceSessionTask](~~609246~~) operation.</p>
+     * <p>The task ID. You can obtain the task ID from the response parameters of the [CreateKillInstanceSessionTask](https://help.aliyun.com/document_detail/609246.html) operation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

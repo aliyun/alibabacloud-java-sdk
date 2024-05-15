@@ -10,18 +10,24 @@ public class GetQueryOptimizeTagRequest extends TeaModel {
      * <p>*   **MySQL**: ApsaraDB RDS for MySQL</p>
      * <p>*   **PolarDBMySQL**: PolarDB for MySQL</p>
      * <p>*   **PostgreSQL**: ApsaraDB RDS for PostgreSQL</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The SQL template ID. You can call the [GetQueryOptimizeDataStats](~~405261~~) operation to query the SQL template ID.</p>
+     * <p>The SQL template ID. You can call the [GetQueryOptimizeDataStats](https://help.aliyun.com/document_detail/405261.html) operation to query the SQL template ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SqlId")
     public String sqlId;

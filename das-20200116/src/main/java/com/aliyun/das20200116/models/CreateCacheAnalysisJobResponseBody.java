@@ -239,7 +239,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * <p>The ID of the cache analysis task.</p>
          * <br>
-         * <p>>  This parameter can be used to query a specific cache analysis task. When you call the CreateCacheAnalysisJob operation, it takes some time to create a cache analysis task. As a result, the analysis results cannot be immediately returned. You can call the [DescribeCacheAnalysisJob](~~180983~~) operation to query the analysis results of the specified cache analysis task.</p>
+         * <p>>  This parameter can be used to query a specific cache analysis task. When you call the CreateCacheAnalysisJob operation, it takes some time to create a cache analysis task. As a result, the analysis results cannot be immediately returned. You can call the [DescribeCacheAnalysisJob](https://help.aliyun.com/document_detail/180983.html) operation to query the analysis results of the specified cache analysis task.</p>
          */
         @NameInMap("JobId")
         public String jobId;

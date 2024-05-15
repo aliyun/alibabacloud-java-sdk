@@ -11,7 +11,7 @@ public class CreateCloudBenchTasksRequest extends TeaModel {
     public String amount;
 
     /**
-     * <p>The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query the ID of the backup set.</p>
+     * <p>The ID of the backup set. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/26273.html) operation to query the ID of the backup set.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -25,14 +25,18 @@ public class CreateCloudBenchTasksRequest extends TeaModel {
     /**
      * <p>The type of the stress testing client. Valid values:</p>
      * <br>
-     * <p>*   **ECS**: indicates that you must create the [DBGateway](~~64905~~).</p>
+     * <p>*   **ECS**: indicates that you must create the [DBGateway](https://help.aliyun.com/document_detail/64905.html).</p>
      * <p>*   **DAS_ECS**: indicates that DAS automatically purchases and deploys an Elastic Compute Service (ECS) instance for stress testing.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClientType")
     public String clientType;
 
     /**
      * <p>The description of the stress testing task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -46,7 +50,7 @@ public class CreateCloudBenchTasksRequest extends TeaModel {
     public String dstConnectionString;
 
     /**
-     * <p>The ID of the destination instance. The instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance. You can call the [GetInstanceInspections](~~202857~~) operation to query the ID.</p>
+     * <p>The ID of the destination instance. The instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance. You can call the [GetInstanceInspections](https://help.aliyun.com/document_detail/202857.html) operation to query the ID.</p>
      * <br>
      * <p>>  This parameter must be specified if you set **DstType** to **Instance**.</p>
      */
@@ -83,7 +87,7 @@ public class CreateCloudBenchTasksRequest extends TeaModel {
     public String dstType;
 
     /**
-     * <p>The specification of the Data Transmission Service (DTS) migration task. You can call the [DescribeCloudbenchTask](~~230669~~) operation to query the specification.</p>
+     * <p>The specification of the Data Transmission Service (DTS) migration task. You can call the [DescribeCloudbenchTask](https://help.aliyun.com/document_detail/230669.html) operation to query the specification.</p>
      * <br>
      * <p>>  You must migrate the basic data in the source instance to the destination instance before you start a stress testing task. When you create a DTS migration task, you must specify this parameter.</p>
      */
@@ -91,7 +95,7 @@ public class CreateCloudBenchTasksRequest extends TeaModel {
     public String dtsJobClass;
 
     /**
-     * <p>The ID of the DTS migration task. You can call the [ConfigureDtsJob](~~208399~~) operation to query the ID.</p>
+     * <p>The ID of the DTS migration task. You can call the [ConfigureDtsJob](https://help.aliyun.com/document_detail/208399.html) operation to query the ID.</p>
      * <br>
      * <p>>  After a DTS migration task is created in the DTS console, you must specify this parameter.</p>
      */
@@ -160,9 +164,11 @@ public class CreateCloudBenchTasksRequest extends TeaModel {
     public String smartPressureTime;
 
     /**
-     * <p>The ID of the source instance. The instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance. You can call the [GetInstanceInspections](~~202857~~) operation to query the ID.</p>
+     * <p>The ID of the source instance. The instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance. You can call the [GetInstanceInspections](https://help.aliyun.com/document_detail/202857.html) operation to query the ID.</p>
      * <br>
      * <p>>  This parameter must be specified if you set **DstType** to **Instance**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SrcInstanceId")
     public String srcInstanceId;
@@ -194,6 +200,8 @@ public class CreateCloudBenchTasksRequest extends TeaModel {
      * <br>
      * <p>*   **pressure test** (default): A task of this type replays the traffic that is captured from the source instance on the destination instance at the maximum playback rate that is supported by the destination instance.</p>
      * <p>*   **smart pressure test**: A task of this type analyzes the traffic that is captured from the source instance over a short period of time and generates traffic on the destination instance for continuous stress testing. The business model based on which the traffic is generated on the destination instance and the traffic distribution are consistent with those on the source instance. Stress testing tasks of this type can help you reduce the amount of time that is consumed to collect data from the source instance and reduce storage costs and performance overheads.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

@@ -8,6 +8,8 @@ public class GetAutonomousNotifyEventsInRangeRequest extends TeaModel {
      * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <br>
      * <p>>  The end time must be later than the start time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -47,7 +49,7 @@ public class GetAutonomousNotifyEventsInRangeRequest extends TeaModel {
     public String minLevel;
 
     /**
-     * <p>The ID of the node in a PolarDB for MySQL cluster. You can call the [DescribeDBClusters](~~98094~~) operation to query the node ID returned by the DBNodeId response parameter.</p>
+     * <p>The ID of the node in a PolarDB for MySQL cluster. You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the node ID returned by the DBNodeId response parameter.</p>
      * <br>
      * <p>>  You must specify the node ID if your database instance is a PolarDB for MySQL cluster.</p>
      */
@@ -68,6 +70,8 @@ public class GetAutonomousNotifyEventsInRangeRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

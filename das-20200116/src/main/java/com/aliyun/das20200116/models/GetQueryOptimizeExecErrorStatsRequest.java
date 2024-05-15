@@ -25,6 +25,8 @@ public class GetQueryOptimizeExecErrorStatsRequest extends TeaModel {
      * <p>*   **MySQL**</p>
      * <p>*   **PolarDBMySQL**</p>
      * <p>*   **PostgreSQL**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -58,12 +60,16 @@ public class GetQueryOptimizeExecErrorStatsRequest extends TeaModel {
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNo")
     public String pageNo;
 
     /**
      * <p>The number of entries per page. Default value: 10.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
@@ -84,6 +90,8 @@ public class GetQueryOptimizeExecErrorStatsRequest extends TeaModel {
 
     /**
      * <p>The time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Time")
     public String time;

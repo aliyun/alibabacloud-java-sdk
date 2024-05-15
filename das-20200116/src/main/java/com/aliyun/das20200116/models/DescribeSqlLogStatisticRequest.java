@@ -4,6 +4,9 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DescribeSqlLogStatisticRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class GetRequestDiagnosisResultRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The unique ID of the diagnostics task. You can call the [CreateRequestDiagnosis](~~341609~~) operation to query the diagnostics task ID.</p>
+     * <p>The unique ID of the diagnostics task. You can call the [CreateRequestDiagnosis](https://help.aliyun.com/document_detail/341609.html) operation to query the diagnostics task ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MessageId")
     public String messageId;

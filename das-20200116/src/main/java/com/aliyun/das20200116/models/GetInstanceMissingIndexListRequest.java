@@ -32,6 +32,8 @@ public class GetInstanceMissingIndexListRequest extends TeaModel {
      * <p>The database instance ID.</p>
      * <br>
      * <p>>  Only ApsaraDB RDS for SQL Server instances are supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

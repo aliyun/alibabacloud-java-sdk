@@ -13,13 +13,15 @@ public class GetAsyncErrorRequestListByCodeRequest extends TeaModel {
     public Long end;
 
     /**
-     * <p>The error code. You can call the [GetAsyncErrorRequestStatByCode](~~409804~~) operation to query the MySQL error codes that may be generated in the SQL Explorer results of an instance.</p>
+     * <p>The error code. You can call the [GetAsyncErrorRequestStatByCode](https://help.aliyun.com/document_detail/409804.html) operation to query the MySQL error codes that may be generated in the SQL Explorer results of an instance.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

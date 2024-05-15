@@ -4,24 +4,47 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DescribeSqlLogTasksRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The filter conditions.</p>
+     */
     @NameInMap("Filters")
     public java.util.List<DescribeSqlLogTasksRequestFilters> filters;
 
+    /**
+     * <p>The ID of the database instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The node ID.</p>
+     * <br>
+     * <p>> This parameter is available only for instances that run in a cluster architecture. You can specify this parameter to query the logs of a specific node. If this parameter is not specified, the logs of the primary node are returned by default.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -87,9 +110,15 @@ public class DescribeSqlLogTasksRequest extends TeaModel {
     }
 
     public static class DescribeSqlLogTasksRequestFilters extends TeaModel {
+        /**
+         * <p>The name of the filter parameter.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the filter parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 

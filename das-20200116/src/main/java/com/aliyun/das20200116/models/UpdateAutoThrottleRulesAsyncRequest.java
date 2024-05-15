@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateAutoThrottleRulesAsyncRequest extends TeaModel {
     /**
      * <p>The duration threshold for triggering automatic SQL throttling. Set this parameter to a positive integer that is greater than or equal to 2. Unit: minutes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AbnormalDuration")
     public Double abnormalDuration;
@@ -15,18 +17,24 @@ public class UpdateAutoThrottleRulesAsyncRequest extends TeaModel {
      * <br>
      * <p>*   Specify an integer that is greater than or equal to 16 when the CPU utilization threshold and the maximum number of active sessions are in the **OR** relationship.</p>
      * <p>*   Specify an integer that is greater than or equal to 2 when the CPU utilization threshold and the maximum number of active sessions are in the **AND** relationship.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ActiveSessions")
     public Long activeSessions;
 
     /**
      * <p>The end time of the throttling window. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AllowThrottleEndTime")
     public String allowThrottleEndTime;
 
     /**
      * <p>The start time of the throttling window. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AllowThrottleStartTime")
     public String allowThrottleStartTime;
@@ -38,6 +46,8 @@ public class UpdateAutoThrottleRulesAsyncRequest extends TeaModel {
      * <br>
      * <p>*   **true**</p>
      * <p>*   **false**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AutoKillSession")
     public Boolean autoKillSession;
@@ -53,12 +63,16 @@ public class UpdateAutoThrottleRulesAsyncRequest extends TeaModel {
      * <br>
      * <p>*   **AND**</p>
      * <p>*   **OR**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CpuSessionRelation")
     public String cpuSessionRelation;
 
     /**
      * <p>The CPU utilization threshold, in percentages. Valid values: 70 to 100.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CpuUsage")
     public Double cpuUsage;
@@ -66,13 +80,17 @@ public class UpdateAutoThrottleRulesAsyncRequest extends TeaModel {
     /**
      * <p>The database instance IDs.</p>
      * <br>
-     * <p>>  Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: `[\"Instance ID1\", \"Instance ID2\"]`.</p>
+     * <p>>  Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: `[\\"Instance ID1\\", \\"Instance ID2\\"]`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     /**
      * <p>The maximum throttling duration. Set this parameter to a positive integer. Unit: minutes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MaxThrottleTime")
     public Double maxThrottleTime;

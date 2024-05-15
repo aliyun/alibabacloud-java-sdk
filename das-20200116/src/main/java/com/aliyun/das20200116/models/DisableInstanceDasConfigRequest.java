@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DisableInstanceDasConfigRequest extends TeaModel {
     /**
      * <p>The database engine. Set the value to Redis.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The database instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -22,6 +26,8 @@ public class DisableInstanceDasConfigRequest extends TeaModel {
      * <p>*   **specScale**: The specifications of a database instance are automatically scaled up or down.</p>
      * <p>*   **shardScale**: The number of shards for a database instance is automatically increased or decreased.</p>
      * <p>*   **bandwidthScale**: The bandwidth of a database instance is automatically increased or decreased.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScaleType")
     public String scaleType;

@@ -134,6 +134,9 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         @NameInMap("Scnt")
         public Long scnt;
 
+        /**
+         * <p>SQL ID。</p>
+         */
         @NameInMap("SqlId")
         public String sqlId;
 

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>das20200116</artifactId>
-  <version>2.5.0</version>
+  <version>2.5.1</version>
   <packaging>jar</packaging>
   <name>das20200116</name>
   <description>Alibaba Cloud DAS (20200116) SDK for Java
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.21</version>
+      <version>0.2.22</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -67,7 +67,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.2</version>
+      <version>0.3.3</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

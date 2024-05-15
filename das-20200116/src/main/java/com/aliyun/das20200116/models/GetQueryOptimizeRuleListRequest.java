@@ -10,6 +10,8 @@ public class GetQueryOptimizeRuleListRequest extends TeaModel {
      * <p>*   **MySQL**</p>
      * <p>*   **PolarDBMySQL**</p>
      * <p>*   **PostgreSQL**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;

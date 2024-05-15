@@ -8,6 +8,8 @@ public class GetInstanceInspectionsRequest extends TeaModel {
      * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <br>
      * <p>>  The end time must be later than the start time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -18,6 +20,8 @@ public class GetInstanceInspectionsRequest extends TeaModel {
      * <p>*   **MySQL**</p>
      * <p>*   **Redis**</p>
      * <p>*   **PolarDBMySQL**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -30,18 +34,24 @@ public class GetInstanceInspectionsRequest extends TeaModel {
      * <p>*   **IDC**: a self-managed database instance that is not deployed on Alibaba Cloud.</p>
      * <br>
      * <p>>  The value IDC specifies that the instance is deployed in a data center.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceArea")
     public String instanceArea;
 
     /**
      * <p>The page number. The value must be a positive integer. Default value: 1.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNo")
     public String pageNo;
 
     /**
      * <p>The number of entries per page. Default value: 10.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
@@ -56,7 +66,7 @@ public class GetInstanceInspectionsRequest extends TeaModel {
      * <p>The filter condition, which can be specified in one of the following formats:</p>
      * <br>
      * <p>*   Specify the ID of a single instance in the {"InstanceId":"Instance ID"} format.</p>
-     * <p>*   Specify the IDs of multiple instances in the {"InstanceIds":\["Instance ID1","Instance ID2"]} format. Separate the instance IDs with commas (,).</p>
+     * <p>*   Specify the IDs of multiple instances in the {"InstanceIds":["Instance ID1","Instance ID2"]} format. Separate the instance IDs with commas (,).</p>
      * <p>*   Specify the region in which the instance resides in the {"region":"Region of the instance"} format.</p>
      */
     @NameInMap("SearchMap")
@@ -64,6 +74,8 @@ public class GetInstanceInspectionsRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeCacheAnalysisJobRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the cache analysis task. You can obtain the task ID from the response parameters of the [CreateCacheAnalysisJob](~~180982~~) operation.</p>
+     * <p>The ID of the cache analysis task. You can obtain the task ID from the response parameters of the [CreateCacheAnalysisJob](https://help.aliyun.com/document_detail/180982.html) operation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("JobId")
     public String jobId;
