@@ -146,7 +146,7 @@ public class QueryMessageResponseBody extends TeaModel {
         /**
          * <p>The truncated size of the message key. Unit: bytes.</p>
          * <br>
-         * <p>*   A message is truncated only if the message exceeds 10 MB in size.</p>
+         * <p>>  A maximum of 1 KB content can be displayed for each message. Content that exceeds 1 KB is automatically truncated. For more information, see [Query messages](https://help.aliyun.com/zh/apsaramq-for-kafka/query-messages).</p>
          */
         @NameInMap("TruncatedKeySize")
         public Integer truncatedKeySize;
@@ -154,7 +154,7 @@ public class QueryMessageResponseBody extends TeaModel {
         /**
          * <p>The truncated size of the message value. Unit: bytes.</p>
          * <br>
-         * <p>*   A message is truncated only if the message exceeds 10 MB in size.</p>
+         * <p>>  A maximum of 1 KB content can be displayed for each message. Content that exceeds 1 KB is automatically truncated. For more information, see [Query messages](https://help.aliyun.com/zh/apsaramq-for-kafka/query-messages).</p>
          */
         @NameInMap("TruncatedValueSize")
         public Integer truncatedValueSize;

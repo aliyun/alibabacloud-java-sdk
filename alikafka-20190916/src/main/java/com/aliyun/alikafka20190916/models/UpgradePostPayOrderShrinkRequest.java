@@ -8,7 +8,7 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
      * <p>The disk size. Unit: GB.</p>
      * <br>
      * <p>*   The disk size that you specify must be greater than or equal to the current disk size of the instance.</p>
-     * <p>*   For information about the valid values of this parameter, see [Billing](~~84737~~).</p>
+     * <p>*   For information about the valid values of this parameter, see [Billing](https://help.aliyun.com/document_detail/84737.html).</p>
      * <br>
      * <p>>  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</p>
      */
@@ -19,7 +19,7 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
      * <p>The Internet traffic for the instance.</p>
      * <br>
      * <p>*   The Internet traffic that you specify must be greater than or equal to the current Internet traffic of the instance.</p>
-     * <p>*   For information about the valid values of this parameter, see [Billing](~~84737~~).</p>
+     * <p>*   For information about the valid values of this parameter, see [Billing](https://help.aliyun.com/document_detail/84737.html).</p>
      * <br>
      * <p>> </p>
      * <br>
@@ -43,6 +43,8 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -52,7 +54,7 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
      * <br>
      * <p>*   The maximum traffic that you specify must be greater than or equal to the current maximum traffic of the instance.</p>
      * <p>*   You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.</p>
-     * <p>*   For information about the valid values of this parameter, see [Billing](~~84737~~).</p>
+     * <p>*   For information about the valid values of this parameter, see [Billing](https://help.aliyun.com/document_detail/84737.html).</p>
      * <br>
      * <p>>  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</p>
      */
@@ -64,7 +66,7 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
      * <br>
      * <p>*   The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.</p>
      * <p>*   You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.</p>
-     * <p>*   For information about the valid values of this parameter, see [Billing](~~84737~~).</p>
+     * <p>*   For information about the valid values of this parameter, see [Billing](https://help.aliyun.com/document_detail/84737.html).</p>
      * <br>
      * <p>>  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</p>
      */
@@ -76,7 +78,7 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
      * <br>
      * <p>*   You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.</p>
      * <p>*   If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</p>
-     * <p>*   For information about the valid values of this parameter, see [Billing](~~84737~~).</p>
+     * <p>*   For information about the valid values of this parameter, see [Billing](https://help.aliyun.com/document_detail/84737.html).</p>
      * <br>
      * <p>>  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</p>
      */
@@ -85,12 +87,14 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The parameters configured for the Serverless instance. When you create an ApsaraMQ for Kafka V3 serverless instance, you must configure these parameters.</p>
+     * <p>The parameters that are configured for the ApsaraMQ for Kafka serverless instance. When you create a serverless ApsaraMQ for Kafka instance, you must configure these parameters.</p>
      */
     @NameInMap("ServerlessConfig")
     public String serverlessConfigShrink;
@@ -109,7 +113,7 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
      * <p>*   normal: Serverless Standard Edition</p>
      * <p>*   professional: Serverless Professional Edition</p>
      * <br>
-     * <p>For more information, see [Billing](~~84737~~).</p>
+     * <p>For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).</p>
      */
     @NameInMap("SpecType")
     public String specType;
@@ -120,7 +124,7 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
      * <p>*   You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.</p>
      * <p>*   If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</p>
      * <p>*   The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you consume exceeds the default value, you are charged additional fees.</p>
-     * <p>*   For information about the valid values of this parameter, see [Billing](~~84737~~).</p>
+     * <p>*   For information about the valid values of this parameter, see [Billing](https://help.aliyun.com/document_detail/84737.html).</p>
      * <br>
      * <p>>  When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</p>
      */

@@ -11,13 +11,15 @@ public class GetInstanceListRequest extends TeaModel {
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The ID of the order. You can obtain the order ID on the [Orders](https://usercenter2-intl.aliyun.com/order/list?pageIndex=1\&pageSize=20\&spm=5176.12818093.top-nav.ditem-ord.36f016d0OQFmJa) page in Alibaba Cloud User Center.</p>
+     * <p>The ID of the order. You can obtain the order ID on the [Orders](https://usercenter2-intl.aliyun.com/order/list?pageIndex=1\\&pageSize=20\\&spm=5176.12818093.top-nav.ditem-ord.36f016d0OQFmJa) page in Alibaba Cloud User Center.</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The ID of the region where the instance resides.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -28,6 +30,12 @@ public class GetInstanceListRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>实例系列标识，可根据系列号来过滤不同系列的实例。取值如下：</p>
+     * <p>- v2</p>
+     * <p>- v3</p>
+     * <p>- confluent</p>
+     */
     @NameInMap("Series")
     public String series;
 

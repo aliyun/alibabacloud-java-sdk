@@ -11,7 +11,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
      * <p>The size of the disk.</p>
      * <br>
      * <p>*   The disk size that you specify must be greater than or equal to the current disk size of the instance.</p>
-     * <p>*   For more information about the valid values, see [Billing overview](~~84737~~).</p>
+     * <p>*   For more information about the valid values, see [Billing overview](https://help.aliyun.com/document_detail/84737.html).</p>
      */
     @NameInMap("DiskSize")
     public Integer diskSize;
@@ -20,7 +20,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
      * <p>The Internet traffic for the instance.</p>
      * <br>
      * <p>*   The Internet traffic volume that you specify must be greater than or equal to the current Internet traffic volume of the instance.</p>
-     * <p>*   For more information about the valid values, see [Billing overview](~~84737~~).</p>
+     * <p>*   For more information about the valid values, see [Billing overview](https://help.aliyun.com/document_detail/84737.html).</p>
      * <p>> - If the **EipModel** parameter is set to **true**, set the **EipMax** parameter to a value that is greater than 0.</p>
      * <p>> - If the **EipModel** parameter is set to **false**, set the **EipMax** parameter to **0**.</p>
      */
@@ -38,6 +38,8 @@ public class UpgradePrePayOrderRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -47,7 +49,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
      * <br>
      * <p>*   The maximum traffic volume that you specify must be greater than or equal to the current maximum traffic volume of the instance.</p>
      * <p>*   You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you configure only the IoMaxSpec parameter.</p>
-     * <p>*   For more information about the valid values, see [Billing overview](~~84737~~).</p>
+     * <p>*   For more information about the valid values, see [Billing overview](https://help.aliyun.com/document_detail/84737.html).</p>
      */
     @NameInMap("IoMax")
     public Integer ioMax;
@@ -57,7 +59,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
      * <br>
      * <p>*   The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.</p>
      * <p>*   You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you configure only the IoMaxSpec parameter.</p>
-     * <p>*   For more information about the valid values, see [Billing overview](~~84737~~).</p>
+     * <p>*   For more information about the valid values, see [Billing overview](https://help.aliyun.com/document_detail/84737.html).</p>
      */
     @NameInMap("IoMaxSpec")
     public String ioMaxSpec;
@@ -70,13 +72,15 @@ public class UpgradePrePayOrderRequest extends TeaModel {
      * <br>
      * <p>*   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.</p>
      * <p>*   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.</p>
-     * <p>*   For more information about the valid values, see [Billing overview](~~84737~~).</p>
+     * <p>*   For more information about the valid values, see [Billing overview](https://help.aliyun.com/document_detail/84737.html).</p>
      */
     @NameInMap("PartitionNum")
     public Integer partitionNum;
 
     /**
      * <p>The region ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -88,7 +92,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
      * <p>*   **professional**: Professional Edition (High Write)</p>
      * <p>*   **professionalForHighRead**: Professional Edition (High Read)</p>
      * <br>
-     * <p>You cannot downgrade an instance from the Professional Edition to the Standard Edition. For more information about these instance editions, see [Billing overview](~~84737~~).</p>
+     * <p>You cannot downgrade an instance from the Professional Edition to the Standard Edition. For more information about these instance editions, see [Billing overview](https://help.aliyun.com/document_detail/84737.html).</p>
      */
     @NameInMap("SpecType")
     public String specType;
@@ -99,7 +103,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
      * <p>*   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.</p>
      * <p>*   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.</p>
      * <p>*   The default value of the TopicQuota parameter varies based on the value of the IoMaxSpec parameter. If the number of topics that you consume exceeds the default value, you are charged additional fees.</p>
-     * <p>*   For more information about the valid values, see [Billing overview](~~84737~~).</p>
+     * <p>*   For more information about the valid values, see [Billing overview](https://help.aliyun.com/document_detail/84737.html).</p>
      */
     @NameInMap("TopicQuota")
     public Integer topicQuota;

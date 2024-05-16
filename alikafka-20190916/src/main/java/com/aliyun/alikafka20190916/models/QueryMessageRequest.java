@@ -12,6 +12,8 @@ public class QueryMessageRequest extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -33,18 +35,38 @@ public class QueryMessageRequest extends TeaModel {
      * <br>
      * <p>*   byOffset: queries messages by offset. If you select this value, you must configure Partition and Offset.</p>
      * <p>*   byTimestamp: queries messages by time. If you select this value, you must configure BeginTime.</p>
+     * <br>
+     * <p><!----></p>
+     * <br>
+     * <p>*   <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("QueryType")
     public String queryType;
 
     /**
      * <p>The ID of the region where the resource resides.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The topic name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Topic")
     public String topic;

@@ -3,35 +3,31 @@ package com.aliyun.alikafka20190916.models;
 
 import com.aliyun.tea.*;
 
-public class GetTopicStatusRequest extends TeaModel {
+public class DeleteScheduledScalingRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the topic.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
-    @NameInMap("Topic")
-    public String topic;
+    @NameInMap("RuleName")
+    public String ruleName;
 
-    public static GetTopicStatusRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetTopicStatusRequest self = new GetTopicStatusRequest();
+    public static DeleteScheduledScalingRuleRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteScheduledScalingRuleRequest self = new DeleteScheduledScalingRuleRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetTopicStatusRequest setInstanceId(String instanceId) {
+    public DeleteScheduledScalingRuleRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -39,7 +35,7 @@ public class GetTopicStatusRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public GetTopicStatusRequest setRegionId(String regionId) {
+    public DeleteScheduledScalingRuleRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -47,12 +43,12 @@ public class GetTopicStatusRequest extends TeaModel {
         return this.regionId;
     }
 
-    public GetTopicStatusRequest setTopic(String topic) {
-        this.topic = topic;
+    public DeleteScheduledScalingRuleRequest setRuleName(String ruleName) {
+        this.ruleName = ruleName;
         return this;
     }
-    public String getTopic() {
-        return this.topic;
+    public String getRuleName() {
+        return this.ruleName;
     }
 
 }

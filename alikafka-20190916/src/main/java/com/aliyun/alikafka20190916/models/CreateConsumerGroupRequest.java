@@ -7,21 +7,27 @@ public class CreateConsumerGroupRequest extends TeaModel {
     /**
      * <p>The name of the consumer group.</p>
      * <br>
-     * <p>*   The value can contain only letters, digits, hyphens (-), and underscores (\_), and the value must contain at least one letter or digit.</p>
+     * <p>*   The value can contain only letters, digits, hyphens (-), and underscores (_), and the value must contain at least one letter or digit.</p>
      * <p>*   The value must be 3 to 128 characters in length. If the value that you specify contains more than 128 characters, the system automatically truncates the value to 128 characters.</p>
      * <p>*   After a consumer group is created, you cannot change the name of the consumer group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConsumerId")
     public String consumerId;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -89,6 +95,8 @@ public class CreateConsumerGroupRequest extends TeaModel {
          * <br>
          * <p>*   You must specify this parameter.</p>
          * <p>*   The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;

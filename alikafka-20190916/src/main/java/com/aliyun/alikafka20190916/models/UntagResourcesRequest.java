@@ -12,12 +12,16 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which the resource is deployed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the resources from which you want to detach tags.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -30,6 +34,8 @@ public class UntagResourcesRequest extends TeaModel {
      * <p>*   **CONSUMERGROUP**</p>
      * <br>
      * <p>>  The value of this parameter is not case-sensitive.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

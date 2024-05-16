@@ -6,15 +6,27 @@ import com.aliyun.tea.*;
 public class DeleteSaslUserRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The encryption method. Valid values:</p>
+     * <br>
+     * <p>*   SCRAM-SHA-512. This is the default value.</p>
+     * <p>*   SCRAM-SHA-256</p>
+     * <br>
+     * <p>>  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     */
     @NameInMap("Mechanism")
     public String mechanism;
 
     /**
      * <p>The ID of the region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -32,6 +44,8 @@ public class DeleteSaslUserRequest extends TeaModel {
 
     /**
      * <p>The name of the user.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Username")
     public String username;

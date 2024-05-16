@@ -11,7 +11,7 @@ public class DescribeAclsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The ACLs.</p>
+     * <p>The access control lists (ACLs).</p>
      */
     @NameInMap("KafkaAclList")
     public DescribeAclsResponseBodyKafkaAclList kafkaAclList;
@@ -81,7 +81,7 @@ public class DescribeAclsResponseBody extends TeaModel {
 
     public static class DescribeAclsResponseBodyKafkaAclListKafkaAclVO extends TeaModel {
         /**
-         * <p>The type of the operation. Valid values:</p>
+         * <p>The operation type. Valid values:</p>
          * <br>
          * <p>*   **Write**</p>
          * <p>*   **Read**</p>
@@ -93,25 +93,25 @@ public class DescribeAclsResponseBody extends TeaModel {
         public String aclPermissionType;
 
         /**
-         * <p>The name of the resource.</p>
+         * <p>The resource name.</p>
          * <br>
-         * <p>*   The value can be the name of a topic or a consumer group.</p>
-         * <p>*   An asterisk (\*) represents the names of all topics or consumer groups.</p>
+         * <p>*   The value can be the name of a topic or consumer group.</p>
+         * <p>*   You can use the asterisk (\\*) wildcard character to specify the names of all topics or consumer groups.</p>
          */
         @NameInMap("AclResourceName")
         public String aclResourceName;
 
         /**
-         * <p>The match mode. Valid values:</p>
+         * <p>The matching mode. Valid values:</p>
          * <br>
-         * <p>*   **LITERAL**: full-name match</p>
+         * <p>*   **LITERAL:** full-name match</p>
          * <p>*   **PREFIXED**: prefix match</p>
          */
         @NameInMap("AclResourcePatternType")
         public String aclResourcePatternType;
 
         /**
-         * <p>The type of the resources to which you want to attach tags. Valid values:</p>
+         * <p>The resource type. Valid values:</p>
          * <br>
          * <p>*   **Topic**</p>
          * <p>*   **Group**</p>
@@ -126,7 +126,7 @@ public class DescribeAclsResponseBody extends TeaModel {
         public String host;
 
         /**
-         * <p>The name of the user.</p>
+         * <p>The username.</p>
          */
         @NameInMap("Username")
         public String username;

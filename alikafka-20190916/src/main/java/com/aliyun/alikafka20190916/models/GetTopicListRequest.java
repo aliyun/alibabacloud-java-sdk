@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetTopicListRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return. Default value: 1.</p>
+     * <p>The page number. Default value: 1</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10</p>
+     * <p>The number of entries to return on each page. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

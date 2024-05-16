@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateSaslUserRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -25,12 +27,16 @@ public class CreateSaslUserRequest extends TeaModel {
 
     /**
      * <p>The password of the SASL user.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -48,6 +54,8 @@ public class CreateSaslUserRequest extends TeaModel {
 
     /**
      * <p>The name of the SASL user.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Username")
     public String username;

@@ -26,6 +26,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * @summary Changes the resource group of an ApsaraMQ for Kafka instance.
+     *
+     * @param request ChangeResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChangeResourceGroupResponse
+     */
     public ChangeResourceGroupResponse changeResourceGroupWithOptions(ChangeResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -58,11 +65,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
     }
 
+    /**
+     * @summary Changes the resource group of an ApsaraMQ for Kafka instance.
+     *
+     * @param request ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
     public ChangeResourceGroupResponse changeResourceGroup(ChangeResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.changeResourceGroupWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Changes the billing method of a Message Queue for Apache Kafka instance from pay-as-you-go to subscription.
+     *
+     * @param request ConvertPostPayOrderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConvertPostPayOrderResponse
+     */
     public ConvertPostPayOrderResponse convertPostPayOrderWithOptions(ConvertPostPayOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -95,11 +115,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ConvertPostPayOrderResponse());
     }
 
+    /**
+     * @summary Changes the billing method of a Message Queue for Apache Kafka instance from pay-as-you-go to subscription.
+     *
+     * @param request ConvertPostPayOrderRequest
+     * @return ConvertPostPayOrderResponse
+     */
     public ConvertPostPayOrderResponse convertPostPayOrder(ConvertPostPayOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.convertPostPayOrderWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Creates an access control list (ACL).
+     *
+     * @param request CreateAclRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAclResponse
+     */
     public CreateAclResponse createAclWithOptions(CreateAclRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -160,11 +193,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAclResponse());
     }
 
+    /**
+     * @summary Creates an access control list (ACL).
+     *
+     * @param request CreateAclRequest
+     * @return CreateAclResponse
+     */
     public CreateAclResponse createAcl(CreateAclRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createAclWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Creates a consumer group.
+     *
+     * @param request CreateConsumerGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateConsumerGroupResponse
+     */
     public CreateConsumerGroupResponse createConsumerGroupWithOptions(CreateConsumerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -205,17 +251,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateConsumerGroupResponse());
     }
 
+    /**
+     * @summary Creates a consumer group.
+     *
+     * @param request CreateConsumerGroupRequest
+     * @return CreateConsumerGroupResponse
+     */
     public CreateConsumerGroupResponse createConsumerGroup(CreateConsumerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createConsumerGroupWithOptions(request, runtime);
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](~~84737~~).
-      *
-      * @param tmpReq CreatePostPayOrderRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreatePostPayOrderResponse
+     * @summary Creates a pay-as-you-go ApsaraMQ for Kafka instance. Pay-as-you-go instances allow you to pay after you use the resources. You are charged for pay-as-you-go instances based on the actual resource usage. You can use pay-as-you-go instances in test scenarios or scenarios in which the peak traffic is uncertain.
+     *
+     * @description Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
+     *
+     * @param tmpReq CreatePostPayOrderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePostPayOrderResponse
      */
     public CreatePostPayOrderResponse createPostPayOrderWithOptions(CreatePostPayOrderRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -300,10 +354,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](~~84737~~).
-      *
-      * @param request CreatePostPayOrderRequest
-      * @return CreatePostPayOrderResponse
+     * @summary Creates a pay-as-you-go ApsaraMQ for Kafka instance. Pay-as-you-go instances allow you to pay after you use the resources. You are charged for pay-as-you-go instances based on the actual resource usage. You can use pay-as-you-go instances in test scenarios or scenarios in which the peak traffic is uncertain.
+     *
+     * @description Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
+     *
+     * @param request CreatePostPayOrderRequest
+     * @return CreatePostPayOrderResponse
      */
     public CreatePostPayOrderResponse createPostPayOrder(CreatePostPayOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -311,12 +367,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see [Billing](~~84737~~).
-      * *   If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the [Renewal](https://renew.console.aliyun.com/#/ecs) page in the Alibaba Cloud Management Console.
-      *
-      * @param tmpReq CreatePrePayOrderRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreatePrePayOrderResponse
+     * @summary Creates a subscription ApsaraMQ for Kafka instance. You can use subscription instances only after you pay for them. Subscription instances are suitable for long-term and stable business scenarios.
+     *
+     * @description *   Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
+     * *   If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the [Renewal](https://renew.console.aliyun.com/#/ecs) page in the Alibaba Cloud Management Console.
+     *
+     * @param tmpReq CreatePrePayOrderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePrePayOrderResponse
      */
     public CreatePrePayOrderResponse createPrePayOrderWithOptions(CreatePrePayOrderRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -405,17 +463,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see [Billing](~~84737~~).
-      * *   If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the [Renewal](https://renew.console.aliyun.com/#/ecs) page in the Alibaba Cloud Management Console.
-      *
-      * @param request CreatePrePayOrderRequest
-      * @return CreatePrePayOrderResponse
+     * @summary Creates a subscription ApsaraMQ for Kafka instance. You can use subscription instances only after you pay for them. Subscription instances are suitable for long-term and stable business scenarios.
+     *
+     * @description *   Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
+     * *   If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the [Renewal](https://renew.console.aliyun.com/#/ecs) page in the Alibaba Cloud Management Console.
+     *
+     * @param request CreatePrePayOrderRequest
+     * @return CreatePrePayOrderResponse
      */
     public CreatePrePayOrderResponse createPrePayOrder(CreatePrePayOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPrePayOrderWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Creates a Simple Authentication and Security Layer (SASL) user.
+     *
+     * @param request CreateSaslUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSaslUserResponse
+     */
     public CreateSaslUserResponse createSaslUserWithOptions(CreateSaslUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -460,18 +527,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSaslUserResponse());
     }
 
+    /**
+     * @summary Creates a Simple Authentication and Security Layer (SASL) user.
+     *
+     * @param request CreateSaslUserRequest
+     * @return CreateSaslUserResponse
+     */
     public CreateSaslUserResponse createSaslUser(CreateSaslUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSaslUserWithOptions(request, runtime);
     }
 
     /**
-      * *   Each Alibaba Cloud account can call this operation up to once per second.
-      * *   The maximum number of topics that you can create in an instance is determined by the specification of the instance.
-      *
-      * @param request CreateTopicRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateTopicResponse
+     * @summary 创建定时伸缩配置
+     *
+     * @param tmpReq CreateScheduledScalingRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateScheduledScalingRuleResponse
+     */
+    public CreateScheduledScalingRuleResponse createScheduledScalingRuleWithOptions(CreateScheduledScalingRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateScheduledScalingRuleShrinkRequest request = new CreateScheduledScalingRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.weeklyTypes)) {
+            request.weeklyTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.weeklyTypes, "WeeklyTypes", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.durationMinutes)) {
+            query.put("DurationMinutes", request.durationMinutes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            query.put("Enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firstScheduledTime)) {
+            query.put("FirstScheduledTime", request.firstScheduledTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatType)) {
+            query.put("RepeatType", request.repeatType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reservedPubFlow)) {
+            query.put("ReservedPubFlow", request.reservedPubFlow);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reservedSubFlow)) {
+            query.put("ReservedSubFlow", request.reservedSubFlow);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleType)) {
+            query.put("ScheduleType", request.scheduleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeZone)) {
+            query.put("TimeZone", request.timeZone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.weeklyTypesShrink)) {
+            query.put("WeeklyTypes", request.weeklyTypesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateScheduledScalingRule"),
+            new TeaPair("version", "2019-09-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateScheduledScalingRuleResponse());
+    }
+
+    /**
+     * @summary 创建定时伸缩配置
+     *
+     * @param request CreateScheduledScalingRuleRequest
+     * @return CreateScheduledScalingRuleResponse
+     */
+    public CreateScheduledScalingRuleResponse createScheduledScalingRule(CreateScheduledScalingRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createScheduledScalingRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * @summary Creates a topic.
+     *
+     * @description *   Each Alibaba Cloud account can call this operation up to once per second.
+     * *   The maximum number of topics that you can create in an instance is determined by the specification of the instance.
+     *
+     * @param request CreateTopicRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTopicResponse
      */
     public CreateTopicResponse createTopicWithOptions(CreateTopicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -538,17 +705,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Each Alibaba Cloud account can call this operation up to once per second.
-      * *   The maximum number of topics that you can create in an instance is determined by the specification of the instance.
-      *
-      * @param request CreateTopicRequest
-      * @return CreateTopicResponse
+     * @summary Creates a topic.
+     *
+     * @description *   Each Alibaba Cloud account can call this operation up to once per second.
+     * *   The maximum number of topics that you can create in an instance is determined by the specification of the instance.
+     *
+     * @param request CreateTopicRequest
+     * @return CreateTopicResponse
      */
     public CreateTopicResponse createTopic(CreateTopicRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createTopicWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Deletes an access control list (ACL).
+     *
+     * @param request DeleteAclRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAclResponse
+     */
     public DeleteAclResponse deleteAclWithOptions(DeleteAclRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -609,11 +785,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAclResponse());
     }
 
+    /**
+     * @summary Deletes an access control list (ACL).
+     *
+     * @param request DeleteAclRequest
+     * @return DeleteAclResponse
+     */
     public DeleteAclResponse deleteAcl(DeleteAclRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAclWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Deletes a consumer group from a specified Message Queue for Apache Kafka instance.
+     *
+     * @param request DeleteConsumerGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteConsumerGroupResponse
+     */
     public DeleteConsumerGroupResponse deleteConsumerGroupWithOptions(DeleteConsumerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -646,11 +835,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteConsumerGroupResponse());
     }
 
+    /**
+     * @summary Deletes a consumer group from a specified Message Queue for Apache Kafka instance.
+     *
+     * @param request DeleteConsumerGroupRequest
+     * @return DeleteConsumerGroupResponse
+     */
     public DeleteConsumerGroupResponse deleteConsumerGroup(DeleteConsumerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteConsumerGroupWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Deletes an instance. You can delete subscription and pay-as-you-go instances after you release them.
+     *
+     * @param request DeleteInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteInstanceResponse
+     */
     public DeleteInstanceResponse deleteInstanceWithOptions(DeleteInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -679,11 +881,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceResponse());
     }
 
+    /**
+     * @summary Deletes an instance. You can delete subscription and pay-as-you-go instances after you release them.
+     *
+     * @param request DeleteInstanceRequest
+     * @return DeleteInstanceResponse
+     */
     public DeleteInstanceResponse deleteInstance(DeleteInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Deletes a Simple Authentication and Security Layer (SASL) user.
+     *
+     * @param request DeleteSaslUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSaslUserResponse
+     */
     public DeleteSaslUserResponse deleteSaslUserWithOptions(DeleteSaslUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -724,11 +939,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSaslUserResponse());
     }
 
+    /**
+     * @summary Deletes a Simple Authentication and Security Layer (SASL) user.
+     *
+     * @param request DeleteSaslUserRequest
+     * @return DeleteSaslUserResponse
+     */
     public DeleteSaslUserResponse deleteSaslUser(DeleteSaslUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSaslUserWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 删除定时伸缩规则
+     *
+     * @param request DeleteScheduledScalingRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteScheduledScalingRuleResponse
+     */
+    public DeleteScheduledScalingRuleResponse deleteScheduledScalingRuleWithOptions(DeleteScheduledScalingRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteScheduledScalingRule"),
+            new TeaPair("version", "2019-09-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteScheduledScalingRuleResponse());
+    }
+
+    /**
+     * @summary 删除定时伸缩规则
+     *
+     * @param request DeleteScheduledScalingRuleRequest
+     * @return DeleteScheduledScalingRuleResponse
+     */
+    public DeleteScheduledScalingRuleResponse deleteScheduledScalingRule(DeleteScheduledScalingRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteScheduledScalingRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * @summary Deletes a topic.
+     *
+     * @param request DeleteTopicRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteTopicResponse
+     */
     public DeleteTopicResponse deleteTopicWithOptions(DeleteTopicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -761,11 +1039,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTopicResponse());
     }
 
+    /**
+     * @summary Deletes a topic.
+     *
+     * @param request DeleteTopicRequest
+     * @return DeleteTopicResponse
+     */
     public DeleteTopicResponse deleteTopic(DeleteTopicRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteTopicWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries access control lists (ACLs).
+     *
+     * @param request DescribeAclsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAclsResponse
+     */
     public DescribeAclsResponse describeAclsWithOptions(DescribeAclsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -822,11 +1113,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAclsResponse());
     }
 
+    /**
+     * @summary Queries access control lists (ACLs).
+     *
+     * @param request DescribeAclsRequest
+     * @return DescribeAclsResponse
+     */
     public DescribeAclsResponse describeAcls(DescribeAclsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAclsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries Simple Authentication and Security Layer (SASL) users.
+     *
+     * @param request DescribeSaslUsersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSaslUsersResponse
+     */
     public DescribeSaslUsersResponse describeSaslUsersWithOptions(DescribeSaslUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -855,11 +1159,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSaslUsersResponse());
     }
 
+    /**
+     * @summary Queries Simple Authentication and Security Layer (SASL) users.
+     *
+     * @param request DescribeSaslUsersRequest
+     * @return DescribeSaslUsersResponse
+     */
     public DescribeSaslUsersResponse describeSaslUsers(DescribeSaslUsersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSaslUsersWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Enables and disables the flexible group creation feature.
+     *
+     * @param request EnableAutoGroupCreationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableAutoGroupCreationResponse
+     */
     public EnableAutoGroupCreationResponse enableAutoGroupCreationWithOptions(EnableAutoGroupCreationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -892,11 +1209,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EnableAutoGroupCreationResponse());
     }
 
+    /**
+     * @summary Enables and disables the flexible group creation feature.
+     *
+     * @param request EnableAutoGroupCreationRequest
+     * @return EnableAutoGroupCreationResponse
+     */
     public EnableAutoGroupCreationResponse enableAutoGroupCreation(EnableAutoGroupCreationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableAutoGroupCreationWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Enables or disables the automatic topic creation feature, or changes the number of partitions in topics that are automatically created.
+     *
+     * @param request EnableAutoTopicCreationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableAutoTopicCreationResponse
+     */
     public EnableAutoTopicCreationResponse enableAutoTopicCreationWithOptions(EnableAutoTopicCreationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -933,11 +1263,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EnableAutoTopicCreationResponse());
     }
 
+    /**
+     * @summary Enables or disables the automatic topic creation feature, or changes the number of partitions in topics that are automatically created.
+     *
+     * @param request EnableAutoTopicCreationRequest
+     * @return EnableAutoTopicCreationResponse
+     */
     public EnableAutoTopicCreationResponse enableAutoTopicCreation(EnableAutoTopicCreationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableAutoTopicCreationWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the IDs of all instances in the current account.
+     *
+     * @param request GetAllInstanceIdListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAllInstanceIdListResponse
+     */
     public GetAllInstanceIdListResponse getAllInstanceIdListWithOptions(GetAllInstanceIdListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -962,11 +1305,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAllInstanceIdListResponse());
     }
 
+    /**
+     * @summary Queries the IDs of all instances in the current account.
+     *
+     * @param request GetAllInstanceIdListRequest
+     * @return GetAllInstanceIdListResponse
+     */
     public GetAllInstanceIdListResponse getAllInstanceIdList(GetAllInstanceIdListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAllInstanceIdListWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the IP address whitelist.
+     *
+     * @param request GetAllowedIpListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAllowedIpListResponse
+     */
     public GetAllowedIpListResponse getAllowedIpListWithOptions(GetAllowedIpListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -995,11 +1351,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAllowedIpListResponse());
     }
 
+    /**
+     * @summary Queries the IP address whitelist.
+     *
+     * @param request GetAllowedIpListRequest
+     * @return GetAllowedIpListResponse
+     */
     public GetAllowedIpListResponse getAllowedIpList(GetAllowedIpListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAllowedIpListWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查询自动伸缩配置
+     *
+     * @param request GetAutoScalingConfigurationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAutoScalingConfigurationResponse
+     */
+    public GetAutoScalingConfigurationResponse getAutoScalingConfigurationWithOptions(GetAutoScalingConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAutoScalingConfiguration"),
+            new TeaPair("version", "2019-09-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAutoScalingConfigurationResponse());
+    }
+
+    /**
+     * @summary 查询自动伸缩配置
+     *
+     * @param request GetAutoScalingConfigurationRequest
+     * @return GetAutoScalingConfigurationResponse
+     */
+    public GetAutoScalingConfigurationResponse getAutoScalingConfiguration(GetAutoScalingConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAutoScalingConfigurationWithOptions(request, runtime);
+    }
+
+    /**
+     * @summary Queries one or more consumer groups in a specified Message Queue for Apache Kafka instance.
+     *
+     * @param request GetConsumerListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetConsumerListResponse
+     */
     public GetConsumerListResponse getConsumerListWithOptions(GetConsumerListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1040,11 +1455,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetConsumerListResponse());
     }
 
+    /**
+     * @summary Queries one or more consumer groups in a specified Message Queue for Apache Kafka instance.
+     *
+     * @param request GetConsumerListRequest
+     * @return GetConsumerListResponse
+     */
     public GetConsumerListResponse getConsumerList(GetConsumerListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getConsumerListWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the consumer progress of a consumer group.
+     *
+     * @param request GetConsumerProgressRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetConsumerProgressResponse
+     */
     public GetConsumerProgressResponse getConsumerProgressWithOptions(GetConsumerProgressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1077,11 +1505,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetConsumerProgressResponse());
     }
 
+    /**
+     * @summary Queries the consumer progress of a consumer group.
+     *
+     * @param request GetConsumerProgressRequest
+     * @return GetConsumerProgressResponse
+     */
     public GetConsumerProgressResponse getConsumerProgress(GetConsumerProgressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getConsumerProgressWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the information about instances in a specified region.
+     *
+     * @param request GetInstanceListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInstanceListResponse
+     */
     public GetInstanceListResponse getInstanceListWithOptions(GetInstanceListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1126,11 +1567,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceListResponse());
     }
 
+    /**
+     * @summary Queries the information about instances in a specified region.
+     *
+     * @param request GetInstanceListRequest
+     * @return GetInstanceListResponse
+     */
     public GetInstanceListResponse getInstanceList(GetInstanceListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getInstanceListWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the used quota of topics and partitions.
+     *
+     * @param request GetQuotaTipRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetQuotaTipResponse
+     */
     public GetQuotaTipResponse getQuotaTipWithOptions(GetQuotaTipRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1159,11 +1613,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetQuotaTipResponse());
     }
 
+    /**
+     * @summary Queries the used quota of topics and partitions.
+     *
+     * @param request GetQuotaTipRequest
+     * @return GetQuotaTipResponse
+     */
     public GetQuotaTipResponse getQuotaTip(GetQuotaTipRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getQuotaTipWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the information about a topic.
+     *
+     * @param request GetTopicListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTopicListResponse
+     */
     public GetTopicListResponse getTopicListWithOptions(GetTopicListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1204,11 +1671,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTopicListResponse());
     }
 
+    /**
+     * @summary Queries the information about a topic.
+     *
+     * @param request GetTopicListRequest
+     * @return GetTopicListResponse
+     */
     public GetTopicListResponse getTopicList(GetTopicListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTopicListWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the status information about messages in a specified topic.
+     *
+     * @param request GetTopicStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTopicStatusResponse
+     */
     public GetTopicStatusResponse getTopicStatusWithOptions(GetTopicStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1241,11 +1721,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTopicStatusResponse());
     }
 
+    /**
+     * @summary Queries the status information about messages in a specified topic.
+     *
+     * @param request GetTopicStatusRequest
+     * @return GetTopicStatusResponse
+     */
     public GetTopicStatusResponse getTopicStatus(GetTopicStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTopicStatusWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Obtains the information about a group that subscribes to a topic.
+     *
+     * @param request GetTopicSubscribeStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTopicSubscribeStatusResponse
+     */
     public GetTopicSubscribeStatusResponse getTopicSubscribeStatusWithOptions(GetTopicSubscribeStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1278,11 +1771,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTopicSubscribeStatusResponse());
     }
 
+    /**
+     * @summary Obtains the information about a group that subscribes to a topic.
+     *
+     * @param request GetTopicSubscribeStatusRequest
+     * @return GetTopicSubscribeStatusResponse
+     */
     public GetTopicSubscribeStatusResponse getTopicSubscribeStatus(GetTopicSubscribeStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTopicSubscribeStatusWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the tags that are attached to a specified resource.
+     *
+     * @param request ListTagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1323,11 +1829,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
     }
 
+    /**
+     * @summary Queries the tags that are attached to a specified resource.
+     *
+     * @param request ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagResourcesWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Changes the name of an ApsaraMQ for Kafka instance. After you deploy an instance, you can call this operation to change the name of the instance.
+     *
+     * @param request ModifyInstanceNameRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyInstanceNameResponse
+     */
     public ModifyInstanceNameResponse modifyInstanceNameWithOptions(ModifyInstanceNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1360,11 +1879,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstanceNameResponse());
     }
 
+    /**
+     * @summary Changes the name of an ApsaraMQ for Kafka instance. After you deploy an instance, you can call this operation to change the name of the instance.
+     *
+     * @param request ModifyInstanceNameRequest
+     * @return ModifyInstanceNameResponse
+     */
     public ModifyInstanceNameResponse modifyInstanceName(ModifyInstanceNameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyInstanceNameWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Changes the number of partitions in a specified topic.
+     *
+     * @param request ModifyPartitionNumRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyPartitionNumResponse
+     */
     public ModifyPartitionNumResponse modifyPartitionNumWithOptions(ModifyPartitionNumRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1401,11 +1933,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyPartitionNumResponse());
     }
 
+    /**
+     * @summary Changes the number of partitions in a specified topic.
+     *
+     * @param request ModifyPartitionNumRequest
+     * @return ModifyPartitionNumResponse
+     */
     public ModifyPartitionNumResponse modifyPartitionNum(ModifyPartitionNumRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyPartitionNumWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 修改定时伸缩规则
+     *
+     * @param request ModifyScheduledScalingRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyScheduledScalingRuleResponse
+     */
+    public ModifyScheduledScalingRuleResponse modifyScheduledScalingRuleWithOptions(ModifyScheduledScalingRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            query.put("Enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyScheduledScalingRule"),
+            new TeaPair("version", "2019-09-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyScheduledScalingRuleResponse());
+    }
+
+    /**
+     * @summary 修改定时伸缩规则
+     *
+     * @param request ModifyScheduledScalingRuleRequest
+     * @return ModifyScheduledScalingRuleResponse
+     */
+    public ModifyScheduledScalingRuleResponse modifyScheduledScalingRule(ModifyScheduledScalingRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyScheduledScalingRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * @summary Modifies the description of a topic.
+     *
+     * @param request ModifyTopicRemarkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyTopicRemarkResponse
+     */
     public ModifyTopicRemarkResponse modifyTopicRemarkWithOptions(ModifyTopicRemarkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1442,11 +2041,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyTopicRemarkResponse());
     }
 
+    /**
+     * @summary Modifies the description of a topic.
+     *
+     * @param request ModifyTopicRemarkRequest
+     * @return ModifyTopicRemarkResponse
+     */
     public ModifyTopicRemarkResponse modifyTopicRemark(ModifyTopicRemarkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyTopicRemarkWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries messages stored in a topic. You can query messages by creation time or offset.
+     *
+     * @param request QueryMessageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryMessageResponse
+     */
     public QueryMessageResponse queryMessageWithOptions(QueryMessageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1467,17 +2079,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMessageResponse());
     }
 
+    /**
+     * @summary Queries messages stored in a topic. You can query messages by creation time or offset.
+     *
+     * @param request QueryMessageRequest
+     * @return QueryMessageResponse
+     */
     public QueryMessageResponse queryMessage(QueryMessageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryMessageWithOptions(request, runtime);
     }
 
     /**
-      * You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.
-      *
-      * @param request ReleaseInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ReleaseInstanceResponse
+     * @summary Releases a pay-as-you-go Message Queue for Apache Kafka instance.
+     *
+     * @description You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.
+     *
+     * @param request ReleaseInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReleaseInstanceResponse
      */
     public ReleaseInstanceResponse releaseInstanceWithOptions(ReleaseInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1512,10 +2132,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.
-      *
-      * @param request ReleaseInstanceRequest
-      * @return ReleaseInstanceResponse
+     * @summary Releases a pay-as-you-go Message Queue for Apache Kafka instance.
+     *
+     * @description You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.
+     *
+     * @param request ReleaseInstanceRequest
+     * @return ReleaseInstanceResponse
      */
     public ReleaseInstanceResponse releaseInstance(ReleaseInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1523,11 +2145,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation only if your instance is in the Stopped state.
-      *
-      * @param request ReopenInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ReopenInstanceResponse
+     * @summary Enables an ApsaraMQ for Kafka instance.
+     *
+     * @description You can call this operation only if your instance is in the Stopped state.
+     *
+     * @param request ReopenInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReopenInstanceResponse
      */
     public ReopenInstanceResponse reopenInstanceWithOptions(ReopenInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1558,10 +2182,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation only if your instance is in the Stopped state.
-      *
-      * @param request ReopenInstanceRequest
-      * @return ReopenInstanceResponse
+     * @summary Enables an ApsaraMQ for Kafka instance.
+     *
+     * @description You can call this operation only if your instance is in the Stopped state.
+     *
+     * @param request ReopenInstanceRequest
+     * @return ReopenInstanceResponse
      */
     public ReopenInstanceResponse reopenInstance(ReopenInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1569,11 +2195,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  You can call this operation up to twice per second.
-      *
-      * @param request StartInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StartInstanceResponse
+     * @summary Deploys an ApsaraMQ for Kafka instance. You must purchase and deploy an ApsaraMQ for Kafka instance before you can use the instance to send and receive messages.
+     *
+     * @description >  You can call this operation up to twice per second.
+     *
+     * @param request StartInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartInstanceResponse
      */
     public StartInstanceResponse startInstanceWithOptions(StartInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1680,10 +2308,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  You can call this operation up to twice per second.
-      *
-      * @param request StartInstanceRequest
-      * @return StartInstanceResponse
+     * @summary Deploys an ApsaraMQ for Kafka instance. You must purchase and deploy an ApsaraMQ for Kafka instance before you can use the instance to send and receive messages.
+     *
+     * @description >  You can call this operation up to twice per second.
+     *
+     * @param request StartInstanceRequest
+     * @return StartInstanceResponse
      */
     public StartInstanceResponse startInstance(StartInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1691,11 +2321,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.
-      *
-      * @param request StopInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StopInstanceResponse
+     * @summary Stops an ApsaraMQ for Kafka instance.
+     *
+     * @description You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.
+     *
+     * @param request StopInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopInstanceResponse
      */
     public StopInstanceResponse stopInstanceWithOptions(StopInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1726,16 +2358,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.
-      *
-      * @param request StopInstanceRequest
-      * @return StopInstanceResponse
+     * @summary Stops an ApsaraMQ for Kafka instance.
+     *
+     * @description You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.
+     *
+     * @param request StopInstanceRequest
+     * @return StopInstanceResponse
      */
     public StopInstanceResponse stopInstance(StopInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Attaches a tag to a resource.
+     *
+     * @param request TagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1776,11 +2417,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
     }
 
+    /**
+     * @summary Attaches a tag to a resource.
+     *
+     * @param request TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.tagResourcesWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Detaches tags from a specified resource.
+     *
+     * @param request UntagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UntagResourcesResponse
+     */
     public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1821,11 +2475,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
     }
 
+    /**
+     * @summary Detaches tags from a specified resource.
+     *
+     * @param request UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagResourcesWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Updates the IP address whitelist of an ApsaraMQ for Kafka instance. Only IP addresses and ports that are configured in the IP address whitelist of an instance can access the instance.
+     *
+     * @param request UpdateAllowedIpRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAllowedIpResponse
+     */
     public UpdateAllowedIpResponse updateAllowedIpWithOptions(UpdateAllowedIpRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1874,20 +2541,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAllowedIpResponse());
     }
 
+    /**
+     * @summary Updates the IP address whitelist of an ApsaraMQ for Kafka instance. Only IP addresses and ports that are configured in the IP address whitelist of an instance can access the instance.
+     *
+     * @param request UpdateAllowedIpRequest
+     * @return UpdateAllowedIpResponse
+     */
     public UpdateAllowedIpResponse updateAllowedIp(UpdateAllowedIpRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateAllowedIpWithOptions(request, runtime);
     }
 
     /**
-      * You can call this operation to reset the consumer offset of a specific consumer group. You can use the timestamp or offset parameter to reset the consumer offset of a consumer group. You can implement the following features by configuring a combination of different parameters:
-      * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to the latest offset. This way, you can consume messages in the topics from the latest offset.
-      * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to a specific point in time. This way, you can consume messages in the topics from the specified point in time.
-      * *   Reset the consumer offset of one subscribed topic of a consumer group to a specific offset in a specific partition. This way, you can consume messages from the specified offset in the specified partition.
-      *
-      * @param tmpReq UpdateConsumerOffsetRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateConsumerOffsetResponse
+     * @summary Resets the consumer offsets of the subscribed topics of a consumer group.
+     *
+     * @description You can call this operation to reset the consumer offset of a specific consumer group. You can use the timestamp or offset parameter to reset the consumer offset of a consumer group. You can implement the following features by configuring a combination of different parameters:
+     * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to the latest offset. This way, you can consume messages in the topics from the latest offset.
+     * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to a specific point in time. This way, you can consume messages in the topics from the specified point in time.
+     * *   Reset the consumer offset of one subscribed topic of a consumer group to a specific offset in a specific partition. This way, you can consume messages from the specified offset in the specified partition.
+     *
+     * @param tmpReq UpdateConsumerOffsetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateConsumerOffsetResponse
      */
     public UpdateConsumerOffsetResponse updateConsumerOffsetWithOptions(UpdateConsumerOffsetRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -1944,13 +2619,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to reset the consumer offset of a specific consumer group. You can use the timestamp or offset parameter to reset the consumer offset of a consumer group. You can implement the following features by configuring a combination of different parameters:
-      * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to the latest offset. This way, you can consume messages in the topics from the latest offset.
-      * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to a specific point in time. This way, you can consume messages in the topics from the specified point in time.
-      * *   Reset the consumer offset of one subscribed topic of a consumer group to a specific offset in a specific partition. This way, you can consume messages from the specified offset in the specified partition.
-      *
-      * @param request UpdateConsumerOffsetRequest
-      * @return UpdateConsumerOffsetResponse
+     * @summary Resets the consumer offsets of the subscribed topics of a consumer group.
+     *
+     * @description You can call this operation to reset the consumer offset of a specific consumer group. You can use the timestamp or offset parameter to reset the consumer offset of a consumer group. You can implement the following features by configuring a combination of different parameters:
+     * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to the latest offset. This way, you can consume messages in the topics from the latest offset.
+     * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to a specific point in time. This way, you can consume messages in the topics from the specified point in time.
+     * *   Reset the consumer offset of one subscribed topic of a consumer group to a specific offset in a specific partition. This way, you can consume messages from the specified offset in the specified partition.
+     *
+     * @param request UpdateConsumerOffsetRequest
+     * @return UpdateConsumerOffsetResponse
      */
     public UpdateConsumerOffsetResponse updateConsumerOffset(UpdateConsumerOffsetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1958,15 +2635,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## **Permissions**
-      * If a RAM user wants to call the **UpdateInstanceConfig** operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see [RAM policies](~~185815~~).
-      * |API|Action|Resource|
-      * |---|---|---|
-      * |UpdateInstanceConfig|alikafka: UpdateInstance|acs:alikafka:*:*:{instanceId}|
-      *
-      * @param request UpdateInstanceConfigRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateInstanceConfigResponse
+     * @summary Modifies the configurations of an ApsaraMQ for Kafka instance. ApsaraMQ for Kafka allows you to modify the configurations of an instance, including the access control list (ACL) feature, the Secure Sockets Layer (SSL) feature, the message retention period, and the maximum message size.
+     *
+     * @description ## **Permissions**
+     * If a RAM user wants to call the **UpdateInstanceConfig** operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see [RAM policies](https://help.aliyun.com/document_detail/185815.html).
+     * |API|Action|Resource|
+     * |---|---|---|
+     * |UpdateInstanceConfig|alikafka: UpdateInstance|acs:alikafka:*:*:{instanceId}|
+     *
+     * @param request UpdateInstanceConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateInstanceConfigResponse
      */
     public UpdateInstanceConfigResponse updateInstanceConfigWithOptions(UpdateInstanceConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2001,20 +2680,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## **Permissions**
-      * If a RAM user wants to call the **UpdateInstanceConfig** operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see [RAM policies](~~185815~~).
-      * |API|Action|Resource|
-      * |---|---|---|
-      * |UpdateInstanceConfig|alikafka: UpdateInstance|acs:alikafka:*:*:{instanceId}|
-      *
-      * @param request UpdateInstanceConfigRequest
-      * @return UpdateInstanceConfigResponse
+     * @summary Modifies the configurations of an ApsaraMQ for Kafka instance. ApsaraMQ for Kafka allows you to modify the configurations of an instance, including the access control list (ACL) feature, the Secure Sockets Layer (SSL) feature, the message retention period, and the maximum message size.
+     *
+     * @description ## **Permissions**
+     * If a RAM user wants to call the **UpdateInstanceConfig** operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see [RAM policies](https://help.aliyun.com/document_detail/185815.html).
+     * |API|Action|Resource|
+     * |---|---|---|
+     * |UpdateInstanceConfig|alikafka: UpdateInstance|acs:alikafka:*:*:{instanceId}|
+     *
+     * @param request UpdateInstanceConfigRequest
+     * @return UpdateInstanceConfigResponse
      */
     public UpdateInstanceConfigResponse updateInstanceConfig(UpdateInstanceConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateInstanceConfigWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Modifies the configurations of a topic. After you create a topic, you can modify the message retention period and maximum message size of the topic.
+     *
+     * @param request UpdateTopicConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateTopicConfigResponse
+     */
     public UpdateTopicConfigResponse updateTopicConfigWithOptions(UpdateTopicConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2055,23 +2743,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTopicConfigResponse());
     }
 
+    /**
+     * @summary Modifies the configurations of a topic. After you create a topic, you can modify the message retention period and maximum message size of the topic.
+     *
+     * @param request UpdateTopicConfigRequest
+     * @return UpdateTopicConfigResponse
+     */
     public UpdateTopicConfigResponse updateTopicConfig(UpdateTopicConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTopicConfigWithOptions(request, runtime);
     }
 
     /**
-      * ## **Permissions**
-      * A RAM user must be granted the required permissions before the RAM user calls the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](~~185815~~).
-      * |API|Action|Resource|
-      * |---|---|---|
-      * |UpgradeInstanceVersion|UpdateInstance|acs:alikafka:*:*:{instanceId}|
-      * ## **QPS limits**
-      * You can send a maximum of two queries per second (QPS).
-      *
-      * @param request UpgradeInstanceVersionRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpgradeInstanceVersionResponse
+     * @summary Updates the version of an instance.
+     *
+     * @description ## **Permissions**
+     * A RAM user must be granted the required permissions before the RAM user calls the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](https://help.aliyun.com/document_detail/185815.html).
+     * |API|Action|Resource|
+     * |---|---|---|
+     * |UpgradeInstanceVersion|UpdateInstance|acs:alikafka:*:*:{instanceId}|
+     * ## **QPS limits**
+     * You can send a maximum of two queries per second (QPS).
+     *
+     * @param request UpgradeInstanceVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpgradeInstanceVersionResponse
      */
     public UpgradeInstanceVersionResponse upgradeInstanceVersionWithOptions(UpgradeInstanceVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2106,16 +2802,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## **Permissions**
-      * A RAM user must be granted the required permissions before the RAM user calls the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](~~185815~~).
-      * |API|Action|Resource|
-      * |---|---|---|
-      * |UpgradeInstanceVersion|UpdateInstance|acs:alikafka:*:*:{instanceId}|
-      * ## **QPS limits**
-      * You can send a maximum of two queries per second (QPS).
-      *
-      * @param request UpgradeInstanceVersionRequest
-      * @return UpgradeInstanceVersionResponse
+     * @summary Updates the version of an instance.
+     *
+     * @description ## **Permissions**
+     * A RAM user must be granted the required permissions before the RAM user calls the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](https://help.aliyun.com/document_detail/185815.html).
+     * |API|Action|Resource|
+     * |---|---|---|
+     * |UpgradeInstanceVersion|UpdateInstance|acs:alikafka:*:*:{instanceId}|
+     * ## **QPS limits**
+     * You can send a maximum of two queries per second (QPS).
+     *
+     * @param request UpgradeInstanceVersionRequest
+     * @return UpgradeInstanceVersionResponse
      */
     public UpgradeInstanceVersionResponse upgradeInstanceVersion(UpgradeInstanceVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2123,11 +2821,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](~~84737~~).
-      *
-      * @param tmpReq UpgradePostPayOrderRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpgradePostPayOrderResponse
+     * @summary Upgrades a pay-as-you-go ApsaraMQ for Kafka instance.
+     *
+     * @description Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
+     *
+     * @param tmpReq UpgradePostPayOrderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpgradePostPayOrderResponse
      */
     public UpgradePostPayOrderResponse upgradePostPayOrderWithOptions(UpgradePostPayOrderRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -2200,10 +2900,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](~~84737~~).
-      *
-      * @param request UpgradePostPayOrderRequest
-      * @return UpgradePostPayOrderResponse
+     * @summary Upgrades a pay-as-you-go ApsaraMQ for Kafka instance.
+     *
+     * @description Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
+     *
+     * @param request UpgradePostPayOrderRequest
+     * @return UpgradePostPayOrderResponse
      */
     public UpgradePostPayOrderResponse upgradePostPayOrder(UpgradePostPayOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2211,11 +2913,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see [Billing overview](~~84737~~).
-      *
-      * @param tmpReq UpgradePrePayOrderRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpgradePrePayOrderResponse
+     * @summary Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.
+     *
+     * @description Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see [Billing overview](https://help.aliyun.com/document_detail/84737.html).
+     *
+     * @param tmpReq UpgradePrePayOrderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpgradePrePayOrderResponse
      */
     public UpgradePrePayOrderResponse upgradePrePayOrderWithOptions(UpgradePrePayOrderRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -2292,10 +2996,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see [Billing overview](~~84737~~).
-      *
-      * @param request UpgradePrePayOrderRequest
-      * @return UpgradePrePayOrderResponse
+     * @summary Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.
+     *
+     * @description Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see [Billing overview](https://help.aliyun.com/document_detail/84737.html).
+     *
+     * @param request UpgradePrePayOrderRequest
+     * @return UpgradePrePayOrderResponse
      */
     public UpgradePrePayOrderResponse upgradePrePayOrder(UpgradePrePayOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();

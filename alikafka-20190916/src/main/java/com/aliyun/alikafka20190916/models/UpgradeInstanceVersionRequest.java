@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class UpgradeInstanceVersionRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the region where the instance resides.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -23,6 +27,8 @@ public class UpgradeInstanceVersionRequest extends TeaModel {
      * <p>*   **2.2.0**</p>
      * <br>
      * <p>If you set this parameter to the current major version, the system upgrades the instance to the latest minor version.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetVersion")
     public String targetVersion;

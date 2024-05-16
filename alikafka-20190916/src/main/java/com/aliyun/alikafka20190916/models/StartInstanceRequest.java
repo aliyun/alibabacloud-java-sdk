@@ -52,6 +52,8 @@ public class StartInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -85,9 +87,9 @@ public class StartInstanceRequest extends TeaModel {
     public Boolean isSetUserAndPassword;
 
     /**
-     * <p>The ID of the key that is used for disk encryption in the region where the instance is deployed. You can obtain the ID of the key in the [Key Management Service (KMS) console](https://kms.console.aliyun.com/?spm=a2c4g.11186623.2.5.336745b8hfiU21) or create a key. For more information, see [Manage CMKs](~~181610~~).</p>
+     * <p>The ID of the key that is used for disk encryption in the region where the instance is deployed. You can obtain the ID of the key in the [Key Management Service (KMS) console](https://kms.console.aliyun.com/?spm=a2c4g.11186623.2.5.336745b8hfiU21) or create a key. For more information, see [Manage CMKs](https://help.aliyun.com/document_detail/181610.html).</p>
      * <br>
-     * <p>If this parameter is configured, disk encryption is enabled for the instance. You cannot disable disk encryption after disk encryption is enabled. When you call this operation, the system checks whether the AliyunServiceRoleForAlikafkaInstanceEncryption service-linked role is created. If the role is not created, the system automatically creates the role. For more information, see [Service-linked roles](~~190460~~).</p>
+     * <p>If this parameter is configured, disk encryption is enabled for the instance. You cannot disable disk encryption after disk encryption is enabled. When you call this operation, the system checks whether the AliyunServiceRoleForAlikafkaInstanceEncryption service-linked role is created. If the role is not created, the system automatically creates the role. For more information, see [Service-linked roles](https://help.aliyun.com/document_detail/190460.html).</p>
      */
     @NameInMap("KMSKeyId")
     public String KMSKeyId;
@@ -116,6 +118,8 @@ public class StartInstanceRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -123,7 +127,7 @@ public class StartInstanceRequest extends TeaModel {
     /**
      * <p>The security group of the instance.</p>
      * <br>
-     * <p>If you do not specify this parameter, ApsaraMQ for Kafka automatically configures a security group for your instance. If you specify this parameter, you must create a security group in advance. For more information, see [Create a security group](~~25468~~).</p>
+     * <p>If you do not specify this parameter, ApsaraMQ for Kafka automatically configures a security group for your instance. If you specify this parameter, you must create a security group in advance. For more information, see [Create a security group](https://help.aliyun.com/document_detail/25468.html).</p>
      */
     @NameInMap("SecurityGroup")
     public String securityGroup;
@@ -131,13 +135,13 @@ public class StartInstanceRequest extends TeaModel {
     /**
      * <p>The two-dimensional arrays that consist of the candidate set for primary zones and the candidate set for secondary zones.</p>
      * <br>
-     * <p>*   If you set CrossZone to true and specify Zone H and Zone F as the candidate set for primary zones and Zone K as the candidate set for secondary zones, set this parameter to `[[\"zoneh\",\"zonef\"],[\"zonek\"]]`.</p>
+     * <p>*   If you set CrossZone to true and specify Zone H and Zone F as the candidate set for primary zones and Zone K as the candidate set for secondary zones, set this parameter to `[[\\"zoneh\\",\\"zonef\\"],[\\"zonek\\"]]`.</p>
      * <br>
      * <p>    **</p>
      * <br>
-     * <p>    **Note** If you specify multiple zones as the primary or secondary zones, the system deploys the instance in one of the zones without prioritizing them. For example, if you set this parameter to `[[\"zoneh\",\"zonef\"],[\"zonek\"]]`, the primary zone in which the instance is deployed can be Zone H or Zone F, and the secondary zone is Zone K.</p>
+     * <p>    **Note** If you specify multiple zones as the primary or secondary zones, the system deploys the instance in one of the zones without prioritizing them. For example, if you set this parameter to `[[\\"zoneh\\",\\"zonef\\"],[\\"zonek\\"]]`, the primary zone in which the instance is deployed can be Zone H or Zone F, and the secondary zone is Zone K.</p>
      * <br>
-     * <p>*   If you set CrossZone to false and want to deploy the instance in Zone K, set this parameter to `[[\"zonek\"],[]]`. In this case, the value of this parameter must still be two-dimensional arrays, but the array that specifies the candidate for secondary zones is left empty.</p>
+     * <p>*   If you set CrossZone to false and want to deploy the instance in Zone K, set this parameter to `[[\\"zonek\\"],[]]`. In this case, the value of this parameter must still be two-dimensional arrays, but the array that specifies the candidate for secondary zones is left empty.</p>
      */
     @NameInMap("SelectedZones")
     public String selectedZones;
@@ -164,24 +168,33 @@ public class StartInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch to which you want to connect the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The vSwitch IDs.</p>
+     */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
     /**
      * <p>The ID of the virtual private cloud (VPC) in which you want to deploy the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The ID of the zone in which you want to deploy the instance.</p>
+     * <p>The ID of the zone where you want to deploy the ApsaraMQ for Kafka instance.</p>
      * <br>
-     * <p>*   The zone ID of the instance must be the same as that of the vSwitch.</p>
-     * <p>*   The value must be in the format of zoneX or Region ID-X. For example, you can set this parameter to zonea or cn-hangzhou-k.</p>
+     * <p>*   The zone ID of the ApsaraMQ for Kafka instance must be the same as that of the vSwitch.</p>
+     * <p>*   The value must be in the zoneX or Region ID-X format. Examples: zonea and cn-hangzhou-k.</p>
+     * <br>
+     * <p>>  If resources in the specified zone is insufficient, the instance may be deployed in another zone.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

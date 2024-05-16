@@ -14,7 +14,9 @@ public class DescribeAclsRequest extends TeaModel {
      * <p>The name or ID of the resource.</p>
      * <br>
      * <p>*   The value can be the name of a topic or a consumer group.</p>
-     * <p>*   You can use an asterisk (\*) to represent the names of all topics or consumer groups.</p>
+     * <p>*   You can use an asterisk (\\*) to represent the names of all topics or consumer groups.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclResourceName")
     public String aclResourceName;
@@ -33,6 +35,8 @@ public class DescribeAclsRequest extends TeaModel {
      * <br>
      * <p>*   **Topic**</p>
      * <p>*   **Group**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclResourceType")
     public String aclResourceType;
@@ -42,18 +46,24 @@ public class DescribeAclsRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The name of the user.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Username")
     public String username;

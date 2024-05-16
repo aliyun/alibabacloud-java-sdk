@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyInstanceNameRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -13,14 +15,18 @@ public class ModifyInstanceNameRequest extends TeaModel {
     /**
      * <p>The instance name. Valid values:</p>
      * <br>
-     * <p>*   The name can contain only letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>*   The name can contain only letters, digits, hyphens (-), and underscores (_).</p>
      * <p>*   The name must be 3 to 64 characters in length. A name that contains more than 64 characters is automatically truncated.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
      * <p>The region ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

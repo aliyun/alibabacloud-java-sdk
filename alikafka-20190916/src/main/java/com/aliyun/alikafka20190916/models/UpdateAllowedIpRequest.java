@@ -10,6 +10,8 @@ public class UpdateAllowedIpRequest extends TeaModel {
      * <p>*   If the **UpdateType** parameter is set to **add**, specify one or more IP addresses for this parameter. Separate multiple IP addresses with commas (,).</p>
      * <p>*   If the **UpdateType** parameter is set to **delete**, specify only one IP address.</p>
      * <p>*   Exercise caution when you delete IP addresses.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AllowedListIp")
     public String allowedListIp;
@@ -19,6 +21,8 @@ public class UpdateAllowedIpRequest extends TeaModel {
      * <br>
      * <p>*   **vpc**: a whitelist for access from a VPC.</p>
      * <p>*   **internet**: a whitelist for access from the Internet.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AllowedListType")
     public String allowedListType;
@@ -31,6 +35,8 @@ public class UpdateAllowedIpRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -44,12 +50,16 @@ public class UpdateAllowedIpRequest extends TeaModel {
      * <p>*   **9095/9095**: the port range for access from VPCs by using the Secure Sockets Layer (SSL) endpoint.</p>
      * <br>
      * <p>This parameter must correspond to **AllowdedListType**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PortRange")
     public String portRange;
 
     /**
      * <p>The ID of the region where the instance resides.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -59,6 +69,8 @@ public class UpdateAllowedIpRequest extends TeaModel {
      * <br>
      * <p>*   **add**</p>
      * <p>*   **delete**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateType")
     public String updateType;

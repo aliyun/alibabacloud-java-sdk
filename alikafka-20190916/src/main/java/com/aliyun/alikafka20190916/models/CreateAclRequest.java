@@ -5,19 +5,45 @@ import com.aliyun.tea.*;
 
 public class CreateAclRequest extends TeaModel {
     /**
-     * <p>The operation type. Valid values:</p>
+     * <p>The type of the operation allowed by the access control list (ACL). Valid values:</p>
      * <br>
-     * <p>*   **Write**: data writes</p>
-     * <p>*   **Read**: data reads</p>
-     * <p>*   **Describe**: reads of transaction IDs****</p>
-     * <p>*   **IdempotentWrite**: idempotent data writes to clusters****</p>
+     * <p>*   **Write**</p>
+     * <p>*   **Read**</p>
+     * <p>*   **Describe**: reads of transactional IDs.</p>
+     * <p>*   **IdempotentWrite**: idempotent data writes to clusters.</p>
+     * <p>*   **IDEMPOTENT_WRITE**: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</p>
+     * <p>*   **DESCRIBE_CONFIGS**: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclOperationType")
     public String aclOperationType;
 
+    /**
+     * <p>The types of operations allowed by the ACL. Separate multiple operation types with commas (,).</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   **Write**</p>
+     * <p>*   **Read**</p>
+     * <p>*   **Describe**: reads of transactional IDs.</p>
+     * <p>*   **IdempotentWrite**: idempotent data writes to clusters.</p>
+     * <p>*   **IDEMPOTENT_WRITE**: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</p>
+     * <p>*   **DESCRIBE_CONFIGS**: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.</p>
+     * <br>
+     * <p>>  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     */
     @NameInMap("AclOperationTypes")
     public String aclOperationTypes;
 
+    /**
+     * <p>The authorization method. Valid values:</p>
+     * <br>
+     * <p>*   **DENY**</p>
+     * <p>*   **ALLOW**</p>
+     * <br>
+     * <p>>  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     */
     @NameInMap("AclPermissionType")
     public String aclPermissionType;
 
@@ -25,7 +51,9 @@ public class CreateAclRequest extends TeaModel {
      * <p>The name or ID of the resource.</p>
      * <br>
      * <p>*   The value can be the name of a topic, consumer group, or cluster, or the ID of a transaction.</p>
-     * <p>*   You can use an asterisk (\*) to represent the names or IDs of all relevant resources.</p>
+     * <p>*   You can use an asterisk (\\*) to represent the names or IDs of all relevant resources.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclResourceName")
     public String aclResourceName;
@@ -35,6 +63,8 @@ public class CreateAclRequest extends TeaModel {
      * <br>
      * <p>*   **LITERAL**: exact match</p>
      * <p>*   **PREFIXED**: prefix match</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclResourcePatternType")
     public String aclResourcePatternType;
@@ -45,22 +75,37 @@ public class CreateAclRequest extends TeaModel {
      * <p>*   **Topic**</p>
      * <p>*   **Group**</p>
      * <p>*   **Cluster**</p>
-     * <p>*   **TransactionalId**: transaction</p>
+     * <p>*   **TransactionalId**: transactional ID</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclResourceType")
     public String aclResourceType;
 
+    /**
+     * <p>The source IP address.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   You can specify only a specific IP address or use the asterisk (\\*) wildcard character to specify all IP addresses. CIDR blocks are not supported.</p>
+     * <br>
+     * <p>*   This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     */
     @NameInMap("Host")
     public String host;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -68,7 +113,9 @@ public class CreateAclRequest extends TeaModel {
     /**
      * <p>The username.</p>
      * <br>
-     * <p>You can use an asterisk (\*) to represent all usernames.</p>
+     * <p>You can use an asterisk (\\*) to represent all usernames.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Username")
     public String username;

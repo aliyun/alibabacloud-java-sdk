@@ -23,7 +23,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The SASL users.</p>
+     * <p>The Simple Authentication and Security Layer (SASL) users.</p>
      */
     @NameInMap("SaslUserList")
     public DescribeSaslUsersResponseBodySaslUserList saslUserList;
@@ -80,20 +80,25 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
     }
 
     public static class DescribeSaslUsersResponseBodySaslUserListSaslUserVO extends TeaModel {
+        /**
+         * <p>The encryption method.</p>
+         * <br>
+         * <p>>  This field is available only for ApsaraMQ for Kafka V3 Serverless instances.</p>
+         */
         @NameInMap("Mechanism")
         public String mechanism;
 
         /**
-         * <p>The password that is used to access the Elasticsearch cluster.</p>
+         * <p>The password.</p>
          */
         @NameInMap("Password")
         public String password;
 
         /**
-         * <p>The request type. Valid values:</p>
+         * <p>The type. Valid values:</p>
          * <br>
-         * <p>*   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. Message Queue for Apache Kafka provides an optimized PLAIN mechanism that allows you to dynamically create SASL users for an instance without the need to restart the instance.</p>
-         * <p>*   **scram**: a mechanism that uses usernames and passwords to verify user identities. This mechanism provides better security protection than the PLAIN mechanism. Message Queue for Apache Kafka uses SCRAM-SHA-256.</p>
+         * <p>*   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.</p>
+         * <p>*   **SCRAM**: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.</p>
          * <br>
          * <p>Default value: **plain**.</p>
          */
@@ -101,7 +106,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The name of the user.</p>
+         * <p>The username.</p>
          */
         @NameInMap("Username")
         public String username;
