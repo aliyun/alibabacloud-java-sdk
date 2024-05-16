@@ -28,6 +28,8 @@ public class DescribeScalingActivitiesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group to which the scaling activity that you want to query belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

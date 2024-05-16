@@ -4,15 +4,31 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeEciScalingConfigurationDetailRequest extends TeaModel {
+    /**
+     * <p>The output format. Set the value to yaml.</p>
+     */
     @NameInMap("OutputFormat")
     public String outputFormat;
 
+    /**
+     * <p>The region ID of the scaling group to which the scaling configuration belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the scaling configuration based on which elastic container instances are created.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ScalingConfigurationId")
     public String scalingConfigurationId;
 
+    /**
+     * <p>The ID of the scaling group to which the scaling configuration belongs.</p>
+     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

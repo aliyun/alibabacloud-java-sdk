@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListTagValuesRequest extends TeaModel {
     /**
-     * <p>The key of the messages that you want to query.</p>
+     * <p>The key of the tag.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
-     * <p>The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the QueryInstanceByTag operation was called.</p>
+     * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -20,13 +22,17 @@ public class ListTagValuesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries to return on each page. Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the scaling group.</p>
+     * <p>The region ID of the Auto Scaling resource.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -35,7 +41,9 @@ public class ListTagValuesRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The type of the Auto Scaling resource. Only scaling groups are supported. Set the value to scalinggroup.</p>
+     * <p>The type of the Auto Scaling resource. Set the value to scalinggroup. This indicates that the tag is added to a scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

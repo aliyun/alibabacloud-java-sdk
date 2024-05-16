@@ -5,15 +5,16 @@ import com.aliyun.tea.*;
 
 public class DeleteScalingGroupRequest extends TeaModel {
     /**
-     * <p>Specifies whether to forcefully delete the VPC. Valid values:</p>
+     * <p>Specifies whether to forcibly delete the scaling group and release Elastic Compute Service (ECS) instances in the scaling group when ECS instances or ongoing scaling activities exist in the scaling group. Valid values:</p>
      * <br>
-     * <p>- **true**: yes</p>
-     * <p>- **false** (default): no</p>
+     * <p>*   true: forcibly deletes the scaling group. The scaling group is disabled and new scaling requests are rejected. After all existing scaling requests are processed, the ECS instances are removed from the scaling group. Then, the scaling group is deleted. If the ECS instances are manually added to the scaling group, the ECS instances are only removed from the scaling group. If the ECS instances are automatically created and added to the scaling group, the ECS instances are removed from the scaling group and then released.</p>
      * <br>
-     * <p>You can forcefully delete a VPC in the following scenarios:</p>
+     * <p>*   false: does not forcibly delete the scaling group. The scaling group is disabled and then deleted if the following conditions are met:</p>
      * <br>
-     * <p>- Only an IPv4 gateway and routes that point to the IPv4 gateway exist in the VPC.</p>
-     * <p>- Only an IPv6 gateway and routes that point to the IPv6 gateway exist in the VPC.</p>
+     * <p>    *   No scaling activities are in process in the scaling group.</p>
+     * <p>    *   The Total Capacity parameter is set to 0. A value of 0 specifies that no ECS instances exist in the scaling group.</p>
+     * <br>
+     * <p>Default value: false.</p>
      */
     @NameInMap("ForceDelete")
     public Boolean forceDelete;
@@ -25,7 +26,7 @@ public class DeleteScalingGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID of the scaling group.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -35,6 +36,8 @@ public class DeleteScalingGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

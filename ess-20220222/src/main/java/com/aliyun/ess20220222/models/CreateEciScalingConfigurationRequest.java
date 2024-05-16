@@ -61,13 +61,13 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
     public Float cpu;
 
     /**
-     * <p>Number of physical CPU cores This parameter is not available for all instance types. For more information, see [Specify custom CPU options](~~197781~~).</p>
+     * <p>Number of physical CPU cores This parameter is not available for all instance types. For more information, see [Specify custom CPU options](https://help.aliyun.com/document_detail/197781.html).</p>
      */
     @NameInMap("CpuOptionsCore")
     public Integer cpuOptionsCore;
 
     /**
-     * <p>The number of threads per core. This parameter is not available for all instance types. A value of 1 indicates that Hyper-Threading is disabled. For more information, see [Specify custom CPU options](~~197781~~).</p>
+     * <p>The number of threads per core. This parameter is not available for all instance types. A value of 1 indicates that Hyper-Threading is disabled. For more information, see [Specify custom CPU options](https://help.aliyun.com/document_detail/197781.html).</p>
      */
     @NameInMap("CpuOptionsThreadsPerCore")
     public Integer cpuOptionsThreadsPerCore;
@@ -86,7 +86,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
      * <br>
      * <p>Default value: false.</p>
      * <br>
-     * <p>>  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](~~368372~~).</p>
+     * <p>>  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).</p>
      */
     @NameInMap("DataCacheBurstingEnabled")
     public Boolean dataCacheBurstingEnabled;
@@ -101,7 +101,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
      * <br>
      * <p>Default value: PL1.</p>
      * <br>
-     * <p>>  For more information about ESSDs, see [ESSDs](~~122389~~).</p>
+     * <p>>  For more information about ESSDs, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).</p>
      */
     @NameInMap("DataCachePL")
     public String dataCachePL;
@@ -109,7 +109,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
     /**
      * <p>The provisioned read/write IOPS of the ESSD AutoPL disk that caches data. Valid values: 0 to min{50,000, 1,000 × *Capacity - Baseline IOPS}. Baseline IOPS = min{1,800+50 x *Capacity, 50,000}.</p>
      * <br>
-     * <p>>  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](~~368372~~).</p>
+     * <p>>  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).</p>
      */
     @NameInMap("DataCacheProvisionedIops")
     public Integer dataCacheProvisionedIops;
@@ -210,9 +210,9 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
     /**
      * <p>The level of the instance type, which is used to filter the instance types that meet the specified criteria. This parameter takes effect only if you set the `CostOptimization` parameter to true. Valid values:</p>
      * <br>
-     * <p>*   EntryLevel: shared instance type. Instances of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instances of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).</p>
-     * <p>*   EnterpriseLevel: Instances of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see [Instance family](~~25378~~).</p>
-     * <p>*   CreditEntryLevel: This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see the [Overview](~~59977~~) topic of burstable instances.</p>
+     * <p>*   EntryLevel: shared instance type. Instances of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instances of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](https://help.aliyun.com/document_detail/108489.html).</p>
+     * <p>*   EnterpriseLevel: Instances of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see [Instance family](https://help.aliyun.com/document_detail/25378.html).</p>
+     * <p>*   CreditEntryLevel: This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see the [Overview](https://help.aliyun.com/document_detail/59977.html) topic of burstable instances.</p>
      */
     @NameInMap("InstanceFamilyLevel")
     public String instanceFamilyLevel;
@@ -250,7 +250,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the RAM role for the elastic container instance. You can use an instance RAM role to access both elastic container instances and Elastic Compute Service (ECS) instances. For more information, see [Use an instance RAM role by calling API operations](~~61178~~).</p>
+     * <p>The name of the RAM role for the elastic container instance. You can use an instance RAM role to access both elastic container instances and Elastic Compute Service (ECS) instances. For more information, see [Use an instance RAM role by calling API operations](https://help.aliyun.com/document_detail/61178.html).</p>
      */
     @NameInMap("RamRoleName")
     public String ramRoleName;
@@ -277,7 +277,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
     public String restartPolicy;
 
     /**
-     * <p>The name of the scaling configuration. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit.</p>
+     * <p>The name of the scaling configuration. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.</p>
      * <br>
      * <p>The name of the scaling configuration must be unique within a scaling group in a region. If you do not specify this parameter, the value of the ScalingConfigurationId parameter is used.</p>
      */
@@ -286,6 +286,8 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group in which you want to create the scaling configuration.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
@@ -1224,7 +1226,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public String fieldRefFieldPath;
 
         /**
-         * <p>The name of the environment variable. The name can be 1 to 128 characters in length and can contain underscores (\_) and digits. The name cannot start with a digit. Specify the value in the \[0-9a-zA-Z] format.</p>
+         * <p>The name of the environment variable. The name can be 1 to 128 characters in length and can contain underscores (_) and digits. The name cannot start with a digit. Specify the value in the [0-9a-zA-Z] format.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -2006,7 +2008,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public String fieldRefFieldPath;
 
         /**
-         * <p>The key of the environment variable. Specify the key in the `[0-9a-zA-Z]` format. The key must be 1 to 128 characters in length. The key can contain underscores (\_) and cannot start with a digit.</p>
+         * <p>The key of the environment variable. Specify the key in the `[0-9a-zA-Z]` format. The key must be 1 to 128 characters in length. The key can contain underscores (_) and cannot start with a digit.</p>
          */
         @NameInMap("Key")
         public String key;

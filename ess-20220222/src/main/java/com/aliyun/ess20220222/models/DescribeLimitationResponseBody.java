@@ -4,9 +4,19 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeLimitationResponseBody extends TeaModel {
+    /**
+     * <p>The maximum number of Application Load Balancer (ALB) server groups that can be attached to a scaling group.</p>
+     * <br>
+     * <p>>  To view the server group quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).</p>
+     */
     @NameInMap("MaxNumberOfAlbServerGroup")
     public Integer maxNumberOfAlbServerGroup;
 
+    /**
+     * <p>The maximum number of ApsaraDB RDS instances that can be attached to a scaling group.</p>
+     * <br>
+     * <p>>  To view the database quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).</p>
+     */
     @NameInMap("MaxNumberOfDBInstances")
     public Integer maxNumberOfDBInstances;
 
@@ -19,6 +29,9 @@ public class DescribeLimitationResponseBody extends TeaModel {
     @NameInMap("MaxNumberOfMaxSize")
     public Integer maxNumberOfMaxSize;
 
+    /**
+     * <p>The minimum number of instances that must be contained in a scaling group. The value of `MaxNumberOfMinSize` must be consistent with the value of `MaxNumberOfMaxSize`.</p>
+     */
     @NameInMap("MaxNumberOfMinSize")
     public Integer maxNumberOfMinSize;
 
@@ -28,15 +41,30 @@ public class DescribeLimitationResponseBody extends TeaModel {
     @NameInMap("MaxNumberOfNotificationConfigurations")
     public Integer maxNumberOfNotificationConfigurations;
 
+    /**
+     * <p>The maximum number of scaling configurations that can be created in a scaling group.</p>
+     * <br>
+     * <p>>  To view the scaling configuration quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).</p>
+     */
     @NameInMap("MaxNumberOfScalingConfigurations")
     public Integer maxNumberOfScalingConfigurations;
 
+    /**
+     * <p>The maximum number of scaling groups that can be created in a region by using an Alibaba Cloud account.</p>
+     * <br>
+     * <p>>  To view the scaling group quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).</p>
+     */
     @NameInMap("MaxNumberOfScalingGroups")
     public Integer maxNumberOfScalingGroups;
 
     @NameInMap("MaxNumberOfScalingInstances")
     public Integer maxNumberOfScalingInstances;
 
+    /**
+     * <p>The maximum number of scaling rules that can be created in a scaling group.</p>
+     * <br>
+     * <p>>  To view the scaling rule quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).</p>
+     */
     @NameInMap("MaxNumberOfScalingRules")
     public Integer maxNumberOfScalingRules;
 

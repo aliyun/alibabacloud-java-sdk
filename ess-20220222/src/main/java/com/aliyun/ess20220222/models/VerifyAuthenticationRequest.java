@@ -4,6 +4,12 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class VerifyAuthenticationRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to check only the authorization status. Valid values:</p>
+     * <br>
+     * <p>*   true: checks only the authorization status. The service-linked role is not created.</p>
+     * <p>*   false (default): checks the authorization status and resource usage.</p>
+     */
     @NameInMap("OnlyCheck")
     public Boolean onlyCheck;
 
@@ -16,6 +22,9 @@ public class VerifyAuthenticationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of your Alibaba Cloud account.</p>
+     */
     @NameInMap("Uid")
     public Long uid;
 

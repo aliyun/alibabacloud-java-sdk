@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagValuesResponseBody extends TeaModel {
     /**
-     * <p>The token that is returned for the next query.</p>
+     * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -23,7 +23,7 @@ public class ListTagValuesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information of the tag values.</p>
+     * <p>Details of the tag values.</p>
      */
     @NameInMap("Values")
     public java.util.List<String> values;

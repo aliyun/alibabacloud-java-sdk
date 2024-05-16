@@ -4,19 +4,27 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class AttachDBInstancesRequest extends TeaModel {
+    /**
+     * <p>The mode in which you want to attach the ApsaraDB RDS instance to the scaling group. Valid values:</p>
+     * <br>
+     * <p>*   SecurityIp: the SecurityIp mode. Auto Scaling automatically adds the private IP addresses of the scaled out instances to the IP address whitelist of the ApsaraDB RDS instance. You can select this mode only when you attach an ApsaraDB RDS instance to a scaling group.</p>
+     * <p>*   SecurityGroup: the security group mode. Auto Scaling adds the security group of the scaling configuration to the security group whitelist for registration and association.</p>
+     */
     @NameInMap("AttachMode")
     public String attachMode;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
      * <br>
-     * <p>The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25965~~).</p>
+     * <p>The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](https://help.aliyun.com/document_detail/25965.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the ApsaraDB RDS instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstances")
     public java.util.List<String> DBInstances;
@@ -46,10 +54,21 @@ public class AttachDBInstancesRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
+    /**
+     * <p>The type of the database that you want to attach to the scaling group. Valid values:</p>
+     * <br>
+     * <p>*   ApsaraDB RDS</p>
+     * <p>*   ApsaraDB for Redis</p>
+     * <p>*   ApsaraDB for MongoDB</p>
+     * <br>
+     * <p>Default value: RDS.</p>
+     */
     @NameInMap("Type")
     public String type;
 

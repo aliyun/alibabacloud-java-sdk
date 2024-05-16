@@ -23,7 +23,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details of the scaling activities.</p>
+     * <p>The information about the scaling activities.</p>
      */
     @NameInMap("ScalingActivities")
     public java.util.List<DescribeScalingActivitiesResponseBodyScalingActivities> scalingActivities;
@@ -114,31 +114,31 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String activityMetadata;
 
         /**
-         * <p>The total number of instances that were manually added to the scaling group after the scaling activity was complete.</p>
+         * <p>The total number of instances that are manually added to the scaling group after the scaling activity is complete.</p>
          */
         @NameInMap("AttachedCapacity")
         public String attachedCapacity;
 
         /**
-         * <p>The total number of instances that were created by Auto Scaling after the scaling activity was complete.</p>
+         * <p>The total number of instances that are created by Auto Scaling after the scaling activity is complete.</p>
          */
         @NameInMap("AutoCreatedCapacity")
         public String autoCreatedCapacity;
 
         /**
-         * <p>The reason why the scaling activity was triggered.</p>
+         * <p>The reason why the scaling activity is triggered.</p>
          */
         @NameInMap("Cause")
         public String cause;
 
         /**
-         * <p>The number of instances that were created during the scaling activity.</p>
+         * <p>The number of instances that are created during the scale-out.</p>
          */
         @NameInMap("CreatedCapacity")
         public Integer createdCapacity;
 
         /**
-         * <p>The instances that were created during the scaling activity.</p>
+         * <p>The instances that are created during the scale-out.</p>
          */
         @NameInMap("CreatedInstances")
         public java.util.List<String> createdInstances;
@@ -150,13 +150,13 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The number of instances that were released during the scaling activity.</p>
+         * <p>The number of instances that are released during the scale-in.</p>
          */
         @NameInMap("DestroyedCapacity")
         public Integer destroyedCapacity;
 
         /**
-         * <p>The instances that were released during the scaling activity.</p>
+         * <p>The instances that are released during the scale-in.</p>
          */
         @NameInMap("DestroyedInstances")
         public java.util.List<String> destroyedInstances;
@@ -168,7 +168,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String detail;
 
         /**
-         * <p>The time when the scaling activity was complete.</p>
+         * <p>The time when the scaling activity is complete.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
@@ -207,27 +207,27 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String scalingGroupId;
 
         /**
-         * <p>If the scaling activity is a scale-out activity, the value of this parameter indicates the number of instances that were created during the scaling activity or the number of instances that were started from Economical Mode.</p>
+         * <p>If you query a scale-out, the value of this parameter indicates the number of instances that are created or the number of instances that are started from the Economical Mode during the scale-out.</p>
          * <br>
-         * <p>If the scaling activity is a scale-in activity, the value of this parameter indicates the number of instances that were deleted during the scaling activity or the number of instances that were stopped in Economical Mode.</p>
+         * <p>If you query a scale-in, the value of this parameter indicates the number of instances that are deleted or the number of instances that are stopped in the Economical Mode during the scale-in.</p>
          */
         @NameInMap("ScalingInstanceNumber")
         public Integer scalingInstanceNumber;
 
         /**
-         * <p>The time when the scaling activity started.</p>
+         * <p>The time when the scaling activity is started.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The number of instances that were started from Economical Mode during the scaling activity.</p>
+         * <p>The number of instances that are started from the Economical Mode during the scale-out.</p>
          */
         @NameInMap("StartedCapacity")
         public Integer startedCapacity;
 
         /**
-         * <p>The instances that were started from Economical Mode during the scaling activity.</p>
+         * <p>The instances that are started from the Economical Mode during the scale-out.</p>
          */
         @NameInMap("StartedInstances")
         public java.util.List<String> startedInstances;
@@ -251,19 +251,19 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String statusMessage;
 
         /**
-         * <p>The number of instances that were stopped in Economical Mode during the scaling activity.</p>
+         * <p>The number of instances that are stopped in the Economical Mode during the scale-in.</p>
          */
         @NameInMap("StoppedCapacity")
         public Integer stoppedCapacity;
 
         /**
-         * <p>The instances that were stopped in Economical Mode during the scaling activity.</p>
+         * <p>The instances that are stopped in the Economical Mode during the scale-in.</p>
          */
         @NameInMap("StoppedInstances")
         public java.util.List<String> stoppedInstances;
 
         /**
-         * <p>The total number of instances in the scaling group after the scaling activity was complete.</p>
+         * <p>The total number of instances in the scaling group after the scaling activity is complete.</p>
          */
         @NameInMap("TotalCapacity")
         public String totalCapacity;

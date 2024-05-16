@@ -21,6 +21,8 @@ public class DeleteScalingRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling rule that you want to delete.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingRuleId")
     public String scalingRuleId;

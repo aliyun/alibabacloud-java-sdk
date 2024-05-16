@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class EnableAlarmRequest extends TeaModel {
     /**
      * <p>The ID of the event-triggered task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AlarmTaskId")
     public String alarmTaskId;
@@ -15,6 +17,8 @@ public class EnableAlarmRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

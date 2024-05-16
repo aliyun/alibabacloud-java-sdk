@@ -4,9 +4,15 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DeleteLifecycleHookRequest extends TeaModel {
+    /**
+     * <p>The ID of the lifecycle hook.</p>
+     */
     @NameInMap("LifecycleHookId")
     public String lifecycleHookId;
 
+    /**
+     * <p>The name of the lifecycle hook.</p>
+     */
     @NameInMap("LifecycleHookName")
     public String lifecycleHookName;
 
@@ -16,12 +22,18 @@ public class DeleteLifecycleHookRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the scaling group.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The ID of the scaling group.</p>
+     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

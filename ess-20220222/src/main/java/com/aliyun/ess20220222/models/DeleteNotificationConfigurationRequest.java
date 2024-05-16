@@ -17,6 +17,8 @@ public class DeleteNotificationConfigurationRequest extends TeaModel {
      * <p>*   account-id: the ID of the Alibaba Cloud account.</p>
      * <p>*   queuename: the name of the MNS queue.</p>
      * <p>*   topicname: the name of the MNS topic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NotificationArn")
     public String notificationArn;
@@ -35,6 +37,8 @@ public class DeleteNotificationConfigurationRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

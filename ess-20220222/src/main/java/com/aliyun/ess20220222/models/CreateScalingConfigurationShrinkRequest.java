@@ -25,7 +25,7 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
     public String affinity;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see the "[How to ensure the idempotence of a request](~~25693~~)" topic.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see the "[How to ensure the idempotence of a request](https://help.aliyun.com/document_detail/25693.html)" topic.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -46,7 +46,7 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
      * <p>*   Standard: standard mode</p>
      * <p>*   Unlimited: unlimited mode</p>
      * <br>
-     * <p>For more information, see the "Performance modes" section in the "[Overview](~~59977~~)" topic.</p>
+     * <p>For more information, see the "Performance modes" section in the "[Overview](https://help.aliyun.com/document_detail/59977.html)" topic.</p>
      */
     @NameInMap("CreditSpecification")
     public String creditSpecification;
@@ -60,7 +60,7 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
      * <br>
      * <p>>  If you specify the priorities of only partial custom ECS instance type + vSwitch combinations, Auto Scaling preferentially creates ECS instances by using the custom combinations that have specified priorities. If the custom combinations that have specified priorities do not provide sufficient resources, Auto Scaling creates ECS instances by using the custom combinations that do not have specified priorities based on the specified orders of vSwitches and instance types.</p>
      * <br>
-     * <p>*   Example: the specified order of vSwitches for your scaling group is vsw1 and vsw2 and the specified order of instance types in your scaling configuration is type1 and type 2. In addition, you use CustomPriorities to specify \["vsw2+type2", "vsw1+type2"]. In this example, the vsw2+type2 combination has the highest priority and the vsw2+type1 combination has the lowest priority. The vsw1+type2 combination has a higher priority than the vsw1+type1 combination.</p>
+     * <p>*   Example: the specified order of vSwitches for your scaling group is vsw1 and vsw2 and the specified order of instance types in your scaling configuration is type1 and type 2. In addition, you use CustomPriorities to specify ["vsw2+type2", "vsw1+type2"]. In this example, the vsw2+type2 combination has the highest priority and the vsw2+type1 combination has the lowest priority. The vsw1+type2 combination has a higher priority than the vsw1+type1 combination.</p>
      */
     @NameInMap("CustomPriorities")
     public java.util.List<CreateScalingConfigurationShrinkRequestCustomPriorities> customPriorities;
@@ -145,7 +145,7 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
     public java.util.List<CreateScalingConfigurationShrinkRequestInstancePatternInfos> instancePatternInfos;
 
     /**
-     * <p>The instance type of the ECS instance. For more information, see the [Instance families](~~25378~~) topic.</p>
+     * <p>The instance type of the ECS instance. For more information, see the [Instance families](https://help.aliyun.com/document_detail/25378.html) topic.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -247,7 +247,7 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
     /**
      * <p>The password that you want to use to log on to an ECS instance. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
      * <br>
-     * <p>`` `() ~!@#$%^&*-_+=\|{}[]:;\"<>,.?/ ``</p>
+     * <p>`` `() ~!@#$%^&*-_+=\\|{}[]:;\\"<>,.?/ ``</p>
      * <br>
      * <p>The password of a Windows instance cannot start with a forward slash (/).</p>
      * <br>
@@ -281,7 +281,7 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The name of the scaling configuration. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit.</p>
+     * <p>The name of the scaling configuration. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.</p>
      * <br>
      * <p>The name of the scaling configuration must be unique in a region. If you do not specify this parameter, the scaling configuration ID is used.</p>
      */
@@ -290,6 +290,8 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group in which you want to create a scaling configuration.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
@@ -316,7 +318,7 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The IDs of the security groups with which you want to associate the ECS instances that are created by using the scaling configuration. For more information, see the "Security group limits" section of the "[Limits](~~25412~~)" topic.</p>
+     * <p>The IDs of the security groups with which you want to associate the ECS instances that are created by using the scaling configuration. For more information, see the "Security group limits" section of the "[Limits](https://help.aliyun.com/document_detail/25412.html)" topic.</p>
      * <br>
      * <p>> If you specify SecurityGroupId, you cannot specify SecurityGroupIds.</p>
      */
@@ -872,7 +874,7 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
 
     public static class CreateScalingConfigurationShrinkRequestImageOptions extends TeaModel {
         /**
-         * <p>For more information about whether an ECS instance uses the ecs-user user user to log on to an ECS instance, see [Manage the login name of an ECS instance](~~388447~~). Value range:</p>
+         * <p>For more information about whether an ECS instance uses the ecs-user user user to log on to an ECS instance, see [Manage the login name of an ECS instance](https://help.aliyun.com/document_detail/388447.html). Value range:</p>
          * <br>
          * <p>- true: Yes.</p>
          * <p>- false: No.</p>
@@ -980,7 +982,7 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the system disk. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
          */
         @NameInMap("DiskName")
         public String diskName;
@@ -1260,7 +1262,7 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The name of the system disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
          */
         @NameInMap("DiskName")
         public String diskName;
@@ -1290,7 +1292,7 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
          * <p>*   PL2: An ESSD can provide up to 100,000 random read/write IOPS.</p>
          * <p>*   PL3: An ESSD can provide up to 1,000,000 random read/write IOPS.</p>
          * <br>
-         * <p>> For more information about how to select ESSD PLs, see [ESSD](~~122389~~).</p>
+         * <p>> For more information about how to select ESSD PLs, see [ESSD](https://help.aliyun.com/document_detail/122389.html).</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
@@ -1471,7 +1473,7 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
         public String burstablePerformance;
 
         /**
-         * <p>The number of vCPUs that you want to allocate to an instance type in intelligent configuration mode. This parameter is used to filter the available instance types that meet the specified criteria. For more information, see the "[Instance families](~~25378~~)" topic.</p>
+         * <p>The number of vCPUs that you want to allocate to an instance type in intelligent configuration mode. This parameter is used to filter the available instance types that meet the specified criteria. For more information, see the "[Instance families](https://help.aliyun.com/document_detail/25378.html)" topic.</p>
          * <br>
          * <p>Take note of the following items when you specify Cores:</p>
          * <br>
@@ -1483,10 +1485,10 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
         public Integer cores;
 
         /**
-         * <p>The instance types that you want to exclude. You can use wildcard characters, such as asterisks (\*), to exclude an instance type or an instance family. Examples:</p>
+         * <p>The instance types that you want to exclude. You can use wildcard characters, such as asterisks (\\*), to exclude an instance type or an instance family. Examples:</p>
          * <br>
          * <p>*   ecs.c6.large: excludes the ecs.c6.large instance type.</p>
-         * <p>*   ecs.c6.\*: excludes the c6 instance family.</p>
+         * <p>*   ecs.c6.\\*: excludes the c6 instance family.</p>
          */
         @NameInMap("ExcludedInstanceTypes")
         public java.util.List<String> excludedInstanceTypes;
@@ -1494,9 +1496,9 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
         /**
          * <p>The level of the instance type, which is used to filter instance types that meet the specified criteria. This parameter takes effect only if you set `CostOptimization` to true. Valid values:</p>
          * <br>
-         * <p>*   EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instance types of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see the "[Shared instance families](~~108489~~)" topic.</p>
-         * <p>*   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see the "[Instance families](~~25378~~)" topic.</p>
-         * <p>*   CreditEntryLevel: credit entry level. This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instance types of this level are suitable for business scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see the "[Overview](~~59977~~)" topic of burstable instances.</p>
+         * <p>*   EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instance types of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see the "[Shared instance families](https://help.aliyun.com/document_detail/108489.html)" topic.</p>
+         * <p>*   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see the "[Instance families](https://help.aliyun.com/document_detail/25378.html)" topic.</p>
+         * <p>*   CreditEntryLevel: credit entry level. This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instance types of this level are suitable for business scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see the "[Overview](https://help.aliyun.com/document_detail/59977.html)" topic of burstable instances.</p>
          */
         @NameInMap("InstanceFamilyLevel")
         public String instanceFamilyLevel;

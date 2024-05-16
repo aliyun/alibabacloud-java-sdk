@@ -4,11 +4,6 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class ScaleWithAdjustmentResponseBody extends TeaModel {
-    /**
-     * <p>伸缩活动的类型。</p>
-     * <br>
-     * <p>当ActivityType为CapacityChange时，表示返回值ScalingActivityId对应伸缩活动仅修改伸缩组期望实例数，没有立刻执行扩缩。适用范围：期望实例数类型伸缩组。</p>
-     */
     @NameInMap("ActivityType")
     public String activityType;
 

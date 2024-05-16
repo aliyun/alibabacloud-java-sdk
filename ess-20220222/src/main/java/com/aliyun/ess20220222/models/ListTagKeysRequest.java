@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagKeysRequest extends TeaModel {
     /**
-     * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -23,6 +23,8 @@ public class ListTagKeysRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Auto Scaling resource.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -31,7 +33,9 @@ public class ListTagKeysRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The type of the Auto Scaling resource. Set the value to scalinggroup. This indicates that the tags are added to scaling groups.</p>
+     * <p>The type of the Auto Scaling resources. Set the value to `scalinggroup`. This means the tag key you want to query is added to a scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

@@ -31,12 +31,16 @@ public class RecordLifecycleActionHeartbeatRequest extends TeaModel {
 
     /**
      * <p>The token of the lifecycle hook. You can obtain this token by using a Message Service (MNS) queue or an MNS topic that is specified for the lifecycle hook.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("lifecycleActionToken")
     public String lifecycleActionToken;
 
     /**
      * <p>The ID of the lifecycle hook.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("lifecycleHookId")
     public String lifecycleHookId;

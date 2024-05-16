@@ -17,6 +17,8 @@ public class ModifyNotificationConfigurationRequest extends TeaModel {
      * <p>*   account-id: the ID of the Alibaba Cloud account.</p>
      * <p>*   queuename: the name of the MNS queue.</p>
      * <p>*   topicname: the name of the MNS topic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NotificationArn")
     public String notificationArn;
@@ -25,6 +27,8 @@ public class ModifyNotificationConfigurationRequest extends TeaModel {
      * <p>The types of the notifications that you want to modify. You can modify one to eight notifications. Specify multiple values in the repeated list form.</p>
      * <br>
      * <p>You can call the DescribeNotificationTypes operation to query the values of this parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NotificationTypes")
     public java.util.List<String> notificationTypes;
@@ -43,6 +47,8 @@ public class ModifyNotificationConfigurationRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

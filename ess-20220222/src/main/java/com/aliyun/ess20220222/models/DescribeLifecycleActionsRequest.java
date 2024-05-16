@@ -44,6 +44,8 @@ public class DescribeLifecycleActionsRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling activity.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingActivityId")
     public String scalingActivityId;

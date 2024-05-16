@@ -4,18 +4,33 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeScheduledTasksResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of the scheduled tasks.</p>
+     */
     @NameInMap("ScheduledTasks")
     public java.util.List<DescribeScheduledTasksResponseBodyScheduledTasks> scheduledTasks;
 
+    /**
+     * <p>The total number of scheduled tasks.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,45 +80,92 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeScheduledTasksResponseBodyScheduledTasks extends TeaModel {
+        /**
+         * <p>The description of the scheduled task.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The expected number of instances in the scaling group if you specify the ScalingGroupId parameter.</p>
+         */
         @NameInMap("DesiredCapacity")
         public Integer desiredCapacity;
 
+        /**
+         * <p>The time period during which the failed scheduled task is retried. Unit: seconds. Valid values: 0 to 21600.</p>
+         */
         @NameInMap("LaunchExpirationTime")
         public Integer launchExpirationTime;
 
+        /**
+         * <p>The point in time at which the scheduled task is triggered.</p>
+         */
         @NameInMap("LaunchTime")
         public String launchTime;
 
+        /**
+         * <p>The maximum number of instances in the scaling group if you specify the ScalingGroupId parameter.</p>
+         */
         @NameInMap("MaxValue")
         public Integer maxValue;
 
+        /**
+         * <p>The minimum number of instances in the scaling group if you specify the ScalingGroupId parameter.</p>
+         */
         @NameInMap("MinValue")
         public Integer minValue;
 
+        /**
+         * <p>The end time of the recurrence of the scheduled task.</p>
+         */
         @NameInMap("RecurrenceEndTime")
         public String recurrenceEndTime;
 
+        /**
+         * <p>The interval at which the scheduled task is repeated.</p>
+         */
         @NameInMap("RecurrenceType")
         public String recurrenceType;
 
+        /**
+         * <p>The number of recurrences of the scheduled task.</p>
+         */
         @NameInMap("RecurrenceValue")
         public String recurrenceValue;
 
+        /**
+         * <p>The ID of the scaling group to which the scheduled task belongs.</p>
+         */
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
 
+        /**
+         * <p>The scaling rule that is executed when the scheduled task is triggered. This parameter is returned only after a scaling rule is specified for the scheduled task.</p>
+         */
         @NameInMap("ScheduledAction")
         public String scheduledAction;
 
+        /**
+         * <p>The ID of the scheduled task.</p>
+         */
         @NameInMap("ScheduledTaskId")
         public String scheduledTaskId;
 
+        /**
+         * <p>The name of the scheduled task.</p>
+         */
         @NameInMap("ScheduledTaskName")
         public String scheduledTaskName;
 
+        /**
+         * <p>Indicates whether the scheduled task is enabled.</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         * <br>
+         * <p>Default value: true.</p>
+         */
         @NameInMap("TaskEnabled")
         public Boolean taskEnabled;
 

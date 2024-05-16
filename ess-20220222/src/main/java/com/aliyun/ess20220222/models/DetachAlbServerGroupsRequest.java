@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DetachAlbServerGroupsRequest extends TeaModel {
     /**
      * <p>Details of the ALB server groups.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AlbServerGroups")
     public java.util.List<DetachAlbServerGroupsRequestAlbServerGroups> albServerGroups;
@@ -13,7 +15,7 @@ public class DetachAlbServerGroupsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
      * <br>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25965~~).</p>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](https://help.aliyun.com/document_detail/25965.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -34,6 +36,8 @@ public class DetachAlbServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group. Examples: cn-hangzhou and cn-shanghai.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -43,6 +47,8 @@ public class DetachAlbServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
@@ -111,12 +117,16 @@ public class DetachAlbServerGroupsRequest extends TeaModel {
     public static class DetachAlbServerGroupsRequestAlbServerGroups extends TeaModel {
         /**
          * <p>The ID of the ALB server group.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("AlbServerGroupId")
         public String albServerGroupId;
 
         /**
          * <p>The port number used by the ECS instances in the ALB server group.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Port")
         public Integer port;

@@ -7,6 +7,9 @@ public class VerifyUserRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where you want to activate Auto Scaling.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

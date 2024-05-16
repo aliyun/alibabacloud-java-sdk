@@ -7,13 +7,13 @@ public class AttachVServerGroupsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
      * <br>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25965~~).</p>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](https://help.aliyun.com/document_detail/25965.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to add Elastic Compute Service (ECS) instances in the scaling group to the vServer group. Valid values:</p>
+     * <p>Specifies whether to add Elastic Compute Service (ECS) instances in the scaling group to new vServer groups. Valid values:</p>
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
@@ -28,6 +28,8 @@ public class AttachVServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group. Examples: cn-hangzhou and cn-shanghai.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -37,12 +39,16 @@ public class AttachVServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
     /**
      * <p>Details of the vServer groups.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VServerGroups")
     public java.util.List<AttachVServerGroupsRequestVServerGroups> VServerGroups;

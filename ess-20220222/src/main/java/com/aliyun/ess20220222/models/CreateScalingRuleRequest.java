@@ -166,12 +166,14 @@ public class CreateScalingRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group to which the scaling rule belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
     /**
-     * <p>The name of the scaling rule. It must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). It must start with a letter or a digit. The name of a scaling rule must be unique in the scaling group to which the scaling rule belongs and within an Alibaba Cloud account.</p>
+     * <p>The name of the scaling rule. It must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). It must start with a letter or a digit. The name of a scaling rule must be unique in the scaling group to which the scaling rule belongs and within an Alibaba Cloud account.</p>
      * <br>
      * <p>If you do not specify this parameter, the value of the ScalingRuleId parameter is used.</p>
      */

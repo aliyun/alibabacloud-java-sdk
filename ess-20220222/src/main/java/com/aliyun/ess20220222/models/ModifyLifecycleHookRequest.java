@@ -5,21 +5,20 @@ import com.aliyun.tea.*;
 
 public class ModifyLifecycleHookRequest extends TeaModel {
     /**
-     * <p>The action that you want Auto Scaling to perform after the lifecycle hook times out. Valid values:</p>
+     * <p>The action that you want Auto Scaling to perform after the lifecycle hook ends. Valid values:</p>
      * <br>
-     * <p>*   CONTINUE: Auto Scaling continues to respond to scale-in or scale-out requests.</p>
-     * <p>*   ABANDON: Auto Scaling releases Elastic Compute Service (ECS) instances that are created during scale-out activities or removes ECS instances from the scaling group during scale-in activities.</p>
-     * <p>*   ROLLBACK: For scale-in activities, Auto Scaling rejects the requests to release ECS instances but rolls back ECS instances. For scale-out activities, the ROLLBACK setting has the same effect as the ABANDON setting.</p>
+     * <p>*   CONTINUE: Auto Scaling continues to respond to scaling requests.</p>
+     * <p>*   ABANDON: Auto Scaling releases Elastic Compute Service (ECS) instances that are created during scale-out activities, or removes ECS instances from the scaling group during scale-in activities.</p>
      * <br>
-     * <p>If a scaling group has multiple lifecycle hooks in effect and you set the DefaultResult parameter for one of the lifecycle hooks to ABANDON or ROLLBACK, the following rule applies to scale-in activities: When the lifecycle hook whose DefaultResult parameter is set to ABANDON or ROLLBACK times out, other lifecycle hooks time out ahead of schedule. In other cases, Auto Scaling performs the action only after all lifecycle hooks time out. The action that Auto Scaling performs is specified by the DefaultResult parameter of the last lifecycle hook that times out.</p>
+     * <p>If multiple lifecycle hooks in a scaling group are triggered during scale-in activities and you set the DefaultResult parameter to ABANDON for the lifecycle hook that you want to modify, Auto Scaling immediately performs the action after the lifecycle hook that you want to modify ends. As a result, other lifecycle hooks end ahead of schedule. In other cases, Auto Scaling performs the action only after all lifecycle hooks end.</p>
      */
     @NameInMap("DefaultResult")
     public String defaultResult;
 
     /**
-     * <p>The period of time before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action specified by the DefaultResult parameter. Valid values: 30 to 21600. Unit: seconds.</p>
+     * <p>The period of time before the lifecycle hook ends. Auto Scaling performs the specified action after the lifecycle hook ends. Valid values: 30 to 21600. Unit: seconds.</p>
      * <br>
-     * <p>You can call the RecordLifecycleActionHeartbeat operation to extend the period of time before a lifecycle hook times out. You can also call the CompleteLifecycleAction operation to end a lifecycle hook ahead of schedule.</p>
+     * <p>You can call the RecordLifecycleActionHeartbeat operation to prolong the length of a lifecycle hook. You can also call the CompleteLifecycleAction operation to end a lifecycle hook ahead of schedule.</p>
      */
     @NameInMap("HeartbeatTimeout")
     public Integer heartbeatTimeout;
@@ -37,7 +36,7 @@ public class ModifyLifecycleHookRequest extends TeaModel {
     public String lifecycleHookName;
 
     /**
-     * <p>The status that you want to specify for the lifecycle hook. Valid values:</p>
+     * <p>The status into which you want to put the lifecycle hook. Valid values:</p>
      * <br>
      * <p>*   Active</p>
      * <p>*   InActive</p>
@@ -50,22 +49,22 @@ public class ModifyLifecycleHookRequest extends TeaModel {
     public String lifecycleHookStatus;
 
     /**
-     * <p>The type of the scaling activity to which the lifecycle hook applies. Valid values:</p>
+     * <p>The type of scaling activity to which the lifecycle hook applies. Valid values:</p>
      * <br>
-     * <p>*   SCALE_OUT: scale-out activity</p>
-     * <p>*   SCALE_IN: scale-in activity</p>
+     * <p>*   SCALE_OUT</p>
+     * <p>*   SCALE_IN</p>
      */
     @NameInMap("LifecycleTransition")
     public String lifecycleTransition;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the notification method.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the notification method. Specify the value in one of the following formats:</p>
      * <br>
      * <p>*   If the notification method is a Message Service (MNS) queue, specify the value in the acs:mns:{region-id}:{account-id}:queue/{queuename} format.</p>
      * <p>*   If the notification method is an MNS topic, specify the value in the acs:mns:{region-id}:{account-id}:topic/{topicname} format.</p>
      * <p>*   If the notification method is an Operation Orchestration Service (OOS) template, specify the value in the acs:oos:{region-id}:{account-id}:template/{templatename} format.</p>
      * <br>
-     * <p>The variables in the preceding formats have the following meanings:</p>
+     * <p>The variables in the preceding parameter formats have the following meanings:</p>
      * <br>
      * <p>*   region-id: the region ID of the scaling group.</p>
      * <p>*   account-id: the ID of the Alibaba Cloud account.</p>
@@ -79,7 +78,7 @@ public class ModifyLifecycleHookRequest extends TeaModel {
     /**
      * <p>The fixed string that is included in a notification. Auto Scaling sends the notification when the lifecycle hook takes effect. The value of this parameter cannot exceed 4,096 characters in length.</p>
      * <br>
-     * <p>Auto Scaling sends the value of the NotificationMetadata parameter together with the notification. This helps you categorize your notifications. If you specify the NotificationMetadata parameter, you must also specify the NotificationArn parameter.</p>
+     * <p>Auto Scaling sends the value specified for the NotificationMetadata parameter together with the notification. This helps you categorize your notifications. The NotificationMetadata parameter takes effect only after you specify the NotificationArn parameter.</p>
      */
     @NameInMap("NotificationMetadata")
     public String notificationMetadata;

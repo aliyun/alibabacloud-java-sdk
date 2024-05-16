@@ -1986,13 +1986,13 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         public Float cpu;
 
         /**
-         * <p>The number of physical CPU cores. You can specify this parameter for only specific instance types. For more information, see [Specify CPU options](~~197781~~).</p>
+         * <p>The number of physical CPU cores. You can specify this parameter for only specific instance types. For more information, see [Specify CPU options](https://help.aliyun.com/document_detail/197781.html).</p>
          */
         @NameInMap("CpuOptionsCore")
         public Integer cpuOptionsCore;
 
         /**
-         * <p>The number of threads per core. You can specify this parameter for only specific instance types. A value of 1 indicates that Hyper-Threading is disabled. For more information, see [Specify CPU options](~~197781~~).</p>
+         * <p>The number of threads per core. You can specify this parameter for only specific instance types. A value of 1 indicates that Hyper-Threading is disabled. For more information, see [Specify CPU options](https://help.aliyun.com/document_detail/197781.html).</p>
          */
         @NameInMap("CpuOptionsThreadsPerCore")
         public Integer cpuOptionsThreadsPerCore;
@@ -2015,7 +2015,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
          * <p>*   true</p>
          * <p>*   false</p>
          * <br>
-         * <p>>  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](~~368372~~).</p>
+         * <p>>  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).</p>
          */
         @NameInMap("DataCacheBurstingEnabled")
         public Boolean dataCacheBurstingEnabled;
@@ -2028,7 +2028,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
          * <p>*   PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</p>
          * <p>*   PL3: An ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
          * <br>
-         * <p>>  For more information about ESSDs, see [ESSDs](~~122389~~).</p>
+         * <p>>  For more information about ESSDs, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).</p>
          */
         @NameInMap("DataCachePL")
         public String dataCachePL;
@@ -2036,7 +2036,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         /**
          * <p>The provisioned read/write IOPS of the ESSD AutoPL disk that caches data. Valid values: 0 to min{50,000, 1000 x *Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50* x Capacity, 50,000}.</p>
          * <br>
-         * <p>>  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](~~368372~~).</p>
+         * <p>>  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html).</p>
          */
         @NameInMap("DataCacheProvisionedIops")
         public Integer dataCacheProvisionedIops;
@@ -2128,9 +2128,9 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         /**
          * <p>The level of the instance family, which is used to filter instance types that meet the specified criteria. This parameter takes effect only if `CostOptimization` is set to true. Valid values:</p>
          * <br>
-         * <p>*   EntryLevel: entry level (shared instance types) Instance types of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. This level is suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).</p>
-         * <p>*   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see [Overview of instance families](~~25378~~).</p>
-         * <p>*   CreditEntryLevel: credit entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview of burstable instances](~~59977~~).</p>
+         * <p>*   EntryLevel: entry level (shared instance types) Instance types of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. This level is suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](https://help.aliyun.com/document_detail/108489.html).</p>
+         * <p>*   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).</p>
+         * <p>*   CreditEntryLevel: credit entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html).</p>
          */
         @NameInMap("InstanceFamilyLevel")
         public String instanceFamilyLevel;
@@ -2179,7 +2179,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         public java.util.List<String> ntpServers;
 
         /**
-         * <p>The Resource Access Management (RAM) role of the elastic container instance. Elastic container instances and Elastic Compute Service (ECS) instances can share the same RAM role. For more information, see [Use the instance RAM role by calling APIs](~~61178~~).</p>
+         * <p>The Resource Access Management (RAM) role of the elastic container instance. Elastic container instances and Elastic Compute Service (ECS) instances can share the same RAM role. For more information, see [Use the instance RAM role by calling APIs](https://help.aliyun.com/document_detail/61178.html).</p>
          */
         @NameInMap("RamRoleName")
         public String ramRoleName;
