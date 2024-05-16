@@ -18181,6 +18181,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DryRun", request.dryRun);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableIpv6)) {
+            query.put("EnableIpv6", request.enableIpv6);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.isDefault)) {
             query.put("IsDefault", request.isDefault);
         }
@@ -18655,6 +18659,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableIpv6)) {
+            query.put("EnableIpv6", request.enableIpv6);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.isDefault)) {

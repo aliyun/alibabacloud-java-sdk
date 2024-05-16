@@ -19,6 +19,9 @@ public class DescribeVpcsRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("EnableIpv6")
+    public Boolean enableIpv6;
+
     /**
      * <p>Specifies whether to query the default VPC in the specified region. Valid values:</p>
      * <br>
@@ -113,6 +116,14 @@ public class DescribeVpcsRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public DescribeVpcsRequest setEnableIpv6(Boolean enableIpv6) {
+        this.enableIpv6 = enableIpv6;
+        return this;
+    }
+    public Boolean getEnableIpv6() {
+        return this.enableIpv6;
     }
 
     public DescribeVpcsRequest setIsDefault(Boolean isDefault) {

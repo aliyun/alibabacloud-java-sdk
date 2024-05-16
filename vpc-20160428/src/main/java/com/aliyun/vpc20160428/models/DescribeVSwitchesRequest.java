@@ -13,6 +13,9 @@ public class DescribeVSwitchesRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("EnableIpv6")
+    public Boolean enableIpv6;
+
     /**
      * <p>Specifies whether to query the default vSwitches in the specified region. Valid values:</p>
      * <br>
@@ -119,6 +122,14 @@ public class DescribeVSwitchesRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public DescribeVSwitchesRequest setEnableIpv6(Boolean enableIpv6) {
+        this.enableIpv6 = enableIpv6;
+        return this;
+    }
+    public Boolean getEnableIpv6() {
+        return this.enableIpv6;
     }
 
     public DescribeVSwitchesRequest setIsDefault(Boolean isDefault) {
