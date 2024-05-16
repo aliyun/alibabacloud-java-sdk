@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetPermissionApplyOrderDetailRequest extends TeaModel {
     /**
      * <p>The ID of the permission request order. You can call the ListPermissionApplyOrders operation to obtain the order ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FlowId")
     public String flowId;

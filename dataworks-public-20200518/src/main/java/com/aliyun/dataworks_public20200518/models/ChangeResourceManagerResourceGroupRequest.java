@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ChangeResourceManagerResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the new resource group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>Indicates whether the resource group was successfully modified.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
@@ -19,8 +23,10 @@ public class ChangeResourceManagerResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the resource type. Valid values:</p>
      * <br>
-     * <p>*   If you set the ResourceType parameter to project, set this parameter to the value of ProjectIdentifier. You can call the [ListProjects](~~178393~~) operation to obtain the value of ProjectIdentifier.</p>
-     * <p>*   If you set the ResourceType parameter to tenantresourcegroup, set this parameter to the value of ResourceGroupType. You can call the [ListResourceGroups](~~173913~~) operation to obtain the value of ResourceGroupType. Only the values 7, 8, and 9 are valid.</p>
+     * <p>*   If you set the ResourceType parameter to project, set this parameter to the value of ProjectIdentifier. You can call the [ListProjects](https://help.aliyun.com/document_detail/178393.html) operation to obtain the value of ProjectIdentifier.</p>
+     * <p>*   If you set the ResourceType parameter to tenantresourcegroup, set this parameter to the value of ResourceGroupType. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/173913.html) operation to obtain the value of ResourceGroupType. Only the values 7, 8, and 9 are valid.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

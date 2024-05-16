@@ -55,6 +55,8 @@ public class ListDataSourcesRequest extends TeaModel {
      * <p>*   analyticdb_for_mysql</p>
      * <p>*   hybriddb_for_postgresql</p>
      * <p>*   holo</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

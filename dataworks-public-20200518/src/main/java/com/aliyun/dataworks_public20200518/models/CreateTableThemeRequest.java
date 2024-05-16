@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CreateTableThemeRequest extends TeaModel {
     /**
      * <p>The level of the table folder. Valid values: 1 and 2. A value of 1 indicates a first-level table folder. A value of 2 indicates a second-level table folder.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Level")
     public Integer level;
 
     /**
      * <p>The name of the table folder.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;

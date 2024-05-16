@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class PublishDataServiceApiRequest extends TeaModel {
     /**
-     * <p>The ID of the API. You can call the [ListDataServiceApis](~~174009~~) operation to obtain the ID.</p>
+     * <p>The ID of the API. You can call the [ListDataServiceApis](https://help.aliyun.com/document_detail/174009.html) operation to obtain the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiId")
     public Long apiId;
 
     /**
      * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

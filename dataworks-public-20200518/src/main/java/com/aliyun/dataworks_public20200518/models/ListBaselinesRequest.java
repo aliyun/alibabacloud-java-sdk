@@ -13,15 +13,24 @@ public class ListBaselinesRequest extends TeaModel {
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("Priority")
     public String priority;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

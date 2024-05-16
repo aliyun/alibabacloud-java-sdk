@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateUdfFileRequest extends TeaModel {
     /**
      * <p>The name of the class in which the function is defined. This parameter corresponds to the Class Name parameter in the Register Function section of the configuration tab of the function in the DataWorks console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClassName")
     public String className;
@@ -33,12 +35,16 @@ public class CreateUdfFileRequest extends TeaModel {
 
     /**
      * <p>The name of the file for the function.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileName")
     public String fileName;
 
     /**
      * <p>The type of the function. Valid values: MATH, AGGREGATE, STRING, DATE, ANALYTIC, and OTHER. This parameter corresponds to the Function Type parameter in the Register Function section of the configuration tab of the function in the DataWorks console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FunctionType")
     public String functionType;
@@ -65,6 +71,8 @@ public class CreateUdfFileRequest extends TeaModel {
 
     /**
      * <p>The names of the resources that are referenced by the function. This parameter corresponds to the Resources parameter in the Register Function section of the configuration tab of the function in the DataWorks console. Multiple resource names are separated by commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Resources")
     public String resources;

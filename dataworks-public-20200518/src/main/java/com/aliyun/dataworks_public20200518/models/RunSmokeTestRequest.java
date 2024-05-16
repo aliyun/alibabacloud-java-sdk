@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class RunSmokeTestRequest extends TeaModel {
     /**
      * <p>The data timestamp.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Bizdate")
     public String bizdate;
 
     /**
      * <p>The name of the workflow.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the ID.</p>
+     * <p>The ID of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeId")
     public Long nodeId;
@@ -31,7 +37,9 @@ public class RunSmokeTestRequest extends TeaModel {
     /**
      * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.</p>
      * <br>
-     * <p>A workspace in basic mode does not have a development environment. For more information, see [Basic mode and standard mode](~~85772~~).</p>
+     * <p>A workspace in basic mode does not have a development environment. For more information, see [Basic mode and standard mode](https://help.aliyun.com/document_detail/85772.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;

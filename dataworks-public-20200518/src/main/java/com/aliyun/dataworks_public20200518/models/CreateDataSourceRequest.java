@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CreateDataSourceRequest extends TeaModel {
     /**
      * <p>The ID of the data source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
      * <p>The environment in which the data source is used. Valid values: 0 and 1. 0 indicates the development environment. 1 indicates the production environment.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
@@ -27,6 +31,8 @@ public class CreateDataSourceRequest extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnvType")
     public Integer envType;
@@ -47,12 +53,16 @@ public class CreateDataSourceRequest extends TeaModel {
      * <p>*   analyticdb_for_mysql</p>
      * <p>*   hybriddb_for_postgresql</p>
      * <p>*   holo</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The description of the data source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
@@ -161,7 +171,7 @@ public class CreateDataSourceRequest extends TeaModel {
      * <p>```</p>
      * <br>
      * <p>{</p>
-     * <p>  "address": "[\"xsaxxsa.mongodb.rds.aliyuncs.com:3717\"]",</p>
+     * <p>  "address": "[\\"xsaxxsa.mongodb.rds.aliyuncs.com:3717\\"]",</p>
      * <p>  "database": "admin",</p>
      * <p>  "password": "sadsda@",</p>
      * <p>  "tag": "public",</p>

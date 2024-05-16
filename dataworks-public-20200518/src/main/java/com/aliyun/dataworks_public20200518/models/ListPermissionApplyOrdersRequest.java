@@ -12,6 +12,8 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
 
     /**
      * <p>The type of the compute engine with which the permission request order is associated. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in MaxCompute compute engine instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EngineType")
     public String engineType;
@@ -35,6 +37,8 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
 
     /**
      * <p>The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OrderType")
     public Integer orderType;
@@ -56,6 +60,8 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
      * <br>
      * <p>*   0: The permission request orders you submitted.</p>
      * <p>*   1: The permission request orders you approved.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("QueryType")
     public Integer queryType;

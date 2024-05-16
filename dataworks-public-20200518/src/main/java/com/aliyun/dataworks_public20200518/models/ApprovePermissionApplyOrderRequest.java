@@ -9,18 +9,24 @@ public class ApprovePermissionApplyOrderRequest extends TeaModel {
      * <br>
      * <p>*   1: Approve the permission request order.</p>
      * <p>*   2: Reject the permission request order.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApproveAction")
     public Integer approveAction;
 
     /**
      * <p>The comment on the approval.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApproveComment")
     public String approveComment;
 
     /**
      * <p>The ID of the permission request order. You can call the ListPermissionApplyOrders operation to obtain the order ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FlowId")
     public String flowId;

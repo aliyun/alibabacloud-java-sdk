@@ -36,6 +36,8 @@ public class CreateImportMigrationRequest extends TeaModel {
 
     /**
      * <p>The name of the import task. The name must be unique within the workspace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -44,6 +46,8 @@ public class CreateImportMigrationRequest extends TeaModel {
      * <p>The path of the import package.</p>
      * <br>
      * <p>**The import package must be uploaded. Example of the upload method:**`  Config config = new Config(); config.setAccessKeyId(accessId); config.setAccessKeySecret(accessKey); config.setEndpoint(popEndpoint); config.setRegionId(regionId); Client client = new Client(config); CreateImportMigrationAdvanceRequest request = new CreateImportMigrationAdvanceRequest(); request.setName("test_migration_api_" + System.currentTimeMillis()); request.setProjectId(123456L); request.setPackageType("DATAWORKS_MODEL"); request.setPackageFileObject(new FileInputStream("/home/admin/Downloads/test.zip")); RuntimeOptions runtime = new RuntimeOptions(); CreateImportMigrationResponse response = client.createImportMigrationAdvance(request, runtime); ... `</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PackageFile")
     public String packageFile;
@@ -54,12 +58,16 @@ public class CreateImportMigrationRequest extends TeaModel {
      * <p>*   DATAWORKS_MODEL (standard format)</p>
      * <p>*   DATAWORKS_V2 (Apsara Stack DataWorks V3.6.1 to V3.11)</p>
      * <p>*   DATAWORKS_V3 (Apsara Stack DataWorks V3.12 and later)</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PackageType")
     public String packageType;
 
     /**
      * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

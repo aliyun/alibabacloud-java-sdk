@@ -37,7 +37,7 @@ public class ListFilesRequest extends TeaModel {
     public Boolean needContent;
 
     /**
-     * <p>The ID of the node that is scheduled. You can call the [ListNodes](~~173979~~) operation to query the ID of the node.</p>
+     * <p>The ID of the node that is scheduled. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID of the node.</p>
      */
     @NameInMap("NodeId")
     public Long nodeId;

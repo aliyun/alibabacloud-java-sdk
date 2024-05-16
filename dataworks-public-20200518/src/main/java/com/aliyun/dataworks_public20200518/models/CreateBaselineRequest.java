@@ -7,24 +7,42 @@ public class CreateBaselineRequest extends TeaModel {
     @NameInMap("AlertMarginThreshold")
     public Integer alertMarginThreshold;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BaselineName")
     public String baselineName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BaselineType")
     public String baselineType;
 
     @NameInMap("NodeIds")
     public String nodeIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OvertimeSettings")
     public java.util.List<CreateBaselineRequestOvertimeSettings> overtimeSettings;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

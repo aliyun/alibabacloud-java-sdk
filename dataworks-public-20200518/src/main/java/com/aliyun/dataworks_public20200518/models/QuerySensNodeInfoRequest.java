@@ -16,9 +16,15 @@ public class QuerySensNodeInfoRequest extends TeaModel {
     @NameInMap("SensitiveName")
     public String sensitiveName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 

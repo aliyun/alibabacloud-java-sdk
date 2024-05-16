@@ -78,12 +78,16 @@ public class ListInstancesRequest extends TeaModel {
 
     /**
      * <p>The time when the node was last modified.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
     /**
      * <p>The ID of the baseline.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateDataServiceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the API group that is associated with the business process in the API Gateway console. You can log on to the API Gateway console and go to the Group Details page to view the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiGatewayGroupId")
     public String apiGatewayGroupId;
@@ -18,12 +20,16 @@ public class CreateDataServiceGroupRequest extends TeaModel {
 
     /**
      * <p>The name of the business process.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The ID of the workspace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

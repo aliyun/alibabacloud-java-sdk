@@ -7,9 +7,15 @@ public class CreateDISyncTaskRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskContent")
     public String taskContent;
 
@@ -19,6 +25,9 @@ public class CreateDISyncTaskRequest extends TeaModel {
     @NameInMap("TaskParam")
     public String taskParam;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 

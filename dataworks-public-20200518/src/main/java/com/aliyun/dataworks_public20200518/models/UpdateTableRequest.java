@@ -109,6 +109,8 @@ public class UpdateTableRequest extends TeaModel {
 
     /**
      * <p>The endpoint of MaxCompute. If this parameter is left empty, the endpoint of the MaxCompute project is used.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableName")
     public String tableName;
@@ -290,6 +292,8 @@ public class UpdateTableRequest extends TeaModel {
     public static class UpdateTableRequestColumns extends TeaModel {
         /**
          * <p>The comment of the field.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
@@ -302,6 +306,8 @@ public class UpdateTableRequest extends TeaModel {
 
         /**
          * <p>The sequence number of the field. If the field is a partition field, this parameter is not supported.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ColumnType")
         public String columnType;

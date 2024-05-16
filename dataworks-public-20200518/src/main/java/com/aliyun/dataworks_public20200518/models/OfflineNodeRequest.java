@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class OfflineNodeRequest extends TeaModel {
     /**
-     * <p>The ID of the DataWorks workspace. You can call the [ListProjects](~~178393~~) operation to obtain the ID.</p>
+     * <p>The ID of the DataWorks workspace. You can call the [ListProjects](https://help.aliyun.com/document_detail/178393.html) operation to obtain the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeId")
     public Long nodeId;
 
     /**
      * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

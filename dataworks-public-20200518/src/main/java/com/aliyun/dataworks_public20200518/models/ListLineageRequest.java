@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListLineageRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Direction")
     public String direction;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EntityQualifiedName")
     public String entityQualifiedName;
 

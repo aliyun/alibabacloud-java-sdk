@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetOpRiskDataRequest extends TeaModel {
     /**
      * <p>The date on which the access records were queried. Specify the value in the yyyyMMdd format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Date")
     public String date;
@@ -30,12 +32,16 @@ public class GetOpRiskDataRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return. Minimum value: 1.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 1000.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

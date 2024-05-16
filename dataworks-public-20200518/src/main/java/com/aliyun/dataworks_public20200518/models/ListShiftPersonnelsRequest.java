@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ListShiftPersonnelsRequest extends TeaModel {
     /**
      * <p>The time when the on-duty engineer ends a shift. Set the value to a UNIX timestamp.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BeginTime")
     public Long beginTime;
 
     /**
      * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -24,6 +28,8 @@ public class ListShiftPersonnelsRequest extends TeaModel {
 
     /**
      * <p>The type of on-duty engineers that you want to query. Valid values: ALL, PRIMARY, BACKUP, and DESIGNATED_USER.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ShiftScheduleIdentifier")
     public String shiftScheduleIdentifier;

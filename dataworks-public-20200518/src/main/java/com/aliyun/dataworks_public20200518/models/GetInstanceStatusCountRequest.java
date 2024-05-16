@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class GetInstanceStatusCountRequest extends TeaModel {
     /**
      * <p>The business date of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BizDate")
     public String bizDate;
 
     /**
      * <p>The running environment in PROD and DEV modes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
     /**
      * <p>The ID of the DataWorks workspace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

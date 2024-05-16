@@ -30,6 +30,8 @@ public class UpdateTableModelInfoRequest extends TeaModel {
 
     /**
      * <p>The globally unique identifier (GUID) of the table. Specify the GUID in the format of odps.{projectName}.{tableName}.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;

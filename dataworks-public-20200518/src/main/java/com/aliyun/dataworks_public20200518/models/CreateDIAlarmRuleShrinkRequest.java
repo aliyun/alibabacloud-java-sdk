@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateDIAlarmRuleShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DIJobId")
     public Long DIJobId;
 
@@ -13,12 +16,21 @@ public class CreateDIAlarmRuleShrinkRequest extends TeaModel {
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MetricType")
     public String metricType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NotificationSettings")
     public String notificationSettingsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TriggerConditions")
     public String triggerConditionsShrink;
 

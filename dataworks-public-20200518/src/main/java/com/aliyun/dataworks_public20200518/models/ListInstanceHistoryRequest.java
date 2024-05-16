@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListInstanceHistoryRequest extends TeaModel {
     /**
      * <p>The environment of the workspace. Valid values: PROD (production environment) and DEV (development environment).By default, data of instances in the production environment is queried.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public Long instanceId;

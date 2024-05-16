@@ -24,6 +24,8 @@ public class CheckMetaPartitionRequest extends TeaModel {
 
     /**
      * <p>The name of the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Partition")
     public String partition;

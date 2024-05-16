@@ -16,6 +16,9 @@ public class GetMetaTableProducingTasksRequest extends TeaModel {
     @NameInMap("SchemaName")
     public String schemaName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TableGuid")
     public String tableGuid;
 

@@ -69,7 +69,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         public String executor;
 
         /**
-         * <p>The ID of the deployment task. You can call the [GetDeployment](~~173950~~) operation to query the details of the deployment task based on the ID.</p>
+         * <p>The ID of the deployment task. You can call the [GetDeployment](https://help.aliyun.com/document_detail/173950.html) operation to query the details of the deployment task based on the ID.</p>
          */
         @NameInMap("Id")
         public Long id;

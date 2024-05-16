@@ -10,9 +10,15 @@ public class GetNodeTypeListInfoRequest extends TeaModel {
     @NameInMap("Locale")
     public String locale;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

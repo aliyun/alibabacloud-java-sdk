@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class GetNodeParentsRequest extends TeaModel {
     /**
      * <p>The ID of the node. You can go to the Operation Center page in the DataWorks console to view the node ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeId")
     public Long nodeId;
 
     /**
      * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;

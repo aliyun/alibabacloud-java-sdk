@@ -6,10 +6,15 @@ import com.aliyun.tea.*;
 public class DeleteProjectMemberRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

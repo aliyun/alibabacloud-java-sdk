@@ -10,24 +10,42 @@ public class CreateResourceFileRequest extends TeaModel {
     @NameInMap("FileDescription")
     public String fileDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FileFolderPath")
     public String fileFolderPath;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FileType")
     public Integer fileType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OriginResourceName")
     public String originResourceName;
 
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegisterToCalcEngine")
     public Boolean registerToCalcEngine;
 

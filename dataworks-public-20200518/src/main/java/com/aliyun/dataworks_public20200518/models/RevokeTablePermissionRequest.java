@@ -8,12 +8,16 @@ public class RevokeTablePermissionRequest extends TeaModel {
      * <p>The permissions that you want to revoke. Separate multiple permissions with commas (,).</p>
      * <br>
      * <p>You can revoke only the SELECT, DESCRIBE, and DOWNLOAD permissions on MaxCompute tables.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Actions")
     public String actions;
 
     /**
      * <p>The name of the MaxCompute project to which the table belongs. You can log on to the DataWorks console and go to the Workspace Management page to obtain the MaxCompute project name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MaxComputeProjectName")
     public String maxComputeProjectName;
@@ -38,13 +42,17 @@ public class RevokeTablePermissionRequest extends TeaModel {
     public String revokeUserName;
 
     /**
-     * <p>The name of the MaxCompute table. You can call the [SearchMetaTables](~~173919~~) operation to query the table name.</p>
+     * <p>The name of the MaxCompute table. You can call the [SearchMetaTables](https://help.aliyun.com/document_detail/173919.html) operation to query the table name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
     /**
      * <p>The ID of the DataWorks workspace with which the MaxCompute project is associated. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WorkspaceId")
     public Long workspaceId;

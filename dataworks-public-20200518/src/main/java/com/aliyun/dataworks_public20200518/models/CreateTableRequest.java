@@ -22,6 +22,9 @@ public class CreateTableRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Columns")
     public java.util.List<CreateTableRequestColumns> columns;
 
@@ -71,7 +74,7 @@ public class CreateTableRequest extends TeaModel {
     public Integer isView;
 
     /**
-     * <p>The ID of the associated category. You can call the [GetMetaCategory](~~173932~~) operation to query the ID of the category that can be associated.</p>
+     * <p>The ID of the associated category. You can call the [GetMetaCategory](https://help.aliyun.com/document_detail/173932.html) operation to query the ID of the category that can be associated.</p>
      */
     @NameInMap("LifeCycle")
     public Integer lifeCycle;
@@ -116,6 +119,8 @@ public class CreateTableRequest extends TeaModel {
 
     /**
      * <p>The endpoint of MaxCompute.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableName")
     public String tableName;
@@ -297,6 +302,8 @@ public class CreateTableRequest extends TeaModel {
     public static class CreateTableRequestColumns extends TeaModel {
         /**
          * <p>The comment of the field.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
@@ -313,6 +320,8 @@ public class CreateTableRequest extends TeaModel {
          * <p>The sequence number of the field. You can use this parameter to specify how fields are sorted in a table. By default, fields are sorted in the order in which requests are created.</p>
          * <br>
          * <p>If the field is a partition field, this parameter is not supported.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ColumnType")
         public String columnType;

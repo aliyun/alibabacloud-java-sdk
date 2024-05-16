@@ -36,6 +36,8 @@ public class GetMetaColumnLineageRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to query the ancestor or descendant lineage of the field. The value up indicates the ancestor lineage. The value down indicates the descendant lineage.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Direction")
     public String direction;

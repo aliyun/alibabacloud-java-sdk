@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetOpSensitiveDataRequest extends TeaModel {
     /**
      * <p>The date on which access records were generated. Specify the value in the yyyyMMdd format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Date")
     public String date;
@@ -24,6 +26,8 @@ public class GetOpSensitiveDataRequest extends TeaModel {
      * <p>{"dbType":"hologres","instanceName":"ABC","databaseName":"abc"}</p>
      * <br>
      * <p>You must specify the parameters based on the compute engine that you use in your business.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -39,12 +43,16 @@ public class GetOpSensitiveDataRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return. Minimum value:1. Maximum value: 1000.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries to return on each page. Minimum value: 1. Maximum value: 1000.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

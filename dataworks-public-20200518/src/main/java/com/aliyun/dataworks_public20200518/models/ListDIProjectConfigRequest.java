@@ -8,12 +8,16 @@ public class ListDIProjectConfigRequest extends TeaModel {
      * <p>The type of the destination data source of the sync solution. This parameter cannot be left empty.</p>
      * <br>
      * <p>Valid values: analyticdb_for_mysql, odps, elasticsearch, holo, mysql, and polardb. You can call the ListDIProjectConfig operation to query the supported types of destination data sources.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationType")
     public String destinationType;
 
     /**
      * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

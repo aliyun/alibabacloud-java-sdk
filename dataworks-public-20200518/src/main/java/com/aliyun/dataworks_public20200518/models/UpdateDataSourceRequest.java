@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class UpdateDataSourceRequest extends TeaModel {
     /**
-     * <p>The ID of the data source that you want to update. You can call the [ListDataSources](~~211431~~) operation to obtain the ID.</p>
+     * <p>The ID of the data source that you want to update. You can call the [ListDataSources](https://help.aliyun.com/document_detail/211431.html) operation to obtain the ID.</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
      * <p>Indicates whether the data source is updated.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DataSourceId")
     public Long dataSourceId;
@@ -131,7 +133,7 @@ public class UpdateDataSourceRequest extends TeaModel {
      * <p>```</p>
      * <br>
      * <p>{</p>
-     * <p>  "address": "[\"xsaxxsa.mongodb.rds.aliyuncs.com:3717\"]",</p>
+     * <p>  "address": "[\\"xsaxxsa.mongodb.rds.aliyuncs.com:3717\\"]",</p>
      * <p>  "database": "admin",</p>
      * <p>  "password": "sadsda@",</p>
      * <p>  "tag": "public",</p>

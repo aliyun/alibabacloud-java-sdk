@@ -13,15 +13,24 @@ public class CreateProjectShrinkRequest extends TeaModel {
     @NameInMap("IsAllowDownload")
     public Integer isAllowDownload;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectDescription")
     public String projectDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;
 
     @NameInMap("ProjectMode")
     public Integer projectMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

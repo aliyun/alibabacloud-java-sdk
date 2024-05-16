@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFolderRequest extends TeaModel {
     /**
-     * <p>The ID of the folder. You can call the [ListFolders](~~173955~~) operation to query the ID.</p>
+     * <p>The ID of the folder. You can call the [ListFolders](https://help.aliyun.com/document_detail/173955.html) operation to query the ID.</p>
      * <br>
      * <p>You must specify either this parameter or the FolderPath parameter.</p>
      */
@@ -13,7 +13,7 @@ public class GetFolderRequest extends TeaModel {
     public String folderId;
 
     /**
-     * <p>The path of the folder. You can call the [ListFolders](~~173955~~) operation to query the path.</p>
+     * <p>The path of the folder. You can call the [ListFolders](https://help.aliyun.com/document_detail/173955.html) operation to query the path.</p>
      * <br>
      * <p>You must specify either this parameter or the FolderId parameter.</p>
      */

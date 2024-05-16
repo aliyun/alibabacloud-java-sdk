@@ -42,12 +42,16 @@ public class ListNodesRequest extends TeaModel {
 
     /**
      * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
     /**
      * <p>The ID of the owner.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

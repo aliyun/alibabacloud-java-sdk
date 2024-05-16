@@ -12,12 +12,16 @@ public class CreateQualityEntityRequest extends TeaModel {
 
     /**
      * <p>The engine or data source type.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnvType")
     public String envType;
 
     /**
      * <p>The partition expression.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MatchExpression")
     public String matchExpression;
@@ -27,12 +31,16 @@ public class CreateQualityEntityRequest extends TeaModel {
 
     /**
      * <p>The name of the maxcompute project or data source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>The name of the table.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableName")
     public String tableName;

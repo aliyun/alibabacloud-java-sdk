@@ -12,6 +12,8 @@ public class CreateMetaCategoryRequest extends TeaModel {
 
     /**
      * <p>The name of the category.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;

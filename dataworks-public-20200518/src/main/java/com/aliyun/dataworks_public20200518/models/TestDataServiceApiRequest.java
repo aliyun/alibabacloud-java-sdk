@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class TestDataServiceApiRequest extends TeaModel {
     /**
      * <p>The ID of the DataService Studio API on which the test is performed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiId")
     public Long apiId;

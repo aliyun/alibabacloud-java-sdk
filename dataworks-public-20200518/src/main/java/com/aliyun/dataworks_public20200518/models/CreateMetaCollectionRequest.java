@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateMetaCollectionRequest extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CollectionType")
     public String collectionType;
@@ -20,6 +22,8 @@ public class CreateMetaCollectionRequest extends TeaModel {
      * <p>The comment of the collection.</p>
      * <br>
      * <p>The comment must be 1 to 64 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;

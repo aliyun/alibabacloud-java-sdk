@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class ImportDataSourcesRequest extends TeaModel {
     /**
-     * <p>The configurations of the data sources to be imported. The Name, DataSourceType, SubType, Description, Content, and EnvType fields are required. For more information about the fields, see [CreateDataSource](~~211429~~).</p>
+     * <p>The configurations of the data sources to be imported. The Name, DataSourceType, SubType, Description, Content, and EnvType fields are required. For more information about the fields, see [CreateDataSource](https://help.aliyun.com/document_detail/211429.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DataSources")
     public String dataSources;
 
     /**
      * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

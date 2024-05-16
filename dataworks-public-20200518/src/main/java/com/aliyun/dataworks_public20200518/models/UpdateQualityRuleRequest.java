@@ -17,7 +17,9 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public Integer blockType;
 
     /**
-     * <p>The ID of the checker. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the checker.</p>
+     * <p>The ID of the checker. You can call the [ListQualityRules](https://help.aliyun.com/document_detail/173995.html) operation to obtain the ID of the checker.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Checker")
     public Integer checker;
@@ -35,7 +37,7 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public String criticalThreshold;
 
     /**
-     * <p>The ID of the partition filter expression. You can call the [GetQualityEntity](~~173995~~) operation to obtain the ID of the partition filter expression.</p>
+     * <p>The ID of the partition filter expression. You can call the [GetQualityEntity](https://help.aliyun.com/document_detail/173995.html) operation to obtain the ID of the partition filter expression.</p>
      */
     @NameInMap("EntityId")
     public Long entityId;
@@ -47,13 +49,17 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public String expectValue;
 
     /**
-     * <p>The ID of the monitoring rule. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the monitoring rule.</p>
+     * <p>The ID of the monitoring rule. You can call the [ListQualityRules](https://help.aliyun.com/document_detail/173995.html) operation to obtain the ID of the monitoring rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MethodName")
     public String methodName;
@@ -87,12 +93,16 @@ public class UpdateQualityRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the compute engine instance or data source. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>The name of the field to be monitored.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Property")
     public String property;
@@ -123,7 +133,7 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public String taskSetting;
 
     /**
-     * <p>The ID of the monitoring template. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the monitoring template that is used to create the monitoring rule.</p>
+     * <p>The ID of the monitoring template. You can call the [ListQualityRules](https://help.aliyun.com/document_detail/173995.html) operation to obtain the ID of the monitoring template that is used to create the monitoring rule.</p>
      */
     @NameInMap("TemplateId")
     public Integer templateId;

@@ -4,12 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListNodeIORequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IoType")
     public String ioType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NodeId")
     public Long nodeId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 

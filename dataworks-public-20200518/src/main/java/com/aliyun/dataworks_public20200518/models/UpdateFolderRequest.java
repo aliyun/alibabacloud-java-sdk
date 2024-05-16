@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateFolderRequest extends TeaModel {
     /**
-     * <p>The ID of the folder. You can call the [ListFolders](~~173955~~) operation to query the ID.</p>
+     * <p>The ID of the folder. You can call the [ListFolders](https://help.aliyun.com/document_detail/173955.html) operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FolderId")
     public String folderId;
 
     /**
      * <p>The name of the folder.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FolderName")
     public String folderName;

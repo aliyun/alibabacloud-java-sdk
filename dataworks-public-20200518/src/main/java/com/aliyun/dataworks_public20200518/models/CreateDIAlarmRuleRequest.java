@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateDIAlarmRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DIJobId")
     public Long DIJobId;
 
@@ -13,12 +16,21 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MetricType")
     public String metricType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NotificationSettings")
     public CreateDIAlarmRuleRequestNotificationSettings notificationSettings;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TriggerConditions")
     public java.util.List<CreateDIAlarmRuleRequestTriggerConditions> triggerConditions;
 
@@ -139,9 +151,15 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
         @NameInMap("InhibitionInterval")
         public Integer inhibitionInterval;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("NotificationChannels")
         public java.util.List<CreateDIAlarmRuleRequestNotificationSettingsNotificationChannels> notificationChannels;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("NotificationReceivers")
         public java.util.List<CreateDIAlarmRuleRequestNotificationSettingsNotificationReceivers> notificationReceivers;
 

@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ListDagsRequest extends TeaModel {
     /**
      * <p>The environment of the workspace. Valid values: PROD and DEV. PROD indicates the production environment. DEV indicates the development environment.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OpSeq")
     public Long opSeq;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetInstanceStatusStatisticRequest extends TeaModel {
     /**
      * <p>The date on which the numbers of instances in different states are obtained. Specify the date in the yyyy-MM-dd format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BizDate")
     public String bizDate;
@@ -23,12 +25,16 @@ public class GetInstanceStatusStatisticRequest extends TeaModel {
 
     /**
      * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
     /**
      * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

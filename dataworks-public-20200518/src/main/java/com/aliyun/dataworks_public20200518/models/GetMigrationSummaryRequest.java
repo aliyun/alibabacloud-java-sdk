@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetMigrationSummaryRequest extends TeaModel {
     /**
      * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MigrationId")
     public Long migrationId;
@@ -13,7 +15,9 @@ public class GetMigrationSummaryRequest extends TeaModel {
     /**
      * <p>The ID of the migration task.</p>
      * <br>
-     * <p>You can call the [CreateImportMigration](~~2809123~~) operation to obtain the ID of the import task and call the [CreateExportMigration](~~3241603~~) operation to obtain the ID of the export task.</p>
+     * <p>You can call the [CreateImportMigration](https://help.aliyun.com/document_detail/2809123.html) operation to obtain the ID of the import task and call the [CreateExportMigration](https://help.aliyun.com/document_detail/3241603.html) operation to obtain the ID of the export task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

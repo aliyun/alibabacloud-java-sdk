@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListEntitiesByTagsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EntityType")
     public String entityType;
 
@@ -13,6 +16,9 @@ public class ListEntitiesByTagsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<UserEntityTag> tags;
 

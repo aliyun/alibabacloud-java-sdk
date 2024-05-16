@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class SaveDataServiceApiTestResultRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApiId")
     public Long apiId;
 
@@ -13,6 +16,9 @@ public class SaveDataServiceApiTestResultRequest extends TeaModel {
     @NameInMap("FailResultSample")
     public String failResultSample;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

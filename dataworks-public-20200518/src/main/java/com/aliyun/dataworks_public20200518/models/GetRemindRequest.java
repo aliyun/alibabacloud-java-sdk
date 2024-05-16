@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetRemindRequest extends TeaModel {
     /**
      * <p>The ID of the custom alert rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RemindId")
     public Long remindId;

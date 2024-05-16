@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListRefDISyncTasksRequest extends TeaModel {
     /**
-     * <p>The name of the data source. You can call the [ListDataSources](~~211431~~) operation to query the name of the data source.</p>
+     * <p>The name of the data source. You can call the [ListDataSources](https://help.aliyun.com/document_detail/211431.html) operation to query the name of the data source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatasourceName")
     public String datasourceName;
@@ -24,6 +26,8 @@ public class ListRefDISyncTasksRequest extends TeaModel {
 
     /**
      * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
@@ -33,6 +37,8 @@ public class ListRefDISyncTasksRequest extends TeaModel {
      * <br>
      * <p>*   from: queries the sync nodes that use the data source as the source data source.</p>
      * <p>*   to: queries the sync nodes that use the data source as the destination data source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RefType")
     public String refType;
@@ -44,6 +50,8 @@ public class ListRefDISyncTasksRequest extends TeaModel {
      * <p>*   DI_REALTIME: real-time sync node</p>
      * <br>
      * <p>You can specify only one type. The sync solution type is not supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

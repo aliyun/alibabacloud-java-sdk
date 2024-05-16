@@ -12,6 +12,8 @@ public class CreateProjectMemberRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. We recommend that you set this parameter to a UUID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
@@ -21,6 +23,8 @@ public class CreateProjectMemberRequest extends TeaModel {
 
     /**
      * <p>The code of the role. This parameter is optional. If you specify the RoleCode parameter, the user is assigned the role.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;

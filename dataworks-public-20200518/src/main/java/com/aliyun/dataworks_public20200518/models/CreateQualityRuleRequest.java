@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateQualityRuleRequest extends TeaModel {
     /**
      * <p>The strength of the monitoring rule. Valid values: 0 and 1. 0 indicates that the monitoring rule is a weak rule. 1 indicates that the monitoring rule is a strong rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BlockType")
     public Integer blockType;
@@ -30,6 +32,8 @@ public class CreateQualityRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the partition filter expression.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EntityId")
     public Long entityId;
@@ -54,6 +58,8 @@ public class CreateQualityRuleRequest extends TeaModel {
 
     /**
      * <p>Specifies whether the monitoring rule is a dynamic threshold rule. Valid values: 0 and 2. 0 indicates that the monitoring rule is not a dynamic threshold rule. 2 indicates that the monitoring rule is a dynamic threshold rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PredictType")
     public Integer predictType;
@@ -63,6 +69,8 @@ public class CreateQualityRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the compute engine instance or data source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
@@ -81,12 +89,16 @@ public class CreateQualityRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the monitoring rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>The type of the monitoring rule. Valid values: 0, 1, and 2. 0 indicates that the monitoring rule is created by the system. 1 indicates that the monitoring rule is created by a user. 2 indicates that the monitoring rule is a workspace-level rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleType")
     public Integer ruleType;

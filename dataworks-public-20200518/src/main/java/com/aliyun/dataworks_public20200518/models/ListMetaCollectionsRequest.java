@@ -12,6 +12,8 @@ public class ListMetaCollectionsRequest extends TeaModel {
 
     /**
      * <p>The ID of the collection creator.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CollectionType")
     public String collectionType;

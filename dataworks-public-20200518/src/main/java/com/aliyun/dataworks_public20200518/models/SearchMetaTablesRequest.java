@@ -32,6 +32,8 @@ public class SearchMetaTablesRequest extends TeaModel {
      * <p>The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</p>
      * <br>
      * <p>You can log on to the [EMR console](https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou) to obtain the ID of the EMR cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Keyword")
     public String keyword;
@@ -43,7 +45,7 @@ public class SearchMetaTablesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The keyword based on which metatables are queried. During the query, the system tokenizes the names of metatables and matches the names with the keyword. If no name is matched, an empty result is returned. By default, the system uses underscores (\_) to tokenize the names.</p>
+     * <p>The keyword based on which metatables are queried. During the query, the system tokenizes the names of metatables and matches the names with the keyword. If no name is matched, an empty result is returned. By default, the system uses underscores (_) to tokenize the names.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

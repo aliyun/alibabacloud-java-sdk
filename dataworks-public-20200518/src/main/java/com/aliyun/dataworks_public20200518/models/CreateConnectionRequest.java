@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CreateConnectionRequest extends TeaModel {
     /**
      * <p>The type of the connection string.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConnectionType")
     public String connectionType;
 
     /**
      * <p>Details of the data source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Content")
     public String content;
@@ -24,18 +28,24 @@ public class CreateConnectionRequest extends TeaModel {
 
     /**
      * <p>Environment of the data source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnvType")
     public Integer envType;
 
     /**
      * <p>The name of the data source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the workspace to be associated with the data source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

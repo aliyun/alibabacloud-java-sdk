@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class EditRecognizeRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
@@ -25,12 +28,21 @@ public class EditRecognizeRuleRequest extends TeaModel {
     @NameInMap("LevelName")
     public String levelName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NodeParent")
     public String nodeParent;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OperationType")
     public Integer operationType;
 
@@ -43,21 +55,36 @@ public class EditRecognizeRuleRequest extends TeaModel {
     @NameInMap("SensitiveDescription")
     public String sensitiveDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SensitiveId")
     public String sensitiveId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SensitiveName")
     public String sensitiveName;
 
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("level")
     public String level;
 

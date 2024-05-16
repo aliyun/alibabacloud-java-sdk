@@ -6,48 +6,64 @@ import com.aliyun.tea.*;
 public class CreateQualityRelativeNodeRequest extends TeaModel {
     /**
      * <p>The type of the compute engine instance or data source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnvType")
     public String envType;
 
     /**
      * <p>The partition filter expression.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MatchExpression")
     public String matchExpression;
 
     /**
      * <p>The ID of the node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeId")
     public Long nodeId;
 
     /**
      * <p>The ID of the workspace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
      * <p>The name of the compute engine instance or data source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>The name of the table.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
     /**
      * <p>The ID of the workspace to which the node to be associated with the partition filter expression belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetNodeProjectId")
     public Long targetNodeProjectId;
 
     /**
      * <p>The name of the workspace to which the node to be associated with the partition filter expression belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetNodeProjectName")
     public String targetNodeProjectName;

@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class EstablishRelationTableToBusinessRequest extends TeaModel {
     /**
-     * <p>The ID of the workflow. You can call the [ListBusiness](~~173945~~) operation to query the ID.</p>
+     * <p>The ID of the workflow. You can call the [ListBusiness](https://help.aliyun.com/document_detail/173945.html) operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BusinessId")
     public String businessId;
 
     /**
-     * <p>The ID of the folder. You can call the [GetFolder](~~173952~~) or [ListFolders](~~173955~~) operation to query the ID.</p>
+     * <p>The ID of the folder. You can call the [GetFolder](https://help.aliyun.com/document_detail/173952.html) or [ListFolders](https://help.aliyun.com/document_detail/173955.html) operation to query the ID.</p>
      */
     @NameInMap("FolderId")
     public String folderId;
@@ -31,7 +33,9 @@ public class EstablishRelationTableToBusinessRequest extends TeaModel {
     public String projectIdentifier;
 
     /**
-     * <p>The universally unique identifier (UUID) of the table. You can call the [SearchMetaTables](~~173919~~) operation to query the UUID.</p>
+     * <p>The universally unique identifier (UUID) of the table. You can call the [SearchMetaTables](https://help.aliyun.com/document_detail/173919.html) operation to query the UUID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;

@@ -11,12 +11,16 @@ public class RevokeColumnPermissionRequest extends TeaModel {
      * <p>*   If you want to revoke permissions from a Resource Access Management (RAM) user, specify this parameter in the RAM$+RAM user format.</p>
      * <br>
      * <p>You must specify either this parameter or RevokeUserId. If you specify both this parameter and RevokeUserId, the value of RevokeUserId prevails.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Columns")
     public String columns;
 
     /**
-     * <p>The name of the MaxCompute table to which the destination fields belong. You can call the [SearchMetaTables](~~173919~~) operation to query the name.</p>
+     * <p>The name of the MaxCompute table to which the destination fields belong. You can call the [SearchMetaTables](https://help.aliyun.com/document_detail/173919.html) operation to query the name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MaxComputeProjectName")
     public String maxComputeProjectName;
@@ -39,12 +43,16 @@ public class RevokeColumnPermissionRequest extends TeaModel {
      * <p>The fields for which you want to revoke permissions from a user. Separate multiple fields with commas (,).</p>
      * <br>
      * <p>You can revoke the permissions on the fields only in MaxCompute tables.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
     /**
      * <p>The name of the MaxCompute project to which the destination fields belong. You can log on to the DataWorks console and go to the Workspace Management page to obtain the name of the MaxCompute project that is associated with the workspace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WorkspaceId")
     public Long workspaceId;

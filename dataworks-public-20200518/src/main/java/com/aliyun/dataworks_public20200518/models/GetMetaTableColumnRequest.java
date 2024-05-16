@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableColumnRequest extends TeaModel {
     /**
-     * <p>The name of the metatable in the EMR cluster. You can call the [GetMetaDBTableList](~~173916~~) operation to query the name.</p>
+     * <p>The name of the metatable in the EMR cluster. You can call the [GetMetaDBTableList](https://help.aliyun.com/document_detail/173916.html) operation to query the name.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -29,7 +29,7 @@ public class GetMetaTableColumnRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The name of the metadatabase of the EMR cluster. You can call the [ListMetaDB](~~185662~~) operation to query the name.</p>
+     * <p>The name of the metadatabase of the EMR cluster. You can call the [ListMetaDB](https://help.aliyun.com/document_detail/185662.html) operation to query the name.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

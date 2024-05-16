@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class GetDataServiceApplicationRequest extends TeaModel {
     /**
      * <p>The ID of the application. You can view the information about the application in the API Gateway console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApplicationId")
     public Long applicationId;
 
     /**
      * <p>The ID of the workspace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

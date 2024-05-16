@@ -7,6 +7,9 @@ public class DsgRunSensIdentifyRequest extends TeaModel {
     @NameInMap("EsMetaParams")
     public java.util.List<DsgRunSensIdentifyRequestEsMetaParams> esMetaParams;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 

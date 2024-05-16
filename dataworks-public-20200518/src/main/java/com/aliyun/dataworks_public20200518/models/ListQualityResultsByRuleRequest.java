@@ -8,18 +8,24 @@ public class ListQualityResultsByRuleRequest extends TeaModel {
      * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
      * <br>
      * <p>This parameter is used together with the StartDate parameter. The interval between the time specified by this parameter and the time specified by the StartDate parameter cannot exceed 7 days.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
      * <p>The number of the page to return.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -29,12 +35,16 @@ public class ListQualityResultsByRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the compute engine instance or data source for which data quality is monitored.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>The ID of the monitoring rule. You can use the ID and information such as a partition filter expression to perform a joint query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;
@@ -43,6 +53,8 @@ public class ListQualityResultsByRuleRequest extends TeaModel {
      * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
      * <br>
      * <p>This parameter is used together with the EndDate parameter. The interval between the time specified by this parameter and the time specified by the EndDate parameter cannot exceed 7 days.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartDate")
     public String startDate;

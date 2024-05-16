@@ -10,30 +10,51 @@ public class CreateDagComplementRequest extends TeaModel {
     @NameInMap("BizEndTime")
     public String bizEndTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndBizDate")
     public String endBizDate;
 
     @NameInMap("ExcludeNodeIds")
     public String excludeNodeIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IncludeNodeIds")
     public String includeNodeIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("NodeParams")
     public String nodeParams;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Parallelism")
     public Boolean parallelism;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RootNodeId")
     public Long rootNodeId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartBizDate")
     public String startBizDate;
 

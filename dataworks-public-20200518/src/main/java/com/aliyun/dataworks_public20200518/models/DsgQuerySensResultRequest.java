@@ -46,6 +46,9 @@ public class DsgQuerySensResultRequest extends TeaModel {
     @NameInMap("Table")
     public String table;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 

@@ -55,7 +55,7 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
         /**
          * <p>The destination data source of the sync node.</p>
          * <br>
-         * <p>If the sync node has multiple destination data sources, the return value is a JSON array, such as \\"odps_writer\\", \\"mysql\\".</p>
+         * <p>If the sync node has multiple destination data sources, the return value is a JSON array, such as \\\\"odps_writer\\\\", \\\\"mysql\\\\".</p>
          * <br>
          * <p>If the RefType parameter is set to to, the sync nodes that use the specified data source as the destination data source are returned. In this case, the value of this parameter indicates the specified data source.</p>
          */
@@ -65,7 +65,7 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
         /**
          * <p>The source data source of the sync node.</p>
          * <br>
-         * <p>If the sync node has multiple source data sources, the return value is a JSON array, such as \\"odps_writer\\", \\"mysql\\".</p>
+         * <p>If the sync node has multiple source data sources, the return value is a JSON array, such as \\\\"odps_writer\\\\", \\\\"mysql\\\\".</p>
          * <br>
          * <p>If the RefType parameter is set to from, the sync nodes that use the specified data source as the source data source are returned. In this case, the value of this parameter indicates the specified data source.</p>
          */

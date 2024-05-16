@@ -8,12 +8,16 @@ public class AddMetaCollectionEntityRequest extends TeaModel {
      * <p>The unique identifier of the entity.</p>
      * <br>
      * <p>Example: maxcompute-table.projectA.tableA.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CollectionQualifiedName")
     public String collectionQualifiedName;
 
     /**
      * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EntityQualifiedName")
     public String entityQualifiedName;

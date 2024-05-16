@@ -29,9 +29,9 @@ public class GetMetaTableChangeLogRequest extends TeaModel {
     public String objectType;
 
     /**
-     * <p>The globally unique identifier (GUID) of the table. Specify the GUID in the format of odps.projectName.tableName. You can call the [GetMetaDBTableList](~~173916~~) operation to query the GUID of the table.</p>
+     * <p>The globally unique identifier (GUID) of the table. Specify the GUID in the format of odps.projectName.tableName. You can call the [GetMetaDBTableList](https://help.aliyun.com/document_detail/173916.html) operation to query the GUID of the table.</p>
      * <br>
-     * <p>>  To query the change logs of a MaxCompute table, you must call the [GetMetaTableChangeLog](~~173925~~) operation.</p>
+     * <p>>  To query the change logs of a MaxCompute table, you must call the [GetMetaTableChangeLog](https://help.aliyun.com/document_detail/173925.html) operation.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -50,6 +50,8 @@ public class GetMetaTableChangeLogRequest extends TeaModel {
 
     /**
      * <p>The entity on which the change is made. Valid values: TABLE and PARTITION.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;

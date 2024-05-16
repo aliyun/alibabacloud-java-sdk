@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListTableLevelRequest extends TeaModel {
     /**
      * <p>The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LevelType")
     public Integer levelType;
@@ -24,6 +26,8 @@ public class ListTableLevelRequest extends TeaModel {
 
     /**
      * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console to obtain the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

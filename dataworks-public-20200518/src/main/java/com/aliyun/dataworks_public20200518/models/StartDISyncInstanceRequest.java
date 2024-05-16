@@ -7,6 +7,8 @@ public class StartDISyncInstanceRequest extends TeaModel {
     /**
      * <p>*   If you set the TaskType parameter to DI_REALTIME, the StartParam parameter specifies the startup parameters for the real-time synchronization node. The startup parameters include failover-related parameters, the parameter that specifies the number of dirty data records allowed, and the parameters in the data definition language (DDL) statements.</p>
      * <p>*   If you set the TaskType parameter to DI_SOLUTION, the StartParam parameter does not take effect.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileId")
     public Long fileId;
@@ -16,6 +18,8 @@ public class StartDISyncInstanceRequest extends TeaModel {
      * <br>
      * <p>*   DI_REALTIME: real-time synchronization node</p>
      * <p>*   DI_SOLUTION: data synchronization solution</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
@@ -32,6 +36,8 @@ public class StartDISyncInstanceRequest extends TeaModel {
     /**
      * <p>*   If you set the TaskType parameter to DI_REALTIME, set the FileId parameter to the ID of the real-time synchronization node that you want to start.</p>
      * <p>*   If you set the TaskType parameter to DI_SOLUTION, set the FileId parameter to the ID of the data synchronization solution that you want to start.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskType")
     public String taskType;
