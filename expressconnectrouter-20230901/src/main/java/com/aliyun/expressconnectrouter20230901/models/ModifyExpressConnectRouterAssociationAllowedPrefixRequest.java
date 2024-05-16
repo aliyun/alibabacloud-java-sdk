@@ -7,6 +7,9 @@ public class ModifyExpressConnectRouterAssociationAllowedPrefixRequest extends T
     @NameInMap("AllowedPrefixes")
     public java.util.List<String> allowedPrefixes;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AssociationId")
     public String associationId;
 
@@ -16,6 +19,9 @@ public class ModifyExpressConnectRouterAssociationAllowedPrefixRequest extends T
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EcrId")
     public String ecrId;
 

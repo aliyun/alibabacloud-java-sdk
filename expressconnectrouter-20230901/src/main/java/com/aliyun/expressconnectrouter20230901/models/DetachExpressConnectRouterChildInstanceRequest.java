@@ -4,9 +4,15 @@ package com.aliyun.expressconnectrouter20230901.models;
 import com.aliyun.tea.*;
 
 public class DetachExpressConnectRouterChildInstanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
 
@@ -16,6 +22,9 @@ public class DetachExpressConnectRouterChildInstanceRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EcrId")
     public String ecrId;
 

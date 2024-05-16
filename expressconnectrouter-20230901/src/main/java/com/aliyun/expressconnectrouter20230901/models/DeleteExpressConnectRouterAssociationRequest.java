@@ -4,6 +4,9 @@ package com.aliyun.expressconnectrouter20230901.models;
 import com.aliyun.tea.*;
 
 public class DeleteExpressConnectRouterAssociationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AssociationId")
     public String associationId;
 
@@ -16,6 +19,9 @@ public class DeleteExpressConnectRouterAssociationRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EcrId")
     public String ecrId;
 

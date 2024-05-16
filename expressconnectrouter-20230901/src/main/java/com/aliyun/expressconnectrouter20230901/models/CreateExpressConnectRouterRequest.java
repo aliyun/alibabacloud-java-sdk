@@ -4,6 +4,9 @@ package com.aliyun.expressconnectrouter20230901.models;
 import com.aliyun.tea.*;
 
 public class CreateExpressConnectRouterRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AlibabaSideAsn")
     public Long alibabaSideAsn;
 
@@ -21,6 +24,9 @@ public class CreateExpressConnectRouterRequest extends TeaModel {
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("Tags")
+    public java.util.List<CreateExpressConnectRouterRequestTags> tags;
 
     public static CreateExpressConnectRouterRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateExpressConnectRouterRequest self = new CreateExpressConnectRouterRequest();
@@ -73,6 +79,44 @@ public class CreateExpressConnectRouterRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateExpressConnectRouterRequest setTags(java.util.List<CreateExpressConnectRouterRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateExpressConnectRouterRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class CreateExpressConnectRouterRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateExpressConnectRouterRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateExpressConnectRouterRequestTags self = new CreateExpressConnectRouterRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateExpressConnectRouterRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateExpressConnectRouterRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

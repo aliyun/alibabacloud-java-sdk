@@ -7,15 +7,24 @@ public class DisableExpressConnectRouterRouteEntriesRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EcrId")
     public String ecrId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NexthopInstanceId")
     public String nexthopInstanceId;
 
