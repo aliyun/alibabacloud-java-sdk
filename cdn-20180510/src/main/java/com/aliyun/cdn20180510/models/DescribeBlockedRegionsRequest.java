@@ -10,6 +10,8 @@ public class DescribeBlockedRegionsRequest extends TeaModel {
      * <p>*   **zh**: simplified Chinese</p>
      * <p>*   **en**: English</p>
      * <p>*   **jp**: Japanese</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Language")
     public String language;

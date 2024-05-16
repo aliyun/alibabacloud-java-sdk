@@ -13,6 +13,8 @@ public class DescribeCdnConditionIPBInfoRequest extends TeaModel {
      * <p>*   condition_isp_config_en</p>
      * <p>*   condition_country_config_cn</p>
      * <p>*   condition_country_config_en</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DataId")
     public String dataId;

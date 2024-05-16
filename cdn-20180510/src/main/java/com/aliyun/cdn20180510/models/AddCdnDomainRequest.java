@@ -10,6 +10,8 @@ public class AddCdnDomainRequest extends TeaModel {
      * <p>*   **web**: images and small files</p>
      * <p>*   **download**: large files</p>
      * <p>*   **video**: on-demand video and audio streaming</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CdnType")
     public String cdnType;
@@ -24,6 +26,8 @@ public class AddCdnDomainRequest extends TeaModel {
      * <p>The domain name that you want to add to Alibaba Cloud CDN.</p>
      * <br>
      * <p>A wildcard domain that starts with a period (.) is supported, such as .example.com.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -57,6 +61,8 @@ public class AddCdnDomainRequest extends TeaModel {
 
     /**
      * <p>The information about the addresses of origin servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Sources")
     public String sources;

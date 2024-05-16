@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnReportRequest extends TeaModel {
     /**
-     * <p>The region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.</p>
+     * <p>The region. You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query regions.</p>
      * <br>
      * <p>*   If you do not specify a region, data in all regions is queried.</p>
      * <p>*   If you specify a region, data in the specified region is queried. You can specify one or more regions. If you specify multiple regions, separate the regions with commas (,).</p>
@@ -21,6 +21,8 @@ public class DescribeCdnReportRequest extends TeaModel {
 
     /**
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -48,13 +50,17 @@ public class DescribeCdnReportRequest extends TeaModel {
     public String isOverseas;
 
     /**
-     * <p>The ID of the operations report that you want to query. You can specify only one ID in each request. You can call the [DescribeCdnSubList](~~271655~~) operation to query report IDs.</p>
+     * <p>The ID of the operations report that you want to query. You can specify only one ID in each request. You can call the [DescribeCdnSubList](https://help.aliyun.com/document_detail/271655.html) operation to query report IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ReportId")
     public Long reportId;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

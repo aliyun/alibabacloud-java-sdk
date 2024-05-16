@@ -23,6 +23,8 @@ public class BatchSetCdnDomainServerCertificateRequest extends TeaModel {
      * <p>The accelerated domain name to which the SSL certificate belongs. The type of request supported by the accelerated domain name must be HTTPS. You can specify multiple accelerated domain names and separate them with commas (,).</p>
      * <br>
      * <p>>  You can manage the SSL certificates of up to 50 accelerated domain names in each call.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -53,6 +55,8 @@ public class BatchSetCdnDomainServerCertificateRequest extends TeaModel {
      * <br>
      * <p>*   **on**: enables the SSL certificate.</p>
      * <p>*   **off**: disables the SSL certificate. This is the default value.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SSLProtocol")
     public String SSLProtocol;

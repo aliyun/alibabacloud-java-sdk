@@ -17,6 +17,8 @@ public class DescribeCdnDomainByCertificateRequest extends TeaModel {
      * <p>The public key of the SSL certificate. You must encode the public key in Base64 and then call the encodeURIComponent function to encode the public key again.</p>
      * <br>
      * <p>The public key must be in the PEM format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SSLPub")
     public String SSLPub;

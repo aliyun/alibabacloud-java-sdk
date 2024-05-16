@@ -19,7 +19,7 @@ public class DescribeCdnUserBillPredictionRequest extends TeaModel {
      * <br>
      * <p>By default, the value of this parameter is determined by the metering method that is currently used. Regions inside and outside the Chinese mainland are classified into the **CN** and **OverSeas** billable regions. Billable regions inside the Chinese mainland include **CN**. Billable regions outside the Chinese mainland include **AP1**, **AP2**, **AP3**, **NA**, **SA**, **EU**, and **MEAA**.</p>
      * <br>
-     * <p>> For more information about billable regions, see [Billable regions](~~142221~~).</p>
+     * <p>> For more information about billable regions, see [Billable regions](https://help.aliyun.com/document_detail/142221.html).</p>
      */
     @NameInMap("Area")
     public String area;

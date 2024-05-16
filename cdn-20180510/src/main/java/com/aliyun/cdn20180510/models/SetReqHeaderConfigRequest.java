@@ -12,12 +12,16 @@ public class SetReqHeaderConfigRequest extends TeaModel {
 
     /**
      * <p>The accelerated domain name. Separate multiple domain names with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The name of the custom header.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Key")
     public String key;
@@ -30,6 +34,8 @@ public class SetReqHeaderConfigRequest extends TeaModel {
 
     /**
      * <p>The value of the custom header.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Value")
     public String value;

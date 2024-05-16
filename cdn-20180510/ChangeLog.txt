@@ -1,3 +1,8 @@
+2024-05-16 Version: 3.4.1
+- Update API BatchDescribeCdnIpInfo: add param Language.
+- Update API DescribeUserDomains: update param DomainName.
+
+
 2024-03-24 Version: 3.4.0
 - Support API DescribeDomainVerifyData.
 - Support API RefreshObjectCacheByCacheTag.

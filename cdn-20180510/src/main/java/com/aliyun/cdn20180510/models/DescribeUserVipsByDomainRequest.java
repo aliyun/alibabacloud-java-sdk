@@ -15,6 +15,8 @@ public class DescribeUserVipsByDomainRequest extends TeaModel {
 
     /**
      * <p>The accelerated domain name. You can specify only one domain name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

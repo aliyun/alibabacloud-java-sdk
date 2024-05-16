@@ -12,6 +12,8 @@ public class UpdateCdnDeliverTaskRequest extends TeaModel {
 
     /**
      * <p>The ID of the tracking task that you want to update.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DeliverId")
     public Long deliverId;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeDomainRealTimeDetailDataRequest extends TeaModel {
     /**
      * <p>The accelerated domain name that you want to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -16,6 +18,8 @@ public class DescribeDomainRealTimeDetailDataRequest extends TeaModel {
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:40:00Z.</p>
      * <br>
      * <p>> The end time must be later than the start time. The difference between the end time and the start time cannot exceed 10 minutes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -26,18 +30,20 @@ public class DescribeDomainRealTimeDetailDataRequest extends TeaModel {
      * <p>*   **qps**: queries per second (QPS)</p>
      * <p>*   **bps**: bandwidth</p>
      * <p>*   **http_code**: HTTP status code</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Field")
     public String field;
 
     /**
-     * <p>The name of the Internet service provider (ISP). You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs. If you do not specify an ISP, data of all ISPs is queried.</p>
+     * <p>The name of the Internet service provider (ISP). You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query ISPs. If you do not specify an ISP, data of all ISPs is queried.</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
     /**
-     * <p>The name of the region. If you do not specify a region, data in all regions is queried. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.</p>
+     * <p>The name of the region. If you do not specify a region, data in all regions is queried. You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query regions.</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
@@ -68,6 +74,8 @@ public class DescribeDomainRealTimeDetailDataRequest extends TeaModel {
      * <p>The beginning of the time range to query.</p>
      * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:33:00Z.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

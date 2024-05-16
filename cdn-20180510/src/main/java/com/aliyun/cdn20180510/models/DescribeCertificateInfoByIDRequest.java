@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeCertificateInfoByIDRequest extends TeaModel {
     /**
      * <p>The ID of the certificate. You can query only one certificate in each call.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CertId")
     public String certId;

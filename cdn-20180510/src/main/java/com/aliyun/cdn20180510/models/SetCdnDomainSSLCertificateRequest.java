@@ -33,6 +33,8 @@ public class SetCdnDomainSSLCertificateRequest extends TeaModel {
 
     /**
      * <p>The accelerated domain name for which you want to configure the SSL certificate. The type of request supported by the domain name must be HTTPS. You can specify only one domain name in each request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -57,6 +59,8 @@ public class SetCdnDomainSSLCertificateRequest extends TeaModel {
      * <br>
      * <p>*   **on**</p>
      * <p>*   **off**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SSLProtocol")
     public String SSLProtocol;

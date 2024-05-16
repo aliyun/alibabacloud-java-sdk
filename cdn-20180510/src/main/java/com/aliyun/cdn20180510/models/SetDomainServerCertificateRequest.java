@@ -25,6 +25,8 @@ public class SetDomainServerCertificateRequest extends TeaModel {
      * <p>The accelerated domain name for which you want to configure the SSL certificate. The type of request supported by the domain name must be HTTPS.</p>
      * <br>
      * <p>You can specify one domain name in each call.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -50,8 +52,8 @@ public class SetDomainServerCertificateRequest extends TeaModel {
     /**
      * <p>The content of the SSL certificate. Specify the content of the SSL certificate only if you want to enable the SSL certificate. You can use one of the following methods to obtain the content of the SSL certificate:</p>
      * <br>
-     * <p>*   Method 1: Call the [DescribeDomainCertificateInfo](~~91182~~) API operation to query the information about the SSL certificate corresponding to the accelerated domain name and obtain the public key of the ServerCertificate certificate from the returned data.</p>
-     * <p>*   Method 2: Call the [DescribeCdnCertificateList](~~91181~~) API operation to query the SSL certificate list corresponding to the accelerated domain name, and obtain the value of CertName from the returned data. Then, Call the [DescribeCdnCertificateDetail](~~131905~~) API operation with CertName as a parameter to obtain the details about the certificate, and obtain the public key of the Cert certificate from the returned data.</p>
+     * <p>*   Method 1: Call the [DescribeDomainCertificateInfo](https://help.aliyun.com/document_detail/91182.html) API operation to query the information about the SSL certificate corresponding to the accelerated domain name and obtain the public key of the ServerCertificate certificate from the returned data.</p>
+     * <p>*   Method 2: Call the [DescribeCdnCertificateList](https://help.aliyun.com/document_detail/91181.html) API operation to query the SSL certificate list corresponding to the accelerated domain name, and obtain the value of CertName from the returned data. Then, Call the [DescribeCdnCertificateDetail](https://help.aliyun.com/document_detail/131905.html) API operation with CertName as a parameter to obtain the details about the certificate, and obtain the public key of the Cert certificate from the returned data.</p>
      */
     @NameInMap("ServerCertificate")
     public String serverCertificate;
@@ -61,6 +63,8 @@ public class SetDomainServerCertificateRequest extends TeaModel {
      * <br>
      * <p>*   **on** : enables the SSL certificate.</p>
      * <p>*   **off**: disables the SSL certificate.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServerCertificateStatus")
     public String serverCertificateStatus;

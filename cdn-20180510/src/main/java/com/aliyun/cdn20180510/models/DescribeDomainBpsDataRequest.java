@@ -29,7 +29,7 @@ public class DescribeDomainBpsDataRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The name of the Internet service provider (ISP). You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISP names.</p>
+     * <p>The name of the Internet service provider (ISP). You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query ISP names.</p>
      * <br>
      * <p>If you do not set this parameter, data of all ISPs is queried.</p>
      */
@@ -37,7 +37,7 @@ public class DescribeDomainBpsDataRequest extends TeaModel {
     public String ispNameEn;
 
     /**
-     * <p>The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.</p>
+     * <p>The name of the region. You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query regions.</p>
      * <br>
      * <p>If you do not specify a region, data in all regions is queried.</p>
      */

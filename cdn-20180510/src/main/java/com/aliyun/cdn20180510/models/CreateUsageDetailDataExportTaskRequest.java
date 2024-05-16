@@ -18,6 +18,8 @@ public class CreateUsageDetailDataExportTaskRequest extends TeaModel {
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
      * <p>> The end time must be later than the start time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -41,6 +43,8 @@ public class CreateUsageDetailDataExportTaskRequest extends TeaModel {
      * <p>The beginning of the time range to query.</p>
      * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -56,6 +60,8 @@ public class CreateUsageDetailDataExportTaskRequest extends TeaModel {
      * <br>
      * <p>*   **flow**: traffic and bandwidth</p>
      * <p>*   **vas**: requests</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

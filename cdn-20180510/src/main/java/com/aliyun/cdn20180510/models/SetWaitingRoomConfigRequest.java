@@ -6,36 +6,48 @@ import com.aliyun.tea.*;
 public class SetWaitingRoomConfigRequest extends TeaModel {
     /**
      * <p>The percentage of requests that are allowed to be redirected to the origin server. Valid values: **0** to **100**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AllowPct")
     public Integer allowPct;
 
     /**
      * <p>The accelerated domain name. You can specify only one domain name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The length of waiting time to skip after an exit from the queue. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GapTime")
     public Integer gapTime;
 
     /**
      * <p>The maximum length of waiting time in the queue. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MaxTimeWait")
     public Integer maxTimeWait;
 
     /**
      * <p>The regular expression that is used to match URI strings for which the virtual waiting room feature is enabled.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WaitUri")
     public String waitUri;
 
     /**
      * <p>The URL of the waiting page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WaitUrl")
     public String waitUrl;

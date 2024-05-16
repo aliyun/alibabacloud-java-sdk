@@ -33,7 +33,7 @@ public class DescribeDomainTopClientIpVisitRequest extends TeaModel {
     /**
      * <p>The name of the region. Separate multiple region names with commas (,).</p>
      * <br>
-     * <p>You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.</p>
+     * <p>You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query regions.</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;

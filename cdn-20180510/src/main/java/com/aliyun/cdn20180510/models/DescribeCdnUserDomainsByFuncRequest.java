@@ -8,6 +8,8 @@ public class DescribeCdnUserDomainsByFuncRequest extends TeaModel {
      * <p>The ID of the feature.</p>
      * <br>
      * <p>For example, the ID of the origin host feature (set_req_host_header) is 18.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FuncId")
     public Integer funcId;

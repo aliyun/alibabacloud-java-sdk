@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class EnableRealtimeLogDeliveryRequest extends TeaModel {
     /**
      * <p>The accelerated domain name for which you want to enable real-time log delivery. You can specify multiple domain names and separate them with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domain")
     public String domain;

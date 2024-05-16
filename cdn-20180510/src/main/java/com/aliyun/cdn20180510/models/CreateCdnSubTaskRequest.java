@@ -27,6 +27,8 @@ public class CreateCdnSubTaskRequest extends TeaModel {
      * <p>*   **19**: page views and unique visitors</p>
      * <p>*   **21**: regions from which requests are initiated</p>
      * <p>*   **23**: Internet service providers (ISPs)</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ReportIds")
     public String reportIds;
