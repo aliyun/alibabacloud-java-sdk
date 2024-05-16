@@ -10,18 +10,33 @@ public class GrantInstanceToExpressConnectRouterRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EcrId")
     public String ecrId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EcrOwnerAliUid")
     public Long ecrOwnerAliUid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceRegionId")
     public String instanceRegionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 

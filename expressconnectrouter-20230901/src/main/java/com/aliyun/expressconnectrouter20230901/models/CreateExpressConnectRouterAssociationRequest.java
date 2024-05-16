@@ -7,6 +7,9 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     @NameInMap("AllowedPrefixes")
     public java.util.List<String> allowedPrefixes;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AssociationRegionId")
     public String associationRegionId;
 
@@ -22,6 +25,9 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EcrId")
     public String ecrId;
 

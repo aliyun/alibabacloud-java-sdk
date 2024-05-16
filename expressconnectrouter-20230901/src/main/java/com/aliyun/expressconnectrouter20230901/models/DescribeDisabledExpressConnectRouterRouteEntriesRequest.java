@@ -10,6 +10,9 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesRequest extends Tea
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EcrId")
     public String ecrId;
 
