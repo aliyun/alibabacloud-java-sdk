@@ -4,15 +4,28 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeScalingGroupDetailRequest extends TeaModel {
+    /**
+     * <p>The output format. Set the value to yaml.</p>
+     */
     @NameInMap("OutputFormat")
     public String outputFormat;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the scaling group. For more information, see the "Regions and zones" topic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

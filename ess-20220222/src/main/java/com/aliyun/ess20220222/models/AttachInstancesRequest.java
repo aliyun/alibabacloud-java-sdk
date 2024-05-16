@@ -4,19 +4,16 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class AttachInstancesRequest extends TeaModel {
-    /**
-     * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。只支持ASCII字符，且不能超过64个字符。更多信息，请参见[如何保证幂等性](~~25965~~)。</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether the scaling group manages the lifecycles of instances that are manually added to the scaling group. Valid values:</p>
+     * <p>Specifies whether to use the scaling group to manage the lifecycles of manually added instances. Valid values:</p>
      * <br>
-     * <p>*   true: The scaling group manages the lifecycles of instances that are manually added in a similar manner in which the scaling group manages the lifecycles of automatically created instances. After Auto Scaling removes instances from the scaling group, Auto Scaling releases the instances. After you call the DetachInstances operation to remove instances from the scaling group, Auto Scaling does not release the instances.</p>
-     * <p>*   false: The scaling group does not manage the lifecycles of instances that are manually added. After Auto Scaling removes instances from the scaling group, Auto Scaling does not release the instances.</p>
+     * <p>*   true: The scaling group manages the lifecycles of manually added instances and automatically created instances in the same manner. In this case, Auto Scaling releases the instances when they are removed from the scaling group. This rule does not apply to instances that are removed by calling the DetachInstances operation.</p>
+     * <p>*   false: The scaling group does not manage the lifecycles of manually added instances. In this case, Auto Scaling does not release the instances when they are removed from the scaling group.</p>
      * <br>
-     * <p>> You cannot specify this parameter for subscription instances.</p>
+     * <p>>  You cannot specify this parameter for subscription instances, non-Alibaba Cloud instances, and instances in Economical Mode.</p>
      * <br>
      * <p>Default value: false.</p>
      */
@@ -24,16 +21,18 @@ public class AttachInstancesRequest extends TeaModel {
     public Boolean entrusted;
 
     /**
-     * <p>The IDs of the ECS instances or elastic container instances that you want to add.</p>
+     * <p>The IDs of the ECS instances, elastic container instances, non-Alibaba Cloud instances, or instances in Economical Mode.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>Specifies whether to trigger a lifecycle hook for a scale-out activity. Valid values:</p>
+     * <p>Specifies whether to trigger the lifecycle hook for scale-outs when you call this operation. Valid values:</p>
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
+     * <br>
+     * <p>>  You cannot specify this parameter for subscription instances and instances in Economical Mode.</p>
      * <br>
      * <p>Default value: false.</p>
      */
@@ -41,7 +40,7 @@ public class AttachInstancesRequest extends TeaModel {
     public Boolean lifecycleHook;
 
     /**
-     * <p>The weights of the ECS instances or elastic container instances as the backend servers of the associated Classic Load Balancer (CLB) instance.</p>
+     * <p>The weight of an ECS instance or elastic container instance as a backend server. You can use this parameter to specify weights for multiple instances at the same time.</p>
      */
     @NameInMap("LoadBalancerWeights")
     public java.util.List<Integer> loadBalancerWeights;
@@ -66,6 +65,8 @@ public class AttachInstancesRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

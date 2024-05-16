@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class DetachVServerGroupsRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to remove ECS instances in your scaling group from the vServer group.</p>
+     * <p>Specifies whether to remove the existing instances in the scaling group from the vServer group marked for detachment.</p>
      * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>*   true: If you set this parameter to `true`, the detachment of the load balancer from the scaling group entails automatic removal of the existing instances in the scaling group from the corresponding vServer group.</p>
+     * <p>*   false: If you set this parameter to `false`, the detachment of the load balancer from the scaling group does not entail automatic removal of the existing instances in the scaling group from the corresponding vServer group.</p>
      * <br>
      * <p>Default value: false.</p>
      */
@@ -28,6 +28,8 @@ public class DetachVServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group. Examples: cn-hangzhou and cn-shanghai.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -37,12 +39,16 @@ public class DetachVServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
     /**
-     * <p>Details of the vServer groups.</p>
+     * <p>The collection of information about the vServer groups marked for detachment.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VServerGroups")
     public java.util.List<DetachVServerGroupsRequestVServerGroups> VServerGroups;
@@ -110,13 +116,13 @@ public class DetachVServerGroupsRequest extends TeaModel {
 
     public static class DetachVServerGroupsRequestVServerGroupsVServerGroupAttributes extends TeaModel {
         /**
-         * <p>The port number that is used when Auto Scaling adds ECS instances to the vServer group. Valid values: 1 to 65535.</p>
+         * <p>The port number that Auto Scaling employs to incorporate instances into the vServer group. Valid values: 1 to 65535.</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The ID of the vServer group.</p>
+         * <p>The ID of the backend vServer group.</p>
          */
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
@@ -146,13 +152,15 @@ public class DetachVServerGroupsRequest extends TeaModel {
 
     public static class DetachVServerGroupsRequestVServerGroups extends TeaModel {
         /**
-         * <p>The ID of the Classic Load Balancer (CLB) instance to which the vServer group belongs.</p>
+         * <p>The ID of the load balancer to which the vServer group belongs.</p>
+         * <br>
+         * <p>>  You can detach vServer groups of up to five load balancers from a scaling group in one call.</p>
          */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
         /**
-         * <p>Details of the vServer group attributes.</p>
+         * <p>The attributes of the backend vServer group.</p>
          */
         @NameInMap("VServerGroupAttributes")
         public java.util.List<DetachVServerGroupsRequestVServerGroupsVServerGroupAttributes> VServerGroupAttributes;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachInstancesRequest extends TeaModel {
     /**
-     * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。只支持ASCII字符，且不能超过64个字符。更多信息，请参见[如何保证幂等性](~~25965~~)。</p>
+     * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。只支持ASCII字符，且不能超过64个字符。更多信息，请参见[如何保证幂等性](https://help.aliyun.com/document_detail/25965.html)。</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -31,6 +31,8 @@ public class DetachInstancesRequest extends TeaModel {
 
     /**
      * <p>The IDs of the ECS instances or elastic container instances that you want to remove from the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
@@ -60,6 +62,8 @@ public class DetachInstancesRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

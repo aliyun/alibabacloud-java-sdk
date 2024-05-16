@@ -11,13 +11,13 @@ public class ListTagKeysResponseBody extends TeaModel {
     public java.util.List<String> keys;
 
     /**
-     * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

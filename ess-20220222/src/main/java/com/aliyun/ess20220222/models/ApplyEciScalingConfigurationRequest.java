@@ -4,18 +4,37 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class ApplyEciScalingConfigurationRequest extends TeaModel {
+    /**
+     * <p>The content of the configuration file.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>Optional. The format of the configuration file. Default value: YAML. Set the value to YAML.</p>
+     */
     @NameInMap("Format")
     public String format;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the scaling configuration that you want to update. If you want to update a scaling configuration based on the value of Content, you must specify ScalingConfigurationId. If you want to create a scaling configuration based on the value of Content, you can leave ScalingConfigurationId empty.</p>
+     */
     @NameInMap("ScalingConfigurationId")
     public String scalingConfigurationId;
 
+    /**
+     * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

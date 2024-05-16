@@ -20,12 +20,16 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Auto Scaling resource. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the Auto Scaling resources. You can specify 1 to 50 resource IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
@@ -35,6 +39,8 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Only scaling groups are supported. Set the value to scalinggroup.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

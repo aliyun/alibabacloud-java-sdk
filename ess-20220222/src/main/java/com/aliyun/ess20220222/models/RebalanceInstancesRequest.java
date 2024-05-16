@@ -24,6 +24,8 @@ public class RebalanceInstancesRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

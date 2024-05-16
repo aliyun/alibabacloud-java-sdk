@@ -56,16 +56,7 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
         public String notificationArn;
 
         /**
-         * <p>The types of notifications for scaling activities and resource changes.</p>
-         * <br>
-         * <p>*   AUTOSCALING:SCALE_OUT_SUCCESS: The scale-out event is successful.</p>
-         * <p>*   AUTOSCALING:SCALE_IN_SUCCESS: The scale-in event is successful.</p>
-         * <p>*   AUTOSCALING:SCALE_OUT_ERROR: The scale-out event fails.</p>
-         * <p>*   AUTOSCALING:SCALE_IN_ERROR: The scale-in event fails.</p>
-         * <p>*   AUTOSCALING:SCALE_REJECT: The scaling activity is rejected.</p>
-         * <p>*   AUTOSCALING:SCALE_OUT_START: The scale-out event is started.</p>
-         * <p>*   AUTOSCALING:SCALE_IN_START: The scale-in event is started.</p>
-         * <p>*   AUTOSCALING:SCHEDULE_TASK_EXPIRING: Auto Scaling sends a notification when a scheduled task is about to expire.</p>
+         * <p>The types of the notifications.</p>
          */
         @NameInMap("NotificationTypes")
         public java.util.List<String> notificationTypes;

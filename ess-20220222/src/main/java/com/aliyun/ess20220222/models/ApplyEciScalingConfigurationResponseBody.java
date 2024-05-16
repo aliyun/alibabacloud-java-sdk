@@ -4,9 +4,15 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class ApplyEciScalingConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the scaling configuration.</p>
+     */
     @NameInMap("ScalingConfigurationId")
     public String scalingConfigurationId;
 

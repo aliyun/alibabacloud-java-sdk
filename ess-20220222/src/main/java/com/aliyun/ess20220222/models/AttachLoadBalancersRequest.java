@@ -16,16 +16,23 @@ public class AttachLoadBalancersRequest extends TeaModel {
     public Boolean async;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to add all instances in the scaling group to the vServer groups of the CLB instance. Valid values:</p>
+     * <p>Specifies whether to add the existing instances in the scaling group as backend servers of the load balancer. Valid values:</p>
      * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>*   true: If you set this parameter to `true`, the attachment of the load balancer entails the addition of the existing instances in the scaling group to the backend server groups of the load balancer.</p>
+     * <br>
+     * <p>    **</p>
+     * <br>
+     * <p>    **Note** If a load balancer is currently attached to your scaling group, and you want to add the instances in your scaling group to the backend server groups of the load balancer, you can call this operation again and set the ForceAttach request parameter to true.</p>
+     * <br>
+     * <p>*   false: If you set this parameter to false, the attachment of the load balancer does not entail the addition of the existing instances in the scaling group to the backend server groups of the load balancer.</p>
      * <br>
      * <p>Default value: false.</p>
      */
@@ -33,13 +40,13 @@ public class AttachLoadBalancersRequest extends TeaModel {
     public Boolean forceAttach;
 
     /**
-     * <p>负载均衡配置列表。</p>
+     * <p>The configurations of the classic load balancer (CLB, formerly known as SLB) instance.</p>
      */
     @NameInMap("LoadBalancerConfigs")
     public java.util.List<AttachLoadBalancersRequestLoadBalancerConfigs> loadBalancerConfigs;
 
     /**
-     * <p>The IDs of the CLB instances.</p>
+     * <p>The IDs of the load balancers that you want to attach to the scaling group.</p>
      */
     @NameInMap("LoadBalancers")
     public java.util.List<String> loadBalancers;
@@ -52,6 +59,8 @@ public class AttachLoadBalancersRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
@@ -127,13 +136,15 @@ public class AttachLoadBalancersRequest extends TeaModel {
 
     public static class AttachLoadBalancersRequestLoadBalancerConfigs extends TeaModel {
         /**
-         * <p>负载均衡CLB（原SLB）实例的ID。</p>
+         * <p>The ID of the CLB instance.</p>
          */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
         /**
-         * <p>弹性伸缩将ECS实例添加到SLB服务器组后，ECS实例作为后端服务器的权重。权重越高，ECS实例将被分配到越多的访问请求。如果权重为0，则ECS实例不会收到访问请求。取值范围：0~100。</p>
+         * <p>The weight of an Elastic Compute Service (ECS) instance or elastic container instance as a backend sever of the CLB instance. If an instance has a higher weight, more access traffic is routed to the instance. If an instance has zero weight, no access traffic is routed to the instance.</p>
+         * <br>
+         * <p>Valid values: 0 to 100.</p>
          */
         @NameInMap("Weight")
         public Integer weight;

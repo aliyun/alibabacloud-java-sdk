@@ -4,6 +4,9 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class ScaleWithAdjustmentShrinkRequest extends TeaModel {
+    /**
+     * <p>The metadata of the scaling activity.</p>
+     */
     @NameInMap("ActivityMetadata")
     public String activityMetadata;
 
@@ -13,6 +16,8 @@ public class ScaleWithAdjustmentShrinkRequest extends TeaModel {
      * <p>*   QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.</p>
      * <p>*   PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.</p>
      * <p>*   TotalCapacity: adjusts the number of ECS instances in the scaling group to a specified number.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AdjustmentType")
     public String adjustmentType;
@@ -23,6 +28,8 @@ public class ScaleWithAdjustmentShrinkRequest extends TeaModel {
      * <p>*   Valid values if you set the AdjustmentType parameter to QuantityChangeInCapacity: -1000 to 1000.</p>
      * <p>*   Valid values if you set the AdjustmentType parameter to PercentChangeInCapacity: -100 to 10000.</p>
      * <p>*   Valid values if you set the AdjustmentType parameter to TotalCapacity: 0 to 2000.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AdjustmentValue")
     public Integer adjustmentValue;
@@ -33,6 +40,9 @@ public class ScaleWithAdjustmentShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The context of the lifecycle hook.</p>
+     */
     @NameInMap("LifecycleHookContext")
     public String lifecycleHookContextShrink;
 
@@ -42,6 +52,9 @@ public class ScaleWithAdjustmentShrinkRequest extends TeaModel {
     @NameInMap("MinAdjustmentMagnitude")
     public Integer minAdjustmentMagnitude;
 
+    /**
+     * <p>The overrides that allow you to adjust the scaling group of the Elastic Container Instance type during a scale-out.</p>
+     */
     @NameInMap("Overrides")
     public String overridesShrink;
 
@@ -53,6 +66,8 @@ public class ScaleWithAdjustmentShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
@@ -63,7 +78,7 @@ public class ScaleWithAdjustmentShrinkRequest extends TeaModel {
      * <p>*   true: triggers the scaling activity in a synchronous manner. The scaling activity is triggered at the time when the scaling rule is executed.</p>
      * <p>*   false: does not trigger the scaling activity in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number of instances and determines whether to trigger the scaling activity based on the check result.</p>
      * <br>
-     * <p>> For more information about the Expected Number of Instances feature, see [Expected number of instances](~~146231~~).</p>
+     * <p>> For more information about the Expected Number of Instances feature, see [Expected number of instances](https://help.aliyun.com/document_detail/146231.html).</p>
      * <br>
      * <p>Default value: false.</p>
      */

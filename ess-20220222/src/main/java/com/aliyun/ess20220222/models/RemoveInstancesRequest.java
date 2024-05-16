@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveInstancesRequest extends TeaModel {
     /**
-     * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。只支持ASCII字符，且不能超过64个字符。更多信息，请参见[如何保证幂等性](~~25965~~)。</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25965.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -23,6 +23,8 @@ public class RemoveInstancesRequest extends TeaModel {
 
     /**
      * <p>The IDs of the ECS instances that you want to remove from the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
@@ -40,20 +42,22 @@ public class RemoveInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The action that you want Auto Scaling to perform after the ECS instance is removed from the scaling group. Valid values:</p>
+     * <p>The action subsequent to the removal of the Elastic Compute Service (ECS) instances. Valid values:</p>
      * <br>
-     * <p>*   recycle: puts the ECS instance into economical mode.</p>
+     * <p>*   recycle: The ECS instances enter the Economical Mode.</p>
      * <br>
-     * <p>    **Note** This setting takes effect only if you set the ScalingPolicy parameter to recycle.</p>
+     * <p>    **</p>
      * <br>
-     * <p>*   release: releases the ECS instance.</p>
+     * <p>    **Note** This setting is applicable only if you set `ScalingPolicy` to `recycle`.</p>
      * <br>
-     * <p>The ScalingPolicy parameter that you specify when you call the CreateScalingGroup operation specifies the reclaim mode of the scaling group. The RemovePolicy parameter that you specify when you call the RemoveInstances operation specifies the action to be performed on ECS instances after the ECS instances are removed. Example:</p>
+     * <p>*   release: The ECS instances are released.</p>
      * <br>
-     * <p>*   If you set both the ScalingPolicy parameter and the RemovePolicy parameter to recycle, the ECS instances are put into economical mode after the ECS instances are removed from the scaling group.</p>
-     * <p>*   If you set the ScalingPolicy parameter to recycle and the RemovePolicy parameter to release, the ECS instances are released after the ECS instances are removed from the scaling group.</p>
-     * <p>*   If you set the ScalingPolicy parameter to release and the RemovePolicy parameter to recycle, the ECS instances are released after the ECS instances are removed from the scaling group.</p>
-     * <p>*   If you set both the ScalingPolicy parameter and the RemovePolicy parameter to release, the ECS instances are released after the ECS instances are removed from the scaling group.</p>
+     * <p>ScalingPolicy of the CreateScalingGroup operation specifies the reclaim mode of the scaling group while RemovePolicy of the RemoveInstances operation specifies the subsequent action when an ECS instance is removed from the scaling group. Examples:</p>
+     * <br>
+     * <p>*   If you set ScalingPolicy and RemovePolicy to recycle, the ECS instances enter the Economical Mode when they are removed.</p>
+     * <p>*   If you set ScalingPolicy to recycle and RemovePolicy to release, the ECS instances are released when they are removed.</p>
+     * <p>*   If you set ScalingPolicy to release and RemovePolicy to recycle, the ECS instances are released when they are removed.</p>
+     * <p>*   If you set ScalingPolicy and RemovePolicy to release, the ECS instances are released when they are removed.</p>
      * <br>
      * <p>Default value: release.</p>
      */
@@ -68,6 +72,8 @@ public class RemoveInstancesRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

@@ -35,8 +35,8 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     /**
      * <p>The performance mode of the burstable instance. Valid values:</p>
      * <br>
-     * <p>*   Standard: standard mode. For more information, see the "Standard mode" section in the [Burstable instances](~~59977~~) topic.</p>
-     * <p>*   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in the [Burstable instances](~~59977~~) topic.</p>
+     * <p>*   Standard: standard mode. For more information, see the "Standard mode" section in the [Burstable instances](https://help.aliyun.com/document_detail/59977.html) topic.</p>
+     * <p>*   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in the [Burstable instances](https://help.aliyun.com/document_detail/59977.html) topic.</p>
      */
     @NameInMap("CreditSpecification")
     public String creditSpecification;
@@ -201,7 +201,7 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     public java.util.List<ModifyScalingConfigurationShrinkRequestNetworkInterfaces> networkInterfaces;
 
     /**
-     * <p>Specifies whether to overwrite existing data. Valid values:</p>
+     * <p>Specifies whether to override existing data. Valid values:</p>
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
@@ -238,12 +238,14 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling configuration that you want to modify.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingConfigurationId")
     public String scalingConfigurationId;
 
     /**
-     * <p>The name of the scaling configuration. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit.</p>
+     * <p>The name of the scaling configuration. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.</p>
      * <br>
      * <p>The name of the scaling configuration must be unique in a region. If you do not specify this parameter, the scaling configuration ID is used.</p>
      */
@@ -875,7 +877,7 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the system disk. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http:// `or `https://`. </p>
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http:// `or `https://`. </p>
          * <br>
          * <p>Default value: null.</p>
          */
@@ -918,7 +920,7 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
          * <p>*   PL2: An ESSD can provide up to 100,000 random read/write IOPS.</p>
          * <p>*   PL3: An ESSD can provide up to 1,000,000 random read/write IOPS.</p>
          * <br>
-         * <p>> For more information about how to select ESSD PLs, see [ESSD](~~122389~~).</p>
+         * <p>> For more information about how to select ESSD PLs, see [ESSD](https://help.aliyun.com/document_detail/122389.html).</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
@@ -1142,7 +1144,7 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The name of the system disk. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
          */
         @NameInMap("DiskName")
         public String diskName;
@@ -1170,7 +1172,7 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
          * <p>*   PL2: An ESSD can provide up to 100,000 random read/write IOPS.</p>
          * <p>*   PL3: An ESSD can provide up to 1,000,000 random read/write IOPS.</p>
          * <br>
-         * <p>> For more information about how to select ESSD PLs, see [ESSD](~~122389~~).</p>
+         * <p>> For more information about how to select ESSD PLs, see [ESSD](https://help.aliyun.com/document_detail/122389.html).</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
@@ -1352,7 +1354,7 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
         public String burstablePerformance;
 
         /**
-         * <p>The number of vCPUs that you want to allocate to an instance type in intelligent configuration mode. You can use this parameter to filter the available instance types that meet the specified criteria. For more information, see [Overview of instance families](~~25378~~).</p>
+         * <p>The number of vCPUs that you want to allocate to an instance type in intelligent configuration mode. You can use this parameter to filter the available instance types that meet the specified criteria. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).</p>
          * <br>
          * <p>When you specify this parameter, take note of the following items:</p>
          * <br>
@@ -1364,10 +1366,10 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
         public Integer cores;
 
         /**
-         * <p>The instance types that you want to exclude. You can use wildcard characters such as an asterisk (\*) to exclude an instance type or an instance family. Examples:</p>
+         * <p>The instance types that you want to exclude. You can use wildcard characters such as an asterisk (\\*) to exclude an instance type or an instance family. Examples:</p>
          * <br>
          * <p>*   ecs.c6.large: excludes the ecs.c6.large instance type.</p>
-         * <p>*   ecs.c6.\*: excludes the c6 instance family.</p>
+         * <p>*   ecs.c6.\\*: excludes the c6 instance family.</p>
          */
         @NameInMap("ExcludedInstanceTypes")
         public java.util.List<String> excludedInstanceTypes;
@@ -1375,9 +1377,9 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
         /**
          * <p>The level of the instance family. You can use this parameter to filter instance types that meet the specified criteria. This parameter takes effect only if you set `CostOptimization` to true. Valid values:</p>
          * <br>
-         * <p>*   EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instance types of this level are suitable for business scenarios in which CPU utilization is low. For more information, see [Shared instance families](~~108489~~).</p>
-         * <p>*   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see the [Overview of instance families](~~25378~~) topic.</p>
-         * <p>*   CreditEntryLevel: credit entry level. This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instance types of this level are suitable for business scenarios in which CPU utilization is low but may fluctuate in specific scenarios. For more information, see [Overview](~~59977~~) of burstable instances.</p>
+         * <p>*   EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instance types of this level are suitable for business scenarios in which CPU utilization is low. For more information, see [Shared instance families](https://help.aliyun.com/document_detail/108489.html).</p>
+         * <p>*   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see the [Overview of instance families](https://help.aliyun.com/document_detail/25378.html) topic.</p>
+         * <p>*   CreditEntryLevel: credit entry level. This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instance types of this level are suitable for business scenarios in which CPU utilization is low but may fluctuate in specific scenarios. For more information, see [Overview](https://help.aliyun.com/document_detail/59977.html) of burstable instances.</p>
          */
         @NameInMap("InstanceFamilyLevel")
         public String instanceFamilyLevel;

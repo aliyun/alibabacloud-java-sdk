@@ -7,7 +7,7 @@ public class AttachServerGroupsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
      * <br>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25965~~).</p>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -28,6 +28,8 @@ public class AttachServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -37,12 +39,16 @@ public class AttachServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
     /**
      * <p>Details of the server groups.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServerGroups")
     public java.util.List<AttachServerGroupsRequestServerGroups> serverGroups;
@@ -111,12 +117,16 @@ public class AttachServerGroupsRequest extends TeaModel {
     public static class AttachServerGroupsRequestServerGroups extends TeaModel {
         /**
          * <p>The port number that is used by an ECS instance after Auto Scaling adds the ECS instance to the server group. Valid values: 1 to 65535.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The ID of the server group.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
@@ -126,6 +136,8 @@ public class AttachServerGroupsRequest extends TeaModel {
          * <br>
          * <p>*   ALB</p>
          * <p>*   NLB</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -134,6 +146,8 @@ public class AttachServerGroupsRequest extends TeaModel {
          * <p>The weight of an ECS instance after Auto Scaling adds the ECS instance to the server group as a backend server.</p>
          * <br>
          * <p>A higher weight specifies that a larger number of requests are forwarded to the ECS instance. If you set the Weight parameter for an ECS instance in the server group to 0, no access requests are forwarded to the ECS instance. Valid values: 0 to 100.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Weight")
         public Integer weight;

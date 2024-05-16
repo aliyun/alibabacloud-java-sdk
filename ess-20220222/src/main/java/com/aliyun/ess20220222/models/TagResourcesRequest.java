@@ -9,12 +9,16 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the Auto Scaling resources. You can specify 1 to 50 resource IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
@@ -24,12 +28,16 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Only scaling groups are supported. Set the value to scalinggroup.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>Details of the tags.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tags")
     public java.util.List<TagResourcesRequestTags> tags;

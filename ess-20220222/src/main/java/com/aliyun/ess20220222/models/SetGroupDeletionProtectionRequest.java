@@ -7,8 +7,12 @@ public class SetGroupDeletionProtectionRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable deletion protection for the scaling group. Valid values:</p>
      * <br>
-     * <p>*   true: enables deletion protection for the scaling group. This way, the scaling group cannot be deleted.</p>
-     * <p>*   false: disables deletion protection for the scaling group.</p>
+     * <p>*   true: enables deletion protection. In this case, you cannot delete the scaling group by using the Auto Scaling console or calling an API operation. You must disable deletion protection before you can delete the scaling group.</p>
+     * <p>*   false: disables deletion protection.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupDeletionProtection")
     public Boolean groupDeletionProtection;
@@ -27,6 +31,8 @@ public class SetGroupDeletionProtectionRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

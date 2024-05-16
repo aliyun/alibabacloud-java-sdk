@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScalingActivityDetailResponseBody extends TeaModel {
     /**
-     * <p>The details about the event.</p>
+     * <p>Details of the scaling activity.</p>
      */
     @NameInMap("Detail")
     public String detail;

@@ -66,13 +66,13 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Float cpu;
 
     /**
-     * <p>The number of physical CPU cores. This parameter is not available for all instance types. For more information, see [Specify custom CPU options](~~197781~~).</p>
+     * <p>The number of physical CPU cores. This parameter is not available for all instance types. For more information, see [Specify custom CPU options](https://help.aliyun.com/document_detail/197781.html).</p>
      */
     @NameInMap("CpuOptionsCore")
     public Integer cpuOptionsCore;
 
     /**
-     * <p>The number of threads per core. This parameter is not available for all instance types. A value of 1 indicates that Hyper-Threading is disabled. For more information, see [Specify custom CPU options](~~197781~~).</p>
+     * <p>The number of threads per core. This parameter is not available for all instance types. A value of 1 indicates that Hyper-Threading is disabled. For more information, see [Specify custom CPU options](https://help.aliyun.com/document_detail/197781.html).</p>
      */
     @NameInMap("CpuOptionsThreadsPerCore")
     public Integer cpuOptionsThreadsPerCore;
@@ -187,9 +187,9 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     /**
      * <p>The level of the instance type, which is used to filter the instance types that meet the specified criteria. This parameter takes effect only if you set the `CostOptimization` parameter to true. Valid values:</p>
      * <br>
-     * <p>*   EntryLevel: shared instance type. Instances of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instances of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).</p>
-     * <p>*   EnterpriseLevel: Instances of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see [Instance family](~~25378~~).</p>
-     * <p>*   CreditEntryLevel: This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see the [Overview](~~59977~~) topic of burstable instances.</p>
+     * <p>*   EntryLevel: shared instance type. Instances of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instances of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](https://help.aliyun.com/document_detail/108489.html).</p>
+     * <p>*   EnterpriseLevel: Instances of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see [Instance family](https://help.aliyun.com/document_detail/25378.html).</p>
+     * <p>*   CreditEntryLevel: This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see the [Overview](https://help.aliyun.com/document_detail/59977.html) topic of burstable instances.</p>
      */
     @NameInMap("InstanceFamilyLevel")
     public String instanceFamilyLevel;
@@ -225,7 +225,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the RAM role for the instance. You can use an instance RAM role to access both elastic container instances and Elastic Compute Service (ECS) instances. For more information, see [Use an instance RAM role by calling API operations](~~61178~~).</p>
+     * <p>The name of the RAM role for the instance. You can use an instance RAM role to access both elastic container instances and Elastic Compute Service (ECS) instances. For more information, see [Use an instance RAM role by calling API operations](https://help.aliyun.com/document_detail/61178.html).</p>
      */
     @NameInMap("RamRoleName")
     public String ramRoleName;
@@ -253,12 +253,14 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling configuration that you want to modify.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingConfigurationId")
     public String scalingConfigurationId;
 
     /**
-     * <p>The name of the scaling configuration. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit.</p>
+     * <p>The name of the scaling configuration. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.</p>
      * <br>
      * <p>The name of the scaling configuration must be unique within a scaling group in a region. If you do not specify this parameter, the value of the ScalingConfigurationId parameter is used.</p>
      */
@@ -1220,13 +1222,13 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public ModifyEciScalingConfigurationRequestContainersEnvironmentVarsFieldRef fieldRef;
 
         /**
-         * <p>The key of the environment variable. Specify the name in the `[0-9a-zA-Z]` format. The name must be 1 to 128 characters in length, and can contain underscores (\_). It cannot start with a digit.</p>
+         * <p>The name of the environment variable. The name can be 1 to 128 characters in length and can contain letters, underscores (_), and digits. It cannot start with a digit. Specify the value in the `[0-9a-zA-Z]` format.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the environment variable. The value must be 0 to 256 characters in length.</p>
+         * <p>The value of the environment variable. The value can be up to 256 characters in length.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -1270,7 +1272,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The type of the protocol. Valid values:</p>
+         * <p>The protocol type. Valid values:</p>
          * <br>
          * <p>*   TCP</p>
          * <p>*   UDP</p>
@@ -1303,25 +1305,25 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     public static class ModifyEciScalingConfigurationRequestContainersVolumeMounts extends TeaModel {
         /**
-         * <p>The path where the container mounts the volume.</p>
+         * <p>The directory within the container onto which you want to mount the volume.</p>
          * <br>
-         * <p>>  Data stored in the path of the container is directly overwritten by the content of the volume.</p>
+         * <p>>  The information stored within this directory will be overridden by the data present on the mounted volume. Specify this parameter with caution.</p>
          */
         @NameInMap("MountPath")
         public String mountPath;
 
         /**
-         * <p>The mount propagation setting of the volume. Mount propagation allows the sharing of volumes that are mounted on one container with other containers in the same pod, or even with other pods on the same node. Valid values:</p>
+         * <p>The mount propagation setting of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:</p>
          * <br>
-         * <p>*   None: The volume mount does not receive subsequent mounts that are mounted to this volume or its subdirectories.</p>
-         * <p>*   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories.</p>
-         * <p>*   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories. In addition, all volume mounts that are created by the container are propagated back to the instance and to all containers of all pods that use the same volume.</p>
+         * <p>*   None: Subsequent mounts executed either on the volume itself or its subdirectories do not propagate to the already established volume mount.</p>
+         * <p>*   HostToCotainer: Subsequent mounts executed either on the volume itself or its subdirectories propagate to the already established volume mount.</p>
+         * <p>*   Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed either on the volume itself or its subdirectories propagate to the already established volume mount. In addition, any volume mounts executed on the container not only propagate back to the underlying host but also to all containers across every pod that uses the same volume.</p>
          */
         @NameInMap("MountPropagation")
         public String mountPropagation;
 
         /**
-         * <p>The name of the volume. The value of this parameter is the same as the value of the Volumes.Name parameter.</p>
+         * <p>The volume name. The value of this parameter is the same as the value of Volume.N.Name.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -1398,13 +1400,13 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public ModifyEciScalingConfigurationRequestContainersSecurityContext securityContext;
 
         /**
-         * <p>The arguments that correspond to the startup commands of the container. You can specify up to 10 arguments.</p>
+         * <p>The container startup arguments. You can specify up to 10 arguments.</p>
          */
         @NameInMap("Args")
         public java.util.List<String> args;
 
         /**
-         * <p>The commands that you want to execute in the container when you use the command line interface (CLI) to perform probes.</p>
+         * <p>The command that you want to run by using the CLI for liveness probing within the container.</p>
          */
         @NameInMap("Commands")
         public java.util.List<String> commands;
@@ -1416,7 +1418,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public Float cpu;
 
         /**
-         * <p>Information about the environment variables.</p>
+         * <p>The environment variables.</p>
          */
         @NameInMap("EnvironmentVars")
         public java.util.List<ModifyEciScalingConfigurationRequestContainersEnvironmentVars> environmentVars;
@@ -1436,57 +1438,105 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         /**
          * <p>The image pulling policy. Valid values:</p>
          * <br>
-         * <p>*   Always: pulls images each time.</p>
-         * <p>*   IfNotPresent: pulls images only if no on-premises images are available. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</p>
-         * <p>*   Never: never pulls images. On-premises images are always used.</p>
+         * <p>*   Always: Each time instances are created, image pulling is performed.</p>
+         * <p>*   IfNotPresent: Image pulling is performed as needed. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</p>
+         * <p>*   Never: On-premises images are always used. Image pulling is not performed.</p>
          */
         @NameInMap("ImagePullPolicy")
         public String imagePullPolicy;
 
+        /**
+         * <p>The commands that you want to run by using the CLI for configuring the postStart callback function within the container.</p>
+         */
         @NameInMap("LifecyclePostStartHandlerExecs")
         public java.util.List<String> lifecyclePostStartHandlerExecs;
 
+        /**
+         * <p>The IP address of the host to which you want to send the HTTP GET requests for configuring the postStart callback function.</p>
+         */
         @NameInMap("LifecyclePostStartHandlerHttpGetHost")
         public String lifecyclePostStartHandlerHttpGetHost;
 
+        /**
+         * <p>The path to which you want to send the HTTP GET requests for configuring the postStart callback function.</p>
+         */
         @NameInMap("LifecyclePostStartHandlerHttpGetPath")
         public String lifecyclePostStartHandlerHttpGetPath;
 
+        /**
+         * <p>The port over which you want to send the HTTP GET requests for configuring the postStart callback function.</p>
+         */
         @NameInMap("LifecyclePostStartHandlerHttpGetPort")
         public Integer lifecyclePostStartHandlerHttpGetPort;
 
+        /**
+         * <p>The protocol type of the HTTP GET requests that you want to send for configuring the postStart callback function. Valid values:</p>
+         * <br>
+         * <p>*   HTTP</p>
+         * <p>*   HTTPS</p>
+         */
         @NameInMap("LifecyclePostStartHandlerHttpGetScheme")
         public String lifecyclePostStartHandlerHttpGetScheme;
 
+        /**
+         * <p>The IP address of the host detected by the TCP sockets that you want to use for configuring the postStart callback function.</p>
+         */
         @NameInMap("LifecyclePostStartHandlerTcpSocketHost")
         public String lifecyclePostStartHandlerTcpSocketHost;
 
+        /**
+         * <p>The port detected by the TCP sockets that you want to use for configuring the postStart callback function.</p>
+         */
         @NameInMap("LifecyclePostStartHandlerTcpSocketPort")
         public Integer lifecyclePostStartHandlerTcpSocketPort;
 
+        /**
+         * <p>The commands that you want to run by using the CLI for configuring the preStop callback function within the container.</p>
+         */
         @NameInMap("LifecyclePreStopHandlerExecs")
         public java.util.List<String> lifecyclePreStopHandlerExecs;
 
+        /**
+         * <p>The IP address of the host to which you want to send the HTTP GET requests for configuring the preStop callback function.</p>
+         */
         @NameInMap("LifecyclePreStopHandlerHttpGetHost")
         public String lifecyclePreStopHandlerHttpGetHost;
 
+        /**
+         * <p>The path to which you want to send the HTTP GET requests for configuring the preStop callback function.</p>
+         */
         @NameInMap("LifecyclePreStopHandlerHttpGetPath")
         public String lifecyclePreStopHandlerHttpGetPath;
 
+        /**
+         * <p>The port over which you want to send the HTTP GET requests for configuring the preStop callback function.</p>
+         */
         @NameInMap("LifecyclePreStopHandlerHttpGetPort")
         public Integer lifecyclePreStopHandlerHttpGetPort;
 
+        /**
+         * <p>The protocol type of the HTTP GET requests that you want to send for configuring the preStop callback function. Valid values:</p>
+         * <br>
+         * <p>*   HTTP</p>
+         * <p>*   HTTPS</p>
+         */
         @NameInMap("LifecyclePreStopHandlerHttpGetScheme")
         public String lifecyclePreStopHandlerHttpGetScheme;
 
+        /**
+         * <p>The IP address of the host detected by the TCP sockets that you want to use for configuring the preStop callback function.</p>
+         */
         @NameInMap("LifecyclePreStopHandlerTcpSocketHost")
         public String lifecyclePreStopHandlerTcpSocketHost;
 
+        /**
+         * <p>The port detected by the TCP sockets that you want to use for configuring the preStop callback function.</p>
+         */
         @NameInMap("LifecyclePreStopHandlerTcpSocketPort")
         public Integer lifecyclePreStopHandlerTcpSocketPort;
 
         /**
-         * <p>The memory size of the container. Unit: GiB.</p>
+         * <p>The memory size that you want to allocate to the container. Unit: GiB.</p>
          */
         @NameInMap("Memory")
         public Float memory;
@@ -1498,13 +1548,13 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>Information about the ports.</p>
+         * <p>The ports.</p>
          */
         @NameInMap("Ports")
         public java.util.List<ModifyEciScalingConfigurationRequestContainersPorts> ports;
 
         /**
-         * <p>Specifies whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur.</p>
+         * <p>Specifies whether the container allocates buffer resources to standard input streams during its active runtime. If you do not specify this parameter, an end-of-file (EOF) error occurs when standard input streams in the container are read.</p>
          * <br>
          * <p>Default value: false.</p>
          */
@@ -1512,23 +1562,23 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public Boolean stdin;
 
         /**
-         * <p>Specifies whether standard input streams are disconnected after a client is disconnected.</p>
+         * <p>Specifies whether standard input streams remain connected during multiple sessions when StdinOnce is set to true.</p>
          * <br>
-         * <p>If you set the StdinOnce parameter to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container is started again.</p>
+         * <p>If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container is restarted.</p>
          */
         @NameInMap("StdinOnce")
         public Boolean stdinOnce;
 
         /**
-         * <p>Specifies whether to enable interaction. Default value: false.</p>
+         * <p>Specifies whether to enable the Interaction feature. Default value: false.</p>
          * <br>
-         * <p>If the command is a /bin/bash command, set the value to true.</p>
+         * <p>If the command is a /bin/bash command, set this parameter to true.</p>
          */
         @NameInMap("Tty")
         public Boolean tty;
 
         /**
-         * <p>Information about the volume mount of the container.</p>
+         * <p>The volume mounts of the container.</p>
          */
         @NameInMap("VolumeMounts")
         public java.util.List<ModifyEciScalingConfigurationRequestContainersVolumeMounts> volumeMounts;

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CompleteLifecycleActionRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -31,12 +31,16 @@ public class CompleteLifecycleActionRequest extends TeaModel {
 
     /**
      * <p>The token of the lifecycle hook. You can obtain this token by using a Message Service (MNS) queue or an MNS topic that is specified for the lifecycle hook.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LifecycleActionToken")
     public String lifecycleActionToken;
 
     /**
      * <p>The ID of the lifecycle hook.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LifecycleHookId")
     public String lifecycleHookId;

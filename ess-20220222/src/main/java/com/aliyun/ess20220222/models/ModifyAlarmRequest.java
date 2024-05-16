@@ -12,6 +12,8 @@ public class ModifyAlarmRequest extends TeaModel {
 
     /**
      * <p>The ID of the event-triggered task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AlarmTaskId")
     public String alarmTaskId;
@@ -44,7 +46,7 @@ public class ModifyAlarmRequest extends TeaModel {
      * <br>
      * <p>This parameter follows the cron expression format. The default format is `X X X X X ?`, in which:</p>
      * <br>
-     * <p>*   X: a placeholder for a field, which represents seconds, minutes, hours, days, and months in sequence. X can be a definite value or a special character that has logical meaning. For information about the valid values of X, see [Cron expression](~~25907~~).</p>
+     * <p>*   X: a placeholder for a field, which represents seconds, minutes, hours, days, and months in sequence. X can be a definite value or a special character that has logical meaning. For information about the valid values of X, see [Cron expression](https://help.aliyun.com/document_detail/25907.html).</p>
      * <p>*   ?: No value is specified.</p>
      * <br>
      * <p>> By default, the value of this parameter is specified in **UTC+8**. You can specify the time zone in the `TZ=+yy` format before a cron expression. y indicates the time zone. For example, `TZ=+00 * * 1-2 * * ?` specifies that the event-triggered task is in effect between 01:00 and 02:59 (UTC+0) every day.</p>
@@ -115,7 +117,7 @@ public class ModifyAlarmRequest extends TeaModel {
      * <p>    *   EciPodCpuUtilization: the CPU utilization of an elastic container instance. Unit: %.</p>
      * <p>    *   EciPodMemoryUtilization: the memory usage of an elastic container instance. Unit: %.</p>
      * <br>
-     * <p>For more information, see [Event-triggered task for system monitoring](~~74854~~).</p>
+     * <p>For more information, see [Event-triggered task for system monitoring](https://help.aliyun.com/document_detail/74854.html).</p>
      */
     @NameInMap("MetricName")
     public String metricName;
@@ -154,6 +156,8 @@ public class ModifyAlarmRequest extends TeaModel {
 
     /**
      * <p>The region ID of the event-triggered task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -440,7 +444,7 @@ public class ModifyAlarmRequest extends TeaModel {
          * <p>    *   EciPodCpuUtilization: the CPU utilization of an elastic container instance. Unit: %.</p>
          * <p>    *   EciPodMemoryUtilization: the memory usage of an elastic container instance. Unit: %.</p>
          * <br>
-         * <p>For more information, see [Event-triggered task for system monitoring](~~74854~~).</p>
+         * <p>For more information, see [Event-triggered task for system monitoring](https://help.aliyun.com/document_detail/74854.html).</p>
          */
         @NameInMap("MetricName")
         public String metricName;

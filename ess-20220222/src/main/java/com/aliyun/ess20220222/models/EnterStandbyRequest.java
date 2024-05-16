@@ -4,12 +4,28 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class EnterStandbyRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to asynchronously put the ECS instance into the Standby state. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("Async")
     public Boolean async;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25965.html).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The IDs of the ECS instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
@@ -19,6 +35,11 @@ public class EnterStandbyRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

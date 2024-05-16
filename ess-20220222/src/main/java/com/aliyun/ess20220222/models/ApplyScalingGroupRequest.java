@@ -4,6 +4,11 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class ApplyScalingGroupRequest extends TeaModel {
+    /**
+     * <p>The content of the configuration file.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Content")
     public String content;
 

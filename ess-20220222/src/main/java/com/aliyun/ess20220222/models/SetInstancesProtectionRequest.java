@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class SetInstancesProtectionRequest extends TeaModel {
     /**
      * <p>The IDs of the ECS instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
@@ -18,6 +20,8 @@ public class SetInstancesProtectionRequest extends TeaModel {
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProtectedFromScaleIn")
     public Boolean protectedFromScaleIn;
@@ -27,6 +31,8 @@ public class SetInstancesProtectionRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
