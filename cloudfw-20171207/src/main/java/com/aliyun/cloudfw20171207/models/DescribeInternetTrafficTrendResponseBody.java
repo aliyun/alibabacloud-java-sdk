@@ -40,6 +40,9 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     @NameInMap("MaxBandwidthTime")
     public Long maxBandwidthTime;
 
+    @NameInMap("MaxDayExceedBytes")
+    public Long maxDayExceedBytes;
+
     /**
      * <p>The maximum inbound network throughput, which indicates the maximum number of bits that are sent inbound per second. Unit: bit/s.</p>
      */
@@ -75,6 +78,9 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
      */
     @NameInMap("TotalBytes")
     public Long totalBytes;
+
+    @NameInMap("TotalExceedBytes")
+    public Long totalExceedBytes;
 
     /**
      * <p>The inbound network throughput, which indicates the total number of bytes that are sent inbound. Unit: bytes.</p>
@@ -147,6 +153,14 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         return this.maxBandwidthTime;
     }
 
+    public DescribeInternetTrafficTrendResponseBody setMaxDayExceedBytes(Long maxDayExceedBytes) {
+        this.maxDayExceedBytes = maxDayExceedBytes;
+        return this;
+    }
+    public Long getMaxDayExceedBytes() {
+        return this.maxDayExceedBytes;
+    }
+
     public DescribeInternetTrafficTrendResponseBody setMaxInBps(Long maxInBps) {
         this.maxInBps = maxInBps;
         return this;
@@ -193,6 +207,14 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     }
     public Long getTotalBytes() {
         return this.totalBytes;
+    }
+
+    public DescribeInternetTrafficTrendResponseBody setTotalExceedBytes(Long totalExceedBytes) {
+        this.totalExceedBytes = totalExceedBytes;
+        return this;
+    }
+    public Long getTotalExceedBytes() {
+        return this.totalExceedBytes;
     }
 
     public DescribeInternetTrafficTrendResponseBody setTotalInBytes(Long totalInBytes) {
