@@ -979,6 +979,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 创建新的AppCode
+     *
+     * @param request CreateAppCodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAppCodeResponse
+     */
+    public CreateAppCodeResponse createAppCodeWithOptions(CreateAppCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appCode)) {
+            query.put("AppCode", request.appCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAppCode"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAppCodeResponse());
+    }
+
+    /**
+     * @summary 创建新的AppCode
+     *
+     * @param request CreateAppCodeRequest
+     * @return CreateAppCodeResponse
+     */
+    public CreateAppCodeResponse createAppCode(CreateAppCodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAppCodeWithOptions(request, runtime);
+    }
+
+    /**
+     * @summary 创建新的AK、SK
+     *
+     * @param request CreateAppKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAppKeyResponse
+     */
+    public CreateAppKeyResponse createAppKeyWithOptions(CreateAppKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appKey)) {
+            query.put("AppKey", request.appKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appSecret)) {
+            query.put("AppSecret", request.appSecret);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAppKey"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAppKeyResponse());
+    }
+
+    /**
+     * @summary 创建新的AK、SK
+     *
+     * @param request CreateAppKeyRequest
+     * @return CreateAppKeyResponse
+     */
+    public CreateAppKeyResponse createAppKey(CreateAppKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAppKeyWithOptions(request, runtime);
+    }
+
+    /**
      * @summary 创建后端服务
      *
      * @param request CreateBackendRequest
@@ -2176,6 +2272,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAppResponse deleteApp(DeleteAppRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAppWithOptions(request, runtime);
+    }
+
+    /**
+     * @summary 删除新的AppCode
+     *
+     * @param request DeleteAppCodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAppCodeResponse
+     */
+    public DeleteAppCodeResponse deleteAppCodeWithOptions(DeleteAppCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appCode)) {
+            query.put("AppCode", request.appCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAppCode"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAppCodeResponse());
+    }
+
+    /**
+     * @summary 删除新的AppCode
+     *
+     * @param request DeleteAppCodeRequest
+     * @return DeleteAppCodeResponse
+     */
+    public DeleteAppCodeResponse deleteAppCode(DeleteAppCodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAppCodeWithOptions(request, runtime);
+    }
+
+    /**
+     * @summary 删除新的AppKey
+     *
+     * @param request DeleteAppKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAppKeyResponse
+     */
+    public DeleteAppKeyResponse deleteAppKeyWithOptions(DeleteAppKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appKey)) {
+            query.put("AppKey", request.appKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAppKey"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAppKeyResponse());
+    }
+
+    /**
+     * @summary 删除新的AppKey
+     *
+     * @param request DeleteAppKeyRequest
+     * @return DeleteAppKeyResponse
+     */
+    public DeleteAppKeyResponse deleteAppKey(DeleteAppKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAppKeyWithOptions(request, runtime);
     }
 
     /**
