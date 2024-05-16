@@ -1,3 +1,8 @@
+2024-05-16 Version: 7.8.6
+- Update API DescribeVSwitches: add param EnableIpv6.
+- Update API DescribeVpcs: add param EnableIpv6.
+
+
 2024-05-10 Version: 7.8.5
 - Update API CreateSslVpnServer: add param IDaaSApplicationId.
 - Update API DescribeSslVpnServers: update response param.
