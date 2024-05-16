@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListFileVersionsRequest extends TeaModel {
     /**
-     * <p>The ID of the file. You can call the [ListFiles](~~173942~~) operation to query the ID.</p>
+     * <p>The ID of the file. You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileId")
     public Long fileId;

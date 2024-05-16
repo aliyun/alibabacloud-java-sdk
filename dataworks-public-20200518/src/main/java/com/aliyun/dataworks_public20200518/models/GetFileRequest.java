@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetFileRequest extends TeaModel {
     /**
-     * <p>The ID of the file. You can call the [ListFiles](~~173942~~) operation to obtain the ID.</p>
+     * <p>The ID of the file. You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to obtain the ID.</p>
      */
     @NameInMap("FileId")
     public Long fileId;
 
     /**
-     * <p>The ID of the node that is scheduled. You can call the [ListFiles](~~173942~~) operation to obtain the node ID.</p>
+     * <p>The ID of the node that is scheduled. You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to obtain the node ID.</p>
      */
     @NameInMap("NodeId")
     public Long nodeId;

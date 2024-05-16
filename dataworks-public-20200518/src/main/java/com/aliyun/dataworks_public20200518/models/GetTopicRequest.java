@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetTopicRequest extends TeaModel {
     /**
      * <p>The ID of the request. You can troubleshoot issues based on the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TopicId")
     public Long topicId;

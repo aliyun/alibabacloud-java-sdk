@@ -15,6 +15,8 @@ public class CreateExportMigrationRequest extends TeaModel {
      * <br>
      * <p>*   FULL: The export task is used to export all data objects.</p>
      * <p>*   INCREMENTAL: The export task is used to export data objects that were modified since the specified point in time. If you set this parameter to INCREMENTAL, you must configure the IncrementalSince parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExportMode")
     public String exportMode;
@@ -41,12 +43,16 @@ public class CreateExportMigrationRequest extends TeaModel {
      * <p>The name of the export task.</p>
      * <br>
      * <p>The name of each export task must be unique. You must ensure that no duplicate export task exists in the current workspace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

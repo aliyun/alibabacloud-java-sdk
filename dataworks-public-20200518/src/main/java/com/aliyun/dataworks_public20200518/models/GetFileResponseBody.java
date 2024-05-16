@@ -731,7 +731,7 @@ public class GetFileResponseBody extends TeaModel {
         /**
          * <p>The scheduling parameters of the node.</p>
          * <br>
-         * <p>This parameter corresponds to the Parameters section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console). For more information about the configurations of the scheduling parameters, see [Configure scheduling parameters](~~137548~~).</p>
+         * <p>This parameter corresponds to the Parameters section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console). For more information about the configurations of the scheduling parameters, see [Configure scheduling parameters](https://help.aliyun.com/document_detail/137548.html).</p>
          */
         @NameInMap("ParaValue")
         public String paraValue;
@@ -749,7 +749,7 @@ public class GetFileResponseBody extends TeaModel {
         public String rerunMode;
 
         /**
-         * <p>The ID of the resource group that is used to run the node. You can call the [ListResourceGroups](~~173913~~) operation to query the available resource groups in the workspace.</p>
+         * <p>The ID of the resource group that is used to run the node. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/173913.html) operation to query the available resource groups in the workspace.</p>
          */
         @NameInMap("ResourceGroupId")
         public Long resourceGroupId;

@@ -21,6 +21,8 @@ public class GenerateDISyncTaskConfigForUpdatingRequest extends TeaModel {
      * <p>*   DI_SOLUTION: synchronization solution</p>
      * <br>
      * <p>    DataWorks allows you to update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
@@ -30,12 +32,16 @@ public class GenerateDISyncTaskConfigForUpdatingRequest extends TeaModel {
      * <br>
      * <p>*   true: The request is successful.</p>
      * <p>*   false: The request fails.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. This parameter is used to prevent repeated operations that are caused by multiple calls.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskParam")
     public String taskParam;
@@ -53,6 +59,8 @@ public class GenerateDISyncTaskConfigForUpdatingRequest extends TeaModel {
      * <br>
      * <p>*   If the script contains the SelectedTables parameter, the system synchronizes the tables that you specify in the SelectedTables parameter.</p>
      * <p>*   If the script contains the Tables parameter, the system synchronizes the tables that you specify in the Tables parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

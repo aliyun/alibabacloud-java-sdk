@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListProjectIdsRequest extends TeaModel {
     /**
      * <p>The ID of the specific Alibaba Cloud account. You can log on to the [DataWorks](https://workbench.data.aliyun.com/console) console and move the pointer over the profile picture in the upper-right corner to view the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;

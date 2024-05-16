@@ -4,17 +4,24 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreatePermissionApplyOrderRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApplyObject")
     public java.util.List<CreatePermissionApplyOrderRequestApplyObject> applyObject;
 
     /**
      * <p>The reason for your request. The administrator determines whether to approve the request based on the reason.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApplyReason")
     public String applyReason;
 
     /**
      * <p>The ID of the Alibaba Cloud account for which you want to request permissions. If you want to request permissions for multiple Alibaba Cloud accounts, separate the IDs of the accounts with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApplyUserIds")
     public String applyUserIds;
@@ -39,6 +46,8 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
 
     /**
      * <p>The name of the MaxCompute project in which you request permissions on the fields of a table.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MaxComputeProjectName")
     public String maxComputeProjectName;
@@ -51,6 +60,8 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
 
     /**
      * <p>The ID of the DataWorks workspace that is associated with the MaxCompute project in which you want to request permissions on the fields of a table. You can go to the Workspace Management page in the DataWorks console to view the workspace ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WorkspaceId")
     public Integer workspaceId;
@@ -129,6 +140,8 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
          * <p>The name of the field on which you want to request permissions. If you want to request permissions on an entire table, enter the names of all fields in the table.</p>
          * <br>
          * <p>You can request permissions on specific fields of a table in a MaxCompute project only after LabelSecurity is enabled for this project. If LabelSecurity is disabled, you can request permissions only on an entire table.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -151,15 +164,22 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
     public static class CreatePermissionApplyOrderRequestApplyObject extends TeaModel {
         /**
          * <p>The permission that you want to request. If you want to request multiple permissions at the same time, separate them with commas (,). You can request only the following permissions: Select, Describe, Drop, Alter, Update, and Download.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Actions")
         public String actions;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ColumnMetaList")
         public java.util.List<CreatePermissionApplyOrderRequestApplyObjectColumnMetaList> columnMetaList;
 
         /**
          * <p>The name of the object on which you want to request permissions. You can request permissions only on MaxCompute tables. Set this parameter to the name of the table on which you want to request permissions.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Name")
         public String name;

@@ -20,12 +20,16 @@ public class GenerateDISyncTaskConfigForCreatingRequest extends TeaModel {
      * <p>*   DI_SOLUTION: synchronization solution</p>
      * <br>
      * <p>DataWorks allows you to create real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. This parameter is used to prevent repeated operations that are caused by multiple calls.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskParam")
     public String taskParam;
@@ -54,13 +58,13 @@ public class GenerateDISyncTaskConfigForCreatingRequest extends TeaModel {
      * <br>
      * <p>"setting": {</p>
      * <br>
-     * <p>"resourceGroup": "S_res_group\_280749521950784\_1623033752022",</p>
+     * <p>"resourceGroup": "S_res_group_280749521950784_1623033752022",</p>
      * <br>
      * <p>"taskType": "oneclick_to_odps"</p>
      * <br>
      * <p>},</p>
      * <br>
-     * <p>"steps": { "stepType": "mysql", "parameter": { "connection": \[ { "datasourceType": "mysql", "datasource": "mysql_pub1", "selectedTables": \[ { "dbName": "mysql_db", "schema": \[ { "tableInfos": \[ { "table": "molin_di_test_in_pk_v4" }</p>
+     * <p>"steps": { "stepType": "mysql", "parameter": { "connection": [ { "datasourceType": "mysql", "datasource": "mysql_pub1", "selectedTables": [ { "dbName": "mysql_db", "schema": [ { "tableInfos": [ { "table": "molin_di_test_in_pk_v4" }</p>
      * <br>
      * <p>}</p>
      * <br>
@@ -112,13 +116,13 @@ public class GenerateDISyncTaskConfigForCreatingRequest extends TeaModel {
      * <br>
      * <p>"setting": {</p>
      * <br>
-     * <p>"resourceGroup": "S_res_group\_280749521950784\_1623033752022",</p>
+     * <p>"resourceGroup": "S_res_group_280749521950784_1623033752022",</p>
      * <br>
      * <p>"taskType": "oneclick_to_kafka"</p>
      * <br>
      * <p>},</p>
      * <br>
-     * <p>"steps": { "stepType": "mysql", "parameter": { "connection": \[ { "datasourceType": "mysql", "datasource": "pkset_test", "selectedTables": \[ { "dbName": "mysql_db", "schema": \[ { "tableInfos": \[ { "table": "molin_di_test_in_pk_v4" }</p>
+     * <p>"steps": { "stepType": "mysql", "parameter": { "connection": [ { "datasourceType": "mysql", "datasource": "pkset_test", "selectedTables": [ { "dbName": "mysql_db", "schema": [ { "tableInfos": [ { "table": "molin_di_test_in_pk_v4" }</p>
      * <br>
      * <p>}</p>
      * <br>
@@ -170,13 +174,13 @@ public class GenerateDISyncTaskConfigForCreatingRequest extends TeaModel {
      * <br>
      * <p>"setting": {</p>
      * <br>
-     * <p>"resourceGroup": "S_res_group\_280749521950784\_1623033752022",</p>
+     * <p>"resourceGroup": "S_res_group_280749521950784_1623033752022",</p>
      * <br>
      * <p>"taskType": "oneclick_to_holo"</p>
      * <br>
      * <p>},</p>
      * <br>
-     * <p>"steps": { "stepType": "mysql", "parameter": { "connection": \[ { "datasourceType": "mysql", "datasource": "mysql_pub", "selectedTables": \[ { "dbName": "mysql_db", "schema": \[ { "tableInfos": \[ { "table": "molin_di_test_in2\_pk_v3" }</p>
+     * <p>"steps": { "stepType": "mysql", "parameter": { "connection": [ { "datasourceType": "mysql", "datasource": "mysql_pub", "selectedTables": [ { "dbName": "mysql_db", "schema": [ { "tableInfos": [ { "table": "molin_di_test_in2_pk_v3" }</p>
      * <br>
      * <p>}</p>
      * <br>
@@ -217,6 +221,8 @@ public class GenerateDISyncTaskConfigForCreatingRequest extends TeaModel {
      * <p>]</p>
      * <br>
      * <p>}</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

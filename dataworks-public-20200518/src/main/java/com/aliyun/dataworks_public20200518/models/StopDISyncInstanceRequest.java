@@ -9,6 +9,8 @@ public class StopDISyncInstanceRequest extends TeaModel {
      * <br>
      * <p>*   true: The request is successful.</p>
      * <p>*   false: The request fails.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileId")
     public Long fileId;
@@ -17,12 +19,16 @@ public class StopDISyncInstanceRequest extends TeaModel {
      * <p>The type of the synchronization node that you want to stop. Set the value to DI_REALTIME.</p>
      * <br>
      * <p>DI_REALTIME indicates a real-time synchronization node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The ID of the synchronization node. You can call the [ListFiles](~~173942~~) operation to obtain the ID.</p>
+     * <p>The ID of the synchronization node. You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to obtain the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

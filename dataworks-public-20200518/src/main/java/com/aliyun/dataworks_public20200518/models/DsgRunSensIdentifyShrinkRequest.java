@@ -7,6 +7,9 @@ public class DsgRunSensIdentifyShrinkRequest extends TeaModel {
     @NameInMap("EsMetaParams")
     public String esMetaParamsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 

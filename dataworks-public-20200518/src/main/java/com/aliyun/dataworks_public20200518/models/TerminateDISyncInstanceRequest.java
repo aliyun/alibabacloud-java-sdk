@@ -9,18 +9,24 @@ public class TerminateDISyncInstanceRequest extends TeaModel {
      * <br>
      * <p>*   true: The request is successful.</p>
      * <p>*   false: The request fails.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileId")
     public Long fileId;
 
     /**
      * <p>The type of the node. A value of DI_REALTIME indicates that the node is a real-time synchronization node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
      * <p>The ID of the real-time synchronization node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

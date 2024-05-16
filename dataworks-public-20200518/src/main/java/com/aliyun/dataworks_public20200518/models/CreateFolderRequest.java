@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateFolderRequest extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FolderPath")
     public String folderPath;

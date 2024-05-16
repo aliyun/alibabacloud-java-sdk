@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class GetDataServiceFolderRequest extends TeaModel {
     /**
      * <p>The ID of the folder.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FolderId")
     public Long folderId;
 
     /**
      * <p>The ID of the workspace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

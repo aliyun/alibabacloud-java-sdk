@@ -9,6 +9,8 @@ public class DeleteDISyncTaskRequest extends TeaModel {
      * <br>
      * <p>*   true: The request is successful.</p>
      * <p>*   false: The request failed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileId")
     public Long fileId;
@@ -17,12 +19,16 @@ public class DeleteDISyncTaskRequest extends TeaModel {
      * <p>The type of the synchronization node in Data Integration.</p>
      * <br>
      * <p>The parameter value is DI_REALTIME and cannot be changed. The value indicates a real-time synchronization node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The ID of the real-time synchronization node. You can call the [ListFiles](~~173942~~) operation to query the ID of the node.</p>
+     * <p>The ID of the real-time synchronization node. You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to query the ID of the node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

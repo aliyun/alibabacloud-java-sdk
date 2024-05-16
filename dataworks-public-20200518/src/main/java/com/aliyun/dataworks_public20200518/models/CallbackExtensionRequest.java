@@ -7,12 +7,21 @@ public class CallbackExtensionRequest extends TeaModel {
     @NameInMap("CheckMessage")
     public String checkMessage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CheckResult")
     public String checkResult;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ExtensionCode")
     public String extensionCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MessageId")
     public String messageId;
 

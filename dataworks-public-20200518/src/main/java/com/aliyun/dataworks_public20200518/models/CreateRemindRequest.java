@@ -12,6 +12,8 @@ public class CreateRemindRequest extends TeaModel {
 
     /**
      * <p>The webhook URL of the DingTalk chatbot. You can specify multiple webhook URLs. Separate the specified webhook URLs with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AlertMethods")
     public String alertMethods;
@@ -29,6 +31,8 @@ public class CreateRemindRequest extends TeaModel {
     /**
      * <p>*   If the AlertUnit parameter is set to OWNER, leave this parameter empty.</p>
      * <p>*   If the AlertUnit parameter is set to OTHER, set this parameter to the ID of the Alibaba Cloud account used by a specific user. You can specify multiple IDs. Separate multiple IDs with commas (,). You can specify a maximum of 10 IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AlertUnit")
     public String alertUnit;
@@ -93,18 +97,24 @@ public class CreateRemindRequest extends TeaModel {
 
     /**
      * <p>The type of the object to which the custom alert rule is applied. Valid values: NODE, BASELINE, PROJECT, and BIZPROCESS. The value NODE indicates a node. The value BASELINE indicates a baseline. The value PROJECT indicates a workspace. The value BIZPROCESS indicates a workflow.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RemindName")
     public String remindName;
 
     /**
      * <p>The minimum interval at which alerts are reported. Unit: seconds. Minimum value: 1200. Default value: 1800.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RemindType")
     public String remindType;
 
     /**
      * <p>The ID of the baseline to which the custom alert rule is applied. This parameter takes effect when the RemindUnit parameter is set to BASELINE. You can specify multiple IDs. Separate multiple IDs with commas (,). A maximum of five baselines can be specified for a custom alert rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RemindUnit")
     public String remindUnit;

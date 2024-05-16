@@ -44,7 +44,7 @@ public class CreateFileRequest extends TeaModel {
     /**
      * <p>The name of the data source for which the node is run.</p>
      * <br>
-     * <p>You can call the [UpdateDataSource](~~211432~~) operation to query the available data sources in the workspace.</p>
+     * <p>You can call the [UpdateDataSource](https://help.aliyun.com/document_detail/211432.html) operation to query the available data sources in the workspace.</p>
      */
     @NameInMap("ConnectionName")
     public String connectionName;
@@ -133,6 +133,8 @@ public class CreateFileRequest extends TeaModel {
 
     /**
      * <p>The name of the file.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileName")
     public String fileName;
@@ -142,7 +144,9 @@ public class CreateFileRequest extends TeaModel {
      * <br>
      * <p>Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).</p>
      * <br>
-     * <p>You can call the [ListFileType](~~212428~~) operation to query the type of the code for the file.</p>
+     * <p>You can call the [ListFileType](https://help.aliyun.com/document_detail/212428.html) operation to query the type of the code for the file.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileType")
     public Integer fileType;
@@ -159,7 +163,7 @@ public class CreateFileRequest extends TeaModel {
     public String inputList;
 
     /**
-     * <p>The input parameters of the node. The value of this parameter must be in the JSON format. For more information about the input parameters, see the InputContextParameterList parameter in the Response parameters section of the [GetFile](~~173954~~) operation.</p>
+     * <p>The input parameters of the node. The value of this parameter must be in the JSON format. For more information about the input parameters, see the InputContextParameterList parameter in the Response parameters section of the [GetFile](https://help.aliyun.com/document_detail/173954.html) operation.</p>
      * <br>
      * <p>This parameter corresponds to the Input Parameters table in the Input and Output Parameters section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).</p>
      */
@@ -167,7 +171,7 @@ public class CreateFileRequest extends TeaModel {
     public String inputParameters;
 
     /**
-     * <p>The output parameters of the node. The value of this parameter must be in the JSON format. For more information about the output parameters, see the OutputContextParameterList parameter in the Response parameters section of the [GetFile](~~173954~~) operation.</p>
+     * <p>The output parameters of the node. The value of this parameter must be in the JSON format. For more information about the output parameters, see the OutputContextParameterList parameter in the Response parameters section of the [GetFile](https://help.aliyun.com/document_detail/173954.html) operation.</p>
      * <br>
      * <p>This parameter corresponds to the Output Parameters table in the Input and Output Parameters section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console).</p>
      */
@@ -183,7 +187,7 @@ public class CreateFileRequest extends TeaModel {
     /**
      * <p>The scheduling parameters of the node. Separate multiple parameters with spaces.</p>
      * <br>
-     * <p>This parameter corresponds to the Parameters section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console). For more information about the configurations of the scheduling parameters, see [Configure scheduling parameters](~~137548~~).</p>
+     * <p>This parameter corresponds to the Parameters section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console). For more information about the configurations of the scheduling parameters, see [Configure scheduling parameters](https://help.aliyun.com/document_detail/137548.html).</p>
      */
     @NameInMap("ParaValue")
     public String paraValue;
@@ -221,13 +225,13 @@ public class CreateFileRequest extends TeaModel {
      * <br>
      * <p>The identifier of the resource group that is used to run the node. This parameter corresponds to the Resource Group parameter in the Resource Group section of the Properties tab in the DataWorks console. You must configure one of the ResourceGroupId and ResourceGroupIdentifier parameters to determine the resource group that is used to run the node.</p>
      * <br>
-     * <p>You can call the [ListResourceGroups](~~173913~~) operation to query the available resource groups in the workspace. When you call the operation, set the ResourceGroupType parameter to 1. The response parameter Id indicates the ID of an available resource group.</p>
+     * <p>You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/173913.html) operation to query the available resource groups in the workspace. When you call the operation, set the ResourceGroupType parameter to 1. The response parameter Id indicates the ID of an available resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public Long resourceGroupId;
 
     /**
-     * <p>The identifier of the resource group that is used to run the node. You can call the [ListResourceGroups](~~173913~~) operation to query the available resource groups in the workspace.</p>
+     * <p>The identifier of the resource group that is used to run the node. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/173913.html) operation to query the available resource groups in the workspace.</p>
      */
     @NameInMap("ResourceGroupIdentifier")
     public String resourceGroupIdentifier;

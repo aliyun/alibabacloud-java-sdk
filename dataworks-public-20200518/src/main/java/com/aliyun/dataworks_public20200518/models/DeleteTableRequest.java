@@ -30,6 +30,8 @@ public class DeleteTableRequest extends TeaModel {
 
     /**
      * <p>The name of the MaxCompute table.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableName")
     public String tableName;

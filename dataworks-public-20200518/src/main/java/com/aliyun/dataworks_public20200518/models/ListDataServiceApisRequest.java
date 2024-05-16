@@ -36,6 +36,8 @@ public class ListDataServiceApisRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page. Default value: 10. A maximum of 100 entries can be returned on each page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

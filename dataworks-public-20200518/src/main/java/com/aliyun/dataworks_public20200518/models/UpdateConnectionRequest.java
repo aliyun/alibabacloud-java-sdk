@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateConnectionRequest extends TeaModel {
     /**
      * <p>The ID of the data source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConnectionId")
     public Long connectionId;

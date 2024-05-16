@@ -53,7 +53,7 @@ public class UpdateTableAddColumnResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The ID of the subtask that you want to run. If this parameter is left empty, all subtasks are complete. You can call the [GetDDLJobStatus](~~185659~~) operation to query the status of the subtask based on the subtask ID.</p>
+         * <p>The ID of the subtask that you want to run. If this parameter is left empty, all subtasks are complete. You can call the [GetDDLJobStatus](https://help.aliyun.com/document_detail/185659.html) operation to query the status of the subtask based on the subtask ID.</p>
          */
         @NameInMap("NextTaskId")
         public String nextTaskId;

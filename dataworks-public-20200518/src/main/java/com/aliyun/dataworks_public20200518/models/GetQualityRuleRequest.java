@@ -9,12 +9,16 @@ public class GetQualityRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the compute engine instance or data source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
-     * <p>The ID of the monitoring rule. You can call the [ListQualityRules](~~173995~~) operation to query the ID.</p>
+     * <p>The ID of the monitoring rule. You can call the [ListQualityRules](https://help.aliyun.com/document_detail/173995.html) operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;

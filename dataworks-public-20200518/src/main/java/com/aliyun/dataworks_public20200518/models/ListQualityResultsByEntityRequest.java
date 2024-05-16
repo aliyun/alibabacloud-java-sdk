@@ -6,24 +6,32 @@ import com.aliyun.tea.*;
 public class ListQualityResultsByEntityRequest extends TeaModel {
     /**
      * <p>The name of the compute engine instance or data source. You can obtain the name from data source configurations.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
      * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EntityId")
     public Long entityId;
 
     /**
      * <p>The error message returned.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -33,12 +41,16 @@ public class ListQualityResultsByEntityRequest extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>The number of the page to return.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartDate")
     public String startDate;

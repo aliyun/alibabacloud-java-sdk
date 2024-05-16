@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ListNodesByOutputRequest extends TeaModel {
     /**
      * <p>The output name of the node. You can specify multiple output names. In this case, separate them with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Outputs")
     public String outputs;
 
     /**
      * <p>The environment type. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;

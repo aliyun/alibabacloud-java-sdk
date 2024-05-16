@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class UpdateBusinessRequest extends TeaModel {
     /**
-     * <p>The ID of the workflow. You can call the [ListBusiness](~~173945~~) operation to obtain the workflow ID.</p>
+     * <p>The ID of the workflow. You can call the [ListBusiness](https://help.aliyun.com/document_detail/173945.html) operation to obtain the workflow ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BusinessId")
     public Long businessId;
 
     /**
-     * <p>The name of the workflow. You can call the [ListBusiness](~~173945~~) operation to obtain the workflow name.</p>
+     * <p>The name of the workflow. You can call the [ListBusiness](https://help.aliyun.com/document_detail/173945.html) operation to obtain the workflow name.</p>
      */
     @NameInMap("BusinessName")
     public String businessName;
@@ -23,7 +25,7 @@ public class UpdateBusinessRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The owner of the workflow. You can call the [ListBusiness](~~173945~~) operation to obtain the workflow owner.</p>
+     * <p>The owner of the workflow. You can call the [ListBusiness](https://help.aliyun.com/document_detail/173945.html) operation to obtain the workflow owner.</p>
      */
     @NameInMap("Owner")
     public String owner;

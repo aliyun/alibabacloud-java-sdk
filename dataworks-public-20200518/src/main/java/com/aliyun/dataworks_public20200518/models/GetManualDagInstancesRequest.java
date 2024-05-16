@@ -4,12 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetManualDagInstancesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DagId")
     public String dagId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

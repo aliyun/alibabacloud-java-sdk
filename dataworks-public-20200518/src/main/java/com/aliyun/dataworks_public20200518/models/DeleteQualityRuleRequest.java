@@ -9,12 +9,16 @@ public class DeleteQualityRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the database engine or data source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>The ID of the rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;

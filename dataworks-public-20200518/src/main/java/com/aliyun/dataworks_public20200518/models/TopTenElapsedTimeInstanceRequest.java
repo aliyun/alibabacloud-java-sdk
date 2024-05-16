@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class TopTenElapsedTimeInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

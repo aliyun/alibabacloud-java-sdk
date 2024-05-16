@@ -12,6 +12,8 @@ public class CheckFileDeploymentRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance to which the file checker belongs. You can obtain the ID from the CheckerInstanceId parameter in the check event logs returned by DataWorks.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CheckerInstanceId")
     public String checkerInstanceId;
@@ -22,6 +24,8 @@ public class CheckFileDeploymentRequest extends TeaModel {
      * <p>*   OK: The file passes the check.</p>
      * <p>*   WARN: The file passes the check, but an alert is reported.</p>
      * <p>*   FAIL: The file fails the check.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public String status;

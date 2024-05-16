@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the [ListInstances](~~173982~~) operation to query the ID.</p>
+     * <p>The ID of the instance. You can call the [ListInstances](https://help.aliyun.com/document_detail/173982.html) operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public Long instanceId;
 
     /**
      * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;

@@ -12,12 +12,16 @@ public class GetInstanceLogRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public Long instanceId;
 
     /**
      * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;

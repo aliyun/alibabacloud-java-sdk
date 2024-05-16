@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListMigrationsRequest extends TeaModel {
     /**
      * <p>The ID of the owner.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MigrationType")
     public String migrationType;
@@ -30,6 +32,8 @@ public class ListMigrationsRequest extends TeaModel {
 
     /**
      * <p>The type of the migration task. Valid values: IMPORT and EXPORT.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

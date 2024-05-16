@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetMetaTableOutputRequest extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndDate")
     public String endDate;
@@ -24,12 +26,16 @@ public class GetMetaTableOutputRequest extends TeaModel {
 
     /**
      * <p>The ID of the node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartDate")
     public String startDate;
 
     /**
      * <p>The end date of the time range to query. The end date must be within the previous 30 days.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;

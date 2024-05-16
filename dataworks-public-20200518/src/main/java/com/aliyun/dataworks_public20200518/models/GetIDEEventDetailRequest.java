@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class GetIDEEventDetailRequest extends TeaModel {
     /**
      * <p>The ID of the message. You can obtain the ID from the received message when the extension point event is triggered.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MessageId")
     public String messageId;
 
     /**
      * <p>The ID of the workspace. You can obtain the ID from the message.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

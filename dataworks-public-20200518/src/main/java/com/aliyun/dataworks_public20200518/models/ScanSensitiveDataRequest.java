@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ScanSensitiveDataRequest extends TeaModel {
     /**
      * <p>The data that you want to check.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Data")
     public String data;

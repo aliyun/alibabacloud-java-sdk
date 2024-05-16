@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetMetaTableIntroWikiRequest extends TeaModel {
     /**
      * <p>The GUID of the metatable.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;

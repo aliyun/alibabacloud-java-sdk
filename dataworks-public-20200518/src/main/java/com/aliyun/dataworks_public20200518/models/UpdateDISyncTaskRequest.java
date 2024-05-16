@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateDISyncTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the sync node to be updated. You can call the [ListFiles](~~173942~~) operation to query the ID of the node.</p>
+     * <p>The ID of the sync node to be updated. You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to query the ID of the node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileId")
     public Long fileId;
@@ -14,12 +16,14 @@ public class UpdateDISyncTaskRequest extends TeaModel {
      * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
      * <br>
      * <p>You must set this parameter to specify the DataWorks workspace in which the node resides.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The updated configuration of the sync node. This operation is equivalent to node update by using the code editor in the DataWorks console. For more information, see [Create a sync node by using the code editor](~~137717~~). You can call the UpdateDISyncTask operation to update only batch sync nodes. If you do not need to update the configuration of the sync node, leave this parameter empty.</p>
+     * <p>The updated configuration of the sync node. This operation is equivalent to node update by using the code editor in the DataWorks console. For more information, see [Create a sync node by using the code editor](https://help.aliyun.com/document_detail/137717.html). You can call the UpdateDISyncTask operation to update only batch sync nodes. If you do not need to update the configuration of the sync node, leave this parameter empty.</p>
      */
     @NameInMap("TaskContent")
     public String taskContent;
@@ -27,7 +31,7 @@ public class UpdateDISyncTaskRequest extends TeaModel {
     /**
      * <p>The setting that updates the resource group used by the node. The value must be in the JSON format.</p>
      * <br>
-     * <p>Only the ResourceGroup field is supported. This field specifies the identifier of the resource group for Data Integration that is used by the node. To query the identifier of the resource group, call the [ListResourceGroup](~~62055~~) operation.</p>
+     * <p>Only the ResourceGroup field is supported. This field specifies the identifier of the resource group for Data Integration that is used by the node. To query the identifier of the resource group, call the [ListResourceGroup](https://help.aliyun.com/document_detail/62055.html) operation.</p>
      * <br>
      * <p>If you do not need to update the resource group for the sync node, leave this parameter empty.</p>
      */
@@ -38,6 +42,8 @@ public class UpdateDISyncTaskRequest extends TeaModel {
      * <p>The type of the sync node.</p>
      * <br>
      * <p>You can call the UpdateDISyncTask operation to update only batch sync nodes. The value must be DI_OFFLINE.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

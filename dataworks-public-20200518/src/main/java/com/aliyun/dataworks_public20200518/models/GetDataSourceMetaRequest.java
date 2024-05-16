@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetDataSourceMetaRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatasourceName")
     public String datasourceName;
@@ -36,6 +38,8 @@ public class GetDataSourceMetaRequest extends TeaModel {
 
     /**
      * <p>The name of the data source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

@@ -4,11 +4,16 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateTableAddColumnRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Column")
     public java.util.List<UpdateTableAddColumnRequestColumn> column;
 
     /**
      * <p>The globally unique identifier (GUID) of the MaxCompute table. Specify the GUID in the odps.projectName.tableName format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;
@@ -37,6 +42,8 @@ public class UpdateTableAddColumnRequest extends TeaModel {
     public static class UpdateTableAddColumnRequestColumn extends TeaModel {
         /**
          * <p>The name of the field.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
@@ -49,6 +56,8 @@ public class UpdateTableAddColumnRequest extends TeaModel {
 
         /**
          * <p>The type of the field. For more information, see MaxCompute field types.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ColumnType")
         public String columnType;

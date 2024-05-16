@@ -20,6 +20,8 @@ public class UpdateMetaCollectionRequest extends TeaModel {
 
     /**
      * <p>The name of the collection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("QualifiedName")
     public String qualifiedName;

@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class DeleteDataServiceApiAuthorityRequest extends TeaModel {
     /**
      * <p>The ID of the API.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiId")
     public Long apiId;
 
     /**
      * <p>The ID of the workspace from which you want to revoke the access permissions on the API.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AuthorizedProjectId")
     public Long authorizedProjectId;
 
     /**
      * <p>The ID of the workspace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

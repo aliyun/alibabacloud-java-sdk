@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateWorkbenchEventResultRequest extends TeaModel {
     /**
      * <p>The check status of the extension point event. Valid values: OK and Fail. A value of OK indicates that the event passes the check. A value of FAIL indicates that the event fails to pass the check.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CheckResult")
     public String checkResult;
@@ -18,12 +20,16 @@ public class UpdateWorkbenchEventResultRequest extends TeaModel {
 
     /**
      * <p>The code of the extension.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExtensionCode")
     public String extensionCode;
 
     /**
      * <p>The ID of the message received when the related extension point event is triggered after you enable message subscription by using the OpenEvent module.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MessageId")
     public String messageId;

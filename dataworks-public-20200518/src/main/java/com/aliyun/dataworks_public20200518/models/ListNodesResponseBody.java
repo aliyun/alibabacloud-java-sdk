@@ -140,7 +140,7 @@ public class ListNodesResponseBody extends TeaModel {
         public Integer fileType;
 
         /**
-         * <p>The types of the nodes. You can call the [ListNodes](~~173979~~) operation to query the type of the node.</p>
+         * <p>The types of the nodes. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the type of the node.</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
@@ -209,7 +209,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String resGroupName;
 
         /**
-         * <p>The types of the nodes. You can call the [ListNodes](~~173979~~) operation to query the type of the node.</p>
+         * <p>The types of the nodes. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the type of the node.</p>
          */
         @NameInMap("SchedulerType")
         public String schedulerType;

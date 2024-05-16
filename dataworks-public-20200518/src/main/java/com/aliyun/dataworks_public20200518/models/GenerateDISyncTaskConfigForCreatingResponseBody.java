@@ -67,7 +67,7 @@ public class GenerateDISyncTaskConfigForCreatingResponseBody extends TeaModel {
         public Long processId;
 
         /**
-         * <p>The ID of the asynchronous thread. You can call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. The parameters are used to create a real-time synchronization node or a synchronization solution in Data Integration.</p>
+         * <p>The ID of the asynchronous thread. You can call the [QueryDISyncTaskConfigProcessResult](https://help.aliyun.com/document_detail/383465.html) operation to obtain the asynchronously generated parameters based on the ID. The parameters are used to create a real-time synchronization node or a synchronization solution in Data Integration.</p>
          */
         @NameInMap("Status")
         public String status;

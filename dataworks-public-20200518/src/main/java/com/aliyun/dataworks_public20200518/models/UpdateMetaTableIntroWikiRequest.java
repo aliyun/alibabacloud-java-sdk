@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class UpdateMetaTableIntroWikiRequest extends TeaModel {
     /**
      * <p>The details of the instructions on how to use the metatable.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
      * <p>The GUID of the metatable. Specify the GUID in the format of odps.{projectName}.{tableName}.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;

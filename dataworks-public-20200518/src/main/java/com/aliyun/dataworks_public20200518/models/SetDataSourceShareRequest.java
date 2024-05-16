@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class SetDataSourceShareRequest extends TeaModel {
     /**
      * <p>The name of the data source to be shared.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatasourceName")
     public String datasourceName;
@@ -20,7 +22,9 @@ public class SetDataSourceShareRequest extends TeaModel {
     public String envType;
 
     /**
-     * <p>The ID of the DataWorks workspace to which the data source belongs. You can call the [ListProjects](~~178393~~) operation to query the ID of the workspace.</p>
+     * <p>The ID of the DataWorks workspace to which the data source belongs. You can call the [ListProjects](https://help.aliyun.com/document_detail/178393.html) operation to query the ID of the workspace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
@@ -38,7 +42,7 @@ public class SetDataSourceShareRequest extends TeaModel {
     public String projectPermissions;
 
     /**
-     * <p>The user to whom the data source is to be shared. If you set this parameter, the specified user can view or use the data source. The value must be a JSON array. Example: {"projectId":10000,"users":\[{"userId":"276184575345452131","permission":"WRITE"},"sharedName":"PX_DATAHUB1.shared_name"}].</p>
+     * <p>The user to whom the data source is to be shared. If you set this parameter, the specified user can view or use the data source. The value must be a JSON array. Example: {"projectId":10000,"users":[{"userId":"276184575345452131","permission":"WRITE"},"sharedName":"PX_DATAHUB1.shared_name"}].</p>
      * <br>
      * <p>Field description:</p>
      * <br>

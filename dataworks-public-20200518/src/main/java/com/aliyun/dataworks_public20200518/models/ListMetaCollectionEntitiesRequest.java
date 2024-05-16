@@ -8,6 +8,8 @@ public class ListMetaCollectionEntitiesRequest extends TeaModel {
      * <p>The type of the entities.</p>
      * <br>
      * <p>For example, if this parameter is set to maxcompute-table, the entity is a MaxCompute table.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CollectionQualifiedName")
     public String collectionQualifiedName;

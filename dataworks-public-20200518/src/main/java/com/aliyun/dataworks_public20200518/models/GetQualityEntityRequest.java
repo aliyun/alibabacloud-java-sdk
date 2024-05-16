@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetQualityEntityRequest extends TeaModel {
     /**
      * <p>The type of the compute engine instance or data source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnvType")
     public String envType;
@@ -21,12 +23,16 @@ public class GetQualityEntityRequest extends TeaModel {
 
     /**
      * <p>The name of the compute engine instance or data source. You can obtain the name from data source configurations.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
-     * <p>The name of the partitioned table. You can call the [GetMetaTablePartition](~~173923~~) operation to obtain the name.</p>
+     * <p>The name of the partitioned table. You can call the [GetMetaTablePartition](https://help.aliyun.com/document_detail/173923.html) operation to obtain the name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableName")
     public String tableName;

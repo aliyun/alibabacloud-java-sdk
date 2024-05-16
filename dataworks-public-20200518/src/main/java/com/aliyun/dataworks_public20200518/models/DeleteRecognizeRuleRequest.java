@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteRecognizeRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SensitiveId")
     public String sensitiveId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 

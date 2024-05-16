@@ -10,6 +10,8 @@ public class UpdateDIProjectConfigRequest extends TeaModel {
      * <p>Valid values: oracle, mysql, polardb, datahub, drds, and analyticdb_for_mysql.</p>
      * <br>
      * <p>If you do not configure this parameter, DataWorks applies the default global configuration to all sources.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationType")
     public String destinationType;
@@ -19,6 +21,8 @@ public class UpdateDIProjectConfigRequest extends TeaModel {
      * <br>
      * <p>*   true: The request was successful.</p>
      * <p>*   false: The request failed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectConfig")
     public String projectConfig;
@@ -27,6 +31,8 @@ public class UpdateDIProjectConfigRequest extends TeaModel {
      * <p>The type of the destinations of the synchronization solutions. This parameter cannot be left empty.</p>
      * <br>
      * <p>Valid values: analyticdb_for_mysql, odps, elasticsearch, holo, mysql, and polardb.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

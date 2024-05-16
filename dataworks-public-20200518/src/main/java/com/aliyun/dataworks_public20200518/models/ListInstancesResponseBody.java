@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the ID of the node.</p>
+     * <p>The ID of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID of the node.</p>
      */
     @NameInMap("Data")
     public ListInstancesResponseBodyData data;
@@ -25,7 +25,7 @@ public class ListInstancesResponseBody extends TeaModel {
     /**
      * <p>The error message that is returned for the instance.</p>
      * <br>
-     * <p>This parameter is deprecated. You can call the [GetInstanceLog](~~173983~~) operation to query the error information related to the node.</p>
+     * <p>This parameter is deprecated. You can call the [GetInstanceLog](https://help.aliyun.com/document_detail/173983.html) operation to query the error information related to the node.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -156,7 +156,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the ID of the node.</p>
+         * <p>The ID of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID of the node.</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
@@ -219,7 +219,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long instanceId;
 
         /**
-         * <p>The name of the workflow. You can call the [ListBusiness](~~173945~~) operation to query the name of the workflow.</p>
+         * <p>The name of the workflow. You can call the [ListBusiness](https://help.aliyun.com/document_detail/173945.html) operation to query the name of the workflow.</p>
          */
         @NameInMap("ModifyTime")
         public Long modifyTime;
@@ -249,7 +249,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The type of the node. You can call the [ListNodes](~~173979~~) operation to query the type of the node.</p>
+         * <p>The type of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the type of the node.</p>
          */
         @NameInMap("RelatedFlowId")
         public Long relatedFlowId;
@@ -298,7 +298,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the workspace. You can call the [ListProjects](~~178393~~) operation to query the ID of the workspace.</p>
+         * <p>The ID of the workspace. You can call the [ListProjects](https://help.aliyun.com/document_detail/178393.html) operation to query the ID of the workspace.</p>
          */
         @NameInMap("TaskRerunTime")
         public Integer taskRerunTime;
@@ -542,7 +542,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the node. You can call the [ListNodes](~~173979~~) operation to query the name of the node.</p>
+         * <p>The name of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the name of the node.</p>
          */
         @NameInMap("Instances")
         public java.util.List<ListInstancesResponseBodyDataInstances> instances;

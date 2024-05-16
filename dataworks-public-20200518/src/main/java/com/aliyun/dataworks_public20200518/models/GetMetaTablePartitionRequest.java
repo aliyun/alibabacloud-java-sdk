@@ -7,7 +7,7 @@ public class GetMetaTablePartitionRequest extends TeaModel {
     /**
      * <p>The name of the metatable in the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</p>
      * <br>
-     * <p>You can call the [GetMetaDBTableList](~~173916~~) operation to query the name of the metatable.</p>
+     * <p>You can call the [GetMetaDBTableList](https://help.aliyun.com/document_detail/173916.html) operation to query the name of the metatable.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -49,7 +49,7 @@ public class GetMetaTablePartitionRequest extends TeaModel {
     /**
      * <p>The name of the metadatabase. This parameter is required only if you set the DataSourceType parameter to emr.</p>
      * <br>
-     * <p>You can call the [ListMetaDB](~~185662~~) operation to query the name of the metadatabase.</p>
+     * <p>You can call the [ListMetaDB](https://help.aliyun.com/document_detail/185662.html) operation to query the name of the metadatabase.</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class RemoveProjectMemberFromRoleRequest extends TeaModel {
     /**
      * <p>The ID of the DataWorks workspace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
@@ -18,18 +20,22 @@ public class RemoveProjectMemberFromRoleRequest extends TeaModel {
      * <p>*   role_project_owner: workspace owner</p>
      * <p>*   role_project_admin: workspace administrator</p>
      * <p>*   role_project_dev: developer</p>
-     * <p>*   role_project_pe: O\&M engineer</p>
+     * <p>*   role_project_pe: O\\&M engineer</p>
      * <p>*   role_project_deploy: deployment expert</p>
      * <p>*   role_project_guest: visitor</p>
      * <p>*   role_project_security: security administrator</p>
      * <p>*   role_project_tester: experiencer</p>
      * <p>*   role_project_erd: model designer</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RoleCode")
     public String roleCode;
 
     /**
      * <p>The ID of the user.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;

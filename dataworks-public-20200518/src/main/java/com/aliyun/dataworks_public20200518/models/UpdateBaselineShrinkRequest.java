@@ -13,6 +13,9 @@ public class UpdateBaselineShrinkRequest extends TeaModel {
     @NameInMap("AlertSettings")
     public String alertSettingsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BaselineId")
     public Long baselineId;
 
@@ -37,6 +40,9 @@ public class UpdateBaselineShrinkRequest extends TeaModel {
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

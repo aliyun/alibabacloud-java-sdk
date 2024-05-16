@@ -12,6 +12,8 @@ public class ListInnerNodesRequest extends TeaModel {
 
     /**
      * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OuterNodeId")
     public Long outerNodeId;
@@ -42,6 +44,8 @@ public class ListInnerNodesRequest extends TeaModel {
 
     /**
      * <p>The environment in which the node is run. Valid values: DEV and PROD. Default value: PROD.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

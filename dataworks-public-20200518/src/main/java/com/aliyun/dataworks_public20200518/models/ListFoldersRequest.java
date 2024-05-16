@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class ListFoldersRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The path of the parent folder.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ParentFolderPath")
     public String parentFolderPath;

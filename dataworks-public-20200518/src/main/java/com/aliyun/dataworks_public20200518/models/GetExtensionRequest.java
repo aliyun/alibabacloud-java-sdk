@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetExtensionRequest extends TeaModel {
     /**
      * <p>The unique code of the extension.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExtensionCode")
     public String extensionCode;

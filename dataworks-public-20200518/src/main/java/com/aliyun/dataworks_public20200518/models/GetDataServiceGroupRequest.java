@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class GetDataServiceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the business process.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the workspace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

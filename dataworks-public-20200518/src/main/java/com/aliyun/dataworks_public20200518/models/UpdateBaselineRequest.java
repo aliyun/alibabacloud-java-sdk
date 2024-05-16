@@ -13,6 +13,9 @@ public class UpdateBaselineRequest extends TeaModel {
     @NameInMap("AlertSettings")
     public java.util.List<UpdateBaselineRequestAlertSettings> alertSettings;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BaselineId")
     public Long baselineId;
 
@@ -37,6 +40,9 @@ public class UpdateBaselineRequest extends TeaModel {
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

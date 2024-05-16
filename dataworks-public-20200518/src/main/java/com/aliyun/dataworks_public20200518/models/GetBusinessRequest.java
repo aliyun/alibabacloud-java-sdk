@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetBusinessRequest extends TeaModel {
     /**
-     * <p>The ID of the workflow. You can call the [ListBusiness](~~173945~~) operation to query the ID.</p>
+     * <p>The ID of the workflow. You can call the [ListBusiness](https://help.aliyun.com/document_detail/173945.html) operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BusinessId")
     public Long businessId;

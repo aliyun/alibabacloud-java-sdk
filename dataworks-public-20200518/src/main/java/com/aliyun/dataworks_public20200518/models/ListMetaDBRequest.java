@@ -12,6 +12,8 @@ public class ListMetaDBRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
@@ -30,6 +32,8 @@ public class ListMetaDBRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

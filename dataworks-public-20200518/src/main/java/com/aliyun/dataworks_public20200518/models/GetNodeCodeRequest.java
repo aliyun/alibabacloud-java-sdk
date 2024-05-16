@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class GetNodeCodeRequest extends TeaModel {
     /**
      * <p>The ID of the node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeId")
     public Long nodeId;
 
     /**
      * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;

@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateManualDagRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BizDate")
     public String bizDate;
 
@@ -13,6 +16,9 @@ public class CreateManualDagRequest extends TeaModel {
     @NameInMap("ExcludeNodeIds")
     public String excludeNodeIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FlowName")
     public String flowName;
 
@@ -22,9 +28,15 @@ public class CreateManualDagRequest extends TeaModel {
     @NameInMap("NodeParameters")
     public String nodeParameters;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

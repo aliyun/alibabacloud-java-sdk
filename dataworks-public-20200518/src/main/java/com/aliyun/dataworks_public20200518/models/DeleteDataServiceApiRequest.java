@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DeleteDataServiceApiRequest extends TeaModel {
     /**
      * <p>The ID of the API in DataService Studio.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiId")
     public Long apiId;
 
     /**
      * <p>The ID of the workspace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateTableThemeRequest extends TeaModel {
     /**
      * <p>The name of the table folder.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -18,6 +20,8 @@ public class UpdateTableThemeRequest extends TeaModel {
 
     /**
      * <p>The ID of the table folder.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ThemeId")
     public Long themeId;

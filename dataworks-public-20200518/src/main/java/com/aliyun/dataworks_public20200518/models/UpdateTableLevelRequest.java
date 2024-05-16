@@ -12,6 +12,8 @@ public class UpdateTableLevelRequest extends TeaModel {
 
     /**
      * <p>The ID of the table level to be updated. You can call the ListTableLevel operation to obtain the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LevelId")
     public Long levelId;
@@ -30,6 +32,8 @@ public class UpdateTableLevelRequest extends TeaModel {
 
     /**
      * <p>The ID of the DataWorks workspace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

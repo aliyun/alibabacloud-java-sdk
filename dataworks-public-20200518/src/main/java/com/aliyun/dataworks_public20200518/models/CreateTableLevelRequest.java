@@ -12,12 +12,16 @@ public class CreateTableLevelRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the service is activated.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LevelType")
     public Integer levelType;
 
     /**
      * <p>Level 1</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;

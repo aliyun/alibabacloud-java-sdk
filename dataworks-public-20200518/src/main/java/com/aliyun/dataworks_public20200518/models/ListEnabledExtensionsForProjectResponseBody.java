@@ -69,7 +69,7 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
-         * <p>The parameter settings of the extension. For more information, see [Configure extension parameters](~~405354~~).</p>
+         * <p>The parameter settings of the extension. For more information, see [Configure extension parameters](https://help.aliyun.com/document_detail/405354.html).</p>
          */
         @NameInMap("Owner")
         public String owner;

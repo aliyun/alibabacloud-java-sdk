@@ -12,6 +12,8 @@ public class DeleteTableThemeRequest extends TeaModel {
 
     /**
      * <p>The ID of the table folder.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ThemeId")
     public Long themeId;

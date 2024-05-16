@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteFolderRequest extends TeaModel {
     /**
-     * <p>The ID of the folder. You can call the [ListFolders](~~173955~~) operation to query the ID.</p>
+     * <p>The ID of the folder. You can call the [ListFolders](https://help.aliyun.com/document_detail/173955.html) operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FolderId")
     public String folderId;

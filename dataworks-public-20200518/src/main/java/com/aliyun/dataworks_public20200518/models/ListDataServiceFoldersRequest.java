@@ -30,6 +30,8 @@ public class ListDataServiceFoldersRequest extends TeaModel {
 
     /**
      * <p>The ID of the workspace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

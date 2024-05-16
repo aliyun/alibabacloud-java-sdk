@@ -20,7 +20,7 @@ public class SubmitFileResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The ID of the deployment task. The ID is used as the value of a specific request parameter when you call the [GetDeployment](~~173950~~) operation to query the details of the deployment task.</p>
+     * <p>The ID of the deployment task. The ID is used as the value of a specific request parameter when you call the [GetDeployment](https://help.aliyun.com/document_detail/173950.html) operation to query the details of the deployment task.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;

@@ -27,6 +27,8 @@ public class RunCycleDagNodesRequest extends TeaModel {
 
     /**
      * <p>The data timestamp at which data is no longer backfilled. Specify the value in the yyyy-MM-dd 00:00:00 format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndBizDate")
     public String endBizDate;
@@ -38,13 +40,17 @@ public class RunCycleDagNodesRequest extends TeaModel {
     public String excludeNodeIds;
 
     /**
-     * <p>The ID of the node for which you want to backfill data. If you want to backfill data for multiple nodes, separate the IDs of the nodes with commas (,). You can call the [ListNodes](~~173979~~) operation to query the ID.</p>
+     * <p>The ID of the node for which you want to backfill data. If you want to backfill data for multiple nodes, separate the IDs of the nodes with commas (,). You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IncludeNodeIds")
     public String includeNodeIds;
 
     /**
      * <p>The name of the workflow.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -57,24 +63,32 @@ public class RunCycleDagNodesRequest extends TeaModel {
 
     /**
      * <p>Specifies whether data can be backfilled for multiple nodes at the same time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Parallelism")
     public Boolean parallelism;
 
     /**
      * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
     /**
-     * <p>The ID of the node for which data is first backfilled. You can call the [ListNodes](~~173979~~) operation to query the ID.</p>
+     * <p>The ID of the node for which data is first backfilled. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RootNodeId")
     public Long rootNodeId;
 
     /**
      * <p>The data timestamp at which data starts to be backfilled. Specify the value in the yyyy-MM-dd 00:00:00 format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartBizDate")
     public String startBizDate;

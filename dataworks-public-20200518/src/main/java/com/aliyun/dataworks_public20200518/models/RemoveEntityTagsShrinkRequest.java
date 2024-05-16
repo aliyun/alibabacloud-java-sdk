@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class RemoveEntityTagsShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QualifiedName")
     public String qualifiedName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TagKeys")
     public String tagKeysShrink;
 

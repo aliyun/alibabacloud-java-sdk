@@ -4,18 +4,30 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateDagTestRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Bizdate")
     public String bizdate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NodeId")
     public Long nodeId;
 
     @NameInMap("NodeParams")
     public String nodeParams;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 

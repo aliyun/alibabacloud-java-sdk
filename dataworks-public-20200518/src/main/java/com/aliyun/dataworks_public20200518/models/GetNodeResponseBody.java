@@ -11,7 +11,7 @@ public class GetNodeResponseBody extends TeaModel {
     public GetNodeResponseBodyData data;
 
     /**
-     * <p>The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the node ID.</p>
+     * <p>The ID of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the node ID.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -125,7 +125,7 @@ public class GetNodeResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the node ID.</p>
+         * <p>The ID of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the node ID.</p>
          */
         @NameInMap("DqcDescription")
         public String dqcDescription;

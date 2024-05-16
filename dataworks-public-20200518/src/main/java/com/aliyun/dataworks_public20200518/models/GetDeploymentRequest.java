@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetDeploymentRequest extends TeaModel {
     /**
-     * <p>The ID of the deployment task. A deployment task ID is generated when you call the [SubmitFile](~~173944~~) or [DeployFile](~~173956~~) operation.</p>
+     * <p>The ID of the deployment task. A deployment task ID is generated when you call the [SubmitFile](https://help.aliyun.com/document_detail/173944.html) or [DeployFile](https://help.aliyun.com/document_detail/173956.html) operation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DeploymentId")
     public Long deploymentId;

@@ -9,6 +9,8 @@ public class GetDISyncTaskRequest extends TeaModel {
      * <br>
      * <p>*   true: The request is successful.</p>
      * <p>*   false: The request fails.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileId")
     public Long fileId;
@@ -18,6 +20,8 @@ public class GetDISyncTaskRequest extends TeaModel {
      * <br>
      * <p>*   DI_REALTIME: real-time synchronization node</p>
      * <p>*   DI_SOLUTION: data synchronization solution</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
@@ -26,7 +30,9 @@ public class GetDISyncTaskRequest extends TeaModel {
      * <p>*   If you set the TaskType parameter to DI_REALTIME, set the FileId parameter to the ID of the real-time synchronization node that you want to query.</p>
      * <p>*   If you set the TaskType parameter to DI_SOLUTION, set the FileId parameter to the ID of the data synchronization solution that you want to query.</p>
      * <br>
-     * <p>You can call the [ListFiles](~~173942~~) operation to query the ID of the real-time synchronization node or data synchronization solution.</p>
+     * <p>You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to query the ID of the real-time synchronization node or data synchronization solution.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

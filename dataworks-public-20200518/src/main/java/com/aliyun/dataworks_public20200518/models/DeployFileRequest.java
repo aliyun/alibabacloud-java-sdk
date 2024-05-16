@@ -11,7 +11,7 @@ public class DeployFileRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The ID of the file. You can call the [ListFiles](~~173942~~) operation to query the ID.</p>
+     * <p>The ID of the file. You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to query the ID.</p>
      * <br>
      * <p>You must configure either the FileId parameter or the NodeId parameter.</p>
      */
