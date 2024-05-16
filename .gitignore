@@ -1,33 +1,58 @@
-.idea/
-.DS_Store
-.history/
-.nyc_output/
-.vscode/
-*.lock
-*.sum
+# Compiled class file
+*.class
+
+# Log file
 *.log
-vendor/
-*.iml
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Maven
 target/
-.settings/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle
+build/
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Eclipse
 .classpath
 .project
-.history/
-coverage.html
-coverage.out
-node_modules/
-libraries/
-**/.libraries.json
-*.sh
-**/bin/
-**/obj/
-**/csharp/**/.vs/
-**/dist/
-*.tgz
-test*
-.php_cs.cache
-.env
+.settings/
+.springBeans
+.sts4-cache
 
-**/python/**/__pycache__
-*.nupkg
-package-lock.json
+# VS Code
+.vscode/
+
+# ENV
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+*/lib/
+*.bat
