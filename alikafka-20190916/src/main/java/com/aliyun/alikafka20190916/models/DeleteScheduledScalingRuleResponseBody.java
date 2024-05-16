@@ -3,45 +3,36 @@ package com.aliyun.alikafka20190916.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteSaslUserResponseBody extends TeaModel {
-    /**
-     * <p>The HTTP status code. If the request is successful, 200 is returned.</p>
-     */
+public class DeleteScheduledScalingRuleResponseBody extends TeaModel {
     @NameInMap("Code")
-    public Integer code;
+    public Long code;
 
-    /**
-     * <p>The returned message.</p>
-     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    public static DeleteSaslUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteSaslUserResponseBody self = new DeleteSaslUserResponseBody();
+    public static DeleteScheduledScalingRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteScheduledScalingRuleResponseBody self = new DeleteScheduledScalingRuleResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteSaslUserResponseBody setCode(Integer code) {
+    public DeleteScheduledScalingRuleResponseBody setCode(Long code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public Long getCode() {
         return this.code;
     }
 
-    public DeleteSaslUserResponseBody setMessage(String message) {
+    public DeleteScheduledScalingRuleResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -49,7 +40,7 @@ public class DeleteSaslUserResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DeleteSaslUserResponseBody setRequestId(String requestId) {
+    public DeleteScheduledScalingRuleResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -57,7 +48,7 @@ public class DeleteSaslUserResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteSaslUserResponseBody setSuccess(Boolean success) {
+    public DeleteScheduledScalingRuleResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

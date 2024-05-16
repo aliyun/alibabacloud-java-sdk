@@ -12,12 +12,16 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which the resource is deployed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The list of resource IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -30,12 +34,16 @@ public class TagResourcesRequest extends TeaModel {
      * <p>*   **CONSUMERGROUP**</p>
      * <br>
      * <p>>  The value of this parameter is not case-sensitive.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tags that you want to add.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -91,6 +99,8 @@ public class TagResourcesRequest extends TeaModel {
          * <br>
          * <p>*   You must specify this parameter.</p>
          * <p>*   The tag key must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag key cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;

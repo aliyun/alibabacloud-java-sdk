@@ -3,29 +3,25 @@ package com.aliyun.alikafka20190916.models;
 
 import com.aliyun.tea.*;
 
-public class GetAllowedIpListRequest extends TeaModel {
+public class GetAutoScalingConfigurationRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
-    public static GetAllowedIpListRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetAllowedIpListRequest self = new GetAllowedIpListRequest();
+    public static GetAutoScalingConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetAutoScalingConfigurationRequest self = new GetAutoScalingConfigurationRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetAllowedIpListRequest setInstanceId(String instanceId) {
+    public GetAutoScalingConfigurationRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -33,7 +29,7 @@ public class GetAllowedIpListRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public GetAllowedIpListRequest setRegionId(String regionId) {
+    public GetAutoScalingConfigurationRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

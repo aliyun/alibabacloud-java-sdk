@@ -10,24 +10,32 @@ public class ModifyPartitionNumRequest extends TeaModel {
      * <p>*   The value must be an integer that is greater than 0.</p>
      * <p>*   To reduce the risk of data skew, we recommend that you set the value to a multiple of 6.</p>
      * <p>*   The number of total partitions ranges from 1 to 360.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AddPartitionNum")
     public Integer addPartitionNum;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The topic name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Topic")
     public String topic;

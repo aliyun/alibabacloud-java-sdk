@@ -27,6 +27,8 @@ public class CreateTopicRequest extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -54,13 +56,20 @@ public class CreateTopicRequest extends TeaModel {
      * <p>The number of partitions in the topic.</p>
      * <br>
      * <p>*   Valid values: 1 to 360.</p>
-     * <p>*   The system recommends the number of partitions based on the specification of the instance. You can view the recommended number in the Message Queue for Apache Kafka console. We recommend that you specify the number that is recommended by the system as the value of this parameter to reduce the risk of data skew.</p>
+     * <p>*   In the ApsaraMQ for Kafka console, you can view the number of partitions that the system recommends based on the specifications of the instance. We recommend that you specify the number that is recommended by the system as the value of this parameter to reduce the risk of data skew.</p>
+     * <br>
+     * <p>Default values:</p>
+     * <br>
+     * <p>*   ApsaraMQ for Kafka V2 instance: 12</p>
+     * <p>*   ApsaraMQ for Kafka V3 instance: 3</p>
      */
     @NameInMap("PartitionNum")
     public String partitionNum;
 
     /**
      * <p>The region ID of the instance in which you want to create a topic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -68,8 +77,10 @@ public class CreateTopicRequest extends TeaModel {
     /**
      * <p>The description of the topic.</p>
      * <br>
-     * <p>*   The description can contain only letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>*   The description can contain only letters, digits, hyphens (-), and underscores (_).</p>
      * <p>*   The description must be 3 to 64 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -94,9 +105,11 @@ public class CreateTopicRequest extends TeaModel {
     /**
      * <p>The topic name.</p>
      * <br>
-     * <p>*   The name can contain only letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>*   The name can contain only letters, digits, hyphens (-), and underscores (_).</p>
      * <p>*   The name must be 3 to 64 characters in length. If the name that you specify contains more than 64 characters, the system automatically truncates the name.</p>
      * <p>*   After a topic is created, you cannot change the name of the topic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Topic")
     public String topic;
@@ -200,6 +213,8 @@ public class CreateTopicRequest extends TeaModel {
          * <br>
          * <p>*   If you do not specify this parameter, the keys of all tags are matched.</p>
          * <p>*   The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;

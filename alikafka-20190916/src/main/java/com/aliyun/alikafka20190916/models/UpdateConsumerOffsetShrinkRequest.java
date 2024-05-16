@@ -7,15 +7,19 @@ public class UpdateConsumerOffsetShrinkRequest extends TeaModel {
     /**
      * <p>The name of the consumer group.</p>
      * <br>
-     * <p>*   The name can contain letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>*   The name can contain letters, digits, hyphens (-), and underscores (_).</p>
      * <p>*   The name must be **3 to 64** characters in length. If a name contains more than **64** characters, the name is automatically truncated.</p>
      * <p>*   The name of a consumer group cannot be changed after the consumer group is created.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConsumerId")
     public String consumerId;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -28,6 +32,8 @@ public class UpdateConsumerOffsetShrinkRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance to which the consumer group belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -53,11 +59,13 @@ public class UpdateConsumerOffsetShrinkRequest extends TeaModel {
     /**
      * <p>The topic name.</p>
      * <br>
-     * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
+     * <p>*   The name can contain letters, digits, underscores (_), and hyphens (-).</p>
      * <p>*   The name must be **3 to 64** characters in length. If a name contains more than **64** characters, the name is automatically truncated.</p>
      * <p>*   The name of a topic cannot be changed after the topic is created.</p>
      * <br>
      * <p>**If you want to reset the consumer offsets of all topics to which the consumer subscribes, specify an empty string.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Topic")
     public String topic;

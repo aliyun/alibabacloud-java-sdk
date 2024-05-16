@@ -7,13 +7,17 @@ public class GetTopicSubscribeStatusRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <br>
-     * <p>You can call the [GetInstanceList](~~437663~~) operation to query instances.</p>
+     * <p>You can call the [GetInstanceList](https://help.aliyun.com/document_detail/437663.html) operation to query instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -21,7 +25,9 @@ public class GetTopicSubscribeStatusRequest extends TeaModel {
     /**
      * <p>The topic name.</p>
      * <br>
-     * <p>You can call the [GetTopicList](~~437677~~) operation to query topics.</p>
+     * <p>You can call the [GetTopicList](https://help.aliyun.com/document_detail/437677.html) operation to query topics.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Topic")
     public String topic;

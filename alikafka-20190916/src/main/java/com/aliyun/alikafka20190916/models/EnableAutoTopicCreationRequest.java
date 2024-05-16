@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class EnableAutoTopicCreationRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -16,6 +18,8 @@ public class EnableAutoTopicCreationRequest extends TeaModel {
      * <p>*   enable: enables the automatic topic creation feature.</p>
      * <p>*   disable: disables the automatic topic creation feature.</p>
      * <p>*   updatePartition: changes the number of partitions in topics that are automatically created.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Operate")
     public String operate;
@@ -30,6 +34,8 @@ public class EnableAutoTopicCreationRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

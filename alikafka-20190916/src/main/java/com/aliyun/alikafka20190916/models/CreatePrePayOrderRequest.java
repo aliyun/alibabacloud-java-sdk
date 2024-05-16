@@ -4,6 +4,9 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class CreatePrePayOrderRequest extends TeaModel {
+    /**
+     * <p>The configurations of ApsaraMQ for Confluent components.</p>
+     */
     @NameInMap("ConfluentConfig")
     public CreatePrePayOrderRequestConfluentConfig confluentConfig;
 
@@ -19,7 +22,7 @@ public class CreatePrePayOrderRequest extends TeaModel {
     /**
      * <p>The disk size. Unit: GB.</p>
      * <br>
-     * <p>For more information about the valid values, see [Billing](~~84737~~).</p>
+     * <p>For more information about the valid values, see [Billing](https://help.aliyun.com/document_detail/84737.html).</p>
      */
     @NameInMap("DiskSize")
     public Integer diskSize;
@@ -33,6 +36,11 @@ public class CreatePrePayOrderRequest extends TeaModel {
     @NameInMap("DiskType")
     public String diskType;
 
+    /**
+     * <p>The subscription duration. Unit: months. Default value: 1. Valid values:</p>
+     * <br>
+     * <p>*   **1 to 12**</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
@@ -40,7 +48,7 @@ public class CreatePrePayOrderRequest extends TeaModel {
      * <p>The Internet traffic for the instance.</p>
      * <br>
      * <p>*   This parameter is required if the **DeployType** parameter is set to **4**.</p>
-     * <p>*   For more information about the valid values, see [Pay-as-you-go](~~72142~~).</p>
+     * <p>*   For more information about the valid values, see [Pay-as-you-go](https://help.aliyun.com/document_detail/72142.html).</p>
      */
     @NameInMap("EipMax")
     public Integer eipMax;
@@ -49,7 +57,7 @@ public class CreatePrePayOrderRequest extends TeaModel {
      * <p>The maximum traffic for the instance. We recommend that you do not configure this parameter.</p>
      * <br>
      * <p>*   You must configure at least one of the **IoMax** and **IoMaxSpec** parameters. If both parameters are configured, the value of the **IoMaxSpec** parameter takes effect. We recommend that you configure only the **IoMaxSpec** parameter.</p>
-     * <p>*   For more information about the valid values, see [Billing](~~84737~~).</p>
+     * <p>*   For more information about the valid values, see [Billing](https://help.aliyun.com/document_detail/84737.html).</p>
      */
     @NameInMap("IoMax")
     public Integer ioMax;
@@ -58,11 +66,17 @@ public class CreatePrePayOrderRequest extends TeaModel {
      * <p>The traffic specification of the instance. We recommend that you configure this parameter.</p>
      * <br>
      * <p>*   You must configure at least one of the **IoMax** and **IoMaxSpec** parameters. If both parameters are configured, the value of the **IoMaxSpec** parameter takes effect. We recommend that you configure only the **IoMaxSpec** parameter.</p>
-     * <p>*   For more information about the valid values, see [Billing](~~84737~~).</p>
+     * <p>*   For more information about the valid values, see [Billing](https://help.aliyun.com/document_detail/84737.html).</p>
      */
     @NameInMap("IoMaxSpec")
     public String ioMaxSpec;
 
+    /**
+     * <p>The billing method of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **0**: the subscription billing method</p>
+     * <p>*   **4**: the subscription billing method for ApsaraMQ for Confluent instances</p>
+     */
     @NameInMap("PaidType")
     public Integer paidType;
 
@@ -71,13 +85,15 @@ public class CreatePrePayOrderRequest extends TeaModel {
      * <br>
      * <p>*   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.</p>
      * <p>*   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.</p>
-     * <p>*   For more information about the valid values, see [Billing](~~84737~~).</p>
+     * <p>*   For more information about the valid values, see [Billing](https://help.aliyun.com/document_detail/84737.html).</p>
      */
     @NameInMap("PartitionNum")
     public Integer partitionNum;
 
     /**
      * <p>The region ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -97,7 +113,7 @@ public class CreatePrePayOrderRequest extends TeaModel {
      * <p>*   **professional**: Professional Edition (High Write)</p>
      * <p>*   **professionalForHighRead**: Professional Edition (High Read)</p>
      * <br>
-     * <p>For more information, see [Billing](~~84737~~).</p>
+     * <p>For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).</p>
      */
     @NameInMap("SpecType")
     public String specType;
@@ -114,7 +130,7 @@ public class CreatePrePayOrderRequest extends TeaModel {
      * <p>*   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.</p>
      * <p>*   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.</p>
      * <p>*   The default value of the TopicQuota parameter varies based on the value of the IoMaxSpec parameter. If the number of topics that you consume exceeds the default value, you are charged additional fees.</p>
-     * <p>*   For more information about the valid values, see [Billing](~~84737~~).</p>
+     * <p>*   For more information about the valid values, see [Billing](https://help.aliyun.com/document_detail/84737.html).</p>
      */
     @NameInMap("TopicQuota")
     public Integer topicQuota;
@@ -245,57 +261,111 @@ public class CreatePrePayOrderRequest extends TeaModel {
     }
 
     public static class CreatePrePayOrderRequestConfluentConfig extends TeaModel {
+        /**
+         * <p>The number of CPU cores of Connect.</p>
+         */
         @NameInMap("ConnectCU")
         public Integer connectCU;
 
+        /**
+         * <p>The number of replicas of Connect.</p>
+         */
         @NameInMap("ConnectReplica")
         public Integer connectReplica;
 
+        /**
+         * <p>The number of CPU cores of Control Center.</p>
+         */
         @NameInMap("ControlCenterCU")
         public Integer controlCenterCU;
 
+        /**
+         * <p>The number of replicas of Control Center.</p>
+         */
         @NameInMap("ControlCenterReplica")
         public Integer controlCenterReplica;
 
+        /**
+         * <p>The disk capacity of Control Center. Unit: GB</p>
+         */
         @NameInMap("ControlCenterStorage")
         public Integer controlCenterStorage;
 
+        /**
+         * <p>The number of CPU cores of the Kafka broker.</p>
+         */
         @NameInMap("KafkaCU")
         public Integer kafkaCU;
 
+        /**
+         * <p>The number of replicas of the Kafka broker.</p>
+         */
         @NameInMap("KafkaReplica")
         public Integer kafkaReplica;
 
+        /**
+         * <p>The number of CPU cores of Kafka Rest Proxy.</p>
+         */
         @NameInMap("KafkaRestProxyCU")
         public Integer kafkaRestProxyCU;
 
+        /**
+         * <p>The number of replicas of Kafka Rest Proxy.</p>
+         */
         @NameInMap("KafkaRestProxyReplica")
         public Integer kafkaRestProxyReplica;
 
+        /**
+         * <p>The disk capacity of the Kafka broker. Unit: GB</p>
+         */
         @NameInMap("KafkaStorage")
         public Integer kafkaStorage;
 
+        /**
+         * <p>The number of CPU cores of ksqIDB.</p>
+         */
         @NameInMap("KsqlCU")
         public Integer ksqlCU;
 
+        /**
+         * <p>The number of replicas of ksqlDB.</p>
+         */
         @NameInMap("KsqlReplica")
         public Integer ksqlReplica;
 
+        /**
+         * <p>The disk capacity of ksqlDB. Unit: GB</p>
+         */
         @NameInMap("KsqlStorage")
         public Integer ksqlStorage;
 
+        /**
+         * <p>The number of CPU cores of Schema Registry.</p>
+         */
         @NameInMap("SchemaRegistryCU")
         public Integer schemaRegistryCU;
 
+        /**
+         * <p>The number of replicas of Schema Registry.</p>
+         */
         @NameInMap("SchemaRegistryReplica")
         public Integer schemaRegistryReplica;
 
+        /**
+         * <p>The number of CPU cores of ZooKeeper.</p>
+         */
         @NameInMap("ZooKeeperCU")
         public Integer zooKeeperCU;
 
+        /**
+         * <p>The number of replicas of ZooKeeper.</p>
+         */
         @NameInMap("ZooKeeperReplica")
         public Integer zooKeeperReplica;
 
+        /**
+         * <p>The disk capacity of ZooKeeper. Unit: GB</p>
+         */
         @NameInMap("ZooKeeperStorage")
         public Integer zooKeeperStorage;
 
@@ -457,6 +527,8 @@ public class CreatePrePayOrderRequest extends TeaModel {
          * <p>*   Valid values of N: 1 to 20.</p>
          * <p>*   If this parameter is left empty, the keys of all tags are matched.</p>
          * <p>*   The tag key can be up to 128 characters in length and cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;

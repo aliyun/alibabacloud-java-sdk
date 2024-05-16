@@ -11,6 +11,8 @@ public class DeleteAclRequest extends TeaModel {
      * <p>*   **Read**: data reads</p>
      * <p>*   **Describe**: reads of transactional IDs</p>
      * <p>*   **IdempotentWrite**: idempotent data writes to clusters</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclOperationType")
     public String aclOperationType;
@@ -45,7 +47,9 @@ public class DeleteAclRequest extends TeaModel {
      * <p>The name of the resource.</p>
      * <br>
      * <p>*   The value can be the name of a topic or consumer group.</p>
-     * <p>*   You can use an asterisk (\*) to indicate the names of all topics or consumer groups.</p>
+     * <p>*   You can use an asterisk (\\*) to indicate the names of all topics or consumer groups.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclResourceName")
     public String aclResourceName;
@@ -55,6 +59,8 @@ public class DeleteAclRequest extends TeaModel {
      * <br>
      * <p>*   **LITERAL:** full match</p>
      * <p>*   **PREFIXED**: prefix match</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclResourcePatternType")
     public String aclResourcePatternType;
@@ -66,6 +72,8 @@ public class DeleteAclRequest extends TeaModel {
      * <p>*   **Group**: consumer group</p>
      * <p>*   **Cluster**: cluster</p>
      * <p>*   **TransactionalId**: transactional ID</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclResourceType")
     public String aclResourceType;
@@ -78,18 +86,24 @@ public class DeleteAclRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The name of the user.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Username")
     public String username;

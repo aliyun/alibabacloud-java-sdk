@@ -9,6 +9,8 @@ public class EnableAutoGroupCreationRequest extends TeaModel {
      * <br>
      * <p>*   **true**: enables the flexible group creation feature.</p>
      * <p>*   **false**: disabled the flexible group creation feature.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
@@ -16,13 +18,17 @@ public class EnableAutoGroupCreationRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <br>
-     * <p>You can call the [GetInstanceList](~~437663~~) operation to query instances.</p>
+     * <p>You can call the [GetInstanceList](https://help.aliyun.com/document_detail/437663.html) operation to query instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

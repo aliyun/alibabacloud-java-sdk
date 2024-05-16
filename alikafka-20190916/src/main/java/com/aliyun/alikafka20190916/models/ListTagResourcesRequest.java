@@ -12,6 +12,8 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which the resource is deployed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -36,6 +38,8 @@ public class ListTagResourcesRequest extends TeaModel {
      * <p>*   **INSTANCE**</p>
      * <p>*   **TOPIC**</p>
      * <p>*   **CONSUMERGROUP**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

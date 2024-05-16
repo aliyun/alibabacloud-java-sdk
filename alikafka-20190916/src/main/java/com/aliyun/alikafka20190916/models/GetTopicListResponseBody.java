@@ -41,7 +41,7 @@ public class GetTopicListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The information about the topic.</p>
+     * <p>The topics.</p>
      */
     @NameInMap("TopicList")
     public GetTopicListResponseBodyTopicList topicList;
@@ -177,14 +177,17 @@ public class GetTopicListResponseBody extends TeaModel {
     }
 
     public static class GetTopicListResponseBodyTopicListTopicVO extends TeaModel {
+        /**
+         * <p>Indicates whether the topic was automatically created.</p>
+         */
         @NameInMap("AutoCreate")
         public Boolean autoCreate;
 
         /**
-         * <p>The log cleanup policy that is used for the topic. This parameter is returned when the **LocalTopic** parameter is set to **true**. Valid values:</p>
+         * <p>The log cleanup policy for the topic. This parameter is returned only if **LocalTopic** is set to **true**. Valid values:</p>
          * <br>
-         * <p>*   false: The topic uses the default log cleanup policy.</p>
-         * <p>*   true: The topic uses the log compaction policy.</p>
+         * <p>*   false: the default log cleanup policy.</p>
+         * <p>*   true: the Apache Kafka log compaction policy.</p>
          */
         @NameInMap("CompactTopic")
         public Boolean compactTopic;
@@ -196,16 +199,16 @@ public class GetTopicListResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the instance</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The type of storage used by the topic. Valid values:</p>
+         * <p>The storage type that is used for the topic. Valid values:</p>
          * <br>
-         * <p>*   false: The topic uses cloud storage.</p>
-         * <p>*   true: The topic uses local storage.</p>
+         * <p>*   false: cloud storage</p>
+         * <p>*   true: local storage</p>
          */
         @NameInMap("LocalTopic")
         public Boolean localTopic;
@@ -217,24 +220,24 @@ public class GetTopicListResponseBody extends TeaModel {
         public Integer partitionNum;
 
         /**
-         * <p>The region ID of the instance to which the topics that you want to query belong.</p>
+         * <p>The ID of the region where the instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The description of the topic. Valid values:</p>
+         * <p>The topic description. Valid values:</p>
          * <br>
-         * <p>*   The description contains only letters, digits, hyphens (-), and underscores (\_).</p>
-         * <p>*   The description is 3 to 64 characters in length.</p>
+         * <p>*   The description can contain only letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>*   The description must be 3 to 64 characters in length.</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
-         * <p>The status of the topic. Valid values:</p>
+         * <p>The topic status. Valid value:</p>
          * <br>
-         * <p>**0:** indicates that the topic is running.</p>
+         * <p>**0**: running.</p>
          * <br>
          * <p>If the topic is deleted, this parameter is not returned.</p>
          */
@@ -242,9 +245,9 @@ public class GetTopicListResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The status of the topic. Valid values:</p>
+         * <p>The topic status. Valid value:</p>
          * <br>
-         * <p>**Running**</p>
+         * <p>**Running**.</p>
          * <br>
          * <p>If the topic is deleted, this parameter is not returned.</p>
          */
@@ -258,13 +261,16 @@ public class GetTopicListResponseBody extends TeaModel {
         public GetTopicListResponseBodyTopicListTopicVOTags tags;
 
         /**
-         * <p>The name of the topic. Valid values:</p>
+         * <p>The topic name. Valid values:</p>
          * <br>
-         * <p>*   The name contains only letters, digits, hyphens (-), and underscores (\_).</p>
-         * <p>*   The name is 3 to 64 characters in length. If the name that you specified contains more than 64 characters, the returned name is automatically truncated.</p>
+         * <p>*   The name can contain only letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>*   The name must be 3 to 64 characters in length. If the name contains more than 64 characters, the system automatically truncates the name.</p>
          */
         @NameInMap("Topic")
         public String topic;
+
+        @NameInMap("TopicConfig")
+        public String topicConfig;
 
         public static GetTopicListResponseBodyTopicListTopicVO build(java.util.Map<String, ?> map) throws Exception {
             GetTopicListResponseBodyTopicListTopicVO self = new GetTopicListResponseBodyTopicListTopicVO();
@@ -365,6 +371,14 @@ public class GetTopicListResponseBody extends TeaModel {
         }
         public String getTopic() {
             return this.topic;
+        }
+
+        public GetTopicListResponseBodyTopicListTopicVO setTopicConfig(String topicConfig) {
+            this.topicConfig = topicConfig;
+            return this;
+        }
+        public String getTopicConfig() {
+            return this.topicConfig;
         }
 
     }

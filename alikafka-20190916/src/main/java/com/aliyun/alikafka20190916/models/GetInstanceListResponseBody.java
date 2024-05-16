@@ -80,57 +80,111 @@ public class GetInstanceListResponseBody extends TeaModel {
     }
 
     public static class GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig extends TeaModel {
+        /**
+         * <p>The number of CPU cores of Connect.</p>
+         */
         @NameInMap("ConnectCU")
         public Integer connectCU;
 
+        /**
+         * <p>The number of replicas of Connect.</p>
+         */
         @NameInMap("ConnectReplica")
         public Integer connectReplica;
 
+        /**
+         * <p>The number of CPU cores of Control Center.</p>
+         */
         @NameInMap("ControlCenterCU")
         public Integer controlCenterCU;
 
+        /**
+         * <p>The number of replicas of Control Center.</p>
+         */
         @NameInMap("ControlCenterReplica")
         public Integer controlCenterReplica;
 
+        /**
+         * <p>The disk capacity of Control Center. Unit: GB.</p>
+         */
         @NameInMap("ControlCenterStorage")
         public Integer controlCenterStorage;
 
+        /**
+         * <p>The number of CPU cores of the Kafka broker.</p>
+         */
         @NameInMap("KafkaCU")
         public Integer kafkaCU;
 
+        /**
+         * <p>The number of replicas of the Kafka broker.</p>
+         */
         @NameInMap("KafkaReplica")
         public Integer kafkaReplica;
 
+        /**
+         * <p>The number of CPU cores of Kafka Rest Proxy.</p>
+         */
         @NameInMap("KafkaRestProxyCU")
         public Integer kafkaRestProxyCU;
 
+        /**
+         * <p>The number of replicas of Kafka Rest Proxy.</p>
+         */
         @NameInMap("KafkaRestProxyReplica")
         public Integer kafkaRestProxyReplica;
 
+        /**
+         * <p>The disk capacity of the Kafka broker. Unit: GB.</p>
+         */
         @NameInMap("KafkaStorage")
         public Integer kafkaStorage;
 
+        /**
+         * <p>The number of CPU cores of ksqlDB.</p>
+         */
         @NameInMap("KsqlCU")
         public Integer ksqlCU;
 
+        /**
+         * <p>The number of replicas of ksqlDB.</p>
+         */
         @NameInMap("KsqlReplica")
         public Integer ksqlReplica;
 
+        /**
+         * <p>The disk capacity of ksqlDB. Unit: GB.</p>
+         */
         @NameInMap("KsqlStorage")
         public Integer ksqlStorage;
 
+        /**
+         * <p>The number of CPU cores of Schema Registry.</p>
+         */
         @NameInMap("SchemaRegistryCU")
         public Integer schemaRegistryCU;
 
+        /**
+         * <p>The number of replicas of Schema Registry.</p>
+         */
         @NameInMap("SchemaRegistryReplica")
         public Integer schemaRegistryReplica;
 
+        /**
+         * <p>The number of CPU cores of ZooKeeper.</p>
+         */
         @NameInMap("ZooKeeperCU")
         public Integer zooKeeperCU;
 
+        /**
+         * <p>The number of replicas of ZooKeeper.</p>
+         */
         @NameInMap("ZooKeeperReplica")
         public Integer zooKeeperReplica;
 
+        /**
+         * <p>The disk capacity of ZooKeeper. Unit: GB.</p>
+         */
         @NameInMap("ZooKeeperStorage")
         public Integer zooKeeperStorage;
 
@@ -369,6 +423,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("AllConfig")
         public String allConfig;
 
+        /**
+         * <p>The parameters that are returned for the ApsaraMQ for Confluent instance.</p>
+         */
         @NameInMap("ConfluentConfig")
         public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig confluentConfig;
 
@@ -388,7 +445,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         public Integer deployType;
 
         /**
-         * <p>The disk size. Unit: GB.</p>
+         * <p>The disk size. Unit: GB</p>
          */
         @NameInMap("DiskSize")
         public Integer diskSize;
@@ -412,7 +469,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         public String domainEndpoint;
 
         /**
-         * <p>The peak Internet traffic allowed for the instance.</p>
+         * <p>The maximum Internet traffic in the instance.</p>
          */
         @NameInMap("EipMax")
         public Integer eipMax;
@@ -439,11 +496,14 @@ public class GetInstanceListResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The peak traffic allowed for the instance.</p>
+         * <p>The maximum traffic in the instance.</p>
          */
         @NameInMap("IoMax")
         public Integer ioMax;
 
+        /**
+         * <p>The maximum read traffic in the instance. Unit: Mbit/s.</p>
+         */
         @NameInMap("IoMaxRead")
         public Integer ioMaxRead;
 
@@ -453,6 +513,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("IoMaxSpec")
         public String ioMaxSpec;
 
+        /**
+         * <p>The maximum write traffic. Unit: Mbit/s.</p>
+         */
         @NameInMap("IoMaxWrite")
         public Integer ioMaxWrite;
 
@@ -477,8 +540,10 @@ public class GetInstanceListResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <br>
-         * <p>*   **0**: subscription</p>
-         * <p>*   **1**: pay-as-you-go</p>
+         * <p>*   **0**: the subscription billing method</p>
+         * <p>*   **1**: the pay-as-you-go billing method</p>
+         * <p>*   **3**: the pay-as-you-go billing method for serverless ApsaraMQ for Kafka V3 instances</p>
+         * <p>*   **4**: the pay-as-you-go billing method for ApsaraMQ for Confluent instances</p>
          */
         @NameInMap("PaidType")
         public Integer paidType;
@@ -489,9 +554,19 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The traffic reserved for message publishing. Unit: MB/s.</p>
+         * <br>
+         * <p>>  This parameter is returned only if the instance is a serverless ApsaraMQ for Kafka V3 instance.</p>
+         */
         @NameInMap("ReservedPublishCapacity")
         public Integer reservedPublishCapacity;
 
+        /**
+         * <p>The traffic reserved for message subscription. Unit: MB/s.</p>
+         * <br>
+         * <p>>  This parameter is returned only if the instance is a serverless ApsaraMQ for Kafka V3 instance.</p>
+         */
         @NameInMap("ReservedSubscribeCapacity")
         public Integer reservedSubscribeCapacity;
 
@@ -511,18 +586,23 @@ public class GetInstanceListResponseBody extends TeaModel {
         public String saslDomainEndpoint;
 
         /**
-         * <p>The security group of the instance.</p>
+         * <p>The security group to which the instance belongs.</p>
          * <br>
-         * <p>*   If the instance is deployed by using the ApsaraMQ for Kafka console or calling the [StartInstance](~~157786~~) operation without a security group configured, no value is returned.</p>
-         * <p>*   If the instance is deployed by calling the [StartInstance](~~157786~~) operation with a security group configured, the returned value is the configured security group.</p>
+         * <p>*   If the instance is deployed in the ApsaraMQ for Kafka console or by calling the [StartInstance](https://help.aliyun.com/document_detail/157786.html) operation without a security group configured, no value is returned.</p>
+         * <p>*   If the instance is deployed by calling the [StartInstance](https://help.aliyun.com/document_detail/157786.html) operation with a security group configured, the returned value is the configured security group.</p>
          */
         @NameInMap("SecurityGroup")
         public String securityGroup;
 
+        /**
+         * <p>实例系列标识。返回值有 v2 ，v3，confluent。</p>
+         */
         @NameInMap("Series")
         public String series;
 
         /**
+         * <p>>  This parameter is out of date. We recommend that you refer to the ViewInstanceStatusCode parameter.</p>
+         * <br>
          * <p>The instance status. Valid values:</p>
          * <br>
          * <p>*   **0**: pending</p>
@@ -533,10 +613,11 @@ public class GetInstanceListResponseBody extends TeaModel {
          * <p>*   **6**: migrating</p>
          * <p>*   **7**: ready for upgrade</p>
          * <p>*   **8**: upgrading</p>
-         * <p>*   **9**: ready for changes</p>
+         * <p>*   **9**: ready for change</p>
          * <p>*   **10**: released</p>
          * <p>*   **11**: changing</p>
          * <p>*   **15**: expired</p>
+         * <p>*   **30**: scaling</p>
          */
         @NameInMap("ServiceStatus")
         public Integer serviceStatus;
@@ -588,7 +669,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         public Integer topicNumLimit;
 
         /**
-         * <p>The upgrade information of the instance.</p>
+         * <p>The upgrade information about the instance.</p>
          */
         @NameInMap("UpgradeServiceDetailInfo")
         public GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo upgradeServiceDetailInfo;
@@ -612,11 +693,33 @@ public class GetInstanceListResponseBody extends TeaModel {
         public Integer usedTopicCount;
 
         /**
-         * <p>The vSwitch ID of the instance.</p>
+         * <p>The ID of the vSwitch to which the instance belongs.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The instance status. The valid values are consistent with the values displayed in the ApsaraMQ for Kafka console. This parameter is used in the new version of ApsaraMQ for Kafka.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   **0**: pending</p>
+         * <p>*   **1**: deploying</p>
+         * <p>*   **2**: running</p>
+         * <p>*   **3**: stopped</p>
+         * <p>*   **4**: expiring</p>
+         * <p>*   **5**: expired</p>
+         * <p>*   **6**: released</p>
+         * <p>*   **7**: upgrading</p>
+         * <p>*   **8**: migrating</p>
+         * <p>*   **21**: stopping</p>
+         * <p>*   **22**: starting</p>
+         * <p>*   **23**: releasing</p>
+         * <p>*   **30**: auto scaling</p>
+         * <p>*   **101**: deployment failed</p>
+         * <p>*   **102**: upgrade failed</p>
+         * <p>*   **103**: migration failed</p>
+         */
         @NameInMap("ViewInstanceStatusCode")
         public Integer viewInstanceStatusCode;
 
