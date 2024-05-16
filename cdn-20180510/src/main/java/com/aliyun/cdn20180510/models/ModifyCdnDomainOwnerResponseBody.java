@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCdnDomainOwnerResponseBody extends TeaModel {
     /**
-     * <p>Procedure</p>
+     * <p>The description of the domain name transfer.</p>
      */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;

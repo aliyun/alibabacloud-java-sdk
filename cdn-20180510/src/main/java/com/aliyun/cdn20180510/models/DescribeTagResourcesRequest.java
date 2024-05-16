@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeTagResourcesRequest extends TeaModel {
     /**
      * <p>The IDs of the resources. You can specify up to 50 IDs in each request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The resource type. Set the value to **DOMAIN**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

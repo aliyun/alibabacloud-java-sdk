@@ -10,6 +10,8 @@ public class BatchAddCdnDomainRequest extends TeaModel {
      * <p>*   **web**: images and small files</p>
      * <p>*   **download**: large files</p>
      * <p>*   **video**: on-demand video and audio streaming</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CdnType")
     public String cdnType;
@@ -22,6 +24,8 @@ public class BatchAddCdnDomainRequest extends TeaModel {
 
     /**
      * <p>The domain names that you want to add to Alibaba Cloud CDN. Separate domain names with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -53,6 +57,8 @@ public class BatchAddCdnDomainRequest extends TeaModel {
 
     /**
      * <p>The information about the addresses of origin servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Sources")
     public String sources;

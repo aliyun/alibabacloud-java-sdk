@@ -46,6 +46,8 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
      * <p>> The end time must be later than the start time. The maximum time range that can be specified is 31 days.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -58,6 +60,8 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
      * <p>*   **acc**: requests</p>
      * <br>
      * <p>> If you set this parameter to **acc**, the **Area** parameter is not supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Field")
     public String field;
@@ -78,6 +82,8 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
      * <p>> Data is collected every 5 minutes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

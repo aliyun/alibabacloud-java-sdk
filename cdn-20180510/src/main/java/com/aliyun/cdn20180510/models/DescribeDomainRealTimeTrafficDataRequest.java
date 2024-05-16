@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeDomainRealTimeTrafficDataRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. You can specify up to 100 domain names in each call. Separate multiple domain names with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -23,7 +25,7 @@ public class DescribeDomainRealTimeTrafficDataRequest extends TeaModel {
     /**
      * <p>The name of the Internet service provider (ISP).</p>
      * <br>
-     * <p>You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list. If you do not set this parameter, all regions are queried.</p>
+     * <p>You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query the most recent region list. If you do not set this parameter, all regions are queried.</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
@@ -31,7 +33,7 @@ public class DescribeDomainRealTimeTrafficDataRequest extends TeaModel {
     /**
      * <p>The name of the region.</p>
      * <br>
-     * <p>You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list. If you do not set this parameter, all regions are queried.</p>
+     * <p>You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query the most recent region list. If you do not set this parameter, all regions are queried.</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;

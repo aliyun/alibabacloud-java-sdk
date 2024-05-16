@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class SetCdnDomainStagingConfigRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. You can specify only one domain name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -13,7 +15,7 @@ public class SetCdnDomainStagingConfigRequest extends TeaModel {
     /**
      * <p>The features that you want to configure. Format:</p>
      * <br>
-     * <p>> *   **functionName**: The name of the feature. Separate multiple values with commas (,). For more information, see [A list of features](~~388460~~).</p>
+     * <p>> *   **functionName**: The name of the feature. Separate multiple values with commas (,). For more information, see [A list of features](https://help.aliyun.com/document_detail/388460.html).</p>
      * <p>>*   **argName**: The feature parameters for **functionName**.</p>
      * <p>>*   **argValue**: The parameter values set for **functionName**.</p>
      * <br>
@@ -32,6 +34,8 @@ public class SetCdnDomainStagingConfigRequest extends TeaModel {
      * <p>         "functionName": "Feature name"</p>
      * <p>            }</p>
      * <p>        ]</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Functions")
     public String functions;

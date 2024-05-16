@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateCdnDeliverTaskRequest extends TeaModel {
     /**
      * <p>The method that is used to send operations reports. Operations reports are sent to you only by email. The settings must be escaped in JSON.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Deliver")
     public String deliver;
@@ -20,18 +22,24 @@ public class CreateCdnDeliverTaskRequest extends TeaModel {
 
     /**
      * <p>The name of the tracking task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The operations reports that are tracked by the task. The data must be escaped in JSON.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Reports")
     public String reports;
 
     /**
      * <p>The parameters that specify the time interval at which the tracking task sends operations reports. The settings must be escaped in JSON.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Schedule")
     public String schedule;

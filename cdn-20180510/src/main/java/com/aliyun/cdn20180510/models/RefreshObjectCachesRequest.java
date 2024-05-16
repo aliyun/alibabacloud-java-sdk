@@ -13,6 +13,9 @@ public class RefreshObjectCachesRequest extends TeaModel {
     @NameInMap("Force")
     public Boolean force;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ObjectPath")
     public String objectPath;
 
@@ -24,7 +27,7 @@ public class RefreshObjectCachesRequest extends TeaModel {
      * <p>*   **Regex**: refreshes content based on regular expressions.</p>
      * <p>*   **ExQuery**: omits parameters after the question mark in the URL and refreshes content.</p>
      * <br>
-     * <p>If you set the ObjectType parameter to File or Directory, you can view [Refresh and prefetch resources](~~27140~~) to obtain more information. If you set the ObjectType parameter to Regex, you can view [Configure URL refresh rules that contain regular expressions](~~146195~~) to obtain more information.</p>
+     * <p>If you set the ObjectType parameter to File or Directory, you can view [Refresh and prefetch resources](https://help.aliyun.com/document_detail/27140.html) to obtain more information. If you set the ObjectType parameter to Regex, you can view [Configure URL refresh rules that contain regular expressions](https://help.aliyun.com/document_detail/146195.html) to obtain more information.</p>
      * <br>
      * <p>If you set the ObjectType parameter to Directory, the resources in the directory that you want to refresh are marked as expired. You cannot delete the directory. If clients request resources on POPs that are marked as expired, Alibaba Cloud CDN checks whether the resources on your origin server are updated. If resources are updated, Alibaba Cloud CDN retrieves the latest version of the resources and returns the resources to the clients. Otherwise, the origin server returns the 304 status code.</p>
      */

@@ -9,6 +9,8 @@ public class DescribeCdnSecFuncInfoRequest extends TeaModel {
      * <br>
      * <p>*   en: English</p>
      * <p>*   zh: Chinese</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Lang")
     public String lang;
@@ -18,6 +20,8 @@ public class DescribeCdnSecFuncInfoRequest extends TeaModel {
      * <br>
      * <p>*   CipherSuiteGroupCustomize: custom cipher suite.</p>
      * <p>*   CipherSuiteGroupStrict: dustom cipher suite.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecFuncType")
     public String secFuncType;

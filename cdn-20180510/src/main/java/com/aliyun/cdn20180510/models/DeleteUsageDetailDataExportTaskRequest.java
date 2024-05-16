@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteUsageDetailDataExportTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the task. You can call the [DescribeUserUsageDataExportTask](~~91062~~) operation to query tasks.</p>
+     * <p>The ID of the task. You can call the [DescribeUserUsageDataExportTask](https://help.aliyun.com/document_detail/91062.html) operation to query tasks.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

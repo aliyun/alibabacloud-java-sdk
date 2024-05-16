@@ -12,6 +12,8 @@ public class CreateCdnCertificateSigningRequestRequest extends TeaModel {
 
     /**
      * <p>The Common Name of the certificate.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CommonName")
     public String commonName;

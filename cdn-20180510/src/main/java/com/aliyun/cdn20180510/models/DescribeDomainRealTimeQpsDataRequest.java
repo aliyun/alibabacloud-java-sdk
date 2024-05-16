@@ -8,6 +8,8 @@ public class DescribeDomainRealTimeQpsDataRequest extends TeaModel {
      * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
      * <br>
      * <p>> You can specify up to 500 domain names in each request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -25,7 +27,7 @@ public class DescribeDomainRealTimeQpsDataRequest extends TeaModel {
     /**
      * <p>The name of the Internet service provider (ISP).</p>
      * <br>
-     * <p>If you do not set this parameter, data of all ISPs is queried. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISP names.</p>
+     * <p>If you do not set this parameter, data of all ISPs is queried. You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query ISP names.</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
@@ -33,7 +35,7 @@ public class DescribeDomainRealTimeQpsDataRequest extends TeaModel {
     /**
      * <p>The name of the region.</p>
      * <br>
-     * <p>If you do not set this parameter, data in all regions is queried. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.</p>
+     * <p>If you do not set this parameter, data in all regions is queried. You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query regions.</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;

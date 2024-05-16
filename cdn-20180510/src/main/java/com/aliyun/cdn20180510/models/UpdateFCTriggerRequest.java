@@ -30,6 +30,8 @@ public class UpdateFCTriggerRequest extends TeaModel {
 
     /**
      * <p>The trigger that corresponds to the Function Compute service.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TriggerARN")
     public String triggerARN;

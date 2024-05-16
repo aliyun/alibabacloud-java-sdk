@@ -8,6 +8,8 @@ public class DescribeDomainRealTimeHttpCodeDataRequest extends TeaModel {
      * <p>The accelerated domain name. You can specify multiple accelerated domain names and separate them with commas (,).</p>
      * <br>
      * <p>> You can specify up to 100 accelerated domain names in each request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -23,13 +25,13 @@ public class DescribeDomainRealTimeHttpCodeDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The name of the Internet service provider (ISP). You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISP names.</p>
+     * <p>The name of the Internet service provider (ISP). You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query ISP names.</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
     /**
-     * <p>The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions. If you do not specify a region, all regions are queried.</p>
+     * <p>The name of the region. You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query regions. If you do not specify a region, all regions are queried.</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;

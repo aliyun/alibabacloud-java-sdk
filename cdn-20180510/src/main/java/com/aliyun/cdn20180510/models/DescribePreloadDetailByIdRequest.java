@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribePreloadDetailByIdRequest extends TeaModel {
     /**
      * <p>Queries the details of a preload task by task ID. You can query one task ID at a time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

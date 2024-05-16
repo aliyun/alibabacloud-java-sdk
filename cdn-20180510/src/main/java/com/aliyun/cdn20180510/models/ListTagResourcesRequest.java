@@ -18,6 +18,8 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Set the value to **DOMAIN**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

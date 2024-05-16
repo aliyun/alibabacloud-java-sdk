@@ -29,7 +29,7 @@ public class DescribeDomainQpsDataByLayerRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The name of the Internet service provider (ISP) for your Alibaba Cloud CDN service. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs. If you do not set this parameter, all ISPs are queried.</p>
+     * <p>The name of the Internet service provider (ISP) for your Alibaba Cloud CDN service. You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query ISPs. If you do not set this parameter, all ISPs are queried.</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
@@ -45,7 +45,7 @@ public class DescribeDomainQpsDataByLayerRequest extends TeaModel {
     public String layer;
 
     /**
-     * <p>The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list. If you do not set this parameter, all regions are queried.</p>
+     * <p>The name of the region. You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query the most recent region list. If you do not set this parameter, all regions are queried.</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;

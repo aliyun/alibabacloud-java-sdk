@@ -8,6 +8,8 @@ public class CreateUserUsageDataExportTaskRequest extends TeaModel {
      * <p>The end of the time range to query. The end time must be later than the start time.</p>
      * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -25,6 +27,8 @@ public class CreateUserUsageDataExportTaskRequest extends TeaModel {
      * <p>The start of the time range to query. The data is collected every 5 minutes.</p>
      * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

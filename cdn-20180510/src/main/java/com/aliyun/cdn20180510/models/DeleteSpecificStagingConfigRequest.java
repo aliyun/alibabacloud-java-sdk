@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class DeleteSpecificStagingConfigRequest extends TeaModel {
     /**
-     * <p>The configuration IDs. Separate configuration IDs with commas (,). For more information about ConfigId, see [Usage notes on ConfigId](~~388994~~).</p>
+     * <p>The configuration IDs. Separate configuration IDs with commas (,). For more information about ConfigId, see [Usage notes on ConfigId](https://help.aliyun.com/document_detail/388994.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigId")
     public String configId;
 
     /**
      * <p>The accelerated domain name. You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

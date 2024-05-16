@@ -114,9 +114,9 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
         /**
          * <p>The ID of the rule condition. This parameter is optional.</p>
          * <br>
-         * <p>To create a rule condition, you can configure the **condition** feature that is described in the [Parameters for configuring features for domain names](~~388460~~) topic. A rule condition can identify parameters that are included in requests and filter requests based on the identified parameters. Each rule condition has a [ConfigId](~~388994~~). You can use ConfigId as ParentId that is referenced by other features. This way, you can combine rule conditions and features for flexible configurations.</p>
+         * <p>To create a rule condition, you can configure the **condition** feature that is described in the [Parameters for configuring features for domain names](https://help.aliyun.com/document_detail/388460.html) topic. A rule condition can identify parameters that are included in requests and filter requests based on the identified parameters. Each rule condition has a [ConfigId](https://help.aliyun.com/document_detail/388994.html). You can use ConfigId as ParentId that is referenced by other features. This way, you can combine rule conditions and features for flexible configurations.</p>
          * <br>
-         * <p>For more information, see [BatchSetCdnDomainConfig](~~90915~~) or ParentId configuration example in this topic.</p>
+         * <p>For more information, see [BatchSetCdnDomainConfig](https://help.aliyun.com/document_detail/90915.html) or ParentId configuration example in this topic.</p>
          */
         @NameInMap("ParentId")
         public String parentId;

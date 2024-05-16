@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListDomainsByLogConfigIdRequest extends TeaModel {
     /**
      * <p>The ID of the custom configuration.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigId")
     public String configId;

@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeIpStatusRequest extends TeaModel {
     /**
-     * <p>The IP addresses that you want to query. Separate IP addresses with underscores (\_), such as Ips=ip1\_ip2.</p>
+     * <p>The IP addresses that you want to query. Separate IP addresses with underscores (_), such as Ips=ip1_ip2.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ips")
     public String ips;

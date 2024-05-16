@@ -9,6 +9,8 @@ public class DescribeCdnUserConfigsRequest extends TeaModel {
      * <br>
      * <p>*   **domain_business_control**: user configurations</p>
      * <p>*   **waf**: Web Application Firewall (WAF) configurations</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FunctionName")
     public String functionName;

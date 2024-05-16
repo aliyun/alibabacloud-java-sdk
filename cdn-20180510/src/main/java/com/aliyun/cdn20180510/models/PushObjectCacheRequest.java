@@ -31,7 +31,9 @@ public class PushObjectCacheRequest extends TeaModel {
     /**
      * <p>The URLs based on which content is prefetched. Format: **accelerated domain name/files to be prefetched**.</p>
      * <br>
-     * <p>> Separate URLs with line feeds (\n or \r\n). Each object path can be up to 1,024 characters in length.</p>
+     * <p>> Separate URLs with line feeds (\\n or \\r\\n). Each object path can be up to 1,024 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ObjectPath")
     public String objectPath;

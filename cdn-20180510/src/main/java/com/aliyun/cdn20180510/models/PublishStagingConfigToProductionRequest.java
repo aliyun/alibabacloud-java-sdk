@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class PublishStagingConfigToProductionRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

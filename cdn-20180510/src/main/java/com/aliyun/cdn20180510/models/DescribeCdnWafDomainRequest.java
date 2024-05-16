@@ -23,6 +23,8 @@ public class DescribeCdnWafDomainRequest extends TeaModel {
      * <p>*   **ap-southeast-1**: outside the Chinese mainland</p>
      * <br>
      * <p>> ap-southeast-1 includes Hong Kong (China), Macao (China), Taiwan (China), and other countries and regions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class AddFCTriggerRequest extends TeaModel {
     /**
      * <p>The name of the event.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventMetaName")
     public String eventMetaName;
 
     /**
      * <p>The version of the event.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventMetaVersion")
     public String eventMetaVersion;
@@ -24,24 +28,32 @@ public class AddFCTriggerRequest extends TeaModel {
 
     /**
      * <p>The remarks.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Notes")
     public String notes;
 
     /**
      * <p>The assigned Resource Access Management (RAM) role.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RoleARN")
     public String roleARN;
 
     /**
      * <p>The resources and filters for event listening.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceARN")
     public String sourceARN;
 
     /**
      * <p>The trigger that corresponds to the Function Compute service.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TriggerARN")
     public String triggerARN;

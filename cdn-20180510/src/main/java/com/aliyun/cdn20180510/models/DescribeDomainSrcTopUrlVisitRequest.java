@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeDomainSrcTopUrlVisitRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
