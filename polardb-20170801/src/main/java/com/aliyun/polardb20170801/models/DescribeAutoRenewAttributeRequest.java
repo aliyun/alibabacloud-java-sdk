@@ -31,7 +31,9 @@ public class DescribeAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~98041~~) operation to query the region ID details.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the region ID details.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

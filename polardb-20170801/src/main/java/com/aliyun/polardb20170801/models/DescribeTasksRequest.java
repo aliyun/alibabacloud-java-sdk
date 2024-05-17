@@ -7,7 +7,7 @@ public class DescribeTasksRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <br>
-     * <p>>  You must specify `DBNodeId` or `DBClusterId`. You can call the [DescribeDBClusters](~~98094~~) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     * <p>>  You must specify `DBNodeId` or `DBClusterId`. You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -15,13 +15,15 @@ public class DescribeTasksRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <br>
-     * <p>>  You must specify `DBNodeId` or `DBClusterId`. You can call the [DescribeDBClusters](~~98094~~) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as node IDs.</p>
+     * <p>>  You must specify `DBNodeId` or `DBClusterId`. You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as node IDs.</p>
      */
     @NameInMap("DBNodeId")
     public String DBNodeId;
 
     /**
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time must be in UTC. The end time must be later than the start time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -56,6 +58,8 @@ public class DescribeTasksRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

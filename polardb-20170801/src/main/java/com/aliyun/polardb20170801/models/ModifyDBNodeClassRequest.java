@@ -12,12 +12,16 @@ public class ModifyDBNodeClassRequest extends TeaModel {
 
     /**
      * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The specifications of all nodes. For more information, see [Specifications of computing nodes](~~102542~~).</p>
+     * <p>The specifications of all nodes. For more information, see [Specifications of computing nodes](https://help.aliyun.com/document_detail/102542.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBNodeTargetClass")
     public String DBNodeTargetClass;
@@ -37,6 +41,8 @@ public class ModifyDBNodeClassRequest extends TeaModel {
      * <br>
      * <p>*   **Upgrade**</p>
      * <p>*   **Downgrade**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ModifyType")
     public String modifyType;

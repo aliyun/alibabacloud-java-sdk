@@ -7,7 +7,9 @@ public class DescribeDBClusterAttributeRequest extends TeaModel {
     /**
      * <p>The ID of cluster.</p>
      * <br>
-     * <p>> You can call the [DescribeDBClusters](~~98094~~) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     * <p>> You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

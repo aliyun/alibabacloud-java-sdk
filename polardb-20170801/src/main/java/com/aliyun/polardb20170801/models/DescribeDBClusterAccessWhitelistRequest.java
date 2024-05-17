@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterAccessWhitelistRequest extends TeaModel {
     /**
      * <p>The ID of the PolarDB cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

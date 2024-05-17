@@ -14,7 +14,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <br>
      * <p>>- If you enable enhanced backup, all backups are retained for 24 hours. For backup files that are created earlier than the previous 24 hours, the system permanently retains only the first backup that is created after 00:00 every day and deletes the rest.</p>
      * <p>>- If you enable enhanced backup, **PreferredBackupPeriod** is automatically set to all days in a week (from Monday to Sunday).</p>
-     * <p>>- This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed supports the cross-region backup feature. For information about the regions that support the cross-region backup feature, see [Overview](~~72672~~).</p>
+     * <p>>- This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed supports the cross-region backup feature. For information about the regions that support the cross-region backup feature, see [Overview](https://help.aliyun.com/document_detail/72672.html).</p>
      */
     @NameInMap("BackupFrequency")
     public String backupFrequency;
@@ -34,7 +34,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
      * <br>
-     * <p>> You can call the [DescribeDBClusters](~~98094~~) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     * <p>> You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -48,7 +50,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <p>*   **4/24H**: enhanced backup. The system backs up data every 4 hours.</p>
      * <br>
      * <p>>- This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.</p>
-     * <p>>- This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see [Overview](~~72672~~).</p>
+     * <p>>- This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see [Overview](https://help.aliyun.com/document_detail/72672.html).</p>
      */
     @NameInMap("DataLevel1BackupFrequency")
     public String dataLevel1BackupFrequency;
@@ -66,7 +68,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <br>
      * <p>>- You need to specify at least two values. Separate multiple values with commas (,).</p>
      * <p>>- This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.</p>
-     * <p>>- This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see [Overview](~~72672~~).</p>
+     * <p>>- This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see [Overview](https://help.aliyun.com/document_detail/72672.html).</p>
      */
     @NameInMap("DataLevel1BackupPeriod")
     public String dataLevel1BackupPeriod;
@@ -80,13 +82,13 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     /**
      * <p>The time period during which automatic backup for level-1 backup is performed. The time period is in the `hh:mmZ-hh:mmZ` format and is displayed in UTC. The start time and end time are on the hour and have an interval of 1 hour. Example: `14:00Z-15:00Z`.</p>
      * <p>>- This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.</p>
-     * <p>>- This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see [Overview](~~72672~~).</p>
+     * <p>>- This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see [Overview](https://help.aliyun.com/document_detail/72672.html).</p>
      */
     @NameInMap("DataLevel1BackupTime")
     public String dataLevel1BackupTime;
 
     /**
-     * <p>The region where the cross-region level-2 backup is stored. For information about regions that support the cross-region backup feature, see [Overview](~~72672~~).</p>
+     * <p>The region where the cross-region level-2 backup is stored. For information about regions that support the cross-region backup feature, see [Overview](https://help.aliyun.com/document_detail/72672.html).</p>
      */
     @NameInMap("DataLevel2BackupAnotherRegionRegion")
     public String dataLevel2BackupAnotherRegionRegion;
@@ -116,7 +118,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <br>
      * <p>>- You need to specify at least two values. Separate multiple values with commas (,).</p>
      * <p>>- This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.</p>
-     * <p>>- This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see [Overview](~~72672~~).</p>
+     * <p>>- This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see [Overview](https://help.aliyun.com/document_detail/72672.html).</p>
      */
     @NameInMap("DataLevel2BackupPeriod")
     public String dataLevel2BackupPeriod;
@@ -151,7 +153,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <p>*   **Sunday**</p>
      * <br>
      * <p>>- You need to specify at least two values. Separate multiple values with commas (,).</p>
-     * <p>>- This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed supports the cross-region backup feature. For information about the regions that support the cross-region backup feature, see [Overview](~~72672~~).</p>
+     * <p>>- This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed supports the cross-region backup feature. For information about the regions that support the cross-region backup feature, see [Overview](https://help.aliyun.com/document_detail/72672.html).</p>
      */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;

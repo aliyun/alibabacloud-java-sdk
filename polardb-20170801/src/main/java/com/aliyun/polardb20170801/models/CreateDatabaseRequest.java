@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDatabaseRequest extends TeaModel {
     /**
-     * <p>The name of the account that is authorized to access the database. You can call the [DescribeAccounts](~~98107~~) operation to query account information.</p>
+     * <p>The name of the account that is authorized to access the database. You can call the [DescribeAccounts](https://help.aliyun.com/document_detail/98107.html) operation to query account information.</p>
      * <p>>- You can specify only a standard account. By default, privileged accounts have all permissions on all databases. You do not need to grant privileged accounts the permissions to access the database.</p>
      * <p>>- This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.</p>
      */
@@ -31,7 +31,9 @@ public class CreateDatabaseRequest extends TeaModel {
     public String accountPrivilege;
 
     /**
-     * <p>The character set that is used by the cluster. For more information, see [Character set tables](~~99716~~).</p>
+     * <p>The character set that is used by the cluster. For more information, see [Character set tables](https://help.aliyun.com/document_detail/99716.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CharacterSetName")
     public String characterSetName;
@@ -61,6 +63,8 @@ public class CreateDatabaseRequest extends TeaModel {
 
     /**
      * <p>The ID of cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -79,10 +83,12 @@ public class CreateDatabaseRequest extends TeaModel {
     /**
      * <p>The name of the database. The name must meet the following requirements:</p>
      * <br>
-     * <p>*   The name can contain lowercase letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>*   The name can contain lowercase letters, digits, hyphens (-), and underscores (_).</p>
      * <p>*   The name must start with a lowercase letter and end with a lowercase letter or a digit. The name must be 1 to 64 characters in length.</p>
      * <br>
      * <p>> Do not use reserved words as database names, such as `test` or `mysql`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBName")
     public String DBName;

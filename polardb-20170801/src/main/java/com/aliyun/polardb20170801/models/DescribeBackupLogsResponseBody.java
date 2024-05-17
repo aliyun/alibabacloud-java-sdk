@@ -81,7 +81,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
 
     public static class DescribeBackupLogsResponseBodyItemsBackupLog extends TeaModel {
         /**
-         * <p>The time when the backup task ended. The time follows the ISO 8601 standard in the `YYYY-MM-DD\"T\"HH:mm:ssZ` format. The time is displayed in UTC.</p>
+         * <p>The time when the backup task ended. The time follows the ISO 8601 standard in the `YYYY-MM-DD\\"T\\"HH:mm:ssZ` format. The time is displayed in UTC.</p>
          */
         @NameInMap("BackupLogEndTime")
         public String backupLogEndTime;
@@ -105,7 +105,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         public String backupLogSize;
 
         /**
-         * <p>The time when the backup task started. The time follows the ISO 8601 standard in the `YYYY-MM-DD\"T\"HH:mm:ssZ` format. The time is displayed in UTC.</p>
+         * <p>The time when the backup task started. The time follows the ISO 8601 standard in the `YYYY-MM-DD\\"T\\"HH:mm:ssZ` format. The time is displayed in UTC.</p>
          */
         @NameInMap("BackupLogStartTime")
         public String backupLogStartTime;

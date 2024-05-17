@@ -16,6 +16,8 @@ public class CreateDBEndpointAddressRequest extends TeaModel {
 
     /**
      * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -23,13 +25,17 @@ public class CreateDBEndpointAddressRequest extends TeaModel {
     /**
      * <p>The ID of the endpoint.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBClusterEndpoints](~~98205~~) operation to query endpoint details.</p>
+     * <p>>  You can call the [DescribeDBClusterEndpoints](https://help.aliyun.com/document_detail/98205.html) operation to query endpoint details.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBEndpointId")
     public String DBEndpointId;
 
     /**
      * <p>The network type of the endpoint. Set the value to **Public**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetType")
     public String netType;

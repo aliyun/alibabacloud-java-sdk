@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterAvailableResourcesRequest extends TeaModel {
     /**
-     * <p>The specifications of the node. For more information, see [Specifications of compute nodes](~~102542~~).</p>
+     * <p>The specifications of the node. For more information, see [Specifications of compute nodes](https://help.aliyun.com/document_detail/102542.html).</p>
      */
     @NameInMap("DBNodeClass")
     public String DBNodeClass;
@@ -50,6 +50,8 @@ public class DescribeDBClusterAvailableResourcesRequest extends TeaModel {
      * <br>
      * <p>*   **Postpaid**: pay-as-you-go</p>
      * <p>*   **Prepaid**: subscription</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PayType")
     public String payType;
@@ -57,7 +59,7 @@ public class DescribeDBClusterAvailableResourcesRequest extends TeaModel {
     /**
      * <p>The region ID of the cluster. Default value: **cn-hangzhou**.</p>
      * <br>
-     * <p>> You can call the [DescribeRegions](~~98041~~) operation to query the available regions.</p>
+     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the available regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -71,7 +73,7 @@ public class DescribeDBClusterAvailableResourcesRequest extends TeaModel {
     /**
      * <p>The zone ID of the cluster.</p>
      * <br>
-     * <p>> You can call the [DescribeRegions](~~98041~~) operation to query the available zones.</p>
+     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the available zones.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

@@ -23,7 +23,7 @@ public class DescribeDBClustersRequest extends TeaModel {
     public String DBClusterIds;
 
     /**
-     * <p>The state of the cluster that you want to query. For information about valid values, see [Cluster states](~~99286~~).</p>
+     * <p>The state of the cluster that you want to query. For information about valid values, see [Cluster states](https://help.aliyun.com/document_detail/99286.html).</p>
      */
     @NameInMap("DBClusterStatus")
     public String DBClusterStatus;
@@ -111,7 +111,9 @@ public class DescribeDBClustersRequest extends TeaModel {
     /**
      * <p>The region ID of the cluster.</p>
      * <br>
-     * <p>> You can call the [DescribeRegions](~~98041~~) operation to query the available regions.</p>
+     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the available regions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -7,13 +7,17 @@ public class DeleteBackupRequest extends TeaModel {
     /**
      * <p>The backup ID. If you need to specify multiple backup IDs, separate the backup IDs with commas (,).</p>
      * <br>
-     * <p>>  You can call the [DescribeBackups](~~98102~~) operation to query the backup IDs.</p>
+     * <p>>  You can call the [DescribeBackups](https://help.aliyun.com/document_detail/98102.html) operation to query the backup IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

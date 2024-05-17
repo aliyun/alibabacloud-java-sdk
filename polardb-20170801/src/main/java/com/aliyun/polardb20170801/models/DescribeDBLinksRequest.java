@@ -7,7 +7,9 @@ public class DescribeDBLinksRequest extends TeaModel {
     /**
      * <p>The ID of the cluster for which you want to query the database links.</p>
      * <br>
-     * <p>> You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.</p>
+     * <p>> You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/173433.html) operation to query PolarDB clusters.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

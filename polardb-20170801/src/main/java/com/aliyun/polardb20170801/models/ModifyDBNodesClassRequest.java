@@ -12,12 +12,16 @@ public class ModifyDBNodesClassRequest extends TeaModel {
 
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The details of the nodes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBNode")
     public java.util.List<ModifyDBNodesClassRequestDBNode> DBNode;
@@ -27,6 +31,8 @@ public class ModifyDBNodesClassRequest extends TeaModel {
      * <br>
      * <p>*   **Upgrade**</p>
      * <p>*   **Downgrade**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ModifyType")
     public String modifyType;
@@ -174,7 +180,7 @@ public class ModifyDBNodesClassRequest extends TeaModel {
         public String DBNodeId;
 
         /**
-         * <p>The specifications of the node that you want to change. For more information, see [Specifications of compute nodes](~~102542~~).</p>
+         * <p>The specifications of the node that you want to change. For more information, see [Specifications of compute nodes](https://help.aliyun.com/document_detail/102542.html).</p>
          * <br>
          * <p>>  If you specify this parameter, DBNode.N.DBNodeId is required. N is an integer that starts from 1. The maximum value of N is calculated by using the following formula:16 - The number of current nodes.</p>
          */

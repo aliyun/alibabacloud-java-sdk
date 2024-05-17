@@ -7,7 +7,9 @@ public class ModifyMaskingRulesRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
      * <br>
-     * <p>> You can call the [DescribeDBClusters](~~98094~~) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     * <p>> You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -44,7 +46,7 @@ public class ModifyMaskingRulesRequest extends TeaModel {
     /**
      * <p>The name of the data masking rule. You can specify only one rule name at a time.</p>
      * <br>
-     * <p>>- You can call the [DescribeMaskingRules](~~212573~~) operation to query the details of all masking rules for a specified cluster, such as the names of the masking rules.</p>
+     * <p>>- You can call the [DescribeMaskingRules](https://help.aliyun.com/document_detail/212573.html) operation to query the details of all masking rules for a specified cluster, such as the names of the masking rules.</p>
      * <p>>- If the rule name does not exist in the cluster, the system automatically creates a masking rule based on the name and the value of `RuleConfig`.</p>
      */
     @NameInMap("RuleName")

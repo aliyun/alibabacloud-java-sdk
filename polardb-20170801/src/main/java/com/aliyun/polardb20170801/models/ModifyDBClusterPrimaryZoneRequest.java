@@ -7,7 +7,9 @@ public class ModifyDBClusterPrimaryZoneRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
      * <br>
-     * <p>> You can call the [DescribeDBClusters](~~173433~~) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     * <p>> You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/173433.html) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -84,7 +86,9 @@ public class ModifyDBClusterPrimaryZoneRequest extends TeaModel {
     /**
      * <p>The ID of the destination primary zone.</p>
      * <br>
-     * <p>> You can call the [DescribeRegions](~~98041~~) operation to query available zones.</p>
+     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available zones.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

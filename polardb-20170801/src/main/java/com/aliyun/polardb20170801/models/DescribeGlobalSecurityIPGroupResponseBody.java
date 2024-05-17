@@ -55,7 +55,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         /**
          * <p>The name of the global IP whitelist template. The name must meet the following requirements:</p>
          * <br>
-         * <p>*   The name can contain lowercase letters, digits, and underscores (\_).</p>
+         * <p>*   The name can contain lowercase letters, digits, and underscores (_).</p>
          * <p>*   The name must start with a letter and end with a letter or a digit.</p>
          * <p>*   The name must be 2 to 120 characters in length.</p>
          */

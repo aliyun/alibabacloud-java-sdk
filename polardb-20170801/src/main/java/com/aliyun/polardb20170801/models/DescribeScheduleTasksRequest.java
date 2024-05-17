@@ -15,7 +15,7 @@ public class DescribeScheduleTasksRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <br>
-     * <p>*   You can call the [DescribeDBClusters](~~98094~~) operation to query the information of all PolarDB clusters that are deployed in a specific region, such as the cluster IDs.</p>
+     * <p>*   You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the information of all PolarDB clusters that are deployed in a specific region, such as the cluster IDs.</p>
      * <br>
      * <p>*   If you do not specify this parameter, all scheduled tasks on your clusters are queried.</p>
      */
@@ -65,7 +65,7 @@ public class DescribeScheduleTasksRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <br>
-     * <p>*   You can call the [DescribeRegions](~~98041~~) operation to query the region information of all clusters in a specific account.</p>
+     * <p>*   You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the region information of all clusters in a specific account.</p>
      * <br>
      * <p>*   If you do not specify this parameter, scheduled tasks on your clusters that are deployed in all regions are queried.</p>
      */

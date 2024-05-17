@@ -4,9 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterResourceGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 

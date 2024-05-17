@@ -15,6 +15,8 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
 
     /**
      * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -27,6 +29,8 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
 
     /**
      * <p>The ID of the endpoint.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBEndpointId")
     public String DBEndpointId;
@@ -34,44 +38,44 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
     /**
      * <p>The advanced configurations of the cluster endpoint, which are in the JSON format. You can specify the configurations of the following attributes: consistency level, transaction splitting, connection pool, and primary node accepts read requests.</p>
      * <br>
-     * <p>*   Specifies the load balancing policy in the format of `{\"LoadBalancePolicy\":\"Selected value\"}`. Default value: 0. Valid values:</p>
+     * <p>*   Specifies the load balancing policy in the format of `{\\"LoadBalancePolicy\\":\\"Selected value\\"}`. Default value: 0. Valid values:</p>
      * <br>
      * <p>    *   **0**: connections-based load balancing</p>
      * <p>    *   **1**: active requests-based load balancing</p>
      * <br>
-     * <p>*   Specifies whether to enable the primary node accepts read requests feature in the format of `{\"MasterAcceptReads\":\"Selected value\"}`. Default value: on. Valid values:</p>
+     * <p>*   Specifies whether to enable the primary node accepts read requests feature in the format of `{\\"MasterAcceptReads\\":\\"Selected value\\"}`. Default value: on. Valid values:</p>
      * <br>
      * <p>    *   **on**</p>
      * <p>    *   **off**</p>
      * <br>
-     * <p>*   Specifies whether to enable the transaction splitting feature in the format of `{\"DistributedTransaction\":\"Selected value\"}`. Default value: on. Valid values:</p>
+     * <p>*   Specifies whether to enable the transaction splitting feature in the format of `{\\"DistributedTransaction\\":\\"Selected value\\"}`. Default value: on. Valid values:</p>
      * <br>
      * <p>    *   **on**</p>
      * <p>    *   **off**</p>
      * <br>
-     * <p>*   Specifies the consistency level in the format of `{\"ConsistLevel\":\"Selected value\"}`. Default value: 1. Valid values:</p>
+     * <p>*   Specifies the consistency level in the format of `{\\"ConsistLevel\\":\\"Selected value\\"}`. Default value: 1. Valid values:</p>
      * <br>
      * <p>    *   **0**: eventual consistency (weak)</p>
      * <p>    *   **1**: session consistency (medium)</p>
      * <p>    *   **2**: global consistency (strong)</p>
      * <br>
-     * <p>*   Specifies the connection pool in the format of `{\"ConnectionPersist\":\"Selected value\"}`. Default value: off. Valid values:</p>
+     * <p>*   Specifies the connection pool in the format of `{\\"ConnectionPersist\\":\\"Selected value\\"}`. Default value: off. Valid values:</p>
      * <br>
      * <p>    *   **off**: disables the connection pool.</p>
      * <p>    *   **Session**: enables the session-level connection pool.</p>
      * <p>    *   **Transaction**: enables the transaction-level connection pool.</p>
      * <br>
-     * <p>*   Specifies whether to enable the parallel query feature in the format of `{\"MaxParallelDegree\":\"Selected value\"}`. Default value: off. Valid values:</p>
+     * <p>*   Specifies whether to enable the parallel query feature in the format of `{\\"MaxParallelDegree\\":\\"Selected value\\"}`. Default value: off. Valid values:</p>
      * <br>
      * <p>    *   **on**</p>
      * <p>    *   **off**</p>
      * <br>
-     * <p>*   Specifies whether to enable the automatic request distribution between row store and column store nodes feature in the format of `{\"EnableHtapImci\":\"Selected value\"}`. Default value: off. Valid values:</p>
+     * <p>*   Specifies whether to enable the automatic request distribution between row store and column store nodes feature in the format of `{\\"EnableHtapImci\\":\\"Selected value\\"}`. Default value: off. Valid values:</p>
      * <br>
      * <p>    *   **on**</p>
      * <p>    *   **off**</p>
      * <br>
-     * <p>*   Specifies whether to enable the overload protection feature in the format of `{\"EnableOverloadThrottle\":\"Selected value\"}`. Default value: off. Valid values:</p>
+     * <p>*   Specifies whether to enable the overload protection feature in the format of `{\\"EnableOverloadThrottle\\":\\"Selected value\\"}`. Default value: off. Valid values:</p>
      * <br>
      * <p>    *   **on**</p>
      * <p>    *   **off**</p>
@@ -84,7 +88,7 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
      * <p>*   If ReadWriteMode is set to **ReadWrite** for the cluster endpoint of a PolarDB for MySQL cluster or if ReadWriteMode is set to **ReadOnly** and the load balancing policy is set to **active requests-based load balancing**, the automatic request distribution between row store and column store nodes feature is supported.</p>
      * <p>*   Only PolarDB for MySQL supports global consistency.</p>
      * <p>*   If the **ReadWriteMode** parameter is set to **ReadOnly**, the consistency level must be **0**.</p>
-     * <p>*   You can specify the consistency level, transaction splitting, connection pool, and primary node accepts read requests features at a time, such as `{\"ConsistLevel\":\"1\",\"DistributedTransaction\":\"on\",\"ConnectionPersist\":\"Session\",\"MasterAcceptReads\":\"on\"}`.</p>
+     * <p>*   You can specify the consistency level, transaction splitting, connection pool, and primary node accepts read requests features at a time, such as `{\\"ConsistLevel\\":\\"1\\",\\"DistributedTransaction\\":\\"on\\",\\"ConnectionPersist\\":\\"Session\\",\\"MasterAcceptReads\\":\\"on\\"}`.</p>
      * <p>*   The transaction splitting settings are restricted by the consistency level settings. For example, if you set the consistency level to **0**, transaction splitting cannot be enabled. If you set the consistency level to **1** or **2**, transaction splitting can be enabled.</p>
      */
     @NameInMap("EndpointConfig")

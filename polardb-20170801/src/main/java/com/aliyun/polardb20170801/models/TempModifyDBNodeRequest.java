@@ -12,18 +12,24 @@ public class TempModifyDBNodeRequest extends TeaModel {
 
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The information of the added node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBNode")
     public java.util.List<TempModifyDBNodeRequestDBNode> DBNode;
 
     /**
      * <p>The type of configuration change. Set the value to **TempUpgrade**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ModifyType")
     public String modifyType;
@@ -32,6 +38,8 @@ public class TempModifyDBNodeRequest extends TeaModel {
      * <p>The type of operation performed on the cluster. Valid values:</p>
      * <br>
      * <p>*   **Modify**: temporarily upgrade the configuration of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OperationType")
     public String operationType;
@@ -52,6 +60,8 @@ public class TempModifyDBNodeRequest extends TeaModel {
      * <p>The rollback time of the configuration for the temporary upgrade. Specify the time in the ISO 8601 standard in the YYYY-MM-DD hh:mm:ss format.</p>
      * <br>
      * <p>>  The rollback time cannot be 1 hour earlier than the current time and cannot be later than one day before the time when the cluster expires.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;
@@ -145,7 +155,7 @@ public class TempModifyDBNodeRequest extends TeaModel {
         /**
          * <p>The instance type of the added node. The instance type of the added node must be the same as the instance type of the original node.</p>
          * <br>
-         * <p>>  You can call the [DescribeDBClusters](~~98094~~) operation to view the instance types of original nodes.</p>
+         * <p>>  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to view the instance types of original nodes.</p>
          */
         @NameInMap("TargetClass")
         public String targetClass;

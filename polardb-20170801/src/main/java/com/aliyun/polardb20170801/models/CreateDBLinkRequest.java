@@ -13,7 +13,9 @@ public class CreateDBLinkRequest extends TeaModel {
     /**
      * <p>The ID of the source cluster that the database link connects.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.</p>
+     * <p>>  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/173433.html) operation to query PolarDB clusters.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -21,9 +23,11 @@ public class CreateDBLinkRequest extends TeaModel {
     /**
      * <p>The name of the database link.</p>
      * <br>
-     * <p>*   The name must contain lowercase letters and can also contain digits and underscores (\_).</p>
+     * <p>*   The name must contain lowercase letters and can also contain digits and underscores (_).</p>
      * <p>*   The name must start with a letter and end with a letter or digit.</p>
      * <p>*   The name must be 1 to 64 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBLinkName")
     public String DBLinkName;
@@ -37,7 +41,7 @@ public class CreateDBLinkRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~98041~~) operation to query information about regions.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query information about regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -57,7 +61,9 @@ public class CreateDBLinkRequest extends TeaModel {
     /**
      * <p>The name of the source database.</p>
      * <br>
-     * <p>>  You can call the [DescribeDatabases](~~173558~~) operation to query information about databases in a PolarDB cluster.</p>
+     * <p>>  You can call the [DescribeDatabases](https://help.aliyun.com/document_detail/173558.html) operation to query information about databases in a PolarDB cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceDBName")
     public String sourceDBName;
@@ -65,7 +71,9 @@ public class CreateDBLinkRequest extends TeaModel {
     /**
      * <p>The account of the destination database.</p>
      * <br>
-     * <p>>  You can call the [DescribeAccounts](~~173549~~) operation to query the account of a PolarDB cluster.</p>
+     * <p>>  You can call the [DescribeAccounts](https://help.aliyun.com/document_detail/173549.html) operation to query the account of a PolarDB cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetDBAccount")
     public String targetDBAccount;
@@ -74,7 +82,7 @@ public class CreateDBLinkRequest extends TeaModel {
      * <p>The ID of the destination cluster that the database link connects.</p>
      * <br>
      * <p>> *   If the destination cluster is a user-created Oracle database on an ECS instance, set the value to `null`.</p>
-     * <p>> *   You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.</p>
+     * <p>> *   You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/173433.html) operation to query PolarDB clusters.</p>
      */
     @NameInMap("TargetDBInstanceName")
     public String targetDBInstanceName;
@@ -82,13 +90,17 @@ public class CreateDBLinkRequest extends TeaModel {
     /**
      * <p>The name of the destination database.</p>
      * <br>
-     * <p>>  You can call the [DescribeDatabases](~~173558~~) operation to query information about databases in a PolarDB cluster.</p>
+     * <p>>  You can call the [DescribeDatabases](https://help.aliyun.com/document_detail/173558.html) operation to query information about databases in a PolarDB cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetDBName")
     public String targetDBName;
 
     /**
      * <p>The account password of the destination database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetDBPasswd")
     public String targetDBPasswd;
@@ -108,7 +120,7 @@ public class CreateDBLinkRequest extends TeaModel {
     /**
      * <p>The ID of the virtual private cloud (VPC).</p>
      * <br>
-     * <p>>  You can call the [DescribeVpcs](~~35739~~) operation to query information about VPCs.</p>
+     * <p>>  You can call the [DescribeVpcs](https://help.aliyun.com/document_detail/35739.html) operation to query information about VPCs.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

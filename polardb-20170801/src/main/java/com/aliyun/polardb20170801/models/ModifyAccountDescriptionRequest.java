@@ -9,18 +9,24 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
      * <br>
      * <p>*   The description cannot start with `http://` or `https://`.</p>
      * <p>*   The description must be 2 to 256 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountDescription")
     public String accountDescription;
 
     /**
      * <p>The name of the account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

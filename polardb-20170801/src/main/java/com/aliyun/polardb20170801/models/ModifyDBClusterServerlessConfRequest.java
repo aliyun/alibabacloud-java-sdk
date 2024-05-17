@@ -15,6 +15,8 @@ public class ModifyDBClusterServerlessConfRequest extends TeaModel {
 
     /**
      * <p>The ID of the serverless cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -98,6 +100,15 @@ public class ModifyDBClusterServerlessConfRequest extends TeaModel {
      */
     @NameInMap("SecondsUntilAutoPause")
     public String secondsUntilAutoPause;
+
+    @NameInMap("ServerlessRuleCpuEnlargeThreshold")
+    public String serverlessRuleCpuEnlargeThreshold;
+
+    @NameInMap("ServerlessRuleCpuShrinkThreshold")
+    public String serverlessRuleCpuShrinkThreshold;
+
+    @NameInMap("ServerlessRuleMode")
+    public String serverlessRuleMode;
 
     public static ModifyDBClusterServerlessConfRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterServerlessConfRequest self = new ModifyDBClusterServerlessConfRequest();
@@ -230,6 +241,30 @@ public class ModifyDBClusterServerlessConfRequest extends TeaModel {
     }
     public String getSecondsUntilAutoPause() {
         return this.secondsUntilAutoPause;
+    }
+
+    public ModifyDBClusterServerlessConfRequest setServerlessRuleCpuEnlargeThreshold(String serverlessRuleCpuEnlargeThreshold) {
+        this.serverlessRuleCpuEnlargeThreshold = serverlessRuleCpuEnlargeThreshold;
+        return this;
+    }
+    public String getServerlessRuleCpuEnlargeThreshold() {
+        return this.serverlessRuleCpuEnlargeThreshold;
+    }
+
+    public ModifyDBClusterServerlessConfRequest setServerlessRuleCpuShrinkThreshold(String serverlessRuleCpuShrinkThreshold) {
+        this.serverlessRuleCpuShrinkThreshold = serverlessRuleCpuShrinkThreshold;
+        return this;
+    }
+    public String getServerlessRuleCpuShrinkThreshold() {
+        return this.serverlessRuleCpuShrinkThreshold;
+    }
+
+    public ModifyDBClusterServerlessConfRequest setServerlessRuleMode(String serverlessRuleMode) {
+        this.serverlessRuleMode = serverlessRuleMode;
+        return this;
+    }
+    public String getServerlessRuleMode() {
+        return this.serverlessRuleMode;
     }
 
 }

@@ -7,7 +7,7 @@ public class RestoreTableRequest extends TeaModel {
     /**
      * <p>The ID of the backup set.</p>
      * <br>
-     * <p>>  You must specify this parameter if you need to restore a database or a table by using a backup set. You can call the [DescribeBackups](~~98102~~) operation to query the ID of the backup set.</p>
+     * <p>>  You must specify this parameter if you need to restore a database or a table by using a backup set. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/98102.html) operation to query the ID of the backup set.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -15,7 +15,9 @@ public class RestoreTableRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~98094~~) operation to query the details of all clusters within your account.</p>
+     * <p>>  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the details of all clusters within your account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -50,7 +52,9 @@ public class RestoreTableRequest extends TeaModel {
     /**
      * <p>The JSON string that contains the information of the database and the table that you want to restore. All values of the database and table information are of the string type. Example: `[ { "tables":[ { "name":"testtb", "type":"table", "newname":"testtb_restore" } ], "name":"testdb", "type":"db", "newname":"testdb_restore" } ]`.</p>
      * <br>
-     * <p>>  You can call the [DescribeMetaList](~~194770~~) operation to query the names and details of databases and tables that can be restored and enter their information into the corresponding locations in the preceding example.</p>
+     * <p>>  You can call the [DescribeMetaList](https://help.aliyun.com/document_detail/194770.html) operation to query the names and details of databases and tables that can be restored and enter their information into the corresponding locations in the preceding example.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableMeta")
     public String tableMeta;

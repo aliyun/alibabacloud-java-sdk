@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterTDERequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -38,13 +40,15 @@ public class ModifyDBClusterTDERequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see [RAM role overview](~~93689~~).</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see [RAM role overview](https://help.aliyun.com/document_detail/93689.html).</p>
      */
     @NameInMap("RoleArn")
     public String roleArn;
 
     /**
      * <p>Modifies the TDE status. Set the value to **Enable**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TDEStatus")
     public String TDEStatus;

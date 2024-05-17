@@ -7,7 +7,9 @@ public class DescribePolarSQLCollectorPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
      * <br>
-     * <p>> You can call the [DescribeDBClusters](~~98094~~) operation to query the details of all the clusters for your account, such as the cluster ID.</p>
+     * <p>> You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the details of all the clusters for your account, such as the cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

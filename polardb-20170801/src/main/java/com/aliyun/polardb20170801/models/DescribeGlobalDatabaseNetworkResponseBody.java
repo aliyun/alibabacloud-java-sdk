@@ -45,7 +45,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
      * <br>
      * <p>*   It cannot start with `http://` or `https://`.</p>
      * <p>*   It must start with a letter.</p>
-     * <p>*   It can contain letters, digits, underscores (\_), and hyphens (-).</p>
+     * <p>*   It can contain letters, digits, underscores (_), and hyphens (-).</p>
      * <p>*   It must be 2 to 126 characters in length.</p>
      */
     @NameInMap("GDNDescription")
@@ -389,7 +389,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
-         * <p>The status of the cluster in the GDN. For more information, see [Cluster status table](~~99286~~).</p>
+         * <p>The status of the cluster in the GDN. For more information, see [Cluster status table](https://help.aliyun.com/document_detail/99286.html).</p>
          */
         @NameInMap("DBClusterStatus")
         public String DBClusterStatus;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateGlobalDatabaseNetworkRequest extends TeaModel {
     /**
      * <p>The ID of the primary cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -15,7 +17,7 @@ public class CreateGlobalDatabaseNetworkRequest extends TeaModel {
      * <br>
      * <p>*   It cannot start with [http:// or https://.](http://https://。)</p>
      * <p>*   It must start with a letter.</p>
-     * <p>*   It can contain letters, digits, underscores (\_), and hyphens (-).</p>
+     * <p>*   It can contain letters, digits, underscores (_), and hyphens (-).</p>
      * <p>*   It must be 2 to 126 characters in length.</p>
      */
     @NameInMap("GDNDescription")

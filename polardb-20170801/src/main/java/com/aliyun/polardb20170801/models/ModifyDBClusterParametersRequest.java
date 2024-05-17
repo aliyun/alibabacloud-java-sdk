@@ -7,7 +7,9 @@ public class ModifyDBClusterParametersRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
      * <br>
-     * <p>> You can call the [DescribeDBClusters](~~98094~~) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     * <p>> You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -32,7 +34,7 @@ public class ModifyDBClusterParametersRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <br>
-     * <p>*   You can call the [DescribeParameterGroups](~~207178~~) operation to query the parameter template ID.</p>
+     * <p>*   You can call the [DescribeParameterGroups](https://help.aliyun.com/document_detail/207178.html) operation to query the parameter template ID.</p>
      * <br>
      * <p>*   You must specify this parameter or the `Parameters` parameter.</p>
      * <p>*   This parameter is valid only for a PolarDB for MySQL cluster.</p>
@@ -45,7 +47,7 @@ public class ModifyDBClusterParametersRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <br>
-     * <p>*   You can call the [DescribeDBClusterParameters](~~98122~~) operation to query the parameters of the PolarDB cluster.</p>
+     * <p>*   You can call the [DescribeDBClusterParameters](https://help.aliyun.com/document_detail/98122.html) operation to query the parameters of the PolarDB cluster.</p>
      * <br>
      * <p>*   This parameter is required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster.</p>
      * <p>*   For PolarDB for MySQL clusters, you must specify this parameter or the `ParameterGroupId` parameter.</p>

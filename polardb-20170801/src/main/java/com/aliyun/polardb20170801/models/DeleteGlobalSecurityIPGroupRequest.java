@@ -7,7 +7,7 @@ public class DeleteGlobalSecurityIPGroupRequest extends TeaModel {
     /**
      * <p>The name of the IP whitelist template. The name of the IP whitelist template must meet the following requirements:</p>
      * <br>
-     * <p>*   The name can contain lowercase letters, digits, and underscores (\_).</p>
+     * <p>*   The name can contain lowercase letters, digits, and underscores (_).</p>
      * <p>*   The name must start with a letter and end with a letter or digit.</p>
      * <p>*   The name must be 2 to 120 characters in length.</p>
      */
@@ -16,6 +16,8 @@ public class DeleteGlobalSecurityIPGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the IP whitelist template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GlobalSecurityGroupId")
     public String globalSecurityGroupId;
@@ -28,6 +30,8 @@ public class DeleteGlobalSecurityIPGroupRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

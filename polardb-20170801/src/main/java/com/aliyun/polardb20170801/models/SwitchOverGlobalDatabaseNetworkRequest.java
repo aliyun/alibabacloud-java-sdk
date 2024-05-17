@@ -7,7 +7,7 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends TeaModel {
     /**
      * <p>The ID of the cluster that will become the primary cluster in the GDN.</p>
      * <br>
-     * <p>You can call the [DescribeGlobalDatabaseNetwork](~~264580~~) operation to query the ID of the cluster in the GDN.</p>
+     * <p>You can call the [DescribeGlobalDatabaseNetwork](https://help.aliyun.com/document_detail/264580.html) operation to query the ID of the cluster in the GDN.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -23,6 +23,8 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends TeaModel {
 
     /**
      * <p>The ID of the GDN.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GDNId")
     public String GDNId;

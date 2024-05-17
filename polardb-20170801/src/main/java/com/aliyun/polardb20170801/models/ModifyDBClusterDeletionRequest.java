@@ -7,7 +7,9 @@ public class ModifyDBClusterDeletionRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~98094~~) operation to.obtain the cluster ID.</p>
+     * <p>>  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to.obtain the cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

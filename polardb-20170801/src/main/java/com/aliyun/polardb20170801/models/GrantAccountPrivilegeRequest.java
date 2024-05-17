@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GrantAccountPrivilegeRequest extends TeaModel {
     /**
      * <p>The username of the account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
@@ -19,19 +21,25 @@ public class GrantAccountPrivilegeRequest extends TeaModel {
      * <p>*   **DDLOnly**: The account is granted the permissions to execute only DDL statements on the database.</p>
      * <p>*   **ReadIndex**: The account has the read and index permissions on the database.</p>
      * <br>
-     * <p>> The number of **AccountPrivilege** values must be the consistent with the number of **DBName** values. Each account permission must correspond to a database name in sequence. For example, you can set **DBName** to `testdb_1,testdb_2` and set **AccountPrivilege** to `ReadWrite,ReadOnly`. In this case, the specified standard account is granted the **read and write** permissions on the **testdb\_1** database and the **read** permission on the **testdb\_2** database.</p>
+     * <p>> The number of **AccountPrivilege** values must be the consistent with the number of **DBName** values. Each account permission must correspond to a database name in sequence. For example, you can set **DBName** to `testdb_1,testdb_2` and set **AccountPrivilege** to `ReadWrite,ReadOnly`. In this case, the specified standard account is granted the **read and write** permissions on the **testdb_1** database and the **read** permission on the **testdb_2** database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountPrivilege")
     public String accountPrivilege;
 
     /**
      * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The names of the databases that the account can access. You can grant the access permissions on one or more databases to the specified standard account. If you need to specify multiple database names, separate the database names with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBName")
     public String DBName;

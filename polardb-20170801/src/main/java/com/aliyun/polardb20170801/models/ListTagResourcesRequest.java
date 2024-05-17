@@ -17,7 +17,9 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~98041~~) operation to query available region IDs.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available region IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -42,6 +44,8 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Set the value to **cluster**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

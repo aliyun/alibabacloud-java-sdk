@@ -12,6 +12,8 @@ public class TransformDBClusterPayTypeRequest extends TeaModel {
 
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -27,6 +29,8 @@ public class TransformDBClusterPayTypeRequest extends TeaModel {
      * <br>
      * <p>*   **Postpaid**: pay-as-you-go.</p>
      * <p>*   **Prepaid**: subscription.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PayType")
     public String payType;
@@ -44,6 +48,8 @@ public class TransformDBClusterPayTypeRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

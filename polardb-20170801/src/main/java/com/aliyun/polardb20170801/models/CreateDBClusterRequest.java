@@ -89,7 +89,7 @@ public class CreateDBClusterRequest extends TeaModel {
      * <br>
      * <p>*   Only when the **DBType** parameter is set to **MySQL** and the **DBVersion** parameter is set to **8.0**, you can set this parameter to **ArchiveNormal** or **NormalMultimaster**.</p>
      * <br>
-     * <p>For more information, see [Product editions](~~183258~~).</p>
+     * <p>For more information, see [Product editions](https://help.aliyun.com/document_detail/183258.html).</p>
      */
     @NameInMap("CreationCategory")
     public String creationCategory;
@@ -99,21 +99,21 @@ public class CreateDBClusterRequest extends TeaModel {
      * <br>
      * <p>*   **Normal**: creates a PolarDB cluster. For more information about how to perform this operation in the console, see the following topics:</p>
      * <br>
-     * <p>    *   [Create a PolarDB for MySQL cluster](~~58769~~)</p>
-     * <p>    *   [Create a PolarDB for PostgreSQL cluster](~~118063~~)</p>
-     * <p>    *   [Create a PolarDB for Oracle cluster](~~118182~~)</p>
+     * <p>    *   [Create a PolarDB for MySQL cluster](https://help.aliyun.com/document_detail/58769.html)</p>
+     * <p>    *   [Create a PolarDB for PostgreSQL cluster](https://help.aliyun.com/document_detail/118063.html)</p>
+     * <p>    *   [Create a PolarDB for Oracle cluster](https://help.aliyun.com/document_detail/118182.html)</p>
      * <br>
      * <p>*   **CloneFromPolarDB**: clones data from an existing PolarDB cluster to a new PolarDB cluster. For more information about how to perform this operation in the console, see the following topics:</p>
      * <br>
-     * <p>    *   [Clone a PolarDB for MySQL cluster](~~87966~~)</p>
-     * <p>    *   [Clone a PolarDB for PostgreSQL cluster](~~118108~~)</p>
-     * <p>    *   [Clone a PolarDB for Oracle cluster](~~118221~~)</p>
+     * <p>    *   [Clone a PolarDB for MySQL cluster](https://help.aliyun.com/document_detail/87966.html)</p>
+     * <p>    *   [Clone a PolarDB for PostgreSQL cluster](https://help.aliyun.com/document_detail/118108.html)</p>
+     * <p>    *   [Clone a PolarDB for Oracle cluster](https://help.aliyun.com/document_detail/118221.html)</p>
      * <br>
-     * <p>*   **CloneFromRDS**: clones data from an existing ApsaraDB RDS for MySQL instance to a new PolarDB for MySQL cluster. For more information about how to perform this operation in the console, see [Create a PolarDB for MySQL cluster by cloning an ApsaraDB RDS for MySQL instance](~~121812~~).</p>
+     * <p>*   **CloneFromRDS**: clones data from an existing ApsaraDB RDS for MySQL instance to a new PolarDB for MySQL cluster. For more information about how to perform this operation in the console, see [Create a PolarDB for MySQL cluster by cloning an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/121812.html).</p>
      * <br>
-     * <p>*   **MigrationFromRDS**: migrates data from an existing ApsaraDB RDS for MySQL instance to a new PolarDB for MySQL cluster. By default, the created PolarDB cluster is in read-only mode, and the binary logging feature is enabled. For more information about how to perform this operation in the console, see [Create a PolarDB for MySQL cluster from an ApsaraDB RDS for MySQL instance](~~121582~~).</p>
+     * <p>*   **MigrationFromRDS**: migrates data from an existing ApsaraDB RDS for MySQL instance to a new PolarDB for MySQL cluster. By default, the created PolarDB cluster is in read-only mode, and the binary logging feature is enabled. For more information about how to perform this operation in the console, see [Create a PolarDB for MySQL cluster from an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/121582.html).</p>
      * <br>
-     * <p>*   **CreateGdnStandby**: creates a secondary cluster. For more information about how to perform this operation in the console, see [Add a secondary cluster](~~160381~~).</p>
+     * <p>*   **CreateGdnStandby**: creates a secondary cluster. For more information about how to perform this operation in the console, see [Add a secondary cluster](https://help.aliyun.com/document_detail/160381.html).</p>
      * <br>
      * <p>Default value: **Normal**.</p>
      * <br>
@@ -149,9 +149,11 @@ public class CreateDBClusterRequest extends TeaModel {
     /**
      * <p>The specifications of the node.</p>
      * <br>
-     * <p>*   For more information about specifications supported by PolarDB for MySQL, see [Specifications of compute nodes](~~102542~~).</p>
-     * <p>*   For information about node specifications supported by the Oracle database engine, see [Specifications of compute nodes](~~207921~~).</p>
-     * <p>*   For information about node specifications supported by the PostgreSQL database engine, see [Specifications of compute nodes](~~209380~~).</p>
+     * <p>*   For more information about specifications supported by PolarDB for MySQL, see [Specifications of compute nodes](https://help.aliyun.com/document_detail/102542.html).</p>
+     * <p>*   For information about node specifications supported by the Oracle database engine, see [Specifications of compute nodes](https://help.aliyun.com/document_detail/207921.html).</p>
+     * <p>*   For information about node specifications supported by the PostgreSQL database engine, see [Specifications of compute nodes](https://help.aliyun.com/document_detail/209380.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBNodeClass")
     public String DBNodeClass;
@@ -168,6 +170,8 @@ public class CreateDBClusterRequest extends TeaModel {
      * <p>*   **MySQL**</p>
      * <p>*   **PostgreSQL**</p>
      * <p>*   **Oracle**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBType")
     public String DBType;
@@ -187,6 +191,8 @@ public class CreateDBClusterRequest extends TeaModel {
      * <p>    *   **14**</p>
      * <br>
      * <p>*   Valid value for the Oracle database engine: **11**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBVersion")
     public String DBVersion;
@@ -259,7 +265,7 @@ public class CreateDBClusterRequest extends TeaModel {
     /**
      * <p>The ID of the parameter template.</p>
      * <br>
-     * <p>> You can call the [DescribeParameterGroups](~~207178~~) operation to query the details of all parameter templates of a specified region, such as the ID of a parameter template.</p>
+     * <p>> You can call the [DescribeParameterGroups](https://help.aliyun.com/document_detail/207178.html) operation to query the details of all parameter templates of a specified region, such as the ID of a parameter template.</p>
      */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
@@ -269,6 +275,8 @@ public class CreateDBClusterRequest extends TeaModel {
      * <br>
      * <p>*   **Postpaid**: pay-as-you-go</p>
      * <p>*   **Prepaid**: subscription</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PayType")
     public String payType;
@@ -303,7 +311,9 @@ public class CreateDBClusterRequest extends TeaModel {
     /**
      * <p>The region ID of the cluster.</p>
      * <br>
-     * <p>> You can call the [DescribeRegions](~~98041~~) operation to query available regions.</p>
+     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available regions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -437,7 +447,7 @@ public class CreateDBClusterRequest extends TeaModel {
      * <br>
      * <p>*   This parameter is valid only when the **DBType** parameter is set to **PostgreSQL** or **Oracle**.</p>
      * <br>
-     * <p>*   You can call the [ModifyDBClusterTDE](~~167982~~) operation to enable TDE for a PolarDB for MySQL cluster.</p>
+     * <p>*   You can call the [ModifyDBClusterTDE](https://help.aliyun.com/document_detail/167982.html) operation to enable TDE for a PolarDB for MySQL cluster.</p>
      * <p>*   TDE cannot be disabled after it is enabled.</p>
      */
     @NameInMap("TDEStatus")
@@ -473,7 +483,7 @@ public class CreateDBClusterRequest extends TeaModel {
     /**
      * <p>The zone ID of the cluster.</p>
      * <br>
-     * <p>> You can call the [DescribeRegions](~~98041~~) operation to query available zones.</p>
+     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available zones.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

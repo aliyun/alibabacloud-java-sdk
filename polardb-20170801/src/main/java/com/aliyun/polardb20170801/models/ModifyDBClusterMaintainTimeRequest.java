@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterMaintainTimeRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -14,6 +16,8 @@ public class ModifyDBClusterMaintainTimeRequest extends TeaModel {
      * <p>The maintenance window of the cluster. Specify the maintenance window in the `HH:mmZ-HH:mmZ` format. For example, the value `16:00Z-17:00Z` indicates that the cluster can be maintained from 00:00 to 01:00 (UTC+8).</p>
      * <p> </p>
      * <p>>  The maintenance window must start on the hour and last for an hour.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MaintainTime")
     public String maintainTime;

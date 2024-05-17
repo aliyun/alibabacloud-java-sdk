@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterConnectivityRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -33,6 +35,8 @@ public class DescribeDBClusterConnectivityRequest extends TeaModel {
 
     /**
      * <p>The source IP address.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceIpAddress")
     public String sourceIpAddress;

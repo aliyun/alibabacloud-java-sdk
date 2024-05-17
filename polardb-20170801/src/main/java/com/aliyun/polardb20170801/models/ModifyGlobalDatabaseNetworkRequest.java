@@ -9,14 +9,18 @@ public class ModifyGlobalDatabaseNetworkRequest extends TeaModel {
      * <br>
      * <p>*   It cannot start with `http://` or `https://`.</p>
      * <p>*   It must start with a letter.</p>
-     * <p>*   It can contain letters, digits, underscores (\_), and hyphens (-).</p>
+     * <p>*   It can contain letters, digits, underscores (_), and hyphens (-).</p>
      * <p>*   It must be 2 to 126 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GDNDescription")
     public String GDNDescription;
 
     /**
      * <p>The ID of the GDN.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GDNId")
     public String GDNId;

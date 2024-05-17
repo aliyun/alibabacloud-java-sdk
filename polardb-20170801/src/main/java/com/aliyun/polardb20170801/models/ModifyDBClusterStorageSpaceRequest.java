@@ -12,6 +12,8 @@ public class ModifyDBClusterStorageSpaceRequest extends TeaModel {
 
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -49,6 +51,8 @@ public class ModifyDBClusterStorageSpaceRequest extends TeaModel {
      * <p>The storage capacity that you can select when you change the cluster. Unit: GB.</p>
      * <br>
      * <p>>  You can set this parameter for PolarDB for MySQL clusters of Standard Edition to a value that ranges from 20 to 32000.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StorageSpace")
     public Long storageSpace;

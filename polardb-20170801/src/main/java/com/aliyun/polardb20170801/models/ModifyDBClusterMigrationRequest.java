@@ -14,6 +14,8 @@ public class ModifyDBClusterMigrationRequest extends TeaModel {
 
     /**
      * <p>The ID of cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -23,6 +25,8 @@ public class ModifyDBClusterMigrationRequest extends TeaModel {
      * <br>
      * <p>*   To perform a data migration, enter the ID of the PolarDB cluster.</p>
      * <p>*   To perform a migration rollback, enter the ID of the ApsaraDB for RDS instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NewMasterInstanceId")
     public String newMasterInstanceId;
@@ -44,6 +48,8 @@ public class ModifyDBClusterMigrationRequest extends TeaModel {
 
     /**
      * <p>The ID of the source ApsaraDB RDS instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceRDSDBInstanceId")
     public String sourceRDSDBInstanceId;
