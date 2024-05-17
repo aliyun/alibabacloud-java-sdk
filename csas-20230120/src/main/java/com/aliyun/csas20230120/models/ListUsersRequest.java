@@ -4,6 +4,9 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListUsersRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
@@ -13,6 +16,9 @@ public class ListUsersRequest extends TeaModel {
     @NameInMap("FuzzyUsername")
     public String fuzzyUsername;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

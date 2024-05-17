@@ -13,6 +13,9 @@ public class ListClientUsersRequest extends TeaModel {
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IdpConfigId")
     public String idpConfigId;
 

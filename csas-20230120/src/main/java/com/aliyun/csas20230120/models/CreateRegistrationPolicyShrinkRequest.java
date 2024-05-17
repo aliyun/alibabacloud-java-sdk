@@ -7,27 +7,42 @@ public class CreateRegistrationPolicyShrinkRequest extends TeaModel {
     @NameInMap("CompanyLimitCount")
     public String companyLimitCountShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CompanyLimitType")
     public String companyLimitType;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MatchMode")
     public String matchMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("PersonalLimitCount")
     public String personalLimitCountShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PersonalLimitType")
     public String personalLimitType;
 
     @NameInMap("Priority")
     public Long priority;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Status")
     public String status;
 

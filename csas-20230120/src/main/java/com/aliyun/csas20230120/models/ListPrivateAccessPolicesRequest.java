@@ -10,12 +10,18 @@ public class ListPrivateAccessPolicesRequest extends TeaModel {
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

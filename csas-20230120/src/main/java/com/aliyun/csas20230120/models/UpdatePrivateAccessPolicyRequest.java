@@ -25,6 +25,9 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     @NameInMap("PolicyAction")
     public String policyAction;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 
@@ -164,12 +167,21 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
         @NameInMap("IdpId")
         public Integer idpId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Relation")
         public String relation;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("UserGroupType")
         public String userGroupType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Value")
         public String value;
 

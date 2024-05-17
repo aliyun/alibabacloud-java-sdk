@@ -4,6 +4,9 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListPrivateAccessTagsForDynamicRouteRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DynamicRouteIds")
     public java.util.List<String> dynamicRouteIds;
 

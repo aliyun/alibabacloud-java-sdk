@@ -4,9 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class DeleteIdpDepartmentRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DepartmentId")
     public String departmentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IdpConfigId")
     public String idpConfigId;
 

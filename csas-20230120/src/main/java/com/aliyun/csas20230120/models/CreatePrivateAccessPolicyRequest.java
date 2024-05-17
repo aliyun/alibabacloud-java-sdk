@@ -7,6 +7,9 @@ public class CreatePrivateAccessPolicyRequest extends TeaModel {
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApplicationType")
     public String applicationType;
 
@@ -19,15 +22,27 @@ public class CreatePrivateAccessPolicyRequest extends TeaModel {
     @NameInMap("DeviceAttributeId")
     public String deviceAttributeId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PolicyAction")
     public String policyAction;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -44,6 +59,8 @@ public class CreatePrivateAccessPolicyRequest extends TeaModel {
      * <p>内网访问策略的用户组类型。取值：</p>
      * <p>- **Normal**：普通用户组。</p>
      * <p>- **Custom**：自定义用户组。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserGroupMode")
     public String userGroupMode;

@@ -13,12 +13,18 @@ public class ListPrivateAccessApplicationsRequest extends TeaModel {
     @NameInMap("ConnectorId")
     public String connectorId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

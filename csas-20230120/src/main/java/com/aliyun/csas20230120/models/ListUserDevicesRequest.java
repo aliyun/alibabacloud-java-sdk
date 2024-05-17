@@ -7,6 +7,9 @@ public class ListUserDevicesRequest extends TeaModel {
     @NameInMap("AppStatuses")
     public java.util.List<String> appStatuses;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
@@ -34,6 +37,9 @@ public class ListUserDevicesRequest extends TeaModel {
     @NameInMap("IaStatuses")
     public java.util.List<String> iaStatuses;
 
+    @NameInMap("InnerIp")
+    public String innerIp;
+
     @NameInMap("Mac")
     public String mac;
 
@@ -43,6 +49,9 @@ public class ListUserDevicesRequest extends TeaModel {
     @NameInMap("PaStatuses")
     public java.util.List<String> paStatuses;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -141,6 +150,14 @@ public class ListUserDevicesRequest extends TeaModel {
     }
     public java.util.List<String> getIaStatuses() {
         return this.iaStatuses;
+    }
+
+    public ListUserDevicesRequest setInnerIp(String innerIp) {
+        this.innerIp = innerIp;
+        return this;
+    }
+    public String getInnerIp() {
+        return this.innerIp;
     }
 
     public ListUserDevicesRequest setMac(String mac) {

@@ -1,3 +1,7 @@
+2024-05-17 Version: 1.5.1
+- Update API ListUserDevices: add param InnerIp.
+
+
 2024-04-25 Version: 1.5.0
 - Support API CreateClientUser.
 - Support API CreateIdpDepartment.

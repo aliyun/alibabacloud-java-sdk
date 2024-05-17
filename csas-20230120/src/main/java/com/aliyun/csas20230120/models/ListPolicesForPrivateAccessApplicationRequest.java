@@ -4,6 +4,9 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListPolicesForPrivateAccessApplicationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 

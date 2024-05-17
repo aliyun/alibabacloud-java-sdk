@@ -4,12 +4,18 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreateUserGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Attributes")
     public java.util.List<CreateUserGroupRequestAttributes> attributes;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -46,12 +52,21 @@ public class CreateUserGroupRequest extends TeaModel {
         @NameInMap("IdpId")
         public Integer idpId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Relation")
         public String relation;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("UserGroupType")
         public String userGroupType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Value")
         public String value;
 

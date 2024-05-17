@@ -7,12 +7,18 @@ public class ListConnectorsRequest extends TeaModel {
     @NameInMap("ConnectorIds")
     public java.util.List<String> connectorIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

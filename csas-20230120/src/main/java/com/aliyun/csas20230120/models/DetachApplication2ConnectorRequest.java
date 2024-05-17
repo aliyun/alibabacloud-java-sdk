@@ -4,11 +4,16 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class DetachApplication2ConnectorRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
     /**
      * <p>ConnectorID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConnectorId")
     public String connectorId;
