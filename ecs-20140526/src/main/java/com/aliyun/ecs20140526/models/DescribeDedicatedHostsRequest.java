@@ -37,9 +37,19 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     @NameInMap("LockReason")
     public String lockReason;
 
+    /**
+     * <p>The maximum number of entries per page. If you specify this parameter, both MaxResults and NextToken are used for a paged query.</p>
+     * <br>
+     * <p>Valid values: 1 to 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -90,7 +100,10 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to display socket capacity information.</p>
+     * <p>Specifies whether to display socket information. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("SocketDetails")
     public String socketDetails;
@@ -280,13 +293,13 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
 
     public static class DescribeDedicatedHostsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N to add to the dedicated host. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The value of tag N of the dedicated host. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

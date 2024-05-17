@@ -11,19 +11,19 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
     public DescribeImageComponentsResponseBodyImageComponent imageComponent;
 
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The query token returned in this call. For information about how to use this return value, see the "Description" section in this topic.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. For information about how to use the returned value, see the "Usage notes" section of this topic.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,13 +81,13 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
 
     public static class DescribeImageComponentsResponseBodyImageComponentImageComponentSetTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the image component.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value of the image component.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -181,13 +181,13 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the resource group to which the image component belongs.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The operating system type supported by the image component.</p>
+         * <p>The type of the operating system supported by the image component.</p>
          */
         @NameInMap("SystemType")
         public String systemType;

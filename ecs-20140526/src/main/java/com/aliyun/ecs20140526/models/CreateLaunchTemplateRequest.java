@@ -273,7 +273,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
      * <br>
      * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
      * <br>
-     * <p>>  This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo.</p>
+     * <p>>  This parameter takes effect only if SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
      */
     @NameInMap("SpotDuration")
     public Integer spotDuration;
@@ -313,7 +313,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public java.util.List<CreateLaunchTemplateRequestTemplateTag> templateTag;
 
     /**
-     * <p>The user data of the instance. The user data must be encoded in Base64. The maximum size of raw data is 16 KB.</p>
+     * <p>The user data of the instance. The user data must be encoded in Base64. The maximum size of raw data is 32 KB.</p>
      */
     @NameInMap("UserData")
     public String userData;
@@ -745,7 +745,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
          * <p>*   cloud: basic disk.</p>
          * <p>*   cloud_efficiency: ultra disk.</p>
          * <p>*   cloud_ssd: standard SSD.</p>
-         * <p>*   cloud_essd: enhanced SSD (ESSD). You can use `SystemDisk.PerformanceLevel` to set the performance level of the ESSD to use as the system disk.</p>
+         * <p>*   cloud_essd: Enterprise SSD (ESSD). You can use `SystemDisk.PerformanceLevel` to set the performance level of the ESSD to use as the system disk.</p>
          * <p>*   cloud_auto: ESSD AutoPL disk.</p>
          * <p>*   cloud_essd_entry: ESSD Entry disk.</p>
          * <br>
@@ -980,7 +980,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The name of data disk N. The name must be 2 to 128 characters in length The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
          */
         @NameInMap("DiskName")
         public String diskName;
@@ -1216,7 +1216,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
          * <br>
          * <p>*   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</p>
          * <p>*   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter. In this case, this parameter is equivalent to `SecurityGroupId`. You cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupIds.N`.</p>
-         * <p>*   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which the instance belongs.</p>
+         * <p>*   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which to assign the instance.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
@@ -1230,7 +1230,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
          * <p>Take note of the following items:</p>
          * <br>
          * <p>*   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must specify this parameter or `NetworkInterface.N.SecurityGroupId`. In this case, this parameter is equivalent to `SecurityGroupIds.N`. You cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupId`.</p>
-         * <p>*   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which the instance belongs.</p>
+         * <p>*   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which to assign the instance.</p>
          */
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;

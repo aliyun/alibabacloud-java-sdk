@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssignIpv6AddressesResponseBody extends TeaModel {
     /**
-     * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
+     * <p>The IPv6 prefixes of the ENI.</p>
      */
     @NameInMap("Ipv6PrefixSets")
     public AssignIpv6AddressesResponseBodyIpv6PrefixSets ipv6PrefixSets;

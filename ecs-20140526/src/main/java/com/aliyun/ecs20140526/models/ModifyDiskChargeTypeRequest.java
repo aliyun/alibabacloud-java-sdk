@@ -7,8 +7,8 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically complete the payment. Valid values:</p>
      * <br>
-     * <p>*   true (default): The payment is automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled.</p>
-     * <p>*   false: An order is generated but no payment is made. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
+     * <p>*   true (default): The payment is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled.</p>
+     * <p>*   false: An order is generated but no payment is made. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can go to the [Orders page](https://usercenter2-intl.aliyun.com/order/list) in the Expenses and Costs console and pay for the order.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
@@ -29,7 +29,7 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     public String diskChargeType;
 
     /**
-     * <p>The disk IDs. Set this parameter to a JSON array that consists of up to 16 disk IDs. Separate the disk IDs with commas (,).</p>
+     * <p>The IDs of disks. The value is a JSON array that consists of up to 16 disk IDs. Separate the disk IDs with commas (,).</p>
      * <br>
      * <p>This parameter is required.</p>
      */

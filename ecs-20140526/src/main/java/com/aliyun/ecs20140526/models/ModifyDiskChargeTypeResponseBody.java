@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskChargeTypeResponseBody extends TeaModel {
     /**
-     * <p>The order ID.</p>
+     * <p>The ID of the order.</p>
      */
     @NameInMap("OrderId")
     public String orderId;

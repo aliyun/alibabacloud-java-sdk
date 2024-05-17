@@ -186,7 +186,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Boolean eniTrunkSupported;
 
         /**
-         * <p>The number of elastic RDMA interfaces (ERIs).</p>
+         * <p>The number of ERIs.</p>
          * <br>
          * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
@@ -200,7 +200,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer GPUAmount;
 
         /**
-         * <p>The amount of GPU memory per GPU. Unit: GiB.</p>
+         * <p>The amount of GPU memory per GPU. Unit: GiB</p>
          */
         @NameInMap("GPUMemorySize")
         public Float GPUMemorySize;
@@ -232,22 +232,22 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         /**
          * <p>The category of the instance type. Valid values:</p>
          * <br>
-         * <p>*   General-purpose: general-purpose instance type</p>
-         * <p>*   Compute-optimized: compute-optimized instance type</p>
-         * <p>*   Memory-optimized: memory-optimized instance type</p>
-         * <p>*   Big data: big data instance type</p>
-         * <p>*   Local SSDs: instance type with local SSDs</p>
-         * <p>*   High Clock Speed: instance type with high clock speeds</p>
-         * <p>*   Enhanced: enhanced instance type</p>
-         * <p>*   Shared: shared instance type</p>
-         * <p>*   Compute-optimized with GPU: GPU-accelerated compute-optimized instance type</p>
-         * <p>*   Visual Compute-optimized: visual compute-optimized instance type</p>
-         * <p>*   Heterogeneous Service: heterogeneous service instance type</p>
-         * <p>*   Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type</p>
-         * <p>*   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type</p>
-         * <p>*   ECS Bare Metal: ECS Bare Metal Instance type</p>
-         * <p>*   Super Computing Cluster: SCC instance type</p>
-         * <p>*   High Performance Compute: high-performance computing instance type</p>
+         * <p>*   General-purpose</p>
+         * <p>*   Compute-optimized</p>
+         * <p>*   Memory-optimized</p>
+         * <p>*   Big data</p>
+         * <p>*   Local SSDs</p>
+         * <p>*   High Clock Speed</p>
+         * <p>*   Enhanced</p>
+         * <p>*   Shared</p>
+         * <p>*   Compute-optimized with GPU</p>
+         * <p>*   Visual Compute-optimized</p>
+         * <p>*   Heterogeneous Service</p>
+         * <p>*   Compute-optimized with FPGA</p>
+         * <p>*   Compute-optimized with NPU</p>
+         * <p>*   ECS Bare Metal</p>
+         * <p>*   Super Computing Cluster</p>
+         * <p>*   High Performance Compute</p>
          */
         @NameInMap("InstanceCategory")
         public String instanceCategory;
@@ -293,7 +293,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer localStorageAmount;
 
         /**
-         * <p>The capacity of each local disk attached per instance. Unit: GiB.</p>
+         * <p>The capacity of each local disk. Unit: GiB</p>
          */
         @NameInMap("LocalStorageCapacity")
         public Long localStorageCapacity;
@@ -301,8 +301,8 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         /**
          * <p>The category of local disks. For more information, see [Local disks](https://help.aliyun.com/document_detail/63138.html). Valid values:</p>
          * <br>
-         * <p>*   local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances.</p>
-         * <p>*   local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances.</p>
+         * <p>*   local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances</p>
+         * <p>*   local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances</p>
          */
         @NameInMap("LocalStorageCategory")
         public String localStorageCategory;
@@ -314,7 +314,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer maximumQueueNumberPerEni;
 
         /**
-         * <p>The memory size. Unit: GiB.</p>
+         * <p>The memory size. Unit: GiB</p>
          */
         @NameInMap("MemorySize")
         public Float memorySize;
@@ -326,7 +326,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer networkCardQuantity;
 
         /**
-         * <p>The information about the network cards.</p>
+         * <p>The information of the network cards.</p>
          */
         @NameInMap("NetworkCards")
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkCards networkCards;
@@ -362,7 +362,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer primaryEniQueueNumber;
 
         /**
-         * <p>The maximum number of QP queues per ERI.</p>
+         * <p>The maximum number of QPs per ERI.</p>
          */
         @NameInMap("QueuePairNumber")
         public Integer queuePairNumber;
@@ -374,7 +374,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer secondaryEniQueueNumber;
 
         /**
-         * <p>规格支持的启动模式。</p>
+         * <p>The boot modes supported by the instance type.</p>
          */
         @NameInMap("SupportedBootModes")
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSupportedBootModes supportedBootModes;

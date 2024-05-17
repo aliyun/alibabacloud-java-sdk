@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopInstancesResponseBody extends TeaModel {
     /**
-     * <p>Details about the responses returned for the instances, which contain the status of each instance before and after the operation is called and the operation results.</p>
+     * <p>The instance-specific responses, which contain the status of each instance before and after the operation was called and the results of the operation.</p>
      */
     @NameInMap("InstanceResponses")
     public StopInstancesResponseBodyInstanceResponses instanceResponses;
@@ -39,31 +39,31 @@ public class StopInstancesResponseBody extends TeaModel {
 
     public static class StopInstancesResponseBodyInstanceResponsesInstanceResponse extends TeaModel {
         /**
-         * <p>The error code that is returned for the operation on the instance. A return value of 200 indicates success. For more information, see the "Error codes" section in this topic.</p>
+         * <p>The error code returned for the instance. A return value of 200 indicates that the operation was successful. For more information, see the "Error codes" section of this topic.</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The current state of the instance.</p>
+         * <p>The current status of the instance.</p>
          */
         @NameInMap("CurrentStatus")
         public String currentStatus;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The error message that is returned for the operation on the instance. A return value of Success indicates that this operation is successful. For more information, see the "Error codes" section in this topic.</p>
+         * <p>The error message returned for the instance. A return value of success indicates that the operation was successful. For more information, see the "Error codes" section of this topic.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The state of the instance before the operation is called.</p>
+         * <p>The status of the instance before the operation was called.</p>
          */
         @NameInMap("PreviousStatus")
         public String previousStatus;

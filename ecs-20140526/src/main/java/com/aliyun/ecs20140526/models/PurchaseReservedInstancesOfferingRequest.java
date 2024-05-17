@@ -13,11 +13,9 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal duration of the reserved instance. Unit: months. This parameter takes effect only when AutoRenew is set to true.</p>
+     * <p>The auto-renewal term of the reserved instance. Unit: months. This parameter takes effect only when AutoRenew is set to true.</p>
      * <br>
-     * <p>Valid values: 1, 12, 36, and 60.</p>
-     * <br>
-     * <p>Default value when PeriodUnit is set to Month: 1.</p>
+     * <p>Valid values: 12 and 36.</p>
      * <br>
      * <p>Default value when PeriodUnit is set to Year: 12.</p>
      */

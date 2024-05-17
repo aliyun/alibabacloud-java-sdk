@@ -40,6 +40,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     @NameInMap("NetworkInterfaceName")
     public String networkInterfaceName;
 
+    @NameInMap("NetworkInterfaceTrafficConfig")
+    public ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig networkInterfaceTrafficConfig;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -144,6 +147,14 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     }
     public String getNetworkInterfaceName() {
         return this.networkInterfaceName;
+    }
+
+    public ModifyNetworkInterfaceAttributeRequest setNetworkInterfaceTrafficConfig(ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig networkInterfaceTrafficConfig) {
+        this.networkInterfaceTrafficConfig = networkInterfaceTrafficConfig;
+        return this;
+    }
+    public ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig getNetworkInterfaceTrafficConfig() {
+        return this.networkInterfaceTrafficConfig;
     }
 
     public ModifyNetworkInterfaceAttributeRequest setOwnerAccount(String ownerAccount) {
@@ -255,6 +266,69 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
         }
         public Integer getUdpTimeout() {
             return this.udpTimeout;
+        }
+
+    }
+
+    public static class ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig extends TeaModel {
+        @NameInMap("NetworkInterfaceTrafficMode")
+        public String networkInterfaceTrafficMode;
+
+        @NameInMap("QueueNumber")
+        public Integer queueNumber;
+
+        @NameInMap("QueuePairNumber")
+        public Integer queuePairNumber;
+
+        @NameInMap("RxQueueSize")
+        public Integer rxQueueSize;
+
+        @NameInMap("TxQueueSize")
+        public Integer txQueueSize;
+
+        public static ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig build(java.util.Map<String, ?> map) throws Exception {
+            ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig self = new ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig setNetworkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+            this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+            return this;
+        }
+        public String getNetworkInterfaceTrafficMode() {
+            return this.networkInterfaceTrafficMode;
+        }
+
+        public ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig setQueueNumber(Integer queueNumber) {
+            this.queueNumber = queueNumber;
+            return this;
+        }
+        public Integer getQueueNumber() {
+            return this.queueNumber;
+        }
+
+        public ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig setQueuePairNumber(Integer queuePairNumber) {
+            this.queuePairNumber = queuePairNumber;
+            return this;
+        }
+        public Integer getQueuePairNumber() {
+            return this.queuePairNumber;
+        }
+
+        public ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig setRxQueueSize(Integer rxQueueSize) {
+            this.rxQueueSize = rxQueueSize;
+            return this;
+        }
+        public Integer getRxQueueSize() {
+            return this.rxQueueSize;
+        }
+
+        public ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig setTxQueueSize(Integer txQueueSize) {
+            this.txQueueSize = txQueueSize;
+            return this;
+        }
+        public Integer getTxQueueSize() {
+            return this.txQueueSize;
         }
 
     }

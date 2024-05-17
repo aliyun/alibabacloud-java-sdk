@@ -8,10 +8,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public ReplaceSystemDiskRequestSystemDisk systemDisk;
 
     /**
-     * <p>The system architecture. Valid values:</p>
-     * <br>
-     * <p>*   i386</p>
-     * <p>*   x86_64</p>
+     * <p>>  This parameter is deprecated.</p>
      */
     @NameInMap("Architecture")
     public String architecture;
@@ -29,13 +26,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The disk ID.</p>
-     * <br>
-     * <p>If the `ImageId` parameter is not specified, this parameter is required.</p>
-     * <br>
-     * <p>If the DiskId parameter is specified, the `Platform` and `Architecture` parameters are required. The specified values of `Platform` and `Architecture` must be consistent with those of `Platform` and `Architecture` parameters of the instance.</p>
-     * <br>
-     * <p>> This feature is available to select users. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm).</p>
+     * <p>>  This parameter is deprecated. To improve compatibility, we recommend that you use `ImageId`.</p>
      */
     @NameInMap("DiskId")
     public String diskId;
@@ -118,10 +109,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public Boolean passwordInherit;
 
     /**
-     * <p>The operating system distribution. Valid values:</p>
-     * <br>
-     * <p>*   CentOS</p>
-     * <p>*   Ubuntu</p>
+     * <p>>  This parameter is deprecated.</p>
      */
     @NameInMap("Platform")
     public String platform;
@@ -318,11 +306,14 @@ public class ReplaceSystemDiskRequest extends TeaModel {
 
     public static class ReplaceSystemDiskRequestSystemDisk extends TeaModel {
         /**
-         * <p>The capacity of the new system disk. Unit: GiB. Valid values: Max{20, Size of the image specified by ImageId} to 500.</p>
+         * <p>The capacity of the new system disk. Unit: GiB. Valid values:</p>
          * <br>
-         * <p>Default value: Max{40, Size of the image specified by ImageId}.</p>
+         * <p>*   Basic disk: Max{20, Size of the image corresponding to ImageId} to 500.</p>
+         * <p>*   Other disks: Max{20, Size of the image corresponding to ImageId} to 2,048.</p>
          * <br>
-         * <p>> If the capacity of the new system disk exceeds `Max{20, Capacity of the original system disk}`, you are charged for the excess capacity.</p>
+         * <p>Default value: 40 or the size of the image corresponding to ImageId, whichever is greater.</p>
+         * <br>
+         * <p>>  If the capacity of the new system disk exceeds `Max{20, Capacity of the original system disk}`, you are charged for excess capacity.</p>
          */
         @NameInMap("Size")
         public Integer size;

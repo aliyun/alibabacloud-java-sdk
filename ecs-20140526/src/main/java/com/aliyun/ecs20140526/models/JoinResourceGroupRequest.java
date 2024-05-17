@@ -48,7 +48,8 @@ public class JoinResourceGroupRequest extends TeaModel {
      * <p>*   keypair: SSH key pair</p>
      * <p>*   launchtemplate: launch template</p>
      * <p>*   command: Cloud Assistant command</p>
-     * <p>*   activation: activation code of the Cloud Assistant managed instance</p>
+     * <p>*   activation: activation code for a Cloud Assistant managed instance</p>
+     * <p>*   managedinstance: Cloud Assistant managed instance</p>
      * <br>
      * <p>The values are case-sensitive.</p>
      */
