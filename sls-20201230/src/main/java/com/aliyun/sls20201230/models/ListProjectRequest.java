@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListProjectRequest extends TeaModel {
+    @NameInMap("fetchQuota")
+    public Boolean fetchQuota;
+
     /**
      * <p>The line from which the query starts. Default value: 0.</p>
      */
@@ -28,6 +31,14 @@ public class ListProjectRequest extends TeaModel {
     public static ListProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProjectRequest self = new ListProjectRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListProjectRequest setFetchQuota(Boolean fetchQuota) {
+        this.fetchQuota = fetchQuota;
+        return this;
+    }
+    public Boolean getFetchQuota() {
+        return this.fetchQuota;
     }
 
     public ListProjectRequest setOffset(Integer offset) {

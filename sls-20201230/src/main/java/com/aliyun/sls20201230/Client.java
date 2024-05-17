@@ -5928,6 +5928,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListProjectResponse listProjectWithOptions(ListProjectRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fetchQuota)) {
+            query.put("fetchQuota", request.fetchQuota);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
             query.put("offset", request.offset);
         }
