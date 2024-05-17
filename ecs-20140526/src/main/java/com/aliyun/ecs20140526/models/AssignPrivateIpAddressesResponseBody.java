@@ -77,7 +77,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
 
     public static class AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet extends TeaModel {
         /**
-         * <p>> 该参数正在邀测中，暂未开放使用。</p>
+         * <p>Details about the assigned IPv4 prefixes.</p>
          */
         @NameInMap("Ipv4PrefixSet")
         public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetIpv4PrefixSet ipv4PrefixSet;

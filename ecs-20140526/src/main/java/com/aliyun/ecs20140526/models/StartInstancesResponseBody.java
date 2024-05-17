@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartInstancesResponseBody extends TeaModel {
     /**
-     * <p>The error code that is returned for the operation on the ECS instance. The value 200 indicates that the operation is successful. For more information, see the "Error codes" section in this topic.</p>
+     * <p>The status of the instances before and after the operation is called and the operation results.</p>
      */
     @NameInMap("InstanceResponses")
     public StartInstancesResponseBodyInstanceResponses instanceResponses;
@@ -39,29 +39,32 @@ public class StartInstancesResponseBody extends TeaModel {
 
     public static class StartInstancesResponseBodyInstanceResponsesInstanceResponse extends TeaModel {
         /**
-         * <p>The error message that is returned for the operation on the ECS instance. The value success indicates that the operation is successful. For more information, see the "Error codes" section in this topic.</p>
+         * <p>The error code returned for the operation on the instance. The status code 200 indicates that the request was successful. For more information, see the "Error codes" section of this topic.</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The status of the ECS instance before the operation is called.</p>
+         * <p>The status of the instance after the operation is called.</p>
          */
         @NameInMap("CurrentStatus")
         public String currentStatus;
 
         /**
-         * <p>The status of the ECS instance after the operation is called.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The ID of the ECS instance.</p>
+         * <p>The error message returned for the operation on the instance. The status code 200 indicates that the request was successful. For more information, see the "Error codes" section of this topic.</p>
          */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The status of the instance before the operation is called.</p>
+         */
         @NameInMap("PreviousStatus")
         public String previousStatus;
 

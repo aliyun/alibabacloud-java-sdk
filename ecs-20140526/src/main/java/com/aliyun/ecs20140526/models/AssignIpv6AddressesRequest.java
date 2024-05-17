@@ -4,35 +4,42 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AssignIpv6AddressesRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The IPv6 addresses that you want to assign to the ENI. You can specify up to 10 IPv6 addresses.</p>
+     * <p>The IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.</p>
      * <br>
      * <p>Example: Ipv6Address.1=2001:db8:1234:1a00::\\*\\*\\*\\*</p>
      * <br>
-     * <p>> You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.</p>
+     * <p>>  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount`, but not both.</p>
      */
     @NameInMap("Ipv6Address")
     public java.util.List<String> ipv6Address;
 
     /**
-     * <p>The number of IPv6 addresses that you want to generate at random for the ENI. Valid values: 1 to 10.</p>
+     * <p>The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.</p>
      * <br>
-     * <p>> You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.</p>
+     * <p>>  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount`, but not both.</p>
      */
     @NameInMap("Ipv6AddressCount")
     public Integer ipv6AddressCount;
 
     /**
-     * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
+     * <p>The IPv6 prefixes to assign to the ENI. Valid values of N: 1 to 10.</p>
+     * <br>
+     * <p>>  To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.</p>
      */
     @NameInMap("Ipv6Prefix")
     public java.util.List<String> ipv6Prefix;
 
     /**
-     * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
+     * <p>The number of IPv6 prefixes to assign to the ENI. Valid values: 1 to 10.</p>
+     * <br>
+     * <p>>  To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.</p>
      */
     @NameInMap("Ipv6PrefixCount")
     public Integer ipv6PrefixCount;

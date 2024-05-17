@@ -13,7 +13,7 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     public Boolean allocatePublicIp;
 
     /**
-     * <p>Specifies whether to enable the automatic payment feature. Valid values:</p>
+     * <p>Specifies whether to automatically complete the payment. Valid values:</p>
      * <br>
      * <p>*   true: After you modify the bandwidth configurations, the payment is automatically complete. Make sure that you have a sufficient balance in your account before you set AutoPay to true. If your account balance is insufficient, your order cannot be paid in the ECS console and becomes invalid. You must cancel the order.</p>
      * <p>*   false: After you modify the bandwidth configurations, an order is generated but the payment is not complete. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the [ECS console](https://ecs.console.aliyun.com) to pay for the order.</p>

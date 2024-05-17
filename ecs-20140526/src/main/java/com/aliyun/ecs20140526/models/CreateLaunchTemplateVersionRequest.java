@@ -8,7 +8,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public CreateLaunchTemplateVersionRequestSystemDisk systemDisk;
 
     /**
-     * <p>The automatic release time of the instance. Specify the time in the [ISO 8601 standard](https://help.aliyun.com/document_detail/25696.html) in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The automatic release time of the instance. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
      * <p>*   If the value of `ss` is not `00`, the time is automatically rounded down to the nearest minute based on the value of `mm`.</p>
      * <p>*   The specified time must be at least 30 minutes later than the current time.</p>
@@ -277,7 +277,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
      * <br>
      * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
      * <br>
-     * <p>>  This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo.</p>
+     * <p>>  This parameter takes effect only if SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
      */
     @NameInMap("SpotDuration")
     public Integer spotDuration;
@@ -305,7 +305,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public java.util.List<CreateLaunchTemplateVersionRequestTag> tag;
 
     /**
-     * <p>The user data of the instance. The user data must be encoded in Base64. The maximum size of raw data is 16 KB.</p>
+     * <p>The user data of the instance. The user data must be encoded in Base64. The maximum size of raw data is 32 KB.</p>
      */
     @NameInMap("UserData")
     public String userData;
@@ -729,7 +729,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
          * <p>*   cloud: basic disk.</p>
          * <p>*   cloud_efficiency: ultra disk.</p>
          * <p>*   cloud_ssd: standard SSD.</p>
-         * <p>*   cloud_auto: enhanced SSD (ESSD) AutoPL disk.</p>
+         * <p>*   cloud_auto: Enterprise SSD (ESSD) AutoPL disk.</p>
          * <p>*   cloud_essd: ESSD. You can use `SystemDisk.PerformanceLevel` to set the performance level of the ESSD to use as the system disk.</p>
          * <p>*   cloud_essd_entry: ESSD Entry disk.</p>
          * <br>
@@ -964,7 +964,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The name of data disk N. The name must be 2 to 128 characters in length The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
          */
         @NameInMap("DiskName")
         public String diskName;
@@ -991,7 +991,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         /**
          * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}</p>
          * <br>
-         * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+         * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
          * <br>
          * <p>>  This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html) and [Modify the performance configurations of an ESSD AutoPL disk](https://help.aliyun.com/document_detail/413275.html).</p>
          */
@@ -1024,7 +1024,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16. If you specify `DataDisk.N.SnapshotId`, `DataDisk.N.Size` is ignored. The data disk is created with the size of the specified snapshot.</p>
+         * <p>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16. When `DataDisk.N.SnapshotId` is specified, `DataDisk.N.Size` is ignored. The data disk is created with the size of the specified snapshot.</p>
          * <br>
          * <p>Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
          */

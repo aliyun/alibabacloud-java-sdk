@@ -11,13 +11,17 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>> 该参数正在邀测中，暂未开放使用。</p>
+     * <p>The IPv4 prefixes to assign to the ENI. Valid values of N: 1 to 10.</p>
+     * <br>
+     * <p>>  To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.</p>
      */
     @NameInMap("Ipv4Prefix")
     public java.util.List<String> ipv4Prefix;
 
     /**
-     * <p>> 该参数正在邀测中，暂未开放使用。</p>
+     * <p>The number of IPv4 prefixes to be randomly generated for the ENI. Valid values: 1 to 10.</p>
+     * <br>
+     * <p>>  To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.</p>
      */
     @NameInMap("Ipv4PrefixCount")
     public Integer ipv4PrefixCount;

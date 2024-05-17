@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     /**
-     * <p>The attribute of the ENI. Valid values:</p>
+     * <p>The attribute of the ENI. Valid value:</p>
      * <br>
-     * <p>attachment: attachment information about the ENI </p>
+     * <p>attachment: attachment information about the ENI</p>
      * <br>
-     * <p>>This parameter is in invitational preview and is not publicly available.</p>
+     * <p>>  This parameter is in invitational preview and is not publicly available.</p>
      */
     @NameInMap("Attribute")
     public String attribute;

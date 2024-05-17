@@ -90,6 +90,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("NetworkInterfaceName")
     public String networkInterfaceName;
 
+    @NameInMap("NetworkInterfaceTrafficConfig")
+    public DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig networkInterfaceTrafficConfig;
+
     /**
      * <p>The communication model of the ENI. Valid values:</p>
      * <br>
@@ -204,7 +207,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public DescribeNetworkInterfaceAttributeResponseBodyTags tags;
 
     /**
-     * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+     * <p>>  This parameter is in invitational preview and is not publicly available.</p>
      */
     @NameInMap("TcpOptionAddressEnabled")
     public String tcpOptionAddressEnabled;
@@ -351,6 +354,14 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     }
     public String getNetworkInterfaceName() {
         return this.networkInterfaceName;
+    }
+
+    public DescribeNetworkInterfaceAttributeResponseBody setNetworkInterfaceTrafficConfig(DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig networkInterfaceTrafficConfig) {
+        this.networkInterfaceTrafficConfig = networkInterfaceTrafficConfig;
+        return this;
+    }
+    public DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig getNetworkInterfaceTrafficConfig() {
+        return this.networkInterfaceTrafficConfig;
     }
 
     public DescribeNetworkInterfaceAttributeResponseBody setNetworkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
@@ -910,6 +921,47 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig extends TeaModel {
+        @NameInMap("NetworkInterfaceTrafficMode")
+        public String networkInterfaceTrafficMode;
+
+        @NameInMap("QueueNumber")
+        public Integer queueNumber;
+
+        @NameInMap("QueuePairNumber")
+        public Integer queuePairNumber;
+
+        public static DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig self = new DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig setNetworkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+            this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+            return this;
+        }
+        public String getNetworkInterfaceTrafficMode() {
+            return this.networkInterfaceTrafficMode;
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig setQueueNumber(Integer queueNumber) {
+            this.queueNumber = queueNumber;
+            return this;
+        }
+        public Integer getQueueNumber() {
+            return this.queueNumber;
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig setQueuePairNumber(Integer queuePairNumber) {
+            this.queuePairNumber = queuePairNumber;
+            return this;
+        }
+        public Integer getQueuePairNumber() {
+            return this.queuePairNumber;
+        }
+
+    }
+
     public static class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp extends TeaModel {
         /**
          * <p>>  This parameter is in invitational preview and is not publicly available.</p>
@@ -948,7 +1000,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet extends TeaModel {
         /**
-         * <p>The elastic IP address (EIP) that is associated with the secondary private IP address of the ENI.</p>
+         * <p>The EIP that is associated with the secondary private IP address of the ENI.</p>
          */
         @NameInMap("AssociatedPublicIp")
         public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp associatedPublicIp;
@@ -1089,13 +1141,13 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
