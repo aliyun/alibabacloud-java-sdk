@@ -12,6 +12,8 @@ public class ChangeResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group to which you want to move the resource.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
@@ -24,12 +26,16 @@ public class ChangeResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The type of the resource. Set the value to backupplan.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDownloadTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set generated when you create a download task. You can call the [DescribeBackups](~~26273~~) operation to query the ID.</p>
+     * <p>The ID of the backup set generated when you create a download task. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/26273.html) operation to query the ID.</p>
      */
     @NameInMap("BackupSetId")
     public String backupSetId;
@@ -17,7 +17,7 @@ public class DescribeDownloadTaskRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The ID of the Database Backup (DBS) data source. Specify the parameter in the format of *ds-${Instance ID}\_${regionId}*.</p>
+     * <p>The ID of the Database Backup (DBS) data source. Specify the parameter in the format of *ds-${Instance ID}_${regionId}*.</p>
      */
     @NameInMap("DatasourceId")
     public String datasourceId;
@@ -58,7 +58,9 @@ public class DescribeDownloadTaskRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.</p>
+     * <p>The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/26231.html) operation to query the region ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionCode")
     public String regionCode;

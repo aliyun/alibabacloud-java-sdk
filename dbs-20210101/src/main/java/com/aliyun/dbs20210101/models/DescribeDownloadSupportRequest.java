@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeDownloadSupportRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.</p>
+     * <p>The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/26231.html) operation to query the region ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionCode")
     public String regionCode;
