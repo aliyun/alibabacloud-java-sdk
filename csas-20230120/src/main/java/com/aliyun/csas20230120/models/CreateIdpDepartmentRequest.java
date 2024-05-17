@@ -4,9 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreateIdpDepartmentRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DepartmentName")
     public String departmentName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IdpConfigId")
     public String idpConfigId;
 

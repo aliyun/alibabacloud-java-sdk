@@ -4,21 +4,36 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreatePrivateAccessApplicationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Addresses")
     public java.util.List<String> addresses;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PortRanges")
     public java.util.List<CreatePrivateAccessApplicationRequestPortRanges> portRanges;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -87,9 +102,15 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     }
 
     public static class CreatePrivateAccessApplicationRequestPortRanges extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Begin")
         public Integer begin;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("End")
         public Integer end;
 

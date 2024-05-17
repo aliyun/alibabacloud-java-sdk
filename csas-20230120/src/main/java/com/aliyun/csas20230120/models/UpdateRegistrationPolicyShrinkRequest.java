@@ -25,6 +25,9 @@ public class UpdateRegistrationPolicyShrinkRequest extends TeaModel {
     @NameInMap("PersonalLimitType")
     public String personalLimitType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 

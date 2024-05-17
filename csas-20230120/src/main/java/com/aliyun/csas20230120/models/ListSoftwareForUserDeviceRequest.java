@@ -4,12 +4,21 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListSoftwareForUserDeviceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceTag")
     public String deviceTag;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

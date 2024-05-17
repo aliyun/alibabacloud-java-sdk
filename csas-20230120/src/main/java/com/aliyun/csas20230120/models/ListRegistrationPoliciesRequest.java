@@ -7,6 +7,9 @@ public class ListRegistrationPoliciesRequest extends TeaModel {
     @NameInMap("CompanyLimitType")
     public String companyLimitType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
@@ -16,6 +19,9 @@ public class ListRegistrationPoliciesRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

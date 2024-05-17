@@ -13,6 +13,9 @@ public class UpdateUserGroupRequest extends TeaModel {
     @NameInMap("ModifyType")
     public String modifyType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserGroupId")
     public String userGroupId;
 
@@ -57,12 +60,21 @@ public class UpdateUserGroupRequest extends TeaModel {
         @NameInMap("IdpId")
         public Integer idpId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Relation")
         public String relation;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("UserGroupType")
         public String userGroupType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Value")
         public String value;
 

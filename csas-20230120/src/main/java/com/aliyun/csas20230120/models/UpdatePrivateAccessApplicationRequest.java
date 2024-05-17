@@ -7,6 +7,9 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     @NameInMap("Addresses")
     public java.util.List<String> addresses;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApplicationId")
     public String applicationId;
 

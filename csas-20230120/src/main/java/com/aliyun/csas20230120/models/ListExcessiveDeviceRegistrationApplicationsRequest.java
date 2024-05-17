@@ -7,6 +7,9 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends TeaModel
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
@@ -22,6 +25,9 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends TeaModel
     @NameInMap("Mac")
     public String mac;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

@@ -7,6 +7,9 @@ public class ListDynamicRoutesRequest extends TeaModel {
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -19,6 +22,9 @@ public class ListDynamicRoutesRequest extends TeaModel {
     @NameInMap("NextHop")
     public String nextHop;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

@@ -10,9 +10,15 @@ public class CreateClientUserRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IdpConfigId")
     public String idpConfigId;
 
@@ -22,6 +28,9 @@ public class CreateClientUserRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Username")
     public String username;
 

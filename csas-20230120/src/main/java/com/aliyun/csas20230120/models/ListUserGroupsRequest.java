@@ -7,6 +7,9 @@ public class ListUserGroupsRequest extends TeaModel {
     @NameInMap("AttributeValue")
     public String attributeValue;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -19,6 +22,9 @@ public class ListUserGroupsRequest extends TeaModel {
     @NameInMap("PAPolicyId")
     public String PAPolicyId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

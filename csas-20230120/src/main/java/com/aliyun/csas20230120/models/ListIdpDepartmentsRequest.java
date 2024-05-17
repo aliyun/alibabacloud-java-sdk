@@ -7,6 +7,9 @@ public class ListIdpDepartmentsRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Long currentPage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IdpConfigId")
     public String idpConfigId;
 

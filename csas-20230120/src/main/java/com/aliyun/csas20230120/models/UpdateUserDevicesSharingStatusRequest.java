@@ -4,9 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserDevicesSharingStatusRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceTags")
     public java.util.List<String> deviceTags;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SharingStatus")
     public Boolean sharingStatus;
 

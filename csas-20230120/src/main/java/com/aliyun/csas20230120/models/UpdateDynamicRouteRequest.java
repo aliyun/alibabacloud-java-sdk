@@ -13,6 +13,9 @@ public class UpdateDynamicRouteRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DynamicRouteId")
     public String dynamicRouteId;
 

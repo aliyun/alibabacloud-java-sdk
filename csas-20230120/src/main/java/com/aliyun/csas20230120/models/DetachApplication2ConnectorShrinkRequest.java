@@ -4,11 +4,16 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class DetachApplication2ConnectorShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApplicationIds")
     public String applicationIdsShrink;
 
     /**
      * <p>ConnectorID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConnectorId")
     public String connectorId;

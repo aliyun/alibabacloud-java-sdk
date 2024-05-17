@@ -13,6 +13,9 @@ public class UpdateClientUserRequest extends TeaModel {
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Id")
     public String id;
 

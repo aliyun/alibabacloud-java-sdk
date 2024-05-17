@@ -15,18 +15,22 @@ public class ListPrivateAccessTagsRequest extends TeaModel {
 
     /**
      * <p>The page number. Valid values: 1 to 10000.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The name of the internal access tag. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the internal access tag. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 1000.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
