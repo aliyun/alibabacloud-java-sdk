@@ -33,18 +33,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, you must add the following dependency to the pom.xml file:
-      * ```xml
-      * <dependency>
-      *     <groupId>com.aliyun</groupId>
-      *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *     <version>1.0.4</version>
-      * </dependency>
-      * ```
-      *
-      * @param request BatchDeleteJobsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return BatchDeleteJobsResponse
+     * @summary Deletes multiple jobs at a time.
+     *
+     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
+     * ```xml
+     * <dependency>
+     *     <groupId>com.aliyun</groupId>
+     *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+     *     <version>1.0.4</version>
+     * </dependency>
+     * ```
+     *
+     * @param request BatchDeleteJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchDeleteJobsResponse
      */
     public BatchDeleteJobsResponse batchDeleteJobsWithOptions(BatchDeleteJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -89,23 +91,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, you must add the following dependency to the pom.xml file:
-      * ```xml
-      * <dependency>
-      *     <groupId>com.aliyun</groupId>
-      *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *     <version>1.0.4</version>
-      * </dependency>
-      * ```
-      *
-      * @param request BatchDeleteJobsRequest
-      * @return BatchDeleteJobsResponse
+     * @summary Deletes multiple jobs at a time.
+     *
+     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
+     * ```xml
+     * <dependency>
+     *     <groupId>com.aliyun</groupId>
+     *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+     *     <version>1.0.4</version>
+     * </dependency>
+     * ```
+     *
+     * @param request BatchDeleteJobsRequest
+     * @return BatchDeleteJobsResponse
      */
     public BatchDeleteJobsResponse batchDeleteJobs(BatchDeleteJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchDeleteJobsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary The additional information that is returned.
+     *
+     * @param request BatchDeleteRouteStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchDeleteRouteStrategyResponse
+     */
     public BatchDeleteRouteStrategyResponse batchDeleteRouteStrategyWithOptions(BatchDeleteRouteStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -144,24 +155,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchDeleteRouteStrategyResponse());
     }
 
+    /**
+     * @summary The additional information that is returned.
+     *
+     * @param request BatchDeleteRouteStrategyRequest
+     * @return BatchDeleteRouteStrategyResponse
+     */
     public BatchDeleteRouteStrategyResponse batchDeleteRouteStrategy(BatchDeleteRouteStrategyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchDeleteRouteStrategyWithOptions(request, runtime);
     }
 
     /**
-      * Before you call this operation, you must add the following dependency to the pom.xml file:
-      * ```xml
-      * <dependency>
-      *     <groupId>com.aliyun</groupId>
-      *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *     <version>1.0.4</version>
-      * </dependency>
-      * ```
-      *
-      * @param request BatchDisableJobsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return BatchDisableJobsResponse
+     * @summary Disables multiple jobs at a time.
+     *
+     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
+     * ```xml
+     * <dependency>
+     *     <groupId>com.aliyun</groupId>
+     *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+     *     <version>1.0.4</version>
+     * </dependency>
+     * ```
+     *
+     * @param request BatchDisableJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchDisableJobsResponse
      */
     public BatchDisableJobsResponse batchDisableJobsWithOptions(BatchDisableJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -206,17 +225,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, you must add the following dependency to the pom.xml file:
-      * ```xml
-      * <dependency>
-      *     <groupId>com.aliyun</groupId>
-      *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *     <version>1.0.4</version>
-      * </dependency>
-      * ```
-      *
-      * @param request BatchDisableJobsRequest
-      * @return BatchDisableJobsResponse
+     * @summary Disables multiple jobs at a time.
+     *
+     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
+     * ```xml
+     * <dependency>
+     *     <groupId>com.aliyun</groupId>
+     *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+     *     <version>1.0.4</version>
+     * </dependency>
+     * ```
+     *
+     * @param request BatchDisableJobsRequest
+     * @return BatchDisableJobsResponse
      */
     public BatchDisableJobsResponse batchDisableJobs(BatchDisableJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -224,18 +245,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, you must add the following dependency to the pom.xml file:
-      * ```xml
-      * <dependency>
-      *     <groupId>com.aliyun</groupId>
-      *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *     <version>1.0.4</version>
-      * </dependency>
-      * ```
-      *
-      * @param request BatchEnableJobsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return BatchEnableJobsResponse
+     * @summary Enables multiple jobs at a time.
+     *
+     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
+     * ```xml
+     * <dependency>
+     *     <groupId>com.aliyun</groupId>
+     *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+     *     <version>1.0.4</version>
+     * </dependency>
+     * ```
+     *
+     * @param request BatchEnableJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchEnableJobsResponse
      */
     public BatchEnableJobsResponse batchEnableJobsWithOptions(BatchEnableJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -280,23 +303,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, you must add the following dependency to the pom.xml file:
-      * ```xml
-      * <dependency>
-      *     <groupId>com.aliyun</groupId>
-      *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *     <version>1.0.4</version>
-      * </dependency>
-      * ```
-      *
-      * @param request BatchEnableJobsRequest
-      * @return BatchEnableJobsResponse
+     * @summary Enables multiple jobs at a time.
+     *
+     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
+     * ```xml
+     * <dependency>
+     *     <groupId>com.aliyun</groupId>
+     *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+     *     <version>1.0.4</version>
+     * </dependency>
+     * ```
+     *
+     * @param request BatchEnableJobsRequest
+     * @return BatchEnableJobsResponse
      */
     public BatchEnableJobsResponse batchEnableJobs(BatchEnableJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchEnableJobsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Creates an application group. The AppKey is returned.
+     *
+     * @param request CreateAppGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAppGroupResponse
+     */
     public CreateAppGroupResponse createAppGroupWithOptions(CreateAppGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -317,11 +349,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAppGroupResponse());
     }
 
+    /**
+     * @summary Creates an application group. The AppKey is returned.
+     *
+     * @param request CreateAppGroupRequest
+     * @return CreateAppGroupResponse
+     */
     public CreateAppGroupResponse createAppGroup(CreateAppGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createAppGroupWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Creates a job and obtains the job ID.
+     *
+     * @param request CreateJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateJobResponse
+     */
     public CreateJobResponse createJobWithOptions(CreateJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -488,11 +533,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateJobResponse());
     }
 
+    /**
+     * @summary Creates a job and obtains the job ID.
+     *
+     * @param request CreateJobRequest
+     * @return CreateJobResponse
+     */
     public CreateJobResponse createJob(CreateJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createJobWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Creates a namespace.
+     *
+     * @param request CreateNamespaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateNamespaceResponse
+     */
     public CreateNamespaceResponse createNamespaceWithOptions(CreateNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -529,11 +587,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNamespaceResponse());
     }
 
+    /**
+     * @summary Creates a namespace.
+     *
+     * @param request CreateNamespaceRequest
+     * @return CreateNamespaceResponse
+     */
     public CreateNamespaceResponse createNamespace(CreateNamespaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createNamespaceWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Creates a routing policy.
+     *
+     * @param request CreateRouteStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRouteStrategyResponse
+     */
     public CreateRouteStrategyResponse createRouteStrategyWithOptions(CreateRouteStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -586,11 +657,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRouteStrategyResponse());
     }
 
+    /**
+     * @summary Creates a routing policy.
+     *
+     * @param request CreateRouteStrategyRequest
+     * @return CreateRouteStrategyResponse
+     */
     public CreateRouteStrategyResponse createRouteStrategy(CreateRouteStrategyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRouteStrategyWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Creates a workflow. By default, the created workflow is disabled. After you update the directed acyclic graph (DAG) of the workflow, you must manually or call the corresponding operation to enable the workflow. You can call this operation only in the professional edition.
+     *
+     * @param request CreateWorkflowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWorkflowResponse
+     */
     public CreateWorkflowResponse createWorkflowWithOptions(CreateWorkflowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -651,11 +735,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWorkflowResponse());
     }
 
+    /**
+     * @summary Creates a workflow. By default, the created workflow is disabled. After you update the directed acyclic graph (DAG) of the workflow, you must manually or call the corresponding operation to enable the workflow. You can call this operation only in the professional edition.
+     *
+     * @param request CreateWorkflowRequest
+     * @return CreateWorkflowResponse
+     */
     public CreateWorkflowResponse createWorkflow(CreateWorkflowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createWorkflowWithOptions(request, runtime);
     }
 
+    /**
+     * @summary The additional information that is returned.
+     *
+     * @param request DeleteAppGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAppGroupResponse
+     */
     public DeleteAppGroupResponse deleteAppGroupWithOptions(DeleteAppGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -692,11 +789,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAppGroupResponse());
     }
 
+    /**
+     * @summary The additional information that is returned.
+     *
+     * @param request DeleteAppGroupRequest
+     * @return DeleteAppGroupResponse
+     */
     public DeleteAppGroupResponse deleteAppGroup(DeleteAppGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAppGroupWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Deletes a specified job.
+     *
+     * @param request DeleteJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteJobResponse
+     */
     public DeleteJobResponse deleteJobWithOptions(DeleteJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -717,11 +827,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteJobResponse());
     }
 
+    /**
+     * @summary Deletes a specified job.
+     *
+     * @param request DeleteJobRequest
+     * @return DeleteJobResponse
+     */
     public DeleteJobResponse deleteJob(DeleteJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteJobWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Deletes a routing policy.
+     *
+     * @param request DeleteRouteStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRouteStrategyResponse
+     */
     public DeleteRouteStrategyResponse deleteRouteStrategyWithOptions(DeleteRouteStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -758,11 +881,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRouteStrategyResponse());
     }
 
+    /**
+     * @summary Deletes a routing policy.
+     *
+     * @param request DeleteRouteStrategyRequest
+     * @return DeleteRouteStrategyResponse
+     */
     public DeleteRouteStrategyResponse deleteRouteStrategy(DeleteRouteStrategyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRouteStrategyWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Deletes a workflow.
+     *
+     * @param request DeleteWorkflowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteWorkflowResponse
+     */
     public DeleteWorkflowResponse deleteWorkflowWithOptions(DeleteWorkflowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -783,11 +919,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWorkflowResponse());
     }
 
+    /**
+     * @summary Deletes a workflow.
+     *
+     * @param request DeleteWorkflowRequest
+     * @return DeleteWorkflowResponse
+     */
     public DeleteWorkflowResponse deleteWorkflow(DeleteWorkflowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteWorkflowWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Returns available regions.
+     *
+     * @param request DescribeRegionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRegionsResponse
+     */
     public DescribeRegionsResponse describeRegionsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -804,11 +953,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
     }
 
+    /**
+     * @summary Returns available regions.
+     *
+     * @return DescribeRegionsResponse
+     */
     public DescribeRegionsResponse describeRegions() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRegionsWithOptions(runtime);
     }
 
+    /**
+     * @summary Designates machines.
+     *
+     * @param request DesignateWorkersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DesignateWorkersResponse
+     */
     public DesignateWorkersResponse designateWorkersWithOptions(DesignateWorkersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -829,11 +990,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DesignateWorkersResponse());
     }
 
+    /**
+     * @summary Designates machines.
+     *
+     * @param request DesignateWorkersRequest
+     * @return DesignateWorkersResponse
+     */
     public DesignateWorkersResponse designateWorkers(DesignateWorkersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.designateWorkersWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Disables a job.
+     *
+     * @param request DisableJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableJobResponse
+     */
     public DisableJobResponse disableJobWithOptions(DisableJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -854,11 +1028,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DisableJobResponse());
     }
 
+    /**
+     * @summary Disables a job.
+     *
+     * @param request DisableJobRequest
+     * @return DisableJobResponse
+     */
     public DisableJobResponse disableJob(DisableJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableJobWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Disables a specified workflow.
+     *
+     * @param request DisableWorkflowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableWorkflowResponse
+     */
     public DisableWorkflowResponse disableWorkflowWithOptions(DisableWorkflowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -879,11 +1066,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DisableWorkflowResponse());
     }
 
+    /**
+     * @summary Disables a specified workflow.
+     *
+     * @param request DisableWorkflowRequest
+     * @return DisableWorkflowResponse
+     */
     public DisableWorkflowResponse disableWorkflow(DisableWorkflowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableWorkflowWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Enables a job.
+     *
+     * @param request EnableJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableJobResponse
+     */
     public EnableJobResponse enableJobWithOptions(EnableJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -904,11 +1104,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EnableJobResponse());
     }
 
+    /**
+     * @summary Enables a job.
+     *
+     * @param request EnableJobRequest
+     * @return EnableJobResponse
+     */
     public EnableJobResponse enableJob(EnableJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableJobWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Enables a specified workflow.
+     *
+     * @param request EnableWorkflowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableWorkflowResponse
+     */
     public EnableWorkflowResponse enableWorkflowWithOptions(EnableWorkflowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -929,17 +1142,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EnableWorkflowResponse());
     }
 
+    /**
+     * @summary Enables a specified workflow.
+     *
+     * @param request EnableWorkflowRequest
+     * @return EnableWorkflowResponse
+     */
     public EnableWorkflowResponse enableWorkflow(EnableWorkflowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableWorkflowWithOptions(request, runtime);
     }
 
     /**
-      * > The combination of the `JobID` and `ScheduleTime` parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.
-      *
-      * @param request ExecuteJobRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ExecuteJobResponse
+     * @summary Triggers a job to immediately run once.
+     *
+     * @description > The combination of the `JobID` and `ScheduleTime` parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.
+     *
+     * @param request ExecuteJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteJobResponse
      */
     public ExecuteJobResponse executeJobWithOptions(ExecuteJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -962,16 +1183,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The combination of the `JobID` and `ScheduleTime` parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.
-      *
-      * @param request ExecuteJobRequest
-      * @return ExecuteJobResponse
+     * @summary Triggers a job to immediately run once.
+     *
+     * @description > The combination of the `JobID` and `ScheduleTime` parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.
+     *
+     * @param request ExecuteJobRequest
+     * @return ExecuteJobResponse
      */
     public ExecuteJobResponse executeJob(ExecuteJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeJobWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Immediately triggers a workflow.
+     *
+     * @param request ExecuteWorkflowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteWorkflowResponse
+     */
     public ExecuteWorkflowResponse executeWorkflowWithOptions(ExecuteWorkflowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -992,11 +1222,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteWorkflowResponse());
     }
 
+    /**
+     * @summary Immediately triggers a workflow.
+     *
+     * @param request ExecuteWorkflowRequest
+     * @return ExecuteWorkflowResponse
+     */
     public ExecuteWorkflowResponse executeWorkflow(ExecuteWorkflowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeWorkflowWithOptions(request, runtime);
     }
 
+    /**
+     * @summary The configuration of the alert. The value is a JSON string. For more information, see **the additional information about response parameters below this table**.
+     *
+     * @param request GetAppGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAppGroupResponse
+     */
     public GetAppGroupResponse getAppGroupWithOptions(GetAppGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1029,11 +1272,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAppGroupResponse());
     }
 
+    /**
+     * @summary The configuration of the alert. The value is a JSON string. For more information, see **the additional information about response parameters below this table**.
+     *
+     * @param request GetAppGroupRequest
+     * @return GetAppGroupResponse
+     */
     public GetAppGroupResponse getAppGroup(GetAppGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAppGroupWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the details of a job based on the job ID. In most cases, the obtained information is used to update jobs.
+     *
+     * @param request GetJobInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetJobInfoResponse
+     */
     public GetJobInfoResponse getJobInfoWithOptions(GetJobInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1054,11 +1310,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobInfoResponse());
     }
 
+    /**
+     * @summary Queries the details of a job based on the job ID. In most cases, the obtained information is used to update jobs.
+     *
+     * @param request GetJobInfoRequest
+     * @return GetJobInfoResponse
+     */
     public GetJobInfoResponse getJobInfo(GetJobInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getJobInfoWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the information about a job instance. You can view the status and progress of the job instance.
+     *
+     * @param request GetJobInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetJobInstanceResponse
+     */
     public GetJobInstanceResponse getJobInstanceWithOptions(GetJobInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1079,11 +1348,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobInstanceResponse());
     }
 
+    /**
+     * @summary Queries the information about a job instance. You can view the status and progress of the job instance.
+     *
+     * @param request GetJobInstanceRequest
+     * @return GetJobInstanceResponse
+     */
     public GetJobInstanceResponse getJobInstance(GetJobInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getJobInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the most recent 10 execution instances of a job.
+     *
+     * @param request GetJobInstanceListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetJobInstanceListResponse
+     */
     public GetJobInstanceListResponse getJobInstanceListWithOptions(GetJobInstanceListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1104,11 +1386,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobInstanceListResponse());
     }
 
+    /**
+     * @summary Queries the most recent 10 execution instances of a job.
+     *
+     * @param request GetJobInstanceListRequest
+     * @return GetJobInstanceListResponse
+     */
     public GetJobInstanceListResponse getJobInstanceList(GetJobInstanceListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getJobInstanceListWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the operational logs of a job. You can call this operation only in the professional edition.
+     *
+     * @param request GetLogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLogResponse
+     */
     public GetLogResponse getLogWithOptions(GetLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1129,11 +1424,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetLogResponse());
     }
 
+    /**
+     * @summary Queries the operational logs of a job. You can call this operation only in the professional edition.
+     *
+     * @param request GetLogRequest
+     * @return GetLogResponse
+     */
     public GetLogResponse getLog(GetLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getLogWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查询概览数据信息
+     *
+     * @param request GetOverviewRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetOverviewResponse
+     */
     public GetOverviewResponse getOverviewWithOptions(GetOverviewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1186,11 +1494,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetOverviewResponse());
     }
 
+    /**
+     * @summary 查询概览数据信息
+     *
+     * @param request GetOverviewRequest
+     * @return GetOverviewResponse
+     */
     public GetOverviewResponse getOverview(GetOverviewRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getOverviewWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Obtains the information about a workflow.
+     *
+     * @param request GetWorkFlowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorkFlowResponse
+     */
     public GetWorkFlowResponse getWorkFlowWithOptions(GetWorkFlowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1211,11 +1532,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkFlowResponse());
     }
 
+    /**
+     * @summary Obtains the information about a workflow.
+     *
+     * @param request GetWorkFlowRequest
+     * @return GetWorkFlowResponse
+     */
     public GetWorkFlowResponse getWorkFlow(GetWorkFlowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getWorkFlowWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Obtains the list of workers that are connected to an application.
+     *
+     * @param request GetWorkerListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorkerListResponse
+     */
     public GetWorkerListResponse getWorkerListWithOptions(GetWorkerListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1236,11 +1570,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkerListResponse());
     }
 
+    /**
+     * @summary Obtains the list of workers that are connected to an application.
+     *
+     * @param request GetWorkerListRequest
+     * @return GetWorkerListResponse
+     */
     public GetWorkerListResponse getWorkerList(GetWorkerListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getWorkerListWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the details of a specified workflow instance, including the state of the workflow instance, the state of each job instance, and the dependencies between job instances. You can call this operation only in the professional edition.
+     *
+     * @param request GetWorkflowInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorkflowInstanceResponse
+     */
     public GetWorkflowInstanceResponse getWorkflowInstanceWithOptions(GetWorkflowInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1261,11 +1608,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkflowInstanceResponse());
     }
 
+    /**
+     * @summary Queries the details of a specified workflow instance, including the state of the workflow instance, the state of each job instance, and the dependencies between job instances. You can call this operation only in the professional edition.
+     *
+     * @param request GetWorkflowInstanceRequest
+     * @return GetWorkflowInstanceResponse
+     */
     public GetWorkflowInstanceResponse getWorkflowInstance(GetWorkflowInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getWorkflowInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Grants permissions to an application group.
+     *
+     * @param request GrantPermissionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GrantPermissionResponse
+     */
     public GrantPermissionResponse grantPermissionWithOptions(GrantPermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1314,24 +1674,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GrantPermissionResponse());
     }
 
+    /**
+     * @summary Grants permissions to an application group.
+     *
+     * @param request GrantPermissionRequest
+     * @return GrantPermissionResponse
+     */
     public GrantPermissionResponse grantPermission(GrantPermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.grantPermissionWithOptions(request, runtime);
     }
 
     /**
-      * Before you call this operation, you must add the following dependency to the pom.xml file:
-      * ```xml
-      * <dependency>
-      *     <groupId>com.aliyun</groupId>
-      *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *     <version>1.0.5</version>
-      * </dependency>
-      * ```
-      *
-      * @param request ListGroupsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListGroupsResponse
+     * @summary Queries a list of applications.
+     *
+     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
+     * ```xml
+     * <dependency>
+     *     <groupId>com.aliyun</groupId>
+     *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+     *     <version>1.0.5</version>
+     * </dependency>
+     * ```
+     *
+     * @param request ListGroupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListGroupsResponse
      */
     public ListGroupsResponse listGroupsWithOptions(ListGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1370,17 +1738,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, you must add the following dependency to the pom.xml file:
-      * ```xml
-      * <dependency>
-      *     <groupId>com.aliyun</groupId>
-      *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *     <version>1.0.5</version>
-      * </dependency>
-      * ```
-      *
-      * @param request ListGroupsRequest
-      * @return ListGroupsResponse
+     * @summary Queries a list of applications.
+     *
+     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
+     * ```xml
+     * <dependency>
+     *     <groupId>com.aliyun</groupId>
+     *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+     *     <version>1.0.5</version>
+     * </dependency>
+     * ```
+     *
+     * @param request ListGroupsRequest
+     * @return ListGroupsResponse
      */
     public ListGroupsResponse listGroups(ListGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1388,16 +1758,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, you must add the following dependency to the pom.xml file:
-      *     <dependency>
-      *           <groupId>com.aliyun</groupId>
-      *           <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *           <version>1.0.5</version>
-      *     </dependency>
-      *
-      * @param request ListJobsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListJobsResponse
+     * @summary Queries jobs.
+     *
+     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
+     *     <dependency>
+     *           <groupId>com.aliyun</groupId>
+     *           <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+     *           <version>1.0.5</version>
+     *     </dependency>
+     *
+     * @param request ListJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListJobsResponse
      */
     public ListJobsResponse listJobsWithOptions(ListJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1420,15 +1792,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, you must add the following dependency to the pom.xml file:
-      *     <dependency>
-      *           <groupId>com.aliyun</groupId>
-      *           <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *           <version>1.0.5</version>
-      *     </dependency>
-      *
-      * @param request ListJobsRequest
-      * @return ListJobsResponse
+     * @summary Queries jobs.
+     *
+     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
+     *     <dependency>
+     *           <groupId>com.aliyun</groupId>
+     *           <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+     *           <version>1.0.5</version>
+     *     </dependency>
+     *
+     * @param request ListJobsRequest
+     * @return ListJobsResponse
      */
     public ListJobsResponse listJobs(ListJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1436,16 +1810,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, you must add the following dependency to the pom.xml file:
-      *     <dependency>
-      *         <groupId>com.aliyun</groupId>
-      *         <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *         <version>1.0.5</version>
-      *     </dependency>
-      *
-      * @param request ListNamespacesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListNamespacesResponse
+     * @summary Queries namespaces.
+     *
+     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
+     *     <dependency>
+     *         <groupId>com.aliyun</groupId>
+     *         <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+     *         <version>1.0.5</version>
+     *     </dependency>
+     *
+     * @param request ListNamespacesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListNamespacesResponse
      */
     public ListNamespacesResponse listNamespacesWithOptions(ListNamespacesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1480,21 +1856,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, you must add the following dependency to the pom.xml file:
-      *     <dependency>
-      *         <groupId>com.aliyun</groupId>
-      *         <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-      *         <version>1.0.5</version>
-      *     </dependency>
-      *
-      * @param request ListNamespacesRequest
-      * @return ListNamespacesResponse
+     * @summary Queries namespaces.
+     *
+     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
+     *     <dependency>
+     *         <groupId>com.aliyun</groupId>
+     *         <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
+     *         <version>1.0.5</version>
+     *     </dependency>
+     *
+     * @param request ListNamespacesRequest
+     * @return ListNamespacesResponse
      */
     public ListNamespacesResponse listNamespaces(ListNamespacesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listNamespacesWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the execution history of a workflow. You can call this operation only in the professional edition.
+     *
+     * @param request ListWorkflowInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWorkflowInstanceResponse
+     */
     public ListWorkflowInstanceResponse listWorkflowInstanceWithOptions(ListWorkflowInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1515,11 +1900,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListWorkflowInstanceResponse());
     }
 
+    /**
+     * @summary Queries the execution history of a workflow. You can call this operation only in the professional edition.
+     *
+     * @param request ListWorkflowInstanceRequest
+     * @return ListWorkflowInstanceResponse
+     */
     public ListWorkflowInstanceResponse listWorkflowInstance(ListWorkflowInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listWorkflowInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Reruns a job to obtain the historical data of the job. You can call this operation only in the professional edition.
+     *
+     * @param request RerunJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RerunJobResponse
+     */
     public RerunJobResponse rerunJobWithOptions(RerunJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1572,11 +1970,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RerunJobResponse());
     }
 
+    /**
+     * @summary Reruns a job to obtain the historical data of the job. You can call this operation only in the professional edition.
+     *
+     * @param request RerunJobRequest
+     * @return RerunJobResponse
+     */
     public RerunJobResponse rerunJob(RerunJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rerunJobWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Reruns a successful or failed job instance. You can call this operation only in the professional edition.
+     *
+     * @param request RetryJobInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RetryJobInstanceResponse
+     */
     public RetryJobInstanceResponse retryJobInstanceWithOptions(RetryJobInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1621,11 +2032,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RetryJobInstanceResponse());
     }
 
+    /**
+     * @summary Reruns a successful or failed job instance. You can call this operation only in the professional edition.
+     *
+     * @param request RetryJobInstanceRequest
+     * @return RetryJobInstanceResponse
+     */
     public RetryJobInstanceResponse retryJobInstance(RetryJobInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.retryJobInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Revokes the permissions that are granted to an Alibaba Cloud Resource Access Management (RAM) user.
+     *
+     * @param request RevokePermissionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokePermissionResponse
+     */
     public RevokePermissionResponse revokePermissionWithOptions(RevokePermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1666,11 +2090,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RevokePermissionResponse());
     }
 
+    /**
+     * @summary Revokes the permissions that are granted to an Alibaba Cloud Resource Access Management (RAM) user.
+     *
+     * @param request RevokePermissionRequest
+     * @return RevokePermissionResponse
+     */
     public RevokePermissionResponse revokePermission(RevokePermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.revokePermissionWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Forcibly sets the state of a job instance to successful. You can call this operation only in the professional edition.
+     *
+     * @param request SetJobInstanceSuccessRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetJobInstanceSuccessResponse
+     */
     public SetJobInstanceSuccessResponse setJobInstanceSuccessWithOptions(SetJobInstanceSuccessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1715,11 +2152,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetJobInstanceSuccessResponse());
     }
 
+    /**
+     * @summary Forcibly sets the state of a job instance to successful. You can call this operation only in the professional edition.
+     *
+     * @param request SetJobInstanceSuccessRequest
+     * @return SetJobInstanceSuccessResponse
+     */
     public SetJobInstanceSuccessResponse setJobInstanceSuccess(SetJobInstanceSuccessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setJobInstanceSuccessWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Forcibly sets the state of a workflow instance to successful. You can call this operation only in the professional edition.
+     *
+     * @param request SetWfInstanceSuccessRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetWfInstanceSuccessResponse
+     */
     public SetWfInstanceSuccessResponse setWfInstanceSuccessWithOptions(SetWfInstanceSuccessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1764,11 +2214,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetWfInstanceSuccessResponse());
     }
 
+    /**
+     * @summary Forcibly sets the state of a workflow instance to successful. You can call this operation only in the professional edition.
+     *
+     * @param request SetWfInstanceSuccessRequest
+     * @return SetWfInstanceSuccessResponse
+     */
     public SetWfInstanceSuccessResponse setWfInstanceSuccess(SetWfInstanceSuccessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setWfInstanceSuccessWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Stops a job instance in the running state.
+     *
+     * @param request StopInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopInstanceResponse
+     */
     public StopInstanceResponse stopInstanceWithOptions(StopInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1789,11 +2252,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopInstanceResponse());
     }
 
+    /**
+     * @summary Stops a job instance in the running state.
+     *
+     * @param request StopInstanceRequest
+     * @return StopInstanceResponse
+     */
     public StopInstanceResponse stopInstance(StopInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * @summary The additional information that is returned.
+     *
+     * @param request UpdateAppGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAppGroupResponse
+     */
     public UpdateAppGroupResponse updateAppGroupWithOptions(UpdateAppGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1834,11 +2310,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAppGroupResponse());
     }
 
+    /**
+     * @summary The additional information that is returned.
+     *
+     * @param request UpdateAppGroupRequest
+     * @return UpdateAppGroupResponse
+     */
     public UpdateAppGroupResponse updateAppGroup(UpdateAppGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateAppGroupWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Updates the configuration information about a job. By default, you need to call the GetJobInfo operation to obtain the original configuration of the job before you call this operation to modify the configuration as required.
+     *
+     * @param request UpdateJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateJobResponse
+     */
     public UpdateJobResponse updateJobWithOptions(UpdateJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2009,11 +2498,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateJobResponse());
     }
 
+    /**
+     * @summary Updates the configuration information about a job. By default, you need to call the GetJobInfo operation to obtain the original configuration of the job before you call this operation to modify the configuration as required.
+     *
+     * @param request UpdateJobRequest
+     * @return UpdateJobResponse
+     */
     public UpdateJobResponse updateJob(UpdateJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateJobWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Updates the basic information about a workflow. You can call this operation only in the professional edition.
+     *
+     * @param request UpdateWorkflowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateWorkflowResponse
+     */
     public UpdateWorkflowResponse updateWorkflowWithOptions(UpdateWorkflowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2072,11 +2574,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWorkflowResponse());
     }
 
+    /**
+     * @summary Updates the basic information about a workflow. You can call this operation only in the professional edition.
+     *
+     * @param request UpdateWorkflowRequest
+     * @return UpdateWorkflowResponse
+     */
     public UpdateWorkflowResponse updateWorkflow(UpdateWorkflowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateWorkflowWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Modifies the nodes and dependencies of a workflow. You can call this operation only in the professional edition.
+     *
+     * @param request UpdateWorkflowDagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateWorkflowDagResponse
+     */
     public UpdateWorkflowDagResponse updateWorkflowDagWithOptions(UpdateWorkflowDagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2123,6 +2638,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWorkflowDagResponse());
     }
 
+    /**
+     * @summary Modifies the nodes and dependencies of a workflow. You can call this operation only in the professional edition.
+     *
+     * @param request UpdateWorkflowDagRequest
+     * @return UpdateWorkflowDagResponse
+     */
     public UpdateWorkflowDagResponse updateWorkflowDag(UpdateWorkflowDagRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateWorkflowDagWithOptions(request, runtime);

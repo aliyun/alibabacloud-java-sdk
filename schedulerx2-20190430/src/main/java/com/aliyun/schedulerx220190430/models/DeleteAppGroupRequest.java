@@ -7,12 +7,21 @@ public class DeleteAppGroupRequest extends TeaModel {
     @NameInMap("DeleteJobs")
     public Boolean deleteJobs;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

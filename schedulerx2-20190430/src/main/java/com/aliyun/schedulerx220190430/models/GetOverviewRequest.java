@@ -10,6 +10,9 @@ public class GetOverviewRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MetricType")
     public Integer metricType;
 
@@ -19,12 +22,21 @@ public class GetOverviewRequest extends TeaModel {
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Operate")
     public String operate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

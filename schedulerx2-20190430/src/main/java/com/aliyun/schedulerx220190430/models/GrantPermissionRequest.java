@@ -12,12 +12,16 @@ public class GrantPermissionRequest extends TeaModel {
 
     /**
      * <p>The application group ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The namespace ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -36,12 +40,16 @@ public class GrantPermissionRequest extends TeaModel {
 
     /**
      * <p>The user ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
      * <p>The username.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserName")
     public String userName;

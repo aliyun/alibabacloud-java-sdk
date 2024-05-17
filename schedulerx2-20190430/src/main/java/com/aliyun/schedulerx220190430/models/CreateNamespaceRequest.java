@@ -12,12 +12,16 @@ public class CreateNamespaceRequest extends TeaModel {
 
     /**
      * <p>The name of the namespace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

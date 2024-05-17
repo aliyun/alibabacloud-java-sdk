@@ -68,6 +68,8 @@ public class CreateJobRequest extends TeaModel {
      * <p>*   **Visual MapReduce**</p>
      * <p>*   **MapReduce**</p>
      * <p>*   **Shard run**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExecuteMode")
     public String executeMode;
@@ -89,6 +91,8 @@ public class CreateJobRequest extends TeaModel {
 
     /**
      * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -105,6 +109,8 @@ public class CreateJobRequest extends TeaModel {
      * <p>*   dataworks</p>
      * <p>*   k8s</p>
      * <p>*   springschedule</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("JobType")
     public String jobType;
@@ -132,12 +138,16 @@ public class CreateJobRequest extends TeaModel {
 
     /**
      * <p>The job name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -168,6 +178,8 @@ public class CreateJobRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -222,6 +234,8 @@ public class CreateJobRequest extends TeaModel {
      * <p>*   **4**: second_delay</p>
      * <p>*   **5**: one_time</p>
      * <p>*   **100**: api</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TimeType")
     public Integer timeType;

@@ -12,6 +12,8 @@ public class EnableWorkflowRequest extends TeaModel {
 
     /**
      * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -24,12 +26,16 @@ public class EnableWorkflowRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The workflow ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WorkflowId")
     public Long workflowId;

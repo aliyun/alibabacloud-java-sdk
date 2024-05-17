@@ -5,25 +5,29 @@ import com.aliyun.tea.*;
 
 public class GetJobInstanceListRequest extends TeaModel {
     /**
-     * <p>结束时间（时间戳）。</p>
+     * <p>The end of the time range to query. Specify the time as a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      */
     @NameInMap("EndTimestamp")
     public Long endTimestamp;
 
     /**
-     * <p>The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+     * <p>The application group ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The ID of the job. You can obtain the ID of the job on the Task Management page in the SchedulerX console.</p>
+     * <p>The job ID.</p>
      */
     @NameInMap("JobId")
     public Long jobId;
 
     /**
-     * <p>The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     * <p>The namespace ID. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -34,27 +38,30 @@ public class GetJobInstanceListRequest extends TeaModel {
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
+    @NameInMap("PageNum")
+    public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>开始时间（时间戳）。</p>
+     * <p>The beginning of the time range to query. Specify the time as a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      */
     @NameInMap("StartTimestamp")
     public Long startTimestamp;
 
     /**
-     * <p>实例状态。包含以下几种状态：</p>
+     * <p>The state of the job instance. Valid values:</p>
      * <br>
-     * <p>1：等待</p>
-     * <p>3：运行中</p>
-     * <p>4：成功</p>
-     * <p>5：失败</p>
-     * <p>9：拒绝</p>
-     * <p>对应枚举类： com.alibaba.schedulerx.common.domain.InstanceStatus</p>
+     * <p>1: The job instance is waiting for execution. 3: The job instance is running. 4: The job instance is successful. 5: The job instance fails. 9: The job instance is rejected. Enumeration class: com.alibaba.schedulerx.common.domain.InstanceStatus</p>
      */
     @NameInMap("Status")
     public Integer status;
@@ -102,6 +109,22 @@ public class GetJobInstanceListRequest extends TeaModel {
     }
     public String getNamespaceSource() {
         return this.namespaceSource;
+    }
+
+    public GetJobInstanceListRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public GetJobInstanceListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public GetJobInstanceListRequest setRegionId(String regionId) {

@@ -4,15 +4,24 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class BatchDeleteRouteStrategyRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("JobIdList")
     public java.util.List<Long> jobIdList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
