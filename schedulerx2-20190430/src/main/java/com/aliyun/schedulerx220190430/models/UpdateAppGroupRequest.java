@@ -7,15 +7,24 @@ public class UpdateAppGroupRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("MaxConcurrency")
     public Integer maxConcurrency;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

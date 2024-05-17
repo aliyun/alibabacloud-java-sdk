@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class SetWfInstanceSuccessRequest extends TeaModel {
     /**
      * <p>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -24,18 +28,24 @@ public class SetWfInstanceSuccessRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The workflow instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WfInstanceId")
     public Long wfInstanceId;
 
     /**
      * <p>The workflow ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WorkflowId")
     public Long workflowId;

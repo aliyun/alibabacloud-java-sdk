@@ -12,6 +12,8 @@ public class CreateWorkflowRequest extends TeaModel {
 
     /**
      * <p>The application group ID. You can obtain the ID on the Application Management page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -24,12 +26,16 @@ public class CreateWorkflowRequest extends TeaModel {
 
     /**
      * <p>The name of the workflow.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -42,6 +48,8 @@ public class CreateWorkflowRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

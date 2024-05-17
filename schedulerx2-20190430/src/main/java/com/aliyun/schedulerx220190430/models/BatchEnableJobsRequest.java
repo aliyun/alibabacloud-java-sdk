@@ -12,12 +12,16 @@ public class BatchEnableJobsRequest extends TeaModel {
 
     /**
      * <p>The job IDs. Multiple job IDs are separated with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("JobIdList")
     public java.util.List<Long> jobIdList;
 
     /**
      * <p>The ID of the namespace to which the job belongs. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -30,6 +34,8 @@ public class BatchEnableJobsRequest extends TeaModel {
 
     /**
      * <p>The ID of the region to which the job belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

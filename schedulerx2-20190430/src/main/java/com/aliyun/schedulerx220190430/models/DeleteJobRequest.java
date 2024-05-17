@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class DeleteJobRequest extends TeaModel {
     /**
      * <p>The ID of the application. You can obtain the application ID on the **Application Management** page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the job. You can obtain the ID on the **Task Management** page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("JobId")
     public Long jobId;
 
     /**
      * <p>The ID of the namespace. You can obtain the ID of the namespace on the **Namespace** page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -30,6 +36,8 @@ public class DeleteJobRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

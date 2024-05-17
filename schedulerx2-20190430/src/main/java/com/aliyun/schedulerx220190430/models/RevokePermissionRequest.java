@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class RevokePermissionRequest extends TeaModel {
     /**
      * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The unique identifier (UID) of the namespace. You can obtain the namespace UID on the Namespace page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -24,12 +28,16 @@ public class RevokePermissionRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The UID of the RAM user.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;

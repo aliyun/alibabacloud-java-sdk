@@ -89,12 +89,16 @@ public class UpdateJobRequest extends TeaModel {
 
     /**
      * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The job ID. You can obtain the job ID on the Task Management page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("JobId")
     public Long jobId;
@@ -128,6 +132,8 @@ public class UpdateJobRequest extends TeaModel {
 
     /**
      * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -158,6 +164,8 @@ public class UpdateJobRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

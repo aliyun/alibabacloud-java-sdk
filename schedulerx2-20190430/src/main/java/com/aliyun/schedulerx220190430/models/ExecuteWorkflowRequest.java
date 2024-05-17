@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ExecuteWorkflowRequest extends TeaModel {
     /**
      * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -18,6 +20,8 @@ public class ExecuteWorkflowRequest extends TeaModel {
 
     /**
      * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -28,11 +32,16 @@ public class ExecuteWorkflowRequest extends TeaModel {
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The workflow ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WorkflowId")
     public Long workflowId;

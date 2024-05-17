@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class DesignateWorkersRequest extends TeaModel {
     /**
      * <p>The type of the machines to be designated. Valid values: 1 and 2. The value 1 specifies the worker type. The value 2 specifies the label type.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DesignateType")
     public Integer designateType;
 
     /**
      * <p>The application group ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The job ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("JobId")
     public Long jobId;
@@ -30,6 +36,8 @@ public class DesignateWorkersRequest extends TeaModel {
 
     /**
      * <p>The unique identifier (UID) of the namespace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -42,12 +50,16 @@ public class DesignateWorkersRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether to allow a failover.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Transferable")
     public Boolean transferable;

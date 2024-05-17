@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListJobsRequest extends TeaModel {
     /**
      * <p>The ID of the application. You can obtain the application ID on the **Application Management** page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -18,6 +20,8 @@ public class ListJobsRequest extends TeaModel {
 
     /**
      * <p>The ID of the namespace. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -30,6 +34,8 @@ public class ListJobsRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

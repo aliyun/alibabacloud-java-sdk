@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class GetWorkFlowRequest extends TeaModel {
     /**
      * <p>The ID of the application group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the namespace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -24,12 +28,16 @@ public class GetWorkFlowRequest extends TeaModel {
 
     /**
      * <p>The region information.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the workflow.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WorkflowId")
     public Long workflowId;

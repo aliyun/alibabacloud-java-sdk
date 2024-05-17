@@ -12,6 +12,8 @@ public class UpdateWorkflowRequest extends TeaModel {
 
     /**
      * <p>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -24,6 +26,8 @@ public class UpdateWorkflowRequest extends TeaModel {
 
     /**
      * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -36,6 +40,8 @@ public class UpdateWorkflowRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -60,6 +66,8 @@ public class UpdateWorkflowRequest extends TeaModel {
 
     /**
      * <p>The workflow ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WorkflowId")
     public String workflowId;

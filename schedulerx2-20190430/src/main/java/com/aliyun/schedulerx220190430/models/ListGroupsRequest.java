@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListGroupsRequest extends TeaModel {
     /**
-     * <p>应用分组名称。</p>
+     * <p>The name of the application group.</p>
      */
     @NameInMap("AppGroupName")
     public String appGroupName;
 
     /**
      * <p>The namespace ID. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;

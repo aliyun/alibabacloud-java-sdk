@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateRouteStrategyRequest extends TeaModel {
     /**
      * <p>The ID of the application group. You can obtain the ID on the **Application Management** page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -18,18 +20,24 @@ public class CreateRouteStrategyRequest extends TeaModel {
 
     /**
      * <p>The name of the routing policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The namespace ID. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
