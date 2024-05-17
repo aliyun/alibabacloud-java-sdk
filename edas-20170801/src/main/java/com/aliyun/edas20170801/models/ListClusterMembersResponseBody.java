@@ -107,8 +107,8 @@ public class ListClusterMembersResponseBody extends TeaModel {
          * <br>
          * <p>*   1: The instance is running.</p>
          * <p>*   0: The instance is being converted.</p>
-         * <p>*   \-1: The instance fails to be converted.</p>
-         * <p>*   \-2: The instance is offline.</p>
+         * <p>*   \\-1: The instance fails to be converted.</p>
+         * <p>*   \\-2: The instance is offline.</p>
          */
         @NameInMap("Status")
         public Integer status;

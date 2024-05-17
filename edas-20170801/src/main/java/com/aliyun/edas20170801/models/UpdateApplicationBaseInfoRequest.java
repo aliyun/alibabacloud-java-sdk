@@ -6,12 +6,14 @@ import com.aliyun.tea.*;
 public class UpdateApplicationBaseInfoRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The name of the application. The name must start with a letter, and can contain letters, digits, underscores (\_), and hyphens (-). The name can be up to 36 characters in length.</p>
+     * <p>The name of the application. The name must start with a letter, and can contain letters, digits, underscores (_), and hyphens (-). The name can be up to 36 characters in length.</p>
      */
     @NameInMap("AppName")
     public String appName;

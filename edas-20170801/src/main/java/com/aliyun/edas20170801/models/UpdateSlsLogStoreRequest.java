@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateSlsLogStoreRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).</p>
+     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](https://help.aliyun.com/document_detail/149390.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -19,7 +21,7 @@ public class UpdateSlsLogStoreRequest extends TeaModel {
      * <br>
      * <p>    *   **logstore**: the name of the Logstore. Make sure that the name of the Logstore is unique in the cluster. The name must comply with the following rules:</p>
      * <br>
-     * <p>        *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>        *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
      * <p>        *   The name must start and end with a lowercase letter or a digit.</p>
      * <p>        *   The name must be 3 to 63 characters in length.</p>
      * <br>
@@ -27,7 +29,9 @@ public class UpdateSlsLogStoreRequest extends TeaModel {
      * <br>
      * <p>        **Note**If you leave this parameter empty, the system automatically generates a name.</p>
      * <br>
-     * <p>    *   **LogDir**: If the standard output type is used, the collection path is stdout.log. If the file type is used, the collection path is the path of the collected file. Wildcards (\*) are supported. The collection path must match the following regular expression: `^/(.+)/(.*)^/$`.</p>
+     * <p>    *   **LogDir**: If the standard output type is used, the collection path is stdout.log. If the file type is used, the collection path is the path of the collected file. Wildcards (\\*) are supported. The collection path must match the following regular expression: `^/(.+)/(.*)^/$`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Configs")
     public String configs;

@@ -33,6 +33,8 @@ public class InsertOrUpdateRegionRequest extends TeaModel {
 
     /**
      * <p>The name of the namespace. The name can be up to 63 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionName")
     public String regionName;
@@ -42,6 +44,8 @@ public class InsertOrUpdateRegionRequest extends TeaModel {
      * <br>
      * <p>*   The ID of a custom namespace is in the `Region ID:Namespace identifier` format. Example: cn-beijing:tdy218.</p>
      * <p>*   The ID of the default namespace is in the `region ID` format. Example: cn-beijing.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionTag")
     public String regionTag;

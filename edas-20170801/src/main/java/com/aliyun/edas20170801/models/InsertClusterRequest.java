@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class InsertClusterRequest extends TeaModel {
     /**
      * <p>The name of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
@@ -16,6 +18,8 @@ public class InsertClusterRequest extends TeaModel {
      * <p>*   2: Elastic Compute Service (ECS) cluster</p>
      * <p>*   3: self-managed Kubernetes cluster in Enterprise Distributed Application Service (EDAS)</p>
      * <p>*   5: Kubernetes cluster</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterType")
     public Integer clusterType;
@@ -39,6 +43,8 @@ public class InsertClusterRequest extends TeaModel {
      * <br>
      * <p>*   1: classic network</p>
      * <p>*   2: virtual private cloud (VPC)</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkMode")
     public Integer networkMode;

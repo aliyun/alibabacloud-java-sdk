@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class InsertServiceGroupRequest extends TeaModel {
     /**
      * <p>The name of the service group that you want to create.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupName")
     public String groupName;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RollbackApplicationResponseBody extends TeaModel {
     /**
-     * <p>The change process ID. You can call the GetChangeOrderInfo operation to query the progress of this rollback. For more information, see [GetChangeOrderInfo](~~423155~~).</p>
+     * <p>The change process ID. You can call the GetChangeOrderInfo operation to query the progress of this rollback. For more information, see [GetChangeOrderInfo](https://help.aliyun.com/document_detail/423155.html).</p>
      */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;

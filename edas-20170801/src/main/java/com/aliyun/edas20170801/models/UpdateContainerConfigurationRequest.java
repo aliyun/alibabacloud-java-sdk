@@ -6,12 +6,14 @@ import com.aliyun.tea.*;
 public class UpdateContainerConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The context path of the Tomcat container. The context path can be an empty string, a null WAR package name, a root directory, or other custom non-empty strings. It can contain letters, digits, hyphens (-), and underscores (\_). Take note of the following items:</p>
+     * <p>The context path of the Tomcat container. The context path can be an empty string, a null WAR package name, a root directory, or other custom non-empty strings. It can contain letters, digits, hyphens (-), and underscores (_). Take note of the following items:</p>
      * <br>
      * <p>*   If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.</p>
      * <p>*   If this parameter is not specified when you configure the Tomcat container for an application, the root directory `/` is used.</p>

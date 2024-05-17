@@ -18,6 +18,8 @@ public class InsertK8sApplicationRequest extends TeaModel {
 
     /**
      * <p>The name of the application. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 36 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppName")
     public String appName;
@@ -41,7 +43,9 @@ public class InsertK8sApplicationRequest extends TeaModel {
     public String buildPackId;
 
     /**
-     * <p>The ID of the cluster. You can call the ListCluster operation to query the cluster ID. For more information, see [ListCluster](~~154995~~).</p>
+     * <p>The ID of the cluster. You can call the ListCluster operation to query the cluster ID. For more information, see [ListCluster](https://help.aliyun.com/document_detail/154995.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -187,7 +191,7 @@ public class InsertK8sApplicationRequest extends TeaModel {
      * <br>
      * <p>`{ "name": "x3", "valueFrom": { "secretKeyRef": { "name": "my-secret", "key": "y3" } } }`</p>
      * <br>
-     * <p>>  If you want to cancel this configuration, set this parameter to an empty JSON array in the format of "\[]".</p>
+     * <p>>  If you want to cancel this configuration, set this parameter to an empty JSON array in the format of "[]".</p>
      */
     @NameInMap("Envs")
     public String envs;
@@ -195,6 +199,14 @@ public class InsertK8sApplicationRequest extends TeaModel {
     @NameInMap("FeatureConfig")
     public String featureConfig;
 
+    /**
+     * <p>Mirror the target platform architecture, which is effective when deployed using war or jar. Enter an example:</p>
+     * <br>
+     * <p>- Specify x86 64 architecture: Linux/amd64</p>
+     * <p>- Specify ARM 64 architecture: Linux/arm64</p>
+     * <p>- Specify the construction of dual architecture images: Linux/amd64, Linux/arm64</p>
+     * <p>- Do not input: default schema</p>
+     */
     @NameInMap("ImagePlatforms")
     public String imagePlatforms;
 
@@ -204,6 +216,9 @@ public class InsertK8sApplicationRequest extends TeaModel {
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    /**
+     * <p>Set the initialization container for the application Pod. Support setting the format YAML for container configuration, which is the value of Init container YAML configured with base64 encoding.</p>
+     */
     @NameInMap("InitContainers")
     public String initContainers;
 
@@ -317,7 +332,7 @@ public class InsertK8sApplicationRequest extends TeaModel {
     public String liveness;
 
     /**
-     * <p>The configurations that are used when the host files are mounted to the container on which the application is running. Example: `\[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt","mountPath":"/app/storage"}\]`. Description:</p>
+     * <p>The configurations that are used when the host files are mounted to the container on which the application is running. Example: `[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt","mountPath":"/app/storage"}\\]`. Description:</p>
      * <br>
      * <p>*   `nodePath`: the host path.</p>
      * <p>*   `mountPath`: the path in the container.</p>
@@ -374,7 +389,7 @@ public class InsertK8sApplicationRequest extends TeaModel {
     public Integer losslessRuleWarmupTime;
 
     /**
-     * <p>The description of the NAS mounting configuration. Set this parameter to a serialized JSON string. Example: `\[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}\]`. The `nasPath` parameter specifies the file storage path, and the `mountPath` parameter specifies the path to mount the file system to the container where the application is running.</p>
+     * <p>The description of the NAS mounting configuration. Set this parameter to a serialized JSON string. Example: `[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}\\]`. The `nasPath` parameter specifies the file storage path, and the `mountPath` parameter specifies the path to mount the file system to the container where the application is running.</p>
      */
     @NameInMap("MountDescs")
     public String mountDescs;
@@ -414,7 +429,7 @@ public class InsertK8sApplicationRequest extends TeaModel {
     public String packageVersion;
 
     /**
-     * <p>The post-start script. Example: `{"exec":{"command":\["cat","/etc/group"\]}}`.</p>
+     * <p>The post-start script. Example: `{"exec":{"command":["cat","/etc/group"\\]}}`.</p>
      * <br>
      * <p>If you want to cancel this configuration, leave this parameter empty by setting it to `""` or `{}`. If you do not specify this parameter, this configuration is ignored.</p>
      */
@@ -443,7 +458,7 @@ public class InsertK8sApplicationRequest extends TeaModel {
     public String pvcMountDescs;
 
     /**
-     * <p>The configuration for the readiness check on the container. If the check fails, the traffic that passes through the Kubernetes Service is not transmitted to the container. Example: \`{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": \\[{"name": "test","value": "testvalue"}\\]}}\`.``</p>
+     * <p>The configuration for the readiness check on the container. If the check fails, the traffic that passes through the Kubernetes Service is not transmitted to the container. Example: \\`{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": \[{"name": "test","value": "testvalue"}\\\\]}}\\`.``</p>
      * <br>
      * <p>If you want to cancel this configuration, leave the parameter value empty by entering `""` or `{}`. If you do not specify this parameter, this configuration is ignored.</p>
      */
@@ -510,6 +525,9 @@ public class InsertK8sApplicationRequest extends TeaModel {
     @NameInMap("ServiceConfigs")
     public String serviceConfigs;
 
+    /**
+     * <p>Set up a Sidecar container for the application Pod. Support setting the format YAML for container configuration, which is the value of Sidecar container YAML configured with base64 encoding.</p>
+     */
     @NameInMap("Sidecars")
     public String sidecars;
 
@@ -522,15 +540,20 @@ public class InsertK8sApplicationRequest extends TeaModel {
      * <br>
      * <p>    *   logstore: the name of the Logstore. Make sure that the name of the Logstore is unique in the cluster. The name must comply with the following rules:</p>
      * <br>
-     * <p>        *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>        *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
      * <p>        *   The name must start and end with a lowercase letter or a digit.</p>
      * <p>        *   The name must be 3 to 63 characters in length. If you leave this parameter empty, the system automatically generates a name.</p>
      * <br>
-     * <p>    *   LogDir: If the standard output type is used, the collection path is stdout.log. If the file type is used, the collection path is the path of the collected file. Wildcards (\*) are supported. The collection path must match the following regular expression: `^/(.+)/(.*)^/$`.</p>
+     * <p>    *   LogDir: If the standard output type is used, the collection path is stdout.log. If the file type is used, the collection path is the path of the collected file. Wildcards (\\*) are supported. The collection path must match the following regular expression: `^/(.+)/(.*)^/$`.</p>
      */
     @NameInMap("SlsConfigs")
     public String slsConfigs;
 
+    /**
+     * <p>The startup probe can be used to detect the viability of slow start containers, avoiding them from being killed before startup. The format is as follows: {"FailureThreshold": 3, "initialDelaySeconds": 5, "SuccessThreshold": 1, "timeoutSeconds": 1, "https Get": {"path": "/consumer", "port": 8080, "scheme": "HTTP", "https Headers": [{"name": "test", "value": "testvalue"}]}.</p>
+     * <br>
+     * <p>If set to "" or {}, it means delete, and if not set, it means ignore.</p>
+     */
     @NameInMap("Startup")
     public String startup;
 
@@ -545,6 +568,9 @@ public class InsertK8sApplicationRequest extends TeaModel {
     @NameInMap("StorageType")
     public String storageType;
 
+    /**
+     * <p>Set the grace stop timeout for the application. Unit: seconds.</p>
+     */
     @NameInMap("TerminateGracePeriod")
     public Integer terminateGracePeriod;
 
@@ -570,6 +596,9 @@ public class InsertK8sApplicationRequest extends TeaModel {
     @NameInMap("UseBodyEncoding")
     public Boolean useBodyEncoding;
 
+    /**
+     * <p>When using custom JDK runtime, it is necessary to configure the basic image address. The address needs to be publicly accessible, and the EDAS server will pull the image to build the application image.</p>
+     */
     @NameInMap("UserBaseImageUrl")
     public String userBaseImageUrl;
 
@@ -611,6 +640,9 @@ public class InsertK8sApplicationRequest extends TeaModel {
     @NameInMap("WebContainerConfig")
     public String webContainerConfig;
 
+    /**
+     * <p>The type of Workload when creating an application is currently only supported for the Deployment type.</p>
+     */
     @NameInMap("WorkloadType")
     public String workloadType;
 

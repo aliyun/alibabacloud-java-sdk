@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteSwimmingLaneRequest extends TeaModel {
     /**
      * <p>The ID of the lane.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LaneId")
     public Long laneId;

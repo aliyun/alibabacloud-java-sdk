@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DeleteDeployGroupRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The name of the instance group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupName")
     public String groupName;

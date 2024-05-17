@@ -69,7 +69,7 @@ public class ListVpcResponseBody extends TeaModel {
 
     public static class ListVpcResponseBodyVpcListVpcEntity extends TeaModel {
         /**
-         * <p>This operation uses only common request headers. For more information, see [Common parameters for API calls](~~123488~~).</p>
+         * <p>This operation uses only common request headers. For more information, see [Common parameters for API calls](https://help.aliyun.com/document_detail/123488.html).</p>
          */
         @NameInMap("EcsNum")
         public Integer ecsNum;

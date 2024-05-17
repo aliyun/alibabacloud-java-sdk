@@ -24,6 +24,8 @@ public class StartK8sAppPrecheckRequest extends TeaModel {
 
     /**
      * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -92,7 +94,7 @@ public class StartK8sAppPrecheckRequest extends TeaModel {
      * <br>
      * <p>`{ "name": "x3", "valueFrom": { "secretKeyRef": { "name": "my-secret", "key": "y3" } } }`</p>
      * <br>
-     * <p>> If you want to cancel this configuration, set this parameter to an empty JSON array, which is in the format of "\[]".</p>
+     * <p>> If you want to cancel this configuration, set this parameter to an empty JSON array, which is in the format of "[]".</p>
      */
     @NameInMap("Envs")
     public String envs;
@@ -139,7 +141,7 @@ public class StartK8sAppPrecheckRequest extends TeaModel {
     public Integer limitmCpu;
 
     /**
-     * <p>The configurations that are used when the host files are mounted to the container on which the application is running. Example: `\[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt","mountPath":"/app/storage"}\]`. Description:</p>
+     * <p>The configurations that are used when the host files are mounted to the container on which the application is running. Example: `[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt","mountPath":"/app/storage"}\\]`. Description:</p>
      * <br>
      * <p>*   `nodePath`: the host path.</p>
      * <p>*   `mountPath`: the path in the container.</p>
@@ -150,6 +152,8 @@ public class StartK8sAppPrecheckRequest extends TeaModel {
 
     /**
      * <p>The namespace of the Kubernetes cluster. This parameter specifies the Kubernetes namespace in which your application is deployed. By default, the default namespace is used.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;

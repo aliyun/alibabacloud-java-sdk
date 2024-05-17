@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateK8sApplicationBaseInfoRequest extends TeaModel {
     /**
      * <p>The ID of the application that you want to modify.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;

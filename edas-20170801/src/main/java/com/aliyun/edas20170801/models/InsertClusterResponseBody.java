@@ -98,7 +98,7 @@ public class InsertClusterResponseBody extends TeaModel {
          * <p>The network type of the cluster. Valid values:</p>
          * <br>
          * <p>*   1: classic network</p>
-         * <p>*   2\. VPC</p>
+         * <p>*   2\\. VPC</p>
          */
         @NameInMap("NetworkMode")
         public Integer networkMode;

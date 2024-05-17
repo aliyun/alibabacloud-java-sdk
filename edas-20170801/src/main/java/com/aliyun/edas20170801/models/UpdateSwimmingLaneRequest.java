@@ -12,6 +12,8 @@ public class UpdateSwimmingLaneRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable the throttling rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnableRules")
     public Boolean enableRules;
@@ -24,6 +26,8 @@ public class UpdateSwimmingLaneRequest extends TeaModel {
 
     /**
      * <p>The ID of the lane.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LaneId")
     public Long laneId;

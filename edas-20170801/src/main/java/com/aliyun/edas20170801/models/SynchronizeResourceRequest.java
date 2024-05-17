@@ -11,7 +11,9 @@ public class SynchronizeResourceRequest extends TeaModel {
     public String resourceIds;
 
     /**
-     * <p>The type of the resource to be synchronized. Valid values: `ecs, slb, vpc, ram, and all`. These values are case-sensitive.</p>
+     * <p>The type of the resource to be synchronized. Valid values: `ecs, slb, vpc, and all`. These values are case-sensitive.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateHookConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -18,6 +20,8 @@ public class UpdateHookConfigurationRequest extends TeaModel {
 
     /**
      * <p>The script to mount. Set the value in the JSON format. Example: `[{"ignoreFail":false,"name":"postprepareInstanceEnvironmentOnScaleOut","script":"ls"},{"ignoreFail":true,"name":"postdeleteInstanceDataOnScaleIn","script":""},{"ignoreFail":true,"name":"prestartInstance","script":""},{"ignoreFail":true,"name":"poststartInstance","script":""},{"ignoreFail":true,"name":"prestopInstance","script":""},{"ignoreFail":true,"name":"poststopInstance","script":""}]`</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Hooks")
     public String hooks;

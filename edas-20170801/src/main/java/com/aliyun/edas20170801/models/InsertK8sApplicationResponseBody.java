@@ -67,7 +67,7 @@ public class InsertK8sApplicationResponseBody extends TeaModel {
 
     public static class InsertK8sApplicationResponseBodyApplicationInfo extends TeaModel {
         /**
-         * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).</p>
+         * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](https://help.aliyun.com/document_detail/149390.html).</p>
          */
         @NameInMap("AppId")
         public String appId;
@@ -79,7 +79,7 @@ public class InsertK8sApplicationResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The ID of the change process. You can call the GetChangeOrderInfo operation to query the change process ID. For more information, see [GetChangeOrderInfo](~~62072~~).</p>
+         * <p>The ID of the change process. You can call the GetChangeOrderInfo operation to query the change process ID. For more information, see [GetChangeOrderInfo](https://help.aliyun.com/document_detail/62072.html).</p>
          */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;

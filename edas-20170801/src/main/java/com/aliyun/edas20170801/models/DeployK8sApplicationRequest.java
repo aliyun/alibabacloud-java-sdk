@@ -11,13 +11,15 @@ public class DeployK8sApplicationRequest extends TeaModel {
     public String annotations;
 
     /**
-     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).</p>
+     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](https://help.aliyun.com/document_detail/149390.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The argument array in the container start-up command. Set this parameter to a JSON array in the format of `\["args1","args2"\]`, where each key is set to a string. If you want to cancel this configuration, set this parameter to an empty JSON array in the format of `"\[\]"`.</p>
+     * <p>The argument array in the container start-up command. Set this parameter to a JSON array in the format of `["args1","args2"\\]`, where each key is set to a string. If you want to cancel this configuration, set this parameter to an empty JSON array in the format of `"[\\]"`.</p>
      */
     @NameInMap("Args")
     public String args;
@@ -42,8 +44,8 @@ public class DeployK8sApplicationRequest extends TeaModel {
      * <br>
      * <p>You can query the build package number by using one of the following methods:</p>
      * <br>
-     * <p>*   Call the ListBuildPack operation. For more information, see [ListBuildPack](~~423222~~).</p>
-     * <p>*   Obtain the value in the **Build package number** column of the [Release notes for EDAS Container](~~92614~~) topic. For example, `59` indicates `EDAS Container 3.5.8`.</p>
+     * <p>*   Call the ListBuildPack operation. For more information, see [ListBuildPack](https://help.aliyun.com/document_detail/423222.html).</p>
+     * <p>*   Obtain the value in the **Build package number** column of the [Release notes for EDAS Container](https://help.aliyun.com/document_detail/92614.html) topic. For example, `59` indicates `EDAS Container 3.5.8`.</p>
      */
     @NameInMap("BuildPackId")
     public String buildPackId;
@@ -185,7 +187,7 @@ public class DeployK8sApplicationRequest extends TeaModel {
      * <br>
      * <p>`{ "name": "x3", "valueFrom": { "secretKeyRef": { "name": "my-secret", "key": "y3" } } }`</p>
      * <br>
-     * <p>>  If you want to cancel this configuration, set this parameter to an empty JSON array, which is in the format of "\[]".</p>
+     * <p>>  If you want to cancel this configuration, set this parameter to an empty JSON array, which is in the format of "[]".</p>
      */
     @NameInMap("Envs")
     public String envs;
@@ -239,7 +241,7 @@ public class DeployK8sApplicationRequest extends TeaModel {
     public String liveness;
 
     /**
-     * <p>The configurations that are used when the host files are mounted to the container on which the application is running. Example: `\[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt","mountPath":"/app/storage"}\]`. The nodePath parameter specifies the host path, the mountPath parameter specifies the path within the container, and the type parameter specifies the mounting type.</p>
+     * <p>The configurations that are used when the host files are mounted to the container on which the application is running. Example: `[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt","mountPath":"/app/storage"}\\]`. The nodePath parameter specifies the host path, the mountPath parameter specifies the path within the container, and the type parameter specifies the mounting type.</p>
      */
     @NameInMap("LocalVolume")
     public String localVolume;
@@ -312,7 +314,7 @@ public class DeployK8sApplicationRequest extends TeaModel {
     public Integer memoryRequest;
 
     /**
-     * <p>The description of the NAS mounting configuration. Set this parameter to a serialized JSON string. Example: `\[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}\]`. The nasPath parameter specifies the file storage path, and the mountPath parameter specifies the path to mount the file system to the container in which the application is running.</p>
+     * <p>The description of the NAS mounting configuration. Set this parameter to a serialized JSON string. Example: `[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}\\]`. The nasPath parameter specifies the file storage path, and the mountPath parameter specifies the path to mount the file system to the container in which the application is running.</p>
      */
     @NameInMap("MountDescs")
     public String mountDescs;
@@ -346,7 +348,7 @@ public class DeployK8sApplicationRequest extends TeaModel {
     public String packageVersionId;
 
     /**
-     * <p>The post-start script. Example: `{"exec":{"command":\["cat","/etc/group"\]}}`. If you want to cancel this configuration, set this parameter to `""` or `{}`. If you do not specify this parameter, this configuration is ignored.</p>
+     * <p>The post-start script. Example: `{"exec":{"command":["cat","/etc/group"\\]}}`. If you want to cancel this configuration, set this parameter to `""` or `{}`. If you do not specify this parameter, this configuration is ignored.</p>
      */
     @NameInMap("PostStart")
     public String postStart;
@@ -371,7 +373,7 @@ public class DeployK8sApplicationRequest extends TeaModel {
     public String pvcMountDescs;
 
     /**
-     * <p>The configuration for the readiness check on the container. If the check fails, the traffic that passes through the Kubernetes service is not transmitted to the container. Example: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": \[{"name": "test","value": "testvalue"}\]}}`. If you want to cancel this configuration, set this parameter to `""` or `{}`. If you do not specify this parameter, this configuration is ignored.</p>
+     * <p>The configuration for the readiness check on the container. If the check fails, the traffic that passes through the Kubernetes service is not transmitted to the container. Example: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": [{"name": "test","value": "testvalue"}\\]}}`. If you want to cancel this configuration, set this parameter to `""` or `{}`. If you do not specify this parameter, this configuration is ignored.</p>
      */
     @NameInMap("Readiness")
     public String readiness;
@@ -411,11 +413,11 @@ public class DeployK8sApplicationRequest extends TeaModel {
      * <br>
      * <p>    *   logstore: the name of the Logstore. Make sure that the name of the Logstore is unique in the cluster. The name must comply with the following rules:</p>
      * <br>
-     * <p>        *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>        *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
      * <p>        *   The name must start and end with a lowercase letter or a digit.</p>
      * <p>        *   The name must be 3 to 63 characters in length. If you leave this parameter empty, the system automatically generates a name.</p>
      * <br>
-     * <p>    *   logDir: If the standard output type is used, the collection path is stdout.log. If the file type is used, the collection path is the path of the collected file. Wildcards (\*) are supported. The collection path must match the following regular expression: `^/(.+)/(.*)^/$`.</p>
+     * <p>    *   logDir: If the standard output type is used, the collection path is stdout.log. If the file type is used, the collection path is the path of the collected file. Wildcards (\\*) are supported. The collection path must match the following regular expression: `^/(.+)/(.*)^/$`.</p>
      */
     @NameInMap("SlsConfigs")
     public String slsConfigs;

@@ -18,30 +18,40 @@ public class InsertSwimmingLaneRequest extends TeaModel {
 
     /**
      * <p>The throttling conditions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EntryRules")
     public String entryRules;
 
     /**
      * <p>The ID of the lane group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>The ID of the custom namespace. The ID is in the `physical region ID:custom namespace identifier` format. Example: `cn-hangzhou:test`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LogicalRegionId")
     public String logicalRegionId;
 
     /**
      * <p>The name of the lane.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The tag.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public String tag;

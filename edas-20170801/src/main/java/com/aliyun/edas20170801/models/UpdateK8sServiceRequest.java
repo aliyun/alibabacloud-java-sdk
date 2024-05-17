@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateK8sServiceRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -27,6 +29,8 @@ public class UpdateK8sServiceRequest extends TeaModel {
      * <p>*   The name can contain lowercase letters, digits, and hyphens (-).</p>
      * <p>*   It must start with a letter and end with a letter or digit.</p>
      * <p>*   The name can be 2 to 32 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -41,10 +45,12 @@ public class UpdateK8sServiceRequest extends TeaModel {
      * <p>Example: `[{"protocol": "TCP", "port": 80, "targetPort": 8080},{"protocol": "TCP", "port": 81, "targetPort": 8081}]`</p>
      */
     @NameInMap("ServicePorts")
-    public java.util.Map<String, ?> servicePorts;
+    public String servicePorts;
 
     /**
      * <p>The type of the service in a Kubernetes cluster. Set the value to ClusterIP.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;
@@ -78,11 +84,11 @@ public class UpdateK8sServiceRequest extends TeaModel {
         return this.name;
     }
 
-    public UpdateK8sServiceRequest setServicePorts(java.util.Map<String, ?> servicePorts) {
+    public UpdateK8sServiceRequest setServicePorts(String servicePorts) {
         this.servicePorts = servicePorts;
         return this;
     }
-    public java.util.Map<String, ?> getServicePorts() {
+    public String getServicePorts() {
         return this.servicePorts;
     }
 

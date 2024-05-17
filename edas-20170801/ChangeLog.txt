@@ -1,3 +1,8 @@
+2024-05-17 Version: 1.0.15
+- Update API CreateK8sService: update param ServicePorts.
+- Update API UpdateK8sService: update param ServicePorts.
+
+
 2024-01-30 Version: 1.0.14
 - Update API DeployK8sApplicationadd CustomAgentVersion param.
 - Update API GetK8sApplicationupdate response param.

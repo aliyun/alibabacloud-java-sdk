@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class BindSlbRequest extends TeaModel {
     /**
      * <p>The ID of the EDAS application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -18,12 +20,16 @@ public class BindSlbRequest extends TeaModel {
 
     /**
      * <p>The ID of the SLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SlbId")
     public String slbId;
 
     /**
      * <p>The IP address of the SLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SlbIp")
     public String slbIp;
@@ -33,6 +39,8 @@ public class BindSlbRequest extends TeaModel {
      * <br>
      * <p>*   internet: Internet-facing SLB instance</p>
      * <p>*   intranet: internal-facing SLB instance</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

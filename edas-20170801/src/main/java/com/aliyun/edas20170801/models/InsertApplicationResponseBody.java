@@ -100,7 +100,7 @@ public class InsertApplicationResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The port used by the created application. Default value: 8080. You can call the UpdateContainerConfiguration operation to change the port. For more information, see [UpdateContainerConfiguration](~~149403~~).</p>
+         * <p>The port used by the created application. Default value: 8080. You can call the UpdateContainerConfiguration operation to change the port. For more information, see [UpdateContainerConfiguration](https://help.aliyun.com/document_detail/149403.html).</p>
          */
         @NameInMap("Port")
         public Integer port;

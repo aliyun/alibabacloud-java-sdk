@@ -6,14 +6,18 @@ import com.aliyun.tea.*;
 public class ChangeDeployGroupRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The ID of the elastic compute component (ECC) that corresponds to the ECS instance for which you want to change the application instance group. You can call the ListApplicationEcc operation to query the ECC ID. For more information, see [ListApplicationEcc](~~199277~~).</p>
+     * <p>The ID of the elastic compute component (ECC) that corresponds to the ECS instance for which you want to change the application instance group. You can call the ListApplicationEcc operation to query the ECC ID. For more information, see [ListApplicationEcc](https://help.aliyun.com/document_detail/199277.html).</p>
      * <br>
      * <p>> You can change the application instance group for only one ECS instance at a time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EccInfo")
     public String eccInfo;
@@ -26,6 +30,8 @@ public class ChangeDeployGroupRequest extends TeaModel {
 
     /**
      * <p>The name of the application instance group. Examples: group_a and group_b. The parameter value for the default application instance group is `_DEFAULT_GROUP`. The name can be up to 64 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupName")
     public String groupName;

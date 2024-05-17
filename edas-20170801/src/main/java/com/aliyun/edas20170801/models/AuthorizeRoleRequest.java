@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class AuthorizeRoleRequest extends TeaModel {
     /**
      * <p>The ID of the role to be assigned. If you want to assign multiple roles to the specified RAM user, separate the IDs of the roles with semicolons (;). If you leave this parameter empty, the roles assigned to the specified RAM user are revoked.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RoleIds")
     public String roleIds;
 
     /**
      * <p>The ID of the RAM user to which you want to assign the roles.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetUserId")
     public String targetUserId;

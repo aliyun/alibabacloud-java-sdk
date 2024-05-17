@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class QuerySlsLogStoreListRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -27,6 +29,8 @@ public class QuerySlsLogStoreListRequest extends TeaModel {
      * <br>
      * <p>*   file: the file type</p>
      * <p>*   stdout: the standard output type</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

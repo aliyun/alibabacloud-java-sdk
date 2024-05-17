@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteApplicationScalingRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).</p>
+     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](https://help.aliyun.com/document_detail/149390.html).</p>
      */
     @NameInMap("AppId")
     public String appId;
