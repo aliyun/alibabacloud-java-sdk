@@ -109,6 +109,9 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         @NameInMap("CallsOffered")
         public Long callsOffered;
 
+        @NameInMap("CallsQueuingTimeout")
+        public Long callsQueuingTimeout;
+
         @NameInMap("CallsServiceLevel10")
         public Long callsServiceLevel10;
 
@@ -117,6 +120,9 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
 
         @NameInMap("CallsServiceLevel30")
         public Long callsServiceLevel30;
+
+        @NameInMap("CallsTimeout")
+        public Long callsTimeout;
 
         @NameInMap("GiveUpByAgentOfQueueCount")
         public Long giveUpByAgentOfQueueCount;
@@ -259,6 +265,14 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             return this.callsOffered;
         }
 
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setCallsQueuingTimeout(Long callsQueuingTimeout) {
+            this.callsQueuingTimeout = callsQueuingTimeout;
+            return this;
+        }
+        public Long getCallsQueuingTimeout() {
+            return this.callsQueuingTimeout;
+        }
+
         public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setCallsServiceLevel10(Long callsServiceLevel10) {
             this.callsServiceLevel10 = callsServiceLevel10;
             return this;
@@ -281,6 +295,14 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         }
         public Long getCallsServiceLevel30() {
             return this.callsServiceLevel30;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setCallsTimeout(Long callsTimeout) {
+            this.callsTimeout = callsTimeout;
+            return this;
+        }
+        public Long getCallsTimeout() {
+            return this.callsTimeout;
         }
 
         public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setGiveUpByAgentOfQueueCount(Long giveUpByAgentOfQueueCount) {
