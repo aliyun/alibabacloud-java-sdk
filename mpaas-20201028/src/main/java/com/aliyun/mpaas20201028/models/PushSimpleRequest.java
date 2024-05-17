@@ -10,6 +10,9 @@ public class PushSimpleRequest extends TeaModel {
     @NameInMap("ActivityEvent")
     public String activityEvent;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -19,15 +22,24 @@ public class PushSimpleRequest extends TeaModel {
     @NameInMap("Classification")
     public String classification;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeliveryType")
     public Long deliveryType;
 
     @NameInMap("DismissalDate")
     public Long dismissalDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ExpiredSeconds")
     public Long expiredSeconds;
 
@@ -73,6 +85,9 @@ public class PushSimpleRequest extends TeaModel {
     @NameInMap("StrategyType")
     public Integer strategyType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetMsgkey")
     public String targetMsgkey;
 
@@ -82,12 +97,18 @@ public class PushSimpleRequest extends TeaModel {
     @NameInMap("ThirdChannelCategory")
     public java.util.Map<String, ?> thirdChannelCategory;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Title")
     public String title;
 
     @NameInMap("Uri")
     public String uri;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

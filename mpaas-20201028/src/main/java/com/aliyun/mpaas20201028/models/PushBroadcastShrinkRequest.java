@@ -7,6 +7,9 @@ public class PushBroadcastShrinkRequest extends TeaModel {
     @NameInMap("AndroidChannel")
     public Integer androidChannel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -19,9 +22,15 @@ public class PushBroadcastShrinkRequest extends TeaModel {
     @NameInMap("Classification")
     public String classification;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeliveryType")
     public Long deliveryType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ExpiredSeconds")
     public Long expiredSeconds;
 
@@ -31,6 +40,9 @@ public class PushBroadcastShrinkRequest extends TeaModel {
     @NameInMap("MiChannelId")
     public String miChannelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Msgkey")
     public String msgkey;
 
@@ -58,6 +70,9 @@ public class PushBroadcastShrinkRequest extends TeaModel {
     @NameInMap("TemplateKeyValue")
     public String templateKeyValue;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
@@ -67,6 +82,9 @@ public class PushBroadcastShrinkRequest extends TeaModel {
     @NameInMap("UnBindPeriod")
     public Long unBindPeriod;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

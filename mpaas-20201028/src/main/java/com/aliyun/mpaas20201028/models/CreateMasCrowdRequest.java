@@ -7,6 +7,9 @@ public class CreateMasCrowdRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MpaasMappcenterMcdpMasCrowdCreateJsonStr")
     public String mpaasMappcenterMcdpMasCrowdCreateJsonStr;
 

@@ -7,6 +7,9 @@ public class CopyMcdpGroupRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MpaasMappcenterMcdpGroupCopyJsonStr")
     public String mpaasMappcenterMcdpGroupCopyJsonStr;
 

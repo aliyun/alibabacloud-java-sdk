@@ -4,6 +4,9 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class PushReportRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -16,6 +19,9 @@ public class PushReportRequest extends TeaModel {
     @NameInMap("ConnectType")
     public String connectType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeliveryToken")
     public String deliveryToken;
 
@@ -28,6 +34,9 @@ public class PushReportRequest extends TeaModel {
     @NameInMap("Model")
     public String model;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OsType")
     public Integer osType;
 
@@ -40,6 +49,9 @@ public class PushReportRequest extends TeaModel {
     @NameInMap("ThirdChannelDeviceToken")
     public String thirdChannelDeviceToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

@@ -4,15 +4,24 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class UploadUserAppToMsaRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
     @NameInMap("FileUrl")
     public String fileUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

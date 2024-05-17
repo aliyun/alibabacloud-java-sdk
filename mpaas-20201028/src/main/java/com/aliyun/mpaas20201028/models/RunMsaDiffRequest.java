@@ -4,15 +4,27 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class RunMsaDiffRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MpaasMappcenterMsaDiffRunJsonStr")
     public String mpaasMappcenterMsaDiffRunJsonStr;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

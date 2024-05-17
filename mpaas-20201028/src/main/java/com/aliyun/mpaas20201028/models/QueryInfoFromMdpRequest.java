@@ -4,6 +4,9 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class QueryInfoFromMdpRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -16,12 +19,18 @@ public class QueryInfoFromMdpRequest extends TeaModel {
     @NameInMap("MobileSha256")
     public String mobileSha256;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RiskScene")
     public String riskScene;
 
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

@@ -7,6 +7,9 @@ public class CreateMasFunnelRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MpaasMappcenterMcdpMasFunnelCreateJsonStr")
     public String mpaasMappcenterMcdpMasFunnelCreateJsonStr;
 

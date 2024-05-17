@@ -7,6 +7,9 @@ public class DeleteMcdpEventAttributeByIdRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MpaasMappcenterMcdpEventAttributeDeleteJsonStr")
     public String mpaasMappcenterMcdpEventAttributeDeleteJsonStr;
 

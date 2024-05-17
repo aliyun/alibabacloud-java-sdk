@@ -7,6 +7,9 @@ public class MTRSOCRServiceRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ImageRaw")
     public String imageRaw;
 
@@ -16,6 +19,9 @@ public class MTRSOCRServiceRequest extends TeaModel {
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 

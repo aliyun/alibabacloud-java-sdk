@@ -4,15 +4,27 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class RevokePushMessageRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MessageId")
     public String messageId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetId")
     public String targetId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

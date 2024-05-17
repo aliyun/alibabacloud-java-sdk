@@ -3,7 +3,7 @@ package com.aliyun.mpaas20201028.models;
 
 import com.aliyun.tea.*;
 
-public class RevokePushTaskRequest extends TeaModel {
+public class QueryLinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      */
@@ -13,8 +13,8 @@ public class RevokePushTaskRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      */
-    @NameInMap("TaskId")
-    public String taskId;
+    @NameInMap("Url")
+    public String url;
 
     /**
      * <p>This parameter is required.</p>
@@ -22,12 +22,12 @@ public class RevokePushTaskRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    public static RevokePushTaskRequest build(java.util.Map<String, ?> map) throws Exception {
-        RevokePushTaskRequest self = new RevokePushTaskRequest();
+    public static QueryLinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        QueryLinkRequest self = new QueryLinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public RevokePushTaskRequest setAppId(String appId) {
+    public QueryLinkRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -35,15 +35,15 @@ public class RevokePushTaskRequest extends TeaModel {
         return this.appId;
     }
 
-    public RevokePushTaskRequest setTaskId(String taskId) {
-        this.taskId = taskId;
+    public QueryLinkRequest setUrl(String url) {
+        this.url = url;
         return this;
     }
-    public String getTaskId() {
-        return this.taskId;
+    public String getUrl() {
+        return this.url;
     }
 
-    public RevokePushTaskRequest setWorkspaceId(String workspaceId) {
+    public QueryLinkRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }

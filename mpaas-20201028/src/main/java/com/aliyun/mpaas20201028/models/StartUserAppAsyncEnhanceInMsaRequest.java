@@ -7,6 +7,9 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends TeaModel {
     @NameInMap("ApkProtector")
     public Boolean apkProtector;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -22,6 +25,9 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends TeaModel {
     @NameInMap("EmulatorEnvironment")
     public Integer emulatorEnvironment;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
@@ -52,6 +58,9 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends TeaModel {
     @NameInMap("TaskType")
     public String taskType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
@@ -61,6 +70,9 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends TeaModel {
     @NameInMap("UseAShield")
     public Boolean useAShield;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
