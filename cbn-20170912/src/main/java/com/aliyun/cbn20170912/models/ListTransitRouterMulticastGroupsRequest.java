@@ -23,10 +23,10 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
     /**
      * <p>Specified whether to query the multicast members. Valid values:</p>
      * <br>
-     * <p>*   **false**: no</p>
-     * <p>*   **true**: yes</p>
+     * <p>*   **false**</p>
+     * <p>*   **true**</p>
      * <br>
-     * <p>>- This parameter can be set together with the IsGroupMember parameter.</p>
+     * <p>>- This parameter must be specified together with the IsGroupMember parameter.</p>
      * <p>>- If you do not set IsGroupMember or IsGroupSource, both the multicast sources and members are queried.</p>
      * <p>>- If you set only one of them or both of them, the specified values prevail.</p>
      */
@@ -36,12 +36,12 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the multicast sources. Valid values:</p>
      * <br>
-     * <p>*   **false**: no</p>
-     * <p>*   **true**: yes</p>
+     * <p>*   **false**</p>
+     * <p>*   **true**</p>
      * <br>
-     * <p>>- This parameter can be set together with the IsGroupMember parameter.</p>
-     * <p>>- If you do not set IsGroupSource or IsGroupMember, both the multicast sources and members are queried.</p>
-     * <p>>- If you set only one of them or both of them, the specified values prevail.</p>
+     * <p>> - This parameter must be specified together with the IsGroupMember parameter.</p>
+     * <p>> *   If you do not specify IsGroupMember or IsGroupSource, both the multicast sources and members are queried.</p>
+     * <p>> *   If you specify only one of them or both of them, the specified values prevail.</p>
      */
     @NameInMap("IsGroupSource")
     public Boolean isGroupSource;
@@ -101,13 +101,17 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The ID of the network instance connection.</p>
+     * <p>The ID of the network instance connection</p>
+     * <br>
+     * <p>You must configure one of the TransitRouterMulticastDomainId and TransitRouterAttachmentId parameters.</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
     /**
      * <p>The ID of the multicast domain.</p>
+     * <br>
+     * <p>You must configure one of the TransitRouterMulticastDomainId and TransitRouterAttachmentId parameters.</p>
      */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;

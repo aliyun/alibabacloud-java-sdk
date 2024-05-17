@@ -46,6 +46,8 @@ public class DeleteTransitRouterVpcAttachmentRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC connection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;

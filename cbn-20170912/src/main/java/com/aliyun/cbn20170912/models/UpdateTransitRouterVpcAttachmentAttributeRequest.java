@@ -54,6 +54,8 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC connection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
@@ -61,7 +63,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends TeaModel {
     /**
      * <p>The name of the VPC connection.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
      */
     @NameInMap("TransitRouterAttachmentName")
     public String transitRouterAttachmentName;

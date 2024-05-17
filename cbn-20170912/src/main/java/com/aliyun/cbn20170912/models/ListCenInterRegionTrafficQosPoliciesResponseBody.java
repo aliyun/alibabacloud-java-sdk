@@ -84,7 +84,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
 
     public static class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues extends TeaModel {
         /**
-         * <p>The differentiated services code point (DSCP) value used to match packets in the queue.</p>
+         * <p>The differentiated services code point (DSCP) value that is used to match packets.</p>
          */
         @NameInMap("Dscps")
         public java.util.List<Integer> dscps;
@@ -96,7 +96,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         public String qosQueueDescription;
 
         /**
-         * <p>The ID of the queue.</p>
+         * <p>The queue ID.</p>
          */
         @NameInMap("QosQueueId")
         public String qosQueueId;
@@ -180,13 +180,12 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         public String trafficQosPolicyName;
 
         /**
-         * <p>The status of the QoS policy. Valid values:</p>
+         * <p>The status of the QoS policy.</p>
          * <br>
          * <p>*   **Creating**: The QoS policy is being created.</p>
          * <p>*   **Active**: The QoS policy is available.</p>
-         * <p>*   **Modifying**: The QoS policy is being modified</p>
+         * <p>*   **Modifying**: The policy is being modified.</p>
          * <p>*   **Deleting**: The QoS policy is being deleted.</p>
-         * <p>*   **Deleted**: The QoS policy is deleted.</p>
          */
         @NameInMap("TrafficQosPolicyStatus")
         public String trafficQosPolicyStatus;

@@ -7,9 +7,9 @@ public class MoveResourceGroupRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -25,6 +25,8 @@ public class MoveResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group to which you want to move the CEN instance or bandwidth plan.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
@@ -37,6 +39,8 @@ public class MoveResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -52,6 +56,8 @@ public class MoveResourceGroupRequest extends TeaModel {
      * <br>
      * <p>*   **CEN**: CEN instance</p>
      * <p>*   **bandwidthpackage**: bandwidth plan</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

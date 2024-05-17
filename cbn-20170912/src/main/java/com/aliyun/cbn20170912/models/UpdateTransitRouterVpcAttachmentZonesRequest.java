@@ -49,6 +49,8 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC connection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
@@ -136,8 +138,8 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends TeaModel {
          * <br>
          * <p>You can specify at most 10 vSwitches in each call.</p>
          * <br>
-         * <p>*   If the VPC connection belongs to the current Alibaba Cloud account, you can call the [DescribeVSwitches](~~35748~~) operation to query the IDs of the vSwitches and zones of the VPC.</p>
-         * <p>*   If the VPC connection belongs to another Alibaba Cloud account, you can call the [ListGrantVSwitchesToCen](~~427599~~) operation to query the IDs of the vSwitches and zones of the VPC.</p>
+         * <p>*   If the VPC connection belongs to the current Alibaba Cloud account, you can call the [DescribeVSwitches](https://help.aliyun.com/document_detail/35748.html) operation to query the IDs of the vSwitches and zones of the VPC.</p>
+         * <p>*   If the VPC connection belongs to another Alibaba Cloud account, you can call the [ListGrantVSwitchesToCen](https://help.aliyun.com/document_detail/427599.html) operation to query the IDs of the vSwitches and zones of the VPC.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

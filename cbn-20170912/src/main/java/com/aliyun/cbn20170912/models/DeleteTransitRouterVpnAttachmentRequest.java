@@ -7,9 +7,9 @@ public class DeleteTransitRouterVpnAttachmentRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -26,8 +26,8 @@ public class DeleteTransitRouterVpnAttachmentRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcefully delete the VPN attachment. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): checks the related resources, such as associated forwarding correlations and route learning policies, before the VPN attachment is deleted. If such a resource exists, the VPN attachment is not deleted and an error message is returned.</p>
-     * <p>*   **true**: deletes the VPN attachment and the related resources.</p>
+     * <p>*   **false** (default): Check for resource dependencies, such as associated forwarding and route learning, before the VPN attachment is deleted. If such resources exist, the VPN attachment is not deleted and an error message is returned.</p>
+     * <p>*   **true**: Delete the resource dependencies along with the VPN attachment.</p>
      */
     @NameInMap("Force")
     public Boolean force;
@@ -46,6 +46,8 @@ public class DeleteTransitRouterVpnAttachmentRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPN attachment.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;

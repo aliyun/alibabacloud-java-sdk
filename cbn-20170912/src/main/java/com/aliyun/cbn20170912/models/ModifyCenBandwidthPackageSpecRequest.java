@@ -14,6 +14,8 @@ public class ModifyCenBandwidthPackageSpecRequest extends TeaModel {
 
     /**
      * <p>The ID of the bandwidth plan.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenBandwidthPackageId")
     public String cenBandwidthPackageId;

@@ -4,9 +4,15 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class UnroutePrivateZoneInCenToVpcRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccessRegionId")
     public String accessRegionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 

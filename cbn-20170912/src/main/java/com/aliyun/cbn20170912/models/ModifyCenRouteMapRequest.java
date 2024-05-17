@@ -15,6 +15,8 @@ public class ModifyCenRouteMapRequest extends TeaModel {
 
     /**
      * <p>The ID of the CEN instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -22,7 +24,9 @@ public class ModifyCenRouteMapRequest extends TeaModel {
     /**
      * <p>The ID of the region in which the routing policy is applied.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenRegionId")
     public String cenRegionId;
@@ -64,7 +68,7 @@ public class ModifyCenRouteMapRequest extends TeaModel {
     /**
      * <p>The description of the routing policy.</p>
      * <br>
-     * <p>The description cannot start with `http://` or `https://`. It must start with a letter and can contain letters, digits, hyphens (-), periods (.), and underscores (\_).</p>
+     * <p>The description cannot start with `http://` or `https://`. It must start with a letter and can contain letters, digits, hyphens (-), periods (.), and underscores (_).</p>
      */
     @NameInMap("Description")
     public String description;
@@ -133,6 +137,8 @@ public class ModifyCenRouteMapRequest extends TeaModel {
      * <br>
      * <p>*   **Permit**: the route is permitted.</p>
      * <p>*   **Deny**: the route is denied.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MapResult")
     public String mapResult;
@@ -223,6 +229,8 @@ public class ModifyCenRouteMapRequest extends TeaModel {
      * <p>The priority of the routing policy. Valid values: **1** to **100**. A smaller value indicates a higher priority.</p>
      * <br>
      * <p>> You cannot specify the same priority for routing policies that apply in the same region and direction. The system matches routes against the match conditions of routing policies in descending order of priority. A smaller value indicates a higher priority. You must set the priorities to proper values.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Priority")
     public Integer priority;
@@ -235,6 +243,8 @@ public class ModifyCenRouteMapRequest extends TeaModel {
 
     /**
      * <p>The ID of the routing policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteMapId")
     public String routeMapId;
@@ -292,7 +302,7 @@ public class ModifyCenRouteMapRequest extends TeaModel {
     /**
      * <p>The IDs of the source regions to which the routes belong. You can enter at most 32 region IDs.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
      */
     @NameInMap("SourceRegionIds")
     public java.util.List<String> sourceRegionIds;

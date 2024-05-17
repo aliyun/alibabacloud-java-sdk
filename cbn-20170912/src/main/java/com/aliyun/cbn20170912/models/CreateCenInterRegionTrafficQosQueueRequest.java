@@ -10,6 +10,9 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Dscps")
     public java.util.List<Integer> dscps;
 
@@ -25,6 +28,9 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
     @NameInMap("QosQueueName")
     public String qosQueueName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RemainBandwidthPercent")
     public String remainBandwidthPercent;
 
@@ -34,6 +40,9 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TrafficQosPolicyId")
     public String trafficQosPolicyId;
 

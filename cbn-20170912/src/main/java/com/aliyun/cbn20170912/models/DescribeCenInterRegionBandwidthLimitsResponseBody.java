@@ -92,6 +92,9 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
 
+        @NameInMap("BandwidthType")
+        public String bandwidthType;
+
         /**
          * <p>The CEN instance ID.</p>
          */
@@ -107,7 +110,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
         /**
          * <p>The ID of the local region.</p>
          * <br>
-         * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+         * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
          */
         @NameInMap("LocalRegionId")
         public String localRegionId;
@@ -146,6 +149,14 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
         }
         public String getBandwidthPackageId() {
             return this.bandwidthPackageId;
+        }
+
+        public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit setBandwidthType(String bandwidthType) {
+            this.bandwidthType = bandwidthType;
+            return this;
+        }
+        public String getBandwidthType() {
+            return this.bandwidthType;
         }
 
         public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit setCenId(String cenId) {

@@ -41,6 +41,8 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
      * <p>>  The following CIDR blocks are not supported:</p>
      * <p>>*   CIDR blocks that start with 0 or 100.64.</p>
      * <p>>*   Multicast CIDR blocks, including 224.0.0.1 to 239.255.255.254.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouteTableAggregationCidr")
     public String transitRouteTableAggregationCidr;
@@ -48,7 +50,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
     /**
      * <p>The description of the aggregate route.</p>
      * <br>
-     * <p>The description must be 0 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -.</p>
+     * <p>The description must be 0 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ _ -.</p>
      */
     @NameInMap("TransitRouteTableAggregationDescription")
     public String transitRouteTableAggregationDescription;
@@ -56,7 +58,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
     /**
      * <p>The name of the aggregate route.</p>
      * <br>
-     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the name empty.</p>
+     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ _ -. You can also leave the name empty.</p>
      */
     @NameInMap("TransitRouteTableAggregationName")
     public String transitRouteTableAggregationName;
@@ -65,12 +67,16 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
      * <p>The scope of networks that you want to advertise the aggregate route.</p>
      * <br>
      * <p>Set the value to **VPC**, which specified that the aggregate route is advertised to VPCs that are in associated forwarding relationship with a route table of the Enterprise Edition transit router and have route synchronization enabled.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouteTableAggregationScope")
     public String transitRouteTableAggregationScope;
 
     /**
      * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouteTableId")
     public String transitRouteTableId;

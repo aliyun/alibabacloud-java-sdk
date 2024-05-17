@@ -22,6 +22,9 @@ public class AddTraficMatchRuleToTrafficMarkingPolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TrafficMarkingPolicyId")
     public String trafficMarkingPolicyId;
 

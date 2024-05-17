@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends TeaModel {
     /**
      * <p>The CEN instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -22,6 +24,8 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends TeaMode
 
     /**
      * <p>The destination CIDR block of the route.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
@@ -51,12 +55,16 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends TeaMode
 
     /**
      * <p>The ID of the route table configured on the network instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;
 
     /**
      * <p>The ID of the network instance connection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;

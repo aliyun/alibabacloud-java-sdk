@@ -37,6 +37,8 @@ public class DeleteCenInterRegionTrafficQosPolicyRequest extends TeaModel {
 
     /**
      * <p>The ID of the QoS policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficQosPolicyId")
     public String trafficQosPolicyId;

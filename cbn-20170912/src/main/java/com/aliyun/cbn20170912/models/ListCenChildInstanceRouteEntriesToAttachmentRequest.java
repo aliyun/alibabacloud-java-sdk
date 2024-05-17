@@ -12,6 +12,8 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
 
     /**
      * <p>The ID of the route table configured on the network instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChildInstanceRouteTableId")
     public String childInstanceRouteTableId;
@@ -57,6 +59,8 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
 
     /**
      * <p>The ID of the network instance connection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeGrantRulesToCenRequest extends TeaModel {
     /**
      * <p>The CEN instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -51,6 +53,8 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
      * <p>*   **VBR**</p>
      * <p>*   **CCN**</p>
      * <p>*   **VPN**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProductType")
     public String productType;
@@ -58,7 +62,7 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     /**
      * <p>The region ID of the network instance.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

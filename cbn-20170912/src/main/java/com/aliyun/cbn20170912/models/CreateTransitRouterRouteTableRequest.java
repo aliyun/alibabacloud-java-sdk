@@ -51,6 +51,8 @@ public class CreateTransitRouterRouteTableRequest extends TeaModel {
 
     /**
      * <p>The ID of the Enterprise Edition transit router.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;

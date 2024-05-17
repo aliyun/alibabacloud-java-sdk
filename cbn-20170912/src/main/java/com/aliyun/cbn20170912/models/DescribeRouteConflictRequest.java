@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeRouteConflictRequest extends TeaModel {
     /**
      * <p>The ID of the network instance that you want to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
@@ -13,13 +15,17 @@ public class DescribeRouteConflictRequest extends TeaModel {
     /**
      * <p>The ID of the region where the network instance is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
     /**
      * <p>The ID of the route table that is configured on the network instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChildInstanceRouteTableId")
     public String childInstanceRouteTableId;
@@ -30,6 +36,8 @@ public class DescribeRouteConflictRequest extends TeaModel {
      * <p>*   **VPC**: virtual private cloud (VPC)</p>
      * <p>*   **VBR**: virtual border router (VBR)</p>
      * <p>*   **CCN**: Cloud Connect Network (CCN) instance</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;

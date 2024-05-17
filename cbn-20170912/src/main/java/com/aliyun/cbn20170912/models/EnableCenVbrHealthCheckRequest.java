@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class EnableCenVbrHealthCheckRequest extends TeaModel {
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -53,6 +55,8 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
      * <p>The destination IP address for the health check.</p>
      * <br>
      * <p>Set the destination IP address to the IP address of the VBR on the customer side.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HealthCheckTargetIp")
     public String healthCheckTargetIp;
@@ -77,6 +81,8 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
 
     /**
      * <p>The ID of the VBR.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VbrInstanceId")
     public String vbrInstanceId;
@@ -92,7 +98,9 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
     /**
      * <p>The ID of the region where the VBR is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VbrInstanceRegionId")
     public String vbrInstanceRegionId;

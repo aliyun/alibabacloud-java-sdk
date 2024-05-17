@@ -85,7 +85,9 @@ public class ListTransitRouterCidrAllocationRequest extends TeaModel {
     /**
      * <p>The ID of the region where the transit router is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -99,13 +101,15 @@ public class ListTransitRouterCidrAllocationRequest extends TeaModel {
     /**
      * <p>The ID of the CIDR block.</p>
      * <br>
-     * <p>You can call the [ListTransitRouterCidr](~~462772~~) operation to query the ID of a CIDR block.</p>
+     * <p>You can call the [ListTransitRouterCidr](https://help.aliyun.com/document_detail/462772.html) operation to query the ID of a CIDR block.</p>
      */
     @NameInMap("TransitRouterCidrId")
     public String transitRouterCidrId;
 
     /**
      * <p>The ID of the transit router.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;

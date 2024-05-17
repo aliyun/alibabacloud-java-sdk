@@ -82,6 +82,8 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
 
     /**
      * <p>The ID of the peer transit router.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PeerTransitRouterId")
     public String peerTransitRouterId;
@@ -95,7 +97,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     /**
      * <p>The ID of the region where the local Enterprise Edition transit router is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

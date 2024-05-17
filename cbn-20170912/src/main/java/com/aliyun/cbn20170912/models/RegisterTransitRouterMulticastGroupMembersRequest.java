@@ -7,18 +7,18 @@ public class RegisterTransitRouterMulticastGroupMembersRequest extends TeaModel 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may be different for each request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and sends the request.</p>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the request.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -27,12 +27,14 @@ public class RegisterTransitRouterMulticastGroupMembersRequest extends TeaModel 
      * <p>The IP address of the multicast group to which the multicast members belong. Valid values: **224.0.0.1** to **239.255.255.254**.</p>
      * <br>
      * <p>If the multicast group does not exist in the specified multicast domain, the system automatically creates the multicast group in the multicast domain.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupIpAddress")
     public String groupIpAddress;
 
     /**
-     * <p>The IDs of ENIs.</p>
+     * <p>The IDs of the ENIs.</p>
      */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
@@ -44,7 +46,7 @@ public class RegisterTransitRouterMulticastGroupMembersRequest extends TeaModel 
     public Long ownerId;
 
     /**
-     * <p>The IDs of the multicast domains that are in different regions.</p>
+     * <p>The IDs of inter-region multicast domains.</p>
      */
     @NameInMap("PeerTransitRouterMulticastDomains")
     public java.util.List<String> peerTransitRouterMulticastDomains;
@@ -57,6 +59,8 @@ public class RegisterTransitRouterMulticastGroupMembersRequest extends TeaModel 
 
     /**
      * <p>The ID of the multicast domain to which the multicast members belong.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;

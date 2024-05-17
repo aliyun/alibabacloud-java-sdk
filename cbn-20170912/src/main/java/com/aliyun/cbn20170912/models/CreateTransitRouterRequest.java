@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateTransitRouterRequest extends TeaModel {
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -37,7 +39,9 @@ public class CreateTransitRouterRequest extends TeaModel {
     /**
      * <p>The ID of the region where the Enterprise Edition transit router is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -54,7 +58,7 @@ public class CreateTransitRouterRequest extends TeaModel {
      * <p>*   **false** (default): no</p>
      * <p>*   **true**: yes</p>
      * <br>
-     * <p>The multicast feature is supported only in specific regions. You can call [ListTransitRouterAvailableResource](~~261356~~) to query the regions that support multicast.</p>
+     * <p>The multicast feature is supported only in specific regions. You can call [ListTransitRouterAvailableResource](https://help.aliyun.com/document_detail/261356.html) to query the regions that support multicast.</p>
      */
     @NameInMap("SupportMulticast")
     public Boolean supportMulticast;
@@ -70,7 +74,7 @@ public class CreateTransitRouterRequest extends TeaModel {
     /**
      * <p>The CIDR blocks of the transit router.</p>
      * <br>
-     * <p>You can add up to five CIDR blocks at a time. For more information about CIDR blocks of transit routers, see [CIDR blocks of transit routers](~~462635~~).</p>
+     * <p>You can add up to five CIDR blocks at a time. For more information about CIDR blocks of transit routers, see [CIDR blocks of transit routers](https://help.aliyun.com/document_detail/462635.html).</p>
      * <br>
      * <p>>  Only Enterprise Edition transit routers support CIDR blocks.</p>
      */

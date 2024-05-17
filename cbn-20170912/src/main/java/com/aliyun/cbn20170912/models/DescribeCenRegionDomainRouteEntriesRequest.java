@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -13,7 +15,9 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     /**
      * <p>The ID of the region that you want to query.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenRegionId")
     public String cenRegionId;

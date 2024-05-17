@@ -45,6 +45,8 @@ public class UpdateTransitRouterRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The ID of the route.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterRouteEntryId")
     public String transitRouterRouteEntryId;

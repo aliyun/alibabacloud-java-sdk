@@ -32,6 +32,8 @@ public class DescribeGrantRulesToResourceRequest extends TeaModel {
      * <p>*   **VPC**: virtual private cloud (VPC)</p>
      * <p>*   **ExpressConnect**: virtual border router (VBR)</p>
      * <p>*   **VPN**: IPsec-VPN connection</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProductType")
     public String productType;
@@ -39,13 +41,15 @@ public class DescribeGrantRulesToResourceRequest extends TeaModel {
     /**
      * <p>The region ID of the network instance.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The network instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;

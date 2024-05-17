@@ -4,15 +4,30 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class SetCenInterRegionBandwidthLimitRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BandwidthLimit")
     public Long bandwidthLimit;
 
+    @NameInMap("BandwidthType")
+    public String bandwidthType;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LocalRegionId")
     public String localRegionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OppositeRegionId")
     public String oppositeRegionId;
 
@@ -39,6 +54,14 @@ public class SetCenInterRegionBandwidthLimitRequest extends TeaModel {
     }
     public Long getBandwidthLimit() {
         return this.bandwidthLimit;
+    }
+
+    public SetCenInterRegionBandwidthLimitRequest setBandwidthType(String bandwidthType) {
+        this.bandwidthType = bandwidthType;
+        return this;
+    }
+    public String getBandwidthType() {
+        return this.bandwidthType;
     }
 
     public SetCenInterRegionBandwidthLimitRequest setCenId(String cenId) {

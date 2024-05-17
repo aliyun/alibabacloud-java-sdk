@@ -37,7 +37,7 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends TeaModel {
     /**
      * <p>The region ID of the transit router.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
      */
     @NameInMap("TrRegionId")
     public String trRegionId;

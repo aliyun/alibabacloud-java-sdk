@@ -120,9 +120,9 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
 
     public static class ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsZones extends TeaModel {
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID.</p>
          * <br>
-         * <p>You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.</p>
+         * <p>You can call the [DescribeZones](https://help.aliyun.com/document_detail/36064.html) operation to query the most recent zone list.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -144,7 +144,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
 
     public static class ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachments extends TeaModel {
         /**
-         * <p>Specifies whether to allow the transit router to automatically advertise routes to the IPsec-VPN connection. Valid values:</p>
+         * <p>Indicates the transit router can automatically advertise routes to the IPsec connection. Valid values:</p>
          * <br>
          * <p>*   **true**: yes</p>
          * <p>*   **false**: no</p>
@@ -153,7 +153,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         public Boolean autoPublishRouteEnabled;
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
          */
         @NameInMap("CenId")
         public String cenId;
@@ -161,34 +161,33 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         /**
          * <p>The billing method of the VPN attachment.</p>
          * <br>
-         * <p>The value is POSTPAY, which is the default value and specifies the pay-as-you-go billing method.</p>
+         * <p>Only POSTPAY may be returned, which is the default pay-as-you-go billing method.</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
-         * <p>The time when the VPN attachment was created.</p>
+         * <p>The time when the VPN connection was created.</p>
          * <br>
-         * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The type of resource to which the transit router is connected.</p>
+         * <p>The type of resource attached to the transit router.</p>
          * <br>
-         * <p>Valid value: **VPN**, which indicates that an IPsec-VPN connection is attached to the transit router.</p>
+         * <p>Only **VPN** may be returned, which indicates that an IPsec-VPN connection is attached to the transit router.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The status of the VPN attachment. Valid values:</p>
+         * <p>The status of the VPN connection. Valid values:</p>
          * <br>
-         * <p>*   **Attached**: The VPC attachment has been created on the transit router.</p>
-         * <p>*   **Attaching**: The VPN attachment is being created on the transit router.</p>
-         * <p>*   **Detaching**: The VPN attachment is being deleted from the transit router.</p>
-         * <p>*   **Detached**: The VPN attachment is deleted from the transit router.</p>
+         * <p>*   **Attached**</p>
+         * <p>*   **Attaching**</p>
+         * <p>*   **Detaching**</p>
          */
         @NameInMap("Status")
         public String status;
@@ -200,7 +199,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         public java.util.List<ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsTags> tags;
 
         /**
-         * <p>The description of the VPN attachment.</p>
+         * <p>The description of the IPsec-VPN connection.</p>
          */
         @NameInMap("TransitRouterAttachmentDescription")
         public String transitRouterAttachmentDescription;
@@ -236,15 +235,15 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         public Long vpnOwnerId;
 
         /**
-         * <p>The ID of the region to which the IPsec-VPN connection belongs.</p>
+         * <p>The region ID of the IPsec-VPN connection.</p>
          * <br>
-         * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+         * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
          */
         @NameInMap("VpnRegionId")
         public String vpnRegionId;
 
         /**
-         * <p>The zones where the VPN attachment is deployed.</p>
+         * <p>The zones in which the VPN attachment is deployed.</p>
          */
         @NameInMap("Zones")
         public java.util.List<ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachmentsZones> zones;

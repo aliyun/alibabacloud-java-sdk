@@ -62,7 +62,9 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     /**
      * <p>The ID of the region where the transit router is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -84,6 +86,8 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
 
     /**
      * <p>The ID of the transit router.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;

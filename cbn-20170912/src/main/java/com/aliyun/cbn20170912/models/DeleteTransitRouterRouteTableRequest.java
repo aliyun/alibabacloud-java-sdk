@@ -37,6 +37,8 @@ public class DeleteTransitRouterRouteTableRequest extends TeaModel {
 
     /**
      * <p>The ID of the custom route table.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterRouteTableId")
     public String transitRouterRouteTableId;

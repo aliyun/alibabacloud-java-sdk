@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateFlowlogRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -31,7 +33,7 @@ public class CreateFlowlogRequest extends TeaModel {
     /**
      * <p>The name of the flow log.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("FlowLogName")
     public String flowLogName;
@@ -50,9 +52,11 @@ public class CreateFlowlogRequest extends TeaModel {
      * <p>*   If no Logstores are created in the selected region, enter a name and the system automatically creates a Logstore. The name of the Logstore. The name must meet the following requirements:</p>
      * <br>
      * <p>    *   The name must be unique in a project.</p>
-     * <p>    *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>    *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
      * <p>    *   The name must start and end with a lowercase letter or a digit.</p>
      * <p>    *   The name must be 3 to 63 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LogStoreName")
     public String logStoreName;
@@ -76,6 +80,8 @@ public class CreateFlowlogRequest extends TeaModel {
      * <p>    *   The name can contain only lowercase letters, digits, and hyphens (-).</p>
      * <p>    *   The name must start and end with a lowercase letter or a digit.</p>
      * <p>    *   The name must be 3 to 63 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
@@ -83,7 +89,9 @@ public class CreateFlowlogRequest extends TeaModel {
     /**
      * <p>The ID of the region where the flow log is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
