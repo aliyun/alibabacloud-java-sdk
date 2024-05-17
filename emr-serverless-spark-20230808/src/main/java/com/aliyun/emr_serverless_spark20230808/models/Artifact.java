@@ -4,27 +4,48 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class Artifact extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("bizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("creator")
     public Long creator;
 
     @NameInMap("credential")
     public Credential credential;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("gmtCreated")
     public String gmtCreated;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("gmtModified")
     public String gmtModified;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("location")
     public String location;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("modifier")
     public Long modifier;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 

@@ -4,9 +4,15 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class Task extends TeaModel {
+    @NameInMap("archives")
+    public java.util.List<String> archives;
+
     @NameInMap("artifactUrl")
     public String artifactUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("bizId")
     public String bizId;
 
@@ -16,6 +22,9 @@ public class Task extends TeaModel {
     @NameInMap("content")
     public String content;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("creator")
     public Long creator;
 
@@ -34,24 +43,48 @@ public class Task extends TeaModel {
     @NameInMap("extraArtifactIds")
     public java.util.List<String> extraArtifactIds;
 
+    @NameInMap("extraSparkSubmitParams")
+    public String extraSparkSubmitParams;
+
+    @NameInMap("files")
+    public java.util.List<String> files;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("gmtCreated")
     public String gmtCreated;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("gmtModified")
     public String gmtModified;
 
     @NameInMap("hasChanged")
     public Boolean hasChanged;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("hasCommited")
     public Boolean hasCommited;
+
+    @NameInMap("jars")
+    public java.util.List<String> jars;
 
     @NameInMap("lastRunResourceQueueId")
     public String lastRunResourceQueueId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("modifier")
     public Long modifier;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 
@@ -64,39 +97,71 @@ public class Task extends TeaModel {
     @NameInMap("sparkConf")
     public java.util.List<SparkConf> sparkConf;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sparkDriverCores")
     public Integer sparkDriverCores;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sparkDriverMemory")
     public Long sparkDriverMemory;
 
     @NameInMap("sparkEntrypoint")
     public String sparkEntrypoint;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sparkExecutorCores")
     public Integer sparkExecutorCores;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sparkExecutorMemory")
     public Long sparkExecutorMemory;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sparkLogLevel")
     public String sparkLogLevel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sparkLogPath")
     public String sparkLogPath;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sparkVersion")
     public String sparkVersion;
 
     @NameInMap("tags")
     public java.util.Map<String, String> tags;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("type")
     public String type;
 
     public static Task build(java.util.Map<String, ?> map) throws Exception {
         Task self = new Task();
         return TeaModel.build(map, self);
+    }
+
+    public Task setArchives(java.util.List<String> archives) {
+        this.archives = archives;
+        return this;
+    }
+    public java.util.List<String> getArchives() {
+        return this.archives;
     }
 
     public Task setArtifactUrl(String artifactUrl) {
@@ -179,6 +244,22 @@ public class Task extends TeaModel {
         return this.extraArtifactIds;
     }
 
+    public Task setExtraSparkSubmitParams(String extraSparkSubmitParams) {
+        this.extraSparkSubmitParams = extraSparkSubmitParams;
+        return this;
+    }
+    public String getExtraSparkSubmitParams() {
+        return this.extraSparkSubmitParams;
+    }
+
+    public Task setFiles(java.util.List<String> files) {
+        this.files = files;
+        return this;
+    }
+    public java.util.List<String> getFiles() {
+        return this.files;
+    }
+
     public Task setGmtCreated(String gmtCreated) {
         this.gmtCreated = gmtCreated;
         return this;
@@ -209,6 +290,14 @@ public class Task extends TeaModel {
     }
     public Boolean getHasCommited() {
         return this.hasCommited;
+    }
+
+    public Task setJars(java.util.List<String> jars) {
+        this.jars = jars;
+        return this;
+    }
+    public java.util.List<String> getJars() {
+        return this.jars;
     }
 
     public Task setLastRunResourceQueueId(String lastRunResourceQueueId) {

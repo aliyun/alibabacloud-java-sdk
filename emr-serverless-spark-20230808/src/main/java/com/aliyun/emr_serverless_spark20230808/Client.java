@@ -26,6 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * @summary 取消jobRun作业
+     *
+     * @param request CancelJobRunRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelJobRunResponse
+     */
     public CancelJobRunResponse cancelJobRunWithOptions(String workspaceId, String jobRunId, CancelJobRunRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -51,12 +59,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelJobRunResponse());
     }
 
+    /**
+     * @summary 取消jobRun作业
+     *
+     * @param request CancelJobRunRequest
+     * @return CancelJobRunResponse
+     */
     public CancelJobRunResponse cancelJobRun(String workspaceId, String jobRunId, CancelJobRunRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.cancelJobRunWithOptions(workspaceId, jobRunId, request, headers, runtime);
     }
 
+    /**
+     * @summary 获取任务
+     *
+     * @param request GetJobRunRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetJobRunResponse
+     */
     public GetJobRunResponse getJobRunWithOptions(String workspaceId, String jobRunId, GetJobRunRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -82,12 +104,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobRunResponse());
     }
 
+    /**
+     * @summary 获取任务
+     *
+     * @param request GetJobRunRequest
+     * @return GetJobRunResponse
+     */
     public GetJobRunResponse getJobRun(String workspaceId, String jobRunId, GetJobRunRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getJobRunWithOptions(workspaceId, jobRunId, request, headers, runtime);
     }
 
+    /**
+     * @summary 查询run列表
+     *
+     * @param tmpReq ListJobRunsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListJobRunsResponse
+     */
     public ListJobRunsResponse listJobRunsWithOptions(String workspaceId, ListJobRunsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListJobRunsShrinkRequest request = new ListJobRunsShrinkRequest();
@@ -171,12 +207,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListJobRunsResponse());
     }
 
+    /**
+     * @summary 查询run列表
+     *
+     * @param request ListJobRunsRequest
+     * @return ListJobRunsResponse
+     */
     public ListJobRunsResponse listJobRuns(String workspaceId, ListJobRunsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listJobRunsWithOptions(workspaceId, request, headers, runtime);
     }
 
+    /**
+     * @summary 启动作业
+     *
+     * @param request StartJobRunRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartJobRunResponse
+     */
     public StartJobRunResponse startJobRunWithOptions(String workspaceId, StartJobRunRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -244,6 +294,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartJobRunResponse());
     }
 
+    /**
+     * @summary 启动作业
+     *
+     * @param request StartJobRunRequest
+     * @return StartJobRunResponse
+     */
     public StartJobRunResponse startJobRun(String workspaceId, StartJobRunRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
