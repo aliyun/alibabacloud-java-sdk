@@ -7,6 +7,9 @@ public class Project extends TeaModel {
     @NameInMap("createTime")
     public String createTime;
 
+    @NameInMap("dataRedundancyType")
+    public String dataRedundancyType;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -24,6 +27,9 @@ public class Project extends TeaModel {
      */
     @NameInMap("projectName")
     public String projectName;
+
+    @NameInMap("quota")
+    public java.util.Map<String, ?> quota;
 
     @NameInMap("region")
     public String region;
@@ -45,6 +51,14 @@ public class Project extends TeaModel {
     }
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    public Project setDataRedundancyType(String dataRedundancyType) {
+        this.dataRedundancyType = dataRedundancyType;
+        return this;
+    }
+    public String getDataRedundancyType() {
+        return this.dataRedundancyType;
     }
 
     public Project setDescription(String description) {
@@ -77,6 +91,14 @@ public class Project extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
+    }
+
+    public Project setQuota(java.util.Map<String, ?> quota) {
+        this.quota = quota;
+        return this;
+    }
+    public java.util.Map<String, ?> getQuota() {
+        return this.quota;
     }
 
     public Project setRegion(String region) {
