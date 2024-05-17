@@ -51,6 +51,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * @summary Moves a resource from one resource group to another.
+     *
+     * @param request ChangeResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChangeResourceGroupResponse
+     */
     public ChangeResourceGroupResponse changeResourceGroupWithOptions(ChangeResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -91,25 +98,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
     }
 
+    /**
+     * @summary Moves a resource from one resource group to another.
+     *
+     * @param request ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
     public ChangeResourceGroupResponse changeResourceGroup(ChangeResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.changeResourceGroupWithOptions(request, runtime);
     }
 
     /**
-      * ### [](#)Supported database engines
-      * *   ApsaraDB RDS for MySQL
-      * *   ApsaraDB RDS for PostgreSQL
-      * *   PolarDB for MySQL
-      * ### [](#)References
-      * For the instances that meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
-      * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
-      * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
-      * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
-      *
-      * @param request CreateDownloadRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateDownloadResponse
+     * @summary Creates an advanced download task for an ApsaraDB RDS for MySQL instance, an ApsaraDB RDS for PostgreSQL instance, or a PolarDB for MySQL cluster.
+     *
+     * @description ### [](#)Supported database engines
+     * *   ApsaraDB RDS for MySQL
+     * *   ApsaraDB RDS for PostgreSQL
+     * *   PolarDB for MySQL
+     * ### [](#)References
+     * For the instances that meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
+     * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/98819.html)
+     * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96774.html)
+     * *   [Download the backup files of a PolarDB for MySQL cluster](https://help.aliyun.com/document_detail/2627635.html)
+     *
+     * @param request CreateDownloadRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDownloadResponse
      */
     public CreateDownloadResponse createDownloadWithOptions(CreateDownloadRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -176,18 +191,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Supported database engines
-      * *   ApsaraDB RDS for MySQL
-      * *   ApsaraDB RDS for PostgreSQL
-      * *   PolarDB for MySQL
-      * ### [](#)References
-      * For the instances that meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
-      * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
-      * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
-      * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
-      *
-      * @param request CreateDownloadRequest
-      * @return CreateDownloadResponse
+     * @summary Creates an advanced download task for an ApsaraDB RDS for MySQL instance, an ApsaraDB RDS for PostgreSQL instance, or a PolarDB for MySQL cluster.
+     *
+     * @description ### [](#)Supported database engines
+     * *   ApsaraDB RDS for MySQL
+     * *   ApsaraDB RDS for PostgreSQL
+     * *   PolarDB for MySQL
+     * ### [](#)References
+     * For the instances that meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
+     * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/98819.html)
+     * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96774.html)
+     * *   [Download the backup files of a PolarDB for MySQL cluster](https://help.aliyun.com/document_detail/2627635.html)
+     *
+     * @param request CreateDownloadRequest
+     * @return CreateDownloadResponse
      */
     public CreateDownloadResponse createDownload(CreateDownloadRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -195,11 +212,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.
-      *
-      * @param request DeleteSandboxInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteSandboxInstanceResponse
+     * @summary Releases a sandbox instance.
+     *
+     * @description This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.
+     *
+     * @param request DeleteSandboxInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSandboxInstanceResponse
      */
     public DeleteSandboxInstanceResponse deleteSandboxInstanceWithOptions(DeleteSandboxInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -234,16 +253,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.
-      *
-      * @param request DeleteSandboxInstanceRequest
-      * @return DeleteSandboxInstanceResponse
+     * @summary Releases a sandbox instance.
+     *
+     * @description This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.
+     *
+     * @param request DeleteSandboxInstanceRequest
+     * @return DeleteSandboxInstanceResponse
      */
     public DeleteSandboxInstanceResponse deleteSandboxInstance(DeleteSandboxInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSandboxInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 备份数据列表查询接口
+     *
+     * @param request DescribeBackupDataListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeBackupDataListResponse
+     */
     public DescribeBackupDataListResponse describeBackupDataListWithOptions(DescribeBackupDataListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -328,11 +356,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBackupDataListResponse());
     }
 
+    /**
+     * @summary 备份数据列表查询接口
+     *
+     * @param request DescribeBackupDataListRequest
+     * @return DescribeBackupDataListResponse
+     */
     public DescribeBackupDataListResponse describeBackupDataList(DescribeBackupDataListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeBackupDataListWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 获取备份策略接口
+     *
+     * @param request DescribeBackupPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeBackupPolicyResponse
+     */
     public DescribeBackupPolicyResponse describeBackupPolicyWithOptions(DescribeBackupPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -361,11 +402,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBackupPolicyResponse());
     }
 
+    /**
+     * @summary 获取备份策略接口
+     *
+     * @param request DescribeBackupPolicyRequest
+     * @return DescribeBackupPolicyResponse
+     */
     public DescribeBackupPolicyResponse describeBackupPolicy(DescribeBackupPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeBackupPolicyWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DescribeDBTablesRecoveryBackupSetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDBTablesRecoveryBackupSetResponse
+     */
     public DescribeDBTablesRecoveryBackupSetResponse describeDBTablesRecoveryBackupSetWithOptions(DescribeDBTablesRecoveryBackupSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -394,11 +446,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBTablesRecoveryBackupSetResponse());
     }
 
+    /**
+     * @param request DescribeDBTablesRecoveryBackupSetRequest
+     * @return DescribeDBTablesRecoveryBackupSetResponse
+     */
     public DescribeDBTablesRecoveryBackupSetResponse describeDBTablesRecoveryBackupSet(DescribeDBTablesRecoveryBackupSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBTablesRecoveryBackupSetWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DescribeDBTablesRecoveryStateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDBTablesRecoveryStateResponse
+     */
     public DescribeDBTablesRecoveryStateResponse describeDBTablesRecoveryStateWithOptions(DescribeDBTablesRecoveryStateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -427,11 +488,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBTablesRecoveryStateResponse());
     }
 
+    /**
+     * @param request DescribeDBTablesRecoveryStateRequest
+     * @return DescribeDBTablesRecoveryStateResponse
+     */
     public DescribeDBTablesRecoveryStateResponse describeDBTablesRecoveryState(DescribeDBTablesRecoveryStateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBTablesRecoveryStateWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DescribeDBTablesRecoveryTimeRangeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDBTablesRecoveryTimeRangeResponse
+     */
     public DescribeDBTablesRecoveryTimeRangeResponse describeDBTablesRecoveryTimeRangeWithOptions(DescribeDBTablesRecoveryTimeRangeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -460,24 +530,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBTablesRecoveryTimeRangeResponse());
     }
 
+    /**
+     * @param request DescribeDBTablesRecoveryTimeRangeRequest
+     * @return DescribeDBTablesRecoveryTimeRangeResponse
+     */
     public DescribeDBTablesRecoveryTimeRangeResponse describeDBTablesRecoveryTimeRange(DescribeDBTablesRecoveryTimeRangeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBTablesRecoveryTimeRangeWithOptions(request, runtime);
     }
 
     /**
-      * ### [](#)Supported database engines
-      * *   ApsaraDB RDS for MySQL
-      * *   ApsaraDB RDS for PostgreSQL
-      * *   PolarDB for MySQL
-      * ### [](#)References
-      * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
-      * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
-      * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
-      *
-      * @param request DescribeDownloadBackupSetStorageInfoRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDownloadBackupSetStorageInfoResponse
+     * @summary Queries the storage information of a downloaded backup set.
+     *
+     * @description ### [](#)Supported database engines
+     * *   ApsaraDB RDS for MySQL
+     * *   ApsaraDB RDS for PostgreSQL
+     * *   PolarDB for MySQL
+     * ### [](#)References
+     * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/98819.html)
+     * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96774.html)
+     * *   [Download the backup files of a PolarDB for MySQL cluster](https://help.aliyun.com/document_detail/2627635.html)
+     *
+     * @param request DescribeDownloadBackupSetStorageInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDownloadBackupSetStorageInfoResponse
      */
     public DescribeDownloadBackupSetStorageInfoResponse describeDownloadBackupSetStorageInfoWithOptions(DescribeDownloadBackupSetStorageInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -520,17 +596,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Supported database engines
-      * *   ApsaraDB RDS for MySQL
-      * *   ApsaraDB RDS for PostgreSQL
-      * *   PolarDB for MySQL
-      * ### [](#)References
-      * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
-      * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
-      * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
-      *
-      * @param request DescribeDownloadBackupSetStorageInfoRequest
-      * @return DescribeDownloadBackupSetStorageInfoResponse
+     * @summary Queries the storage information of a downloaded backup set.
+     *
+     * @description ### [](#)Supported database engines
+     * *   ApsaraDB RDS for MySQL
+     * *   ApsaraDB RDS for PostgreSQL
+     * *   PolarDB for MySQL
+     * ### [](#)References
+     * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/98819.html)
+     * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96774.html)
+     * *   [Download the backup files of a PolarDB for MySQL cluster](https://help.aliyun.com/document_detail/2627635.html)
+     *
+     * @param request DescribeDownloadBackupSetStorageInfoRequest
+     * @return DescribeDownloadBackupSetStorageInfoResponse
      */
     public DescribeDownloadBackupSetStorageInfoResponse describeDownloadBackupSetStorageInfo(DescribeDownloadBackupSetStorageInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -538,19 +616,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Supported database engines
-      * *   ApsaraDB RDS for MySQL
-      * *   ApsaraDB RDS for PostgreSQL
-      * *   PolarDB for MySQL
-      * ### [](#)References
-      * You can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
-      * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
-      * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
-      * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
-      *
-      * @param request DescribeDownloadSupportRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDownloadSupportResponse
+     * @summary Queries whether an instance supports the advanced download feature.
+     *
+     * @description ### [](#)Supported database engines
+     * *   ApsaraDB RDS for MySQL
+     * *   ApsaraDB RDS for PostgreSQL
+     * *   PolarDB for MySQL
+     * ### [](#)References
+     * You can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
+     * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/98819.html)
+     * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96774.html)
+     * *   [Download the backup files of a PolarDB for MySQL cluster](https://help.aliyun.com/document_detail/2627635.html)
+     *
+     * @param request DescribeDownloadSupportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDownloadSupportResponse
      */
     public DescribeDownloadSupportResponse describeDownloadSupportWithOptions(DescribeDownloadSupportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -581,18 +661,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Supported database engines
-      * *   ApsaraDB RDS for MySQL
-      * *   ApsaraDB RDS for PostgreSQL
-      * *   PolarDB for MySQL
-      * ### [](#)References
-      * You can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
-      * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
-      * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
-      * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
-      *
-      * @param request DescribeDownloadSupportRequest
-      * @return DescribeDownloadSupportResponse
+     * @summary Queries whether an instance supports the advanced download feature.
+     *
+     * @description ### [](#)Supported database engines
+     * *   ApsaraDB RDS for MySQL
+     * *   ApsaraDB RDS for PostgreSQL
+     * *   PolarDB for MySQL
+     * ### [](#)References
+     * You can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
+     * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/98819.html)
+     * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96774.html)
+     * *   [Download the backup files of a PolarDB for MySQL cluster](https://help.aliyun.com/document_detail/2627635.html)
+     *
+     * @param request DescribeDownloadSupportRequest
+     * @return DescribeDownloadSupportResponse
      */
     public DescribeDownloadSupportResponse describeDownloadSupport(DescribeDownloadSupportRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -600,18 +682,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Supported database engines
-      * *   ApsaraDB RDS for MySQL
-      * *   ApsaraDB RDS for PostgreSQL
-      * *   PolarDB for MySQL
-      * ### [](#)References
-      * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
-      * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
-      * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
-      *
-      * @param request DescribeDownloadTaskRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDownloadTaskResponse
+     * @summary Queries the advanced download tasks for an ApsaraDB RDS for MySQL instance, an ApsaraDB RDS for PostgreSQL instance, or a PolarDB for MySQL cluster.
+     *
+     * @description ### [](#)Supported database engines
+     * *   ApsaraDB RDS for MySQL
+     * *   ApsaraDB RDS for PostgreSQL
+     * *   PolarDB for MySQL
+     * ### [](#)References
+     * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/98819.html)
+     * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96774.html)
+     * *   [Download the backup files of a PolarDB for MySQL cluster](https://help.aliyun.com/document_detail/2627635.html)
+     *
+     * @param request DescribeDownloadTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDownloadTaskResponse
      */
     public DescribeDownloadTaskResponse describeDownloadTaskWithOptions(DescribeDownloadTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -682,17 +766,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Supported database engines
-      * *   ApsaraDB RDS for MySQL
-      * *   ApsaraDB RDS for PostgreSQL
-      * *   PolarDB for MySQL
-      * ### [](#)References
-      * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
-      * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
-      * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
-      *
-      * @param request DescribeDownloadTaskRequest
-      * @return DescribeDownloadTaskResponse
+     * @summary Queries the advanced download tasks for an ApsaraDB RDS for MySQL instance, an ApsaraDB RDS for PostgreSQL instance, or a PolarDB for MySQL cluster.
+     *
+     * @description ### [](#)Supported database engines
+     * *   ApsaraDB RDS for MySQL
+     * *   ApsaraDB RDS for PostgreSQL
+     * *   PolarDB for MySQL
+     * ### [](#)References
+     * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/98819.html)
+     * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96774.html)
+     * *   [Download the backup files of a PolarDB for MySQL cluster](https://help.aliyun.com/document_detail/2627635.html)
+     *
+     * @param request DescribeDownloadTaskRequest
+     * @return DescribeDownloadTaskResponse
      */
     public DescribeDownloadTaskResponse describeDownloadTask(DescribeDownloadTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -700,11 +786,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.
-      *
-      * @param request DescribeSandboxBackupSetsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeSandboxBackupSetsResponse
+     * @summary Queries the snapshots of an instance.
+     *
+     * @description Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/203154.html) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](https://help.aliyun.com/document_detail/185577.html). This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.
+     *
+     * @param request DescribeSandboxBackupSetsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSandboxBackupSetsResponse
      */
     public DescribeSandboxBackupSetsResponse describeSandboxBackupSetsWithOptions(DescribeSandboxBackupSetsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -743,10 +831,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.
-      *
-      * @param request DescribeSandboxBackupSetsRequest
-      * @return DescribeSandboxBackupSetsResponse
+     * @summary Queries the snapshots of an instance.
+     *
+     * @description Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/203154.html) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](https://help.aliyun.com/document_detail/185577.html). This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.
+     *
+     * @param request DescribeSandboxBackupSetsRequest
+     * @return DescribeSandboxBackupSetsResponse
      */
     public DescribeSandboxBackupSetsResponse describeSandboxBackupSets(DescribeSandboxBackupSetsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -754,11 +844,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
-      *
-      * @param request DescribeSandboxInstancesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeSandboxInstancesResponse
+     * @summary Queries sandbox instances that are created within an account.
+     *
+     * @description This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+     *
+     * @param request DescribeSandboxInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSandboxInstancesResponse
      */
     public DescribeSandboxInstancesResponse describeSandboxInstancesWithOptions(DescribeSandboxInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -797,10 +889,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
-      *
-      * @param request DescribeSandboxInstancesRequest
-      * @return DescribeSandboxInstancesResponse
+     * @summary Queries sandbox instances that are created within an account.
+     *
+     * @description This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+     *
+     * @param request DescribeSandboxInstancesRequest
+     * @return DescribeSandboxInstancesResponse
      */
     public DescribeSandboxInstancesResponse describeSandboxInstances(DescribeSandboxInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -808,11 +902,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
-      *
-      * @param request DescribeSandboxRecoveryTimeRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeSandboxRecoveryTimeResponse
+     * @summary Queries the recoverable time range of a sandbox instance.
+     *
+     * @description Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/203154.html) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](https://help.aliyun.com/document_detail/185577.html). This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+     *
+     * @param request DescribeSandboxRecoveryTimeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSandboxRecoveryTimeResponse
      */
     public DescribeSandboxRecoveryTimeResponse describeSandboxRecoveryTimeWithOptions(DescribeSandboxRecoveryTimeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -839,16 +935,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
-      *
-      * @param request DescribeSandboxRecoveryTimeRequest
-      * @return DescribeSandboxRecoveryTimeResponse
+     * @summary Queries the recoverable time range of a sandbox instance.
+     *
+     * @description Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/203154.html) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](https://help.aliyun.com/document_detail/185577.html). This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
+     *
+     * @param request DescribeSandboxRecoveryTimeRequest
+     * @return DescribeSandboxRecoveryTimeResponse
      */
     public DescribeSandboxRecoveryTimeResponse describeSandboxRecoveryTime(DescribeSandboxRecoveryTimeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSandboxRecoveryTimeWithOptions(request, runtime);
     }
 
+    /**
+     * @param request ModifyDBTablesRecoveryStateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDBTablesRecoveryStateResponse
+     */
     public ModifyDBTablesRecoveryStateResponse modifyDBTablesRecoveryStateWithOptions(ModifyDBTablesRecoveryStateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -885,11 +988,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBTablesRecoveryStateResponse());
     }
 
+    /**
+     * @param request ModifyDBTablesRecoveryStateRequest
+     * @return ModifyDBTablesRecoveryStateResponse
+     */
     public ModifyDBTablesRecoveryStateResponse modifyDBTablesRecoveryState(ModifyDBTablesRecoveryStateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDBTablesRecoveryStateWithOptions(request, runtime);
     }
 
+    /**
+     * @param request SupportDBTableRecoveryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SupportDBTableRecoveryResponse
+     */
     public SupportDBTableRecoveryResponse supportDBTableRecoveryWithOptions(SupportDBTableRecoveryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -918,6 +1030,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SupportDBTableRecoveryResponse());
     }
 
+    /**
+     * @param request SupportDBTableRecoveryRequest
+     * @return SupportDBTableRecoveryResponse
+     */
     public SupportDBTableRecoveryResponse supportDBTableRecovery(SupportDBTableRecoveryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.supportDBTableRecoveryWithOptions(request, runtime);

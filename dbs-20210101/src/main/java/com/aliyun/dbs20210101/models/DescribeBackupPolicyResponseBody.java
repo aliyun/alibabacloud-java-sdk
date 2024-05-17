@@ -111,6 +111,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         @NameInMap("FilterValue")
         public String filterValue;
 
+        @NameInMap("PolicyId")
+        public String policyId;
+
         @NameInMap("RetentionType")
         public String retentionType;
 
@@ -193,6 +196,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
         public String getFilterValue() {
             return this.filterValue;
+        }
+
+        public DescribeBackupPolicyResponseBodyDataAdvanceDataPolicies setPolicyId(String policyId) {
+            this.policyId = policyId;
+            return this;
+        }
+        public String getPolicyId() {
+            return this.policyId;
         }
 
         public DescribeBackupPolicyResponseBodyDataAdvanceDataPolicies setRetentionType(String retentionType) {

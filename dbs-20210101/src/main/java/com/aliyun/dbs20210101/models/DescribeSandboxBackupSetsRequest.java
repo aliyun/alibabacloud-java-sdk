@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeSandboxBackupSetsRequest extends TeaModel {
     /**
-     * <p>The ID of the backup schedule. You can call the [DescribeBackupPlanList](~~437215~~) operation to query the ID of the backup schedule.</p>
+     * <p>The ID of the backup schedule. You can call the [DescribeBackupPlanList](https://help.aliyun.com/document_detail/437215.html) operation to query the ID of the backup schedule.</p>
      * <br>
-     * <p>> If your instance is an ApsaraDB RDS for MySQL instance, you can [configure automatic access to a data source](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.</p>
+     * <p>> If your instance is an ApsaraDB RDS for MySQL instance, you can [configure automatic access to a data source](https://help.aliyun.com/document_detail/193091.html) to automatically add the instance to DBS and obtain the ID of the backup schedule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
@@ -28,8 +30,8 @@ public class DescribeSandboxBackupSetsRequest extends TeaModel {
      * <p>The number of entries to return on each page. Valid values:</p>
      * <br>
      * <p>*   30: This is the default value.</p>
-     * <p>*   50\.</p>
-     * <p>*   100\.</p>
+     * <p>*   50\\.</p>
+     * <p>*   100\\.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

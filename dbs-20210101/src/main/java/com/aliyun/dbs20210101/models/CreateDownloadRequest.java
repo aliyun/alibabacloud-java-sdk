@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDownloadRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query the ID of the backup set.</p>
+     * <p>The ID of the backup set. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/26273.html) operation to query the ID of the backup set.</p>
      * <br>
      * <p>> This parameter is required if the BakSetType parameter is set to full.</p>
      */
@@ -13,7 +13,7 @@ public class CreateDownloadRequest extends TeaModel {
     public String bakSetId;
 
     /**
-     * <p>The size of the full backup set. Unit: bytes. You can call the [DescribeBackups](~~26273~~) operation to query the size of the full backup set.</p>
+     * <p>The size of the full backup set. Unit: bytes. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/26273.html) operation to query the size of the full backup set.</p>
      */
     @NameInMap("BakSetSize")
     public String bakSetSize;
@@ -49,12 +49,16 @@ public class CreateDownloadRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.</p>
+     * <p>The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/26231.html) operation to query the region ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionCode")
     public String regionCode;
@@ -63,7 +67,7 @@ public class CreateDownloadRequest extends TeaModel {
      * <p>The name of the OSS bucket that is used to store the backup set.</p>
      * <br>
      * <p>*   This parameter is required if the TargetType parameter is set to OSS.</p>
-     * <p>*   Make sure that your account is granted the **AliyunDBSDefaultRole** permission. For more information, see [Use RAM for resource authorization](~~26307~~). You can also grant permissions based on the operation instructions in the Resource Access Management (RAM) console.</p>
+     * <p>*   Make sure that your account is granted the **AliyunDBSDefaultRole** permission. For more information, see [Use RAM for resource authorization](https://help.aliyun.com/document_detail/26307.html). You can also grant permissions based on the operation instructions in the Resource Access Management (RAM) console.</p>
      */
     @NameInMap("TargetBucket")
     public String targetBucket;
