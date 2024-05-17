@@ -12,6 +12,8 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region in which the resource resides.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceRegionId")
     public String resourceRegionId;
@@ -21,6 +23,8 @@ public class ListTagResourcesRequest extends TeaModel {
      * <br>
      * <p>*   **application**: Enterprise Distributed Application Service (EDAS) application</p>
      * <p>*   **cluster**: EDAS cluster</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -30,7 +34,7 @@ public class ListTagResourcesRequest extends TeaModel {
      * <br>
      * <p>*   You can add up to 20 tags to a resource.</p>
      * <p>*   The key cannot start with **aliyun** or **acs:** and cannot contain **http://** or **https://**.</p>
-     * <p>*   The tag key or tag value can be up to 128 characters in length, and can contain letters, digits, hyphens (-), commas (,), asterisks (\*), forward slashes (/), question marks (?), and colons (:).</p>
+     * <p>*   The tag key or tag value can be up to 128 characters in length, and can contain letters, digits, hyphens (-), commas (,), asterisks (\\*), forward slashes (/), question marks (?), and colons (:).</p>
      * <p>*   Set this parameter to a JSON array.</p>
      */
     @NameInMap("Tags")

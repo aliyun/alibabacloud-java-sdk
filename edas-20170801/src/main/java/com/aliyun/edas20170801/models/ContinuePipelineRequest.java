@@ -14,7 +14,9 @@ public class ContinuePipelineRequest extends TeaModel {
     public Boolean confirm;
 
     /**
-     * <p>The ID of the change process. You can call the GetChangeOrderInfo operation to query the ID of the change process that corresponds to a specific batch. For more information, see [GetChangeOrderInfo](~~62072~~).</p>
+     * <p>The ID of the change process. You can call the GetChangeOrderInfo operation to query the ID of the change process that corresponds to a specific batch. For more information, see [GetChangeOrderInfo](https://help.aliyun.com/document_detail/62072.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PipelineId")
     public String pipelineId;

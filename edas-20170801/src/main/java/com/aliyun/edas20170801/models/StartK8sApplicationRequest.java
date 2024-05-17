@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class StartK8sApplicationRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see [ListApplication](~~149390~~).</p>
+     * <p>The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see [ListApplication](https://help.aliyun.com/document_detail/149390.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;

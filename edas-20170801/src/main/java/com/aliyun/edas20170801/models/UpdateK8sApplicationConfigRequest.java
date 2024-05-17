@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class UpdateK8sApplicationConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see [ListApplication](~~423162~~).</p>
+     * <p>The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see [ListApplication](https://help.aliyun.com/document_detail/423162.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The ID of the cluster. You can query the cluster ID by calling the ListCluster operation. For more information, see [ListCluster](~~411844~~).</p>
+     * <p>The ID of the cluster. You can query the cluster ID by calling the ListCluster operation. For more information, see [ListCluster](https://help.aliyun.com/document_detail/411844.html).</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

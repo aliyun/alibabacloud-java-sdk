@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class BindK8sSlbRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -32,7 +34,7 @@ public class BindK8sSlbRequest extends TeaModel {
     public String scheduler;
 
     /**
-     * <p>The information about the ports. This parameter is required if you want to configure multi-port mappings or use a protocol other than TCP. You must set this parameter to a JSON array. Example: \[{"targetPort":8080,"port":82,"loadBalancerProtocol":"TCP"},{"port":81,"certId":"1362469756373809\_16c185d6fa2\_1914500329\_-xxxxxxx","targetPort":8181,"lo adBalancerProtocol":"HTTPS"}]</p>
+     * <p>The information about the ports. This parameter is required if you want to configure multi-port mappings or use a protocol other than TCP. You must set this parameter to a JSON array. Example: [{"targetPort":8080,"port":82,"loadBalancerProtocol":"TCP"},{"port":81,"certId":"1362469756373809_16c185d6fa2_1914500329_-xxxxxxx","targetPort":8181,"lo adBalancerProtocol":"HTTPS"}]</p>
      * <br>
      * <p>*   port: The frontend port. Valid values: 1 to 65535. This parameter is required. Each port must be unique.</p>
      * <p>*   targetPort: The backend port. Valid values: 1 to 65535. This parameter is required.</p>
@@ -80,6 +82,8 @@ public class BindK8sSlbRequest extends TeaModel {
      * <br>
      * <p>*   internet: Internet-facing SLB instance</p>
      * <p>*   intranet: internal-facing SLB instance</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

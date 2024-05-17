@@ -12,6 +12,8 @@ public class RetryChangeOrderTaskRequest extends TeaModel {
 
     /**
      * <p>The ID of the process.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

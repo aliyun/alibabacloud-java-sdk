@@ -7,7 +7,7 @@ public class RestartApplicationResponseBody extends TeaModel {
     /**
      * <p>The ID of the change process.</p>
      * <br>
-     * <p>You can call the GetChangeOrderInfo operation to query the progress of this restart. For more information, see [GetChangeOrderInfo](~~62072~~).</p>
+     * <p>You can call the GetChangeOrderInfo operation to query the progress of this restart. For more information, see [GetChangeOrderInfo](https://help.aliyun.com/document_detail/62072.html).</p>
      */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;

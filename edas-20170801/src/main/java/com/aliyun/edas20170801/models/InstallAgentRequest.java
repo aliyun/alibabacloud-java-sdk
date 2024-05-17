@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class InstallAgentRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -18,6 +20,8 @@ public class InstallAgentRequest extends TeaModel {
 
     /**
      * <p>The ID of the ECS instance. Separate multiple IDs with commas (,). Example: instanceId1,instanceId2.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;

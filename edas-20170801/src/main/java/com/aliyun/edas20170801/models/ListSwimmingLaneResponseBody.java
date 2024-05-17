@@ -78,6 +78,9 @@ public class ListSwimmingLaneResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>Additional information.</p>
+         */
         @NameInMap("Extra")
         public String extra;
 

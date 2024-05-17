@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class MigrateEcuRequest extends TeaModel {
     /**
      * <p>The ID of the ECS instance. Separate multiple IDs with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;

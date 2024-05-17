@@ -9,6 +9,8 @@ public class ListEcsNotInClusterRequest extends TeaModel {
      * <br>
      * <p>*   1: classic network</p>
      * <p>*   2: virtual private cloud (VPC)</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkMode")
     public Integer networkMode;

@@ -17,12 +17,16 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The IDs of the resources from which you want to remove tags. You can specify up to 20 IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceIds")
     public String resourceIds;
 
     /**
      * <p>The region in which the resource resides.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceRegionId")
     public String resourceRegionId;
@@ -32,6 +36,8 @@ public class UntagResourcesRequest extends TeaModel {
      * <br>
      * <p>*   **application**: Enterprise Distributed Application Service (EDAS) application</p>
      * <p>*   **cluster**: EDAS cluster</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

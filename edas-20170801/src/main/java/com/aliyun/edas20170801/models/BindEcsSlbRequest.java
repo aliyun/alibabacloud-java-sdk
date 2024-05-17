@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class BindEcsSlbRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see [ListApplication](~~149390~~).</p>
+     * <p>The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see [ListApplication](https://help.aliyun.com/document_detail/149390.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The ID of the instance group whose application you want to bind. You can call the ListDeployGroup operation to query the group ID. For more information, see [ListDeployGroup](~~62077~~).</p>
+     * <p>The ID of the instance group whose application you want to bind. You can call the ListDeployGroup operation to query the group ID. For more information, see [ListDeployGroup](https://help.aliyun.com/document_detail/62077.html).</p>
      */
     @NameInMap("DeployGroupId")
     public String deployGroupId;
@@ -24,18 +26,24 @@ public class BindEcsSlbRequest extends TeaModel {
 
     /**
      * <p>The listener port for the SLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The listener protocol for the SLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
      * <p>The ID of the SLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SlbId")
     public String slbId;

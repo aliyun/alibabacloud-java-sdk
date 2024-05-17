@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ScaleInApplicationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the change process for this operation. You can call the GetChangeOrderInfo operation to query the progress of this scale-in. For more information, see [GetChangeOrderInfo](~~62072~~). No ID is generated if the ForceStatus parameter is set to true. You can check whether the request is successful based on the value of the Code parameter.</p>
+     * <p>The ID of the change process for this operation. You can call the GetChangeOrderInfo operation to query the progress of this scale-in. For more information, see [GetChangeOrderInfo](https://help.aliyun.com/document_detail/62072.html). No ID is generated if the ForceStatus parameter is set to true. You can check whether the request is successful based on the value of the Code parameter.</p>
      */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;

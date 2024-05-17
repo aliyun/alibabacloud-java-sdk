@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteEcuRequest extends TeaModel {
     /**
      * <p>The unique ID of the ECU to be deleted.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EcuId")
     public String ecuId;

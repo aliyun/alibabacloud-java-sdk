@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class InsertApplicationRequest extends TeaModel {
     /**
-     * <p>The name of the application. The name can contain only digits, letters, hyphens (-), and underscores (\_) and must start with a letter. The name can be up to 36 characters in length.</p>
+     * <p>The name of the application. The name can contain only digits, letters, hyphens (-), and underscores (_) and must start with a letter. The name can be up to 36 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
@@ -13,8 +15,8 @@ public class InsertApplicationRequest extends TeaModel {
     /**
      * <p>The build package number of EDAS Container. This parameter is required if you create a High-Speed Service Framework (HSF) application. You can query the build package number by using one of the following methods:</p>
      * <br>
-     * <p>*   Call the ListBuildPack operation. For more information, see [ListBuildPack](~~149391~~).</p>
-     * <p>*   Obtain the value in the **Build package number** column of the [Release notes for EDAS Container](~~92614~~) topic.</p>
+     * <p>*   Call the ListBuildPack operation. For more information, see [ListBuildPack](https://help.aliyun.com/document_detail/149391.html).</p>
+     * <p>*   Obtain the value in the **Build package number** column of the [Release notes for EDAS Container](https://help.aliyun.com/document_detail/92614.html) topic.</p>
      */
     @NameInMap("BuildPackId")
     public Integer buildPackId;
@@ -26,7 +28,7 @@ public class InsertApplicationRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the application component. You can call the ListComponents operation to query the component IDs. For more information, see [ListComponents](~~97502~~).</p>
+     * <p>The ID of the application component. You can call the ListComponents operation to query the component IDs. For more information, see [ListComponents](https://help.aliyun.com/document_detail/97502.html).</p>
      * <br>
      * <p>This parameter is required if the application runs in Apache Tomcat or in a standard Java application runtime environment. The Apache Tomcat application runtime environment is applicable to Dubbo applications that are deployed by using WAR packages. A standard Java application runtime environment is applicable to Spring Boot or Spring Cloud applications that are deployed by using JAR packages.</p>
      * <br>
@@ -43,7 +45,7 @@ public class InsertApplicationRequest extends TeaModel {
     public String componentIds;
 
     /**
-     * <p>The number of CPU cores that can be used by the application container in a Swarm cluster. \*\*This parameter is deprecated.\*\*</p>
+     * <p>The number of CPU cores that can be used by the application container in a Swarm cluster. \\*\\*This parameter is deprecated.\\*\\*</p>
      */
     @NameInMap("Cpu")
     public Integer cpu;
@@ -55,7 +57,7 @@ public class InsertApplicationRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The value of `ecu_id` of the ECS instance to be added during scale-out. The ECU ID is the unique identity for an ECS instance that is imported to EDAS. Separate multiple values of `ecu_id` with commas (,). You can call the ListScaleOutEcu operation to query the value of `ecu_id`. For more information, see [ListScaleOutEcu](~~149371~~).</p>
+     * <p>The value of `ecu_id` of the ECS instance to be added during scale-out. The ECU ID is the unique identity for an ECS instance that is imported to EDAS. Separate multiple values of `ecu_id` with commas (,). You can call the ListScaleOutEcu operation to query the value of `ecu_id`. For more information, see [ListScaleOutEcu](https://help.aliyun.com/document_detail/149371.html).</p>
      */
     @NameInMap("EcuInfo")
     public String ecuInfo;
@@ -109,7 +111,7 @@ public class InsertApplicationRequest extends TeaModel {
     public String jvmOptions;
 
     /**
-     * <p>The ID of the microservices namespace. To query the ID of a microservices namespace, you can choose **Resource Management** > **Microservice Namespaces** in the left-side navigation pane of the EDAS console or call the ListUserDefineRegion operation. For more information, see [ListUserDefineRegion](~~149377~~).</p>
+     * <p>The ID of the microservices namespace. To query the ID of a microservices namespace, you can choose **Resource Management** > **Microservice Namespaces** in the left-side navigation pane of the EDAS console or call the ListUserDefineRegion operation. For more information, see [ListUserDefineRegion](https://help.aliyun.com/document_detail/149377.html).</p>
      * <br>
      * <p>*   This parameter is required if the cluster you specify is not deployed in the default microservices namespace. Otherwise, the message `application regionId is different with cluster regionId!` appears.</p>
      * <p>*   If the cluster you specify is deployed in the default microservices namespace, you do not need to specify this parameter. Set this parameter to the ID of the microservices namespace in which the cluster you specify is deployed.</p>
@@ -130,7 +132,7 @@ public class InsertApplicationRequest extends TeaModel {
     public Integer maxPermSize;
 
     /**
-     * <p>The memory size that can be used by the application container in a Swarm cluster. \*\*This parameter is deprecated.\*\*</p>
+     * <p>The memory size that can be used by the application container in a Swarm cluster. \\*\\*This parameter is deprecated.\\*\\*</p>
      */
     @NameInMap("Mem")
     public Integer mem;
@@ -148,7 +150,7 @@ public class InsertApplicationRequest extends TeaModel {
     public String packageType;
 
     /**
-     * <p>The reserved port for the application. \*\*This parameter is deprecated.\*\*</p>
+     * <p>The reserved port for the application. \\*\\*This parameter is deprecated.\\*\\*</p>
      */
     @NameInMap("ReservedPortStr")
     public String reservedPortStr;

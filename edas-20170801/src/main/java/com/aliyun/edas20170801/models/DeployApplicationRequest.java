@@ -11,7 +11,9 @@ public class DeployApplicationRequest extends TeaModel {
     public String appEnv;
 
     /**
-     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~423162~~).</p>
+     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](https://help.aliyun.com/document_detail/423162.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -19,7 +21,7 @@ public class DeployApplicationRequest extends TeaModel {
     /**
      * <p>The number of batches per instance group.</p>
      * <br>
-     * <p>*   If you specify an ID when you set the GroupId parameter, the application is deployed to the specified instance group. The minimum number of batches that can be specified is 1. The maximum number of batches is the maximum number of ECS instances in the Normal state in the instance group. The actual value falls in the range of \[1, specified number]. The specified number of batches equals the number of ECS instances in the specified instance group.</p>
+     * <p>*   If you specify an ID when you set the GroupId parameter, the application is deployed to the specified instance group. The minimum number of batches that can be specified is 1. The maximum number of batches is the maximum number of ECS instances in the Normal state in the instance group. The actual value falls in the range of [1, specified number]. The specified number of batches equals the number of ECS instances in the specified instance group.</p>
      * <p>*   If you set the GroupId parameter to all, the application is deployed to all instance groups. The minimum number of batches that can be specified is 1. The maximum number of batches is the number of ECS instances in the instance group that has the largest number of ECS instances in the Normal state.</p>
      */
     @NameInMap("Batch")
@@ -44,14 +46,14 @@ public class DeployApplicationRequest extends TeaModel {
      * <br>
      * <p>You can query the build package number by using one of the following methods:</p>
      * <br>
-     * <p>*   Call the ListBuildPack operation. For more information, see [ListBuildPack](~~149391~~).</p>
-     * <p>*   Obtain the value in the **Build package number** column of the [Release notes for EDAS Container](~~92614~~) topic. For example, `59` indicates `EDAS Container 3.5.8`.</p>
+     * <p>*   Call the ListBuildPack operation. For more information, see [ListBuildPack](https://help.aliyun.com/document_detail/149391.html).</p>
+     * <p>*   Obtain the value in the **Build package number** column of the [Release notes for EDAS Container](https://help.aliyun.com/document_detail/92614.html) topic. For example, `59` indicates `EDAS Container 3.5.8`.</p>
      */
     @NameInMap("BuildPackId")
     public Long buildPackId;
 
     /**
-     * <p>The IDs of the components used by the application. The parameter is not applicable to High-Speed Framework (HSF) applications. You can call the ListComponents operation to query the component IDs. For more information, see [ListComponents](~~423223~~).</p>
+     * <p>The IDs of the components used by the application. The parameter is not applicable to High-Speed Framework (HSF) applications. You can call the ListComponents operation to query the component IDs. For more information, see [ListComponents](https://help.aliyun.com/document_detail/423223.html).</p>
      * <br>
      * <p>*   If you have specified the component IDs when you create the application, you do not need to set the parameter when you deploy the application.</p>
      * <p>*   Set the parameter if you need to update the component versions for the application during the deployment.</p>
@@ -63,13 +65,15 @@ public class DeployApplicationRequest extends TeaModel {
      * <p>*   5: OpenJDK 1.8.x</p>
      * <p>*   6: OpenJDK 1.7.x</p>
      * <br>
-     * <p>For more information, see the Common application parameters section of the [InsertApplication](~~423185~~) topic.</p>
+     * <p>For more information, see the Common application parameters section of the [InsertApplication](https://help.aliyun.com/document_detail/423185.html) topic.</p>
      */
     @NameInMap("ComponentIds")
     public String componentIds;
 
     /**
      * <p>The deployment mode of the application. Valid values: `url` and `image`. The image value is deprecated. You can deploy an application to a Swarm cluster only by using an image.``</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DeployType")
     public String deployType;
@@ -95,9 +99,11 @@ public class DeployApplicationRequest extends TeaModel {
     public Boolean gray;
 
     /**
-     * <p>The ID of the instance group to which the application is deployed. You can call the ListDeployGroup operation to query the ID of the instance group. For more information, see [ListDeployGroup](~~423184~~).</p>
+     * <p>The ID of the instance group to which the application is deployed. You can call the ListDeployGroup operation to query the ID of the instance group. For more information, see [ListDeployGroup](https://help.aliyun.com/document_detail/423184.html).</p>
      * <br>
      * <p>Set the parameter to `all` if you want to deploy the application to all instance groups.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -110,6 +116,8 @@ public class DeployApplicationRequest extends TeaModel {
 
     /**
      * <p>The version of the application deployment package. The value can be up to 64 characters in length. We recommend that you use a timestamp.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PackageVersion")
     public String packageVersion;
@@ -118,13 +126,13 @@ public class DeployApplicationRequest extends TeaModel {
      * <p>The mode in which the deployment batches are triggered. Valid values:</p>
      * <br>
      * <p>*   0: automatic.</p>
-     * <p>*   1: You must manually trigger the next batch. You can manually click **Proceed to Next Batch** in the console or call the ContinuePipeline operation to proceed to the next batch. We recommend that you choose the automatic mode when you call an API operation to deploy the application. For more information, see [ContinuePipeline](~~126990~~).</p>
+     * <p>*   1: You must manually trigger the next batch. You can manually click **Proceed to Next Batch** in the console or call the ContinuePipeline operation to proceed to the next batch. We recommend that you choose the automatic mode when you call an API operation to deploy the application. For more information, see [ContinuePipeline](https://help.aliyun.com/document_detail/126990.html).</p>
      */
     @NameInMap("ReleaseType")
     public Long releaseType;
 
     /**
-     * <p>The canary release policy. For more information about canary release policies, see [DeployK8sApplication](~~423212~~).</p>
+     * <p>The canary release policy. For more information about canary release policies, see [DeployK8sApplication](https://help.aliyun.com/document_detail/423212.html).</p>
      */
     @NameInMap("TrafficControlStrategy")
     public String trafficControlStrategy;

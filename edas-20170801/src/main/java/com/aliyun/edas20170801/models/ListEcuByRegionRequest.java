@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListEcuByRegionRequest extends TeaModel {
     /**
      * <p>Set the value to `pop-query`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Act")
     public String act;

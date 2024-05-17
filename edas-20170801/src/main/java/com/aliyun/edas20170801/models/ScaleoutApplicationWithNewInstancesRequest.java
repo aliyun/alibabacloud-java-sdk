@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ScaleoutApplicationWithNewInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the application that you want to scale out. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).</p>
+     * <p>The ID of the application that you want to scale out. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](https://help.aliyun.com/document_detail/149390.html).</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -37,7 +37,7 @@ public class ScaleoutApplicationWithNewInstancesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the instance group that you want to scale out. You can call the ListDeployGroup operation to query the group ID. For more information, see [ListDeployGroup](~~62077~~).</p>
+     * <p>The ID of the instance group that you want to scale out. You can call the ListDeployGroup operation to query the group ID. For more information, see [ListDeployGroup](https://help.aliyun.com/document_detail/62077.html).</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -71,6 +71,8 @@ public class ScaleoutApplicationWithNewInstancesRequest extends TeaModel {
 
     /**
      * <p>The number of instances to be added for the scale-out.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingNum")
     public Integer scalingNum;
@@ -81,13 +83,13 @@ public class ScaleoutApplicationWithNewInstancesRequest extends TeaModel {
      * <p>*   recycle: economical mode</p>
      * <p>*   release: release mode</p>
      * <br>
-     * <p>For more information about how to remove instances from a specified scaling group, see [RemoveInstances](~~25955~~).</p>
+     * <p>For more information about how to remove instances from a specified scaling group, see [RemoveInstances](https://help.aliyun.com/document_detail/25955.html).</p>
      */
     @NameInMap("ScalingPolicy")
     public String scalingPolicy;
 
     /**
-     * <p>The ID of the ECS instance launch template. You can call the DescribeLaunchTemplates operation to query the launch template ID. For more information, see [DescribeLaunchTemplates](~~73759~~).</p>
+     * <p>The ID of the ECS instance launch template. You can call the DescribeLaunchTemplates operation to query the launch template ID. For more information, see [DescribeLaunchTemplates](https://help.aliyun.com/document_detail/73759.html).</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
@@ -99,7 +101,7 @@ public class ScaleoutApplicationWithNewInstancesRequest extends TeaModel {
     public String templateInstanceId;
 
     /**
-     * <p>The version of the ECS instance launch template. You can call the DescribeLaunchTemplateVersions operation to query the launch template version. For more information, see [DescribeLaunchTemplateVersions](~~73761~~).</p>
+     * <p>The version of the ECS instance launch template. You can call the DescribeLaunchTemplateVersions operation to query the launch template version. For more information, see [DescribeLaunchTemplateVersions](https://help.aliyun.com/document_detail/73761.html).</p>
      * <br>
      * <p>> If you set this parameter to `-1`, the default launch template version is used.</p>
      */

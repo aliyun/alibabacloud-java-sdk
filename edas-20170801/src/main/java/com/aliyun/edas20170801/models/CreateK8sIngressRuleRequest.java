@@ -12,6 +12,8 @@ public class CreateK8sIngressRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the Kubernetes cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -59,12 +61,16 @@ public class CreateK8sIngressRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the Ingress. The name can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter but cannot end with a hyphen (-). The name can be up to 63 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The namespace of the Kubernetes cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;

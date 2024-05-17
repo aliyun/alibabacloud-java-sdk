@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class RollbackApplicationRequest extends TeaModel {
     /**
-     * <p>The application ID. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~423162~~).</p>
+     * <p>The application ID. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](https://help.aliyun.com/document_detail/423162.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -23,15 +25,19 @@ public class RollbackApplicationRequest extends TeaModel {
     public Integer batchWaitTime;
 
     /**
-     * <p>The application group ID. You can call the ListDeployGroup operation to query the application group ID. For more information, see [ListDeployGroup](~~423184~~).</p>
+     * <p>The application group ID. You can call the ListDeployGroup operation to query the application group ID. For more information, see [ListDeployGroup](https://help.aliyun.com/document_detail/423184.html).</p>
      * <br>
      * <p>If you need to roll back the application in all application groups, set this parameter to `all`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The historical version to which you want to roll back the application. Call the ListHistoryDeployVersion operation to query the historical versions of the application. Then, set this parameter based on the returned value of `PackageVersion`. For more information, see [ListHistoryDeployVersion](~~423163~~).</p>
+     * <p>The historical version to which you want to roll back the application. Call the ListHistoryDeployVersion operation to query the historical versions of the application. Then, set this parameter based on the returned value of `PackageVersion`. For more information, see [ListHistoryDeployVersion](https://help.aliyun.com/document_detail/423163.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HistoryVersion")
     public String historyVersion;

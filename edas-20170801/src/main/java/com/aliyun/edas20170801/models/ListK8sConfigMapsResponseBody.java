@@ -139,7 +139,7 @@ public class ListK8sConfigMapsResponseBody extends TeaModel {
 
     public static class ListK8sConfigMapsResponseBodyResultConfigMaps extends TeaModel {
         /**
-         * <p>The ID of the Kubernetes cluster. You can obtain the cluster ID by calling the GetK8sCluster operation. For more information, see [GetK8sCluster](~~181437~~).</p>
+         * <p>The ID of the Kubernetes cluster. You can obtain the cluster ID by calling the GetK8sCluster operation. For more information, see [GetK8sCluster](https://help.aliyun.com/document_detail/181437.html).</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;

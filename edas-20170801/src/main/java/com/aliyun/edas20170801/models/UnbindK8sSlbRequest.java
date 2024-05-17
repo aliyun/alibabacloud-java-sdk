@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class UnbindK8sSlbRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).</p>
+     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](https://help.aliyun.com/document_detail/149390.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The ID of the cluster. You can call the GetK8sCluster operation to query the cluster ID. For more information, see [GetK8sCluster](~~181437~~).</p>
+     * <p>The ID of the cluster. You can call the GetK8sCluster operation to query the cluster ID. For more information, see [GetK8sCluster](https://help.aliyun.com/document_detail/181437.html).</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -27,6 +29,8 @@ public class UnbindK8sSlbRequest extends TeaModel {
      * <br>
      * <p>*   **internet**: Internet-facing SLB instance</p>
      * <p>*   **intranet**: internal-facing SLB instance</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;
