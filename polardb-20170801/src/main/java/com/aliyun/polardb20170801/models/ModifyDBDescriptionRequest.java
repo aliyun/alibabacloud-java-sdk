@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyDBDescriptionRequest extends TeaModel {
     /**
      * <p>The ID of cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -15,12 +17,16 @@ public class ModifyDBDescriptionRequest extends TeaModel {
      * <br>
      * <p>*   It cannot start with `http://` or `https://`.</p>
      * <p>*   It must be 2 to 256 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBDescription")
     public String DBDescription;
 
     /**
      * <p>The name of the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBName")
     public String DBName;

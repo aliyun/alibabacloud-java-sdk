@@ -7,13 +7,17 @@ public class ResetGlobalDatabaseNetworkRequest extends TeaModel {
     /**
      * <p>The ID of the cluster in the GDN.</p>
      * <br>
-     * <p>>  You can call the [DescribeGlobalDatabaseNetwork](~~264580~~) operation to view the ID of the cluster in the GDN.</p>
+     * <p>>  You can call the [DescribeGlobalDatabaseNetwork](https://help.aliyun.com/document_detail/264580.html) operation to view the ID of the cluster in the GDN.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The ID of the GDN.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GDNId")
     public String GDNId;

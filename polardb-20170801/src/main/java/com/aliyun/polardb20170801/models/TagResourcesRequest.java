@@ -12,10 +12,15 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -27,10 +32,15 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Set the value to **cluster**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The cluster ID. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterIds")
     public String DBClusterIds;
@@ -43,7 +45,9 @@ public class ModifyAutoRenewAttributeRequest extends TeaModel {
      * <p>The ID of the region. The region ID can be up to 50 characters in length.</p>
      * <p>cn-hangzhou</p>
      * <p> </p>
-     * <p>>  You can call the [DescribeRegions](~~98041~~) operation to query the available regions.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the available regions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

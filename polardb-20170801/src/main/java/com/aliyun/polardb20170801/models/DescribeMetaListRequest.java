@@ -8,7 +8,7 @@ public class DescribeMetaListRequest extends TeaModel {
      * <p>The ID of the data backup file.</p>
      * <br>
      * <p>>*   When you run a query, you must specify the `BackId` or `RestoreTime` parameter.</p>
-     * <p>>*   You can call the [DescribeBackups](~~98102~~) operation to query the ID of the backup set.</p>
+     * <p>>*   You can call the [DescribeBackups](https://help.aliyun.com/document_detail/98102.html) operation to query the ID of the backup set.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -16,7 +16,9 @@ public class DescribeMetaListRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~98094~~) operation to query the details of all clusters under your account.</p>
+     * <p>>  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the details of all clusters under your account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -57,7 +59,7 @@ public class DescribeMetaListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region in which the instance resides. You can call the [DescribeDBClusterAttribute](~~2319132~~) operation to query the region ID of the instance.</p>
+     * <p>The ID of the region in which the instance resides. You can call the [DescribeDBClusterAttribute](https://help.aliyun.com/document_detail/2319132.html) operation to query the region ID of the instance.</p>
      */
     @NameInMap("RegionCode")
     public String regionCode;
@@ -71,7 +73,7 @@ public class DescribeMetaListRequest extends TeaModel {
     /**
      * <p>The point in time for the restoration. Specify the time in the YYYY-MM-DDThh:mmZ format. The time must be in UTC.</p>
      * <br>
-     * <p>>  When you run a query, you must specify the `BackId` or `RestoreTime` parameter. You can call the [DescribeBackups](~~98102~~) operation to query the point in time for the restoration.</p>
+     * <p>>  When you run a query, you must specify the `BackId` or `RestoreTime` parameter. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/98102.html) operation to query the point in time for the restoration.</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterSSLRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -18,7 +20,7 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
      * <p>*   This parameter is required for a PolarDB for MySQL cluster.</p>
      * <br>
      * <p>*   This parameter is not required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. By default, SSL encryption is enabled for all endpoints.</p>
-     * <p>*   You can call the [DescribeDBClusterSSL](~~153414~~) operation to view the details of the endpoint.</p>
+     * <p>*   You can call the [DescribeDBClusterSSL](https://help.aliyun.com/document_detail/153414.html) operation to view the details of the endpoint.</p>
      */
     @NameInMap("DBEndpointId")
     public String DBEndpointId;
@@ -67,7 +69,7 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
      * <p>*   **Enable**: SSL encryption is enabled.</p>
      * <p>*   **Update**: The SSL certificate is updated.</p>
      * <br>
-     * <p>> After you enable SSL encryption or update the SSL certificate, you must download and configure the certificate. For more information, see [Configure SSL encryption](~~153182~~).</p>
+     * <p>> After you enable SSL encryption or update the SSL certificate, you must download and configure the certificate. For more information, see [Configure SSL encryption](https://help.aliyun.com/document_detail/153182.html).</p>
      */
     @NameInMap("SSLEnabled")
     public String SSLEnabled;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ManuallyStartDBClusterRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -19,7 +21,7 @@ public class ManuallyStartDBClusterRequest extends TeaModel {
     /**
      * <p>The region ID of the cluster.</p>
      * <br>
-     * <p>> You can call the [DescribeRegions](~~98041~~) operation to query available regions.</p>
+     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

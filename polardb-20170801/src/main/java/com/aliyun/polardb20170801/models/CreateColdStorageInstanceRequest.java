@@ -10,6 +10,9 @@ public class CreateColdStorageInstanceRequest extends TeaModel {
     @NameInMap("ColdStorageInstanceDescription")
     public String coldStorageInstanceDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 

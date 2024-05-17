@@ -61,6 +61,15 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     @NameInMap("SecondsUntilAutoPause")
     public String secondsUntilAutoPause;
 
+    @NameInMap("ServerlessRuleCpuEnlargeThreshold")
+    public String serverlessRuleCpuEnlargeThreshold;
+
+    @NameInMap("ServerlessRuleCpuShrinkThreshold")
+    public String serverlessRuleCpuShrinkThreshold;
+
+    @NameInMap("ServerlessRuleMode")
+    public String serverlessRuleMode;
+
     @NameInMap("Switchs")
     public String switchs;
 
@@ -147,6 +156,30 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     }
     public String getSecondsUntilAutoPause() {
         return this.secondsUntilAutoPause;
+    }
+
+    public DescribeDBClusterServerlessConfResponseBody setServerlessRuleCpuEnlargeThreshold(String serverlessRuleCpuEnlargeThreshold) {
+        this.serverlessRuleCpuEnlargeThreshold = serverlessRuleCpuEnlargeThreshold;
+        return this;
+    }
+    public String getServerlessRuleCpuEnlargeThreshold() {
+        return this.serverlessRuleCpuEnlargeThreshold;
+    }
+
+    public DescribeDBClusterServerlessConfResponseBody setServerlessRuleCpuShrinkThreshold(String serverlessRuleCpuShrinkThreshold) {
+        this.serverlessRuleCpuShrinkThreshold = serverlessRuleCpuShrinkThreshold;
+        return this;
+    }
+    public String getServerlessRuleCpuShrinkThreshold() {
+        return this.serverlessRuleCpuShrinkThreshold;
+    }
+
+    public DescribeDBClusterServerlessConfResponseBody setServerlessRuleMode(String serverlessRuleMode) {
+        this.serverlessRuleMode = serverlessRuleMode;
+        return this;
+    }
+    public String getServerlessRuleMode() {
+        return this.serverlessRuleMode;
     }
 
     public DescribeDBClusterServerlessConfResponseBody setSwitchs(String switchs) {

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeGlobalSecurityIPGroupRelationRequest extends TeaModel {
     /**
      * <p>The ID of cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -18,6 +20,8 @@ public class DescribeGlobalSecurityIPGroupRelationRequest extends TeaModel {
 
     /**
      * <p>The region ID of the IP whitelist template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

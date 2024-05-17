@@ -8,6 +8,8 @@ public class ResetAccountRequest extends TeaModel {
      * <p>The username of the account.</p>
      * <br>
      * <p>> You can reset only the permissions of a privileged account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
@@ -24,6 +26,8 @@ public class ResetAccountRequest extends TeaModel {
 
     /**
      * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

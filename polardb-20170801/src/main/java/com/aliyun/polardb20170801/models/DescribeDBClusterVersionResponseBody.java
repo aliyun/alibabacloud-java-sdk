@@ -55,7 +55,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
      * <p>*   **Old**: The minor version is outdated. We recommend that you upgrade the cluster to the latest version.</p>
      * <p>*   **HighRisk**: The minor version has critical defects. We recommend that you immediately update the cluster to the latest minor version.</p>
      * <br>
-     * <p>>  For more information about how to update the minor version, see [Minor version update](~~158572~~).</p>
+     * <p>>  For more information about how to update the minor version, see [Minor version update](https://help.aliyun.com/document_detail/158572.html).</p>
      */
     @NameInMap("DBVersionStatus")
     public String DBVersionStatus;

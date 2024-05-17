@@ -32,7 +32,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public Long blktagUsed;
 
     /**
-     * <p>[The edition of PolarDB](~~183258~~). Valid values:</p>
+     * <p>[The edition of PolarDB](https://help.aliyun.com/document_detail/183258.html). Valid values:</p>
      * <br>
      * <p>*   **Normal**: Cluster Edition.</p>
      * <p>*   **Basic**: Single Node Edition.</p>
@@ -78,7 +78,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String DBClusterNetworkType;
 
     /**
-     * <p>The status of the cluster. For information about the valid values, see [Cluster states](~~99286~~).</p>
+     * <p>The status of the cluster. For information about the valid values, see [Cluster states](https://help.aliyun.com/document_detail/99286.html).</p>
      */
     @NameInMap("DBClusterStatus")
     public String DBClusterStatus;
@@ -108,7 +108,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      * <p>*   **Old**: The minor version is outdated. We recommend that you upgrade the cluster to the latest version.</p>
      * <p>*   **HighRisk**: The minor version has critical defects. We recommend that you immediately upgrade the cluster to the latest version.</p>
      * <br>
-     * <p>> For more information about how to upgrade the minor version, see [Upgrade versions](~~158572~~).</p>
+     * <p>> For more information about how to upgrade the minor version, see [Upgrade versions](https://help.aliyun.com/document_detail/158572.html).</p>
      */
     @NameInMap("DBVersionStatus")
     public String DBVersionStatus;
@@ -947,6 +947,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          * <br>
          * <p>*   **ON**</p>
          * <p>*   **OFF**</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("SccMode")
         public String sccMode;

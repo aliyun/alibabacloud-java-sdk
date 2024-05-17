@@ -174,7 +174,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         public DescribeDatabasesResponseBodyDatabasesDatabaseAccounts accounts;
 
         /**
-         * <p>The character set that the database uses. For more information, see [Character set tables](~~99716~~).</p>
+         * <p>The character set that the database uses. For more information, see [Character set tables](https://help.aliyun.com/document_detail/99716.html).</p>
          */
         @NameInMap("CharacterSetName")
         public String characterSetName;

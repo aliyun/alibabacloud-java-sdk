@@ -23,6 +23,8 @@ public class CreateDBClusterEndpointRequest extends TeaModel {
 
     /**
      * <p>The ID of cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -69,6 +71,8 @@ public class CreateDBClusterEndpointRequest extends TeaModel {
 
     /**
      * <p>The type of the cluster endpoint. Set the value to **Custom**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndpointType")
     public String endpointType;

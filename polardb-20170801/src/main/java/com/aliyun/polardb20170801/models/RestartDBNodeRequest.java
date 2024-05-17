@@ -7,7 +7,9 @@ public class RestartDBNodeRequest extends TeaModel {
     /**
      * <p>The ID of the node.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~185342~~) operation to query the details of all clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     * <p>>  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/185342.html) operation to query the details of all clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBNodeId")
     public String DBNodeId;

@@ -8,7 +8,7 @@ public class DescribeClassListRequest extends TeaModel {
      * <p>The code of the commodity. Valid values:</p>
      * <br>
      * <p>*   polardb_sub: the subscription cluster in regions in the Chinese mainland</p>
-     * <p>*   polardb_sub \_intl: the subscription cluster in regions outside the Chinese mainland</p>
+     * <p>*   polardb_sub _intl: the subscription cluster in regions outside the Chinese mainland</p>
      * <p>*   polardb_payg: the pay-as-you-go cluster in regions in the Chinese mainland</p>
      * <p>*   polardb_payg_intl: the pay-as-you-go cluster in regions outside the Chinese mainland</p>
      * <p>*   polardb_sub_jushita: the subscription cluster for CloudTmall</p>
@@ -20,6 +20,8 @@ public class DescribeClassListRequest extends TeaModel {
      * <p>>*   If you are using an Alibaba Cloud international account, you can view only the codes of the commodities that are available outside the Chinese mainland.</p>
      * <p>>*   If you use a CloudTmall account, you can view only the codes of the commodities that are available in CloudTmall.</p>
      * <p>>*   If you use a Cainiao account, you can view only the codes of the commodities that are available in Cainiao.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;

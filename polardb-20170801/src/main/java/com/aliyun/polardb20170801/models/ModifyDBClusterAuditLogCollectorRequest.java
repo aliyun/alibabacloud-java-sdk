@@ -9,12 +9,16 @@ public class ModifyDBClusterAuditLogCollectorRequest extends TeaModel {
      * <br>
      * <p>*   Enable</p>
      * <p>*   Disable</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CollectorStatus")
     public String collectorStatus;
 
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

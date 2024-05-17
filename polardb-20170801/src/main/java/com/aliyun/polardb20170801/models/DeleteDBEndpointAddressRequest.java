@@ -7,7 +7,9 @@ public class DeleteDBEndpointAddressRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~98094~~) operation to query the details of all clusters that belong to your account, such as the cluster ID.</p>
+     * <p>>  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the details of all clusters that belong to your account, such as the cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -15,13 +17,17 @@ public class DeleteDBEndpointAddressRequest extends TeaModel {
     /**
      * <p>The ID of the endpoint.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBClusterEndpoints](~~98205~~) operation to query the endpoints of a specified PolarDB cluster.</p>
+     * <p>>  You can call the [DescribeDBClusterEndpoints](https://help.aliyun.com/document_detail/98205.html) operation to query the endpoints of a specified PolarDB cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBEndpointId")
     public String DBEndpointId;
 
     /**
      * <p>The network type of the endpoint. Set the value to **Public** (public network).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetType")
     public String netType;

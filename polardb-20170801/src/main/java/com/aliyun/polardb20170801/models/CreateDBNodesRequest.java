@@ -12,12 +12,16 @@ public class CreateDBNodesRequest extends TeaModel {
 
     /**
      * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The details of the read-only node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBNode")
     public java.util.List<CreateDBNodesRequestDBNode> DBNode;
@@ -34,7 +38,7 @@ public class CreateDBNodesRequest extends TeaModel {
 
     /**
      * <p>The ID of the cluster endpoint to which the read-only node is added. If you want to add the read-only node to multiple endpoints at the same time, separate the endpoint IDs with commas (,).</p>
-     * <p>> - You can call the [DescribeDBClusterEndpoints](~~98205~~) operation to query the details of cluster endpoints, including endpoint IDs.</p>
+     * <p>> - You can call the [DescribeDBClusterEndpoints](https://help.aliyun.com/document_detail/98205.html) operation to query the details of cluster endpoints, including endpoint IDs.</p>
      * <p>>- You can enter the ID of the default cluster endpoint or a custom cluster endpoint.</p>
      * <p>>- If you leave this parameter empty, the read-only node is added to all cluster endpoints for which the **Automatically Associate New Nodes** feature is enabled. If you set `AutoAddNewNodes` to `Enable`, the Automatically Associate New Nodes feature is enabled.</p>
      */
@@ -201,9 +205,9 @@ public class CreateDBNodesRequest extends TeaModel {
         /**
          * <p>The specifications of the read-only node that you want to add, which must be the same as the specifications of the existing nodes. For more information, see the following topics:</p>
          * <br>
-         * <p>*   PolarDB for MySQL: [Specifications of compute nodes](~~102542~~)</p>
-         * <p>*   PolarDB for PostgreSQL (Compatible with Oracle): [Specifications of compute nodes](~~207921~~)</p>
-         * <p>*   PolarDB for PostgreSQL: [Specifications of compute nodes](~~209380~~)</p>
+         * <p>*   PolarDB for MySQL: [Specifications of compute nodes](https://help.aliyun.com/document_detail/102542.html)</p>
+         * <p>*   PolarDB for PostgreSQL (Compatible with Oracle): [Specifications of compute nodes](https://help.aliyun.com/document_detail/207921.html)</p>
+         * <p>*   PolarDB for PostgreSQL: [Specifications of compute nodes](https://help.aliyun.com/document_detail/209380.html)</p>
          * <br>
          * <p>>- You need to specify either DBNode.N.ZoneId or DBNode.N.TargetClass. N is an integer that starts from 1. The maximum value of N is equal to 16 minus the number of existing nodes.</p>
          * <p>>- You can add multiple read-only nodes at the same time only to PolarDB for MySQL clusters, which can contain up to of 15 read-only nodes.</p>
@@ -213,7 +217,7 @@ public class CreateDBNodesRequest extends TeaModel {
         public String targetClass;
 
         /**
-         * <p>The zone ID of the node that you want to add, which must be the same as the zone ID of existing nodes. You can call the [DescribeRegions](~~98041~~) operation to query the IDs of zones.</p>
+         * <p>The zone ID of the node that you want to add, which must be the same as the zone ID of existing nodes. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the IDs of zones.</p>
          * <br>
          * <p>>- You need to specify either DBNode.N.ZoneId or DBNode.N.TargetClass. N is an integer that starts from 1. The maximum value of N is equal to 16 minus the number of existing nodes.</p>
          * <p>>- You can add multiple read-only nodes at the same time only to PolarDB for MySQL clusters, which can contain up to of 15 read-only nodes.</p>

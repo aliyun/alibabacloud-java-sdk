@@ -17,9 +17,11 @@ public class EvaluateRegionResourceRequest extends TeaModel {
     /**
      * <p>The specifications of the node. For information about node specifications, see the following topics:</p>
      * <br>
-     * <p>*   PolarDB for MySQL: [Specifications of compute nodes](~~102542~~)</p>
-     * <p>*   PolarDB for Oracle: [Specifications of compute nodes](~~207921~~)</p>
-     * <p>*   PolarDB for PostgreSQL: [Specifications of compute nodes](~~209380~~)</p>
+     * <p>*   PolarDB for MySQL: [Specifications of compute nodes](https://help.aliyun.com/document_detail/102542.html)</p>
+     * <p>*   PolarDB for Oracle: [Specifications of compute nodes](https://help.aliyun.com/document_detail/207921.html)</p>
+     * <p>*   PolarDB for PostgreSQL: [Specifications of compute nodes](https://help.aliyun.com/document_detail/209380.html)</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBNodeClass")
     public String DBNodeClass;
@@ -30,6 +32,8 @@ public class EvaluateRegionResourceRequest extends TeaModel {
      * <p>*   **MySQL**</p>
      * <p>*   **PostgreSQL**</p>
      * <p>*   **Oracle**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBType")
     public String DBType;
@@ -49,6 +53,8 @@ public class EvaluateRegionResourceRequest extends TeaModel {
      * <p>    *   **14**</p>
      * <br>
      * <p>*   Valid value for the Oracle database engine: **11**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBVersion")
     public String DBVersion;
@@ -67,6 +73,8 @@ public class EvaluateRegionResourceRequest extends TeaModel {
      * <br>
      * <p>*   **true**</p>
      * <p>*   **false**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NeedMaxScaleLink")
     public String needMaxScaleLink;
@@ -80,7 +88,9 @@ public class EvaluateRegionResourceRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <br>
-     * <p>> You can call the [DescribeRegions](~~98041~~) operation to query available regions.</p>
+     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available regions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -106,7 +116,9 @@ public class EvaluateRegionResourceRequest extends TeaModel {
     /**
      * <p>The zone ID.</p>
      * <br>
-     * <p>> You can call the [DescribeRegions](~~98041~~) operation to query available zones.</p>
+     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available zones.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

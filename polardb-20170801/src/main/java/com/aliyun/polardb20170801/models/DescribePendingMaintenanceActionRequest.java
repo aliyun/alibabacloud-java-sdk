@@ -36,9 +36,11 @@ public class DescribePendingMaintenanceActionRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the pending event. You can call the [DescribeRegions](~~98041~~) operation to query the regions and zones that are supported by PolarDB.</p>
+     * <p>The region ID of the pending event. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the regions and zones that are supported by PolarDB.</p>
      * <p>>- You can set this parameter to **all** to view all pending events within your account.</p>
      * <p>>- If you set `Region` to **all**, you must set `TaskType` to **all**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public String region;
@@ -68,6 +70,8 @@ public class DescribePendingMaintenanceActionRequest extends TeaModel {
      * <p>*   **all**: queries the details of the pending events of all preceding types.</p>
      * <br>
      * <p>> If the `Region` parameter is set to **all**, the `TaskType` parameter must be set to **all**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

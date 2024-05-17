@@ -110,7 +110,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * <p>The size of the backup set. Unit: bytes.</p>
          * <br>
-         * <p>> After you delete the target snapshot backups, the storage space that is consumed by the backups is released. The released storage space is smaller than the size of the backup file, because the snapshots share specific data blocks. For more information, see [FAQ about backup](~~164881~~).</p>
+         * <p>> After you delete the target snapshot backups, the storage space that is consumed by the backups is released. The released storage space is smaller than the size of the backup file, because the snapshots share specific data blocks. For more information, see [FAQ about backup](https://help.aliyun.com/document_detail/164881.html).</p>
          */
         @NameInMap("BackupSetSize")
         public String backupSetSize;

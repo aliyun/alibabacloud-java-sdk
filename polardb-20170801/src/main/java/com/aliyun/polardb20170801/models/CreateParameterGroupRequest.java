@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateParameterGroupRequest extends TeaModel {
     /**
      * <p>The type of the database engine. Only **MySQL** is supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBType")
     public String DBType;
@@ -16,6 +18,8 @@ public class CreateParameterGroupRequest extends TeaModel {
      * <p>*   **5.6**</p>
      * <p>*   **5.7**</p>
      * <p>*   **8.0**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBVersion")
     public String DBVersion;
@@ -35,8 +39,10 @@ public class CreateParameterGroupRequest extends TeaModel {
     /**
      * <p>The name of the parameter template. The name must meet the following requirements:</p>
      * <br>
-     * <p>*   It can contain letters, digits, and underscores (\_). It must start with a letter and cannot end with an underscore.**</p>
+     * <p>*   It can contain letters, digits, and underscores (_). It must start with a letter and cannot end with an underscore.**</p>
      * <p>*   It must be 8 to 64 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ParameterGroupName")
     public String parameterGroupName;
@@ -44,7 +50,9 @@ public class CreateParameterGroupRequest extends TeaModel {
     /**
      * <p>The JSON string that consists of parameters and values. The parameter values are strings. Example: `{"wait_timeout":"86400","innodb_old_blocks_time":"1000"}`.</p>
      * <br>
-     * <p>> You can call the [DescribeParameterTemplates](~~207428~~) operation to query the details of all parameters in the cluster of a specified engine version, such as the parameter name and valid values.</p>
+     * <p>> You can call the [DescribeParameterTemplates](https://help.aliyun.com/document_detail/207428.html) operation to query the details of all parameters in the cluster of a specified engine version, such as the parameter name and valid values.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Parameters")
     public String parameters;
@@ -52,7 +60,9 @@ public class CreateParameterGroupRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <br>
-     * <p>> You can call the [DescribeRegions](~~98041~~) operation to query available regions.</p>
+     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available regions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

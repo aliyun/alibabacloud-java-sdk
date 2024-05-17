@@ -18,6 +18,8 @@ public class DescribeGlobalSecurityIPGroupRequest extends TeaModel {
 
     /**
      * <p>The region ID of the IP whitelist template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

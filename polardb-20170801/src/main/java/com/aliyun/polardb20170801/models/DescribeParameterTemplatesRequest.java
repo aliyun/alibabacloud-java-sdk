@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeParameterTemplatesRequest extends TeaModel {
     /**
      * <p>The type of the database engine. Only **MySQL** is supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBType")
     public String DBType;
@@ -16,6 +18,8 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
      * <p>*   **5.6**</p>
      * <p>*   **5.7**</p>
      * <p>*   **8.0**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBVersion")
     public String DBVersion;
@@ -29,7 +33,9 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~98041~~) operation to query all regions that are available within your account, such as the region IDs.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query all regions that are available within your account, such as the region IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

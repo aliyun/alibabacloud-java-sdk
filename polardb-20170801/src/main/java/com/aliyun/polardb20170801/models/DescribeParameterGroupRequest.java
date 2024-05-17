@@ -13,7 +13,9 @@ public class DescribeParameterGroupRequest extends TeaModel {
     /**
      * <p>The ID of the parameter template.</p>
      * <br>
-     * <p>> You can call the [DescribeParameterGroups](~~207178~~) operation to query the details of all parameter templates of a specified region, such as the ID of a parameter template.</p>
+     * <p>> You can call the [DescribeParameterGroups](https://help.aliyun.com/document_detail/207178.html) operation to query the details of all parameter templates of a specified region, such as the ID of a parameter template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
@@ -21,7 +23,9 @@ public class DescribeParameterGroupRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <br>
-     * <p>>You can call the [DescribeRegions](~~98041~~) operation to query all regions that are available within your account, such as the region ID.</p>
+     * <p>>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query all regions that are available within your account, such as the region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

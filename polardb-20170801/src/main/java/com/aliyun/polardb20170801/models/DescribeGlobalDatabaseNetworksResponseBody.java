@@ -98,7 +98,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
          * <p>*   **Primary**: the primary cluster</p>
          * <p>*   **standby**: the secondary cluster</p>
          * <br>
-         * <p>> A GDN consists of one primary cluster and up to four secondary clusters. For more information, see [GDN](~~160381~~).</p>
+         * <p>> A GDN consists of one primary cluster and up to four secondary clusters. For more information, see [GDN](https://help.aliyun.com/document_detail/160381.html).</p>
          */
         @NameInMap("Role")
         public String role;
@@ -164,7 +164,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
          * <br>
          * <p>*   It cannot start with `http://` or `https://`.</p>
          * <p>*   It must start with a letter.</p>
-         * <p>*   It can contain letters, digits, underscores (\_), and hyphens (-).</p>
+         * <p>*   It can contain letters, digits, underscores (_), and hyphens (-).</p>
          * <p>*   It must be 2 to 126 characters in length.</p>
          */
         @NameInMap("GDNDescription")

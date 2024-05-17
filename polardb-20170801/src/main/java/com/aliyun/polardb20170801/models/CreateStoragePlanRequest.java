@@ -21,6 +21,8 @@ public class CreateStoragePlanRequest extends TeaModel {
      * <br>
      * <p>*   **Month**</p>
      * <p>*   **Year**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Period")
     public String period;
@@ -33,6 +35,8 @@ public class CreateStoragePlanRequest extends TeaModel {
 
     /**
      * <p>The capacity of the storage plan. Unit: GB. Valid values: 50, 100, 200, 300, 500, 1000, 2000, 3000, 5000, 10000, 15000, 20000, 25000, 30000, 50000, 100000, and 200000</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StorageClass")
     public String storageClass;
@@ -42,6 +46,8 @@ public class CreateStoragePlanRequest extends TeaModel {
      * <br>
      * <p>*   **Mainland**: The storage plan is used inside the Chinese mainland.</p>
      * <p>*   **Overseas**: The storage plan is used outside the Chinese mainland.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StorageType")
     public String storageType;
@@ -51,6 +57,8 @@ public class CreateStoragePlanRequest extends TeaModel {
      * <br>
      * <p>*   If **Period** is set to **Month**, the value ranges from 1 to 9.</p>
      * <p>*   If **Period** is set to **Year**, the value can be 1, 2, 3, or 5.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UsedTime")
     public String usedTime;

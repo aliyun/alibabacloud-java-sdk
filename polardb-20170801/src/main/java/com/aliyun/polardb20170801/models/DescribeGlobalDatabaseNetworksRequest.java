@@ -7,7 +7,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
      * <br>
-     * <p>> You can call the [DescribeDBClusters](~~98094~~) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     * <p>> You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -23,7 +23,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
      * <br>
      * <p>*   It cannot start with `http://` or `https://`.</p>
      * <p>*   It must start with a letter.</p>
-     * <p>*   It can contain letters, digits, underscores (\_), and hyphens (-).</p>
+     * <p>*   It can contain letters, digits, underscores (_), and hyphens (-).</p>
      * <p>*   It must be 2 to 126 characters in length.</p>
      */
     @NameInMap("GDNDescription")

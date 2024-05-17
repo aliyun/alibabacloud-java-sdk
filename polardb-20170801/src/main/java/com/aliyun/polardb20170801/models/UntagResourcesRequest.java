@@ -21,13 +21,17 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~98041~~) operation to query the available regions.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the available regions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the clusters.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -40,6 +44,8 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Set the value to **cluster**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

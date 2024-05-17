@@ -7,7 +7,9 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
      * <br>
-     * <p>> You can call the [DescribeDBClusters](~~98094~~) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     * <p>> You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -21,7 +23,7 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
      * <br>
-     * <p>> You can call the [DescribeRegions](~~98041~~) operation to query all regions that are available for your account, such as the region ID.</p>
+     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query all regions that are available for your account, such as the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

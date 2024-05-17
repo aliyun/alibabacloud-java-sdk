@@ -14,7 +14,9 @@ public class DeleteParameterGroupRequest extends TeaModel {
      * <p>The parameter template ID.</p>
      * <br>
      * <p> </p>
-     * <p>>  You can call the [DescribeParameterGroups](~~207178~~) operation to query the parameter template ID.</p>
+     * <p>>  You can call the [DescribeParameterGroups](https://help.aliyun.com/document_detail/207178.html) operation to query the parameter template ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
@@ -22,7 +24,9 @@ public class DeleteParameterGroupRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <p> </p>
-     * <p>>  You can call the [DescribeRegions](~~98041~~) operation to query available regions.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available regions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

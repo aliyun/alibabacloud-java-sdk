@@ -7,7 +7,9 @@ public class CancelScheduleTasksRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~98094~~) operation to query the information of all clusters that are deployed in a specified region, such as the cluster IDs.</p>
+     * <p>>  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the information of all clusters that are deployed in a specified region, such as the cluster IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -33,8 +35,10 @@ public class CancelScheduleTasksRequest extends TeaModel {
     /**
      * <p>The ID of the scheduled task that you want to cancel.</p>
      * <br>
-     * <p>> *   You can call the [DescribeScheduleTasks](~~199648~~) operation to query the details of all scheduled tasks that belong to the current account, such as the task IDs.</p>
+     * <p>> *   You can call the [DescribeScheduleTasks](https://help.aliyun.com/document_detail/199648.html) operation to query the details of all scheduled tasks that belong to the current account, such as the task IDs.</p>
      * <p>>*   You can cancel only the tasks whose status is `pending`.``</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

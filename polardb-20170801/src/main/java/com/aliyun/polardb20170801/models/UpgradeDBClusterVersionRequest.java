@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpgradeDBClusterVersionRequest extends TeaModel {
     /**
      * <p>The ID of cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -52,7 +54,7 @@ public class UpgradeDBClusterVersionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The code of the version to which you want to upgrade the cluster. You can call the [DescribeDBClusterVersion](~~2319145~~) operation to query the version code.</p>
+     * <p>The code of the version to which you want to upgrade the cluster. You can call the [DescribeDBClusterVersion](https://help.aliyun.com/document_detail/2319145.html) operation to query the version code.</p>
      */
     @NameInMap("TargetDBRevisionVersionCode")
     public String targetDBRevisionVersionCode;
