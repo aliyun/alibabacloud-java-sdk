@@ -4,24 +4,45 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class Credential extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("accessId")
     public String accessId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dir")
     public String dir;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("expire")
     public String expire;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("host")
     public String host;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("policy")
     public String policy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("securityToken")
     public String securityToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("signature")
     public String signature;
 

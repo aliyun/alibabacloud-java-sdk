@@ -4,39 +4,72 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class Template extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("creator")
     public Long creator;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("gmtCreated")
     public String gmtCreated;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("gmtModified")
     public String gmtModified;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("modifier")
     public Long modifier;
 
     @NameInMap("sparkConf")
     public java.util.List<SparkConf> sparkConf;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sparkDriverCores")
     public Integer sparkDriverCores;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sparkDriverMemory")
     public Long sparkDriverMemory;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sparkExecutorCores")
     public Integer sparkExecutorCores;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sparkExecutorMemory")
     public Long sparkExecutorMemory;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sparkLogLevel")
     public String sparkLogLevel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sparkLogPath")
     public String sparkLogPath;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sparkVersion")
     public String sparkVersion;
 

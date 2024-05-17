@@ -4,27 +4,48 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class Category extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("bizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("creator")
     public Long creator;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("gmtCreated")
     public String gmtCreated;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("gmtModified")
     public String gmtModified;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("modifier")
     public Long modifier;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 
     @NameInMap("parentBizId")
     public String parentBizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("type")
     public String type;
 

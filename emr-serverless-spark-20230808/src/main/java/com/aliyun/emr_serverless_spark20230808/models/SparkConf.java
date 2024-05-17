@@ -4,9 +4,15 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class SparkConf extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("key")
     public String key;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("value")
     public String value;
 
