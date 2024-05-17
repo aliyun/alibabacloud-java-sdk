@@ -10,6 +10,9 @@ public class PushMultipleShrinkRequest extends TeaModel {
     @NameInMap("ActivityEvent")
     public String activityEvent;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -19,12 +22,18 @@ public class PushMultipleShrinkRequest extends TeaModel {
     @NameInMap("Classification")
     public String classification;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeliveryType")
     public Long deliveryType;
 
     @NameInMap("DismissalDate")
     public Long dismissalDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ExpiredSeconds")
     public Long expiredSeconds;
 
@@ -49,18 +58,27 @@ public class PushMultipleShrinkRequest extends TeaModel {
     @NameInMap("StrategyType")
     public Integer strategyType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetMsg")
     public java.util.List<PushMultipleShrinkRequestTargetMsg> targetMsg;
 
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
     @NameInMap("ThirdChannelCategory")
     public String thirdChannelCategoryShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -233,9 +251,15 @@ public class PushMultipleShrinkRequest extends TeaModel {
         @NameInMap("ExtendedParams")
         public String extendedParams;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("MsgKey")
         public String msgKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Target")
         public String target;
 

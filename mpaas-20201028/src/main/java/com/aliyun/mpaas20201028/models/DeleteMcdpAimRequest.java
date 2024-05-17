@@ -7,6 +7,9 @@ public class DeleteMcdpAimRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MpaasMappcenterMcdpAimDeleteJsonStr")
     public String mpaasMappcenterMcdpAimDeleteJsonStr;
 

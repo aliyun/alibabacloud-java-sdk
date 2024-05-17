@@ -4,6 +4,9 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class ListMcubeMiniAppsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -16,9 +19,15 @@ public class ListMcubeMiniAppsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

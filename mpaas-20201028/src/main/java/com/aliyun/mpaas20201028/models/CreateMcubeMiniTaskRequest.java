@@ -4,6 +4,9 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class CreateMcubeMiniTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -16,24 +19,42 @@ public class CreateMcubeMiniTaskRequest extends TeaModel {
     @NameInMap("GreyNum")
     public Long greyNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Memo")
     public String memo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PackageId")
     public Long packageId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PublishMode")
     public Long publishMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PublishType")
     public Long publishType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
     @NameInMap("WhitelistIds")
     public String whitelistIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

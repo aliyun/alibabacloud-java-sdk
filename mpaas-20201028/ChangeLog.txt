@@ -1,3 +1,9 @@
+2024-05-17 Version: 3.3.0
+- Support API CreateLink.
+- Support API QueryInfoFromMdp.
+- Support API QueryLink.
+
+
 2024-02-06 Version: 3.2.0
 - Generated java 2020-10-28 for mPaaS.
 

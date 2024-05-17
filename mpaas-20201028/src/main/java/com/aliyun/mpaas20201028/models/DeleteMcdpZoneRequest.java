@@ -7,6 +7,9 @@ public class DeleteMcdpZoneRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MpaasMappcenterMcdpZoneDeleteJsonStr")
     public String mpaasMappcenterMcdpZoneDeleteJsonStr;
 

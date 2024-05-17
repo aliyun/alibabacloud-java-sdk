@@ -4,36 +4,63 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class UploadMcubeMiniPackageRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AutoInstall")
     public Long autoInstall;
 
     @NameInMap("ClientVersionMax")
     public String clientVersionMax;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClientVersionMin")
     public String clientVersionMin;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EnableKeepAlive")
     public String enableKeepAlive;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EnableOptionMenu")
     public String enableOptionMenu;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EnableTabBar")
     public Long enableTabBar;
 
     @NameInMap("ExtendInfo")
     public String extendInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("H5Id")
     public String h5Id;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("H5Name")
     public String h5Name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("H5Version")
     public String h5Version;
 
@@ -43,39 +70,72 @@ public class UploadMcubeMiniPackageRequest extends TeaModel {
     @NameInMap("IconUrl")
     public String iconUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstallType")
     public Long installType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MainUrl")
     public String mainUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OnexFlag")
     public Boolean onexFlag;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PackageType")
     public Long packageType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Platform")
     public String platform;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ResourceFileUrl")
     public String resourceFileUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ResourceType")
     public Long resourceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
     @NameInMap("Uuid")
     public String uuid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Vhost")
     public String vhost;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

@@ -4,18 +4,33 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class CreateMcubeWhitelistRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WhiteListName")
     public String whiteListName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WhitelistType")
     public String whitelistType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

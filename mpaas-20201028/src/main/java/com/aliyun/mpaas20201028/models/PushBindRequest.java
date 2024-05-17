@@ -4,21 +4,36 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class PushBindRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeliveryToken")
     public String deliveryToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OsType")
     public Integer osType;
 
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

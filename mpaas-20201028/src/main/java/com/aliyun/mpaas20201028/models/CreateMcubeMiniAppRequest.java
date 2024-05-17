@@ -4,18 +4,33 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class CreateMcubeMiniAppRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("H5Id")
     public String h5Id;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("H5Name")
     public String h5Name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

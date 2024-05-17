@@ -16,18 +16,27 @@ public class CreateMdsMiniprogramTaskRequest extends TeaModel {
     @NameInMap("GreyNum")
     public String greyNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
     @NameInMap("Memo")
     public String memo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PackageId")
     public Long packageId;
 
     @NameInMap("PublishMode")
     public String publishMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PublishType")
     public Long publishType;
 

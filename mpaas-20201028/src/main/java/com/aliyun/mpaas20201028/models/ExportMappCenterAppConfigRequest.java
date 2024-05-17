@@ -13,12 +13,21 @@ public class ExportMappCenterAppConfigRequest extends TeaModel {
     @NameInMap("CertRsaBase64")
     public String certRsaBase64;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Identifier")
     public String identifier;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OnexFlag")
     public Boolean onexFlag;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SystemType")
     public String systemType;
 
