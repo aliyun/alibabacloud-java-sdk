@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeCenGeographicSpanRemainingBandwidthRequest extends TeaModel {
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance to which the bandwidth plan is associated.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -18,6 +20,8 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends TeaModel
      * <p>*   **Asia-Pacific**: Asia Pacific</p>
      * <p>*   **Europe**: Europe</p>
      * <p>*   **Australia**: Australia</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GeographicRegionAId")
     public String geographicRegionAId;
@@ -30,6 +34,8 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends TeaModel
      * <p>*   **Asia-Pacific**: Asia Pacific</p>
      * <p>*   **Europe**: Europe</p>
      * <p>*   **Australia**: Australia</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GeographicRegionBId")
     public String geographicRegionBId;

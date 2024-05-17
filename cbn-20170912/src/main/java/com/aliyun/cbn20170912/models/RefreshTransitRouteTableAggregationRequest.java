@@ -19,9 +19,15 @@ public class RefreshTransitRouteTableAggregationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TransitRouteTableAggregationCidr")
     public String transitRouteTableAggregationCidr;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TransitRouteTableId")
     public String transitRouteTableId;
 

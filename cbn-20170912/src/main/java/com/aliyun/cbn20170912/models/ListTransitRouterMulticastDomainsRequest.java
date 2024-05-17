@@ -42,7 +42,7 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
     /**
      * <p>The region ID of the transit router.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -56,7 +56,7 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
     /**
      * <p>The tags.</p>
      * <br>
-     * <p>You can specify at most 20 tags in each call.</p>
+     * <p>You can specify up to 20 tags in each call.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTransitRouterMulticastDomainsRequestTag> tag;
@@ -176,21 +176,21 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
 
     public static class ListTransitRouterMulticastDomainsRequestTag extends TeaModel {
         /**
-         * <p>The tag keys.</p>
+         * <p>The tag key.</p>
          * <br>
-         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag key cannot be an empty string. The key can be up to 64 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.</p>
          * <br>
-         * <p>You can specify at most 20 tag keys.</p>
+         * <p>You can specify at most 20 tag keys in each call.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag values.</p>
+         * <p>The tag value.</p>
          * <br>
-         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          * <br>
-         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>Each key-value pair must be unique. You can specify up to 20 tag values in each call.</p>
          */
         @NameInMap("Value")
         public String value;

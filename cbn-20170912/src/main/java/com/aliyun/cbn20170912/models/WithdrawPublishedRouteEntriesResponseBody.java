@@ -4,6 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class WithdrawPublishedRouteEntriesResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

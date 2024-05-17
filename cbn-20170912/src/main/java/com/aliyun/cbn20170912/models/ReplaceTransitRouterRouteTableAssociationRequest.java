@@ -37,12 +37,16 @@ public class ReplaceTransitRouterRouteTableAssociationRequest extends TeaModel {
 
     /**
      * <p>The ID of the network instance connection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
     /**
      * <p>The ID of the route table with which you want to associate the network instance connection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterRouteTableId")
     public String transitRouterRouteTableId;

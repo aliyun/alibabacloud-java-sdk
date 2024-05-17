@@ -30,7 +30,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
      * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -53,7 +53,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     /**
      * <p>The ID of the region where the VPC is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -96,6 +96,8 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
 
     /**
      * <p>The VPC ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -112,6 +114,8 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
      * <p>A zone that supports Enterprise Edition transit routers.</p>
      * <br>
      * <p>You can specify at most 10 zones.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneMappings")
     public java.util.List<CreateTransitRouterVpcAttachmentRequestZoneMappings> zoneMappings;
@@ -306,6 +310,8 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
          * <p>A vSwitch that is deployed in the zone that supports Enterprise Edition transit routers.</p>
          * <br>
          * <p>You can specify vSwitches for at most 10 zones in each call.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -313,9 +319,11 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         /**
          * <p>The ID of the zone that supports Enterprise Edition transit routers.</p>
          * <br>
-         * <p>You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.</p>
+         * <p>You can call the [DescribeZones](https://help.aliyun.com/document_detail/36064.html) operation to query the most recent zone list.</p>
          * <br>
          * <p>You can specify at most 10 zones in each call.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

@@ -34,6 +34,8 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
 
     /**
      * <p>The maximum bandwidth value of the bandwidth plan. Unit: Mbit/s. Valid values: **2** to **10000**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
@@ -66,6 +68,8 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
      * <p>*   **Asia-Pacific**: Asia Pacific</p>
      * <p>*   **Europe**: Europe</p>
      * <p>*   **Australia**: Australia</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GeographicRegionAId")
     public String geographicRegionAId;
@@ -78,6 +82,8 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
      * <p>*   **Asia-Pacific**: Asia Pacific</p>
      * <p>*   **Europe**: Europe</p>
      * <p>*   **Australia**: Australia</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GeographicRegionBId")
     public String geographicRegionBId;
@@ -85,7 +91,7 @@ public class CreateCenBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The name of the bandwidth plan.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;

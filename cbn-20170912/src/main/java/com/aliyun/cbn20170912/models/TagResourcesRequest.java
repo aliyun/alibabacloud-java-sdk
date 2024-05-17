@@ -18,6 +18,8 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The IDs of the resources. You can enter most at 20 resource IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -30,12 +32,16 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Set the value to **cen**, which specifies a CEN instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The list of tags that you want to associate with the resources.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;

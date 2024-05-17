@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DetachCenChildInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -18,6 +20,8 @@ public class DetachCenChildInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the network instance that you want to detach from the CEN instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
@@ -31,7 +35,9 @@ public class DetachCenChildInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the region where the network instance is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
@@ -42,6 +48,8 @@ public class DetachCenChildInstanceRequest extends TeaModel {
      * <p>*   **VPC**: virtual private cloud (VPC)</p>
      * <p>*   **VBR**: virtual border router (VBR)</p>
      * <p>*   **CCN**: Cloud Connect Network (CCN) instance</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;

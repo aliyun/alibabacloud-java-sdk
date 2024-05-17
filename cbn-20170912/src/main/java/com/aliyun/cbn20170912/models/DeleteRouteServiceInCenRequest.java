@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class DeleteRouteServiceInCenRequest extends TeaModel {
     /**
      * <p>The ID of the region where the cloud service is accessed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccessRegionId")
     public String accessRegionId;
 
     /**
      * <p>The ID of the CEN instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The IP addresses or CIDR blocks of the cloud service.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Host")
     public String host;
@@ -25,7 +31,9 @@ public class DeleteRouteServiceInCenRequest extends TeaModel {
     /**
      * <p>The region ID of the cloud service.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HostRegionId")
     public String hostRegionId;

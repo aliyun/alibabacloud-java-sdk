@@ -41,12 +41,16 @@ public class DeleteTransitRouteTableAggregationRequest extends TeaModel {
      * <p>>  The following CIDR blocks are not supported:</p>
      * <p>>*   CIDR blocks that start with 0 or 100.64.</p>
      * <p>>*   Multicast CIDR blocks, including 224.0.0.1 to 239.255.255.254.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouteTableAggregationCidr")
     public String transitRouteTableAggregationCidr;
 
     /**
      * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouteTableId")
     public String transitRouteTableId;

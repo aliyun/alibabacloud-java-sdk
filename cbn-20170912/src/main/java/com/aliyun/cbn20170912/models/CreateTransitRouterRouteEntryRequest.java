@@ -45,6 +45,8 @@ public class CreateTransitRouterRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The destination CIDR block of the route.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterRouteEntryDestinationCidrBlock")
     public String transitRouterRouteEntryDestinationCidrBlock;
@@ -68,12 +70,16 @@ public class CreateTransitRouterRouteEntryRequest extends TeaModel {
      * <br>
      * <p>*   **BlackHole**: routes network traffic to a black hole. All packets that match this route are dropped. If you select this option, you do not need to specify the next hop information.</p>
      * <p>*   **Attachment**: routes network traffic to a network instance connection. If you select this option, you must specify the ID of the network instance connection. All packets that match this route are routed to the specified network instance connection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterRouteEntryNextHopType")
     public String transitRouterRouteEntryNextHopType;
 
     /**
      * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterRouteTableId")
     public String transitRouterRouteTableId;

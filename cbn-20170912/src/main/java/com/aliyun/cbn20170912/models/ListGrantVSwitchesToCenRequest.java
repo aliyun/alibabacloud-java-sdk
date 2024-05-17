@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListGrantVSwitchesToCenRequest extends TeaModel {
     /**
      * <p>The CEN instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -31,7 +33,9 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
     /**
      * <p>The region ID of the VPC.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -44,6 +48,8 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
 
     /**
      * <p>The VPC ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -54,7 +60,7 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
      * <p>*   If you specify a zone ID, the system queries the information about the vSwitches in the specified zone.</p>
      * <p>*   If you do not specify a zone ID, the system queries the information about the vSwitches in all zones.</p>
      * <br>
-     * <p>You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.</p>
+     * <p>You can call the [DescribeZones](https://help.aliyun.com/document_detail/36064.html) operation to query the most recent zone list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

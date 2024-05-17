@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyCenAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -21,7 +23,7 @@ public class ModifyCenAttributeRequest extends TeaModel {
     /**
      * <p>The name of the CEN instance.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;

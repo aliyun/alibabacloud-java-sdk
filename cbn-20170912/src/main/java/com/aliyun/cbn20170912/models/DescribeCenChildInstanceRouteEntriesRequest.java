@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeCenChildInstanceRouteEntriesRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The ID of the network instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
@@ -19,7 +23,7 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends TeaModel {
     /**
      * <p>The ID of the region where the network instance is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
      */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
@@ -36,6 +40,8 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends TeaModel {
      * <p>*   **VPC**: virtual private cloud (VPC)</p>
      * <p>*   **VBR**: virtual border router (VBR)</p>
      * <p>*   **CCN**: Cloud Connect Network (CCN) instance</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;

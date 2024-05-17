@@ -120,7 +120,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
 
     public static class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsZoneMappings extends TeaModel {
         /**
-         * <p>The ID of the ENI that is associated with the vSwitch of the Enterprise Edition transit router.</p>
+         * <p>The ID of the ENI created by the Enterprise Edition transit router in the vSwitch.</p>
          */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
@@ -170,16 +170,16 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
 
     public static class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments extends TeaModel {
         /**
-         * <p>Indicates whether the Enterprise Edition transit router automatically advertises routes to VPCs. Valid values:</p>
+         * <p>Indicates whether the Enterprise Edition transit router can automatically advertise routes to the VPC. Valid values:</p>
          * <br>
-         * <p>*   **false:** (default)</p>
+         * <p>*   **false**</p>
          * <p>*   **true**</p>
          */
         @NameInMap("AutoPublishRouteEnabled")
         public Boolean autoPublishRouteEnabled;
 
         /**
-         * <p>The CEN instance ID.</p>
+         * <p>The ID of the CEN instance.</p>
          */
         @NameInMap("CenId")
         public String cenId;
@@ -187,7 +187,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         /**
          * <p>The billing method of the VPC connection.</p>
          * <br>
-         * <p>Only **POSTPAY** may be returned, which is the default value and specifies the pay-as-you-go billing method.</p>
+         * <p>Only **POSTPAY** may be returned, which indicates the default pay-as-you-go billing method.</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
@@ -195,7 +195,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         /**
          * <p>The time when the VPC connection was created.</p>
          * <br>
-         * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -223,13 +223,12 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
          * <p>*   **Attached**</p>
          * <p>*   **Attaching**</p>
          * <p>*   **Detaching**</p>
-         * <p>*   **Detached**</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The information about the tags.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsTags> tags;
@@ -241,7 +240,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String transitRouterAttachmentDescription;
 
         /**
-         * <p>The ID of the VPC connection.</p>
+         * <p>The VPC connection ID.</p>
          */
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;
@@ -253,7 +252,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String transitRouterAttachmentName;
 
         /**
-         * <p>The ID of the Enterprise Edition transit router.</p>
+         * <p>The description of the Enterprise Edition transit router.</p>
          */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
@@ -277,7 +276,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String vpcRegionId;
 
         /**
-         * <p>The primary and secondary zones of the VPC connection and the vSwitches and elastic network interfaces (ENIs) of the VPC.</p>
+         * <p>The primary and secondary zones, vSwitches, and ENIs of the VPC.</p>
          */
         @NameInMap("ZoneMappings")
         public java.util.List<ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsZoneMappings> zoneMappings;

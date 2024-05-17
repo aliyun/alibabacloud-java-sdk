@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListGrantVSwitchEnisRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance to which the VPC is attached.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -59,12 +61,16 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
 
     /**
      * <p>The ID of a vSwitch in the VPC. You can specify only one vSwitch in each call.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the VPC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

@@ -34,7 +34,7 @@ public class ListTrafficMarkingPoliciesRequest extends TeaModel {
     /**
      * <p>The description of the traffic marking policy.</p>
      * <br>
-     * <p>The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.</p>
+     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
      */
     @NameInMap("TrafficMarkingPolicyDescription")
     public String trafficMarkingPolicyDescription;
@@ -48,7 +48,7 @@ public class ListTrafficMarkingPoliciesRequest extends TeaModel {
     /**
      * <p>The name of the traffic marking policy.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://.</p>
      */
     @NameInMap("TrafficMarkingPolicyName")
     public String trafficMarkingPolicyName;

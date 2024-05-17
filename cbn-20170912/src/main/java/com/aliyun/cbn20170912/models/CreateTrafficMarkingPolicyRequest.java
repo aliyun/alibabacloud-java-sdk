@@ -27,6 +27,8 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
      * <p>The differentiated services code point (DSCP) value to be added to packets that match the traffic classification rule. Valid values: **0** to **63**.</p>
      * <br>
      * <p>The DSCP value of each traffic marking policy on a transit router must be unique.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MarkingDscp")
     public Integer markingDscp;
@@ -41,6 +43,8 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
      * <p>The priority value of the traffic marking policy. Valid values: **1** to **100**.</p>
      * <br>
      * <p>The priority value of each traffic marking policy on a transit router must be unique. A smaller value specifies a higher priority.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Priority")
     public Integer priority;
@@ -79,6 +83,8 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
 
     /**
      * <p>The ID of the transit router.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;

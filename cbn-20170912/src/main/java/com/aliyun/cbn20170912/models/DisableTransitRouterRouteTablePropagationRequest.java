@@ -37,12 +37,16 @@ public class DisableTransitRouterRouteTablePropagationRequest extends TeaModel {
 
     /**
      * <p>The ID of the network instance connection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
     /**
      * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterRouteTableId")
     public String transitRouterRouteTableId;

@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class RevokeInstanceFromTransitRouterRequest extends TeaModel {
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance to which the transit router belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenOwnerId")
     public Long cenOwnerId;
 
     /**
      * <p>The network instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -28,6 +34,8 @@ public class RevokeInstanceFromTransitRouterRequest extends TeaModel {
      * <p>*   **VPC**: VPC</p>
      * <p>*   **ExpressConnect**: VBR</p>
      * <p>*   **VPN**: IPsec connection</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -41,7 +49,7 @@ public class RevokeInstanceFromTransitRouterRequest extends TeaModel {
     /**
      * <p>The region ID of the network instance.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

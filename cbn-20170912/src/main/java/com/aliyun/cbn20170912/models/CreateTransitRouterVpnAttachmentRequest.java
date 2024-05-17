@@ -55,7 +55,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
     /**
      * <p>The ID of the region where the transit router is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -85,7 +85,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
     /**
      * <p>The name of the VPN attachment.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
      */
     @NameInMap("TransitRouterAttachmentName")
     public String transitRouterAttachmentName;
@@ -98,6 +98,8 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
 
     /**
      * <p>The ID of the IPsec-VPN attachment.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpnId")
     public String vpnId;
@@ -115,6 +117,8 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
      * <p>The ID of the zone in the current region.</p>
      * <br>
      * <p>Resources are deployed in the specified zone.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Zone")
     public java.util.List<CreateTransitRouterVpnAttachmentRequestZone> zone;
@@ -308,7 +312,9 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
         /**
          * <p>The zone ID of the read-only instance.</p>
          * <br>
-         * <p>You can call the [ListTransitRouterAvailableResource](~~261356~~) operation to query the most recent zone list.</p>
+         * <p>You can call the [ListTransitRouterAvailableResource](https://help.aliyun.com/document_detail/261356.html) operation to query the most recent zone list.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

@@ -27,6 +27,8 @@ public class RegisterTransitRouterMulticastGroupSourcesRequest extends TeaModel 
      * <p>The IP address of the multicast group to which the multicast source belongs. Valid values: **224.0.0.1** to **239.255.255.254**.</p>
      * <br>
      * <p>If the multicast group does not exist in the multicast domain, the system automatically creates the multicast group in the multicast domain.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupIpAddress")
     public String groupIpAddress;
@@ -51,6 +53,8 @@ public class RegisterTransitRouterMulticastGroupSourcesRequest extends TeaModel 
 
     /**
      * <p>The ID of the multicast domain to which the multicast source belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;

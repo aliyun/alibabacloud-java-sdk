@@ -50,13 +50,15 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends TeaModel {
     /**
      * <p>The new description of the traffic marking policy.</p>
      * <br>
-     * <p>The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.</p>
+     * <p>The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The description must start with a letter.</p>
      */
     @NameInMap("TrafficMarkingPolicyDescription")
     public String trafficMarkingPolicyDescription;
 
     /**
      * <p>The ID of the traffic marking policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficMarkingPolicyId")
     public String trafficMarkingPolicyId;
@@ -64,7 +66,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends TeaModel {
     /**
      * <p>The new name of the traffic marking policy.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
      */
     @NameInMap("TrafficMarkingPolicyName")
     public String trafficMarkingPolicyName;
@@ -365,7 +367,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends TeaModel {
         /**
          * <p>The protocol that is used to match packets.</p>
          * <br>
-         * <p>You can call the [ListTrafficMarkingPolicies](~~468322~~) operation to query the details about a traffic classification rule.</p>
+         * <p>You can call the [ListTrafficMarkingPolicies](https://help.aliyun.com/document_detail/468322.html) operation to query the details about a traffic classification rule.</p>
          */
         @NameInMap("Protocol")
         public String protocol;

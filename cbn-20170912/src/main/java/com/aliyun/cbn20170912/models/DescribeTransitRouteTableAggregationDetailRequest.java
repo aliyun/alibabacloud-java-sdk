@@ -28,12 +28,16 @@ public class DescribeTransitRouteTableAggregationDetailRequest extends TeaModel 
 
     /**
      * <p>The destination CIDR block of the aggregate route.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouteTableAggregationCidr")
     public String transitRouteTableAggregationCidr;
 
     /**
      * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouteTableId")
     public String transitRouteTableId;

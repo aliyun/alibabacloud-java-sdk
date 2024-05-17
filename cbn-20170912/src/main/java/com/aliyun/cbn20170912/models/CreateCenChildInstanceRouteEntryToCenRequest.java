@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -13,13 +15,15 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
      * <br>
-     * <p>>  If the network instance belongs to another Alibaba Cloud account, this parameter is required.</p>
+     * <p>> If the network instance belongs to another Alibaba Cloud account, this parameter is required.</p>
      */
     @NameInMap("ChildInstanceAliUid")
     public Long childInstanceAliUid;
 
     /**
      * <p>The ID of the network instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
@@ -27,24 +31,30 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     /**
      * <p>The ID of the region where the network instance is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
     /**
-     * <p>The type of the attached network instance. Valid values:</p>
+     * <p>The type of the network instance. Valid values:</p>
      * <br>
      * <p>*   **VPC**: a virtual private cloud (VPC)</p>
      * <p>*   **VBR**: a virtual border router (VBR)</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
 
     /**
-     * <p>The destination CIDR block of the route entry.</p>
+     * <p>The destination CIDR block of the route.</p>
      * <br>
      * <p>Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
@@ -62,7 +72,9 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the route table of the network instance.</p>
+     * <p>The ID of the route table configured on the network instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;

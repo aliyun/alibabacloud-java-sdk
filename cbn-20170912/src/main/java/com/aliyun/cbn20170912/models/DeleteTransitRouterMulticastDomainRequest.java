@@ -35,6 +35,8 @@ public class DeleteTransitRouterMulticastDomainRequest extends TeaModel {
 
     /**
      * <p>The ID of the multicast domain.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;

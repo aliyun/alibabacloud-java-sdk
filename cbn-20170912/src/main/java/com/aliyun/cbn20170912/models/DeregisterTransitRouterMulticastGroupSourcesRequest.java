@@ -23,6 +23,8 @@ public class DeregisterTransitRouterMulticastGroupSourcesRequest extends TeaMode
 
     /**
      * <p>The IP address of the multicast group to which the multicast source belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupIpAddress")
     public String groupIpAddress;
@@ -47,6 +49,8 @@ public class DeregisterTransitRouterMulticastGroupSourcesRequest extends TeaMode
 
     /**
      * <p>The ID of the multicast domain to which the multicast source belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     /**
      * <p>The ID of the CEN instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -20,6 +22,8 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
 
     /**
      * <p>The ID of the network instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
@@ -27,7 +31,9 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     /**
      * <p>The ID of the region where the network instance is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
@@ -37,6 +43,8 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
      * <br>
      * <p>*   **VPC**: a virtual private cloud (VPC)</p>
      * <p>*   **VBR**: a virtual border router (VBR)</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
@@ -45,6 +53,8 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
      * <p>The destination CIDR block of the route.</p>
      * <br>
      * <p>Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
@@ -63,6 +73,8 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
 
     /**
      * <p>The ID of the route table configured on the network instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;

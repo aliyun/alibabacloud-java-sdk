@@ -37,6 +37,8 @@ public class DeleteTransitRouterRequest extends TeaModel {
 
     /**
      * <p>The ID of the transit router.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;

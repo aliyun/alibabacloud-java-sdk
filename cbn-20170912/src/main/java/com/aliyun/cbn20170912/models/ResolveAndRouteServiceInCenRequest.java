@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ResolveAndRouteServiceInCenRequest extends TeaModel {
     /**
      * <p>The IDs of the regions where the cloud service is accessed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccessRegionIds")
     public java.util.List<String> accessRegionIds;
 
     /**
      * <p>The ID of the CEN instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -38,18 +42,24 @@ public class ResolveAndRouteServiceInCenRequest extends TeaModel {
      * <p>The IP addresses or CIDR blocks of the cloud service.</p>
      * <br>
      * <p>> In most cases, multiple IP addresses or CIDR blocks are assigned to a cloud service. We recommend that you call this operation multiple times to add all IP addresses and CIDR blocks of the cloud service.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Host")
     public String host;
 
     /**
      * <p>The ID of the region in which the cloud service is deployed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HostRegionId")
     public String hostRegionId;
 
     /**
      * <p>The ID of the VPC that is associated with the cloud service.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HostVpcId")
     public String hostVpcId;

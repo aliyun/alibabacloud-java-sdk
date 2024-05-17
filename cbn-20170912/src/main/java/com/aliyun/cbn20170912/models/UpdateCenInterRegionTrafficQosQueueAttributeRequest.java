@@ -43,6 +43,8 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaMode
 
     /**
      * <p>The queue ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("QosQueueId")
     public String qosQueueId;

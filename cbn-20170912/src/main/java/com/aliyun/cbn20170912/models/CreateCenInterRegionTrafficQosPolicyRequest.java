@@ -36,7 +36,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
     /**
      * <p>The description of the QoS policy.</p>
      * <br>
-     * <p>The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.</p>
+     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
      */
     @NameInMap("TrafficQosPolicyDescription")
     public String trafficQosPolicyDescription;
@@ -44,7 +44,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
     /**
      * <p>The name of the QoS policy.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
      */
     @NameInMap("TrafficQosPolicyName")
     public String trafficQosPolicyName;
@@ -52,19 +52,23 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
     /**
      * <p>The information about the QoS queue.</p>
      * <br>
-     * <p>You can call this operation to create at most three QoS queues. To create more queues, you must call the CreateCenInterRegionTrafficQosQueue operation.</p>
+     * <p>You can add at most three QoS queues in a QoS policy by calling this operation. To add more QoS queues, call the CreateCenInterRegionTrafficQosQueue operation.</p>
      */
     @NameInMap("TrafficQosQueues")
     public java.util.List<CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues> trafficQosQueues;
 
     /**
      * <p>The ID of the inter-region connection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
     /**
      * <p>The ID of the transit router.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
@@ -164,9 +168,9 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
 
     public static class CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues extends TeaModel {
         /**
-         * <p>The DSCP value that matches the current queue.</p>
+         * <p>The Differentiated Services Code Point (DSCP) value that matches the current queue.</p>
          * <br>
-         * <p>Each QoS policy supports up to three queues. You can specify at most 60 DSCP values for each queue. Separate DSCP values with commas (,).</p>
+         * <p>Each QoS policy supports at most three queues. You can specify at most 60 DSCP values for each queue. Separate multiple DCSP values with commas (,).</p>
          */
         @NameInMap("Dscps")
         public java.util.List<Integer> dscps;
@@ -174,9 +178,9 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
         /**
          * <p>The description of the current queue.</p>
          * <br>
-         * <p>Each QoS policy supports up to three queues. You can add a description to each queue.</p>
+         * <p>Each QoS policy supports at most three queues. You can specify a description for each queue.</p>
          * <br>
-         * <p>The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.</p>
+         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
          */
         @NameInMap("QosQueueDescription")
         public String qosQueueDescription;
@@ -184,19 +188,19 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
         /**
          * <p>The name of the current queue.</p>
          * <br>
-         * <p>Each QoS policy supports up to three queues. You can specify a name for each queue.</p>
+         * <p>Each QoS policy supports at most three queues. You can specify a name for each queue.</p>
          * <br>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+         * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
          */
         @NameInMap("QosQueueName")
         public String qosQueueName;
 
         /**
-         * <p>The percentage of bandwidth resources that can be allocated to the current queue.</p>
+         * <p>The percentage of the inter-region bandwidth that can be used by the queue.</p>
          * <br>
-         * <p>Each QoS policy supports up to three queues. You can specify a percentage of bandwidth resources for each queue.</p>
+         * <p>Each QoS policy supports at most three queues. You can specify a valid percentage for each queue.</p>
          * <br>
-         * <p>If you enter **1**, it indicates that the current queue can consume at most \*\*1%\*\* of the bandwidth resources.</p>
+         * <p>For example, a value of **1** specifies that the queue can consume 1% of the inter-region bandwidth.</p>
          * <br>
          * <p>>  The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.</p>
          */

@@ -26,8 +26,8 @@ public class DeleteTransitRouterVbrAttachmentRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcibly delete the VBR connection. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): checks for dependency resources, such as associated forwarding correlations and route learning policies before the VBR connection is deleted. If such resources exist, the VBR connection is not deleted and an error message is returned.</p>
-     * <p>*   **true**: deletes all dependency resources along with the VBR connection.</p>
+     * <p>*   **false** (default): checks for resources related to the VBR connection, such as associated forwarding and route learning policies. If such resources exist, the VBR connection is not deleted and an error message is returned.</p>
+     * <p>*   **true**: deletes the VBR connection and related resources.</p>
      */
     @NameInMap("Force")
     public Boolean force;
@@ -46,6 +46,8 @@ public class DeleteTransitRouterVbrAttachmentRequest extends TeaModel {
 
     /**
      * <p>The ID of the VBR connection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;

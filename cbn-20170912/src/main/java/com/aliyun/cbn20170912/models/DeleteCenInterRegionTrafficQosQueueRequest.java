@@ -31,6 +31,8 @@ public class DeleteCenInterRegionTrafficQosQueueRequest extends TeaModel {
 
     /**
      * <p>The ID of the queue.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("QosQueueId")
     public String qosQueueId;

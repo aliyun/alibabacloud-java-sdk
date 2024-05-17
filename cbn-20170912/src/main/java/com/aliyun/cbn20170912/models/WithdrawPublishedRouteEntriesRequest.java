@@ -4,21 +4,53 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class WithdrawPublishedRouteEntriesRequest extends TeaModel {
+    /**
+     * <p>The ID of the CEN instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The ID of the attached network instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
+    /**
+     * <p>The ID of the region where the attached network instance is created.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
+    /**
+     * <p>The ID of the route table of the attached network instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ChildInstanceRouteTableId")
     public String childInstanceRouteTableId;
 
+    /**
+     * <p>The type of the attached network instance.</p>
+     * <br>
+     * <p>Set the value to **VPC**, which indicates a virtual private cloud (VPC).</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
 
+    /**
+     * <p>The destination CIDR block of the route that you want to withdraw.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 

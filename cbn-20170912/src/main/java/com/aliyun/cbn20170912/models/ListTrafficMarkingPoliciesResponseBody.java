@@ -32,7 +32,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The list of traffic marking policies.</p>
+     * <p>The information about the traffic marking policy.</p>
      */
     @NameInMap("TrafficMarkingPolicies")
     public java.util.List<ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPolicies> trafficMarkingPolicies;
@@ -84,7 +84,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
 
     public static class ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPoliciesTrafficMatchRules extends TeaModel {
         /**
-         * <p>The destination CIDR block used to match data packets.</p>
+         * <p>The destination CIDR block that is used to match packets.</p>
          */
         @NameInMap("DstCidr")
         public String dstCidr;
@@ -97,20 +97,22 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
 
         /**
          * <p>The DSCP value used to match data packets.</p>
+         * <br>
+         * <p>>  If the value of the **MatchDscp** parameter is -1, data packets are considered a match regardless of the DSCP value.</p>
          */
         @NameInMap("MatchDscp")
         public Integer matchDscp;
 
         /**
-         * <p>The protocol used to match data packets.</p>
+         * <p>The protocol that is used to match packets.</p>
          * <br>
-         * <p>> Traffic marking policies support multiple protocols. For more information, see the documentation of CEN.</p>
+         * <p>>  Traffic marking policies support multiple protocols. For more information, see the documentation of CEN.</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
-         * <p>The source CIDR block used to match data packets.</p>
+         * <p>The source CIDR block that is used to match packets.</p>
          */
         @NameInMap("SrcCidr")
         public String srcCidr;
@@ -145,7 +147,6 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
          * <p>*   **Creating**: The rule is being created.</p>
          * <p>*   **Active**: The rule is available.</p>
          * <p>*   **Deleting**: The rule is being deleted.</p>
-         * <p>*   **Deleted**: The rule is deleted.</p>
          */
         @NameInMap("TrafficMatchRuleStatus")
         public String trafficMatchRuleStatus;
@@ -239,7 +240,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
 
     public static class ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPolicies extends TeaModel {
         /**
-         * <p>The differentiated services code point (DSCP) value of the traffic marking policy.</p>
+         * <p>The Differentiated Service Code Point (DSCP) value of the traffic marking policy.</p>
          */
         @NameInMap("MarkingDscp")
         public Integer markingDscp;
@@ -247,7 +248,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         /**
          * <p>The priority of the traffic marking policy.</p>
          * <br>
-         * <p>A smaller value indicates a higher priority.</p>
+         * <p>A lower value indicates a higher priority.</p>
          */
         @NameInMap("Priority")
         public Integer priority;
@@ -275,15 +276,14 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
          * <br>
          * <p>*   **Creating**: The policy is being created.</p>
          * <p>*   **Active**: The policy is available.</p>
-         * <p>*   **Modifying**: The policy is being modified</p>
+         * <p>*   **Modifying**: The policy is being modified.</p>
          * <p>*   **Deleting**: The policy is being deleted.</p>
-         * <p>*   **Deleted**: The policy is deleted.</p>
          */
         @NameInMap("TrafficMarkingPolicyStatus")
         public String trafficMarkingPolicyStatus;
 
         /**
-         * <p>The list of traffic classification rules.</p>
+         * <p>The traffic classification rules.</p>
          */
         @NameInMap("TrafficMatchRules")
         public java.util.List<ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPoliciesTrafficMatchRules> trafficMatchRules;

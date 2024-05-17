@@ -37,6 +37,8 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaModel {
 
     /**
      * <p>The ID of the traffic marking policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TrafficMarkingPolicyId")
     public String trafficMarkingPolicyId;

@@ -13,16 +13,18 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends TeaMode
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): preforms a dry run and sends the request.</p>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The IP address of the multicast group to which the multicast members belong.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupIpAddress")
     public String groupIpAddress;
@@ -53,6 +55,8 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends TeaMode
 
     /**
      * <p>The ID of the multicast domain to which the multicast members belong.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;

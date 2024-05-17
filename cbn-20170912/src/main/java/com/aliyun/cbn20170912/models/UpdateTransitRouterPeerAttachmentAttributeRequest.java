@@ -90,6 +90,8 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
 
     /**
      * <p>The ID of the inter-region connection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;

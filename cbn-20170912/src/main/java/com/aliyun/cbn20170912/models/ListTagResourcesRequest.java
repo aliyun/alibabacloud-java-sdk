@@ -69,6 +69,8 @@ public class ListTagResourcesRequest extends TeaModel {
      * <p>**Flowlog**: flow log</p>
      * <br>
      * <p>**TransitRouterMulticastDomain**: multicast domain</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

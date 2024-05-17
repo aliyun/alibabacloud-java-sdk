@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateTransitRouterCidrRequest extends TeaModel {
     /**
      * <p>The CIDR block of the transit router.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Cidr")
     public String cidr;
@@ -13,9 +15,9 @@ public class CreateTransitRouterCidrRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -53,12 +55,14 @@ public class CreateTransitRouterCidrRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to allow the system to automatically add a route that points to the CIDR block to the route table of the transit router.</p>
-     * <p>- **true** (default): yes</p>
      * <br>
-     * <p>  A value of true specifies that after you create a private VPN connection and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the transit router to which the VPN connection is attached. </p>
+     * <p>*   **true** (default)</p>
      * <br>
-     * <p>  The blackhole route is advertised only to the route tables of virtual border routers (VBRs) that are connected to the transit router. </p>
-     * <p>- **false**: no</p>
+     * <p>    If you set the value to true, after you create a VPN attachment on a private VPN gateway and enable route learning for the VPN attachment, the system automatically adds the following route to the route table of the transit router that is in route learning relationship with the VPN attachment:</p>
+     * <br>
+     * <p>    A blackhole route whose destination CIDR block is the transit router CIDR block, which refers to the CIDR block from which gateway IP addresses are allocated to the IPsec-VPN connection. The blackhole route is advertised only to the route tables of virtual border routers (VBRs) connected to the transit router.</p>
+     * <br>
+     * <p>*   **false**</p>
      */
     @NameInMap("PublishCidrRoute")
     public Boolean publishCidrRoute;
@@ -66,7 +70,9 @@ public class CreateTransitRouterCidrRequest extends TeaModel {
     /**
      * <p>The region ID of the transit router.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeChildInstanceRegions](https://help.aliyun.com/document_detail/132080.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -79,6 +85,8 @@ public class CreateTransitRouterCidrRequest extends TeaModel {
 
     /**
      * <p>The ID of the transit router.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;

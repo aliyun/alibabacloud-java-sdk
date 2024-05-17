@@ -25,6 +25,9 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends TeaModel {
     @NameInMap("TransitRouterAttachmentDescription")
     public String transitRouterAttachmentDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 

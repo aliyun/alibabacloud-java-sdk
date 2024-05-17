@@ -4,6 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterMulticastDomainVSwitchesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
@@ -28,6 +31,9 @@ public class ListTransitRouterMulticastDomainVSwitchesRequest extends TeaModel {
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
