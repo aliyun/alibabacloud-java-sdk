@@ -60,12 +60,34 @@ public class CreateSubscribedCalendarRequest extends TeaModel {
     }
 
     public static class CreateSubscribedCalendarRequestSubscribeScope extends TeaModel {
+        @NameInMap("CorpIds")
+        public java.util.List<String> corpIds;
+
+        @NameInMap("OpenConversationIds")
+        public java.util.List<String> openConversationIds;
+
         @NameInMap("UserIds")
         public java.util.List<String> userIds;
 
         public static CreateSubscribedCalendarRequestSubscribeScope build(java.util.Map<String, ?> map) throws Exception {
             CreateSubscribedCalendarRequestSubscribeScope self = new CreateSubscribedCalendarRequestSubscribeScope();
             return TeaModel.build(map, self);
+        }
+
+        public CreateSubscribedCalendarRequestSubscribeScope setCorpIds(java.util.List<String> corpIds) {
+            this.corpIds = corpIds;
+            return this;
+        }
+        public java.util.List<String> getCorpIds() {
+            return this.corpIds;
+        }
+
+        public CreateSubscribedCalendarRequestSubscribeScope setOpenConversationIds(java.util.List<String> openConversationIds) {
+            this.openConversationIds = openConversationIds;
+            return this;
+        }
+        public java.util.List<String> getOpenConversationIds() {
+            return this.openConversationIds;
         }
 
         public CreateSubscribedCalendarRequestSubscribeScope setUserIds(java.util.List<String> userIds) {
