@@ -651,12 +651,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * @summary 创建文档
      *
-     * @param request CreateDocRequest
+     * @param tmpReq CreateDocRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDocResponse
      */
-    public CreateDocResponse createDocWithOptions(CreateDocRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateDocResponse createDocWithOptions(CreateDocRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDocShrinkRequest request = new CreateDocShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tagIds)) {
+            request.tagIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tagIds, "TagIds", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
             query.put("AgentKey", request.agentKey);
@@ -686,8 +692,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartDate", request.startDate);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tagIdsShrink)) {
+            query.put("TagIds", request.tagIdsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.title)) {
             query.put("Title", request.title);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2694,10 +2708,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
-            query.put("ProductCode", request.productCode);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3595,6 +3605,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.categoryIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.categoryIds, "CategoryIds", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tagIds)) {
+            request.tagIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tagIds, "TagIds", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
             query.put("AgentKey", request.agentKey);
@@ -3666,6 +3680,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagIdsShrink)) {
+            query.put("TagIds", request.tagIdsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4049,12 +4067,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * @summary 文档变更
      *
-     * @param request UpdateDocRequest
+     * @param tmpReq UpdateDocRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateDocResponse
      */
-    public UpdateDocResponse updateDocWithOptions(UpdateDocRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateDocResponse updateDocWithOptions(UpdateDocRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateDocShrinkRequest request = new UpdateDocShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tagIds)) {
+            request.tagIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tagIds, "TagIds", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
             query.put("AgentKey", request.agentKey);
@@ -4090,6 +4114,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
             query.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagIdsShrink)) {
+            query.put("TagIds", request.tagIdsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.title)) {

@@ -3,7 +3,7 @@ package com.aliyun.chatbot20220408.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateDocRequest extends TeaModel {
+public class UpdateDocShrinkRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
@@ -35,17 +35,17 @@ public class UpdateDocRequest extends TeaModel {
     public String startDate;
 
     @NameInMap("TagIds")
-    public java.util.List<Long> tagIds;
+    public String tagIdsShrink;
 
     @NameInMap("Title")
     public String title;
 
-    public static UpdateDocRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateDocRequest self = new UpdateDocRequest();
+    public static UpdateDocShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateDocShrinkRequest self = new UpdateDocShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDocRequest setAgentKey(String agentKey) {
+    public UpdateDocShrinkRequest setAgentKey(String agentKey) {
         this.agentKey = agentKey;
         return this;
     }
@@ -53,7 +53,7 @@ public class UpdateDocRequest extends TeaModel {
         return this.agentKey;
     }
 
-    public UpdateDocRequest setCategoryId(Long categoryId) {
+    public UpdateDocShrinkRequest setCategoryId(Long categoryId) {
         this.categoryId = categoryId;
         return this;
     }
@@ -61,7 +61,7 @@ public class UpdateDocRequest extends TeaModel {
         return this.categoryId;
     }
 
-    public UpdateDocRequest setConfig(String config) {
+    public UpdateDocShrinkRequest setConfig(String config) {
         this.config = config;
         return this;
     }
@@ -69,7 +69,7 @@ public class UpdateDocRequest extends TeaModel {
         return this.config;
     }
 
-    public UpdateDocRequest setContent(String content) {
+    public UpdateDocShrinkRequest setContent(String content) {
         this.content = content;
         return this;
     }
@@ -77,7 +77,7 @@ public class UpdateDocRequest extends TeaModel {
         return this.content;
     }
 
-    public UpdateDocRequest setDocName(String docName) {
+    public UpdateDocShrinkRequest setDocName(String docName) {
         this.docName = docName;
         return this;
     }
@@ -85,7 +85,7 @@ public class UpdateDocRequest extends TeaModel {
         return this.docName;
     }
 
-    public UpdateDocRequest setEndDate(String endDate) {
+    public UpdateDocShrinkRequest setEndDate(String endDate) {
         this.endDate = endDate;
         return this;
     }
@@ -93,7 +93,7 @@ public class UpdateDocRequest extends TeaModel {
         return this.endDate;
     }
 
-    public UpdateDocRequest setKnowledgeId(Long knowledgeId) {
+    public UpdateDocShrinkRequest setKnowledgeId(Long knowledgeId) {
         this.knowledgeId = knowledgeId;
         return this;
     }
@@ -101,7 +101,7 @@ public class UpdateDocRequest extends TeaModel {
         return this.knowledgeId;
     }
 
-    public UpdateDocRequest setMeta(String meta) {
+    public UpdateDocShrinkRequest setMeta(String meta) {
         this.meta = meta;
         return this;
     }
@@ -109,7 +109,7 @@ public class UpdateDocRequest extends TeaModel {
         return this.meta;
     }
 
-    public UpdateDocRequest setStartDate(String startDate) {
+    public UpdateDocShrinkRequest setStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
@@ -117,15 +117,15 @@ public class UpdateDocRequest extends TeaModel {
         return this.startDate;
     }
 
-    public UpdateDocRequest setTagIds(java.util.List<Long> tagIds) {
-        this.tagIds = tagIds;
+    public UpdateDocShrinkRequest setTagIdsShrink(String tagIdsShrink) {
+        this.tagIdsShrink = tagIdsShrink;
         return this;
     }
-    public java.util.List<Long> getTagIds() {
-        return this.tagIds;
+    public String getTagIdsShrink() {
+        return this.tagIdsShrink;
     }
 
-    public UpdateDocRequest setTitle(String title) {
+    public UpdateDocShrinkRequest setTitle(String title) {
         this.title = title;
         return this;
     }

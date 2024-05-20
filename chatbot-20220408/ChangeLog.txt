@@ -1,3 +1,15 @@
+2024-05-20 Version: 2.0.0
+- Update API CreateDoc: add param TagIds.
+- Update API CreateDoc: add param Url.
+- Update API CreateDoc: update param Content.
+- Update API DescribeDoc: update response param.
+- Update API ListAgent: delete param ProductCode.
+- Update API ListAgent: update response param.
+- Update API SearchDoc: add param TagIds.
+- Update API SearchDoc: update response param.
+- Update API UpdateDoc: add param TagIds.
+
+
 2024-05-10 Version: 1.4.0
 - Support API ListTongyiChatHistorys.
 

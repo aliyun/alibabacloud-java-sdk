@@ -28,6 +28,9 @@ public class DescribeDocResponseBody extends TeaModel {
     @NameInMap("DocName")
     public String docName;
 
+    @NameInMap("DocTags")
+    public java.util.List<DescribeDocResponseBodyDocTags> docTags;
+
     @NameInMap("EffectStatus")
     public Integer effectStatus;
 
@@ -143,6 +146,14 @@ public class DescribeDocResponseBody extends TeaModel {
     }
     public String getDocName() {
         return this.docName;
+    }
+
+    public DescribeDocResponseBody setDocTags(java.util.List<DescribeDocResponseBodyDocTags> docTags) {
+        this.docTags = docTags;
+        return this;
+    }
+    public java.util.List<DescribeDocResponseBodyDocTags> getDocTags() {
+        return this.docTags;
     }
 
     public DescribeDocResponseBody setEffectStatus(Integer effectStatus) {
@@ -332,6 +343,69 @@ public class DescribeDocResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDocResponseBodyDocInfoDocParas> getDocParas() {
             return this.docParas;
+        }
+
+    }
+
+    public static class DescribeDocResponseBodyDocTags extends TeaModel {
+        @NameInMap("DefaultTag")
+        public Boolean defaultTag;
+
+        @NameInMap("GroupId")
+        public Long groupId;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("TagId")
+        public Long tagId;
+
+        @NameInMap("TagName")
+        public String tagName;
+
+        public static DescribeDocResponseBodyDocTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDocResponseBodyDocTags self = new DescribeDocResponseBodyDocTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDocResponseBodyDocTags setDefaultTag(Boolean defaultTag) {
+            this.defaultTag = defaultTag;
+            return this;
+        }
+        public Boolean getDefaultTag() {
+            return this.defaultTag;
+        }
+
+        public DescribeDocResponseBodyDocTags setGroupId(Long groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public Long getGroupId() {
+            return this.groupId;
+        }
+
+        public DescribeDocResponseBodyDocTags setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public DescribeDocResponseBodyDocTags setTagId(Long tagId) {
+            this.tagId = tagId;
+            return this;
+        }
+        public Long getTagId() {
+            return this.tagId;
+        }
+
+        public DescribeDocResponseBodyDocTags setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
         }
 
     }

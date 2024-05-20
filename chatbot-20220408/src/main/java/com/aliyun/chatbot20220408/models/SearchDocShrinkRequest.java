@@ -58,6 +58,9 @@ public class SearchDocShrinkRequest extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
+    @NameInMap("TagIds")
+    public String tagIdsShrink;
+
     public static SearchDocShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchDocShrinkRequest self = new SearchDocShrinkRequest();
         return TeaModel.build(map, self);
@@ -205,6 +208,14 @@ public class SearchDocShrinkRequest extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public SearchDocShrinkRequest setTagIdsShrink(String tagIdsShrink) {
+        this.tagIdsShrink = tagIdsShrink;
+        return this;
+    }
+    public String getTagIdsShrink() {
+        return this.tagIdsShrink;
     }
 
 }
