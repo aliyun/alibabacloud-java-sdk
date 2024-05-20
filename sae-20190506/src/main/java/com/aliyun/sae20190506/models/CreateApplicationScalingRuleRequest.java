@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationScalingRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -19,12 +22,18 @@ public class CreateApplicationScalingRuleRequest extends TeaModel {
     @NameInMap("ScalingRuleMetric")
     public String scalingRuleMetric;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ScalingRuleName")
     public String scalingRuleName;
 
     @NameInMap("ScalingRuleTimer")
     public String scalingRuleTimer;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ScalingRuleType")
     public String scalingRuleType;
 

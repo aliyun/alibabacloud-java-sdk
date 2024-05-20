@@ -12,6 +12,8 @@ public class DescribeComponentsRequest extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

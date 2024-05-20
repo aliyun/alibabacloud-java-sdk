@@ -27,6 +27,8 @@ public class ListAppEventsRequest extends TeaModel {
 
     /**
      * <p>The namespace ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;

@@ -12,24 +12,30 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>cn-beijing</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>\["d42921c4-5433-4abd-8075-0e536f8b\*\*\*\*"]</p>
+     * <p>["d42921c4-5433-4abd-8075-0e536f8b\\*\\*\\*\\*"]</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceIds")
     public String resourceIds;
 
     /**
      * <p>application</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>\["k1","k2"]</p>
+     * <p>["k1","k2"]</p>
      */
     @NameInMap("TagKeys")
     public String tagKeys;

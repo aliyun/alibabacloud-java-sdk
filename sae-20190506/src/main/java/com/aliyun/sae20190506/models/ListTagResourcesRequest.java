@@ -12,24 +12,28 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>cn-beijing</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>\["d42921c4-5433-4abd-8075-0e536f8b\*\*\*\*"]</p>
+     * <p>["d42921c4-5433-4abd-8075-0e536f8b\\*\\*\\*\\*"]</p>
      */
     @NameInMap("ResourceIds")
     public String resourceIds;
 
     /**
      * <p>application</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>\[{"key":"k1","value":"v1"}]</p>
+     * <p>[{"key":"k1","value":"v1"}]</p>
      */
     @NameInMap("Tags")
     public String tags;

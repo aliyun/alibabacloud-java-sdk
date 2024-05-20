@@ -4,12 +4,21 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UpdateSecretShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SecretData")
     public String secretDataShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SecretId")
     public Long secretId;
 

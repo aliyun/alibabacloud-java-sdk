@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class RescaleApplicationVerticallyRequest extends TeaModel {
     /**
      * <p>The application ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The destination CPU specification. Unit: millicore.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Cpu")
     public String cpu;
 
     /**
      * <p>The destination memory size. Unit: MB.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Memory")
     public String memory;

@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class AclEntryConfig extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("entry")
     public String entry;
 

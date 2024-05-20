@@ -4,15 +4,27 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class BuildPipeline extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BuildConfig")
     public BuildPipelineBuildConfig buildConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CodeConfig")
     public BuildPipelineCodeConfig codeConfig;
 
@@ -28,6 +40,9 @@ public class BuildPipeline extends TeaModel {
     @NameInMap("PackageConfig")
     public BuildPipelinePackageConfig packageConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TriggerConfig")
     public BuildPipelineTriggerConfig triggerConfig;
 
@@ -112,6 +127,9 @@ public class BuildPipeline extends TeaModel {
         @NameInMap("BeforeBuildCommand")
         public String beforeBuildCommand;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("BuildType")
         public String buildType;
 
@@ -205,9 +223,15 @@ public class BuildPipeline extends TeaModel {
     }
 
     public static class BuildPipelineCodeConfig extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("BranchName")
         public String branchName;
 
@@ -220,12 +244,21 @@ public class BuildPipeline extends TeaModel {
         @NameInMap("OrganizationId")
         public String organizationId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Provider")
         public String provider;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("RepoFullName")
         public String repoFullName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("RepoId")
         public String repoId;
 
@@ -452,6 +485,9 @@ public class BuildPipeline extends TeaModel {
         @NameInMap("TagName")
         public String tagName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 

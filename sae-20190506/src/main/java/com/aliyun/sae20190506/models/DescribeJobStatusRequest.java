@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeJobStatusRequest extends TeaModel {
     /**
      * <p>The ID of the job template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;

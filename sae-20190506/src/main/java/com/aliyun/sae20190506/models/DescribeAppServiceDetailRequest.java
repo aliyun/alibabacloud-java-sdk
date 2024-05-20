@@ -5,10 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeAppServiceDetailRequest extends TeaModel {
     /**
-     * <p>6dcc8c9e-d3da-478a-a066-86dcf820\*\*\*\*</p>
+     * <p>6dcc8c9e-d3da-478a-a066-86dcf820\\*\\*\\*\\*</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
+
+    @NameInMap("NacosInstanceId")
+    public String nacosInstanceId;
+
+    @NameInMap("NacosNamespaceId")
+    public String nacosNamespaceId;
 
     /**
      * <p>springCloud</p>
@@ -45,6 +53,22 @@ public class DescribeAppServiceDetailRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public DescribeAppServiceDetailRequest setNacosInstanceId(String nacosInstanceId) {
+        this.nacosInstanceId = nacosInstanceId;
+        return this;
+    }
+    public String getNacosInstanceId() {
+        return this.nacosInstanceId;
+    }
+
+    public DescribeAppServiceDetailRequest setNacosNamespaceId(String nacosNamespaceId) {
+        this.nacosNamespaceId = nacosNamespaceId;
+        return this;
+    }
+    public String getNacosNamespaceId() {
+        return this.nacosNamespaceId;
     }
 
     public DescribeAppServiceDetailRequest setServiceGroup(String serviceGroup) {

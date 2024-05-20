@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DeleteHistoryJobRequest extends TeaModel {
     /**
      * <p>The ID of the job template to which the job that you want to delete belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The ID of the job.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("JobId")
     public String jobId;

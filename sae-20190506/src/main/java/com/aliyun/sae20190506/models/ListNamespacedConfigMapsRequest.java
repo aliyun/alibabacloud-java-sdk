@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListNamespacedConfigMapsRequest extends TeaModel {
     /**
      * <p>cn-hangzhou</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DisableApplicationScalingRuleRequest extends TeaModel {
     /**
      * <p>timer-0800-2100</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The ID of the request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingRuleName")
     public String scalingRuleName;

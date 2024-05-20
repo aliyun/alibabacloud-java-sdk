@@ -179,7 +179,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Boolean appDeletingStatus;
 
         /**
-         * <p>\[{"key":"key","value":"value"}]</p>
+         * <p>[{"key":"key","value":"value"}]</p>
          */
         @NameInMap("AppDescription")
         public String appDescription;

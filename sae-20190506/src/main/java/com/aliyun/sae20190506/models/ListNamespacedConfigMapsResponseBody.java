@@ -175,7 +175,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
          * <br>
          * <p>{"k1":"v1", "k2":"v2"}</p>
          * <br>
-         * <p>k specifies a key and v specifies a value. For more information, see [Manage and use configurations](~~171326~~).</p>
+         * <p>k specifies a key and v specifies a value. For more information, see [Manage and use configurations](https://help.aliyun.com/document_detail/171326.html).</p>
          */
         @NameInMap("Data")
         public java.util.Map<String, ?> data;

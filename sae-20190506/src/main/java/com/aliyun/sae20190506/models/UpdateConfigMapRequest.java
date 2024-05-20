@@ -6,10 +6,15 @@ import com.aliyun.tea.*;
 public class UpdateConfigMapRequest extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigMapId")
     public Long configMapId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Data")
     public String data;
 

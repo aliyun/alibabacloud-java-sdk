@@ -9,6 +9,8 @@ public class StopApplicationRequest extends TeaModel {
      * <br>
      * <p>*   **success** is returned when the request succeeds.</p>
      * <p>*   An error code is returned when the request fails.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;

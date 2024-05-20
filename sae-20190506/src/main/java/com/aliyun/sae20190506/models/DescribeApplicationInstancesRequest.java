@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationInstancesRequest extends TeaModel {
     /**
-     * <p>d700e680-aa4d-4ec1-afc2-6566b5ff\*\*\*\*</p>
+     * <p>d700e680-aa4d-4ec1-afc2-6566b5ff\\*\\*\\*\\*</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -17,7 +19,9 @@ public class DescribeApplicationInstancesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>b2a8a925-477a-4ed7-b825-d5e22500\*\*\*\*</p>
+     * <p>b2a8a925-477a-4ed7-b825-d5e22500\\*\\*\\*\\*</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;

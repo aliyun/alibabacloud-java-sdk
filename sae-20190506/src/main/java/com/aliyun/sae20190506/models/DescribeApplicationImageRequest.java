@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationImageRequest extends TeaModel {
     /**
-     * <p>d700e680-aa4d-4ec1-afc2-6566b5ff\*\*\*\*</p>
+     * <p>d700e680-aa4d-4ec1-afc2-6566b5ff\\*\\*\\*\\*</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>registry-vpc.cn-hangzhou.aliyuncs.com/demo/demo:latest</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageUrl")
     public String imageUrl;

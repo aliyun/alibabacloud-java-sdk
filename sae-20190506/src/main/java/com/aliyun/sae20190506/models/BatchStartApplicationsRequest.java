@@ -15,6 +15,8 @@ public class BatchStartApplicationsRequest extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
     /**
-     * <p>acs:ram::123456789012\*\*\*\*:role/adminrole</p>
+     * <p>acs:ram::123456789012\\*\\*\\*\\*:role/adminrole</p>
      */
     @NameInMap("AcrAssumeRoleArn")
     public String acrAssumeRoleArn;
@@ -24,6 +24,8 @@ public class CreateApplicationRequest extends TeaModel {
 
     /**
      * <p>test</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppName")
     public String appName;
@@ -56,7 +58,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String commandArgs;
 
     /**
-     * <p>\[{"configMapId":16,"key":"test","mountPath":"/tmp"}]</p>
+     * <p>[{"configMapId":16,"key":"test","mountPath":"/tmp"}]</p>
      */
     @NameInMap("ConfigMapMountDesc")
     public String configMapMountDesc;
@@ -68,7 +70,7 @@ public class CreateApplicationRequest extends TeaModel {
     public Integer cpu;
 
     /**
-     * <p>\[{"hostName":"samplehost","ip":"127.0.0.1"}]</p>
+     * <p>[{"hostName":"samplehost","ip":"127.0.0.1"}]</p>
      */
     @NameInMap("CustomHostAlias")
     public String customHostAlias;
@@ -89,7 +91,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String enableEbpf;
 
     /**
-     * <p>\[{"name":"envtmp","value":"0"}]</p>
+     * <p>[{"name":"envtmp","value":"0"}]</p>
      */
     @NameInMap("Envs")
     public String envs;
@@ -110,7 +112,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String jarStartArgs;
 
     /**
-     * <p>\-Xms4G -Xmx4G</p>
+     * <p>\\-Xms4G -Xmx4G</p>
      */
     @NameInMap("JarStartOptions")
     public String jarStartOptions;
@@ -125,7 +127,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String kafkaConfigs;
 
     /**
-     * <p>{"exec":{"command":\["sh","-c","cat /home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}</p>
+     * <p>{"exec":{"command":["sh","-c","cat /home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}</p>
      */
     @NameInMap("Liveness")
     public String liveness;
@@ -140,7 +142,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String microRegistration;
 
     /**
-     * <p>\[{mountPath: "/tmp", nasPath: "/"}]</p>
+     * <p>[{mountPath: "/tmp", nasPath: "/"}]</p>
      */
     @NameInMap("MountDesc")
     public String mountDesc;
@@ -161,7 +163,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String nasConfigs;
 
     /**
-     * <p>KSAK\*\*\*\*</p>
+     * <p>KSAK\\*\\*\\*\\*</p>
      */
     @NameInMap("NasId")
     public String nasId;
@@ -179,19 +181,21 @@ public class CreateApplicationRequest extends TeaModel {
     public String ossAkSecret;
 
     /**
-     * <p>\[{"bucketName": "oss-bucket", "bucketPath": "data/user.data", "mountPath": "/usr/data/user.data", "readOnly": true}]</p>
+     * <p>[{"bucketName": "oss-bucket", "bucketPath": "data/user.data", "mountPath": "/usr/data/user.data", "readOnly": true}]</p>
      */
     @NameInMap("OssMountDescs")
     public String ossMountDescs;
 
     /**
      * <p>FatJar</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PackageType")
     public String packageType;
 
     /**
-     * <p>http://myoss.oss-cn-\*\*\*\*.aliyuncs.com/my-buc/2019-06-30/\*\*\*\*.jar</p>
+     * <p>http://myoss.oss-cn-\\*\\*\\*\\*.aliyuncs.com/my-buc/2019-06-30/\\*\\*\\*\\*.jar</p>
      */
     @NameInMap("PackageUrl")
     public String packageUrl;
@@ -224,13 +228,13 @@ public class CreateApplicationRequest extends TeaModel {
     public String phpConfigLocation;
 
     /**
-     * <p>{"exec":{"command":\["cat","/etc/group"]}}</p>
+     * <p>{"exec":{"command":["cat","/etc/group"]}}</p>
      */
     @NameInMap("PostStart")
     public String postStart;
 
     /**
-     * <p>{"exec":{"command":\["cat","/etc/group"]}}</p>
+     * <p>{"exec":{"command":["cat","/etc/group"]}}</p>
      */
     @NameInMap("PreStop")
     public String preStop;
@@ -248,13 +252,15 @@ public class CreateApplicationRequest extends TeaModel {
     public String pythonModules;
 
     /**
-     * <p>{"exec":{"command":\["sh","-c","cat /home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}</p>
+     * <p>{"exec":{"command":["sh","-c","cat /home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}</p>
      */
     @NameInMap("Readiness")
     public String readiness;
 
     /**
      * <p>1</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Replicas")
     public Integer replicas;
@@ -263,13 +269,13 @@ public class CreateApplicationRequest extends TeaModel {
     public String saeVersion;
 
     /**
-     * <p>sg-wz969ngg2e49q5i4\*\*\*\*</p>
+     * <p>sg-wz969ngg2e49q5i4\\*\\*\\*\\*</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
-     * <p>\[{"logDir":"","logType":"stdout"},{"logDir":"/tmp/a.log"}]</p>
+     * <p>[{"logDir":"","logType":"stdout"},{"logDir":"/tmp/a.log"}]</p>
      */
     @NameInMap("SlsConfigs")
     public String slsConfigs;
@@ -293,19 +299,19 @@ public class CreateApplicationRequest extends TeaModel {
     public String tomcatConfig;
 
     /**
-     * <p>vsw-bp12mw1f8k3jgygk9\*\*\*\*</p>
+     * <p>vsw-bp12mw1f8k3jgygk9\\*\\*\\*\\*</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>vpc-bp1aevy8sofi8mh1q\*\*\*\*</p>
+     * <p>vpc-bp1aevy8sofi8mh1q\\*\\*\\*\\*</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>CATALINA_OPTS=\\"$CATALINA_OPTS $Options\\" catalina.sh run</p>
+     * <p>CATALINA_OPTS=\\\\"$CATALINA_OPTS $Options\\\\" catalina.sh run</p>
      */
     @NameInMap("WarStartOptions")
     public String warStartOptions;

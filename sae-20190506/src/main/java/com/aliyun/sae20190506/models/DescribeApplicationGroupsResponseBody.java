@@ -163,20 +163,20 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
          * <p>*   When you use a PHP package, the following values are valid:</p>
          * <br>
          * <p>    *   **PhpZip**</p>
-         * <p>    *   **IMAGE_PHP\_5\_4**</p>
-         * <p>    *   **IMAGE_PHP\_5\_4\_ALPINE**</p>
-         * <p>    *   **IMAGE_PHP\_5\_5**</p>
-         * <p>    *   **IMAGE_PHP\_5\_5\_ALPINE**</p>
-         * <p>    *   **IMAGE_PHP\_5\_6**</p>
-         * <p>    *   **IMAGE_PHP\_5\_6\_ALPINE**</p>
-         * <p>    *   **IMAGE_PHP\_7\_0**</p>
-         * <p>    *   **IMAGE_PHP\_7\_0\_ALPINE**</p>
-         * <p>    *   **IMAGE_PHP\_7\_1**</p>
-         * <p>    *   **IMAGE_PHP\_7\_1\_ALPINE**</p>
-         * <p>    *   **IMAGE_PHP\_7\_2**</p>
-         * <p>    *   **IMAGE_PHP\_7\_2\_ALPINE**</p>
-         * <p>    *   **IMAGE_PHP\_7\_3**</p>
-         * <p>    *   **IMAGE_PHP\_7\_3\_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP_5_4**</p>
+         * <p>    *   **IMAGE_PHP_5_4_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP_5_5**</p>
+         * <p>    *   **IMAGE_PHP_5_5_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP_5_6**</p>
+         * <p>    *   **IMAGE_PHP_5_6_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP_7_0**</p>
+         * <p>    *   **IMAGE_PHP_7_0_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP_7_1**</p>
+         * <p>    *   **IMAGE_PHP_7_1_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP_7_2**</p>
+         * <p>    *   **IMAGE_PHP_7_2_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP_7_3**</p>
+         * <p>    *   **IMAGE_PHP_7_3_ALPINE**</p>
          */
         @NameInMap("PackageType")
         public String packageType;

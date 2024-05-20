@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ConfirmPipelineBatchRequest extends TeaModel {
     /**
      * <p>true</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Confirm")
     public Boolean confirm;
 
     /**
-     * <p>e2e-vds-feh-\*\*\*</p>
+     * <p>e2e-vds-feh-\\*\\*\\*</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PipelineId")
     public String pipelineId;
