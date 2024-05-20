@@ -7,11 +7,11 @@ public class GetOrderInfoResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public java.util.List<GetOrderInfoResponseBodyData> data;
+
     @NameInMap("Message")
     public String message;
-
-    @NameInMap("Data")
-    public java.util.Map<String, ?> data;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -32,20 +32,20 @@ public class GetOrderInfoResponseBody extends TeaModel {
         return this.code;
     }
 
+    public GetOrderInfoResponseBody setData(java.util.List<GetOrderInfoResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetOrderInfoResponseBodyData> getData() {
+        return this.data;
+    }
+
     public GetOrderInfoResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
-    }
-
-    public GetOrderInfoResponseBody setData(java.util.Map<String, ?> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.Map<String, ?> getData() {
-        return this.data;
     }
 
     public GetOrderInfoResponseBody setRequestId(String requestId) {
@@ -62,6 +62,91 @@ public class GetOrderInfoResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class GetOrderInfoResponseBodyData extends TeaModel {
+        @NameInMap("bizType")
+        public String bizType;
+
+        @NameInMap("currentConcurrency")
+        public Integer currentConcurrency;
+
+        @NameInMap("currentDays")
+        public Integer currentDays;
+
+        @NameInMap("instanceId")
+        public String instanceId;
+
+        @NameInMap("licenseKey")
+        public String licenseKey;
+
+        @NameInMap("remark")
+        public String remark;
+
+        @NameInMap("totalDays")
+        public Integer totalDays;
+
+        public static GetOrderInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetOrderInfoResponseBodyData self = new GetOrderInfoResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public GetOrderInfoResponseBodyData setBizType(String bizType) {
+            this.bizType = bizType;
+            return this;
+        }
+        public String getBizType() {
+            return this.bizType;
+        }
+
+        public GetOrderInfoResponseBodyData setCurrentConcurrency(Integer currentConcurrency) {
+            this.currentConcurrency = currentConcurrency;
+            return this;
+        }
+        public Integer getCurrentConcurrency() {
+            return this.currentConcurrency;
+        }
+
+        public GetOrderInfoResponseBodyData setCurrentDays(Integer currentDays) {
+            this.currentDays = currentDays;
+            return this;
+        }
+        public Integer getCurrentDays() {
+            return this.currentDays;
+        }
+
+        public GetOrderInfoResponseBodyData setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public GetOrderInfoResponseBodyData setLicenseKey(String licenseKey) {
+            this.licenseKey = licenseKey;
+            return this;
+        }
+        public String getLicenseKey() {
+            return this.licenseKey;
+        }
+
+        public GetOrderInfoResponseBodyData setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
+        }
+
+        public GetOrderInfoResponseBodyData setTotalDays(Integer totalDays) {
+            this.totalDays = totalDays;
+            return this;
+        }
+        public Integer getTotalDays() {
+            return this.totalDays;
+        }
+
     }
 
 }

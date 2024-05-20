@@ -1,3 +1,7 @@
+2024-05-20 Version: 1.0.1
+- Update API GetOrderInfo: add param ListReleased.
+
+
 2021-08-17 Version: 1.0.0
 - Init SDK.
 
