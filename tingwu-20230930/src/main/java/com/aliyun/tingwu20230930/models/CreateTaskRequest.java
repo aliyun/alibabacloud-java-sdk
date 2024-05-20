@@ -77,6 +77,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("MultipleStreamsEnabled")
         public Boolean multipleStreamsEnabled;
 
+        @NameInMap("OutputPath")
+        public String outputPath;
+
         @NameInMap("ProgressiveCallbacksEnabled")
         public Boolean progressiveCallbacksEnabled;
 
@@ -122,6 +125,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public Boolean getMultipleStreamsEnabled() {
             return this.multipleStreamsEnabled;
+        }
+
+        public CreateTaskRequestInput setOutputPath(String outputPath) {
+            this.outputPath = outputPath;
+            return this;
+        }
+        public String getOutputPath() {
+            return this.outputPath;
         }
 
         public CreateTaskRequestInput setProgressiveCallbacksEnabled(Boolean progressiveCallbacksEnabled) {
@@ -244,12 +255,23 @@ public class CreateTaskRequest extends TeaModel {
     }
 
     public static class CreateTaskRequestParametersExtraParams extends TeaModel {
+        @NameInMap("MaxKeywords")
+        public Integer maxKeywords;
+
         @NameInMap("NfixEnabled")
         public Boolean nfixEnabled;
 
         public static CreateTaskRequestParametersExtraParams build(java.util.Map<String, ?> map) throws Exception {
             CreateTaskRequestParametersExtraParams self = new CreateTaskRequestParametersExtraParams();
             return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestParametersExtraParams setMaxKeywords(Integer maxKeywords) {
+            this.maxKeywords = maxKeywords;
+            return this;
+        }
+        public Integer getMaxKeywords() {
+            return this.maxKeywords;
         }
 
         public CreateTaskRequestParametersExtraParams setNfixEnabled(Boolean nfixEnabled) {
