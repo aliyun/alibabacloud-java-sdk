@@ -12,6 +12,8 @@ public class ListIngressesRequest extends TeaModel {
 
     /**
      * <p>The returned data.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

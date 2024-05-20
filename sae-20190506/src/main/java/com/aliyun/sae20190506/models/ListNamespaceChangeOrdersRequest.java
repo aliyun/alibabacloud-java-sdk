@@ -30,6 +30,8 @@ public class ListNamespaceChangeOrdersRequest extends TeaModel {
 
     /**
      * <p>cn-shanghai:test</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

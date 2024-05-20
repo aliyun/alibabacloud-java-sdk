@@ -4,15 +4,27 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class PriceEstimateFeature extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CpuCore")
     public Float cpuCore;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CpuStrategy")
     public String cpuStrategy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EnvType")
     public String envType;
 
@@ -43,6 +55,9 @@ public class PriceEstimateFeature extends TeaModel {
     @NameInMap("MaxInstanceCount")
     public Long maxInstanceCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MemoryGiB")
     public Float memoryGiB;
 
@@ -55,6 +70,9 @@ public class PriceEstimateFeature extends TeaModel {
     @NameInMap("NoneLoadSeconds")
     public Long noneLoadSeconds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

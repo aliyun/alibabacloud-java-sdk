@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListAppServicesPageRequest extends TeaModel {
     /**
      * <p>1</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -24,6 +26,8 @@ public class ListAppServicesPageRequest extends TeaModel {
 
     /**
      * <p>9999</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServiceType")
     public String serviceType;

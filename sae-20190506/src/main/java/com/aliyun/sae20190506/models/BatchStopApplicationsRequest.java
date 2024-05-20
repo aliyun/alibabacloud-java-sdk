@@ -11,7 +11,9 @@ public class BatchStopApplicationsRequest extends TeaModel {
     public String appIds;
 
     /**
-     * <p>ebf491f0-c1a5-45e2-b2c4-710dbe2a\*\*\*\*,ebf491f0-c1a5-45e2-b2c4-71025e2a\*\*\*\*</p>
+     * <p>ebf491f0-c1a5-45e2-b2c4-710dbe2a\\*\\*\\*\\*,ebf491f0-c1a5-45e2-b2c4-71025e2a\\*\\*\\*\\*</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

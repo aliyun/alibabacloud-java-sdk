@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeNamespaceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: The call was successful.</p>
+     * <p>*   **3xx**: The call was redirected.</p>
+     * <p>*   **4xx**: The call failed.</p>
+     * <p>*   **5xx**: A server error occurred.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -17,39 +22,40 @@ public class DescribeNamespaceResponseBody extends TeaModel {
     public DescribeNamespaceResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The error code returned. Take note of the following rules:</p>
+     * <br>
+     * <p>*   The **ErrorCode** parameter is not returned if the request succeeds.</p>
+     * <p>*   The **ErrorCode** parameter is returned if the request fails. For more information, see the **Error codes** section in this topic.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The additional information that is returned. Valid values:</p>
+     * <br>
+     * <p>*   success: If the call is successful, **success** is returned.</p>
+     * <p>*   An error code: If the call fails, an error code is returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The error code.</p>
-     * <br>
-     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
-     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information of the namespace.</p>
+     * <p>Indicates whether the information about the namespace was queried successfully. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The information was queried.</p>
+     * <p>*   **false**: The image failed to be found.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request was invalid.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <p>The trace ID that is used to query the details of the request.</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -116,20 +122,29 @@ public class DescribeNamespaceResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespaceResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the SAE built-in registry is enabled. </p>
+         * <p>Valid values:</p>
+         * <p>* true</p>
+         * <p>* false</p>
+         */
         @NameInMap("EnableMicroRegistration")
         public Boolean enableMicroRegistration;
 
+        /**
+         * <p>The short ID of the namespace.</p>
+         */
         @NameInMap("NameSpaceShortId")
         public String nameSpaceShortId;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The description of the namespace.</p>
          */
         @NameInMap("NamespaceDescription")
         public String namespaceDescription;
 
         /**
-         * <p>cn-beijing:test</p>
+         * <p>The ID of the namespace. The information about the default namespace cannot be queried or modified. The default namespace cannot be deleted.</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
@@ -141,7 +156,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
-         * <p>cn-beijing:test</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

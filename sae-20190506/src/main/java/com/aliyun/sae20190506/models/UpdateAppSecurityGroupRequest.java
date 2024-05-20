@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateAppSecurityGroupRequest extends TeaModel {
     /**
-     * <p>sg-wz969ngg2e49q5i4\*\*\*\*</p>
+     * <p>sg-wz969ngg2e49q5i4\\*\\*\\*\\*</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The ID of the request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

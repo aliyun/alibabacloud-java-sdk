@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class AclConfig extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("aclEntries")
     public java.util.List<AclEntryConfig> aclEntries;
 

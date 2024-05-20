@@ -4,9 +4,15 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UpdateApplicationDescriptionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppDescription")
     public String appDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 

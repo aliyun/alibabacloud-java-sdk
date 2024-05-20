@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class CreateConfigMapRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Data")
     public String data;
 
@@ -12,12 +15,16 @@ public class CreateConfigMapRequest extends TeaModel {
 
     /**
      * <p>cn-hangzhou</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

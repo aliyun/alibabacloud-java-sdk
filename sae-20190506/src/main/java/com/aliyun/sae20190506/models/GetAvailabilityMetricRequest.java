@@ -10,6 +10,9 @@ public class GetAvailabilityMetricRequest extends TeaModel {
     @NameInMap("CpuStrategy")
     public String cpuStrategy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Limit")
     public Long limit;
 

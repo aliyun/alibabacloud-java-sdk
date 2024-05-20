@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateJobRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) required for a RAM role to obtain images across accounts. For more information, see [Grant permissions across Alibaba Cloud accounts by using a RAM role](~~223585~~).</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) required for a RAM role to obtain images across accounts. For more information, see [Grant permissions across Alibaba Cloud accounts by using a RAM role](https://help.aliyun.com/document_detail/223585.html).</p>
      */
     @NameInMap("AcrAssumeRoleArn")
     public String acrAssumeRoleArn;
@@ -24,6 +24,8 @@ public class CreateJobRequest extends TeaModel {
 
     /**
      * <p>The name of the job template. The name can contain digits, letters, and hyphens (-). The name must start with a letter and cannot exceed 36 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppName")
     public String appName;
@@ -80,7 +82,7 @@ public class CreateJobRequest extends TeaModel {
     /**
      * <p>The description of the **ConfigMap** instance mounted to the application. Use configurations created on the Configuration Items page to configure containers. The following table describes the parameters that are used in the preceding statements.</p>
      * <br>
-     * <p>*   **congfigMapId**: the ID of the ConfigMap instance. You can call the [ListNamespacedConfigMaps](~~176917~~) operation to obtain the ID.</p>
+     * <p>*   **congfigMapId**: the ID of the ConfigMap instance. You can call the [ListNamespacedConfigMaps](https://help.aliyun.com/document_detail/176917.html) operation to obtain the ID.</p>
      * <p>*   **key**: the key.</p>
      * <br>
      * <p>> You can use the `sae-sys-configmap-all` key to mount all keys.</p>
@@ -123,7 +125,7 @@ public class CreateJobRequest extends TeaModel {
     public Boolean enableImageAccl;
 
     /**
-     * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see [CreateConfigMap](~~176914~~). Take note of the following rules:</p>
+     * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see [CreateConfigMap](https://help.aliyun.com/document_detail/176914.html). Take note of the following rules:</p>
      * <br>
      * <p>*   Customize</p>
      * <br>
@@ -255,9 +257,11 @@ public class CreateJobRequest extends TeaModel {
      * <p>*   If you deploy the application by using a Java Archive (JAR) package, you can set this parameter to **FatJar**, **War**, or **Image**.</p>
      * <p>*   If you deploy the application by using a PHP package, you can set this parameter to one of the following values:</p>
      * <br>
-     * <p>**PhpZip** **IMAGE_PHP\_5\_4** **IMAGE_PHP\_5\_4\_ALPINE** **IMAGE_PHP\_5\_5** **IMAGE_PHP\_5\_5\_ALPINE** **IMAGE_PHP\_5\_6** **IMAGE_PHP\_5\_6\_ALPINE** **IMAGE_PHP\_7\_0** **IMAGE_PHP\_7\_0\_ALPINE** **IMAGE_PHP\_7\_1** **IMAGE_PHP\_7\_1\_ALPINE** **IMAGE_PHP\_7\_2** **IMAGE_PHP\_7\_2\_ALPINE** **IMAGE_PHP\_7\_3** **IMAGE_PHP\_7\_3\_ALPINE**</p>
+     * <p>**PhpZip** **IMAGE_PHP_5_4** **IMAGE_PHP_5_4_ALPINE** **IMAGE_PHP_5_5** **IMAGE_PHP_5_5_ALPINE** **IMAGE_PHP_5_6** **IMAGE_PHP_5_6_ALPINE** **IMAGE_PHP_7_0** **IMAGE_PHP_7_0_ALPINE** **IMAGE_PHP_7_1** **IMAGE_PHP_7_1_ALPINE** **IMAGE_PHP_7_2** **IMAGE_PHP_7_2_ALPINE** **IMAGE_PHP_7_3** **IMAGE_PHP_7_3_ALPINE**</p>
      * <br>
      * <p>*   If you deploy the application by using a **Python** package, you can set this parameter to **PythonZip** or **Image**:</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PackageType")
     public String packageType;
@@ -287,13 +291,13 @@ public class CreateJobRequest extends TeaModel {
     public String phpConfigLocation;
 
     /**
-     * <p>The script that is run immediately after the container is started. Example: `{"exec":{"command":\["sh","-c","echo hello"\]}}`</p>
+     * <p>The script that is run immediately after the container is started. Example: `{"exec":{"command":["sh","-c","echo hello"\\]}}`</p>
      */
     @NameInMap("PostStart")
     public String postStart;
 
     /**
-     * <p>The script that is run before the container is stopped. Example: `{"exec":{"command":\["sh","-c","echo hello"\]}}`</p>
+     * <p>The script that is run before the container is stopped. Example: `{"exec":{"command":["sh","-c","echo hello"\\]}}`</p>
      */
     @NameInMap("PreStop")
     public String preStop;
@@ -324,6 +328,8 @@ public class CreateJobRequest extends TeaModel {
 
     /**
      * <p>The number of concurrent instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Replicas")
     public Integer replicas;
@@ -413,7 +419,7 @@ public class CreateJobRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The startup command of the WAR package. For information about how to configure the startup command, see [Configure startup commands](~~96677~~).</p>
+     * <p>The startup command of the WAR package. For information about how to configure the startup command, see [Configure startup commands](https://help.aliyun.com/document_detail/96677.html).</p>
      */
     @NameInMap("WarStartOptions")
     public String warStartOptions;
@@ -431,6 +437,8 @@ public class CreateJobRequest extends TeaModel {
 
     /**
      * <p>Set the value to `job`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Workload")
     public String workload;

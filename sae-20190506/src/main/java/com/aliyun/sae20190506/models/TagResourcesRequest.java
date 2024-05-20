@@ -12,18 +12,22 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceIds")
     public String resourceIds;
 
     /**
-     * <p>\[{"key":"k1","value":"v1"}]</p>
+     * <p>[{"key":"k1","value":"v1"}]</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>\["d42921c4-5433-4abd-8075-0e536f8b\*\*\*\*"]</p>
+     * <p>["d42921c4-5433-4abd-8075-0e536f8b\\*\\*\\*\\*"]</p>
      */
     @NameInMap("Tags")
     public String tags;

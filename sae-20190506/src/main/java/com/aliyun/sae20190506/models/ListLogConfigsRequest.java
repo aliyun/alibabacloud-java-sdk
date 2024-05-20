@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class ListLogConfigsRequest extends TeaModel {
     /**
      * <p>10</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The ID of the request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>1</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

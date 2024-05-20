@@ -203,6 +203,9 @@ public class BuildPipelineRun extends TeaModel {
         @NameInMap("TagName")
         public String tagName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -241,6 +244,9 @@ public class BuildPipelineRun extends TeaModel {
         @NameInMap("BeforeBuildCommand")
         public String beforeBuildCommand;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("BuildType")
         public String buildType;
 
@@ -259,6 +265,9 @@ public class BuildPipelineRun extends TeaModel {
         @NameInMap("TomcatConfig")
         public TomcatConfig tomcatConfig;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Trigger")
         public BuildPipelineRunBuildConfigTrigger trigger;
 
@@ -345,9 +354,15 @@ public class BuildPipelineRun extends TeaModel {
     }
 
     public static class BuildPipelineRunCodeConfig extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("BranchName")
         public String branchName;
 
@@ -360,12 +375,21 @@ public class BuildPipelineRun extends TeaModel {
         @NameInMap("OrganizationId")
         public String organizationId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Provider")
         public String provider;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("RepoFullName")
         public String repoFullName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("RepoId")
         public String repoId;
 

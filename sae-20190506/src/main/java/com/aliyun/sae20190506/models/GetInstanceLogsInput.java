@@ -7,6 +7,9 @@ public class GetInstanceLogsInput extends TeaModel {
     @NameInMap("backwardLine")
     public Long backwardLine;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("endTime")
     public Long endTime;
 
@@ -31,6 +34,9 @@ public class GetInstanceLogsInput extends TeaModel {
     @NameInMap("packMeta")
     public String packMeta;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("startTime")
     public Long startTime;
 

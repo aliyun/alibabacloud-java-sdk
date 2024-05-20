@@ -323,7 +323,7 @@ public class DescribeJobResponseBody extends TeaModel {
 
     public static class DescribeJobResponseBodyData extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is used to pull images across accounts. For more information, see [Pull images across Alibaba Cloud accounts](~~190675~~) and [Grant permissions across Alibaba Cloud accounts by using a RAM role](~~223585~~).</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is used to pull images across accounts. For more information, see [Pull images across Alibaba Cloud accounts](https://help.aliyun.com/document_detail/190675.html) and [Grant permissions across Alibaba Cloud accounts by using a RAM role](https://help.aliyun.com/document_detail/223585.html).</p>
          */
         @NameInMap("AcrAssumeRoleArn")
         public String acrAssumeRoleArn;
@@ -428,7 +428,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String edasContainerVersion;
 
         /**
-         * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see [CreateConfigMap](~~176914~~). Valid values:</p>
+         * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see [CreateConfigMap](https://help.aliyun.com/document_detail/176914.html). Valid values:</p>
          * <br>
          * <p>*   Custom configuration</p>
          * <br>
@@ -557,20 +557,20 @@ public class DescribeJobResponseBody extends TeaModel {
          * <p>*   If you deploy the application by using a PHP package, this parameter is set to one of the following values:</p>
          * <br>
          * <p>    *   **PhpZip**</p>
-         * <p>    *   **IMAGE_PHP\_5\_4**</p>
-         * <p>    *   **IMAGE_PHP\_5\_4\_ALPINE**</p>
-         * <p>    *   **IMAGE_PHP\_5\_5**</p>
-         * <p>    *   **IMAGE_PHP\_5\_5\_ALPINE**</p>
-         * <p>    *   **IMAGE_PHP\_5\_6**</p>
-         * <p>    *   **IMAGE_PHP\_5\_6\_ALPINE**</p>
-         * <p>    *   **IMAGE_PHP\_7\_0**</p>
-         * <p>    *   **IMAGE_PHP\_7\_0\_ALPINE**</p>
-         * <p>    *   **IMAGE_PHP\_7\_1**</p>
-         * <p>    *   **IMAGE_PHP\_7\_1\_ALPINE**</p>
-         * <p>    *   **IMAGE_PHP\_7\_2**</p>
-         * <p>    *   **IMAGE_PHP\_7\_2\_ALPINE**</p>
-         * <p>    *   **IMAGE_PHP\_7\_3**</p>
-         * <p>    *   **IMAGE_PHP\_7\_3\_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP_5_4**</p>
+         * <p>    *   **IMAGE_PHP_5_4_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP_5_5**</p>
+         * <p>    *   **IMAGE_PHP_5_5_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP_5_6**</p>
+         * <p>    *   **IMAGE_PHP_5_6_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP_7_0**</p>
+         * <p>    *   **IMAGE_PHP_7_0_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP_7_1**</p>
+         * <p>    *   **IMAGE_PHP_7_1_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP_7_2**</p>
+         * <p>    *   **IMAGE_PHP_7_2_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP_7_3**</p>
+         * <p>    *   **IMAGE_PHP_7_3_ALPINE**</p>
          * <br>
          * <p>*   If you deploy the application by using a Pythhon package, this parameter is set to **PythonZip** or **Image**.</p>
          */
@@ -602,13 +602,13 @@ public class DescribeJobResponseBody extends TeaModel {
         public String phpConfigLocation;
 
         /**
-         * <p>The script that is run immediately after the container is started. Example: `{"exec":{"command":\["cat","/etc/group"\]}}`</p>
+         * <p>The script that is run immediately after the container is started. Example: `{"exec":{"command":["cat","/etc/group"\\]}}`</p>
          */
         @NameInMap("PostStart")
         public String postStart;
 
         /**
-         * <p>The script that is run before the container is stopped. Example: `{"exec":{"command":\["cat","/etc/group"\]}}`</p>
+         * <p>The script that is run before the container is stopped. Example: `{"exec":{"command":["cat","/etc/group"\\]}}`</p>
          */
         @NameInMap("PreStop")
         public String preStop;

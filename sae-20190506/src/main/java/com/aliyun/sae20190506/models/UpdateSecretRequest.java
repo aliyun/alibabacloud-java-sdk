@@ -4,12 +4,21 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UpdateSecretRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SecretData")
     public UpdateSecretRequestSecretData secretData;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SecretId")
     public Long secretId;
 
@@ -43,6 +52,9 @@ public class UpdateSecretRequest extends TeaModel {
     }
 
     public static class UpdateSecretRequestSecretData extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("SecretData")
         public String secretData;
 

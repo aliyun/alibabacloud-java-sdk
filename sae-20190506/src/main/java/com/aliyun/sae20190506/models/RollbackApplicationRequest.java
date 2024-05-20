@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class RollbackApplicationRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -40,7 +42,7 @@ public class RollbackApplicationRequest extends TeaModel {
      * <p>The minimum number of available instances. Take note of the following rules:</p>
      * <br>
      * <p>*   If you set the value to **0**, business interruptions occur when the application is updated.</p>
-     * <p>*   If you set the value to \*\*-1\*\*, the minimum number of available instances is automatically set to a system-recommended value. The value is the nearest integer to which the calculated result of the following formula is rounded up: Current number of instances × 25%. For example, if five instances are available, the minimum number of available instances is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.</p>
+     * <p>*   If you set the value to \\*\\*-1\\*\\*, the minimum number of available instances is automatically set to a system-recommended value. The value is the nearest integer to which the calculated result of the following formula is rounded up: Current number of instances × 25%. For example, if five instances are available, the minimum number of available instances is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.</p>
      * <br>
      * <p>> Make sure that at least one instance is available during application deployment and rollback to prevent business interruptions.</p>
      */
@@ -78,7 +80,9 @@ public class RollbackApplicationRequest extends TeaModel {
     public String updateStrategy;
 
     /**
-     * <p>The ID of the application version. Call the [ListAppVersions](~~162054~~) operation to obtain the version ID.</p>
+     * <p>The ID of the application version. Call the [ListAppVersions](https://help.aliyun.com/document_detail/162054.html) operation to obtain the version ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VersionId")
     public String versionId;

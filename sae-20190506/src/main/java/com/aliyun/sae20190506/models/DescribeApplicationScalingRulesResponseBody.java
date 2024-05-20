@@ -711,9 +711,9 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         /**
          * <p>The days on which the scheduled auto scaling policy takes effect. Valid values:</p>
          * <br>
-         * <p>*   **\* \* \***: The scheduled auto scaling policy takes effect at a specified time every day.</p>
+         * <p>*   **\\* \\* \\***: The scheduled auto scaling policy takes effect at a specified time every day.</p>
          * <br>
-         * <p>*   **\* \* Fri,Mon**: The scheduled auto scaling policy takes effect at a specified time on one or multiple days of a week. The specified time is in the GMT+8 time zone. Valid values:</p>
+         * <p>*   **\\* \\* Fri,Mon**: The scheduled auto scaling policy takes effect at a specified time on one or multiple days of a week. The specified time is in the GMT+8 time zone. Valid values:</p>
          * <br>
          * <p>    *   **Sun**: Sunday</p>
          * <p>    *   **Mon**: Monday</p>
@@ -723,7 +723,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
          * <p>    *   **Fri**: Friday</p>
          * <p>    *   **Sat**: Saturday</p>
          * <br>
-         * <p>*   **1,2,3,28,31 \* \***: The scheduled auto scaling policy takes effect at a specified time on one or multiple days of a month. Valid values: 1 to 31. If the month does not have a 31st day, the auto scaling policy takes effect on the specified days other than the 31st day.</p>
+         * <p>*   **1,2,3,28,31 \\* \\***: The scheduled auto scaling policy takes effect at a specified time on one or multiple days of a month. Valid values: 1 to 31. If the month does not have a 31st day, the auto scaling policy takes effect on the specified days other than the 31st day.</p>
          */
         @NameInMap("Period")
         public String period;

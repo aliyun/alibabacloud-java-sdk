@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DeleteApplicationScalingRuleRequest extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingRuleName")
     public String scalingRuleName;

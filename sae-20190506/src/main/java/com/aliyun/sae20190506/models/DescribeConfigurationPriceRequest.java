@@ -4,9 +4,15 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeConfigurationPriceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Cpu")
     public Integer cpu;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Memory")
     public Integer memory;
 

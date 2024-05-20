@@ -10,12 +10,21 @@ public class GetChangeOrderMetricRequest extends TeaModel {
     @NameInMap("CpuStrategy")
     public String cpuStrategy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Limit")
     public Long limit;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 

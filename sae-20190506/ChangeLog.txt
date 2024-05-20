@@ -1,3 +1,21 @@
+2024-05-20 Version: 1.22.14
+- Update API BatchStartApplications: add param Version.
+- Update API BatchStopApplications: add param Version.
+- Update API DescribeAppServiceDetail: add param NacosInstanceId.
+- Update API DescribeAppServiceDetail: add param NacosNamespaceId.
+- Update API DescribeAppServiceDetail: update response param.
+- Update API GetArmsTopNMetric: add param AppSource.
+- Update API GetArmsTopNMetric: add param CpuStrategy.
+- Update API GetAvailabilityMetric: add param AppSource.
+- Update API GetAvailabilityMetric: add param CpuStrategy.
+- Update API GetChangeOrderMetric: add param AppSource.
+- Update API GetChangeOrderMetric: add param CpuStrategy.
+- Update API GetScaleAppMetric: add param AppSource.
+- Update API GetScaleAppMetric: add param CpuStrategy.
+- Update API GetWarningEventMetric: add param AppSource.
+- Update API GetWarningEventMetric: add param CpuStrategy.
+
+
 2024-04-12 Version: 1.22.13
 - Update API BatchStartApplications: add param Version.
 - Update API BatchStopApplications: add param Version.

@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationStatusRequest extends TeaModel {
     /**
-     * <p>0099b7be-5f5b-4512-a7fc-56049ef1\*\*\*\*</p>
+     * <p>0099b7be-5f5b-4512-a7fc-56049ef1\\*\\*\\*\\*</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;

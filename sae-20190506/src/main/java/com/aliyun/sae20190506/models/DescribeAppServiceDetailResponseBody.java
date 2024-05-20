@@ -358,6 +358,15 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        @NameInMap("ServicePorts")
+        public java.util.List<Long> servicePorts;
+
+        @NameInMap("ServiceProtocol")
+        public String serviceProtocol;
+
+        @NameInMap("ServiceTags")
+        public java.util.List<String> serviceTags;
+
         /**
          * <p>The type of the service. Valid values:</p>
          * <br>
@@ -430,6 +439,30 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         }
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        public DescribeAppServiceDetailResponseBodyData setServicePorts(java.util.List<Long> servicePorts) {
+            this.servicePorts = servicePorts;
+            return this;
+        }
+        public java.util.List<Long> getServicePorts() {
+            return this.servicePorts;
+        }
+
+        public DescribeAppServiceDetailResponseBodyData setServiceProtocol(String serviceProtocol) {
+            this.serviceProtocol = serviceProtocol;
+            return this;
+        }
+        public String getServiceProtocol() {
+            return this.serviceProtocol;
+        }
+
+        public DescribeAppServiceDetailResponseBodyData setServiceTags(java.util.List<String> serviceTags) {
+            this.serviceTags = serviceTags;
+            return this;
+        }
+        public java.util.List<String> getServiceTags() {
+            return this.serviceTags;
         }
 
         public DescribeAppServiceDetailResponseBodyData setServiceType(String serviceType) {

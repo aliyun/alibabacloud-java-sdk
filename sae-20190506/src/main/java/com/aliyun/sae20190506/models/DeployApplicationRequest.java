@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeployApplicationRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) required for a RAM role to obtain images across accounts. For more information, see [Grant permissions across Alibaba Cloud accounts by using a RAM role](~~223585~~).</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) required for a RAM role to obtain images across accounts. For more information, see [Grant permissions across Alibaba Cloud accounts by using a RAM role](https://help.aliyun.com/document_detail/223585.html).</p>
      */
     @NameInMap("AcrAssumeRoleArn")
     public String acrAssumeRoleArn;
@@ -18,6 +18,8 @@ public class DeployApplicationRequest extends TeaModel {
 
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -79,7 +81,7 @@ public class DeployApplicationRequest extends TeaModel {
     /**
      * <p>The description of the **ConfigMap** instance mounted to the application. Use configurations created on the Configuration Items page to configure containers. The following table describes the parameters that are used in the preceding statements.</p>
      * <br>
-     * <p>*   **congfigMapId**: the ID of the ConfigMap instance. You can call the [ListNamespacedConfigMaps](~~176917~~) operation to obtain the ID.</p>
+     * <p>*   **congfigMapId**: the ID of the ConfigMap instance. You can call the [ListNamespacedConfigMaps](https://help.aliyun.com/document_detail/176917.html) operation to obtain the ID.</p>
      * <p>*   **key**: the key.</p>
      * <br>
      * <p>> You can use `sae-sys-configmap-all` to mount all keys.</p>
@@ -135,7 +137,7 @@ public class DeployApplicationRequest extends TeaModel {
     public Boolean enableGreyTagRoute;
 
     /**
-     * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see [CreateConfigMap](~~176914~~). Take note of the following rules:</p>
+     * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see [CreateConfigMap](https://help.aliyun.com/document_detail/176914.html). Take note of the following rules:</p>
      * <br>
      * <p>*   Customize</p>
      * <br>
@@ -204,7 +206,7 @@ public class DeployApplicationRequest extends TeaModel {
     /**
      * <p>The details of the availability check that was performed on the container. If the container fails this health check multiple times, the system disables and restarts the container. You can use one of the following methods to perform the health check:</p>
      * <br>
-     * <p>*   Example of **exec**: `{"exec":{"command":\["sh","-c","cat/home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}`</p>
+     * <p>*   Example of **exec**: `{"exec":{"command":["sh","-c","cat/home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}`</p>
      * <p>*   Sample code of the **httpGet** method: `{"httpGet":{"path":"/","port":18091,"scheme":"HTTP","isContainKeyWord":true,"keyWord":"SAE"},"initialDelaySeconds":11,"periodSeconds":10,"timeoutSeconds":1}`</p>
      * <p>*   Sample code of the **tcpSocket** method: `{"tcpSocket":{"port":18091},"initialDelaySeconds":11,"periodSeconds":10,"timeoutSeconds":1}`</p>
      * <br>
@@ -253,7 +255,7 @@ public class DeployApplicationRequest extends TeaModel {
      * <p>The minimum number of available instances. Special values:</p>
      * <br>
      * <p>*   If you set the value to **0**, business interruptions occur when the application is updated.</p>
-     * <p>*   If you set the value to \*\*-1\*\*, the minimum number of available instances is automatically set to a system-recommended value. The value is the nearest integer to which the calculated result of the following formula is rounded up: Current number of instances × 25%. For example, if five instances are available, the minimum number of available instances is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.</p>
+     * <p>*   If you set the value to \\*\\*-1\\*\\*, the minimum number of available instances is automatically set to a system-recommended value. The value is the nearest integer to which the calculated result of the following formula is rounded up: Current number of instances × 25%. For example, if five instances are available, the minimum number of available instances is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.</p>
      * <br>
      * <p>> Make sure that at least one instance is available during application deployment and rollback to prevent business interruptions.</p>
      */
@@ -278,7 +280,7 @@ public class DeployApplicationRequest extends TeaModel {
      * <p>*   **mountPath**: the mount path of the container.</p>
      * <p>*   **readOnly**: If you set the value to **false**, the application has the read and write permissions.</p>
      * <p>*   **nasId**: the ID of the NAS file system.</p>
-     * <p>*   **mountDomain**: the domain name of the mount target. For more information, see [DescribeMountTargets](~~62626~~).</p>
+     * <p>*   **mountDomain**: the domain name of the mount target. For more information, see [DescribeMountTargets](https://help.aliyun.com/document_detail/62626.html).</p>
      * <p>*   **nasPath**: the directory in the NAS file system.</p>
      */
     @NameInMap("NasConfigs")
@@ -356,13 +358,13 @@ public class DeployApplicationRequest extends TeaModel {
     public String phpConfigLocation;
 
     /**
-     * <p>The script that is run immediately after the container is started. Example: `{"exec":{"command":\["sh","-c","echo hello"\]}}`</p>
+     * <p>The script that is run immediately after the container is started. Example: `{"exec":{"command":["sh","-c","echo hello"\\]}}`</p>
      */
     @NameInMap("PostStart")
     public String postStart;
 
     /**
-     * <p>The script that is run before the container is stopped. Example: `{"exec":{"command":\["sh","-c","echo hello"\]}}`</p>
+     * <p>The script that is run before the container is stopped. Example: `{"exec":{"command":["sh","-c","echo hello"\\]}}`</p>
      */
     @NameInMap("PreStop")
     public String preStop;
@@ -475,7 +477,7 @@ public class DeployApplicationRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The startup command of the WAR package. For information about how to configure the startup command, see [Configure startup commands](~~96677~~).</p>
+     * <p>The startup command of the WAR package. For information about how to configure the startup command, see [Configure startup commands](https://help.aliyun.com/document_detail/96677.html).</p>
      */
     @NameInMap("WarStartOptions")
     public String warStartOptions;

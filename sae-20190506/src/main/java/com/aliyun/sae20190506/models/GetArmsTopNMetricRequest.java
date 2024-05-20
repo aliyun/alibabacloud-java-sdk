@@ -10,18 +10,33 @@ public class GetArmsTopNMetricRequest extends TeaModel {
     @NameInMap("CpuStrategy")
     public String cpuStrategy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Limit")
     public Long limit;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

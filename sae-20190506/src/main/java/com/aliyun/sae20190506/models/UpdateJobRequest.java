@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateJobRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is used to pull images across accounts. For more information, see [Grant permissions across Alibaba Cloud accounts by using a RAM role](~~223585~~).</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is used to pull images across accounts. For more information, see [Grant permissions across Alibaba Cloud accounts by using a RAM role](https://help.aliyun.com/document_detail/223585.html).</p>
      */
     @NameInMap("AcrAssumeRoleArn")
     public String acrAssumeRoleArn;
@@ -18,6 +18,8 @@ public class UpdateJobRequest extends TeaModel {
 
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -65,7 +67,7 @@ public class UpdateJobRequest extends TeaModel {
     /**
      * <p>The description of the **ConfigMap** instance mounted to the application. Use configurations created on the Configuration Items page to configure containers. The following parameters are involved:</p>
      * <br>
-     * <p>*   **congfigMapId**: the ID of the ConfigMap instance. You can call the [ListNamespacedConfigMaps](~~176917~~) operation to obtain the ID.</p>
+     * <p>*   **congfigMapId**: the ID of the ConfigMap instance. You can call the [ListNamespacedConfigMaps](https://help.aliyun.com/document_detail/176917.html) operation to obtain the ID.</p>
      * <p>*   **key**: the key.</p>
      * <br>
      * <p>> You can use the `sae-sys-configmap-all` key to mount all keys.</p>
@@ -94,7 +96,7 @@ public class UpdateJobRequest extends TeaModel {
     public Boolean enableImageAccl;
 
     /**
-     * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see [CreateConfigMap](~~176914~~). Valid values:</p>
+     * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see [CreateConfigMap](https://help.aliyun.com/document_detail/176914.html). Valid values:</p>
      * <br>
      * <p>*   Configure custom environment variables</p>
      * <br>
@@ -228,13 +230,13 @@ public class UpdateJobRequest extends TeaModel {
     public String phpConfigLocation;
 
     /**
-     * <p>The script to be run after the container is started. Example: `{"exec":{"command":\["sh","-c","echo hello"\]}}`</p>
+     * <p>The script to be run after the container is started. Example: `{"exec":{"command":["sh","-c","echo hello"\\]}}`</p>
      */
     @NameInMap("PostStart")
     public String postStart;
 
     /**
-     * <p>The script that is run before the container is stopped. Example: `{"exec":{"command":\["sh","-c","echo hello"\]}}`</p>
+     * <p>The script that is run before the container is stopped. Example: `{"exec":{"command":["sh","-c","echo hello"\\]}}`</p>
      */
     @NameInMap("PreStop")
     public String preStop;
@@ -336,7 +338,7 @@ public class UpdateJobRequest extends TeaModel {
     public String triggerConfig;
 
     /**
-     * <p>The startup command of the WAR package. For information about how to configure the startup command, see [Configure startup commands](~~96677~~).</p>
+     * <p>The startup command of the WAR package. For information about how to configure the startup command, see [Configure startup commands](https://help.aliyun.com/document_detail/96677.html).</p>
      */
     @NameInMap("WarStartOptions")
     public String warStartOptions;

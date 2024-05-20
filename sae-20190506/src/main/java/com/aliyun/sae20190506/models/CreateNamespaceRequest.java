@@ -32,6 +32,8 @@ public class CreateNamespaceRequest extends TeaModel {
 
     /**
      * <p>cn-beijing:test</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NamespaceName")
     public String namespaceName;

@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class EnableApplicationScalingRuleRequest extends TeaModel {
     /**
      * <p>The application ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The name of the auto scaling policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingRuleName")
     public String scalingRuleName;

@@ -10,12 +10,18 @@ public class CreateIngressRequest extends TeaModel {
     @NameInMap("CertIds")
     public String certIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DefaultRule")
     public String defaultRule;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
@@ -25,12 +31,21 @@ public class CreateIngressRequest extends TeaModel {
     @NameInMap("LoadBalanceType")
     public String loadBalanceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Rules")
     public String rules;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SlbId")
     public String slbId;
 

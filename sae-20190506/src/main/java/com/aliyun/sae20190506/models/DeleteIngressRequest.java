@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteIngressRequest extends TeaModel {
     /**
      * <p>87</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IngressId")
     public Long ingressId;

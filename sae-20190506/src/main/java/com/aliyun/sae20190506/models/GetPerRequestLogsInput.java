@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class GetPerRequestLogsInput extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("endTime")
     public Long endTime;
 
@@ -19,9 +22,15 @@ public class GetPerRequestLogsInput extends TeaModel {
     @NameInMap("isColdStart")
     public Boolean isColdStart;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("requestID")
     public String requestID;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("startTime")
     public Long startTime;
 

@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeChangeOrderRequest extends TeaModel {
     /**
-     * <p>76fa5c0-9ebb-4bb4-b383-1f885447\*\*\*\*</p>
+     * <p>76fa5c0-9ebb-4bb4-b383-1f885447\\*\\*\\*\\*</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;
