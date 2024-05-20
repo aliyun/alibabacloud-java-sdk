@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ModifyRDSToClickhouseDbRequest extends TeaModel {
     /**
      * <p>The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CkPassword")
     public String ckPassword;
 
     /**
      * <p>The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CkUserName")
     public String ckUserName;
@@ -24,6 +28,8 @@ public class ModifyRDSToClickhouseDbRequest extends TeaModel {
 
     /**
      * <p>The ID of the ApsaraDB for ClickHouse cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbClusterId")
     public String dbClusterId;
@@ -42,12 +48,16 @@ public class ModifyRDSToClickhouseDbRequest extends TeaModel {
 
     /**
      * <p>The ID of the ApsaraDB RDS for MySQL instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RdsId")
     public String rdsId;
 
     /**
      * <p>The password of the account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RdsPassword")
     public String rdsPassword;
@@ -60,18 +70,24 @@ public class ModifyRDSToClickhouseDbRequest extends TeaModel {
 
     /**
      * <p>The database in the ApsaraDB RDS for MySQL instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RdsSynDb")
     public String rdsSynDb;
 
     /**
      * <p>The table in the ApsaraDB RDS for MySQL instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RdsSynTables")
     public String rdsSynTables;
 
     /**
      * <p>The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RdsUserName")
     public String rdsUserName;
@@ -93,6 +109,8 @@ public class ModifyRDSToClickhouseDbRequest extends TeaModel {
      * <br>
      * <p>*   **true**</p>
      * <p>*   **false**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SkipUnsupported")
     public Boolean skipUnsupported;

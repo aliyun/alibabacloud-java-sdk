@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpgradeMinorVersionRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -29,6 +31,8 @@ public class UpgradeMinorVersionRequest extends TeaModel {
      * <p>*   **false**: updates the minor engine version of the ApsaraDB for ClickHouse cluster at the specified time or within the specified maintenance window.</p>
      * <br>
      * <p>>  If you want to update the minor engine version of the ApsaraDB for ClickHouse cluster at the specified time, **UpgradeTime** is required.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UpgradeImmediately")
     public Boolean upgradeImmediately;

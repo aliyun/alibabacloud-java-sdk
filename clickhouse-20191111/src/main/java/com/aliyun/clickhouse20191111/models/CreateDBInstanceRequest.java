@@ -4,11 +4,16 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable auto-renewal.</p>
+     * <br>
+     * <p>>  This parameter is valid only if the value of PayType is set to Prepaid.</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
-     * <p>The ID of the backup set. You can call the [DescribeBackups](~~360339~~) operation to query the backup sets.</p>
+     * <p>The ID of the backup set. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/360339.html) operation to query the backup sets.</p>
      * <br>
      * <p>>  If you want to restore the data of an ApsaraDB for ClickHouse cluster, this parameter is required.</p>
      */
@@ -26,6 +31,8 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <br>
      * <p>*   **Basic**: Single-replica Edition</p>
      * <p>*   **HighAvailability**: Double-replica Edition</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterCategory")
     public String DBClusterCategory;
@@ -33,13 +40,25 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The specifications of the cluster.</p>
      * <br>
-     * <p>*   Valid values when the cluster is of Single-replica Edition: -**S4**: 4 CPU cores and 16 GB of memory -**S8**: 8 CPU cores and 32 GB of memory -**S16**: 16 CPU cores and 64 GB of memory</p>
+     * <p>*   Valid values when the cluster is of Single-replica Edition: </p>
      * <br>
+     * <p>    - **S4**: 4 CPU cores and 16 GB of memory </p>
+     * <p>    - **S8**: 8 CPU cores and 32 GB of memory</p>
+     * <p>    -  **S16**: 16 CPU cores and 64 GB of memory</p>
      * <p>    *   **S32**: 32 CPU cores and 128 GB of memory</p>
      * <p>    *   **S64**: 64 CPU cores and 256 GB of memory</p>
      * <p>    *   **S104**: 104 CPU cores and 384 GB of memory</p>
      * <br>
-     * <p>*   Valid values when the cluster is of Double-replica Edition: -**C4**: 4 CPU cores and 16 GB of memory -**C8**: 8 CPU cores and 32 GB of memory -**C16**: 16 CPU cores and 64 GB of memory -**C32**: 32 CPU cores and 128 GB of memory -**C64**: 64 CPU cores and 256 GB of memory -**C104**: 104 CPU cores and 384 GB of memory</p>
+     * <p>*   Valid values when the cluster is of Double-replica Edition: </p>
+     * <br>
+     * <p>    - **C4**: 4 CPU cores and 16 GB of memory </p>
+     * <p>    - **C8**: 8 CPU cores and 32 GB of memory </p>
+     * <p>    - **C16**: 16 CPU cores and 64 GB of memory </p>
+     * <p>    - **C32**: 32 CPU cores and 128 GB of memory </p>
+     * <p>    - **C64**: 64 CPU cores and 256 GB of memory </p>
+     * <p>    - **C104**: 104 CPU cores and 384 GB of memory</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterClass")
     public String DBClusterClass;
@@ -52,6 +71,8 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The network type of the cluster. Only Virtual Private Cloud (VPC) is supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterNetworkType")
     public String DBClusterNetworkType;
@@ -61,6 +82,8 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <br>
      * <p>*   **21.8.10.19**</p>
      * <p>*   **22.8.5.29**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterVersion")
     public String DBClusterVersion;
@@ -70,6 +93,8 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <br>
      * <p>*   Valid values when the cluster is of Single-replica Edition: 1 to 48.</p>
      * <p>*   Valid values when the cluster is of Double-replica Edition: 1 to 24.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBNodeGroupCount")
     public String DBNodeGroupCount;
@@ -78,6 +103,8 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>The storage capacity of a single node. Valid values: 100 to 32000. Unit: GB.</p>
      * <br>
      * <p>>  This value is a multiple of 100.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBNodeStorage")
     public String DBNodeStorage;
@@ -85,10 +112,12 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The storage type of the cluster. Valid values:</p>
      * <br>
-     * <p>*   **CloudESSD_PL1**: The cluster uses an enhanced SSD (ESSD) of performance level (PL) 1.</p>
+     * <p>*   **CloudESSD**: The cluster uses an enhanced SSD (ESSD) of performance level 1 (PL1).</p>
      * <p>*   **CloudESSD_PL2**: The cluster uses an ESSD of PL2.</p>
      * <p>*   **CloudESSD_PL3**: The cluster uses an ESSD of PL3.</p>
      * <p>*   **CloudEfficiency**: The cluster uses an ultra disk.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbNodeStorageType")
     public String dbNodeStorageType;
@@ -122,6 +151,8 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <br>
      * <p>*   **Postpaid**: The cluster uses the pay-as-you-go billing method.</p>
      * <p>*   **Prepaid**: The cluster uses the subscription billing method.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PayType")
     public String payType;
@@ -138,7 +169,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -156,7 +189,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the source cluster. You can call the [DescribeDBClusters](~~170879~~) operation to query backup set IDs.</p>
+     * <p>The ID of the source cluster. You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/170879.html) operation to query backup set IDs.</p>
      * <br>
      * <p>>  If you want to restore the data of an ApsaraDB for ClickHouse cluster, this parameter is required.</p>
      */
@@ -176,37 +209,47 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The VPC ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
     /**
-     * <p>备专有网络交换机</p>
+     * <p>The vSwitch in the secondary zone for the VPC.</p>
      */
     @NameInMap("VSwitchBak")
     public String vSwitchBak;
 
     /**
-     * <p>备专有网络交换机2</p>
+     * <p>The vSwitch in secondary zone 2 for the VPC.</p>
      */
     @NameInMap("VSwitchBak2")
     public String vSwitchBak2;
 
     /**
      * <p>The vSwitch ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>Secondary zone 2.</p>
+     */
     @NameInMap("ZondIdBak2")
     public String zondIdBak2;
 
     /**
-     * <p>The zone ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent zone list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
 
+    /**
+     * <p>The secondary zone.</p>
+     */
     @NameInMap("ZoneIdBak")
     public String zoneIdBak;
 

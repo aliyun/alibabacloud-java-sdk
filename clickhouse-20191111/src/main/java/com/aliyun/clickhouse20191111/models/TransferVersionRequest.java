@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class TransferVersionRequest extends TeaModel {
     /**
      * <p>The ID of the source ApsaraDB for ClickHouse cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -33,7 +35,9 @@ public class TransferVersionRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -46,30 +50,40 @@ public class TransferVersionRequest extends TeaModel {
 
     /**
      * <p>The database account that is used to log on to the database in the source ApsaraDB for ClickHouse cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceAccount")
     public String sourceAccount;
 
     /**
      * <p>The password that corresponds to the database account for logging on to the database in the source ApsaraDB for ClickHouse cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourcePassword")
     public String sourcePassword;
 
     /**
      * <p>The database account that is used to log on to the database in the destination ApsaraDB for ClickHouse cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetAccount")
     public String targetAccount;
 
     /**
      * <p>The ID of the destination ApsaraDB for ClickHouse cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetDbClusterId")
     public String targetDbClusterId;
 
     /**
      * <p>The password that corresponds to the database account for logging on to the database in the destination ApsaraDB for ClickHouse cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetPassword")
     public String targetPassword;

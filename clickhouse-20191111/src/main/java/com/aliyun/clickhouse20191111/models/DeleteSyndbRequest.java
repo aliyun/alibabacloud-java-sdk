@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteSyndbRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbClusterId")
     public String dbClusterId;
@@ -24,6 +26,8 @@ public class DeleteSyndbRequest extends TeaModel {
 
     /**
      * <p>The name of the database in the ApsaraDB RDS for MySQL instance. The database is used for data synchronization.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SynDb")
     public String synDb;

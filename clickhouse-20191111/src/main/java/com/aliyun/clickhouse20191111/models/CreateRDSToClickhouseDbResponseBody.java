@@ -27,7 +27,7 @@ public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
      * <br>
      * <p>*   **1**: Created.</p>
      * <p>*   **0**: Creation failed. The tables in the synchronization task are duplicate. The duplicate tables are returned for the **RepeatedDbs** parameter.</p>
-     * <p>*   **1**: Creation failed. The cause why the creation failed is returned for the **ErrorMsg** parameter.</p>
+     * <p>*   **-1**: Creation failed. The cause why the creation failed is returned for the **ErrorMsg** parameter.</p>
      */
     @NameInMap("Status")
     public Long status;

@@ -9,12 +9,16 @@ public class ModifyDBClusterDescriptionRequest extends TeaModel {
      * <br>
      * <p>*   The cluster name cannot start with http:// or https://.</p>
      * <p>*   The cluster name must be 2 to 256 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterDescription")
     public String DBClusterDescription;
 
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

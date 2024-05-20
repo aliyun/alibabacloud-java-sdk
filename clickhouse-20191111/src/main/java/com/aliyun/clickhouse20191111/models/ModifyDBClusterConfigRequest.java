@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterConfigRequest extends TeaModel {
     /**
-     * <p>The cluster ID. You can call the [DescribeDBClusters](~~170879~~) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+     * <p>The cluster ID. You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/170879.html) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -23,7 +25,7 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
     public String reason;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -38,6 +40,8 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
      * <p>The names of the parameters and the new values that you want to specify for the parameters.</p>
      * <br>
      * <p>>  You can change the value of a single parameter. The values of parameters that are not specified will not be changed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserConfig")
     public String userConfig;

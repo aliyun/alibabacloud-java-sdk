@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterConfigInXMLRequest extends TeaModel {
     /**
-     * <p>The configuration parameters whose settings you want to modify. You can call the [DescribeDBClusterConfigInXML](~~452210~~) operation to query configuration parameters, and modify the settings of the returned configuration parameters.</p>
+     * <p>The configuration parameters whose settings you want to modify. You can call the [DescribeDBClusterConfigInXML](https://help.aliyun.com/document_detail/452210.html) operation to query configuration parameters, and modify the settings of the returned configuration parameters.</p>
      * <br>
      * <p>> You must specify all configuration parameters even when you want to modify the setting of a single parameter. If a configuration parameter is not specified, the original value of this parameter is retained or the modification fails.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
-     * <p>The cluster ID. You can call the [DescribeDBClusters](~~170879~~) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+     * <p>The cluster ID. You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/170879.html) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -25,7 +29,7 @@ public class ModifyDBClusterConfigInXMLRequest extends TeaModel {
     public String reason;
 
     /**
-     * <p>The region ID of the cluster. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the cluster. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

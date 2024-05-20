@@ -12,6 +12,8 @@ public class CreateBackupPolicyRequest extends TeaModel {
 
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -32,6 +34,8 @@ public class CreateBackupPolicyRequest extends TeaModel {
      * <p>*   **Friday**</p>
      * <p>*   **Saturday**</p>
      * <p>*   **Sunday**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
@@ -40,12 +44,14 @@ public class CreateBackupPolicyRequest extends TeaModel {
      * <p>The backup window. Specify the time in the ISO 8601 standard in the HH:mmZ-HH:mmZ format. The time must be in Coordinated Universal Time (UTC).</p>
      * <br>
      * <p>For example, if you set the backup window to 00:00Z-01:00Z, the data of the cluster can be backed up from 08:00 (UTC+8) to 09:00 (UTC+8).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

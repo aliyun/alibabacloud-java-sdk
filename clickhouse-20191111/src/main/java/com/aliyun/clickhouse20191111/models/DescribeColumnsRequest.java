@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeColumnsRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -23,13 +25,17 @@ public class DescribeColumnsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The database name. You can call the [DescribeSchemas](~~350931~~) operation to query database names.</p>
+     * <p>The database name. You can call the [DescribeSchemas](https://help.aliyun.com/document_detail/350931.html) operation to query database names.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SchemaName")
     public String schemaName;
 
     /**
-     * <p>The table name. You can call the [DescribeTables](~~350932~~) operation to query table names.</p>
+     * <p>The table name. You can call the [DescribeTables](https://help.aliyun.com/document_detail/350932.html) operation to query table names.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableName")
     public String tableName;
