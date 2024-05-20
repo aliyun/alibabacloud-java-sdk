@@ -4665,6 +4665,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 新增或编辑脱敏规则
+     *
+     * @param tmpReq DsgDesensPlanAddOrUpdateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DsgDesensPlanAddOrUpdateResponse
+     */
+    public DsgDesensPlanAddOrUpdateResponse dsgDesensPlanAddOrUpdateWithOptions(DsgDesensPlanAddOrUpdateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DsgDesensPlanAddOrUpdateShrinkRequest request = new DsgDesensPlanAddOrUpdateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.desensRules)) {
+            request.desensRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.desensRules, "DesensRules", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.desensRulesShrink)) {
+            query.put("DesensRules", request.desensRulesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DsgDesensPlanAddOrUpdate"),
+            new TeaPair("version", "2020-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DsgDesensPlanAddOrUpdateResponse());
+    }
+
+    /**
+     * @summary 新增或编辑脱敏规则
+     *
+     * @param request DsgDesensPlanAddOrUpdateRequest
+     * @return DsgDesensPlanAddOrUpdateResponse
+     */
+    public DsgDesensPlanAddOrUpdateResponse dsgDesensPlanAddOrUpdate(DsgDesensPlanAddOrUpdateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.dsgDesensPlanAddOrUpdateWithOptions(request, runtime);
+    }
+
+    /**
      * @summary 删除脱敏规则
      *
      * @param tmpReq DsgDesensPlanDeleteRequest
@@ -5081,6 +5129,92 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 查询场景列表
+     *
+     * @param request DsgSceneQuerySceneListByNameRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DsgSceneQuerySceneListByNameResponse
+     */
+    public DsgSceneQuerySceneListByNameResponse dsgSceneQuerySceneListByNameWithOptions(DsgSceneQuerySceneListByNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DsgSceneQuerySceneListByName"),
+            new TeaPair("version", "2020-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DsgSceneQuerySceneListByNameResponse());
+    }
+
+    /**
+     * @summary 查询场景列表
+     *
+     * @param request DsgSceneQuerySceneListByNameRequest
+     * @return DsgSceneQuerySceneListByNameResponse
+     */
+    public DsgSceneQuerySceneListByNameResponse dsgSceneQuerySceneListByName(DsgSceneQuerySceneListByNameRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.dsgSceneQuerySceneListByNameWithOptions(request, runtime);
+    }
+
+    /**
+     * @summary 删除二级场景
+     *
+     * @param tmpReq DsgScenedDeleteSceneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DsgScenedDeleteSceneResponse
+     */
+    public DsgScenedDeleteSceneResponse dsgScenedDeleteSceneWithOptions(DsgScenedDeleteSceneRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DsgScenedDeleteSceneShrinkRequest request = new DsgScenedDeleteSceneShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ids)) {
+            request.idsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ids, "Ids", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.idsShrink)) {
+            query.put("Ids", request.idsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DsgScenedDeleteScene"),
+            new TeaPair("version", "2020-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DsgScenedDeleteSceneResponse());
+    }
+
+    /**
+     * @summary 删除二级场景
+     *
+     * @param request DsgScenedDeleteSceneRequest
+     * @return DsgScenedDeleteSceneResponse
+     */
+    public DsgScenedDeleteSceneResponse dsgScenedDeleteScene(DsgScenedDeleteSceneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.dsgScenedDeleteSceneWithOptions(request, runtime);
+    }
+
+    /**
      * @summary 识别任务停止
      *
      * @param request DsgStopSensIdentifyRequest
@@ -5325,6 +5459,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DsgUserGroupQueryUserListResponse dsgUserGroupQueryUserList() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.dsgUserGroupQueryUserListWithOptions(runtime);
+    }
+
+    /**
+     * @summary 新增或编辑脱敏白名单
+     *
+     * @param tmpReq DsgWhiteListAddOrUpdateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DsgWhiteListAddOrUpdateResponse
+     */
+    public DsgWhiteListAddOrUpdateResponse dsgWhiteListAddOrUpdateWithOptions(DsgWhiteListAddOrUpdateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DsgWhiteListAddOrUpdateShrinkRequest request = new DsgWhiteListAddOrUpdateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.whiteLists)) {
+            request.whiteListsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.whiteLists, "WhiteLists", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.whiteListsShrink)) {
+            query.put("WhiteLists", request.whiteListsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DsgWhiteListAddOrUpdate"),
+            new TeaPair("version", "2020-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DsgWhiteListAddOrUpdateResponse());
+    }
+
+    /**
+     * @summary 新增或编辑脱敏白名单
+     *
+     * @param request DsgWhiteListAddOrUpdateRequest
+     * @return DsgWhiteListAddOrUpdateResponse
+     */
+    public DsgWhiteListAddOrUpdateResponse dsgWhiteListAddOrUpdate(DsgWhiteListAddOrUpdateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.dsgWhiteListAddOrUpdateWithOptions(request, runtime);
+    }
+
+    /**
+     * @summary 删除脱敏白名单
+     *
+     * @param tmpReq DsgWhiteListDeleteListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DsgWhiteListDeleteListResponse
+     */
+    public DsgWhiteListDeleteListResponse dsgWhiteListDeleteListWithOptions(DsgWhiteListDeleteListRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DsgWhiteListDeleteListShrinkRequest request = new DsgWhiteListDeleteListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ids)) {
+            request.idsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ids, "Ids", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.idsShrink)) {
+            query.put("Ids", request.idsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DsgWhiteListDeleteList"),
+            new TeaPair("version", "2020-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DsgWhiteListDeleteListResponse());
+    }
+
+    /**
+     * @summary 删除脱敏白名单
+     *
+     * @param request DsgWhiteListDeleteListRequest
+     * @return DsgWhiteListDeleteListResponse
+     */
+    public DsgWhiteListDeleteListResponse dsgWhiteListDeleteList(DsgWhiteListDeleteListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.dsgWhiteListDeleteListWithOptions(request, runtime);
     }
 
     /**
