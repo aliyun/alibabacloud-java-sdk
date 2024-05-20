@@ -10,6 +10,9 @@ public class ModifyDBClusterAccessWhiteListRequest extends TeaModel {
     @NameInMap("DBClusterIPArrayName")
     public String DBClusterIPArrayName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -28,6 +31,9 @@ public class ModifyDBClusterAccessWhiteListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SecurityIps")
     public String securityIps;
 

@@ -145,6 +145,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("AppointmentRestartTime")
         public String appointmentRestartTime;
 
+        @NameInMap("AvailableUpgradeMajorVersion")
+        public java.util.Map<String, ?> availableUpgradeMajorVersion;
+
         /**
          * <p>The site ID. Valid values:</p>
          * <br>
@@ -547,6 +550,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getAppointmentRestartTime() {
             return this.appointmentRestartTime;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setAvailableUpgradeMajorVersion(java.util.Map<String, ?> availableUpgradeMajorVersion) {
+            this.availableUpgradeMajorVersion = availableUpgradeMajorVersion;
+            return this;
+        }
+        public java.util.Map<String, ?> getAvailableUpgradeMajorVersion() {
+            return this.availableUpgradeMajorVersion;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBCluster setBid(String bid) {

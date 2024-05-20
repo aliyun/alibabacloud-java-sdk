@@ -24,6 +24,8 @@ public class ModifyDBClusterRequest extends TeaModel {
      * <p>    *   **C32**</p>
      * <p>    *   **C64**</p>
      * <p>    *   **C104**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterClass")
     public String DBClusterClass;
@@ -39,6 +41,8 @@ public class ModifyDBClusterRequest extends TeaModel {
      * <br>
      * <p>*   If the cluster is of Single-replica Edition, the value must be an integer that ranges from 1 to 48.</p>
      * <p>*   If the cluster is of Double-replica Edition, the value must be an integer that ranges from 1 to 24.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBNodeGroupCount")
     public String DBNodeGroupCount;
@@ -49,6 +53,8 @@ public class ModifyDBClusterRequest extends TeaModel {
      * <p>Valid values: 100 to 32000.</p>
      * <br>
      * <p>>  This value is a multiple of 100.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBNodeStorage")
     public String DBNodeStorage;
@@ -63,7 +69,9 @@ public class ModifyDBClusterRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

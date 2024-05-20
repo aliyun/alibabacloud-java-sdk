@@ -17,9 +17,11 @@ public class CreateSQLAccountRequest extends TeaModel {
      * <p>The name of the database account.</p>
      * <br>
      * <p>*   The name must be unique in the cluster.</p>
-     * <p>*   The name can contain lowercase letters, digits, or underscores (\_).</p>
+     * <p>*   The name can contain lowercase letters, digits, or underscores (_).</p>
      * <p>*   The name must start with a lowercase letter and end with a lowercase letter or a digit.</p>
      * <p>*   The name must be 2 to 64 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
@@ -28,8 +30,10 @@ public class CreateSQLAccountRequest extends TeaModel {
      * <p>The password of the database account.</p>
      * <br>
      * <p>*   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
-     * <p>*   Special characters include ! @ # $ % ^ & \* ( ) \_ + - =</p>
+     * <p>*   Special characters include ! @ # $ % ^ & \\* ( ) _ + - =</p>
      * <p>*   The password must be 8 to 32 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
@@ -39,12 +43,16 @@ public class CreateSQLAccountRequest extends TeaModel {
      * <br>
      * <p>*   **Super**: privileged account.</p>
      * <p>*   **Normal**: standard account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountType")
     public String accountType;
 
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

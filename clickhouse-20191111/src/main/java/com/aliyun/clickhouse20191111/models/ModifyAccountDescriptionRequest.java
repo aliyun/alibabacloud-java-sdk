@@ -4,12 +4,21 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class ModifyAccountDescriptionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountDescription")
     public String accountDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 

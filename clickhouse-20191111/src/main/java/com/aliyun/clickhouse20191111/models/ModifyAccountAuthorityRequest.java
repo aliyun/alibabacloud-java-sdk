@@ -6,24 +6,32 @@ import com.aliyun.tea.*;
 public class ModifyAccountAuthorityRequest extends TeaModel {
     /**
      * <p>The name of the database account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The databases to which you want to grant permissions. Separate databases with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AllowDatabases")
     public String allowDatabases;
 
     /**
      * <p>The dictionaries to which you want to grant permissions. Separate dictionaries with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AllowDictionaries")
     public String allowDictionaries;
 
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -33,6 +41,8 @@ public class ModifyAccountAuthorityRequest extends TeaModel {
      * <br>
      * <p>*   **true**: grants DDL permissions to the database account.</p>
      * <p>*   **false**: does not grant DDL permissions to the database account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DdlAuthority")
     public Boolean ddlAuthority;
@@ -42,6 +52,8 @@ public class ModifyAccountAuthorityRequest extends TeaModel {
      * <br>
      * <p>*   **all**</p>
      * <p>*   **readonly,modify**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DmlAuthority")
     public String dmlAuthority;
@@ -53,7 +65,7 @@ public class ModifyAccountAuthorityRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -4,9 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class ModifyMinorVersionGreadeTypeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MaintainAutoType")
     public Boolean maintainAutoType;
 

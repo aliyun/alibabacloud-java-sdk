@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsRequest extends TeaModel {
     /**
-     * <p>The cluster ID. You can call the [DescribeDBClusters](~~170879~~) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+     * <p>The cluster ID. You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/170879.html) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -14,6 +16,8 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd hh:mm:ss format. The time must be in UTC.</p>
      * <br>
      * <p>>  The end time must be later than the start time. The specified time range that can be specified must be less than seven days.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -47,7 +51,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Integer queryDurationMs;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -60,6 +64,8 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd hh:mm:ss format. The time must be in Coordinated Universal Time (UTC).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

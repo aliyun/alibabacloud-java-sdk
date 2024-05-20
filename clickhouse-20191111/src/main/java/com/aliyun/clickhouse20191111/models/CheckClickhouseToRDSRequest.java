@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CheckClickhouseToRDSRequest extends TeaModel {
     /**
      * <p>The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CkPassword")
     public String ckPassword;
 
     /**
      * <p>The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CkUserName")
     public String ckUserName;
@@ -24,6 +28,8 @@ public class CheckClickhouseToRDSRequest extends TeaModel {
 
     /**
      * <p>The ID of the ApsaraDB for ClickHouse cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbClusterId")
     public String dbClusterId;
@@ -36,12 +42,16 @@ public class CheckClickhouseToRDSRequest extends TeaModel {
 
     /**
      * <p>The ID of the ApsaraDB RDS for MySQL instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RdsId")
     public String rdsId;
 
     /**
      * <p>The password of the account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RdsPassword")
     public String rdsPassword;
@@ -54,18 +64,24 @@ public class CheckClickhouseToRDSRequest extends TeaModel {
 
     /**
      * <p>The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RdsUserName")
     public String rdsUserName;
 
     /**
      * <p>The ID of the VPC in which the ApsaraDB RDS for MySQL instance is deployed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RdsVpcId")
     public String rdsVpcId;
 
     /**
      * <p>The internal endpoint of the ApsaraDB RDS for MySQL instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RdsVpcUrl")
     public String rdsVpcUrl;

@@ -15,6 +15,8 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnableSLB")
     public Boolean enableSLB;

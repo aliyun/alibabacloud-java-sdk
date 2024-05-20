@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterPerformanceRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -14,6 +16,8 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
      * <br>
      * <p>>  The end time must be later than the start time. The interval cannot be more than 32 days.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -76,6 +80,8 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in Coordinated Universal Time (UTC).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

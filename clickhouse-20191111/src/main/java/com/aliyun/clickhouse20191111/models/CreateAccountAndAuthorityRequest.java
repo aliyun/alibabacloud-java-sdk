@@ -7,24 +7,45 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     @NameInMap("AccountDescription")
     public String accountDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AllowDatabases")
     public String allowDatabases;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AllowDictionaries")
     public String allowDictionaries;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DdlAuthority")
     public Boolean ddlAuthority;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DmlAuthority")
     public String dmlAuthority;
 

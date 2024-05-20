@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeConfigVersionDifferenceRequest extends TeaModel {
     /**
-     * <p>The ID of the change record. You can call the [DescribeConfigHistory](~~452209~~) operation to query the ID of the change record.</p>
+     * <p>The ID of the change record. You can call the [DescribeConfigHistory](https://help.aliyun.com/document_detail/452209.html) operation to query the ID of the change record.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChangeId")
     public String changeId;
 
     /**
-     * <p>The cluster ID. You can call the [DescribeDBClusters](~~170879~~) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+     * <p>The cluster ID. You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/170879.html) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

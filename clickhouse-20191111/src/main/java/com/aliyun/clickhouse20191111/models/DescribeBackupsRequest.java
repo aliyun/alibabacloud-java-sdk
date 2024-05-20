@@ -7,9 +7,15 @@ public class DescribeBackupsRequest extends TeaModel {
     @NameInMap("BackupId")
     public String backupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
@@ -31,6 +37,9 @@ public class DescribeBackupsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CheckScaleOutBalancedRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -33,7 +35,9 @@ public class CheckScaleOutBalancedRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

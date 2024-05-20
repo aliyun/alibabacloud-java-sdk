@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeSynDbsRequest extends TeaModel {
     /**
      * <p>The ID of the ApsaraDB for ClickHouse cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbClusterId")
     public String dbClusterId;

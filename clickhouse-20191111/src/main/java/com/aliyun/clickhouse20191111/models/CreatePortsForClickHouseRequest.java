@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreatePortsForClickHouseRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -18,12 +20,14 @@ public class CreatePortsForClickHouseRequest extends TeaModel {
 
     /**
      * <p>The port type. Set the value to mysql_port.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PortType")
     public String portType;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/170875.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
