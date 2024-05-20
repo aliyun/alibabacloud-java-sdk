@@ -3,10 +3,13 @@ package com.aliyun.chatbot20220408.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateDocRequest extends TeaModel {
+public class CreateDocShrinkRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CategoryId")
     public Long categoryId;
 
@@ -16,17 +19,8 @@ public class UpdateDocRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
-    @NameInMap("DocName")
-    public String docName;
-
     @NameInMap("EndDate")
     public String endDate;
-
-    /**
-     * <p>This parameter is required.</p>
-     */
-    @NameInMap("KnowledgeId")
-    public Long knowledgeId;
 
     @NameInMap("Meta")
     public String meta;
@@ -35,17 +29,23 @@ public class UpdateDocRequest extends TeaModel {
     public String startDate;
 
     @NameInMap("TagIds")
-    public java.util.List<Long> tagIds;
+    public String tagIdsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Title")
     public String title;
 
-    public static UpdateDocRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateDocRequest self = new UpdateDocRequest();
+    @NameInMap("Url")
+    public String url;
+
+    public static CreateDocShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateDocShrinkRequest self = new CreateDocShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDocRequest setAgentKey(String agentKey) {
+    public CreateDocShrinkRequest setAgentKey(String agentKey) {
         this.agentKey = agentKey;
         return this;
     }
@@ -53,7 +53,7 @@ public class UpdateDocRequest extends TeaModel {
         return this.agentKey;
     }
 
-    public UpdateDocRequest setCategoryId(Long categoryId) {
+    public CreateDocShrinkRequest setCategoryId(Long categoryId) {
         this.categoryId = categoryId;
         return this;
     }
@@ -61,7 +61,7 @@ public class UpdateDocRequest extends TeaModel {
         return this.categoryId;
     }
 
-    public UpdateDocRequest setConfig(String config) {
+    public CreateDocShrinkRequest setConfig(String config) {
         this.config = config;
         return this;
     }
@@ -69,7 +69,7 @@ public class UpdateDocRequest extends TeaModel {
         return this.config;
     }
 
-    public UpdateDocRequest setContent(String content) {
+    public CreateDocShrinkRequest setContent(String content) {
         this.content = content;
         return this;
     }
@@ -77,15 +77,7 @@ public class UpdateDocRequest extends TeaModel {
         return this.content;
     }
 
-    public UpdateDocRequest setDocName(String docName) {
-        this.docName = docName;
-        return this;
-    }
-    public String getDocName() {
-        return this.docName;
-    }
-
-    public UpdateDocRequest setEndDate(String endDate) {
+    public CreateDocShrinkRequest setEndDate(String endDate) {
         this.endDate = endDate;
         return this;
     }
@@ -93,15 +85,7 @@ public class UpdateDocRequest extends TeaModel {
         return this.endDate;
     }
 
-    public UpdateDocRequest setKnowledgeId(Long knowledgeId) {
-        this.knowledgeId = knowledgeId;
-        return this;
-    }
-    public Long getKnowledgeId() {
-        return this.knowledgeId;
-    }
-
-    public UpdateDocRequest setMeta(String meta) {
+    public CreateDocShrinkRequest setMeta(String meta) {
         this.meta = meta;
         return this;
     }
@@ -109,7 +93,7 @@ public class UpdateDocRequest extends TeaModel {
         return this.meta;
     }
 
-    public UpdateDocRequest setStartDate(String startDate) {
+    public CreateDocShrinkRequest setStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
@@ -117,20 +101,28 @@ public class UpdateDocRequest extends TeaModel {
         return this.startDate;
     }
 
-    public UpdateDocRequest setTagIds(java.util.List<Long> tagIds) {
-        this.tagIds = tagIds;
+    public CreateDocShrinkRequest setTagIdsShrink(String tagIdsShrink) {
+        this.tagIdsShrink = tagIdsShrink;
         return this;
     }
-    public java.util.List<Long> getTagIds() {
-        return this.tagIds;
+    public String getTagIdsShrink() {
+        return this.tagIdsShrink;
     }
 
-    public UpdateDocRequest setTitle(String title) {
+    public CreateDocShrinkRequest setTitle(String title) {
         this.title = title;
         return this;
     }
     public String getTitle() {
         return this.title;
+    }
+
+    public CreateDocShrinkRequest setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
     }
 
 }

@@ -58,6 +58,9 @@ public class SearchDocRequest extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
+    @NameInMap("TagIds")
+    public java.util.List<Long> tagIds;
+
     public static SearchDocRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchDocRequest self = new SearchDocRequest();
         return TeaModel.build(map, self);
@@ -205,6 +208,14 @@ public class SearchDocRequest extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public SearchDocRequest setTagIds(java.util.List<Long> tagIds) {
+        this.tagIds = tagIds;
+        return this;
+    }
+    public java.util.List<Long> getTagIds() {
+        return this.tagIds;
     }
 
 }

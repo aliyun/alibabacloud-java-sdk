@@ -67,6 +67,69 @@ public class SearchDocResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class SearchDocResponseBodyDocHitsDocTags extends TeaModel {
+        @NameInMap("DefaultTag")
+        public Boolean defaultTag;
+
+        @NameInMap("GroupId")
+        public Long groupId;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("TagId")
+        public Long tagId;
+
+        @NameInMap("TagName")
+        public String tagName;
+
+        public static SearchDocResponseBodyDocHitsDocTags build(java.util.Map<String, ?> map) throws Exception {
+            SearchDocResponseBodyDocHitsDocTags self = new SearchDocResponseBodyDocHitsDocTags();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchDocResponseBodyDocHitsDocTags setDefaultTag(Boolean defaultTag) {
+            this.defaultTag = defaultTag;
+            return this;
+        }
+        public Boolean getDefaultTag() {
+            return this.defaultTag;
+        }
+
+        public SearchDocResponseBodyDocHitsDocTags setGroupId(Long groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public Long getGroupId() {
+            return this.groupId;
+        }
+
+        public SearchDocResponseBodyDocHitsDocTags setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public SearchDocResponseBodyDocHitsDocTags setTagId(Long tagId) {
+            this.tagId = tagId;
+            return this;
+        }
+        public Long getTagId() {
+            return this.tagId;
+        }
+
+        public SearchDocResponseBodyDocHitsDocTags setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
+        }
+
+    }
+
     public static class SearchDocResponseBodyDocHits extends TeaModel {
         @NameInMap("BizCode")
         public String bizCode;
@@ -88,6 +151,9 @@ public class SearchDocResponseBody extends TeaModel {
 
         @NameInMap("DocName")
         public String docName;
+
+        @NameInMap("DocTags")
+        public java.util.List<SearchDocResponseBodyDocHitsDocTags> docTags;
 
         @NameInMap("EffectStatus")
         public Integer effectStatus;
@@ -187,6 +253,14 @@ public class SearchDocResponseBody extends TeaModel {
         }
         public String getDocName() {
             return this.docName;
+        }
+
+        public SearchDocResponseBodyDocHits setDocTags(java.util.List<SearchDocResponseBodyDocHitsDocTags> docTags) {
+            this.docTags = docTags;
+            return this;
+        }
+        public java.util.List<SearchDocResponseBodyDocHitsDocTags> getDocTags() {
+            return this.docTags;
         }
 
         public SearchDocResponseBodyDocHits setEffectStatus(Integer effectStatus) {

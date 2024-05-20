@@ -16,9 +16,6 @@ public class CreateDocRequest extends TeaModel {
     @NameInMap("Config")
     public String config;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("Content")
     public String content;
 
@@ -31,11 +28,17 @@ public class CreateDocRequest extends TeaModel {
     @NameInMap("StartDate")
     public String startDate;
 
+    @NameInMap("TagIds")
+    public java.util.List<Long> tagIds;
+
     /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("Title")
     public String title;
+
+    @NameInMap("Url")
+    public String url;
 
     public static CreateDocRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDocRequest self = new CreateDocRequest();
@@ -98,12 +101,28 @@ public class CreateDocRequest extends TeaModel {
         return this.startDate;
     }
 
+    public CreateDocRequest setTagIds(java.util.List<Long> tagIds) {
+        this.tagIds = tagIds;
+        return this;
+    }
+    public java.util.List<Long> getTagIds() {
+        return this.tagIds;
+    }
+
     public CreateDocRequest setTitle(String title) {
         this.title = title;
         return this;
     }
     public String getTitle() {
         return this.title;
+    }
+
+    public CreateDocRequest setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
     }
 
 }
