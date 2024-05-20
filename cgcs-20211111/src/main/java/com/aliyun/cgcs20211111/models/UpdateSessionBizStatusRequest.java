@@ -7,6 +7,9 @@ public class UpdateSessionBizStatusRequest extends TeaModel {
     @NameInMap("BizStatus")
     public String bizStatus;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PlatformSessionId")
     public String platformSessionId;
 

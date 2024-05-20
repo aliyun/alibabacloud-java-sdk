@@ -4,12 +4,21 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CreateAppSessionBatchShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppInfos")
     public String appInfosShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CustomTaskId")
     public String customTaskId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Timeout")
     public Integer timeout;
 

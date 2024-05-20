@@ -10,6 +10,9 @@ public class CreateAppSessionRequest extends TeaModel {
     @NameInMap("AdapterFileId")
     public String adapterFileId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -19,6 +22,9 @@ public class CreateAppSessionRequest extends TeaModel {
     @NameInMap("ClientIp")
     public String clientIp;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CustomSessionId")
     public String customSessionId;
 

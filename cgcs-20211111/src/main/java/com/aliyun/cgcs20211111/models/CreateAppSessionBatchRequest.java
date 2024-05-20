@@ -4,12 +4,21 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CreateAppSessionBatchRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppInfos")
     public java.util.List<CreateAppSessionBatchRequestAppInfos> appInfos;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CustomTaskId")
     public String customTaskId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Timeout")
     public Integer timeout;
 
@@ -177,6 +186,9 @@ public class CreateAppSessionBatchRequest extends TeaModel {
         @NameInMap("AdapterFileId")
         public String adapterFileId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
@@ -189,6 +201,9 @@ public class CreateAppSessionBatchRequest extends TeaModel {
         @NameInMap("CustomUserId")
         public String customUserId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("CustomerSessionId")
         public String customerSessionId;
 

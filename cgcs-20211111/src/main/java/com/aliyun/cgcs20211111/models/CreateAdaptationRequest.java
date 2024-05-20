@@ -7,6 +7,9 @@ public class CreateAdaptationRequest extends TeaModel {
     @NameInMap("AdaptTarget")
     public CreateAdaptationRequestAdaptTarget adaptTarget;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppVersionId")
     public String appVersionId;
 
