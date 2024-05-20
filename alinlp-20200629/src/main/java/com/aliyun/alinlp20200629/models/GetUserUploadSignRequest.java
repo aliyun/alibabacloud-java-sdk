@@ -4,6 +4,9 @@ package com.aliyun.alinlp20200629.models;
 import com.aliyun.tea.*;
 
 public class GetUserUploadSignRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceCode")
     public String serviceCode;
 

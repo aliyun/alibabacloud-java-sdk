@@ -4,11 +4,20 @@ package com.aliyun.alinlp20200629.models;
 import com.aliyun.tea.*;
 
 public class DeleteServiceDataByConditionsShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Conditions")
     public String conditionsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceId")
     public Long serviceId;
+
+    @NameInMap("X-DashScope-OpenAPISource")
+    public String xDashScopeOpenAPISource;
 
     public static DeleteServiceDataByConditionsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteServiceDataByConditionsShrinkRequest self = new DeleteServiceDataByConditionsShrinkRequest();
@@ -29,6 +38,14 @@ public class DeleteServiceDataByConditionsShrinkRequest extends TeaModel {
     }
     public Long getServiceId() {
         return this.serviceId;
+    }
+
+    public DeleteServiceDataByConditionsShrinkRequest setXDashScopeOpenAPISource(String xDashScopeOpenAPISource) {
+        this.xDashScopeOpenAPISource = xDashScopeOpenAPISource;
+        return this;
+    }
+    public String getXDashScopeOpenAPISource() {
+        return this.xDashScopeOpenAPISource;
     }
 
 }

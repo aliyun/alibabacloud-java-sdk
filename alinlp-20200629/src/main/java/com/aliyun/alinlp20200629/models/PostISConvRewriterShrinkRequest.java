@@ -13,11 +13,11 @@ public class PostISConvRewriterShrinkRequest extends TeaModel {
     @NameInMap("Input")
     public String inputShrink;
 
+    @NameInMap("Model")
+    public String model;
+
     @NameInMap("Parameters")
     public String parametersShrink;
-
-    @NameInMap("Version")
-    public String version;
 
     public static PostISConvRewriterShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         PostISConvRewriterShrinkRequest self = new PostISConvRewriterShrinkRequest();
@@ -48,20 +48,20 @@ public class PostISConvRewriterShrinkRequest extends TeaModel {
         return this.inputShrink;
     }
 
+    public PostISConvRewriterShrinkRequest setModel(String model) {
+        this.model = model;
+        return this;
+    }
+    public String getModel() {
+        return this.model;
+    }
+
     public PostISConvRewriterShrinkRequest setParametersShrink(String parametersShrink) {
         this.parametersShrink = parametersShrink;
         return this;
     }
     public String getParametersShrink() {
         return this.parametersShrink;
-    }
-
-    public PostISConvRewriterShrinkRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

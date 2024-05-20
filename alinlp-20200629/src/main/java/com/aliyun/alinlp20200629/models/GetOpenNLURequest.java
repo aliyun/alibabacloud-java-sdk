@@ -13,6 +13,9 @@ public class GetOpenNLURequest extends TeaModel {
     @NameInMap("Sentence")
     public String sentence;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceCode")
     public String serviceCode;
 

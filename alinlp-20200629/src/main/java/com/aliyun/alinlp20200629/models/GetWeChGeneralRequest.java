@@ -7,12 +7,18 @@ public class GetWeChGeneralRequest extends TeaModel {
     @NameInMap("Operation")
     public String operation;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceCode")
     public String serviceCode;
 
     @NameInMap("Size")
     public String size;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Text")
     public String text;
 

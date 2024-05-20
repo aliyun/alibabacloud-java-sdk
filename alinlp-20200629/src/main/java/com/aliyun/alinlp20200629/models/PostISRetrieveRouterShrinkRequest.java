@@ -13,11 +13,11 @@ public class PostISRetrieveRouterShrinkRequest extends TeaModel {
     @NameInMap("Input")
     public String inputShrink;
 
+    @NameInMap("Model")
+    public String model;
+
     @NameInMap("Parameters")
     public String parametersShrink;
-
-    @NameInMap("Version")
-    public String version;
 
     public static PostISRetrieveRouterShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         PostISRetrieveRouterShrinkRequest self = new PostISRetrieveRouterShrinkRequest();
@@ -48,20 +48,20 @@ public class PostISRetrieveRouterShrinkRequest extends TeaModel {
         return this.inputShrink;
     }
 
+    public PostISRetrieveRouterShrinkRequest setModel(String model) {
+        this.model = model;
+        return this;
+    }
+    public String getModel() {
+        return this.model;
+    }
+
     public PostISRetrieveRouterShrinkRequest setParametersShrink(String parametersShrink) {
         this.parametersShrink = parametersShrink;
         return this;
     }
     public String getParametersShrink() {
         return this.parametersShrink;
-    }
-
-    public PostISRetrieveRouterShrinkRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

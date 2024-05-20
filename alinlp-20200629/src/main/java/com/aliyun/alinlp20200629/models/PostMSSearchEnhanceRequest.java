@@ -46,6 +46,9 @@ public class PostMSSearchEnhanceRequest extends TeaModel {
     @NameInMap("Uq")
     public String uq;
 
+    @NameInMap("X-DashScope-OpenAPISource")
+    public String xDashScopeOpenAPISource;
+
     public static PostMSSearchEnhanceRequest build(java.util.Map<String, ?> map) throws Exception {
         PostMSSearchEnhanceRequest self = new PostMSSearchEnhanceRequest();
         return TeaModel.build(map, self);
@@ -161,6 +164,14 @@ public class PostMSSearchEnhanceRequest extends TeaModel {
     }
     public String getUq() {
         return this.uq;
+    }
+
+    public PostMSSearchEnhanceRequest setXDashScopeOpenAPISource(String xDashScopeOpenAPISource) {
+        this.xDashScopeOpenAPISource = xDashScopeOpenAPISource;
+        return this;
+    }
+    public String getXDashScopeOpenAPISource() {
+        return this.xDashScopeOpenAPISource;
     }
 
 }

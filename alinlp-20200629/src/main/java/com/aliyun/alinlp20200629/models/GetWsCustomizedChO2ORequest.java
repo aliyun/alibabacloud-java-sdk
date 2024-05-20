@@ -7,9 +7,15 @@ public class GetWsCustomizedChO2ORequest extends TeaModel {
     @NameInMap("OutType")
     public String outType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceCode")
     public String serviceCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Text")
     public String text;
 

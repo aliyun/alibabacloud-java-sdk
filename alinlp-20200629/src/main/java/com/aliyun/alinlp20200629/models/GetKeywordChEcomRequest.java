@@ -7,9 +7,15 @@ public class GetKeywordChEcomRequest extends TeaModel {
     @NameInMap("ApiVersion")
     public String apiVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceCode")
     public String serviceCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Text")
     public String text;
 

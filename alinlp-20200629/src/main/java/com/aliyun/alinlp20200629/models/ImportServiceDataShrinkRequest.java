@@ -7,6 +7,9 @@ public class ImportServiceDataShrinkRequest extends TeaModel {
     @NameInMap("Partition")
     public String partitionShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceId")
     public Long serviceId;
 

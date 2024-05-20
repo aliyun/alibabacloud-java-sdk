@@ -10,6 +10,9 @@ public class PostMSServiceDataImportShrinkRequest extends TeaModel {
     @NameInMap("Documents")
     public String documentsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceId")
     public Long serviceId;
 

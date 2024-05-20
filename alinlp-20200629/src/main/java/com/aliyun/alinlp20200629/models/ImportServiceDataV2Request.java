@@ -10,6 +10,9 @@ public class ImportServiceDataV2Request extends TeaModel {
     @NameInMap("Documents")
     public java.util.List<ImportServiceDataV2RequestDocuments> documents;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceId")
     public Long serviceId;
 

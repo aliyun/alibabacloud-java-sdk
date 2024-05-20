@@ -10,6 +10,9 @@ public class PostMSServiceDataImportRequest extends TeaModel {
     @NameInMap("Documents")
     public java.util.List<PostMSServiceDataImportRequestDocuments> documents;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceId")
     public Long serviceId;
 

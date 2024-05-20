@@ -4,9 +4,15 @@ package com.aliyun.alinlp20200629.models;
 import com.aliyun.tea.*;
 
 public class GetDpChGeneralCTBRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceCode")
     public String serviceCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Text")
     public String text;
 

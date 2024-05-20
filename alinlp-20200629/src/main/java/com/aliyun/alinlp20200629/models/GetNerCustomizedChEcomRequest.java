@@ -7,9 +7,15 @@ public class GetNerCustomizedChEcomRequest extends TeaModel {
     @NameInMap("LexerId")
     public String lexerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceCode")
     public String serviceCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Text")
     public String text;
 
