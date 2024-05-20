@@ -7,11 +7,11 @@ public class GetOpenStatusResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -32,20 +32,20 @@ public class GetOpenStatusResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetOpenStatusResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public GetOpenStatusResponseBody setData(java.util.Map<String, ?> data) {
         this.data = data;
         return this;
     }
     public java.util.Map<String, ?> getData() {
         return this.data;
+    }
+
+    public GetOpenStatusResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public GetOpenStatusResponseBody setRequestId(String requestId) {

@@ -4,11 +4,11 @@ package com.aliyun.opt20210730.models;
 import com.aliyun.tea.*;
 
 public class GetOrderUsageResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Data")
     public java.util.List<java.util.Map<String, ?>> data;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -21,20 +21,20 @@ public class GetOrderUsageResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetOrderUsageResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public GetOrderUsageResponseBody setData(java.util.List<java.util.Map<String, ?>> data) {
         this.data = data;
         return this;
     }
     public java.util.List<java.util.Map<String, ?>> getData() {
         return this.data;
+    }
+
+    public GetOrderUsageResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public GetOrderUsageResponseBody setRequestId(String requestId) {
