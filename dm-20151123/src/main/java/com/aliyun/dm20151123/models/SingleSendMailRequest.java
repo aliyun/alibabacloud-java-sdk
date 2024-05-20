@@ -4,9 +4,15 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class SingleSendMailRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AddressType")
     public Integer addressType;
 
@@ -28,6 +34,9 @@ public class SingleSendMailRequest extends TeaModel {
     @NameInMap("ReplyAddressAlias")
     public String replyAddressAlias;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ReplyToAddress")
     public Boolean replyToAddress;
 
@@ -37,6 +46,9 @@ public class SingleSendMailRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Subject")
     public String subject;
 
@@ -46,6 +58,9 @@ public class SingleSendMailRequest extends TeaModel {
     @NameInMap("TextBody")
     public String textBody;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ToAddress")
     public String toAddress;
 

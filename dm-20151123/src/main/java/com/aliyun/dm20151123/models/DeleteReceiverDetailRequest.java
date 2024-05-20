@@ -10,6 +10,9 @@ public class DeleteReceiverDetailRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ReceiverId")
     public String receiverId;
 

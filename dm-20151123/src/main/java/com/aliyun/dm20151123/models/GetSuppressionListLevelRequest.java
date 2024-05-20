@@ -3,15 +3,7 @@ package com.aliyun.dm20151123.models;
 
 import com.aliyun.tea.*;
 
-public class CheckDomainRequest extends TeaModel {
-    /**
-     * <p>The ID of the domain name.</p>
-     * <br>
-     * <p>This parameter is required.</p>
-     */
-    @NameInMap("DomainId")
-    public Integer domainId;
-
+public class GetSuppressionListLevelRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -21,20 +13,12 @@ public class CheckDomainRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static CheckDomainRequest build(java.util.Map<String, ?> map) throws Exception {
-        CheckDomainRequest self = new CheckDomainRequest();
+    public static GetSuppressionListLevelRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetSuppressionListLevelRequest self = new GetSuppressionListLevelRequest();
         return TeaModel.build(map, self);
     }
 
-    public CheckDomainRequest setDomainId(Integer domainId) {
-        this.domainId = domainId;
-        return this;
-    }
-    public Integer getDomainId() {
-        return this.domainId;
-    }
-
-    public CheckDomainRequest setOwnerId(Long ownerId) {
+    public GetSuppressionListLevelRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -42,7 +26,7 @@ public class CheckDomainRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CheckDomainRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public GetSuppressionListLevelRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -50,7 +34,7 @@ public class CheckDomainRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public CheckDomainRequest setResourceOwnerId(Long resourceOwnerId) {
+    public GetSuppressionListLevelRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }

@@ -4,6 +4,9 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class DeleteMailAddressRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MailAddressId")
     public Integer mailAddressId;
 

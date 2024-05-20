@@ -4,9 +4,15 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class BatchSendMailRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AddressType")
     public Integer addressType;
 
@@ -16,6 +22,9 @@ public class BatchSendMailRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ReceiversName")
     public String receiversName;
 
@@ -34,6 +43,9 @@ public class BatchSendMailRequest extends TeaModel {
     @NameInMap("TagName")
     public String tagName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 

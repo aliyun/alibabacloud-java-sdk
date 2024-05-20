@@ -3,14 +3,9 @@ package com.aliyun.dm20151123.models;
 
 import com.aliyun.tea.*;
 
-public class CheckDomainRequest extends TeaModel {
-    /**
-     * <p>The ID of the domain name.</p>
-     * <br>
-     * <p>This parameter is required.</p>
-     */
-    @NameInMap("DomainId")
-    public Integer domainId;
+public class CreateUserSuppressionRequest extends TeaModel {
+    @NameInMap("Address")
+    public String address;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -21,20 +16,20 @@ public class CheckDomainRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static CheckDomainRequest build(java.util.Map<String, ?> map) throws Exception {
-        CheckDomainRequest self = new CheckDomainRequest();
+    public static CreateUserSuppressionRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateUserSuppressionRequest self = new CreateUserSuppressionRequest();
         return TeaModel.build(map, self);
     }
 
-    public CheckDomainRequest setDomainId(Integer domainId) {
-        this.domainId = domainId;
+    public CreateUserSuppressionRequest setAddress(String address) {
+        this.address = address;
         return this;
     }
-    public Integer getDomainId() {
-        return this.domainId;
+    public String getAddress() {
+        return this.address;
     }
 
-    public CheckDomainRequest setOwnerId(Long ownerId) {
+    public CreateUserSuppressionRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -42,7 +37,7 @@ public class CheckDomainRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CheckDomainRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public CreateUserSuppressionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -50,7 +45,7 @@ public class CheckDomainRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public CheckDomainRequest setResourceOwnerId(Long resourceOwnerId) {
+    public CreateUserSuppressionRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }

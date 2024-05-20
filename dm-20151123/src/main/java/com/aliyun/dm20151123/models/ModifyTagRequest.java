@@ -18,12 +18,16 @@ public class ModifyTagRequest extends TeaModel {
 
     /**
      * <p>The ID of the tag.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TagId")
     public Integer tagId;
 
     /**
      * <p>The name of the tag.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TagName")
     public String tagName;

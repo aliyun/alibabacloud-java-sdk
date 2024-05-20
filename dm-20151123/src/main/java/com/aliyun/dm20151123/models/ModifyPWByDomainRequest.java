@@ -4,12 +4,18 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class ModifyPWByDomainRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Password")
     public String password;
 
