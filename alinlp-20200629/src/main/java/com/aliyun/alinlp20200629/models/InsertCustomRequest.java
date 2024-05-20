@@ -4,6 +4,9 @@ package com.aliyun.alinlp20200629.models;
 import com.aliyun.tea.*;
 
 public class InsertCustomRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApiId")
     public Integer apiId;
 
@@ -19,6 +22,9 @@ public class InsertCustomRequest extends TeaModel {
     @NameInMap("RegUrl")
     public String regUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceCode")
     public String serviceCode;
 

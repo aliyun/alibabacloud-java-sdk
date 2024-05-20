@@ -13,6 +13,9 @@ public class PostMSDataProcessingCountShrinkRequest extends TeaModel {
     @NameInMap("ServiceId")
     public Long serviceId;
 
+    @NameInMap("X-DashScope-OpenAPISource")
+    public String xDashScopeOpenAPISource;
+
     public static PostMSDataProcessingCountShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         PostMSDataProcessingCountShrinkRequest self = new PostMSDataProcessingCountShrinkRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class PostMSDataProcessingCountShrinkRequest extends TeaModel {
     }
     public Long getServiceId() {
         return this.serviceId;
+    }
+
+    public PostMSDataProcessingCountShrinkRequest setXDashScopeOpenAPISource(String xDashScopeOpenAPISource) {
+        this.xDashScopeOpenAPISource = xDashScopeOpenAPISource;
+        return this;
+    }
+    public String getXDashScopeOpenAPISource() {
+        return this.xDashScopeOpenAPISource;
     }
 
 }

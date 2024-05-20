@@ -7,9 +7,15 @@ public class GetMedicineChMedicalRequest extends TeaModel {
     @NameInMap("Factory")
     public String factory;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceCode")
     public String serviceCode;
 

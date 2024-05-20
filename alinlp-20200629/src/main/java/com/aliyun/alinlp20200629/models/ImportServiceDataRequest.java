@@ -7,6 +7,9 @@ public class ImportServiceDataRequest extends TeaModel {
     @NameInMap("Partition")
     public java.util.List<java.util.Map<String, String>> partition;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceId")
     public Long serviceId;
 

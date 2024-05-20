@@ -7,6 +7,9 @@ public class GetBrandChEcomRequest extends TeaModel {
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceCode")
     public String serviceCode;
 

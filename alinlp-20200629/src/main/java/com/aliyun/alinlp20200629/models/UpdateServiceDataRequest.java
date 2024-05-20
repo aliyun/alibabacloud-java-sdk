@@ -4,9 +4,15 @@ package com.aliyun.alinlp20200629.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceDataRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Conditions")
     public java.util.Map<String, ?> conditions;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceId")
     public Long serviceId;
 

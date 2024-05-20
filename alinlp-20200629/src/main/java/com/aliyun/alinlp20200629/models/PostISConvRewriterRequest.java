@@ -13,11 +13,11 @@ public class PostISConvRewriterRequest extends TeaModel {
     @NameInMap("Input")
     public java.util.Map<String, ?> input;
 
+    @NameInMap("Model")
+    public String model;
+
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
-
-    @NameInMap("Version")
-    public String version;
 
     public static PostISConvRewriterRequest build(java.util.Map<String, ?> map) throws Exception {
         PostISConvRewriterRequest self = new PostISConvRewriterRequest();
@@ -48,20 +48,20 @@ public class PostISConvRewriterRequest extends TeaModel {
         return this.input;
     }
 
+    public PostISConvRewriterRequest setModel(String model) {
+        this.model = model;
+        return this;
+    }
+    public String getModel() {
+        return this.model;
+    }
+
     public PostISConvRewriterRequest setParameters(java.util.Map<String, ?> parameters) {
         this.parameters = parameters;
         return this;
     }
     public java.util.Map<String, ?> getParameters() {
         return this.parameters;
-    }
-
-    public PostISConvRewriterRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

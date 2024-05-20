@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alinlp20200629</artifactId>
-  <version>2.7.2</version>
+  <version>3.0.0</version>
   <packaging>jar</packaging>
   <name>alinlp20200629</name>
   <description>Alibaba Cloud alinlp (20200629) SDK for Java
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.21</version>
+      <version>0.2.22</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -67,7 +67,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.2</version>
+      <version>0.3.3</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

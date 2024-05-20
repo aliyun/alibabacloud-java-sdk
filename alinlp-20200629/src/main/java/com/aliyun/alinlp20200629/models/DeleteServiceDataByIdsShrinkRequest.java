@@ -4,9 +4,15 @@ package com.aliyun.alinlp20200629.models;
 import com.aliyun.tea.*;
 
 public class DeleteServiceDataByIdsShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Ids")
     public String idsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceId")
     public Long serviceId;
 

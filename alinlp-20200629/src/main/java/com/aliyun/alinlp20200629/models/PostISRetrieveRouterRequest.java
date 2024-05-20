@@ -13,11 +13,11 @@ public class PostISRetrieveRouterRequest extends TeaModel {
     @NameInMap("Input")
     public java.util.Map<String, ?> input;
 
+    @NameInMap("Model")
+    public String model;
+
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
-
-    @NameInMap("Version")
-    public String version;
 
     public static PostISRetrieveRouterRequest build(java.util.Map<String, ?> map) throws Exception {
         PostISRetrieveRouterRequest self = new PostISRetrieveRouterRequest();
@@ -48,20 +48,20 @@ public class PostISRetrieveRouterRequest extends TeaModel {
         return this.input;
     }
 
+    public PostISRetrieveRouterRequest setModel(String model) {
+        this.model = model;
+        return this;
+    }
+    public String getModel() {
+        return this.model;
+    }
+
     public PostISRetrieveRouterRequest setParameters(java.util.Map<String, ?> parameters) {
         this.parameters = parameters;
         return this;
     }
     public java.util.Map<String, ?> getParameters() {
         return this.parameters;
-    }
-
-    public PostISRetrieveRouterRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

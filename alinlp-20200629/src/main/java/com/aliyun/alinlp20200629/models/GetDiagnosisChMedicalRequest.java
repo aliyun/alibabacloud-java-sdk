@@ -4,9 +4,15 @@ package com.aliyun.alinlp20200629.models;
 import com.aliyun.tea.*;
 
 public class GetDiagnosisChMedicalRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceCode")
     public String serviceCode;
 

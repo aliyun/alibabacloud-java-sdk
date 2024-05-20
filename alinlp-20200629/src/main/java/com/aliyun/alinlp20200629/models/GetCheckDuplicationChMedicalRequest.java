@@ -4,12 +4,21 @@ package com.aliyun.alinlp20200629.models;
 import com.aliyun.tea.*;
 
 public class GetCheckDuplicationChMedicalRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OriginQ")
     public String originQ;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OriginT")
     public String originT;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceCode")
     public String serviceCode;
 
