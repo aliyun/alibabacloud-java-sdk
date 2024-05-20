@@ -4,12 +4,18 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class SendTestByTemplateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
     @NameInMap("Birthday")
     public String birthday;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Email")
     public String email;
 
@@ -31,6 +37,9 @@ public class SendTestByTemplateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public Integer templateId;
 

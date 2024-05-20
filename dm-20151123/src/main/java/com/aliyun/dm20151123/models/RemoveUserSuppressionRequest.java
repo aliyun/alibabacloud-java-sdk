@@ -3,7 +3,7 @@ package com.aliyun.dm20151123.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteTagRequest extends TeaModel {
+public class RemoveUserSuppressionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,20 +13,15 @@ public class DeleteTagRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The ID of the tag.</p>
-     * <br>
-     * <p>This parameter is required.</p>
-     */
-    @NameInMap("TagId")
-    public Integer tagId;
+    @NameInMap("SuppressionIds")
+    public String suppressionIds;
 
-    public static DeleteTagRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteTagRequest self = new DeleteTagRequest();
+    public static RemoveUserSuppressionRequest build(java.util.Map<String, ?> map) throws Exception {
+        RemoveUserSuppressionRequest self = new RemoveUserSuppressionRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteTagRequest setOwnerId(Long ownerId) {
+    public RemoveUserSuppressionRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -34,7 +29,7 @@ public class DeleteTagRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DeleteTagRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public RemoveUserSuppressionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -42,7 +37,7 @@ public class DeleteTagRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DeleteTagRequest setResourceOwnerId(Long resourceOwnerId) {
+    public RemoveUserSuppressionRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -50,12 +45,12 @@ public class DeleteTagRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DeleteTagRequest setTagId(Integer tagId) {
-        this.tagId = tagId;
+    public RemoveUserSuppressionRequest setSuppressionIds(String suppressionIds) {
+        this.suppressionIds = suppressionIds;
         return this;
     }
-    public Integer getTagId() {
-        return this.tagId;
+    public String getSuppressionIds() {
+        return this.suppressionIds;
     }
 
 }

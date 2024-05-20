@@ -7,6 +7,9 @@ public class CheckReplyToMailAddressRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MailAddressId")
     public Integer mailAddressId;
 

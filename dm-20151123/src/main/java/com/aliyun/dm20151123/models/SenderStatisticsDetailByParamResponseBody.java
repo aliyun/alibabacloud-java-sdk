@@ -46,6 +46,9 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         @NameInMap("AccountName")
         public String accountName;
 
+        @NameInMap("ErrorClassification")
+        public String errorClassification;
+
         @NameInMap("LastUpdateTime")
         public String lastUpdateTime;
 
@@ -75,6 +78,14 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         }
         public String getAccountName() {
             return this.accountName;
+        }
+
+        public SenderStatisticsDetailByParamResponseBodyDataMailDetail setErrorClassification(String errorClassification) {
+            this.errorClassification = errorClassification;
+            return this;
+        }
+        public String getErrorClassification() {
+            return this.errorClassification;
         }
 
         public SenderStatisticsDetailByParamResponseBodyDataMailDetail setLastUpdateTime(String lastUpdateTime) {

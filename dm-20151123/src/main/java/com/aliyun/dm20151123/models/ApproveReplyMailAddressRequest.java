@@ -13,6 +13,9 @@ public class ApproveReplyMailAddressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Ticket")
     public String ticket;
 
