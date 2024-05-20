@@ -4,9 +4,15 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class ModifyAppVersionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppVersionId")
     public String appVersionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppVersionName")
     public String appVersionName;
 

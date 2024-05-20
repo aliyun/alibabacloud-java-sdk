@@ -4,6 +4,9 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class BatchCheckSessionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Records")
     public java.util.List<BatchCheckSessionRequestRecords> records;
 
@@ -30,6 +33,9 @@ public class BatchCheckSessionRequest extends TeaModel {
         @NameInMap("ReferenceInfo")
         public java.util.Map<String, ?> referenceInfo;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 

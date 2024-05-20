@@ -10,6 +10,9 @@ public class StopAppSessionBatchRequest extends TeaModel {
     @NameInMap("AppVersion")
     public String appVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BatchId")
     public String batchId;
 

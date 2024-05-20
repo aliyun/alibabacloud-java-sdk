@@ -4,6 +4,9 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CreateCapacityReservationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -13,6 +16,9 @@ public class CreateCapacityReservationRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DistrictId")
     public String districtId;
 
@@ -20,9 +26,15 @@ public class CreateCapacityReservationRequest extends TeaModel {
     @Deprecated
     public String expectResourceReadyTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ExpectSessionCapacity")
     public Integer expectSessionCapacity;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 

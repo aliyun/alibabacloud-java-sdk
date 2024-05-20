@@ -4,15 +4,27 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class ReserveInstancesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Amount")
     public Integer amount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DistrictId")
     public String districtId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 

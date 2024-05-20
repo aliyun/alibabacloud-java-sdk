@@ -7,6 +7,9 @@ public class CancelReserveTaskRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

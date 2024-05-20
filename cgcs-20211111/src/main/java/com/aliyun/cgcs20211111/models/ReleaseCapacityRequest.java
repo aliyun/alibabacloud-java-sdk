@@ -4,18 +4,30 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class ReleaseCapacityRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
     @NameInMap("AppVersion")
     public String appVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DistrictId")
     public String districtId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ExpectReleaseSessionCapacity")
     public Integer expectReleaseSessionCapacity;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 

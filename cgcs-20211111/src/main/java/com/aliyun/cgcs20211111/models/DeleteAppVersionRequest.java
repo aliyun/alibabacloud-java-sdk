@@ -4,6 +4,9 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class DeleteAppVersionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppVersionId")
     public String appVersionId;
 

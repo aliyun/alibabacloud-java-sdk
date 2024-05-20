@@ -4,9 +4,15 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CreateAppSessionBatchSyncShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppInfos")
     public String appInfosShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BatchId")
     public String batchId;
 
