@@ -7,6 +7,9 @@ public class GetStatTrendRequest extends TeaModel {
     @NameInMap("appVersion")
     public String appVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dataSourceId")
     public String dataSourceId;
 
@@ -16,6 +19,9 @@ public class GetStatTrendRequest extends TeaModel {
     @NameInMap("startDate")
     public String startDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("type")
     public Integer type;
 
