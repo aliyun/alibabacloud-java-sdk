@@ -29,6 +29,9 @@ public class DetachInstancesRequest extends TeaModel {
     @NameInMap("DetachOption")
     public String detachOption;
 
+    @NameInMap("IgnoreInvalidInstance")
+    public Boolean ignoreInvalidInstance;
+
     /**
      * <p>The IDs of the ECS instances or elastic container instances that you want to remove from the scaling group.</p>
      * <br>
@@ -95,6 +98,14 @@ public class DetachInstancesRequest extends TeaModel {
     }
     public String getDetachOption() {
         return this.detachOption;
+    }
+
+    public DetachInstancesRequest setIgnoreInvalidInstance(Boolean ignoreInvalidInstance) {
+        this.ignoreInvalidInstance = ignoreInvalidInstance;
+        return this;
+    }
+    public Boolean getIgnoreInvalidInstance() {
+        return this.ignoreInvalidInstance;
     }
 
     public DetachInstancesRequest setInstanceIds(java.util.List<String> instanceIds) {

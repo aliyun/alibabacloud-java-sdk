@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
-     * <p>Details of the regions.</p>
+     * <p>The collection of region information.</p>
      */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
@@ -39,7 +39,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
         /**
-         * <p>Indicates whether the region supports scaling groups of the classic network type. Valid values:</p>
+         * <p>Indicates whether the current region supports scaling groups that reside in the classic network. Valid values:</p>
          * <br>
          * <p>*   true</p>
          * <p>*   false</p>
@@ -48,28 +48,28 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public Boolean classicUnavailable;
 
         /**
-         * <p>The name of the region.</p>
+         * <p>The region name.</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>The endpoint of the region.</p>
+         * <p>The region endpoint.</p>
          */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>Indicates whether the region supports scaling groups of the virtual private cloud (VPC) type. Valid values:</p>
+         * <p>Indicates whether the current region supports scaling groups that reside in virtual private clouds (VPCs). Valid values:</p>
          * <br>
-         * <p>*   true: The region does not support scaling groups of the VPC type.</p>
-         * <p>*   false: The region supports scaling groups of the VPC type.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("VpcUnavailable")
         public Boolean vpcUnavailable;
