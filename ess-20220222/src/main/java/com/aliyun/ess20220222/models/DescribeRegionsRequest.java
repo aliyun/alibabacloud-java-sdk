@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>The language that is used as a filter condition to filter returned results. For more information, see [RFC 7231](https://tools.ietf.org/html/rfc7231). Valid values:</p>
+     * <p>The language for the response. For more information, see [RFC7231](https://tools.ietf.org/html/rfc7231). Valid values:</p>
      * <br>
      * <p>*   zh-CN: Chinese</p>
      * <p>*   en-US: English</p>
      * <p>*   ja: Japanese</p>
      * <br>
-     * <p>Default value: en-US</p>
+     * <p>Default value: zh-CN.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;

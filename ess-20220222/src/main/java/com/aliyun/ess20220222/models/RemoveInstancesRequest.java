@@ -21,6 +21,9 @@ public class RemoveInstancesRequest extends TeaModel {
     @NameInMap("DecreaseDesiredCapacity")
     public Boolean decreaseDesiredCapacity;
 
+    @NameInMap("IgnoreInvalidInstance")
+    public Boolean ignoreInvalidInstance;
+
     /**
      * <p>The IDs of the ECS instances that you want to remove from the scaling group.</p>
      * <br>
@@ -97,6 +100,14 @@ public class RemoveInstancesRequest extends TeaModel {
     }
     public Boolean getDecreaseDesiredCapacity() {
         return this.decreaseDesiredCapacity;
+    }
+
+    public RemoveInstancesRequest setIgnoreInvalidInstance(Boolean ignoreInvalidInstance) {
+        this.ignoreInvalidInstance = ignoreInvalidInstance;
+        return this;
+    }
+    public Boolean getIgnoreInvalidInstance() {
+        return this.ignoreInvalidInstance;
     }
 
     public RemoveInstancesRequest setInstanceIds(java.util.List<String> instanceIds) {

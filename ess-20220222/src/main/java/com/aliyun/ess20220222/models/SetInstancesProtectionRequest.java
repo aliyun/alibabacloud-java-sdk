@@ -16,7 +16,7 @@ public class SetInstancesProtectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to put ECS instances into the Protected state. Auto Scaling does not remove ECS instances in the Protected state from scaling groups during scale-in activities.</p>
+     * <p>Specifies whether to protect ECS instances from being stopped or removed from the scaling group during scale-ins. Valid values:</p>
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>

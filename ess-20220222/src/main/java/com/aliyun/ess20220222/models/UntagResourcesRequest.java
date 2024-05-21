@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags from the Auto Scaling resource. This parameter takes effect only if you do not specify the `TagKeys` parameter. Valid values:</p>
+     * <p>Specifies whether to remove all tags from the resource. This parameter takes effect only when you do not specify `TagKeys` in the request parameters. Valid values:</p>
      * <br>
-     * <p>*   true: removes all tags from the Auto Scaling resource.</p>
-     * <p>*   false: does not remove tags from the Auto Scaling resource.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      * <br>
      * <p>Default value: false.</p>
      */
@@ -19,7 +19,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Auto Scaling resource. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID of the resource. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -27,7 +27,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the Auto Scaling resources. You can specify 1 to 50 resource IDs.</p>
+     * <p>The resource IDs.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -38,7 +38,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The type of the resource. Only scaling groups are supported. Set the value to scalinggroup.</p>
+     * <p>The resource type. Set the value to scalinggroup.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -46,7 +46,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The keys of the tags that you want to remove from the Auto Scaling resource. You can specify 1 to 20 tag keys.</p>
+     * <p>The tag keys.</p>
      */
     @NameInMap("TagKeys")
     public java.util.List<String> tagKeys;

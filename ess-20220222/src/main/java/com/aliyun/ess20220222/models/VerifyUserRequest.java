@@ -8,7 +8,9 @@ public class VerifyUserRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where you want to activate Auto Scaling.</p>
+     * <p>The ID of the region where Auto Scaling is required.</p>
+     * <br>
+     * <p>Examples: `cn-hangzhou` and `cn-shanghai`. For more information, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
