@@ -240,6 +240,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("MicroRegistration")
     public String microRegistration;
 
+    @NameInMap("MicroRegistrationConfig")
+    public String microRegistrationConfig;
+
     /**
      * <p>The percentage of the minimum number of available instances. Take note of the following rules:</p>
      * <br>
@@ -405,6 +408,9 @@ public class DeployApplicationRequest extends TeaModel {
 
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
+
+    @NameInMap("ServiceTags")
+    public String serviceTags;
 
     /**
      * <p>The logging configurations of Log Service.</p>
@@ -706,6 +712,14 @@ public class DeployApplicationRequest extends TeaModel {
         return this.microRegistration;
     }
 
+    public DeployApplicationRequest setMicroRegistrationConfig(String microRegistrationConfig) {
+        this.microRegistrationConfig = microRegistrationConfig;
+        return this;
+    }
+    public String getMicroRegistrationConfig() {
+        return this.microRegistrationConfig;
+    }
+
     public DeployApplicationRequest setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {
         this.minReadyInstanceRatio = minReadyInstanceRatio;
         return this;
@@ -896,6 +910,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public DeployApplicationRequest setServiceTags(String serviceTags) {
+        this.serviceTags = serviceTags;
+        return this;
+    }
+    public String getServiceTags() {
+        return this.serviceTags;
     }
 
     public DeployApplicationRequest setSlsConfigs(String slsConfigs) {

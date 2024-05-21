@@ -135,6 +135,220 @@ public class ListApplicationsResponseBody extends TeaModel {
         return this.totalSize;
     }
 
+    public static class ListApplicationsResponseBodyDataApplicationsChildrenTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListApplicationsResponseBodyDataApplicationsChildrenTags build(java.util.Map<String, ?> map) throws Exception {
+            ListApplicationsResponseBodyDataApplicationsChildrenTags self = new ListApplicationsResponseBodyDataApplicationsChildrenTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildrenTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildrenTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListApplicationsResponseBodyDataApplicationsChildren extends TeaModel {
+        @NameInMap("AppDeletingStatus")
+        public Boolean appDeletingStatus;
+
+        @NameInMap("AppDescription")
+        public String appDescription;
+
+        @NameInMap("AppId")
+        public String appId;
+
+        @NameInMap("AppName")
+        public String appName;
+
+        @NameInMap("BaseAppId")
+        public String baseAppId;
+
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        @NameInMap("Instances")
+        public Integer instances;
+
+        @NameInMap("Mem")
+        public Integer mem;
+
+        @NameInMap("MseEnabled")
+        public Boolean mseEnabled;
+
+        @NameInMap("NamespaceId")
+        public String namespaceId;
+
+        @NameInMap("ProgrammingLanguage")
+        public String programmingLanguage;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("RunningInstances")
+        public Integer runningInstances;
+
+        @NameInMap("ScaleRuleEnabled")
+        public Boolean scaleRuleEnabled;
+
+        @NameInMap("ScaleRuleType")
+        public String scaleRuleType;
+
+        @NameInMap("Tags")
+        public java.util.List<ListApplicationsResponseBodyDataApplicationsChildrenTags> tags;
+
+        public static ListApplicationsResponseBodyDataApplicationsChildren build(java.util.Map<String, ?> map) throws Exception {
+            ListApplicationsResponseBodyDataApplicationsChildren self = new ListApplicationsResponseBodyDataApplicationsChildren();
+            return TeaModel.build(map, self);
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setAppDeletingStatus(Boolean appDeletingStatus) {
+            this.appDeletingStatus = appDeletingStatus;
+            return this;
+        }
+        public Boolean getAppDeletingStatus() {
+            return this.appDeletingStatus;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setAppDescription(String appDescription) {
+            this.appDescription = appDescription;
+            return this;
+        }
+        public String getAppDescription() {
+            return this.appDescription;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setBaseAppId(String baseAppId) {
+            this.baseAppId = baseAppId;
+            return this;
+        }
+        public String getBaseAppId() {
+            return this.baseAppId;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setInstances(Integer instances) {
+            this.instances = instances;
+            return this;
+        }
+        public Integer getInstances() {
+            return this.instances;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setMem(Integer mem) {
+            this.mem = mem;
+            return this;
+        }
+        public Integer getMem() {
+            return this.mem;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setMseEnabled(Boolean mseEnabled) {
+            this.mseEnabled = mseEnabled;
+            return this;
+        }
+        public Boolean getMseEnabled() {
+            return this.mseEnabled;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setNamespaceId(String namespaceId) {
+            this.namespaceId = namespaceId;
+            return this;
+        }
+        public String getNamespaceId() {
+            return this.namespaceId;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setProgrammingLanguage(String programmingLanguage) {
+            this.programmingLanguage = programmingLanguage;
+            return this;
+        }
+        public String getProgrammingLanguage() {
+            return this.programmingLanguage;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setRunningInstances(Integer runningInstances) {
+            this.runningInstances = runningInstances;
+            return this;
+        }
+        public Integer getRunningInstances() {
+            return this.runningInstances;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setScaleRuleEnabled(Boolean scaleRuleEnabled) {
+            this.scaleRuleEnabled = scaleRuleEnabled;
+            return this;
+        }
+        public Boolean getScaleRuleEnabled() {
+            return this.scaleRuleEnabled;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setScaleRuleType(String scaleRuleType) {
+            this.scaleRuleType = scaleRuleType;
+            return this;
+        }
+        public String getScaleRuleType() {
+            return this.scaleRuleType;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setTags(java.util.List<ListApplicationsResponseBodyDataApplicationsChildrenTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListApplicationsResponseBodyDataApplicationsChildrenTags> getTags() {
+            return this.tags;
+        }
+
+    }
+
     public static class ListApplicationsResponseBodyDataApplicationsTags extends TeaModel {
         /**
          * <p>appName</p>
@@ -196,6 +410,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("BaseAppId")
+        public String baseAppId;
+
+        @NameInMap("Children")
+        public java.util.List<ListApplicationsResponseBodyDataApplicationsChildren> children;
+
         @NameInMap("Cpu")
         public Integer cpu;
 
@@ -208,11 +428,17 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("Mem")
         public Integer mem;
 
+        @NameInMap("MseEnabled")
+        public Boolean mseEnabled;
+
         /**
          * <p>demo-app</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
+
+        @NameInMap("ProgrammingLanguage")
+        public String programmingLanguage;
 
         /**
          * <p>The number of running instances.</p>
@@ -269,6 +495,22 @@ public class ListApplicationsResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public ListApplicationsResponseBodyDataApplications setBaseAppId(String baseAppId) {
+            this.baseAppId = baseAppId;
+            return this;
+        }
+        public String getBaseAppId() {
+            return this.baseAppId;
+        }
+
+        public ListApplicationsResponseBodyDataApplications setChildren(java.util.List<ListApplicationsResponseBodyDataApplicationsChildren> children) {
+            this.children = children;
+            return this;
+        }
+        public java.util.List<ListApplicationsResponseBodyDataApplicationsChildren> getChildren() {
+            return this.children;
+        }
+
         public ListApplicationsResponseBodyDataApplications setCpu(Integer cpu) {
             this.cpu = cpu;
             return this;
@@ -293,12 +535,28 @@ public class ListApplicationsResponseBody extends TeaModel {
             return this.mem;
         }
 
+        public ListApplicationsResponseBodyDataApplications setMseEnabled(Boolean mseEnabled) {
+            this.mseEnabled = mseEnabled;
+            return this;
+        }
+        public Boolean getMseEnabled() {
+            return this.mseEnabled;
+        }
+
         public ListApplicationsResponseBodyDataApplications setNamespaceId(String namespaceId) {
             this.namespaceId = namespaceId;
             return this;
         }
         public String getNamespaceId() {
             return this.namespaceId;
+        }
+
+        public ListApplicationsResponseBodyDataApplications setProgrammingLanguage(String programmingLanguage) {
+            this.programmingLanguage = programmingLanguage;
+            return this;
+        }
+        public String getProgrammingLanguage() {
+            return this.programmingLanguage;
         }
 
         public ListApplicationsResponseBodyDataApplications setRegionId(String regionId) {

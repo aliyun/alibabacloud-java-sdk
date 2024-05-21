@@ -45,6 +45,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("AutoConfig")
     public Boolean autoConfig;
 
+    @NameInMap("BaseAppId")
+    public String baseAppId;
+
     /**
      * <p>sleep</p>
      */
@@ -140,6 +143,9 @@ public class CreateApplicationRequest extends TeaModel {
 
     @NameInMap("MicroRegistration")
     public String microRegistration;
+
+    @NameInMap("MicroRegistrationConfig")
+    public String microRegistrationConfig;
 
     /**
      * <p>[{mountPath: "/tmp", nasPath: "/"}]</p>
@@ -274,6 +280,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    @NameInMap("ServiceTags")
+    public String serviceTags;
+
     /**
      * <p>[{"logDir":"","logType":"stdout"},{"logDir":"/tmp/a.log"}]</p>
      */
@@ -381,6 +390,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public Boolean getAutoConfig() {
         return this.autoConfig;
+    }
+
+    public CreateApplicationRequest setBaseAppId(String baseAppId) {
+        this.baseAppId = baseAppId;
+        return this;
+    }
+    public String getBaseAppId() {
+        return this.baseAppId;
     }
 
     public CreateApplicationRequest setCommand(String command) {
@@ -525,6 +542,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getMicroRegistration() {
         return this.microRegistration;
+    }
+
+    public CreateApplicationRequest setMicroRegistrationConfig(String microRegistrationConfig) {
+        this.microRegistrationConfig = microRegistrationConfig;
+        return this;
+    }
+    public String getMicroRegistrationConfig() {
+        return this.microRegistrationConfig;
     }
 
     public CreateApplicationRequest setMountDesc(String mountDesc) {
@@ -725,6 +750,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public CreateApplicationRequest setServiceTags(String serviceTags) {
+        this.serviceTags = serviceTags;
+        return this;
+    }
+    public String getServiceTags() {
+        return this.serviceTags;
     }
 
     public CreateApplicationRequest setSlsConfigs(String slsConfigs) {
