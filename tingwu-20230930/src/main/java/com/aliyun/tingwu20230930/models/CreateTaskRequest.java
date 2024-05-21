@@ -406,6 +406,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("DiarizationEnabled")
         public Boolean diarizationEnabled;
 
+        @NameInMap("Model")
+        public String model;
+
         @NameInMap("OutputLevel")
         public Integer outputLevel;
 
@@ -447,6 +450,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public Boolean getDiarizationEnabled() {
             return this.diarizationEnabled;
+        }
+
+        public CreateTaskRequestParametersTranscription setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
         }
 
         public CreateTaskRequestParametersTranscription setOutputLevel(Integer outputLevel) {
