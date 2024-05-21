@@ -31,16 +31,15 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The health state of the instance. Valid values:</p>
+     * <p>The health status of the instance. Valid values:</p>
      * <br>
-     * <p>*   Impaired: The instance is impaired.</p>
-     * <p>*   Warning: The performance of the instance is degraded.</p>
-     * <p>*   Maintaining: The instance is being maintained.</p>
-     * <p>*   Initializing: The instance is being initialized.</p>
-     * <p>*   InsufficientData: The state cannot be determined due to insufficient data.</p>
-     * <p>*   NotApplicable: The state is not applicable.</p>
+     * <p>*   OK</p>
+     * <p>*   Impaired</p>
+     * <p>*   Initializing</p>
+     * <p>*   InsufficientData</p>
+     * <p>*   NotApplicable</p>
      * <br>
-     * <p>All these values are case-sensitive.</p>
+     * <p>All the values are case-sensitive.</p>
      */
     @NameInMap("HealthStatus")
     public String healthStatus;
@@ -94,11 +93,11 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The lifecycle state of the instance. Valid values:</p>
+     * <p>The lifecycle status of the instance. Valid values:</p>
      * <br>
-     * <p>*   Starting: The instance is being started.</p>
-     * <p>*   Running: The instance is running.</p>
-     * <p>*   Stopped: The instance is stopped.</p>
+     * <p>*   Starting</p>
+     * <p>*   Running</p>
+     * <p>*   Stopped</p>
      */
     @NameInMap("Status")
     public String status;

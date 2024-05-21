@@ -27,8 +27,8 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>The performance mode of the burstable instance. Valid values:</p>
      * <br>
-     * <p>*   Standard: standard mode. For more information, see the "Standard mode" section in [Overview](~~59977#section-svb-w9d-dju~~).</p>
-     * <p>*   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in [Overview](~~59977#section-svb-w9d-dju~~).</p>
+     * <p>*   Standard: the standard mode. For more information, see the [Performance modes](~~59977#section-svb-w9d-dju~~) section of the "Overview of burstable instances" topic.</p>
+     * <p>*   Unlimited: the unlimited mode. For more information, see the [Performance modes](~~59977#section-svb-w9d-dju~~) section of the "Overview of burstable instances" topic.</p>
      */
     @NameInMap("CreditSpecification")
     public String creditSpecification;
@@ -46,19 +46,18 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>Details about the elastic IP address (EIP) associated with the instance.</p>
+     * <p>The elastic IP address (EIP) associated with the instance.</p>
      */
     @NameInMap("EipAddress")
     public DescribeInstanceAttributeResponseBodyEipAddress eipAddress;
 
     /**
-     * <p>ECS实例是否开启了Jumbo frame特性。 可能值：</p>
+     * <p>Indicates whether the Jumbo Frame feature is enabled for the instance. Valid values:</p>
      * <br>
-     * <p>- true：开启。</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      * <br>
-     * <p>- false：不开启。</p>
-     * <br>
-     * <p>更多信息，请参见[ECS实例MTU](https://help.aliyun.com/document_detail/200512.html)。</p>
+     * <p>For more information, see [MTUs](https://help.aliyun.com/document_detail/200512.html).</p>
      */
     @NameInMap("EnableJumboFrame")
     public Boolean enableJumboFrame;
@@ -124,12 +123,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The metering method for network usage. Valid values:</p>
+     * <p>The billing method for network usage. Valid values:</p>
      * <br>
      * <p>*   PayByBandwidth</p>
      * <p>*   PayByTraffic</p>
      * <br>
-     * <p>> When the **pay-by-traffic** method is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** metering method for network usage.</p>
+     * <p>>  When the **pay-by-traffic** billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
@@ -561,12 +560,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public Integer bandwidth;
 
         /**
-         * <p>The metering method for network usage. Valid values:</p>
+         * <p>The billing method for network usage. Valid values:</p>
          * <br>
          * <p>*   PayByBandwidth</p>
          * <p>*   PayByTraffic</p>
          * <br>
-         * <p>> When the **pay-by-traffic** method is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** metering method for network usage.</p>
+         * <p>>  When the **pay-by-traffic** billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
@@ -639,11 +638,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The reason why the instance was locked. Valid values:</p>
          * <br>
-         * <p>*   financial: The dedicated host was locked due to overdue payments.</p>
+         * <p>*   financial: The instance was locked due to overdue payments.</p>
          * <p>*   security: The instance was locked due to security reasons.</p>
          * <p>*   recycling: The preemptible instance was locked and pending release.</p>
          * <p>*   dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</p>
-         * <p>*   refunded: The instance was locked because a refund was made for the instance.</p>
+         * <p>*   refunded: The instance was locked because a refund is made for the instance.</p>
          */
         @NameInMap("LockReason")
         public String lockReason;

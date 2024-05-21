@@ -8,22 +8,29 @@ public class DescribeInstancesRequest extends TeaModel {
     public java.util.List<DescribeInstancesRequestFilter> filter;
 
     /**
-     * <p>The value of attribute N. Valid values of N: 1 to 20.</p>
+     * <p>The additional attributes. Valid values of N: 1 to 20. Valid values:</p>
+     * <br>
+     * <p>*   META_OPTIONS: instance metadata</p>
+     * <p>*   DDH_CLUSTER: dedicated host cluster</p>
+     * <p>*   NETWORK_PRIMARY_ENI_IP: secondary IP address associated with the primary ENI</p>
+     * <p>*   CPU_OPTIONS_TOPOLOGY_TYPE: CPU topology type of the instance</p>
      */
     @NameInMap("AdditionalAttributes")
     public java.util.List<String> additionalAttributes;
 
     /**
-     * <p>>  This parameter is currently in invitational preview and unavailable for general users.</p>
+     * <p>>  This parameter is in invitational preview and is not publicly available.</p>
      */
     @NameInMap("DeviceAvailable")
     public Boolean deviceAvailable;
 
     /**
-     * <p>Specifies whether to check the validity of the request without actually making the request. Default value: false. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   true: The validity of the request is checked but the request is not made. Check items include whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</p>
-     * <p>*   false: The validity of the request is checked. If the check succeeds, a 2XX HTTP status code is returned and the request is made.</p>
+     * <p>*   true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</p>
+     * <p>*   false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <br>
+     * <p>Default value: false.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -35,7 +42,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String eipAddresses;
 
     /**
-     * <p>The ID of the High Performance Computing (HPC) cluster to which the instance belongs.</p>
+     * <p>The ID of the high-performance computing (HPC) cluster to which the instance belongs.</p>
      */
     @NameInMap("HpcClusterId")
     public String hpcClusterId;
@@ -48,13 +55,13 @@ public class DescribeInstancesRequest extends TeaModel {
      * <br>
      * <p>Default value: enabled.</p>
      * <br>
-     * <p>>  For more information about instance metadata, see [Overview of ECS instance metadata](https://help.aliyun.com/document_detail/49122.html).</p>
+     * <p>>  For information about instance metadata, see [Access instance metadata](https://help.aliyun.com/document_detail/49122.html).</p>
      */
     @NameInMap("HttpEndpoint")
     public String httpEndpoint;
 
     /**
-     * <p>>  This parameter is currently in invitational preview and unavailable for general users.</p>
+     * <p>>  This parameter is in invitational preview and is not publicly available.</p>
      */
     @NameInMap("HttpPutResponseHopLimit")
     public Integer httpPutResponseHopLimit;
@@ -67,7 +74,7 @@ public class DescribeInstancesRequest extends TeaModel {
      * <br>
      * <p>Default value: optional.</p>
      * <br>
-     * <p>>  For more information about modes of accessing instance metadata, see [Access mode of instance metadata](https://help.aliyun.com/document_detail/150575.html).</p>
+     * <p>>  For information about modes of accessing instance metadata, see [Access instance metadata](https://help.aliyun.com/document_detail/150575.html).</p>
      */
     @NameInMap("HttpTokens")
     public String httpTokens;
@@ -94,13 +101,13 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The IDs of instances. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).</p>
+     * <p>The ID of the instance. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     /**
-     * <p>The name of the instance. Fuzzy search with the asterisk (\\*) wildcard characters is supported.</p>
+     * <p>The name of the instance. Fuzzy search with asterisk (\\*) wildcard characters is supported.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
@@ -108,8 +115,8 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <br>
-     * <p>*   classic: classic network</p>
-     * <p>*   vpc: VPC</p>
+     * <p>*   classic</p>
+     * <p>*   vpc</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
@@ -129,22 +136,25 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The billing method for network usage. Valid values:</p>
      * <br>
-     * <p>*   PayByBandwidth: pay-by-bandwidth</p>
-     * <p>*   PayByTraffic: pay-by-traffic</p>
+     * <p>*   PayByBandwidth</p>
+     * <p>*   PayByTraffic</p>
      * <br>
-     * <p>>  When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidth values are used as upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instances, use the **pay-by-bandwidth** billing method for network usage.</p>
+     * <p>>  When the **pay-by-traffic** billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
-     * <p>Specifies whether the instance is I/O optimized.</p>
+     * <p>Specifies whether the instance is an I/O optimized instance. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("IoOptimized")
     public Boolean ioOptimized;
 
     /**
-     * <p>IPv6 address N of the elastic network interface (ENI). You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</p>
+     * <p>The IPv6 addresses assigned to elastic network interfaces (ENIs).</p>
      */
     @NameInMap("Ipv6Address")
     public java.util.List<String> ipv6Address;
@@ -168,24 +178,24 @@ public class DescribeInstancesRequest extends TeaModel {
     public String lockReason;
 
     /**
-     * <p>The maximum number of entries to return on each page. Maximum value: 100.</p>
+     * <p>The maximum number of entries per page. Valid values: 1 to 100.</p>
      * <br>
      * <p>Default value:</p>
      * <br>
-     * <p>*   If this parameter is not specified or is set to a value smaller than 10, the default value is 10.</p>
-     * <p>*   If this parameter is set to a value greater than 100, the default value is 100.</p>
+     * <p>*   If you do not specify this parameter or if you set this parameter to a value that is smaller than 10, the default value is 10.</p>
+     * <p>*   If you set this parameter to a value that is greater than 100, the default value is 100.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>>  This parameter is currently in invitational preview and unavailable for general users.</p>
+     * <p>>  This parameter is in invitational preview and is not publicly available.</p>
      */
     @NameInMap("NeedSaleCycle")
     public Boolean needSaleCycle;
 
     /**
-     * <p>The query token. Set the value to the `NextToken` value returned in the last call to the DescribeInstances operation.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -197,7 +207,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <br>
      * <p>Pages start from page 1.</p>
      * <br>
@@ -207,9 +217,9 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
-     * <p>Maximum value: 100.</p>
+     * <p>Valid values: 1 to 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -217,7 +227,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The private IP addresses of instances located in VPCs. This parameter is valid when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
+     * <p>The private IP addresses of instances located in a VPC. This parameter is valid when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
      */
     @NameInMap("PrivateIpAddresses")
     public String privateIpAddresses;
@@ -229,7 +239,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String publicIpAddresses;
 
     /**
-     * <p>The Remote Direct Memory Access (RDMA) IP address of the HPC instance.</p>
+     * <p>The remote direct memory access (RDMA) IP addresses of the instance in the HPC cluster.</p>
      */
     @NameInMap("RdmaIpAddresses")
     public String rdmaIpAddresses;
@@ -263,7 +273,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The state of the instance. Valid values:</p>
+     * <p>The status of the instance. Valid values:</p>
      * <br>
      * <p>*   Pending: The instance is being created.</p>
      * <p>*   Running: The instance is running.</p>
@@ -275,19 +285,19 @@ public class DescribeInstancesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the instance.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeInstancesRequestTag> tag;
 
     /**
-     * <p>The ID of the vSwitch to which the instance is connected.</p>
+     * <p>The ID of the vSwitch.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the instance belongs.</p>
+     * <p>The ID of the virtual private cloud (VPC).</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -641,13 +651,13 @@ public class DescribeInstancesRequest extends TeaModel {
 
     public static class DescribeInstancesRequestFilter extends TeaModel {
         /**
-         * <p>The key of filter 1 used to query resources. Set the value to `CreationStartTime`. You can specify a time by setting both `Filter.1.Key` and `Filter.1.Value` to query resources that were created after the time.</p>
+         * <p>The key of filter 1 used to query resources. Set the value to `CreationStartTime`. You can specify a time by setting both `Filter.1.Key` and `Filter.1.Value` to query resources that were created after the specified time.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of filter 1 used to query resources. Set the value to a time. If you specify this parameter, you must also specify the `Filter.1.Key` parameter. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.</p>
+         * <p>The value of filter 1 used to query resources. Set the value to a time. If you specify this parameter, you must also specify `Filter.1.Key`. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -679,7 +689,7 @@ public class DescribeInstancesRequest extends TeaModel {
         /**
          * <p>The key of tag N of the instance. Valid values of N: 1 to 20.</p>
          * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.</p>
+         * <p>If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.</p>
          */
         @NameInMap("Key")
         public String key;

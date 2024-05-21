@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeImagePipelinesRequest extends TeaModel {
     /**
-     * <p>The ID of image template N. Valid values of N: 1 to 20.</p>
+     * <p>The IDs of image templates. Valid values of N: 1 to 20.</p>
      */
     @NameInMap("ImagePipelineId")
     public java.util.List<String> imagePipelineId;
 
     /**
-     * <p>The maximum number of entries to return on each page. Valid values: 1 to 500.</p>
+     * <p>The number of entries per page. Valid values: 1 to 500.</p>
      * <br>
      * <p>Default value: 50.</p>
      */
@@ -25,7 +25,7 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The query token. Set the value to the `NextToken` value returned in the last call to the DescribeImagePipelines operation. Leave this parameter empty the first time you call this operation.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -59,7 +59,7 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The key of tag N of the image template. Valid values of N: 1 to 20.</p>
+     * <p>The tags of the image template.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeImagePipelinesRequestTag> tag;
@@ -159,13 +159,13 @@ public class DescribeImagePipelinesRequest extends TeaModel {
 
     public static class DescribeImagePipelinesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the image template. Valid values of N: 1 to 20.</p>
+         * <p>The key of tag N. Valid values of N: 1 to 20.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the image template. Valid values of N: 1 to 20.</p>
+         * <p>The value of tag N. Valid values of N: 1 to 20.</p>
          */
         @NameInMap("Value")
         public String value;

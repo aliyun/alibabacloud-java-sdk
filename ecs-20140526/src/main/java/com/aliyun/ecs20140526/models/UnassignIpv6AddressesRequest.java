@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UnassignIpv6AddressesRequest extends TeaModel {
     /**
-     * <p>The IPv6 addresses to unassign. Valid values of N: 1 to 10.</p>
+     * <p>IPv6 address N to unassign. Valid values of N: 1 to 10.</p>
      */
     @NameInMap("Ipv6Address")
     public java.util.List<String> ipv6Address;
 
     /**
-     * <p>The IPv6 prefixes to unassign. Valid values of N: 1 to 10.</p>
+     * <p>IPv6 prefix N to unassign. Valid values of N: 1 to 10.</p>
      */
     @NameInMap("Ipv6Prefix")
     public java.util.List<String> ipv6Prefix;

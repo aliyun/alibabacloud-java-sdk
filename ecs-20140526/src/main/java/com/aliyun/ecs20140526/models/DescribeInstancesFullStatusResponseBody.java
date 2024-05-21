@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     /**
-     * <p>The full status information of the instances.</p>
+     * <p>The queried instances.</p>
+     * <br>
+     * <p>>  If no instances exist, this parameter is empty.</p>
      */
     @NameInMap("InstanceFullStatusSet")
     public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet instanceFullStatusSet;
@@ -189,43 +191,43 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk extends TeaModel {
         /**
-         * <p>The time when the cloud disk or local disk was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the disk was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The category of the cloud disk or local disk. Valid values:</p>
+         * <p>The category of the disk. Valid values:</p>
          * <br>
-         * <p>*   cloud: basic disk.</p>
-         * <p>*   cloud_efficiency: ultra disk.</p>
-         * <p>*   cloud_ssd: standard SSD.</p>
-         * <p>*   cloud_essd: enhanced SSD (ESSD).</p>
-         * <p>*   local_ssd_pro: I/O-intensive local disk.</p>
-         * <p>*   local_hdd_pro: throughput-intensive local disk.</p>
-         * <p>*   ephemeral: retired local disk.</p>
-         * <p>*   ephemeral_ssd: retired local SSD.</p>
+         * <p>*   cloud: basic disk</p>
+         * <p>*   cloud_efficiency: ultra disk</p>
+         * <p>*   cloud_ssd: standard SSD</p>
+         * <p>*   cloud_essd: Enterprise SSD (ESSD)</p>
+         * <p>*   local_ssd_pro: I/O-intensive local disk</p>
+         * <p>*   local_hdd_pro: throughput-intensive local disk</p>
+         * <p>*   ephemeral: retired local disk</p>
+         * <p>*   ephemeral_ssd: retired local SSD</p>
          */
         @NameInMap("DeviceCategory")
         public String deviceCategory;
 
         /**
-         * <p>The size of the cloud disk or local disk. Unit: GiB.</p>
+         * <p>The size of the disk. Unit: GiB.</p>
          */
         @NameInMap("DeviceSize")
         public String deviceSize;
 
         /**
-         * <p>The type of the cloud disk or local disk. Valid values:</p>
+         * <p>The type of the disk. Valid values:</p>
          * <br>
-         * <p>*   system: system disk.</p>
-         * <p>*   data: data disk.</p>
+         * <p>*   system</p>
+         * <p>*   data</p>
          */
         @NameInMap("DeviceType")
         public String deviceType;
 
         /**
-         * <p>The time when the cloud disk or local disk was released. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the disk was released. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("ReleaseTime")
         public String releaseTime;
@@ -310,7 +312,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         public String diskId;
 
         /**
-         * <p>The inactive cloud disks or local disks that have been released and must be cleared.</p>
+         * <p>The inactive disks that have been released and must be cleared.</p>
          */
         @NameInMap("InactiveDisks")
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisks inactiveDisks;
@@ -354,7 +356,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus eventCycleStatus;
 
         /**
-         * <p>The ID of the system event.</p>
+         * <p>The system event ID.</p>
          */
         @NameInMap("EventId")
         public String eventId;
@@ -373,24 +375,42 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
         /**
          * <p>The extended attributes of system events generated for instances that have local disks attached.</p>
+         * <br>
+         * <p>The return values vary based on the system event type.</p>
+         * <br>
+         * <p>If the system event type is not one of the following types, this parameter is empty:</p>
+         * <br>
+         * <p>*   SystemMaintenance.StopAndRepair</p>
+         * <p>*   SystemMaintenance.CleanInactiveDisks</p>
+         * <p>*   SecurityPunish.Locked</p>
+         * <p>*   SecurityPunish.WebsiteBanned</p>
+         * <p>*   SystemUpgrade.Migrate</p>
+         * <p>*   SystemMaintenance.RebootAndIsolateErrorDisk</p>
+         * <p>*   SystemMaintenance.RebootAndReInitErrorDisk</p>
+         * <p>*   SystemMaintenance.ReInitErrorDisk</p>
+         * <p>*   SystemMaintenance.IsolateErrorDisk</p>
          */
         @NameInMap("ExtendedAttribute")
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttribute extendedAttribute;
 
         /**
          * <p>The impact level of the system event.</p>
+         * <br>
+         * <p>>  If the user is not in a whitelist, this parameter is empty.</p>
          */
         @NameInMap("ImpactLevel")
         public String impactLevel;
 
         /**
-         * <p>The scheduled O\\&M time of the system event. The time is displayed in UTC.</p>
+         * <p>The scheduled time at which to execute the O\\&M task related to the system event. The time is displayed in UTC.</p>
          */
         @NameInMap("NotBefore")
         public String notBefore;
 
         /**
          * <p>The reason why the system event was scheduled.</p>
+         * <br>
+         * <p>>  If the exception cause is not detected, this parameter is empty.</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -529,13 +549,13 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus healthStatus;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>Details about the scheduled system events.</p>
+         * <p>The system events that are in the Scheduled or Inquiring state.</p>
          */
         @NameInMap("ScheduledSystemEventSet")
         public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSet scheduledSystemEventSet;

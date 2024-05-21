@@ -7,7 +7,7 @@ public class ModifySecurityGroupAttributeRequest extends TeaModel {
     /**
      * <p>The new description of the security group. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
      * <br>
-     * <p>This parameter is empty by default.</p>
+     * <p>By default, this parameter is left empty.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -15,6 +15,9 @@ public class ModifySecurityGroupAttributeRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    /**
+     * <p>RAM用户的虚拟账号ID。</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -26,14 +29,20 @@ public class ModifySecurityGroupAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>资源主账号的账号名称。</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>资源主账号的ID，亦即UID。</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the security group.</p>
+     * <p>The security group ID.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -41,9 +50,9 @@ public class ModifySecurityGroupAttributeRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The new name of the security group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The new name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * <br>
-     * <p>This parameter is empty by default.</p>
+     * <p>By default, this parameter is left empty.</p>
      */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;

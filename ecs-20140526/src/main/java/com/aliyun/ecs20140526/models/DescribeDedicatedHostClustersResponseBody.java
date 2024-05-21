@@ -11,19 +11,19 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     public DescribeDedicatedHostClustersResponseBodyDedicatedHostClusters dedicatedHostClusters;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -136,25 +136,25 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacitiesLocalStorageCapacity extends TeaModel {
         /**
-         * <p>The available capacity of the local disk. Unit: GiB.</p>
+         * <p>The available capacity of the local disk. Unit: GiB</p>
          */
         @NameInMap("AvailableDisk")
         public Integer availableDisk;
 
         /**
-         * <p>The category of the data disk. Valid values:</p>
+         * <p>The category of data disks. Valid values:</p>
          * <br>
-         * <p>- cloud: basic disk</p>
-         * <p>- cloud_efficiency: ultra disk</p>
-         * <p>- cloud_ssd: standard SSD</p>
-         * <p>- ephemeral_ssd: local SSD</p>
-         * <p>- cloud_essd: enhanced SSD (ESSD)</p>
+         * <p>*   cloud: basic disk</p>
+         * <p>*   cloud_efficiency: ultra disk</p>
+         * <p>*   cloud_ssd: standard SSD</p>
+         * <p>*   ephemeral_ssd: local SSD</p>
+         * <p>*   cloud_essd: Enterprise SSD (ESSD)</p>
          */
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
 
         /**
-         * <p>The total capacity of the local disk. Unit: GiB.</p>
+         * <p>The total capacity of the local disk. Unit: GiB</p>
          */
         @NameInMap("TotalDisk")
         public Integer totalDisk;
@@ -217,7 +217,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypes availableInstanceTypes;
 
         /**
-         * <p>The size of available memory. Unit: GiB.</p>
+         * <p>The size of available memory. Unit: GiB</p>
          */
         @NameInMap("AvailableMemory")
         public Integer availableMemory;
@@ -235,7 +235,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacities localStorageCapacities;
 
         /**
-         * <p>The total memory size. Unit: GiB.</p>
+         * <p>The total memory size. Unit: GiB</p>
          */
         @NameInMap("TotalMemory")
         public Integer totalMemory;

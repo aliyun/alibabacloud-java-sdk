@@ -5,39 +5,39 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesResponseBody extends TeaModel {
     /**
-     * <p>Details about the instances.</p>
+     * <p>Details about the queried instances.</p>
      */
     @NameInMap("Instances")
     public DescribeInstancesResponseBodyInstances instances;
 
     /**
-     * <p>The query token returned in this call.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of instances returned.</p>
+     * <p>The total number of instances queried.</p>
      * <br>
-     * <p>>  If you specify the `MaxResults` and `NextToken` parameters to perform a paged query, the value of the `TotalCount` response parameter is invalid.</p>
+     * <p>>  If you specify the `MaxResults` and `NextToken` request parameters to perform a paged query, the value of the `TotalCount` response parameter is invalid.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -117,9 +117,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The CPU topology type of the instance. Valid values:</p>
          * <br>
-         * <p>- ContinuousCoreToHTMapping: Hyper-Threading (HT) continuous mode</p>
-         * <br>
-         * <p>- DiscreteCoreToHTMapping: HT discrete mode</p>
+         * <p>*   ContinuousCoreToHTMapping: Hyper-Threading (HT) continuous mode</p>
+         * <p>*   DiscreteCoreToHTMapping: HT discrete mode</p>
          */
         @NameInMap("TopologyType")
         public String topologyType;
@@ -215,10 +214,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesInstanceDedicatedInstanceAttribute extends TeaModel {
         /**
-         * <p>Indicates whether the instance on the dedicated host is associated with the dedicated host. Valid values: </p>
+         * <p>Indicates whether the instance on the dedicated host is associated with the dedicated host. Valid values:</p>
          * <br>
-         * <p>- default: The instance is not associated with the dedicated host. When the instance is started from economical mode, the instance may be automatically deployed on another dedicated host in the automatic deployment resource pool.</p>
-         * <p>- host: The instance is associated with the dedicated host. When the instance is started from economical mode, the instance is still deployed on the original dedicated host.</p>
+         * <p>*   default: The instance is not associated with the dedicated host. When the instance is restarted from economical mode, the instance may be automatically deployed on another dedicated host in the automatic deployment resource pool.</p>
+         * <p>*   host: The instance is associated with the dedicated host. When the instance is restarted from economical mode, the instance is still deployed on the original dedicated host.</p>
          */
         @NameInMap("Affinity")
         public String affinity;
@@ -226,8 +225,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instance is hosted on a dedicated host. Valid values:</p>
          * <br>
-         * <p>- default: The instance is not hosted on a dedicated host.</p>
-         * <p>- host: The instance is hosted on a dedicated host.</p>
+         * <p>*   default: The instance is not hosted on a dedicated host.</p>
+         * <p>*   host: The instance is hosted on a dedicated host.</p>
          */
         @NameInMap("Tenancy")
         public String tenancy;
@@ -305,10 +304,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Integer bandwidth;
 
         /**
-         * <p>The billing method of the EIP. Valid values: </p>
+         * <p>The billing method of the EIP. Valid values:</p>
          * <br>
-         * <p>- PayByBandwidth</p>
-         * <p>- PayByTraffic</p>
+         * <p>*   PayByBandwidth</p>
+         * <p>*   PayByTraffic</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
@@ -374,7 +373,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesInstanceHibernationOptions extends TeaModel {
         /**
-         * <p>>  This parameter is in invitational preview and is unavailable for general users.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("Configured")
         public Boolean configured;
@@ -396,10 +395,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesInstanceImageOptions extends TeaModel {
         /**
-         * <p>Indicates whether the instance that uses the image supports logons of the ecs-user user. Valid values: </p>
+         * <p>Indicates whether the instance that uses the image supports logons of the ecs-user user. Valid values:</p>
          * <br>
-         * <p>- true: The instance that uses the image supports logons of the ecs-user user.</p>
-         * <p>- false: The instance that uses the image does not support logons of the ecs-user user.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("LoginAsNonRoot")
         public Boolean loginAsNonRoot;
@@ -442,23 +441,23 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the access channel is enabled for instance metadata. Valid values:</p>
          * <br>
-         * <p>- enabled</p>
-         * <p>- disabled</p>
+         * <p>*   enabled</p>
+         * <p>*   disabled</p>
          */
         @NameInMap("HttpEndpoint")
         public String httpEndpoint;
 
         /**
-         * <p>>  This parameter is unavailable.</p>
+         * <p>>  This parameter is not publicly available.</p>
          */
         @NameInMap("HttpPutResponseHopLimit")
         public Integer httpPutResponseHopLimit;
 
         /**
-         * <p>Indicates whether the security hardening mode (IMDSv2) is forcefully used to access instance metadata. Valid values: </p>
+         * <p>Indicates whether the security hardening mode (IMDSv2) is forcefully used to access instance metadata. Valid values:</p>
          * <br>
-         * <p>- optional: The security hardening mode (IMDSv2) is not forcefully used.</p>
-         * <p>- required: The security hardening mode (IMDSv2) is forcefully used.</p>
+         * <p>*   optional: The security hardening mode (IMDSv2) is not forcefully used.</p>
+         * <p>*   required: The security hardening mode (IMDSv2) is forcefully used.</p>
          */
         @NameInMap("HttpTokens")
         public String httpTokens;
@@ -496,7 +495,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv4PrefixSetsIpv4PrefixSet extends TeaModel {
         /**
-         * <p>The IPv4 prefix.</p>
+         * <p>The IPv4 prefix of the ENI.</p>
          */
         @NameInMap("Ipv4Prefix")
         public String ipv4Prefix;
@@ -537,7 +536,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6PrefixSetsIpv6PrefixSet extends TeaModel {
         /**
-         * <p>The IPv6 prefix.</p>
+         * <p>The IPv6 prefix of the ENI.</p>
          */
         @NameInMap("Ipv6Prefix")
         public String ipv6Prefix;
@@ -578,7 +577,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set extends TeaModel {
         /**
-         * <p>The IPv6 address assigned to the ENI.</p>
+         * <p>The IPv6 address of the ENI.</p>
          */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
@@ -620,12 +619,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet extends TeaModel {
         /**
          * <p>Indicates whether the IP address is the primary private IP address.</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("Primary")
         public Boolean primary;
 
         /**
-         * <p>The private IP address of the instance to which the ENI is bound.</p>
+         * <p>The private IP address of the ENI.</p>
          */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
@@ -674,25 +676,25 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterface extends TeaModel {
         /**
-         * <p>The sets of IPv4 prefix.</p>
+         * <p>The IPv4 prefixes of the ENI. This parameter has a value only when `AdditionalAttributes.N` is set to `NETWORK_PRIMARY_ENI_IP`.</p>
          */
         @NameInMap("Ipv4PrefixSets")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv4PrefixSets ipv4PrefixSets;
 
         /**
-         * <p>The sets of IPv6 prefix.</p>
+         * <p>The IPv6 prefixes of the ENI. This parameter has a value only when `AdditionalAttributes.N` is set to `NETWORK_PRIMARY_ENI_IP`.</p>
          */
         @NameInMap("Ipv6PrefixSets")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6PrefixSets ipv6PrefixSets;
 
         /**
-         * <p>The IPv6 addresses assigned to the ENI. This parameter has a value only when the `AdditionalAttributes.N` request parameter is set to `NETWORK_PRIMARY_ENI_IP`.</p>
+         * <p>The IPv6 addresses of the ENI. This parameter has a value only when `AdditionalAttributes.N` is set to `NETWORK_PRIMARY_ENI_IP`.</p>
          */
         @NameInMap("Ipv6Sets")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets ipv6Sets;
 
         /**
-         * <p>The media access control (MAC) address of the ENI.</p>
+         * <p>The MAC address of the ENI.</p>
          */
         @NameInMap("MacAddress")
         public String macAddress;
@@ -710,7 +712,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String primaryIpAddress;
 
         /**
-         * <p>Details about the private IP address.</p>
+         * <p>Details about the private IP addresses of the ENI.</p>
          */
         @NameInMap("PrivateIpSets")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets privateIpSets;
@@ -824,11 +826,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The reason why the instance was locked. Valid values:</p>
          * <br>
-         * <p>- financial: The instance was locked due to overdue payments.</p>
-         * <p>- security: The instance was locked due to security reasons.</p>
-         * <p>- recycling: The preemptible instance was locked and pending release.</p>
-         * <p>- dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</p>
-         * <p>- refunded: The instance was locked because a refund was made for the instance.</p>
+         * <p>*   financial: The instance was locked due to overdue payments.</p>
+         * <p>*   security: The instance was locked due to security reasons.</p>
+         * <p>*   recycling: The preemptible instance was locked and pending release.</p>
+         * <p>*   dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</p>
+         * <p>*   refunded: The instance was locked because a refund is made for the instance.</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
@@ -1008,7 +1010,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesInstanceVpcAttributes extends TeaModel {
         /**
-         * <p>The NAT IP address of the instance. It is used by ECS instances in different VPCs for communication.</p>
+         * <p>The NAT IP address of the instance. The NAT IP address is used by ECS instances in different VPCs for communication.</p>
          */
         @NameInMap("NatIpAddress")
         public String natIpAddress;
@@ -1072,7 +1074,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesInstance extends TeaModel {
         /**
-         * <p>The time when to automatically release the pay-as-you-go instance.</p>
+         * <p>The automatic release time of the pay-as-you-go instance.</p>
          */
         @NameInMap("AutoReleaseTime")
         public String autoReleaseTime;
@@ -1080,7 +1082,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The ID of the cluster to which the instance belongs.</p>
          * <br>
-         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         * <p>>  This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -1106,14 +1108,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The performance mode of the burstable instance. Valid values:</p>
          * <br>
-         * <p>*   Standard: standard mode. For more information, see the "Standard mode" section in [Overview](https://help.aliyun.com/document_detail/59977.html).</p>
-         * <p>*   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in [Overview](https://help.aliyun.com/document_detail/59977.html).</p>
+         * <p>*   Standard: the standard mode. For more information, see the "Standard mode" section in [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html).</p>
+         * <p>*   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html).</p>
          */
         @NameInMap("CreditSpecification")
         public String creditSpecification;
 
         /**
-         * <p>Details about the dedicated host. It is an array that consists of the DedicatedHostClusterId, DedicatedHostId, and DedicatedHostName parameters.</p>
+         * <p>The information about the dedicated host. The value is an array that consists of DedicatedHostClusterId, DedicatedHostId, and DedicatedHostName.</p>
          */
         @NameInMap("DedicatedHostAttribute")
         public DescribeInstancesResponseBodyInstancesInstanceDedicatedHostAttribute dedicatedHostAttribute;
@@ -1125,12 +1127,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public DescribeInstancesResponseBodyInstancesInstanceDedicatedInstanceAttribute dedicatedInstanceAttribute;
 
         /**
-         * <p>The release protection attribute of the instance. This parameter indicates whether you can use the ECS console or call the DeleteInstance operation to release the instance.</p>
+         * <p>Indicates whether release protection was enabled for the instance. This parameter determines whether you can use the ECS console or call the DeleteInstance operation to release the instance.</p>
          * <br>
-         * <p>*   true: Release protection is enabled for the instance.</p>
-         * <p>*   false: Release protection is disabled for the instance.</p>
+         * <p>*   true: Release protection was enabled for the instance.</p>
+         * <p>*   false: Release protection was disabled for the instance.</p>
          * <br>
-         * <p>>  This parameter is applicable only to pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.</p>
+         * <p>>  This parameter is applicable only to pay-as-you-go instances. The release protection feature can protect instances against manual releases, but not against automatic releases.</p>
          */
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
@@ -1142,7 +1144,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Integer deploymentSetGroupNo;
 
         /**
-         * <p>The ID of the deployment set in which the instance is deployed.</p>
+         * <p>The ID of the deployment set.</p>
          */
         @NameInMap("DeploymentSetId")
         public String deploymentSetId;
@@ -1154,13 +1156,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether data disks can be attached to the instance.</p>
+         * <p>Indicates whether data disks can be attached to the instance. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("DeviceAvailable")
         public Boolean deviceAvailable;
 
         /**
-         * <p>Details about the capacity reservation related to the instance.</p>
+         * <p>Details about the capacity reservation associated with the instance.</p>
          */
         @NameInMap("EcsCapacityReservationAttr")
         public DescribeInstancesResponseBodyInstancesInstanceEcsCapacityReservationAttr ecsCapacityReservationAttr;
@@ -1172,7 +1177,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public DescribeInstancesResponseBodyInstancesInstanceEipAddress eipAddress;
 
         /**
-         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).</p>
+         * <p>The expiration time of the instance. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -1190,7 +1195,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String GPUSpec;
 
         /**
-         * <p>>  This parameter is in invitational preview and is unavailable for general users.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("HibernationOptions")
         public DescribeInstancesResponseBodyInstancesInstanceHibernationOptions hibernationOptions;
@@ -1208,13 +1213,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String hpcClusterId;
 
         /**
-         * <p>>  This parameter is in invitational preview and is unavailable for general users.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("ISP")
         public String ISP;
 
         /**
-         * <p>The ID of the image that the instance is running.</p>
+         * <p>The image ID of the instance.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
@@ -1262,13 +1267,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String instanceNetworkType;
 
         /**
-         * <p>The instance type of the instance.</p>
+         * <p>The instance type.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The instance family of the instance.</p>
+         * <p>The instance family.</p>
          */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
@@ -1276,8 +1281,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The billing method for network usage. Valid values:</p>
          * <br>
-         * <p>*   PayByBandwidth: pay-by-bandwidth</p>
-         * <p>*   PayByTraffic: pay-by-traffic</p>
+         * <p>*   PayByBandwidth</p>
+         * <p>*   PayByTraffic</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
@@ -1295,13 +1300,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Integer internetMaxBandwidthOut;
 
         /**
-         * <p>Indicates whether the instance is I/O optimized.</p>
+         * <p>Indicates whether the instance is an I/O optimized instance.</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("IoOptimized")
         public Boolean ioOptimized;
 
         /**
-         * <p>The name of the key pair bound to the instance.</p>
+         * <p>The name of the key pair.</p>
          */
         @NameInMap("KeyPairName")
         public String keyPairName;
@@ -1313,13 +1321,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Integer localStorageAmount;
 
         /**
-         * <p>The capacity of local disks attached to the instance.</p>
+         * <p>The capacity of local disks attached to the instance. Unit: GiB</p>
          */
         @NameInMap("LocalStorageCapacity")
         public Long localStorageCapacity;
 
         /**
-         * <p>The memory size of the instance. Unit: MiB.</p>
+         * <p>The memory size. Unit: MiB.</p>
          */
         @NameInMap("Memory")
         public Integer memory;
@@ -1331,7 +1339,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public DescribeInstancesResponseBodyInstancesInstanceMetadataOptions metadataOptions;
 
         /**
-         * <p>Details about the ENIs bound to the instance.</p>
+         * <p>The ENIs bound to the instance.</p>
          */
         @NameInMap("NetworkInterfaces")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces networkInterfaces;
@@ -1370,7 +1378,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public DescribeInstancesResponseBodyInstancesInstancePublicIpAddress publicIpAddress;
 
         /**
-         * <p>The RDMA IP addresses of the HPC instance.</p>
+         * <p>The RDMA IP addresses of the instance in the HPC cluster.</p>
          */
         @NameInMap("RdmaIpAddress")
         public DescribeInstancesResponseBodyInstancesInstanceRdmaIpAddress rdmaIpAddress;
@@ -1394,7 +1402,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>>  The parameter is discontinued.</p>
+         * <p>>  The parameter is removed.</p>
          */
         @NameInMap("SaleCycle")
         public String saleCycle;
@@ -1412,12 +1420,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String serialNumber;
 
         /**
-         * <p>The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.</p>
+         * <p>The protection period of the preemptible instance. Unit: hours. Valid values:</p>
          * <br>
-         * <p>*   Protection periods of 2, 3, 4, 5, and 6 hours are in invitational preview. If you want to set this parameter to one of these values, submit a ticket.</p>
-         * <p>*   A value of 0 indicates that the preemptible instance has no protection period.</p>
+         * <p>*   1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</p>
+         * <p>*   0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</p>
          * <br>
-         * <p>>  This parameter is returned when the SpotStrategy parameter is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
+         * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
+         * <br>
+         * <p>>  This parameter is returned when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
          */
         @NameInMap("SpotDuration")
         public Integer spotDuration;
@@ -1425,15 +1435,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The interruption mode of the preemptible instance when the system initiates a preemptible instance interruption operation. Valid values:</p>
          * <br>
-         * <p>- Terminate: releases the instance. </p>
-         * <br>
-         * <p>- Stop: stops the instance in economical mode.</p>
+         * <p>*   Terminate: releases the preemptible instance.</p>
+         * <p>*   Stop: stops the instance in economical mode.</p>
          */
         @NameInMap("SpotInterruptionBehavior")
         public String spotInterruptionBehavior;
 
         /**
-         * <p>The maximum hourly price of the instance. It can be accurate to three decimal places. This parameter is valid only when the SpotStrategy parameter is set to SpotWithPriceLimit.</p>
+         * <p>The maximum hourly price of the instance. The value can be accurate to three decimal places. This parameter is valid when SpotStrategy is set to SpotWithPriceLimit.</p>
          */
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
@@ -1442,7 +1451,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
          * <br>
          * <p>*   NoSpot: The instance is a regular pay-as-you-go instance.</p>
-         * <p>*   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</p>
+         * <p>*   SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.</p>
          * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</p>
          */
         @NameInMap("SpotStrategy")
@@ -1463,8 +1472,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instance continues to be billed after it is stopped. Valid values:</p>
          * <br>
-         * <p>*   KeepCharging: The instance is stopped in standard mode. The billing of the instance continues after the instance is stopped, and resources are retained for the instance.</p>
-         * <p>*   StopCharging: The instance is stopped in economical mode. The billing of some resources of the instance stops after the instance is stopped. When the instance is stopped, its resources such as vCPUs, memory, and public IP address are released. The instance may be unable to start again if some required resources are out of stock in the current region.</p>
+         * <p>*   KeepCharging: The instance is stopped in standard mode. Billing for the instance continues after the instance is stopped, and resources are retained for the instance.</p>
+         * <p>*   StopCharging: The instance is stopped in economical mode. Billing for some resources of the instance stops after the instance is stopped. When the instance is stopped, its resources such as vCPUs, memory, and public IP addresses are released. The instance may be unable to restart if some required resources are out of stock in the current region.</p>
          * <p>*   Not-applicable: The instance does not support economical mode.</p>
          */
         @NameInMap("StoppedMode")
@@ -1479,7 +1488,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The virtual LAN (VLAN) ID of the instance.</p>
          * <br>
-         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         * <p>>  This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</p>
          */
         @NameInMap("VlanId")
         public String vlanId;
