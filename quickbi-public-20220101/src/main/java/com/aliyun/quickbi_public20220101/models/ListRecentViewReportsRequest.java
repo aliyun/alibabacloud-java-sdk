@@ -19,6 +19,9 @@ public class ListRecentViewReportsRequest extends TeaModel {
     @NameInMap("TreeType")
     public String treeType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

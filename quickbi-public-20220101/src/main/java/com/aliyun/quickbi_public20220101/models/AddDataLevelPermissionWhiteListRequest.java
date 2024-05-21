@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AddDataLevelPermissionWhiteListRequest extends TeaModel {
     /**
      * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CubeId")
     public String cubeId;

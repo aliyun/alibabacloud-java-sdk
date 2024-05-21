@@ -14,6 +14,8 @@ public class QueryShareListRequest extends TeaModel {
      * <p>*   Analysis: Ad hoc analysis</p>
      * <p>*   DATAFORM</p>
      * <p>*   SCREEN: Data dashboard</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ReportId")
     public String reportId;

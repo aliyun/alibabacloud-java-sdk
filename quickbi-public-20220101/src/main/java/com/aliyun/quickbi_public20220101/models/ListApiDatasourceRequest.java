@@ -13,6 +13,9 @@ public class ListApiDatasourceRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

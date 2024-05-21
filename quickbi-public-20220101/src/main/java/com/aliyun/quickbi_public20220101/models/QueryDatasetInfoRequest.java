@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class QueryDatasetInfoRequest extends TeaModel {
     /**
      * <p>Queries information about a specified dataset.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatasetId")
     public String datasetId;

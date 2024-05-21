@@ -46,6 +46,9 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
         @NameInMap("Favorite")
         public Boolean favorite;
 
+        @NameInMap("FavoriteDate")
+        public String favoriteDate;
+
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
@@ -93,6 +96,14 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
         }
         public Boolean getFavorite() {
             return this.favorite;
+        }
+
+        public ListFavoriteReportsResponseBodyResultData setFavoriteDate(String favoriteDate) {
+            this.favoriteDate = favoriteDate;
+            return this;
+        }
+        public String getFavoriteDate() {
+            return this.favoriteDate;
         }
 
         public ListFavoriteReportsResponseBodyResultData setGmtCreate(String gmtCreate) {

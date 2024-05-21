@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CheckReadableRequest extends TeaModel {
     /**
      * <p>The user ID of the Quick BI to be checked.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
      * <p>The ID of the work. Resources here include BI portal, dashboards, spreadsheets, and self-service access.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WorksId")
     public String worksId;

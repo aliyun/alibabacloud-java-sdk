@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListByUserGroupIdRequest extends TeaModel {
     /**
      * <p>The ID of the user group that you want to query. Separate multiple user groups with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserGroupIds")
     public String userGroupIds;

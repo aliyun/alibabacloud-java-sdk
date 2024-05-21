@@ -9,6 +9,8 @@ public class AddUserGroupMemberRequest extends TeaModel {
      * <br>
      * <p>*   true: The task is added.</p>
      * <p>*   false: The tag failed to be added.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserGroupId")
     public String userGroupId;
@@ -18,6 +20,8 @@ public class AddUserGroupMemberRequest extends TeaModel {
      * <br>
      * <p>*   true: The request was successful.</p>
      * <p>*   false: The request failed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserIdList")
     public String userIdList;

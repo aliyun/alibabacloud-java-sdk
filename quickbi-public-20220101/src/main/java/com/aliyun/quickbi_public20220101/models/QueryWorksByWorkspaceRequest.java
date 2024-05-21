@@ -53,6 +53,8 @@ public class QueryWorksByWorkspaceRequest extends TeaModel {
 
     /**
      * <p>The ID of the workspace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

@@ -26,7 +26,7 @@ public class UpdateUserRequest extends TeaModel {
      * <p>The nickname of the account.</p>
      * <br>
      * <p>*   Format check: The value can be up to 50 characters in length.</p>
-     * <p>*   Special format verification: Chinese and English digits\_ \ / | () ] \[</p>
+     * <p>*   Special format verification: Chinese and English digits_ \\ / | () ] [</p>
      */
     @NameInMap("NickName")
     public String nickName;
@@ -36,6 +36,8 @@ public class UpdateUserRequest extends TeaModel {
 
     /**
      * <p>The ID of the user to be updated. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;

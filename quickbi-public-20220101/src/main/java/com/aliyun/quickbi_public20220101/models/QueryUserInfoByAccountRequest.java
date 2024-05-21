@@ -15,6 +15,8 @@ public class QueryUserInfoByAccountRequest extends TeaModel {
      * <p>*   ID：</p>
      * <br>
      * <p>    *   Enter the UID of the account to query the account information.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Account")
     public String account;

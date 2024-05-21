@@ -13,6 +13,9 @@ public class QueryComponentPerformanceRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QueryType")
     public String queryType;
 
@@ -22,6 +25,9 @@ public class QueryComponentPerformanceRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

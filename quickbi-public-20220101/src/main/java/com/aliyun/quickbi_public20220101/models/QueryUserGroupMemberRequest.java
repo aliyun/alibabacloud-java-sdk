@@ -7,6 +7,9 @@ public class QueryUserGroupMemberRequest extends TeaModel {
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserGroupId")
     public String userGroupId;
 

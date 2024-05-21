@@ -9,12 +9,16 @@ public class AddShareReportRequest extends TeaModel {
      * <br>
      * <p>*   1: view only</p>
      * <p>*   3: View and export</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AuthPoint")
     public Integer authPoint;
 
     /**
      * <p>The validity period of the share. The value is a timestamp in milliseconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExpireDate")
     public Long expireDate;
@@ -35,12 +39,16 @@ public class AddShareReportRequest extends TeaModel {
      * <p>*   0: user</p>
      * <p>*   1: user group</p>
      * <p>*   2: organization</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ShareToType")
     public Integer shareToType;
 
     /**
      * <p>The ID of the shared work. The works here include BI portal, dashboards, spreadsheets, and self-service access.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WorksId")
     public String worksId;

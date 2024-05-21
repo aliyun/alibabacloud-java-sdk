@@ -11,7 +11,7 @@ public class CreateUserGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the added user group is returned. An empty string \"\" is returned if the add fails.</p>
+     * <p>The ID of the added user group is returned. An empty string \\"\\" is returned if the add fails.</p>
      */
     @NameInMap("Result")
     public String result;
