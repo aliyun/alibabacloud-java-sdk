@@ -325,6 +325,12 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("project_title")
         public String projectTitle;
 
+        @NameInMap("thirdpart_cost_center_id")
+        public String thirdpartCostCenterId;
+
+        @NameInMap("thirdpart_invoice_id")
+        public String thirdpartInvoiceId;
+
         @NameInMap("thirdpart_itinerary_id")
         public String thirdpartItineraryId;
 
@@ -411,6 +417,22 @@ public class ApplyListQueryResponseBody extends TeaModel {
             return this.projectTitle;
         }
 
+        public ApplyListQueryResponseBodyModuleListItineraryList setThirdpartCostCenterId(String thirdpartCostCenterId) {
+            this.thirdpartCostCenterId = thirdpartCostCenterId;
+            return this;
+        }
+        public String getThirdpartCostCenterId() {
+            return this.thirdpartCostCenterId;
+        }
+
+        public ApplyListQueryResponseBodyModuleListItineraryList setThirdpartInvoiceId(String thirdpartInvoiceId) {
+            this.thirdpartInvoiceId = thirdpartInvoiceId;
+            return this;
+        }
+        public String getThirdpartInvoiceId() {
+            return this.thirdpartInvoiceId;
+        }
+
         public ApplyListQueryResponseBodyModuleListItineraryList setThirdpartItineraryId(String thirdpartItineraryId) {
             this.thirdpartItineraryId = thirdpartItineraryId;
             return this;
@@ -464,6 +486,12 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
         @NameInMap("project_title")
         public String projectTitle;
+
+        @NameInMap("thirdpart_cost_center_id")
+        public String thirdpartCostCenterId;
+
+        @NameInMap("thirdpart_invoice_id")
+        public String thirdpartInvoiceId;
 
         @NameInMap("thirdpart_itinerary_id")
         public String thirdpartItineraryId;
@@ -546,6 +574,22 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
         public String getProjectTitle() {
             return this.projectTitle;
+        }
+
+        public ApplyListQueryResponseBodyModuleListItinerarySetList setThirdpartCostCenterId(String thirdpartCostCenterId) {
+            this.thirdpartCostCenterId = thirdpartCostCenterId;
+            return this;
+        }
+        public String getThirdpartCostCenterId() {
+            return this.thirdpartCostCenterId;
+        }
+
+        public ApplyListQueryResponseBodyModuleListItinerarySetList setThirdpartInvoiceId(String thirdpartInvoiceId) {
+            this.thirdpartInvoiceId = thirdpartInvoiceId;
+            return this;
+        }
+        public String getThirdpartInvoiceId() {
+            return this.thirdpartInvoiceId;
         }
 
         public ApplyListQueryResponseBodyModuleListItinerarySetList setThirdpartItineraryId(String thirdpartItineraryId) {
