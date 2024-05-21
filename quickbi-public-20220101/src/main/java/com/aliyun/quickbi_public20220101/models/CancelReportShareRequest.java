@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CancelReportShareRequest extends TeaModel {
     /**
      * <p>The ID of the work. The works here include BI portal, dashboards, spreadsheets, and self-service access.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ReportId")
     public String reportId;
@@ -16,6 +18,8 @@ public class CancelReportShareRequest extends TeaModel {
      * <p>*   If ShareToType is 0 (user), ShareTo is the user ID.</p>
      * <p>*   When ShareToType is set to 1 (user group), ShareTo is the user group ID.</p>
      * <p>*   When ShareToType=2 (organization), ShareTo is the ID of the organization.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ShareToIds")
     public String shareToIds;
@@ -26,6 +30,8 @@ public class CancelReportShareRequest extends TeaModel {
      * <p>*   0: Delete by user</p>
      * <p>*   1: Delete by user group</p>
      * <p>*   2: Delete by organization</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ShareToType")
     public Integer shareToType;

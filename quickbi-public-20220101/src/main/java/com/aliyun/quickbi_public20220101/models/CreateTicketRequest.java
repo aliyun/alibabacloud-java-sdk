@@ -28,6 +28,9 @@ public class CreateTicketRequest extends TeaModel {
     @NameInMap("WatermarkParam")
     public String watermarkParam;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorksId")
     public String worksId;
 

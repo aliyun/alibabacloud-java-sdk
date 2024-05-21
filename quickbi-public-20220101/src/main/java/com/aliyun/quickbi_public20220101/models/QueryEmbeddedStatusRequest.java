@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class QueryEmbeddedStatusRequest extends TeaModel {
     /**
      * <p>The work ID of the query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WorksId")
     public String worksId;

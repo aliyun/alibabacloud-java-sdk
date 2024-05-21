@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class WithdrawAllUserGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the user. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;

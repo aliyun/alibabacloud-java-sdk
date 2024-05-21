@@ -8,13 +8,15 @@ public class UpdateUserGroupRequest extends TeaModel {
      * <p>The description of the user group.</p>
      * <br>
      * <p>*   Format verification: Maximum length 255</p>
-     * <p>*   Special format verification: Chinese and English digits\_ \ / | () ] \[</p>
+     * <p>*   Special format verification: Chinese and English digits_ \\ / | () ] [</p>
      */
     @NameInMap("UserGroupDescription")
     public String userGroupDescription;
 
     /**
      * <p>The ID of the user group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserGroupId")
     public String userGroupId;
@@ -23,7 +25,7 @@ public class UpdateUserGroupRequest extends TeaModel {
      * <p>The name of the user group.</p>
      * <br>
      * <p>*   Format verification: Maximum length 255</p>
-     * <p>*   Special format verification: Chinese and English digits\_ \ / | () ] \[</p>
+     * <p>*   Special format verification: Chinese and English digits_ \\ / | () ] [</p>
      */
     @NameInMap("UserGroupName")
     public String userGroupName;

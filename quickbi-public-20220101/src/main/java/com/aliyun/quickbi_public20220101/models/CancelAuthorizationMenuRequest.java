@@ -4,9 +4,15 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class CancelAuthorizationMenuRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DataPortalId")
     public String dataPortalId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MenuIds")
     public String menuIds;
 

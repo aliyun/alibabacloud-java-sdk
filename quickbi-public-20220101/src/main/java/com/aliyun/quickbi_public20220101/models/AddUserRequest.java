@@ -4,6 +4,9 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class AddUserRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
@@ -16,12 +19,18 @@ public class AddUserRequest extends TeaModel {
     @NameInMap("AuthAdminUser")
     public Boolean authAdminUser;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NickName")
     public String nickName;
 
     @NameInMap("RoleIds")
     public String roleIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserType")
     public Integer userType;
 

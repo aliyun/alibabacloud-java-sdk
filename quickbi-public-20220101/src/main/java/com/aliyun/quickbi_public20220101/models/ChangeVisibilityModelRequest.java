@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ChangeVisibilityModelRequest extends TeaModel {
     /**
      * <p>The number of menus that are successfully modified.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DataPortalId")
     public String dataPortalId;
@@ -15,10 +17,15 @@ public class ChangeVisibilityModelRequest extends TeaModel {
      * <br>
      * <p>*   true: The request was successful.</p>
      * <p>*   false: The request failed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MenuIds")
     public String menuIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ShowOnlyWithAccess")
     public Boolean showOnlyWithAccess;
 

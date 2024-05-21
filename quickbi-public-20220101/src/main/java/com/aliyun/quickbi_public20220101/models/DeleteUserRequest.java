@@ -9,6 +9,8 @@ public class DeleteUserRequest extends TeaModel {
 
     /**
      * <p>Deletes a user from a specified organization.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;

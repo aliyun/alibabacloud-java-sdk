@@ -4,12 +4,21 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserTagValueRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TagId")
     public String tagId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TagValue")
     public String tagValue;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

@@ -4,9 +4,15 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class UpdateTicketNumRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Ticket")
     public String ticket;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TicketNum")
     public Integer ticketNum;
 

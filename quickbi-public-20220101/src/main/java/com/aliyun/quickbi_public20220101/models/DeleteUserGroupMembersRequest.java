@@ -4,9 +4,15 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class DeleteUserGroupMembersRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserGroupIds")
     public String userGroupIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

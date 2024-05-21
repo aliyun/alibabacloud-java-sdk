@@ -7,9 +7,15 @@ public class UpdateUserTagMetaRequest extends TeaModel {
     @NameInMap("TagDescription")
     public String tagDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TagId")
     public String tagId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TagName")
     public String tagName;
 

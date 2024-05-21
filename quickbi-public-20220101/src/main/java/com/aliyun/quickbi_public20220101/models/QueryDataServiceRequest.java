@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class QueryDataServiceRequest extends TeaModel {
     /**
      * <p>Call an API that is created in DataService Studio.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
@@ -13,7 +15,7 @@ public class QueryDataServiceRequest extends TeaModel {
     /**
      * <p># Prerequisites</p>
      * <br>
-     * <p>You can use the Quick BI data service to create an API for the data service. For more information, see [Data service](~~144980~~).</p>
+     * <p>You can use the Quick BI data service to create an API for the data service. For more information, see [Data service](https://help.aliyun.com/document_detail/144980.html).</p>
      * <br>
      * <p># Limits</p>
      * <br>

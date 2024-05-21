@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetUserGroupInfoRequest extends TeaModel {
     /**
      * <p>The ID of the user group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Keyword")
     public String keyword;

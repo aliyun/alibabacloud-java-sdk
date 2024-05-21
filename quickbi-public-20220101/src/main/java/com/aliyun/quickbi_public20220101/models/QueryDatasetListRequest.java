@@ -38,6 +38,8 @@ public class QueryDatasetListRequest extends TeaModel {
 
     /**
      * <p>The name of the data source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

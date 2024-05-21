@@ -9,12 +9,16 @@ public class DelayTicketExpireTimeRequest extends TeaModel {
      * <br>
      * <p>*   Unit: minutes. Valid values: 0 to 240. Unit: minutes. Valid values: 4 hours.</p>
      * <p>*   Expired bills cannot be extended.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExpireTime")
     public Integer expireTime;
 
     /**
      * <p>The value of the third-party embedded ticket, that is, the accessTicket value in the URL.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ticket")
     public String ticket;

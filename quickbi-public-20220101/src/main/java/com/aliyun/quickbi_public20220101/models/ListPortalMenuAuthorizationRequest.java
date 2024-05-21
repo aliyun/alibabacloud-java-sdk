@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListPortalMenuAuthorizationRequest extends TeaModel {
     /**
      * <p>The ID of the BI portal.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DataPortalId")
     public String dataPortalId;

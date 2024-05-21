@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class AddUserGroupMembersRequest extends TeaModel {
     /**
      * <p>The IDs of the user groups. Separate the IDs with commas (,). Example: aGroupId,bGroupId,cGroupIds</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserGroupIds")
     public String userGroupIds;
 
     /**
      * <p>The user ID of the Quick BI.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;

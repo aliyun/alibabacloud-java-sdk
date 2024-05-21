@@ -15,6 +15,8 @@ public class AuthorizeMenuRequest extends TeaModel {
 
     /**
      * <p>The ID of the BI portal.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DataPortalId")
     public String dataPortalId;
@@ -24,6 +26,8 @@ public class AuthorizeMenuRequest extends TeaModel {
      * <br>
      * <p>*   The directory menu cannot be authorized.</p>
      * <p>*   You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 100.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MenuIds")
     public String menuIds;

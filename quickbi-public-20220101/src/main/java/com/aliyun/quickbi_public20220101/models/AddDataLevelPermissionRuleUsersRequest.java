@@ -4,6 +4,9 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class AddDataLevelPermissionRuleUsersRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AddUserModel")
     public String addUserModel;
 

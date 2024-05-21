@@ -9,6 +9,8 @@ public class CreateUserGroupRequest extends TeaModel {
      * <br>
      * <p>*   If you enter the ID of a parent user group, the new user group is added to the user group with the ID.</p>
      * <p>*   If you enter -1, the new user group is added to the root directory.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ParentUserGroupId")
     public String parentUserGroupId;
@@ -17,7 +19,7 @@ public class CreateUserGroupRequest extends TeaModel {
      * <p>The description of the user group.</p>
      * <br>
      * <p>*   Format verification: Maximum length 255</p>
-     * <p>*   Special format verification: Chinese and English digits\_ \ / | () ] \[</p>
+     * <p>*   Special format verification: Chinese and English digits_ \\ / | () ] [</p>
      */
     @NameInMap("UserGroupDescription")
     public String userGroupDescription;
@@ -35,7 +37,9 @@ public class CreateUserGroupRequest extends TeaModel {
      * <p>The name of the RAM user group.</p>
      * <br>
      * <p>*   Format verification: Maximum length 255</p>
-     * <p>*   Special format verification: Chinese and English digits\_ \ / | () ] \[</p>
+     * <p>*   Special format verification: Chinese and English digits_ \\ / | () ] [</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserGroupName")
     public String userGroupName;

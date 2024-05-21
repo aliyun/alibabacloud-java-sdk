@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CancelCollectionRequest extends TeaModel {
     /**
      * <p>The ID of the favorite user. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
      * <p>The ID of the work to cancel the collection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WorksId")
     public String worksId;

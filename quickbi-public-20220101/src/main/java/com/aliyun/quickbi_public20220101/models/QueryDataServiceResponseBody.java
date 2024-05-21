@@ -20,7 +20,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
     public QueryDataServiceResponseBodyResult result;
 
     /**
-     * <p>{ "area": \["East China", "North China"], "shopping_date": "2019Q1", }</p>
+     * <p>{ "area": ["East China", "North China"], "shopping_date": "2019Q1", }</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -89,7 +89,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>SELECT COMPANY_T\_1\_.\"area\" AS D_AREA\_2\_, COMPANY_T\_1\_.\"city\" AS D_CITY\_3\_, SUM(COMPANY_T\_1\_.\"profit_amt\") AS D_PROFIT\_4\_ FROM \"quickbi_test\".\"company_sales_record_copy\" AS COMPANY_T\_1\_ WHERE COMPANY_T\_1\_.\"area\" LIKE \"% China East %\" GROUP BY COMPANY_T\_1\_.\"area\", COMPANY_T\_1\_.\"city\" HAVING SUM(COMPANY_T\_1\_.\"order_amt\") > 1 LIMIT 0,10</p>
+         * <p>SELECT COMPANY_T_1_.\\"area\\" AS D_AREA_2_, COMPANY_T_1_.\\"city\\" AS D_CITY_3_, SUM(COMPANY_T_1_.\\"profit_amt\\") AS D_PROFIT_4_ FROM \\"quickbi_test\\".\\"company_sales_record_copy\\" AS COMPANY_T_1_ WHERE COMPANY_T_1_.\\"area\\" LIKE \\"% China East %\\" GROUP BY COMPANY_T_1_.\\"area\\", COMPANY_T_1_.\\"city\\" HAVING SUM(COMPANY_T_1_.\\"order_amt\\") > 1 LIMIT 0,10</p>
          */
         @NameInMap("Type")
         public String type;

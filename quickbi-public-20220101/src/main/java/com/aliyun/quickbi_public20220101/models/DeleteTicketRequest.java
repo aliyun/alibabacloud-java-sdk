@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteTicketRequest extends TeaModel {
     /**
      * <p>Deletes a specified ticket from an embedded report.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ticket")
     public String ticket;
