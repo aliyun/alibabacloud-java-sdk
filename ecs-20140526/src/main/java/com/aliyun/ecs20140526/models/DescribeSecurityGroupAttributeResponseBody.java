@@ -19,6 +19,9 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     @NameInMap("InnerAccessPolicy")
     public String innerAccessPolicy;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>Details about the security group rules.</p>
      */
@@ -74,6 +77,14 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     }
     public String getInnerAccessPolicy() {
         return this.innerAccessPolicy;
+    }
+
+    public DescribeSecurityGroupAttributeResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeSecurityGroupAttributeResponseBody setPermissions(DescribeSecurityGroupAttributeResponseBodyPermissions permissions) {

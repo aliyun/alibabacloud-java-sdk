@@ -201,7 +201,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The tag value of the ENI.</p>
+     * <p>The tags of the ENI.</p>
      */
     @NameInMap("Tags")
     public DescribeNetworkInterfaceAttributeResponseBodyTags tags;
@@ -1141,13 +1141,13 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key of the ENI.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value of the ENI.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

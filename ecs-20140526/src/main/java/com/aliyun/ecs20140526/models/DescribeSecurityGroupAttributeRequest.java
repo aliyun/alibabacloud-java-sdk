@@ -16,6 +16,12 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     @NameInMap("Direction")
     public String direction;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The network interface card (NIC) type of the security group rule.</p>
      * <br>
@@ -76,6 +82,22 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     }
     public String getDirection() {
         return this.direction;
+    }
+
+    public DescribeSecurityGroupAttributeRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeSecurityGroupAttributeRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeSecurityGroupAttributeRequest setNicType(String nicType) {

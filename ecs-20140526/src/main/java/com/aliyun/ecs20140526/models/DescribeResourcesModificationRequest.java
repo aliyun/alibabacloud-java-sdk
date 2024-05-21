@@ -5,21 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeResourcesModificationRequest extends TeaModel {
     /**
-     * <p>The condition. If you specify this parameter, the system queries the resource types that the resource can be changed to after the resource meets the specified condition.</p>
-     * <br>
-     * <p>Set the value to DiskCategory, which indicates a disk category change. When you set this parameter to DiskCategory, the system queries the instance types that the instance can be changed to after a disk category change.</p>
+     * <p>The conditions.</p>
      */
     @NameInMap("Conditions")
     public java.util.List<String> conditions;
 
     /**
-     * <p>The number of vCPU cores of the instance type. For information about the values, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html). This parameter takes effect only when DestinationResource is set to InstanceType.</p>
+     * <p>The number of vCPUs of the instance type. For information about the values, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html). This parameter takes effect only when DestinationResource is set to InstanceType.</p>
      */
     @NameInMap("Cores")
     public Integer cores;
 
     /**
-     * <p>The target resource type. Valid values:</p>
+     * <p>The type of the resource. Valid values:</p>
      * <br>
      * <p>*   InstanceType</p>
      * <p>*   SystemDisk</p>
@@ -30,7 +28,7 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     public String destinationResource;
 
     /**
-     * <p>The instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html) or call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation to query the most recent instance type list. This parameter is required when DestinationResource is set to SystemDisk.</p>
+     * <p>The instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html). You can also call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation to query the most recent instance type list. This parameter must be specified when DestinationResource is set to SystemDisk.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -49,14 +47,14 @@ public class DescribeResourcesModificationRequest extends TeaModel {
      * <br>
      * <p>Default value: false.</p>
      * <br>
-     * <p>When MigrateAcrossZone is set to true and you upgrade the instance type of an Elastic Compute Service (ECS) instance based on the returned information, take note of the following items:</p>
+     * <p>When MigrateAcrossZone is set to true and you upgrade the instance type of an instance based on the returned information, take note of the following items:</p>
      * <br>
-     * <p>*   Instances that reside in the classic network:</p>
+     * <p>*   Instance that resides in the classic network:</p>
      * <br>
-     * <p>    *   For [retired instance types](https://help.aliyun.com/document_detail/55263.html), when a non-I/O-optimized instance is upgraded to an I/O-optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For Linux instances, basic disks (cloud) are identified as xvd\\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\\* such as vda and vdb.</p>
+     * <p>    *   For [retired instance types](https://help.aliyun.com/document_detail/55263.html), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\\* such as vda and vdb.</p>
      * <p>    *   For [instance families available for purchase](https://help.aliyun.com/document_detail/25378.html), when the instance type of an instance is changed, the private IP address of the instance changes.</p>
      * <br>
-     * <p>*   Instances that reside in virtual private clouds (VPCs): For [retired instance types](https://help.aliyun.com/document_detail/55263.html), when a non-I/O-optimized instance is upgraded to an I/O-optimized instance, the disk device names and software authorization codes of the instance change. For Linux instances, basic disks (cloud) are identified as xvd\\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\\* such as vda and vdb.</p>
+     * <p>*   Instance that resides in a virtual private cloud (VPC): For [retired instance types](https://help.aliyun.com/document_detail/55263.html), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\\* such as vda and vdb.</p>
      */
     @NameInMap("MigrateAcrossZone")
     public Boolean migrateAcrossZone;
@@ -66,12 +64,12 @@ public class DescribeResourcesModificationRequest extends TeaModel {
      * <br>
      * <p>*   Valid values for subscription resources:</p>
      * <br>
-     * <p>    *   Upgrade</p>
-     * <p>    *   Downgrade</p>
-     * <p>    *   RenewDowngrade</p>
-     * <p>    *   RenewModify</p>
+     * <p>    *   Upgrade: upgrades resources.</p>
+     * <p>    *   Downgrade: downgrades resources.</p>
+     * <p>    *   RenewDowngrade: renews and downgrades resources.</p>
+     * <p>    *   RenewModify: renews an expired instance and changes its configurations.</p>
      * <br>
-     * <p>*   Valid values for pay-as-you-go resources: Upgrade</p>
+     * <p>*   Set the value to Upgrade for pay-as-you-go resources.</p>
      * <br>
      * <p>Default value: Upgrade.</p>
      */
@@ -85,7 +83,7 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -107,7 +105,7 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the zone.</p>
+     * <p>The zone ID.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeImagePipelinesResponseBody extends TeaModel {
     /**
-     * <p>Details of the image templates.</p>
+     * <p>Details about the image templates.</p>
      */
     @NameInMap("ImagePipeline")
     public DescribeImagePipelinesResponseBodyImagePipeline imagePipeline;
 
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The query token returned in this call. For information about how to use this return value, see the "Description" section in this topic.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. For information about how to use the return value, see the "Usage notes" section of this topic.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -100,13 +100,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
     public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the image template.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value of the image template.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -174,7 +174,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
     public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet extends TeaModel {
         /**
-         * <p>The IDs of Alibaba Cloud accounts to which to share the created image.</p>
+         * <p>The IDs of Alibaba Cloud accounts to which to share the image that will be created based on the image template.</p>
          */
         @NameInMap("AddAccounts")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts addAccounts;
@@ -222,7 +222,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name prefix of the created image.</p>
+         * <p>The name prefix of the image to be created based on the image template.</p>
          */
         @NameInMap("ImageName")
         public String imageName;
@@ -234,7 +234,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         public String imagePipelineId;
 
         /**
-         * <p>The instance type of the intermediate instance.</p>
+         * <p>The instance type.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -258,7 +258,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The system disk size of the intermediate instance. Unit: GiB.</p>
+         * <p>The system disk size of the intermediate instance. Unit: GiB</p>
          */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
@@ -270,13 +270,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTags tags;
 
         /**
-         * <p>The IDs of regions to which to distribute the created image.</p>
+         * <p>The IDs of regions to which to distribute the image that will be created based on the image template.</p>
          */
         @NameInMap("ToRegionIds")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetToRegionIds toRegionIds;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The ID of the vSwitch in the virtual private cloud (VPC).</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
