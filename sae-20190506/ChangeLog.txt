@@ -1,3 +1,13 @@
+2024-05-21 Version: 1.22.15
+- Update API CreateApplication: add param BaseAppId.
+- Update API CreateApplication: add param MicroRegistrationConfig.
+- Update API CreateApplication: add param ServiceTags.
+- Update API DeployApplication: add param MicroRegistrationConfig.
+- Update API DeployApplication: add param ServiceTags.
+- Update API DescribeApplicationConfig: update response param.
+- Update API ListApplications: update response param.
+
+
 2024-05-20 Version: 1.22.14
 - Update API BatchStartApplications: add param Version.
 - Update API BatchStopApplications: add param Version.

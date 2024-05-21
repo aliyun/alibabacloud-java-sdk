@@ -758,6 +758,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        @NameInMap("ServiceTags")
+        public java.util.Map<String, String> serviceTags;
+
         /**
          * <p>The logging configurations of Log Service.</p>
          * <br>
@@ -1301,6 +1304,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getSecurityGroupId() {
             return this.securityGroupId;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setServiceTags(java.util.Map<String, String> serviceTags) {
+            this.serviceTags = serviceTags;
+            return this;
+        }
+        public java.util.Map<String, String> getServiceTags() {
+            return this.serviceTags;
         }
 
         public DescribeApplicationConfigResponseBodyData setSlsConfigs(String slsConfigs) {
