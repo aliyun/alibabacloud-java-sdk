@@ -26,6 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * @summary 获取H5页面性能统计数据
+     *
+     * @param request GetH5PageTrendRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetH5PageTrendResponse
+     */
     public GetH5PageTrendResponse getH5PageTrendWithOptions(GetH5PageTrendRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -67,12 +75,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetH5PageTrendResponse());
     }
 
+    /**
+     * @summary 获取H5页面性能统计数据
+     *
+     * @param request GetH5PageTrendRequest
+     * @return GetH5PageTrendResponse
+     */
     public GetH5PageTrendResponse getH5PageTrend(GetH5PageTrendRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getH5PageTrendWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 获取启动性能统计数据
+     *
+     * @param request GetLaunchTrendRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLaunchTrendResponse
+     */
     public GetLaunchTrendResponse getLaunchTrendWithOptions(GetLaunchTrendRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -114,12 +136,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetLaunchTrendResponse());
     }
 
+    /**
+     * @summary 获取启动性能统计数据
+     *
+     * @param request GetLaunchTrendRequest
+     * @return GetLaunchTrendResponse
+     */
     public GetLaunchTrendResponse getLaunchTrend(GetLaunchTrendRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getLaunchTrendWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 获取原生页面性能统计数据
+     *
+     * @param request GetNativePageTrendRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetNativePageTrendResponse
+     */
     public GetNativePageTrendResponse getNativePageTrendWithOptions(GetNativePageTrendRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -161,12 +197,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetNativePageTrendResponse());
     }
 
+    /**
+     * @summary 获取原生页面性能统计数据
+     *
+     * @param request GetNativePageTrendRequest
+     * @return GetNativePageTrendResponse
+     */
     public GetNativePageTrendResponse getNativePageTrend(GetNativePageTrendRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getNativePageTrendWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 获取网络性能统计数据
+     *
+     * @param request GetNetworkTrendRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetNetworkTrendResponse
+     */
     public GetNetworkTrendResponse getNetworkTrendWithOptions(GetNetworkTrendRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -208,12 +258,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetNetworkTrendResponse());
     }
 
+    /**
+     * @summary 获取网络性能统计数据
+     *
+     * @param request GetNetworkTrendRequest
+     * @return GetNetworkTrendResponse
+     */
     public GetNetworkTrendResponse getNetworkTrend(GetNetworkTrendRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getNetworkTrendWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 获取离线统计数据
+     *
+     * @param request GetStatTrendRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetStatTrendResponse
+     */
     public GetStatTrendResponse getStatTrendWithOptions(GetStatTrendRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -255,12 +319,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetStatTrendResponse());
     }
 
+    /**
+     * @summary 获取离线统计数据
+     *
+     * @param request GetStatTrendRequest
+     * @return GetStatTrendResponse
+     */
     public GetStatTrendResponse getStatTrend(GetStatTrendRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getStatTrendWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 获取符号表文件上传参数
+     *
+     * @param request GetSymUploadParamRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSymUploadParamResponse
+     */
     public GetSymUploadParamResponse getSymUploadParamWithOptions(GetSymUploadParamRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -302,12 +380,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetSymUploadParamResponse());
     }
 
+    /**
+     * @summary 获取符号表文件上传参数
+     *
+     * @param request GetSymUploadParamRequest
+     * @return GetSymUploadParamResponse
+     */
     public GetSymUploadParamResponse getSymUploadParam(GetSymUploadParamRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getSymUploadParamWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 获取今日实时统计数据
+     *
+     * @param request GetTodayStatTrendRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTodayStatTrendResponse
+     */
     public GetTodayStatTrendResponse getTodayStatTrendWithOptions(GetTodayStatTrendRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -341,12 +433,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTodayStatTrendResponse());
     }
 
+    /**
+     * @summary 获取今日实时统计数据
+     *
+     * @param request GetTodayStatTrendRequest
+     * @return GetTodayStatTrendResponse
+     */
     public GetTodayStatTrendResponse getTodayStatTrend(GetTodayStatTrendRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getTodayStatTrendWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 更新监控告警计划
+     *
+     * @param request UpdateAlertPlanRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAlertPlanResponse
+     */
     public UpdateAlertPlanResponse updateAlertPlanWithOptions(UpdateAlertPlanRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -380,12 +486,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAlertPlanResponse());
     }
 
+    /**
+     * @summary 更新监控告警计划
+     *
+     * @param request UpdateAlertPlanRequest
+     * @return UpdateAlertPlanResponse
+     */
     public UpdateAlertPlanResponse updateAlertPlan(UpdateAlertPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateAlertPlanWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 上传符号表文件
+     *
+     * @param request UploadSymbolFileRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UploadSymbolFileResponse
+     */
     public UploadSymbolFileResponse uploadSymbolFileWithOptions(UploadSymbolFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -431,6 +551,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UploadSymbolFileResponse());
     }
 
+    /**
+     * @summary 上传符号表文件
+     *
+     * @param request UploadSymbolFileRequest
+     * @return UploadSymbolFileResponse
+     */
     public UploadSymbolFileResponse uploadSymbolFile(UploadSymbolFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -444,7 +570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -468,12 +594,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();

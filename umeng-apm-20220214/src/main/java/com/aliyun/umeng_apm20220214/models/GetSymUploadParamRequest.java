@@ -4,15 +4,27 @@ package com.aliyun.umeng_apm20220214.models;
 import com.aliyun.tea.*;
 
 public class GetSymUploadParamRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("appVersion")
     public String appVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dataSourceId")
     public String dataSourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("fileName")
     public String fileName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("fileType")
     public Integer fileType;
 

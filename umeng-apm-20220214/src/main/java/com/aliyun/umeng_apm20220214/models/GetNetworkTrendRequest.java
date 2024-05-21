@@ -7,15 +7,27 @@ public class GetNetworkTrendRequest extends TeaModel {
     @NameInMap("appVersion")
     public String appVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dataSourceId")
     public String dataSourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("endDate")
     public String endDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("startDate")
     public String startDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("timeUnit")
     public String timeUnit;
 

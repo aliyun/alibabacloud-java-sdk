@@ -4,12 +4,21 @@ package com.aliyun.umeng_apm20220214.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlertPlanRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dataSourceId")
     public String dataSourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("planId")
     public Long planId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("versions")
     public String versions;
 
