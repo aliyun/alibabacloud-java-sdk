@@ -285,6 +285,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("project_name")
         public String projectName;
 
+        @NameInMap("refund_change_cost")
+        public Double refundChangeCost;
+
         @NameInMap("refund_fee")
         public Double refundFee;
 
@@ -877,6 +880,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getProjectName() {
             return this.projectName;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setRefundChangeCost(Double refundChangeCost) {
+            this.refundChangeCost = refundChangeCost;
+            return this;
+        }
+        public Double getRefundChangeCost() {
+            return this.refundChangeCost;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setRefundFee(Double refundFee) {

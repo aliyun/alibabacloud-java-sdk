@@ -126,6 +126,9 @@ public class IsvUserSaveRequest extends TeaModel {
         @NameInMap("real_name_en")
         public String realNameEn;
 
+        @NameInMap("role_id_list")
+        public java.util.List<String> roleIdList;
+
         @NameInMap("third_depart_id")
         public String thirdDepartId;
 
@@ -262,6 +265,14 @@ public class IsvUserSaveRequest extends TeaModel {
         }
         public String getRealNameEn() {
             return this.realNameEn;
+        }
+
+        public IsvUserSaveRequestUserList setRoleIdList(java.util.List<String> roleIdList) {
+            this.roleIdList = roleIdList;
+            return this;
+        }
+        public java.util.List<String> getRoleIdList() {
+            return this.roleIdList;
         }
 
         public IsvUserSaveRequestUserList setThirdDepartId(String thirdDepartId) {

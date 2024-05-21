@@ -72,6 +72,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 批量新增企业自定义角色下人员
+     *
+     * @param tmpReq AddEmployeesToCustomRoleRequest
+     * @param headers AddEmployeesToCustomRoleHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddEmployeesToCustomRoleResponse
+     */
+    public AddEmployeesToCustomRoleResponse addEmployeesToCustomRoleWithOptions(AddEmployeesToCustomRoleRequest tmpReq, AddEmployeesToCustomRoleHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddEmployeesToCustomRoleShrinkRequest request = new AddEmployeesToCustomRoleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userIdList)) {
+            request.userIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userIdList, "user_id_list", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.roleId)) {
+            body.put("role_id", request.roleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userIdListShrink)) {
+            body.put("user_id_list", request.userIdListShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddEmployeesToCustomRole"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/role/v1/customRoleEmployees/add"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddEmployeesToCustomRoleResponse());
+    }
+
+    /**
+     * @summary 批量新增企业自定义角色下人员
+     *
+     * @param request AddEmployeesToCustomRoleRequest
+     * @return AddEmployeesToCustomRoleResponse
+     */
+    public AddEmployeesToCustomRoleResponse addEmployeesToCustomRole(AddEmployeesToCustomRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        AddEmployeesToCustomRoleHeaders headers = new AddEmployeesToCustomRoleHeaders();
+        return this.addEmployeesToCustomRoleWithOptions(request, headers, runtime);
+    }
+
+    /**
      * @summary 新增发票抬头适用人员
      *
      * @param tmpReq AddInvoiceEntityRequest
@@ -2542,6 +2606,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 创建企业自定义角色
+     *
+     * @param request CreateCustomRoleRequest
+     * @param headers CreateCustomRoleHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCustomRoleResponse
+     */
+    public CreateCustomRoleResponse createCustomRoleWithOptions(CreateCustomRoleRequest request, CreateCustomRoleHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.roleId)) {
+            body.put("role_id", request.roleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleName)) {
+            body.put("role_name", request.roleName);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCustomRole"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/role/v1/customRoles/create"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCustomRoleResponse());
+    }
+
+    /**
+     * @summary 创建企业自定义角色
+     *
+     * @param request CreateCustomRoleRequest
+     * @return CreateCustomRoleResponse
+     */
+    public CreateCustomRoleResponse createCustomRole(CreateCustomRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CreateCustomRoleHeaders headers = new CreateCustomRoleHeaders();
+        return this.createCustomRoleWithOptions(request, headers, runtime);
+    }
+
+    /**
      * @summary 创建子企业
      *
      * @param request CreateSubCorpRequest
@@ -2601,6 +2723,124 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         CreateSubCorpHeaders headers = new CreateSubCorpHeaders();
         return this.createSubCorpWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * @summary 删除企业自定义角色
+     *
+     * @param request DeleteCustomRoleRequest
+     * @param headers DeleteCustomRoleHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCustomRoleResponse
+     */
+    public DeleteCustomRoleResponse deleteCustomRoleWithOptions(DeleteCustomRoleRequest request, DeleteCustomRoleHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.roleId)) {
+            body.put("role_id", request.roleId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCustomRole"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/role/v1/customRoles/delete"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomRoleResponse());
+    }
+
+    /**
+     * @summary 删除企业自定义角色
+     *
+     * @param request DeleteCustomRoleRequest
+     * @return DeleteCustomRoleResponse
+     */
+    public DeleteCustomRoleResponse deleteCustomRole(DeleteCustomRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        DeleteCustomRoleHeaders headers = new DeleteCustomRoleHeaders();
+        return this.deleteCustomRoleWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * @summary 批量删除企业自定义角色下人员
+     *
+     * @param tmpReq DeleteEmployeesFromCustomRoleRequest
+     * @param headers DeleteEmployeesFromCustomRoleHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEmployeesFromCustomRoleResponse
+     */
+    public DeleteEmployeesFromCustomRoleResponse deleteEmployeesFromCustomRoleWithOptions(DeleteEmployeesFromCustomRoleRequest tmpReq, DeleteEmployeesFromCustomRoleHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteEmployeesFromCustomRoleShrinkRequest request = new DeleteEmployeesFromCustomRoleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userIdList)) {
+            request.userIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userIdList, "user_id_list", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.roleId)) {
+            body.put("role_id", request.roleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userIdListShrink)) {
+            body.put("user_id_list", request.userIdListShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteEmployeesFromCustomRole"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/role/v1/customRoleEmployees/delete"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEmployeesFromCustomRoleResponse());
+    }
+
+    /**
+     * @summary 批量删除企业自定义角色下人员
+     *
+     * @param request DeleteEmployeesFromCustomRoleRequest
+     * @return DeleteEmployeesFromCustomRoleResponse
+     */
+    public DeleteEmployeesFromCustomRoleResponse deleteEmployeesFromCustomRole(DeleteEmployeesFromCustomRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        DeleteEmployeesFromCustomRoleHeaders headers = new DeleteEmployeesFromCustomRoleHeaders();
+        return this.deleteEmployeesFromCustomRoleWithOptions(request, headers, runtime);
     }
 
     /**
@@ -9995,6 +10235,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 查询子企业列表
+     *
+     * @param request QueryGroupCorpListRequest
+     * @param headers QueryGroupCorpListHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryGroupCorpListResponse
+     */
+    public QueryGroupCorpListResponse queryGroupCorpListWithOptions(QueryGroupCorpListRequest request, QueryGroupCorpListHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("user_id", request.userId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryGroupCorpList"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/sub_corps/v1/corps/action/corpList"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryGroupCorpListResponse());
+    }
+
+    /**
+     * @summary 查询子企业列表
+     *
+     * @param request QueryGroupCorpListRequest
+     * @return QueryGroupCorpListResponse
+     */
+    public QueryGroupCorpListResponse queryGroupCorpList(QueryGroupCorpListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        QueryGroupCorpListHeaders headers = new QueryGroupCorpListHeaders();
+        return this.queryGroupCorpListWithOptions(request, headers, runtime);
+    }
+
+    /**
      * @summary 报销单查询
      *
      * @param request QueryReimbursementOrderRequest
@@ -12226,6 +12520,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         TravelStandardQueryHeaders headers = new TravelStandardQueryHeaders();
         return this.travelStandardQueryWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * @summary 更新企业自定义角色
+     *
+     * @param request UpdateCustomRoleRequest
+     * @param headers UpdateCustomRoleHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCustomRoleResponse
+     */
+    public UpdateCustomRoleResponse updateCustomRoleWithOptions(UpdateCustomRoleRequest request, UpdateCustomRoleHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.roleId)) {
+            body.put("role_id", request.roleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleName)) {
+            body.put("role_name", request.roleName);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCustomRole"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/role/v1/customRoles/update"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCustomRoleResponse());
+    }
+
+    /**
+     * @summary 更新企业自定义角色
+     *
+     * @param request UpdateCustomRoleRequest
+     * @return UpdateCustomRoleResponse
+     */
+    public UpdateCustomRoleResponse updateCustomRole(UpdateCustomRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        UpdateCustomRoleHeaders headers = new UpdateCustomRoleHeaders();
+        return this.updateCustomRoleWithOptions(request, headers, runtime);
     }
 
     /**
