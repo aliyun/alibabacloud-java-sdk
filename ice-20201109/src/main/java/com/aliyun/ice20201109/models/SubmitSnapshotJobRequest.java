@@ -4,18 +4,27 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitSnapshotJobRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Input")
     public SubmitSnapshotJobRequestInput input;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Output")
     public SubmitSnapshotJobRequestOutput output;
 
     @NameInMap("ScheduleConfig")
     public SubmitSnapshotJobRequestScheduleConfig scheduleConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateConfig")
     public SubmitSnapshotJobRequestTemplateConfig templateConfig;
 
@@ -76,9 +85,15 @@ public class SubmitSnapshotJobRequest extends TeaModel {
     }
 
     public static class SubmitSnapshotJobRequestInput extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -106,9 +121,15 @@ public class SubmitSnapshotJobRequest extends TeaModel {
     }
 
     public static class SubmitSnapshotJobRequestOutput extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -372,6 +393,9 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         @NameInMap("OverwriteParams")
         public SubmitSnapshotJobRequestTemplateConfigOverwriteParams overwriteParams;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 

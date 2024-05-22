@@ -4,15 +4,24 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomizedVoiceJobRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Gender")
     public String gender;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Scenario")
     public String scenario;
 
     @NameInMap("VoiceDesc")
     public String voiceDesc;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VoiceId")
     public String voiceId;
 

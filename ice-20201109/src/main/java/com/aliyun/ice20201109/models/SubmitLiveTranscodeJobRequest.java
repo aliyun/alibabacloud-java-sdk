@@ -4,21 +4,36 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitLiveTranscodeJobRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartMode")
     public Integer startMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StreamInput")
     public SubmitLiveTranscodeJobRequestStreamInput streamInput;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
     @NameInMap("TimedConfig")
     public SubmitLiveTranscodeJobRequestTimedConfig timedConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TranscodeOutput")
     public SubmitLiveTranscodeJobRequestTranscodeOutput transcodeOutput;
 
@@ -76,9 +91,15 @@ public class SubmitLiveTranscodeJobRequest extends TeaModel {
     }
 
     public static class SubmitLiveTranscodeJobRequestStreamInput extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("InputUrl")
         public String inputUrl;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -139,6 +160,9 @@ public class SubmitLiveTranscodeJobRequest extends TeaModel {
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 

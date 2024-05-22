@@ -10,6 +10,9 @@ public class UpdateLiveTranscodeTemplateShrinkRequest extends TeaModel {
     @NameInMap("TemplateConfig")
     public String templateConfigShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

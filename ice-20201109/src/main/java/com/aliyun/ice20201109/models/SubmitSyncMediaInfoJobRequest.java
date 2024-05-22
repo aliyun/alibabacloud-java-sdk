@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitSyncMediaInfoJobRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Input")
     public SubmitSyncMediaInfoJobRequestInput input;
 
@@ -54,9 +57,15 @@ public class SubmitSyncMediaInfoJobRequest extends TeaModel {
     }
 
     public static class SubmitSyncMediaInfoJobRequestInput extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 

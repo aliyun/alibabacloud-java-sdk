@@ -10,6 +10,9 @@ public class UpdateCustomTemplateRequest extends TeaModel {
     @NameInMap("TemplateConfig")
     public String templateConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

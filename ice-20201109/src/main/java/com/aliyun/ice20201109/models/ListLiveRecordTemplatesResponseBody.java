@@ -153,12 +153,16 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
     public static class ListLiveRecordTemplatesResponseBodyRecordTemplateList extends TeaModel {
         /**
          * <p>代表创建时间的资源属性字段</p>
+         * <br>
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>最后修改时间</p>
+         * <br>
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          */
         @NameInMap("LastModified")
         public String lastModified;

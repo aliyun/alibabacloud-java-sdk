@@ -7,15 +7,27 @@ public class SubmitLiveSnapshotJobRequest extends TeaModel {
     @NameInMap("CallbackUrl")
     public String callbackUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobName")
     public String jobName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SnapshotOutput")
     public SubmitLiveSnapshotJobRequestSnapshotOutput snapshotOutput;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StreamInput")
     public SubmitLiveSnapshotJobRequestStreamInput streamInput;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
@@ -65,12 +77,21 @@ public class SubmitLiveSnapshotJobRequest extends TeaModel {
     }
 
     public static class SubmitLiveSnapshotJobRequestSnapshotOutput extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
@@ -106,9 +127,15 @@ public class SubmitLiveSnapshotJobRequest extends TeaModel {
     }
 
     public static class SubmitLiveSnapshotJobRequestStreamInput extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Url")
         public String url;
 

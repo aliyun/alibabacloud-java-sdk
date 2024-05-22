@@ -7,9 +7,15 @@ public class SearchMediaClipByFaceRequest extends TeaModel {
     @NameInMap("EntityId")
     public String entityId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FaceSearchToken")
     public String faceSearchToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 

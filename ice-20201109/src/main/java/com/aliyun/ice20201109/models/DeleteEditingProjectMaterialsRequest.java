@@ -4,12 +4,21 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeleteEditingProjectMaterialsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MaterialIds")
     public String materialIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MaterialType")
     public String materialType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 

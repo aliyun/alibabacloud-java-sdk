@@ -7,6 +7,9 @@ public class SubmitCustomizedVoiceJobRequest extends TeaModel {
     @NameInMap("DemoAudioMediaURL")
     public String demoAudioMediaURL;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VoiceId")
     public String voiceId;
 

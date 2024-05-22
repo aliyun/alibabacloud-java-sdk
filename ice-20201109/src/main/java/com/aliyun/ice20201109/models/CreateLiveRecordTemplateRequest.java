@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CreateLiveRecordTemplateRequest extends TeaModel {
     /**
      * <p>代表资源名称的资源属性字段</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>录制格式</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RecordFormat")
     public java.util.List<CreateLiveRecordTemplateRequestRecordFormat> recordFormat;
@@ -43,6 +47,8 @@ public class CreateLiveRecordTemplateRequest extends TeaModel {
 
         /**
          * <p>格式</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Format")
         public String format;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteLiveRecordTemplateRequest extends TeaModel {
     /**
      * <p>代表资源一级ID的资源属性字段</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

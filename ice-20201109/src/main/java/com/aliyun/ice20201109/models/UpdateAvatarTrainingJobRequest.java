@@ -10,6 +10,9 @@ public class UpdateAvatarTrainingJobRequest extends TeaModel {
     @NameInMap("AvatarName")
     public String avatarName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 

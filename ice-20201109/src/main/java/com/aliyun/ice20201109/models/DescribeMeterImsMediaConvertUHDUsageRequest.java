@@ -4,15 +4,24 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DescribeMeterImsMediaConvertUHDUsageRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTs")
     public Long endTs;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Interval")
     public String interval;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTs")
     public Long startTs;
 

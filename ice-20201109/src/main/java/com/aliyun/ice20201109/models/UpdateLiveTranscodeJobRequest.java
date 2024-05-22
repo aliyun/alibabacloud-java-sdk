@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateLiveTranscodeJobRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
@@ -65,9 +68,15 @@ public class UpdateLiveTranscodeJobRequest extends TeaModel {
     }
 
     public static class UpdateLiveTranscodeJobRequestStreamInput extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("InputUrl")
         public String inputUrl;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -125,9 +134,15 @@ public class UpdateLiveTranscodeJobRequest extends TeaModel {
     }
 
     public static class UpdateLiveTranscodeJobRequestTranscodeOutput extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 

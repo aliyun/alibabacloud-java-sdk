@@ -4,21 +4,36 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitLiveTranscodeJobShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartMode")
     public Integer startMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StreamInput")
     public String streamInputShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
     @NameInMap("TimedConfig")
     public String timedConfigShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TranscodeOutput")
     public String transcodeOutputShrink;
 

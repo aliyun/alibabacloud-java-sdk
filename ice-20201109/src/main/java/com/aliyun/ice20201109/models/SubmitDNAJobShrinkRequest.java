@@ -7,9 +7,15 @@ public class SubmitDNAJobShrinkRequest extends TeaModel {
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBId")
     public String DBId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Input")
     public String inputShrink;
 
@@ -22,6 +28,9 @@ public class SubmitDNAJobShrinkRequest extends TeaModel {
     @NameInMap("PipelineId")
     public String pipelineId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PrimaryKey")
     public String primaryKey;
 

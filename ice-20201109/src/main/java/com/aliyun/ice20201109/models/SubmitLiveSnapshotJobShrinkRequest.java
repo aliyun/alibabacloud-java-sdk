@@ -7,15 +7,27 @@ public class SubmitLiveSnapshotJobShrinkRequest extends TeaModel {
     @NameInMap("CallbackUrl")
     public String callbackUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobName")
     public String jobName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SnapshotOutput")
     public String snapshotOutputShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StreamInput")
     public String streamInputShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

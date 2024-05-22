@@ -10,6 +10,9 @@ public class AlterSearchIndexRequest extends TeaModel {
     @NameInMap("IndexStatus")
     public String indexStatus;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IndexType")
     public String indexType;
 

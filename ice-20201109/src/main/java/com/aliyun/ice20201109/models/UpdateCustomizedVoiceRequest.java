@@ -7,6 +7,9 @@ public class UpdateCustomizedVoiceRequest extends TeaModel {
     @NameInMap("DemoAudioMediaId")
     public String demoAudioMediaId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VoiceId")
     public String voiceId;
 
