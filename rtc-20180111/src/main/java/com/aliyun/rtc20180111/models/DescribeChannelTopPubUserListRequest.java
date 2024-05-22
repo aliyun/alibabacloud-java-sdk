@@ -6,13 +6,21 @@ import com.aliyun.tea.*;
 public class DescribeChannelTopPubUserListRequest extends TeaModel {
     /**
      * <p>APP ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CreatedTs")
     public Long createdTs;
 

@@ -4,9 +4,15 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DeleteAppStreamingOutTemplateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StreamingOutTemplate")
     public DeleteAppStreamingOutTemplateRequestStreamingOutTemplate streamingOutTemplate;
 
@@ -32,6 +38,9 @@ public class DeleteAppStreamingOutTemplateRequest extends TeaModel {
     }
 
     public static class DeleteAppStreamingOutTemplateRequestStreamingOutTemplate extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 

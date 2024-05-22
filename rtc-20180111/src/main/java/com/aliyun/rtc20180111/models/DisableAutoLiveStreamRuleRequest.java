@@ -4,12 +4,18 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DisableAutoLiveStreamRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 

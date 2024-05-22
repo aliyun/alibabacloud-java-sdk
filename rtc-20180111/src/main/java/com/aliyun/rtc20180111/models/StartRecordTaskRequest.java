@@ -4,9 +4,15 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class StartRecordTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
@@ -43,12 +49,18 @@ public class StartRecordTaskRequest extends TeaModel {
     @NameInMap("SubSpecUsers")
     public java.util.List<String> subSpecUsers;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
     @NameInMap("TaskProfile")
     public String taskProfile;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

@@ -4,6 +4,9 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DeleteRecordTemplateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -13,6 +16,9 @@ public class DeleteRecordTemplateRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

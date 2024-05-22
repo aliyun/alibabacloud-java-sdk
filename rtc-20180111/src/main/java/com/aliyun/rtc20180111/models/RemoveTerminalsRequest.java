@@ -4,15 +4,24 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class RemoveTerminalsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TerminalIds")
     public java.util.List<String> terminalIds;
 

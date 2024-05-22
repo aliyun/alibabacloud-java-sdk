@@ -6,16 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeUsageAreaDistributionStatDataRequest extends TeaModel {
     /**
      * <p>APP ID</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
     @NameInMap("ParentArea")
     public String parentArea;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 

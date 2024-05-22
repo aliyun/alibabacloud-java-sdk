@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class StartCloudRecordRequest extends TeaModel {
     /**
      * <p>appId</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>channelName</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChannelId")
     public String channelId;
@@ -24,6 +28,8 @@ public class StartCloudRecordRequest extends TeaModel {
 
     /**
      * <p>storageConfig</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StorageConfig")
     public StartCloudRecordRequestStorageConfig storageConfig;
@@ -36,6 +42,8 @@ public class StartCloudRecordRequest extends TeaModel {
 
     /**
      * <p>templateId</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
@@ -96,6 +104,8 @@ public class StartCloudRecordRequest extends TeaModel {
     public static class StartCloudRecordRequestPanes extends TeaModel {
         /**
          * <p>paneId</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("PaneId")
         public Integer paneId;
@@ -132,30 +142,40 @@ public class StartCloudRecordRequest extends TeaModel {
     public static class StartCloudRecordRequestStorageConfig extends TeaModel {
         /**
          * <p>accessKey</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("AccessKey")
         public String accessKey;
 
         /**
          * <p>bucket</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
          * <p>region</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Region")
         public Integer region;
 
         /**
          * <p>secretKey</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("SecretKey")
         public String secretKey;
 
         /**
          * <p>vendor</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Vendor")
         public Integer vendor;

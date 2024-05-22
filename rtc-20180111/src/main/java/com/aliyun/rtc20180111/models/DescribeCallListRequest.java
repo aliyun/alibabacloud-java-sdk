@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeCallListRequest extends TeaModel {
     /**
      * <p>APP ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -16,21 +18,33 @@ public class DescribeCallListRequest extends TeaModel {
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTs")
     public Long endTs;
 
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("QueryMode")
     public String queryMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTs")
     public Long startTs;
 

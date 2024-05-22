@@ -4,6 +4,9 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class UpdateAutoLiveStreamRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -22,9 +25,15 @@ public class UpdateAutoLiveStreamRuleRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PlayDomain")
     public String playDomain;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RuleId")
     public Integer ruleId;
 

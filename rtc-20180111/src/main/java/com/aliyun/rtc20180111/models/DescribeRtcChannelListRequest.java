@@ -13,9 +13,15 @@ public class DescribeRtcChannelListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -25,6 +31,9 @@ public class DescribeRtcChannelListRequest extends TeaModel {
     @NameInMap("SortType")
     public String sortType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TimePoint")
     public String timePoint;
 

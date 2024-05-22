@@ -7,6 +7,9 @@ public class DescribeAppsRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("AppVersion")
+    public String appVersion;
+
     @NameInMap("Order")
     public String order;
 
@@ -33,6 +36,14 @@ public class DescribeAppsRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public DescribeAppsRequest setAppVersion(String appVersion) {
+        this.appVersion = appVersion;
+        return this;
+    }
+    public String getAppVersion() {
+        return this.appVersion;
     }
 
     public DescribeAppsRequest setOrder(String order) {
