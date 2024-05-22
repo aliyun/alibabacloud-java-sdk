@@ -31,6 +31,9 @@ public class CreateEditingProjectRequest extends TeaModel {
     @NameInMap("Timeline")
     public String timeline;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Title")
     public String title;
 

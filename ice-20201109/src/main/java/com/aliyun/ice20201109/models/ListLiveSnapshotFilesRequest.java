@@ -4,9 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListLiveSnapshotFilesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
@@ -16,6 +22,9 @@ public class ListLiveSnapshotFilesRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

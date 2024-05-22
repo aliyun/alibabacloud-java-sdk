@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListLiveRecordJobsRequest extends TeaModel {
+    /**
+     * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
@@ -19,6 +22,9 @@ public class ListLiveRecordJobsRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

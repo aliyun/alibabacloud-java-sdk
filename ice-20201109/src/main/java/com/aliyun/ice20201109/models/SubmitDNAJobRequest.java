@@ -7,9 +7,15 @@ public class SubmitDNAJobRequest extends TeaModel {
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBId")
     public String DBId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Input")
     public SubmitDNAJobRequestInput input;
 
@@ -22,6 +28,9 @@ public class SubmitDNAJobRequest extends TeaModel {
     @NameInMap("PipelineId")
     public String pipelineId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PrimaryKey")
     public String primaryKey;
 
@@ -131,9 +140,15 @@ public class SubmitDNAJobRequest extends TeaModel {
     }
 
     public static class SubmitDNAJobRequestInput extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 

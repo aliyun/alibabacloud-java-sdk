@@ -10,6 +10,9 @@ public class CreateDNADBRequest extends TeaModel {
     @NameInMap("Model")
     public String model;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 

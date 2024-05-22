@@ -7,6 +7,9 @@ public class CreateAvatarTrainingJobRequest extends TeaModel {
     @NameInMap("AvatarDescription")
     public String avatarDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AvatarName")
     public String avatarName;
 

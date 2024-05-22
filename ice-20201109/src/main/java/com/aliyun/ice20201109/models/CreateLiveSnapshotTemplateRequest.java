@@ -10,9 +10,15 @@ public class CreateLiveSnapshotTemplateRequest extends TeaModel {
     @NameInMap("SequenceFormat")
     public String sequenceFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TimeInterval")
     public Integer timeInterval;
 

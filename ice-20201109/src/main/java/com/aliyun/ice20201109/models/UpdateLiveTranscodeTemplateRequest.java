@@ -10,6 +10,9 @@ public class UpdateLiveTranscodeTemplateRequest extends TeaModel {
     @NameInMap("TemplateConfig")
     public UpdateLiveTranscodeTemplateRequestTemplateConfig templateConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

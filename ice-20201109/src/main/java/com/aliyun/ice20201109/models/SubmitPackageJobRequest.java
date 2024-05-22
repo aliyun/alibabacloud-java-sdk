@@ -4,12 +4,18 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitPackageJobRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Inputs")
     public java.util.List<SubmitPackageJobRequestInputs> inputs;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Output")
     public SubmitPackageJobRequestOutput output;
 
@@ -65,9 +71,15 @@ public class SubmitPackageJobRequest extends TeaModel {
     }
 
     public static class SubmitPackageJobRequestInputsInput extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -95,6 +107,9 @@ public class SubmitPackageJobRequest extends TeaModel {
     }
 
     public static class SubmitPackageJobRequestInputs extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Input")
         public SubmitPackageJobRequestInputsInput input;
 
@@ -114,9 +129,15 @@ public class SubmitPackageJobRequest extends TeaModel {
     }
 
     public static class SubmitPackageJobRequestOutput extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 

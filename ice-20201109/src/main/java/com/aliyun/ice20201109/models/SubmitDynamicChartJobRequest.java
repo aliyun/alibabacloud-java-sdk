@@ -16,6 +16,9 @@ public class SubmitDynamicChartJobRequest extends TeaModel {
     @NameInMap("ChartTitle")
     public String chartTitle;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ChartType")
     public String chartType;
 
@@ -25,9 +28,15 @@ public class SubmitDynamicChartJobRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Input")
     public String input;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OutputConfig")
     public String outputConfig;
 

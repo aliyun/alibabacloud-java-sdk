@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class SubmitLiveRecordJobRequest extends TeaModel {
     /**
      * <p>代表资源名称的资源属性字段</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -16,14 +18,22 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
     @NameInMap("NotifyUrl")
     public String notifyUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RecordOutput")
     public SubmitLiveRecordJobRequestRecordOutput recordOutput;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StreamInput")
     public SubmitLiveRecordJobRequestStreamInput streamInput;
 
     /**
      * <p>录制模板ID</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
@@ -80,6 +90,9 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -115,6 +128,9 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
     }
 
     public static class SubmitLiveRecordJobRequestStreamInput extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 

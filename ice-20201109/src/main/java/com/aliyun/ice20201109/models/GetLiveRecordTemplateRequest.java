@@ -7,6 +7,9 @@ public class GetLiveRecordTemplateRequest extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

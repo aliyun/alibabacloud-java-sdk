@@ -4,9 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitIProductionJobShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FunctionName")
     public String functionName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Input")
     public String inputShrink;
 
@@ -16,6 +22,9 @@ public class SubmitIProductionJobShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Output")
     public String outputShrink;
 

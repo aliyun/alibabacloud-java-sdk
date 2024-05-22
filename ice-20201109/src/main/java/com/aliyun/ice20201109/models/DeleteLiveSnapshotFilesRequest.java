@@ -4,12 +4,18 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveSnapshotFilesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CreateTimestampList")
     public java.util.List<Long> createTimestampList;
 
     @NameInMap("DeleteOriginalFile")
     public Boolean deleteOriginalFile;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 

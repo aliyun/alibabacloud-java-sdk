@@ -106,6 +106,9 @@ public class GetTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigCombineConfigs extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("AudioIndex")
         public String audioIndex;
 
@@ -115,6 +118,9 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         @NameInMap("Start")
         public Double start;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("VideoIndex")
         public String videoIndex;
 
@@ -2065,6 +2071,9 @@ public class GetTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigCombineConfigs extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("AudioIndex")
         public String audioIndex;
 
@@ -2074,6 +2083,9 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         @NameInMap("Start")
         public Double start;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("VideoIndex")
         public String videoIndex;
 

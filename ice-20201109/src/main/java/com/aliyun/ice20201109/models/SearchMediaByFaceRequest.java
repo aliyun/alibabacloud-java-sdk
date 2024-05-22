@@ -7,6 +7,9 @@ public class SearchMediaByFaceRequest extends TeaModel {
     @NameInMap("EntityId")
     public String entityId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FaceSearchToken")
     public String faceSearchToken;
 
@@ -19,6 +22,9 @@ public class SearchMediaByFaceRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PersonImageUrl")
     public String personImageUrl;
 

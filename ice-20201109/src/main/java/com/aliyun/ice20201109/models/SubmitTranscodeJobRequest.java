@@ -7,12 +7,18 @@ public class SubmitTranscodeJobRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InputGroup")
     public java.util.List<SubmitTranscodeJobRequestInputGroup> inputGroup;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OutputGroup")
     public java.util.List<SubmitTranscodeJobRequestOutputGroup> outputGroup;
 
@@ -79,9 +85,15 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         @NameInMap("InputUrl")
         public String inputUrl;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -117,12 +129,18 @@ public class SubmitTranscodeJobRequest extends TeaModel {
     }
 
     public static class SubmitTranscodeJobRequestOutputGroupOutput extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Media")
         public String media;
 
         @NameInMap("OutputUrl")
         public String outputUrl;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -158,6 +176,9 @@ public class SubmitTranscodeJobRequest extends TeaModel {
     }
 
     public static class SubmitTranscodeJobRequestOutputGroupProcessConfigCombineConfigs extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("AudioIndex")
         public String audioIndex;
 
@@ -167,6 +188,9 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         @NameInMap("Start")
         public Double start;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("VideoIndex")
         public String videoIndex;
 
@@ -410,6 +434,9 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobRequestOutputGroupProcessConfigImageWatermarksOverwriteParams overwriteParams;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -511,6 +538,9 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobRequestOutputGroupProcessConfigSubtitlesOverwriteParams overwriteParams;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -659,6 +689,9 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobRequestOutputGroupProcessConfigTextWatermarksOverwriteParams overwriteParams;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -1259,6 +1292,9 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParams overwriteParams;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -1301,6 +1337,9 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         @NameInMap("TextWatermarks")
         public java.util.List<SubmitTranscodeJobRequestOutputGroupProcessConfigTextWatermarks> textWatermarks;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Transcode")
         public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscode transcode;
 
@@ -1360,9 +1399,15 @@ public class SubmitTranscodeJobRequest extends TeaModel {
     }
 
     public static class SubmitTranscodeJobRequestOutputGroup extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Output")
         public SubmitTranscodeJobRequestOutputGroupOutput output;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ProcessConfig")
         public SubmitTranscodeJobRequestOutputGroupProcessConfig processConfig;
 

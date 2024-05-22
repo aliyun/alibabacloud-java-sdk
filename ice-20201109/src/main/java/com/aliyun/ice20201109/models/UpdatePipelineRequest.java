@@ -7,6 +7,9 @@ public class UpdatePipelineRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PipelineId")
     public String pipelineId;
 

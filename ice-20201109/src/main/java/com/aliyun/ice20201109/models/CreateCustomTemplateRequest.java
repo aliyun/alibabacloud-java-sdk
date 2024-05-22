@@ -4,15 +4,24 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomTemplateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("Subtype")
     public Integer subtype;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateConfig")
     public String templateConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public Integer type;
 

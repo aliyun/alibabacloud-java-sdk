@@ -4,15 +4,24 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DescribeMeterImsMpsAiUsageRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTs")
     public Long endTs;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Interval")
     public Long interval;
 
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTs")
     public Long startTs;
 

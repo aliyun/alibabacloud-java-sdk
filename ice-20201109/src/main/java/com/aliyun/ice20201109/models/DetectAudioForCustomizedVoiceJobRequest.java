@@ -4,12 +4,21 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DetectAudioForCustomizedVoiceJobRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AudioRecordId")
     public Integer audioRecordId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RecordUrl")
     public String recordUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VoiceId")
     public String voiceId;
 

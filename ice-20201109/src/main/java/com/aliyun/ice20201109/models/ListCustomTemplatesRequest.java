@@ -22,6 +22,9 @@ public class ListCustomTemplatesRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 

@@ -4,18 +4,27 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitSnapshotJobShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Input")
     public String inputShrink;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Output")
     public String outputShrink;
 
     @NameInMap("ScheduleConfig")
     public String scheduleConfigShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateConfig")
     public String templateConfigShrink;
 

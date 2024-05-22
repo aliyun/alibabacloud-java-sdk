@@ -16,6 +16,9 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     @NameInMap("MediaMetadata")
     public String mediaMetadata;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OutputMediaConfig")
     public String outputMediaConfig;
 

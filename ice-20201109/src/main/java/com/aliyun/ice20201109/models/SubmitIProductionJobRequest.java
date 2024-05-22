@@ -4,9 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitIProductionJobRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FunctionName")
     public String functionName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Input")
     public SubmitIProductionJobRequestInput input;
 
@@ -16,6 +22,9 @@ public class SubmitIProductionJobRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Output")
     public SubmitIProductionJobRequestOutput output;
 
@@ -98,9 +107,15 @@ public class SubmitIProductionJobRequest extends TeaModel {
     }
 
     public static class SubmitIProductionJobRequestInput extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -128,9 +143,15 @@ public class SubmitIProductionJobRequest extends TeaModel {
     }
 
     public static class SubmitIProductionJobRequestOutput extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 

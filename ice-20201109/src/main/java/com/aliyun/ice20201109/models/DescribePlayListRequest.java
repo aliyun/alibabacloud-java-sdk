@@ -4,9 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DescribePlayListRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BeginTs")
     public String beginTs;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTs")
     public String endTs;
 
@@ -16,9 +22,15 @@ public class DescribePlayListRequest extends TeaModel {
     @NameInMap("OrderType")
     public String orderType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

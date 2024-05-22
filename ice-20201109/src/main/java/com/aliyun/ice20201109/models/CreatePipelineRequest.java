@@ -4,12 +4,18 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class CreatePipelineRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Speed")
     public String speed;
 

@@ -125,6 +125,9 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
     }
 
     public static class ListTranscodeJobsResponseBodyJobsOutputGroupProcessConfigCombineConfigs extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("AudioIndex")
         public String audioIndex;
 
@@ -134,6 +137,9 @@ public class ListTranscodeJobsResponseBody extends TeaModel {
         @NameInMap("Start")
         public Double start;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("VideoIndex")
         public String videoIndex;
 

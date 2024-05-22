@@ -4,9 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateMediaToSearchLibRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MsgBody")
     public String msgBody;
 

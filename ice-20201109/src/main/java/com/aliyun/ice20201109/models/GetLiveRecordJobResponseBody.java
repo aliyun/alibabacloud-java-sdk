@@ -108,6 +108,8 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
     public static class GetLiveRecordJobResponseBodyRecordJob extends TeaModel {
         /**
          * <p>代表创建时间的资源属性字段</p>
+         * <br>
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          */
         @NameInMap("CreateTime")
         public String createTime;

@@ -7,12 +7,21 @@ public class SubmitAudioProduceJobRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EditingConfig")
     public String editingConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InputConfig")
     public String inputConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OutputConfig")
     public String outputConfig;
 
