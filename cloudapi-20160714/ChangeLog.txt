@@ -1,3 +1,7 @@
+2024-05-22 Version: 3.8.0
+- Support API DescribeAppSecurities.
+
+
 2024-05-16 Version: 3.7.0
 - Support API CreateAppCode.
 - Support API CreateAppKey.
