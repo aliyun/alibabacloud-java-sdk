@@ -4,12 +4,21 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class RemoveUsersRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Users")
     public java.util.List<RemoveUsersRequestUsers> users;
 
@@ -43,6 +52,9 @@ public class RemoveUsersRequest extends TeaModel {
     }
 
     public static class RemoveUsersRequestUsers extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

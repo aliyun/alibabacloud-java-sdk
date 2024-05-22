@@ -4,9 +4,15 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class CreateAppStreamingOutTemplateShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StreamingOutTemplate")
     public String streamingOutTemplateShrink;
 

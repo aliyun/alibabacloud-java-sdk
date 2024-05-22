@@ -4,6 +4,9 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class UpdateRecordTemplateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -22,42 +25,69 @@ public class UpdateRecordTemplateRequest extends TeaModel {
     @NameInMap("EnableM3u8DateTime")
     public Boolean enableM3u8DateTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FileSplitInterval")
     public Integer fileSplitInterval;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Formats")
     public java.util.List<String> formats;
 
     @NameInMap("HttpCallbackUrl")
     public String httpCallbackUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LayoutIds")
     public java.util.List<Long> layoutIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MediaEncode")
     public Integer mediaEncode;
 
     @NameInMap("MnsQueue")
     public String mnsQueue;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OssBucket")
     public String ossBucket;
 
     @NameInMap("OssEndpoint")
     public String ossEndpoint;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OssFilePrefix")
     public String ossFilePrefix;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskProfile")
     public String taskProfile;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

@@ -4,6 +4,9 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class StartMPUTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -13,6 +16,9 @@ public class StartMPUTaskRequest extends TeaModel {
     @NameInMap("Backgrounds")
     public java.util.List<StartMPUTaskRequestBackgrounds> backgrounds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
@@ -67,6 +73,9 @@ public class StartMPUTaskRequest extends TeaModel {
     @NameInMap("SubSpecUsers")
     public java.util.List<String> subSpecUsers;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

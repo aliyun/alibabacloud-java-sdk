@@ -4,12 +4,18 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class ModifyMPULayoutRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
     @NameInMap("AudioMixCount")
     public Integer audioMixCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LayoutId")
     public Long layoutId;
 

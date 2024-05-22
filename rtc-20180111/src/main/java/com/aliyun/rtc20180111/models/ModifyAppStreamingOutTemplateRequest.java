@@ -4,9 +4,15 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class ModifyAppStreamingOutTemplateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StreamingOutTemplate")
     public ModifyAppStreamingOutTemplateRequestStreamingOutTemplate streamingOutTemplate;
 
@@ -32,15 +38,27 @@ public class ModifyAppStreamingOutTemplateRequest extends TeaModel {
     }
 
     public static class ModifyAppStreamingOutTemplateRequestStreamingOutTemplate extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("LayoutIds")
         public java.util.List<String> layoutIds;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("MediaEncode")
         public Integer mediaEncode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 

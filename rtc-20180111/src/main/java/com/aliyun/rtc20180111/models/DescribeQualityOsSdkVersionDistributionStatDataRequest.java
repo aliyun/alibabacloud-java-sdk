@@ -6,13 +6,21 @@ import com.aliyun.tea.*;
 public class DescribeQualityOsSdkVersionDistributionStatDataRequest extends TeaModel {
     /**
      * <p>APP ID</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndDate")
     public Long endDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartDate")
     public Long startDate;
 
