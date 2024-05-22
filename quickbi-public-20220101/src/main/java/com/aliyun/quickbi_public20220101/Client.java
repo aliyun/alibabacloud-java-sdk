@@ -961,6 +961,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 生成智能小Q嵌入ticket
+     *
+     * @param request CreateTicket4CopilotRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTicket4CopilotResponse
+     */
+    public CreateTicket4CopilotResponse createTicket4CopilotWithOptions(CreateTicket4CopilotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountType)) {
+            query.put("AccountType", request.accountType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.copilotId)) {
+            query.put("CopilotId", request.copilotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expireTime)) {
+            query.put("ExpireTime", request.expireTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ticketNum)) {
+            query.put("TicketNum", request.ticketNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTicket4Copilot"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTicket4CopilotResponse());
+    }
+
+    /**
+     * @summary 生成智能小Q嵌入ticket
+     *
+     * @param request CreateTicket4CopilotRequest
+     * @return CreateTicket4CopilotResponse
+     */
+    public CreateTicket4CopilotResponse createTicket4Copilot(CreateTicket4CopilotRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createTicket4CopilotWithOptions(request, runtime);
+    }
+
+    /**
      * @summary Create a user group. You can specify a parent user group.
      *
      * @param request CreateUserGroupRequest

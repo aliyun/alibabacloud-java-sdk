@@ -585,6 +585,9 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         @NameInMap("MeasureList")
         public java.util.List<QueryDatasetInfoResponseBodyResultMeasureList> measureList;
 
+        @NameInMap("OpenOfflineAcceleration")
+        public Boolean openOfflineAcceleration;
+
         /**
          * <p>Test Space</p>
          */
@@ -717,6 +720,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
         public java.util.List<QueryDatasetInfoResponseBodyResultMeasureList> getMeasureList() {
             return this.measureList;
+        }
+
+        public QueryDatasetInfoResponseBodyResult setOpenOfflineAcceleration(Boolean openOfflineAcceleration) {
+            this.openOfflineAcceleration = openOfflineAcceleration;
+            return this;
+        }
+        public Boolean getOpenOfflineAcceleration() {
+            return this.openOfflineAcceleration;
         }
 
         public QueryDatasetInfoResponseBodyResult setOwnerId(String ownerId) {

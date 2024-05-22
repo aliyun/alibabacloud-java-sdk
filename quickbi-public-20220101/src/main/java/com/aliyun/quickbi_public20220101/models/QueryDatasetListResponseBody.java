@@ -211,6 +211,9 @@ public class QueryDatasetListResponseBody extends TeaModel {
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        @NameInMap("OpenOfflineAcceleration")
+        public Boolean openOfflineAcceleration;
+
         /**
          * <p>The creation time.</p>
          */
@@ -303,6 +306,14 @@ public class QueryDatasetListResponseBody extends TeaModel {
         }
         public String getModifyTime() {
             return this.modifyTime;
+        }
+
+        public QueryDatasetListResponseBodyResultData setOpenOfflineAcceleration(Boolean openOfflineAcceleration) {
+            this.openOfflineAcceleration = openOfflineAcceleration;
+            return this;
+        }
+        public Boolean getOpenOfflineAcceleration() {
+            return this.openOfflineAcceleration;
         }
 
         public QueryDatasetListResponseBodyResultData setOwnerId(String ownerId) {
