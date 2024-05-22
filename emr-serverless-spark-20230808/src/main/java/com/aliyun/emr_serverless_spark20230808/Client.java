@@ -27,6 +27,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 添加用户
+     *
+     * @param request AddMembersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddMembersResponse
+     */
+    public AddMembersResponse addMembersWithOptions(AddMembersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.memberArns)) {
+            body.put("memberArns", request.memberArns);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("workspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddMembers"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/auth/members"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddMembersResponse());
+    }
+
+    /**
+     * @summary 添加用户
+     *
+     * @param request AddMembersRequest
+     * @return AddMembersResponse
+     */
+    public AddMembersResponse addMembers(AddMembersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.addMembersWithOptions(request, headers, runtime);
+    }
+
+    /**
      * @summary 取消jobRun作业
      *
      * @param request CancelJobRunRequest
@@ -114,6 +169,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getJobRunWithOptions(workspaceId, jobRunId, request, headers, runtime);
+    }
+
+    /**
+     * @summary 给用户授权Role列表
+     *
+     * @param request GrantRoleToUsersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GrantRoleToUsersResponse
+     */
+    public GrantRoleToUsersResponse grantRoleToUsersWithOptions(GrantRoleToUsersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.roleArn)) {
+            body.put("roleArn", request.roleArn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userArns)) {
+            body.put("userArns", request.userArns);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GrantRoleToUsers"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/auth/roles/grant"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GrantRoleToUsersResponse());
+    }
+
+    /**
+     * @summary 给用户授权Role列表
+     *
+     * @param request GrantRoleToUsersRequest
+     * @return GrantRoleToUsersResponse
+     */
+    public GrantRoleToUsersResponse grantRoleToUsers(GrantRoleToUsersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.grantRoleToUsersWithOptions(request, headers, runtime);
     }
 
     /**
