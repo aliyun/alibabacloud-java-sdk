@@ -8,7 +8,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public CreateAutoProvisioningGroupRequestLaunchConfiguration launchConfiguration;
 
     /**
-     * <p>The name of the auto provisioning group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the auto provisioning group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("AutoProvisioningGroupName")
     public String autoProvisioningGroupName;
@@ -26,7 +26,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public String autoProvisioningGroupType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -78,13 +78,13 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public java.util.List<CreateAutoProvisioningGroupRequestLaunchTemplateConfig> launchTemplateConfig;
 
     /**
-     * <p>The ID of the launch template associated with the auto provisioning group. You can call the [DescribeLaunchTemplates](https://help.aliyun.com/document_detail/73759.html) operation to query available launch templates. When both LaunchTemplateId and `LaunchConfiguration.*` parameters are specified, LaunchTemplateId takes precedence.</p>
+     * <p>The ID of the launch template associated with the auto provisioning group. You can call the [DescribeLaunchTemplates](~~73759~~) operation to query available launch templates. When both LaunchTemplateId and `LaunchConfiguration.*` parameters are specified, LaunchTemplateId takes precedence.</p>
      */
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
     /**
-     * <p>The version of the launch template associated with the auto provisioning group. You can call the [DescribeLaunchTemplateVersions](https://help.aliyun.com/document_detail/73761.html) operation to query the versions of available launch templates.</p>
+     * <p>The version of the launch template associated with the auto provisioning group. You can call the [DescribeLaunchTemplateVersions](~~73761~~) operation to query the versions of available launch templates.</p>
      * <br>
      * <p>Default value: the default version of the launch template.</p>
      */
@@ -133,9 +133,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public String payAsYouGoTargetCapacity;
 
     /**
-     * <p>The ID of the region in which to create the auto provisioning group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The ID of the region in which to create the auto provisioning group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -227,8 +225,6 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
      * <p>The total target capacity of the auto provisioning group. The value must be a positive integer.</p>
      * <br>
      * <p>The total target capacity of the auto provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by `PayAsYouGoTargetCapacity` and the target capacity of preemptible instances specified by `SpotTargetCapacity`.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("TotalTargetCapacity")
     public String totalTargetCapacity;
@@ -236,7 +232,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     /**
      * <p>The time at which to start the auto provisioning group. The period of time between this point in time and the point in time specified by `ValidUntil` is the validity period of the auto provisioning group.</p>
      * <br>
-     * <p>Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
      * <p>By default, an auto provisioning group is started immediately after it is created.</p>
      */
@@ -246,7 +242,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     /**
      * <p>The time at which the auto provisioning group expires. The period of time between this point in time and the point in time specified by `ValidFrom` is the validity period of the auto provisioning group.</p>
      * <br>
-     * <p>Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
      * <p>Default value: 2099-12-31T23:59:59Z.</p>
      */
@@ -586,7 +582,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <br>
          * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("Category")
         public String category;
@@ -599,29 +595,29 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <br>
          * <p>Default value: true.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("DeleteWithInstance")
         public Boolean deleteWithInstance;
 
         /**
-         * <p>The description of data disk N. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>The description of data disk N. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The mount point of data disk N. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>The mount point of data disk N. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("Device")
         public String device;
 
         /**
-         * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
          * <br>
          * <p>By default, this parameter is left empty.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("DiskName")
         public String diskName;
@@ -637,13 +633,13 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <br>
          * <p>Default value: false.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key to use for data disk N. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>The ID of the Key Management Service (KMS) key to use for data disk N. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("KmsKeyId")
         public String kmsKeyId;
@@ -656,9 +652,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
          * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
          * <br>
-         * <p>For information about ESSD performance levels, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).</p>
+         * <p>For information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
@@ -684,7 +680,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <br>
          * <p>>  The value of this parameter must be greater than or equal to the size of the snapshot specified by `LaunchConfiguration.DataDisk.N.SnapshotId`.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("Size")
         public Integer size;
@@ -694,7 +690,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <br>
          * <p>After this parameter is specified, `LaunchConfiguration.DataDisk.N.Size` is ignored. The size of data disk N is the same as that of the snapshot specified by this parameter. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
@@ -822,7 +818,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <br>
          * <p>Default value: aes-256.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("EncryptAlgorithm")
         public String encryptAlgorithm;
@@ -835,7 +831,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <br>
          * <p>Default value: false.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("Encrypted")
         public String encrypted;
@@ -843,7 +839,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>The ID of the KMS key to use for system disk N.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
@@ -942,7 +938,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationArn> arn;
 
         /**
-         * <p>The automatic release time of the pay-as-you-go instance. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <p>The automatic release time of the pay-as-you-go instance. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in Coordinated Universal Time (UTC).</p>
          * <br>
          * <p>*   If the value of `ss` is not `00`, the start time is automatically rounded down to the nearest minute based on the value of `mm`.</p>
          * <p>*   The specified time must be at least 30 minutes later than the current time.</p>
@@ -954,12 +950,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>The performance mode of the burstable instance. Valid values:</p>
          * <br>
-         * <p>*   Standard: the standard mode. For more information, see the "Standard mode" section in the [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html) topic.</p>
-         * <p>*   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in the [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html) topic.</p>
+         * <p>*   Standard: the standard mode. For more information, see the "Standard mode" section in the [Overview of burstable instances](~~59977~~) topic.</p>
+         * <p>*   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in the [Overview of burstable instances](~~59977~~) topic.</p>
          * <br>
          * <p>This parameter is empty by default.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("CreditSpecification")
         public String creditSpecification;
@@ -983,7 +979,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <p>*   For Windows instances, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. It can contain letters, digits, and hyphens (-).</p>
          * <p>*   For instances that run other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</p>
          * <p>*   You cannot specify both `LaunchConfiguration.HostName` and `LaunchConfiguration.HostNames.N`. Otherwise, an error is returned.</p>
-         * <p>*   When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>*   When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("HostName")
         public String hostName;
@@ -1003,31 +999,31 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public java.util.List<String> hostNames;
 
         /**
-         * <p>The name of the image family. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `aliyun` or `acs:`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the image family. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `aliyun` or `acs:`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
          */
         @NameInMap("ImageFamily")
         public String imageFamily;
 
         /**
-         * <p>The ID of the image to be used to create the instance. You can call the [DescribeImages](https://help.aliyun.com/document_detail/25534.html) operation to query available image resources. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>The ID of the image to be used to create the instance. You can call the [DescribeImages](~~25534~~) operation to query available image resources. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
-         * <p>The instance description. The description must be 2 to 256 characters in length. The description can contain letters and cannot start with `http://` or `https://`. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>The instance description. The description must be 2 to 256 characters in length. The description can contain letters and cannot start with `http://` or `https://`. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
 
         /**
-         * <p>The instance name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The instance name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
          * <br>
          * <p>The default value of this parameter is the `InstanceId` value.</p>
          * <br>
-         * <p>When you batch create instances, you can batch configure sequential names for the instances. For more information, see [Batch configure sequential names or hostnames for multiple instances](https://help.aliyun.com/document_detail/196048.html).</p>
+         * <p>When you batch create instances, you can batch configure sequential names for the instances. For more information, see [Batch configure sequential names or hostnames for multiple instances](~~196048~~).</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
@@ -1040,7 +1036,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <br>
          * <p>>  When the pay-by-traffic billing method for network usage is used, the maximum inbound and outbound bandwidth values are used as the upper limits of bandwidth instead of guaranteed performance specifications. When demands outstrip resource supplies, the maximum bandwidths may be limited. If you want guaranteed bandwidth for your instance, use the pay-by-bandwidth billing method.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
@@ -1051,7 +1047,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <p>*   When the maximum outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.</p>
          * <p>*   When the maximum outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the value of `LaunchConfiguration.InternetMaxBandwidthOut`, and the default value is the value of `LaunchConfiguration.InternetMaxBandwidthOut`.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("InternetMaxBandwidthIn")
         public Integer internetMaxBandwidthIn;
@@ -1061,7 +1057,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <br>
          * <p>Default value: 0.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("InternetMaxBandwidthOut")
         public Integer internetMaxBandwidthOut;
@@ -1074,7 +1070,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <br>
          * <p>For instances of retired instance types, the default value is none. For instances of other instance types, the default value is optimized.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("IoOptimized")
         public String ioOptimized;
@@ -1085,7 +1081,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <p>*   For Windows instances, this parameter is ignored. This parameter is empty by default.</p>
          * <p>*   By default, password-based logon is disabled for Linux instances.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("KeyPairName")
         public String keyPairName;
@@ -1093,7 +1089,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>The instance password. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The password can contain the following special characters:</p>
          * <br>
-         * <p>``( ) ` ~ ! @ # $ % ^ & * - _ + = | { }  ``: ; \\" < > , . ? /``  For Windows instances, the password cannot start with a forward slash (/). When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence. `</p>
+         * <p>``( ) ` ~ ! @ # $ % ^ & * - _ + = | { }  ``: ; \" < > , . ? /``  For Windows instances, the password cannot start with a forward slash (/). When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence. `</p>
          */
         @NameInMap("Password")
         public String password;
@@ -1104,19 +1100,19 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <p>*   true: uses the password preset in the image.</p>
          * <p>*   false: does not use the password preset in the image.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("PasswordInherit")
         public Boolean passwordInherit;
 
         /**
-         * <p>The name of the instance Resource Access Management (RAM) role. You can call the [ListRoles](https://help.aliyun.com/document_detail/28713.html) operation provided by RAM to query the instance RAM roles that you created. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>The name of the instance Resource Access Management (RAM) role. You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you created. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("RamRoleName")
         public String ramRoleName;
 
         /**
-         * <p>The ID of the resource group to which to assign the instance. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>The ID of the resource group to which to assign the instance. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -1127,13 +1123,13 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <p>*   Active: enables security hardening. This value is applicable only to public images.</p>
          * <p>*   Deactive: disables security hardening. This value is applicable to all image types.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("SecurityEnhancementStrategy")
         public String securityEnhancementStrategy;
 
         /**
-         * <p>The ID of the security group to which to assign the instance. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>The ID of the security group to which to assign the instance. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
@@ -1145,7 +1141,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public java.util.List<String> securityGroupIds;
 
         /**
-         * <p>The system disk information of instances. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>The system disk information of instances. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("SystemDisk")
         public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk systemDisk;
@@ -1160,7 +1156,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <br>
          * <p>For non-I/O optimized instances of retired instance types, the default value is cloud. For other instances, the default value is cloud_efficiency.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
@@ -1168,17 +1164,17 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>The description of the system disk. The description must be 2 to 256 characters in length. The description can contain letters and cannot start with `http://` or `https://`.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("SystemDiskDescription")
         public String systemDiskDescription;
 
         /**
-         * <p>The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
          * <br>
          * <p>This parameter is empty by default.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("SystemDiskName")
         public String systemDiskName;
@@ -1191,9 +1187,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
          * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
          * <br>
-         * <p>For more information about ESSD performance levels, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).</p>
+         * <p>For more information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("SystemDiskPerformanceLevel")
         public String systemDiskPerformanceLevel;
@@ -1203,7 +1199,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <br>
          * <p>Default value: 40 or the size of the image specified by LaunchConfiguration.ImageId, whichever is greater.</p>
          * <br>
-         * <p>When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
@@ -1215,7 +1211,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationTag> tag;
 
         /**
-         * <p>The instance user data. The user data must be encoded in Base64. The raw data can be up to 32 KB in size. When both LaunchTemplateId and LaunchConfiguration.\\* parameters are specified, LaunchTemplateId takes precedence.</p>
+         * <p>The instance user data. The user data must be encoded in Base64. The raw data can be up to 32 KB in size. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          */
         @NameInMap("UserData")
         public String userData;
@@ -1536,9 +1532,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>The instance family level of the instance type in extended configuration N. This parameter is used to filter instance types. Valid values:</p>
          * <br>
-         * <p>*   EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see [Shared instance families](https://help.aliyun.com/document_detail/108489.html).</p>
-         * <p>*   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see the [Overview of instance families](https://help.aliyun.com/document_detail/25378.html) topic.</p>
-         * <p>*   CreditEntryLevel: credit entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html).</p>
+         * <p>*   EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).</p>
+         * <p>*   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see the [Overview of instance families](~~25378~~) topic.</p>
+         * <p>*   CreditEntryLevel: credit entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview of burstable instances](~~59977~~).</p>
          * <br>
          * <p>Valid values of N: 1 to 10.</p>
          */
@@ -1546,7 +1542,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String instanceFamilyLevel;
 
         /**
-         * <p>The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see [Instance families](https://help.aliyun.com/document_detail/25378.html).</p>
+         * <p>The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see [Instance families](~~25378~~).</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;

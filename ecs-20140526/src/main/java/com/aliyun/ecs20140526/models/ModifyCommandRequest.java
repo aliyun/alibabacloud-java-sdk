@@ -11,9 +11,7 @@ public class ModifyCommandRequest extends TeaModel {
     public String commandContent;
 
     /**
-     * <p>The command ID. You can call the [DescribeCommands](https://help.aliyun.com/document_detail/64843.html) operation to query all available command IDs.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The command ID. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.</p>
      */
     @NameInMap("CommandId")
     public String commandId;
@@ -37,9 +35,7 @@ public class ModifyCommandRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the command. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

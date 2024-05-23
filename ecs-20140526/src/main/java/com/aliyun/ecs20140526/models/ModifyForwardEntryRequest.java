@@ -10,15 +10,9 @@ public class ModifyForwardEntryRequest extends TeaModel {
     @NameInMap("ExternalPort")
     public String externalPort;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("ForwardEntryId")
     public String forwardEntryId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("ForwardTableId")
     public String forwardTableId;
 
@@ -37,9 +31,6 @@ public class ModifyForwardEntryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

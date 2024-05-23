@@ -55,7 +55,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         public String diskCategory;
 
         /**
-         * <p>The expiration time of a privilege. This parameter is returned only when the account privilege has an expiration time. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The expiration time of a privilege. This parameter is returned only when the account privilege has an expiration time. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -90,7 +90,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
          * <p>*   max-axt-invocation-daily</p>
          * <p>*   max-cloud-assistant-activation-count</p>
          * <br>
-         * <p>When the AttributeName parameter is set to supported-postpay-instance-types, an instance type is returned. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html).</p>
+         * <p>When the AttributeName parameter is set to supported-postpay-instance-types, an instance type is returned. For more information, see [Instance families](~~25378~~).</p>
          * <br>
          * <p>When the AttributeName parameter is set to real-name-authentications, one of the following values is returned:</p>
          * <br>

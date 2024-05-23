@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyStorageSetAttributeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The value of **ClientToken** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The value of **ClientToken** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -23,9 +23,7 @@ public class ModifyStorageSetAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the storage set. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the storage set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -38,8 +36,6 @@ public class ModifyStorageSetAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the storage set.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("StorageSetId")
     public String storageSetId;

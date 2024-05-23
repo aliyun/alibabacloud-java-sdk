@@ -24,8 +24,6 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -41,8 +39,6 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
      * <br>
      * <p>*   SessionManagerDelivery: the Session Record Delivery feature</p>
      * <p>*   InvocationDelivery: the Operation Content and Result Delivery feature</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("SettingType")
     public String settingType;
@@ -136,9 +132,9 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
          * <br>
          * <p>Make sure that the upgrade windows specified by this parameter are not shorter than 1 hour.</p>
          * <br>
-         * <p>Specify each upgrade window in the following format: \\<Start time in the HH:mm format>-\\<End time in the HH:mm format>.</p>
+         * <p>Specify each upgrade window in the following format: \<Start time in the HH:mm format>-\<End time in the HH:mm format>.</p>
          * <br>
-         * <p>For example, [ "02:00-03:00", "05:00-06:00" ] specifies that Cloud Assistant Agent can be upgraded from 2:00:00 to 3:00:00 and from 5:00:00 to 6:00:00 every day in the UTC time zone.</p>
+         * <p>For example, \[ "02:00-03:00", "05:00-06:00" ] specifies that Cloud Assistant Agent can be upgraded from 2:00:00 to 3:00:00 and from 5:00:00 to 6:00:00 every day in the UTC time zone.</p>
          */
         @NameInMap("AllowedUpgradeWindow")
         public java.util.List<String> allowedUpgradeWindow;
@@ -233,7 +229,7 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
          * <p>The prefix of the OSS bucket directory. The prefix must meet the following requirements:</p>
          * <br>
          * <p>*   The prefix can be up to 254 characters in length.</p>
-         * <p>*   The prefix cannot start with a forward slash (/) or a backslash (\\\\).</p>
+         * <p>*   The prefix cannot start with a forward slash (/) or a backslash (\\).</p>
          * <br>
          * <p>Note: If you do not need a directory prefix, specify a pair of double quotation marks ("") for this parameter to clear the directory prefix that you specified.</p>
          */

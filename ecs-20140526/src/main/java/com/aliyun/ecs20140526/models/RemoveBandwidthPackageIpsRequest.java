@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RemoveBandwidthPackageIpsRequest extends TeaModel {
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
@@ -19,15 +16,9 @@ public class RemoveBandwidthPackageIpsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RemovedIpAddresses")
     public java.util.List<String> removedIpAddresses;
 

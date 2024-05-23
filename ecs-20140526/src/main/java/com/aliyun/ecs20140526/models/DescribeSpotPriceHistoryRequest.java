@@ -5,20 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeSpotPriceHistoryRequest extends TeaModel {
     /**
-     * <p>The type of the operating system platform. Valid values:</p>
+     * <p>The end of the time range to query. Specify the time in the [ISO 8601 standard](~~25696~~) in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.</p>
      * <br>
-     * <p>*   linux</p>
-     * <p>*   windows</p>
+     * <p>This parameter is empty by default. If this parameter is empty, the current time is used.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. The specified time can be up to 30 days earlier than the specified EndTime value.</p>
+     * <p>The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. The specified time can be up to 30 days earlier than the specified EndTime value.</p>
      * <br>
      * <p>This parameter is empty by default. If this parameter is empty, the time that is 3 hours earlier than the specified EndTime value is used.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -41,8 +38,6 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
      * <br>
      * <p>*   classic: classic network</p>
      * <p>*   vpc: Virtual Private Cloud (VPC)</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -57,9 +52,9 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     public String OSType;
 
     /**
-     * <p>The line from which the query starts. </p>
+     * <p>The line from which the query starts.</p>
      * <br>
-     * <p>Default value: 0.</p>
+     * <p>Default value: 0</p>
      */
     @NameInMap("Offset")
     public Integer offset;
@@ -72,8 +67,6 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
 
     /**
      * <p>The zone ID of the preemptible instance.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -85,21 +78,22 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values: </p>
+     * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
      * <br>
-     * <p>- 1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bidding price with the market price and checks the resource inventory to determine whether to retain or release the instance. </p>
+     * <p>*   1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</p>
+     * <p>*   0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</p>
      * <br>
-     * <p>- 0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the biding price with the market price and checks the resource inventory to determine whether to retain or release the instance. </p>
+     * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
      * <br>
-     * <p>Alibaba Cloud sends Elastic Compute Service (ECS) system events to notify you 5 minutes before the instance is released. Preemptible instances are billed by the second. We recommend that you specify a protection period based on your business requirements. </p>
-     * <br>
-     * <p>>If you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo, this parameter takes effect.</p>
+     * <p>>  This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo.</p>
      */
     @NameInMap("SpotDuration")
     public Integer spotDuration;
 
     /**
-     * <p>The time that corresponds to the queried spot price. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format.</p>
+     * <p>The beginning of the time range to query. The value of this parameter and the value of EndTime can be up to 30 days apart. Specify the time in the [ISO 8601 standard](~~25696~~) in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is left empty by default. If this parameter is empty, the time that is 3 hours earlier than the value of EndTime is used.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

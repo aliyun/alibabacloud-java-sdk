@@ -17,7 +17,7 @@ public class DescribeRegionsRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The billing method of the instance. For more information, see [Billing overview](https://help.aliyun.com/document_detail/25398.html). Valid values:</p>
+     * <p>The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:</p>
      * <br>
      * <p>*   PrePaid: subscription. If this parameter is set to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.</p>
      * <p>*   PostPaid: pay-as-you-go.</p>

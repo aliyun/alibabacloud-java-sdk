@@ -29,8 +29,6 @@ public class DeleteSnapshotRequest extends TeaModel {
 
     /**
      * <p>The snapshot ID.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;

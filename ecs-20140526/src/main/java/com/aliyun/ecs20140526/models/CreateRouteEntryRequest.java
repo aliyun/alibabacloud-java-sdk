@@ -7,9 +7,6 @@ public class CreateRouteEntryRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
@@ -37,9 +34,6 @@ public class CreateRouteEntryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RouteTableId")
     public String routeTableId;
 

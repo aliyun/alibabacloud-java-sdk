@@ -4,39 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateForwardEntryRequest extends TeaModel {
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("ExternalIp")
     public String externalIp;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("ExternalPort")
     public String externalPort;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("ForwardTableId")
     public String forwardTableId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("InternalIp")
     public String internalIp;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("InternalPort")
     public String internalPort;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
@@ -46,9 +28,6 @@ public class CreateForwardEntryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

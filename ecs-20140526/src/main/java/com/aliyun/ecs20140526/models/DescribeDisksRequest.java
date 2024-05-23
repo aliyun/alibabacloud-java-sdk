@@ -240,9 +240,7 @@ public class DescribeDisksRequest extends TeaModel {
     public Boolean portable;
 
     /**
-     * <p>The region ID of the disk. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -268,7 +266,7 @@ public class DescribeDisksRequest extends TeaModel {
     public String snapshotId;
 
     /**
-     * <p>The state of the cloud disk. For more information, see [Disk states](https://help.aliyun.com/document_detail/25689.html). Valid values:</p>
+     * <p>The state of the cloud disk. For more information, see [Disk states](~~25689~~). Valid values:</p>
      * <br>
      * <p>*   In_use</p>
      * <p>*   Available</p>
@@ -612,7 +610,7 @@ public class DescribeDisksRequest extends TeaModel {
         /**
          * <p>The disk tag key. Valid values of N: 1 to 20.</p>
          * <br>
-         * <p>Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.</p>
+         * <p>Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](~~110425~~) operation.</p>
          */
         @NameInMap("Key")
         public String key;

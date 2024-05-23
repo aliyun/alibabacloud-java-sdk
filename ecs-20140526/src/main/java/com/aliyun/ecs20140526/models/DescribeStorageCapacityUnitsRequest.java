@@ -22,7 +22,7 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     public Integer capacity;
 
     /**
-     * <p>The name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("Name")
     public String name;
@@ -54,9 +54,7 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the SCU. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the SCU. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

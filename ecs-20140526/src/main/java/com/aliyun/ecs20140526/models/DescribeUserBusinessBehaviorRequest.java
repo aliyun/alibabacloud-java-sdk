@@ -19,9 +19,6 @@ public class DescribeUserBusinessBehaviorRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("statusKey")
     public String statusKey;
 

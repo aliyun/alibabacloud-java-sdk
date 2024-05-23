@@ -12,9 +12,7 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
      * <br>
      * <p>Default value: enabled.</p>
      * <br>
-     * <p>> For more information about instance metadata, see [Overview of ECS instance metadata](https://help.aliyun.com/document_detail/49122.html).</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>> For more information about instance metadata, see [Overview of ECS instance metadata](~~49122~~).</p>
      */
     @NameInMap("HttpEndpoint")
     public String httpEndpoint;
@@ -33,7 +31,7 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
      * <br>
      * <p>Default value: optional.</p>
      * <br>
-     * <p>> For more information about the modes of accessing instance metadata, see [Access mode of instance metadata](https://help.aliyun.com/document_detail/150575.html).</p>
+     * <p>> For more information about the modes of accessing instance metadata, see [Access mode of instance metadata](~~150575~~).</p>
      */
     @NameInMap("HttpTokens")
     public String httpTokens;
@@ -54,9 +52,7 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

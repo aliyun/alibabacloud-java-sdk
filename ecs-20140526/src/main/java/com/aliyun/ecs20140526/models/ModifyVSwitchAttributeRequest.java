@@ -22,9 +22,6 @@ public class ModifyVSwitchAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

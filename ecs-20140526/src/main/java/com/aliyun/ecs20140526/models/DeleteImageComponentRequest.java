@@ -6,8 +6,6 @@ import com.aliyun.tea.*;
 public class DeleteImageComponentRequest extends TeaModel {
     /**
      * <p>The ID of the image component.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageComponentId")
     public String imageComponentId;
@@ -19,9 +17,7 @@ public class DeleteImageComponentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the image component. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the image component. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

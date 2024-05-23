@@ -20,7 +20,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public java.util.List<ReplaceSystemDiskRequestArn> arn;
 
     /**
-     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but make sure that the token is unique across requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
+     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but make sure that the token is unique across requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -58,8 +58,6 @@ public class ReplaceSystemDiskRequest extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -87,7 +85,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to reset the password for the instance. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
      * <br>
-     * <p>    ()`~!@#$%^&*-_+=|{}[]:;\\"<>,.?/</p>
+     * <p>    ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/</p>
      * <br>
      * <p>The passwords of Windows instances cannot start with a forward slash (/).</p>
      * <br>

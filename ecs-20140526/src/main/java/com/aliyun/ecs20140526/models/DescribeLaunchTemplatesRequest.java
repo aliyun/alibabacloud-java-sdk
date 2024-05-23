@@ -40,8 +40,6 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
 
     /**
      * <p>The tags of the launch template.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

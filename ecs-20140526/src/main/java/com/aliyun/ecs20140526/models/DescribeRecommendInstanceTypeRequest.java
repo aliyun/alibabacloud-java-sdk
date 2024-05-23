@@ -13,7 +13,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public Integer cores;
 
     /**
-     * <p>The billing method of the ECS instance. For more information, see [Billing overview](https://help.aliyun.com/document_detail/25398.html). Valid values:</p>
+     * <p>The billing method of the ECS instance. For more information, see [Billing overview](~~25398~~). Valid values:</p>
      * <br>
      * <p>*   PrePaid: subscription</p>
      * <p>*   PostPaid: pay-as-you-go</p>
@@ -28,13 +28,13 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
      * <br>
      * <p>*   EntryLevel</p>
      * <p>*   EnterpriseLevel</p>
-     * <p>*   CreditEntryLevel For more information, see [Burstable instance families](https://help.aliyun.com/document_detail/59977.html).</p>
+     * <p>*   CreditEntryLevel For more information, see [Burstable instance families](~~59977~~).</p>
      */
     @NameInMap("InstanceFamilyLevel")
     public String instanceFamilyLevel;
 
     /**
-     * <p>The instance type. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html) or call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation to query the most recent instance type list.</p>
+     * <p>The instance type. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.</p>
      * <br>
      * <p>> If you specify `InstanceType`, the `Cores` and `Memory` parameters are ignored.</p>
      */
@@ -83,8 +83,6 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
      * <p>*   vpc</p>
      * <br>
      * <p>Default value: vpc.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -108,9 +106,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public String priorityStrategy;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -162,7 +158,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public String systemDiskCategory;
 
     /**
-     * <p>The zone ID. You can call the [DescribeZones](https://help.aliyun.com/document_detail/25610.html) operation to query the most recent zone list.</p>
+     * <p>The zone ID. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
      * <br>
      * <p>We recommend that you set the value of ZoneMatchMode to Include, which is the default value. This way, the system recommends instance types that are available in the zone specified by the ZoneId parameter based on priority. The system also recommends instance types that are available in other zones within the same region.</p>
      */

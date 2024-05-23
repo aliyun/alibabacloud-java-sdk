@@ -18,7 +18,7 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
      * <br>
      * <p>Default value: false.</p>
      * <br>
-     * <p>>  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](https://help.aliyun.com/document_detail/193667.html).</p>
+     * <p>>  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).</p>
      */
     @NameInMap("DisableInstantAccess")
     public Boolean disableInstantAccess;
@@ -45,14 +45,12 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the snapshot.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;
 
     /**
-     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      * <br>
      * <p>The name cannot start with auto because snapshots whose names start with auto are recognized as automatic snapshots.</p>
      */

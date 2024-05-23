@@ -23,7 +23,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The time when the OSS storage plan expires. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The time when the OSS storage plan expires. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("SnapshotPackages")
     public DescribeSnapshotPackageResponseBodySnapshotPackages snapshotPackages;
@@ -81,7 +81,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
 
     public static class DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage extends TeaModel {
         /**
-         * <p>The time when the OSS storage plan was purchased. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the OSS storage plan was purchased. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("DisplayName")
         public String displayName;

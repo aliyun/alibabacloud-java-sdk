@@ -5,17 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyManagedInstanceRequest extends TeaModel {
     /**
-     * <p>The new name of the managed instance. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with a special character or a digit. It can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:) and cannot start with `http://` or `https://`.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The new name of the managed instance. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with a special character or a digit. It can contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:) and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The request ID.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
@@ -28,8 +24,6 @@ public class ModifyManagedInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the managed instance.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

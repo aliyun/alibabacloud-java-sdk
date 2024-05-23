@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceTypeFamiliesRequest extends TeaModel {
     /**
-     * <p>The generation of the instance family. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html). Valid values:</p>
+     * <p>The generation of the instance family. For more information, see [Overview of instance families](~~25378~~). Valid values:</p>
      * <br>
      * <p>*   ecs-1: Generation I, which consists of the earliest and cost-effective instance types</p>
      * <p>*   ecs-2: Generation II, which provides upgraded software and hardware and higher performance than Generation I</p>
@@ -24,9 +24,7 @@ public class DescribeInstanceTypeFamiliesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance family. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the instance family. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

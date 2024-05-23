@@ -31,9 +31,6 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     @NameInMap("PeeringSubnetMask")
     public String peeringSubnetMask;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -46,9 +43,6 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     @NameInMap("UserCidr")
     public String userCidr;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("VbrId")
     public String vbrId;
 

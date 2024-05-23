@@ -278,7 +278,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
          * <br>
          * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
          * <br>
-         * <p>>  This parameter is available only if the corresponding disk category parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html) and [Modify the performance configurations of an ESSD AutoPL disk](https://help.aliyun.com/document_detail/413275.html).</p>
+         * <p>>  This parameter is available only if the corresponding disk category parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).</p>
          */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
@@ -481,7 +481,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The ID of security group *N* with which you want to associate the ECS instance. Valid values of *N* vary based on the maximum number of security groups with which the instance can be associated. For more information, see the "Security group limits" section in the [Limits](https://help.aliyun.com/document_detail/25412.html) topic.</p>
+         * <p>The ID of security group *N* with which you want to associate the ECS instance. Valid values of *N* vary based on the maximum number of security groups with which the instance can be associated. For more information, see the "Security group limits" section in the [Limits](~~25412~~) topic.</p>
          * <br>
          * <p>>  You cannot specify the **SecurityGroupId** and **SecurityGroupIds.N** parameters at the same time.</p>
          */
@@ -684,7 +684,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisks dataDisks;
 
         /**
-         * <p>Specifies whether to enable release protection for the instance. This parameter determines whether you can use the ECS console or call the [DeleteInstance](https://help.aliyun.com/document_detail/25507.html) operation to release the instance. Valid values:</p>
+         * <p>Specifies whether to enable release protection for the instance. This parameter determines whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance. Valid values:</p>
          * <br>
          * <p>- true</p>
          * <p>- false</p>
@@ -854,7 +854,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The IDs of the security groups to which to assign the instance. The valid values of N are based on the maximum number of security groups to which the instance can belong. For more information, see the "Security group limits" section in [Limits](https://help.aliyun.com/document_detail/25412.html).</p>
+         * <p>The IDs of the security groups to which to assign the instance. The valid values of N are based on the maximum number of security groups to which the instance can belong. For more information, see the "Security group limits" section in [Limits](~~25412~~).</p>
          * <br>
          * <p>> You cannot specify both the `SecurityGroupId` and `SecurityGroupIds.N` parameters.</p>
          */

@@ -17,7 +17,7 @@ public class DescribeKeyPairsRequest extends TeaModel {
     public String keyPairFingerPrint;
 
     /**
-     * <p>The name of the key pair. You can use the asterisk (\\*) symbol as a wildcard in regular expressions to perform a fuzzy search for key pairs. Sample patterns:</p>
+     * <p>The name of the key pair. You can use the asterisk (\*) symbol as a wildcard in regular expressions to perform a fuzzy search for key pairs. Sample patterns:</p>
      * <br>
      * <p>*   `*SshKey`: queries key pairs whose names end with SshKey, including the key pair named SshKey.</p>
      * <p>*   `SshKey*`: queries key pairs whose names start with SshKey, including the key pair named SshKey.</p>
@@ -47,9 +47,7 @@ public class DescribeKeyPairsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the key pair. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -171,7 +169,7 @@ public class DescribeKeyPairsRequest extends TeaModel {
         /**
          * <p>The key of tag N of the key pair. Valid values of N: 1 to 20.</p>
          * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that are bound with this tag can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that are bound with all these tags can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.</p>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that are bound with this tag can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that are bound with all these tags can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
          */
         @NameInMap("Key")
         public String key;

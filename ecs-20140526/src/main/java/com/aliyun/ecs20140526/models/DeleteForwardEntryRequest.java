@@ -4,15 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteForwardEntryRequest extends TeaModel {
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("ForwardEntryId")
     public String forwardEntryId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("ForwardTableId")
     public String forwardTableId;
 
@@ -22,9 +16,6 @@ public class DeleteForwardEntryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

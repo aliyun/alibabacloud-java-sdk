@@ -16,13 +16,13 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public String allocationType;
 
     /**
-     * <p>The instance type. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html).</p>
+     * <p>The instance type. For more information, see [Instance families](~~25378~~).</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
-     * <p>The instance family. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html).</p>
+     * <p>The instance family. For more information, see [Instance families](~~25378~~).</p>
      */
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
@@ -69,9 +69,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the instances. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -123,7 +121,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public java.util.List<DescribeReservedInstancesRequestTag> tag;
 
     /**
-     * <p>The zone ID of the reserved instances. This parameter is required when Scope is set to Zone. You can call the [DescribeZones](https://help.aliyun.com/document_detail/25610.html) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the reserved instances. This parameter is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -281,7 +279,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
         /**
          * <p>The key of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.</p>
          * <br>
-         * <p>Up to 1,000 resources with the specified tags can be returned in the response. To query more than 1,000 resources with the specified tags, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.</p>
+         * <p>Up to 1,000 resources with the specified tags can be returned in the response. To query more than 1,000 resources with the specified tags, call the [ListTagResources](~~110425~~) operation.</p>
          */
         @NameInMap("Key")
         public String key;

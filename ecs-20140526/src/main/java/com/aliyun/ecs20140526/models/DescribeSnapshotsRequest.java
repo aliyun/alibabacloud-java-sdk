@@ -77,7 +77,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Page starts from page 1.</p>
+     * <p>The page number. Pages start from page 1.</p>
      * <br>
      * <p>Default value: 1.</p>
      */
@@ -93,9 +93,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the disk. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -426,7 +424,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
         /**
          * <p>The key of tag N of the snapshot. Valid values of N: 1 to 20</p>
          * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added are returned. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added are returned. To query more than 1,000 resources with the specified tags, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.</p>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added are returned. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added are returned. To query more than 1,000 resources with the specified tags, call the [ListTagResources](~~110425~~) operation.</p>
          */
         @NameInMap("Key")
         public String key;

@@ -257,7 +257,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
          * <br>
          * <p>*   EntryLevel: entry level (shared).</p>
          * <p>*   EnterpriseLevel: enterprise level.</p>
-         * <p>*   CreditEntryLevel: credit-based entry level. For more information, see [Overview](https://help.aliyun.com/document_detail/59977.html).</p>
+         * <p>*   CreditEntryLevel: credit-based entry level. For more information, see [Overview](~~59977~~).</p>
          */
         @NameInMap("InstanceFamilyLevel")
         public String instanceFamilyLevel;
@@ -299,7 +299,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Long localStorageCapacity;
 
         /**
-         * <p>The category of local disks. For more information, see [Local disks](https://help.aliyun.com/document_detail/63138.html). Valid values:</p>
+         * <p>The category of local disks. For more information, see [Local disks](~~63138~~). Valid values:</p>
          * <br>
          * <p>*   local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances</p>
          * <p>*   local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances</p>

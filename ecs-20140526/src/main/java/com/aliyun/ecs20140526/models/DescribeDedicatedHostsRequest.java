@@ -23,7 +23,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String dedicatedHostName;
 
     /**
-     * <p>The dedicated host type. You can call the [DescribeDedicatedHostTypes](https://help.aliyun.com/document_detail/134240.html) operation to query the most recent list of dedicated host types.</p>
+     * <p>The dedicated host type. You can call the [DescribeDedicatedHostTypes](~~134240~~) operation to query the most recent list of dedicated host types.</p>
      */
     @NameInMap("DedicatedHostType")
     public String dedicatedHostType;
@@ -78,9 +78,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the dedicated host. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -129,7 +127,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public java.util.List<DescribeDedicatedHostsRequestTag> tag;
 
     /**
-     * <p>The zone ID of the dedicated host. You can call the [DescribeZones](https://help.aliyun.com/document_detail/25610.html) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the dedicated host. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

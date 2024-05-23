@@ -5,17 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteDiagnosticReportsRequest extends TeaModel {
     /**
-     * <p>The region ID of the diagnostic report. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the diagnostic report. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of diagnostic reports. You can specify up to 100 report IDs.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("ReportIds")
     public java.util.List<String> reportIds;

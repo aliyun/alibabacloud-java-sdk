@@ -191,7 +191,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk extends TeaModel {
         /**
-         * <p>The time when the disk was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the disk was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -227,7 +227,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         public String deviceType;
 
         /**
-         * <p>The time when the disk was released. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the disk was released. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("ReleaseTime")
         public String releaseTime;
@@ -402,7 +402,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         public String impactLevel;
 
         /**
-         * <p>The scheduled time at which to execute the O\\&M task related to the system event. The time is displayed in UTC.</p>
+         * <p>The scheduled time at which to execute the O\&M task related to the system event. The time is displayed in UTC.</p>
          */
         @NameInMap("NotBefore")
         public String notBefore;

@@ -50,8 +50,6 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the auto provisioning group.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

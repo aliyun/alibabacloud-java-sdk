@@ -7,9 +7,6 @@ public class DeleteNetworkInterfacePermissionRequest extends TeaModel {
     @NameInMap("Force")
     public Boolean force;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("NetworkInterfacePermissionId")
     public String networkInterfacePermissionId;
 
@@ -19,9 +16,6 @@ public class DeleteNetworkInterfacePermissionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -7,9 +7,6 @@ public class DeleteHaVipRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("HaVipId")
     public String haVipId;
 
@@ -19,9 +16,6 @@ public class DeleteHaVipRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

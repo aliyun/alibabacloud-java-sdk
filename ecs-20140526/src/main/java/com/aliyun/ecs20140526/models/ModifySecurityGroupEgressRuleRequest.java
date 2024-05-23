@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -47,7 +47,7 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     public Long destGroupOwnerId;
 
     /**
-     * <p>The ID of the destination prefix list. You can call the [DescribePrefixLists](https://help.aliyun.com/document_detail/205046.html) operation to query the IDs of available prefix lists.</p>
+     * <p>The ID of the destination prefix list. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.</p>
      * <br>
      * <p>If you specify `DestCidrIp`, `Ipv6DestCidrIp`, or `DestGroupId`, this parameter is ignored.</p>
      */
@@ -87,7 +87,7 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     public String ipv6SourceCidrIp;
 
     /**
-     * <p>You cannot modify this parameter when you modify a security group rule by specifying its ID.\\</p>
+     * <p>You cannot modify this parameter when you modify a security group rule by specifying its ID.\</p>
      * <p>You can add a new rule that meets your business requirements and delete the original rule.</p>
      */
     @NameInMap("NicType")
@@ -130,9 +130,7 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     public String priority;
 
     /**
-     * <p>The region ID of the security group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -145,14 +143,12 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the security group.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
-     * <p>The ID of the security group rule.\\</p>
+     * <p>The ID of the security group rule.\</p>
      * <p>This parameter is required when you modify a security group rule based on the security group rule ID.</p>
      */
     @NameInMap("SecurityGroupRuleId")
