@@ -13,6 +13,9 @@ public class ListProjectsRequest extends TeaModel {
     @NameInMap("Prefix")
     public String prefix;
 
+    @NameInMap("Tag")
+    public java.util.List<ListProjectsRequestTag> tag;
+
     public static ListProjectsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProjectsRequest self = new ListProjectsRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,44 @@ public class ListProjectsRequest extends TeaModel {
     }
     public String getPrefix() {
         return this.prefix;
+    }
+
+    public ListProjectsRequest setTag(java.util.List<ListProjectsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListProjectsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListProjectsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListProjectsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListProjectsRequestTag self = new ListProjectsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListProjectsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListProjectsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -2162,12 +2162,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * @summary 创建项目
      *
-     * @param request CreateProjectRequest
+     * @param tmpReq CreateProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateProjectResponse
      */
-    public CreateProjectResponse createProjectWithOptions(CreateProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateProjectResponse createProjectWithOptions(CreateProjectRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateProjectShrinkRequest request = new CreateProjectShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.datasetMaxBindCount)) {
             query.put("DatasetMaxBindCount", request.datasetMaxBindCount);
@@ -2203,6 +2209,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceRole)) {
             query.put("ServiceRole", request.serviceRole);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
@@ -5088,12 +5098,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * @summary 获取项目列表
      *
-     * @param request ListProjectsRequest
+     * @param tmpReq ListProjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListProjectsResponse
      */
-    public ListProjectsResponse listProjectsWithOptions(ListProjectsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListProjectsResponse listProjectsWithOptions(ListProjectsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListProjectsShrinkRequest request = new ListProjectsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
@@ -5105,6 +5121,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.prefix)) {
             query.put("Prefix", request.prefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -6598,12 +6618,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * @summary 更新项目
      *
-     * @param request UpdateProjectRequest
+     * @param tmpReq UpdateProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateProjectResponse
      */
-    public UpdateProjectResponse updateProjectWithOptions(UpdateProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateProjectResponse updateProjectWithOptions(UpdateProjectRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateProjectShrinkRequest request = new UpdateProjectShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.datasetMaxBindCount)) {
             query.put("DatasetMaxBindCount", request.datasetMaxBindCount);
@@ -6639,6 +6665,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceRole)) {
             query.put("ServiceRole", request.serviceRole);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
