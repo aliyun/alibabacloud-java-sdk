@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AssignPrivateIpAddressesRequest extends TeaModel {
     /**
      * <p>The ID of the ENI.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;

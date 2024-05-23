@@ -7,6 +7,9 @@ public class DescribeEnsSaleControlStockRequest extends TeaModel {
     @NameInMap("AliUidAccount")
     public String aliUidAccount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 

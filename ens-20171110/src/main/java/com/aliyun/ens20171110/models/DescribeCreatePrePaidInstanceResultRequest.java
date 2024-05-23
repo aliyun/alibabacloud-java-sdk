@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeCreatePrePaidInstanceResultRequest extends TeaModel {
     /**
      * <p>The ID of the instance. You can call the CreateIntance operation to create an instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

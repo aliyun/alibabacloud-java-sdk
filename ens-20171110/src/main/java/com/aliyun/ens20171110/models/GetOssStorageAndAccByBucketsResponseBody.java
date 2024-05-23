@@ -39,19 +39,19 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
 
     public static class GetOssStorageAndAccByBucketsResponseBodyBucketList extends TeaModel {
         /**
-         * <p>The number of visits.</p>
+         * <p>The number of times that the bucket is accessed.</p>
          */
         @NameInMap("Acc")
         public Long acc;
 
         /**
-         * <p>The bucket name.</p>
+         * <p>The name of the bucket.</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
-         * <p>The storage usage of the cluster, in bytes.</p>
+         * <p>The storage usage of the bucket. Unit: bytes.</p>
          */
         @NameInMap("StorageUsageByte")
         public Long storageUsageByte;

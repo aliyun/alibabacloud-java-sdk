@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpgradeApplicationRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -17,6 +19,8 @@ public class UpgradeApplicationRequest extends TeaModel {
      * <p>*   Configuration information of the target version</p>
      * <p>*   Canary release policy for resources</p>
      * <p>*   Intelligent upgrade policy that contains information such as the time window and resource usage limit</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Template")
     public String template;

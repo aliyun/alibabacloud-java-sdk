@@ -19,7 +19,7 @@ public class DescribeImagesRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The name of the custom image. The name must be 2 to 128 characters in length The name must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the custom image. The name must be 2 to 128 characters in length The name must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
      * <br>
      * <p>By default, this parameter is left empty, which indicates that the original name is retained.</p>
      */

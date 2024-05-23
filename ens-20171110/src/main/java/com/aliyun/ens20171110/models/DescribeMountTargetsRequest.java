@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeMountTargetsRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The ID of the file system.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;

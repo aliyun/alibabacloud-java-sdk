@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class PushApplicationDataRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The data files that you want to push. The value must be a JSON string.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Data")
     public String data;

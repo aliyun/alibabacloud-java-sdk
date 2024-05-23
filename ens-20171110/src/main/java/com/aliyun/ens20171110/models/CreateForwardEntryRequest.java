@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateForwardEntryRequest extends TeaModel {
     /**
      * <p>The elastic IP address (EIP) that is used to access the Internet.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExternalIp")
     public String externalIp;
@@ -16,6 +18,8 @@ public class CreateForwardEntryRequest extends TeaModel {
      * <p>*   Valid values: 1 to 65535.</p>
      * <p>*   To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</p>
      * <p>*   If you set ExternalPort to a port range, you must also set InternalPort to a port range, and the number of ports specified must be the same for both parameters. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExternalPort")
     public String externalPort;
@@ -34,6 +38,8 @@ public class CreateForwardEntryRequest extends TeaModel {
 
     /**
      * <p>The private IP address of the instance that uses the DNAT entry for Internet communication.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InternalIp")
     public String internalIp;
@@ -43,6 +49,8 @@ public class CreateForwardEntryRequest extends TeaModel {
      * <br>
      * <p>*   Valid values: 1 to 65535.</p>
      * <p>*   To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InternalPort")
     public String internalPort;
@@ -59,6 +67,8 @@ public class CreateForwardEntryRequest extends TeaModel {
 
     /**
      * <p>The ID of the Network Address Translation (NAT) gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;

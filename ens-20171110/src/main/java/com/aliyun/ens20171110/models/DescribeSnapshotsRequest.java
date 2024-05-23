@@ -11,7 +11,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the disk. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent list of regions.</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;

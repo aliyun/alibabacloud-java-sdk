@@ -8,6 +8,8 @@ public class DeleteImageRequest extends TeaModel {
      * <p>The ID of the image. You can specify only one image ID.</p>
      * <br>
      * <p>You can delete only custom images that you created.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageId")
     public String imageId;

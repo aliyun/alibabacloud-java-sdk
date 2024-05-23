@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDiskResponseBody extends TeaModel {
     /**
-     * <p>IDs of instances.</p>
+     * <p>The IDs of the instances.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;

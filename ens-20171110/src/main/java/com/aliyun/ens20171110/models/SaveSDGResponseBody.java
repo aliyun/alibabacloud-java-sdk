@@ -3,16 +3,19 @@ package com.aliyun.ens20171110.models;
 
 import com.aliyun.tea.*;
 
-public class TerminateWorkflowResponseBody extends TeaModel {
+public class SaveSDGResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static TerminateWorkflowResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        TerminateWorkflowResponseBody self = new TerminateWorkflowResponseBody();
+    public static SaveSDGResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SaveSDGResponseBody self = new SaveSDGResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public TerminateWorkflowResponseBody setRequestId(String requestId) {
+    public SaveSDGResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -6,18 +6,22 @@ import com.aliyun.tea.*;
 public class RunServiceScheduleRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The IP address of the client.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClientIp")
     public String clientIp;
 
     /**
-     * <p>The directory to which the data file is mounted. The value must be a full path and cannot be \"/../\". Example: \["/data/app01", "/data/user"]. Specify the relative path of the virtual device for this parameter. For example, specify /data for this parameter when the actual path of the virtual device is /data/{input path}.</p>
+     * <p>The directory to which the data file is mounted. The value must be a full path and cannot be \\"/../\\". Example: ["/data/app01", "/data/user"]. Specify the relative path of the virtual device for this parameter. For example, specify /data for this parameter when the actual path of the virtual device is /data/{input path}.</p>
      */
     @NameInMap("Directorys")
     public String directorys;
@@ -55,6 +59,8 @@ public class RunServiceScheduleRequest extends TeaModel {
      * <p>*   Confirm: confirms the scheduling operation.</p>
      * <p>*   Cancel: cancels the scheduling operation.</p>
      * <p>*   Console: performs the scheduling operation when the device is in the scheduling state.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServiceAction")
     public String serviceAction;
@@ -67,6 +73,8 @@ public class RunServiceScheduleRequest extends TeaModel {
 
     /**
      * <p>The UUID of the device.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

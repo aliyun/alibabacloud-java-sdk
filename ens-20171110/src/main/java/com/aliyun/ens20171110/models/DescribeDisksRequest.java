@@ -65,7 +65,7 @@ public class DescribeDisksRequest extends TeaModel {
     public String ensRegionIds;
 
     /**
-     * <p>The instance to which the disk is attached.</p>
+     * <p>The ID of the instance to which the disk is attached.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -105,7 +105,7 @@ public class DescribeDisksRequest extends TeaModel {
      * <p>*   Available: The disk can be attached.</p>
      * <p>*   Attaching: The disk is being attached.</p>
      * <p>*   Detaching: The disk is being detached.</p>
-     * <p>*   Creating: The image is being created.</p>
+     * <p>*   Creating: The disk is being created.</p>
      * <p>*   ReIniting: The disk is being reset.</p>
      * <p>*   Deleting: The disk is being released.</p>
      * <p>*   Deleted: The disk is released.</p>

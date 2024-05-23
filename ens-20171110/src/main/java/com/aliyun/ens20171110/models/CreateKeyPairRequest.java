@@ -7,8 +7,10 @@ public class CreateKeyPairRequest extends TeaModel {
     /**
      * <p>The name of the key pair. The name must conform to the following naming conventions:</p>
      * <br>
-     * <p>*   The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>*   The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * <p>*   It must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;

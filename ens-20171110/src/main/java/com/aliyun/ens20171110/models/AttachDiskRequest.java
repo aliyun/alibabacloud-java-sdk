@@ -15,13 +15,17 @@ public class AttachDiskRequest extends TeaModel {
     public String deleteWithInstance;
 
     /**
-     * <p>The ID of the disk to be attached. The cloud disk and the instance must belong to the same zone.</p>
+     * <p>The ID of the disk to be attached. The cloud disk and the instance must belong to the same node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

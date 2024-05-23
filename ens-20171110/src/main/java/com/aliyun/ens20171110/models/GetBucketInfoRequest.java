@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetBucketInfoRequest extends TeaModel {
     /**
      * <p>The name of the bucket.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BucketName")
     public String bucketName;

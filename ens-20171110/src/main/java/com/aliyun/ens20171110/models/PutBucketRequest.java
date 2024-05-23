@@ -18,6 +18,8 @@ public class PutBucketRequest extends TeaModel {
      * <p>The name of the bucket.</p>
      * <br>
      * <p>This parameter can contain 3 to 50 characters in length and can contain only lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BucketName")
     public String bucketName;

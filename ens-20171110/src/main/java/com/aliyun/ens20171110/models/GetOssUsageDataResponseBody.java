@@ -39,19 +39,19 @@ public class GetOssUsageDataResponseBody extends TeaModel {
 
     public static class GetOssUsageDataResponseBodyUsageList extends TeaModel {
         /**
-         * <p>The inbound bandwidth over the intranet. Unit: bit/s.</p>
+         * <p>The inbound bandwidth over the internal network. Unit: bit/s.</p>
          */
         @NameInMap("LanRxBw")
         public Long lanRxBw;
 
         /**
-         * <p>The outbound bandwidth over the intranet. Unit: bit/s.</p>
+         * <p>The outbound bandwidth over the internal network. Unit: bit/s.</p>
          */
         @NameInMap("LanTxBw")
         public Long lanTxBw;
 
         /**
-         * <p>The number of time point within a day.</p>
+         * <p>The number of time points within a day.</p>
          */
         @NameInMap("Point")
         public Long point;
@@ -69,7 +69,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
         public Long storageUsageByte;
 
         /**
-         * <p>The outbound bandwidth over the intranet. Unit: bit/s.</p>
+         * <p>The outbound bandwidth over the Internet. Unit: bit/s.</p>
          */
         @NameInMap("WanRxBw")
         public Long wanRxBw;

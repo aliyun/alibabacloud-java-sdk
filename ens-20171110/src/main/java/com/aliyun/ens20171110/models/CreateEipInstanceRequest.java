@@ -18,18 +18,24 @@ public class CreateEipInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the Edge Node Service (ENS) node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The billing method of the EIP. Set the value to **PostPaid**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
      * <p>The metering method of the EIP. Set the value to **95BandwidthByMonth**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;

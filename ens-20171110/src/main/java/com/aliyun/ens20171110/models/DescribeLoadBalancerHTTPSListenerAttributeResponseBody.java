@@ -54,10 +54,10 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     /**
      * <p>The HTTP status code for a successful health check. Valid values:</p>
      * <br>
-     * <p>*   **http\_2xx** (default)</p>
-     * <p>*   **http\_3xx**.</p>
-     * <p>*   **http\_4xx**</p>
-     * <p>*   **http\_5xx**</p>
+     * <p>*   **http_2xx** (default)</p>
+     * <p>*   **http_3xx**.</p>
+     * <p>*   **http_4xx**</p>
+     * <p>*   **http_5xx**</p>
      * <br>
      * <p>>  This parameter is returned only if the HealthCheck parameter is set to on.</p>
      */

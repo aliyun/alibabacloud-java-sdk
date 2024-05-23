@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeDataDownloadURLRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The name of the data file.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DataName")
     public String dataName;
 
     /**
      * <p>The version number of the data file.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DataVersion")
     public String dataVersion;

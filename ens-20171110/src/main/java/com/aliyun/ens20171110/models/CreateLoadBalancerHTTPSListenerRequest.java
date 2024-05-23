@@ -39,6 +39,8 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
      * <br>
      * <p>*   **on**</p>
      * <p>*   **off**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HealthCheck")
     public String healthCheck;
@@ -62,10 +64,10 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>The HTTP status code for a successful health check. Valid values:</p>
      * <br>
-     * <p>*   **http\_2xx** (default)</p>
-     * <p>*   **http\_3xx**</p>
-     * <p>*   **http\_4xx**</p>
-     * <p>*   **http\_5xx**</p>
+     * <p>*   **http_2xx** (default)</p>
+     * <p>*   **http_3xx**</p>
+     * <p>*   **http_4xx**</p>
+     * <p>*   **http_5xx**</p>
      * <br>
      * <p>>  This parameter takes effect only if you set HealthCheck to on.</p>
      */
@@ -144,12 +146,16 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
 
     /**
      * <p>The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -177,6 +183,8 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
 
     /**
      * <p>The ID of the server certificate.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;

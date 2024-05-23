@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class RemoveVSwitchesFromEpnInstanceRequest extends TeaModel {
     /**
      * <p>The ID of theEPN instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EPNInstanceId")
     public String EPNInstanceId;
 
     /**
      * <p>The internal networking information that you want to delete.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchesInfo")
     public String vSwitchesInfo;

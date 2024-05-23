@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateLoadBalancerRequest extends TeaModel {
     /**
      * <p>The ID of the Edge Node Service (ENS) node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
@@ -20,24 +22,32 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     /**
      * <p>The specification of the ELB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerSpec")
     public String loadBalancerSpec;
 
     /**
      * <p>The network ID of the created ELB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkId")
     public String networkId;
 
     /**
      * <p>The billing method of the instance. Valid value: PostPaid. PostPaid specifies the pay-as-you-go billing method.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
      * <p>The ID of the vSwitch to which the internal-facing ELB instance belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

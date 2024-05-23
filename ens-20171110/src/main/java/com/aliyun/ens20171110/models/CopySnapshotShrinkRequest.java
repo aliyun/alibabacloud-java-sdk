@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CopySnapshotShrinkRequest extends TeaModel {
     /**
      * <p>The destination nodes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationRegionIds")
     public String destinationRegionIdsShrink;
@@ -17,13 +19,15 @@ public class CopySnapshotShrinkRequest extends TeaModel {
     public String destinationSnapshotDescription;
 
     /**
-     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      */
     @NameInMap("DestinationSnapshotName")
     public String destinationSnapshotName;
 
     /**
      * <p>The ID of the source snapshot.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;

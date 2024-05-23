@@ -9,6 +9,8 @@ public class DescribeUserBandWidthDataRequest extends TeaModel {
      * <br>
      * <p>*   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <p>*   If the value of the seconds place is not 00, the start time is automatically set to the next minute.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -38,6 +40,8 @@ public class DescribeUserBandWidthDataRequest extends TeaModel {
 
     /**
      * <p>The precision of the monitoring data that you want to obtain. Valid values: 300, 1200, 3600, and 14400. Default value: 300. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Period")
     public String period;
@@ -47,6 +51,8 @@ public class DescribeUserBandWidthDataRequest extends TeaModel {
      * <br>
      * <p>*   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <p>*   If the value of the seconds place is not 00, the start time is automatically set to the next minute.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

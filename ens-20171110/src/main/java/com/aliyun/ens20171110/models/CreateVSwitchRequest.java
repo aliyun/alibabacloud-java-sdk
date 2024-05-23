@@ -10,6 +10,8 @@ public class CreateVSwitchRequest extends TeaModel {
      * <p>*   The subnet mask must be 16 to 29 bits in length.</p>
      * <p>*   The CIDR block of the vSwitch must fall within the CIDR block of the VPC to which the vSwitch belongs.</p>
      * <p>*   The CIDR block of the vSwitch cannot be the same as the destination CIDR block in a route entry of the VPC. However, it can be a subset of the destination CIDR block.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
@@ -24,6 +26,8 @@ public class CreateVSwitchRequest extends TeaModel {
 
     /**
      * <p>The ID of the edge node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
@@ -38,7 +42,7 @@ public class CreateVSwitchRequest extends TeaModel {
      * <p>The name of the vSwitch. The name must meet the following requirements:</p>
      * <br>
      * <p>*   The name must be 2 to 128 characters in length.</p>
-     * <p>*   The name must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>*   The name must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * <br>
      * <p>Default value: null.</p>
      */

@@ -726,6 +726,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstance extends TeaModel {
+        @NameInMap("AutoReleaseTime")
+        public String autoReleaseTime;
+
         /**
          * <p>The number of vCPUs.</p>
          */
@@ -767,7 +770,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <br>
          * <p>*   The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).</p>
          * <p>*   For a Windows instance, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). The hostname cannot contain periods (.) or contain only digits.</p>
-         * <p>*   For an instance that runs another operating system such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</p>
+         * <p>*   For other operating systems: The hostname must be 2 to 64 characters in length and can contain letters, digits, and hyphens (-). It can be separated by periods (.).</p>
          */
         @NameInMap("HostName")
         public String hostName;
@@ -791,7 +794,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The name of the virtual private cloud (VPC).</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
@@ -810,10 +813,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The instance family. Valid values:</p>
          * <br>
-         * <p>*   x86\_vm: x86-based computing instance.</p>
-         * <p>*   x86\_pm: x86-based physical machine.</p>
-         * <p>*   x86\_bmi: x86-based bare metal instance.</p>
-         * <p>*   x86\_bm: bare metal instance with the SmartNIC.</p>
+         * <p>*   x86_vm: x86-based computing instance.</p>
+         * <p>*   x86_pm: x86-based physical machine.</p>
+         * <p>*   x86_bmi: x86-based bare metal instance.</p>
+         * <p>*   x86_bm: bare metal instance with the SmartNIC.</p>
          * <p>*   pc_bmi: heterogeneous bare metal instance.</p>
          * <p>*   pc_vm: heterogeneous virtual machine.</p>
          * <p>*   arm_bmi: Arm-based computing instance.</p>
@@ -840,7 +843,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Integer memory;
 
         /**
-         * <p>The returned information about the network.</p>
+         * <p>Details of the network.</p>
          */
         @NameInMap("NetworkAttributes")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes networkAttributes;
@@ -881,8 +884,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("SpecName")
         public String specName;
 
+        @NameInMap("SpotStrategy")
+        public String spotStrategy;
+
         /**
-         * <p>The status. Valid values:</p>
+         * <p>The status of the instance. Valid values:</p>
          * <br>
          * <p>*   Running</p>
          * <p>*   Expired</p>
@@ -892,7 +898,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The returned information about the disk.</p>
+         * <p>Details of the system disk.</p>
          */
         @NameInMap("SystemDisk")
         public DescribeInstancesResponseBodyInstancesInstanceSystemDisk systemDisk;
@@ -903,6 +909,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static DescribeInstancesResponseBodyInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesInstance self = new DescribeInstancesResponseBodyInstancesInstance();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setAutoReleaseTime(String autoReleaseTime) {
+            this.autoReleaseTime = autoReleaseTime;
+            return this;
+        }
+        public String getAutoReleaseTime() {
+            return this.autoReleaseTime;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setCpu(String cpu) {
@@ -1087,6 +1101,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getSpecName() {
             return this.specName;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+        public String getSpotStrategy() {
+            return this.spotStrategy;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setStatus(String status) {

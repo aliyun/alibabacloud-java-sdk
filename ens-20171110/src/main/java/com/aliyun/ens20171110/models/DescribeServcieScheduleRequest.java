@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeServcieScheduleRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -18,6 +20,8 @@ public class DescribeServcieScheduleRequest extends TeaModel {
 
     /**
      * <p>The UUID of the device.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

@@ -12,6 +12,8 @@ public class DescribeImageSharePermissionRequest extends TeaModel {
 
     /**
      * <p>The ID of the image.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageId")
     public String imageId;

@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DeploySDGResponseBody extends TeaModel {
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("Data")
     public DeploySDGResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DeploySDGResponseBody extends TeaModel {
     }
 
     public static class DeploySDGResponseBodyDataResultFailedItems extends TeaModel {
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("ErrMessage")
         public String errMessage;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -62,12 +74,21 @@ public class DeploySDGResponseBody extends TeaModel {
     }
 
     public static class DeploySDGResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The number of failed tasks.</p>
+         */
         @NameInMap("FailedCount")
         public Long failedCount;
 
+        /**
+         * <p>Details of failed tasks.</p>
+         */
         @NameInMap("FailedItems")
         public java.util.List<DeploySDGResponseBodyDataResultFailedItems> failedItems;
 
+        /**
+         * <p>The number of successful tasks.</p>
+         */
         @NameInMap("SuccessCount")
         public Long successCount;
 
@@ -103,12 +124,24 @@ public class DeploySDGResponseBody extends TeaModel {
     }
 
     public static class DeploySDGResponseBodyData extends TeaModel {
+        /**
+         * <p>The response message. Success is returned for a successful request.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The task result.</p>
+         */
         @NameInMap("Result")
         public DeploySDGResponseBodyDataResult result;
 
+        /**
+         * <p>Indicates whether all tasks are successful. Valid values:</p>
+         * <br>
+         * <p>*   true: All tasks are successful.</p>
+         * <p>*   false: Failed tasks exist.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

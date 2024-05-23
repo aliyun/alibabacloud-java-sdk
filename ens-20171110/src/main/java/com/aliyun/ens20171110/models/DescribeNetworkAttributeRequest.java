@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeNetworkAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the network.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkId")
     public String networkId;

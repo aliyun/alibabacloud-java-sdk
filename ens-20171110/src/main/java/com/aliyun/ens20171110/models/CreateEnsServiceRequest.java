@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateEnsServiceRequest extends TeaModel {
     /**
      * <p>The ID of the resource that you want to obtain. You can specify only one ID in a request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnsServiceId")
     public String ensServiceId;
@@ -15,6 +17,8 @@ public class CreateEnsServiceRequest extends TeaModel {
      * <br>
      * <p>*   **Buy**: create</p>
      * <p>*   **Upgrade**: change</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OrderType")
     public String orderType;

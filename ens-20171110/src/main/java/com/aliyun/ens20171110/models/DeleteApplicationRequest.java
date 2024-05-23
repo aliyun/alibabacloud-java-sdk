@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteApplicationRequest extends TeaModel {
     /**
      * <p>The ID of the application. To obtain the application ID, call the ListApplication operation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;

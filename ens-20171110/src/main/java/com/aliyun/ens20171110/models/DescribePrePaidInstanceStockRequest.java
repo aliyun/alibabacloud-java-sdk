@@ -6,24 +6,32 @@ import com.aliyun.tea.*;
 public class DescribePrePaidInstanceStockRequest extends TeaModel {
     /**
      * <p>The ID of the datadisk.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DataDiskSize")
     public Integer dataDiskSize;
 
     /**
      * <p>The ID of the edge node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The size of the system disk. Unit: GB.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceSpec")
     public String instanceSpec;
 
     /**
      * <p>The ID of the systemdisk</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SystemDiskSize")
     public Integer systemDiskSize;

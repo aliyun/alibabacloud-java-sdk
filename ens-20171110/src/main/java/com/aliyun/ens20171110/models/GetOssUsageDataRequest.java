@@ -11,7 +11,9 @@ public class GetOssUsageDataRequest extends TeaModel {
     public String bucket;
 
     /**
-     * <p>The end of the time range to query. The time is in UTC. Format: 2010-01-21T09:50:23Z.</p>
+     * <p>The end of the time range to query. The time must be in UTC. Format: 2010-01-21T09:50:23Z.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -25,7 +27,9 @@ public class GetOssUsageDataRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The beginning of the time range to query. The time is in UTC. Format: 2010-01-21T09:50:23Z.</p>
+     * <p>The beginning of the time range to query. The time must be in UTC. Format: 2010-01-21T09:50:23Z.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

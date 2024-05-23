@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ReleasePostPaidInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the instance to be deleted. You can specify only one instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

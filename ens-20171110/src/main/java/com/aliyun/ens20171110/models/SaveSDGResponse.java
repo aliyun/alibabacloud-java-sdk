@@ -3,7 +3,7 @@ package com.aliyun.ens20171110.models;
 
 import com.aliyun.tea.*;
 
-public class RollbackWorkflowResponse extends TeaModel {
+public class SaveSDGResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class RollbackWorkflowResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public RollbackWorkflowResponseBody body;
+    public SaveSDGResponseBody body;
 
-    public static RollbackWorkflowResponse build(java.util.Map<String, ?> map) throws Exception {
-        RollbackWorkflowResponse self = new RollbackWorkflowResponse();
+    public static SaveSDGResponse build(java.util.Map<String, ?> map) throws Exception {
+        SaveSDGResponse self = new SaveSDGResponse();
         return TeaModel.build(map, self);
     }
 
-    public RollbackWorkflowResponse setHeaders(java.util.Map<String, String> headers) {
+    public SaveSDGResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class RollbackWorkflowResponse extends TeaModel {
         return this.headers;
     }
 
-    public RollbackWorkflowResponse setStatusCode(Integer statusCode) {
+    public SaveSDGResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class RollbackWorkflowResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public RollbackWorkflowResponse setBody(RollbackWorkflowResponseBody body) {
+    public SaveSDGResponse setBody(SaveSDGResponseBody body) {
         this.body = body;
         return this;
     }
-    public RollbackWorkflowResponseBody getBody() {
+    public SaveSDGResponseBody getBody() {
         return this.body;
     }
 

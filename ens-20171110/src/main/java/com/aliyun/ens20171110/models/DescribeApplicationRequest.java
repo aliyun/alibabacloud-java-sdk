@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeApplicationRequest extends TeaModel {
     /**
      * <p>The ID of the application. You can call the ListApplications operation to obtain the application ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -35,6 +37,9 @@ public class DescribeApplicationRequest extends TeaModel {
      */
     @NameInMap("OutDetailStatParams")
     public String outDetailStatParams;
+
+    @NameInMap("ResourceSelector")
+    public String resourceSelector;
 
     public static DescribeApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApplicationRequest self = new DescribeApplicationRequest();
@@ -71,6 +76,14 @@ public class DescribeApplicationRequest extends TeaModel {
     }
     public String getOutDetailStatParams() {
         return this.outDetailStatParams;
+    }
+
+    public DescribeApplicationRequest setResourceSelector(String resourceSelector) {
+        this.resourceSelector = resourceSelector;
+        return this;
+    }
+    public String getResourceSelector() {
+        return this.resourceSelector;
     }
 
 }

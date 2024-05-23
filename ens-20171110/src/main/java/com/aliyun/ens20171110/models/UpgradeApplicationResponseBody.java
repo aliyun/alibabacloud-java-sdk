@@ -10,6 +10,9 @@ public class UpgradeApplicationResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TaskId")
+    public String taskId;
+
     public static UpgradeApplicationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpgradeApplicationResponseBody self = new UpgradeApplicationResponseBody();
         return TeaModel.build(map, self);
@@ -21,6 +24,14 @@ public class UpgradeApplicationResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpgradeApplicationResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

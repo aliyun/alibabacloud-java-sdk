@@ -133,11 +133,17 @@ public class DescribeDisksResponseBody extends TeaModel {
         public String diskName;
 
         /**
-         * <p>Indicates whether the cloud disk is encrypted.</p>
+         * <p>Indicates whether the cloud disk is encrypted. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
+        /**
+         * <p>The ID of the Key Management Service (KMS) key that is used for the cloud disk.</p>
+         */
         @NameInMap("EncryptedKeyId")
         public String encryptedKeyId;
 
@@ -160,16 +166,16 @@ public class DescribeDisksResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>Specifies whether the cloud disk or the local disk is removable. Valid values:</p>
+         * <p>Indicates whether the cloud disk or local disk is removable. Valid values:</p>
          * <br>
          * <p>*   true: The disk is removable. A removable disk can independently exist and can be attached to or detached from an instance within the same zone.</p>
          * <p>*   false: The disk is not removable. A disk that is not removable cannot independently exist or be attached to or detached from an instance within the same zone.</p>
          * <br>
-         * <p>The **Portable** attribute of the following disks is **false**, and these disks share the same lifecycle with their associated instances:</p>
+         * <p>If disks are of the following categories or types, the **Portable** value is **false** and the disks have the same lifecycle as their attached instances:</p>
          * <br>
-         * <p>*   Local HDD.</p>
-         * <p>*   Local SSD.</p>
-         * <p>*   Data disk that uses the subscription billing method.</p>
+         * <p>*   Local HDDs</p>
+         * <p>*   Local SSDs</p>
+         * <p>*   Data disks that use the subscription billing method</p>
          */
         @NameInMap("Portable")
         public Boolean portable;
@@ -199,7 +205,7 @@ public class DescribeDisksResponseBody extends TeaModel {
          * <p>*   Available: The disk can be attached.</p>
          * <p>*   Attaching: The disk is being attached.</p>
          * <p>*   Detaching: The disk is being detached.</p>
-         * <p>*   Creating: The image is being created.</p>
+         * <p>*   Creating: The disk is being created.</p>
          * <p>*   ReIniting: The disk is being reset.</p>
          */
         @NameInMap("Status")

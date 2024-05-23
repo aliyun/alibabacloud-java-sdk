@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateSnatEntryRequest extends TeaModel {
     /**
      * <p>The ID of the Network Address Translation (NAT) gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
@@ -18,6 +20,8 @@ public class CreateSnatEntryRequest extends TeaModel {
 
     /**
      * <p>The elastic IP address (EIP) in the SNAT entry. Separate multiple EIPs with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SnatIp")
     public String snatIp;

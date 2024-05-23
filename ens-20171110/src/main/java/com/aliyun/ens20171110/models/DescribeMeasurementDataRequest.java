@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeMeasurementDataRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartDate")
     public String startDate;

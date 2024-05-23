@@ -9,12 +9,16 @@ public class RenewARMServerInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance that you want to renew.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The renewal period. By default, instances are renewed on a monthly basis. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Period")
     public Integer period;
@@ -24,6 +28,8 @@ public class RenewARMServerInstanceRequest extends TeaModel {
      * <br>
      * <p>*   Month (default)</p>
      * <p>*   Year</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;

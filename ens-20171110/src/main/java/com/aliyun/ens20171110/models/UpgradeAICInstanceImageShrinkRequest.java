@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class UpgradeAICInstanceImageShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the AIC image.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The IDs of the servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServerIds")
     public String serverIdsShrink;

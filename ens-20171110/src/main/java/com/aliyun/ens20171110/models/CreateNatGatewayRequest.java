@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateNatGatewayRequest extends TeaModel {
     /**
      * <p>The ID of the Edge Node Service (ENS) node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
@@ -24,12 +26,16 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     /**
      * <p>The ID of the network.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkId")
     public String networkId;
 
     /**
      * <p>The ID of the vSwitch.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

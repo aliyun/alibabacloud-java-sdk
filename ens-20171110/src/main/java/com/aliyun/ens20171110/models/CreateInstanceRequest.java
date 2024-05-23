@@ -24,6 +24,8 @@ public class CreateInstanceRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
@@ -50,7 +52,7 @@ public class CreateInstanceRequest extends TeaModel {
      * <br>
      * <p>*   The name must be **2** to **128** characters in length.</p>
      * <p>*   It must start with a letter but cannot start with http:// or https://.</p>
-     * <p>*   The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
+     * <p>*   The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * <br>
      * <p>If you do not specify this parameter, the instance ID is used as the instance name by default.</p>
      */
@@ -61,6 +63,8 @@ public class CreateInstanceRequest extends TeaModel {
      * <p>The type of the instance.</p>
      * <br>
      * <p>For more information, see [](~~66124~~).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -96,7 +100,7 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The password of the instance.</p>
      * <br>
-     * <p>The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include: ``()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/``</p>
+     * <p>The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include: ``()`~!@#$%^&*-_+=|{}[]:;\\"<>,.?/``</p>
      */
     @NameInMap("Password")
     public String password;
@@ -119,6 +123,8 @@ public class CreateInstanceRequest extends TeaModel {
 
     /**
      * <p>The subscription period of the instance. Valid values: **1** to **9** and **12**. Unit: months.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Period")
     public String period;
@@ -140,6 +146,8 @@ public class CreateInstanceRequest extends TeaModel {
 
     /**
      * <p>The number of instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Quantity")
     public String quantity;

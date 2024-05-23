@@ -18,6 +18,8 @@ public class DescribeSDGDeploymentStatusRequest extends TeaModel {
 
     /**
      * <p>The ID of the SDG.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SDGId")
     public String SDGId;

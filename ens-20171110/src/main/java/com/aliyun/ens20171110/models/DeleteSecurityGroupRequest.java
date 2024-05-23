@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteSecurityGroupRequest extends TeaModel {
     /**
      * <p>The security group ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

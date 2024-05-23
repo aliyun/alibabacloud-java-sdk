@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteDeviceInternetPortRequest extends TeaModel {
     /**
      * <p>The ID of the instance. You can specify the ID of the server or container.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -15,12 +17,16 @@ public class DeleteDeviceInternetPortRequest extends TeaModel {
      * <br>
      * <p>*   SNAT</p>
      * <p>*   DNAT</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatType")
     public String natType;
 
     /**
      * <p>The ID of the rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

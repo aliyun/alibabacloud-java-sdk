@@ -3,7 +3,7 @@ package com.aliyun.ens20171110.models;
 
 import com.aliyun.tea.*;
 
-public class RestartWorkflowResponse extends TeaModel {
+public class DeleteSDGResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class RestartWorkflowResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public RestartWorkflowResponseBody body;
+    public DeleteSDGResponseBody body;
 
-    public static RestartWorkflowResponse build(java.util.Map<String, ?> map) throws Exception {
-        RestartWorkflowResponse self = new RestartWorkflowResponse();
+    public static DeleteSDGResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteSDGResponse self = new DeleteSDGResponse();
         return TeaModel.build(map, self);
     }
 
-    public RestartWorkflowResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteSDGResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class RestartWorkflowResponse extends TeaModel {
         return this.headers;
     }
 
-    public RestartWorkflowResponse setStatusCode(Integer statusCode) {
+    public DeleteSDGResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class RestartWorkflowResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public RestartWorkflowResponse setBody(RestartWorkflowResponseBody body) {
+    public DeleteSDGResponse setBody(DeleteSDGResponseBody body) {
         this.body = body;
         return this;
     }
-    public RestartWorkflowResponseBody getBody() {
+    public DeleteSDGResponseBody getBody() {
         return this.body;
     }
 

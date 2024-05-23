@@ -11,12 +11,6 @@ public class ResetAICInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IDs of the AIC instance groups.</p>
-     */
-    @NameInMap("InstanceIds")
-    public java.util.List<String> instanceIds;
-
-    /**
      * <p>The ID of the server.</p>
      */
     @NameInMap("ServerId")
@@ -33,14 +27,6 @@ public class ResetAICInstanceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ResetAICInstanceRequest setInstanceIds(java.util.List<String> instanceIds) {
-        this.instanceIds = instanceIds;
-        return this;
-    }
-    public java.util.List<String> getInstanceIds() {
-        return this.instanceIds;
     }
 
     public ResetAICInstanceRequest setServerId(String serverId) {

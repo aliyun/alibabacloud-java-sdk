@@ -275,13 +275,13 @@ public class DescribeInstancesRequest extends TeaModel {
 
     public static class DescribeInstancesRequestTags extends TeaModel {
         /**
-         * <p>实例的标签键。N的取值范围为1~20。</p>
+         * <p>The tag key. Valid values: 1 to 20.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>实例的标签值。N的取值范围：1~20。</p>
+         * <p>The tag value. Valid values: 1 to 20.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DeleteEnsSaleConditionControlRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AliUidAccount")
     public String aliUidAccount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SaleControls")
     public java.util.List<DeleteEnsSaleConditionControlRequestSaleControls> saleControls;
 
@@ -43,9 +52,15 @@ public class DeleteEnsSaleConditionControlRequest extends TeaModel {
     }
 
     public static class DeleteEnsSaleConditionControlRequestSaleControlsConditionControls extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ConditionControlModuleCode")
         public String conditionControlModuleCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ConditionControlModuleValue")
         public String conditionControlModuleValue;
 
@@ -73,12 +88,21 @@ public class DeleteEnsSaleConditionControlRequest extends TeaModel {
     }
 
     public static class DeleteEnsSaleConditionControlRequestSaleControls extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ConditionControls")
         public java.util.List<DeleteEnsSaleConditionControlRequestSaleControlsConditionControls> conditionControls;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("OrderType")
         public String orderType;
 

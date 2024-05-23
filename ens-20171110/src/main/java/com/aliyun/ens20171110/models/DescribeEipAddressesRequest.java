@@ -12,6 +12,8 @@ public class DescribeEipAddressesRequest extends TeaModel {
 
     /**
      * <p>The ID of the Edge Node Service (ENS) node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;

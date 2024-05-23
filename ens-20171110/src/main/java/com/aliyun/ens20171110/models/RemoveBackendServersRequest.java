@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class RemoveBackendServersRequest extends TeaModel {
     /**
-     * <p>The list of backend servers that you want to add. You can add at most 20 backend servers.</p>
+     * <p>The list of backend servers that you want to remove. You can remove up to 20 backend servers at a time.</p>
      * <br>
-     * <p>>  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BackendServers")
     public java.util.List<RemoveBackendServersRequestBackendServers> backendServers;
 
     /**
      * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -53,7 +55,9 @@ public class RemoveBackendServersRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the instance that is used as the backend server.</p>
+         * <p>The instance ID of the backend server.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ServerId")
         public String serverId;
@@ -61,16 +65,14 @@ public class RemoveBackendServersRequest extends TeaModel {
         /**
          * <p>The type of the backend server. Valid values:</p>
          * <br>
-         * <p>*   **ens**: ENS instance.</p>
-         * <p>*   **eni**: ENI.</p>
+         * <p>*   **ens**: an Edge Node Service (ENS) instance.</p>
+         * <p>*   **eni**: an elastic network interface (ENI).</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The weight of the backend server. Default value: 100. Valid values: **0** to **100**.</p>
-         * <br>
-         * <p>>  The value 0 indicates that requests are not forwarded to the backend server.</p>
+         * <p>The weight of the backend server.</p>
          */
         @NameInMap("Weight")
         public Integer weight;
