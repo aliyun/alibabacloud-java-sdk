@@ -224,7 +224,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
          * <p>The image architecture. Valid values:</p>
          * <br>
          * <p>*   i386</p>
-         * <p>*   x86_64</p>
+         * <p>*   x86\_64</p>
          */
         @NameInMap("Architecture")
         public String architecture;

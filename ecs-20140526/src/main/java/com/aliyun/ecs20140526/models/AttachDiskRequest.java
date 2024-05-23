@@ -42,8 +42,6 @@ public class AttachDiskRequest extends TeaModel {
      * <p>The ID of the disk. The disk specified by the `DiskId` parameter and the instance specified by the `InstanceId` parameter must reside in the same zone.</p>
      * <br>
      * <p>> For more information about the limits on attaching a data disk and a system disk, see the "Usage notes" section of this topic.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("DiskId")
     public String diskId;
@@ -53,8 +51,6 @@ public class AttachDiskRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance to which you want to attach the disk.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -77,7 +73,7 @@ public class AttachDiskRequest extends TeaModel {
     /**
      * <p>The password that is set when you attach the system disk. The password is applicable only to the administrator and root users. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
      * <br>
-     * <p>    ()`~!@#$%^&*-_+=|{}[]:;\\"<>,.?/</p>
+     * <p>    ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/</p>
      * <br>
      * <p>For Windows instances, passwords cannot start with a forward slash (/).</p>
      * <br>

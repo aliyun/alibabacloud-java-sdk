@@ -20,9 +20,7 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the elasticity assurance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the elasticity assurance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -97,14 +95,12 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
     public static class ModifyElasticityAssuranceRequestPrivatePoolOptions extends TeaModel {
         /**
          * <p>The ID of the elasticity assurance.</p>
-         * <br>
-         * <p>This parameter is required.</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
          */
         @NameInMap("Name")
         public String name;

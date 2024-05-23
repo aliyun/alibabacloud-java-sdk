@@ -55,7 +55,7 @@ public class DescribeInstancesRequest extends TeaModel {
      * <br>
      * <p>Default value: enabled.</p>
      * <br>
-     * <p>>  For information about instance metadata, see [Access instance metadata](https://help.aliyun.com/document_detail/49122.html).</p>
+     * <p>>  For information about instance metadata, see [Access instance metadata](~~49122~~).</p>
      */
     @NameInMap("HttpEndpoint")
     public String httpEndpoint;
@@ -74,7 +74,7 @@ public class DescribeInstancesRequest extends TeaModel {
      * <br>
      * <p>Default value: optional.</p>
      * <br>
-     * <p>>  For information about modes of accessing instance metadata, see [Access instance metadata](https://help.aliyun.com/document_detail/150575.html).</p>
+     * <p>>  For information about modes of accessing instance metadata, see [Access instance metadata](~~150575~~).</p>
      */
     @NameInMap("HttpTokens")
     public String httpTokens;
@@ -107,7 +107,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceIds;
 
     /**
-     * <p>The name of the instance. Fuzzy search with asterisk (\\*) wildcard characters is supported.</p>
+     * <p>The name of the instance. Fuzzy search with asterisk (\*) wildcard characters is supported.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
@@ -245,9 +245,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String rdmaIpAddresses;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -689,7 +687,7 @@ public class DescribeInstancesRequest extends TeaModel {
         /**
          * <p>The key of tag N of the instance. Valid values of N: 1 to 20.</p>
          * <br>
-         * <p>If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.</p>
+         * <p>If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
          */
         @NameInMap("Key")
         public String key;

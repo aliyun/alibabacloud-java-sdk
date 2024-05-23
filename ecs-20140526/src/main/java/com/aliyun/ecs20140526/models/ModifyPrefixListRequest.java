@@ -24,22 +24,18 @@ public class ModifyPrefixListRequest extends TeaModel {
 
     /**
      * <p>The ID of the prefix list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
     /**
-     * <p>The name of the prefix list. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). It must start with a letter and cannot start with `http://`, `https://`, `com.aliyun`, or `com.alibabacloud`.</p>
+     * <p>The name of the prefix list. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). It must start with a letter and cannot start with `http://`, `https://`, `com.aliyun`, or `com.alibabacloud`.</p>
      */
     @NameInMap("PrefixListName")
     public String prefixListName;
 
     /**
-     * <p>The region ID of the prefix list. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the prefix list. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -147,11 +143,9 @@ public class ModifyPrefixListRequest extends TeaModel {
          * <br>
          * <p>Take note of the following items when you add the entries:</p>
          * <br>
-         * <p>*   The total number of entries in the prefix list cannot exceed the maximum number of entries you specified for the prefix list. You can call the [DescribePrefixListAttributes](https://help.aliyun.com/document_detail/205872.html) operation to query the maximum number of entries that the prefix list can contain.</p>
+         * <p>*   The total number of entries in the prefix list cannot exceed the maximum number of entries you specified for the prefix list. You can call the [DescribePrefixListAttributes](~~205872~~) operation to query the maximum number of entries that the prefix list can contain.</p>
          * <p>*   You cannot specify duplicate CIDR blocks.</p>
          * <p>*   The CIDR blocks cannot be the same as the `RemoveEntry.N.Cidr` values.</p>
-         * <br>
-         * <p>This parameter is required.</p>
          */
         @NameInMap("Cidr")
         public String cidr;
@@ -193,8 +187,6 @@ public class ModifyPrefixListRequest extends TeaModel {
          * <br>
          * <p>*   You cannot specify duplicate CIDR blocks.</p>
          * <p>*   The CIDR blocks cannot be the same as the `AddEntry.N.Cidr` values.</p>
-         * <br>
-         * <p>This parameter is required.</p>
          */
         @NameInMap("Cidr")
         public String cidr;

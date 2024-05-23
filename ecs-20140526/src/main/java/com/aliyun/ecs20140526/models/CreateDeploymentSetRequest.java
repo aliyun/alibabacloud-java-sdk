@@ -11,7 +11,7 @@ public class CreateDeploymentSetRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of the deployment set. The name must be 2 to 128 characters in length and can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the deployment set. The name must be 2 to 128 characters in length and can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (\_), periods (.), and hyphens (-).</p>
      */
     @NameInMap("DeploymentSetName")
     public String deploymentSetName;
@@ -51,7 +51,7 @@ public class CreateDeploymentSetRequest extends TeaModel {
     public Long groupCount;
 
     /**
-     * <p>The region ID of the deployment set. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("OnUnableToRedeployFailedInstance")
     public String onUnableToRedeployFailedInstance;
@@ -64,8 +64,6 @@ public class CreateDeploymentSetRequest extends TeaModel {
 
     /**
      * <p>Creates a deployment set in a specific region.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

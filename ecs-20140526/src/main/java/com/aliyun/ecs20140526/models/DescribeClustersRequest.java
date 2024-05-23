@@ -10,9 +10,6 @@ public class DescribeClustersRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

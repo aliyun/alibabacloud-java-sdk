@@ -23,7 +23,7 @@ public class CreateDiskRequest extends TeaModel {
     public Boolean burstingEnabled;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -50,7 +50,7 @@ public class CreateDiskRequest extends TeaModel {
     public String diskCategory;
 
     /**
-     * <p>The name of the disk. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the disk. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      * <br>
      * <p>This parameter is empty by default.</p>
      */
@@ -99,7 +99,7 @@ public class CreateDiskRequest extends TeaModel {
      * <br>
      * <p>Default value: Disabled.</p>
      * <br>
-     * <p>> Disks for which the multi-attach feature is enabled support only the pay-as-you-go billing method. When `MultiAttach` is set to Enabled, you cannot specify `InstanceId`. You can call the [AttachDisk](https://help.aliyun.com/document_detail/25515.html) operation to attach disks to instances after the disks are created. Disks for which the multi-attach feature is enabled can be attached only as data disks.</p>
+     * <p>> Disks for which the multi-attach feature is enabled support only the pay-as-you-go billing method. When `MultiAttach` is set to Enabled, you cannot specify `InstanceId`. You can call the [AttachDisk](~~25515~~) operation to attach disks to instances after the disks are created. Disks for which the multi-attach feature is enabled can be attached only as data disks.</p>
      */
     @NameInMap("MultiAttach")
     public String multiAttach;
@@ -120,7 +120,7 @@ public class CreateDiskRequest extends TeaModel {
      * <br>
      * <p>Default value: PL1.</p>
      * <br>
-     * <p>For more information about ESSD performance levels, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).</p>
+     * <p>For more information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
      */
     @NameInMap("PerformanceLevel")
     public String performanceLevel;
@@ -132,9 +132,7 @@ public class CreateDiskRequest extends TeaModel {
     public Long provisionedIops;
 
     /**
-     * <p>The ID of the region in which to create the disk. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The ID of the region in which to create the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -203,7 +201,7 @@ public class CreateDiskRequest extends TeaModel {
     public String storageSetId;
 
     /**
-     * <p>The number of partitions in the storage set. The value must be greater than or equal to 2 but cannot exceed the quota obtained by calling the [DescribeAccountAttributes](https://help.aliyun.com/document_detail/73772.html)operation.</p>
+     * <p>The number of partitions in the storage set. The value must be greater than or equal to 2 but cannot exceed the quota obtained by calling the [DescribeAccountAttributes](~~73772~~)operation.</p>
      * <br>
      * <p>Default value: 2.</p>
      */

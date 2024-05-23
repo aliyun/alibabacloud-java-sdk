@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteNatGatewayRequest extends TeaModel {
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
@@ -16,9 +13,6 @@ public class DeleteNatGatewayRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

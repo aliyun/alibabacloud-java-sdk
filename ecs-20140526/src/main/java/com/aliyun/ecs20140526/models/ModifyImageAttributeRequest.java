@@ -30,7 +30,7 @@ public class ModifyImageAttributeRequest extends TeaModel {
     public ModifyImageAttributeRequestFeatures features;
 
     /**
-     * <p>The name of the image family. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with acs: or aliyun. [It cannot contain http:// or https://. It can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).](http://https://。、（.）、（:）、（_）（-）。)</p>
+     * <p>The name of the image family. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with acs: or aliyun. [It cannot contain http:// or https://. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).](http://https://。、（.）、（:）、（\_）（-）。)</p>
      * <br>
      * <p>By default, this parameter is empty.</p>
      */
@@ -39,14 +39,12 @@ public class ModifyImageAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the custom image.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
-     * <p>The name of the custom image. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with acs: or aliyun. [It cannot contain http:// or https://. It can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).](http://https://。、（.）、（:）、（_）（-）。)</p>
+     * <p>The name of the custom image. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with acs: or aliyun. [It cannot contain http:// or https://. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).](http://https://。、（.）、（:）、（\_）（-）。)</p>
      * <br>
      * <p>By default, this parameter is empty. In this case, the original name is retained.</p>
      */
@@ -68,9 +66,7 @@ public class ModifyImageAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the custom image. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

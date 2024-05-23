@@ -14,7 +14,7 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The expiration time of the capacity reservation. This parameter takes effect only when `EndTimeType` is set to Limited. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).</p>
+     * <p>The expiration time of the capacity reservation. This parameter takes effect only when `EndTimeType` is set to Limited. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. For more information, see [ISO 8601](~~25696~~).</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -54,9 +54,7 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The region ID of the capacity reservation. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -179,14 +177,12 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public static class ModifyCapacityReservationRequestPrivatePoolOptions extends TeaModel {
         /**
          * <p>The capacity reservation ID.</p>
-         * <br>
-         * <p>This parameter is required.</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The name of the capacity reservation. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the capacity reservation. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
          */
         @NameInMap("Name")
         public String name;

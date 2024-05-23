@@ -6,8 +6,6 @@ import com.aliyun.tea.*;
 public class DeleteAutoProvisioningGroupRequest extends TeaModel {
     /**
      * <p>The ID of the auto provisioning group.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("AutoProvisioningGroupId")
     public String autoProvisioningGroupId;
@@ -20,8 +18,6 @@ public class DeleteAutoProvisioningGroupRequest extends TeaModel {
 
     /**
      * <p>The region ID of the auto provisioning group.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

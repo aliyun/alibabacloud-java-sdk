@@ -17,7 +17,7 @@ public class DescribeZonesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The billing method of resources. For more information, see [Billing overview](https://help.aliyun.com/document_detail/25398.html). Valid values:</p>
+     * <p>The billing method of resources. For more information, see [Billing overview](~~25398~~). Valid values:</p>
      * <br>
      * <p>*   PrePaid: subscription</p>
      * <p>*   PostPaid: pay-as-you-go</p>
@@ -34,9 +34,7 @@ public class DescribeZonesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -48,7 +46,7 @@ public class DescribeZonesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The bidding policy for pay-as-you-go instances. You can specify this parameter when the `InstanceChargeType` parameter is set to PostPaid. For more information, see [Preemptible instances](https://help.aliyun.com/document_detail/52088.html). Valid values:</p>
+     * <p>The bidding policy for pay-as-you-go instances. You can specify this parameter when the `InstanceChargeType` parameter is set to PostPaid. For more information, see [Preemptible instances](~~52088~~). Valid values:</p>
      * <br>
      * <p>*   NoSpot: The instances are regular pay-as-you-go instances.</p>
      * <p>*   SpotWithPriceLimit: The instances are preemptible instances with user-defined maximum hourly prices.</p>

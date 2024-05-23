@@ -19,7 +19,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public Integer cpu;
 
     /**
-     * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).</p>
+     * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).</p>
      */
     @NameInMap("CreationTime")
     public String creationTime;
@@ -57,13 +57,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
      * <p>*   true</p>
      * <p>*   false</p>
      * <br>
-     * <p>For more information, see [MTUs](https://help.aliyun.com/document_detail/200512.html).</p>
+     * <p>For more information, see [MTUs](~~200512~~).</p>
      */
     @NameInMap("EnableJumboFrame")
     public Boolean enableJumboFrame;
 
     /**
-     * <p>The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).</p>
+     * <p>The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).</p>
      */
     @NameInMap("ExpiredTime")
     public String expiredTime;

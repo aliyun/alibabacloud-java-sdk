@@ -4,15 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class UnassociateEipAddressRequest extends TeaModel {
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("AllocationId")
     public String allocationId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -15,7 +15,7 @@ public class ModifyInvocationAttributeShrinkRequest extends TeaModel {
      * <br>
      * <p>    *   You can define custom parameters in the `{{}}` format. Within `{{}}`, the spaces and line feeds before and after the parameter names are ignored.</p>
      * <p>    *   The number of custom parameters cannot exceed 20.</p>
-     * <p>    *   A custom parameter name can contain letters, digits, underscores (_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</p>
+     * <p>    *   A custom parameter name can contain letters, digits, underscores (\_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</p>
      * <p>    *   Each custom parameter name cannot exceed 64 bytes in length.</p>
      * <br>
      * <p>*   You can specify built-in environment parameters as custom parameters. Then, when you run the command, these parameters are automatically specified by Cloud Assistant. You can specify the following built-in environment parameters:</p>
@@ -74,7 +74,7 @@ public class ModifyInvocationAttributeShrinkRequest extends TeaModel {
      * <br>
      * <p>    *   The specified interval must be in the range of 60 seconds to 7 days and must be longer than the timeout period specified when you created the scheduled task.</p>
      * <p>    *   The interval is the amount of time that elapses between two consecutive executions. The interval is irrelevant to the amount of time that is required to run the command once. For example, you set the interval to 5 minutes and the command requires 2 minutes to run once. Each time the command running is complete, the system waits 3 minutes instead of 5 minutes before the system runs the command again.</p>
-     * <p>    *   The point in time at which the command is run the next time is calculated based on the creation time of the task (the [CreationTime](https://help.aliyun.com/document_detail/64840.html) value returned by the `DescribeInvocations` operation) and the modified execution interval.</p>
+     * <p>    *   The point in time at which the command is run the next time is calculated based on the creation time of the task (the [CreationTime](~~64840~~) value returned by the `DescribeInvocations` operation) and the modified execution interval.</p>
      * <br>
      * <p>*   To run a command only once at a specific time, specify a point in time and a time zone. Specify the point in time in the `at(yyyy-MM-dd HH:mm:ss <Time zone>)` format, which indicates `at(Year-Month-Day Hours:Minutes:Seconds <Time zone>)`. If you do not specify a time zone, the Coordinated Universal Time (UTC) time zone is used by default. You can specify a time zone in the following forms:</p>
      * <br>
@@ -84,7 +84,7 @@ public class ModifyInvocationAttributeShrinkRequest extends TeaModel {
      * <br>
      * <p>    For example, to configure a command to run only once at 13:15:30 on June 6, 2022 (Shanghai time), set the time to `at(2022-06-06 13:15:30 Asia/Shanghai)`. To configure a command to run only once at 13:15:30 on June 6, 2022 (UTC-7), set the time to `at(2022-06-06 13:15:30 GMT-7:00)`.</p>
      * <br>
-     * <p>*   To run a command at designated points in time, use a cron expression to define the schedule. Specify a schedule in the `<Cron expression> <Time zone>` format. The cron expression is in the `<Seconds> <Minutes> <Hours> <Day of the month> <Month> <Day of the week> <Year (optional)>` format. The system calculates the execution times of the command based on the specified cron expression and time zone and runs the command as scheduled. If you do not specify a time zone, the system time zones of the instances on which you want to run the command are used by default. For information about cron expressions, see [Cron expressions](https://help.aliyun.com/document_detail/64769.html). You can specify the time zone in the following forms:</p>
+     * <p>*   To run a command at designated points in time, use a cron expression to define the schedule. Specify a schedule in the `<Cron expression> <Time zone>` format. The cron expression is in the `<Seconds> <Minutes> <Hours> <Day of the month> <Month> <Day of the week> <Year (optional)>` format. The system calculates the execution times of the command based on the specified cron expression and time zone and runs the command as scheduled. If you do not specify a time zone, the system time zones of the instances on which you want to run the command are used by default. For information about cron expressions, see [Cron expressions](~~64769~~). You can specify the time zone in the following forms:</p>
      * <br>
      * <p>    *   The time zone name. Examples: `Asia/Shanghai` and `America/Los_Angeles`.</p>
      * <p>    *   The time offset from GMT. Examples: `GMT+8:00` (UTC+8) and `GMT-7:00` (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.</p>
@@ -105,8 +105,6 @@ public class ModifyInvocationAttributeShrinkRequest extends TeaModel {
 
     /**
      * <p>The execution ID of the command.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("InvokeId")
     public String invokeId;
@@ -134,8 +132,6 @@ public class ModifyInvocationAttributeShrinkRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

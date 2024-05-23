@@ -8,7 +8,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public CreateLaunchTemplateVersionRequestSystemDisk systemDisk;
 
     /**
-     * <p>The automatic release time of the instance. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The automatic release time of the instance. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
      * <p>*   If the value of `ss` is not `00`, the time is automatically rounded down to the nearest minute based on the value of `mm`.</p>
      * <p>*   The specified time must be at least 30 minutes later than the current time.</p>
@@ -20,8 +20,8 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     /**
      * <p>The performance mode of the burstable instance. Valid values:</p>
      * <br>
-     * <p>*   Standard: the standard mode. For more information, see the "Standard mode" section in [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html).</p>
-     * <p>*   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html).</p>
+     * <p>*   Standard: the standard mode. For more information, see the "Standard mode" section in [Overview of burstable instances](~~59977~~).</p>
+     * <p>*   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Overview of burstable instances](~~59977~~).</p>
      */
     @NameInMap("CreditSpecification")
     public String creditSpecification;
@@ -33,7 +33,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public java.util.List<CreateLaunchTemplateVersionRequestDataDisk> dataDisk;
 
     /**
-     * <p>Specifies whether to enable release protection for the instance. This parameter specifies whether you can use the ECS console or call the [DeleteInstance](https://help.aliyun.com/document_detail/25507.html) operation to release the instance. Valid values:</p>
+     * <p>Specifies whether to enable release protection for the instance. This parameter specifies whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance. Valid values:</p>
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
@@ -74,7 +74,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The ID of the image to use to create the Elastic Compute Service (ECS) instance. You can call the [DescribeImages](https://help.aliyun.com/document_detail/25534.html) operation to query available images.</p>
+     * <p>The ID of the image to use to create the Elastic Compute Service (ECS) instance. You can call the [DescribeImages](~~25534~~) operation to query available images.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
@@ -97,13 +97,13 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The instance type. For more information, see [Instance families](https://help.aliyun.com/document_detail/25378.html) or call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation to query the most recent instance type list.</p>
+     * <p>The instance type. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -159,13 +159,13 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public String keyPairName;
 
     /**
-     * <p>The ID of the launch template. For more information, call the [DescribeLaunchTemplates](https://help.aliyun.com/document_detail/73759.html) operation. You must specify `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template.</p>
+     * <p>The ID of the launch template. For more information, call the [DescribeLaunchTemplates](~~73759~~) operation. You must specify `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template.</p>
      */
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
     /**
-     * <p>The name of the launch template. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the launch template. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("LaunchTemplateName")
     public String launchTemplateName;
@@ -219,15 +219,13 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The name of the instance Resource Access Management (RAM) role. You can call the [ListRoles](https://help.aliyun.com/document_detail/28713.html) operation provided by RAM to query the instance RAM roles that you created.</p>
+     * <p>The name of the instance Resource Access Management (RAM) role. You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you created.</p>
      */
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
     /**
-     * <p>The region ID of the command. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent list of regions.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -262,7 +260,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The ID of security group N to which to assign the instance. The valid values of N depend on the maximum number of security groups to which the instance can belong. For more information, see [Quantity limits](https://help.aliyun.com/document_detail/25412.html).</p>
+     * <p>The ID of security group N to which to assign the instance. The valid values of N depend on the maximum number of security groups to which the instance can belong. For more information, see [Quantity limits](~~25412~~).</p>
      * <br>
      * <p>> The `SecurityGroupId` parameter and the `SecurityGroupIds.N` parameter are mutually exclusive.</p>
      */
@@ -756,7 +754,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
          */
         @NameInMap("DiskName")
         public String diskName;
@@ -788,7 +786,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
          * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
          * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
          * <br>
-         * <p>For more information about ESSD performance levels, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).</p>
+         * <p>For more information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
@@ -798,7 +796,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
          * <br>
          * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
          * <br>
-         * <p>> This parameter is available only if you set the Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html) and [Modify the performance configurations of an ESSD AutoPL disk](https://help.aliyun.com/document_detail/413275.html).</p>
+         * <p>> This parameter is available only if you set the Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).</p>
          */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
@@ -964,7 +962,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
          */
         @NameInMap("DiskName")
         public String diskName;
@@ -983,7 +981,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
          * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
          * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
          * <br>
-         * <p>For information about ESSD performance levels, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).</p>
+         * <p>For information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
@@ -993,7 +991,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
          * <br>
          * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
          * <br>
-         * <p>>  This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html) and [Modify the performance configurations of an ESSD AutoPL disk](https://help.aliyun.com/document_detail/413275.html).</p>
+         * <p>>  This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).</p>
          */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
@@ -1184,7 +1182,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The IDs of the security groups to which to assign the secondary ENI. The security group and the secondary ENI must belong to the same VPC. The valid values of N in `SecurityGroupIds.N` vary based on the maximum number of security groups to which a secondary ENI can belong. For more information, see the "Security group limits" section in [Limits](https://help.aliyun.com/document_detail/25412.html). The value of N in `NetworkInterface.N` cannot be greater than 1.</p>
+         * <p>The IDs of the security groups to which to assign the secondary ENI. The security group and the secondary ENI must belong to the same VPC. The valid values of N in `SecurityGroupIds.N` vary based on the maximum number of security groups to which a secondary ENI can belong. For more information, see the "Security group limits" section in [Limits](~~25412~~). The value of N in `NetworkInterface.N` cannot be greater than 1.</p>
          * <br>
          * <p>>  You cannot specify both `NetworkInterface.N.SecurityGroupId` and `NetworkInterface.N.SecurityGroupIds.N`.</p>
          */

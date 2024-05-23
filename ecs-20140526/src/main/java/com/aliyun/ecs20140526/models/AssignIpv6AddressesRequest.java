@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssignIpv6AddressesRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -13,7 +13,7 @@ public class AssignIpv6AddressesRequest extends TeaModel {
     /**
      * <p>The IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.</p>
      * <br>
-     * <p>Example: Ipv6Address.1=2001:db8:1234:1a00::\\*\\*\\*\\*</p>
+     * <p>Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*</p>
      * <br>
      * <p>>  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount`, but not both.</p>
      */
@@ -46,8 +46,6 @@ public class AssignIpv6AddressesRequest extends TeaModel {
 
     /**
      * <p>The ENI ID.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -59,9 +57,7 @@ public class AssignIpv6AddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the ENI. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

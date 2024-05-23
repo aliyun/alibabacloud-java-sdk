@@ -6,14 +6,12 @@ import com.aliyun.tea.*;
 public class CreateDemandRequest extends TeaModel {
     /**
      * <p>The number of instances. Valid values: 1 to 100000.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("Amount")
     public Integer amount;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The value of `ClientToken` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The value of `ClientToken` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -25,7 +23,7 @@ public class CreateDemandRequest extends TeaModel {
     public String demandDescription;
 
     /**
-     * <p>The name of the demand. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with [http:// or https://](http://https://). It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the demand. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with [http:// or https://](http://https://). It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
      * <br>
      * <p>The default value is the instance type name.</p>
      */
@@ -33,11 +31,9 @@ public class CreateDemandRequest extends TeaModel {
     public String demandName;
 
     /**
-     * <p>The end time of the subscription period. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
+     * <p>The end time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
      * <br>
      * <p>If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm). The value of EndTime is later than the value of Starttime. In most cases, the interval between the two times cannot be more than 10 days.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -52,9 +48,7 @@ public class CreateDemandRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The instance type. See [Instance families](https://help.aliyun.com/document_detail/25378.html) or call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation to query the performance data of an instance type, or see [Select instance types](https://help.aliyun.com/document_detail/58291.html) to learn how to select instance types.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The instance type. See [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of an instance type, or see [Select instance types](~~58291~~) to learn how to select instance types.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -71,8 +65,6 @@ public class CreateDemandRequest extends TeaModel {
      * <p>*   Valid values when the value of PeriodUnit is Day: 1, 2, 3, 4, 5, and 6.</p>
      * <p>*   Valid values when the value of PeriodUnit is Week: 1, 2, 3, and 4.</p>
      * <p>*   Valid values when the value of PeriodUnit is Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("Period")
     public Integer period;
@@ -83,16 +75,12 @@ public class CreateDemandRequest extends TeaModel {
      * <p>*   Day</p>
      * <p>*   Week</p>
      * <p>*   Month. This is the default value.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -104,21 +92,17 @@ public class CreateDemandRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start time of the subscription period. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
+     * <p>The start time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
      * <br>
      * <p>If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm). The value of EndTime must be later than the value of Starttime. In most cases, the interval between the two times cannot be more than 10 days.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The zone ID of the instance. You can call the [DescribeZones](https://help.aliyun.com/document_detail/25610.html) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
      * <br>
      * <p>This parameter is empty by default. If you leave this parameter empty, the system randomly selects a zone.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

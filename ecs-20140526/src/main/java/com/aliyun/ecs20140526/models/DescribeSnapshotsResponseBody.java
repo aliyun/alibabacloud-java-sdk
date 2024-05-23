@@ -150,7 +150,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     public static class DescribeSnapshotsResponseBodySnapshotsSnapshot extends TeaModel {
         /**
-         * <p>Indicates whether the snapshot can be used to create or roll back disks. Valid values:</p>
+         * <p>Indicates whether the snapshot can be used to create or roll back a disk. Valid values:</p>
          * <br>
          * <p>*   true</p>
          * <p>*   false</p>
@@ -161,13 +161,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The category of the snapshot.</p>
          * <br>
-         * <p>>  This parameter will be removed in the future. We recommend that you use `InstantAccess` to ensure future compatibility.</p>
+         * <p>>  This parameter will be removed in the future. To ensure future compatibility, we recommend that you use `InstantAccess`.</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The time when the snapshot was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -187,7 +187,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   true: The instant access feature is enabled. The instant access feature can be enabled only for enhanced SSDs (ESSDs).</p>
+         * <p>*   true: The instant access feature is enabled. By default, the instant access feature is enabled for Enterprise SSDs (ESSDs).</p>
          * <p>*   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</p>
          */
         @NameInMap("InstantAccess")
@@ -197,18 +197,20 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
          * <p>Indicates the validity period of the instant access feature. When the specified period expires, the instant access feature is automatically disabled.</p>
          * <br>
          * <p>By default, the value of this parameter is the same as the value of `RetentionDays`.</p>
+         * <br>
+         * <p>>  This parameter is deprecated. The normal snapshots of ESSDs are upgraded to support the instant access feature by default. No additional configurations are required to enable the feature and you are not charged for the feature. For more information, see [Use the instant access feature](~~193667~~).</p>
          */
         @NameInMap("InstantAccessRetentionDays")
         public Integer instantAccessRetentionDays;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key used for the data disk.</p>
+         * <p>The ID of the KMS key used for the data disk.</p>
          */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
 
         /**
-         * <p>The time when the snapshot was last changed. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the snapshot was last changed. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("LastModifiedTime")
         public String lastModifiedTime;
@@ -226,7 +228,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String progress;
 
         /**
-         * <p>The ID of the region to which the snapshot belongs.</p>
+         * <p>The region ID of the snapshot.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -238,7 +240,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public Integer remainTime;
 
         /**
-         * <p>The resource group ID to which the snapshot belongs.</p>
+         * <p>The ID of the resource group to which the snapshot belongs.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -255,6 +257,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("SnapshotId")
         public String snapshotId;
 
+        @NameInMap("SnapshotLinkId")
+        public String snapshotLinkId;
+
         /**
          * <p>The name of the snapshot. This parameter is returned only if a snapshot name was specified when the snapshot was created.</p>
          */
@@ -268,7 +273,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String snapshotSN;
 
         /**
-         * <p>The type of snapshot. Valid values:</p>
+         * <p>The type of the snapshot. Valid values:</p>
          * <br>
          * <p>*   auto or timer: automatic snapshot</p>
          * <p>*   user: manual snapshot</p>
@@ -313,7 +318,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The category of the source disk.</p>
          * <br>
-         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         * <p>>  This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</p>
          */
         @NameInMap("SourceStorageType")
         public String sourceStorageType;
@@ -476,6 +481,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
         public String getSnapshotId() {
             return this.snapshotId;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setSnapshotLinkId(String snapshotLinkId) {
+            this.snapshotLinkId = snapshotLinkId;
+            return this;
+        }
+        public String getSnapshotLinkId() {
+            return this.snapshotLinkId;
         }
 
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setSnapshotName(String snapshotName) {

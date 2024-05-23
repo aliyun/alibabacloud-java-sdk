@@ -11,9 +11,7 @@ public class StopInvocationRequest extends TeaModel {
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The ID of the command task. You can call the [DescribeInvocations](https://help.aliyun.com/document_detail/64840.html) operation to query all task IDs.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The ID of the command task. You can call the [DescribeInvocations](~~64840~~) operation to query all task IDs.</p>
      */
     @NameInMap("InvokeId")
     public String invokeId;
@@ -25,9 +23,7 @@ public class StopInvocationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the command task. You can call the [DescribeInvocations](https://help.aliyun.com/document_detail/64840.html) operation to query the IDs of all command tasks.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The ID of the command task. You can call the [DescribeInvocations](~~64840~~) operation to query the IDs of all command tasks.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

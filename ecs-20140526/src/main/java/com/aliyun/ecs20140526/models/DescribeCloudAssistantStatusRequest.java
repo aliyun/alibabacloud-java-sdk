@@ -61,9 +61,7 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the instance. You can call [DescribeRegions](~~25609~~) to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

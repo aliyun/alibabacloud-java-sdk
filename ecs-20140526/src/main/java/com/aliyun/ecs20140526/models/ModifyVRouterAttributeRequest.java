@@ -22,9 +22,6 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("VRouterId")
     public String VRouterId;
 

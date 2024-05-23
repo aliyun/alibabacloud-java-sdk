@@ -7,15 +7,9 @@ public class AssociateHaVipRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("HaVipId")
     public String haVipId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -25,9 +19,6 @@ public class AssociateHaVipRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

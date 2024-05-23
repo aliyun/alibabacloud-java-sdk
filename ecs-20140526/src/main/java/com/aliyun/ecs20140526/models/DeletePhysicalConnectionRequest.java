@@ -13,15 +13,9 @@ public class DeletePhysicalConnectionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

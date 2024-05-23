@@ -23,8 +23,6 @@ public class ModifyDiskSpecRequest extends TeaModel {
 
     /**
      * <p>The disk ID.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("DiskId")
     public String diskId;
@@ -70,7 +68,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
      * <br>
      * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
      * <br>
-     * <p>>  This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](https://help.aliyun.com/document_detail/368372.html) and [Modify the performance configurations of an ESSD AutoPL disk](https://help.aliyun.com/document_detail/413275.html).</p>
+     * <p>>  This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).</p>
      */
     @NameInMap("ProvisionedIops")
     public Long provisionedIops;
@@ -172,7 +170,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
          * <br>
          * <p>Valid values: 900 to maximum IOPS per disk (with an increment of 100).</p>
          * <br>
-         * <p>For more information, see [Block storage performance](https://help.aliyun.com/document_detail/25382.html).</p>
+         * <p>For more information, see [Block storage performance](~~25382~~).</p>
          */
         @NameInMap("IOPS")
         public Integer IOPS;
@@ -192,7 +190,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
          * <br>
          * <p>Valid values: 60 to maximum throughput per disk.</p>
          * <br>
-         * <p>For more information, see [Block storage performance](https://help.aliyun.com/document_detail/25382.html).</p>
+         * <p>For more information, see [Block storage performance](~~25382~~).</p>
          */
         @NameInMap("Throughput")
         public Integer throughput;

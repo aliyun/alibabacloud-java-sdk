@@ -53,7 +53,7 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public java.util.List<String> diskIds;
 
     /**
-     * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (\_), periods (.), and hyphens (-).</p>
      */
     @NameInMap("DiskName")
     public String diskName;
@@ -78,7 +78,7 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the command. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

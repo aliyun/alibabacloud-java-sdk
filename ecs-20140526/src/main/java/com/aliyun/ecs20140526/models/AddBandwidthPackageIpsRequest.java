@@ -4,18 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AddBandwidthPackageIpsRequest extends TeaModel {
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("IpCount")
     public String ipCount;
 
@@ -25,9 +19,6 @@ public class AddBandwidthPackageIpsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

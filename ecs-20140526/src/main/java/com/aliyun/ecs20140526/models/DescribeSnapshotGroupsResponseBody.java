@@ -130,7 +130,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         /**
          * <p>The retention period of the instant access feature. After the retention period ends, the snapshot is automatically released.</p>
          * <br>
-         * <p>>  This parameter is deprecated. The normal snapshots of enhanced SSDs (ESSDs) are upgraded to support the instant access feature by default. No additional configurations are required to enable the feature and you are not charged for the feature. For more information, see [Use the instant access feature](https://help.aliyun.com/document_detail/193667.html).</p>
+         * <p>>  This parameter is deprecated. The normal snapshots of enhanced SSDs (ESSDs) are upgraded to support the instant access feature by default. No additional configurations are required to enable the feature and you are not charged for the feature. For more information, see [Use the instant access feature](~~193667~~).</p>
          */
         @NameInMap("InstantAccessRetentionDays")
         public Integer instantAccessRetentionDays;

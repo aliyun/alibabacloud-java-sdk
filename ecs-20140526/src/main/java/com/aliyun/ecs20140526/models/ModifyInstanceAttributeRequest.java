@@ -13,13 +13,13 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
      * <p>*   Standard</p>
      * <p>*   Unlimited</p>
      * <br>
-     * <p>For more information about the performance modes of burstable instances, see [Overview](https://help.aliyun.com/document_detail/59977.html).</p>
+     * <p>For more information about the performance modes of burstable instances, see [Overview](~~59977~~).</p>
      */
     @NameInMap("CreditSpecification")
     public String creditSpecification;
 
     /**
-     * <p>The release protection attribute of the instance. This parameter specifies whether you can use the ECS console or call the [DeleteInstance](https://help.aliyun.com/document_detail/25507.html) operation to release the instance.</p>
+     * <p>The release protection attribute of the instance. This parameter specifies whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance.</p>
      * <br>
      * <p>>  This parameter is applicable only to pay-as-you-go instances. The release protection attribute can protect instances against manual releases, but not against automatic releases.</p>
      */
@@ -39,7 +39,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
      * <br>
      * <p>false</p>
      * <br>
-     * <p>You can enable the Jumbo Frames feature only for specific instance types. For more information, see [MTUs](https://help.aliyun.com/document_detail/200512.html).</p>
+     * <p>You can enable the Jumbo Frames feature only for specific instance types. For more information, see [MTUs](~~200512~~).</p>
      */
     @NameInMap("EnableJumboFrame")
     public Boolean enableJumboFrame;
@@ -47,8 +47,8 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The hostname of the instance. Take note of the following items:</p>
      * <br>
-     * <p>*   When you change the hostname of the instance, the instance cannot be in the Creating (`Pending`) or Starting (`Starting`) state. Otherwise, the new hostname and the configurations in `/etc/hosts` may not take effect. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/25506.html) operation to query the status of the instance.</p>
-     * <p>*   After you change the hostname, you must call the [RebootInstance](https://help.aliyun.com/document_detail/25502.html) operation for the new hostname to take effect.</p>
+     * <p>*   When you change the hostname of the instance, the instance cannot be in the Creating (`Pending`) or Starting (`Starting`) state. Otherwise, the new hostname and the configurations in `/etc/hosts` may not take effect. You can call the [DescribeInstances](~~25506~~) operation to query the status of the instance.</p>
+     * <p>*   After you change the hostname, you must call the [RebootInstance](~~25502~~) operation for the new hostname to take effect.</p>
      * <br>
      * <p>The following limits apply to the hostnames of instances that run different operating systems:</p>
      * <br>
@@ -60,14 +60,12 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
@@ -87,7 +85,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
      * <br>
-     * <p>    ( ) ` ~ ! @ # $ % ^ & * - _ + = | { } [ ] : ; \\" < > , . ? /</p>
+     * <p>    ( ) ` ~ ! @ # $ % ^ & * - _ + = | { } [ ] : ; \" < > , . ? /</p>
      * <br>
      * <p>The password of a Windows instance cannot start with a forward slash (/).</p>
      * <br>
@@ -295,7 +293,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
          * <br>
          * <p>> </p>
          * <br>
-         * <p>*   This parameter is supported only by specific instance families. For information about the supported instance families, see [View and modify CPU topologies](https://help.aliyun.com/document_detail/2636059.html).</p>
+         * <p>*   This parameter is supported only by specific instance families. For information about the supported instance families, see [View and modify CPU topologies](~~2636059~~).</p>
          * <br>
          * <p>*   Before you specify this parameter, make sure that the instance is in the Stopped (`Stopped`) state.</p>
          */

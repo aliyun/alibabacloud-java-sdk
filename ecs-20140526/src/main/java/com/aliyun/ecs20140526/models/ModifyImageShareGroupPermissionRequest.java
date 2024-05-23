@@ -10,9 +10,6 @@ public class ModifyImageShareGroupPermissionRequest extends TeaModel {
     @NameInMap("RemoveGroup")
     public java.util.List<String> removeGroup;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("ImageId")
     public String imageId;
 
@@ -22,9 +19,6 @@ public class ModifyImageShareGroupPermissionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

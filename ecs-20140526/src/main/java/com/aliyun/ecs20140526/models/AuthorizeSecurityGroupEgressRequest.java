@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -114,9 +114,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     public String priority;
 
     /**
-     * <p>The region ID of the source security group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the source security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -129,8 +127,6 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
 
     /**
      * <p>The security group ID.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
@@ -395,7 +391,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public Long destGroupOwnerId;
 
         /**
-         * <p>The ID of the destination prefix list to be referenced in security group rule N. You can call the [DescribePrefixLists](https://help.aliyun.com/document_detail/205046.html) operation to query the IDs of available prefix lists.</p>
+         * <p>The ID of the destination prefix list to be referenced in security group rule N. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.</p>
          * <br>
          * <p>Take note of the following items:</p>
          * <br>
@@ -435,7 +431,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The source IPv6 CIDR block for security group rule N. CIDR blocks and IPv6 addresses are supported.</p>
          * <br>
-         * <p>This parameter is supported by quintuple rules. For more information, see [Security group quintuple rules](https://help.aliyun.com/document_detail/97439.html).</p>
+         * <p>This parameter is supported by quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          * <br>
@@ -500,7 +496,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The source IPv4 CIDR block for security group rule N. CIDR blocks and IPv4 addresses are supported.</p>
          * <br>
-         * <p>This parameter is supported by quintuple rules. For more information, see [Security group quintuple rules](https://help.aliyun.com/document_detail/97439.html).</p>
+         * <p>This parameter is supported by quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          */
@@ -515,7 +511,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
          * <p>*   If you set IpProtocol to GRE, the port number range is -1/-1.</p>
          * <p>*   If you set IpProtocol to ALL, the port number range is -1/-1.</p>
          * <br>
-         * <p>This parameter is supported by quintuple rules. For more information, see [Security group quintuple rules](https://help.aliyun.com/document_detail/97439.html).</p>
+         * <p>This parameter is supported by quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          */

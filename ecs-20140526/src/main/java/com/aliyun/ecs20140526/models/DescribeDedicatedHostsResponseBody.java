@@ -675,13 +675,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
          * <p>*   on: The dedicated host was added to the resource pool for automatic deployment.</p>
          * <p>*   off: The dedicated host was not added to the resource pool for automatic deployment.</p>
          * <br>
-         * <p>For information about automatic deployment, see the "Automatic deployment" section in [Functions and features](https://help.aliyun.com/document_detail/118938.html).</p>
+         * <p>For information about automatic deployment, see the "Automatic deployment" section in [Functions and features](~~118938~~).</p>
          */
         @NameInMap("AutoPlacement")
         public String autoPlacement;
 
         /**
-         * <p>The automatic release time of the dedicated host. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
+         * <p>The automatic release time of the dedicated host. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
          */
         @NameInMap("AutoReleaseTime")
         public String autoReleaseTime;
@@ -711,7 +711,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public Float cpuOverCommitRatio;
 
         /**
-         * <p>The time when the dedicated host was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
+         * <p>The time when the dedicated host was created. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -753,7 +753,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The expiration time of the subscription dedicated host. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
+         * <p>The expiration time of the subscription dedicated host. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;

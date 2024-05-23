@@ -6,16 +6,12 @@ import com.aliyun.tea.*;
 public class DeleteDiagnosticMetricSetsRequest extends TeaModel {
     /**
      * <p>The ID of diagnostic metric set.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("MetricSetIds")
     public java.util.List<String> metricSetIds;
 
     /**
      * <p>The IDs of diagnostic metric sets. You can specify up to 10 set IDs.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -31,15 +31,9 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
     @NameInMap("PeeringSubnetMask")
     public String peeringSubnetMask;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -55,9 +49,6 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
     @NameInMap("VbrOwnerId")
     public Long vbrOwnerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("VlanId")
     public Integer vlanId;
 

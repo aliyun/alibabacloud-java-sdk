@@ -19,9 +19,6 @@ public class CreateHaVipRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,9 +28,6 @@ public class CreateHaVipRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

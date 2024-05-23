@@ -6,8 +6,6 @@ import com.aliyun.tea.*;
 public class InstallCloudAssistantRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -20,8 +18,6 @@ public class InstallCloudAssistantRequest extends TeaModel {
 
     /**
      * <p>The IDs of instances. You can specify up to 50 instance IDs in a single request.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

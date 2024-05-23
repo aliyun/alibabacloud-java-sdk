@@ -107,13 +107,13 @@ public class DescribeDemandsResponseBody extends TeaModel {
         public String privatePoolId;
 
         /**
-         * <p>The end of the time range during which the filed resources are delivered and available. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The end of the time range during which the filed resources are delivered and available. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("SupplyEndTime")
         public String supplyEndTime;
 
         /**
-         * <p>The beginning of the time range during which the filed resources are delivered and available. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The beginning of the time range during which the filed resources are delivered and available. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("SupplyStartTime")
         public String supplyStartTime;
@@ -244,13 +244,13 @@ public class DescribeDemandsResponseBody extends TeaModel {
         public String demandStatus;
 
         /**
-         * <p>The time when the demand was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the demand was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("DemandTime")
         public String demandTime;
 
         /**
-         * <p>The expected end time for the purchase of the filed resources. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The expected end time for the purchase of the filed resources. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
@@ -294,7 +294,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
         public String periodUnit;
 
         /**
-         * <p>The expected start time for the purchase of the filed resources. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The expected start time for the purchase of the filed resources. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("StartTime")
         public String startTime;

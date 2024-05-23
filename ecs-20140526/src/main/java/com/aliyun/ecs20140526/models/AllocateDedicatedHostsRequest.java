@@ -22,7 +22,7 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     public String actionOnMaintenance;
 
     /**
-     * <p>Specifies whether to add the dedicated host to the resource pool for automatic deployment. If you create an ECS instance on a dedicated host without specifying the **DedicatedHostId** parameter, Alibaba Cloud selects a dedicated host from the resource pool to host the instance. For more information, see [Automatic deployment](https://help.aliyun.com/document_detail/118938.html). Valid values:</p>
+     * <p>Specifies whether to add the dedicated host to the resource pool for automatic deployment. If you create an ECS instance on a dedicated host without specifying the **DedicatedHostId** parameter, Alibaba Cloud selects a dedicated host from the resource pool to host the instance. For more information, see [Automatic deployment](~~118938~~). Valid values:</p>
      * <br>
      * <p>*   on: adds the dedicated host to the resource pool for automatic deployment.</p>
      * <p>*   off: does not add the dedicated host to the resource pool for automatic deployment.</p>
@@ -78,7 +78,7 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -98,15 +98,13 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     public String dedicatedHostClusterId;
 
     /**
-     * <p>The name of the dedicated host. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the dedicated host. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("DedicatedHostName")
     public String dedicatedHostName;
 
     /**
-     * <p>The dedicated host type. You can call the [DescribeDedicatedHostTypes](https://help.aliyun.com/document_detail/134240.html) operation to query the most recent list of dedicated host types.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The dedicated host type. You can call the [DescribeDedicatedHostTypes](~~134240~~) operation to query the most recent list of dedicated host types.</p>
      */
     @NameInMap("DedicatedHostType")
     public String dedicatedHostType;
@@ -160,9 +158,7 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     public Integer quantity;
 
     /**
-     * <p>The ID of the region in which to create the dedicated host. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The ID of the region in which to create the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityGroupRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -25,9 +25,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the security group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -45,7 +43,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (\_), periods (.), and hyphens (-).</p>
      */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
@@ -54,7 +52,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
      * <p>The type of the security group. Valid values:</p>
      * <br>
      * <p>*   normal: basic security group.</p>
-     * <p>*   enterprise: advanced security group. For more information, see [Advanced security groups](https://help.aliyun.com/document_detail/120621.html).</p>
+     * <p>*   enterprise: advanced security group. For more information, see [Advanced security groups](~~120621~~).</p>
      */
     @NameInMap("SecurityGroupType")
     public String securityGroupType;

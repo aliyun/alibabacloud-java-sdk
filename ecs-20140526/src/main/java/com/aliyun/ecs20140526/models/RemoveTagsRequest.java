@@ -8,17 +8,13 @@ public class RemoveTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource. For example, if you set ResourceType to instance, you must set this parameter to the ID of the related instance.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -46,8 +42,6 @@ public class RemoveTagsRequest extends TeaModel {
      * <p>*   snapshotpolicy</p>
      * <br>
      * <p>All values must be in lowercase.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

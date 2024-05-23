@@ -11,7 +11,7 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     public java.util.List<String> conditions;
 
     /**
-     * <p>The number of vCPUs of the instance type. For information about the values, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html). This parameter takes effect only when DestinationResource is set to InstanceType.</p>
+     * <p>The number of vCPUs of the instance type. For information about the values, see [Overview of instance families](~~25378~~). This parameter takes effect only when DestinationResource is set to InstanceType.</p>
      */
     @NameInMap("Cores")
     public Integer cores;
@@ -21,20 +21,18 @@ public class DescribeResourcesModificationRequest extends TeaModel {
      * <br>
      * <p>*   InstanceType</p>
      * <p>*   SystemDisk</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationResource")
     public String destinationResource;
 
     /**
-     * <p>The instance type. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html). You can also call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation to query the most recent instance type list. This parameter must be specified when DestinationResource is set to SystemDisk.</p>
+     * <p>The instance type. For more information, see [Overview of instance families](~~25378~~). You can also call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list. This parameter must be specified when DestinationResource is set to SystemDisk.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
-     * <p>The memory size of the instance type. Unit: GiB. For information about the values, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html). This parameter takes effect only when DestinationResource is set to InstanceType.</p>
+     * <p>The memory size of the instance type. Unit: GiB. For information about the values, see [Overview of instance families](~~25378~~). This parameter takes effect only when DestinationResource is set to InstanceType.</p>
      */
     @NameInMap("Memory")
     public Float memory;
@@ -51,10 +49,10 @@ public class DescribeResourcesModificationRequest extends TeaModel {
      * <br>
      * <p>*   Instance that resides in the classic network:</p>
      * <br>
-     * <p>    *   For [retired instance types](https://help.aliyun.com/document_detail/55263.html), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\\* such as vda and vdb.</p>
-     * <p>    *   For [instance families available for purchase](https://help.aliyun.com/document_detail/25378.html), when the instance type of an instance is changed, the private IP address of the instance changes.</p>
+     * <p>    *   For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</p>
+     * <p>    *   For [instance families available for purchase](~~25378~~), when the instance type of an instance is changed, the private IP address of the instance changes.</p>
      * <br>
-     * <p>*   Instance that resides in a virtual private cloud (VPC): For [retired instance types](https://help.aliyun.com/document_detail/55263.html), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\\* such as vda and vdb.</p>
+     * <p>*   Instance that resides in a virtual private cloud (VPC): For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</p>
      */
     @NameInMap("MigrateAcrossZone")
     public Boolean migrateAcrossZone;
@@ -83,17 +81,13 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource. For example, when DestinationResource is set to InstanceType, this parameter can be interpreted as InstanceId.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;

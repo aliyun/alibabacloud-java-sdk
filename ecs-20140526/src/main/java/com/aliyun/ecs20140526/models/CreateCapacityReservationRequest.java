@@ -8,7 +8,7 @@ public class CreateCapacityReservationRequest extends TeaModel {
     public CreateCapacityReservationRequestPrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
+     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -22,7 +22,7 @@ public class CreateCapacityReservationRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The time when the capacity reservation expires. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. For more information, see [ISO 8601](https://help.aliyun.com/document_detail/25696.html).</p>
+     * <p>The time when the capacity reservation expires. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. For more information, see [ISO 8601](~~25696~~).</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -38,16 +38,12 @@ public class CreateCapacityReservationRequest extends TeaModel {
 
     /**
      * <p>The total number of instances for which the capacity of an instance type is reserved.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceAmount")
     public Integer instanceAmount;
 
     /**
-     * <p>The instance type. You can create a capacity reservation to reserve the capacity of only one instance type. You can call the [DescribeInstanceTypes](https://help.aliyun.com/document_detail/25620.html) operation to query the instance types provided by ECS.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The instance type. You can create a capacity reservation to reserve the capacity of only one instance type. You can call the [DescribeInstanceTypes](~~25620~~) operation to query the instance types provided by ECS.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -72,9 +68,7 @@ public class CreateCapacityReservationRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The ID of the region in which to create the capacity reservation. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The ID of the region in which to create the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -107,8 +101,6 @@ public class CreateCapacityReservationRequest extends TeaModel {
 
     /**
      * <p>The ID of the zone in which you want to create the capacity reservation. A capacity reservation can reserve resources within only one zone.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneId")
     public java.util.List<String> zoneId;
@@ -267,7 +259,7 @@ public class CreateCapacityReservationRequest extends TeaModel {
         public String matchCriteria;
 
         /**
-         * <p>The capacity reservation name. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The capacity reservation name. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
          */
         @NameInMap("Name")
         public String name;

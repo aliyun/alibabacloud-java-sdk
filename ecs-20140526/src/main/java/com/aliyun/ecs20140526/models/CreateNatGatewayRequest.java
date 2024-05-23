@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateNatGatewayRequest extends TeaModel {
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("BandwidthPackage")
     public java.util.List<CreateNatGatewayRequestBandwidthPackage> bandwidthPackage;
 
@@ -25,9 +22,6 @@ public class CreateNatGatewayRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -37,9 +31,6 @@ public class CreateNatGatewayRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("VpcId")
     public String vpcId;
 

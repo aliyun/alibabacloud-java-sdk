@@ -22,17 +22,13 @@ public class UntagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource IDs. Valid values of N: 1 to 50.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -63,8 +59,6 @@ public class UntagResourcesRequest extends TeaModel {
      * <p>*   capacityreservation: capacity reservation</p>
      * <p>*   command: Cloud Assistant command</p>
      * <p>*   invocation: Cloud Assistant command execution result</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

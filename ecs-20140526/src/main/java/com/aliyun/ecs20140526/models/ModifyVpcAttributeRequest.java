@@ -28,9 +28,6 @@ public class ModifyVpcAttributeRequest extends TeaModel {
     @NameInMap("UserCidr")
     public String userCidr;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("VpcId")
     public String vpcId;
 

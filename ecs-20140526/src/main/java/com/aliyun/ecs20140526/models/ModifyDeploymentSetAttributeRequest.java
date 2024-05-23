@@ -6,14 +6,12 @@ import com.aliyun.tea.*;
 public class ModifyDeploymentSetAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the deployment set.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("DeploymentSetId")
     public String deploymentSetId;
 
     /**
-     * <p>The new name of the deployment set. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The new name of the deployment set. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("DeploymentSetName")
     public String deploymentSetName;
@@ -31,9 +29,7 @@ public class ModifyDeploymentSetAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the deployment set. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

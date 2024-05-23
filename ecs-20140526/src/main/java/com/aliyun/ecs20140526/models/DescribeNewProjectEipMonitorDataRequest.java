@@ -4,15 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeNewProjectEipMonitorDataRequest extends TeaModel {
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("AllocationId")
     public String allocationId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
@@ -34,9 +28,6 @@ public class DescribeNewProjectEipMonitorDataRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 

@@ -23,7 +23,7 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The network interface card (NIC) type of the security group rule.</p>
+     * <p>The network interface controller (NIC) type of the security group rule.</p>
      * <br>
      * <p>*   Valid values for rules of security groups in the classic network:</p>
      * <br>
@@ -32,13 +32,13 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
      * <br>
      * <p>    **</p>
      * <br>
-     * <p>    **Note**You can query security group rules of only one NIC type in a single call. To query security group rules of both NIC types, call the operation twice.</p>
+     * <p>    **Note** You can query security group rules of only one NIC type in a single call. To query security group rules of both NIC types, call the operation twice.</p>
      * <br>
-     * <p>*   If the security group is in a virtual private cloud (VPC), set the value to intranet. This is also the default value.</p>
+     * <p>*   When the security group is in a virtual private cloud (VPC), set the value to intranet, which is the default value for rules of security groups in VPCs.</p>
      * <br>
      * <p>    **</p>
      * <br>
-     * <p>    **Note**If you set this parameter to internet or leave this parameter empty, the value of intranet is automatically used.</p>
+     * <p>    **Note** If you set this parameter to internet or leave this parameter empty, a value of intranet is automatically used.</p>
      */
     @NameInMap("NicType")
     public String nicType;
@@ -50,9 +50,7 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the security group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -65,8 +63,6 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the security group.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

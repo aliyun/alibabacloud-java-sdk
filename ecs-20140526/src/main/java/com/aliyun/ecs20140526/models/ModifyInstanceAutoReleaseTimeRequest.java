@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceAutoReleaseTimeRequest extends TeaModel {
     /**
-     * <p>The automatic release time of the instance. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <p>The automatic release time of the instance. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      * <br>
      * <p>*   If the value of seconds (`ss`) is not `00`, the time is automatically rounded to the nearest minute based on the value of minutes (`mm`).</p>
      * <p>*   The release time must be at least 30 minutes later than the current time.</p>
@@ -18,8 +18,6 @@ public class ModifyInstanceAutoReleaseTimeRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -31,7 +29,7 @@ public class ModifyInstanceAutoReleaseTimeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

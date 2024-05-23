@@ -146,7 +146,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the [CreateDiagnosticReport](https://help.aliyun.com/document_detail/442490.html) operation to create the diagnostic report.</p>
+         * <p>The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the [CreateDiagnosticReport](~~442490~~) operation to create the diagnostic report.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
@@ -200,7 +200,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         public String severity;
 
         /**
-         * <p>The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the [CreateDiagnosticReport](https://help.aliyun.com/document_detail/442490.html) operation to create the diagnostic report.</p>
+         * <p>The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the [CreateDiagnosticReport](~~442490~~) operation to create the diagnostic report.</p>
          */
         @NameInMap("StartTime")
         public String startTime;

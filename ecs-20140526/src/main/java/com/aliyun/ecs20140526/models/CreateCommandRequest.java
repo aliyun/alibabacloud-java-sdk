@@ -13,7 +13,7 @@ public class CreateCommandRequest extends TeaModel {
      * <br>
      * <p>    *   Custom parameters are defined in the `{{}}` format. Within `{{}}`, the spaces and line feeds before and after the parameter names are ignored.</p>
      * <p>    *   You can specify up to 20 custom parameters.</p>
-     * <p>    *   A custom parameter name can contain only letters, digits, underscores (_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</p>
+     * <p>    *   A custom parameter name can contain only letters, digits, underscores (\_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</p>
      * <p>    *   Each custom parameter name can be up to 64 bytes in length.</p>
      * <br>
      * <p>*   You can specify built-in environment parameters as custom parameters in a command. When you run the command, Cloud Assistant automatically uses the environment parameter values for the custom parameters. You can specify the following built-in environment variables:</p>
@@ -37,12 +37,10 @@ public class CreateCommandRequest extends TeaModel {
      * <p>        *   Linux: 2.2.3.309</p>
      * <p>        *   Windows: 2.1.3.309</p>
      * <br>
-     * <p>    *   `{{ACS::CommandId}}`: the command ID. If you want to call the [RunCommand](https://help.aliyun.com/document_detail/141751.html) operation to run the command and specify `{{ACS::CommandId}}` as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</p>
+     * <p>    *   `{{ACS::CommandId}}`: the command ID. If you want to call the [RunCommand](~~141751~~) operation to run the command and specify `{{ACS::CommandId}}` as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</p>
      * <br>
      * <p>        *   Linux: 2.2.3.309</p>
      * <p>        *   Windows: 2.1.3.309</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("CommandContent")
     public String commandContent;
@@ -76,8 +74,6 @@ public class CreateCommandRequest extends TeaModel {
 
     /**
      * <p>The name of the command. The name supports all character sets and can be up to 128 characters in length.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -89,9 +85,7 @@ public class CreateCommandRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region in which to create the command. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The ID of the region in which to create the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -128,8 +122,6 @@ public class CreateCommandRequest extends TeaModel {
      * <p>*   RunBatScript: batch commands. These commands are applicable to Windows instances.</p>
      * <p>*   RunPowerShellScript: PowerShell commands. These commands are applicable to Windows instances.</p>
      * <p>*   RunShellScript: shell commands. These commands are applicable to Linux instances.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;
@@ -140,7 +132,7 @@ public class CreateCommandRequest extends TeaModel {
      * <p>Default values:</p>
      * <br>
      * <p>*   For Linux instance, the default value is the home directory of the root user, which is the `/root` directory.</p>
-     * <p>*   For Windows instances, the default value is the directory where the Cloud Assistant Agent process resides, such as `C:\\Windows\\System32\\`.</p>
+     * <p>*   For Windows instances, the default value is the directory where the Cloud Assistant Agent process resides, such as `C:\Windows\System32\`.</p>
      * <br>
      * <p>>  If you set WorkingDir to a directory other than default ones, make sure that the directory exists on the instances.</p>
      */
@@ -276,7 +268,7 @@ public class CreateCommandRequest extends TeaModel {
         /**
          * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call [ListTagResources](https://help.aliyun.com/document_detail/110425.html) operation.</p>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call [ListTagResources](~~110425~~) operation.</p>
          * <br>
          * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          */

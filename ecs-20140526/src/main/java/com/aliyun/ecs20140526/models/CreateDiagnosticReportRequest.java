@@ -17,17 +17,13 @@ public class CreateDiagnosticReportRequest extends TeaModel {
     public String metricSetId;
 
     /**
-     * <p>The ID of the region in which to create a diagnostic report. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
-     * <br>
-     * <p>This parameter is required.</p>
+     * <p>The ID of the region in which to create a diagnostic report. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;

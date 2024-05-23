@@ -11,15 +11,13 @@ public class StartInstancesRequest extends TeaModel {
     public String batchOptimization;
 
     /**
-     * <p>The region ID of the ECS instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <p>The region ID of the ECS instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The ID of instance N. Valid values of N: 1 to 100.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -37,8 +35,6 @@ public class StartInstancesRequest extends TeaModel {
      * <p>*   SuccessFirst: separately starts each ECS instance. The response contains the operation results of each ECS instance.</p>
      * <br>
      * <p>Default value: AllTogether.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
