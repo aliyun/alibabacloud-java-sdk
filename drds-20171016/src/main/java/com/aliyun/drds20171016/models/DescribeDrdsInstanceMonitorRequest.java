@@ -4,18 +4,30 @@ package com.aliyun.drds20171016.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsInstanceMonitorRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Key")
     public String key;
 
     @NameInMap("PeriodMultiple")
     public Integer periodMultiple;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

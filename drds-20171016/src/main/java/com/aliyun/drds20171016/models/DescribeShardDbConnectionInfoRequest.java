@@ -4,12 +4,21 @@ package com.aliyun.drds20171016.models;
 import com.aliyun.tea.*;
 
 public class DescribeShardDbConnectionInfoRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SubDbName")
     public String subDbName;
 

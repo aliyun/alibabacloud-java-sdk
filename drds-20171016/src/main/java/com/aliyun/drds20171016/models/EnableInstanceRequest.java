@@ -22,6 +22,9 @@ public class EnableInstanceRequest extends TeaModel {
     @NameInMap("RestoreTime")
     public String restoreTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceDbInstId")
     public String sourceDbInstId;
 

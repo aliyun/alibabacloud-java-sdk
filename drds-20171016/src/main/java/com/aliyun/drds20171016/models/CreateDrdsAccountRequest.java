@@ -7,12 +7,18 @@ public class CreateDrdsAccountRequest extends TeaModel {
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

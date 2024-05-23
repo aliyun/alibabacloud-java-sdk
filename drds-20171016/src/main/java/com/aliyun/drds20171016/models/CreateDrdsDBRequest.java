@@ -4,18 +4,33 @@ package com.aliyun.drds20171016.models;
 import com.aliyun.tea.*;
 
 public class CreateDrdsDBRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Encode")
     public String encode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RdsInstances")
     public String rdsInstances;
 

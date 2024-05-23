@@ -22,21 +22,36 @@ public class CreateDrdsInstanceRequest extends TeaModel {
     @NameInMap("IsHa")
     public Boolean isHa;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Quantity")
     public Integer quantity;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Specification")
     public String specification;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -46,6 +61,9 @@ public class CreateDrdsInstanceRequest extends TeaModel {
     @NameInMap("VswitchId")
     public String vswitchId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

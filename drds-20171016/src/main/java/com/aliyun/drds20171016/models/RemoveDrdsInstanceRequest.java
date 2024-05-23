@@ -4,6 +4,9 @@ package com.aliyun.drds20171016.models;
 import com.aliyun.tea.*;
 
 public class RemoveDrdsInstanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
