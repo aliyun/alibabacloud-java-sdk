@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeSnatTableEntriesRequest extends TeaModel {
     /**
      * <p>The ID of the Network Address Translation (NAT) gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;

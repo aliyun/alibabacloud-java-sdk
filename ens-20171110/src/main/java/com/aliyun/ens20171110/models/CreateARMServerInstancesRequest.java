@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateARMServerInstancesRequest extends TeaModel {
     /**
      * <p>The number of instances to create. Valid values: **1** to **100**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Amount")
     public Integer amount;
@@ -27,6 +29,8 @@ public class CreateARMServerInstancesRequest extends TeaModel {
 
     /**
      * <p>The ID of the Edge Node Service (ENS) node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
@@ -39,6 +43,8 @@ public class CreateARMServerInstancesRequest extends TeaModel {
 
     /**
      * <p>The ID of the image.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
@@ -67,6 +73,8 @@ public class CreateARMServerInstancesRequest extends TeaModel {
      * <p>*   aic.cf52r.c2.np</p>
      * <p>*   aic.cf52r.c3.np</p>
      * <p>*   aic.cf52r.c4.np</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -87,6 +95,8 @@ public class CreateARMServerInstancesRequest extends TeaModel {
      * <p>The billing method. Set the value to **PrePaid**. PrePaid specifies the subscription billing method.</p>
      * <br>
      * <p>>  Only PrePaid is supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PayType")
     public String payType;
@@ -96,7 +106,9 @@ public class CreateARMServerInstancesRequest extends TeaModel {
      * <br>
      * <p>*   If you leave PeriodUnit empty, the instance is purchased on a monthly basis. Valid values: Day and Month.</p>
      * <p>*   If you set PeriodUnit to Day, you can set Period only to 3.</p>
-     * <p>*   If you set PeriodUnit to Month, you can set Period to a value within the range of \[1,9], or set the value to 12.</p>
+     * <p>*   If you set PeriodUnit to Month, you can set Period to a value within the range of [1,9], or set the value to 12.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Period")
     public Integer period;
@@ -106,7 +118,9 @@ public class CreateARMServerInstancesRequest extends TeaModel {
      * <br>
      * <p>*   If you leave PeriodUnit empty, the instance is purchased on a monthly basis. Valid values: Day and Month.</p>
      * <p>*   If you set PeriodUnit to Day, you can set Period only to 3.</p>
-     * <p>*   If you set PeriodUnit to Month, you can set Period to a value within the range of \[1,9], or set the value to 12.</p>
+     * <p>*   If you set PeriodUnit to Month, you can set Period to a value within the range of [1,9], or set the value to 12.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
@@ -114,25 +128,27 @@ public class CreateARMServerInstancesRequest extends TeaModel {
     /**
      * <p>The resolution. Valid values:</p>
      * <br>
-     * <p>*   1920\*1080</p>
-     * <p>*   1080\*1920</p>
-     * <p>*   1280\*720</p>
-     * <p>*   720\*1280</p>
-     * <p>*   2400\*1080</p>
-     * <p>*   1920\*864</p>
-     * <p>*   1080\*2400</p>
-     * <p>*   864\*1920</p>
+     * <p>*   1920\\*1080</p>
+     * <p>*   1080\\*1920</p>
+     * <p>*   1280\\*720</p>
+     * <p>*   720\\*1280</p>
+     * <p>*   2400\\*1080</p>
+     * <p>*   1920\\*864</p>
+     * <p>*   1080\\*2400</p>
+     * <p>*   864\\*1920</p>
      * <br>
      * <p><!----></p>
      * <br>
-     * <p>*   1920\*1080</p>
-     * <p>*   1080\*1920</p>
-     * <p>*   1280\*720</p>
-     * <p>*   720\*1280</p>
-     * <p>*   2400\*1080</p>
-     * <p>*   1920\*864</p>
-     * <p>*   1080\*2400</p>
-     * <p>*   864\*1920</p>
+     * <p>*   1920\\*1080</p>
+     * <p>*   1080\\*1920</p>
+     * <p>*   1280\\*720</p>
+     * <p>*   720\\*1280</p>
+     * <p>*   2400\\*1080</p>
+     * <p>*   1920\\*864</p>
+     * <p>*   1080\\*2400</p>
+     * <p>*   864\\*1920</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Resolution")
     public String resolution;
@@ -151,6 +167,8 @@ public class CreateARMServerInstancesRequest extends TeaModel {
      * <p>*   cas.cf52m1r</p>
      * <p>*   cas.tg52g2</p>
      * <p>*   ens.afq-c2m3i.medium</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServerType")
     public String serverType;

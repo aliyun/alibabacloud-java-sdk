@@ -81,10 +81,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet extends TeaModel {
         /**
-         * <p>Indicates whether the IP address is the primary private IP address. Valid values:</p>
+         * <p>Specifies whether the private IP address is the primary private IP address. Valid values:</p>
          * <br>
-         * <p>*   true: The IP address is the primary private IP address.</p>
-         * <p>*   false: The IP address is the secondary private IP address.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("Primary")
         public Boolean primary;
@@ -158,13 +158,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet extends TeaModel {
         /**
-         * <p>The time when the ENI was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC. The format is yyyy-MM-ddThh:mmZ.</p>
+         * <p>The time when the ENI was created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The description of the ENI.</p>
+         * <p>The description of ENI.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -176,13 +176,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
-         * <p>The ID of the instance to which the ENI is attached.</p>
+         * <p>The ID of the instance to which the ENI is bound.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The media access control (MAC) address of the ENI.</p>
+         * <p>The MAC address of the ENI.</p>
          */
         @NameInMap("MacAddress")
         public String macAddress;
@@ -200,34 +200,34 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>The name of the ENI.</p>
+         * <p>The ENI name.</p>
          */
         @NameInMap("NetworkInterfaceName")
         public String networkInterfaceName;
 
         /**
-         * <p>The primary private IP address.</p>
+         * <p>The private IP address of the server.</p>
          */
         @NameInMap("PrimaryIp")
         public String primaryIp;
 
         /**
-         * <p>The type of the primary IP address. Valid values:</p>
+         * <p>The primary private IP address. Valid values:</p>
          * <br>
-         * <p>*   **Public**: public endpoint.</p>
-         * <p>*   **Private**: internal endpoint.</p>
+         * <p>*   **Public**: public IP address.</p>
+         * <p>*   **Private**: internal IP address.</p>
          */
         @NameInMap("PrimaryIpType")
         public String primaryIpType;
 
         /**
-         * <p>Details about the private IP addresses.</p>
+         * <p>Details about the private IP address.</p>
          */
         @NameInMap("PrivateIpSets")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets privateIpSets;
 
         /**
-         * <p>IDs of security groups.</p>
+         * <p>The ID of the security group.</p>
          */
         @NameInMap("SecurityGroupIds")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds securityGroupIds;

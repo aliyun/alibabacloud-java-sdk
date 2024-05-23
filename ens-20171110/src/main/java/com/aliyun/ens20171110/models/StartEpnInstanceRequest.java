@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class StartEpnInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the EPN instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EPNInstanceId")
     public String EPNInstanceId;

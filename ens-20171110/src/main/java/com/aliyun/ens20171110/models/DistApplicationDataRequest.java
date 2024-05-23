@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DistApplicationDataRequest extends TeaModel {
     /**
      * <p>The ID of the application. To obtain the application ID, call the ListApplications operation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The list of data files that you want to distribute. The value must be a JSON string.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Data")
     public String data;

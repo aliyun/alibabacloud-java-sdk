@@ -105,7 +105,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         public String networkAclEntryName;
 
         /**
-         * <p>The action to be performed on network traffic that matches the rule. Valid values:</p>
+         * <p>The action that is performed on network traffic that matches the rule. Valid values:</p>
          * <br>
          * <p>*   **accept**: allows the network traffic.</p>
          * <p>*   **drop**: blocks the network traffic.</p>
@@ -116,8 +116,8 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         /**
          * <p>The destination port range of the outbound rule.</p>
          * <br>
-         * <p>*   If **Protocol** in the outbound rule is set to **all** or **icmp**, \*\*-1/-1\*\* is returned for this parameter. \*\*-1/-1\*\* indicates all ports.</p>
-         * <p>*   If **Protocol** in the outbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**. 120/120 indicates port 1 to port 200 and 80/80 indicates port 80. Valid values for a port: **1 to 65535**.</p>
+         * <p>*   If **Protocol** of the outbound rule is set to **all** or **icmp** the port range is **-1/-1**, which indicates all ports.</p>
+         * <p>*   If **Protocol** of the outbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: **1 to 65535**.</p>
          */
         @NameInMap("PortRange")
         public String portRange;
@@ -129,12 +129,12 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The protocol. Valid values:</p>
+         * <p>The protocol type. Valid values:</p>
          * <br>
-         * <p>*   **icmp**</p>
-         * <p>*   **tcp**</p>
-         * <p>*   **udp**</p>
-         * <p>*   **all**</p>
+         * <p>*   **icmp**: ICMP.</p>
+         * <p>*   **tcp**: TCP.</p>
+         * <p>*   **udp**: UDP.</p>
+         * <p>*   **all**: all protocols.</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -264,8 +264,8 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         /**
          * <p>The destination port range of the inbound rule.</p>
          * <br>
-         * <p>*   If **Protocol** in the inbound rule is set to **all** or **icmp**, \*\*-1/-1\*\* is returned for this parameter. \*\*-1/-1\*\* indicates all ports.</p>
-         * <p>*   If **Protocol** in the inbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**. 1/200 indicates port 1 to port 200 and 80/80 indicates port 80. Valid values for a port: **1 to 65535**.</p>
+         * <p>*   If **Protocol** of the inbound rule is set to **all** or **icmp**, the port range is **-1/-1**, which indicates all ports.</p>
+         * <p>*   If **Protocol** of the inbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: **1 to 65535**.</p>
          */
         @NameInMap("PortRange")
         public String portRange;
@@ -277,12 +277,12 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The protocol. Valid values:</p>
+         * <p>The protocol type. Valid values:</p>
          * <br>
-         * <p>*   **icmp**</p>
-         * <p>*   **tcp**</p>
-         * <p>*   **udp**</p>
-         * <p>*   **all**</p>
+         * <p>*   **icmp**: ICMP.</p>
+         * <p>*   **tcp**: TCP.</p>
+         * <p>*   **udp**: UDP.</p>
+         * <p>*   **all**: all protocols.</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -377,7 +377,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
 
     public static class DescribeNetworkAclsResponseBodyNetworkAclsResources extends TeaModel {
         /**
-         * <p>The ID of the ENS node.</p>
+         * <p>The ID of the edge node.</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;

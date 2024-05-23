@@ -12,6 +12,8 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance for which you want to modify attributes. You can specify only one ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -19,7 +21,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The name of the instance.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;

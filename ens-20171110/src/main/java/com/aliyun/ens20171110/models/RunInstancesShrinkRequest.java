@@ -6,9 +6,22 @@ import com.aliyun.tea.*;
 public class RunInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The number of instances that you want to create. Valid values: 1 to 100.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Amount")
     public Long amount;
+
+    /**
+     * <p>The time when to automatically release the pay-as-you-go instance. Specify the time in the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in Coordinated Universal Time (UTC).</p>
+     * <br>
+     * <p>*   If the value of `ss` is not `00`, the start time is automatically rounded down to the nearest minute based on the value of `mm`.</p>
+     * <p>*   The specified time must be at least one hour later than the current time.</p>
+     * <br>
+     * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+     */
+    @NameInMap("AutoReleaseTime")
+    public String autoReleaseTime;
 
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
@@ -22,11 +35,7 @@ public class RunInstancesShrinkRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>Specifies whether to use vouchers. Default values: true. Valid values:</p>
-     * <br>
-     * <p>- true </p>
-     * <br>
-     * <p>- false</p>
+     * <p>Specifies whether to use coupons. Default value: true.</p>
      */
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
@@ -34,9 +43,8 @@ public class RunInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The billing cycle of computing resources of the instance. Only pay-as-you-go instances are supported. Valid values:</p>
      * <br>
-     * <p>*   Hour</p>
-     * <p>*   Day</p>
-     * <p>*   Month</p>
+     * <p>*   **Day**</p>
+     * <p>*   **Month**</p>
      */
     @NameInMap("BillingCycle")
     public String billingCycle;
@@ -50,7 +58,7 @@ public class RunInstancesShrinkRequest extends TeaModel {
     public String carrier;
 
     /**
-     * <p>The specification of the data disk.</p>
+     * <p>The specifications of the data disk.</p>
      */
     @NameInMap("DataDisk")
     public String dataDiskShrink;
@@ -89,12 +97,14 @@ public class RunInstancesShrinkRequest extends TeaModel {
      * <br>
      * <p>*   **PrePaid**: subscription.</p>
      * <p>*   **PostPaid**: pay-as-you-go.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
+     * <p>The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * <br>
      * <p>The default value of this parameter is the value of the InstanceId parameter.</p>
      */
@@ -103,6 +113,8 @@ public class RunInstancesShrinkRequest extends TeaModel {
 
     /**
      * <p>The instance type.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -120,16 +132,18 @@ public class RunInstancesShrinkRequest extends TeaModel {
 
     /**
      * <p>The maximum public bandwidth. If the value of this parameter is greater than 0, a public IP address is assigned to the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InternetMaxBandwidthOut")
     public Long internetMaxBandwidthOut;
 
     /**
-     * <p>The type of IP address. Valid values:</p>
+     * <p>The type of the IP address. Valid values:</p>
      * <br>
-     * <p>*   **ipv4**: IPv4. This is the default value.</p>
-     * <p>*   **ipv6**: IPv6.</p>
-     * <p>*   **ipv4Andipv6**: IPv4 and IPv6.</p>
+     * <p>*   **ipv4** (default)</p>
+     * <p>*   **ipv6**</p>
+     * <p>*   **ipv4Andipv6**</p>
      */
     @NameInMap("IpType")
     public String ipType;
@@ -216,6 +230,8 @@ public class RunInstancesShrinkRequest extends TeaModel {
      * <p>*   **Middle**: province</p>
      * <p>*   **Small**: city</p>
      * <p>*   **Region**: node</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScheduleAreaLevel")
     public String scheduleAreaLevel;
@@ -247,11 +263,25 @@ public class RunInstancesShrinkRequest extends TeaModel {
     public String securityId;
 
     /**
+     * <p>The bidding policy for the pay-as-you-go instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PostPaid`. Valid values:</p>
+     * <br>
+     * <p>*   NoSpot: The instance is created as a regular pay-as-you-go instance.</p>
+     * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</p>
+     * <br>
+     * <p>Default value: NoSpot.</p>
+     */
+    @NameInMap("SpotStrategy")
+    public String spotStrategy;
+
+    /**
      * <p>The specification of the system disk.</p>
      */
     @NameInMap("SystemDisk")
     public String systemDiskShrink;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<RunInstancesShrinkRequestTag> tag;
 
@@ -286,6 +316,14 @@ public class RunInstancesShrinkRequest extends TeaModel {
     }
     public Long getAmount() {
         return this.amount;
+    }
+
+    public RunInstancesShrinkRequest setAutoReleaseTime(String autoReleaseTime) {
+        this.autoReleaseTime = autoReleaseTime;
+        return this;
+    }
+    public String getAutoReleaseTime() {
+        return this.autoReleaseTime;
     }
 
     public RunInstancesShrinkRequest setAutoRenew(Boolean autoRenew) {
@@ -512,6 +550,14 @@ public class RunInstancesShrinkRequest extends TeaModel {
         return this.securityId;
     }
 
+    public RunInstancesShrinkRequest setSpotStrategy(String spotStrategy) {
+        this.spotStrategy = spotStrategy;
+        return this;
+    }
+    public String getSpotStrategy() {
+        return this.spotStrategy;
+    }
+
     public RunInstancesShrinkRequest setSystemDiskShrink(String systemDiskShrink) {
         this.systemDiskShrink = systemDiskShrink;
         return this;
@@ -553,9 +599,15 @@ public class RunInstancesShrinkRequest extends TeaModel {
     }
 
     public static class RunInstancesShrinkRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

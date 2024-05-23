@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyForwardEntryRequest extends TeaModel {
     /**
      * <p>The ID of the DNAT entry.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ForwardEntryId")
     public String forwardEntryId;

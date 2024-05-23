@@ -27,12 +27,16 @@ public class RescaleDeviceServiceRequest extends TeaModel {
 
     /**
      * <p>The region level of the scale-out. Set the value to RegionId. RegionId specifies that resource scale-out is performed based on the ID of the edge node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RescaleLevel")
     public String rescaleLevel;
 
     /**
      * <p>The scaling operation. Set the value to Add to add new resources.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RescaleType")
     public String rescaleType;
@@ -45,6 +49,8 @@ public class RescaleDeviceServiceRequest extends TeaModel {
 
     /**
      * <p>The required resources. The value must be a JSON string.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceSelector")
     public String resourceSelector;

@@ -12,6 +12,8 @@ public class RevokeSecurityGroupRequest extends TeaModel {
      * <p>*   icmp: ICMP.</p>
      * <p>*   gre: GRE.</p>
      * <p>*   all: all protocols.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IpProtocol")
     public String ipProtocol;
@@ -32,6 +34,8 @@ public class RevokeSecurityGroupRequest extends TeaModel {
      * <p>*   When the IpProtocol parameter is set to icmp, the port number range is **-1/-1**, which indicates all ports.</p>
      * <p>*   When the IpProtocol parameter is set to gre, the port number range is **-1/-1**, which indicates all ports.</p>
      * <p>*   When the IpProtocol parameter is set to all, the port number range is **-1/-1**, which indicates all ports.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PortRange")
     public String portRange;
@@ -44,12 +48,16 @@ public class RevokeSecurityGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the security group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
      * <p>The source CIDR block. CIDR blocks and IPv4 addresses are supported. Default value: 0.0.XX.XX/0.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceCidrIp")
     public String sourceCidrIp;

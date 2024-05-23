@@ -81,7 +81,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
 
     public static class DescribeExportImageInfoResponseBodyImagesImage extends TeaModel {
         /**
-         * <p>The architecture of the image. Example: **x86\_64**.</p>
+         * <p>The architecture of the image. Example: **x86_64**.</p>
          */
         @NameInMap("Architecture")
         public String architecture;

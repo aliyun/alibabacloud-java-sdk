@@ -41,7 +41,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Maximum value: 50. Default value: 10.</p>
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

@@ -17,12 +17,16 @@ public class AddDeviceInternetPortRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance. You can specify the ID of the server or container.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The internal IP address of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InternalIp")
     public String internalIp;
@@ -38,12 +42,16 @@ public class AddDeviceInternetPortRequest extends TeaModel {
      * <br>
      * <p>*   SNAT</p>
      * <p>*   DNAT</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatType")
     public String natType;
 
     /**
      * <p>The ID of the Edge Node Service (ENS) node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

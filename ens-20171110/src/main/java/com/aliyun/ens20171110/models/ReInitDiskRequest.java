@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ReInitDiskRequest extends TeaModel {
     /**
      * <p>The ID of the disk to be initialized. You can initialize only one disk at a time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
      * <p>The ID of the image to use to create the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageId")
     public String imageId;

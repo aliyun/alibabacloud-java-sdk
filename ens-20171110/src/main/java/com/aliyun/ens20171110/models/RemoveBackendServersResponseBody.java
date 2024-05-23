@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveBackendServersResponseBody extends TeaModel {
     /**
-     * <p>The list of backend servers that you want to add. You can add at most 20 backend servers.</p>
-     * <br>
-     * <p>>  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.</p>
+     * <p>The list of backend servers that you want to add to the SLB instance.</p>
      */
     @NameInMap("BackendServers")
     public RemoveBackendServersResponseBodyBackendServers backendServers;
@@ -53,7 +51,7 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the instance that is used as the backend server.</p>
+         * <p>The instance ID of the backend server.</p>
          */
         @NameInMap("ServerId")
         public String serverId;
@@ -61,14 +59,14 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         /**
          * <p>The type of the backend server. Valid values:</p>
          * <br>
-         * <p>*   **ens**: ENS instance.</p>
-         * <p>*   **eni**: ENI.</p>
+         * <p>*   **ens**: an ENS instance.</p>
+         * <p>*   **eni**: an ENI.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The weight of the backend server. Default value: 100. Valid values: **0** to **100**.</p>
+         * <p>The weight of the backend server.</p>
          * <br>
          * <p>>  The value 0 indicates that requests are not forwarded to the backend server.</p>
          */

@@ -12,8 +12,6 @@ public class DescribeNetworkAclsRequest extends TeaModel {
 
     /**
      * <p>The name of the network ACL.</p>
-     * <br>
-     * <p>The name must be 1 to 128 characters in length. The name cannot start with \*\*http:// **or** https://\*\*.</p>
      */
     @NameInMap("NetworkAclName")
     public String networkAclName;

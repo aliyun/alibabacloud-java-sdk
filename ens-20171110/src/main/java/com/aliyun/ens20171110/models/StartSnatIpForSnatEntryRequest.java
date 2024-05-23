@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class StartSnatIpForSnatEntryRequest extends TeaModel {
     /**
      * <p>The ID of the SNAT entry.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SnatEntryId")
     public String snatEntryId;
 
     /**
      * <p>The EIP specified in the SNAT entry.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SnatIp")
     public String snatIp;

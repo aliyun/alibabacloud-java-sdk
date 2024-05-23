@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AssociateEnsEipAddressRequest extends TeaModel {
     /**
      * <p>The ID of the EIP.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;
@@ -14,6 +16,8 @@ public class AssociateEnsEipAddressRequest extends TeaModel {
      * <p>The ID of the cloud service with which you want to associate the EIP.</p>
      * <br>
      * <p>>  IDs of Edge Load Balancer (ELB) are supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

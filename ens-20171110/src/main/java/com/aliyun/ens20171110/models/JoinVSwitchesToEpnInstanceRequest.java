@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class JoinVSwitchesToEpnInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the edge network instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EPNInstanceId")
     public String EPNInstanceId;
 
     /**
      * <p>The information about the internal networking to which you want to add the edge network instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchesInfo")
     public String vSwitchesInfo;

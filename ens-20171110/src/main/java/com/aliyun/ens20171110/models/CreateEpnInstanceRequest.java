@@ -12,6 +12,8 @@ public class CreateEpnInstanceRequest extends TeaModel {
 
     /**
      * <p>The type of the EPN instance. Set the value to **EdgeToEdge**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EPNInstanceType")
     public String EPNInstanceType;
@@ -25,12 +27,16 @@ public class CreateEpnInstanceRequest extends TeaModel {
      * <p>*   **PayByBandwidth**: Pay by fixed bandwidth.</p>
      * <br>
      * <p>You can specify only one metering method for network usage and cannot overwrite the existing metering method.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
      * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 1 to 100.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
@@ -41,6 +47,8 @@ public class CreateEpnInstanceRequest extends TeaModel {
      * <p>*   **SpeedUp**: intelligent acceleration network (Internet)</p>
      * <p>*   **Connection**: internal network</p>
      * <p>*   **SpeedUpAndConnection**: intelligent acceleration network and internal network</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkingModel")
     public String networkingModel;

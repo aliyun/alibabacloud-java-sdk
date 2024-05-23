@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the auto-renewal feature. Valid values: **True and False**. Default value: False.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
@@ -18,6 +20,8 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
 
     /**
      * <p>The IDs of the instances. Separate IDs with semicolons (;).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;

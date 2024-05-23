@@ -3,16 +3,19 @@ package com.aliyun.ens20171110.models;
 
 import com.aliyun.tea.*;
 
-public class RollbackWorkflowResponseBody extends TeaModel {
+public class DeleteSDGResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static RollbackWorkflowResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        RollbackWorkflowResponseBody self = new RollbackWorkflowResponseBody();
+    public static DeleteSDGResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteSDGResponseBody self = new DeleteSDGResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public RollbackWorkflowResponseBody setRequestId(String requestId) {
+    public DeleteSDGResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

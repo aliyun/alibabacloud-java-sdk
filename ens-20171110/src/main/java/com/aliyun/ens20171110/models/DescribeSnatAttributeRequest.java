@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeSnatAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the SNAT entry.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SnatEntryId")
     public String snatEntryId;

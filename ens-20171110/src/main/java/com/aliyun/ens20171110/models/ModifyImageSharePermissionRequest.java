@@ -12,6 +12,8 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
 
     /**
      * <p>The ID of the image. You can specify only one image ID. Custom images and public images are supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageId")
     public String imageId;

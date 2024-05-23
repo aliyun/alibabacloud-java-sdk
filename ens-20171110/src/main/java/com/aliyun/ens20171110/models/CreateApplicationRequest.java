@@ -11,6 +11,8 @@ public class CreateApplicationRequest extends TeaModel {
      * <p>*   Information such as resource specifications and network security configurations</p>
      * <p>*   Service specifications</p>
      * <p>*   Required resources</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Template")
     public String template;

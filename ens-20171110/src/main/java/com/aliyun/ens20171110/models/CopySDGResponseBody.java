@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CopySDGResponseBody extends TeaModel {
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("Data")
     public CopySDGResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class CopySDGResponseBody extends TeaModel {
     }
 
     public static class CopySDGResponseBodyDataResultFailedItems extends TeaModel {
+        /**
+         * <p>The ID of the destination node.</p>
+         */
         @NameInMap("DestinationRegionId")
         public String destinationRegionId;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
@@ -62,12 +74,21 @@ public class CopySDGResponseBody extends TeaModel {
     }
 
     public static class CopySDGResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The number of failed nodes.</p>
+         */
         @NameInMap("FailedCount")
         public Long failedCount;
 
+        /**
+         * <p>Details of failed nodes.</p>
+         */
         @NameInMap("FailedItems")
         public java.util.List<CopySDGResponseBodyDataResultFailedItems> failedItems;
 
+        /**
+         * <p>The number of successful nodes.</p>
+         */
         @NameInMap("SuccessCount")
         public Long successCount;
 
@@ -103,12 +124,24 @@ public class CopySDGResponseBody extends TeaModel {
     }
 
     public static class CopySDGResponseBodyData extends TeaModel {
+        /**
+         * <p>The response message. Success is returned for a successful request.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The execution result of the synchronization request.</p>
+         */
         @NameInMap("Result")
         public CopySDGResponseBodyDataResult result;
 
+        /**
+         * <p>Indicates whether all tasks are successful. Valid values:</p>
+         * <br>
+         * <p>*   **true**: All tasks are successful.</p>
+         * <p>*   **false**: Failed tasks exist.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

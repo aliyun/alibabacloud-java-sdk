@@ -15,6 +15,8 @@ public class PutBucketLifecycleRequest extends TeaModel {
 
     /**
      * <p>The name of the bucket.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BucketName")
     public String bucketName;
@@ -60,6 +62,8 @@ public class PutBucketLifecycleRequest extends TeaModel {
      * <br>
      * <p>*   **Enabled**: The rule is periodically executed.</p>
      * <p>*   **Disabled**: The rule is ignored.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public String status;

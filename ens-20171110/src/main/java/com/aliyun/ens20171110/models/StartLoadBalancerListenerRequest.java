@@ -14,6 +14,8 @@ public class StartLoadBalancerListenerRequest extends TeaModel {
      * <p>*   We recommend that you use port 80 for HTTP.</p>
      * <br>
      * <p>*   We recommend that you use port 443 for HTTPS.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
@@ -33,6 +35,8 @@ public class StartLoadBalancerListenerRequest extends TeaModel {
 
     /**
      * <p>The ID of the ELB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;

@@ -12,6 +12,8 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
      * <p>*   icmp</p>
      * <p>*   gre</p>
      * <p>*   all: All protocols are supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IpProtocol")
     public String ipProtocol;
@@ -34,6 +36,8 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
      * <p>*   When the IpProtocol parameter is set to icmp, the port number range is **-1/-1**, which indicates all ports.</p>
      * <p>*   When the IpProtocol parameter is set to gre, the port number range is **-1/-1**, which indicates all ports.</p>
      * <p>*   When the IpProtocol parameter is set to all, the port number range is **-1/-1**, which indicates all ports.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PortRange")
     public String portRange;
@@ -48,6 +52,8 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the security group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
@@ -56,6 +62,8 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
      * <p>The source IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.</p>
      * <br>
      * <p>This parameter is empty by default.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceCidrIp")
     public String sourceCidrIp;

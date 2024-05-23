@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetDeviceInternetPortRequest extends TeaModel {
     /**
      * <p>The ID of the instance. You can specify the ID of the server or container. You can specify only one ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -15,6 +17,8 @@ public class GetDeviceInternetPortRequest extends TeaModel {
      * <br>
      * <p>*   SNAT</p>
      * <p>*   DNAT</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NatType")
     public String natType;

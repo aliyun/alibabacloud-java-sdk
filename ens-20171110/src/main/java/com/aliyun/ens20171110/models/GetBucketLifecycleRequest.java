@@ -6,12 +6,14 @@ import com.aliyun.tea.*;
 public class GetBucketLifecycleRequest extends TeaModel {
     /**
      * <p>The name of the bucket.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BucketName")
     public String bucketName;
 
     /**
-     * <p>The ID of the rule to be queried. If this parameter is not specified, all rules are returned.</p>
+     * <p>The ID of the rule that you want to query. If this parameter is not specified, all rules are returned.</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

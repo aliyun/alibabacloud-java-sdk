@@ -60,10 +60,10 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     /**
      * <p>The HTTP status codes for a successful health check. Valid values:</p>
      * <br>
-     * <p>*   **http\_2xx** (default)</p>
-     * <p>*   **http\_3xx**.</p>
-     * <p>*   **http\_4xx**</p>
-     * <p>*   **http\_5xx**</p>
+     * <p>*   **http_2xx** (default)</p>
+     * <p>*   **http_3xx**.</p>
+     * <p>*   **http_4xx**</p>
+     * <p>*   **http_5xx**</p>
      */
     @NameInMap("HealthCheckHttpCode")
     public String healthCheckHttpCode;
@@ -99,12 +99,16 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
 
     /**
      * <p>The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;

@@ -81,7 +81,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
 
     public static class DescribeKeyPairsResponseBodyKeyPairsKeyPair extends TeaModel {
         /**
-         * <p>The time when the key pair was created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the key pair was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -92,6 +92,9 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         @NameInMap("KeyPairFingerPrint")
         public String keyPairFingerPrint;
 
+        /**
+         * <p>The ID of the key pair.</p>
+         */
         @NameInMap("KeyPairId")
         public String keyPairId;
 

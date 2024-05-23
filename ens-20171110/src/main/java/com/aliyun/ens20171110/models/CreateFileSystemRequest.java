@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateFileSystemRequest extends TeaModel {
     /**
      * <p>The information about the orders.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OrderDetails")
     public java.util.List<CreateFileSystemRequestOrderDetails> orderDetails;
@@ -29,48 +31,64 @@ public class CreateFileSystemRequest extends TeaModel {
          * <br>
          * <p>*   PrePaid: subscription. This billing method is not supported.</p>
          * <p>*   PostPaid: pay-as-you-go.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The ID of the node.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         /**
          * <p>The name of the file system.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("FileSystemName")
         public String fileSystemName;
 
         /**
          * <p>The name of the mount target.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("MountTargetDomain")
         public String mountTargetDomain;
 
         /**
          * <p>The ID of the VPC.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("NetworkId")
         public String networkId;
 
         /**
          * <p>The type of the order.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("OrderType")
         public String orderType;
 
         /**
          * <p>The storage protocol. Valid values: nsf and smb.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
          * <p>The type of the storage. Set the value to capacity.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("StorgeType")
         public String storgeType;

@@ -9,8 +9,8 @@ public class CreateDiskRequest extends TeaModel {
      * <br>
      * <p>*   cloud_efficiency: ultra disk.</p>
      * <p>*   cloud_ssd: all-flash disk.</p>
-     * <p>*   local_hdd: local HDD.</p>
-     * <p>*   local_ssd: local SSD.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -32,15 +32,16 @@ public class CreateDiskRequest extends TeaModel {
 
     /**
      * <p>The ID of the edge node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
-     * <p>The billing method of the instance. Valid values:</p>
+     * <p>The billing method of the instance. Set the value to **PostPaid**.</p>
      * <br>
-     * <p>*   PrePaid: subscription.</p>
-     * <p>*   PostPaid: pay-as-you-go.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyEnsEipAddressAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the EIP.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;

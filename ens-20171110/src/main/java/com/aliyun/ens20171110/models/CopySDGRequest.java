@@ -4,9 +4,19 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CopySDGRequest extends TeaModel {
+    /**
+     * <p>The destination nodes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DestinationRegionIds")
     public java.util.List<String> destinationRegionIds;
 
+    /**
+     * <p>The ID of the SDG that you want to copy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SDGId")
     public String SDGId;
 

@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class DeleteMountTargetRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The ID of the file system.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The name of the mount target.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MountTargetName")
     public String mountTargetName;

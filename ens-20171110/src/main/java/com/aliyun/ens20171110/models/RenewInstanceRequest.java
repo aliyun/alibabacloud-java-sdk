@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class RenewInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -25,6 +27,8 @@ public class RenewInstanceRequest extends TeaModel {
      * <p>*   8</p>
      * <p>*   9</p>
      * <p>*   12</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Period")
     public Long period;

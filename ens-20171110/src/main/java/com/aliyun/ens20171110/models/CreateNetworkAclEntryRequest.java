@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateNetworkAclEntryRequest extends TeaModel {
     /**
      * <p>The source CIDR block.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
@@ -23,6 +25,8 @@ public class CreateNetworkAclEntryRequest extends TeaModel {
      * <br>
      * <p>*   **ingress**</p>
      * <p>*   **egress**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Direction")
     public String direction;
@@ -37,6 +41,8 @@ public class CreateNetworkAclEntryRequest extends TeaModel {
 
     /**
      * <p>The ID of the network ACL.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkAclId")
     public String networkAclId;
@@ -46,6 +52,8 @@ public class CreateNetworkAclEntryRequest extends TeaModel {
      * <br>
      * <p>*   **accept**: allows network traffic.</p>
      * <p>*   **drop**: blocks network traffic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Policy")
     public String policy;
@@ -55,12 +63,16 @@ public class CreateNetworkAclEntryRequest extends TeaModel {
      * <br>
      * <p>*   If you set **Protocol** to **all** or **icmp**, set this parameter to -1/-1, which specifies all ports.</p>
      * <p>*   If you set **Protocol** to **tcp** or **udp**, the port can be **1 to 65535**. You can set this parameter to **1/200** or **80/80**, which specifies ports 1 to 200 or port 80.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PortRange")
     public String portRange;
 
     /**
      * <p>The priority of the rule. Valid values: **1 to 100**. Default value: **1**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Priority")
     public Integer priority;
@@ -72,6 +84,8 @@ public class CreateNetworkAclEntryRequest extends TeaModel {
      * <p>*   **tcp**: TCP</p>
      * <p>*   **udp**: UDP</p>
      * <p>*   **all**: all protocols</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Protocol")
     public String protocol;

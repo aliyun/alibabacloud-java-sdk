@@ -10,20 +10,22 @@ public class CreateClassicNetworkRequest extends TeaModel {
      * <p>*   10.0.0.0/8 (default)</p>
      * <p>*   172.16.0.0/12</p>
      * <p>*   192.168.0.0/16</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
     /**
-     * <p>The description of the listener. The description is **1** to **80** characters in length.</p>
-     * <br>
-     * <p>>  The value cannot start with `http://` or `https://`.</p>
+     * <p>The description of the network. The name must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the edge node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
@@ -33,7 +35,7 @@ public class CreateClassicNetworkRequest extends TeaModel {
      * <br>
      * <p>*   The name must be 2 to 128 characters in length.</p>
      * <p>*   The name must start with a letter but cannot start with http:// or https://.</p>
-     * <p>*   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>*   The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      */
     @NameInMap("NetworkName")
     public String networkName;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteForwardEntryRequest extends TeaModel {
     /**
      * <p>The ID of the DNAT entry that you want to delete.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ForwardEntryId")
     public String forwardEntryId;

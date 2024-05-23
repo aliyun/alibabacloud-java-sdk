@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ReleaseARMServerInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the server.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

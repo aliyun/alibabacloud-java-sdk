@@ -20,6 +20,8 @@ public class DescribeEnsNetDistrictRequest extends TeaModel {
      * <p>*   **Big**: area</p>
      * <p>*   **Middle**: province</p>
      * <p>*   **Small**: city</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetLevelCode")
     public String netLevelCode;

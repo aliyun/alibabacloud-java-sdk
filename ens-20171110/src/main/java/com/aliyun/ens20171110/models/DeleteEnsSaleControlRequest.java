@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DeleteEnsSaleControlRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AliUidAccount")
     public String aliUidAccount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SaleControls")
     public java.util.List<DeleteEnsSaleControlRequestSaleControls> saleControls;
 
@@ -43,9 +52,15 @@ public class DeleteEnsSaleControlRequest extends TeaModel {
     }
 
     public static class DeleteEnsSaleControlRequestSaleControls extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("OrderType")
         public String orderType;
 

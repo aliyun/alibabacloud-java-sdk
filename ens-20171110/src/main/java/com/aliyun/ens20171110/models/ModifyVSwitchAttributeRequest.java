@@ -7,13 +7,16 @@ public class ModifyVSwitchAttributeRequest extends TeaModel {
     /**
      * <p>The description of the vSwitch.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.</p>
+     * <p>*   The description must be 2 to 256 characters in length.</p>
+     * <p>*   The description cannot start with http:// or https://.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the vSwitch.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -22,8 +25,7 @@ public class ModifyVSwitchAttributeRequest extends TeaModel {
      * <p>The name of the vSwitch.</p>
      * <br>
      * <p>*   The name must be 2 to 128 characters in length.</p>
-     * <p>*   The name must start with a letter but cannot start with http:// or https://.</p>
-     * <p>*   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>*   The name must start with a letter and cannot start with http:// or https://.</p>
      */
     @NameInMap("VSwitchName")
     public String vSwitchName;

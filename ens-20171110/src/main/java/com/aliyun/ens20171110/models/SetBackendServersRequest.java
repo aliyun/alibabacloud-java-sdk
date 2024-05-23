@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class SetBackendServersRequest extends TeaModel {
     /**
-     * <p>The list of backend servers that you want to add. You can add at most 20 backend servers.</p>
+     * <p>The list of backend servers that you want to add. You can modify at most 20 backend servers.</p>
      * <br>
-     * <p>>  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BackendServers")
     public java.util.List<SetBackendServersRequestBackendServers> backendServers;
 
     /**
      * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -41,7 +43,9 @@ public class SetBackendServersRequest extends TeaModel {
 
     public static class SetBackendServersRequestBackendServers extends TeaModel {
         /**
-         * <p>The ID of the instance that is used as the backend server.</p>
+         * <p>The ID of the instance that you want to use as the backend server.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ServerId")
         public String serverId;
@@ -50,7 +54,7 @@ public class SetBackendServersRequest extends TeaModel {
          * <p>The type of the backend server. Valid values:</p>
          * <br>
          * <p>*   **ens**: ENS instance.</p>
-         * <p>*   **eni**: ENI.</p>
+         * <p>*   **eni**: Elastic Network Interface (ENI) instance.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -59,6 +63,8 @@ public class SetBackendServersRequest extends TeaModel {
          * <p>The weight of the backend server. Default value: 100. Valid values: **0** to **100**.</p>
          * <br>
          * <p>>  The value 0 indicates that requests are not forwarded to the backend server.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Weight")
         public Integer weight;

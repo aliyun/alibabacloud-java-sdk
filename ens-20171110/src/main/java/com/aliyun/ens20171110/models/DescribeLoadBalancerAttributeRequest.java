@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeLoadBalancerAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the ELB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;

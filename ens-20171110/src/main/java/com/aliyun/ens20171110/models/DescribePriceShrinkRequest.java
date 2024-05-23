@@ -18,12 +18,16 @@ public class DescribePriceShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the ENS node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
-     * <p>The type of the instance.</p>
+     * <p>The specifications of instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -35,6 +39,8 @@ public class DescribePriceShrinkRequest extends TeaModel {
      * <p>*   95BandwidthByMonth: Pay by monthly 95th percentile bandwidth</p>
      * <p>*   PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth</p>
      * <p>*   PayByBandwidth: Pay by fixed bandwidth</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
@@ -45,6 +51,8 @@ public class DescribePriceShrinkRequest extends TeaModel {
      * <p>*   If you leave the PeriodUnit parameter empty, the instance is purchased on a monthly basis. Valid values: Day and Month.</p>
      * <p>*   If you set PeriodUnit to Day, you can set Period only to 3.</p>
      * <p>*   If you set PeriodUnit to Month, you can set Period to a number from 1 to 9, or set Period to 12.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Period")
     public Integer period;
@@ -60,6 +68,8 @@ public class DescribePriceShrinkRequest extends TeaModel {
 
     /**
      * <p>The number of instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Quantity")
     public Integer quantity;
@@ -166,6 +176,8 @@ public class DescribePriceShrinkRequest extends TeaModel {
     public static class DescribePriceShrinkRequestSystemDisk extends TeaModel {
         /**
          * <p>The size of the system disk. Unit: GB.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Size")
         public Integer size;

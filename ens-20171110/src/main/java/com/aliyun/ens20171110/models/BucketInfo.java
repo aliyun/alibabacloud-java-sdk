@@ -7,6 +7,9 @@ public class BucketInfo extends TeaModel {
     @NameInMap("BucketAcl")
     public String bucketAcl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BucketName")
     public String bucketName;
 

@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ExportImageRequest extends TeaModel {
     /**
      * <p>The ID of the image.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The OSS bucket to which you want to export the image.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OSSBucket")
     public String OSSBucket;
@@ -28,6 +32,8 @@ public class ExportImageRequest extends TeaModel {
      * <p>Valid values:</p>
      * <br>
      * <p>*   cn-beijing</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OSSRegionId")
     public String OSSRegionId;

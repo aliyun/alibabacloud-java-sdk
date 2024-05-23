@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DeleteEnsSaleControlShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AliUidAccount")
     public String aliUidAccount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SaleControls")
     public String saleControlsShrink;
 

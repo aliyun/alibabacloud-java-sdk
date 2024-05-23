@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeKeyPairsRequest extends TeaModel {
+    /**
+     * <p>The ID of the key pair.</p>
+     */
     @NameInMap("KeyPairId")
     public String keyPairId;
 
@@ -12,7 +15,7 @@ public class DescribeKeyPairsRequest extends TeaModel {
      * <br>
      * <p>*   Digits</p>
      * <p>*   :</p>
-     * <p>*   \_</p>
+     * <p>*   _</p>
      * <p>*   *</p>
      * <br>
      * <p>You can specify only one name. By default, all key pairs are queried.</p>

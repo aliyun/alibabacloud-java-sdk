@@ -3,7 +3,7 @@ package com.aliyun.ens20171110.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeWorkflowActivityResponse extends TeaModel {
+public class CreateSDGResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeWorkflowActivityResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeWorkflowActivityResponseBody body;
+    public CreateSDGResponseBody body;
 
-    public static DescribeWorkflowActivityResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeWorkflowActivityResponse self = new DescribeWorkflowActivityResponse();
+    public static CreateSDGResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateSDGResponse self = new CreateSDGResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeWorkflowActivityResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateSDGResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeWorkflowActivityResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeWorkflowActivityResponse setStatusCode(Integer statusCode) {
+    public CreateSDGResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeWorkflowActivityResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeWorkflowActivityResponse setBody(DescribeWorkflowActivityResponseBody body) {
+    public CreateSDGResponse setBody(CreateSDGResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeWorkflowActivityResponseBody getBody() {
+    public CreateSDGResponseBody getBody() {
         return this.body;
     }
 

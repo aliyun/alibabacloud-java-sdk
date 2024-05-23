@@ -39,7 +39,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
 
     public static class GetBucketInfoResponseBodyBucketInfo extends TeaModel {
         /**
-         * <p>The access control list (ACL) of the bucket.</p>
+         * <p>The ACL of the bucket.</p>
          * <br>
          * <p>*   **public-read-write**</p>
          * <p>*   **public-read**</p>
@@ -61,7 +61,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The time when the bucket was created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The time when the bucket was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -73,7 +73,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
         public String logicalBucketType;
 
         /**
-         * <p>The time when the bucket was modified. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The time when the bucket was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;

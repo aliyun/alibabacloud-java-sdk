@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class RescaleApplicationRequest extends TeaModel {
     /**
      * <p>The ID of the application. You can query the application ID by calling the ListApplications operation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -25,12 +27,16 @@ public class RescaleApplicationRequest extends TeaModel {
      * <br>
      * <p>*   Add: adds new resources.</p>
      * <p>*   Del: releases resources.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RescaleType")
     public String rescaleType;
 
     /**
      * <p>The required resources. The value must be a JSON string.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceSelector")
     public String resourceSelector;

@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetBackendServersResponseBody extends TeaModel {
     /**
-     * <p>The list of backend servers that you want to add. You can add at most 20 backend servers.</p>
-     * <br>
-     * <p>>  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.</p>
+     * <p>The backend servers.</p>
      */
     @NameInMap("BackendServers")
     public SetBackendServersResponseBodyBackendServers backendServers;
@@ -53,7 +51,7 @@ public class SetBackendServersResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the instance that is used as the backend server.</p>
+         * <p>The ID of the instance that you want to use as the backend server.</p>
          */
         @NameInMap("ServerId")
         public String serverId;
@@ -62,7 +60,7 @@ public class SetBackendServersResponseBody extends TeaModel {
          * <p>The type of the backend server. Valid values:</p>
          * <br>
          * <p>*   **ens**: ENS instance.</p>
-         * <p>*   **eni**: ENI.</p>
+         * <p>*   **eni**: ENI instance.</p>
          */
         @NameInMap("Type")
         public String type;

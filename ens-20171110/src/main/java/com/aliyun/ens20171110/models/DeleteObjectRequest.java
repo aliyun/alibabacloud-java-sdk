@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DeleteObjectRequest extends TeaModel {
     /**
      * <p>The name of the bucket.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BucketName")
     public String bucketName;
 
     /**
-     * <p>The name of the source file.</p>
+     * <p>The name of the file.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ObjectKey")
     public String objectKey;
