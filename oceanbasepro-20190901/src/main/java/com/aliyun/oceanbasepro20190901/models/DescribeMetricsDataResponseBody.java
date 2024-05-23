@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricsDataResponseBody extends TeaModel {
     @NameInMap("Data")
-    public String data;
+    public java.util.List<String> data;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -15,11 +15,11 @@ public class DescribeMetricsDataResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeMetricsDataResponseBody setData(String data) {
+    public DescribeMetricsDataResponseBody setData(java.util.List<String> data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public java.util.List<String> getData() {
         return this.data;
     }
 

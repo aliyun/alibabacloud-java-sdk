@@ -4,24 +4,42 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeProjectStepMetricRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Aggregator")
     public String aggregator;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BeginTimestamp")
     public Long beginTimestamp;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTimestamp")
     public Long endTimestamp;
 
     @NameInMap("MaxPointNum")
     public Integer maxPointNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MetricType")
     public String metricType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StepName")
     public String stepName;
 

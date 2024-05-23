@@ -18,6 +18,8 @@ public class CreateTenantUserRequest extends TeaModel {
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -30,24 +32,32 @@ public class CreateTenantUserRequest extends TeaModel {
 
     /**
      * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
      * <p>The name of the database account.  You cannot use reserved keywords, such as SYS and root.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserName")
     public String userName;
 
     /**
-     * <p>The password of the database account.  It must be 10 to 32 characters in length and contain three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. The special characters are ! @ # $ % \ ^ \ & \ * ( ) _ + - =</p>
+     * <p>The password of the database account.  It must be 10 to 32 characters in length and contain three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. The special characters are ! @ # $ % \\ ^ \\ & \\ * ( ) _ + - =</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserPassword")
     public String userPassword;
 
     /**
      * <p>The type of the database account. Valid values: Admin: the super administrator account. Normal: a general account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserType")
     public String userType;

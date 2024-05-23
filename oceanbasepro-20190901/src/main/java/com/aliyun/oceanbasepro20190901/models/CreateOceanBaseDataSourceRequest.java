@@ -34,21 +34,36 @@ public class CreateOceanBaseDataSourceRequest extends TeaModel {
     @NameInMap("LogProxyPort")
     public String logProxyPort;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Password")
     public String password;
 
     @NameInMap("Port")
     public Integer port;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Tenant")
     public String tenant;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

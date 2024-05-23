@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeSQLSamplesRequest extends TeaModel {
     /**
      * <p>The database name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbName")
     public String dbName;
@@ -13,6 +15,8 @@ public class DescribeSQLSamplesRequest extends TeaModel {
     /**
      * <p>The end time of querying the slow query execution.</p>
      * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -23,8 +27,13 @@ public class DescribeSQLSamplesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ReturnSqlText")
+    public Boolean returnSqlText;
+
     /**
      * <p>SQL ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SqlId")
     public String sqlId;
@@ -32,6 +41,8 @@ public class DescribeSQLSamplesRequest extends TeaModel {
     /**
      * <p>The start time of querying the slow query execution.</p>
      * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -69,6 +80,14 @@ public class DescribeSQLSamplesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeSQLSamplesRequest setReturnSqlText(Boolean returnSqlText) {
+        this.returnSqlText = returnSqlText;
+        return this;
+    }
+    public Boolean getReturnSqlText() {
+        return this.returnSqlText;
     }
 
     public DescribeSQLSamplesRequest setSqlId(String sqlId) {

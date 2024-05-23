@@ -7,12 +7,21 @@ public class ModifyTenantEncryptionRequest extends TeaModel {
     @NameInMap("EncryptionKeyId")
     public String encryptionKeyId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EncryptionType")
     public String encryptionType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 

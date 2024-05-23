@@ -25,9 +25,14 @@ public class CreateInstanceRequest extends TeaModel {
      * <p>The billing method of the instance. Valid values:  </p>
      * <p>- PrePay: the subscription billing method. You must ensure that the remaining balance or credit balance of your account can cover the cost of the subscription. Otherwise, you will receive an InvalidPayMethod error. </p>
      * <p>- PostPay: the pay-as-you-go billing method. This is the default value. By default, fees are charged on an hourly basis.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
+
+    @NameInMap("CpuArch")
+    public String cpuArch;
 
     /**
      * <p>The size of the storage space,in GB.    </p>
@@ -65,6 +70,8 @@ public class CreateInstanceRequest extends TeaModel {
      * <p> - 14C70GB: indicates 14 CPU cores and 70 GB of memory. This is the default value.</p>
      * <p>- 30C180GB: indicates 30 CPU cores and 180 GB of memory.     </p>
      * <p>- 62C400GB: indicates 62 CPU cores and 400 GB of memory.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceClass")
     public String instanceClass;
@@ -147,13 +154,17 @@ public class CreateInstanceRequest extends TeaModel {
      * <p>- normal: Standard Cluster Edition (Cloud Disk). This is the default value.</p>
      * <p>- normal_ssd: Standard Cluster Edition (Local Disk).</p>
      * <p>- history: History Database Cluster Edition.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Series")
     public String series;
 
     /**
      * <p>The ID of the zone to which the instance belongs.   </p>
-     * <p>For more information about how to obtain the list of zones, see [DescribeZones](~~25610~~).</p>
+     * <p>For more information about how to obtain the list of zones, see [DescribeZones](https://help.aliyun.com/document_detail/25610.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Zones")
     public String zones;
@@ -185,6 +196,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public CreateInstanceRequest setCpuArch(String cpuArch) {
+        this.cpuArch = cpuArch;
+        return this;
+    }
+    public String getCpuArch() {
+        return this.cpuArch;
     }
 
     public CreateInstanceRequest setDiskSize(Long diskSize) {

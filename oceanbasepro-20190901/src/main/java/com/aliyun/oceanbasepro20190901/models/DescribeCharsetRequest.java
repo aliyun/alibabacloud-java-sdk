@@ -15,6 +15,8 @@ public class DescribeCharsetRequest extends TeaModel {
 
     /**
      * <p>The return result of the request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantMode")
     public String tenantMode;

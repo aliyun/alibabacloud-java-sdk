@@ -10,6 +10,9 @@ public class ModifyTenantUserPasswordRequest extends TeaModel {
     @NameInMap("EncryptionType")
     public String encryptionType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -22,18 +25,24 @@ public class ModifyTenantUserPasswordRequest extends TeaModel {
      * <p>&InstanceId=ob317v4uif****</p>
      * <p>&Common request parameters</p>
      * <p>```</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserName")
     public String userName;
 
     /**
      * <p>You can call this operation to change the logon password of a specified account in a tenant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserPassword")
     public String userPassword;

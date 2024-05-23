@@ -4,21 +4,36 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricsDataRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GroupByLabels")
     public String groupByLabels;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Labels")
     public String labels;
 
     @NameInMap("Limit")
     public String limit;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Metrics")
     public String metrics;
 
@@ -31,6 +46,9 @@ public class DescribeMetricsDataRequest extends TeaModel {
     @NameInMap("SortOrder")
     public String sortOrder;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

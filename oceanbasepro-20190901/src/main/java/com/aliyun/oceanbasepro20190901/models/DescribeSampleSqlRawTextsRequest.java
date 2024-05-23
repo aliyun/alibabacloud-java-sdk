@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeSampleSqlRawTextsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
@@ -18,10 +24,15 @@ public class DescribeSampleSqlRawTextsRequest extends TeaModel {
 
     /**
      * <p>SQL ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SqlId")
     public String sqlId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

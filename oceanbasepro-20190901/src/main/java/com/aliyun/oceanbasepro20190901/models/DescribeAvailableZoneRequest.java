@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableZoneRequest extends TeaModel {
+    @NameInMap("CpuArch")
+    public String cpuArch;
+
     @NameInMap("DeployType")
     public String deployType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
@@ -22,6 +28,14 @@ public class DescribeAvailableZoneRequest extends TeaModel {
     public static DescribeAvailableZoneRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableZoneRequest self = new DescribeAvailableZoneRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAvailableZoneRequest setCpuArch(String cpuArch) {
+        this.cpuArch = cpuArch;
+        return this;
+    }
+    public String getCpuArch() {
+        return this.cpuArch;
     }
 
     public DescribeAvailableZoneRequest setDeployType(String deployType) {

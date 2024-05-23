@@ -7,6 +7,8 @@ public class DescribeParametersHistoryRequest extends TeaModel {
     /**
      * <p>The type of the parameter.   </p>
      * <p>Valid values: CLUSTER and TENANT.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Dimension")
     public String dimension;
@@ -20,12 +22,16 @@ public class DescribeParametersHistoryRequest extends TeaModel {
 
     /**
      * <p>The end time for the query of parameter modification history.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -34,6 +40,8 @@ public class DescribeParametersHistoryRequest extends TeaModel {
      * <p>The number of the page to return.    </p>
      * <p>- Start value: 1   </p>
      * <p>- Default value: 1</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -42,12 +50,16 @@ public class DescribeParametersHistoryRequest extends TeaModel {
      * <p>The number of rows to return on each page.   </p>
      * <p>- Maximum value: 100   </p>
      * <p>- Default value: 10</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The start time of the time range for querying the parameter modification history.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

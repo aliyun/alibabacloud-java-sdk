@@ -4,6 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
+    @NameInMap("CpuArch")
+    public String cpuArch;
+
     /**
      * <p>The operation that you want to perform.   </p>
      * <p>Set the value to **DescribeZones**.</p>
@@ -20,6 +23,14 @@ public class DescribeZonesRequest extends TeaModel {
     public static DescribeZonesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeZonesRequest self = new DescribeZonesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeZonesRequest setCpuArch(String cpuArch) {
+        this.cpuArch = cpuArch;
+        return this;
+    }
+    public String getCpuArch() {
+        return this.cpuArch;
     }
 
     public DescribeZonesRequest setDeployType(String deployType) {

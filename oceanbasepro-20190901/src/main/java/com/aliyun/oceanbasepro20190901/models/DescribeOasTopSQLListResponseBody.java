@@ -144,7 +144,7 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
         public Double execPs;
 
         @NameInMap("Executions")
-        public Double executions;
+        public Long executions;
 
         @NameInMap("FailCount")
         public Double failCount;
@@ -557,11 +557,11 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
             return this.execPs;
         }
 
-        public DescribeOasTopSQLListResponseBodyDataSqlList setExecutions(Double executions) {
+        public DescribeOasTopSQLListResponseBodyDataSqlList setExecutions(Long executions) {
             this.executions = executions;
             return this;
         }
-        public Double getExecutions() {
+        public Long getExecutions() {
             return this.executions;
         }
 
@@ -1118,7 +1118,7 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
          * <p>Total number of executions during the execution period.</p>
          */
         @NameInMap("Executions")
-        public Double executions;
+        public Long executions;
 
         /**
          * <p>Average number of partition accessed during the execution period.</p>
@@ -1668,11 +1668,11 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
             return this.execPs;
         }
 
-        public DescribeOasTopSQLListResponseBodyData setExecutions(Double executions) {
+        public DescribeOasTopSQLListResponseBodyData setExecutions(Long executions) {
             this.executions = executions;
             return this;
         }
-        public Double getExecutions() {
+        public Long getExecutions() {
             return this.executions;
         }
 

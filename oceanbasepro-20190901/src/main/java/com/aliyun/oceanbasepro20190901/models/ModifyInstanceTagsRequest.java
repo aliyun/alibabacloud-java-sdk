@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ModifyInstanceTagsRequest extends TeaModel {
     /**
      * <p>The tags.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>You can call this operation to modify the value of the cluster tags.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tags")
     public String tags;

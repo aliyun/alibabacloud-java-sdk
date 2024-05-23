@@ -16,9 +16,15 @@ public class CreateMySqlDataSourceRequest extends TeaModel {
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Password")
     public String password;
 
@@ -28,9 +34,15 @@ public class CreateMySqlDataSourceRequest extends TeaModel {
     @NameInMap("Schema")
     public String schema;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

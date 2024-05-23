@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class ModifyDatabaseDescriptionRequest extends TeaModel {
     /**
      * <p>Example 1</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The description of the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -22,6 +29,8 @@ public class ModifyDatabaseDescriptionRequest extends TeaModel {
     /**
      * <p>The operation that you want to perform.   </p>
      * <p>Set the value to **ModifyDatabaseDescription**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

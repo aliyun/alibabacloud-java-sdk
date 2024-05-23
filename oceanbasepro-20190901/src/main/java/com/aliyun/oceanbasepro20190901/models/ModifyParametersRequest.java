@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyParametersRequest extends TeaModel {
     /**
      * <p>The ID of the OceanBase cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Dimension")
     public String dimension;
@@ -18,6 +20,8 @@ public class ModifyParametersRequest extends TeaModel {
 
     /**
      * <p>Alibaba Cloud CLI</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -25,6 +29,8 @@ public class ModifyParametersRequest extends TeaModel {
     /**
      * <p>The resource ID of the parameter type.    </p>
      * <p>You can leave this parameter unspecified when you call this operation to modify cluster parameters. In the case of tenant parameters, pass the tenant ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Parameters")
     public String parameters;

@@ -14,12 +14,16 @@ public class ModifyInstanceNodeNumRequest extends TeaModel {
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of nodes in the cluster. If the cluster is deployed in n-n-n mode, the number of nodes in the cluster equals n × 3.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeNum")
     public String nodeNum;

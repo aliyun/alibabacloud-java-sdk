@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeSQLPlansRequest extends TeaModel {
     /**
      * <p>SQLID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SQLId")
     public String SQLId;
 
     /**
      * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeTenantZonesReadRequest extends TeaModel {
     /**
      * <p>The zone information of the tenant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The return result of the request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

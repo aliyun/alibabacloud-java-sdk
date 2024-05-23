@@ -7,6 +7,8 @@ public class ModifyTenantPrimaryZoneRequest extends TeaModel {
     /**
      * <p>The primary zone of the tenant.    </p>
      * <p>It is one of the zones in which the cluster is deployed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -37,6 +39,8 @@ public class ModifyTenantPrimaryZoneRequest extends TeaModel {
 
     /**
      * <p>The return result of the request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
@@ -49,6 +53,9 @@ public class ModifyTenantPrimaryZoneRequest extends TeaModel {
      */
     @NameInMap("UserVSwitchId")
     public String userVSwitchId;
+
+    @NameInMap("UserVpcOwnerId")
+    public String userVpcOwnerId;
 
     @NameInMap("VpcId")
     public String vpcId;
@@ -120,6 +127,14 @@ public class ModifyTenantPrimaryZoneRequest extends TeaModel {
     }
     public String getUserVSwitchId() {
         return this.userVSwitchId;
+    }
+
+    public ModifyTenantPrimaryZoneRequest setUserVpcOwnerId(String userVpcOwnerId) {
+        this.userVpcOwnerId = userVpcOwnerId;
+        return this;
+    }
+    public String getUserVpcOwnerId() {
+        return this.userVpcOwnerId;
     }
 
     public ModifyTenantPrimaryZoneRequest setVpcId(String vpcId) {

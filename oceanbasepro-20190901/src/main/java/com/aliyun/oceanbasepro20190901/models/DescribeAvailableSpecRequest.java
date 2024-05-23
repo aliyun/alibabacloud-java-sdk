@@ -4,12 +4,18 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableSpecRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("Spec")
     public String spec;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UpgradeType")
     public String upgradeType;
 

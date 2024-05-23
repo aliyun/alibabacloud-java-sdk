@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyDatabaseUserRolesRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
@@ -18,12 +20,16 @@ public class ModifyDatabaseUserRolesRequest extends TeaModel {
 
     /**
      * <p>A list of usernames and their respective roles.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Users")
     public String users;

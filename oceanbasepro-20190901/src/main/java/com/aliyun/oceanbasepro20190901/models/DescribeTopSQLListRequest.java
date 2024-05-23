@@ -12,6 +12,8 @@ public class DescribeTopSQLListRequest extends TeaModel {
 
     /**
      * <p>The SQL type.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -87,12 +89,16 @@ public class DescribeTopSQLListRequest extends TeaModel {
 
     /**
      * <p>The maximum response time, in ms.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The average CPU time, in ms.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

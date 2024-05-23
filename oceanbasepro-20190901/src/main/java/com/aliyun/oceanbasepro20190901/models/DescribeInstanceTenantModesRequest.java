@@ -7,6 +7,8 @@ public class DescribeInstanceTenantModesRequest extends TeaModel {
     /**
      * <p>The operation that you want to perform.   </p>
      * <p>Set the value to **DescribeInstanceTenantModes**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

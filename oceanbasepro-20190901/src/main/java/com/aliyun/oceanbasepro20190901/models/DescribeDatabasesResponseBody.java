@@ -159,7 +159,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
         /**
          * <p>The actual data size, in GB. </p>
-         * <p>><notice>This parameter is no longer used in later versions. RequiredSize is used instead.></notice></p>
+         * <p>>Notice: This parameter is no longer used in later versions. RequiredSize is used instead.</p>
          */
         @NameInMap("DataSize")
         public Double dataSize;

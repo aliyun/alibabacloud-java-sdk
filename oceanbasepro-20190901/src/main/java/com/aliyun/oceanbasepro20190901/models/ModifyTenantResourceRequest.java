@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ModifyTenantResourceRequest extends TeaModel {
     /**
      * <p>The information about the CPU resources of the tenant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Cpu")
     public Integer cpu;
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -24,6 +28,8 @@ public class ModifyTenantResourceRequest extends TeaModel {
 
     /**
      * <p>The memory size of the tenant, in GB.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Memory")
     public Integer memory;
@@ -32,10 +38,13 @@ public class ModifyTenantResourceRequest extends TeaModel {
      * <p>Specifies to create a read-only zone. Separate the names of multiple zones with commas (,).</p>
      */
     @NameInMap("ReadOnlyZoneList")
+    @Deprecated
     public String readOnlyZoneList;
 
     /**
      * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
