@@ -1,3 +1,30 @@
+2024-05-23 Version: 1.5.0
+- Support API ClearIntervenes.
+- Support API DeleteCustomText.
+- Support API DeleteInterveneRule.
+- Support API DocumentExtraction.
+- Support API ExportIntervenes.
+- Support API GenerateFileUrlByKey.
+- Support API GenerateUploadConfig.
+- Support API GetCustomText.
+- Support API GetInterveneGlobalReply.
+- Support API GetInterveneImportTaskInfo.
+- Support API GetInterveneRuleDetail.
+- Support API GetInterveneTemplateFileUrl.
+- Support API ImportInterveneFile.
+- Support API ImportInterveneFileAsync.
+- Support API InsertInterveneGlobalReply.
+- Support API InsertInterveneRule.
+- Support API ListCustomText.
+- Support API ListInterveneCnt.
+- Support API ListInterveneImportTasks.
+- Support API ListInterveneRules.
+- Support API ListIntervenes.
+- Support API SaveCustomText.
+- Support API SearchNews.
+- Support API UpdateCustomText.
+
+
 2024-03-12 Version: 1.4.0
 - Support API ClearIntervenes.
 - Support API DeleteInterveneRule.

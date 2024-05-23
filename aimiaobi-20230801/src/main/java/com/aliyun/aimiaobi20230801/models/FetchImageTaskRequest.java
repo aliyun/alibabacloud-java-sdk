@@ -4,12 +4,21 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class FetchImageTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ArticleTaskId")
     public String articleTaskId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskIdList")
     public java.util.List<String> taskIdList;
 

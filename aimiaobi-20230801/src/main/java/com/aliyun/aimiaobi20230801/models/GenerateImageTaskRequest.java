@@ -4,18 +4,33 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class GenerateImageTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ArticleTaskId")
     public String articleTaskId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ParagraphList")
     public java.util.List<GenerateImageTaskRequestParagraphList> paragraphList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Size")
     public String size;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Style")
     public String style;
 
@@ -65,9 +80,15 @@ public class GenerateImageTaskRequest extends TeaModel {
     }
 
     public static class GenerateImageTaskRequestParagraphList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Id")
         public Long id;
 

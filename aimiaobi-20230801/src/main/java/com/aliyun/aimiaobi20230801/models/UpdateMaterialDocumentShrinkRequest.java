@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class UpdateMaterialDocumentShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
@@ -13,6 +16,9 @@ public class UpdateMaterialDocumentShrinkRequest extends TeaModel {
     @NameInMap("DocKeywords")
     public String docKeywordsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DocType")
     public String docType;
 
@@ -22,6 +28,9 @@ public class UpdateMaterialDocumentShrinkRequest extends TeaModel {
     @NameInMap("HtmlContent")
     public String htmlContent;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Id")
     public Long id;
 

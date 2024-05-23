@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class SaveMaterialDocumentRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
@@ -16,6 +19,9 @@ public class SaveMaterialDocumentRequest extends TeaModel {
     @NameInMap("DocKeywords")
     public java.util.List<String> docKeywords;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DocType")
     public String docType;
 

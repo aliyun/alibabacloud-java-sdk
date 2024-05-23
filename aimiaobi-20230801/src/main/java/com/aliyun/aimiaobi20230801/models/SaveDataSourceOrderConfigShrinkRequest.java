@@ -4,12 +4,21 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class SaveDataSourceOrderConfigShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserConfigDataSourceList")
     public String userConfigDataSourceListShrink;
 
