@@ -116,6 +116,12 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
         @NameInMap("DomainType")
         public String domainType;
 
+        /**
+         * <p>Indicates whether the DNS traffic analysis feature is enabled for the domain name. Valid values:</p>
+         * <br>
+         * <p>*   OPEN</p>
+         * <p>*   CLOSE</p>
+         */
         @NameInMap("resolveAnalysisStatus")
         public String resolveAnalysisStatus;
 

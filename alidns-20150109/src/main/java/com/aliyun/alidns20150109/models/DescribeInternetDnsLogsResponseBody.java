@@ -136,6 +136,9 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         @NameInMap("Value")
         public DescribeInternetDnsLogsResponseBodyLogsLogValue value;
 
+        @NameInMap("ZoneName")
+        public String zoneName;
+
         public static DescribeInternetDnsLogsResponseBodyLogsLog build(java.util.Map<String, ?> map) throws Exception {
             DescribeInternetDnsLogsResponseBodyLogsLog self = new DescribeInternetDnsLogsResponseBodyLogsLog();
             return TeaModel.build(map, self);
@@ -219,6 +222,14 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         }
         public DescribeInternetDnsLogsResponseBodyLogsLogValue getValue() {
             return this.value;
+        }
+
+        public DescribeInternetDnsLogsResponseBodyLogsLog setZoneName(String zoneName) {
+            this.zoneName = zoneName;
+            return this;
+        }
+        public String getZoneName() {
+            return this.zoneName;
         }
 
     }

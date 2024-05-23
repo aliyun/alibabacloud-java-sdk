@@ -7,6 +7,9 @@ public class DescribePdnsAppKeyRequest extends TeaModel {
     @NameInMap("AppKeyId")
     public String appKeyId;
 
+    @NameInMap("AuthCode")
+    public String authCode;
+
     @NameInMap("Lang")
     public String lang;
 
@@ -21,6 +24,14 @@ public class DescribePdnsAppKeyRequest extends TeaModel {
     }
     public String getAppKeyId() {
         return this.appKeyId;
+    }
+
+    public DescribePdnsAppKeyRequest setAuthCode(String authCode) {
+        this.authCode = authCode;
+        return this;
+    }
+    public String getAuthCode() {
+        return this.authCode;
     }
 
     public DescribePdnsAppKeyRequest setLang(String lang) {
