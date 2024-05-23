@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeClassDetailsRequest extends TeaModel {
     /**
      * <p>The code of the instance type.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClassCode")
     public String classCode;
@@ -23,18 +25,24 @@ public class DescribeClassDetailsRequest extends TeaModel {
      * <p>*   **rds_intl**: The instance is a subscription primary instance.</p>
      * <p>*   **rords_intl**: The instance is a pay-as-you-go read-only instance.</p>
      * <p>*   **rds_rordspre_public_intl**: The instance is a subscription read-only instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     /**
      * <p>The type of the database engine.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The database engine version of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -44,6 +52,8 @@ public class DescribeClassDetailsRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

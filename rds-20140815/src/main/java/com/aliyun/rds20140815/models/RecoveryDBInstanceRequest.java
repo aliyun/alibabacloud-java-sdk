@@ -15,7 +15,7 @@ public class RecoveryDBInstanceRequest extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The instance type of the new instance. For more information, see [Instance types](~~26312~~).</p>
+     * <p>The instance type of the new instance. For more information, see [Instance types](https://help.aliyun.com/document_detail/26312.html).</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
@@ -30,7 +30,7 @@ public class RecoveryDBInstanceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The storage capacity of the new instance. Unit: GB. For more information, see [Instance types](~~26312~~).</p>
+     * <p>The storage capacity of the new instance. Unit: GB. For more information, see [Instance types](https://help.aliyun.com/document_detail/26312.html).</p>
      * <br>
      * <p>>  You must set this parameter to a value that is greater than or equal to the storage capacity of the original instance.</p>
      */
@@ -52,6 +52,8 @@ public class RecoveryDBInstanceRequest extends TeaModel {
      * <br>
      * <p>*   If you want to restore databases to a new instance, the value is in the format of `Original database name 1,New database name 2`.</p>
      * <p>*   If you want to restore databases to an existing instance, the value is in the format of `{"Original database name 1":"New database name 1","Original database name 2":"New database name 2"`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbNames")
     public String dbNames;

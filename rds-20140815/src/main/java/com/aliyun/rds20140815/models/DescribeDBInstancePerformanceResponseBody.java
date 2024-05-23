@@ -164,7 +164,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         /**
          * <p>The format in which the value of the performance metric is returned.</p>
          * <br>
-         * <p>>  If a performance metric value consists of multiple fields, the values are separated with ampersands (&). Example: com_delete\&com_insert\&com_insert_select\&com_replace.</p>
+         * <p>>  If a performance metric value consists of multiple fields, the values are separated with ampersands (&). Example: com_delete\\&com_insert\\&com_insert_select\\&com_replace.</p>
          */
         @NameInMap("ValueFormat")
         public String valueFormat;

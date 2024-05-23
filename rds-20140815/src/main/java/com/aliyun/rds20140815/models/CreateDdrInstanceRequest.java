@@ -30,13 +30,15 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String connectionMode;
 
     /**
-     * <p>The instance type of the destination instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).</p>
+     * <p>The instance type of the destination instance. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
-     * <p>The instance name. The name must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-), and must start with a letter.</p>
+     * <p>The instance name. The name must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.</p>
      * <br>
      * <p>>  The value cannot start with http:// or https://.</p>
      */
@@ -48,12 +50,16 @@ public class CreateDdrInstanceRequest extends TeaModel {
      * <br>
      * <p>*   **Internet**</p>
      * <p>*   **Intranet**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceNetType")
     public String DBInstanceNetType;
 
     /**
-     * <p>The storage capacity of the destination instance. Valid values: **5 to 2000**. Unit: GB. You can increase the storage capacity at a step size of 5 GB. For more information, see [Primary instance types](~~26312~~).</p>
+     * <p>The storage capacity of the destination instance. Valid values: **5 to 2000**. Unit: GB. You can increase the storage capacity at a step size of 5 GB. For more information, see [Primary instance types](https://help.aliyun.com/document_detail/26312.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
@@ -70,6 +76,8 @@ public class CreateDdrInstanceRequest extends TeaModel {
      * <p>*   **MySQL**</p>
      * <p>*   **SQLServer**</p>
      * <p>*   **PostgreSQL**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -78,8 +86,10 @@ public class CreateDdrInstanceRequest extends TeaModel {
      * <p>The major engine version of the destination instance. The value of this parameter varies based on the value of **Engine**.</p>
      * <br>
      * <p>*   Valid values when Engine is set to MySQL: **5.5, 5.6, 5.7, and 8.0**</p>
-     * <p>*   Valid values when Engine is set to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**</p>
+     * <p>*   Valid values when Engine is set to SQLServer: **2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, and 2019_ent**</p>
      * <p>*   Valid values when Engine is set to PostgreSQL: **9.4, 10.0, 11.0, 12.0, and 13.0**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -108,6 +118,8 @@ public class CreateDdrInstanceRequest extends TeaModel {
      * <br>
      * <p>*   **Postpaid**: pay-as-you-go</p>
      * <p>*   **Prepaid**: subscription</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PayType")
     public String payType;
@@ -131,6 +143,8 @@ public class CreateDdrInstanceRequest extends TeaModel {
 
     /**
      * <p>The region ID of the destination instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -160,15 +174,19 @@ public class CreateDdrInstanceRequest extends TeaModel {
      * <br>
      * <p>*   **BackupSet**: restores data from a backup set. If you use this value, you must also specify **BackupSetId**.</p>
      * <p>*   **BackupTime**: restores data to a point in time. If you use this value, you must also specify **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RestoreType")
     public String restoreType;
 
     /**
-     * <p>The IP address whitelist of the destination instance. If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. You can add a maximum of 1,000 entries. For more information, see [Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance](~~43185~~). The entries in the IP address whitelist must be in one of the following formats:</p>
+     * <p>The IP address whitelist of the destination instance. If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. You can add a maximum of 1,000 entries. For more information, see [Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/43185.html). The entries in the IP address whitelist must be in one of the following formats:</p>
      * <br>
      * <p>*   IP address. Example: 10.23.12.24.</p>
      * <p>*   CIDR block. Example: 10.23.12.24/24. In this example, 24 indicates that the prefix of the CIDR block is 24 bits in length. You can replace 24 with a value that ranges from 1 to 32.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityIPList")
     public String securityIPList;

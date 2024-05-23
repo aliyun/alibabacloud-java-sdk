@@ -15,16 +15,23 @@ public class DescribeAllWhitelistTemplateRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page. Enumerated valid values: 10, 30, and 50.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MaxRecordsPerPage")
     public Integer maxRecordsPerPage;
 
     /**
      * <p>The page number.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNumbers")
     public Integer pageNumbers;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

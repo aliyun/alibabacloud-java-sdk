@@ -7,13 +7,15 @@ public class CreateTempDBInstanceRequest extends TeaModel {
     /**
      * <p>The backup set ID. You can call the DescribeBackups operation to query the backup set ID.</p>
      * <br>
-     * <p>>  You must specify at least one of the **BackupId** or **RestoreTime** parameters.</p>
+     * <p>>  You must specify at least one of **BackupId** and **RestoreTime** parameters.</p>
      */
     @NameInMap("BackupId")
     public Long backupId;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

@@ -22,12 +22,16 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The instance ID. You can remove tags from N instances at a time. Valid values of N: **1** to **50**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -40,6 +44,8 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Set the value to **INSTANCE**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

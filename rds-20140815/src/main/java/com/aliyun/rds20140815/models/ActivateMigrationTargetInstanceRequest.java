@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ActivateMigrationTargetInstanceRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;

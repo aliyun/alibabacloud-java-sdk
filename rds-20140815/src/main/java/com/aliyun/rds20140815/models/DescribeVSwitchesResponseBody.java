@@ -29,7 +29,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The information about the vSwitches.</p>
+     * <p>The information about the vSwitch.</p>
      */
     @NameInMap("VSwitchs")
     public java.util.List<DescribeVSwitchesResponseBodyVSwitchs> vSwitchs;
@@ -82,6 +82,8 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public static class DescribeVSwitchesResponseBodyVSwitchs extends TeaModel {
         /**
          * <p>The number of available IP addresses in the vSwitch.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("AvailableIpAddressCount")
         public String availableIpAddressCount;
@@ -116,7 +118,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         /**
          * <p>The status of the vSwitch. Valid values:</p>
          * <br>
-         * <p>*   **Pending**: The vSwitch is being configured.</p>
+         * <p>*   **Pending**: The vSwitch is being specified.</p>
          * <p>*   **Available**: The vSwitch is available.</p>
          */
         @NameInMap("Status")

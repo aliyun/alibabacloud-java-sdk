@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyDBInstanceProxyConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -19,6 +21,8 @@ public class ModifyDBInstanceProxyConfigurationRequest extends TeaModel {
      * <p>*   **TransparentSwitch**: transparent switchover</p>
      * <p>*   **PersistentConnections**: short-lived connection optimization</p>
      * <p>*   **AttacksProtection**: brute-force attack protection</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProxyConfigurationKey")
     public String proxyConfigurationKey;
@@ -42,6 +46,8 @@ public class ModifyDBInstanceProxyConfigurationRequest extends TeaModel {
      * <p>    *   **Disable**: The feature is disabled. This is the default value.</p>
      * <br>
      * <p>Format: {"Feature 1":"Status 1","Feature 2":"Status 2"...}</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProxyConfigurationValue")
     public String proxyConfigurationValue;

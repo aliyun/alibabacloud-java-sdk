@@ -36,7 +36,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
      * <p>*   **true**: The system admin account was enabled.</p>
      * <p>*   **false**: The system admin account was disabled.</p>
      * <br>
-     * <p>>  The [system admin account](~~170736~~) is supported only for the instances that run SQL Server. If the instance runs SQL Server, a value is returned for this parameter. If the instance runs a different database engine, no value is returned for this parameter.</p>
+     * <p>>  The [system admin account](https://help.aliyun.com/document_detail/170736.html) is supported only for the instances that run SQL Server. If the instance runs SQL Server, a value is returned for this parameter. If the instance runs a different database engine, no value is returned for this parameter.</p>
      */
     @NameInMap("SystemAdminAccountStatus")
     public String systemAdminAccountStatus;
@@ -114,7 +114,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         public String accountPrivilege;
 
         /**
-         * <p>The permissions that are granted to the account. For more information, see [Account permissions](~~146395~~).</p>
+         * <p>The permissions that are granted to the account. For more information, see [Account permissions](https://help.aliyun.com/document_detail/146395.html).</p>
          */
         @NameInMap("AccountPrivilegeDetail")
         public String accountPrivilegeDetail;

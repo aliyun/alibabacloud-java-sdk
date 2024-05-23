@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDBInstanceResponseBody extends TeaModel {
     /**
-     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query region ID of the instance.</p>
+     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/26231.html) operation to query region ID of the instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

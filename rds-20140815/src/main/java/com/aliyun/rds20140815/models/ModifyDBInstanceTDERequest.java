@@ -5,20 +5,22 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceTDERequest extends TeaModel {
     /**
-     * <p>The file that contains the certificate.\</p>
+     * <p>The file that contains the certificate.\\</p>
      * <p>Format:</p>
      * <br>
      * <p>*   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the certificate file>` (The file name contains the extension.)</p>
      * <p>*   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the certificate file>` (The file name contains the extension.)</p>
      * <br>
      * <p>> *   This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</p>
-     * <p>> *   You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>> *   You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.</p>
      */
     @NameInMap("Certificate")
     public String certificate;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -67,14 +69,14 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     public String passWord;
 
     /**
-     * <p>The file that contains the private key of the certificate.\</p>
+     * <p>The file that contains the private key of the certificate.\\</p>
      * <p>Format:</p>
      * <br>
      * <p>*   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the file that contains the private key>` (The file name contains the extension.)</p>
      * <p>*   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the file that contains the private key>` (The file name contains the extension.)</p>
      * <br>
      * <p>> *   This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</p>
-     * <p>> *   You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>> *   You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.</p>
      */
     @NameInMap("PrivateKey")
     public String privateKey;
@@ -86,7 +88,7 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see [RAM role overview](~~93689~~).</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see [RAM role overview](https://help.aliyun.com/document_detail/93689.html).</p>
      * <br>
      * <p>> This parameter is available when the instance runs MySQL or PostgreSQL.</p>
      */
@@ -98,6 +100,8 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
      * <br>
      * <p>*   **Enabled**</p>
      * <p>*   **Disabled**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TDEStatus")
     public String TDEStatus;

@@ -65,18 +65,22 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
 
     /**
      * <p>The internal or public endpoint for which the server certificate needs to be created or updated.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>Specifies whether to enable the forceful SSL encryption feature. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see [Configure the SSL encryption feature](~~95715~~). Valid values:</p>
+     * <p>Specifies whether to enable the forceful SSL encryption feature. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see [Configure the SSL encryption feature](https://help.aliyun.com/document_detail/95715.html). Valid values:</p>
      * <br>
      * <p>*   **1**: enables the feature.</p>
      * <p>*   **0**: disables the feature.</p>
@@ -135,7 +139,7 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public String serverKey;
 
     /**
-     * <p>The minimum Transport Layer Security (TLS) version. Valid values: 1.0, 1.1, and 1.2. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see [Configure the SSL encryption feature](~~95715~~).</p>
+     * <p>The minimum Transport Layer Security (TLS) version. Valid values: 1.0, 1.1, and 1.2. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see [Configure the SSL encryption feature](https://help.aliyun.com/document_detail/95715.html).</p>
      */
     @NameInMap("TlsVersion")
     public String tlsVersion;

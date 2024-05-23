@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyDBInstanceNetworkExpireTimeRequest extends TeaModel {
     /**
      * <p>The retention days of the classic network endpoint. Valid values: **1 to 120**. Unit: days.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClassicExpiredDays")
     public Integer classicExpiredDays;
@@ -15,12 +17,16 @@ public class ModifyDBInstanceNetworkExpireTimeRequest extends TeaModel {
      * <br>
      * <p>*   The internal endpoint of the classic network.</p>
      * <p>*   The read/write splitting endpoint of the classic network.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

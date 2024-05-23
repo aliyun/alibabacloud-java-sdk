@@ -9,24 +9,32 @@ public class CreateGADInstanceRequest extends TeaModel {
      * <br>
      * <p>> *   A primary instance can serve only as the central node of a single global active database cluster.</p>
      * <p>> *   The primary instance can serve as the central node of the global active database cluster only in the following regions: China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), China (Zhangjiakou), China (Shenzhen), and China (Chengdu).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CentralDBInstanceId")
     public String centralDBInstanceId;
 
     /**
      * <p>The username of the privileged account of the central node. You can call the DescribeAccounts operation to query the privileged account of the central node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CentralRdsDtsAdminAccount")
     public String centralRdsDtsAdminAccount;
 
     /**
      * <p>The password of the privileged account of the central node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CentralRdsDtsAdminPassword")
     public String centralRdsDtsAdminPassword;
 
     /**
      * <p>The region ID of the central node. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CentralRegionId")
     public String centralRegionId;
@@ -39,6 +47,8 @@ public class CreateGADInstanceRequest extends TeaModel {
      * <p>*   **Table**: the name of the table. If you set the **all** field to **false**, you must nest the name of the table that you want to synchronize into the JSON array.</p>
      * <br>
      * <p>Example: `{ "testdb": { "name": "testdb", "all": false, "Table": { "order": { "name": "order", "all": true }, "ordernew": { "name": "ordernew", "all": true } } } }`</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBList")
     public String DBList;
@@ -63,6 +73,8 @@ public class CreateGADInstanceRequest extends TeaModel {
 
     /**
      * <p>The information about the unit node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UnitNode")
     public java.util.List<CreateGADInstanceRequestUnitNode> unitNode;
@@ -185,7 +197,7 @@ public class CreateGADInstanceRequest extends TeaModel {
          * <p>The name of the unit node that you want to create. The name must meet the following requirements:</p>
          * <br>
          * <p>*   The name must be **2 to 255** characters in length.</p>
-         * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-) and must start with a letter.</p>
+         * <p>*   The name can contain letters, digits, underscores (_), and hyphens (-) and must start with a letter.</p>
          * <p>*   The name cannot start with `http://` or `https://`.</p>
          * <br>
          * <p>**N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.</p>
@@ -194,7 +206,7 @@ public class CreateGADInstanceRequest extends TeaModel {
         public String DBInstanceDescription;
 
         /**
-         * <p>The storage capacity of the unit node that you want to create. Unit: GB You can adjust the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the DescribeAvailableResource operation to query the storage capacity range that is supported by the new instance type.</p>
+         * <p>The storage capacity of the unit node that you want to create. Unit: GB You can adjust the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html). You can also call the DescribeAvailableResource operation to query the storage capacity range that is supported by the new instance type.</p>
          * <br>
          * <p>**N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.</p>
          */
@@ -219,7 +231,7 @@ public class CreateGADInstanceRequest extends TeaModel {
         public String DBInstanceStorageType;
 
         /**
-         * <p>The instance type of the unit node that you want to create. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can call the DescribeAvailableResource operation to query the available instance types in a region.</p>
+         * <p>The instance type of the unit node that you want to create. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html). You can call the DescribeAvailableResource operation to query the available instance types in a region.</p>
          * <br>
          * <p>**N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.</p>
          */
@@ -234,6 +246,8 @@ public class CreateGADInstanceRequest extends TeaModel {
          * <p>*   **ignore**: DTS hides the conflicting primary key on the node.</p>
          * <br>
          * <p>**N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DtsConflict")
         public String dtsConflict;
@@ -246,9 +260,11 @@ public class CreateGADInstanceRequest extends TeaModel {
          * <p>*   **large**</p>
          * <p>*   **micro**</p>
          * <br>
-         * <p>>  For more information, see [Specifications of data synchronization tasks](~~26605~~).</p>
+         * <p>>  For more information, see [Specifications of data synchronization tasks](https://help.aliyun.com/document_detail/26605.html).</p>
          * <br>
          * <p>**N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DtsInstanceClass")
         public String dtsInstanceClass;
@@ -291,12 +307,14 @@ public class CreateGADInstanceRequest extends TeaModel {
          * <p>The region ID of the unit node that you want to create. You can call the DescribeRegions operation to query the most recent region list.</p>
          * <br>
          * <p>**N** in this parameter specifies the Nth unit node. The value of N is an integer within the range of **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("RegionID")
         public String regionID;
 
         /**
-         * <p>The [IP address whitelist](~~43185~~) of the unit node that you want to create. If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. The IP address whitelist can contain up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:</p>
+         * <p>The [IP address whitelist](https://help.aliyun.com/document_detail/43185.html) of the unit node that you want to create. If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. The IP address whitelist can contain up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:</p>
          * <br>
          * <p>*   IP addresses, such as `10.10.10.10`.</p>
          * <p>*   CIDR blocks, such as `10.10.10.10/24`. In this example, **24** indicates that the prefix of the IP address in the whitelist is 24 bits in length. You can replace 24 with a value within the range of **1 to 32**.</p>

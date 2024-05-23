@@ -20,7 +20,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
      * <p>Indicates whether parameter templates exist in the specified region. Valid values:</p>
      * <p>*   true</p>
      * <p>*   false</p>
-     * <p>><notice>This parameter is deprecated.></notice></p>
+     * <p>>Notice: This parameter is deprecated.</p>
      */
     @NameInMap("SignalForOptimizeParams")
     public Boolean signalForOptimizeParams;

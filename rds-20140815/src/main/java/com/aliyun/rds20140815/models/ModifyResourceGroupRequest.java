@@ -12,6 +12,8 @@ public class ModifyResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -24,6 +26,8 @@ public class ModifyResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The resource group ID. You can call the ListResourceGroups operation to obtain the resource group ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreatePostgresExtensionsRequest extends TeaModel {
     /**
      * <p>The account of the user who owns the extension. Only privileged accounts are supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
@@ -18,12 +20,16 @@ public class CreatePostgresExtensionsRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The database name. You can call the DescribeDatabases operation to query the database name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBNames")
     public String DBNames;
@@ -58,7 +64,7 @@ public class CreatePostgresExtensionsRequest extends TeaModel {
      * <p>*   true</p>
      * <p>*   false</p>
      * <br>
-     * <p>>  For more information about the risks, see [Limits on extension creation for ApsaraDB RDS for PostgreSQL instances](~~2587815~~).</p>
+     * <p>>  For more information about the risks, see [Limits on extension creation for ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/2587815.html).</p>
      */
     @NameInMap("RiskConfirmed")
     public Boolean riskConfirmed;

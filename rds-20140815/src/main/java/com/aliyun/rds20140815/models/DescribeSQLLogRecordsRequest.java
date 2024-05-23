@@ -11,7 +11,9 @@ public class DescribeSQLLogRecordsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/610396.html) operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -24,6 +26,8 @@ public class DescribeSQLLogRecordsRequest extends TeaModel {
 
     /**
      * <p>The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time must be less than 15 days. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -31,7 +35,7 @@ public class DescribeSQLLogRecordsRequest extends TeaModel {
     /**
      * <p>Specifies whether to generate an SQL audit log file or return SQL audit log entries. Valid values:</p>
      * <br>
-     * <p>*   **File**: If you set this parameter to File, this operation generates an SQL audit log file and returns only common response parameters. After you call this operation, you must call the [DescribeSQLLogFiles](~~26295~~) operation to obtain the download URL of the SQL audit log file.</p>
+     * <p>*   **File**: If you set this parameter to File, this operation generates an SQL audit log file and returns only common response parameters. After you call this operation, you must call the [DescribeSQLLogFiles](https://help.aliyun.com/document_detail/26295.html) operation to obtain the download URL of the SQL audit log file.</p>
      * <p>*   **Stream** (default): If you set this parameter to Stream, this operation returns SQL audit log entries.</p>
      * <br>
      * <p>> If you set this parameter to **File**, only ApsaraDB RDS for MySQL instances that use local disks and ApsaraDB RDS for SQL Server instances are supported, and a maximum of 1 million log entries are returned.</p>
@@ -64,7 +68,7 @@ public class DescribeSQLLogRecordsRequest extends TeaModel {
      * <br>
      * <p>*   When you call this operation and set the **Form** parameter to **File** to generate an audit file, you cannot filter log entries by keyword.</p>
      * <p>*   You can specify up to 10 keywords. The keywords are evaluated by using the **AND** operator. Separate multiple keywords with spaces.</p>
-     * <p>*   If a field name in the specified SQL statement is enclosed in backquotes (\`) and you want to use the field name as a keyword, you must enter the backquotes (\`) as part of the field name. For example, if the field name is \`id\`, enter \`id\` instead of id.</p>
+     * <p>*   If a field name in the specified SQL statement is enclosed in backquotes (\\`) and you want to use the field name as a keyword, you must enter the backquotes (\\`) as part of the field name. For example, if the field name is \\`id\\`, enter \\`id\\` instead of id.</p>
      * <br>
      * <p>>  After you enter a keyword, the system matches the keyword based on the **Database**, **User**, and **QueryKeywords** parameters. The parameters are evaluated by using the **OR** operator.</p>
      */
@@ -85,6 +89,8 @@ public class DescribeSQLLogRecordsRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. You can query data in the last 15 days before the current date. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

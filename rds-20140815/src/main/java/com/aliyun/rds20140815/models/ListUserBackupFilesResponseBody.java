@@ -93,7 +93,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String ossBucket;
 
         /**
-         * <p>The metadata of the full backup file. For more information, see [Manage object metadata](~~31859~~).</p>
+         * <p>The metadata of the full backup file. For more information, see [Manage object metadata](https://help.aliyun.com/document_detail/31859.html).</p>
          */
         @NameInMap("OssFileMetaData")
         public String ossFileMetaData;

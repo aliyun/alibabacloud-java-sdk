@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
+    /**
+     * <p>Order parameters.</p>
+     */
     @NameInMap("OrderParams")
     public String orderParams;
 
@@ -25,6 +28,9 @@ public class DescribePriceResponseBody extends TeaModel {
     @NameInMap("Rules")
     public DescribePriceResponseBodyRules rules;
 
+    /**
+     * <p>Serverless price information.</p>
+     */
     @NameInMap("ServerlessPrice")
     public DescribePriceResponseBodyServerlessPrice serverlessPrice;
 
@@ -185,7 +191,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String isSelected;
 
         /**
-         * <p>The name of the coupon.</p>
+         * <p>The coupon name.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -292,6 +298,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
+        /**
+         * <p>Order Information</p>
+         */
         @NameInMap("OrderLines")
         public String orderLines;
 
@@ -307,9 +316,15 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("RuleIds")
         public DescribePriceResponseBodyPriceInfoRuleIds ruleIds;
 
+        /**
+         * <p>Estimated hourly cost calculated based on the maximum RCU selected by the user.</p>
+         */
         @NameInMap("TradeMaxRCUAmount")
         public Float tradeMaxRCUAmount;
 
+        /**
+         * <p>Estimated hourly cost calculated based on the minimum RCU selected by the user.</p>
+         */
         @NameInMap("TradeMinRCUAmount")
         public Float tradeMinRCUAmount;
 
@@ -476,33 +491,63 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyServerlessPrice extends TeaModel {
+        /**
+         * <p>MaxRCU discount amount.</p>
+         */
         @NameInMap("RCUDiscountMaxAmount")
         public Float RCUDiscountMaxAmount;
 
+        /**
+         * <p>MinRCU discount amount.</p>
+         */
         @NameInMap("RCUDiscountMinAmount")
         public Float RCUDiscountMinAmount;
 
+        /**
+         * <p>MaxRCU price.</p>
+         */
         @NameInMap("RCUOriginalMaxAmount")
         public Float RCUOriginalMaxAmount;
 
+        /**
+         * <p>MinRCU price.</p>
+         */
         @NameInMap("RCUOriginalMinAmount")
         public Float RCUOriginalMinAmount;
 
+        /**
+         * <p>Original price of the disk.</p>
+         */
         @NameInMap("StorageOriginalAmount")
         public Float storageOriginalAmount;
 
+        /**
+         * <p>Maximum total price before discount.</p>
+         */
         @NameInMap("TotalOriginalMaxAmount")
         public Float totalOriginalMaxAmount;
 
+        /**
+         * <p>The minimum total price before the discount.</p>
+         */
         @NameInMap("TotalOriginalMinAmount")
         public Float totalOriginalMinAmount;
 
+        /**
+         * <p>MaxRCU transaction price.</p>
+         */
         @NameInMap("TradeMaxRCUAmount")
         public Float tradeMaxRCUAmount;
 
+        /**
+         * <p>MinRCU transaction price.</p>
+         */
         @NameInMap("TradeMinRCUAmount")
         public Float tradeMinRCUAmount;
 
+        /**
+         * <p>Disk discount price.</p>
+         */
         @NameInMap("storageDiscountAmount")
         public Float storageDiscountAmount;
 

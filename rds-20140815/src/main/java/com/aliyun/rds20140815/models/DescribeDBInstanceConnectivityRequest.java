@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceConnectivityRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbInstanceName")
     public String dbInstanceName;
@@ -33,6 +35,8 @@ public class DescribeDBInstanceConnectivityRequest extends TeaModel {
 
     /**
      * <p>The source IP address.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceIpAddress")
     public String sourceIpAddress;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAccountRequest extends TeaModel {
     /**
-     * <p>The description of the account. The value must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-), and must start with a letter.</p>
+     * <p>The description of the account. The value must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.</p>
      * <br>
      * <p>> : The name cannot start with http:// or https://.</p>
      */
@@ -18,7 +18,7 @@ public class CreateAccountRequest extends TeaModel {
      * <br>
      * <p>*   The name must be unique.</p>
      * <br>
-     * <p>*   The name can contain lowercase letters, digits, and underscores (\_). For MySQL databases, the name can contain uppercase letters.</p>
+     * <p>*   The name can contain lowercase letters, digits, and underscores (_). For MySQL databases, the name can contain uppercase letters.</p>
      * <br>
      * <p>*   The name must start with a letter and end with a letter or digit.</p>
      * <br>
@@ -33,7 +33,9 @@ public class CreateAccountRequest extends TeaModel {
      * <p>    *   If the instance runs PostgreSQL with local disks, the value must be 2 to 16 characters in length.</p>
      * <p>    *   If the instance runs MariaDB, the value must be 2 to 16 characters in length.</p>
      * <br>
-     * <p>*   For more information about invalid characters, see [Forbidden keywords](~~26317~~).</p>
+     * <p>*   For more information about invalid characters, see [Forbidden keywords](https://help.aliyun.com/document_detail/26317.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
@@ -47,6 +49,8 @@ public class CreateAccountRequest extends TeaModel {
      * <p>*   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
      * <br>
      * <p>*   Special characters include `! @ # $ % ^ & * ( ) _ + - =`</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
@@ -58,13 +62,15 @@ public class CreateAccountRequest extends TeaModel {
      * <p>*   **Super**: privileged account.</p>
      * <p>*   **Sysadmin**: system admin account. The account type is available only for ApsaraDB RDS for SQL Server instances.</p>
      * <br>
-     * <p>Before you create a system admin account, check whether the RDS instance meets all prerequisites. For more information, see [Create a system admin account](~~170736~~).</p>
+     * <p>Before you create a system admin account, check whether the RDS instance meets all prerequisites. For more information, see [Create a system admin account](https://help.aliyun.com/document_detail/170736.html).</p>
      */
     @NameInMap("AccountType")
     public String accountType;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

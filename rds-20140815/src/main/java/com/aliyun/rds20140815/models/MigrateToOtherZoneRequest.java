@@ -19,13 +19,15 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     /**
      * <p>The new instance type of the instance. You can change the instance type of the instance. You cannot change the storage type of the instance. If you set **IsModifySpec** to **true**, you must specify at least one of DBInstanceClass and **DBInstanceStorage**.</p>
      * <br>
-     * <p>For more information about instance types, see [Primary ApsaraDB RDS for MySQL instance types](~~276975~~).</p>
+     * <p>For more information about instance types, see [Primary ApsaraDB RDS for MySQL instance types](https://help.aliyun.com/document_detail/276975.html).</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -33,7 +35,7 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     /**
      * <p>The new storage capacity of the instance. If you set **IsModifySpec** to **true**, you must specify at least one of DBInstanceStorage and **DBInstanceClass**.</p>
      * <br>
-     * <p>Unit: GB. The available storage capacity range varies based on the instance type of the instance. For more information, see [Primary ApsaraDB RDS for MySQL instance types](~~276975~~).</p>
+     * <p>Unit: GB. The available storage capacity range varies based on the instance type of the instance. For more information, see [Primary ApsaraDB RDS for MySQL instance types](https://help.aliyun.com/document_detail/276975.html).</p>
      */
     @NameInMap("DBInstanceStorage")
     public Long DBInstanceStorage;
@@ -107,6 +109,8 @@ public class MigrateToOtherZoneRequest extends TeaModel {
 
     /**
      * <p>The ID of the destination zone. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

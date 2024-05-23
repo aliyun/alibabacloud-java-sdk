@@ -10,7 +10,9 @@ public class CheckServiceLinkedRoleRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <br>
-     * <p>>  You can specify any region for this parameter, which does not affect your query results. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>>  You can specify any region for this parameter, which does not affect your query results. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -30,7 +32,9 @@ public class CheckServiceLinkedRoleRequest extends TeaModel {
     /**
      * <p>The SLR name.</p>
      * <br>
-     * <p>>  For more information about the SLRs supported by ApsaraDB RDS, see [Service-linked roles](~~342840~~).</p>
+     * <p>>  For more information about the SLRs supported by ApsaraDB RDS, see [Service-linked roles](https://help.aliyun.com/document_detail/342840.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServiceLinkedRole")
     public String serviceLinkedRole;

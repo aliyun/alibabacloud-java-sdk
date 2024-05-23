@@ -12,6 +12,8 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -31,6 +33,8 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
      * <p>*   **8.0**</p>
      * <p>*   **5.7**</p>
      * <p>*   **5.6**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;

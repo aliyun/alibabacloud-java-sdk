@@ -95,7 +95,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
 
     public static class DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems extends TeaModel {
         /**
-         * <p>The PostgreSQL version to which the minor engine version corresponds. For more information, see [Release notes for AliPG](~~126002~~).</p>
+         * <p>The PostgreSQL version to which the minor engine version corresponds. For more information, see [Release notes for AliPG](https://help.aliyun.com/document_detail/126002.html).</p>
          * <br>
          * <p>>  This parameter is available only for instances that run **PostgreSQL**.</p>
          */

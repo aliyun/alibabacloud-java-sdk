@@ -11,7 +11,7 @@ public class CheckAccountNameAvailableRequest extends TeaModel {
      * <br>
      * <p>*   The value must start with a lowercase letter, and end with a lowercase letter or a digit.</p>
      * <br>
-     * <p>*   The value can contain lowercase letters, digits, and underscores (\_).</p>
+     * <p>*   The value can contain lowercase letters, digits, and underscores (_).</p>
      * <br>
      * <p>*   The length of the value must meet the following requirements:</p>
      * <br>
@@ -22,7 +22,9 @@ public class CheckAccountNameAvailableRequest extends TeaModel {
      * <p>    *   If the instance runs PostgreSQL with local disks, the value must be 2 to 16 characters in length.</p>
      * <p>    *   If the instance runs MariaDB, the value must be 2 to 16 characters in length.</p>
      * <br>
-     * <p>*   For more information about invalid characters, see [Forbidden keywords table](~~26317~~).</p>
+     * <p>*   For more information about invalid characters, see [Forbidden keywords table](https://help.aliyun.com/document_detail/26317.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
@@ -35,6 +37,8 @@ public class CheckAccountNameAvailableRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

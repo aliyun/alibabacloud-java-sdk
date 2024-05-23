@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ReleaseReadWriteSplittingConnectionRequest extends TeaModel {
     /**
      * <p>The ID of the primary instance. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

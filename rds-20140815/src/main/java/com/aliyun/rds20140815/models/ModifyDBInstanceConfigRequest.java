@@ -11,24 +11,31 @@ public class ModifyDBInstanceConfigRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of the configuration item that you want to modify.</p>
+     * <p>The name of the configuration item that you want to modify. Valid values:</p>
      * <br>
-     * <p>*   **pgbouncer**</p>
+     * <p>*   **pgbouncer**. This configuration item is supported for ApsaraDB RDS for PostgreSQL instances.</p>
+     * <p>*   **clear_errorlog**. This configuration item is supported for ApsaraDB RDS for SQL Server instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigName")
     public String configName;
 
     /**
-     * <p>The value of the configuration item that you want to modify.</p>
+     * <p>The value of the configuration item that you want to modify. Valid values:</p>
      * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <p>*   If you set ConfigName to pgbouncer, the valid values are **true** and **false**.</p>
+     * <p>*   If you set ConfigName to clear_errorlog, set the value to **1**. The value 1 indicates that error logs are cleaned up.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigValue")
     public String configValue;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

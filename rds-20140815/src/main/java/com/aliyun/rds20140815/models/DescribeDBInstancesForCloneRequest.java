@@ -28,7 +28,7 @@ public class DescribeDBInstancesForCloneRequest extends TeaModel {
     public String currentInstanceId;
 
     /**
-     * <p>The instance type of the instance. For more information, see [Instance types](~~26312~~).</p>
+     * <p>The instance type of the instance. For more information, see [Instance types](https://help.aliyun.com/document_detail/26312.html).</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
@@ -40,7 +40,7 @@ public class DescribeDBInstancesForCloneRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The status of the instance. For more information, see [Instance state table](~~26315~~).</p>
+     * <p>The status of the instance. For more information, see [Instance state table](https://help.aliyun.com/document_detail/26315.html).</p>
      */
     @NameInMap("DBInstanceStatus")
     public String DBInstanceStatus;
@@ -138,6 +138,8 @@ public class DescribeDBInstancesForCloneRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

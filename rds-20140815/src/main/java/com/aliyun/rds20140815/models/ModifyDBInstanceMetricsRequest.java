@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyDBInstanceMetricsRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
@@ -14,6 +16,8 @@ public class ModifyDBInstanceMetricsRequest extends TeaModel {
      * <p>The keys of the Enhanced Monitoring metrics that you want to display for the instance. You can enter a maximum of 30 metric keys. If you enter multiple metric keys, you must separate the metric keys with commas (,).</p>
      * <br>
      * <p>You can call the DescribeAvailableMetrics operation to query the keys of metrics.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MetricsConfig")
     public String metricsConfig;
@@ -26,6 +30,8 @@ public class ModifyDBInstanceMetricsRequest extends TeaModel {
      * <br>
      * <p>*   **instance**: This modification is applied only to the current instance.</p>
      * <p>*   **region**: This modification is applied to all ApsaraDB RDS for PostgreSQL instances that are equipped with the same type of storage media as the current instance in the region to which the current instance belongs. For example, if the current instance is equipped with cloud disks, this modification is applied to all ApsaraDB RDS for PostgreSQL instances that are equipped with cloud disks in the region to which the current instance belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Scope")
     public String scope;

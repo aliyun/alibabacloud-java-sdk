@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateYouhuiForOrderRequest extends TeaModel {
     /**
      * <p>The activity ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ActivityId")
     public Long activityId;
@@ -15,12 +17,16 @@ public class CreateYouhuiForOrderRequest extends TeaModel {
 
     /**
      * <p>The promotion ID. You can call the GetResourcePrice operation to query the promotion ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PromotionId")
     public Long promotionId;
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

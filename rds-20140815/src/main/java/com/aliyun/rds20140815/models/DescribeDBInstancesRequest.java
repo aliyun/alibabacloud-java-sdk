@@ -39,7 +39,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String connectionString;
 
     /**
-     * <p>The instance type of the instance. For information, see [Primary ApsaraDB RDS instance types](~~26312~~).</p>
+     * <p>The instance type of the instance. For information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
@@ -51,7 +51,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The status of the instance. For more information, see [Instance states](~~26315~~).</p>
+     * <p>The status of the instance. For more information, see [Instance states](https://help.aliyun.com/document_detail/26315.html).</p>
      */
     @NameInMap("DBInstanceStatus")
     public String DBInstanceStatus;
@@ -184,6 +184,8 @@ public class DescribeDBInstancesRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

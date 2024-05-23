@@ -85,7 +85,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         public Float cpuAllocatedAmount;
 
         /**
-         * <p>The core overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).</p>
+         * <p>The core overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](https://help.aliyun.com/document_detail/182328.html).</p>
          */
         @NameInMap("CpuAllocationRatio")
         public Integer cpuAllocationRatio;
@@ -130,7 +130,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         public Float diskAllocatedAmount;
 
         /**
-         * <p>The disk overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).</p>
+         * <p>The disk overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](https://help.aliyun.com/document_detail/182328.html).</p>
          */
         @NameInMap("DiskAllocationRatio")
         public Integer diskAllocationRatio;
@@ -187,7 +187,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         public Float memAllocatedAmount;
 
         /**
-         * <p>The memory overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).</p>
+         * <p>The memory overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](https://help.aliyun.com/document_detail/182328.html).</p>
          */
         @NameInMap("MemAllocationRatio")
         public Integer memAllocationRatio;

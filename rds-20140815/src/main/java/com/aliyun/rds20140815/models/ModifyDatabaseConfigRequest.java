@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyDatabaseConfigRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -14,18 +16,24 @@ public class ModifyDatabaseConfigRequest extends TeaModel {
      * <p>The database name.</p>
      * <br>
      * <p>>  You can specify only one database name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBName")
     public String DBName;
 
     /**
      * <p>The name of the database property that you want to modify.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatabasePropertyName")
     public String databasePropertyName;
 
     /**
      * <p>The value of the database property that you want to modify.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatabasePropertyValue")
     public String databasePropertyValue;

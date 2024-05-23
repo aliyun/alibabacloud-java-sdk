@@ -18,12 +18,16 @@ public class ModifyEventInfoRequest extends TeaModel {
 
     /**
      * <p>The event ID. Separate multiple event IDs with commas (,). You can configure up to 20 event IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventId")
     public String eventId;
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

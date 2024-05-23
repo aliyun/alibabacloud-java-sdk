@@ -67,7 +67,7 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The instance type of the new instance. For information, see [Primary ApsaraDB RDS instance types](~~26312~~).</p>
+     * <p>The instance type of the new instance. For information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).</p>
      * <br>
      * <p>> By default, the new instance uses the same instance type as the original primary instance.</p>
      */
@@ -76,12 +76,14 @@ public class CloneDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The storage capacity of the new instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).</p>
+     * <p>The storage capacity of the new instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).</p>
      * <br>
      * <p>> By default, the new instance has the same storage capacity as the original primary instance.</p>
      */
@@ -145,7 +147,9 @@ public class CloneDBInstanceRequest extends TeaModel {
      * <br>
      * <p>*   **Postpaid**: pay-as-you-go.</p>
      * <p>*   **Prepaid**: subscription.</p>
-     * <p>*   **Serverless**: serverless. This value is not supported for instances that run MariaDB. For more information, see [Overview of serverless ApsaraDB RDS for MySQL instances](~~411291~~), [Overview of serverless ApsaraDB RDS for SQL Server instances](~~604344~~), and [Overview of serverless ApsaraDB RDS for PostgreSQL instances](~~607742~~).</p>
+     * <p>*   **Serverless**: serverless. This value is not supported for instances that run MariaDB. For more information, see [Overview of serverless ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/411291.html), [Overview of serverless ApsaraDB RDS for SQL Server instances](https://help.aliyun.com/document_detail/604344.html), and [Overview of serverless ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/607742.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PayType")
     public String payType;
@@ -191,7 +195,9 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String restoreTime;
 
     /**
-     * <p>The configuration of the serverless instance. You must specify this parameter only when you restore data to a new serverless instance.</p>
+     * <p>The specifications for the serverless instance. You must specify this parameter only when you restore data to a new serverless instance.</p>
+     * <br>
+     * <p>>  This parameter is available only on the China site (aliyun.com).</p>
      */
     @NameInMap("ServerlessConfig")
     public CloneDBInstanceRequestServerlessConfig serverlessConfig;
@@ -499,10 +505,11 @@ public class CloneDBInstanceRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable the automatic start and stop feature for the serverless ApsaraDB RDS for MySQL instance. After the automatic start and stop feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection is established to the instance, the instance is automatically resumed. Valid values:</p>
          * <br>
-         * <p>*   **true**: enables the feature.</p>
-         * <p>*   **false** (default): disables the feature.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false** (default)</p>
          * <br>
-         * <p>> This parameter is supported only for serverless ApsaraDB RDS for MySQL instances.</p>
+         * <p>> *   This parameter is supported only for serverless ApsaraDB RDS for MySQL instances.</p>
+         * <p>> *   This parameter is available only on the China site (aliyun.com).</p>
          */
         @NameInMap("AutoPause")
         public Boolean autoPause;
@@ -514,7 +521,11 @@ public class CloneDBInstanceRequest extends TeaModel {
          * <p>*   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**</p>
          * <p>*   Serverless ApsaraDB RDS for PostgreSQL instances: **1 to 12**</p>
          * <br>
-         * <p>> The value of this parameter must be greater than or equal to the value of **MinCapacity** and can be specified only to an **integer**.</p>
+         * <p>> </p>
+         * <br>
+         * <p>*   The value of this parameter must be greater than or equal to the value of **MinCapacity** and can be specified only to an **integer**.</p>
+         * <br>
+         * <p>*   This parameter is available only on the China site (aliyun.com).</p>
          */
         @NameInMap("MaxCapacity")
         public Double maxCapacity;
@@ -526,7 +537,11 @@ public class CloneDBInstanceRequest extends TeaModel {
          * <p>*   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**. Only integers are supported.</p>
          * <p>*   Serverless ApsaraDB RDS for PostgreSQL instances: **0.5 to 12**.</p>
          * <br>
-         * <p>> The value of this parameter must be less than or equal to the value of **MaxCapacity**.</p>
+         * <p>> </p>
+         * <br>
+         * <p>*   The value of this parameter must be less than or equal to the value of **MaxCapacity**.</p>
+         * <br>
+         * <p>*   This parameter is available only on the China site (aliyun.com).</p>
          */
         @NameInMap("MinCapacity")
         public Double minCapacity;
@@ -534,10 +549,14 @@ public class CloneDBInstanceRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable the forced scaling feature for the serverless ApsaraDB RDS for MySQL instance. In most cases, ApsaraDB RDS automatically scales in or out the RCUs of a serverless instance based on business requirements in real time. In rare cases, the scaling does not take effect in real time. You can enable the forced scaling feature to forcefully scales in or out the RCUs of the instance. Valid values:</p>
          * <br>
-         * <p>*   **true**: enables the feature.</p>
-         * <p>*   **false** (default): disables the feature.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false** (default)</p>
          * <br>
-         * <p>> This parameter is supported only for serverless ApsaraDB RDS for MySQL instances.</p>
+         * <p>> </p>
+         * <br>
+         * <p>*   This parameter is supported only for serverless ApsaraDB RDS for MySQL instances.</p>
+         * <br>
+         * <p>*   This parameter is available only on the China site (aliyun.com).</p>
          */
         @NameInMap("SwitchForce")
         public Boolean switchForce;

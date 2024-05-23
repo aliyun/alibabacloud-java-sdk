@@ -11,19 +11,25 @@ public class DeletePostgresExtensionsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/610396.html) operation to query the ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The database on which the extension is installed. If you want to specify multiple databases, separate the databases with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBNames")
     public String DBNames;
 
     /**
      * <p>The name of the extension. If you want to specify multiple extensions, separate the extension names with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Extensions")
     public String extensions;

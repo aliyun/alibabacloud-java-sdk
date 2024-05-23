@@ -58,13 +58,15 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance type of the read-only instance. For more information, see [Read-only instance types](~~145759~~). We recommend that you specify an instance type whose specifications are higher than or equal to the specifications of the instance type of the primary instance. If the specifications of the read-only instance are lower than the specifications of the primary instance, the read-only instance may encounter issues such as high latency and heavy load.</p>
+     * <p>The instance type of the read-only instance. For more information, see [Read-only instance types](https://help.aliyun.com/document_detail/145759.html). We recommend that you specify an instance type whose specifications are higher than or equal to the specifications of the instance type of the primary instance. If the specifications of the read-only instance are lower than the specifications of the primary instance, the read-only instance may encounter issues such as high latency and heavy load.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
-     * <p>The description of the read-only instance. The description must be 2 to 256 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The value must start with a letter</p>
+     * <p>The description of the read-only instance. The description must be 2 to 256 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The value must start with a letter</p>
      * <br>
      * <p>> The value cannot start with [http:// or https://.](http://https://。)</p>
      */
@@ -73,12 +75,16 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The primary instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The storage capacity of the read-only instance. The storage capacity of the read-only instance must be greater than or equal to that of the primary instance. For more information, see the **Storage capacity** column in [Read-only instance types](~~145759~~). This value must be a multiple of 5. Unit: GB.</p>
+     * <p>The storage capacity of the read-only instance. The storage capacity of the read-only instance must be greater than or equal to that of the primary instance. For more information, see the **Storage capacity** column in [Read-only instance types](https://help.aliyun.com/document_detail/145759.html). This value must be a multiple of 5. Unit: GB.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
@@ -119,8 +125,10 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      * <p>The version of the database engine. The read-only instance and the primary instance must run the same major engine version.</p>
      * <br>
      * <p>*   If the read-only instance runs MySQL, set this parameter to **5.6**, **5.7**, or **8.0**.</p>
-     * <p>*   If the read-only instance runs MySQL, set this parameter to **2017\_ent, 2019\_ent, or 2022\_ent**.</p>
+     * <p>*   If the read-only instance runs MySQL, set this parameter to **2017_ent, 2019_ent, or 2022_ent**.</p>
      * <p>*   If the read-only instance runs PostgreSQL, set this parameter to **10.0, 11.0, 12.0, 13.0, 14.0, or 15.0**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -167,6 +175,8 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      * <br>
      * <p>*   **Postpaid**: pay-as-you-go</p>
      * <p>*   **Prepaid**: subscription</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PayType")
     public String payType;
@@ -196,6 +206,8 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The region ID. The read-only instance and the primary instance must reside in the same region. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -258,6 +270,8 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The zone ID. You can call the DescribeRegions operation to query the zone ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

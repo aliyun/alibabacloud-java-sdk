@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeCloudMigrationPrecheckResultRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
      * <p>The page number. Pages start from page 1. Default value: **1**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values: **30** to **100**. Default value: 30.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -28,7 +34,7 @@ public class DescribeCloudMigrationPrecheckResultRequest extends TeaModel {
     /**
      * <p>The private or public IP address that is used to connect to the self-managed PostgreSQL instance.</p>
      * <br>
-     * <p>*   If the self-managed PostgreSQL instance resides on an Elastic Compute Service (ECS) instance, enter the private IP address of the ECS instance. For more information about how to obtain the private IP address of an ECS instance, see [View IP addresses](~~273914~~).</p>
+     * <p>*   If the self-managed PostgreSQL instance resides on an Elastic Compute Service (ECS) instance, enter the private IP address of the ECS instance. For more information about how to obtain the private IP address of an ECS instance, see [View IP addresses](https://help.aliyun.com/document_detail/273914.html).</p>
      * <p>*   If the self-managed PostgreSQL instance resides in an on-premises data center, enter the private IP address of the on-premises data center.</p>
      */
     @NameInMap("SourceIpAddress")

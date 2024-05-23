@@ -14,6 +14,8 @@ public class ModifyDBInstanceEndpointAddressRequest extends TeaModel {
 
     /**
      * <p>The endpoint that you want to modify. The endpoint can be a public endpoint or an internal endpoint.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
@@ -25,13 +27,17 @@ public class ModifyDBInstanceEndpointAddressRequest extends TeaModel {
     public String connectionStringPrefix;
 
     /**
-     * <p>The endpoint ID of the instance. You can call the [DescribeDBInstanceEndpoints](~~610488~~) operation to query the endpoint ID of the instance.</p>
+     * <p>The endpoint ID of the instance. You can call the DescribeDBInstanceEndpoints operation to query the endpoint ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceEndpointId")
     public String DBInstanceEndpointId;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

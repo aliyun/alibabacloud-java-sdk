@@ -138,7 +138,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         public String crossBackupType;
 
         /**
-         * <p>The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-), and must start with a letter.</p>
+         * <p>The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.</p>
          * <br>
          * <p>>  The value cannot start with http:// or https://.</p>
          */
@@ -152,7 +152,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
-         * <p>The instance status. For more information, see [Instance statuses](~~26315~~).</p>
+         * <p>The instance status. For more information, see [Instance statuses](https://help.aliyun.com/document_detail/26315.html).</p>
          */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;

@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeOssDownloadsRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The migration task ID. You can call the DescribeMigrateTasks operation to query the migration task ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MigrateTaskId")
     public String migrateTaskId;

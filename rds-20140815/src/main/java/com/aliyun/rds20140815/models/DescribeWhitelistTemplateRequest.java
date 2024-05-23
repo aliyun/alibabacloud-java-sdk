@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeWhitelistTemplateRequest extends TeaModel {
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -20,7 +23,9 @@ public class DescribeWhitelistTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the whitelist template. You can call the [DescribeAllWhitelistTemplate](~~2412075~~) operation to obtain the ID of the whitelist template.</p>
+     * <p>The ID of the whitelist template. You can call the [DescribeAllWhitelistTemplate](https://help.aliyun.com/document_detail/2412075.html) operation to obtain the ID of the whitelist template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateId")
     public Integer templateId;

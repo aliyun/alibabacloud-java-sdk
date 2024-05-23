@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckInstanceExistRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

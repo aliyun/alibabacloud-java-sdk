@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeInstanceLinkedWhitelistTemplateRequest extends TeaModel {
     /**
      * <p>The instance name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InsName")
     public String insName;

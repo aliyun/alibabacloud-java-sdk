@@ -9,15 +9,19 @@ public class ImportUserBackupFileRequest extends TeaModel {
      * <br>
      * <p>The JSON array contains the following fields:</p>
      * <br>
-     * <p>*   **Bucket**: The name of the OSS bucket in which the full backup file is stored as an object. You can call the [GetBucket](~~31965~~) operation to query the name of the bucket.</p>
-     * <p>*   **Object**: The path of the full backup file that is stored as an object in the OSS bucket. You can call the [GetObject](~~31980~~) operation to query the path of the object.</p>
-     * <p>*   **Location**: The ID of the region in which the OSS bucket is located. You can call the [GetBucketLocation](~~31967~~) operation to query the region of the bucket.</p>
+     * <p>*   **Bucket**: The name of the OSS bucket in which the full backup file is stored as an object. You can call the [GetBucket](https://help.aliyun.com/document_detail/31965.html) operation to query the name of the bucket.</p>
+     * <p>*   **Object**: The path of the full backup file that is stored as an object in the OSS bucket. You can call the [GetObject](https://help.aliyun.com/document_detail/31980.html) operation to query the path of the object.</p>
+     * <p>*   **Location**: The ID of the region in which the OSS bucket is located. You can call the [GetBucketLocation](https://help.aliyun.com/document_detail/31967.html) operation to query the region of the bucket.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BackupFile")
     public String backupFile;
 
     /**
      * <p>The region ID of the OSS bucket where the full backup file of the self-managed MySQL database is located. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BucketRegion")
     public String bucketRegion;
@@ -42,6 +46,8 @@ public class ImportUserBackupFileRequest extends TeaModel {
      * <br>
      * <p>> *   The value of this parameter is the ID of the region in which you want to create the instance.</p>
      * <p>> *   The value of this parameter must be consistent with the value of **BucketRegion**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

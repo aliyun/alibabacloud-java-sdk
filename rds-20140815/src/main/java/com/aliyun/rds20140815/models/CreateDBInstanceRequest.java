@@ -48,10 +48,10 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <br>
      * <p>*   **babelfishEnabled**: specifies whether to enable Babelfish for the instance. If you set this field to **true**, you enable Babelfish for the instance. If you leave this parameter empty, Babelfish is disabled for the instance.</p>
      * <p>*   **migrationMode**: The migration mode of the instance. Valid values: **single-db** and **multi-db**.</p>
-     * <p>*   **masterUsername**: The username of the administrator account. The username can contain lowercase letters, digits, and underscores (\_). It must start with a letter and end with a letter or digit. It can be up to 63 characters in length and cannot start with pg.</p>
+     * <p>*   **masterUsername**: The username of the administrator account. The username can contain lowercase letters, digits, and underscores (_). It must start with a letter and end with a letter or digit. It can be up to 63 characters in length and cannot start with pg.</p>
      * <p>*   **masterUserPassword**: The password of the administrator account. The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. It must be 8 to 32 characters in length. The password can contain any of the following characters: `! @ # $ % ^ & * ( ) _ + - =`.</p>
      * <br>
-     * <p>> This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).</p>
+     * <p>> This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](https://help.aliyun.com/document_detail/428613.html).</p>
      */
     @NameInMap("BabelfishConfig")
     public String babelfishConfig;
@@ -103,7 +103,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>A reserved parameter.</p>
      */
     @NameInMap("ColdDataEnabled")
     public Boolean coldDataEnabled;
@@ -137,7 +137,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String createStrategy;
 
     /**
-     * <p>The instance type of the instance. You can specify a standard instance type or an economy instance type. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).</p>
+     * <p>The instance type of the instance. You can specify a standard instance type or an economy instance type. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).</p>
      * <br>
      * <p>To create a serverless instance, set this parameter to one of the following values:</p>
      * <br>
@@ -146,12 +146,14 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>*   If you want to create a serverless instance that runs SQL Server, set this parameter to **mssql.mem2.serverless.s2**.</p>
      * <p>*   If you want to create a serverless instance that runs PostgreSQL on RDS Basic Edition, set this parameter to **pg.n2.serverless.1c**.</p>
      * <p>*   If you want to create a serverless instance that runs PostgreSQL on RDS High-availability Edition, set this parameter to **pg.n2.serverless.2c**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
-     * <p>The instance name. The name must be 2 to 255 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The instance name. The name must be 2 to 255 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
      * <br>
      * <p>> The name cannot start with http:// or https://.</p>
      */
@@ -160,12 +162,16 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The network connection type of the instance. The value of this parameter is fixed as **Intranet**, indicating an internal network connection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceNetType")
     public String DBInstanceNetType;
 
     /**
-     * <p>The storage capacity of the instance. Unit: GB. The storage capacity increases in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).</p>
+     * <p>The storage capacity of the instance. Unit: GB. The storage capacity increases in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
@@ -212,11 +218,11 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>*   If you set **Engine** to **MySQL**:</p>
      * <br>
      * <p>    *   The time zone of the instance is in UTC. Valid values: **-12:59** to **+13:00**.</p>
-     * <p>    *   If the instance uses local SSDs, you can specify the name of the time zone. Example: Asia/Hong_Kong. For more information, see [Time zones](~~297356~~).</p>
+     * <p>    *   If the instance uses local SSDs, you can specify the name of the time zone. Example: Asia/Hong_Kong. For more information, see [Time zones](https://help.aliyun.com/document_detail/297356.html).</p>
      * <br>
      * <p>*   If you set **Engine** to **PostgreSQL**:</p>
      * <br>
-     * <p>    *   The time zone of the instance is not in UTC. For more information, see [Time zones](~~297356~~).</p>
+     * <p>    *   The time zone of the instance is not in UTC. For more information, see [Time zones](https://help.aliyun.com/document_detail/297356.html).</p>
      * <p>    *   You can specify this parameter only when the instance runs PostgreSQL with standard SSDs or ESSDs.</p>
      * <br>
      * <p>> *   You can specify the time zone when you create a primary instance. You cannot specify the time zone when you create a read-only instance. Read-only instances inherit the time zone of their primary instance.</p>
@@ -257,9 +263,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the key that was used to encrypt the disk in the region where the disk is deployed. If this parameter is specified, disk encryption is enabled and you must also specify the **RoleARN** parameter. Disk encryption cannot be disabled after it is enabled.</p>
      * <br>
-     * <p>You can obtain the ID of the key in the Key Management Service (KMS) console or create a key. For more information, see [Create a CMK](~~181610~~).</p>
+     * <p>You can obtain the ID of the key in the Key Management Service (KMS) console or create a key. For more information, see [Create a CMK](https://help.aliyun.com/document_detail/181610.html).</p>
      * <br>
-     * <p>>  This parameter is optional when you create an instance that runs MySQL, PostgreSQL, or SQL Server. You need to only specify the **RoleARN** parameter to create an instance that has cloud disk encryption enabled by using the obtained key ID.</p>
+     * <p>> *   This parameter is not required when you create an RDS instance that runs MySQL, PostgreSQL, or SQL Server. You need to only specify the **RoleARN** parameter to create an instance that has cloud disk encryption enabled by using the obtained key ID.</p>
+     * <p>> *   You can configure RAM authorization to require a RAM user to enable cloud disk encryption when the RAM user is used to create an instance. If cloud disk encryption is disabled during the instance creation, the creation operation fails. To complete the configuration, you can attach the following policy to the RAM user: `{"Version":"1","Statement":[{"Effect":"Deny","Action":"rds:CreateDBInstance","Resource":"*","Condition":{"StringEquals":{"rds:DiskEncryptionRequired":"false"}}}]}`</p>
+     * <br>
+     * <br>
+     * <br>
+     * <p>>Warning: The configuration also affects the CreateOrder operation that is called to create instances in the console.</p>
      */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
@@ -271,6 +282,8 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>*   **SQLServer**</p>
      * <p>*   **PostgreSQL**</p>
      * <p>*   **MariaDB**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -281,14 +294,14 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>*   Regular instance</p>
      * <br>
      * <p>    *   Valid values when you set Engine to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**</p>
-     * <p>    *   Valid values when you set Engine to SQLServer: **08r2\_ent_ha** (cloud disks, discontinued), **2008r2** (local disks, discontinued), **2012** (SQL Server EE Basic), **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_ent_ha**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_ent**, **2017\_std_ha**, **2017\_web**, **2019\_ent**, **2019\_std_ha**, **2019\_web**, **2022\_ent**, **2022\_std_ha**, and **2022\_web**</p>
+     * <p>    *   Valid values when you set Engine to SQLServer: **08r2_ent_ha** (cloud disks, discontinued), **2008r2** (local disks, discontinued), **2012** (SQL Server EE Basic), **2012_ent_ha**, **2012_std_ha**, **2012_web**, **2014_ent_ha**, **2014_std_ha**, **2016_ent_ha**, **2016_std_ha**, **2016_web**, **2017_ent**, **2017_std_ha**, **2017_web**, **2019_ent**, **2019_std_ha**, **2019_web**, **2022_ent**, **2022_std_ha**, and **2022_web**</p>
      * <p>    *   Valid values when you set Engine to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, **15.0**, and **16.0**</p>
-     * <p>    *   Valid value if you set the Engine parameter to MariaDB: **10.3**</p>
+     * <p>    *   Valid values when you set Engine to MariaDB: **10.3**</p>
      * <br>
      * <p>*   Serverless instance</p>
      * <br>
      * <p>    *   Valid values when you set Engine to MySQL: **5.7** and **8.0**</p>
-     * <p>    *   Valid values when you set Engine to SQLServer: **2016\_std_sl**, **2017\_std_sl**, and **2019\_std_sl**</p>
+     * <p>    *   Valid values when you set Engine to SQLServer: **2016_std_sl**, **2017_std_sl**, and **2019_std_sl**</p>
      * <p>    *   Valid values when you set Engine to PostgreSQL: **14.0**, **15.0**, and **16.0**</p>
      * <br>
      * <p>> </p>
@@ -299,7 +312,9 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <br>
      * <p>*   RDS instances that run SQL Server 2014 are not available for purchase on the international site (alibabacloud.com).</p>
      * <br>
-     * <p>*   ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled support only PostgreSQL 13.0, PostgreSQL 14.0, and PostgreSQL 15.0.</p>
+     * <p>*   Babelfish is supported only for ApsaraDB RDS for PostgreSQL instances that run PostgreSQL 15.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -328,9 +343,11 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <br>
      * <p>*   **Postpaid**: pay-as-you-go.</p>
      * <p>*   **Prepaid**: subscription.</p>
-     * <p>*   **Serverless**: serverless. This value is not supported for instances that run MariaDB. For more information, see [Overview of serverless ApsaraDB RDS for MySQL instances](~~411291~~), [Overview of serverless ApsaraDB RDS for SQL Server instances](~~604344~~), and [Overview of serverless ApsaraDB RDS for PostgreSQL instances](~~607742~~).</p>
+     * <p>*   **Serverless**: serverless. This value is not supported for instances that run MariaDB. For more information, see [Overview of serverless ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/411291.html), [Overview of serverless ApsaraDB RDS for SQL Server instances](https://help.aliyun.com/document_detail/604344.html), and [Overview of serverless ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/607742.html).</p>
      * <br>
      * <p>> The system automatically generates a purchase order and completes the payment.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PayType")
     public String payType;
@@ -363,6 +380,8 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -383,10 +402,12 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String roleARN;
 
     /**
-     * <p>The IP address whitelist of the instance. For more information, see [Use a database client or the CLI to connect to an ApsaraDB RDS for MySQL instance](~~43185~~). If the IP address whitelist contains more than one entry, separate the entries with commas (,). Each entry must be unique. The IP address whitelist can contain up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:</p>
+     * <p>The IP address whitelist of the instance. For more information, see [Use a database client or the CLI to connect to an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/43185.html). If the IP address whitelist contains more than one entry, separate the entries with commas (,). Each entry must be unique. The IP address whitelist can contain up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:</p>
      * <br>
      * <p>*   IP addresses, such as 10.10.XX.XX.</p>
      * <p>*   CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityIPList")
     public String securityIPList;
@@ -405,7 +426,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>*   **Enable**</p>
      * <p>*   **Disable** (default)</p>
      * <br>
-     * <p>>  After the instance is created, you can call the ModifyDasInstanceConfig operation to adjust the settings of automatic storage expansion for the instance. For more information, see [Configure automatic storage expansion](~~173826~~).</p>
+     * <p>>  After the instance is created, you can call the ModifyDasInstanceConfig operation to adjust the settings of automatic storage expansion for the instance. For more information, see [Configure automatic storage expansion](https://help.aliyun.com/document_detail/173826.html).</p>
      */
     @NameInMap("StorageAutoScale")
     public String storageAutoScale;
@@ -487,12 +508,12 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>    *   xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.</p>
      * <p>    *   xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.</p>
      * <br>
-     * <p>    > You can call the DescribeDBMiniEngineVersions operation to query the minor engine version. For more information about the differences between minor engine versions of AliSQL, see [Release notes](~~96060~~).</p>
+     * <p>    > You can call the DescribeDBMiniEngineVersions operation to query the minor engine version. For more information about the differences between minor engine versions of AliSQL, see [Release notes](https://help.aliyun.com/document_detail/96060.html).</p>
      * <br>
      * <p>*   If you create an instance that runs PostgreSQL, the value is in the following format: `rds_postgres_<Major engine version>00_<Minor engine version>`. Example: `rds_postgres_1400_20220830`.</p>
      * <br>
      * <p>    *   1400: The major engine version is PostgreSQL 14.</p>
-     * <p>    *   20220830: the AliPG version. You can call the DescribeDBMiniEngineVersions operation to query the AliPG version. For more information about minor engine versions, see [Release notes for AliPG](~~126002~~).</p>
+     * <p>    *   20220830: the AliPG version. You can call the DescribeDBMiniEngineVersions operation to query the AliPG version. For more information about minor engine versions, see [Release notes for AliPG](https://help.aliyun.com/document_detail/126002.html).</p>
      * <br>
      * <p>    > If you configure the **BabelfishConfig** parameter for your instance that runs PostgreSQL and set the babelfishEnabled field to true, the value of this parameter is in the following format: `rds_postgres_Major engine version00_AliPG version_babelfish`.</p>
      */
@@ -540,6 +561,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The whitelists. If you enter more than one IP address or CIDR block, you must separate these IP addresses or CIDR blocks with commas (,). Do not add spaces preceding or following the commas. Example: `192.168.0.1,172.16.213.9`.</p>
+     */
     @NameInMap("WhitelistTemplateList")
     public String whitelistTemplateList;
 

@@ -45,7 +45,7 @@ public class QueryNotifyResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
-         * <p>Indicates whether the notification has been confirmed. You can call the [ConfirmNotify](~~610444~~) operation to mark the notification as confirmed. Valid values:</p>
+         * <p>Indicates whether the notification has been confirmed. You can call the [ConfirmNotify](https://help.aliyun.com/document_detail/610444.html) operation to mark the notification as confirmed. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>
@@ -54,7 +54,7 @@ public class QueryNotifyResponseBody extends TeaModel {
         public Boolean confirmFlag;
 
         /**
-         * <p>The UID of the contact who called the [ConfirmNotify](~~610444~~) operation to mark the notification as confirmed. The contact belongs to the current Alibaba Cloud account.</p>
+         * <p>The UID of the contact who called the [ConfirmNotify](https://help.aliyun.com/document_detail/610444.html) operation to mark the notification as confirmed. The contact belongs to the current Alibaba Cloud account.</p>
          * <br>
          * <p>The value **0** indicates that the notification is automatically confirmed by the system.</p>
          */
@@ -133,7 +133,7 @@ public class QueryNotifyResponseBody extends TeaModel {
          * <p>The type of the notification. Valid values:</p>
          * <br>
          * <p>*   **Sell**: sales notification</p>
-         * <p>*   **Operation**: O\&M notification</p>
+         * <p>*   **Operation**: O\\&M notification</p>
          * <p>*   **Promotion**: promotion notification</p>
          */
         @NameInMap("Type")

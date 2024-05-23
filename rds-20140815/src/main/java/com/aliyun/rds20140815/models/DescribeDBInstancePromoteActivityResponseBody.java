@@ -18,7 +18,7 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
     public String bid;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/26232.html) operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -40,7 +40,7 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The activity information about the instance. For more information, see [Instance activities](~~2391834~~).</p>
+     * <p>The activity information about the instance. For more information, see [Instance activities](https://help.aliyun.com/document_detail/2391834.html).</p>
      */
     @NameInMap("IsActivity")
     public String isActivity;

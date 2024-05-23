@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteDBProxyEndpointAddressRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -20,12 +22,16 @@ public class DeleteDBProxyEndpointAddressRequest extends TeaModel {
      * <p>If the instance runs MySQL, the default value of this parameter is **Classic**.</p>
      * <br>
      * <p>> If the instance runs PostgreSQL, you must set this parameter to **Public** or **VPC**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBProxyConnectStringNetType")
     public String DBProxyConnectStringNetType;
 
     /**
      * <p>The proxy endpoint ID. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;

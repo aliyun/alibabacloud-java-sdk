@@ -111,7 +111,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The system event category. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).</p>
+         * <p>The system event category. For more information, see [View the event history of an ApsaraDB RDS instance](https://help.aliyun.com/document_detail/129759.html).</p>
          */
         @NameInMap("EventCategory")
         public String eventCategory;
@@ -141,7 +141,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         public String eventImpact;
 
         /**
-         * <p>The event level. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).</p>
+         * <p>The event level. For more information, see [View the event history of an ApsaraDB RDS instance](https://help.aliyun.com/document_detail/129759.html).</p>
          */
         @NameInMap("EventLevel")
         public String eventLevel;
@@ -517,7 +517,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         public String time;
 
         /**
-         * <p>The event type. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).</p>
+         * <p>The event type. For more information, see [View the event history of an ApsaraDB RDS instance](https://help.aliyun.com/document_detail/129759.html).</p>
          */
         @NameInMap("Type")
         public String type;

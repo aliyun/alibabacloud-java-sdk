@@ -60,7 +60,7 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
          * <p>The effective time. Valid values:</p>
          * <br>
          * <p>*   **Immediate**: This is the default value.</p>
-         * <p>*   **MaintainTime**: The effective time is within the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~610402~~).</p>
+         * <p>*   **MaintainTime**: The effective time is within the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](https://help.aliyun.com/document_detail/610402.html).</p>
          */
         @NameInMap("EffectiveTime")
         public String effectiveTime;

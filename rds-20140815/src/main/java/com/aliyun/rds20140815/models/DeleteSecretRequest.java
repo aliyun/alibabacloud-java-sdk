@@ -22,6 +22,8 @@ public class DeleteSecretRequest extends TeaModel {
      * <p>The engine of the database.</p>
      * <br>
      * <p>> Only MySQL is supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -31,6 +33,8 @@ public class DeleteSecretRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeSecrets operation to query the region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -14,6 +14,8 @@ public class DescribeKmsAssociateResourcesRequest extends TeaModel {
 
     /**
      * <p>The ID of the KMS resource. Only key IDs are supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("KmsResourceId")
     public String kmsResourceId;
@@ -26,12 +28,16 @@ public class DescribeKmsAssociateResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the KMS resource. Only key is supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("KmsResourceType")
     public String kmsResourceType;
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the KMS resource belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("KmsResourceUser")
     public String kmsResourceUser;

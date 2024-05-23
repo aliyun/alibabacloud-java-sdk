@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class GrantOperatorPermissionRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The expiration time of the permissions. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExpiredTime")
     public String expiredTime;
@@ -27,6 +31,8 @@ public class GrantOperatorPermissionRequest extends TeaModel {
      * <br>
      * <p>*   **Control**: the configuration permissions, which allow you to view and modify configurations of the instance.</p>
      * <p>*   **Data**: the data permissions, which allow you to view schemas, indexes, and SQL statements of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Privileges")
     public String privileges;

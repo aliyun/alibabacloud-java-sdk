@@ -33,6 +33,8 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
      * <p>*   **mssql**: SQL Server</p>
      * <p>*   **PostgreSQL**: PostgreSQL</p>
      * <p>*   **MariaDB**: MariaDB</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -44,6 +46,8 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
      * <p>*   Valid values when you set the Engine parameter to mssql: **2008r2**.</p>
      * <p>*   Valid values when you set the Engine parameter to PostgreSQL: **10.0, 11.0, 12.0, 13.0, 14.0, and 15.0**.</p>
      * <p>*   Valid values when you set the Engine parameter to MariaDB: **10.3**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;

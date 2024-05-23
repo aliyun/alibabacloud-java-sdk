@@ -13,13 +13,17 @@ public class CheckCreateDdrDBInstanceRequest extends TeaModel {
     public String backupSetId;
 
     /**
-     * <p>The instance type of the destination instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).</p>
+     * <p>The instance type of the destination instance. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
-     * <p>The storage capacity of the destination instance. Valid values: **5 to 2000**. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary instance types](~~26312~~).</p>
+     * <p>The storage capacity of the destination instance. Valid values: **5 to 2000**. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary instance types](https://help.aliyun.com/document_detail/26312.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
@@ -30,6 +34,8 @@ public class CheckCreateDdrDBInstanceRequest extends TeaModel {
      * <p>*   **MySQL**</p>
      * <p>*   **SQLServer**</p>
      * <p>*   **PostgreSQL**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -38,8 +44,10 @@ public class CheckCreateDdrDBInstanceRequest extends TeaModel {
      * <p>The major engine version of the destination instance. The value of this parameter varies based on the value of **Engine**.</p>
      * <br>
      * <p>*   Valid values when Engine is set to MySQL: **5.5, 5.6, 5.7, and 8.0**</p>
-     * <p>*   Valid values when Engine is set to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**</p>
+     * <p>*   Valid values when Engine is set to SQLServer: **2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, and 2019_ent**</p>
      * <p>*   PostgreSQL: **10.0, 11.0, 12.0, 13.0, 14.0, and 15.0**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -49,6 +57,8 @@ public class CheckCreateDdrDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The region ID of the destination instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -80,6 +90,8 @@ public class CheckCreateDdrDBInstanceRequest extends TeaModel {
      * <p>*   **1**: restores data to a point in time. If you set this parameter to 1, you must also specify the **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName** parameters.</p>
      * <br>
      * <p>Default value: **0**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RestoreType")
     public String restoreType;

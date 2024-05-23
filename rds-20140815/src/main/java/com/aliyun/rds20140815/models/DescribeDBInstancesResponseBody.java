@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancesResponseBody extends TeaModel {
     /**
-     * <p>The details of the instance.</p>
+     * <p>The information about the instances.</p>
      */
     @NameInMap("Items")
     public DescribeDBInstancesResponseBodyItems items;
@@ -140,10 +140,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesResponseBodyItemsDBInstance extends TeaModel {
         /**
-         * <p>Indicates whether the buffer pool extension (BPE) feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **1**</p>
-         * <p>*   **0**</p>
+         * <p>A deprecated parameter.</p>
          */
         @NameInMap("BpeEnabled")
         public String bpeEnabled;
@@ -196,11 +193,16 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The number of CPU instances.</p>
+         * <br>
+         * <p>Returns only when the InstanceLevel parameter is 1.</p>
+         */
         @NameInMap("DBInstanceCPU")
         public String DBInstanceCPU;
 
         /**
-         * <p>The instance type of the instance. For information, see [Primary ApsaraDB RDS instance types](~~26312~~).</p>
+         * <p>The instance type of the instance. For information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).</p>
          */
         @NameInMap("DBInstanceClass")
         public String DBInstanceClass;
@@ -217,6 +219,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The memory size of the node. Unit: MB.</p>
+         * <br>
+         * <p>Returns only when the InstanceLevel parameter is 1.</p>
+         */
         @NameInMap("DBInstanceMemory")
         public Integer DBInstanceMemory;
 
@@ -230,7 +237,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBInstanceNetType;
 
         /**
-         * <p>The instance status. For more information, see [Instance statuses](~~26315~~).</p>
+         * <p>The instance status. For more information, see [Instance statuses](https://help.aliyun.com/document_detail/26315.html).</p>
          */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
@@ -242,7 +249,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBInstanceStorageType;
 
         /**
-         * <p>The role of the instance. Valid values:</p>
+         * <p>The type of the instance. Valid values:</p>
          * <br>
          * <p>*   **Primary**: primary instance</p>
          * <p>*   **Readonly**: read-only instance</p>
@@ -253,13 +260,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBInstanceType;
 
         /**
-         * <p>The ID of the dedicated cluster to which the instances belong.</p>
+         * <p>The ID of the dedicated cluster.</p>
          */
         @NameInMap("DedicatedHostGroupId")
         public String dedicatedHostGroupId;
 
         /**
-         * <p>The name of the dedicated cluster to which the instance belongs.</p>
+         * <p>The name of the dedicated cluster.</p>
          */
         @NameInMap("DedicatedHostGroupName")
         public String dedicatedHostGroupName;
@@ -375,10 +382,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String instanceNetworkType;
 
         /**
-         * <p>Whether IO acceleration is enabled. The value has the following meanings:</p>
+         * <p>Indicates whether the I/O acceleration feature is enabled. Valid values:</p>
          * <br>
-         * <p>- 1: enabled</p>
-         * <p>- 0: not enabled</p>
+         * <p>*   1: enabled</p>
+         * <p>*   0: disabled</p>
          */
         @NameInMap("IoAccelerationEnabled")
         public String ioAccelerationEnabled;
@@ -429,7 +436,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String payType;
 
         /**
-         * <p>The IDs of the read-only instances that are attached to the primary instance. This parameter is returned only when the instance is a primary instance.</p>
+         * <p>The IDs of the read-only instances. This parameter is returned only when the instance is a primary instance and has the read-only instances attached.</p>
          */
         @NameInMap("ReadOnlyDBInstanceIds")
         public DescribeDBInstancesResponseBodyItemsDBInstanceReadOnlyDBInstanceIds readOnlyDBInstanceIds;

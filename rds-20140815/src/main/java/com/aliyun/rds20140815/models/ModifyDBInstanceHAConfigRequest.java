@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyDBInstanceHAConfigRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
@@ -15,6 +17,8 @@ public class ModifyDBInstanceHAConfigRequest extends TeaModel {
      * <br>
      * <p>*   RPO: Data consistency is preferred. The instance ensures data reliability to minimize data losses. If you have high requirements on data consistency, select this mode.</p>
      * <p>*   RTO: Service availability is preferred. The instance restores the database service at the earliest opportunity to ensure service availability. If you have high requirements for service availability, select this mode.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HAMode")
     public String HAMode;
@@ -32,7 +36,7 @@ public class ModifyDBInstanceHAConfigRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The data replication mode of the instance. For more information, see [Data replication mode](~~96055~~).</p>
+     * <p>The data replication mode of the instance. For more information, see [Data replication mode](https://help.aliyun.com/document_detail/96055.html).</p>
      * <br>
      * <p>*   Semi-sync: the semi-synchronous mode.</p>
      * <p>*   Sync: the synchronous mode.</p>
@@ -40,6 +44,8 @@ public class ModifyDBInstanceHAConfigRequest extends TeaModel {
      * <p>*   Mgr: the MySQL group replication (MGR) mode. This mode is available only for the China site (aliyun.com).</p>
      * <br>
      * <p>> This parameter is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SyncMode")
     public String syncMode;
