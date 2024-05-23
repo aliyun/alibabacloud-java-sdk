@@ -24,6 +24,8 @@ public class DescribeTenantUsersRequest extends TeaModel {
 
     /**
      * <p>The return result of the request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

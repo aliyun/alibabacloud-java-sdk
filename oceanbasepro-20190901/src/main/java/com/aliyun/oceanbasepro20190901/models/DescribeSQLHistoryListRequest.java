@@ -7,6 +7,8 @@ public class DescribeSQLHistoryListRequest extends TeaModel {
     /**
      * <p>The end time of the time range for querying the SQL execution history.   </p>
      * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -26,6 +28,8 @@ public class DescribeSQLHistoryListRequest extends TeaModel {
 
     /**
      * <p>SQLID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SQLId")
     public String SQLId;
@@ -33,12 +37,16 @@ public class DescribeSQLHistoryListRequest extends TeaModel {
     /**
      * <p>The start time of the time range for querying the SQL execution history.   </p>
      * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

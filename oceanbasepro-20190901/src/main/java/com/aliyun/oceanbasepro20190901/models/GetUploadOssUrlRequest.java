@@ -7,6 +7,9 @@ public class GetUploadOssUrlRequest extends TeaModel {
     @NameInMap("EffectiveTimeMinutes")
     public Integer effectiveTimeMinutes;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 

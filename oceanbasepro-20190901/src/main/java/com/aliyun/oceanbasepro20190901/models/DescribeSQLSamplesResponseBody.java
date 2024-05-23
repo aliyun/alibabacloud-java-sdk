@@ -275,6 +275,9 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         @NameInMap("Server")
         public String server;
 
+        @NameInMap("SqlText")
+        public String sqlText;
+
         /**
          * <p>SQL type.</p>
          */
@@ -670,6 +673,14 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         }
         public String getServer() {
             return this.server;
+        }
+
+        public DescribeSQLSamplesResponseBodyData setSqlText(String sqlText) {
+            this.sqlText = sqlText;
+            return this;
+        }
+        public String getSqlText() {
+            return this.sqlText;
         }
 
         public DescribeSQLSamplesResponseBodyData setSqlType(String sqlType) {

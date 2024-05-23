@@ -25,6 +25,9 @@ public class CreateProjectRequest extends TeaModel {
     @NameInMap("FullTransferConfig")
     public CreateProjectRequestFullTransferConfig fullTransferConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Id")
     public String id;
 
@@ -34,6 +37,9 @@ public class CreateProjectRequest extends TeaModel {
     @NameInMap("LabelIds")
     public java.util.List<String> labelIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -43,24 +49,39 @@ public class CreateProjectRequest extends TeaModel {
     @NameInMap("ReverseIncrTransferConfig")
     public CreateProjectRequestReverseIncrTransferConfig reverseIncrTransferConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SinkEndpointId")
     public String sinkEndpointId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceEndpointId")
     public String sourceEndpointId;
 
     @NameInMap("StructTransferConfig")
     public CreateProjectRequestStructTransferConfig structTransferConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TransferMapping")
     public CreateProjectRequestTransferMapping transferMapping;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 
     @NameInMap("UseOss")
     public Boolean useOss;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkerGradeId")
     public String workerGradeId;
 

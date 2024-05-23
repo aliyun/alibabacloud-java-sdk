@@ -1146,6 +1146,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("PayType")
         public String payType;
 
+        @NameInMap("PrimaryInstance")
+        public String primaryInstance;
+
+        @NameInMap("PrimaryRegion")
+        public String primaryRegion;
+
         @NameInMap("ProxyClusterId")
         public String proxyClusterId;
 
@@ -1437,6 +1443,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public String getPayType() {
             return this.payType;
+        }
+
+        public DescribeInstanceResponseBodyInstance setPrimaryInstance(String primaryInstance) {
+            this.primaryInstance = primaryInstance;
+            return this;
+        }
+        public String getPrimaryInstance() {
+            return this.primaryInstance;
+        }
+
+        public DescribeInstanceResponseBodyInstance setPrimaryRegion(String primaryRegion) {
+            this.primaryRegion = primaryRegion;
+            return this;
+        }
+        public String getPrimaryRegion() {
+            return this.primaryRegion;
         }
 
         public DescribeInstanceResponseBodyInstance setProxyClusterId(String proxyClusterId) {

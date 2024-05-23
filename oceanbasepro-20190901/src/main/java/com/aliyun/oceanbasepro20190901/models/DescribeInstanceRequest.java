@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeInstanceRequest extends TeaModel {
     /**
      * <p>The size of the data disk, in GB.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

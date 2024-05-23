@@ -4,18 +4,30 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateTenantReadOnlyConnectionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

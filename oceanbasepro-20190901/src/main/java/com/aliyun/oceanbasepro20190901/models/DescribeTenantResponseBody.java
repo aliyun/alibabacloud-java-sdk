@@ -1110,6 +1110,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         public String instanceType;
 
+        @NameInMap("LowerCaseTableNames")
+        public byte[] lowerCaseTableNames;
+
         /**
          * <p>```</p>
          * <p>http(s)://[Endpoint]/?Action=DescribeTenant</p>
@@ -1253,6 +1256,9 @@ public class DescribeTenantResponseBody extends TeaModel {
 
         @NameInMap("TimeZone")
         public String timeZone;
+
+        @NameInMap("Version")
+        public String version;
 
         /**
          * <p>Indicates whether the clog service is available. To enable the clog service, submit a ticket.</p>
@@ -1401,6 +1407,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             return this.instanceType;
         }
 
+        public DescribeTenantResponseBodyTenant setLowerCaseTableNames(byte[] lowerCaseTableNames) {
+            this.lowerCaseTableNames = lowerCaseTableNames;
+            return this;
+        }
+        public byte[] getLowerCaseTableNames() {
+            return this.lowerCaseTableNames;
+        }
+
         public DescribeTenantResponseBodyTenant setMasterIntranetAddressZone(String masterIntranetAddressZone) {
             this.masterIntranetAddressZone = masterIntranetAddressZone;
             return this;
@@ -1519,6 +1533,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public String getTimeZone() {
             return this.timeZone;
+        }
+
+        public DescribeTenantResponseBodyTenant setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
         public DescribeTenantResponseBodyTenant setVpcId(String vpcId) {

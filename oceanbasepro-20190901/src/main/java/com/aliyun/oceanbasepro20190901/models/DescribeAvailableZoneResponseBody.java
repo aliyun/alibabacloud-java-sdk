@@ -180,6 +180,9 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
         @NameInMap("Channel")
         public String channel;
 
+        @NameInMap("CpuArch")
+        public String cpuArch;
+
         @NameInMap("DeployType")
         public String deployType;
 
@@ -209,6 +212,14 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
         }
         public String getChannel() {
             return this.channel;
+        }
+
+        public DescribeAvailableZoneResponseBodyDataAvailableZones setCpuArch(String cpuArch) {
+            this.cpuArch = cpuArch;
+            return this;
+        }
+        public String getCpuArch() {
+            return this.cpuArch;
         }
 
         public DescribeAvailableZoneResponseBodyDataAvailableZones setDeployType(String deployType) {

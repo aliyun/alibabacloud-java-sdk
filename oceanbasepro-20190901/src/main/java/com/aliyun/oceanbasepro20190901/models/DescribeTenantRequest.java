@@ -10,12 +10,16 @@ public class DescribeTenantRequest extends TeaModel {
      * <p>- ALLOCATING_INTERNET_ADDRESS: An address is being applied for.   </p>
      * <p>- PENDING_OFFLINE_INTERNET_ADDRESS: The address is being disabled.   </p>
      * <p>- ONLINE: The address is in service.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>Indicates whether to enable transaction splitting.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

@@ -10,6 +10,9 @@ public class DescribeDataBackupSetRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeNodeMetricsRequest extends TeaModel {
     /**
      * <p>$.parameters[7].schema.description</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The list of nodes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>$.parameters[7].schema.enumValueTitles</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Metrics")
     public String metrics;
@@ -48,6 +54,8 @@ public class DescribeNodeMetricsRequest extends TeaModel {
 
     /**
      * <p>$.parameters[9].schema.example</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

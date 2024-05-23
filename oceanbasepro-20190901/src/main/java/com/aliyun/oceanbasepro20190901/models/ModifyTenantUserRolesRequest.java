@@ -10,6 +10,8 @@ public class ModifyTenantUserRolesRequest extends TeaModel {
      * <p>update: updates all privileges. This is the default value.  </p>
      * <p>add: adds a privilege.  </p>
      * <p>delete: deletes a privilege.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -23,12 +25,16 @@ public class ModifyTenantUserRolesRequest extends TeaModel {
     /**
      * <p>The operation that you want to perform.   </p>
      * <p>Set the value to **ModifyTenantUserRoles**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
      * <p>The role of the database account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserName")
     public String userName;
@@ -37,6 +43,8 @@ public class ModifyTenantUserRolesRequest extends TeaModel {
      * <p>The type of the account. Valid values:   </p>
      * <p>- Admin: the super administrator account.   </p>
      * <p>- Normal: a general account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserRole")
     public String userRole;

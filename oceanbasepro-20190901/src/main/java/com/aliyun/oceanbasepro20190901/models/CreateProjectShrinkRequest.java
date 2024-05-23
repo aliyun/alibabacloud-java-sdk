@@ -25,6 +25,9 @@ public class CreateProjectShrinkRequest extends TeaModel {
     @NameInMap("FullTransferConfig")
     public String fullTransferConfigShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Id")
     public String id;
 
@@ -34,6 +37,9 @@ public class CreateProjectShrinkRequest extends TeaModel {
     @NameInMap("LabelIds")
     public String labelIdsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -43,24 +49,39 @@ public class CreateProjectShrinkRequest extends TeaModel {
     @NameInMap("ReverseIncrTransferConfig")
     public String reverseIncrTransferConfigShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SinkEndpointId")
     public String sinkEndpointId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceEndpointId")
     public String sourceEndpointId;
 
     @NameInMap("StructTransferConfig")
     public String structTransferConfigShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TransferMapping")
     public String transferMappingShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 
     @NameInMap("UseOss")
     public Boolean useOss;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkerGradeId")
     public String workerGradeId;
 

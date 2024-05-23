@@ -41,6 +41,8 @@ public class CreateOmsMysqlDataSourceRequest extends TeaModel {
      * <p>It must be 2 to 128 characters in length and can contain letters, digits, underscores (_), periods (.), and hyphens (-).   </p>
      * <br>
      * <p>> <br>Invalid characters, such as slashes (/), are not allowed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -48,6 +50,8 @@ public class CreateOmsMysqlDataSourceRequest extends TeaModel {
     /**
      * <p>The password of the username that is used to access the database. It must be Base64 encoded.   </p>
      * <p>For example, for the password abcd123@!, the Base64-encoded value is YWJjZDEyM0Ah.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Password")
     public String password;
@@ -71,12 +75,16 @@ public class CreateOmsMysqlDataSourceRequest extends TeaModel {
     /**
      * <p>The type of the MySQL data source.   </p>
      * <p>Valid values: INTERNET, VPC, RDS, PolarDB, and DG.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The username that is used to access the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Username")
     public String username;

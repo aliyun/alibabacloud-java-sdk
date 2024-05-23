@@ -26,6 +26,8 @@ public class DeleteInstancesRequest extends TeaModel {
     /**
      * <p>The ID of the cluster to be deleted.   </p>
      * <p>The value is a string in the JSON format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;

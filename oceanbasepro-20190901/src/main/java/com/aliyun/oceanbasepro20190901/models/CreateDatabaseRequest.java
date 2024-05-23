@@ -19,6 +19,8 @@ public class CreateDatabaseRequest extends TeaModel {
 
     /**
      * <p>Alibaba Cloud CLI</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
@@ -32,12 +34,16 @@ public class CreateDatabaseRequest extends TeaModel {
 
     /**
      * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Encoding")
     public String encoding;
 
     /**
      * <p>The collation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -45,6 +51,8 @@ public class CreateDatabaseRequest extends TeaModel {
     /**
      * <p>The name of the database.   </p>
      * <p>You cannot use reserved keywords, such as test and mysql.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

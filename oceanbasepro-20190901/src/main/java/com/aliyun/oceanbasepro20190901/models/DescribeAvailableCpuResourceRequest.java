@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeAvailableCpuResourceRequest extends TeaModel {
     /**
      * <p>The CPU resources available.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

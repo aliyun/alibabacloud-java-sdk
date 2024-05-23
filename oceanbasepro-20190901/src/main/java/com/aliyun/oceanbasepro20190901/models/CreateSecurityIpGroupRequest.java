@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class CreateSecurityIpGroupRequest extends TeaModel {
     /**
      * <p>The ID of the OceanBase cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the whitelist group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityIpGroupName")
     public String securityIpGroupName;
 
     /**
      * <p>The return result of the request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityIps")
     public String securityIps;

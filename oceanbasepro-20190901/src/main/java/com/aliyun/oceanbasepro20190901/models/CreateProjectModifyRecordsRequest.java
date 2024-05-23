@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateProjectModifyRecordsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Databases")
     public java.util.List<CreateProjectModifyRecordsRequestDatabases> databases;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Id")
     public String id;
 

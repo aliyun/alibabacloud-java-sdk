@@ -14,12 +14,16 @@ public class SwitchoverInstanceRequest extends TeaModel {
 
     /**
      * <p>The instance ID of the primary/standby instance. You can set the default value to the instance ID of the instance to be switched to the primary instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The instance ID of the instance to be switched to the primary instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetInstanceId")
     public String targetInstanceId;

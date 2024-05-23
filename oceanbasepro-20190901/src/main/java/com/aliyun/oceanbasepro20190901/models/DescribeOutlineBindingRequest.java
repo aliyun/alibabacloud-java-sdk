@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeOutlineBindingRequest extends TeaModel {
     /**
      * <p>The name of the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
@@ -25,6 +27,8 @@ public class DescribeOutlineBindingRequest extends TeaModel {
 
     /**
      * <p>SQLID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SQLId")
     public String SQLId;
@@ -32,12 +36,16 @@ public class DescribeOutlineBindingRequest extends TeaModel {
     /**
      * <p>The name of the tenant.    </p>
      * <p>It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_). It cannot be set to SYS.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
     /**
      * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

@@ -7,18 +7,24 @@ public class ModifyTenantUserStatusRequest extends TeaModel {
     /**
      * <p>The operation that you want to perform.   </p>
      * <p>Set the value to **ModifyTenantUserStatus**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
      * <p>The list of database accounts in the tenant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserName")
     public String userName;
@@ -27,6 +33,8 @@ public class ModifyTenantUserStatusRequest extends TeaModel {
      * <p>The status of the database account. Valid values:   </p>
      * <p>- Locked: The account is locked. </p>
      * <p>- Online: The account is unlocked.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserStatus")
     public String userStatus;

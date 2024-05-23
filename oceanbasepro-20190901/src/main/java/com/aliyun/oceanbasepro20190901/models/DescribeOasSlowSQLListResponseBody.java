@@ -1209,43 +1209,43 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
          * <p>Number of occurrences of code 4012 during the execution period.</p>
          */
         @NameInMap("RetCode4012Count")
-        public Long retCode4012Count;
+        public Double retCode4012Count;
 
         /**
          * <p>Number of occurrences of code 4013 during the execution period.</p>
          */
         @NameInMap("RetCode4013Count")
-        public Long retCode4013Count;
+        public Double retCode4013Count;
 
         /**
          * <p>Number of occurrences of code 5001 during the execution period.</p>
          */
         @NameInMap("RetCode5001Count")
-        public Long retCode5001Count;
+        public Double retCode5001Count;
 
         /**
          * <p>Number of occurrences of code 5024 during the execution period.</p>
          */
         @NameInMap("RetCode5024Count")
-        public Long retCode5024Count;
+        public Double retCode5024Count;
 
         /**
          * <p>Number of occurrences of code 5167 during the execution period.</p>
          */
         @NameInMap("RetCode5167Count")
-        public Long retCode5167Count;
+        public Double retCode5167Count;
 
         /**
          * <p>Number of occurrences of code 5217 during the execution period.</p>
          */
         @NameInMap("RetCode5217Count")
-        public Long retCode5217Count;
+        public Double retCode5217Count;
 
         /**
          * <p>Number of occurrences of code 6002 during the execution period.</p>
          */
         @NameInMap("RetCode6002Count")
-        public Long retCode6002Count;
+        public Double retCode6002Count;
 
         /**
          * <p>Total number of retries during the execution period.</p>
@@ -1784,59 +1784,59 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
             return this.remotePlans;
         }
 
-        public DescribeOasSlowSQLListResponseBodyData setRetCode4012Count(Long retCode4012Count) {
+        public DescribeOasSlowSQLListResponseBodyData setRetCode4012Count(Double retCode4012Count) {
             this.retCode4012Count = retCode4012Count;
             return this;
         }
-        public Long getRetCode4012Count() {
+        public Double getRetCode4012Count() {
             return this.retCode4012Count;
         }
 
-        public DescribeOasSlowSQLListResponseBodyData setRetCode4013Count(Long retCode4013Count) {
+        public DescribeOasSlowSQLListResponseBodyData setRetCode4013Count(Double retCode4013Count) {
             this.retCode4013Count = retCode4013Count;
             return this;
         }
-        public Long getRetCode4013Count() {
+        public Double getRetCode4013Count() {
             return this.retCode4013Count;
         }
 
-        public DescribeOasSlowSQLListResponseBodyData setRetCode5001Count(Long retCode5001Count) {
+        public DescribeOasSlowSQLListResponseBodyData setRetCode5001Count(Double retCode5001Count) {
             this.retCode5001Count = retCode5001Count;
             return this;
         }
-        public Long getRetCode5001Count() {
+        public Double getRetCode5001Count() {
             return this.retCode5001Count;
         }
 
-        public DescribeOasSlowSQLListResponseBodyData setRetCode5024Count(Long retCode5024Count) {
+        public DescribeOasSlowSQLListResponseBodyData setRetCode5024Count(Double retCode5024Count) {
             this.retCode5024Count = retCode5024Count;
             return this;
         }
-        public Long getRetCode5024Count() {
+        public Double getRetCode5024Count() {
             return this.retCode5024Count;
         }
 
-        public DescribeOasSlowSQLListResponseBodyData setRetCode5167Count(Long retCode5167Count) {
+        public DescribeOasSlowSQLListResponseBodyData setRetCode5167Count(Double retCode5167Count) {
             this.retCode5167Count = retCode5167Count;
             return this;
         }
-        public Long getRetCode5167Count() {
+        public Double getRetCode5167Count() {
             return this.retCode5167Count;
         }
 
-        public DescribeOasSlowSQLListResponseBodyData setRetCode5217Count(Long retCode5217Count) {
+        public DescribeOasSlowSQLListResponseBodyData setRetCode5217Count(Double retCode5217Count) {
             this.retCode5217Count = retCode5217Count;
             return this;
         }
-        public Long getRetCode5217Count() {
+        public Double getRetCode5217Count() {
             return this.retCode5217Count;
         }
 
-        public DescribeOasSlowSQLListResponseBodyData setRetCode6002Count(Long retCode6002Count) {
+        public DescribeOasSlowSQLListResponseBodyData setRetCode6002Count(Double retCode6002Count) {
             this.retCode6002Count = retCode6002Count;
             return this;
         }
-        public Long getRetCode6002Count() {
+        public Double getRetCode6002Count() {
             return this.retCode6002Count;
         }
 

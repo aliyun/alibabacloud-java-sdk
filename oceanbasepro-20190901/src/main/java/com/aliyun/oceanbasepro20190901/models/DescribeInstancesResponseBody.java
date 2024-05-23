@@ -68,19 +68,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>The size of scaling step during a major compaction.</p>
          */
         @NameInMap("ScaleStepInMerge")
-        public Long scaleStepInMerge;
+        public Double scaleStepInMerge;
 
         /**
          * <p>The size of scaling step during daily use.</p>
          */
         @NameInMap("ScaleStepInNormal")
-        public Long scaleStepInNormal;
+        public Double scaleStepInNormal;
 
         /**
          * <p>The maximum usage of the data disk, in percentage, that triggers the scaling of the data disk for major compactions.</p>
          */
         @NameInMap("UpperMergeThreshold")
-        public Long upperMergeThreshold;
+        public Double upperMergeThreshold;
 
         /**
          * <p>The scale-out strategy. Valid values: RAW and PERCENTAGE.</p>
@@ -92,13 +92,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>The maximum usage of the data disk, in percentage, that triggers the scaling of the data disk for daily use.</p>
          */
         @NameInMap("UpperThreshold")
-        public Long upperThreshold;
+        public Double upperThreshold;
 
         /**
          * <p>The maximum space, in GB, to which the data disk can be scaled.</p>
          */
         @NameInMap("Upperbound")
-        public Long upperbound;
+        public Double upperbound;
 
         public static DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig self = new DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig();
@@ -121,27 +121,27 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.maxDiskSize;
         }
 
-        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setScaleStepInMerge(Long scaleStepInMerge) {
+        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setScaleStepInMerge(Double scaleStepInMerge) {
             this.scaleStepInMerge = scaleStepInMerge;
             return this;
         }
-        public Long getScaleStepInMerge() {
+        public Double getScaleStepInMerge() {
             return this.scaleStepInMerge;
         }
 
-        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setScaleStepInNormal(Long scaleStepInNormal) {
+        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setScaleStepInNormal(Double scaleStepInNormal) {
             this.scaleStepInNormal = scaleStepInNormal;
             return this;
         }
-        public Long getScaleStepInNormal() {
+        public Double getScaleStepInNormal() {
             return this.scaleStepInNormal;
         }
 
-        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setUpperMergeThreshold(Long upperMergeThreshold) {
+        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setUpperMergeThreshold(Double upperMergeThreshold) {
             this.upperMergeThreshold = upperMergeThreshold;
             return this;
         }
-        public Long getUpperMergeThreshold() {
+        public Double getUpperMergeThreshold() {
             return this.upperMergeThreshold;
         }
 
@@ -153,19 +153,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.upperScaleStrategy;
         }
 
-        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setUpperThreshold(Long upperThreshold) {
+        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setUpperThreshold(Double upperThreshold) {
             this.upperThreshold = upperThreshold;
             return this;
         }
-        public Long getUpperThreshold() {
+        public Double getUpperThreshold() {
             return this.upperThreshold;
         }
 
-        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setUpperbound(Long upperbound) {
+        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setUpperbound(Double upperbound) {
             this.upperbound = upperbound;
             return this;
         }
-        public Long getUpperbound() {
+        public Double getUpperbound() {
             return this.upperbound;
         }
 
@@ -226,60 +226,60 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>The number of original CPU cores in the cluster.</p>
          */
         @NameInMap("OriginalTotalCpu")
-        public Long originalTotalCpu;
+        public Double originalTotalCpu;
 
         /**
          * <p>The total number of CPU cores of the cluster.</p>
          */
         @NameInMap("TotalCpu")
-        public Long totalCpu;
+        public Double totalCpu;
 
         /**
          * <p>The number of CPU cores of each replica node in the cluster.</p>
          */
         @NameInMap("UnitCpu")
-        public Long unitCpu;
+        public Double unitCpu;
 
         /**
          * <p>The number of CPU cores used in the cluster.</p>
          */
         @NameInMap("UsedCpu")
-        public Long usedCpu;
+        public Double usedCpu;
 
         public static DescribeInstancesResponseBodyInstancesResourceCpu build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesResourceCpu self = new DescribeInstancesResponseBodyInstancesResourceCpu();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesResourceCpu setOriginalTotalCpu(Long originalTotalCpu) {
+        public DescribeInstancesResponseBodyInstancesResourceCpu setOriginalTotalCpu(Double originalTotalCpu) {
             this.originalTotalCpu = originalTotalCpu;
             return this;
         }
-        public Long getOriginalTotalCpu() {
+        public Double getOriginalTotalCpu() {
             return this.originalTotalCpu;
         }
 
-        public DescribeInstancesResponseBodyInstancesResourceCpu setTotalCpu(Long totalCpu) {
+        public DescribeInstancesResponseBodyInstancesResourceCpu setTotalCpu(Double totalCpu) {
             this.totalCpu = totalCpu;
             return this;
         }
-        public Long getTotalCpu() {
+        public Double getTotalCpu() {
             return this.totalCpu;
         }
 
-        public DescribeInstancesResponseBodyInstancesResourceCpu setUnitCpu(Long unitCpu) {
+        public DescribeInstancesResponseBodyInstancesResourceCpu setUnitCpu(Double unitCpu) {
             this.unitCpu = unitCpu;
             return this;
         }
-        public Long getUnitCpu() {
+        public Double getUnitCpu() {
             return this.unitCpu;
         }
 
-        public DescribeInstancesResponseBodyInstancesResourceCpu setUsedCpu(Long usedCpu) {
+        public DescribeInstancesResponseBodyInstancesResourceCpu setUsedCpu(Double usedCpu) {
             this.usedCpu = usedCpu;
             return this;
         }
-        public Long getUsedCpu() {
+        public Double getUsedCpu() {
             return this.usedCpu;
         }
 
@@ -290,19 +290,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>The original size of the disk.</p>
          */
         @NameInMap("OriginalTotalDiskSize")
-        public Long originalTotalDiskSize;
+        public Double originalTotalDiskSize;
 
         /**
          * <p>The total storage space of the cluster, in GB.</p>
          */
         @NameInMap("TotalDiskSize")
-        public Long totalDiskSize;
+        public Double totalDiskSize;
 
         /**
          * <p>The storage space of each replica node in the cluster, in GB.</p>
          */
         @NameInMap("UnitDiskSize")
-        public Long unitDiskSize;
+        public Double unitDiskSize;
 
         /**
          * <p>The size of used storage space of the cluster, in GB.</p>
@@ -315,27 +315,27 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesResourceDiskSize setOriginalTotalDiskSize(Long originalTotalDiskSize) {
+        public DescribeInstancesResponseBodyInstancesResourceDiskSize setOriginalTotalDiskSize(Double originalTotalDiskSize) {
             this.originalTotalDiskSize = originalTotalDiskSize;
             return this;
         }
-        public Long getOriginalTotalDiskSize() {
+        public Double getOriginalTotalDiskSize() {
             return this.originalTotalDiskSize;
         }
 
-        public DescribeInstancesResponseBodyInstancesResourceDiskSize setTotalDiskSize(Long totalDiskSize) {
+        public DescribeInstancesResponseBodyInstancesResourceDiskSize setTotalDiskSize(Double totalDiskSize) {
             this.totalDiskSize = totalDiskSize;
             return this;
         }
-        public Long getTotalDiskSize() {
+        public Double getTotalDiskSize() {
             return this.totalDiskSize;
         }
 
-        public DescribeInstancesResponseBodyInstancesResourceDiskSize setUnitDiskSize(Long unitDiskSize) {
+        public DescribeInstancesResponseBodyInstancesResourceDiskSize setUnitDiskSize(Double unitDiskSize) {
             this.unitDiskSize = unitDiskSize;
             return this;
         }
-        public Long getUnitDiskSize() {
+        public Double getUnitDiskSize() {
             return this.unitDiskSize;
         }
 
@@ -354,13 +354,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>The original memory size of the cluster, in GB.</p>
          */
         @NameInMap("OriginalTotalMemory")
-        public Long originalTotalMemory;
+        public Double originalTotalMemory;
 
         /**
          * <p>The total memory size of the cluster, in GB.</p>
          */
         @NameInMap("TotalMemory")
-        public Long totalMemory;
+        public Double totalMemory;
 
         /**
          * <p>The memory size of each replica node in the cluster, in GB.</p>
@@ -379,19 +379,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesResourceMemory setOriginalTotalMemory(Long originalTotalMemory) {
+        public DescribeInstancesResponseBodyInstancesResourceMemory setOriginalTotalMemory(Double originalTotalMemory) {
             this.originalTotalMemory = originalTotalMemory;
             return this;
         }
-        public Long getOriginalTotalMemory() {
+        public Double getOriginalTotalMemory() {
             return this.originalTotalMemory;
         }
 
-        public DescribeInstancesResponseBodyInstancesResourceMemory setTotalMemory(Long totalMemory) {
+        public DescribeInstancesResponseBodyInstancesResourceMemory setTotalMemory(Double totalMemory) {
             this.totalMemory = totalMemory;
             return this;
         }
-        public Long getTotalMemory() {
+        public Double getTotalMemory() {
             return this.totalMemory;
         }
 

@@ -189,7 +189,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
          * <p>The maximum disk usage, in percentage.</p>
          */
         @NameInMap("IsPrimaryTenantZone")
-        public String isPrimaryTenantZone;
+        public Boolean isPrimaryTenantZone;
 
         /**
          * <p>The server with the highest disk usage.</p>
@@ -214,11 +214,11 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceTopologyResponseBodyInstanceTopologyTenantsTenantZones setIsPrimaryTenantZone(String isPrimaryTenantZone) {
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyTenantsTenantZones setIsPrimaryTenantZone(Boolean isPrimaryTenantZone) {
             this.isPrimaryTenantZone = isPrimaryTenantZone;
             return this;
         }
-        public String getIsPrimaryTenantZone() {
+        public Boolean getIsPrimaryTenantZone() {
             return this.isPrimaryTenantZone;
         }
 

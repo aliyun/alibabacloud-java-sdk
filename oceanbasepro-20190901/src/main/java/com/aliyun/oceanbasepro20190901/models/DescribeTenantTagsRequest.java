@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeTenantTagsRequest extends TeaModel {
     /**
      * <p>The ID of the OceanBase cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -18,6 +20,8 @@ public class DescribeTenantTagsRequest extends TeaModel {
 
     /**
      * <p>The JSON string of the tenant ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantIds")
     public String tenantIds;

@@ -7,24 +7,32 @@ public class ModifyTenantUserDescriptionRequest extends TeaModel {
     /**
      * <p>The operation that you want to perform.   </p>
      * <p>Set the value to **ModifyTenantUserDescription**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
      * <p>The description of the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserName")
     public String userName;
