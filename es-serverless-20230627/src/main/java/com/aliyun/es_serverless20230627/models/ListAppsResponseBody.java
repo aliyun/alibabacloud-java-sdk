@@ -10,6 +10,9 @@ public class ListAppsResponseBody extends TeaModel {
     @NameInMap("result")
     public java.util.List<ListAppsResponseBodyResult> result;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 

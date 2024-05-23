@@ -3,7 +3,7 @@ package com.aliyun.es_serverless20230627.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteAppResponse extends TeaModel {
+public class CreateEndpointResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteAppResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DeleteAppResponseBody body;
+    public CreateEndpointResponseBody body;
 
-    public static DeleteAppResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteAppResponse self = new DeleteAppResponse();
+    public static CreateEndpointResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateEndpointResponse self = new CreateEndpointResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteAppResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateEndpointResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteAppResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteAppResponse setStatusCode(Integer statusCode) {
+    public CreateEndpointResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteAppResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteAppResponse setBody(DeleteAppResponseBody body) {
+    public CreateEndpointResponse setBody(CreateEndpointResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteAppResponseBody getBody() {
+    public CreateEndpointResponseBody getBody() {
         return this.body;
     }
 
