@@ -38,6 +38,9 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
         @NameInMap("CreateDate")
         public String createDate;
 
+        @NameInMap("CreateTimestamp")
+        public Long createTimestamp;
+
         @NameInMap("State")
         public String state;
 
@@ -60,6 +63,14 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
         }
         public String getCreateDate() {
             return this.createDate;
+        }
+
+        public DescribePdnsAppKeysResponseBodyAppKeys setCreateTimestamp(Long createTimestamp) {
+            this.createTimestamp = createTimestamp;
+            return this;
+        }
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
         }
 
         public DescribePdnsAppKeysResponseBodyAppKeys setState(String state) {

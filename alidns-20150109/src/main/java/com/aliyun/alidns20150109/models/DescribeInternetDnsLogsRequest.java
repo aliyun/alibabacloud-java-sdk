@@ -4,6 +4,9 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeInternetDnsLogsRequest extends TeaModel {
+    @NameInMap("AccountId")
+    public Long accountId;
+
     @NameInMap("DomainName")
     public String domainName;
 
@@ -31,6 +34,14 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
     public static DescribeInternetDnsLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInternetDnsLogsRequest self = new DescribeInternetDnsLogsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInternetDnsLogsRequest setAccountId(Long accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    public Long getAccountId() {
+        return this.accountId;
     }
 
     public DescribeInternetDnsLogsRequest setDomainName(String domainName) {
