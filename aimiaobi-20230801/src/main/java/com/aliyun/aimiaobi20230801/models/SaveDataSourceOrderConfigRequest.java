@@ -4,12 +4,21 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class SaveDataSourceOrderConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserConfigDataSourceList")
     public java.util.List<SaveDataSourceOrderConfigRequestUserConfigDataSourceList> userConfigDataSourceList;
 
@@ -43,15 +52,24 @@ public class SaveDataSourceOrderConfigRequest extends TeaModel {
     }
 
     public static class SaveDataSourceOrderConfigRequestUserConfigDataSourceList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Number")
         public Integer number;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class FeedbackDialogueRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
@@ -22,6 +25,9 @@ public class FeedbackDialogueRequest extends TeaModel {
     @NameInMap("RatingTags")
     public java.util.List<String> ratingTags;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 

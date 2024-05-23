@@ -4,18 +4,33 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class GenerateImageTaskShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ArticleTaskId")
     public String articleTaskId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ParagraphList")
     public String paragraphListShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Size")
     public String size;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Style")
     public String style;
 
