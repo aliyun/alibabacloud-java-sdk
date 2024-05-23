@@ -4,9 +4,15 @@ package com.aliyun.drds20171016.models;
 import com.aliyun.tea.*;
 
 public class ModifyDrdsIpWhiteListRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
@@ -16,6 +22,9 @@ public class ModifyDrdsIpWhiteListRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IpWhiteList")
     public String ipWhiteList;
 

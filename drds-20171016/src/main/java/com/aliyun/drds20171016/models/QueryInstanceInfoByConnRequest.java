@@ -4,12 +4,21 @@ package com.aliyun.drds20171016.models;
 import com.aliyun.tea.*;
 
 public class QueryInstanceInfoByConnRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Host")
     public String host;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

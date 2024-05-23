@@ -4,18 +4,33 @@ package com.aliyun.drds20171016.models;
 import com.aliyun.tea.*;
 
 public class ModifyReadOnlyAccountPasswordRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NewPasswd")
     public String newPasswd;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OriginPassword")
     public String originPassword;
 

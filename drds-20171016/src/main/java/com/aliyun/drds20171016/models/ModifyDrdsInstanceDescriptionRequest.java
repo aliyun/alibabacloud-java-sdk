@@ -4,9 +4,15 @@ package com.aliyun.drds20171016.models;
 import com.aliyun.tea.*;
 
 public class ModifyDrdsInstanceDescriptionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
