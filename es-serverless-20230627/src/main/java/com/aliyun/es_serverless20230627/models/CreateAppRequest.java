@@ -6,13 +6,21 @@ import com.aliyun.tea.*;
 public class CreateAppRequest extends TeaModel {
     /**
      * <p>应用名</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("appName")
     public String appName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("authentication")
     public CreateAppRequestAuthentication authentication;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("chargeType")
     public String chargeType;
 
@@ -25,11 +33,23 @@ public class CreateAppRequest extends TeaModel {
     @NameInMap("network")
     public java.util.List<CreateAppRequestNetwork> network;
 
+    @NameInMap("privateNetwork")
+    public java.util.List<CreateAppRequestPrivateNetwork> privateNetwork;
+
+    @NameInMap("quotaInfo")
+    public CreateAppRequestQuotaInfo quotaInfo;
+
     @NameInMap("regionId")
     public String regionId;
 
+    @NameInMap("scenario")
+    public String scenario;
+
     @NameInMap("version")
     public String version;
+
+    @NameInMap("dryRun")
+    public Boolean dryRun;
 
     public static CreateAppRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppRequest self = new CreateAppRequest();
@@ -76,6 +96,22 @@ public class CreateAppRequest extends TeaModel {
         return this.network;
     }
 
+    public CreateAppRequest setPrivateNetwork(java.util.List<CreateAppRequestPrivateNetwork> privateNetwork) {
+        this.privateNetwork = privateNetwork;
+        return this;
+    }
+    public java.util.List<CreateAppRequestPrivateNetwork> getPrivateNetwork() {
+        return this.privateNetwork;
+    }
+
+    public CreateAppRequest setQuotaInfo(CreateAppRequestQuotaInfo quotaInfo) {
+        this.quotaInfo = quotaInfo;
+        return this;
+    }
+    public CreateAppRequestQuotaInfo getQuotaInfo() {
+        return this.quotaInfo;
+    }
+
     public CreateAppRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -84,12 +120,28 @@ public class CreateAppRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateAppRequest setScenario(String scenario) {
+        this.scenario = scenario;
+        return this;
+    }
+    public String getScenario() {
+        return this.scenario;
+    }
+
     public CreateAppRequest setVersion(String version) {
         this.version = version;
         return this;
     }
     public String getVersion() {
         return this.version;
+    }
+
+    public CreateAppRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public static class CreateAppRequestAuthenticationBasicAuth extends TeaModel {
@@ -230,6 +282,140 @@ public class CreateAppRequest extends TeaModel {
         }
         public java.util.List<CreateAppRequestNetworkWhiteIpGroup> getWhiteIpGroup() {
             return this.whiteIpGroup;
+        }
+
+    }
+
+    public static class CreateAppRequestPrivateNetworkWhiteIpGroup extends TeaModel {
+        @NameInMap("groupName")
+        public String groupName;
+
+        @NameInMap("ips")
+        public java.util.List<String> ips;
+
+        public static CreateAppRequestPrivateNetworkWhiteIpGroup build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppRequestPrivateNetworkWhiteIpGroup self = new CreateAppRequestPrivateNetworkWhiteIpGroup();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppRequestPrivateNetworkWhiteIpGroup setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public CreateAppRequestPrivateNetworkWhiteIpGroup setIps(java.util.List<String> ips) {
+            this.ips = ips;
+            return this;
+        }
+        public java.util.List<String> getIps() {
+            return this.ips;
+        }
+
+    }
+
+    public static class CreateAppRequestPrivateNetwork extends TeaModel {
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        @NameInMap("pvlEndpointId")
+        public String pvlEndpointId;
+
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("vpcId")
+        public String vpcId;
+
+        @NameInMap("whiteIpGroup")
+        public java.util.List<CreateAppRequestPrivateNetworkWhiteIpGroup> whiteIpGroup;
+
+        public static CreateAppRequestPrivateNetwork build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppRequestPrivateNetwork self = new CreateAppRequestPrivateNetwork();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppRequestPrivateNetwork setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public CreateAppRequestPrivateNetwork setPvlEndpointId(String pvlEndpointId) {
+            this.pvlEndpointId = pvlEndpointId;
+            return this;
+        }
+        public String getPvlEndpointId() {
+            return this.pvlEndpointId;
+        }
+
+        public CreateAppRequestPrivateNetwork setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public CreateAppRequestPrivateNetwork setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public CreateAppRequestPrivateNetwork setWhiteIpGroup(java.util.List<CreateAppRequestPrivateNetworkWhiteIpGroup> whiteIpGroup) {
+            this.whiteIpGroup = whiteIpGroup;
+            return this;
+        }
+        public java.util.List<CreateAppRequestPrivateNetworkWhiteIpGroup> getWhiteIpGroup() {
+            return this.whiteIpGroup;
+        }
+
+    }
+
+    public static class CreateAppRequestQuotaInfo extends TeaModel {
+        @NameInMap("appType")
+        public String appType;
+
+        @NameInMap("cu")
+        public Integer cu;
+
+        @NameInMap("storage")
+        public Integer storage;
+
+        public static CreateAppRequestQuotaInfo build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppRequestQuotaInfo self = new CreateAppRequestQuotaInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppRequestQuotaInfo setAppType(String appType) {
+            this.appType = appType;
+            return this;
+        }
+        public String getAppType() {
+            return this.appType;
+        }
+
+        public CreateAppRequestQuotaInfo setCu(Integer cu) {
+            this.cu = cu;
+            return this;
+        }
+        public Integer getCu() {
+            return this.cu;
+        }
+
+        public CreateAppRequestQuotaInfo setStorage(Integer storage) {
+            this.storage = storage;
+            return this;
+        }
+        public Integer getStorage() {
+            return this.storage;
         }
 
     }
